@@ -15,7 +15,7 @@ const ServicesGrid = () => {
     {
       title: "Paid Ads That Maximize ROI",
       description: "Ads that don't generate leads are useless. We engineer Google and Meta campaigns that make every dollar work harder, bringing in calls, forms, and real growth—fast.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     },
     {
       title: "Social Media That Builds Trust",
