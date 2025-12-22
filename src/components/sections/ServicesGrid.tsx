@@ -5,12 +5,12 @@ const ServicesGrid = () => {
     {
       title: "Local SEO That Dominates",
       description: "Outdated SEO tactics waste time and money. We build location-specific visibility through technical optimization, content alignment, and authority signals that actually move rankings.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1616499370260-485b3e5ed653?w=600&q=80",
     },
     {
       title: "Google Maps Visibility That Converts",
       description: "Your clients need to own the local 3-pack. We optimize Google Business Profiles, manage reviews, and build citation authority to drive calls directly from Maps.",
-      image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&q=80",
     },
     {
       title: "Paid Ads That Maximize ROI",
