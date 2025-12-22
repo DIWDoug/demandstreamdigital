@@ -66,7 +66,8 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Dialed-In Web" 
-              className="h-8 md:h-10 w-auto brightness-0 invert opacity-90"
+              className="h-8 md:h-10 w-auto"
+              style={{ filter: 'brightness(0) saturate(100%) invert(70%) sepia(20%) saturate(800%) hue-rotate(175deg) brightness(95%) contrast(90%)' }}
             />
           </a>
 
