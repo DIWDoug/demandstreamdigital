@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/sections/Header";
+import Hero from "@/components/sections/Hero";
+import TrustReel from "@/components/sections/TrustReel";
+import FeaturedIn from "@/components/sections/FeaturedIn";
+import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
+import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import Packages from "@/components/sections/Packages";
+import WhatWeSolve from "@/components/sections/WhatWeSolve";
+import ContactForm from "@/components/sections/ContactForm";
+import HowWeOperate from "@/components/sections/HowWeOperate";
+import FinalCTA from "@/components/sections/FinalCTA";
+import Footer from "@/components/sections/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="dark min-h-screen bg-background text-foreground">
+      <Header />
+      <Hero />
+      <TrustReel />
+      <FeaturedIn />
+      <ScalableFulfillment />
+      <RetentionPhilosophy />
+      <div id="services">
+        <ServicesGrid />
       </div>
+      <Packages />
+      <div id="about">
+        <WhatWeSolve />
+      </div>
+      <ContactForm />
+      <HowWeOperate />
+      <FinalCTA />
+      <Footer />
     </div>
   );
 };
