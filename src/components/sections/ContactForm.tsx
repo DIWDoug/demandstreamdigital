@@ -88,7 +88,7 @@ const ContactForm = () => {
                   <AccordionItem 
                     key={index} 
                     value={`item-${index}`}
-                    className="bg-surface-elevated border border-border rounded-lg px-5 data-[state=open]:border-accent-pop/30 data-[state=open]:shadow-lg data-[state=open]:shadow-accent-pop/10 transition-all duration-300"
+                    className="bg-surface-elevated border border-border rounded-lg px-5 data-[state=open]:border-accent-blue/30 data-[state=open]:shadow-lg data-[state=open]:shadow-accent-blue/10 transition-all duration-300"
                   >
                     <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline py-4">
                       <div className="flex items-center gap-4">

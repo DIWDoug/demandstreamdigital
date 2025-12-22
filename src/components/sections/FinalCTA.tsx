@@ -10,7 +10,7 @@ const FinalCTA = () => {
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm text-accent-pop uppercase tracking-widest mb-4 font-medium">
+          <p className="text-sm text-accent-blue uppercase tracking-widest mb-4 font-medium">
             Join 100+ Agency Partners
           </p>
           <h2 className="mb-6 text-foreground">

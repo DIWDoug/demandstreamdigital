@@ -307,13 +307,13 @@
     transform: translateY(-4px);
   }
 
-  /* Pop text accent - underlined emphasis like existing site */
+  /* Pop text accent - using blue for emphasis */
   .text-pop {
-    color: hsl(var(--accent-pop));
+    color: hsl(var(--accent-blue));
   }
 
   .text-pop-underline {
-    color: hsl(var(--accent-pop));
+    color: hsl(var(--accent-blue));
     position: relative;
     display: inline-block;
   }
@@ -325,16 +325,16 @@
     bottom: -4px;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, hsl(var(--accent-pop)), hsl(var(--accent-pop-glow)));
+    background: linear-gradient(90deg, hsl(var(--accent-blue)), hsl(var(--accent-blue-glow)));
     border-radius: 2px;
   }
 
   /* Step number badge */
   .step-badge {
     @apply w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold;
-    background: linear-gradient(135deg, hsl(var(--accent-pop)), hsl(var(--accent-pop-glow)));
+    background: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-blue-glow)));
     color: white;
-    box-shadow: 0 4px 15px hsl(var(--accent-pop) / 0.3);
+    box-shadow: 0 4px 15px hsl(var(--accent-blue) / 0.3);
   }
 
   /* Wave section divider */
@@ -372,7 +372,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, hsl(var(--accent-pop) / 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle, hsl(var(--accent-blue) / 0.1) 0%, transparent 50%);
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
