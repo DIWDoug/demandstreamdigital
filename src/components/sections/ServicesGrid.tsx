@@ -60,7 +60,7 @@ const ServicesGrid = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-sm text-cta uppercase tracking-widest mb-4">
+          <p className="text-sm text-accent-pop uppercase tracking-widest mb-4 font-medium">
             White-Label Local Digital Marketing Partner
           </p>
           <h2 className="mb-6 text-foreground">
@@ -91,7 +91,7 @@ const ServicesGrid = () => {
                 {bucket.services.map((service, serviceIndex) => (
                   <div 
                     key={serviceIndex}
-                    className="premium-card transition-all duration-300 hover:translate-y-[-2px]"
+                    className="premium-card glow-card transition-all duration-300 hover:translate-y-[-2px]"
                   >
                     <h4 className="text-lg text-foreground mb-2">
                       {service.title}

@@ -52,6 +52,10 @@
     --accent-blue: 224 60% 55%;
     --accent-blue-glow: 224 60% 65%;
     
+    /* Pop accent - for emphasis text (warm red like existing site) */
+    --accent-pop: 4 74% 49%;
+    --accent-pop-glow: 4 74% 59%;
+    
     --surface-dark: 220 20% 8%;
     --surface-elevated: 220 18% 12%;
     --surface-card: 220 15% 15%;
@@ -301,6 +305,81 @@
 
   .hover-lift:hover {
     transform: translateY(-4px);
+  }
+
+  /* Pop text accent - underlined emphasis like existing site */
+  .text-pop {
+    color: hsl(var(--accent-pop));
+  }
+
+  .text-pop-underline {
+    color: hsl(var(--accent-pop));
+    position: relative;
+    display: inline-block;
+  }
+
+  .text-pop-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--accent-pop)), hsl(var(--accent-pop-glow)));
+    border-radius: 2px;
+  }
+
+  /* Step number badge */
+  .step-badge {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold;
+    background: linear-gradient(135deg, hsl(var(--accent-pop)), hsl(var(--accent-pop-glow)));
+    color: white;
+    box-shadow: 0 4px 15px hsl(var(--accent-pop) / 0.3);
+  }
+
+  /* Wave section divider */
+  .wave-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    overflow: hidden;
+  }
+
+  .wave-divider.top {
+    top: -1px;
+  }
+
+  .wave-divider.bottom {
+    bottom: -1px;
+    transform: rotate(180deg);
+  }
+
+  .wave-divider svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Glow card effect */
+  .glow-card {
+    @apply relative overflow-hidden;
+  }
+
+  .glow-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, hsl(var(--accent-pop) / 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  .glow-card:hover::before {
+    opacity: 1;
   }
 }
 

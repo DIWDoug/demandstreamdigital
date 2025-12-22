@@ -10,11 +10,11 @@ const FinalCTA = () => {
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm text-cta uppercase tracking-widest mb-4 font-medium">
+          <p className="text-sm text-accent-pop uppercase tracking-widest mb-4 font-medium">
             Join 100+ Agency Partners
           </p>
           <h2 className="mb-6 text-foreground">
-            Ready to Scale Local Without Risk?
+            Ready to <span className="text-pop-underline">Scale Local</span> Without Risk?
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
             A white-label partner built for agencies that value execution, stability, and long-term growth. 90% client retention rate.
