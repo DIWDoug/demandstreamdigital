@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Users, Award } from "lucide-react";
 
 const TopicalExpertise = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
 
   const hubs = [
     {
@@ -146,8 +146,18 @@ const TopicalExpertise = () => {
   ];
 
   const toggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
+    setExpandedIndices(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
   };
+
+  const isExpanded = (index: number) => expandedIndices.has(index);
 
   return (
     <section className="py-24 lg:py-32 bg-surface-dark relative">
@@ -168,7 +178,7 @@ const TopicalExpertise = () => {
             <div 
               key={index}
               className={`premium-card cursor-pointer transition-all duration-300 ${
-                expandedIndex === index 
+                isExpanded(index) 
                   ? "ring-1 ring-accent-blue/50 bg-surface-elevated" 
                   : "hover:translate-y-[-2px]"
               }`}
@@ -184,7 +194,7 @@ const TopicalExpertise = () => {
                 </div>
                 <ChevronDown 
                   className={`h-5 w-5 text-text-muted transition-transform duration-300 ${
-                    expandedIndex === index ? "rotate-180" : ""
+                    isExpanded(index) ? "rotate-180" : ""
                   }`} 
                 />
               </div>
@@ -197,7 +207,7 @@ const TopicalExpertise = () => {
               {/* Spokes - expanded content */}
               <div 
                 className={`overflow-hidden transition-all duration-300 ${
-                  expandedIndex === index ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                  isExpanded(index) ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="pt-4 border-t border-border space-y-4">
@@ -226,7 +236,7 @@ const TopicalExpertise = () => {
               </div>
 
               {/* Collapsed state hint */}
-              {expandedIndex !== index && (
+              {!isExpanded(index) && (
                 <p className="text-accent-blue text-xs font-medium">
                   {hub.spokes.length} specialized areas — click to explore
                 </p>
