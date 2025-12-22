@@ -18,9 +18,9 @@ const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     },
     {
-      title: "Social Media That Builds Trust",
-      description: "Organic reach isn't dead—it's strategic. We create consistent, branded content that builds local authority and keeps your clients top-of-mind in their markets.",
-      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80",
+      title: "Content Marketing That Builds Authority",
+      description: "Thin content doesn't rank. We create strategic, topical content that establishes thought leadership, answers what your audience is searching, and signals expertise to both Google and AI.",
+      image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&q=80",
     },
     {
       title: "Email Marketing That Nurtures & Converts",

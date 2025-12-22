@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Users, Award } from "lucide-react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Share2, FileText, Award } from "lucide-react";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
@@ -16,15 +16,31 @@ const TopicalExpertise = () => {
         },
         {
           title: "Technical SEO for Multi-Location",
-          description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy."
+          description: "Site architecture, internal linking, crawlability fixes, and Core Web Vitals optimization that help search engines understand your client's service area hierarchy."
         },
         {
-          title: "Local Content Strategy",
-          description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries."
+          title: "Service Area Page Development",
+          description: "Unique, valuable pages for each city, neighborhood, and service area that rank for local intent queries and convert visitors into leads."
         },
         {
           title: "Local Link Acquisition",
-          description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
+          description: "Strategic outreach to local publications, sponsorships, and community organizations that build geographic authority signals Google trusts."
+        },
+        {
+          title: "Competitor Gap Analysis",
+          description: "Deep analysis of what's working for local competitors—keywords they rank for, backlinks they've earned, and content gaps you can exploit."
+        },
+        {
+          title: "Local Schema Implementation",
+          description: "LocalBusiness, Service, and FAQ schema markup that helps search engines understand business details and display rich results."
+        },
+        {
+          title: "Internal Linking Architecture",
+          description: "Strategic internal link structures that distribute authority to priority pages and help users navigate location-based content."
+        },
+        {
+          title: "Mobile-First Optimization",
+          description: "Speed, usability, and conversion optimization for mobile users—where most local searches happen."
         }
       ]
     },
@@ -48,6 +64,22 @@ const TopicalExpertise = () => {
         {
           title: "Local Pack Ranking Strategy",
           description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches."
+        },
+        {
+          title: "GBP Post Strategy",
+          description: "Regular posting cadence with offers, updates, and events that signal activity and engagement to Google's algorithm."
+        },
+        {
+          title: "Photo & Video Optimization",
+          description: "Geotagged imagery, virtual tours, and video content that increases engagement and time-on-listing metrics."
+        },
+        {
+          title: "Q&A Management",
+          description: "Proactive question seeding and response management that controls the narrative and captures featured snippet opportunities."
+        },
+        {
+          title: "Multi-Location Management",
+          description: "Scalable systems for managing dozens or hundreds of locations with consistent optimization and reporting."
         }
       ]
     },
@@ -71,6 +103,22 @@ const TopicalExpertise = () => {
         {
           title: "Call Tracking & Attribution",
           description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions."
+        },
+        {
+          title: "Negative Keyword Management",
+          description: "Ongoing refinement of negative keyword lists to eliminate wasted spend and improve lead quality over time."
+        },
+        {
+          title: "Ad Copy Testing & Optimization",
+          description: "Continuous A/B testing of headlines, descriptions, and CTAs to improve click-through and conversion rates."
+        },
+        {
+          title: "Local Service Ads (LSA)",
+          description: "Google Guaranteed and Google Screened campaign management for service businesses that qualify."
+        },
+        {
+          title: "Performance Max for Local",
+          description: "AI-powered campaign structures that leverage Google's machine learning for local lead generation at scale."
         }
       ]
     },
@@ -94,29 +142,69 @@ const TopicalExpertise = () => {
         {
           title: "Lead Form & Conversion Optimization",
           description: "Native lead forms, Messenger automation, and landing page integration that reduces friction and increases conversion rates."
+        },
+        {
+          title: "Video Ad Production",
+          description: "Short-form video content optimized for Reels and Stories that captures attention in the first three seconds."
+        },
+        {
+          title: "Advantage+ Campaign Management",
+          description: "Leveraging Meta's AI-powered campaign types for efficient local lead generation and audience discovery."
+        },
+        {
+          title: "Creative Fatigue Monitoring",
+          description: "Proactive creative refresh cycles that maintain performance before ad fatigue tanks results."
+        },
+        {
+          title: "Cross-Platform Attribution",
+          description: "Connecting Meta ad performance to actual leads and revenue using proper tracking and CRM integration."
         }
       ]
     },
     {
-      icon: Users,
-      title: "Organic Social Media",
-      summary: "Maintain consistent brand presence and community engagement across social platforms.",
+      icon: FileText,
+      title: "Content Marketing",
+      summary: "Build topical authority, rank for informational queries, and position your clients as thought leaders that AI models cite.",
       spokes: [
         {
-          title: "Content Calendar Management",
-          description: "Strategic posting schedules, content themes, and platform-specific formats that maintain engagement without overwhelming clients."
+          title: "Topical Content Strategy",
+          description: "Comprehensive content planning that builds topical authority around core services—the kind of depth that signals expertise to Google and AI."
         },
         {
-          title: "Community Engagement",
-          description: "Comment management, direct message handling, and proactive engagement that builds authentic local relationships."
+          title: "Service-Focused Pillar Content",
+          description: "In-depth guides and resources that establish expertise on core services and support internal linking to conversion pages."
         },
         {
-          title: "Local Content Creation",
-          description: "Behind-the-scenes content, team spotlights, and community involvement posts that humanize local service brands."
+          title: "Geographic Content Writing",
+          description: "Location-specific content that demonstrates local expertise and captures geographic search intent across service areas."
         },
         {
-          title: "Platform Strategy & Optimization",
-          description: "Profile optimization, hashtag research, and algorithm-friendly posting strategies across Facebook, Instagram, and LinkedIn."
+          title: "People Also Ask Optimization",
+          description: "Question-focused content structured to capture featured snippets and People Also Ask boxes for informational queries."
+        },
+        {
+          title: "Power Posts & Linkable Assets",
+          description: "High-value resources designed to earn backlinks naturally—original research, tools, comprehensive guides, and industry reports."
+        },
+        {
+          title: "AI Visibility & Citation Strategy",
+          description: "Content structured for AI model training and citation—clear, authoritative, well-sourced content that LLMs reference in answers."
+        },
+        {
+          title: "Blog Content Production",
+          description: "Consistent publishing cadence with SEO-optimized articles that capture long-tail queries and build topical authority over time."
+        },
+        {
+          title: "Content Refresh & Optimization",
+          description: "Regular audits and updates to existing content that maintain rankings and improve performance as search intent evolves."
+        },
+        {
+          title: "FAQ & Knowledge Base Content",
+          description: "Structured Q&A content that captures voice search queries and provides clear answers search engines can extract."
+        },
+        {
+          title: "Case Study & Social Proof Content",
+          description: "Results-focused content that demonstrates expertise and builds trust with prospects researching solutions."
         }
       ]
     },
@@ -140,6 +228,22 @@ const TopicalExpertise = () => {
         {
           title: "Reputation & Trust Management",
           description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation."
+        },
+        {
+          title: "HARO & Expert Commentary",
+          description: "Responding to journalist queries and providing expert quotes that earn high-authority backlinks from news publications."
+        },
+        {
+          title: "Guest Posting & Thought Leadership",
+          description: "Strategic content placement on industry publications that builds authority and drives referral traffic."
+        },
+        {
+          title: "Podcast & Interview Placements",
+          description: "Securing guest appearances on relevant podcasts and interview features that build personal and brand authority."
+        },
+        {
+          title: "Award Submissions & Recognition",
+          description: "Identifying and pursuing industry awards, certifications, and recognition opportunities that build credibility signals."
         }
       ]
     }
@@ -207,7 +311,7 @@ const TopicalExpertise = () => {
               {/* Spokes - expanded content */}
               <div 
                 className={`overflow-hidden transition-all duration-300 ${
-                  isExpanded(index) ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                  isExpanded(index) ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="pt-4 border-t border-border space-y-4">
