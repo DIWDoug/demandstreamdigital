@@ -32,7 +32,7 @@ const ScalableFulfillment = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="mb-6 text-foreground">
-            <span className="text-pop-underline">Scalable</span> White-Label Local Fulfillment
+            <span className="text-pop">Scalable</span> White-Label Local Fulfillment
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Dialed-In Web removes the burden of execution while preserving your control over every aspect of your agency.
