@@ -21,9 +21,9 @@ const Hero = () => {
       />
 
       <div className="container mx-auto px-6 lg:px-8 py-32 lg:py-40 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-6 animate-fade-in-up">
+          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
             <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
               White-Label Local Digital Marketing Partner
@@ -31,20 +31,20 @@ const Hero = () => {
             <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold leading-tight mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s" }}>
+          {/* Main Headline - improved line height */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
             White-Label Local{" "}
             <span className="text-cta drop-shadow-[0_0_30px_hsl(var(--cta)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
             You Can Trust
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          {/* Subheadline - more breathing room */}
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.1s" }}>
             Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and organic social without building internal fulfillment teams. All execution is delivered under your brand.
           </p>
 
           {/* Premium positioning line */}
-          <p className="text-base md:text-lg text-text-muted italic mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base md:text-lg text-text-muted italic mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Built for agencies focused on retention, not churn.
           </p>
 
