@@ -28,7 +28,7 @@ const LocalGrowthEngine = () => {
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+    <section className="py-24 lg:py-32 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Book Stack with Author in Front - matching reference layout */}
@@ -66,33 +66,33 @@ const LocalGrowthEngine = () => {
             
             {/* Author info at bottom left */}
             <div className="absolute bottom-0 left-4 lg:left-8 z-20">
-              <p className="text-xl lg:text-2xl font-semibold text-foreground">Doug Bryson</p>
-              <p className="text-text-secondary text-sm">Founder & CEO</p>
-              <div className="w-16 h-1 bg-cta mt-2" />
+              <p className="text-xl lg:text-2xl font-semibold text-gray-900">Doug Bryson</p>
+              <p className="text-gray-600 text-sm">Founder & CEO</p>
+              <div className="w-16 h-1 bg-[hsl(76,42%,41%)] mt-2" />
             </div>
           </div>
 
           {/* Right: Content */}
           <div>
-            <p className="text-text-secondary text-lg mb-2">Discover How To</p>
-            <h2 className="text-foreground mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+            <p className="text-gray-500 text-lg mb-2">Discover How To</p>
+            <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
               Scale Your Agency<br />
-              <span className="text-cta">Without the Chaos</span>
+              <span className="text-[hsl(76,42%,35%)]">Without the Chaos</span>
             </h2>
             
-            <div className="w-16 h-1 bg-cta mb-8" />
+            <div className="w-16 h-1 bg-[hsl(76,42%,41%)] mb-8" />
 
-            <h3 className="text-xl font-semibold text-foreground mb-4">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               The Framework for White-Label Local Marketing That Actually Works
             </h3>
             
-            <p className="text-text-secondary mb-6">
+            <p className="text-gray-600 mb-6">
               If you're an agency owner looking to add local marketing services without hiring specialists 
               or burning through freelancers, you've found the right resource. The Local Growth Engine 
               is the methodology behind $2M+ in retainer revenue generated for our agency partners.
             </p>
 
-            <p className="text-text-secondary mb-8">
+            <p className="text-gray-600 mb-8">
               Inside, you'll discover the three-layer system we use to deliver consistent results across 
               Local SEO, Google Maps, paid media, and reputation management — all white-labeled and 
               built for scale.
@@ -109,7 +109,7 @@ const LocalGrowthEngine = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="flex-1 px-4 py-3 rounded-lg bg-surface-elevated border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all"
+                      className="flex-1 px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[hsl(76,42%,41%)]/50 focus:border-[hsl(76,42%,41%)] transition-all"
                     />
                     <button
                       type="submit"
@@ -129,15 +129,15 @@ const LocalGrowthEngine = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-cta/10 border border-cta/20 max-w-md">
-                <CheckCircle2 className="h-5 w-5 text-cta flex-shrink-0" />
-                <p className="text-foreground">
+              <div className="flex items-center gap-3 p-4 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 max-w-md">
+                <CheckCircle2 className="h-5 w-5 text-[hsl(76,42%,35%)] flex-shrink-0" />
+                <p className="text-gray-900">
                   You're on the list! We'll be in touch soon.
                 </p>
               </div>
             )}
 
-            <p className="text-text-muted text-sm mt-4">
+            <p className="text-gray-500 text-sm mt-4">
               Coming soon. Join the waitlist to get notified + exclusive bonus content.
             </p>
           </div>
