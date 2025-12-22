@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
@@ -110,8 +110,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side - Phone & CTA */}
-          <div className="hidden md:flex items-center gap-6">
+          {/* Right side - Phone, Search & CTA */}
+          <div className="hidden md:flex items-center gap-4">
             <a 
               href="tel:2143072995"
               className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors"
@@ -122,6 +122,12 @@ const Header = () => {
             <a href="#contact" className="btn-cta text-sm py-2.5 px-6">
               Get Started
             </a>
+            <button 
+              className="p-2.5 rounded-full bg-cta hover:bg-cta-glow transition-colors"
+              aria-label="Search"
+            >
+              <Search className="h-4 w-4 text-cta-foreground" />
+            </button>
           </div>
 
           {/* Mobile menu button */}
