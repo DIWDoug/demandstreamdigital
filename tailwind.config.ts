@@ -52,6 +52,10 @@ export default {
           DEFAULT: "hsl(var(--cta))",
           foreground: "hsl(var(--cta-foreground))",
         },
+        "accent-blue": {
+          DEFAULT: "hsl(var(--accent-blue))",
+          glow: "hsl(var(--accent-blue-glow))",
+        },
         surface: {
           dark: "hsl(var(--surface-dark))",
           elevated: "hsl(var(--surface-elevated))",

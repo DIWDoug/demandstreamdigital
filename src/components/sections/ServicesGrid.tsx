@@ -74,8 +74,8 @@ const ServicesGrid = () => {
             <div key={bucketIndex} className="relative">
               {/* Bucket Header - Visually dominant */}
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-lg bg-surface-elevated border border-border">
-                  <bucket.icon className="h-6 w-6 text-cta" />
+                <div className="p-3 rounded-lg bg-surface-elevated border border-accent-blue/30">
+                  <bucket.icon className="h-6 w-6 text-accent-blue" />
                 </div>
                 <div>
                   <h3 className="bucket-header">{bucket.name}</h3>
