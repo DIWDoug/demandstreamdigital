@@ -285,17 +285,17 @@
   /* Bucket header styling - uses accent color */
   .bucket-header {
     @apply text-2xl md:text-3xl font-bold uppercase tracking-widest;
-    color: hsl(var(--cta));
+    color: hsl(var(--accent-blue));
   }
 
   /* Icon accent styling */
   .icon-accent {
-    color: hsl(var(--cta));
+    color: hsl(var(--accent-blue));
   }
 
   .icon-accent-glow {
-    color: hsl(var(--cta));
-    filter: drop-shadow(0 0 8px hsl(var(--cta) / 0.4));
+    color: hsl(var(--accent-blue));
+    filter: drop-shadow(0 0 8px hsl(var(--accent-blue) / 0.4));
   }
 
   /* Hover scale utility */
