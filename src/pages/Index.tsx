@@ -2,7 +2,6 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
 import FeaturedIn from "@/components/sections/FeaturedIn";
-import ProofStats from "@/components/sections/ProofStats";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import ServicesGrid from "@/components/sections/ServicesGrid";
@@ -21,7 +20,6 @@ const Index = () => {
       <Hero />
       <TrustReel />
       <FeaturedIn />
-      <ProofStats />
       <ScalableFulfillment />
       <RetentionPhilosophy />
       <div id="services">
