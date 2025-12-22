@@ -109,15 +109,10 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  /* Typography */
-  h1 {
+  /* Typography - All headers use Inter Variable */
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', system-ui, sans-serif;
     @apply font-bold tracking-tight;
-  }
-  
-  h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    @apply font-semibold tracking-tight;
   }
 }
 
