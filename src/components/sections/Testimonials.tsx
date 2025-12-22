@@ -3,19 +3,19 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Dialed-In Web transformed how we handle local SEO for our clients. Their white-label fulfillment is seamless and the results speak for themselves.",
-    author: "Agency Partner",
-    role: "Digital Marketing Agency Owner"
+    quote: "They're an exceptionally dependable agency partner. They're trustworthy, they communicate clearly, and really consistently, which sometimes is rare in today's world.",
+    author: "Trevor Anderson",
+    role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "Finally, a partner who understands the agency model. They deliver consistent results without the drama.",
-    author: "Agency Partner", 
-    role: "SEO Agency Founder"
+    quote: "What I really appreciate most about the Dialed In Web team is their high standard of excellence. The attention to detail on all their projects is so strong. Their work is clean, and they stay ahead of deadlines.",
+    author: "Trevor Anderson", 
+    role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "The retention rates we've seen since partnering with Dialed-In are unmatched. Our clients stay because the work actually moves the needle.",
-    author: "Agency Partner",
-    role: "Marketing Agency Director"
+    quote: "From a customer service standpoint, they really treat our clients like they are their own. That's so important to us—knowing that our clients are in good hands throughout the entire relationship.",
+    author: "Trevor Anderson",
+    role: "Founder & CEO, Anderson Collaborative"
   }
 ];
 
