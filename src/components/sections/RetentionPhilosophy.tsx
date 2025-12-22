@@ -3,7 +3,7 @@ const RetentionPhilosophy = () => {
     <section className="py-32 lg:py-40 bg-surface-dark relative overflow-hidden">
       {/* Subtle background accent */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-primary/30 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-accent-blue/30 to-transparent blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">

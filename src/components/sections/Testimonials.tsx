@@ -67,7 +67,7 @@ const Testimonials = () => {
               className="bg-card/50 border-border/30 hover:border-border/50 transition-colors duration-300"
             >
               <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-primary/40 mb-4" />
+                <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
                 <p className="text-foreground/90 text-base leading-relaxed mb-6">
                   "{testimonial.quote}"
                 </p>

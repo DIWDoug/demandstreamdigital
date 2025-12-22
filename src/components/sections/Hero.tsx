@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
       {/* Abstract data texture overlay */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl bg-gradient-to-br from-primary/20 to-transparent" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl bg-gradient-to-br from-accent-blue/20 to-transparent" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl bg-gradient-to-tl from-muted/30 to-transparent" />
       </div>
 
