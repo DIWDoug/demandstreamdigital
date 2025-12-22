@@ -93,7 +93,7 @@ const ServicesGrid = () => {
                     key={serviceIndex}
                     className="premium-card transition-all duration-300 hover:translate-y-[-2px]"
                   >
-                    <h4 className="text-lg font-semibold text-foreground mb-2">
+                    <h4 className="text-lg text-foreground mb-2">
                       {service.title}
                     </h4>
                     <p className="text-foreground/70 text-sm font-medium mb-3">
