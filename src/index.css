@@ -92,6 +92,11 @@
     --border: 220 15% 18%;
     --input: 220 15% 15%;
     --ring: 76 42% 41%;
+
+    /* CTA tokens for dark mode - olive green #7d953d */
+    --cta: 76 42% 41%;
+    --cta-foreground: 0 0% 100%;
+    --cta-glow: 76 42% 51%;
   }
 }
 
