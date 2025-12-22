@@ -65,7 +65,7 @@ const ServicesGrid = () => {
     <section className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6 text-foreground">
             Our Core Services
           </h2>
@@ -74,53 +74,79 @@ const ServicesGrid = () => {
           </p>
         </div>
 
-        {/* Buckets with visual hierarchy */}
-        <div className="space-y-16 lg:space-y-20">
+        {/* Horizontal 3-column pillars */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {buckets.map((bucket, bucketIndex) => (
-            <div key={bucketIndex} className="relative">
-              {/* Bucket Header - Visually dominant */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-lg bg-surface-elevated border border-accent-blue/30 group-hover:border-accent-blue/50 transition-colors shadow-lg shadow-accent-blue/10">
-                  <bucket.icon className="h-6 w-6 text-accent-blue" />
-                </div>
-                <div>
-                  <h3 className="bucket-header">{bucket.name}</h3>
-                  <p className="text-text-muted text-sm mt-1">{bucket.tagline}</p>
-                </div>
+            <div 
+              key={bucketIndex} 
+              className="text-center group"
+            >
+              {/* Icon */}
+              <div className="inline-flex p-4 rounded-2xl bg-surface-elevated border border-accent-blue/20 mb-6 group-hover:border-accent-blue/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent-blue/10">
+                <bucket.icon className="h-8 w-8 text-accent-blue" />
               </div>
+              
+              {/* Name */}
+              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2 tracking-wide uppercase">
+                {bucket.name}
+              </h3>
+              
+              {/* Tagline */}
+              <p className="text-text-muted text-sm mb-6">
+                {bucket.tagline}
+              </p>
 
-              {/* Services - Nested under bucket */}
-              <div className="grid md:grid-cols-2 gap-6 pl-0 md:pl-16">
+              {/* Service list */}
+              <div className="space-y-3">
                 {bucket.services.map((service, serviceIndex) => (
-                  <div 
+                  <a 
                     key={serviceIndex}
-                    className="premium-card glow-card transition-all duration-300 hover:translate-y-[-2px]"
+                    href="#contact"
+                    className="block text-text-secondary hover:text-accent-blue transition-colors text-sm"
                   >
-                    <h4 className="text-lg text-foreground mb-2">
-                      {service.title}
-                    </h4>
-                    <p className="text-foreground/70 text-sm font-medium mb-3">
-                      {service.subtitle}
-                    </p>
-                    <p className="text-text-secondary text-sm mb-4">
-                      {service.description}
-                    </p>
-                    <a 
-                      href="#contact" 
-                      className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
-                    >
-                      {service.cta}
-                    </a>
-                  </div>
+                    {service.title.replace('White-Label ', '')}
+                  </a>
                 ))}
               </div>
-
-              {/* Subtle separator between buckets */}
-              {bucketIndex < buckets.length - 1 && (
-                <div className="section-divider mt-16 lg:mt-20" />
-              )}
             </div>
           ))}
+        </div>
+
+        {/* Divider */}
+        <div className="section-divider mb-16" />
+
+        {/* Detailed service cards below */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {buckets.flatMap((bucket, bucketIndex) => 
+            bucket.services.map((service, serviceIndex) => (
+              <div 
+                key={`${bucketIndex}-${serviceIndex}`}
+                className="premium-card glow-card transition-all duration-300 hover:translate-y-[-2px]"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <bucket.icon className="h-4 w-4 text-accent-blue" />
+                  <span className="text-xs text-accent-blue uppercase tracking-wider font-medium">
+                    {bucket.name}
+                  </span>
+                </div>
+                <h4 className="text-lg text-foreground mb-2">
+                  {service.title}
+                </h4>
+                <p className="text-foreground/70 text-sm font-medium mb-3">
+                  {service.subtitle}
+                </p>
+                <p className="text-text-secondary text-sm mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+                <a 
+                  href="#contact" 
+                  className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
+                >
+                  {service.cta}
+                </a>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </section>
