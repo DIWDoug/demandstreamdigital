@@ -61,7 +61,7 @@ const ServicesGrid = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
-            The Core 30
+            White-Label Local Digital Marketing Partner
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-foreground">
             Our Core Services
