@@ -32,7 +32,7 @@ const ContactForm = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Fulfillment in 5 Clear Steps
             </h2>
             <p className="text-lg text-text-secondary">
