@@ -23,12 +23,10 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 py-32 lg:py-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
-            <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
+          <div className="flex items-center justify-center mb-8 animate-fade-in-up">
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
               White-Label Local Digital Marketing Partner
             </p>
-            <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
           </div>
 
           {/* Main Headline - improved line height */}
