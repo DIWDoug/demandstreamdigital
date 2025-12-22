@@ -10,7 +10,6 @@ import Packages from "@/components/sections/Packages";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
-import HowItWorks from "@/components/sections/HowItWorks";
 import HowWeOperate from "@/components/sections/HowWeOperate";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
@@ -24,7 +23,6 @@ const Index = () => {
       <FeaturedIn />
       <ProofStats />
       <ScalableFulfillment />
-      <HowItWorks />
       <RetentionPhilosophy />
       <div id="services">
         <ServicesGrid />
