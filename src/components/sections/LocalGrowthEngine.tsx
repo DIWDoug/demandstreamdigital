@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import bookCover from "@/assets/local-growth-engine-cover.png";
-import authorPhoto from "@/assets/doug-bryson-headshot.jpeg";
+import authorCutout from "@/assets/doug-bryson-cutout.png";
 
 const LocalGrowthEngine = () => {
   const [email, setEmail] = useState("");
@@ -31,44 +31,44 @@ const LocalGrowthEngine = () => {
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Book Stack with Author in Front */}
-          <div className="relative flex justify-center lg:justify-start min-h-[500px] lg:min-h-[600px]">
-            {/* Book stack behind author - multiple copies fanned */}
-            <div className="absolute left-0 top-8 lg:top-12">
-              {/* Back book */}
+          {/* Left: Book Stack with Author in Front - matching reference layout */}
+          <div className="relative flex justify-center lg:justify-start min-h-[450px] lg:min-h-[550px]">
+            {/* Fanned book stack behind author */}
+            <div className="absolute left-0 lg:left-4 top-12 lg:top-16">
+              {/* Back book - most rotated */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute -left-4 top-0 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-12 opacity-60"
+                className="absolute -left-2 top-0 w-36 md:w-44 lg:w-52 drop-shadow-lg -rotate-12 opacity-70"
               />
               {/* Middle book */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute left-4 top-4 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-6 opacity-80"
+                className="absolute left-8 top-2 w-36 md:w-44 lg:w-52 drop-shadow-lg -rotate-6 opacity-85"
               />
-              {/* Front book */}
+              {/* Front book - straight */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute left-12 top-8 w-40 md:w-48 lg:w-56 drop-shadow-xl rotate-2"
+                className="absolute left-20 top-4 w-36 md:w-44 lg:w-52 drop-shadow-xl rotate-3"
               />
             </div>
             
-            {/* Author photo overlapping books */}
-            <div className="absolute right-0 lg:right-8 bottom-16 z-10">
+            {/* Author cutout overlapping books from the right */}
+            <div className="absolute right-0 lg:right-0 bottom-12 z-10">
               <img 
-                src={authorPhoto} 
+                src={authorCutout} 
                 alt="Doug Bryson" 
-                className="w-56 md:w-64 lg:w-72 rounded-lg shadow-2xl"
+                className="w-52 md:w-64 lg:w-80 object-contain drop-shadow-2xl"
               />
             </div>
             
             {/* Author info at bottom left */}
-            <div className="absolute bottom-0 left-0">
-              <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
+            <div className="absolute bottom-0 left-0 z-20">
+              <p className="text-xl lg:text-2xl font-semibold text-foreground">Doug Bryson</p>
               <p className="text-text-secondary text-sm">Founder & CEO</p>
-              <div className="w-12 h-1 bg-cta mt-2" />
+              <div className="w-16 h-1 bg-cta mt-2" />
             </div>
           </div>
 
