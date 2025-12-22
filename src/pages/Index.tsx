@@ -5,6 +5,7 @@ import FeaturedIn from "@/components/sections/FeaturedIn";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import Packages from "@/components/sections/Packages";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
@@ -26,6 +27,7 @@ const Index = () => {
       <div id="services">
         <ServicesGrid />
       </div>
+      <TopicalExpertise />
       <Packages />
       <div id="about">
         <WhatWeSolve />
