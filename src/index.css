@@ -48,6 +48,10 @@
     --cta-foreground: 0 0% 100%;
     --cta-glow: 145 70% 55%;
     
+    /* Blue accent - for icons, highlights, borders */
+    --accent-blue: 224 66% 35%;
+    --accent-blue-glow: 224 66% 45%;
+    
     --surface-dark: 220 20% 8%;
     --surface-elevated: 220 18% 12%;
     --surface-card: 220 15% 15%;
@@ -189,10 +193,20 @@
     letter-spacing: 0.1em;
   }
 
-  /* Bucket header styling */
+  /* Bucket header styling - uses blue accent */
   .bucket-header {
     @apply text-2xl md:text-3xl font-bold uppercase tracking-widest;
-    color: hsl(var(--cta));
+    color: hsl(var(--accent-blue));
+  }
+
+  /* Icon accent styling */
+  .icon-accent {
+    color: hsl(var(--accent-blue));
+  }
+
+  .icon-accent-glow {
+    color: hsl(var(--accent-blue));
+    filter: drop-shadow(0 0 8px hsl(var(--accent-blue) / 0.4));
   }
 }
 
