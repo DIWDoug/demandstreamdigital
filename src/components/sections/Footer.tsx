@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-display font-bold text-foreground mb-4">
+            <h3 className="text-xl font-bold text-foreground mb-4">
               DialedinWeb
             </h3>
             <p className="text-sm text-text-secondary leading-relaxed">
