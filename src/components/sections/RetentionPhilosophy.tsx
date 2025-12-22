@@ -19,8 +19,8 @@ const RetentionPhilosophy = () => {
           </p>
 
           {/* The Mantra - Visually dominant */}
-          <h2 className="mantra mb-16 whitespace-nowrap">
-            relationship. results. good marketing.
+          <h2 className="mantra mb-16">
+            relationship. results.<br />good marketing.
           </h2>
 
           {/* Supporting text - reduced */}
