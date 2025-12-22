@@ -10,6 +10,7 @@ import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
 import HowWeOperate from "@/components/sections/HowWeOperate";
+import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 
@@ -32,6 +33,7 @@ const Index = () => {
       <Testimonials />
       <ContactForm />
       <HowWeOperate />
+      <FAQ />
       <FinalCTA />
       <Footer />
     </div>
