@@ -234,6 +234,10 @@ const TopicalExpertise = () => {
           description: "Press release distribution, journalist outreach, and earned media coverage that builds brand authority and backlink profiles."
         },
         {
+          title: "Vendor & Partner Testimonial Links",
+          description: "Leveraging existing business relationships—accountants, attorneys, suppliers, software vendors—by offering testimonials in exchange for backlinks from their sites."
+        },
+        {
           title: "Industry Directory Listings",
           description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites that signal expertise."
         },
