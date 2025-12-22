@@ -58,8 +58,24 @@ const TopicalExpertise = () => {
           description: "Systematic review acquisition strategies and professional response management that builds trust and improves rankings."
         },
         {
-          title: "Citation Building & Cleanup",
-          description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms that validate business legitimacy."
+          title: "Structured Citation Consistency",
+          description: "NAP accuracy across 75+ directories, ensuring name, address, and phone consistency that Google trusts for local ranking signals."
+        },
+        {
+          title: "Data Aggregator Distribution",
+          description: "Strategic submissions to major data aggregators like Data Axle, Localeze, and Foursquare—the sources that feed hundreds of downstream directories."
+        },
+        {
+          title: "Industry-Specific Platform Listings",
+          description: "Placement on vertical-specific directories that validate business legitimacy—from home services to healthcare to legal industry platforms."
+        },
+        {
+          title: "Unstructured Citations",
+          description: "Video, image, audio, and social media mentions that create brand signals without traditional NAP format—YouTube, podcasts, news coverage, and press."
+        },
+        {
+          title: "Social Foundation Citations",
+          description: "Optimized social profiles on Facebook, LinkedIn, Instagram, and X that reinforce brand consistency and create authority signals."
         },
         {
           title: "Local Pack Ranking Strategy",
