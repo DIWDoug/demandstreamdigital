@@ -32,40 +32,40 @@ const LocalGrowthEngine = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Book Stack with Author in Front - matching reference layout */}
-          <div className="relative flex justify-center lg:justify-start min-h-[450px] lg:min-h-[550px]">
+          <div className="relative flex justify-center lg:justify-start min-h-[480px] lg:min-h-[580px]">
             {/* Fanned book stack behind author */}
-            <div className="absolute left-0 lg:left-4 top-12 lg:top-16">
+            <div className="absolute left-4 lg:left-8 top-8 lg:top-12">
               {/* Back book - most rotated */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute -left-2 top-0 w-36 md:w-44 lg:w-52 drop-shadow-lg -rotate-12 opacity-70"
+                className="absolute left-0 top-0 w-32 md:w-40 lg:w-48 drop-shadow-lg -rotate-12 opacity-60"
               />
               {/* Middle book */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute left-8 top-2 w-36 md:w-44 lg:w-52 drop-shadow-lg -rotate-6 opacity-85"
+                className="absolute left-10 top-2 w-32 md:w-40 lg:w-48 drop-shadow-lg -rotate-4 opacity-80"
               />
-              {/* Front book - straight */}
+              {/* Front book - slight rotation */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute left-20 top-4 w-36 md:w-44 lg:w-52 drop-shadow-xl rotate-3"
+                className="absolute left-20 top-4 w-32 md:w-40 lg:w-48 drop-shadow-xl rotate-6"
               />
             </div>
             
             {/* Author cutout overlapping books from the right */}
-            <div className="absolute right-0 lg:right-0 bottom-12 z-10">
+            <div className="absolute right-4 lg:right-8 bottom-16 z-10">
               <img 
                 src={authorCutout} 
                 alt="Doug Bryson" 
-                className="w-52 md:w-64 lg:w-80 object-contain drop-shadow-2xl"
+                className="w-48 md:w-56 lg:w-72 object-contain drop-shadow-2xl"
               />
             </div>
             
             {/* Author info at bottom left */}
-            <div className="absolute bottom-0 left-0 z-20">
+            <div className="absolute bottom-0 left-4 lg:left-8 z-20">
               <p className="text-xl lg:text-2xl font-semibold text-foreground">Doug Bryson</p>
               <p className="text-text-secondary text-sm">Founder & CEO</p>
               <div className="w-16 h-1 bg-cta mt-2" />
