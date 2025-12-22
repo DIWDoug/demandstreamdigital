@@ -1,63 +1,31 @@
-import { Eye, Target, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const ServicesGrid = () => {
-  const buckets = [
+  const services = [
     {
-      icon: Eye,
-      name: "Visibility",
-      tagline: "Be found where it matters",
-      services: [
-        {
-          title: "White-Label Local SEO",
-          subtitle: "Local organic visibility built for real markets.",
-          description: "Our white-label local SEO improves rankings for location-based searches through technical cleanup, on-page optimization, local content alignment, and relevance signals. Scopes are adjusted by city size, competition, industry, and existing authority so agencies can deliver consistent local growth without relying on generic SEO playbooks.",
-          cta: "Learn more about Local SEO →"
-        },
-        {
-          title: "White-Label Google Maps",
-          subtitle: "Visibility where local intent is highest.",
-          description: "We optimize and manage Google Business Profiles to improve Maps rankings and local pack visibility. This includes category strategy, citation alignment, review support, and ongoing optimization informed by local competition. Scopes adjust for market density, proximity challenges, and industry pressure.",
-          cta: "Learn more about Google Maps →"
-        }
-      ]
+      title: "Local SEO That Dominates",
+      description: "Outdated SEO tactics waste time and money. We build location-specific visibility through technical optimization, content alignment, and authority signals that actually move rankings.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     },
     {
-      icon: Target,
-      name: "Demand",
-      tagline: "Turn attention into action",
-      services: [
-        {
-          title: "White-Label Google Ads",
-          subtitle: "Paid search designed for local lead generation.",
-          description: "We manage locally focused Google Ads campaigns built for calls and form leads. Campaigns are structured around service areas, keyword intent, and competitive spend levels. Strategy and budgeting adapt to each local market and industry economics, giving agencies a defensible paid offering.",
-          cta: "Learn more about Google Ads →"
-        },
-        {
-          title: "White-Label Meta Ads",
-          subtitle: "Local awareness and demand generation.",
-          description: "We run Facebook and Instagram ad campaigns that support local lead generation and remarketing. Strategies are customized by geography, service value, and industry buying behavior. Fulfillment is delivered under your brand so you can offer paid social without building internal media capacity.",
-          cta: "Learn more about Meta Ads →"
-        }
-      ]
+      title: "Google Maps Visibility That Converts",
+      description: "Your clients need to own the local 3-pack. We optimize Google Business Profiles, manage reviews, and build citation authority to drive calls directly from Maps.",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80",
     },
     {
-      icon: Award,
-      name: "Authority",
-      tagline: "Build lasting credibility",
-      services: [
-        {
-          title: "White-Label Organic Social",
-          subtitle: "Consistent local presence without the overhead.",
-          description: "We provide organic social execution designed to support local authority and credibility. Content cadence, tone, and platform focus are aligned to the client's location and industry norms. Deliverables are white-labeled so agencies maintain a consistent brand presence for clients.",
-          cta: "Learn more about Organic Social →"
-        },
-        {
-          title: "White-Label Local Authority Building",
-          subtitle: "Trust signals that matter locally.",
-          description: "Local authority building strengthens credibility through citations, local mentions, PR-style placements, community relevance, and discussion signals. This work supports both organic and Maps performance, especially in competitive local markets where authority gaps limit growth and ranking stability.",
-          cta: "Learn more about Authority Building →"
-        }
-      ]
+      title: "Paid Ads That Maximize ROI",
+      description: "Ads that don't generate leads are useless. We engineer Google and Meta campaigns that make every dollar work harder, bringing in calls, forms, and real growth—fast.",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
+    },
+    {
+      title: "Social Media That Builds Trust",
+      description: "Organic reach isn't dead—it's strategic. We create consistent, branded content that builds local authority and keeps your clients top-of-mind in their markets.",
+      image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80",
+    },
+    {
+      title: "Authority Building That Lasts",
+      description: "Trust signals compound over time. We build credibility through citations, local mentions, PR placements, and community relevance that support long-term ranking stability.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
     }
   ];
 
@@ -67,86 +35,47 @@ const ServicesGrid = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6 text-foreground">
-            Our Core Services
+            Services Designed to Win
           </h2>
           <p className="text-lg text-text-secondary">
-            Three pillars of local marketing execution, delivered under your brand.
+            Full-service local marketing execution, delivered under your brand.
           </p>
         </div>
 
-        {/* Horizontal 3-column pillars */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16">
-          {buckets.map((bucket, bucketIndex) => (
-            <div 
-              key={bucketIndex} 
-              className="text-center group"
+        {/* Horizontal scrolling cards on mobile, grid on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {services.map((service, index) => (
+            <a
+              key={index}
+              href="#contact"
+              className="group relative overflow-hidden rounded-xl aspect-[3/4] lg:aspect-[2/3] cursor-pointer"
             >
-              {/* Icon */}
-              <div className="inline-flex p-4 rounded-2xl bg-surface-elevated border border-accent-blue/20 mb-6 group-hover:border-accent-blue/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent-blue/10">
-                <bucket.icon className="h-8 w-8 text-accent-blue" />
-              </div>
-              
-              {/* Name */}
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-2 tracking-wide uppercase">
-                {bucket.name}
-              </h3>
-              
-              {/* Tagline */}
-              <p className="text-text-muted text-sm mb-6">
-                {bucket.tagline}
-              </p>
-
-              {/* Service list */}
-              <div className="space-y-3">
-                {bucket.services.map((service, serviceIndex) => (
-                  <a 
-                    key={serviceIndex}
-                    href="#contact"
-                    className="block text-text-secondary hover:text-accent-blue transition-colors text-sm"
-                  >
-                    {service.title.replace('White-Label ', '')}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Divider */}
-        <div className="section-divider mb-16" />
-
-        {/* Detailed service cards below */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {buckets.flatMap((bucket, bucketIndex) => 
-            bucket.services.map((service, serviceIndex) => (
+              {/* Background image */}
               <div 
-                key={`${bucketIndex}-${serviceIndex}`}
-                className="premium-card glow-card transition-all duration-300 hover:translate-y-[-2px]"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <bucket.icon className="h-4 w-4 text-accent-blue" />
-                  <span className="text-xs text-accent-blue uppercase tracking-wider font-medium">
-                    {bucket.name}
-                  </span>
-                </div>
-                <h4 className="text-lg text-foreground mb-2">
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              
+              {/* Blue overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,70%,35%)] via-[hsl(200,70%,40%)/90%] to-[hsl(200,70%,45%)/80%] mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[hsl(200,70%,40%)]/60" />
+              
+              {/* Content */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                <h3 className="text-lg lg:text-xl font-bold mb-3 leading-tight">
                   {service.title}
-                </h4>
-                <p className="text-foreground/70 text-sm font-medium mb-3">
-                  {service.subtitle}
-                </p>
-                <p className="text-text-secondary text-sm mb-4 line-clamp-3">
+                </h3>
+                <p className="text-sm text-white/80 leading-relaxed mb-6 line-clamp-4">
                   {service.description}
                 </p>
-                <a 
-                  href="#contact" 
-                  className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
-                >
-                  {service.cta}
-                </a>
+                
+                {/* Arrow button */}
+                <div className="w-12 h-12 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                  <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
               </div>
-            ))
-          )}
+            </a>
+          ))}
         </div>
       </div>
     </section>
