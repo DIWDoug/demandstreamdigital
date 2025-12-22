@@ -8,14 +8,14 @@ const testimonials = [
     role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "What I really appreciate most about the Dialed In Web team is their high standard of excellence. The attention to detail on all their projects is so strong. Their work is clean, and they stay ahead of deadlines.",
-    author: "Trevor Anderson", 
-    role: "Founder & CEO, Anderson Collaborative"
+    quote: "The last thing you want to worry about is, is a vendor doing a good job? Are they reliable? Are they good at what they do? Doug and his team just absolutely crushed it.",
+    author: "Jeremy", 
+    role: "Digital Marketing Agency Owner, Florida"
   },
   {
-    quote: "From a customer service standpoint, they really treat our clients like they are their own. That's so important to us—knowing that our clients are in good hands throughout the entire relationship.",
-    author: "Trevor Anderson",
-    role: "Founder & CEO, Anderson Collaborative"
+    quote: "Our retention rate on SEO is extremely high, probably about 90%. I can go to sleep every night knowing that we're doing everything we can to help a client.",
+    author: "Jeremy",
+    role: "Digital Marketing Agency Owner, Florida"
   }
 ];
 
