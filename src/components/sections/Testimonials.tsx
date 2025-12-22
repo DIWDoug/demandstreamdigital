@@ -67,10 +67,10 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="bg-gradient-to-br from-card/80 to-card/50 border-border/30 hover:border-cta/30 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20"
+              className="bg-gradient-to-br from-card/80 to-card/50 border-border/30 hover:border-accent-blue/30 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20"
             >
               <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-cta/40 mb-4" />
+                <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
                 <p className="text-foreground/90 text-base mb-6">
                   "{testimonial.quote}"
                 </p>
