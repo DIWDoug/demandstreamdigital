@@ -5,12 +5,12 @@ const ServicesGrid = () => {
     {
       title: "Local SEO That Dominates",
       description: "Outdated SEO tactics waste time and money. We build location-specific visibility through technical optimization, content alignment, and authority signals that actually move rankings.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80",
     },
     {
       title: "Google Maps Visibility That Converts",
       description: "Your clients need to own the local 3-pack. We optimize Google Business Profiles, manage reviews, and build citation authority to drive calls directly from Maps.",
-      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
     },
     {
       title: "Paid Ads That Maximize ROI",
@@ -20,12 +20,12 @@ const ServicesGrid = () => {
     {
       title: "Social Media That Builds Trust",
       description: "Organic reach isn't dead—it's strategic. We create consistent, branded content that builds local authority and keeps your clients top-of-mind in their markets.",
-      image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80",
     },
     {
       title: "Email Marketing That Nurtures & Converts",
       description: "Leads go cold without follow-up. We build automated email sequences that nurture prospects, re-engage past customers, and turn one-time buyers into repeat clients.",
-      image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
     }
   ];
 
