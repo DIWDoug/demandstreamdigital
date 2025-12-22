@@ -117,31 +117,51 @@
 }
 
 @layer components {
-  /* Premium CTA Button - Green for ACTION only */
+  /* Premium CTA Button - Enhanced with stronger glow */
   .btn-cta {
     @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold;
     @apply rounded-lg transition-all duration-300 ease-out;
-    background: hsl(var(--cta));
+    background: linear-gradient(135deg, hsl(var(--cta)), hsl(var(--cta-glow)));
     color: hsl(var(--cta-foreground));
-    box-shadow: 0 0 30px hsl(var(--cta) / 0.3);
+    box-shadow: 
+      0 4px 15px hsl(var(--cta) / 0.4),
+      0 0 40px hsl(var(--cta) / 0.2);
   }
   
   .btn-cta:hover {
-    background: hsl(var(--cta-glow));
-    box-shadow: 0 0 40px hsl(var(--cta) / 0.5);
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, hsl(var(--cta-glow)), hsl(var(--cta)));
+    box-shadow: 
+      0 6px 25px hsl(var(--cta) / 0.5),
+      0 0 60px hsl(var(--cta) / 0.3);
+    transform: translateY(-3px);
   }
 
-  /* Subtle card styling - NO green borders */
+  /* Premium card with glass effect */
   .premium-card {
-    @apply rounded-xl p-6;
-    background: hsl(var(--surface-card));
+    @apply rounded-xl p-6 transition-all duration-300;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--surface-card)),
+      hsl(var(--surface-elevated) / 0.8)
+    );
     border: 1px solid hsl(var(--border-subtle));
+    box-shadow: 
+      0 4px 20px hsl(0 0% 0% / 0.2),
+      inset 0 1px 0 hsl(0 0% 100% / 0.05);
   }
 
   .premium-card:hover {
-    border-color: hsl(var(--border-card));
-    background: hsl(var(--surface-elevated));
+    border-color: hsl(var(--cta) / 0.3);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--surface-elevated)),
+      hsl(var(--surface-card))
+    );
+    box-shadow: 
+      0 8px 30px hsl(0 0% 0% / 0.3),
+      0 0 40px hsl(var(--cta) / 0.1),
+      inset 0 1px 0 hsl(0 0% 100% / 0.08);
+    transform: translateY(-2px);
   }
 
   /* Section dividers */
@@ -155,19 +175,26 @@
     );
   }
 
-  /* Pill badges for features */
+  /* Pill badges for features - enhanced */
   .pill-badge {
-    @apply inline-flex items-center px-4 py-2 text-sm rounded-full;
+    @apply inline-flex items-center px-4 py-2 text-sm rounded-full transition-all duration-300;
     background: hsl(var(--surface-elevated));
     border: 1px solid hsl(var(--border-subtle));
     color: hsl(var(--text-secondary));
   }
 
-  /* Premium gradient backgrounds */
+  .pill-badge:hover {
+    border-color: hsl(var(--cta) / 0.4);
+    color: hsl(var(--text-primary));
+    transform: translateY(-1px);
+  }
+
+  /* Premium gradient backgrounds - enhanced */
   .gradient-hero {
     background: 
+      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(76 42% 20% / 0.3), transparent),
       radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 30% 15% / 0.8), transparent),
-      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(145 50% 20% / 0.15), transparent),
+      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(76 42% 25% / 0.15), transparent),
       linear-gradient(180deg, hsl(var(--surface-dark)), hsl(220 20% 4%));
   }
 
@@ -185,6 +212,15 @@
     background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 10% 70%));
   }
 
+  /* Stats number styling */
+  .stat-number {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+    background: linear-gradient(135deg, hsl(var(--cta)), hsl(var(--cta-glow)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   /* Mantra/belief statement styling */
   .mantra {
     font-family: 'Inter', system-ui, sans-serif;
@@ -193,20 +229,29 @@
     letter-spacing: 0.1em;
   }
 
-  /* Bucket header styling - uses blue accent */
+  /* Bucket header styling - uses accent color */
   .bucket-header {
     @apply text-2xl md:text-3xl font-bold uppercase tracking-widest;
-    color: hsl(var(--accent-blue));
+    color: hsl(var(--cta));
   }
 
   /* Icon accent styling */
   .icon-accent {
-    color: hsl(var(--accent-blue));
+    color: hsl(var(--cta));
   }
 
   .icon-accent-glow {
-    color: hsl(var(--accent-blue));
-    filter: drop-shadow(0 0 8px hsl(var(--accent-blue) / 0.4));
+    color: hsl(var(--cta));
+    filter: drop-shadow(0 0 8px hsl(var(--cta) / 0.4));
+  }
+
+  /* Hover scale utility */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
   }
 }
 
