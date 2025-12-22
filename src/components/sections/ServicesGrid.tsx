@@ -42,36 +42,47 @@ const ServicesGrid = () => {
           </p>
         </div>
 
-        {/* Horizontal scrolling cards on mobile, grid on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {/* Horizontal cards with expand on hover */}
+        <div className="flex gap-4 h-[500px] lg:h-[550px]">
           {services.map((service, index) => (
             <a
               key={index}
               href="#contact"
-              className="group relative overflow-hidden rounded-xl aspect-[3/4] lg:aspect-[2/3] cursor-pointer"
+              className="group relative overflow-hidden rounded-xl flex-1 hover:flex-[2] transition-all duration-500 ease-out cursor-pointer"
             >
               {/* Background image */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               
               {/* Green overlay - brand olive green */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(76,42%,20%)] via-[hsl(76,42%,30%)/90%] to-[hsl(76,42%,35%)/80%] mix-blend-multiply" />
-              <div className="absolute inset-0 bg-[hsl(76,42%,30%)]/70" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(76,42%,15%)] via-[hsl(76,42%,25%)/90%] to-[hsl(76,42%,30%)/70%]" />
+              <div className="absolute inset-0 bg-[hsl(76,42%,28%)]/75 mix-blend-multiply" />
               
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
                 <h3 className="text-lg lg:text-xl font-bold mb-3 leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-sm text-white/80 leading-relaxed mb-6 line-clamp-4">
+                <p className="text-sm text-white/80 leading-relaxed mb-6 line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
                   {service.description}
                 </p>
                 
-                {/* Arrow button */}
-                <div className="w-12 h-12 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                  <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                {/* Arrow button - transforms to LEARN MORE on hover */}
+                <div className="flex items-center">
+                  {/* Compact arrow (default state) */}
+                  <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center group-hover:hidden transition-all duration-300">
+                    <ArrowRight className="h-5 w-5 text-[hsl(76,42%,30%)]" />
+                  </div>
+                  
+                  {/* Expanded LEARN MORE button (hover state) */}
+                  <div className="hidden group-hover:flex items-center justify-between w-full bg-white rounded-lg px-5 py-3 transition-all duration-300">
+                    <span className="text-[hsl(76,42%,30%)] font-semibold text-sm uppercase tracking-wider">
+                      Learn More
+                    </span>
+                    <ArrowRight className="h-5 w-5 text-[hsl(76,42%,30%)]" />
+                  </div>
                 </div>
               </div>
             </a>
