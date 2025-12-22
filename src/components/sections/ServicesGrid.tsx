@@ -56,9 +56,9 @@ const ServicesGrid = () => {
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               
-              {/* Blue overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(200,70%,35%)] via-[hsl(200,70%,40%)/90%] to-[hsl(200,70%,45%)/80%] mix-blend-multiply" />
-              <div className="absolute inset-0 bg-[hsl(200,70%,40%)]/60" />
+              {/* Green overlay - brand olive green */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(76,42%,20%)] via-[hsl(76,42%,30%)/90%] to-[hsl(76,42%,35%)/80%] mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[hsl(76,42%,30%)]/70" />
               
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
