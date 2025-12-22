@@ -116,7 +116,7 @@
 
   /* Typography Hierarchy - Inter for all headings, Lora for body */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif !important;
     @apply font-semibold tracking-tight;
   }
 
@@ -140,8 +140,13 @@
     @apply text-sm md:text-base font-medium;
   }
 
+  /* Headings spans should also use Inter */
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-family: 'Inter', system-ui, sans-serif !important;
+  }
+
   /* Body text uses Lora */
-  p, li, span, label {
+  p, li, label {
     font-family: 'Lora', Georgia, serif;
   }
 
