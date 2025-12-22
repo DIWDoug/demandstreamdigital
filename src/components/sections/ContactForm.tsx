@@ -70,16 +70,19 @@ const ContactForm = () => {
       
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left Column - Header + Accordion */}
-            <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 text-foreground">
-                Fulfillment in 5 Clear Steps
-              </h2>
-              <p className="text-lg text-text-secondary mb-10">
-                A predictable onboarding process designed for agencies that value control and execution.
-              </p>
+          {/* Centered Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 text-foreground">
+              Fulfillment in 5 Clear Steps
+            </h2>
+            <p className="text-lg text-text-secondary">
+              A predictable onboarding process designed for agencies that value control and execution.
+            </p>
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Left Column - Accordion */}
+            <div>
               <Accordion type="single" collapsible defaultValue="item-4" className="space-y-3">
                 {steps.map((step, index) => (
                   <AccordionItem 
