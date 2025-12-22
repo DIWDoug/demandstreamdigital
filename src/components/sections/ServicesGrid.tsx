@@ -60,7 +60,7 @@ const ServicesGrid = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
+          <p className="text-sm text-cta uppercase tracking-widest mb-4">
             White-Label Local Digital Marketing Partner
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
@@ -77,8 +77,8 @@ const ServicesGrid = () => {
             <div key={bucketIndex} className="relative">
               {/* Bucket Header - Visually dominant */}
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-lg bg-surface-elevated border border-accent-blue/30">
-                  <bucket.icon className="h-6 w-6 text-accent-blue" />
+                <div className="p-3 rounded-lg bg-surface-elevated border border-cta/30 group-hover:border-cta/50 transition-colors shadow-lg shadow-cta/10">
+                  <bucket.icon className="h-6 w-6 text-cta" />
                 </div>
                 <div>
                   <h3 className="bucket-header">{bucket.name}</h3>

@@ -3,15 +3,16 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
-      {/* Abstract data texture overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl bg-gradient-to-br from-accent-blue/20 to-transparent" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl bg-gradient-to-tl from-muted/30 to-transparent" />
+      {/* Enhanced abstract data texture overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl bg-gradient-to-br from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl bg-gradient-to-tl from-cta/20 to-transparent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl bg-gradient-radial from-cta/10 to-transparent" />
       </div>
 
       {/* Grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--text-secondary)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--text-secondary)) 1px, transparent 1px)`,
@@ -23,17 +24,17 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3 mb-6 animate-fade-in-up">
-            <span className="w-1 h-6 bg-cta rounded-full" />
+            <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
               White-Label Local Digital Marketing Partner
             </p>
-            <span className="w-1 h-6 bg-cta rounded-full" />
+            <span className="w-1.5 h-8 bg-cta rounded-full shadow-lg shadow-cta/30" />
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-bold leading-tight mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s" }}>
             White-Label Local{" "}
-            <span className="text-cta">SEO & Paid Media Fulfillment</span>{" "}
+            <span className="text-cta drop-shadow-[0_0_30px_hsl(var(--cta)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
             You Can Trust
           </h1>
 
@@ -62,8 +63,8 @@ const Hero = () => {
 
       {/* Subtle scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-        <div className="w-6 h-10 rounded-full border border-border flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-text-muted rounded-full animate-bounce" />
+        <div className="w-6 h-10 rounded-full border border-border/50 flex items-start justify-center p-2 backdrop-blur-sm">
+          <div className="w-1 h-2 bg-cta rounded-full animate-bounce" />
         </div>
       </div>
     </section>

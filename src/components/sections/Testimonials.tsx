@@ -47,7 +47,10 @@ const Testimonials = () => {
         {/* Video Testimonials */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {videoTestimonials.map((video, index) => (
-            <div key={index} className="relative aspect-video rounded-lg overflow-hidden border border-border/30 bg-card">
+            <div 
+              key={index} 
+              className="relative aspect-video rounded-xl overflow-hidden border border-border/30 bg-card shadow-xl shadow-black/20 hover:shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:-translate-y-1"
+            >
               <iframe
                 src={`https://www.youtube.com/embed/${video.id}`}
                 title={video.title}
@@ -64,10 +67,10 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="bg-card/50 border-border/30 hover:border-border/50 transition-colors duration-300"
+              className="bg-gradient-to-br from-card/80 to-card/50 border-border/30 hover:border-cta/30 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/20"
             >
               <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
+                <Quote className="h-8 w-8 text-cta/40 mb-4" />
                 <p className="text-foreground/90 text-base leading-relaxed mb-6">
                   "{testimonial.quote}"
                 </p>
