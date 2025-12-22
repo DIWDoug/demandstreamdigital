@@ -6,23 +6,23 @@ const WhatWeSolve = () => {
   const tabs = [
     {
       label: "Operations",
-      yourRole: "You focus on client relationships and growth strategy.",
-      ourRole: "We handle execution with structured workflows and predictable delivery cycles."
+      yourRole: "You focus on building client relationships, developing growth strategy, and scaling your agency. Your time stays on high-value activities that drive revenue.",
+      ourRole: "We handle the day-to-day execution with structured workflows, defined timelines, and predictable delivery cycles. No more scrambling to meet deadlines or manage freelancer chaos."
     },
     {
       label: "Client Support",
-      yourRole: "You remain the primary point of contact for your clients.",
-      ourRole: "We provide white-label deliverables and reporting you can present as your own."
+      yourRole: "You remain the primary point of contact for your clients. You own the relationship, set expectations, and deliver the strategic vision they hired you for.",
+      ourRole: "We provide fully white-labeled deliverables, reports, and campaign updates you can present as your own. Your clients never know we exist—your brand stays front and center."
     },
     {
       label: "Fulfillment",
-      yourRole: "You sell and price services according to your margins.",
-      ourRole: "We execute campaigns behind the scenes with consistency and reliability."
+      yourRole: "You sell and price services according to your margins. You control the packages, the positioning, and the profit. Your business model stays intact.",
+      ourRole: "We execute campaigns behind the scenes with consistency, reliability, and quality. From local SEO to paid media, every deliverable meets agency-grade standards."
     },
     {
       label: "Sales",
-      yourRole: "You close deals and manage client expectations.",
-      ourRole: "We provide the capability proof and case studies to support your pitch."
+      yourRole: "You close deals, manage client expectations, and grow your book of business. Your sales process stays yours—we don't interfere with how you win clients.",
+      ourRole: "We provide the capability proof, case studies, and performance data to support your pitch. When prospects ask if you can deliver, you'll have the receipts."
     }
   ];
 

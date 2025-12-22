@@ -8,7 +8,7 @@
    All other elements use charcoal/gray palette
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -49,8 +49,8 @@
     --cta-glow: 145 70% 55%;
     
     /* Blue accent - for icons, highlights, borders */
-    --accent-blue: 224 66% 35%;
-    --accent-blue-glow: 224 66% 45%;
+    --accent-blue: 224 60% 55%;
+    --accent-blue-glow: 224 60% 65%;
     
     --surface-dark: 220 20% 8%;
     --surface-elevated: 220 18% 12%;
@@ -110,7 +110,12 @@
   }
 
   /* Typography */
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+  
+  h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     @apply font-semibold tracking-tight;
   }
