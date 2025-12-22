@@ -6,6 +6,8 @@ import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
+import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
+import AIVisibility from "@/components/sections/AIVisibility";
 import Packages from "@/components/sections/Packages";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
@@ -28,6 +30,8 @@ const Index = () => {
         <ServicesGrid />
       </div>
       <TopicalExpertise />
+      <LocalGrowthEngine />
+      <AIVisibility />
       <Packages />
       <div id="about">
         <WhatWeSolve />
