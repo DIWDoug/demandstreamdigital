@@ -35,7 +35,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Dialed-In Web" 
-              className="h-8 md:h-10 w-auto"
+              className="h-8 md:h-10 w-auto brightness-0 invert opacity-90"
             />
           </a>
 
