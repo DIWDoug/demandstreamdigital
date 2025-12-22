@@ -5,7 +5,6 @@ import googleNewsLogo from "@/assets/logos/google-news.png";
 import marketwatchLogo from "@/assets/logos/marketwatch.png";
 import businessInsiderLogo from "@/assets/logos/business-insider.png";
 import yahooNewsLogo from "@/assets/logos/yahoo-news.png";
-import dailyTechGeekLogo from "@/assets/logos/daily-tech-geek.png";
 import apNewsLogo from "@/assets/logos/ap-news.png";
 
 const FeaturedIn = () => {
@@ -18,7 +17,6 @@ const FeaturedIn = () => {
     { name: "Benzinga", src: benzingaLogo },
     { name: "Bloomberg", src: bloombergLogo },
     { name: "AP News", src: apNewsLogo },
-    { name: "Daily Tech Geek", src: dailyTechGeekLogo },
   ];
 
   return (
