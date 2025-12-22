@@ -69,14 +69,14 @@ const ContactForm = () => {
                     placeholder="Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
                   />
                   <input
                     type="email"
                     placeholder="Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
                   />
                 </div>
                 <div className="grid md:grid-cols-2 gap-5">
@@ -85,20 +85,20 @@ const ContactForm = () => {
                     placeholder="Phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
                   />
                   <input
                     type="url"
                     placeholder="Website (https://)"
                     value={formData.website}
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta transition-colors"
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
                   />
                 </div>
                 <select
                   value={formData.interest}
                   onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-cta transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-accent-blue transition-colors"
                 >
                   <option value="" className="text-text-muted">I'm interested in...</option>
                   <option value="local-seo">Local SEO</option>

@@ -45,7 +45,7 @@ const WhatWeSolve = () => {
                 onClick={() => setActiveTab(index)}
                 className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeTab === index
-                    ? "bg-cta text-cta-foreground"
+                    ? "bg-accent-blue text-white"
                     : "bg-surface-elevated text-text-secondary hover:text-foreground border border-border"
                 }`}
               >
@@ -72,7 +72,7 @@ const WhatWeSolve = () => {
 
               {/* Our Role */}
               <div className="md:border-l md:border-border md:pl-12">
-                <p className="text-sm text-cta uppercase tracking-widest mb-4">
+                <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
                   Our Role
                 </p>
                 <p className="text-lg text-foreground leading-relaxed">
