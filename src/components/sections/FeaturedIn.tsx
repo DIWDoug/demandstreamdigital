@@ -1,12 +1,24 @@
+import bloombergLogo from "@/assets/logos/bloomberg.png";
+import benzingaLogo from "@/assets/logos/benzinga.png";
+import digitalJournalLogo from "@/assets/logos/digital-journal.png";
+import googleNewsLogo from "@/assets/logos/google-news.png";
+import marketwatchLogo from "@/assets/logos/marketwatch.png";
+import businessInsiderLogo from "@/assets/logos/business-insider.png";
+import yahooNewsLogo from "@/assets/logos/yahoo-news.png";
+import dailyTechGeekLogo from "@/assets/logos/daily-tech-geek.png";
+import apNewsLogo from "@/assets/logos/ap-news.png";
+
 const FeaturedIn = () => {
   const logos = [
-    { name: "Yahoo News", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Yahoo_News_Logo_2019.svg/320px-Yahoo_News_Logo_2019.svg.png" },
-    { name: "Business Insider", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Business_Insider_Logo.svg/320px-Business_Insider_Logo.svg.png" },
-    { name: "MarketWatch", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/MarketWatch_logo.svg/320px-MarketWatch_logo.svg.png" },
-    { name: "Google News", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Google_News_2020.svg/200px-Google_News_2020.svg.png" },
-    { name: "Digital Journal", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Digital_Journal_Logo.svg/320px-Digital_Journal_Logo.svg.png" },
-    { name: "Bloomberg", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/New_Bloomberg_Logo.svg/320px-New_Bloomberg_Logo.svg.png" },
-    { name: "AP", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Associated_Press_logo_2012.svg/200px-Associated_Press_logo_2012.svg.png" },
+    { name: "Yahoo News", src: yahooNewsLogo },
+    { name: "Business Insider", src: businessInsiderLogo },
+    { name: "MarketWatch", src: marketwatchLogo },
+    { name: "Google News", src: googleNewsLogo },
+    { name: "Digital Journal", src: digitalJournalLogo },
+    { name: "Benzinga", src: benzingaLogo },
+    { name: "Bloomberg", src: bloombergLogo },
+    { name: "AP News", src: apNewsLogo },
+    { name: "Daily Tech Geek", src: dailyTechGeekLogo },
   ];
 
   return (
@@ -21,7 +33,7 @@ const FeaturedIn = () => {
               key={index}
               src={logo.src}
               alt={logo.name}
-              className="h-5 md:h-6 w-auto object-contain grayscale opacity-50 hover:opacity-70 hover:grayscale-0 transition-all duration-300"
+              className="h-6 md:h-8 w-auto object-contain grayscale invert opacity-60 hover:opacity-80 transition-all duration-300"
             />
           ))}
         </div>
