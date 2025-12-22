@@ -50,7 +50,7 @@ const ScalableFulfillment = () => {
                   <feature.icon className="h-6 w-6 text-text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                  <h3 className="text-lg text-foreground mb-2">
                     {feature.title}
                   </h3>
                   <p className="text-text-secondary text-sm leading-relaxed">
