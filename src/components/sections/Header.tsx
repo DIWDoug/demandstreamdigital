@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,12 +30,11 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
-            <img 
-              src={logo} 
-              alt="Dialed-In Web" 
-              className="h-8 md:h-10 w-auto brightness-0 invert opacity-90"
-            />
+          <a href="/" className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-accent-blue" />
+            <span className="text-xl font-sans font-semibold tracking-tight text-foreground">
+              Dialed-In<span className="text-accent-blue">Web</span>
+            </span>
           </a>
 
           {/* Desktop Nav */}
