@@ -10,12 +10,14 @@ const ServicesGrid = () => {
         {
           title: "White-Label Local SEO",
           subtitle: "Local organic visibility built for real markets.",
-          description: "Our white-label local SEO improves rankings for location-based searches through technical cleanup, on-page optimization, local content alignment, and relevance signals. Scopes are adjusted by city size, competition, industry, and existing authority so agencies can deliver consistent local growth without relying on generic SEO playbooks."
+          description: "Our white-label local SEO improves rankings for location-based searches through technical cleanup, on-page optimization, local content alignment, and relevance signals. Scopes are adjusted by city size, competition, industry, and existing authority so agencies can deliver consistent local growth without relying on generic SEO playbooks.",
+          cta: "Learn more about Local SEO →"
         },
         {
           title: "White-Label Google Maps",
           subtitle: "Visibility where local intent is highest.",
-          description: "We optimize and manage Google Business Profiles to improve Maps rankings and local pack visibility. This includes category strategy, citation alignment, review support, and ongoing optimization informed by local competition. Scopes adjust for market density, proximity challenges, and industry pressure."
+          description: "We optimize and manage Google Business Profiles to improve Maps rankings and local pack visibility. This includes category strategy, citation alignment, review support, and ongoing optimization informed by local competition. Scopes adjust for market density, proximity challenges, and industry pressure.",
+          cta: "Learn more about Google Maps →"
         }
       ]
     },
@@ -27,12 +29,14 @@ const ServicesGrid = () => {
         {
           title: "White-Label Google Ads",
           subtitle: "Paid search designed for local lead generation.",
-          description: "We manage locally focused Google Ads campaigns built for calls and form leads. Campaigns are structured around service areas, keyword intent, and competitive spend levels. Strategy and budgeting adapt to each local market and industry economics, giving agencies a defensible paid offering."
+          description: "We manage locally focused Google Ads campaigns built for calls and form leads. Campaigns are structured around service areas, keyword intent, and competitive spend levels. Strategy and budgeting adapt to each local market and industry economics, giving agencies a defensible paid offering.",
+          cta: "Learn more about Google Ads →"
         },
         {
           title: "White-Label Meta Ads",
           subtitle: "Local awareness and demand generation.",
-          description: "We run Facebook and Instagram ad campaigns that support local lead generation and remarketing. Strategies are customized by geography, service value, and industry buying behavior. Fulfillment is delivered under your brand so you can offer paid social without building internal media capacity."
+          description: "We run Facebook and Instagram ad campaigns that support local lead generation and remarketing. Strategies are customized by geography, service value, and industry buying behavior. Fulfillment is delivered under your brand so you can offer paid social without building internal media capacity.",
+          cta: "Learn more about Meta Ads →"
         }
       ]
     },
@@ -44,12 +48,14 @@ const ServicesGrid = () => {
         {
           title: "White-Label Organic Social",
           subtitle: "Consistent local presence without the overhead.",
-          description: "We provide organic social execution designed to support local authority and credibility. Content cadence, tone, and platform focus are aligned to the client's location and industry norms. Deliverables are white-labeled so agencies maintain a consistent brand presence for clients."
+          description: "We provide organic social execution designed to support local authority and credibility. Content cadence, tone, and platform focus are aligned to the client's location and industry norms. Deliverables are white-labeled so agencies maintain a consistent brand presence for clients.",
+          cta: "Learn more about Organic Social →"
         },
         {
           title: "White-Label Local Authority Building",
           subtitle: "Trust signals that matter locally.",
-          description: "Local authority building strengthens credibility through citations, local mentions, PR-style placements, community relevance, and discussion signals. This work supports both organic and Maps performance, especially in competitive local markets where authority gaps limit growth and ranking stability."
+          description: "Local authority building strengthens credibility through citations, local mentions, PR-style placements, community relevance, and discussion signals. This work supports both organic and Maps performance, especially in competitive local markets where authority gaps limit growth and ranking stability.",
+          cta: "Learn more about Authority Building →"
         }
       ]
     }
@@ -96,9 +102,15 @@ const ServicesGrid = () => {
                     <p className="text-foreground/70 text-sm font-medium mb-3">
                       {service.subtitle}
                     </p>
-                    <p className="text-text-secondary text-sm">
+                    <p className="text-text-secondary text-sm mb-4">
                       {service.description}
                     </p>
+                    <a 
+                      href="#contact" 
+                      className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
+                    >
+                      {service.cta}
+                    </a>
                   </div>
                 ))}
               </div>
