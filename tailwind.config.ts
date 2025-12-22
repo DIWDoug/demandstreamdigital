@@ -56,6 +56,10 @@ export default {
           DEFAULT: "hsl(var(--accent-blue))",
           glow: "hsl(var(--accent-blue-glow))",
         },
+        "accent-pop": {
+          DEFAULT: "hsl(var(--accent-pop))",
+          glow: "hsl(var(--accent-pop-glow))",
+        },
         surface: {
           dark: "hsl(var(--surface-dark))",
           elevated: "hsl(var(--surface-elevated))",

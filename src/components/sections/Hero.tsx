@@ -33,7 +33,7 @@ const Hero = () => {
 
           {/* Main Headline - improved line height */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
-            White-Label Local{" "}
+            <span className="text-pop-underline">White-Label</span> Local{" "}
             <span className="text-cta drop-shadow-[0_0_30px_hsl(var(--cta)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
             You Can Trust
           </h1>

@@ -37,7 +37,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-foreground mb-4">
-            What Agency Partners Say
+            What Agency Partners <span className="text-pop">Say</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             Real feedback from agencies who've made the switch to system-driven fulfillment.
