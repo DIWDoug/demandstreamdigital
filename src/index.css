@@ -111,13 +111,13 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Lora', Georgia, serif;
   }
 
-  /* Typography Hierarchy - Instrument Serif for H1-H2, Inter for rest */
-  h1, h2 {
-    font-family: 'Instrument Serif', Georgia, serif;
-    @apply font-medium tracking-tight;
+  /* Typography Hierarchy - Inter for all headings, Lora for body */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
   }
 
   h1 {
@@ -125,12 +125,7 @@
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl leading-tight font-normal;
-  }
-
-  h3, h4, h5, h6 {
-    font-family: 'Inter', system-ui, sans-serif;
-    @apply font-medium tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight font-medium;
   }
 
   h3 {
@@ -145,9 +140,19 @@
     @apply text-sm md:text-base font-medium;
   }
 
+  /* Body text uses Lora */
+  p, li, span, label {
+    font-family: 'Lora', Georgia, serif;
+  }
+
+  /* Buttons and UI elements use Inter */
+  button, input, select, textarea, a {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
   /* Mantra / Philosophy text styling */
   .mantra {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Inter', system-ui, sans-serif;
     @apply text-2xl md:text-3xl lg:text-4xl font-medium;
     letter-spacing: 0.02em;
     color: hsl(var(--accent-blue));
