@@ -14,8 +14,8 @@ const testimonials = [
   },
   {
     quote: "Our retention rate on SEO is extremely high, probably about 90%. I can go to sleep every night knowing that we're doing everything we can to help a client.",
-    author: "Jeremy",
-    role: "Digital Marketing Agency Owner, Florida"
+    author: "Florida Agency Owner",
+    role: "Digital Marketing Agency Owner"
   }
 ];
 
