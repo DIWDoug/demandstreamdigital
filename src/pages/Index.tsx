@@ -2,10 +2,12 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
 import FeaturedIn from "@/components/sections/FeaturedIn";
+import SystemPrimer from "@/components/sections/SystemPrimer";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import SystemConfirmation from "@/components/sections/SystemConfirmation";
+import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
-import ServicesGrid from "@/components/sections/ServicesGrid";
-import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
 import AIVisibility from "@/components/sections/AIVisibility";
 import Packages from "@/components/sections/Packages";
@@ -24,12 +26,14 @@ const Index = () => {
       <Hero />
       <TrustReel />
       <FeaturedIn />
-      <ScalableFulfillment />
-      <RetentionPhilosophy />
+      <SystemPrimer />
       <div id="services">
         <ServicesGrid />
       </div>
+      <SystemConfirmation />
       <TopicalExpertise />
+      <ScalableFulfillment />
+      <RetentionPhilosophy />
       <LocalGrowthEngine />
       <AIVisibility />
       <Packages />
