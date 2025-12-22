@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import bookCover from "@/assets/local-growth-engine-book-v2.png";
+import authorPhoto from "@/assets/doug-bryson-headshot.jpeg";
 
 const LocalGrowthEngine = () => {
   const [email, setEmail] = useState("");
@@ -29,22 +30,31 @@ const LocalGrowthEngine = () => {
   return (
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Book Cover Image */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Author with Book */}
           <div className="relative flex justify-center lg:justify-start">
             <div className="relative">
-              {/* Book image */}
+              {/* Book behind author */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="w-72 md:w-80 lg:w-96 drop-shadow-2xl relative z-10"
+                className="absolute -left-8 top-8 w-48 md:w-56 lg:w-64 drop-shadow-xl opacity-90 -rotate-6 z-0"
               />
               
-              {/* Author info overlay - positioned at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-background/90 to-transparent pt-16 pb-4 px-4">
-                <p className="text-xl font-semibold text-foreground">Your Name</p>
+              {/* Author photo in foreground */}
+              <div className="relative z-10">
+                <img 
+                  src={authorPhoto} 
+                  alt="Doug Bryson" 
+                  className="w-64 md:w-72 lg:w-80 rounded-lg shadow-2xl"
+                />
+              </div>
+              
+              {/* Author info below */}
+              <div className="mt-6 text-center lg:text-left">
+                <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
                 <p className="text-text-secondary text-sm">Founder & CEO</p>
-                <div className="w-12 h-1 bg-cta mt-2" />
+                <div className="w-12 h-1 bg-cta mt-2 mx-auto lg:mx-0" />
               </div>
             </div>
           </div>
