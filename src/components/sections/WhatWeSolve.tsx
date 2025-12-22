@@ -33,7 +33,7 @@ const WhatWeSolve = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="mb-6 text-foreground">
-              How We Keep Your Clients Coming Back
+              How We Keep Your Clients<br />Coming Back
             </h2>
           </div>
 
