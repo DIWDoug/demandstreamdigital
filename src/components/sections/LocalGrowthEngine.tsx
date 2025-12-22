@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import bookCover from "@/assets/local-growth-engine-book-v2.png";
+import bookCover from "@/assets/local-growth-engine-cover.png";
 import authorPhoto from "@/assets/doug-bryson-headshot.jpeg";
 
 const LocalGrowthEngine = () => {
