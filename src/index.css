@@ -259,6 +259,34 @@
     );
   }
 
+  /* Light contrast section */
+  .section-light {
+    background: linear-gradient(180deg, hsl(0 0% 97%), hsl(0 0% 93%));
+    color: hsl(220 20% 10%);
+  }
+
+  .section-light h1,
+  .section-light h2,
+  .section-light h3,
+  .section-light h4 {
+    color: hsl(220 20% 10%);
+  }
+
+  .section-light p,
+  .section-light li {
+    color: hsl(220 15% 30%);
+  }
+
+  /* Slightly elevated dark section */
+  .section-elevated {
+    background: linear-gradient(180deg, hsl(220 18% 12%), hsl(220 20% 8%));
+  }
+
+  /* Green accent section */
+  .section-accent {
+    background: linear-gradient(135deg, hsl(76 42% 15%), hsl(76 35% 10%));
+  }
+
   /* Text gradient for emphasis */
   .text-gradient {
     @apply bg-clip-text text-transparent;

@@ -25,16 +25,16 @@ const ScalableFulfillment = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 gradient-section relative">
+    <section className="py-24 lg:py-32 section-light relative">
       {/* Section divider top */}
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="mb-6 text-foreground">
-            <span className="text-pop">Scalable</span> White-Label Local Fulfillment
+          <h2 className="mb-6">
+            <span className="text-[hsl(76,42%,35%)]">Scalable</span> White-Label Local Fulfillment
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto">
             Dialed-In Web removes the burden of execution while preserving your control over every aspect of your agency.
           </p>
         </div>
@@ -43,17 +43,17 @@ const ScalableFulfillment = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="premium-card glow-card group transition-all duration-300"
+              className="rounded-xl p-6 bg-white shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-surface-elevated border border-border">
-                  <feature.icon className="h-6 w-6 text-text-secondary" />
+                <div className="p-3 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
+                  <feature.icon className="h-6 w-6 text-[hsl(76,42%,35%)]" />
                 </div>
                 <div>
-                  <h3 className="text-lg text-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-text-secondary text-sm">
+                  <p className="text-gray-600 text-sm">
                     {feature.description}
                   </p>
                 </div>
