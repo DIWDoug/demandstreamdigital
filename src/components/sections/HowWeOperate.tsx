@@ -14,7 +14,7 @@ const HowWeOperate = () => {
     <section className="py-20 lg:py-24 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-medium mb-10 text-foreground">
+          <h2 className="mb-10 text-foreground">
             How We Operate
           </h2>
           

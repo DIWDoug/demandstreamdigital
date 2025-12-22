@@ -63,7 +63,7 @@ const ServicesGrid = () => {
           <p className="text-sm text-cta uppercase tracking-widest mb-4">
             White-Label Local Digital Marketing Partner
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-foreground">
+          <h2 className="mb-6 text-foreground">
             Our Core Services
           </h2>
           <p className="text-lg text-text-secondary">

@@ -13,7 +13,7 @@ const FinalCTA = () => {
           <p className="text-sm text-cta uppercase tracking-widest mb-4 font-medium">
             Join 100+ Agency Partners
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-foreground">
+          <h2 className="mb-6 text-foreground">
             Ready to Scale Local Without Risk?
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
