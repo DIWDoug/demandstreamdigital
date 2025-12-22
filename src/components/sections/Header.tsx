@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,11 +16,40 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const servicesDropdown = [
+    { label: "Local SEO", href: "#services" },
+    { label: "Google Maps", href: "#services" },
+    { label: "Google Ads", href: "#services" },
+    { label: "Meta Ads", href: "#services" },
+    { label: "Organic Social", href: "#services" },
+    { label: "Authority Building", href: "#services" },
+  ];
+
   const navLinks = [
-    { label: "Services", href: "#services" },
+    { 
+      label: "Services", 
+      href: "#services",
+      hasDropdown: true,
+      dropdownItems: servicesDropdown
+    },
     { label: "About", href: "#about" },
+    { label: "Results", href: "#testimonials" },
     { label: "Contact", href: "#contact" }
   ];
+
+  const handleDropdownToggle = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  };
 
   return (
     <header 
@@ -40,27 +71,58 @@ const Header = () => {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-1" ref={dropdownRef}>
             {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="text-sm text-text-secondary hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
+              <div key={index} className="relative">
+                {link.hasDropdown ? (
+                  <>
+                    <button
+                      onClick={() => handleDropdownToggle(link.label)}
+                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    >
+                      {link.label}
+                      <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
+                    </button>
+                    {activeDropdown === link.label && (
+                      <div className="absolute top-full left-0 mt-1 w-56 bg-surface-elevated border border-border rounded-lg shadow-xl shadow-black/20 py-2 z-50">
+                        {link.dropdownItems?.map((item, idx) => (
+                          <a
+                            key={idx}
+                            href={item.href}
+                            className="block px-4 py-2.5 text-sm text-text-secondary hover:text-foreground hover:bg-surface-dark transition-colors"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <a
+                    href={link.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </a>
+                )}
+              </div>
             ))}
+          </nav>
+
+          {/* Right side - Phone & CTA */}
+          <div className="hidden md:flex items-center gap-6">
             <a 
               href="tel:2143072995"
-              className="flex items-center gap-2 text-sm text-text-secondary hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-4 w-4 text-cta" />
               (214) 307-2995
             </a>
-            <a href="#contact" className="btn-cta text-sm py-2.5 px-5">
+            <a href="#contact" className="btn-cta text-sm py-2.5 px-6">
               Get Started
             </a>
-          </nav>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -73,32 +135,64 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border">
-            <nav className="flex flex-col gap-4">
+          <div className="md:hidden py-6 border-t border-border bg-surface-dark">
+            <nav className="flex flex-col gap-2">
               {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="text-base text-text-secondary hover:text-foreground transition-colors"
+                <div key={index}>
+                  {link.hasDropdown ? (
+                    <>
+                      <button
+                        onClick={() => handleDropdownToggle(link.label)}
+                        className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                      >
+                        {link.label}
+                        <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
+                      </button>
+                      {activeDropdown === link.label && (
+                        <div className="pl-4 pb-2 space-y-1">
+                          {link.dropdownItems?.map((item, idx) => (
+                            <a
+                              key={idx}
+                              href={item.href}
+                              className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
+                              onClick={() => {
+                                setActiveDropdown(null);
+                                setIsMobileMenuOpen(false);
+                              }}
+                            >
+                              {item.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                </div>
+              ))}
+              <div className="pt-4 mt-2 border-t border-border">
+                <a 
+                  href="tel:2143072995"
+                  className="flex items-center gap-2 py-3 text-foreground font-medium"
+                >
+                  <Phone className="h-4 w-4 text-cta" />
+                  (214) 307-2995
+                </a>
+                <a 
+                  href="#contact" 
+                  className="btn-cta text-center mt-3 w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  Get Started
                 </a>
-              ))}
-              <a 
-                href="tel:2143072995"
-                className="flex items-center gap-2 text-base text-text-secondary"
-              >
-                <Phone className="h-4 w-4" />
-                (214) 307-2995
-              </a>
-              <a 
-                href="#contact" 
-                className="btn-cta text-center mt-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get Started
-              </a>
+              </div>
             </nav>
           </div>
         )}
