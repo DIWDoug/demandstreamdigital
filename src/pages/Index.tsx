@@ -7,6 +7,7 @@ import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import Packages from "@/components/sections/Packages";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
+import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
 import HowWeOperate from "@/components/sections/HowWeOperate";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -28,6 +29,7 @@ const Index = () => {
       <div id="about">
         <WhatWeSolve />
       </div>
+      <Testimonials />
       <ContactForm />
       <HowWeOperate />
       <FinalCTA />
