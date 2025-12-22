@@ -1,5 +1,6 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import TrustReel from "@/components/sections/TrustReel";
 import FeaturedIn from "@/components/sections/FeaturedIn";
 import ProofStats from "@/components/sections/ProofStats";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
@@ -18,6 +19,7 @@ const Index = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <Header />
       <Hero />
+      <TrustReel />
       <FeaturedIn />
       <ProofStats />
       <ScalableFulfillment />

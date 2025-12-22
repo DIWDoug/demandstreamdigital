@@ -19,9 +19,9 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <section className="py-10 bg-surface-dark border-b border-border">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-6">
-        <p className="text-center text-xs text-text-muted uppercase tracking-widest mb-6">
+        <p className="text-center text-xs text-muted-foreground uppercase tracking-widest mb-8">
           Featured In
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
@@ -29,8 +29,8 @@ const FeaturedIn = () => {
             <img
               key={index}
               src={logo.src}
-              alt={`${logo.name} logo - Dialed-In Web featured in ${logo.name}`}
-              className="h-6 md:h-8 w-auto object-contain brightness-0 invert opacity-50 hover:opacity-80 transition-all duration-300"
+              alt={logo.name}
+              className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-60 hover:opacity-90 transition-all duration-300"
             />
           ))}
         </div>
