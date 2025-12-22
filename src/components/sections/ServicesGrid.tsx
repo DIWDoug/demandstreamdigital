@@ -23,9 +23,9 @@ const ServicesGrid = () => {
       image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80",
     },
     {
-      title: "Authority Building That Lasts",
-      description: "Trust signals compound over time. We build credibility through citations, local mentions, PR placements, and community relevance that support long-term ranking stability.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+      title: "Email Marketing That Nurtures & Converts",
+      description: "Leads go cold without follow-up. We build automated email sequences that nurture prospects, re-engage past customers, and turn one-time buyers into repeat clients.",
+      image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80",
     }
   ];
 
