@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import bookCover from "@/assets/local-growth-engine-book-v2.png";
 
@@ -26,132 +26,97 @@ const LocalGrowthEngine = () => {
     });
   };
 
-  const frameworkPillars = [
-    {
-      title: "Visibility Layer",
-      description: "Technical foundations that make local businesses discoverable across search surfaces."
-    },
-    {
-      title: "Authority Layer", 
-      description: "Trust signals and credibility markers that search engines and AI models weight heavily."
-    },
-    {
-      title: "Engagement Layer",
-      description: "Conversion-focused touchpoints that turn visibility into leads and revenue."
-    }
-  ];
-
   return (
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      {/* Subtle background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-blue/5 to-transparent pointer-events-none" />
-      
-      <div className="container mx-auto px-6 lg:px-8 relative">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Book Cover & Framework Info */}
-          <div>
-            {/* Book Cover */}
-            <div className="mb-10 flex justify-center lg:justify-start">
+          {/* Left: Book Cover Image */}
+          <div className="relative flex justify-center lg:justify-start">
+            <div className="relative">
+              {/* Book image */}
               <img 
                 src={bookCover} 
-                alt="The Local Growth Engine book cover" 
-                className="w-64 lg:w-80 drop-shadow-2xl"
+                alt="The Local Growth Engine book" 
+                className="w-72 md:w-80 lg:w-96 drop-shadow-2xl relative z-10"
               />
-            </div>
-
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-accent-blue text-sm font-medium mb-6">
-              <BookOpen className="h-4 w-4" />
-              Coming Soon
-            </div>
-            
-            <h2 className="mb-6 text-foreground">
-              The Local Growth Engine
-            </h2>
-            
-            <p className="text-lg text-text-secondary mb-8">
-              The framework behind everything we deliver. Built from years of local marketing execution, 
-              refined through hundreds of campaigns, and now available as the playbook agencies need 
-              to understand what actually drives local growth.
-            </p>
-
-            <p className="text-foreground mb-8">
-              This isn't theory. It's the same system we use to generate results for our partners — 
-              and the reason our approach naturally aligns with how AI models now surface local businesses.
-            </p>
-
-            {/* Framework pillars */}
-            <div className="space-y-4 mb-10">
-              {frameworkPillars.map((pillar, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="w-1 bg-gradient-to-b from-accent-blue to-accent-blue/30 rounded-full flex-shrink-0" />
-                  <div>
-                    <h4 className="text-foreground font-medium mb-1">{pillar.title}</h4>
-                    <p className="text-text-secondary text-sm">{pillar.description}</p>
-                  </div>
-                </div>
-              ))}
+              
+              {/* Author info overlay - positioned at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-background/90 to-transparent pt-16 pb-4 px-4">
+                <p className="text-xl font-semibold text-foreground">Your Name</p>
+                <p className="text-text-secondary text-sm">Founder & CEO</p>
+                <div className="w-12 h-1 bg-cta mt-2" />
+              </div>
             </div>
           </div>
 
-          {/* Right: Early Access Signup */}
-          <div className="lg:pl-8">
-            <div className="premium-card bg-surface-elevated">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                Get Early Access
-              </h3>
-              <p className="text-text-secondary mb-6">
-                Be the first to receive The Local Growth Engine when it launches. 
-                Early subscribers also get exclusive frameworks and templates not included in the public release.
-              </p>
+          {/* Right: Content */}
+          <div>
+            <p className="text-text-secondary text-lg mb-2">Discover How To</p>
+            <h2 className="text-foreground mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+              Scale Your Agency<br />
+              <span className="text-cta">Without the Chaos</span>
+            </h2>
+            
+            <div className="w-16 h-1 bg-cta mb-8" />
 
-              {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="email" className="sr-only">Email address</label>
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+              The Framework for White-Label Local Marketing That Actually Works
+            </h3>
+            
+            <p className="text-text-secondary mb-6">
+              If you're an agency owner looking to add local marketing services without hiring specialists 
+              or burning through freelancers, you've found the right resource. The Local Growth Engine 
+              is the methodology behind $2M+ in retainer revenue generated for our agency partners.
+            </p>
+
+            <p className="text-text-secondary mb-8">
+              Inside, you'll discover the three-layer system we use to deliver consistent results across 
+              Local SEO, Google Maps, paid media, and reputation management — all white-labeled and 
+              built for scale.
+            </p>
+
+            {/* Email signup or CTA */}
+            {!isSubmitted ? (
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <div className="flex-1 w-full sm:w-auto">
+                  <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
-                      id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-accent-blue transition-all"
+                      className="flex-1 px-4 py-3 rounded-lg bg-surface-elevated border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all"
                     />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="btn-cta w-full flex items-center justify-center gap-2"
-                  >
-                    {isSubmitting ? (
-                      "Joining..."
-                    ) : (
-                      <>
-                        Join the Waitlist
-                        <ArrowRight className="h-4 w-4" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              ) : (
-                <div className="flex items-center gap-3 p-4 rounded-lg bg-cta/10 border border-cta/20">
-                  <CheckCircle2 className="h-5 w-5 text-cta flex-shrink-0" />
-                  <p className="text-foreground">
-                    You're on the list! We'll be in touch soon.
-                  </p>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="btn-cta flex items-center justify-center gap-2 whitespace-nowrap"
+                    >
+                      {isSubmitting ? (
+                        "Joining..."
+                      ) : (
+                        <>
+                          Get Early Access
+                          <ArrowRight className="h-4 w-4" />
+                        </>
+                      )}
+                    </button>
+                  </form>
                 </div>
-              )}
+              </div>
+            ) : (
+              <div className="flex items-center gap-3 p-4 rounded-lg bg-cta/10 border border-cta/20 max-w-md">
+                <CheckCircle2 className="h-5 w-5 text-cta flex-shrink-0" />
+                <p className="text-foreground">
+                  You're on the list! We'll be in touch soon.
+                </p>
+              </div>
+            )}
 
-              <p className="text-text-muted text-xs mt-4">
-                No spam. Just the book and occasional insights on local marketing.
-              </p>
-            </div>
-
-            {/* Social proof */}
-            <div className="mt-6 flex items-center gap-4 text-text-secondary text-sm">
-              <span className="font-medium text-foreground">$2M+</span>
-              <span>in retainer revenue generated for agency partners</span>
-            </div>
+            <p className="text-text-muted text-sm mt-4">
+              Coming soon. Join the waitlist to get notified + exclusive bonus content.
+            </p>
           </div>
         </div>
       </div>
