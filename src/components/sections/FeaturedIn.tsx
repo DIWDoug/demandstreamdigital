@@ -21,7 +21,7 @@ const FeaturedIn = () => {
               key={index}
               src={logo.src}
               alt={logo.name}
-              className="h-5 md:h-6 w-auto object-contain grayscale opacity-40 hover:opacity-60 transition-opacity duration-300"
+              className="h-5 md:h-6 w-auto object-contain grayscale opacity-50 hover:opacity-70 hover:grayscale-0 transition-all duration-300"
             />
           ))}
         </div>
