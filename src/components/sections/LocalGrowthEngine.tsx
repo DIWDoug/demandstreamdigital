@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import bookCover from "@/assets/local-growth-engine-book.png";
 
 const LocalGrowthEngine = () => {
   const [email, setEmail] = useState("");
@@ -47,8 +48,17 @@ const LocalGrowthEngine = () => {
       
       <div className="container mx-auto px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Book & Framework Info */}
+          {/* Left: Book Cover & Framework Info */}
           <div>
+            {/* Book Cover */}
+            <div className="mb-10 flex justify-center lg:justify-start">
+              <img 
+                src={bookCover} 
+                alt="The Local Growth Engine book cover" 
+                className="w-64 lg:w-80 drop-shadow-2xl"
+              />
+            </div>
+
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-accent-blue text-sm font-medium mb-6">
               <BookOpen className="h-4 w-4" />
               Coming Soon
