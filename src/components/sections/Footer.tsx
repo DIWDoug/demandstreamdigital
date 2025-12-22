@@ -8,16 +8,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-16 bg-background border-t border-border">
+    <footer className="py-16 bg-background border-t border-border" role="contentinfo">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold text-foreground mb-4">
-              DialedinWeb
+              Dialed-In Web
             </h3>
-            <p className="text-sm text-text-secondary leading-relaxed">
+            <p className="text-sm text-text-secondary leading-relaxed mb-4">
               White-label local marketing fulfillment for agencies that value execution and long-term partnerships.
+            </p>
+            <p className="text-xs text-text-muted">
+              Serving agencies across the US & Canada since 2019.
             </p>
           </div>
 

@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-bold leading-tight mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-tight mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s" }}>
             White-Label Local{" "}
             <span className="text-cta drop-shadow-[0_0_30px_hsl(var(--cta)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
             You Can Trust
