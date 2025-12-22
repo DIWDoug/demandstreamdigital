@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BookOpen, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import bookCover from "@/assets/local-growth-engine-book.png";
+import bookCover from "@/assets/local-growth-engine-book-v2.png";
 
 const LocalGrowthEngine = () => {
   const [email, setEmail] = useState("");
