@@ -116,6 +116,8 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
   }
 
   /* Typography Hierarchy - Inter for all headings, Lora for body */
