@@ -259,9 +259,9 @@
     );
   }
 
-  /* Light contrast section */
+  /* Light contrast section - warm cream tones */
   .section-light {
-    background: linear-gradient(180deg, hsl(0 0% 97%), hsl(0 0% 93%));
+    background: linear-gradient(180deg, hsl(40 30% 96%), hsl(35 25% 92%));
     color: hsl(220 20% 10%);
   }
 
