@@ -145,9 +145,10 @@
     font-family: 'Inter', system-ui, sans-serif !important;
   }
 
-  /* Body text uses Lora */
+  /* Body text uses Lora with consistent line-height */
   p, li, label {
     font-family: 'Lora', Georgia, serif;
+    @apply leading-relaxed;
   }
 
   /* Buttons and UI elements use Inter */

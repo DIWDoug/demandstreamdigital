@@ -62,7 +62,7 @@ const WhatWeSolve = () => {
                 <p className="text-sm text-text-muted uppercase tracking-widest mb-4">
                   Your Role
                 </p>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-lg text-foreground">
                   {tabs[activeTab].yourRole}
                 </p>
               </div>
@@ -75,7 +75,7 @@ const WhatWeSolve = () => {
                 <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
                   Our Role
                 </p>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="text-lg text-foreground">
                   {tabs[activeTab].ourRole}
                 </p>
               </div>

@@ -71,7 +71,7 @@ const Testimonials = () => {
             >
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 text-cta/40 mb-4" />
-                <p className="text-foreground/90 text-base leading-relaxed mb-6">
+                <p className="text-foreground/90 text-base mb-6">
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t border-border/20 pt-4">

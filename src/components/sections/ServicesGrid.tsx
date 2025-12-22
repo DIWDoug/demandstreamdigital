@@ -99,7 +99,7 @@ const ServicesGrid = () => {
                     <p className="text-foreground/70 text-sm font-medium mb-3">
                       {service.subtitle}
                     </p>
-                    <p className="text-text-secondary text-sm leading-relaxed">
+                    <p className="text-text-secondary text-sm">
                       {service.description}
                     </p>
                   </div>
