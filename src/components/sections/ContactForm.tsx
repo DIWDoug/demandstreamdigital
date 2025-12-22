@@ -65,7 +65,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-background relative">
+    <section id="contact" className="py-24 lg:py-32 bg-surface-dark relative">
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
@@ -75,7 +75,7 @@ const ContactForm = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 text-foreground">
               Fulfillment in 5 Clear Steps
             </h2>
-            <p className="text-lg text-text-secondary">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
               A predictable onboarding process designed for agencies that value control and execution.
             </p>
           </div>
@@ -216,6 +216,11 @@ const ContactForm = () => {
                   LET'S GET STARTED
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
+
+                {/* Trust signal below CTA */}
+                <p className="text-xs text-text-muted text-center mt-4">
+                  No contracts. No pressure. Just a conversation about your fulfillment needs.
+                </p>
               </form>
             </div>
           </div>
