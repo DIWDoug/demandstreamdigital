@@ -32,7 +32,7 @@ const videoTestimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 md:py-32 bg-surface-dark">
+    <section className="py-24 lg:py-32 bg-surface-dark">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
