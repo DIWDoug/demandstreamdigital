@@ -31,31 +31,44 @@ const LocalGrowthEngine = () => {
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Author with Book */}
-          <div className="relative flex justify-center lg:justify-start">
-            <div className="relative">
-              {/* Book behind author */}
+          {/* Left: Book Stack with Author in Front */}
+          <div className="relative flex justify-center lg:justify-start min-h-[500px] lg:min-h-[600px]">
+            {/* Book stack behind author - multiple copies fanned */}
+            <div className="absolute left-0 top-8 lg:top-12">
+              {/* Back book */}
               <img 
                 src={bookCover} 
                 alt="The Local Growth Engine book" 
-                className="absolute -left-8 top-8 w-48 md:w-56 lg:w-64 drop-shadow-xl opacity-90 -rotate-6 z-0"
+                className="absolute -left-4 top-0 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-12 opacity-60"
               />
-              
-              {/* Author photo in foreground */}
-              <div className="relative z-10">
-                <img 
-                  src={authorPhoto} 
-                  alt="Doug Bryson" 
-                  className="w-64 md:w-72 lg:w-80 rounded-lg shadow-2xl"
-                />
-              </div>
-              
-              {/* Author info below */}
-              <div className="mt-6 text-center lg:text-left">
-                <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
-                <p className="text-text-secondary text-sm">Founder & CEO</p>
-                <div className="w-12 h-1 bg-cta mt-2 mx-auto lg:mx-0" />
-              </div>
+              {/* Middle book */}
+              <img 
+                src={bookCover} 
+                alt="The Local Growth Engine book" 
+                className="absolute left-4 top-4 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-6 opacity-80"
+              />
+              {/* Front book */}
+              <img 
+                src={bookCover} 
+                alt="The Local Growth Engine book" 
+                className="absolute left-12 top-8 w-40 md:w-48 lg:w-56 drop-shadow-xl rotate-2"
+              />
+            </div>
+            
+            {/* Author photo overlapping books */}
+            <div className="absolute right-0 lg:right-8 bottom-16 z-10">
+              <img 
+                src={authorPhoto} 
+                alt="Doug Bryson" 
+                className="w-56 md:w-64 lg:w-72 rounded-lg shadow-2xl"
+              />
+            </div>
+            
+            {/* Author info at bottom left */}
+            <div className="absolute bottom-0 left-0">
+              <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
+              <p className="text-text-secondary text-sm">Founder & CEO</p>
+              <div className="w-12 h-1 bg-cta mt-2" />
             </div>
           </div>
 
