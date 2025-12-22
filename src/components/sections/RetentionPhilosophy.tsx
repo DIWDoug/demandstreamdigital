@@ -20,7 +20,7 @@ const RetentionPhilosophy = () => {
 
           {/* The Mantra - Visually dominant */}
           <h2 className="mantra mb-16">
-            <span className="text-pop">relationship.</span> results. marketing.
+            relationship. results. marketing.
           </h2>
 
           {/* Supporting text - reduced */}
