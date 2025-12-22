@@ -8,13 +8,13 @@ const RetentionPhilosophy = () => {
       
       {/* Subtle background accent */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-accent-pop/30 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-radial from-accent-blue/30 to-transparent blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           {/* Small intro */}
-          <p className="text-sm text-accent-pop uppercase tracking-widest mb-12 font-medium">
+          <p className="text-sm text-accent-blue uppercase tracking-widest mb-12 font-medium">
             Our Philosophy
           </p>
 

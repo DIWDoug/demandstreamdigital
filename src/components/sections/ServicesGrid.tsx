@@ -60,7 +60,7 @@ const ServicesGrid = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-sm text-accent-pop uppercase tracking-widest mb-4 font-medium">
+          <p className="text-sm text-accent-blue uppercase tracking-widest mb-4 font-medium">
             White-Label Local Digital Marketing Partner
           </p>
           <h2 className="mb-6 text-foreground">
