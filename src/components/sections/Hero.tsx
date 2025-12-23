@@ -51,8 +51,8 @@ const Hero = () => {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-semibold mb-6 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
-              White-Label Local{" "}
-              <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
+              White-Label{" "}
+              <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Local SEO & Paid Media Fulfillment</span>{" "}
               You Can Trust
             </h1>
 
