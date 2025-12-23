@@ -11,7 +11,7 @@ const FinalCTA = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           {/* Simple, inevitable headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium mb-6 text-foreground">
+          <h2 className="font-medium mb-6 text-foreground">
             The agencies that scale without chaos
             <br />
             <span className="text-text-secondary">all made the same decision.</span>

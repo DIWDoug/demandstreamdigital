@@ -30,7 +30,7 @@ const SystemPrimer = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header - minimal */}
         <div className="max-w-2xl mx-auto text-center mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-4">
+          <h2 className="font-semibold text-foreground mb-4">
             One Inbound System. Multiple Execution Layers.
           </h2>
           <p className="text-text-secondary">
