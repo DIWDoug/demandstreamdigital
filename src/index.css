@@ -132,8 +132,9 @@
 
   h2 {
     font-weight: 500;
-    line-height: 1.1;
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.05;
+    /* Force larger, consistent section headlines across the site */
+    font-size: clamp(3rem, 5.8vw, 5.75rem) !important;
   }
 
   h3 {
@@ -168,8 +169,9 @@
   .mantra {
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 500;
-    line-height: 1.15;
-    font-size: clamp(2.75rem, 4.6vw, 4.75rem);
+    line-height: 1.05;
+    /* Keep mantra aligned with global h2 sizing for consistency */
+    font-size: inherit;
     letter-spacing: 0.02em;
     color: hsl(var(--accent-blue));
   }
@@ -311,13 +313,7 @@
     background-clip: text;
   }
 
-  /* Mantra/belief statement styling */
-  .mantra {
-    font-family: 'Inter', system-ui, sans-serif;
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide;
-    color: hsl(var(--text-primary));
-    letter-spacing: 0.1em;
-  }
+  /* Mantra/belief statement styling - removed duplicate definition (handled in @layer base) */
 
   /* Bucket header styling - uses accent color */
   .bucket-header {
