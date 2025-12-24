@@ -1,14 +1,45 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Map, MousePointerClick, Share2, FileText, Award } from "lucide-react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Share2, FileText, Award, Shield, Eye, Target } from "lucide-react";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
 
+  // Trust/Clarity/Execution framework layers
+  const frameworkLayers = {
+    trust: {
+      icon: Shield,
+      label: "Trust Layer",
+      color: "text-emerald-400",
+      bgColor: "bg-emerald-400/10",
+      borderColor: "border-emerald-400/20"
+    },
+    clarity: {
+      icon: Eye,
+      label: "Clarity Layer", 
+      color: "text-amber-400",
+      bgColor: "bg-amber-400/10",
+      borderColor: "border-amber-400/20"
+    },
+    execution: {
+      icon: Target,
+      label: "Execution Layer",
+      color: "text-accent-blue",
+      bgColor: "bg-accent-blue/10",
+      borderColor: "border-accent-blue/20"
+    }
+  };
+
   const hubs = [
     {
+      id: "local-seo",
       icon: MapPin,
-      title: "Local SEO",
+      title: "White Label Local SEO",
       summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
+      framework: {
+        trust: "Help clients understand that rankings aren't overnight—they're earned through consistent technical work and content authority.",
+        clarity: "Set realistic timelines: 3-6 months for traction, 6-12 months for sustainable rankings. Dependencies include site health, competition, and content velocity.",
+        execution: "Requires weekly optimization cycles, content production capacity, and technical SEO expertise across 50+ ranking factors."
+      },
       spokes: [
         {
           title: "On-Page Local Optimization",
@@ -33,21 +64,19 @@ const TopicalExpertise = () => {
         {
           title: "Local Schema Implementation",
           description: "LocalBusiness, Service, and FAQ schema markup that helps search engines understand business details and display rich results."
-        },
-        {
-          title: "Internal Linking Architecture",
-          description: "Strategic internal link structures that distribute authority to priority pages and help users navigate location-based content."
-        },
-        {
-          title: "Mobile-First Optimization",
-          description: "Speed, usability, and conversion optimization for mobile users—where most local searches happen."
         }
       ]
     },
     {
+      id: "google-maps",
       icon: Map,
-      title: "Google Maps Optimization",
+      title: "White Label Google Maps Optimization",
       summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
+      framework: {
+        trust: "Be honest about what moves the needle in Maps—proximity, reviews, and NAP consistency matter more than any single hack.",
+        clarity: "Explain the review velocity needed (2-4/week minimum) and the time to build citation authority (60-90 days for aggregators to propagate).",
+        execution: "Requires systematic review management, citation building across 75+ directories, and ongoing GBP optimization."
+      },
       spokes: [
         {
           title: "Google Business Profile Management",
@@ -66,43 +95,25 @@ const TopicalExpertise = () => {
           description: "Strategic submissions to major data aggregators like Data Axle, Localeze, and Foursquare—the sources that feed hundreds of downstream directories."
         },
         {
-          title: "Industry-Specific Platform Listings",
-          description: "Placement on vertical-specific directories that validate business legitimacy—from home services to healthcare to legal industry platforms."
-        },
-        {
-          title: "Unstructured Citations",
-          description: "Video, image, audio, and social media mentions that create brand signals without traditional NAP format—YouTube, podcasts, news coverage, and press."
-        },
-        {
-          title: "Social Foundation Citations",
-          description: "Optimized social profiles on Facebook, LinkedIn, Instagram, and X that reinforce brand consistency and create authority signals."
-        },
-        {
           title: "Local Pack Ranking Strategy",
           description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches."
         },
         {
           title: "GBP Post Strategy",
           description: "Regular posting cadence with offers, updates, and events that signal activity and engagement to Google's algorithm."
-        },
-        {
-          title: "Photo & Video Optimization",
-          description: "Geotagged imagery, virtual tours, and video content that increases engagement and time-on-listing metrics."
-        },
-        {
-          title: "Q&A Management",
-          description: "Proactive question seeding and response management that controls the narrative and captures featured snippet opportunities."
-        },
-        {
-          title: "Multi-Location Management",
-          description: "Scalable systems for managing dozens or hundreds of locations with consistent optimization and reporting."
         }
       ]
     },
     {
+      id: "google-ads",
       icon: MousePointerClick,
-      title: "Google Ads Management",
+      title: "White Label Google Ads Management",
       summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
+      framework: {
+        trust: "Paid media requires investment before insight. The first 30 days are data collection, not performance optimization.",
+        clarity: "Budget allocation matters: explain why $1,500/mo minimum is needed for local services, and how CPA improves over 90 days of learning.",
+        execution: "Demands weekly bid adjustments, negative keyword management, landing page testing, and conversion tracking expertise."
+      },
       spokes: [
         {
           title: "Local Search Campaign Structure",
@@ -121,14 +132,6 @@ const TopicalExpertise = () => {
           description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions."
         },
         {
-          title: "Negative Keyword Management",
-          description: "Ongoing refinement of negative keyword lists to eliminate wasted spend and improve lead quality over time."
-        },
-        {
-          title: "Ad Copy Testing & Optimization",
-          description: "Continuous A/B testing of headlines, descriptions, and CTAs to improve click-through and conversion rates."
-        },
-        {
           title: "Local Service Ads (LSA)",
           description: "Google Guaranteed and Google Screened campaign management for service businesses that qualify."
         },
@@ -139,9 +142,15 @@ const TopicalExpertise = () => {
       ]
     },
     {
+      id: "meta-ads",
       icon: Share2,
-      title: "Meta Ads (Facebook & Instagram)",
+      title: "White Label Meta Ads (Facebook & Instagram)",
       summary: "Build local awareness and capture demand through targeted social advertising.",
+      framework: {
+        trust: "Social ads work differently than search—they create demand rather than capture it. Set expectations for a longer consideration cycle.",
+        clarity: "Explain the creative fatigue curve (refresh every 2-3 weeks) and why retargeting is essential for local service conversion.",
+        execution: "Requires continuous creative production, audience testing, and pixel/conversion API expertise for accurate tracking."
+      },
       spokes: [
         {
           title: "Local Audience Targeting",
@@ -164,23 +173,21 @@ const TopicalExpertise = () => {
           description: "Short-form video content optimized for Reels and Stories that captures attention in the first three seconds."
         },
         {
-          title: "Advantage+ Campaign Management",
-          description: "Leveraging Meta's AI-powered campaign types for efficient local lead generation and audience discovery."
-        },
-        {
-          title: "Creative Fatigue Monitoring",
-          description: "Proactive creative refresh cycles that maintain performance before ad fatigue tanks results."
-        },
-        {
           title: "Cross-Platform Attribution",
           description: "Connecting Meta ad performance to actual leads and revenue using proper tracking and CRM integration."
         }
       ]
     },
     {
+      id: "content-marketing",
       icon: FileText,
-      title: "Content Marketing",
+      title: "White Label Content Marketing",
       summary: "Build topical authority, rank for informational queries, and position your clients as thought leaders that AI models cite.",
+      framework: {
+        trust: "Content is a long game. Help clients understand that topical authority builds over 6-12 months of consistent publishing.",
+        clarity: "Explain the hub-and-spoke model: pillar content supports conversion pages, blog posts capture long-tail, and all of it compounds.",
+        execution: "Requires subject matter expertise, consistent publishing velocity (4-8 pieces/month), and strategic internal linking."
+      },
       spokes: [
         {
           title: "Topical Content Strategy",
@@ -195,14 +202,6 @@ const TopicalExpertise = () => {
           description: "Location-specific content that demonstrates local expertise and captures geographic search intent across service areas."
         },
         {
-          title: "People Also Ask Optimization",
-          description: "Question-focused content structured to capture featured snippets and People Also Ask boxes for informational queries."
-        },
-        {
-          title: "Power Posts & Linkable Assets",
-          description: "High-value resources designed to earn backlinks naturally—original research, tools, comprehensive guides, and industry reports."
-        },
-        {
           title: "AI Visibility & Citation Strategy",
           description: "Content structured for AI model training and citation—clear, authoritative, well-sourced content that LLMs reference in answers."
         },
@@ -213,21 +212,19 @@ const TopicalExpertise = () => {
         {
           title: "Content Refresh & Optimization",
           description: "Regular audits and updates to existing content that maintain rankings and improve performance as search intent evolves."
-        },
-        {
-          title: "FAQ & Knowledge Base Content",
-          description: "Structured Q&A content that captures voice search queries and provides clear answers search engines can extract."
-        },
-        {
-          title: "Case Study & Social Proof Content",
-          description: "Results-focused content that demonstrates expertise and builds trust with prospects researching solutions."
         }
       ]
     },
     {
+      id: "authority-building",
       icon: Award,
-      title: "Authority Building",
+      title: "White Label Authority Building",
       summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
+      framework: {
+        trust: "Backlinks aren't bought—they're earned through relationships, quality content, and genuine value. No shortcuts that risk penalties.",
+        clarity: "Authority building is slow: expect 3-6 quality links/month from legitimate sources. Faster usually means riskier.",
+        execution: "Requires relationship management, PR expertise, content worth linking to, and ongoing monitoring for link health."
+      },
       spokes: [
         {
           title: "Digital PR & Media Placements",
@@ -246,24 +243,12 @@ const TopicalExpertise = () => {
           description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement that create authentic local signals."
         },
         {
-          title: "Reputation & Trust Management",
-          description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation."
-        },
-        {
           title: "HARO & Expert Commentary",
           description: "Responding to journalist queries and providing expert quotes that earn high-authority backlinks from news publications."
         },
         {
           title: "Guest Posting & Thought Leadership",
           description: "Strategic content placement on industry publications that builds authority and drives referral traffic."
-        },
-        {
-          title: "Podcast & Interview Placements",
-          description: "Securing guest appearances on relevant podcasts and interview features that build personal and brand authority."
-        },
-        {
-          title: "Award Submissions & Recognition",
-          description: "Identifying and pursuing industry awards, certifications, and recognition opportunities that build credibility signals."
         }
       ]
     }
@@ -287,13 +272,26 @@ const TopicalExpertise = () => {
     <section className="py-24 lg:py-32 bg-surface-dark relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="mb-6 text-foreground">
             Deep Expertise Across<br />Local Marketing
           </h2>
-          <p className="text-lg text-text-secondary">
+          <p className="text-lg text-text-secondary mb-6">
             Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
           </p>
+        </div>
+
+        {/* Framework legend */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(frameworkLayers).map(([key, layer]) => (
+            <div 
+              key={key}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${layer.bgColor} border ${layer.borderColor}`}
+            >
+              <layer.icon className={`h-3.5 w-3.5 ${layer.color}`} />
+              <span className={`text-xs font-medium ${layer.color}`}>{layer.label}</span>
+            </div>
+          ))}
         </div>
 
         {/* Hub cards grid */}
@@ -301,6 +299,7 @@ const TopicalExpertise = () => {
           {hubs.map((hub, index) => (
             <div 
               key={index}
+              id={hub.id}
               className={`premium-card cursor-pointer transition-all duration-300 ${
                 isExpanded(index) 
                   ? "ring-1 ring-accent-blue/50 bg-surface-elevated" 
@@ -331,10 +330,41 @@ const TopicalExpertise = () => {
               {/* Spokes - expanded content */}
               <div 
                 className={`overflow-hidden transition-all duration-300 ${
-                  isExpanded(index) ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+                  isExpanded(index) ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="pt-4 border-t border-border space-y-4">
+                {/* Framework layers */}
+                <div className="pt-4 border-t border-border space-y-3 mb-6">
+                  <p className="text-xs uppercase tracking-widest text-text-muted mb-3">How we approach this service</p>
+                  
+                  <div className={`p-3 rounded-lg ${frameworkLayers.trust.bgColor} border ${frameworkLayers.trust.borderColor}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Shield className={`h-3.5 w-3.5 ${frameworkLayers.trust.color}`} />
+                      <span className={`text-xs font-semibold ${frameworkLayers.trust.color}`}>Trust Layer</span>
+                    </div>
+                    <p className="text-text-secondary text-sm">{hub.framework.trust}</p>
+                  </div>
+                  
+                  <div className={`p-3 rounded-lg ${frameworkLayers.clarity.bgColor} border ${frameworkLayers.clarity.borderColor}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Eye className={`h-3.5 w-3.5 ${frameworkLayers.clarity.color}`} />
+                      <span className={`text-xs font-semibold ${frameworkLayers.clarity.color}`}>Clarity Layer</span>
+                    </div>
+                    <p className="text-text-secondary text-sm">{hub.framework.clarity}</p>
+                  </div>
+                  
+                  <div className={`p-3 rounded-lg ${frameworkLayers.execution.bgColor} border ${frameworkLayers.execution.borderColor}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Target className={`h-3.5 w-3.5 ${frameworkLayers.execution.color}`} />
+                      <span className={`text-xs font-semibold ${frameworkLayers.execution.color}`}>Execution Layer</span>
+                    </div>
+                    <p className="text-text-secondary text-sm">{hub.framework.execution}</p>
+                  </div>
+                </div>
+
+                {/* Spokes list */}
+                <div className="space-y-4">
+                  <p className="text-xs uppercase tracking-widest text-text-muted">What's included</p>
                   {hub.spokes.map((spoke, spokeIndex) => (
                     <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
                       <h4 className="text-sm font-medium text-foreground mb-1">
@@ -354,7 +384,7 @@ const TopicalExpertise = () => {
                     className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Discuss {hub.title} for your agency →
+                    Discuss {hub.title.replace('White Label ', '')} for your agency →
                   </a>
                 </div>
               </div>
