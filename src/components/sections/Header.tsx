@@ -27,12 +27,12 @@ const Header = () => {
   }, []);
 
   const servicesDropdown = [
-    { label: "Local SEO", href: "#services" },
-    { label: "Google Maps", href: "#services" },
-    { label: "Google Ads", href: "#services" },
-    { label: "Meta Ads", href: "#services" },
-    { label: "Organic Social", href: "#services" },
-    { label: "Authority Building", href: "#services" },
+    { label: "White Label Local SEO", href: "#local-seo" },
+    { label: "White Label Google Maps", href: "#google-maps" },
+    { label: "White Label Google Ads", href: "#google-ads" },
+    { label: "White Label Meta Ads", href: "#meta-ads" },
+    { label: "White Label Content Marketing", href: "#content-marketing" },
+    { label: "White Label Authority Building", href: "#authority-building" },
   ];
 
   const navLinks = [
@@ -42,6 +42,7 @@ const Header = () => {
       hasDropdown: true,
       dropdownItems: servicesDropdown
     },
+    { label: "The Book", href: "#book" },
     { label: "About", href: "#about" },
     { label: "Results", href: "#testimonials" },
     { label: "Contact", href: "#contact" }

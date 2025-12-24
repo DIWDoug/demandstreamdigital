@@ -1,23 +1,11 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
-import FeaturedIn from "@/components/sections/FeaturedIn";
-import PoweredBy from "@/components/sections/PoweredBy";
-import SystemPrimer from "@/components/sections/SystemPrimer";
-import ServicesGrid from "@/components/sections/ServicesGrid";
-import SystemConfirmation from "@/components/sections/SystemConfirmation";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
-import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
-import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-import AIVisibility from "@/components/sections/AIVisibility";
-import Packages from "@/components/sections/Packages";
-import WhatWeSolve from "@/components/sections/WhatWeSolve";
+import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
-import HowWeOperate from "@/components/sections/HowWeOperate";
-import FAQ from "@/components/sections/FAQ";
-import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 
 const Index = () => {
@@ -26,27 +14,19 @@ const Index = () => {
       <Header />
       <Hero />
       <TrustReel />
-      <FeaturedIn />
-      <PoweredBy />
-      <SystemPrimer />
       <div id="services">
-        <ServicesGrid />
+        <TopicalExpertise />
       </div>
-      <SystemConfirmation />
-      <TopicalExpertise />
-      <ScalableFulfillment />
-      <RetentionPhilosophy />
       <LocalGrowthEngine />
-      <AIVisibility />
-      <Packages />
       <div id="about">
-        <WhatWeSolve />
+        <ScalableFulfillment />
       </div>
-      <Testimonials />
-      <ContactForm />
-      <HowWeOperate />
-      <FAQ />
-      <FinalCTA />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+      <div id="contact">
+        <ContactForm />
+      </div>
       <Footer />
     </div>
   );

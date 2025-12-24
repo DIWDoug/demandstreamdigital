@@ -28,7 +28,10 @@ const LocalGrowthEngine = () => {
   };
 
   return (
-    <section className="py-24 lg:py-32 section-light relative overflow-hidden">
+    <section id="book" className="py-24 lg:py-32 section-light relative overflow-hidden">
+      {/* Prominent divider */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent-blue to-transparent" />
+      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Book Stack with Author in Front */}
@@ -74,29 +77,57 @@ const LocalGrowthEngine = () => {
 
           {/* Right: Content */}
           <div>
-            <p className="text-gray-500 text-lg mb-2">Discover How To</p>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-blue/10 border border-accent-blue/20 text-accent-blue text-sm font-medium mb-4">
+              Coming Soon
+            </div>
+            <p className="text-gray-500 text-lg mb-2">The Framework Behind Our Fulfillment</p>
             <h2 className="text-gray-900 mb-4">
-              Scale Your Agency<br />
-              <span className="text-accent-blue">Without the Chaos</span>
+              The Local Growth Engine
             </h2>
             
             <div className="w-16 h-1 bg-accent-blue mb-8" />
 
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              The Framework for White-Label Local Marketing That Actually Works
+              Trust. Clarity. Execution.
             </h3>
             
             <p className="text-gray-600 mb-6">
-              If you're an agency owner looking to add local marketing services without hiring specialists 
-              or burning through freelancers, you've found the right resource. The Local Growth Engine 
-              is the methodology behind $2M+ in retainer revenue generated for our agency partners.
+              Most white-label partners just say "we do the work." We take a different approach: we teach you to understand the work deeply enough to communicate it clearly to clients. That's what actually keeps them.
             </p>
 
-            <p className="text-gray-600 mb-8">
-              Inside, you'll discover the three-layer system we use to deliver consistent results across 
-              Local SEO, Google Maps, paid media, and reputation management — all white-labeled and 
-              built for scale.
+            <p className="text-gray-600 mb-6">
+              This book breaks down our three-layer framework for local marketing fulfillment—the same methodology behind $2M+ in retainer revenue generated for our agency partners.
             </p>
+
+            <div className="space-y-3 mb-8">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-emerald-600 text-xs font-bold">T</span>
+                </div>
+                <div>
+                  <p className="text-gray-900 font-medium">Trust Layer</p>
+                  <p className="text-gray-500 text-sm">How to communicate this work honestly to clients</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-amber-600 text-xs font-bold">C</span>
+                </div>
+                <div>
+                  <p className="text-gray-900 font-medium">Clarity Layer</p>
+                  <p className="text-gray-500 text-sm">What clients need to understand about timelines and dependencies</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-blue-600 text-xs font-bold">E</span>
+                </div>
+                <div>
+                  <p className="text-gray-900 font-medium">Execution Layer</p>
+                  <p className="text-gray-500 text-sm">What consistent delivery actually requires</p>
+                </div>
+              </div>
+            </div>
 
             {/* Email signup - only CTA button is green */}
             {!isSubmitted ? (
