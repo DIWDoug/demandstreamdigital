@@ -1,17 +1,17 @@
-import semrushLogo from "@/assets/logos/semrush.png";
+import semrushLogo from "@/assets/logos/semrush.svg";
 import localDominatorLogo from "@/assets/logos/local-dominator.jpg";
-import brightlocalLogo from "@/assets/logos/brightlocal.webp";
-import ahrefsLogo from "@/assets/logos/ahrefs.webp";
-import claudeLogo from "@/assets/logos/claude.png";
-import geminiLogo from "@/assets/logos/gemini.png";
-import chatgptLogo from "@/assets/logos/chatgpt.png";
+import brightlocalLogo from "@/assets/logos/brightlocal.svg";
+import ahrefsLogo from "@/assets/logos/ahrefs.svg";
+import claudeLogo from "@/assets/logos/claude.svg";
+import geminiLogo from "@/assets/logos/gemini.svg";
+import chatgptLogo from "@/assets/logos/chatgpt.svg";
 
 const PoweredBy = () => {
   const logos = [
     { name: "Semrush", src: semrushLogo },
     { name: "Ahrefs", src: ahrefsLogo },
     { name: "BrightLocal", src: brightlocalLogo },
-    { name: "Local Dominator", src: localDominatorLogo },
+    { name: "Local Dominator", src: localDominatorLogo, hasBackground: true },
     { name: "ChatGPT", src: chatgptLogo },
     { name: "Claude", src: claudeLogo },
     { name: "Gemini", src: geminiLogo },
@@ -29,7 +29,9 @@ const PoweredBy = () => {
               key={index}
               src={logo.src}
               alt={logo.name}
-              className="h-12 md:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 mix-blend-multiply dark:mix-blend-screen dark:invert"
+              className={`h-12 md:h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 ${
+                logo.hasBackground ? 'rounded-lg' : ''
+              }`}
             />
           ))}
         </div>
