@@ -133,8 +133,8 @@
   h2 {
     font-weight: 500;
     line-height: 1.1;
-    /* Section headlines - reduced by 50% */
-    font-size: clamp(1.5rem, 2.9vw, 2.875rem) !important;
+    /* Section headlines - slightly increased after 50% reduction */
+    font-size: clamp(1.75rem, 3.4vw, 3.25rem) !important;
   }
 
   h3 {
