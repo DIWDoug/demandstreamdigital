@@ -32,7 +32,7 @@ const ScalableFulfillment = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="mb-6">
-            <span className="text-[hsl(76,42%,35%)]">Scalable</span> White-Label Local Fulfillment
+            <span className="text-accent-blue">Scalable</span> White-Label Local Fulfillment
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
             Dialed-In Web removes the burden of execution while preserving your control over every aspect of your agency.
@@ -43,11 +43,11 @@ const ScalableFulfillment = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="rounded-xl p-6 bg-white shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="rounded-xl p-6 bg-white shadow-md border border-gray-100/80 group transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
-                  <feature.icon className="h-6 w-6 text-[hsl(76,42%,35%)]" />
+                <div className="p-3 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
+                  <feature.icon className="h-6 w-6 text-accent-blue" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">

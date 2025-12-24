@@ -53,7 +53,7 @@ const ServicesGrid = () => {
           </p>
         </div>
 
-        {/* Core Service - Dominant Card */}
+        {/* Core Service - Dominant Card with blue overlay */}
         <div className="mb-8">
           <a
             href="#contact"
@@ -65,9 +65,9 @@ const ServicesGrid = () => {
               style={{ backgroundImage: `url(${coreService.image})` }}
             />
             
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(224,60%,15%)] via-[hsl(224,60%,20%)/85%] to-[hsl(224,60%,25%)/60%]" />
-            <div className="absolute inset-0 bg-[hsl(224,60%,20%)]/60 mix-blend-multiply" />
+            {/* Blue overlay - not green */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(224,60%,12%)] via-[hsl(224,60%,18%)/90%] to-[hsl(224,60%,22%)/70%]" />
+            <div className="absolute inset-0 bg-[hsl(224,60%,18%)]/70 mix-blend-multiply" />
             
             {/* Content */}
             <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end text-white">
@@ -84,20 +84,20 @@ const ServicesGrid = () => {
                 {coreService.description}
               </p>
               
-              {/* CTA Button */}
+              {/* CTA Button - white, not green */}
               <div className="flex items-center">
                 <div className="flex items-center justify-between bg-white rounded-lg px-6 py-3.5 group-hover:bg-white/95 transition-all duration-300 w-fit">
-                  <span className="text-[hsl(224,60%,25%)] font-semibold text-sm uppercase tracking-wider mr-3">
+                  <span className="text-[hsl(224,60%,20%)] font-semibold text-sm uppercase tracking-wider mr-3">
                     Build Your Foundation
                   </span>
-                  <ArrowRight className="h-5 w-5 text-[hsl(224,60%,25%)] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-5 w-5 text-[hsl(224,60%,20%)] transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        {/* Amplifier Services - Smaller, equal grid */}
+        {/* Amplifier Services - Charcoal/gray overlay, NOT green */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {amplifiers.map((service, index) => (
             <a
@@ -111,39 +111,39 @@ const ServicesGrid = () => {
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               
-              {/* Green overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(76,42%,15%)] via-[hsl(76,42%,25%)/90%] to-[hsl(76,42%,30%)/70%]" />
-              <div className="absolute inset-0 bg-[hsl(76,42%,28%)]/75 mix-blend-multiply" />
+              {/* Charcoal/neutral overlay - NOT green */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,20%,8%)] via-[hsl(220,20%,15%)/90%] to-[hsl(220,20%,20%)/70%]" />
+              <div className="absolute inset-0 bg-[hsl(220,20%,12%)]/75 mix-blend-multiply" />
               
               {/* Content */}
               <div className="absolute inset-0 p-5 flex flex-col justify-end text-white">
                 {/* Amplifier label */}
                 <div className="flex items-center gap-2 mb-3">
-                  <service.icon className="h-4 w-4 text-white/70" />
-                  <span className="text-xs text-white/60 font-medium uppercase tracking-wider">{service.label}</span>
+                  <service.icon className="h-4 w-4 text-accent-blue/70" />
+                  <span className="text-xs text-white/50 font-medium uppercase tracking-wider">{service.label}</span>
                 </div>
                 
                 <h3 className="text-lg font-bold mb-2 leading-tight">
                   {service.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed mb-4 line-clamp-3">
+                <p className="text-sm text-white/60 leading-relaxed mb-4 line-clamp-3">
                   {service.description}
                 </p>
                 
-                {/* Arrow */}
+                {/* Arrow - neutral, not green */}
                 <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300">
-                  <ArrowRight className="h-4 w-4 text-white group-hover:text-[hsl(76,42%,30%)] transition-colors" />
+                  <ArrowRight className="h-4 w-4 text-white group-hover:text-[hsl(220,20%,15%)] transition-colors" />
                 </div>
               </div>
             </a>
           ))}
         </div>
 
-        {/* Single section CTA */}
+        {/* Single section CTA - text link, blue accent */}
         <div className="mt-12 text-center">
           <a 
             href="#contact"
-            className="inline-flex items-center gap-2 text-cta hover:text-cta-glow font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue-glow font-medium transition-colors"
           >
             See the Inbound System in Action
             <ArrowRight className="h-4 w-4" />

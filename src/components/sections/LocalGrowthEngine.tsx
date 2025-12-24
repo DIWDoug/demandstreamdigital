@@ -31,7 +31,7 @@ const LocalGrowthEngine = () => {
     <section className="py-24 lg:py-32 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Book Stack with Author in Front - matching reference layout */}
+          {/* Left: Book Stack with Author in Front */}
           <div className="relative flex justify-center lg:justify-start min-h-[480px] lg:min-h-[580px]">
             {/* Fanned book stack behind author */}
             <div className="absolute left-4 lg:left-8 top-8 lg:top-12">
@@ -64,11 +64,11 @@ const LocalGrowthEngine = () => {
               />
             </div>
             
-            {/* Author info at bottom left */}
+            {/* Author info at bottom left - blue accent line instead of green */}
             <div className="absolute bottom-0 left-4 lg:left-8 z-20">
               <p className="text-xl lg:text-2xl font-semibold text-gray-900">Doug Bryson</p>
               <p className="text-gray-600 text-sm">Founder & CEO</p>
-              <div className="w-16 h-1 bg-[hsl(76,42%,41%)] mt-2" />
+              <div className="w-16 h-1 bg-accent-blue mt-2" />
             </div>
           </div>
 
@@ -77,10 +77,10 @@ const LocalGrowthEngine = () => {
             <p className="text-gray-500 text-lg mb-2">Discover How To</p>
             <h2 className="text-gray-900 mb-4">
               Scale Your Agency<br />
-              <span className="text-[hsl(76,42%,35%)]">Without the Chaos</span>
+              <span className="text-accent-blue">Without the Chaos</span>
             </h2>
             
-            <div className="w-16 h-1 bg-[hsl(76,42%,41%)] mb-8" />
+            <div className="w-16 h-1 bg-accent-blue mb-8" />
 
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               The Framework for White-Label Local Marketing That Actually Works
@@ -98,7 +98,7 @@ const LocalGrowthEngine = () => {
               built for scale.
             </p>
 
-            {/* Email signup or CTA */}
+            {/* Email signup - only CTA button is green */}
             {!isSubmitted ? (
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <div className="flex-1 w-full sm:w-auto">
@@ -109,7 +109,7 @@ const LocalGrowthEngine = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="flex-1 px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[hsl(76,42%,41%)]/50 focus:border-[hsl(76,42%,41%)] transition-all"
+                      className="flex-1 px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 focus:border-accent-blue transition-all"
                     />
                     <button
                       type="submit"
@@ -129,15 +129,15 @@ const LocalGrowthEngine = () => {
                 </div>
               </div>
             ) : (
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 max-w-md">
-                <CheckCircle2 className="h-5 w-5 text-[hsl(76,42%,35%)] flex-shrink-0" />
+              <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-blue/10 border border-accent-blue/20 max-w-md">
+                <CheckCircle2 className="h-5 w-5 text-accent-blue flex-shrink-0" />
                 <p className="text-gray-900">
                   You're on the list! We'll be in touch soon.
                 </p>
               </div>
             )}
 
-            <p className="text-gray-500 text-sm mt-4">
+            <p className="text-gray-400 text-sm mt-4">
               Coming soon. Join the waitlist to get notified + exclusive bonus content.
             </p>
           </div>

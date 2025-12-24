@@ -20,17 +20,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen gradient-hero noise-overlay flex items-center overflow-hidden">
-      {/* Enhanced abstract data texture overlay */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl bg-gradient-to-br from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl bg-gradient-to-tl from-cta/20 to-transparent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl bg-gradient-radial from-cta/10 to-transparent" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Hero background with darkened top zone */}
+      <div className="absolute inset-0 gradient-hero" />
+      
+      {/* Darkened top 20% for header contrast */}
+      <div className="absolute top-0 left-0 right-0 h-[20%] bg-gradient-to-b from-[hsl(220,25%,4%)] to-transparent" />
+      
+      {/* Subtle abstract texture - reduced */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] rounded-full blur-3xl bg-gradient-to-br from-accent-blue/20 to-transparent animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute bottom-1/3 right-1/4 w-[300px] h-[300px] rounded-full blur-3xl bg-gradient-to-tl from-accent-blue/15 to-transparent animate-pulse" style={{ animationDuration: '8s', animationDelay: '3s' }} />
       </div>
 
-      {/* Grid pattern */}
+      {/* Grid pattern - more subtle */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--text-secondary)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--text-secondary)) 1px, transparent 1px)`,
@@ -38,26 +43,30 @@ const Hero = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 py-32 lg:py-40 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* Increased vertical padding ~25% */}
+      <div className="container mx-auto px-6 lg:px-8 py-40 lg:py-52 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left-aligned content block */}
           <div className="max-w-xl">
             {/* Eyebrow */}
             <div className="flex items-center mb-6 animate-fade-in-up">
-              <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
+              <p className="text-sm md:text-base text-foreground/80 uppercase tracking-widest font-medium">
                 White-Label Local Digital Marketing Partner
               </p>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-6 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
+            {/* Main Headline - Dominant */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-4 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
               White-Label{" "}
-              <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Local SEO & Paid Media Fulfillment</span>{" "}
+              <span className="text-accent-blue">Local SEO & Paid Media Fulfillment</span>{" "}
               You Can Trust
             </h1>
 
-            {/* Authority anchor - immediately under headline */}
-            <p className="text-base md:text-lg text-cta font-medium mb-8 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            {/* Blue divider under H1 */}
+            <div className="w-24 h-0.5 bg-gradient-to-r from-accent-blue to-accent-blue/40 mb-6 animate-fade-in-up" style={{ animationDelay: "0.12s" }} />
+
+            {/* Authority anchor - using blue, not green */}
+            <p className="text-base md:text-lg text-accent-blue font-medium mb-8 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               Built for agencies managing 50–500+ local clients
             </p>
 
@@ -66,11 +75,11 @@ const Hero = () => {
               Dialed-In Web helps agencies scale local SEO, Google Maps visibility, and paid media without building internal fulfillment teams. All execution is delivered under your brand.
             </p>
 
-            {/* CTAs - Primary + Secondary */}
+            {/* Secondary CTA - text only, no green */}
             <div className="flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <a 
                 href="#system"
-                className="text-text-secondary hover:text-foreground transition-colors font-medium flex items-center gap-2 py-4"
+                className="text-text-secondary hover:text-foreground transition-colors font-medium flex items-center gap-2 py-4 border-b border-transparent hover:border-accent-blue/30"
               >
                 How the System Works
                 <ArrowRight className="h-4 w-4" />
@@ -78,9 +87,9 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right column - Compact form */}
+          {/* Right column - Lower contrast form container */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <div className="bg-card/60 backdrop-blur-md border border-border/50 rounded-2xl p-8 shadow-2xl">
+            <div className="bg-surface-elevated/40 backdrop-blur-sm border border-border/30 rounded-2xl p-8 shadow-xl">
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 See If We're a Fit
               </h3>
@@ -96,7 +105,7 @@ const Hero = () => {
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     required
-                    className="bg-background/50 border-border/50 focus:border-cta h-12"
+                    className="bg-background/30 border-border/30 focus:border-accent-blue/50 h-12"
                   />
                 </div>
                 <div>
@@ -106,7 +115,7 @@ const Hero = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="bg-background/50 border-border/50 focus:border-cta h-12"
+                    className="bg-background/30 border-border/30 focus:border-accent-blue/50 h-12"
                   />
                 </div>
                 <div>
@@ -116,7 +125,7 @@ const Hero = () => {
                     value={formData.website}
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                     required
-                    className="bg-background/50 border-border/50 focus:border-cta h-12"
+                    className="bg-background/30 border-border/30 focus:border-accent-blue/50 h-12"
                   />
                 </div>
                 
@@ -130,7 +139,7 @@ const Hero = () => {
                 </Button>
               </form>
               
-              <p className="text-text-secondary/60 text-xs mt-4 text-center">
+              <p className="text-text-muted/50 text-xs mt-4 text-center">
                 No spam. We only work with qualified agencies.
               </p>
             </div>
@@ -140,8 +149,8 @@ const Hero = () => {
 
       {/* Subtle scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-        <div className="w-6 h-10 rounded-full border border-border/50 flex items-start justify-center p-2 backdrop-blur-sm">
-          <div className="w-1 h-2 bg-cta rounded-full animate-bounce" />
+        <div className="w-6 h-10 rounded-full border border-border/30 flex items-start justify-center p-2 backdrop-blur-sm">
+          <div className="w-1 h-2 bg-accent-blue/60 rounded-full animate-bounce" />
         </div>
       </div>
     </section>
