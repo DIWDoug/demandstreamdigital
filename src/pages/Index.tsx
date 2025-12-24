@@ -2,6 +2,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
 import FeaturedIn from "@/components/sections/FeaturedIn";
+import PoweredBy from "@/components/sections/PoweredBy";
 import SystemPrimer from "@/components/sections/SystemPrimer";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import SystemConfirmation from "@/components/sections/SystemConfirmation";
@@ -26,6 +27,7 @@ const Index = () => {
       <Hero />
       <TrustReel />
       <FeaturedIn />
+      <PoweredBy />
       <SystemPrimer />
       <div id="services">
         <ServicesGrid />
