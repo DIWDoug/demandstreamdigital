@@ -1,5 +1,4 @@
 const TrustReel = () => {
-  // Reduced to 5 items per audit recommendation
   const trustItems = [
     "White-Label Partner",
     "100s of Campaigns Managed",
@@ -9,27 +8,27 @@ const TrustReel = () => {
   ];
 
   return (
-    <section className="py-8 bg-surface-dark border-y border-border overflow-hidden">
-      <div className="relative">
-        {/* Single row, slower animation, more spacing */}
-        <div className="flex animate-slide-left">
+    <section className="py-6 bg-[hsl(220,20%,6%)] border-y border-border/20 overflow-hidden">
+      <div className="relative flex items-center justify-center">
+        {/* Single row, slower animation (35s), reduced font, increased letter spacing */}
+        <div className="flex animate-slide-left-slow">
           {/* First set */}
-          <div className="flex shrink-0 gap-16 px-8">
+          <div className="flex shrink-0 gap-20 px-10">
             {trustItems.map((item, index) => (
               <span 
                 key={index} 
-                className="text-sm text-text-muted whitespace-nowrap tracking-wide uppercase"
+                className="text-xs text-text-muted/60 whitespace-nowrap tracking-[0.2em] uppercase"
               >
                 {item}
               </span>
             ))}
           </div>
           {/* Duplicate for seamless loop */}
-          <div className="flex shrink-0 gap-16 px-8">
+          <div className="flex shrink-0 gap-20 px-10">
             {trustItems.map((item, index) => (
               <span 
                 key={`dup-${index}`} 
-                className="text-sm text-text-muted whitespace-nowrap tracking-wide uppercase"
+                className="text-xs text-text-muted/60 whitespace-nowrap tracking-[0.2em] uppercase"
               >
                 {item}
               </span>

@@ -36,12 +36,12 @@ const SystemConfirmation = () => {
               </p>
             </div>
 
-            {/* Right side - proof points */}
+            {/* Right side - proof points with BLUE checkmarks, not green */}
             <div className="flex-1 space-y-4">
               {points.map((point, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-cta/20 border border-cta/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="h-3.5 w-3.5 text-cta" />
+                  <div className="w-6 h-6 rounded-full bg-accent-blue/20 border border-accent-blue/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="h-3.5 w-3.5 text-accent-blue" />
                   </div>
                   <div>
                     <p className="text-foreground font-medium">{point.text}</p>

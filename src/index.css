@@ -430,6 +430,11 @@
     animation: slideLeft 25s linear infinite;
   }
 
+  /* Slower trust reel animation */
+  .animate-slide-left-slow {
+    animation: slideLeft 45s linear infinite;
+  }
+
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }

@@ -69,22 +69,22 @@ const AIVisibility = () => {
             </div>
           </div>
 
-          {/* What this means */}
+          {/* What this means - stats use BLUE, not green */}
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6">
-              <p className="text-3xl font-bold text-cta mb-2">Zero</p>
+              <p className="text-3xl font-bold text-accent-blue mb-2">Zero</p>
               <p className="text-text-secondary text-sm">
                 Additional cost for AI visibility — it's built into our standard fulfillment
               </p>
             </div>
             <div className="text-center p-6">
-              <p className="text-3xl font-bold text-cta mb-2">Future-Proof</p>
+              <p className="text-3xl font-bold text-accent-blue mb-2">Future-Proof</p>
               <p className="text-text-secondary text-sm">
                 As AI search grows, your clients are already positioned to capture that traffic
               </p>
             </div>
             <div className="text-center p-6">
-              <p className="text-3xl font-bold text-cta mb-2">Proven</p>
+              <p className="text-3xl font-bold text-accent-blue mb-2">Proven</p>
               <p className="text-text-secondary text-sm">
                 The same methodology that's generated $2M+ in partner revenue
               </p>
