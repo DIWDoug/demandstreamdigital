@@ -5,7 +5,6 @@ import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ";
 import ContactForm from "@/components/sections/ContactForm";
 import Footer from "@/components/sections/Footer";
 
@@ -22,7 +21,6 @@ const Index = () => {
       <div id="about">
         <ScalableFulfillment />
       </div>
-      <FAQ />
       <div id="testimonials">
         <Testimonials />
       </div>
