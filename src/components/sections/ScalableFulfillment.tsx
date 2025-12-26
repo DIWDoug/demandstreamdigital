@@ -1,70 +1,68 @@
-import { Zap, Users, TrendingUp, Shield } from "lucide-react";
+import { Users, Shield, Clock, Settings } from "lucide-react";
 
 const ScalableFulfillment = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: "Expand Services, Not Payroll",
-      description: "Scale into new local markets without hiring, training, or managing additional staff."
-    },
+  const points = [
     {
       icon: Users,
-      title: "Your Brand, Our Execution",
-      description: "We operate behind the scenes. You maintain the relationship and the margin."
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictable Delivery",
-      description: "Structured workflows and consistent cycles so you can grow without chaos."
+      title: "Expand Without Hiring",
+      description: "Add services to your roster without building internal teams."
     },
     {
       icon: Shield,
-      title: "Full Control Preserved",
-      description: "Strategy, pricing, and client communication remain entirely yours."
+      title: "Your Brand, Our Work",
+      description: "Every deliverable is white-labeled. Clients never know we exist."
+    },
+    {
+      icon: Clock,
+      title: "Predictable Timelines",
+      description: "Clear SLAs and consistent delivery you can plan around."
+    },
+    {
+      icon: Settings,
+      title: "Full Control",
+      description: "You own the client relationship. We handle execution."
     }
   ];
 
   return (
-    <section className="py-24 lg:py-32 section-light relative">
-      {/* Section divider top */}
-      <div className="section-divider absolute top-0" />
-      
+    <section className="py-24 lg:py-32 bg-surface-dark">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="mb-6">
-            <span className="text-accent-blue">Scalable</span> White-Label Local Fulfillment
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto">
-            Dialed-In Web removes the burden of execution while preserving your control over every aspect of your agency.
-          </p>
-        </div>
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="mb-4 text-foreground">
+              Why Agencies Partner With Us
+            </h2>
+            <p className="text-text-secondary max-w-xl mx-auto">
+              Scale your services without scaling your headcount.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="rounded-xl p-6 bg-white shadow-md border border-gray-100/80 group transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
-                  <feature.icon className="h-6 w-6 text-accent-blue" />
+          {/* Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {points.map((point, index) => (
+              <div 
+                key={index}
+                className="flex gap-4"
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <point.icon className="h-5 w-5 text-accent-blue" />
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {feature.title}
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    {point.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    {feature.description}
+                  <p className="text-text-secondary text-sm">
+                    {point.description}
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* Section divider bottom */}
-      <div className="section-divider absolute bottom-0" />
     </section>
   );
 };
