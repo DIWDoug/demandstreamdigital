@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Smooth scroll offset for fixed header */
-[id] {
-  scroll-margin-top: 80px;
-}
-
 /* Premium Agency Design System - Dialed-In Web
    Dark mode with restrained accent colors
    Green = ACTION ONLY (CTAs)
