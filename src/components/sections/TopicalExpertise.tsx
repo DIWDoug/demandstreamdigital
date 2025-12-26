@@ -9,84 +9,90 @@ const TopicalExpertise = () => {
       id: "local-seo",
       icon: MapPin,
       title: "White Label Local SEO",
-      summary: "Dominate local organic search results.",
+      summary: "Dominate local organic search results with comprehensive on-page optimization, technical SEO foundations, and strategic link acquisition that positions your clients as the obvious choice in their market.",
+      description: "Local SEO requires understanding how Google interprets geographic relevance, service intent, and business authority. We build the complete technical and content foundation that allows local businesses to rank consistently across their service areas.",
       spokes: [
-        "On-Page Local Optimization",
-        "Technical SEO for Multi-Location",
-        "Service Area Page Development",
-        "Local Link Acquisition",
-        "Competitor Gap Analysis",
-        "Local Schema Implementation"
+        { name: "On-Page Local Optimization", detail: "Title tags, meta descriptions, header structure, and content optimization aligned to local search intent and geographic modifiers." },
+        { name: "Technical SEO for Multi-Location", detail: "Site architecture, internal linking, crawl optimization, and structured data implementation for businesses serving multiple areas." },
+        { name: "Service Area Page Development", detail: "Unique, substantive pages for each service-location combination that satisfy both user intent and search engine quality guidelines." },
+        { name: "Local Link Acquisition", detail: "Strategic outreach to local organizations, industry directories, and community partners that build genuine geographic relevance." },
+        { name: "Competitor Gap Analysis", detail: "Systematic evaluation of competitor positioning, keyword opportunities, and content gaps that inform strategy and prioritization." },
+        { name: "Local Schema Implementation", detail: "LocalBusiness, Service, and geographic schema markup that helps search engines understand business context and service areas." }
       ]
     },
     {
       id: "google-maps",
       icon: Map,
       title: "White Label Google Maps Optimization",
-      summary: "Own the local 3-pack.",
+      summary: "Own the local 3-pack with comprehensive Google Business Profile management, review generation systems, and citation consistency that establishes your clients as trusted local authorities.",
+      description: "The local pack is where most local searches convert. We manage every signal that influences map rankings—from profile completeness to review velocity to citation accuracy across the data ecosystem.",
       spokes: [
-        "Google Business Profile Management",
-        "Review Generation & Response",
-        "Structured Citation Consistency",
-        "Data Aggregator Distribution",
-        "Local Pack Ranking Strategy",
-        "GBP Post Strategy"
+        { name: "Google Business Profile Management", detail: "Complete profile optimization including categories, attributes, services, products, and ongoing content that maximizes visibility and conversion." },
+        { name: "Review Generation & Response", detail: "Systematic review acquisition workflows and professional response templates that build reputation and demonstrate customer engagement." },
+        { name: "Structured Citation Consistency", detail: "NAP accuracy across core directories, industry-specific listings, and local data sources that establish business legitimacy." },
+        { name: "Data Aggregator Distribution", detail: "Submission to major data aggregators that feed business information to hundreds of downstream directories and platforms." },
+        { name: "Local Pack Ranking Strategy", detail: "Ongoing optimization focused on the specific signals that influence local pack placement including proximity, relevance, and prominence." },
+        { name: "GBP Post Strategy", detail: "Regular posting cadence with offers, updates, and content that keeps profiles active and engaging for potential customers." }
       ]
     },
     {
       id: "google-ads",
       icon: MousePointerClick,
       title: "White Label Google Ads",
-      summary: "Capture high-intent local searches.",
+      summary: "Capture high-intent local searches with precisely structured campaigns, optimized landing pages, and attribution systems that prove ROI to clients every month.",
+      description: "Local paid search requires understanding service-based buying behavior, geographic bid modifiers, and the landing page experience that converts clicks into calls. We build campaigns that deliver measurable leads.",
       spokes: [
-        "Local Search Campaign Structure",
-        "Landing Page Optimization",
-        "Bid Strategy & Budget Allocation",
-        "Call Tracking & Attribution",
-        "Local Service Ads (LSA)",
-        "Performance Max for Local"
+        { name: "Local Search Campaign Structure", detail: "Account architecture designed for local service businesses including geographic targeting, ad scheduling, and keyword segmentation." },
+        { name: "Landing Page Optimization", detail: "Conversion-focused landing pages with clear calls-to-action, trust signals, and tracking implementation that maximize lead quality." },
+        { name: "Bid Strategy & Budget Allocation", detail: "Smart bidding implementation, budget pacing, and ongoing optimization that balances volume with cost-per-acquisition targets." },
+        { name: "Call Tracking & Attribution", detail: "Phone call tracking, form submission attribution, and reporting infrastructure that connects ad spend to actual business outcomes." },
+        { name: "Local Service Ads (LSA)", detail: "Google Guaranteed and Screened setup, review management, and optimization for service businesses in eligible categories." },
+        { name: "Performance Max for Local", detail: "Asset optimization, audience signals, and creative strategy for Google's AI-driven campaign type focused on local objectives." }
       ]
     },
     {
       id: "meta-ads",
       icon: Share2,
       title: "White Label Meta Ads",
-      summary: "Build local awareness through social.",
+      summary: "Build local awareness and generate leads through Facebook and Instagram with creative strategy, precise targeting, and retargeting systems that nurture prospects into customers.",
+      description: "Social advertising for local businesses requires understanding how to reach geographic audiences, create thumb-stopping creative, and build retargeting sequences that move prospects through the consideration journey.",
       spokes: [
-        "Local Audience Targeting",
-        "Creative Strategy & Production",
-        "Retargeting & Lookalike Campaigns",
-        "Lead Form Optimization",
-        "Video Ad Production",
-        "Cross-Platform Attribution"
+        { name: "Local Audience Targeting", detail: "Geographic targeting, interest-based segmentation, and custom audience development that reaches the right local prospects." },
+        { name: "Creative Strategy & Production", detail: "Ad creative development including static images, carousels, and short-form video optimized for local service messaging." },
+        { name: "Retargeting & Lookalike Campaigns", detail: "Website visitor retargeting, customer list lookalikes, and sequential messaging that nurtures prospects toward conversion." },
+        { name: "Lead Form Optimization", detail: "Meta lead form setup, qualification questions, and CRM integration that delivers quality leads directly to client systems." },
+        { name: "Video Ad Production", detail: "Short-form video content designed for social consumption including testimonial clips, service showcases, and promotional content." },
+        { name: "Cross-Platform Attribution", detail: "Conversion tracking, pixel implementation, and reporting that connects social ad spend to measurable business outcomes." }
       ]
     },
     {
       id: "content-marketing",
       icon: FileText,
       title: "White Label Content Marketing",
-      summary: "Build topical authority that ranks.",
+      summary: "Build topical authority that ranks in search engines and gets cited by AI systems through strategic content development, pillar page architecture, and ongoing optimization.",
+      description: "Content marketing for local businesses requires understanding topical authority, geographic content strategy, and the evolving landscape of AI-driven search. We create content systems that compound over time.",
       spokes: [
-        "Topical Content Strategy",
-        "Service-Focused Pillar Content",
-        "Geographic Content Writing",
-        "AI Visibility & Citation Strategy",
-        "Blog Content Production",
-        "Content Refresh & Optimization"
+        { name: "Topical Content Strategy", detail: "Content planning based on topical authority principles, keyword clustering, and competitive content gap analysis." },
+        { name: "Service-Focused Pillar Content", detail: "Comprehensive pillar pages for core services that establish expertise and serve as hubs for supporting content." },
+        { name: "Geographic Content Writing", detail: "Location-specific content that demonstrates local expertise without creating thin doorway pages that risk algorithmic penalties." },
+        { name: "AI Visibility & Citation Strategy", detail: "Content optimization for AI systems including structured data, clear entity relationships, and authoritative sourcing." },
+        { name: "Blog Content Production", detail: "Ongoing blog content that addresses customer questions, demonstrates expertise, and supports internal linking architecture." },
+        { name: "Content Refresh & Optimization", detail: "Systematic content auditing and updating that maintains relevance, improves performance, and prevents content decay." }
       ]
     },
     {
       id: "authority-building",
       icon: Award,
       title: "White Label Authority Building",
-      summary: "Establish trust signals that last.",
+      summary: "Establish trust signals that last through digital PR, strategic link acquisition, and industry positioning that builds genuine authority over time.",
+      description: "Authority cannot be manufactured—it must be earned through consistent visibility, genuine relationships, and content that demonstrates expertise. We build the backlink profiles and brand signals that establish long-term credibility.",
       spokes: [
-        "Digital PR & Media Placements",
-        "Vendor & Partner Testimonial Links",
-        "Industry Directory Listings",
-        "Local Sponsorship & Partnerships",
-        "HARO & Expert Commentary",
-        "Guest Posting & Thought Leadership"
+        { name: "Digital PR & Media Placements", detail: "Press release distribution, journalist outreach, and media placement strategies that generate coverage and high-authority links." },
+        { name: "Vendor & Partner Testimonial Links", detail: "Strategic relationship development with vendors, suppliers, and partners that results in genuine testimonial placements and backlinks." },
+        { name: "Industry Directory Listings", detail: "Submission to relevant industry associations, professional organizations, and niche directories that signal expertise and legitimacy." },
+        { name: "Local Sponsorship & Partnerships", detail: "Community involvement strategies including local sponsorships, event partnerships, and nonprofit relationships that build local authority." },
+        { name: "HARO & Expert Commentary", detail: "Journalist query responses and expert commentary placements that position clients as authoritative sources in their industries." },
+        { name: "Guest Posting & Thought Leadership", detail: "Strategic content placement on industry publications and relevant platforms that builds visibility and earns contextual backlinks." }
       ]
     }
   ];
@@ -132,27 +138,27 @@ const TopicalExpertise = () => {
 
               {/* Summary */}
               <p className="text-sm text-text-secondary mb-3">
-                {service.summary}
+                {expandedIndex === index ? service.description : service.summary}
               </p>
 
               {/* Expanded spokes */}
               <div 
                 className={`overflow-hidden transition-all duration-300 ${
-                  expandedIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  expandedIndex === index ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="pt-3 border-t border-border/30">
-                  <ul className="space-y-2">
-                    {service.spokes.map((spoke, spokeIndex) => (
-                      <li 
-                        key={spokeIndex}
-                        className="text-sm text-text-muted flex items-center gap-2"
-                      >
-                        <span className="w-1 h-1 bg-accent-blue rounded-full" />
-                        {spoke}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="pt-4 border-t border-border/30 space-y-4">
+                  {service.spokes.map((spoke, spokeIndex) => (
+                    <div key={spokeIndex}>
+                      <h4 className="text-sm font-medium text-foreground mb-1 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-accent-blue rounded-full flex-shrink-0" />
+                        {spoke.name}
+                      </h4>
+                      <p className="text-sm text-text-muted pl-3.5">
+                        {spoke.detail}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
