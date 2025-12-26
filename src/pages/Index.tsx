@@ -22,10 +22,10 @@ const Index = () => {
       <div id="about">
         <ScalableFulfillment />
       </div>
-      <FAQ />
       <div id="testimonials">
         <Testimonials />
       </div>
+      <FAQ />
       <div id="contact">
         <ContactForm />
       </div>
