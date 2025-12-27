@@ -36,10 +36,6 @@ const WhoWeAre = () => {
               <p>
                 <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.
               </p>
-              
-              <p className="text-cta font-semibold pt-2">
-                — Doug
-              </p>
             </div>
             
             {/* Power Punch CTA */}
