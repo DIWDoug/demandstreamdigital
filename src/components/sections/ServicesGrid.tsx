@@ -47,6 +47,43 @@ const ServicesGrid = () => {
           </p>
         </div>
 
+        {/* Core Service - Full Width */}
+        <a
+          href="#contact"
+          className="group relative overflow-hidden rounded-xl h-[280px] mb-6 block cursor-pointer"
+        >
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style={{ backgroundImage: `url(https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80)` }}
+          />
+          
+          {/* Green overlay - brand olive green */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(76,42%,15%)] via-[hsl(76,42%,25%)/90%] to-[hsl(76,42%,30%)/70%]" />
+          <div className="absolute inset-0 bg-[hsl(76,42%,28%)]/75 mix-blend-multiply" />
+          
+          {/* Content */}
+          <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-center text-white max-w-3xl">
+            <span className="text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Core Service</span>
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+              Digital Inbound Marketing
+            </h3>
+            <p className="text-base text-white/80 leading-relaxed mb-6 max-w-xl">
+              A comprehensive strategy that attracts, engages, and converts your ideal clients through content, SEO, and targeted campaigns—all working together to generate sustainable lead flow.
+            </p>
+            
+            {/* Arrow button - transforms to LEARN MORE on hover */}
+            <div className="flex items-center">
+              <div className="flex items-center gap-3 bg-white rounded-lg px-5 py-3 transition-all duration-300 group-hover:gap-4">
+                <span className="text-[hsl(76,42%,30%)] font-semibold text-sm uppercase tracking-wider">
+                  Learn More
+                </span>
+                <ArrowRight className="h-5 w-5 text-[hsl(76,42%,30%)] transition-transform group-hover:translate-x-1" />
+              </div>
+            </div>
+          </div>
+        </a>
+
         {/* Horizontal cards with expand on hover */}
         <div className="flex gap-4 h-[500px] lg:h-[550px]">
           {services.map((service, index) => (
