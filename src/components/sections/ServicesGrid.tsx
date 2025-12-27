@@ -4,32 +4,32 @@ const ServicesGrid = () => {
   const services = [
     {
       title: "Local SEO That Dominates",
-      description: "Outdated SEO tactics waste time and money. We build location-specific visibility through technical optimization, content alignment, and authority signals that actually move rankings.",
+      description: "Your clients deserve page-one visibility, not excuses. We execute technical optimization, strategic content, and authority-building that delivers measurable ranking gains you can present with confidence.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     },
     {
       title: "Google Maps Visibility That Converts",
-      description: "Your clients need to own the local 3-pack. We optimize Google Business Profiles, manage reviews, and build citation authority to drive calls directly from Maps.",
+      description: "The local 3-pack drives calls. We optimize Google Business Profiles, orchestrate review strategies, and build citation authority—giving your clients the visibility that translates to revenue.",
       image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&q=80",
     },
     {
       title: "Paid Ads That Maximize ROI",
-      description: "Ads that don't generate leads are useless. We engineer Google and Meta campaigns that make every dollar work harder, bringing in calls, forms, and real growth—fast.",
+      description: "Every dollar accountable. We architect Google and Meta campaigns engineered for lead generation—real calls, real forms, real growth your clients can track back to your partnership.",
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
     },
     {
       title: "Email Marketing That Converts",
-      description: "Stay top-of-mind with strategic email campaigns. We create automated sequences, newsletters, and targeted promotions that nurture leads and drive repeat business.",
+      description: "Nurture leads into loyal customers. We build automated sequences and targeted campaigns that keep your clients top-of-mind and drive repeat business month after month.",
       image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&q=80",
     },
     {
       title: "Authority Building That Lasts",
-      description: "Trust signals compound over time. We build credibility through citations, local mentions, PR placements, and community relevance that support long-term ranking stability.",
+      description: "Trust compounds. We construct credibility through strategic citations, PR placements, and local relevance signals that create lasting competitive advantages for your clients.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
     },
     {
-      title: "Track & Measure",
-      description: "Data-driven decisions require clear visibility. We provide transparent reporting, performance dashboards, and actionable insights so you always know what's working and what's next.",
+      title: "Reporting You Can Stand Behind",
+      description: "Present results with confidence. We deliver white-labeled dashboards and executive summaries that make you look like the expert—because you are, with us behind you.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     }
   ];
@@ -42,10 +42,10 @@ const ServicesGrid = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6 text-foreground">
-            White-Label Services Built for Agency Growth
+            Premium Fulfillment for Selective Partners
           </h2>
           <p className="text-lg text-text-secondary">
-            Full-service digital marketing fulfillment, delivered under your brand.
+            Enterprise-grade execution, delivered invisibly under your brand. The same caliber of work we'd put our own name on.
           </p>
           
           {/* Green divider */}
@@ -69,12 +69,12 @@ const ServicesGrid = () => {
           
           {/* Content */}
           <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-center text-white max-w-3xl">
-            <span className="text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Core Service</span>
+            <span className="text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Partner-Exclusive Service</span>
             <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
               Digital Inbound Marketing
             </h3>
             <p className="text-base text-white/80 leading-relaxed mb-6 max-w-xl">
-              A comprehensive strategy that attracts, engages, and converts your ideal clients through content, SEO, and targeted campaigns, all working together to generate sustainable lead flow.
+              The complete growth engine your clients need—strategic content, technical SEO, and targeted campaigns orchestrated to generate predictable, sustainable lead flow you can stake your reputation on.
             </p>
             
             {/* Arrow button - transforms to LEARN MORE on hover */}
