@@ -18,24 +18,28 @@ const ContactForm = () => {
 
   const steps = [
     {
-      title: "Define Your Scope",
-      content: "Tell us exactly what services you need fulfilled. We'll help you map out the deliverables and set clear expectations."
+      title: "Discovery & Alignment",
+      content: "We start with a deep-dive conversation to understand your agency's goals, client base, and fulfillment needs. No cookie-cutter approaches—just clarity."
     },
     {
-      title: "Get Wholesale Pricing",
-      content: "Receive transparent, agency-friendly pricing that protects your margins while delivering premium results."
+      title: "Scope & Pricing",
+      content: "Receive transparent, agency-friendly pricing that protects your margins. We map out deliverables and set clear expectations upfront."
     },
     {
-      title: "Onboard Your Clients",
-      content: "We provide white-label onboarding materials so your clients never know we exist. Your brand, your process."
+      title: "Seamless Onboarding",
+      content: "We provide white-label onboarding materials so your clients never know we exist. Your brand, your process, zero friction."
     },
     {
-      title: "Let Us Execute",
-      content: "Our team handles the heavy lifting: campaigns, optimizations, and reporting. You focus on growing your agency."
+      title: "Execute with Precision",
+      content: "Our team handles the heavy lifting: campaigns, optimizations, and reporting. You focus on growing your agency while we deliver."
     },
     {
-      title: "Deliver Results",
-      content: "You receive white-labeled deliverables ready for client presentation. Every report includes your logo and branding so it looks and feels like your own work."
+      title: "Deliver & Communicate",
+      content: "You receive white-labeled deliverables ready for client presentation. Proactive updates keep you informed every step of the way."
+    },
+    {
+      title: "Delight & Retain",
+      content: "We go beyond delivery—helping you exceed client expectations, strengthen relationships, and build long-term retention."
     }
   ];
 
@@ -54,10 +58,10 @@ const ContactForm = () => {
           {/* Centered Header */}
           <div className="text-center mb-16">
             <h2 className="mb-4 text-foreground">
-              Fulfillment in <span className="text-pop">5 Clear Steps</span>
+              Fulfillment in <span className="text-pop">6 Clear Steps</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              A predictable onboarding process designed for agencies that value control and execution.
+              A predictable process designed for agencies that value control, execution, and client delight.
             </p>
           </div>
 
@@ -157,6 +161,16 @@ const ContactForm = () => {
                 <p className="text-xs text-text-muted text-center mt-4">
                   No contracts. No pressure. Just a conversation about your fulfillment needs.
                 </p>
+
+                {/* Partner Quote */}
+                <div className="mt-8 pt-6 border-t border-border">
+                  <p className="text-sm text-text-secondary italic text-center">
+                    "They're trustworthy, they communicate clearly and really consistently, which is sometimes rare in today's world."
+                  </p>
+                  <p className="text-xs text-text-muted text-center mt-2">
+                    — Trevor Anderson, Founder & CEO, Anderson Collaborative
+                  </p>
+                </div>
               </form>
             </div>
           </div>
