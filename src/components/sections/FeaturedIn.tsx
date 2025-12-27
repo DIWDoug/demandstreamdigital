@@ -19,9 +19,9 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <section className="pt-12 pb-0 bg-secondary">
+    <section className="pt-16 pb-8 section-light">
       <div className="container mx-auto px-6">
-        <p className="text-center text-xs text-muted-foreground uppercase tracking-widest mb-8">
+        <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
           Featured In
         </p>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
@@ -30,7 +30,7 @@ const FeaturedIn = () => {
               key={index}
               src={logo.src}
               alt={logo.name}
-              className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-60 hover:opacity-90 transition-all duration-300"
+              className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-all duration-300"
             />
           ))}
         </div>
