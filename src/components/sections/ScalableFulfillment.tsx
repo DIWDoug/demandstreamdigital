@@ -43,7 +43,8 @@ const ScalableFulfillment = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="rounded-xl p-6 bg-[#FCFCFA] shadow-sm border border-gray-200/50 group transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+              className="rounded-xl p-6 bg-gradient-to-br from-white/60 to-[#FCFCFA] border border-gray-200/40 group transition-all duration-300 hover:-translate-y-1"
+              style={{ boxShadow: 'inset 0 1px 2px rgba(255,255,255,0.8), inset 0 -1px 2px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.04)' }}
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
