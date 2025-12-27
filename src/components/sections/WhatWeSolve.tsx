@@ -6,13 +6,13 @@ const WhatWeSolve = () => {
   const tabs = [
     {
       label: "Expertise",
-      yourRole: "You stay in your lane—strategy, relationships, and growing your agency. Leave the technical heavy lifting to people who live and breathe it every day.",
+      yourRole: "You stay in your lane: strategy, relationships, and growing your agency. Leave the technical heavy lifting to people who live and breathe it every day.",
       yourRoleDetails: [
         "Answer client questions with confidence, backed by real specialists",
         "Offer services you couldn't staff internally without major overhead",
         "Stop pretending to be an expert in everything"
       ],
-      ourRole: "We go deep so you don't have to. Local search, paid media, reputation—our team eats, sleeps, and breathes this stuff. You get senior-level execution without the senior-level payroll.",
+      ourRole: "We go deep so you don't have to. Local search, paid media, reputation. Our team eats, sleeps, and breathes this stuff. You get senior-level execution without the senior-level payroll.",
       ourRoleDetails: [
         "Specialists who've run thousands of local campaigns",
         "Constant training on platform changes and algorithm shifts",
@@ -21,7 +21,7 @@ const WhatWeSolve = () => {
     },
     {
       label: "Transparency",
-      yourRole: "You stay informed without doing the work. No mysteries, no vague updates—just straight answers and real data you can relay to clients without breaking a sweat.",
+      yourRole: "You stay informed without doing the work. No mysteries, no vague updates. Just straight answers and real data you can relay to clients without breaking a sweat.",
       yourRoleDetails: [
         "Check campaign status anytime without chasing anyone down",
         "Get heads-up on issues before they become client problems",
@@ -31,18 +31,18 @@ const WhatWeSolve = () => {
       ourRoleDetails: [
         "Weekly updates written for humans, not search nerds",
         "Live dashboards you can screenshot and send",
-        "No jargon dumps—just what matters and why"
+        "No jargon dumps. Just what matters and why"
       ]
     },
     {
       label: "Growth",
-      yourRole: "You focus on landing new business and expanding existing accounts. We make sure you can actually deliver what you sell—so you stop leaving money on the table.",
+      yourRole: "You focus on landing new business and expanding existing accounts. We make sure you can actually deliver what you sell, so you stop leaving money on the table.",
       yourRoleDetails: [
         "Pitch bigger deals knowing you have the bench to back it up",
         "Stop turning away work because you're maxed out",
         "Scale revenue without scaling headcount first"
       ],
-      ourRole: "We arm you with proof—real results, real case studies, real numbers. When a prospect asks if you can handle their account, you won't have to bluff.",
+      ourRole: "We arm you with proof: real results, real case studies, real numbers. When a prospect asks if you can handle their account, you won't have to bluff.",
       ourRoleDetails: [
         "Battle-tested results you can reference in proposals",
         "Fast onboarding so new clients feel handled from day one",
@@ -57,7 +57,7 @@ const WhatWeSolve = () => {
         "Trust that deadlines get hit without your constant oversight",
         "Build the business instead of babysitting the work"
       ],
-      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, zero fire drills. Your operations become boring—in the best way.",
+      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, zero fire drills. Your operations become boring, in the best way.",
       ourRoleDetails: [
         "Structured sprints with clear milestones and owners",
         "Dedicated account managers who know your clients by name",
@@ -66,17 +66,17 @@ const WhatWeSolve = () => {
     },
     {
       label: "White Label",
-      yourRole: "You own the client relationship completely. Every report, every update, every win—it all comes from you. We're invisible by design.",
+      yourRole: "You own the client relationship completely. Every report, every update, every win comes from you. We're invisible by design.",
       yourRoleDetails: [
         "Present our work as your own without any awkward explanations",
         "Control when and how clients hear about results",
         "Build your brand equity, not someone else's"
       ],
-      ourRole: "We disappear behind your brand. Custom reports, your colors, your voice. Your clients will never know we exist—and that's exactly the point.",
+      ourRole: "We disappear behind your brand. Custom reports, your colors, your voice. Your clients will never know we exist, and that's exactly the point.",
       ourRoleDetails: [
         "Fully branded deliverables ready for client presentation",
         "Summaries written the way you'd write them",
-        "Zero co-branding, zero \"powered by\" footers, zero visibility"
+        "Zero co-branding, zero 'powered by' footers, zero visibility"
       ]
     },
     {
@@ -87,11 +87,11 @@ const WhatWeSolve = () => {
         "Bundle services in ways that make sense for your positioning",
         "Protect your margins without cutting corners on quality"
       ],
-      ourRole: "We deliver the work—consistently, reliably, at the standard your reputation depends on. Every campaign, every month, no drop-offs.",
+      ourRole: "We deliver the work consistently, reliably, at the standard your reputation depends on. Every campaign, every month, no drop-offs.",
       ourRoleDetails: [
         "Processes refined over a decade of local marketing",
         "QA checkpoints before anything goes live",
-        "Same quality at 5 clients or 50—we scale with you"
+        "Same quality at 5 clients or 50. We scale with you"
       ]
     }
   ];
