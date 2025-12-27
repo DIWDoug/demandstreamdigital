@@ -5,8 +5,8 @@ import logo from "@/assets/dialedinweb-logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const megaMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,38 +18,46 @@ const Header = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+      if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
+        setIsMegaMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const servicesDropdown = [
-    { label: "Local SEO", href: "#services" },
-    { label: "Google Maps", href: "#services" },
-    { label: "Google Ads", href: "#services" },
-    { label: "Meta Ads", href: "#services" },
-    { label: "Email Marketing", href: "#services" },
-    { label: "Authority Building", href: "#services" },
+  const serviceCategories = [
+    {
+      title: "LOCAL SEO",
+      items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
+    },
+    {
+      title: "GOOGLE MAPS",
+      items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
+    },
+    {
+      title: "PAID MEDIA",
+      items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
+    },
+    {
+      title: "EMAIL MARKETING",
+      items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
+    },
+    {
+      title: "AUTHORITY",
+      items: ["PR Placements", "Local Citations", "Industry Directories", "Brand Mentions", "Reputation Signals", "Trust Building"]
+    },
+    {
+      title: "REPORTING",
+      items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
+    }
   ];
 
   const navLinks = [
-    { 
-      label: "Services", 
-      href: "#services",
-      hasDropdown: true,
-      dropdownItems: servicesDropdown
-    },
     { label: "About", href: "#about" },
     { label: "Results", href: "#testimonials" },
     { label: "Contact", href: "#contact" }
   ];
-
-  const handleDropdownToggle = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
-  };
 
   return (
     <header 
@@ -58,6 +66,7 @@ const Header = () => {
           ? "bg-surface-dark/95 backdrop-blur-md border-b border-border shadow-lg" 
           : "bg-transparent"
       }`}
+      ref={megaMenuRef}
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -77,43 +86,25 @@ const Header = () => {
             </a>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-0" ref={dropdownRef}>
+            <nav className="hidden md:flex items-center gap-0">
+              {/* Services Mega Menu Trigger */}
+              <button
+                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
               {navLinks.map((link, index) => (
-                <div key={index} className="relative">
-                {link.hasDropdown ? (
-                  <>
-                    <button
-                      onClick={() => handleDropdownToggle(link.label)}
-                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
-                    >
-                      {link.label}
-                      <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
-                    </button>
-                    {activeDropdown === link.label && (
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-surface-elevated border border-border rounded-lg shadow-xl shadow-black/20 py-2 z-50">
-                        {link.dropdownItems?.map((item, idx) => (
-                          <a
-                            key={idx}
-                            href={item.href}
-                            className="block px-4 py-2.5 text-sm text-text-secondary hover:text-foreground hover:bg-surface-dark transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {item.label}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <a
-                    href={link.href}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
-                  >
-                    {link.label}
-                  </a>
-                )}
-              </div>
-            ))}
+                <a
+                  key={index}
+                  href={link.href}
+                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
           </div>
 
@@ -146,49 +137,85 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mega Menu Dropdown */}
+        {isMegaMenuOpen && (
+          <div className="hidden md:block absolute left-0 right-0 top-full bg-surface-dark/98 backdrop-blur-md border-b border-border shadow-2xl">
+            <div className="container mx-auto px-6 lg:px-8 py-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+                {serviceCategories.map((category, index) => (
+                  <div key={index}>
+                    <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
+                      {category.title}
+                    </h4>
+                    <ul className="space-y-2">
+                      {category.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          <a 
+                            href="#services"
+                            className="text-xs text-text-secondary hover:text-foreground transition-colors"
+                            onClick={() => setIsMegaMenuOpen(false)}
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-6 border-t border-border bg-surface-dark">
             <nav className="flex flex-col gap-2">
-              {navLinks.map((link, index) => (
-                <div key={index}>
-                  {link.hasDropdown ? (
-                    <>
-                      <button
-                        onClick={() => handleDropdownToggle(link.label)}
-                        className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
-                      >
-                        {link.label}
-                        <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
-                      </button>
-                      {activeDropdown === link.label && (
-                        <div className="pl-4 pb-2 space-y-1">
-                          {link.dropdownItems?.map((item, idx) => (
-                            <a
-                              key={idx}
-                              href={item.href}
-                              className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
+              {/* Services Accordion */}
+              <button
+                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isMegaMenuOpen && (
+                <div className="pl-4 pb-4 grid grid-cols-2 gap-4">
+                  {serviceCategories.map((category, index) => (
+                    <div key={index}>
+                      <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-2">
+                        {category.title}
+                      </h4>
+                      <ul className="space-y-1">
+                        {category.items.slice(0, 3).map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <a 
+                              href="#services"
+                              className="text-xs text-text-secondary hover:text-foreground transition-colors"
                               onClick={() => {
-                                setActiveDropdown(null);
+                                setIsMegaMenuOpen(false);
                                 setIsMobileMenuOpen(false);
                               }}
                             >
-                              {item.label}
+                              {item}
                             </a>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                    </a>
-                  )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
+              )}
+              
+              {navLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
               ))}
               <div className="pt-4 mt-2 border-t border-border">
                 <a 
