@@ -265,7 +265,7 @@
   .section-light {
     background: 
       radial-gradient(circle at center, hsl(220 15% 70% / 0.15) 1px, transparent 1px),
-      linear-gradient(180deg, hsl(40 30% 96%), hsl(35 25% 92%));
+      linear-gradient(180deg, hsl(60 20% 98%), hsl(60 15% 95%));
     background-size: 24px 24px, 100% 100%;
     color: hsl(220 20% 10%);
   }
