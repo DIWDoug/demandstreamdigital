@@ -16,6 +16,12 @@ const ContinuingEducation = () => {
     "Multi-location GMB optimization strategies",
     "Conversion rate optimization for service businesses",
     "Client retention and upsell frameworks",
+    "Schema markup for enhanced SERP visibility",
+    "Review generation and reputation management tactics",
+    "Local landing page optimization best practices",
+    "Google Business Profile post strategies",
+    "Competitor analysis and gap identification",
+    "Technical SEO auditing methodologies",
   ];
 
   const industryVoices = [
@@ -67,7 +73,7 @@ const ContinuingEducation = () => {
             </div>
             
             {/* Scrolling container */}
-            <div className="relative h-[280px] overflow-hidden">
+            <div className="relative h-[340px] overflow-hidden">
               {/* Fade overlays */}
               <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
