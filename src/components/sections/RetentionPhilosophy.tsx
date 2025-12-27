@@ -39,7 +39,10 @@ const RetentionPhilosophy = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
             Trust. Clarity. Execution.
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-4">
+            We're an agency built by marketers—not a staffing company, not just visionaries. Our team is intensively trained and held to the same standards you'd expect from your own.
+          </p>
+          <p className="text-base text-text-muted max-w-2xl mx-auto">
             A white-label partnership only works when you can trust the work, understand what you're selling, and count on flawless delivery. We built our process around all three.
           </p>
         </div>
