@@ -61,6 +61,9 @@ const ScalableFulfillment = () => {
               />
             ))}
           </div>
+          
+          {/* Subtle divider */}
+          <div className="mt-12 border-b border-gray-300/50 max-w-2xl mx-auto" />
         </div>
 
         <div className="max-w-4xl mx-auto text-center mb-16">
