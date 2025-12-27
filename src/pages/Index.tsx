@@ -6,7 +6,7 @@ import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
 
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
-import Packages from "@/components/sections/Packages";
+
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
@@ -28,7 +28,7 @@ const Index = () => {
       <LocalGrowthEngine />
       
       <ContinuingEducation />
-      <Packages />
+      
       <div id="about">
         <WhatWeSolve />
       </div>
