@@ -16,7 +16,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
             href="#contact" 
             className="btn-cta group flex items-center gap-2"
           >
-            Schedule Strategy Session
+            Schedule a Discovery Call
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           

@@ -155,7 +155,7 @@ const Header = () => {
               </span>
             </a>
             <a href="#contact" className="btn-cta text-sm py-2.5 px-6">
-              Get Started
+              Schedule a Discovery Call
             </a>
             <button 
               className="p-2.5 rounded-full bg-cta hover:bg-cta-glow transition-colors"
@@ -274,7 +274,7 @@ const Header = () => {
                   className="btn-cta text-center mt-3 w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Schedule a Discovery Call
                 </a>
               </div>
             </nav>
