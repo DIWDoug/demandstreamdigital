@@ -5,6 +5,10 @@ import ahrefs from "@/assets/logos/ahrefs.webp";
 import chatgpt from "@/assets/logos/chatgpt.png";
 import claude from "@/assets/logos/claude.png";
 import gemini from "@/assets/logos/gemini.png";
+import googleAds from "@/assets/logos/google-ads.png";
+import hubspot from "@/assets/logos/hubspot.svg";
+import meta from "@/assets/logos/meta.svg";
+import surferseo from "@/assets/logos/surferseo.svg";
 
 const TechStack = () => {
   const logos = [
@@ -12,6 +16,10 @@ const TechStack = () => {
     { src: ahrefs, alt: "Ahrefs" },
     { src: brightlocal, alt: "BrightLocal" },
     { src: localDominator, alt: "Local Dominator" },
+    { src: surferseo, alt: "Surfer SEO" },
+    { src: googleAds, alt: "Google Ads" },
+    { src: meta, alt: "Meta" },
+    { src: hubspot, alt: "HubSpot" },
     { src: chatgpt, alt: "ChatGPT" },
     { src: claude, alt: "Claude AI" },
     { src: gemini, alt: "Google Gemini" },
