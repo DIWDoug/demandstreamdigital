@@ -40,7 +40,7 @@ const WhoWeAre = () => {
               href="#contact" 
               className="btn-cta group inline-flex items-center gap-2 text-sm px-8 py-4 font-semibold"
             >
-              Let's Fix That
+              Get a Partner Who Delivers
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
 
