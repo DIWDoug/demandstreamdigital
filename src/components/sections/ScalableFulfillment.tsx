@@ -43,7 +43,7 @@ const ScalableFulfillment = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="rounded-xl p-6 bg-white shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="rounded-xl p-6 bg-[#FCFCFA] shadow-sm border border-gray-200/50 group transition-all duration-300 hover:shadow-md hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
