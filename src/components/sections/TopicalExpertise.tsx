@@ -257,16 +257,20 @@ const TopicalExpertise = () => {
               {/* Spokes - expanded content */}
               <div 
                 className={`overflow-hidden transition-all duration-300 ${
-                  isExpanded(index) ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                  isExpanded(index) ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="pt-4 border-t border-border space-y-4">
+                <div className="pt-4 border-t border-border space-y-5">
                   {hub.spokes.map((spoke, spokeIndex) => (
                     <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                      <h4 className="text-sm font-medium text-foreground mb-1">
-                        {spoke.title}
-                      </h4>
-                      <p className="text-text-secondary text-sm leading-relaxed">
+                      <a 
+                        href="#contact" 
+                        className="text-sm font-medium text-foreground hover:text-cta transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {spoke.title} →
+                      </a>
+                      <p className="text-text-secondary text-sm leading-relaxed mt-1">
                         {spoke.description}
                       </p>
                     </div>
