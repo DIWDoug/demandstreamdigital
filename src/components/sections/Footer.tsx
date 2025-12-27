@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background border-t border-border relative overflow-hidden" role="contentinfo">
+    <footer className="bg-surface-dark border-t border-border relative overflow-hidden" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
       
       {/* Spacer */}
