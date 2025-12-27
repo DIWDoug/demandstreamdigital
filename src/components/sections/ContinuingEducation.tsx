@@ -7,6 +7,15 @@ const ContinuingEducation = () => {
     "High-impact link building through strategic outreach campaigns",
     "AI-powered SEO tactics that future-proof your rankings",
     "GBP service-to-content expansion for maximum local visibility",
+    "Operational Streamlining for agency efficiency",
+    "Cameron Herold's COO Whisperer leadership systems",
+    "Edward Sturm's Compact Keywords strategy",
+    "Caleb Ulku's AI SEO Mastery framework",
+    "Matthew Woodward's Search Logistics Content approach",
+    "Advanced local citation building techniques",
+    "Multi-location GMB optimization strategies",
+    "Conversion rate optimization for service businesses",
+    "Client retention and upsell frameworks",
   ];
 
   const industryVoices = [
@@ -48,22 +57,31 @@ const ContinuingEducation = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* What We're Studying */}
-          <div className="p-8 rounded-2xl bg-surface-elevated/50 border border-border/50 backdrop-blur-sm">
+          {/* What We're Studying - Scrolling */}
+          <div className="p-8 rounded-2xl bg-surface-elevated/50 border border-border/50 backdrop-blur-sm overflow-hidden">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-cta/10 border border-cta/20">
                 <BookOpen className="w-6 h-6 text-cta" />
               </div>
               <h3 className="text-xl font-bold text-foreground">What We're Studying Now</h3>
             </div>
-            <ul className="space-y-4">
-              {currentlyStudying.map((topic, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-cta mt-2 shrink-0" />
-                  <span className="text-text-secondary">{topic}</span>
-                </li>
-              ))}
-            </ul>
+            
+            {/* Scrolling container */}
+            <div className="relative h-[280px] overflow-hidden">
+              {/* Fade overlays */}
+              <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
+              
+              {/* Scrolling content */}
+              <div className="animate-scroll-vertical">
+                {[...currentlyStudying, ...currentlyStudying].map((topic, index) => (
+                  <div key={index} className="flex items-start gap-3 py-3">
+                    <div className="w-2 h-2 rounded-full bg-cta mt-2 shrink-0" />
+                    <span className="text-text-secondary text-sm">{topic}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Who We Learn From */}
