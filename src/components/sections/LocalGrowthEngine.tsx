@@ -28,9 +28,6 @@ const LocalGrowthEngine = () => {
 
   return (
     <section className="py-16 lg:py-20 section-light relative overflow-hidden">
-      {/* Smooth gradient transition from dark TopicalExpertise */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-surface-dark to-transparent pointer-events-none" />
-      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Fanned Book Stack */}
