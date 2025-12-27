@@ -12,37 +12,37 @@ const WhoWeAre = () => {
               Who We Are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              I Know Why You Started Your Agency. And Why It Feels Harder Than It Should.
+              You Didn't Start Your Agency to Feel This Stuck
             </h2>
             
-            {/* Hook */}
+            {/* Identify */}
             <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-              You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
+              You wanted freedom. You wanted to build something of your own. I get it. That was me too.
             </p>
             
-            {/* Three Pain Points */}
+            {/* Struggle */}
             <div className="space-y-4 mb-6">
               <p className="text-text-secondary leading-relaxed">
-                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The "experts" you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble. You never knew if your team would actually come through.
+                <span className="text-foreground font-semibold">But then reality hit.</span> Freelancers ghosted you mid-project. "Experts" delivered work you had to redo at 2am. Every new client felt like a gamble.
               </p>
               <p className="text-text-secondary leading-relaxed">
-                You started spending more time managing chaos than growing your business. More time apologizing to clients than celebrating wins. More time wondering if you made the right choice than actually enjoying the work.
-              </p>
-              <p className="text-text-secondary leading-relaxed">
-                And the worst part? You felt alone. Like every other agency owner had it figured out except you.
+                More time managing chaos than growing your business. More time apologizing than celebrating. And that gut feeling you're the only one who can't figure this out.
               </p>
             </div>
             
             {/* Solution */}
-            <p className="text-text-secondary mb-6 leading-relaxed">
-              <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own. Your reputation is on the line, and I don't take that lightly.
+            <p className="text-text-secondary mb-8 leading-relaxed">
+              <span className="text-foreground font-semibold">I built Dialed-In Web to be the partner I wished I had.</span> One who delivers. Answers the phone. Treats your clients like my own.
             </p>
             
-            <div className="mb-8 text-right">
-              <p className="text-cta font-medium text-lg" style={{ fontFamily: 'cursive' }}>
-                Doug Bryson
-              </p>
-            </div>
+            {/* Power Punch CTA */}
+            <a 
+              href="#contact" 
+              className="btn-cta group inline-flex items-center gap-2 text-sm px-8 py-4 font-semibold"
+            >
+              Let's Fix That
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
 
           </div>
 
