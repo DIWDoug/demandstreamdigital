@@ -12,6 +12,34 @@ const Hero = () => {
         <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full blur-[70px] bg-gradient-to-tr from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
       </div>
 
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-cta/40 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${8 + Math.random() * 12}s`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={`lg-${i}`}
+            className="absolute w-2 h-2 rounded-full bg-accent-blue/20 animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${12 + Math.random() * 8}s`,
+              animationDelay: `${Math.random() * 8}s`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Grid pattern */}
       <div 
         className="absolute inset-0 opacity-[0.05]"
