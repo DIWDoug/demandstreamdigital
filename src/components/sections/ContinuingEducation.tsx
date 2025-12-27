@@ -13,6 +13,12 @@ const ContinuingEducation = () => {
     { name: "Neil Patel", focus: "Growth Marketing" },
     { name: "Gary Vaynerchuk", focus: "Social & Brand" },
     { name: "Alex Hormozi", focus: "Offer Strategy" },
+    { name: "Caleb Ulku", focus: "AI & Automation" },
+    { name: "Matt Diggity", focus: "SEO & Link Building" },
+    { name: "Lead Gen Jay", focus: "Lead Generation" },
+    { name: "Instantly", focus: "Cold Outreach" },
+    { name: "Hey Tony", focus: "Agency Growth" },
+    { name: "Edward Sturm", focus: "Growth Hacking" },
   ];
 
   return (
@@ -63,7 +69,7 @@ const ContinuingEducation = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground">Industry Voices We Follow</h3>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {industryVoices.map((voice, index) => (
                 <div key={index} className="p-4 rounded-lg bg-surface-dark/50 border border-border/30">
                   <p className="font-semibold text-foreground text-sm">{voice.name}</p>
