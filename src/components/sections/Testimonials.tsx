@@ -11,6 +11,11 @@ const testimonials = [
     quote: "The last thing you want to worry about is, is your partner doing a good job? Are they reliable? Are they good at what they do? Doug and his team just absolutely crushed it.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
+  },
+  {
+    quote: "Our retention rate on SEO is extremely high, probably about 90%. I can go to sleep every night knowing that we're doing everything we can to help a client.",
+    author: "Florida Agency Owner",
+    role: "Digital Marketing Agency Owner"
   }
 ];
 
