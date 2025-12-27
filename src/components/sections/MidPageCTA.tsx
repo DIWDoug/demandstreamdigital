@@ -10,7 +10,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
   return (
     <section className={`py-8 lg:py-10 ${isLight ? "section-light" : "bg-surface-dark"}`}>
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           {/* Primary CTA Button */}
           <a 
             href="#contact" 
@@ -19,11 +19,6 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
             Schedule Strategy Session
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
-          
-          {/* OR Divider */}
-          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-foreground text-background font-bold text-sm mx-4">
-            OR
-          </div>
           
           {/* Secondary CTA - Phone */}
           <a 
