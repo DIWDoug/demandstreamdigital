@@ -147,10 +147,12 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <a 
               href="tel:2143072995"
-              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors"
+              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group"
             >
               <Phone className="h-4 w-4 text-cta" />
-              (214) 307-2995
+              <span className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-cta after:transition-all after:duration-300 group-hover:after:w-full">
+                (214) 307-2995
+              </span>
             </a>
             <a href="#contact" className="btn-cta text-sm py-2.5 px-6">
               Get Started

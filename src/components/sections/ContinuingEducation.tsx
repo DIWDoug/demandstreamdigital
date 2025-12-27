@@ -102,7 +102,7 @@ const ContinuingEducation = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {industryVoices.map((voice, index) => (
-                <div key={index} className="p-4 rounded-lg bg-surface-dark/50 border border-border/30">
+                <div key={index} className="p-4 rounded-lg bg-surface-dark/50 border border-border/30 transition-all duration-300 hover:border-cta/40 hover:bg-surface-dark/80 hover:scale-[1.02] cursor-default">
                   <p className="font-semibold text-foreground text-sm">{voice.name}</p>
                   <p className="text-text-muted text-xs">{voice.focus}</p>
                 </div>
