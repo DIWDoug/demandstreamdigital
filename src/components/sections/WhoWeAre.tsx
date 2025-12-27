@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 const WhoWeAre = () => {
@@ -40,16 +39,6 @@ const WhoWeAre = () => {
                 <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
               </p>
             </div>
-            
-            {/* Power Punch CTA */}
-            <a 
-              href="#contact" 
-              className="btn-cta group inline-flex items-center gap-2 text-sm px-8 py-4 font-semibold"
-            >
-              Get a Partner Who Delivers
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-
           </div>
 
           {/* Right: Image */}
