@@ -14,7 +14,7 @@ const Hero = () => {
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(40)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 rounded-full bg-cta/40 animate-float"
@@ -26,7 +26,7 @@ const Hero = () => {
             }}
           />
         ))}
-        {[...Array(10)].map((_, i) => (
+        {[...Array(25)].map((_, i) => (
           <div
             key={`lg-${i}`}
             className="absolute w-2 h-2 rounded-full bg-accent-blue/20 animate-float"
@@ -35,6 +35,18 @@ const Hero = () => {
               top: `${Math.random() * 100}%`,
               animationDuration: `${12 + Math.random() * 8}s`,
               animationDelay: `${Math.random() * 8}s`,
+            }}
+          />
+        ))}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`xl-${i}`}
+            className="absolute w-3 h-3 rounded-full bg-cta/15 blur-sm animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${15 + Math.random() * 10}s`,
+              animationDelay: `${Math.random() * 10}s`,
             }}
           />
         ))}
