@@ -1,4 +1,5 @@
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import wylerPhoto from "@/assets/wyler.jpg";
 import {
   Tooltip,
   TooltipContent,
@@ -76,37 +77,24 @@ const WhoWeAre = () => {
           {/* Right: Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
+              {/* Doug's headshot - visible by default */}
               <img 
                 src={dougHeadshot} 
                 alt="Doug Bryson, Founder of Dialed-In Web"
-                className="w-full h-auto object-cover rounded-2xl"
+                className="w-full h-auto object-cover rounded-2xl group-hover:opacity-0 transition-opacity duration-300"
               />
-              {/* Aviator sunglasses overlay on hover */}
-              <div className="absolute inset-0 flex items-start justify-center pointer-events-none">
-                <svg 
-                  viewBox="0 0 120 45" 
-                  className="w-[35%] mt-[22%] opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 drop-shadow-lg"
-                >
-                  {/* Left aviator lens - teardrop shape */}
-                  <path d="M 8 18 Q 8 8 20 6 Q 38 4 48 10 Q 55 16 54 26 Q 52 38 40 40 Q 25 42 14 36 Q 8 30 8 18 Z" fill="#1a1a1a" stroke="#d4a853" strokeWidth="2"/>
-                  {/* Right aviator lens - teardrop shape */}
-                  <path d="M 112 18 Q 112 8 100 6 Q 82 4 72 10 Q 65 16 66 26 Q 68 38 80 40 Q 95 42 106 36 Q 112 30 112 18 Z" fill="#1a1a1a" stroke="#d4a853" strokeWidth="2"/>
-                  {/* Bridge */}
-                  <path d="M 54 16 Q 60 12 66 16" stroke="#d4a853" strokeWidth="2.5" fill="none"/>
-                  {/* Left temple */}
-                  <line x1="8" y1="14" x2="0" y2="10" stroke="#d4a853" strokeWidth="2.5" strokeLinecap="round"/>
-                  {/* Right temple */}
-                  <line x1="112" y1="14" x2="120" y2="10" stroke="#d4a853" strokeWidth="2.5" strokeLinecap="round"/>
-                  {/* Lens gradient/shine */}
-                  <ellipse cx="28" cy="18" rx="10" ry="6" fill="rgba(255,255,255,0.08)"/>
-                  <ellipse cx="92" cy="18" rx="10" ry="6" fill="rgba(255,255,255,0.08)"/>
-                </svg>
-              </div>
+              {/* Wyler's photo - visible on hover */}
+              <img 
+                src={wylerPhoto} 
+                alt="Wyler, a good boy"
+                className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-foreground font-bold text-xl">Doug Bryson</p>
+                <p className="text-foreground font-bold text-xl group-hover:hidden">Doug Bryson</p>
                 <p className="text-text-secondary group-hover:hidden">Founder, Dialed-In Web</p>
-                <p className="text-text-secondary hidden group-hover:block">😎 Deal with it.</p>
+                <p className="text-foreground font-bold text-xl hidden group-hover:block">Wyler</p>
+                <p className="text-text-secondary hidden group-hover:block">A good boy. 🐕</p>
               </div>
             </div>
             
