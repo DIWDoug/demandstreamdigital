@@ -47,7 +47,7 @@ const ScalableFulfillment = () => {
       
       <div className="container mx-auto px-6 lg:px-8">
         {/* Featured In Logos */}
-        <div className="max-w-5xl mx-auto mb-16">
+        <div className="max-w-5xl mx-auto mb-24">
           <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
             Featured In
           </p>
