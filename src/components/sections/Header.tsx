@@ -55,12 +55,12 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#FCFCFA]/95 backdrop-blur-md shadow-[0_4px_20px_-5px_rgba(0,0,0,0.1)]" 
+          ? "bg-[#FCFCFA] backdrop-blur-md shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)]" 
           : "bg-transparent"
       }`}
       style={isScrolled ? { 
-        borderBottom: '1px solid rgba(0,0,0,0.05)',
-        background: 'linear-gradient(to bottom, rgba(252,252,250,0.98) 0%, rgba(252,252,250,0.95) 100%)'
+        borderBottom: '1px solid rgba(0,0,0,0.08)',
+        background: 'linear-gradient(to bottom, rgba(252,252,250,1) 0%, rgba(252,252,250,0.97) 100%)'
       } : {}}
     >
       <div className="container mx-auto px-6 lg:px-8">
