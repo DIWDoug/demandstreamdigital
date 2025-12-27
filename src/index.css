@@ -261,11 +261,11 @@
     );
   }
 
-  /* Light contrast section - #FCFCFA neutral off-white with subtle dot grid */
+  /* Light contrast section - pure #FCFCFA with subtle dot grid */
   .section-light {
     background: 
       radial-gradient(circle at center, hsl(220 15% 70% / 0.1) 1px, transparent 1px),
-      linear-gradient(180deg, hsl(60 17% 98.4%), hsl(60 10% 97%));
+      #FCFCFA;
     background-size: 24px 24px, 100% 100%;
     color: hsl(220 20% 10%);
   }
