@@ -53,15 +53,15 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#FCFCFA] ${
         isScrolled 
-          ? "bg-[#FCFCFA] backdrop-blur-md shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)]" 
-          : "bg-transparent"
+          ? "shadow-[0_8px_30px_-5px_rgba(0,0,0,0.15)]" 
+          : ""
       }`}
-      style={isScrolled ? { 
-        borderBottom: '1px solid rgba(0,0,0,0.08)',
+      style={{ 
+        borderBottom: isScrolled ? '1px solid rgba(0,0,0,0.08)' : 'none',
         background: 'linear-gradient(to bottom, rgba(252,252,250,1) 0%, rgba(252,252,250,0.97) 100%)'
-      } : {}}
+      }}
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -70,7 +70,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Dialed-In Web" 
-              className={`h-8 md:h-10 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0 opacity-90' : 'brightness-0 invert opacity-90'}`}
+              className="h-8 md:h-10 w-auto brightness-0 opacity-90"
             />
           </a>
 
@@ -82,7 +82,7 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => handleDropdownToggle(link.label)}
-                      className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors uppercase tracking-wide ${isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'}`}
+                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors uppercase tracking-wide"
                     >
                       {link.label}
                       <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
@@ -105,7 +105,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={link.href}
-                    className={`px-4 py-2 text-sm font-medium transition-colors uppercase tracking-wide ${isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'}`}
+                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors uppercase tracking-wide"
                   >
                     {link.label}
                   </a>
@@ -118,7 +118,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <a 
               href="tel:2143072995"
-              className={`flex items-center gap-2 font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-[hsl(76,42%,35%)]' : 'text-foreground hover:text-cta'}`}
+              className="flex items-center gap-2 text-gray-700 font-medium hover:text-[hsl(76,42%,35%)] transition-colors"
             >
               <Phone className="h-4 w-4 text-cta" />
               (214) 307-2995
