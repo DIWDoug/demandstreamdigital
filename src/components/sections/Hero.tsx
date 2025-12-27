@@ -76,25 +76,25 @@ const Hero = () => {
               AI-Enhanced
             </span>
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
-              White-Label Local Digital Marketing Partner
+              White-Label Digital Marketing Partner
             </p>
           </div>
 
           {/* Main Headline - improved line height */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
-            White-Label Local{" "}
-            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
+            White-Label{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span>{" "}
             You Can Trust
           </h1>
 
           {/* Subheadline - more breathing room */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and email marketing, powered by AI tools and human expertise. All execution delivered under your brand.
+            Dialed-In Web is a white-label digital marketing partner that helps agencies scale service delivery. From strategy to execution, we handle fulfillment under your brand.
           </p>
 
           {/* Premium positioning line */}
           <p className="text-base md:text-lg text-text-muted italic mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Built for agencies focused on retention, not churn.
+            Built for agencies focused on client retention and sustainable growth.
           </p>
 
           {/* CTA Button */}
