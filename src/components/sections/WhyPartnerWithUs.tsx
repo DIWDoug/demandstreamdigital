@@ -1,4 +1,4 @@
-import { ShieldCheck, Eye, Rocket, Settings, Zap, MessageCircle } from "lucide-react";
+import { ShieldCheck, Eye, Rocket, Settings, Zap, MessageCircle, Brain } from "lucide-react";
 import bloombergLogo from "@/assets/logos/bloomberg.png";
 import digitalJournalLogo from "@/assets/logos/digital-journal.png";
 import googleNewsLogo from "@/assets/logos/google-news.png";
@@ -27,6 +27,11 @@ const WhyPartnerWithUs = () => {
   ];
 
   const benefits = [
+    {
+      icon: Brain,
+      title: "AI-Powered Workflows",
+      description: "We leverage ChatGPT, Claude, and cutting-edge AI tools to accelerate research, content, and optimization—delivering faster, smarter results."
+    },
     {
       icon: Settings,
       title: "Full Control",
@@ -109,24 +114,23 @@ const WhyPartnerWithUs = () => {
           ))}
         </div>
 
-        {/* Additional Benefits */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* Additional Benefits - Now with consistent embossed style */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <div 
               key={benefit.title}
-              className="flex items-start gap-4 p-6 rounded-lg bg-white/50 border border-gray-200/50"
+              className="text-center p-6 rounded-xl bg-gradient-to-br from-white to-[#F0F0ED] border border-gray-300/50"
+              style={{ boxShadow: 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)' }}
             >
-              <div className="p-2 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 shrink-0">
-                <benefit.icon className="h-5 w-5 text-[hsl(76,42%,35%)]" />
+              <div className="inline-flex items-center justify-center p-3 rounded-xl bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 mb-4">
+                <benefit.icon className="h-5 w-5 text-[hsl(76,42%,35%)]" strokeWidth={1.5} />
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-1">
-                  {benefit.title}
-                </h4>
-                <p className="text-gray-600 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
+              <h4 className="font-bold text-gray-900 mb-2">
+                {benefit.title}
+              </h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>

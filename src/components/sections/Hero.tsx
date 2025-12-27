@@ -71,7 +71,10 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 pt-48 pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
-          <div className="flex items-center justify-center mb-8 animate-fade-in-up">
+          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
+            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full">
+              AI-Enhanced
+            </span>
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
               White-Label Local Digital Marketing Partner
             </p>
@@ -86,7 +89,7 @@ const Hero = () => {
 
           {/* Subheadline - more breathing room */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and email marketing without building internal fulfillment teams. All execution is delivered under your brand.
+            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and email marketing—powered by AI tools and human expertise. All execution delivered under your brand.
           </p>
 
           {/* Premium positioning line */}

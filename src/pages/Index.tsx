@@ -4,7 +4,7 @@ import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-import AIVisibility from "@/components/sections/AIVisibility";
+
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import Packages from "@/components/sections/Packages";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
@@ -26,7 +26,7 @@ const Index = () => {
       </div>
       <TopicalExpertise />
       <LocalGrowthEngine />
-      <AIVisibility />
+      
       <ContinuingEducation />
       <Packages />
       <div id="about">
