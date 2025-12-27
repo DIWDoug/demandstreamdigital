@@ -20,6 +20,8 @@ const ContinuingEducation = () => {
     { name: "Edward Sturm", focus: "Growth Hacking" },
     { name: "HubSpot", focus: "Inbound Marketing" },
     { name: "Single Grain", focus: "Digital Marketing" },
+    { name: "Darryl Rosser", focus: "Agency Scaling" },
+    { name: "Matthew Woodward", focus: "SEO & Affiliate" },
   ];
 
   return (
