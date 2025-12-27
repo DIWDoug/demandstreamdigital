@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SubtleOrbs from "@/components/SubtleOrbs";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-surface-dark relative">
+    <section id="contact" className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
+      <SubtleOrbs />
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
