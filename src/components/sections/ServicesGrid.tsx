@@ -89,8 +89,8 @@ const ServicesGrid = () => {
           </div>
         </a>
 
-        {/* Horizontal cards with expand on hover */}
-        <div className="flex gap-4 h-[500px] lg:h-[550px]">
+        {/* Desktop: Horizontal cards with expand on hover */}
+        <div className="hidden lg:flex gap-4 h-[550px]">
           {services.map((service, index) => (
             <a
               key={index}
@@ -130,6 +130,42 @@ const ServicesGrid = () => {
                     </span>
                     <ArrowRight className="h-5 w-5 text-[hsl(76,42%,30%)]" />
                   </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Mobile & Tablet: Stacked cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:hidden">
+          {services.map((service, index) => (
+            <a
+              key={index}
+              href="#contact"
+              className="group relative overflow-hidden rounded-xl h-[280px] cursor-pointer"
+            >
+              {/* Background image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              
+              {/* Green overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(76,42%,15%)] via-[hsl(76,42%,25%)/90%] to-[hsl(76,42%,30%)/70%]" />
+              <div className="absolute inset-0 bg-[hsl(76,42%,28%)]/75 mix-blend-multiply" />
+              
+              {/* Content */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                <h3 className="text-lg font-bold mb-2 leading-tight">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-white/80 leading-relaxed mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+                
+                <div className="flex items-center gap-2 text-white font-medium text-sm">
+                  Learn More
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </a>

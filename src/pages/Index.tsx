@@ -36,7 +36,9 @@ const Index = () => {
         <WhatWeSolve />
       </div>
       <MidPageCTA variant="dark" />
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
       <ContactForm />
       
       <FAQ />
