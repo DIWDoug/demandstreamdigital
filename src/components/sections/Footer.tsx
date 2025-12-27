@@ -37,7 +37,7 @@ const Footer = () => {
       {/* Quick Links Bar - Above Service Categories */}
       <div className="py-6 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+          <nav className="flex flex-wrap items-center justify-start gap-6 md:gap-10">
             <a href="#about" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
               About Us
             </a>
