@@ -1,4 +1,5 @@
 import { Sparkles, MessageSquare, Search, Globe } from "lucide-react";
+import SubtleOrbs from "@/components/SubtleOrbs";
 
 const AIVisibility = () => {
   const platforms = [
@@ -9,7 +10,8 @@ const AIVisibility = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark relative">
+    <section className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
+      <SubtleOrbs />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
