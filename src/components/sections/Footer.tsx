@@ -33,6 +33,26 @@ const Footer = () => {
     <footer className="bg-background border-t border-border relative overflow-hidden" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
       
+      {/* Quick Links Bar - Above Service Categories */}
+      <div className="py-6 border-b border-border">
+        <div className="container mx-auto px-6 lg:px-8">
+          <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <a href="#about" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
+              About Us
+            </a>
+            <a href="#services" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
+              Services
+            </a>
+            <a href="#testimonials" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
+              Results
+            </a>
+            <a href="#contact" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
+              Contact
+            </a>
+          </nav>
+        </div>
+      </div>
+
       {/* Service Categories Grid */}
       <div className="py-12 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
@@ -60,7 +80,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="py-12">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
             {/* Brand */}
             <div>
               <h3 className="text-xl font-bold text-foreground mb-4">
@@ -72,30 +92,6 @@ const Footer = () => {
               <p className="text-xs text-text-muted">
                 Serving agencies across the US & Canada since 2019.
               </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-4">
-                Quick Links
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#about" className="text-sm text-text-secondary hover:text-foreground transition-colors">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="text-sm text-text-secondary hover:text-foreground transition-colors">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-sm text-text-secondary hover:text-foreground transition-colors">
-                    Contact
-                  </a>
-                </li>
-              </ul>
             </div>
 
             {/* Contact */}
