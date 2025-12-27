@@ -20,7 +20,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 py-32 lg:py-40 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 pt-40 pb-32 lg:pt-48 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
           <div className="flex items-center justify-center mb-8 animate-fade-in-up">
