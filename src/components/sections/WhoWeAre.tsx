@@ -13,7 +13,7 @@ const WhoWeAre = () => {
               Who We Are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              I Get It. I've Been There.
+              Built by a Marketer for Marketers
             </h2>
             <p className="text-text-secondary text-lg mb-6 leading-relaxed">
               I've sat in the BNI meetings wondering if this was the right path. I've hired freelancers who disappeared. I've stayed up late fixing work that should have been done right the first time. I've felt the pressure of promising clients results while wondering who was actually going to deliver.
