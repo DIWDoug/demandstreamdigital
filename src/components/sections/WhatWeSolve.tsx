@@ -5,93 +5,93 @@ const WhatWeSolve = () => {
 
   const tabs = [
     {
-      label: "Competency",
-      yourRole: "You stay focused on strategic vision and client relationships. You don't need to become an expert in every channel or tactic—that's what partners are for.",
+      label: "Expertise",
+      yourRole: "You stay in your lane—strategy, relationships, and growing your agency. Leave the technical heavy lifting to people who live and breathe it every day.",
       yourRoleDetails: [
-        "Trust that the work is done by specialists, not generalists",
-        "Lean on our expertise when clients ask tough technical questions",
-        "Expand your service offerings without expanding your learning curve"
+        "Answer client questions with confidence, backed by real specialists",
+        "Offer services you couldn't staff internally without major overhead",
+        "Stop pretending to be an expert in everything"
       ],
-      ourRole: "We bring deep, specialized knowledge across local SEO, paid media, and reputation management. Our team stays current so yours doesn't have to.",
+      ourRole: "We go deep so you don't have to. Local search, paid media, reputation—our team eats, sleeps, and breathes this stuff. You get senior-level execution without the senior-level payroll.",
       ourRoleDetails: [
-        "Certified specialists in Google Ads, Meta, and local search",
-        "Continuous training on algorithm updates and best practices",
-        "Industry-specific experience across 50+ verticals"
+        "Specialists who've run thousands of local campaigns",
+        "Constant training on platform changes and algorithm shifts",
+        "Experience across 50+ industries, from plumbers to plastic surgeons"
       ]
     },
     {
-      label: "Clarity",
-      yourRole: "You maintain full visibility into what's happening with your clients' campaigns. No black boxes, no surprises—just clear, actionable information when you need it.",
+      label: "Transparency",
+      yourRole: "You stay informed without doing the work. No mysteries, no vague updates—just straight answers and real data you can relay to clients without breaking a sweat.",
       yourRoleDetails: [
-        "Know exactly where every project stands at any moment",
-        "Get proactive updates before clients ask questions",
-        "Understand results well enough to explain them confidently"
+        "Check campaign status anytime without chasing anyone down",
+        "Get heads-up on issues before they become client problems",
+        "Actually understand what's happening so you can speak to it"
       ],
-      ourRole: "We provide transparent reporting, regular updates, and open communication so you're never caught off guard. You'll always have the answers your clients expect.",
+      ourRole: "We keep you in the loop with clear reporting and honest communication. You'll never be blindsided in a client meeting or left scrambling for answers.",
       ourRoleDetails: [
-        "Weekly status reports with plain-language summaries",
-        "Direct access to dashboards and performance metrics",
-        "Clear documentation of strategy, tactics, and results"
+        "Weekly updates written for humans, not search nerds",
+        "Live dashboards you can screenshot and send",
+        "No jargon dumps—just what matters and why"
       ]
     },
     {
-      label: "Sales",
-      yourRole: "You close deals, manage client expectations, and grow your book of business. Your sales process stays yours—we don't interfere with how you win clients.",
+      label: "Growth",
+      yourRole: "You focus on landing new business and expanding existing accounts. We make sure you can actually deliver what you sell—so you stop leaving money on the table.",
       yourRoleDetails: [
-        "Sell with confidence knowing you can actually deliver",
-        "Take on bigger accounts without hiring ahead of revenue",
-        "Say yes to opportunities you used to turn down"
+        "Pitch bigger deals knowing you have the bench to back it up",
+        "Stop turning away work because you're maxed out",
+        "Scale revenue without scaling headcount first"
       ],
-      ourRole: "We provide the capability proof, case studies, and performance data to support your pitch. When prospects ask if you can deliver, you'll have the receipts.",
+      ourRole: "We arm you with proof—real results, real case studies, real numbers. When a prospect asks if you can handle their account, you won't have to bluff.",
       ourRoleDetails: [
-        "Access to anonymized case studies across industries",
-        "Performance benchmarks that help you set expectations",
-        "Onboarding support that makes new clients feel handled"
+        "Battle-tested results you can reference in proposals",
+        "Fast onboarding so new clients feel handled from day one",
+        "Capacity that flexes with your pipeline, not against it"
       ]
     },
     {
-      label: "Operations",
-      yourRole: "You focus on building client relationships, developing growth strategy, and scaling your agency. Your time stays on high-value activities that drive revenue.",
+      label: "Workflow",
+      yourRole: "You run your agency, not a fulfillment center. Your mornings go to strategy and sales, not chasing deliverables or managing task lists.",
       yourRoleDetails: [
-        "Spend your mornings on strategy calls, not task management",
-        "Build relationships that lead to referrals and upsells",
-        "Focus on agency growth instead of putting out fires"
+        "Reclaim the time you lose to project management chaos",
+        "Trust that deadlines get hit without your constant oversight",
+        "Build the business instead of babysitting the work"
       ],
-      ourRole: "We handle the day-to-day execution with structured workflows, defined timelines, and predictable delivery cycles. No more scrambling to meet deadlines or manage freelancer chaos.",
+      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, zero fire drills. Your operations become boring—in the best way.",
       ourRoleDetails: [
-        "Weekly sprint cycles with clear deliverable schedules",
-        "Dedicated project managers who know your accounts",
-        "Real-time dashboards so you always know where things stand"
+        "Structured sprints with clear milestones and owners",
+        "Dedicated account managers who know your clients by name",
+        "Systems built for agencies, not adapted from something else"
       ]
     },
     {
-      label: "Client Support",
-      yourRole: "You remain the primary point of contact for your clients. You own the relationship, set expectations, and deliver the strategic vision they hired you for.",
+      label: "White Label",
+      yourRole: "You own the client relationship completely. Every report, every update, every win—it all comes from you. We're invisible by design.",
       yourRoleDetails: [
-        "Present insights and recommendations as your own expertise",
-        "Control the narrative and timing of all client communications",
-        "Build trust through consistent, high-quality delivery"
+        "Present our work as your own without any awkward explanations",
+        "Control when and how clients hear about results",
+        "Build your brand equity, not someone else's"
       ],
-      ourRole: "We provide fully white-labeled deliverables, reports, and campaign updates you can present as your own. Your clients never know we exist. Your brand stays front and center.",
+      ourRole: "We disappear behind your brand. Custom reports, your colors, your voice. Your clients will never know we exist—and that's exactly the point.",
       ourRoleDetails: [
-        "Custom-branded reports with your logo and colors",
-        "Executive summaries written in your voice",
-        "Data visualizations that make you look sharp in QBRs"
+        "Fully branded deliverables ready for client presentation",
+        "Summaries written the way you'd write them",
+        "Zero co-branding, zero \"powered by\" footers, zero visibility"
       ]
     },
     {
-      label: "Fulfillment",
-      yourRole: "You sell and price services according to your margins. You control the packages, the positioning, and the profit. Your business model stays intact.",
+      label: "Execution",
+      yourRole: "You set the pricing, you keep the margin, you control the packages. We never touch your client relationships or your revenue model.",
       yourRoleDetails: [
-        "Set your own pricing. We never talk to your clients",
-        "Bundle services however makes sense for your market",
-        "Keep 100% of the margin you build into your proposals"
+        "Mark up our work however your market supports",
+        "Bundle services in ways that make sense for your positioning",
+        "Protect your margins without cutting corners on quality"
       ],
-      ourRole: "We execute campaigns behind the scenes with consistency, reliability, and quality. From local SEO to paid media, every deliverable meets agency-grade standards.",
+      ourRole: "We deliver the work—consistently, reliably, at the standard your reputation depends on. Every campaign, every month, no drop-offs.",
       ourRoleDetails: [
-        "SOPs built from 10+ years of local marketing experience",
-        "Quality checks at every stage before anything goes live",
-        "Scalable processes that work whether you have 5 or 50 clients"
+        "Processes refined over a decade of local marketing",
+        "QA checkpoints before anything goes live",
+        "Same quality at 5 clients or 50—we scale with you"
       ]
     }
   ];
