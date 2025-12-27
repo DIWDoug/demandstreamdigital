@@ -1,10 +1,5 @@
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wylerPhoto from "@/assets/wyler.jpg";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const WhoWeAre = () => {
   return (
@@ -26,29 +21,11 @@ const WhoWeAre = () => {
               <span className="absolute -left-2 -top-4 text-6xl text-cta/40 font-serif leading-none">"</span>
               
               <p className="pl-6">
-                You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the{" "}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <span className="underline decoration-dotted cursor-help">hamster wheel</span>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>No actual hamsters were harmed in the making of this agency. 🐹</p>
-                  </TooltipContent>
-                </Tooltip>
-                . I get it. That was me too.
+                You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
               </p>
               
               <p className="pl-6">
-                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired{" "}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <span className="underline decoration-dotted cursor-help">ghosted you mid-project</span>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>The only ghosts we like are in Pac-Man. 👻</p>
-                  </TooltipContent>
-                </Tooltip>
-                . The 'experts' you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
+                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The 'experts' you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
               </p>
               
               <p className="pl-6">
@@ -60,16 +37,7 @@ const WhoWeAre = () => {
               </p>
               
               <p className="pl-6">
-                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who{" "}
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <span className="underline decoration-dotted cursor-help">answers the phone</span>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Yes, with a human voice and everything. Wild, right? 📞</p>
-                  </TooltipContent>
-                </Tooltip>
-                . Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
+                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
               </p>
             </div>
           </div>
