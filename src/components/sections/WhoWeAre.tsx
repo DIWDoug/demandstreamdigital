@@ -16,25 +16,28 @@ const WhoWeAre = () => {
             </h2>
             
             {/* Personal Letter Style Content */}
-            <div className="space-y-4 mb-8 font-handwriting text-base md:text-lg leading-relaxed text-text-secondary">
-              <p>
-                "You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
+            <div className="relative space-y-4 mb-8 font-handwriting text-base md:text-lg leading-relaxed text-text-secondary">
+              {/* Opening quote */}
+              <span className="absolute -left-2 -top-4 text-6xl text-cta/40 font-serif leading-none">"</span>
+              
+              <p className="pl-6">
+                You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
               </p>
               
-              <p>
+              <p className="pl-6">
                 <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The 'experts' you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
               </p>
               
-              <p>
+              <p className="pl-6">
                 You started spending more time managing chaos than growing your business. More time apologizing to clients than celebrating wins. More time wondering if you made the right choice than actually enjoying the work.
               </p>
               
-              <p>
+              <p className="pl-6">
                 And the worst part? You felt alone. Like every other agency owner had it figured out except you.
               </p>
               
-              <p>
-                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly."
+              <p className="pl-6">
+                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
               </p>
             </div>
             
