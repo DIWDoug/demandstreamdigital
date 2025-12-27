@@ -4,59 +4,103 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "How does white-label fulfillment work?",
-    answer: "We operate entirely behind the scenes. You maintain the client relationship, set pricing, and own communication. We handle execution under your brand. Clients never know we exist."
-  },
-  {
-    question: "What's the onboarding process like?",
-    answer: "Onboarding typically takes 1-2 weeks. We'll gather access credentials, review current campaigns or profiles, and align on expectations. From there, we follow structured workflows with predictable delivery cycles."
-  },
-  {
-    question: "Do you require long-term contracts?",
-    answer: "No. We don't require long-term contracts. We work on a month-to-month basis with a 30-day notice policy. Our retention comes from results, not lock-in agreements."
-  },
-  {
-    question: "How quickly can you ramp up for new projects?",
-    answer: "Fast. Our team is structured to scale with your needs, whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
-  },
-  {
-    question: "Is your pricing transparent?",
-    answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront. No surprise charges for revisions, reporting, or additional requests."
-  },
-  {
-    question: "How is quality guaranteed?",
-    answer: "We use proven systems, structured workflows, and industry expertise built over years of local marketing execution. Clear communication and predictable delivery cycles keep accountability high."
-  },
-  {
-    question: "When should I use white-label vs. hiring in-house?",
-    answer: "White-label is ideal when you have unpredictable workloads, want to scale without overhead, or need specialized expertise immediately. It lets you say yes to more work without the commitment of full-time hires."
-  },
-  {
-    question: "Who handles client communication?",
-    answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you. Your clients never interact with us directly."
-  },
-  {
-    question: "How do you handle reporting?",
-    answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations."
-  },
-  {
-    question: "What industries do you specialize in?",
-    answer: "We focus on local service businesses: legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation."
-  },
-  {
-    question: "Can I start with just one service?",
-    answer: "Absolutely. Many partners start with Local SEO or Google Ads, then expand as trust builds. There's no minimum service requirement."
-  },
-  {
-    question: "What makes you different from other white-label providers?",
-    answer: "We're an agency built by marketers, not a staffing company. Our team has hands-on experience running campaigns, so we understand the nuances of client expectations and agency operations."
-  }
-];
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const FAQ = () => {
+  const faqs = [
+    {
+      question: "How does white-label fulfillment work?",
+      answer: (
+        <>
+          We operate entirely behind the scenes. You maintain the client relationship, set pricing, and own communication. We handle execution under your brand.{" "}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="underline decoration-dotted cursor-help">Clients never know we exist</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>We're like marketing ninjas. But with fewer throwing stars. 🥷</p>
+            </TooltipContent>
+          </Tooltip>
+          .
+        </>
+      )
+    },
+    {
+      question: "What's the onboarding process like?",
+      answer: "Onboarding typically takes 1-2 weeks. We'll gather access credentials, review current campaigns or profiles, and align on expectations. From there, we follow structured workflows with predictable delivery cycles."
+    },
+    {
+      question: "Do you require long-term contracts?",
+      answer: (
+        <>
+          No. We don't require long-term contracts. We work on a month-to-month basis with a{" "}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="underline decoration-dotted cursor-help">30-day notice policy</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>We don't believe in holding people hostage. Bad for morale. 🔓</p>
+            </TooltipContent>
+          </Tooltip>
+          . Our retention comes from results, not lock-in agreements.
+        </>
+      )
+    },
+    {
+      question: "How quickly can you ramp up for new projects?",
+      answer: "Fast. Our team is structured to scale with your needs, whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
+    },
+    {
+      question: "Is your pricing transparent?",
+      answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront. No surprise charges for revisions, reporting, or additional requests."
+    },
+    {
+      question: "How is quality guaranteed?",
+      answer: "We use proven systems, structured workflows, and industry expertise built over years of local marketing execution. Clear communication and predictable delivery cycles keep accountability high."
+    },
+    {
+      question: "When should I use white-label vs. hiring in-house?",
+      answer: "White-label is ideal when you have unpredictable workloads, want to scale without overhead, or need specialized expertise immediately. It lets you say yes to more work without the commitment of full-time hires."
+    },
+    {
+      question: "Who handles client communication?",
+      answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you. Your clients never interact with us directly."
+    },
+    {
+      question: "How do you handle reporting?",
+      answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations."
+    },
+    {
+      question: "What industries do you specialize in?",
+      answer: "We focus on local service businesses: legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation."
+    },
+    {
+      question: "Can I start with just one service?",
+      answer: "Absolutely. Many partners start with Local SEO or Google Ads, then expand as trust builds. There's no minimum service requirement."
+    },
+    {
+      question: "What makes you different from other white-label providers?",
+      answer: (
+        <>
+          We're an agency built by marketers, not a staffing company. Our team has{" "}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="underline decoration-dotted cursor-help">hands-on experience</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Real campaigns. Real clients. Real 2am "why isn't this working" moments. ☕</p>
+            </TooltipContent>
+          </Tooltip>
+          {" "}running campaigns, so we understand the nuances of client expectations and agency operations.
+        </>
+      )
+    }
+  ];
+
   // Split FAQs into two columns
   const midpoint = Math.ceil(faqs.length / 2);
   const leftColumn = faqs.slice(0, midpoint);

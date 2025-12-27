@@ -1,4 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Hero = () => {
   return (
@@ -72,9 +77,16 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
-            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full">
-              AI-Enhanced
-            </span>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full cursor-help">
+                  AI-Enhanced
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>No, we didn't just ask ChatGPT to write this. Mostly. 🤖</p>
+              </TooltipContent>
+            </Tooltip>
             <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
               White-Label Digital Marketing Partner
             </p>
@@ -89,7 +101,16 @@ const Hero = () => {
 
           {/* Subheadline - more breathing room */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web is a white-label digital marketing partner that helps agencies scale without the hiring headaches. We handle the execution so you can focus on growth.
+            Dialed-In Web is a white-label digital marketing partner that helps agencies scale without the{" "}
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="underline decoration-dotted cursor-help">hiring headaches</span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>You know the ones. The "where's my deliverable?" ones. 💆</p>
+              </TooltipContent>
+            </Tooltip>
+            . We handle the execution so you can focus on growth.
           </p>
 
           {/* Premium positioning line */}
