@@ -127,7 +127,7 @@ const LocalGrowthEngine = () => {
 
             <p className="text-gray-600 mb-8">
               Inside, you'll discover the three-layer system we use to deliver consistent results across 
-              Local SEO, Google Maps, paid media, and reputation management — all white-labeled and 
+              Local SEO, Google Maps, paid media, and reputation management. All white-labeled and 
               built for scale.
             </p>
 

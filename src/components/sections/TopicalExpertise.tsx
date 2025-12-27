@@ -238,7 +238,7 @@ const TopicalExpertise = () => {
               {/* Collapsed state hint */}
               {!isExpanded(index) && (
                 <p className="text-accent-blue text-xs font-medium">
-                  {hub.spokes.length} specialized areas — click to explore
+                  {hub.spokes.length} specialized areas. Click to explore
                 </p>
               )}
             </div>

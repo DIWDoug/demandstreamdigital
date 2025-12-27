@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "How does white-label fulfillment work?",
-    answer: "We operate entirely behind the scenes. You maintain the client relationship, set pricing, and own communication. We handle execution under your brand—clients never know we exist."
+    answer: "We operate entirely behind the scenes. You maintain the client relationship, set pricing, and own communication. We handle execution under your brand. Clients never know we exist."
   },
   {
     question: "What's the onboarding process like?",
@@ -16,15 +16,15 @@ const faqs = [
   },
   {
     question: "Do you require long-term contracts?",
-    answer: "No. We don't require long-term contracts—we work on a month-to-month basis. However, we do have a strict 30-day notice policy. Our retention comes from results, not lock-in agreements."
+    answer: "No. We don't require long-term contracts. We work on a month-to-month basis with a 30-day notice policy. Our retention comes from results, not lock-in agreements."
   },
   {
     question: "How quickly can you ramp up for new projects?",
-    answer: "Fast. Our team is structured to scale with your needs—whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
+    answer: "Fast. Our team is structured to scale with your needs, whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
   },
   {
     question: "Is your pricing transparent?",
-    answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront—no surprise charges for revisions, reporting, or additional requests."
+    answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront. No surprise charges for revisions, reporting, or additional requests."
   },
   {
     question: "How is quality guaranteed?",
@@ -36,15 +36,15 @@ const faqs = [
   },
   {
     question: "Who handles client communication?",
-    answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you—your clients never interact with us directly."
+    answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you. Your clients never interact with us directly."
   },
   {
     question: "How do you handle reporting?",
-    answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations—not overwhelm them."
+    answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations."
   },
   {
     question: "What industries do you specialize in?",
-    answer: "We focus on local service businesses—legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation."
+    answer: "We focus on local service businesses: legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation."
   },
   {
     question: "Can I start with just one service?",
