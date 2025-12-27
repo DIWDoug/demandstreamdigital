@@ -42,10 +42,10 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Why Agencies <span className="text-[hsl(76,42%,35%)]">Partner</span> With Us
+            Why Agencies Choose Us as Their <span className="text-[hsl(76,42%,35%)]">Fulfillment Partner</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're an agency built by marketers, not a staffing company. Our team is intensively trained and held to the same standards you'd expect from your own.
+            We're a white-label digital marketing partner built by marketers, not a staffing company. Our team delivers agency-grade execution under your brand.
           </p>
         </div>
 

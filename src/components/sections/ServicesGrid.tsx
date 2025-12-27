@@ -40,10 +40,10 @@ const ServicesGrid = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="mb-6 text-foreground">
-            Services Designed for Longevity
+            White-Label Services Built for Agency Growth
           </h2>
           <p className="text-lg text-text-secondary">
-            Full-service local marketing execution, delivered under your brand.
+            Full-service digital marketing fulfillment, delivered under your brand.
           </p>
         </div>
 
