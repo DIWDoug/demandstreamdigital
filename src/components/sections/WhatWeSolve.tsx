@@ -1,4 +1,10 @@
 import { useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const WhatWeSolve = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -96,84 +102,108 @@ const WhatWeSolve = () => {
     }
   ];
 
+  // Helper to render detail text with tooltip for Easter egg
+  const renderDetailText = (detail: string) => {
+    if (detail.includes("50+ industries")) {
+      const parts = detail.split("50+ industries");
+      return (
+        <>
+          {parts[0]}
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="underline decoration-dotted cursor-help">50+ industries</span>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Yeah, we even talked with Traffic Junkie once. Don't Google it.</p>
+            </TooltipContent>
+          </Tooltip>
+          {parts[1]}
+        </>
+      );
+    }
+    return detail;
+  };
+
   return (
-    <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-surface-dark relative">
-      {/* Section divider from ContinuingEducation */}
-      <div className="absolute top-0 left-0 right-0">
-        <div className="section-divider" />
-      </div>
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="mb-6 text-foreground">
-              How We Keep Your Clients<br />Coming Back
-            </h2>
-          </div>
+    <TooltipProvider>
+      <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-surface-dark relative">
+        {/* Section divider from ContinuingEducation */}
+        <div className="absolute top-0 left-0 right-0">
+          <div className="section-divider" />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="mb-6 text-foreground">
+                How We Keep Your Clients<br />Coming Back
+              </h2>
+            </div>
 
-          {/* Tab navigation */}
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  activeTab === index
-                    ? "bg-accent-blue text-white"
-                    : "bg-surface-elevated text-text-secondary hover:text-foreground border border-border"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+            {/* Tab navigation */}
+            <div className="flex flex-wrap justify-center gap-2 mb-10">
+              {tabs.map((tab, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    activeTab === index
+                      ? "bg-accent-blue text-white"
+                      : "bg-surface-elevated text-text-secondary hover:text-foreground border border-border"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
 
-          {/* Tab content - Expanded copy with details */}
-          <div className="premium-card py-10">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-12">
-              {/* Your Role */}
-              <div>
-                <p className="text-sm text-text-muted uppercase tracking-widest mb-4">
-                  Your Role
-                </p>
-                <p className="text-lg text-foreground mb-6">
-                  {tabs[activeTab].yourRole}
-                </p>
-                <ul className="space-y-3">
-                  {tabs[activeTab].yourRoleDetails.map((detail, index) => (
-                    <li key={index} className="flex items-start gap-3 text-text-secondary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-text-muted mt-2.5 flex-shrink-0" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Tab content - Expanded copy with details */}
+            <div className="premium-card py-10">
+              <div className="grid md:grid-cols-2 gap-10 md:gap-12">
+                {/* Your Role */}
+                <div>
+                  <p className="text-sm text-text-muted uppercase tracking-widest mb-4">
+                    Your Role
+                  </p>
+                  <p className="text-lg text-foreground mb-6">
+                    {tabs[activeTab].yourRole}
+                  </p>
+                  <ul className="space-y-3">
+                    {tabs[activeTab].yourRoleDetails.map((detail, index) => (
+                      <li key={index} className="flex items-start gap-3 text-text-secondary">
+                        <span className="w-1.5 h-1.5 rounded-full bg-text-muted mt-2.5 flex-shrink-0" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              {/* Divider for mobile */}
-              <div className="md:hidden section-divider" />
+                {/* Divider for mobile */}
+                <div className="md:hidden section-divider" />
 
-              {/* Our Role */}
-              <div className="md:border-l md:border-border md:pl-12">
-                <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
-                  Our Role
-                </p>
-                <p className="text-lg text-foreground mb-6">
-                  {tabs[activeTab].ourRole}
-                </p>
-                <ul className="space-y-3">
-                  {tabs[activeTab].ourRoleDetails.map((detail, index) => (
-                    <li key={index} className="flex items-start gap-3 text-text-secondary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2.5 flex-shrink-0" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Our Role */}
+                <div className="md:border-l md:border-border md:pl-12">
+                  <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
+                    Our Role
+                  </p>
+                  <p className="text-lg text-foreground mb-6">
+                    {tabs[activeTab].ourRole}
+                  </p>
+                  <ul className="space-y-3">
+                    {tabs[activeTab].ourRoleDetails.map((detail, index) => (
+                      <li key={index} className="flex items-start gap-3 text-text-secondary">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2.5 flex-shrink-0" />
+                        <span>{renderDetailText(detail)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </TooltipProvider>
   );
 };
 
