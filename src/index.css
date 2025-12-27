@@ -428,7 +428,7 @@
   }
 
   .animate-scroll-vertical {
-    animation: scrollVertical 30s linear infinite;
+    animation: scrollVertical 60s linear infinite;
   }
 
   @keyframes fadeIn {
