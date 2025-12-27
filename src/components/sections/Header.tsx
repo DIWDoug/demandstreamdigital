@@ -60,9 +60,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo & Nav together */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             {/* Logo */}
             <a href="/" className="flex items-center overflow-hidden">
               <img 
@@ -70,16 +70,16 @@ const Header = () => {
                 alt="Dialed-In Web" 
                 className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
                   isScrolled 
-                    ? "h-6 md:h-7 max-w-[28px] md:max-w-[32px] object-cover object-left" 
-                    : "h-6 md:h-8"
+                    ? "h-5 md:h-6 max-w-[24px] md:max-w-[28px] object-cover object-left" 
+                    : "h-5 md:h-6"
                 }`}
               />
             </a>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-1" ref={dropdownRef}>
-            {navLinks.map((link, index) => (
-              <div key={index} className="relative">
+            <nav className="hidden md:flex items-center gap-0" ref={dropdownRef}>
+              {navLinks.map((link, index) => (
+                <div key={index} className="relative">
                 {link.hasDropdown ? (
                   <>
                     <button
