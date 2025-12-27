@@ -33,31 +33,51 @@ const LocalGrowthEngine = () => {
           {/* Left: Fanned Book Stack */}
           <div className="relative flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
             {/* Fanned ebook mockup */}
-            <div className="relative">
+            <div className="relative" style={{ perspective: '1000px' }}>
               {/* Back book - most rotated */}
-              <img 
-                src={bookCover} 
-                alt="The Local Growth Engine ebook" 
-                className="absolute -left-16 lg:-left-20 top-8 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-15 opacity-70"
-              />
+              <div 
+                className="absolute -left-16 lg:-left-24 top-8 w-40 md:w-48 lg:w-56 -rotate-12 opacity-60"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img 
+                  src={bookCover} 
+                  alt="The Local Growth Engine ebook" 
+                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] border border-gray-200"
+                />
+              </div>
               {/* Middle-back book */}
-              <img 
-                src={bookCover} 
-                alt="The Local Growth Engine ebook" 
-                className="absolute -left-8 lg:-left-10 top-4 w-40 md:w-48 lg:w-56 drop-shadow-lg -rotate-8 opacity-85"
-              />
+              <div 
+                className="absolute -left-8 lg:-left-12 top-4 w-40 md:w-48 lg:w-56 -rotate-6 opacity-75"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img 
+                  src={bookCover} 
+                  alt="The Local Growth Engine ebook" 
+                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] border border-gray-200"
+                />
+              </div>
               {/* Middle-front book */}
-              <img 
-                src={bookCover} 
-                alt="The Local Growth Engine ebook" 
-                className="absolute left-4 lg:left-6 top-2 w-40 md:w-48 lg:w-56 drop-shadow-xl -rotate-2 opacity-95"
-              />
-              {/* Front book - centered, no rotation */}
-              <img 
-                src={bookCover} 
-                alt="The Local Growth Engine ebook" 
-                className="relative left-16 lg:left-24 w-44 md:w-52 lg:w-64 drop-shadow-2xl rotate-4 z-10"
-              />
+              <div 
+                className="absolute left-1 lg:left-2 top-2 w-40 md:w-48 lg:w-56 rotate-0 opacity-90"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img 
+                  src={bookCover} 
+                  alt="The Local Growth Engine ebook" 
+                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] border border-gray-200"
+                />
+              </div>
+              {/* Front book - main focus */}
+              <div 
+                className="relative left-12 lg:left-20 w-44 md:w-52 lg:w-64 rotate-6 z-10"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img 
+                  src={bookCover} 
+                  alt="The Local Growth Engine ebook" 
+                  className="w-full rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] border border-gray-100"
+                />
+              </div>
             </div>
           </div>
 
