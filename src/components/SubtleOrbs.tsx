@@ -1,12 +1,47 @@
-const SubtleOrbs = () => {
+interface SubtleOrbsProps {
+  variant?: 'default' | 'top-right' | 'bottom-left' | 'center' | 'scattered';
+}
+
+const SubtleOrbs = ({ variant = 'default' }: SubtleOrbsProps) => {
+  const getOrbStyles = () => {
+    switch (variant) {
+      case 'top-right':
+        return {
+          green: { top: '10%', right: '5%', left: 'auto' },
+          blue: { bottom: '30%', left: '10%', right: 'auto' },
+        };
+      case 'bottom-left':
+        return {
+          green: { bottom: '15%', left: '5%', top: 'auto' },
+          blue: { top: '20%', right: '10%', left: 'auto' },
+        };
+      case 'center':
+        return {
+          green: { top: '40%', left: '30%' },
+          blue: { top: '50%', right: '25%', left: 'auto' },
+        };
+      case 'scattered':
+        return {
+          green: { top: '5%', right: '20%', left: 'auto' },
+          blue: { bottom: '10%', left: '5%', right: 'auto' },
+        };
+      default:
+        return {
+          green: { top: '20%', left: '10%' },
+          blue: { bottom: '20%', right: '15%', left: 'auto' },
+        };
+    }
+  };
+
+  const styles = getOrbStyles();
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Green orb */}
       <div 
         className="absolute w-64 h-64 rounded-full bg-cta/5 blur-3xl animate-float"
         style={{
-          top: '20%',
-          left: '10%',
+          ...styles.green,
           animationDuration: '20s',
         }}
       />
@@ -14,8 +49,7 @@ const SubtleOrbs = () => {
       <div 
         className="absolute w-48 h-48 rounded-full bg-accent-blue/5 blur-3xl animate-float"
         style={{
-          bottom: '20%',
-          right: '15%',
+          ...styles.blue,
           animationDuration: '25s',
           animationDelay: '5s',
         }}
