@@ -2,6 +2,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
+import TopReasons from "@/components/sections/TopReasons";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
@@ -22,6 +23,7 @@ const Index = () => {
       <Hero />
       <ScalableFulfillment />
       <RetentionPhilosophy />
+      <TopReasons />
       <div id="services">
         <ServicesGrid />
       </div>
