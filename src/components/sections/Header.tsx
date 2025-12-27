@@ -62,11 +62,15 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center overflow-hidden">
             <img 
               src={logo} 
               alt="Dialed-In Web" 
-              className="h-6 md:h-8 w-auto brightness-0 invert opacity-90"
+              className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
+                isScrolled 
+                  ? "h-6 md:h-7 max-w-[28px] md:max-w-[32px] object-cover object-left" 
+                  : "h-6 md:h-8"
+              }`}
             />
           </a>
 
