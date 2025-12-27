@@ -1,8 +1,6 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
-import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
-import TopReasons from "@/components/sections/TopReasons";
+import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
@@ -21,9 +19,7 @@ const Index = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <Header />
       <Hero />
-      <ScalableFulfillment />
-      <RetentionPhilosophy />
-      <TopReasons />
+      <WhyPartnerWithUs />
       <div id="services">
         <ServicesGrid />
       </div>
