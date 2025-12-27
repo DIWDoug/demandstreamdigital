@@ -114,8 +114,8 @@ const WhatWeSolve = () => {
           </div>
 
           {/* Tab content - Expanded copy with details */}
-          <div className="premium-card">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="premium-card py-10">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-12">
               {/* Your Role */}
               <div>
                 <p className="text-sm text-text-muted uppercase tracking-widest mb-4">
