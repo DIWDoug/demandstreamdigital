@@ -53,10 +53,15 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  // Split FAQs into two columns
+  const midpoint = Math.ceil(faqs.length / 2);
+  const leftColumn = faqs.slice(0, midpoint);
+  const rightColumn = faqs.slice(midpoint);
+
   return (
     <section className="py-24 lg:py-32 section-light">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="mb-4">
@@ -67,23 +72,44 @@ const FAQ = () => {
             </p>
           </div>
 
-          {/* FAQ Accordion */}
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
-              >
-                <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline py-5">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-5">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {/* FAQ Accordion - Two Columns */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Left Column */}
+            <Accordion type="single" collapsible className="space-y-4">
+              {leftColumn.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-left-${index}`}
+                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                >
+                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            {/* Right Column */}
+            <Accordion type="single" collapsible className="space-y-4">
+              {rightColumn.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-right-${index}`}
+                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                >
+                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>
