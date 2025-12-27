@@ -1,4 +1,4 @@
-import { ShieldCheck, Eye, Rocket, Calculator, Zap, MessageCircle } from "lucide-react";
+import { ShieldCheck, Eye, Rocket, Calculator, Zap, MessageCircle, ArrowRight } from "lucide-react";
 
 const WhyPartnerWithUs = () => {
   const allBenefits = [
@@ -68,6 +68,17 @@ const WhyPartnerWithUs = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <a 
+            href="#about" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(76,42%,41%)] text-white font-semibold rounded-lg hover:bg-[hsl(76,42%,35%)] transition-colors group"
+          >
+            Meet the Team Behind the Magic
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
         </div>
       </div>
     </section>
