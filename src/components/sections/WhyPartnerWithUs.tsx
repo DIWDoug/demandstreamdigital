@@ -1,11 +1,4 @@
 import { ShieldCheck, Eye, Rocket, Settings, Zap, MessageCircle, Brain } from "lucide-react";
-import bloombergLogo from "@/assets/logos/bloomberg.png";
-import digitalJournalLogo from "@/assets/logos/digital-journal.png";
-import googleNewsLogo from "@/assets/logos/google-news.png";
-import marketwatchLogo from "@/assets/logos/marketwatch.png";
-import businessInsiderLogo from "@/assets/logos/business-insider.png";
-import yahooNewsLogo from "@/assets/logos/yahoo-news.png";
-import apNewsLogo from "@/assets/logos/ap-news.png";
 
 const WhyPartnerWithUs = () => {
   const corePillars = [
@@ -49,40 +42,11 @@ const WhyPartnerWithUs = () => {
     }
   ];
 
-  const logos = [
-    { name: "Yahoo News", src: yahooNewsLogo },
-    { name: "Business Insider", src: businessInsiderLogo },
-    { name: "MarketWatch", src: marketwatchLogo },
-    { name: "Google News", src: googleNewsLogo },
-    { name: "Digital Journal", src: digitalJournalLogo },
-    { name: "AP News", src: apNewsLogo },
-  ];
-
   return (
     <section className="pt-12 pb-24 lg:pt-16 lg:pb-32 section-light relative">
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
-        {/* Featured In Logos */}
-        <div className="max-w-5xl mx-auto mb-20">
-          <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
-            Featured In
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.name}
-                className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-70 hover:opacity-100 transition-all duration-300"
-              />
-            ))}
-          </div>
-          
-          {/* Subtle divider */}
-          <div className="mt-12 h-[2px] max-w-2xl mx-auto bg-gradient-to-r from-transparent via-[hsl(76,42%,45%)] to-transparent" />
-        </div>
-
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
