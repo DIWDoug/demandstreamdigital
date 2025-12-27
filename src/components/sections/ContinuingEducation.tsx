@@ -2,10 +2,10 @@ import { BookOpen, TrendingUp, Users, Lightbulb, GraduationCap, Podcast } from "
 
 const ContinuingEducation = () => {
   const currentlyStudying = [
-    "AI-powered search optimization & LLM visibility",
-    "Local algorithm updates & ranking factors",
-    "Advanced conversion rate optimization",
-    "First-party data strategies post-cookie",
+    "Hub & Spoke SEO methodology for topical authority domination",
+    "Whitespark's Local Search Ranking Factors 2026 deep dive",
+    "High-impact link building through strategic outreach campaigns",
+    "AI-powered SEO tactics that future-proof your rankings",
   ];
 
   const industryVoices = [
