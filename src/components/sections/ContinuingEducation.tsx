@@ -22,6 +22,7 @@ const ContinuingEducation = () => {
     "Google Business Profile post strategies",
     "Competitor analysis and gap identification",
     "Technical SEO auditing methodologies",
+    "Go High Level CRM automation and workflows",
   ];
 
   const industryVoices = [
