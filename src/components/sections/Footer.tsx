@@ -1,5 +1,6 @@
-import { MapPin, Phone, Linkedin, Facebook } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import logo from "@/assets/dialedinweb-logo.png";
 
 const Footer = () => {
   const serviceCategories = [
@@ -77,76 +78,83 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Footer Content */}
+      {/* Main Footer Content - 3 Column Layout */}
       <div className="py-12">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-            {/* Brand */}
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            {/* Left - Contact Info */}
             <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">
-                Dialed-In Web
-              </h3>
-              <p className="text-sm text-text-secondary leading-relaxed mb-4">
-                White-label local marketing fulfillment for agencies that value execution and long-term partnerships.
-              </p>
-              <p className="text-xs text-text-muted">
-                Serving agencies across the US & Canada since 2019.
-              </p>
+              <div className="flex items-center gap-3 text-sm text-text-secondary mb-2">
+                <MapPin className="h-4 w-4 shrink-0" />
+                Dallas, TX 75226
+              </div>
+              <a 
+                href="tel:2143072995"
+                className="flex items-center gap-3 text-sm text-text-secondary hover:text-foreground transition-colors"
+              >
+                <Phone className="h-4 w-4 shrink-0" />
+                (214) 307-2995
+              </a>
             </div>
 
-            {/* Contact */}
-            <div>
-              <h4 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-4">
-                Contact
-              </h4>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-sm text-text-secondary">
-                  <MapPin className="h-4 w-4 shrink-0" />
-                  Dallas, TX 75226
-                </li>
-                <li>
-                  <a 
-                    href="tel:2143072995"
-                    className="flex items-center gap-3 text-sm text-text-secondary hover:text-foreground transition-colors"
-                  >
-                    <Phone className="h-4 w-4 shrink-0" />
-                    (214) 307-2995
-                  </a>
-                </li>
-              </ul>
+            {/* Center - Logo */}
+            <div className="flex justify-center">
+              <img 
+                src={logo} 
+                alt="Dialed-In Web" 
+                className="h-8 brightness-0 invert opacity-80"
+              />
+            </div>
 
-              {/* Social Icons */}
-              <div className="flex items-center gap-4 mt-6">
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-surface-elevated hover:bg-cta/20 text-text-secondary hover:text-cta transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-surface-elevated hover:bg-cta/20 text-text-secondary hover:text-cta transition-colors"
-                  aria-label="X (Twitter)"
-                >
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-surface-elevated hover:bg-cta/20 text-text-secondary hover:text-cta transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-              </div>
+            {/* Right - Social Icons */}
+            <div className="flex items-center justify-end gap-5">
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-foreground transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-foreground transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-foreground transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-foreground transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
