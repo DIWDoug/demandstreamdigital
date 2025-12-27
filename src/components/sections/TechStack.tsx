@@ -1,0 +1,46 @@
+import brightlocal from "@/assets/logos/brightlocal.webp";
+import localDominator from "@/assets/logos/local-dominator.jpg";
+import semrush from "@/assets/logos/semrush.png";
+import ahrefs from "@/assets/logos/ahrefs.webp";
+import chatgpt from "@/assets/logos/chatgpt.png";
+import claude from "@/assets/logos/claude.png";
+import gemini from "@/assets/logos/gemini.png";
+
+const TechStack = () => {
+  const logos = [
+    { src: semrush, alt: "Semrush" },
+    { src: ahrefs, alt: "Ahrefs" },
+    { src: brightlocal, alt: "BrightLocal" },
+    { src: localDominator, alt: "Local Dominator" },
+    { src: chatgpt, alt: "ChatGPT" },
+    { src: claude, alt: "Claude AI" },
+    { src: gemini, alt: "Google Gemini" },
+  ];
+
+  return (
+    <section className="py-12 lg:py-16 bg-surface-dark border-y border-border">
+      <div className="container mx-auto px-6 lg:px-8">
+        <p className="text-center text-sm text-text-muted uppercase tracking-widest mb-10">
+          The Company We Keep
+        </p>
+        
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+          {logos.map((logo, index) => (
+            <div 
+              key={index}
+              className="flex items-center justify-center"
+            >
+              <img 
+                src={logo.src} 
+                alt={logo.alt}
+                className="h-8 md:h-10 w-auto object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TechStack;
