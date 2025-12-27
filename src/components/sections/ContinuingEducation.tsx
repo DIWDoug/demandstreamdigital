@@ -21,7 +21,7 @@ const ContinuingEducation = () => {
     { name: "HubSpot", focus: "Inbound Marketing" },
     { name: "Single Grain", focus: "Digital Marketing" },
     { name: "Darryl Rosser", focus: "Agency Scaling" },
-    { name: "Matthew Woodward", focus: "SEO & Affiliate" },
+    { name: "Matthew Woodward", focus: "Link Building & Outreach" },
     { name: "Josh Nelson", focus: "Agency Growth" },
   ];
 
