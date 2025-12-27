@@ -1,4 +1,4 @@
-import { Zap, Users, TrendingUp, Shield } from "lucide-react";
+import { Zap, Users, Sliders, Shield } from "lucide-react";
 
 const ScalableFulfillment = () => {
   const features = [
@@ -13,9 +13,9 @@ const ScalableFulfillment = () => {
       description: "We operate behind the scenes. You maintain the relationship and the margin."
     },
     {
-      icon: TrendingUp,
-      title: "Predictable Delivery",
-      description: "Structured workflows and consistent cycles so you can grow without chaos."
+      icon: Sliders,
+      title: "Customized Pricing, Not Cookie-Cutter",
+      description: "Tailored solutions built around your clients' unique needs—no generic packages."
     },
     {
       icon: Shield,
