@@ -31,7 +31,7 @@ const ContactForm = () => {
     },
     {
       title: "Let Us Execute",
-      content: "Our team handles the heavy lifting—campaigns, optimizations, reporting—while you focus on growing your agency."
+      content: "Our team handles the heavy lifting: campaigns, optimizations, and reporting. You focus on growing your agency."
     },
     {
       title: "Deliver Results",

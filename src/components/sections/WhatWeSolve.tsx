@@ -27,7 +27,7 @@ const WhatWeSolve = () => {
         "Control the narrative and timing of all client communications",
         "Build trust through consistent, high-quality delivery"
       ],
-      ourRole: "We provide fully white-labeled deliverables, reports, and campaign updates you can present as your own. Your clients never know we exist—your brand stays front and center.",
+      ourRole: "We provide fully white-labeled deliverables, reports, and campaign updates you can present as your own. Your clients never know we exist. Your brand stays front and center.",
       ourRoleDetails: [
         "Custom-branded reports with your logo and colors",
         "Executive summaries written in your voice",
