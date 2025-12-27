@@ -24,7 +24,6 @@ const Index = () => {
       <Hero />
       <WhoWeAre />
       <WhyPartnerWithUs />
-      <MidPageCTA variant="light" />
       <div id="services">
         <ServicesGrid />
       </div>
