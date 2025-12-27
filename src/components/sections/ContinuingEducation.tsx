@@ -64,7 +64,7 @@ const ContinuingEducation = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* What We're Studying - Scrolling */}
           <div className="p-8 rounded-2xl bg-surface-elevated/50 border border-border/50 backdrop-blur-sm overflow-hidden">
             <div className="flex items-center gap-3 mb-6">
