@@ -39,7 +39,7 @@ const SubtleOrbs = ({ variant = 'default' }: SubtleOrbsProps) => {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Green orb */}
       <div 
-        className="absolute w-64 h-64 rounded-full bg-cta/5 blur-3xl animate-float"
+        className="absolute w-96 h-96 rounded-full bg-cta/20 blur-3xl animate-float"
         style={{
           ...styles.green,
           animationDuration: '20s',
@@ -47,7 +47,7 @@ const SubtleOrbs = ({ variant = 'default' }: SubtleOrbsProps) => {
       />
       {/* Blue orb */}
       <div 
-        className="absolute w-48 h-48 rounded-full bg-accent-blue/5 blur-3xl animate-float"
+        className="absolute w-72 h-72 rounded-full bg-accent-blue/15 blur-3xl animate-float"
         style={{
           ...styles.blue,
           animationDuration: '25s',
