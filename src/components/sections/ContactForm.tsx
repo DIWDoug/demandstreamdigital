@@ -12,9 +12,7 @@ const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
-    revenue: "",
-    interests: [] as string[],
-    message: ""
+    revenue: ""
   });
 
   const steps = [
@@ -39,24 +37,6 @@ const ContactForm = () => {
       content: "You receive white-labeled deliverables ready for client presentation. Every report includes your logo and branding so it looks and feels like your own work."
     }
   ];
-
-  const interestOptions = [
-    "Web Design (WordPress)",
-    "Digital Inbound Marketing",
-    "Search Engine Optimization (SEO)",
-    "Web Advertising",
-    "Local Reputation Management",
-    "Amazon Advertising"
-  ];
-
-  const handleInterestChange = (interest: string) => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
-    }));
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -167,39 +147,6 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                {/* Interest Checkboxes */}
-                <fieldset className="border border-border rounded-lg p-4">
-                  <legend className="text-sm text-foreground px-2">
-                    I'm interested in: <span className="text-red-500">*</span>
-                  </legend>
-                  <div className="space-y-3 mt-2">
-                    {interestOptions.map((interest) => (
-                      <label key={interest} className="flex items-center gap-3 cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={formData.interests.includes(interest)}
-                          onChange={() => handleInterestChange(interest)}
-                          className="w-4 h-4 rounded border-border bg-surface-dark text-cta focus:ring-cta"
-                        />
-                        <span className="text-foreground text-sm">{interest}</span>
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
-
-
-                {/* Message Textarea */}
-                <div>
-                  <label className="block text-sm text-foreground mb-2">
-                    How can we help you?
-                  </label>
-                  <textarea
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors resize-none"
-                  />
-                </div>
 
                 <button type="submit" className="btn-cta w-full group">
                   LET'S GET STARTED
