@@ -16,7 +16,7 @@ const FinalCTA = () => {
             Ready to <span className="text-pop">Scale Your Agency</span> Without the Overhead?
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
-            A white-label digital marketing partner built for agencies that value execution, stability, and sustainable growth. 90% client retention rate.
+            A white-label digital marketing partner built for agencies that value execution, reliability, and long-term success. 90% client retention rate.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

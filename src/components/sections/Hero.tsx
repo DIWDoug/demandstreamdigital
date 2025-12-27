@@ -89,7 +89,7 @@ const Hero = () => {
 
           {/* Subheadline - more breathing room */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web is a white-label digital marketing partner that helps agencies scale service delivery. From strategy to execution, we handle fulfillment under your brand.
+            Dialed-In Web is a white-label digital marketing partner that helps agencies scale without the hiring headaches. We handle the execution so you can focus on growth.
           </p>
 
           {/* Premium positioning line */}
