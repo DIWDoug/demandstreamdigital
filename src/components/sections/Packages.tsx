@@ -1,12 +1,14 @@
 const Packages = () => {
   const factors = [
     "City size & population density",
-    "Local competition & SERP difficulty",
+    "Local competition intensity",
     "Industry & service vertical",
-    "Website age & technical foundation",
+    "Ad spend & budget allocation",
     "Google Maps competitive pressure",
+    "Email list size & engagement",
     "Lead value & conversion economics",
-    "Market saturation & growth potential"
+    "Multi-location complexity",
+    "Reputation & review velocity"
   ];
 
   return (
@@ -21,7 +23,7 @@ const Packages = () => {
               Packages Built Around Real Local Factors
             </h2>
             <p className="text-lg max-w-2xl mx-auto">
-              We scope work based on the variables that actually affect local performance.
+              Every local market is different. We scope SEO, paid media, email marketing, and reputation management based on the variables that actually affect performance.
             </p>
           </div>
 

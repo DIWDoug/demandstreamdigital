@@ -92,6 +92,9 @@ const AIVisibility = () => {
               </p>
             </div>
           </div>
+
+          {/* Divider */}
+          <div className="mt-16 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         </div>
       </div>
     </section>
