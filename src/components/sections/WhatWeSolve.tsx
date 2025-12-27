@@ -114,7 +114,7 @@ const WhatWeSolve = () => {
               <span className="underline decoration-dotted cursor-help">50+ industries</span>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Yeah, we even talked with Traffic Junkie once. Don't Google it.</p>
+              <p>Yeah, we even talked with TrafficJunky once. Don't Google it. 😈</p>
             </TooltipContent>
           </Tooltip>
           {parts[1]}
