@@ -86,65 +86,63 @@ const ContactForm = () => {
             {/* Right Column - Form */}
             <div>
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm text-foreground mb-2">
-                      Full Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm text-foreground mb-2">
-                      Email <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm text-foreground mb-2">
+                    Full Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
+                  />
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm text-foreground mb-2">
-                      SMS Enabled Phone # <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm text-foreground mb-2">
-                      Agency Monthly Revenue <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                      required
-                      value={formData.revenue}
-                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-accent-blue transition-colors"
-                    >
-                      <option value="">Select revenue range</option>
-                      <option value="under-25k">Under $25,000</option>
-                      <option value="25k-50k">$25,000 - $50,000</option>
-                      <option value="50k-100k">$50,000 - $100,000</option>
-                      <option value="100k-250k">$100,000 - $250,000</option>
-                      <option value="250k-500k">$250,000 - $500,000</option>
-                      <option value="500k+">$500,000+</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-sm text-foreground mb-2">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm text-foreground mb-2">
+                    SMS Enabled Phone # <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm text-foreground mb-2">
+                    Agency Monthly Revenue <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    required
+                    value={formData.revenue}
+                    onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-accent-blue transition-colors"
+                  >
+                    <option value="">Select revenue range</option>
+                    <option value="under-25k">Under $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k-250k">$100,000 - $250,000</option>
+                    <option value="250k-500k">$250,000 - $500,000</option>
+                    <option value="500k+">$500,000+</option>
+                  </select>
                 </div>
 
 
