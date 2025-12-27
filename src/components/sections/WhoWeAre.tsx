@@ -38,9 +38,14 @@ const WhoWeAre = () => {
             <p className="text-text-secondary mb-6 leading-relaxed">
               I've worked with coaches, SaaS companies, national furniture brands, and mom-and-pop shops. I've rebranded three times. But at the core, I'm an inbound marketer and digital producer who knows how to get results and isn't afraid to roll up my sleeves.
             </p>
-            <p className="text-foreground font-semibold text-lg italic mb-8">
-              "I've been there. That's why I'm here."
-            </p>
+            <div className="mb-8">
+              <p className="text-foreground font-semibold text-lg italic mb-3">
+                "I've been there. That's why I'm here."
+              </p>
+              <p className="text-cta font-medium" style={{ fontFamily: 'cursive' }}>
+                — Doug Bryson
+              </p>
+            </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-8">
