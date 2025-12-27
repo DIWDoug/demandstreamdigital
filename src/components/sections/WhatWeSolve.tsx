@@ -20,6 +20,36 @@ const WhatWeSolve = () => {
       ]
     },
     {
+      label: "Clarity",
+      yourRole: "You maintain full visibility into what's happening with your clients' campaigns. No black boxes, no surprises—just clear, actionable information when you need it.",
+      yourRoleDetails: [
+        "Know exactly where every project stands at any moment",
+        "Get proactive updates before clients ask questions",
+        "Understand results well enough to explain them confidently"
+      ],
+      ourRole: "We provide transparent reporting, regular updates, and open communication so you're never caught off guard. You'll always have the answers your clients expect.",
+      ourRoleDetails: [
+        "Weekly status reports with plain-language summaries",
+        "Direct access to dashboards and performance metrics",
+        "Clear documentation of strategy, tactics, and results"
+      ]
+    },
+    {
+      label: "Sales",
+      yourRole: "You close deals, manage client expectations, and grow your book of business. Your sales process stays yours—we don't interfere with how you win clients.",
+      yourRoleDetails: [
+        "Sell with confidence knowing you can actually deliver",
+        "Take on bigger accounts without hiring ahead of revenue",
+        "Say yes to opportunities you used to turn down"
+      ],
+      ourRole: "We provide the capability proof, case studies, and performance data to support your pitch. When prospects ask if you can deliver, you'll have the receipts.",
+      ourRoleDetails: [
+        "Access to anonymized case studies across industries",
+        "Performance benchmarks that help you set expectations",
+        "Onboarding support that makes new clients feel handled"
+      ]
+    },
+    {
       label: "Operations",
       yourRole: "You focus on building client relationships, developing growth strategy, and scaling your agency. Your time stays on high-value activities that drive revenue.",
       yourRoleDetails: [
@@ -62,21 +92,6 @@ const WhatWeSolve = () => {
         "SOPs built from 10+ years of local marketing experience",
         "Quality checks at every stage before anything goes live",
         "Scalable processes that work whether you have 5 or 50 clients"
-      ]
-    },
-    {
-      label: "Sales",
-      yourRole: "You close deals, manage client expectations, and grow your book of business. Your sales process stays yours—we don't interfere with how you win clients.",
-      yourRoleDetails: [
-        "Sell with confidence knowing you can actually deliver",
-        "Take on bigger accounts without hiring ahead of revenue",
-        "Say yes to opportunities you used to turn down"
-      ],
-      ourRole: "We provide the capability proof, case studies, and performance data to support your pitch. When prospects ask if you can deliver, you'll have the receipts.",
-      ourRoleDetails: [
-        "Access to anonymized case studies across industries",
-        "Performance benchmarks that help you set expectations",
-        "Onboarding support that makes new clients feel handled"
       ]
     }
   ];
