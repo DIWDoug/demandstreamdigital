@@ -6,6 +6,7 @@ const ContinuingEducation = () => {
     "Whitespark's Local Search Ranking Factors 2026 deep dive",
     "High-impact link building through strategic outreach campaigns",
     "AI-powered SEO tactics that future-proof your rankings",
+    "GBP service-to-content expansion for maximum local visibility",
   ];
 
   const industryVoices = [
