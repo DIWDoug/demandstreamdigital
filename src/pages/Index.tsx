@@ -1,6 +1,5 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import FeaturedIn from "@/components/sections/FeaturedIn";
 import ScalableFulfillment from "@/components/sections/ScalableFulfillment";
 import RetentionPhilosophy from "@/components/sections/RetentionPhilosophy";
 import ServicesGrid from "@/components/sections/ServicesGrid";
@@ -21,7 +20,6 @@ const Index = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <Header />
       <Hero />
-      <FeaturedIn />
       <ScalableFulfillment />
       <RetentionPhilosophy />
       <div id="services">
