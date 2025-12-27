@@ -9,7 +9,7 @@ const WhoWeAre = () => {
           {/* Left: Content */}
           <div>
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              Who We Are
+              A Message From Doug
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
               You Didn't Start Your Agency to Feel This Stuck
