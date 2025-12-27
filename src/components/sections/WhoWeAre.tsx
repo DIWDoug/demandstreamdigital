@@ -38,8 +38,8 @@ const WhoWeAre = () => {
             <p className="text-text-secondary mb-6 leading-relaxed">
               I've worked with coaches, SaaS companies, national furniture brands, and mom-and-pop shops. I've rebranded three times. But at the core, I'm an inbound marketer and digital producer who knows how to get results and isn't afraid to roll up my sleeves.
             </p>
-            <p className="text-text-secondary mb-8 leading-relaxed">
-              Dialed-In Web exists because I built the fulfillment partner I always wished I had.
+            <p className="text-foreground font-semibold text-lg italic mb-8">
+              "I've been there. That's why I'm here."
             </p>
 
             {/* Stats */}
