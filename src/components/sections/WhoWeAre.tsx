@@ -22,10 +22,7 @@ const WhoWeAre = () => {
               I built Dialed-In Web to be the partner I always wished existed. Not a vendor. Not a contractor. A partner who actually gives a damn about your success, because I know what it feels like to be on your side of the table.
             </p>
             
-            <div className="p-6 rounded-xl bg-gradient-to-br from-cta/10 to-accent-blue/10 border border-cta/20 mb-8">
-              <p className="text-foreground font-semibold text-xl italic mb-3">
-                "I've been there. That's why I'm here."
-              </p>
+            <div className="mb-8">
               <p className="text-cta font-medium text-lg" style={{ fontFamily: 'cursive' }}>
                 — Doug Bryson
               </p>
