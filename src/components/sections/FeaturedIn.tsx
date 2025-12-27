@@ -19,18 +19,18 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <section className="pt-16 pb-8 section-light">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-6">
-        <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
-          Featured In
+        <p className="text-center text-lg md:text-xl text-gray-800 font-medium mb-10 max-w-3xl mx-auto">
+          Agencies across North America trust Dialed-In Web to scale their local SEO fulfillment.
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20">
           {logos.map((logo, index) => (
             <img
               key={index}
               src={logo.src}
               alt={logo.name}
-              className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-all duration-300"
+              className="h-6 md:h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-all duration-300"
             />
           ))}
         </div>
