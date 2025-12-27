@@ -1,4 +1,4 @@
-import { ShieldCheck, Eye, Rocket, Brain, Zap, MessageCircle } from "lucide-react";
+import { ShieldCheck, Eye, Rocket, Calculator, Zap, MessageCircle } from "lucide-react";
 
 const WhyPartnerWithUs = () => {
   const allBenefits = [
@@ -18,9 +18,9 @@ const WhyPartnerWithUs = () => {
       description: "Held to the highest standard. Structured workflows and attention to detail that reflects the quality your agency is known for."
     },
     {
-      icon: Brain,
-      title: "AI-Powered Workflows",
-      description: "We leverage ChatGPT, Claude, and cutting-edge AI tools to accelerate research, content, and optimization for faster results."
+      icon: Calculator,
+      title: "Custom Pricing, Not Packages",
+      description: "We use AI to analyze market factors and build pricing that fits each client. No cookie-cutter packages. Every scope reflects real competitive conditions."
     },
     {
       icon: Zap,
