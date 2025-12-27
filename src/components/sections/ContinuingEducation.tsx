@@ -15,8 +15,6 @@ const ContinuingEducation = () => {
     { name: "Caleb Ulku", focus: "AI SEO Proximity Ranking" },
     { name: "Matt Diggity", focus: "SEO & Link Building" },
     { name: "Lead Gen Jay", focus: "Lead Generation" },
-    { name: "Instantly", focus: "Cold Outreach" },
-    { name: "Hey Tony", focus: "Agency Growth" },
     { name: "Edward Sturm", focus: "Growth Hacking" },
     { name: "HubSpot", focus: "Inbound Marketing" },
     { name: "Single Grain", focus: "Digital Marketing" },
