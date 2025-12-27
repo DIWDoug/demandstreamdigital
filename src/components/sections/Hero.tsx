@@ -86,7 +86,7 @@ const Hero = () => {
 
           {/* Subheadline - more breathing room */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and organic social without building internal fulfillment teams. All execution is delivered under your brand.
+            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and email marketing without building internal fulfillment teams. All execution is delivered under your brand.
           </p>
 
           {/* Premium positioning line */}

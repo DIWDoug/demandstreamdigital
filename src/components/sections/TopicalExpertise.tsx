@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Users, Award } from "lucide-react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Mail, Award } from "lucide-react";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
@@ -98,25 +98,25 @@ const TopicalExpertise = () => {
       ]
     },
     {
-      icon: Users,
-      title: "Organic Social Media",
-      summary: "Maintain consistent brand presence and community engagement across social platforms.",
+      icon: Mail,
+      title: "Email Marketing",
+      summary: "Nurture leads and drive repeat business through strategic email campaigns and automation.",
       spokes: [
         {
-          title: "Content Calendar Management",
-          description: "Strategic posting schedules, content themes, and platform-specific formats that maintain engagement without overwhelming clients."
+          title: "Campaign Strategy & Design",
+          description: "Custom email templates, compelling copy, and strategic send schedules that maximize open rates and conversions."
         },
         {
-          title: "Community Engagement",
-          description: "Comment management, direct message handling, and proactive engagement that builds authentic local relationships."
+          title: "Automation Sequences",
+          description: "Welcome series, nurture flows, and re-engagement campaigns that work around the clock to convert leads into customers."
         },
         {
-          title: "Local Content Creation",
-          description: "Behind-the-scenes content, team spotlights, and community involvement posts that humanize local service brands."
+          title: "List Management & Segmentation",
+          description: "Clean list hygiene, audience segmentation, and targeted messaging that improves deliverability and engagement."
         },
         {
-          title: "Platform Strategy & Optimization",
-          description: "Profile optimization, hashtag research, and algorithm-friendly posting strategies across Facebook, Instagram, and LinkedIn."
+          title: "Performance Analytics",
+          description: "Open rates, click-through tracking, A/B testing insights, and ROI analysis to continuously optimize campaign performance."
         }
       ]
     },

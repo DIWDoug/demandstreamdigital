@@ -31,7 +31,7 @@ const Header = () => {
     { label: "Google Maps", href: "#services" },
     { label: "Google Ads", href: "#services" },
     { label: "Meta Ads", href: "#services" },
-    { label: "Organic Social", href: "#services" },
+    { label: "Email Marketing", href: "#services" },
     { label: "Authority Building", href: "#services" },
   ];
 
