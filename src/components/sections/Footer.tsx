@@ -34,25 +34,8 @@ const Footer = () => {
     <footer className="bg-background border-t border-border relative overflow-hidden" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
       
-      {/* Quick Links Bar - Above Service Categories */}
-      <div className="py-6 border-b border-border">
-        <div className="container mx-auto px-6 lg:px-8">
-          <nav className="flex flex-wrap items-center justify-start gap-6 md:gap-10">
-            <a href="#about" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
-              About Us
-            </a>
-            <a href="#services" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
-              Services
-            </a>
-            <a href="#testimonials" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
-              Results
-            </a>
-            <a href="#contact" className="text-sm font-medium text-text-secondary hover:text-foreground transition-colors uppercase tracking-wide">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </div>
+      {/* Spacer */}
+      <div className="h-8" />
 
       {/* Service Categories Grid */}
       <div className="py-12 border-b border-border">

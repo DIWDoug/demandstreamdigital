@@ -47,6 +47,9 @@ const ServicesGrid = () => {
           <p className="text-lg text-text-secondary">
             Full-service digital marketing fulfillment, delivered under your brand.
           </p>
+          
+          {/* Green divider */}
+          <div className="w-24 h-1 bg-[hsl(76,42%,41%)] mx-auto mt-8 rounded-full" />
         </div>
 
         {/* Core Service - Full Width */}
