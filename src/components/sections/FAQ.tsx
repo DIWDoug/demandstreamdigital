@@ -63,15 +63,15 @@ const FAQ = () => {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <section className="py-24 lg:py-32 section-light">
+    <section className="py-24 lg:py-32 bg-surface-dark">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="mb-4">
+            <h2 className="mb-4 text-foreground">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg">
+            <p className="text-lg text-text-secondary">
               Common questions from agency partners.
             </p>
           </div>
@@ -84,12 +84,12 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-left-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                  className="bg-surface-elevated border border-border rounded-lg px-6 data-[state=open]:border-accent-blue/30 transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                  <AccordionTrigger className="text-base font-medium text-foreground hover:no-underline py-4 text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                  <AccordionContent className="text-text-secondary pb-4 text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -102,12 +102,12 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-right-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                  className="bg-surface-elevated border border-border rounded-lg px-6 data-[state=open]:border-accent-blue/30 transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                  <AccordionTrigger className="text-base font-medium text-foreground hover:no-underline py-4 text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                  <AccordionContent className="text-text-secondary pb-4 text-sm">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
