@@ -36,47 +36,71 @@ const LocalGrowthEngine = () => {
             <div className="relative" style={{ perspective: '1000px' }}>
               {/* Back book - most rotated */}
               <div 
-                className="absolute -left-16 lg:-left-24 top-8 w-40 md:w-48 lg:w-56 -rotate-12 opacity-60"
+                className="absolute -left-16 lg:-left-24 top-8 w-40 md:w-48 lg:w-56 -rotate-12 opacity-50"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <img 
-                  src={bookCover} 
-                  alt="The Local Growth Engine ebook" 
-                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] border border-gray-200"
-                />
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={bookCover} 
+                    alt="The Local Growth Engine ebook" 
+                    className="w-full"
+                    style={{ 
+                      filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
+                      mixBlendMode: 'multiply'
+                    }}
+                  />
+                </div>
               </div>
               {/* Middle-back book */}
               <div 
-                className="absolute -left-8 lg:-left-12 top-4 w-40 md:w-48 lg:w-56 -rotate-6 opacity-75"
+                className="absolute -left-8 lg:-left-12 top-4 w-40 md:w-48 lg:w-56 -rotate-6 opacity-70"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <img 
-                  src={bookCover} 
-                  alt="The Local Growth Engine ebook" 
-                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.4)] border border-gray-200"
-                />
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={bookCover} 
+                    alt="The Local Growth Engine ebook" 
+                    className="w-full"
+                    style={{ 
+                      filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
+                      mixBlendMode: 'multiply'
+                    }}
+                  />
+                </div>
               </div>
               {/* Middle-front book */}
               <div 
-                className="absolute left-1 lg:left-2 top-2 w-40 md:w-48 lg:w-56 rotate-0 opacity-90"
+                className="absolute left-1 lg:left-2 top-2 w-40 md:w-48 lg:w-56 rotate-0 opacity-85"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <img 
-                  src={bookCover} 
-                  alt="The Local Growth Engine ebook" 
-                  className="w-full rounded-md shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] border border-gray-200"
-                />
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={bookCover} 
+                    alt="The Local Growth Engine ebook" 
+                    className="w-full"
+                    style={{ 
+                      filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.35))',
+                      mixBlendMode: 'multiply'
+                    }}
+                  />
+                </div>
               </div>
               {/* Front book - main focus */}
               <div 
                 className="relative left-12 lg:left-20 w-44 md:w-52 lg:w-64 rotate-6 z-10"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <img 
-                  src={bookCover} 
-                  alt="The Local Growth Engine ebook" 
-                  className="w-full rounded-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] border border-gray-100"
-                />
+                <div className="relative overflow-hidden rounded-lg">
+                  <img 
+                    src={bookCover} 
+                    alt="The Local Growth Engine ebook" 
+                    className="w-full"
+                    style={{ 
+                      filter: 'drop-shadow(0 35px 60px rgba(0,0,0,0.5))',
+                      mixBlendMode: 'multiply'
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
