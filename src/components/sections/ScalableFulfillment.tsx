@@ -26,6 +26,8 @@ const ScalableFulfillment = () => {
 
   return (
     <section className="py-24 lg:py-32 section-light relative">
+      {/* Section divider top */}
+      <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
