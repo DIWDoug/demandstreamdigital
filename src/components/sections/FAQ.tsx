@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Do you require long-term contracts?",
-    answer: "No. We work on a month-to-month basis. Our retention comes from results, not lock-in agreements. Most partners stay because the work speaks for itself."
+    answer: "No. We don't require long-term contracts—we work on a month-to-month basis. However, we do have a strict 30-day notice policy. Our retention comes from results, not lock-in agreements."
   },
   {
     question: "How do you handle reporting?",
