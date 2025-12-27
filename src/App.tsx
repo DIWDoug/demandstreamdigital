@@ -5,12 +5,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import { useKonamiCode } from "./hooks/useKonamiCode";
 
 const queryClient = new QueryClient();
+
+const KonamiCodeListener = () => {
+  useKonamiCode();
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <KonamiCodeListener />
       <Toaster />
       <Sonner />
       <BrowserRouter>
