@@ -146,7 +146,11 @@ const Header = () => {
             <div className="container mx-auto px-6 lg:px-8 py-8 relative">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
                 {serviceCategories.map((category, index) => (
-                  <div key={index}>
+                  <div 
+                    key={index}
+                    className="opacity-0 animate-fade-in"
+                    style={{ animationDelay: `${index * 75}ms`, animationFillMode: 'forwards' }}
+                  >
                     <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
                       {category.title}
                     </h4>
