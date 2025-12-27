@@ -140,7 +140,10 @@ const Header = () => {
         {/* Mega Menu Dropdown */}
         {isMegaMenuOpen && (
           <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50">
-            <div className="container mx-auto px-6 lg:px-8 py-8">
+            {/* Top gradient glow */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
+            <div className="container mx-auto px-6 lg:px-8 py-8 relative">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
