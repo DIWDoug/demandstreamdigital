@@ -18,11 +18,11 @@ const WhoWeAre = () => {
             {/* Personal Letter Style Content */}
             <div className="space-y-4 mb-8 font-handwriting text-base md:text-lg leading-relaxed text-text-secondary">
               <p>
-                You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
+                "You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
               </p>
               
               <p>
-                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The "experts" you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
+                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The 'experts' you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
               </p>
               
               <p>
@@ -34,7 +34,7 @@ const WhoWeAre = () => {
               </p>
               
               <p>
-                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.
+                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly."
               </p>
             </div>
             
