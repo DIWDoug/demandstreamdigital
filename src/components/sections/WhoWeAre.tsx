@@ -1,25 +1,8 @@
-import { Users, Target, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 const WhoWeAre = () => {
-  const highlights = [
-    {
-      icon: Users,
-      stat: "50+",
-      label: "Agency Partners"
-    },
-    {
-      icon: Target,
-      stat: "90%",
-      label: "Client Retention"
-    },
-    {
-      icon: Award,
-      stat: "2011",
-      label: "In the Game"
-    }
-  ];
-
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
@@ -38,47 +21,45 @@ const WhoWeAre = () => {
             <p className="text-text-secondary mb-6 leading-relaxed">
               I built Dialed-In Web to be the partner I always wished existed. Not a vendor. Not a contractor. A partner who actually gives a damn about your success, because I know what it feels like to be on your side of the table.
             </p>
-            <div className="mb-8">
-              <p className="text-foreground font-semibold text-lg italic mb-3">
+            
+            <div className="p-6 rounded-xl bg-gradient-to-br from-cta/10 to-accent-blue/10 border border-cta/20 mb-8">
+              <p className="text-foreground font-semibold text-xl italic mb-3">
                 "I've been there. That's why I'm here."
               </p>
-              <p className="text-cta font-medium" style={{ fontFamily: 'cursive' }}>
+              <p className="text-cta font-medium text-lg" style={{ fontFamily: 'cursive' }}>
                 — Doug Bryson
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-8">
-              {highlights.map((item) => (
-                <div key={item.label} className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <item.icon className="w-5 h-5 text-cta mr-2" />
-                    <span className="text-2xl font-bold text-foreground">{item.stat}</span>
-                  </div>
-                  <p className="text-xs text-text-muted uppercase tracking-wide">{item.label}</p>
-                </div>
-              ))}
-            </div>
+            <Button 
+              size="lg" 
+              className="group bg-cta hover:bg-cta/90 text-white"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Meet My Team
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
 
           {/* Right: Image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={dougHeadshot} 
                 alt="Doug Bryson, Founder of Dialed-In Web"
                 className="w-full h-auto object-cover rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-foreground font-semibold text-lg">Doug Bryson</p>
-                <p className="text-text-secondary text-sm">Founder, Dialed-In Web</p>
+                <p className="text-foreground font-bold text-xl">Doug Bryson</p>
+                <p className="text-text-secondary">Founder, Dialed-In Web</p>
               </div>
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-cta/10 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent-blue/10 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-cta/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent-blue/20 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 -right-4 w-2 h-24 bg-gradient-to-b from-cta to-accent-blue rounded-full" />
           </div>
         </div>
       </div>
