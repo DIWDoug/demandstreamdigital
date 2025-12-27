@@ -1,4 +1,5 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
+import SubtleOrbs from "@/components/SubtleOrbs";
 
 const Footer = () => {
   const quickLinks = [
@@ -8,7 +9,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-16 bg-background border-t border-border" role="contentinfo">
+    <footer className="py-16 bg-background border-t border-border relative overflow-hidden" role="contentinfo">
+      <SubtleOrbs />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}

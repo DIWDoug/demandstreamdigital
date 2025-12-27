@@ -1,4 +1,5 @@
 import { Shield, Clock, Eye, DollarSign, Lock, CheckCircle } from "lucide-react";
+import SubtleOrbs from "@/components/SubtleOrbs";
 
 const HowWeOperate = () => {
   const principles = [
@@ -11,7 +12,8 @@ const HowWeOperate = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-background relative">
+    <section className="py-16 lg:py-20 bg-background relative overflow-hidden">
+      <SubtleOrbs />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="mb-10 text-foreground">
