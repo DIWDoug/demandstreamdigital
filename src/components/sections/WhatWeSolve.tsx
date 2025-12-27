@@ -68,6 +68,10 @@ const WhatWeSolve = () => {
 
   return (
     <section className="py-24 lg:py-32 bg-surface-dark relative">
+      {/* Section divider from ContinuingEducation */}
+      <div className="absolute top-0 left-0 right-0">
+        <div className="section-divider" />
+      </div>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
