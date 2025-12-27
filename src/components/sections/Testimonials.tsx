@@ -8,7 +8,7 @@ const testimonials = [
     role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "The last thing you want to worry about is, is a vendor doing a good job? Are they reliable? Are they good at what they do? Doug and his team just absolutely crushed it.",
+    quote: "The last thing you want to worry about is, is your partner doing a good job? Are they reliable? Are they good at what they do? Doug and his team just absolutely crushed it.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
   },
