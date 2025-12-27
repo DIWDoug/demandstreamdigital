@@ -2,6 +2,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
@@ -23,6 +24,7 @@ const Index = () => {
       <Hero />
       <WhoWeAre />
       <WhyPartnerWithUs />
+      <MidPageCTA variant="light" />
       <div id="services">
         <ServicesGrid />
       </div>
@@ -34,6 +36,7 @@ const Index = () => {
       <div id="about">
         <WhatWeSolve />
       </div>
+      <MidPageCTA variant="dark" />
       <Testimonials />
       <ContactForm />
       
