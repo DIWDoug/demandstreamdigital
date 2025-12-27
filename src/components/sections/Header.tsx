@@ -143,7 +143,7 @@ const Header = () => {
             {/* Top gradient glow */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
             <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
-            <div className="container mx-auto px-6 lg:px-8 py-8 relative">
+            <div className="container mx-auto px-6 lg:px-8 py-8 relative font-sans">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
                 {serviceCategories.map((category, index) => (
                   <div 
@@ -151,7 +151,7 @@ const Header = () => {
                     className="opacity-0 animate-fade-in"
                     style={{ animationDelay: `${index * 75}ms`, animationFillMode: 'forwards' }}
                   >
-                    <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
+                    <h4 className="text-[11px] font-semibold text-foreground uppercase tracking-widest mb-4">
                       {category.title}
                     </h4>
                     <ul className="space-y-2">
@@ -159,7 +159,7 @@ const Header = () => {
                         <li key={itemIndex}>
                           <a 
                             href="#services"
-                            className="text-xs text-text-secondary hover:text-foreground transition-colors"
+                            className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
                             {item}
