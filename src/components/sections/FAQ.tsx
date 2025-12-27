@@ -49,6 +49,10 @@ const faqs = [
   {
     question: "Can I start with just one service?",
     answer: "Absolutely. Many partners start with Local SEO or Google Ads, then expand as trust builds. There's no minimum service requirement."
+  },
+  {
+    question: "What makes you different from other white-label providers?",
+    answer: "We're an agency built by marketers, not a staffing company. Our team has hands-on experience running campaigns, so we understand the nuances of client expectations and agency operations."
   }
 ];
 
