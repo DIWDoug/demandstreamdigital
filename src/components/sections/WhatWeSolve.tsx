@@ -38,7 +38,7 @@ const WhatWeSolve = () => {
       label: "Fulfillment",
       yourRole: "You sell and price services according to your margins. You control the packages, the positioning, and the profit. Your business model stays intact.",
       yourRoleDetails: [
-        "Set your own pricing—we never talk to your clients",
+        "Set your own pricing. We never talk to your clients",
         "Bundle services however makes sense for your market",
         "Keep 100% of the margin you build into your proposals"
       ],

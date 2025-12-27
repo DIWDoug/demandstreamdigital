@@ -69,7 +69,7 @@ const ServicesGrid = () => {
               Digital Inbound Marketing
             </h3>
             <p className="text-base text-white/80 leading-relaxed mb-6 max-w-xl">
-              A comprehensive strategy that attracts, engages, and converts your ideal clients through content, SEO, and targeted campaigns—all working together to generate sustainable lead flow.
+              A comprehensive strategy that attracts, engages, and converts your ideal clients through content, SEO, and targeted campaigns, all working together to generate sustainable lead flow.
             </p>
             
             {/* Arrow button - transforms to LEARN MORE on hover */}
