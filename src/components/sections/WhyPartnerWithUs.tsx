@@ -35,7 +35,7 @@ const WhyPartnerWithUs = () => {
   ];
 
   return (
-    <section className="pt-12 pb-24 lg:pt-16 lg:pb-32 section-light relative">
+    <section className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative">
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
@@ -70,8 +70,6 @@ const WhyPartnerWithUs = () => {
           ))}
         </div>
       </div>
-
-      <div className="section-divider absolute bottom-0" />
     </section>
   );
 };
