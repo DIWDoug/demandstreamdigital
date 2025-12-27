@@ -1,7 +1,6 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
-import ServiceCategories from "@/components/sections/ServiceCategories";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
@@ -23,7 +22,6 @@ const Index = () => {
       <Hero />
       <WhyPartnerWithUs />
       <div id="services">
-        <ServiceCategories />
         <ServicesGrid />
       </div>
       <TopicalExpertise />
