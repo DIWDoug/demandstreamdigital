@@ -16,8 +16,8 @@ const Footer = () => {
       items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
     },
     {
-      title: "SOCIAL MEDIA",
-      items: ["Content Creation", "Brand Voice Development", "Community Management", "Platform Strategy", "Visual Design", "Engagement Reporting"]
+      title: "EMAIL MARKETING",
+      items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
     },
     {
       title: "AUTHORITY",
