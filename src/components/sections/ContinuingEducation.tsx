@@ -8,7 +8,7 @@ const ContinuingEducation = () => {
     "AI-powered SEO tactics that future-proof your rankings",
     "GBP service-to-content expansion for maximum local visibility",
     "Operational Streamlining for agency efficiency",
-    "Cameron Herold's COO Whisperer leadership systems",
+    "Cameron Herold's COO Alliance leadership systems",
     "Edward Sturm's Compact Keywords strategy",
     "Caleb Ulku's AI SEO Mastery framework",
     "Matthew Woodward's Search Logistics Content approach",
@@ -23,6 +23,7 @@ const ContinuingEducation = () => {
     "Competitor analysis and gap identification",
     "Technical SEO auditing methodologies",
     "Go High Level CRM automation and workflows",
+    "Loganix link building and citation strategies",
   ];
 
   const industryVoices = [
