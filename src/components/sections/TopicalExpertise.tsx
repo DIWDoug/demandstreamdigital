@@ -266,7 +266,11 @@ const TopicalExpertise = () => {
                       <a 
                         href="#contact" 
                         className="text-sm font-medium text-foreground hover:text-cta transition-colors"
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          e.preventDefault();
+                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
                       >
                         {spoke.title} →
                       </a>
