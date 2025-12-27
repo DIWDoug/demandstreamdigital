@@ -157,6 +157,13 @@
     @apply leading-relaxed;
   }
 
+  /* Allow local font utilities (e.g. font-handwriting) to win on content blocks */
+  .font-handwriting p,
+  .font-handwriting li,
+  .font-handwriting label {
+    font-family: inherit;
+  }
+
   /* Buttons and UI elements use Inter */
   button, input, select, textarea, a {
     font-family: 'Inter', system-ui, sans-serif;
