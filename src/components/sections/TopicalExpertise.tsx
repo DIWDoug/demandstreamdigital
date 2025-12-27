@@ -25,6 +25,14 @@ const TopicalExpertise = () => {
         {
           title: "Local Link Acquisition",
           description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
+        },
+        {
+          title: "Keyword Research & Mapping",
+          description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages for maximum organic visibility."
+        },
+        {
+          title: "Competitor & Market Analysis",
+          description: "Deep analysis of local competitors' strategies, ranking factors, and market opportunities to identify gaps and advantages."
         }
       ]
     },
@@ -48,6 +56,14 @@ const TopicalExpertise = () => {
         {
           title: "Local Pack Ranking Strategy",
           description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches."
+        },
+        {
+          title: "Photo & Media Optimization",
+          description: "Professional photo management, virtual tours, and visual content strategies that increase engagement and click-through rates."
+        },
+        {
+          title: "Multi-Location GBP Management",
+          description: "Scalable systems for managing dozens or hundreds of locations with consistent branding and optimized performance."
         }
       ]
     },
@@ -71,6 +87,14 @@ const TopicalExpertise = () => {
         {
           title: "Call Tracking & Attribution",
           description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions."
+        },
+        {
+          title: "Ad Copy & Extension Testing",
+          description: "Continuous A/B testing of headlines, descriptions, callouts, and sitelinks to improve quality scores and conversion rates."
+        },
+        {
+          title: "Negative Keyword Management",
+          description: "Ongoing search term analysis and negative keyword refinement to eliminate waste and improve lead quality."
         }
       ]
     },
@@ -94,6 +118,14 @@ const TopicalExpertise = () => {
         {
           title: "Lead Form & Conversion Optimization",
           description: "Native lead forms, Messenger automation, and landing page integration that reduces friction and increases conversion rates."
+        },
+        {
+          title: "Campaign Budget Optimization",
+          description: "Strategic budget allocation across campaigns, ad sets, and placements to maximize return on ad spend."
+        },
+        {
+          title: "Performance Reporting & Insights",
+          description: "Detailed analytics dashboards, audience insights, and actionable recommendations for continuous improvement."
         }
       ]
     },
@@ -117,6 +149,14 @@ const TopicalExpertise = () => {
         {
           title: "Performance Analytics",
           description: "Open rates, click-through tracking, A/B testing insights, and ROI analysis to continuously optimize campaign performance."
+        },
+        {
+          title: "Drip Campaign Development",
+          description: "Multi-touch email sequences tailored to buyer stages that systematically move prospects toward conversion."
+        },
+        {
+          title: "Deliverability & Compliance",
+          description: "SPF, DKIM, and DMARC configuration, CAN-SPAM compliance, and sender reputation management for maximum inbox placement."
         }
       ]
     },
@@ -140,6 +180,14 @@ const TopicalExpertise = () => {
         {
           title: "Reputation & Trust Management",
           description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation."
+        },
+        {
+          title: "Thought Leadership Content",
+          description: "Expert articles, guest posts, and industry commentary that positions clients as trusted authorities in their field."
+        },
+        {
+          title: "Awards & Recognition Strategy",
+          description: "Strategic award submissions, certification pursuits, and accolade promotion that builds credibility and differentiates from competitors."
         }
       ]
     }
