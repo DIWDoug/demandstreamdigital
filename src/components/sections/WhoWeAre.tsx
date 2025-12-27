@@ -30,13 +30,16 @@ const WhoWeAre = () => {
               Who We Are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              A Fulfillment Partner Built by Agency Owners, for Agency Owners
+              Built From the Trenches of Agency Life
             </h2>
             <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-              Dialed-In Web was founded by Doug Bryson after years of running agencies and struggling with the same problems you face: unreliable freelancers, inconsistent quality, and the impossible task of scaling fulfillment without sacrificing margins.
+              I've been in the agency space since 2019. I've been the person at the BNI meetings. I've signed up for every online course, outsourced to every country, and been an expert-vetted, top-rated Plus Upwork freelancer.
+            </p>
+            <p className="text-text-secondary mb-6 leading-relaxed">
+              I've worked with everyone from coaches to SaaS companies, national furniture brands to mom-and-pop shops. I've rebranded my company three times. But at the core, I'm a digital producer. I know how to explain what I need to the right audience, and when I have to roll up my sleeves to get the job done, I can and I will.
             </p>
             <p className="text-text-secondary mb-8 leading-relaxed">
-              We built the partner we always wished we had. A team that understands agency economics, respects your client relationships, and delivers work you can confidently put your name on.
+              Dialed-In Web exists because I built the partner I always wished I had.
             </p>
 
             {/* Stats */}
