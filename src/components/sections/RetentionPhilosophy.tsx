@@ -20,7 +20,10 @@ const RetentionPhilosophy = () => {
 
           {/* The Mantra - Visually dominant */}
           <h2 className="mantra mb-16">
-            Trust. Clarity.<br />Execution.
+            <span className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>Trust.</span>{' '}
+            <span className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Clarity.</span>
+            <br />
+            <span className="inline-block opacity-0 animate-fade-in" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>Execution.</span>
           </h2>
 
           {/* Supporting text - reduced */}
