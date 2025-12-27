@@ -16,7 +16,7 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-white">
+    <section className="py-16 lg:py-20 section-light">
       <div className="container mx-auto px-6">
         <p className="text-center text-lg md:text-xl text-gray-800 font-medium mb-10 max-w-3xl mx-auto">
           Agencies across North America trust Dialed-In Web to scale their local SEO fulfillment.
