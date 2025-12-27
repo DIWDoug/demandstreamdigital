@@ -55,7 +55,7 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-surface-dark/95 backdrop-blur-md border-b border-border" 
+          ? "bg-[#FCFCFA]/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm" 
           : "bg-transparent"
       }`}
     >
@@ -66,7 +66,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Dialed-In Web" 
-              className="h-8 md:h-10 w-auto brightness-0 invert opacity-90"
+              className={`h-8 md:h-10 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0 opacity-90' : 'brightness-0 invert opacity-90'}`}
             />
           </a>
 
@@ -78,7 +78,7 @@ const Header = () => {
                   <>
                     <button
                       onClick={() => handleDropdownToggle(link.label)}
-                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                      className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors uppercase tracking-wide ${isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'}`}
                     >
                       {link.label}
                       <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === link.label ? 'rotate-180' : ''}`} />
@@ -101,7 +101,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={link.href}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    className={`px-4 py-2 text-sm font-medium transition-colors uppercase tracking-wide ${isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-foreground/80 hover:text-foreground'}`}
                   >
                     {link.label}
                   </a>
@@ -114,7 +114,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <a 
               href="tel:2143072995"
-              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors"
+              className={`flex items-center gap-2 font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-[hsl(76,42%,35%)]' : 'text-foreground hover:text-cta'}`}
             >
               <Phone className="h-4 w-4 text-cta" />
               (214) 307-2995
