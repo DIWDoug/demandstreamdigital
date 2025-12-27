@@ -19,6 +19,26 @@ const faqs = [
     answer: "No. We don't require long-term contracts—we work on a month-to-month basis. However, we do have a strict 30-day notice policy. Our retention comes from results, not lock-in agreements."
   },
   {
+    question: "How quickly can you ramp up for new projects?",
+    answer: "Fast. Our team is structured to scale with your needs—whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
+  },
+  {
+    question: "Is your pricing transparent?",
+    answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront—no surprise charges for revisions, reporting, or additional requests."
+  },
+  {
+    question: "How is quality guaranteed?",
+    answer: "We use proven systems, structured workflows, and industry expertise built over years of local marketing execution. Clear communication and predictable delivery cycles keep accountability high."
+  },
+  {
+    question: "When should I use white-label vs. hiring in-house?",
+    answer: "White-label is ideal when you have unpredictable workloads, want to scale without overhead, or need specialized expertise immediately. It lets you say yes to more work without the commitment of full-time hires."
+  },
+  {
+    question: "Who handles client communication?",
+    answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you—your clients never interact with us directly."
+  },
+  {
     question: "How do you handle reporting?",
     answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations—not overwhelm them."
   },
