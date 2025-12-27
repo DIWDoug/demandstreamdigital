@@ -19,7 +19,7 @@ const WhoWeAre = () => {
               I've sat in the BNI meetings wondering if this was the right path. I've hired freelancers who disappeared. I've stayed up late fixing work that should have been done right the first time. I've felt the pressure of promising clients results while wondering who was actually going to deliver.
             </p>
             <p className="text-text-secondary mb-6 leading-relaxed">
-              I built Dialed-In Web to be the white-label digital marketing partner I always wished existed. Not a vendor. Not a contractor. A fulfillment partner who actually gives a damn about your agency's success, because I know what it feels like to be on your side of the table.
+              I built Dialed-In Web to be the white-label digital marketing partner I always wished existed. Not a vendor. Not a contractor. A partner who actually gives a damn about your agency's success, because I know what it feels like to be on your side of the table.
             </p>
             
             <div className="mb-8 text-right">
