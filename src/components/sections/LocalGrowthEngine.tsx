@@ -27,11 +27,14 @@ const LocalGrowthEngine = () => {
   };
 
   return (
-    <section className="py-24 lg:py-32 section-light relative overflow-hidden">
+    <section className="py-16 lg:py-20 section-light relative overflow-hidden">
+      {/* Smooth gradient transition from dark TopicalExpertise */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-surface-dark to-transparent pointer-events-none" />
+      
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Fanned Book Stack */}
-          <div className="relative flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
+          <div className="relative flex justify-center items-center min-h-[350px] lg:min-h-[420px]">
             {/* Fanned ebook mockup */}
             <div className="relative" style={{ perspective: '1000px' }}>
               {/* Back book - most rotated */}
@@ -107,25 +110,25 @@ const LocalGrowthEngine = () => {
 
           {/* Right: Content */}
           <div>
-            <p className="text-gray-500 text-lg mb-2">Discover How To</p>
-            <h2 className="text-gray-900 mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
+            <p className="text-gray-500 text-base mb-1">Discover How To</p>
+            <h2 className="text-gray-900 mb-3" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}>
               Scale Your Agency<br />
               <span className="text-[hsl(76,42%,35%)]">Without the Chaos</span>
             </h2>
             
-            <div className="w-16 h-1 bg-[hsl(76,42%,41%)] mb-8" />
+            <div className="w-12 h-0.5 bg-[hsl(76,42%,41%)] mb-5" />
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
               The Framework for White-Label Local Marketing That Actually Works
             </h3>
             
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-4 text-sm leading-relaxed">
               If you're an agency owner looking to add local marketing services without hiring specialists 
               or burning through freelancers, you've found the right resource. The Local Growth Engine 
               is the methodology behind $2M+ in retainer revenue generated for our agency partners.
             </p>
 
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 text-sm leading-relaxed">
               Inside, you'll discover the three-layer system we use to deliver consistent results across 
               Local SEO, Google Maps, paid media, and reputation management. All white-labeled and 
               built for scale.
