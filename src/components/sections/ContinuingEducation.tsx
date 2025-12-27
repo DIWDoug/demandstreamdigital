@@ -9,8 +9,8 @@ const ContinuingEducation = () => {
   ];
 
   const industryVoices = [
-    { name: "Rand Fishkin", focus: "SEO & Audience Research" },
     { name: "Neil Patel", focus: "Growth Marketing" },
+    { name: "Whitespark CA", focus: "Local SEO" },
     { name: "Alex Hormozi", focus: "Offer Strategy" },
     { name: "Caleb Ulku", focus: "AI SEO Proximity Ranking" },
     { name: "Matt Diggity", focus: "SEO & Link Building" },
