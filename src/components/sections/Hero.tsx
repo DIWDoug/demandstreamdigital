@@ -14,39 +14,59 @@ const Hero = () => {
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(40)].map((_, i) => (
+        {/* Primary green particles - brand CTA color */}
+        {[...Array(30)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-cta/40 animate-float"
+            className="absolute w-1 h-1 rounded-full bg-cta animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDuration: `${8 + Math.random() * 12}s`,
               animationDelay: `${Math.random() * 5}s`,
+              opacity: 0.5 + Math.random() * 0.3,
             }}
           />
         ))}
-        {[...Array(25)].map((_, i) => (
+        {/* Blue accent particles */}
+        {[...Array(20)].map((_, i) => (
           <div
-            key={`lg-${i}`}
-            className="absolute w-2 h-2 rounded-full bg-accent-blue/20 animate-float"
+            key={`blue-${i}`}
+            className="absolute w-1.5 h-1.5 rounded-full bg-accent-blue animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDuration: `${12 + Math.random() * 8}s`,
+              animationDuration: `${10 + Math.random() * 10}s`,
+              animationDelay: `${Math.random() * 6}s`,
+              opacity: 0.4 + Math.random() * 0.3,
+            }}
+          />
+        ))}
+        {/* Larger green glow particles */}
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={`glow-${i}`}
+            className="absolute w-3 h-3 rounded-full bg-cta blur-sm animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${14 + Math.random() * 8}s`,
               animationDelay: `${Math.random() * 8}s`,
+              opacity: 0.3 + Math.random() * 0.2,
             }}
           />
         ))}
-        {[...Array(15)].map((_, i) => (
+        {/* Larger blue glow particles */}
+        {[...Array(8)].map((_, i) => (
           <div
-            key={`xl-${i}`}
-            className="absolute w-3 h-3 rounded-full bg-cta/15 blur-sm animate-float"
+            key={`blue-glow-${i}`}
+            className="absolute w-4 h-4 rounded-full bg-accent-blue blur-md animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDuration: `${15 + Math.random() * 10}s`,
+              animationDuration: `${16 + Math.random() * 10}s`,
               animationDelay: `${Math.random() * 10}s`,
+              opacity: 0.2 + Math.random() * 0.15,
             }}
           />
         ))}
