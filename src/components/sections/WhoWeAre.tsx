@@ -30,13 +30,13 @@ const WhoWeAre = () => {
               Who We Are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              Built by an Inbound Marketer for Agency Partners
+              I Get It. I've Been There.
             </h2>
             <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-              I've been in the agency space since 2011. I've attended the BNI meetings, signed up for every online course, outsourced to every country, and earned expert-vetted, top-rated Plus status on Upwork.
+              I've sat in the BNI meetings wondering if this was the right path. I've hired freelancers who disappeared. I've stayed up late fixing work that should have been done right the first time. I've felt the pressure of promising clients results while wondering who was actually going to deliver.
             </p>
             <p className="text-text-secondary mb-6 leading-relaxed">
-              I've worked with coaches, SaaS companies, national furniture brands, and mom-and-pop shops. I've rebranded three times. But at the core, I'm an inbound marketer and digital producer who knows how to get results and isn't afraid to roll up my sleeves.
+              I built Dialed-In Web to be the partner I always wished existed. Not a vendor. Not a contractor. A partner who actually gives a damn about your success, because I know what it feels like to be on your side of the table.
             </p>
             <div className="mb-8">
               <p className="text-foreground font-semibold text-lg italic mb-3">
