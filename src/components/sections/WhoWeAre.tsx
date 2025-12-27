@@ -12,18 +12,18 @@ const WhoWeAre = () => {
               Who We Are
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              I Know Why You Started Your Agency—and Why It Feels Harder Than It Should
+              I Know Why You Started Your Agency. And Why It Feels Harder Than It Should.
             </h2>
             
             {/* Hook */}
             <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-              You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it—because that was me too.
+              You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
             </p>
             
             {/* Three Pain Points */}
             <div className="space-y-4 mb-6">
               <p className="text-text-secondary leading-relaxed">
-                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The "experts" you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble—because you never knew if your team would actually come through.
+                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The "experts" you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble. You never knew if your team would actually come through.
               </p>
               <p className="text-text-secondary leading-relaxed">
                 You started spending more time managing chaos than growing your business. More time apologizing to clients than celebrating wins. More time wondering if you made the right choice than actually enjoying the work.
@@ -35,12 +35,12 @@ const WhoWeAre = () => {
             
             {/* Solution */}
             <p className="text-text-secondary mb-6 leading-relaxed">
-              <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own—because your reputation is on the line, and I don't take that lightly.
+              <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own. Your reputation is on the line, and I don't take that lightly.
             </p>
             
             <div className="mb-8 text-right">
               <p className="text-cta font-medium text-lg" style={{ fontFamily: 'cursive' }}>
-                — Doug Bryson
+                Doug Bryson
               </p>
             </div>
 
