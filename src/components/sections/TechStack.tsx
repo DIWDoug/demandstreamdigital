@@ -28,8 +28,11 @@ const TechStack = () => {
   return (
     <section className="py-12 lg:py-16 bg-surface-dark border-y border-border overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 mb-8">
-        <p className="text-center text-sm text-text-muted uppercase tracking-widest">
+        <p className="text-center text-sm text-text-muted uppercase tracking-widest mb-2">
           The Company We Keep
+        </p>
+        <p className="text-center text-xs text-text-muted italic">
+          so many tools our CPA brings it up every meeting
         </p>
       </div>
       
