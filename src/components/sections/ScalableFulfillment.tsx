@@ -47,6 +47,23 @@ const ScalableFulfillment = () => {
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">
+        {/* Featured In Logos */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
+            Featured In
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {logos.map((logo, index) => (
+              <img
+                key={index}
+                src={logo.src}
+                alt={logo.name}
+                className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-all duration-300"
+              />
+            ))}
+          </div>
+        </div>
+
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="mb-6">
             <span className="text-[hsl(76,42%,35%)]">Scalable</span> White-Label Local Fulfillment
@@ -56,7 +73,7 @@ const ScalableFulfillment = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index}
@@ -78,23 +95,6 @@ const ScalableFulfillment = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Featured In Logos */}
-        <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xs text-gray-500 uppercase tracking-widest mb-8">
-            Featured In
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.name}
-                className="h-8 md:h-10 w-auto object-contain brightness-0 opacity-40 hover:opacity-70 transition-all duration-300"
-              />
-            ))}
-          </div>
         </div>
       </div>
 
