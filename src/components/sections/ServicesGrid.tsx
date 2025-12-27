@@ -26,6 +26,11 @@ const ServicesGrid = () => {
       title: "Authority Building That Lasts",
       description: "Trust signals compound over time. We build credibility through citations, local mentions, PR placements, and community relevance that support long-term ranking stability.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+    },
+    {
+      title: "Track & Measure",
+      description: "Data-driven decisions require clear visibility. We provide transparent reporting, performance dashboards, and actionable insights so you always know what's working and what's next.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
     }
   ];
 
