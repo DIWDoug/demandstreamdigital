@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wylerPhoto from "@/assets/wyler.jpg";
 
@@ -40,6 +41,15 @@ const WhoWeAre = () => {
                 <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
               </p>
             </div>
+
+            {/* CTA Button */}
+            <a 
+              href="#contact" 
+              className="btn-cta group inline-flex"
+            >
+              Let's Get Started
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
 
           {/* Right: Image */}
