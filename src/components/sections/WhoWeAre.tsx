@@ -30,14 +30,14 @@ const WhoWeAre = () => {
             {/* Hook Value CTA */}
             <div className="p-6 rounded-xl bg-surface-elevated border border-border">
               <p className="text-foreground font-semibold text-lg mb-4">
-                Ready to stop doing it all yourself?
+                Want to see who's behind the scenes?
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a 
                   href="#contact" 
                   className="btn-cta group flex items-center justify-center gap-2 text-sm px-6 py-3"
                 >
-                  Schedule Strategy Session
+                  Meet My Team
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a 
