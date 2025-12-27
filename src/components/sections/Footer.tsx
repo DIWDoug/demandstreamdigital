@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className="py-16 bg-background border-t border-border relative overflow-hidden" role="contentinfo">
-      <SubtleOrbs />
+      <SubtleOrbs variant="bottom-left" />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}

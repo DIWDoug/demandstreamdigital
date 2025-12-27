@@ -46,7 +46,7 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
-      <SubtleOrbs />
+      <SubtleOrbs variant="top-right" />
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">

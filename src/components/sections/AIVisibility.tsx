@@ -11,7 +11,7 @@ const AIVisibility = () => {
 
   return (
     <section className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
-      <SubtleOrbs />
+      <SubtleOrbs variant="bottom-left" />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
