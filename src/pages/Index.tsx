@@ -1,5 +1,6 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
@@ -20,6 +21,7 @@ const Index = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <Header />
       <Hero />
+      <WhoWeAre />
       <WhyPartnerWithUs />
       <div id="services">
         <ServicesGrid />
