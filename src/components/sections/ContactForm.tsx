@@ -12,9 +12,8 @@ const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
-    website: "",
+    revenue: "",
     interests: [] as string[],
-    budget: "",
     message: ""
   });
 
@@ -110,7 +109,7 @@ const ContactForm = () => {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm text-foreground mb-2">
-                      Name <span className="text-red-500">*</span>
+                      Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -137,7 +136,7 @@ const ContactForm = () => {
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-sm text-foreground mb-2">
-                      Phone <span className="text-red-500">*</span>
+                      SMS Enabled Phone # <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -149,16 +148,22 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <label className="block text-sm text-foreground mb-2">
-                      Website <span className="text-red-500">*</span>
+                      Agency Monthly Revenue <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="url"
+                    <select
                       required
-                      placeholder="https://"
-                      value={formData.website}
-                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
-                    />
+                      value={formData.revenue}
+                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-accent-blue transition-colors"
+                    >
+                      <option value="">Select revenue range</option>
+                      <option value="under-25k">Under $25,000</option>
+                      <option value="25k-50k">$25,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-250k">$100,000 - $250,000</option>
+                      <option value="250k-500k">$250,000 - $500,000</option>
+                      <option value="500k+">$500,000+</option>
+                    </select>
                   </div>
                 </div>
 
@@ -182,25 +187,6 @@ const ContactForm = () => {
                   </div>
                 </fieldset>
 
-                {/* Budget Dropdown */}
-                <div>
-                  <label className="block text-sm text-foreground mb-2">
-                    Monthly Marketing Budget <span className="text-red-500">*</span>
-                  </label>
-                  <select
-                    required
-                    value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border text-foreground focus:outline-none focus:border-accent-blue transition-colors"
-                  >
-                    <option value="">Select budget below</option>
-                    <option value="under-5k">Under $5,000</option>
-                    <option value="5k-10k">$5,000 - $10,000</option>
-                    <option value="10k-25k">$10,000 - $25,000</option>
-                    <option value="25k-50k">$25,000 - $50,000</option>
-                    <option value="50k+">$50,000+</option>
-                  </select>
-                </div>
 
                 {/* Message Textarea */}
                 <div>
