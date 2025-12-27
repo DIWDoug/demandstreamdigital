@@ -247,10 +247,10 @@
   /* Premium gradient backgrounds - enhanced */
   .gradient-hero {
     background: 
-      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(76 42% 20% / 0.3), transparent),
-      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 30% 15% / 0.8), transparent),
-      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(76 42% 25% / 0.15), transparent),
-      linear-gradient(180deg, hsl(var(--surface-dark)), hsl(220 20% 4%));
+      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(76 42% 15% / 0.4), transparent),
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 25% 8% / 0.9), transparent),
+      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(76 42% 18% / 0.2), transparent),
+      linear-gradient(180deg, hsl(220 22% 5%), hsl(220 22% 3%));
   }
 
   .gradient-section {
