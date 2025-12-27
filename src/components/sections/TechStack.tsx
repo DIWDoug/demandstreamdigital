@@ -3,7 +3,7 @@ import localDominator from "@/assets/logos/local-dominator.jpg";
 import semrush from "@/assets/logos/semrush.png";
 import ahrefs from "@/assets/logos/ahrefs.webp";
 import chatgpt from "@/assets/logos/chatgpt.jpeg";
-import claude from "@/assets/logos/claude.png";
+import claude from "@/assets/logos/claude.webp";
 import gemini from "@/assets/logos/gemini.png";
 import googleAds from "@/assets/logos/google-ads.png";
 import hubspot from "@/assets/logos/hubspot.svg";
