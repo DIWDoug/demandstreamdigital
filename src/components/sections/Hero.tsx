@@ -1,99 +1,68 @@
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    email: "",
-    website: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    console.log("Form submitted:", formData);
-    setTimeout(() => setIsSubmitting(false), 1000);
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 gradient-hero" />
-      <div className="absolute top-0 left-0 right-0 h-[20%] bg-gradient-to-b from-[hsl(220,25%,4%)] to-transparent" />
+    <section className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
+      {/* Enhanced abstract data texture overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl bg-gradient-to-br from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl bg-gradient-to-tl from-cta/20 to-transparent animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl bg-gradient-radial from-cta/10 to-transparent" />
+      </div>
+
+      {/* Grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--text-secondary)) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--text-secondary)) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
 
       <div className="container mx-auto px-6 lg:px-8 py-32 lg:py-40 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left content */}
-          <div className="max-w-xl">
-            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-6">
-              White-Label Partner for Local Agencies
-            </p>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6" style={{ lineHeight: "1.1" }}>
-              Local SEO & Paid Media Fulfillment
-            </h1>
-
-            <p className="text-lg text-text-secondary mb-8">
-              Scale your agency without hiring. We execute local SEO, Google Maps, and paid media under your brand.
-            </p>
-
-            <p className="text-base text-text-muted">
-              For agencies managing 50–500+ local clients.
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center mb-8 animate-fade-in-up">
+            <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
+              White-Label Local Digital Marketing Partner
             </p>
           </div>
 
-          {/* Right form */}
-          <div className="bg-surface-elevated/60 backdrop-blur-sm border border-border/40 rounded-xl p-8">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              See If We're a Fit
-            </h3>
-            <p className="text-text-secondary text-sm mb-6">
-              This starts a conversation, not a sales call.
-            </p>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                type="text"
-                placeholder="First Name"
-                value={formData.firstName}
-                onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                required
-                className="bg-background/40 border-border/40 h-12"
-              />
-              <Input
-                type="email"
-                placeholder="Work Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="bg-background/40 border-border/40 h-12"
-              />
-              <Input
-                type="url"
-                placeholder="Agency Website"
-                value={formData.website}
-                onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                required
-                className="bg-background/40 border-border/40 h-12"
-              />
-              
-              <Button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full btn-cta h-12"
-              >
-                {isSubmitting ? "Submitting..." : "Get Partnership Details"}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-            
-            <p className="text-text-muted/60 text-xs mt-4 text-center">
-              No spam. We only work with qualified agencies.
-            </p>
+          {/* Main Headline - improved line height */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
+            White-Label Local{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">SEO & Paid Media Fulfillment</span>{" "}
+            You Can Trust
+          </h1>
+
+          {/* Subheadline - more breathing room */}
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            Dialed-In Web helps agencies scale local SEO, Google Maps visibility, paid media, and organic social without building internal fulfillment teams. All execution is delivered under your brand.
+          </p>
+
+          {/* Premium positioning line */}
+          <p className="text-base md:text-lg text-text-muted italic mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            Built for agencies focused on retention, not churn.
+          </p>
+
+          {/* CTA Button */}
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <a 
+              href="#contact" 
+              className="btn-cta group"
+            >
+              Request Partner Consultation
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
+        </div>
+      </div>
+
+      {/* Subtle scroll indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+        <div className="w-6 h-10 rounded-full border border-border/50 flex items-start justify-center p-2 backdrop-blur-sm">
+          <div className="w-1 h-2 bg-cta rounded-full animate-bounce" />
         </div>
       </div>
     </section>

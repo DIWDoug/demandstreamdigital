@@ -131,10 +131,7 @@
   }
 
   h2 {
-    font-weight: 500;
-    line-height: 1.1;
-    /* Section headlines - slightly increased after 50% reduction */
-    font-size: clamp(1.75rem, 3.4vw, 3.25rem) !important;
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight font-medium;
   }
 
   h3 {
@@ -168,10 +165,7 @@
   /* Mantra / Philosophy text styling */
   .mantra {
     font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 500;
-    line-height: 1.05;
-    /* Keep mantra aligned with global h2 sizing for consistency */
-    font-size: inherit;
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium;
     letter-spacing: 0.02em;
     color: hsl(var(--accent-blue));
   }
@@ -313,7 +307,13 @@
     background-clip: text;
   }
 
-  /* Mantra/belief statement styling - removed duplicate definition (handled in @layer base) */
+  /* Mantra/belief statement styling */
+  .mantra {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide;
+    color: hsl(var(--text-primary));
+    letter-spacing: 0.1em;
+  }
 
   /* Bucket header styling - uses accent color */
   .bucket-header {
@@ -428,11 +428,6 @@
 
   .animate-slide-left {
     animation: slideLeft 25s linear infinite;
-  }
-
-  /* Slower trust reel animation */
-  .animate-slide-left-slow {
-    animation: slideLeft 45s linear infinite;
   }
 
   @keyframes fadeIn {

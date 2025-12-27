@@ -1,68 +1,70 @@
-import { Users, Shield, Clock, Settings } from "lucide-react";
+import { Zap, Users, TrendingUp, Shield } from "lucide-react";
 
 const ScalableFulfillment = () => {
-  const points = [
+  const features = [
+    {
+      icon: Zap,
+      title: "Expand Services, Not Payroll",
+      description: "Scale into new local markets without hiring, training, or managing additional staff."
+    },
     {
       icon: Users,
-      title: "Expand Without Hiring",
-      description: "Adding new services to your agency traditionally means recruiting specialists, managing training, and absorbing overhead before you've sold a single project. White-label partnerships eliminate that risk. You can offer comprehensive local marketing services immediately, scale capacity based on actual demand, and maintain healthy margins without the fixed costs of internal teams. When client needs change, you adapt instantly."
+      title: "Your Brand, Our Execution",
+      description: "We operate behind the scenes. You maintain the relationship and the margin."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictable Delivery",
+      description: "Structured workflows and consistent cycles so you can grow without chaos."
     },
     {
       icon: Shield,
-      title: "Your Brand, Our Work",
-      description: "Every report, every deliverable, every communication is formatted under your brand. Clients interact with your team, see your logo, and build loyalty to your agency. We operate entirely behind the scenes—no co-branding, no client-facing presence, no confusion about who they hired. This preserves the relationship equity you've built and positions you as the full-service partner your clients need."
-    },
-    {
-      icon: Clock,
-      title: "Predictable Timelines",
-      description: "Inconsistent delivery destroys client trust faster than almost anything else. We operate with clear service level agreements, defined turnaround times, and proactive communication when timelines shift. You can confidently set client expectations, plan your account management capacity, and build a reputation for reliability that becomes a competitive advantage in a market full of agencies that overpromise and underdeliver."
-    },
-    {
-      icon: Settings,
-      title: "Full Control",
-      description: "You own the client relationship completely. You set pricing, manage communication cadence, decide what gets shared and when. We provide the execution capacity and strategic support, but every decision about client experience remains yours. This isn't a referral partnership or revenue share arrangement—it's fulfillment infrastructure that scales with your ambition while you retain complete autonomy over your business."
+      title: "Full Control Preserved",
+      description: "Strategy, pricing, and client communication remain entirely yours."
     }
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark">
+    <section className="py-24 lg:py-32 section-light relative">
+      {/* Section divider top */}
+      <div className="section-divider absolute top-0" />
+      
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="mb-4 text-foreground">
-              Why Agencies Partner With Us
-            </h2>
-            <p className="text-text-secondary max-w-2xl mx-auto">
-              Growing an agency means constantly balancing capacity against opportunity. You can't hire ahead of revenue, but you can't serve clients without the right expertise. White-label fulfillment solves this fundamental tension—giving you the capacity to say yes to new business while maintaining the quality that keeps existing clients renewing.
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="mb-6">
+            <span className="text-[hsl(76,42%,35%)]">Scalable</span> White-Label Local Fulfillment
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto">
+            Dialed-In Web removes the burden of execution while preserving your control over every aspect of your agency.
+          </p>
+        </div>
 
-          {/* Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {points.map((point, index) => (
-              <div 
-                key={index}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
-                    <point.icon className="h-5 w-5 text-accent-blue" />
-                  </div>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="rounded-xl p-6 bg-white shadow-lg border border-gray-100 group transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
+                  <feature.icon className="h-6 w-6 text-[hsl(76,42%,35%)]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
-                    {point.title}
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {feature.title}
                   </h3>
-                  <p className="text-text-secondary text-sm">
-                    {point.description}
+                  <p className="text-gray-600 text-sm">
+                    {feature.description}
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* Section divider bottom */}
+      <div className="section-divider absolute bottom-0" />
     </section>
   );
 };

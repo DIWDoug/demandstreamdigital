@@ -1,138 +1,248 @@
-import { MapPin, Map, MousePointerClick, Share2, FileText, Award, Check, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Users, Award } from "lucide-react";
 
 const TopicalExpertise = () => {
-  const services = [
+  const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
+
+  const hubs = [
     {
-      id: "local-seo",
       icon: MapPin,
       title: "Local SEO",
-      bullets: [
-        "Dominate organic rankings across service areas.",
-        "Technical SEO, content, and link building that compounds."
+      summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
+      spokes: [
+        {
+          title: "On-Page Local Optimization",
+          description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market."
+        },
+        {
+          title: "Technical SEO for Multi-Location",
+          description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy."
+        },
+        {
+          title: "Local Content Strategy",
+          description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries."
+        },
+        {
+          title: "Local Link Acquisition",
+          description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
+        }
       ]
     },
     {
-      id: "google-maps",
       icon: Map,
-      title: "Maps Optimization",
-      bullets: [
-        "Own the local 3-pack with GBP mastery.",
-        "Reviews, citations, and ongoing visibility."
+      title: "Google Maps Optimization",
+      summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
+      spokes: [
+        {
+          title: "Google Business Profile Management",
+          description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results."
+        },
+        {
+          title: "Review Generation & Response",
+          description: "Systematic review acquisition strategies and professional response management that builds trust and improves rankings."
+        },
+        {
+          title: "Citation Building & Cleanup",
+          description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms that validate business legitimacy."
+        },
+        {
+          title: "Local Pack Ranking Strategy",
+          description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches."
+        }
       ]
     },
     {
-      id: "google-ads",
       icon: MousePointerClick,
-      title: "Google Ads",
-      bullets: [
-        "Capture high-intent local searches.",
-        "Landing pages and attribution that proves ROI."
+      title: "Google Ads Management",
+      summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
+      spokes: [
+        {
+          title: "Local Search Campaign Structure",
+          description: "Service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation economics."
+        },
+        {
+          title: "Landing Page Optimization",
+          description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization for maximum lead capture."
+        },
+        {
+          title: "Bid Strategy & Budget Allocation",
+          description: "Smart bidding configurations and budget pacing that maximize lead volume within client profitability targets."
+        },
+        {
+          title: "Call Tracking & Attribution",
+          description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions."
+        }
       ]
     },
     {
-      id: "meta-ads",
       icon: Share2,
-      title: "Meta Ads",
-      bullets: [
-        "Build awareness on Facebook & Instagram.",
-        "Creative, targeting, and retargeting that converts."
+      title: "Meta Ads (Facebook & Instagram)",
+      summary: "Build local awareness and capture demand through targeted social advertising.",
+      spokes: [
+        {
+          title: "Local Audience Targeting",
+          description: "Geographic, demographic, and interest-based audiences tailored to each client's service area and ideal customer profile."
+        },
+        {
+          title: "Creative Strategy & Production",
+          description: "Thumb-stopping ad creative, video content, and carousel formats optimized for local service businesses."
+        },
+        {
+          title: "Retargeting & Lookalike Campaigns",
+          description: "Website visitor retargeting and lookalike audience expansion that keeps clients top-of-mind through the buying journey."
+        },
+        {
+          title: "Lead Form & Conversion Optimization",
+          description: "Native lead forms, Messenger automation, and landing page integration that reduces friction and increases conversion rates."
+        }
       ]
     },
     {
-      id: "content-marketing",
-      icon: FileText,
-      title: "Content Marketing",
-      bullets: [
-        "Build topical authority that ranks.",
-        "Content systems that compound over time."
+      icon: Users,
+      title: "Organic Social Media",
+      summary: "Maintain consistent brand presence and community engagement across social platforms.",
+      spokes: [
+        {
+          title: "Content Calendar Management",
+          description: "Strategic posting schedules, content themes, and platform-specific formats that maintain engagement without overwhelming clients."
+        },
+        {
+          title: "Community Engagement",
+          description: "Comment management, direct message handling, and proactive engagement that builds authentic local relationships."
+        },
+        {
+          title: "Local Content Creation",
+          description: "Behind-the-scenes content, team spotlights, and community involvement posts that humanize local service brands."
+        },
+        {
+          title: "Platform Strategy & Optimization",
+          description: "Profile optimization, hashtag research, and algorithm-friendly posting strategies across Facebook, Instagram, and LinkedIn."
+        }
       ]
     },
     {
-      id: "authority-building",
       icon: Award,
       title: "Authority Building",
-      bullets: [
-        "Digital PR and strategic link acquisition.",
-        "Trust signals that establish credibility."
+      summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
+      spokes: [
+        {
+          title: "Digital PR & Media Placements",
+          description: "Press release distribution, journalist outreach, and earned media coverage that builds brand authority and backlink profiles."
+        },
+        {
+          title: "Industry Directory Listings",
+          description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites that signal expertise."
+        },
+        {
+          title: "Local Sponsorship & Partnerships",
+          description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement that create authentic local signals."
+        },
+        {
+          title: "Reputation & Trust Management",
+          description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation."
+        }
       ]
     }
   ];
 
+  const toggleExpand = (index: number) => {
+    setExpandedIndices(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
+  const isExpanded = (index: number) => expandedIndices.has(index);
+
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    <section className="py-24 lg:py-32 bg-surface-dark relative">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* Left side - Headline + CTA */}
-          <div className="lg:col-span-4 lg:sticky lg:top-24">
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent-blue/30 bg-accent-blue/10 text-accent-blue text-sm font-medium mb-6">
-              <span className="w-1.5 h-1.5 bg-accent-blue rounded-full" />
-              White Label Fulfillment
-            </span>
-            
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
-              Local marketing is hard.
-              <br />
-              <span className="text-text-secondary">We make it easier.</span>
-            </h2>
-            
-            <p className="text-text-secondary text-lg mb-8 leading-relaxed">
-              Disconnected services and unreliable vendors slow you down. We deliver everything—under your brand—so you can focus on growing your agency.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a 
-                href="#contact" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-accent-blue text-white font-semibold rounded-lg hover:bg-accent-blue/90 transition-colors"
-              >
-                Start a Conversation
-              </a>
-              <a 
-                href="#book" 
-                className="inline-flex items-center justify-center px-6 py-3 border border-accent-blue text-accent-blue font-semibold rounded-lg hover:bg-accent-blue/10 transition-colors"
-              >
-                Get the Book Free
-              </a>
-            </div>
-          </div>
-          
-          {/* Right side - Hub cards grid */}
-          <div className="lg:col-span-8">
-            <div className="grid sm:grid-cols-2 gap-4">
-              {services.map((service, index) => (
-                <div 
-                  key={index}
-                  id={service.id}
-                  className="group p-6 rounded-xl border border-border/40 bg-surface-card/30 hover:border-accent-blue/40 hover:bg-surface-card/60 transition-all duration-300"
-                >
-                  {/* Header */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <service.icon className="h-5 w-5 text-accent-blue" />
-                    <h3 className="text-lg font-semibold text-foreground">{service.title}</h3>
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="mb-6 text-foreground">
+            Deep Expertise Across<br />Local Marketing
+          </h2>
+          <p className="text-lg text-text-secondary">
+            Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
+          </p>
+        </div>
+
+        {/* Hub cards grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {hubs.map((hub, index) => (
+            <div 
+              key={index}
+              className={`premium-card cursor-pointer transition-all duration-300 ${
+                isExpanded(index) 
+                  ? "ring-1 ring-accent-blue/50 bg-surface-elevated" 
+                  : "hover:translate-y-[-2px]"
+              }`}
+              onClick={() => toggleExpand(index)}
+            >
+              {/* Hub header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
+                    <hub.icon className="h-5 w-5 text-accent-blue" />
                   </div>
-                  
-                  {/* Bullet points */}
-                  <ul className="space-y-2.5 mb-4">
-                    {service.bullets.map((bullet, bulletIndex) => (
-                      <li key={bulletIndex} className="flex items-start gap-2.5">
-                        <Check className="h-4 w-4 text-accent-blue flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-text-secondary leading-relaxed">{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {/* Learn more link */}
+                  <h3 className="text-lg font-semibold text-foreground">{hub.title}</h3>
+                </div>
+                <ChevronDown 
+                  className={`h-5 w-5 text-text-muted transition-transform duration-300 ${
+                    isExpanded(index) ? "rotate-180" : ""
+                  }`} 
+                />
+              </div>
+
+              {/* Hub summary */}
+              <p className="text-text-secondary text-sm mb-4">
+                {hub.summary}
+              </p>
+
+              {/* Spokes - expanded content */}
+              <div 
+                className={`overflow-hidden transition-all duration-300 ${
+                  isExpanded(index) ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="pt-4 border-t border-border space-y-4">
+                  {hub.spokes.map((spoke, spokeIndex) => (
+                    <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
+                      <h4 className="text-sm font-medium text-foreground mb-1">
+                        {spoke.title}
+                      </h4>
+                      <p className="text-text-secondary text-sm leading-relaxed">
+                        {spoke.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA within expanded card */}
+                <div className="mt-6 pt-4 border-t border-border">
                   <a 
-                    href={`#${service.id}`}
-                    className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-accent-blue transition-colors group/link"
+                    href="#contact" 
+                    className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
-                    Learn more
-                    <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" />
+                    Discuss {hub.title} for your agency →
                   </a>
                 </div>
-              ))}
+              </div>
+
+              {/* Collapsed state hint */}
+              {!isExpanded(index) && (
+                <p className="text-accent-blue text-xs font-medium">
+                  {hub.spokes.length} specialized areas — click to explore
+                </p>
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

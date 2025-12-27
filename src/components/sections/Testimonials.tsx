@@ -1,48 +1,86 @@
+import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+
+const testimonials = [
+  {
+    quote: "They're an exceptionally dependable agency partner. They're trustworthy, they communicate clearly, and really consistently, which sometimes is rare in today's world.",
+    author: "Trevor Anderson",
+    role: "Founder & CEO, Anderson Collaborative"
+  },
+  {
+    quote: "The last thing you want to worry about is, is a vendor doing a good job? Are they reliable? Are they good at what they do? Doug and his team just absolutely crushed it.",
+    author: "Jeremy", 
+    role: "Digital Marketing Agency Owner, Florida"
+  },
+  {
+    quote: "Our retention rate on SEO is extremely high, probably about 90%. I can go to sleep every night knowing that we're doing everything we can to help a client.",
+    author: "Florida Agency Owner",
+    role: "Digital Marketing Agency Owner"
+  }
+];
+
+const videoTestimonials = [
+  {
+    id: "dR2Yxbldi1Q",
+    title: "Agency Partner Testimonial"
+  },
+  {
+    id: "i66XV1on6pM", 
+    title: "Florida Agency Owner Testimonial"
+  }
+];
 
 const Testimonials = () => {
   return (
     <section className="py-24 lg:py-32 section-light">
-      <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
-        {/* Header */}
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-gray-900">
-            What Partners Say
+          <h2 className="mb-4">
+            What Agency Partners <span className="text-[hsl(76,42%,35%)]">Say</span>
           </h2>
-        </div>
-
-        {/* Main testimonial with video */}
-        <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
-          {/* Video */}
-          <div className="aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-            <iframe
-              src="https://www.youtube.com/embed/dR2Yxbldi1Q"
-              title="Agency Partner Testimonial"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
-
-          {/* Quote */}
-          <div>
-            <Quote className="h-8 w-8 text-gray-300 mb-4" />
-            <blockquote className="text-xl text-gray-800 font-medium leading-relaxed mb-6">
-              "They're exceptionally dependable. Trustworthy, clear communication, and really consistent—which is rare."
-            </blockquote>
-            <div>
-              <p className="text-gray-900 font-semibold">Trevor Anderson</p>
-              <p className="text-gray-600 text-sm">Founder, Anderson Collaborative</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Secondary quote */}
-        <div className="max-w-2xl mx-auto text-center border-t border-gray-200 pt-10">
-          <p className="text-gray-600 italic">
-            "Our retention rate on SEO is about 90%. I can go to sleep knowing we're doing everything we can."
+          <p className="text-lg max-w-2xl mx-auto">
+            Real feedback from agencies who've made the switch to system-driven fulfillment.
           </p>
-          <p className="text-gray-500 text-sm mt-3">— Digital Agency, Florida</p>
+        </div>
+
+        {/* Video Testimonials */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {videoTestimonials.map((video, index) => (
+            <div 
+              key={index} 
+              className="relative aspect-video rounded-xl overflow-hidden border border-gray-200 bg-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <iframe
+                src={`https://www.youtube.com/embed/${video.id}`}
+                title={video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Quote Cards */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card 
+              key={index} 
+              className="bg-white border-gray-200 hover:border-[hsl(224,60%,55%)]/30 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            >
+              <CardContent className="p-6">
+                <Quote className="h-8 w-8 text-[hsl(224,60%,55%)]/40 mb-4" />
+                <p className="text-gray-700 text-base mb-6">
+                  "{testimonial.quote}"
+                </p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="text-gray-900 font-medium">{testimonial.author}</p>
+                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
