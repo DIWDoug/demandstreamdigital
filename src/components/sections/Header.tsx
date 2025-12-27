@@ -61,21 +61,23 @@ const Header = () => {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="/" className="flex items-center overflow-hidden">
-            <img 
-              src={logo} 
-              alt="Dialed-In Web" 
-              className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
-                isScrolled 
-                  ? "h-6 md:h-7 max-w-[28px] md:max-w-[32px] object-cover object-left" 
-                  : "h-6 md:h-8"
-              }`}
-            />
-          </a>
+          {/* Logo & Nav together */}
+          <div className="flex items-center gap-6">
+            {/* Logo */}
+            <a href="/" className="flex items-center overflow-hidden">
+              <img 
+                src={logo} 
+                alt="Dialed-In Web" 
+                className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
+                  isScrolled 
+                    ? "h-6 md:h-7 max-w-[28px] md:max-w-[32px] object-cover object-left" 
+                    : "h-6 md:h-8"
+                }`}
+              />
+            </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1" ref={dropdownRef}>
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center gap-1" ref={dropdownRef}>
             {navLinks.map((link, index) => (
               <div key={index} className="relative">
                 {link.hasDropdown ? (
@@ -112,7 +114,8 @@ const Header = () => {
                 )}
               </div>
             ))}
-          </nav>
+            </nav>
+          </div>
 
           {/* Right side - Phone, Search & CTA */}
           <div className="hidden md:flex items-center gap-4">
