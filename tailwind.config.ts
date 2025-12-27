@@ -84,6 +84,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Lora', 'Georgia', 'serif'],
+        handwriting: ['Caveat', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
