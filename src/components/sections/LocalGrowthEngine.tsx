@@ -28,10 +28,7 @@ const LocalGrowthEngine = () => {
 
   return (
     <section className="py-24 lg:py-32 section-light relative overflow-hidden">
-      {/* Gradient transition from dark above */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[hsl(220,20%,6%)] to-transparent pointer-events-none" />
-      
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Fanned Book Stack */}
           <div className="relative flex justify-center items-center min-h-[400px] lg:min-h-[500px]">
@@ -179,9 +176,6 @@ const LocalGrowthEngine = () => {
           </div>
         </div>
       </div>
-      
-      {/* Gradient transition to dark below */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(220,20%,6%)] to-transparent pointer-events-none" />
     </section>
   );
 };
