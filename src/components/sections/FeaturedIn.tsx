@@ -1,5 +1,3 @@
-import bloombergLogo from "@/assets/logos/bloomberg.png";
-
 import digitalJournalLogo from "@/assets/logos/digital-journal.png";
 import googleNewsLogo from "@/assets/logos/google-news.png";
 import marketwatchLogo from "@/assets/logos/marketwatch.png";
@@ -14,7 +12,6 @@ const FeaturedIn = () => {
     { name: "MarketWatch", src: marketwatchLogo },
     { name: "Google News", src: googleNewsLogo },
     { name: "Digital Journal", src: digitalJournalLogo },
-    { name: "Bloomberg", src: bloombergLogo },
     { name: "AP News", src: apNewsLogo },
   ];
 
