@@ -64,16 +64,16 @@ const Footer = () => {
       {/* Main Footer Content - 3 Column Layout */}
       <div className="py-12">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             {/* Left - Contact Info */}
-            <div>
-              <div className="flex items-center gap-3 text-sm text-text-secondary mb-2">
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 text-sm text-text-secondary mb-2">
                 <MapPin className="h-4 w-4 shrink-0" />
-                Dallas, TX 75226
+                <span>2703 Elm St, Dallas, TX 75226</span>
               </div>
               <a 
                 href="tel:2143072995"
-                className="flex items-center gap-3 text-sm text-text-secondary hover:text-foreground transition-colors"
+                className="flex items-center justify-center md:justify-start gap-3 text-sm text-text-secondary hover:text-foreground transition-colors"
               >
                 <Phone className="h-4 w-4 shrink-0" />
                 (214) 307-2995
@@ -81,7 +81,7 @@ const Footer = () => {
             </div>
 
             {/* Center - Logo */}
-            <div className="flex justify-center">
+            <div className="flex justify-center order-first md:order-none mb-4 md:mb-0">
               <img 
                 src={logo} 
                 alt="Dialed-In Web" 
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             {/* Right - Social Icons */}
-            <div className="flex items-center justify-end gap-5">
+            <div className="flex items-center justify-center md:justify-end gap-5">
               <a 
                 href="https://facebook.com" 
                 target="_blank" 
