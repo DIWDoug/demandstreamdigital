@@ -73,7 +73,7 @@ const ContinuingEducation = () => {
             </div>
             
             {/* Scrolling container */}
-            <div className="relative h-[340px] overflow-hidden">
+            <div className="relative h-[400px] overflow-hidden">
               {/* Fade overlays */}
               <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-surface-elevated/80 to-transparent z-10 pointer-events-none" />
