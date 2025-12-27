@@ -5,6 +5,21 @@ const WhatWeSolve = () => {
 
   const tabs = [
     {
+      label: "Competency",
+      yourRole: "You stay focused on strategic vision and client relationships. You don't need to become an expert in every channel or tactic—that's what partners are for.",
+      yourRoleDetails: [
+        "Trust that the work is done by specialists, not generalists",
+        "Lean on our expertise when clients ask tough technical questions",
+        "Expand your service offerings without expanding your learning curve"
+      ],
+      ourRole: "We bring deep, specialized knowledge across local SEO, paid media, and reputation management. Our team stays current so yours doesn't have to.",
+      ourRoleDetails: [
+        "Certified specialists in Google Ads, Meta, and local search",
+        "Continuous training on algorithm updates and best practices",
+        "Industry-specific experience across 50+ verticals"
+      ]
+    },
+    {
       label: "Operations",
       yourRole: "You focus on building client relationships, developing growth strategy, and scaling your agency. Your time stays on high-value activities that drive revenue.",
       yourRoleDetails: [
@@ -62,21 +77,6 @@ const WhatWeSolve = () => {
         "Access to anonymized case studies across industries",
         "Performance benchmarks that help you set expectations",
         "Onboarding support that makes new clients feel handled"
-      ]
-    },
-    {
-      label: "Competency",
-      yourRole: "You stay focused on strategic vision and client relationships. You don't need to become an expert in every channel or tactic—that's what partners are for.",
-      yourRoleDetails: [
-        "Trust that the work is done by specialists, not generalists",
-        "Lean on our expertise when clients ask tough technical questions",
-        "Expand your service offerings without expanding your learning curve"
-      ],
-      ourRole: "We bring deep, specialized knowledge across local SEO, paid media, and reputation management. Our team stays current so yours doesn't have to.",
-      ourRoleDetails: [
-        "Certified specialists in Google Ads, Meta, and local search",
-        "Continuous training on algorithm updates and best practices",
-        "Industry-specific experience across 50+ verticals"
       ]
     }
   ];
