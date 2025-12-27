@@ -32,14 +32,14 @@ const videoTestimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark">
+    <section className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-foreground">
+          <h2 className="mb-4 text-surface-dark">
             What Agency Partners <span className="text-cta">Say</span>
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-surface-dark/70 max-w-2xl mx-auto">
             Real feedback from agencies who've made the switch to system-driven fulfillment.
           </p>
         </div>
@@ -49,7 +49,7 @@ const Testimonials = () => {
           {videoTestimonials.map((video, index) => (
             <div 
               key={index} 
-              className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface-elevated shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="relative aspect-video rounded-xl overflow-hidden border border-surface-dark/20 bg-surface-dark shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
               <iframe
                 src={`https://www.youtube.com/embed/${video.id}`}
@@ -67,14 +67,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="bg-surface-elevated border-border hover:border-accent-blue/30 transition-all duration-300 hover:-translate-y-1"
+              className="bg-surface-dark border-surface-dark/20 hover:border-cta/30 transition-all duration-300 hover:-translate-y-1"
             >
               <CardContent className="p-6">
-                <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
+                <Quote className="h-8 w-8 text-cta/40 mb-4" />
                 <p className="text-text-secondary text-base mb-6">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-border pt-4">
+                <div className="border-t border-foreground/10 pt-4">
                   <p className="text-foreground font-medium">{testimonial.author}</p>
                   <p className="text-text-muted text-sm">{testimonial.role}</p>
                 </div>

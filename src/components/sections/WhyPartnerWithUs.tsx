@@ -35,14 +35,14 @@ const WhyPartnerWithUs = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark relative">
+    <section className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-surface-dark mb-6">
             Why Agencies Choose Us as Their <span className="text-cta">Fulfillment Partner</span>
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg text-surface-dark/70 max-w-2xl mx-auto">
             We're a white-label digital marketing partner built by marketers, not a staffing company. Our team delivers agency-grade execution under your brand.
           </p>
         </div>
@@ -52,9 +52,9 @@ const WhyPartnerWithUs = () => {
           {allBenefits.map((benefit) => (
             <div 
               key={benefit.title}
-              className="text-center p-8 rounded-xl bg-surface-elevated border border-border hover:border-accent-blue/30 transition-all duration-300"
+              className="text-center p-8 rounded-xl bg-surface-dark border border-surface-dark/20 hover:border-cta/30 transition-all duration-300"
             >
-              <div className="inline-flex items-center justify-center p-4 rounded-xl bg-cta/10 border border-cta/20 mb-5">
+              <div className="inline-flex items-center justify-center p-4 rounded-xl bg-cta/20 border border-cta/30 mb-5">
                 <benefit.icon className="w-7 h-7 text-cta" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
