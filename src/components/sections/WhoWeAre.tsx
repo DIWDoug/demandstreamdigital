@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 const WhoWeAre = () => {
@@ -28,14 +27,27 @@ const WhoWeAre = () => {
               </p>
             </div>
 
-            <Button 
-              size="lg" 
-              className="group bg-cta hover:bg-cta/90 text-white"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Meet My Team
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            {/* Hook Value CTA */}
+            <div className="p-6 rounded-xl bg-surface-elevated border border-border">
+              <p className="text-foreground font-semibold text-lg mb-4">
+                Ready to stop doing it all yourself?
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="#contact" 
+                  className="btn-cta group flex items-center justify-center gap-2 text-sm px-6 py-3"
+                >
+                  Schedule Strategy Session
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+                <a 
+                  href="tel:2143072995"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground hover:bg-surface-card transition-colors font-medium text-sm"
+                >
+                  Call (214) 307-2995
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Right: Image */}
