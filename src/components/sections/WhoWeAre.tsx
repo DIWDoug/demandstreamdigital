@@ -16,7 +16,7 @@ const WhoWeAre = () => {
             </h2>
             
             {/* Personal Letter Style Content */}
-            <div className="space-y-5 mb-8 font-handwriting text-xl md:text-2xl leading-relaxed text-text-secondary">
+            <div className="space-y-5 mb-8 font-handwriting text-lg md:text-xl leading-relaxed text-text-secondary">
               <p>
                 You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
               </p>
