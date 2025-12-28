@@ -50,12 +50,11 @@ const Services = () => {
       {/* Deep Expertise - Same as Homepage */}
       <TopicalExpertise />
       
+      {/* FAQ - Answer objections before conversion */}
+      <ServicesFAQ />
       
       {/* Contact Form */}
       <ContactForm />
-      
-      {/* FAQ */}
-      <ServicesFAQ />
 
       <Footer />
     </div>
