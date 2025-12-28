@@ -67,6 +67,13 @@ const AntiPackageDiagnosis = () => {
       
       {/* Gradient transition to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/0 via-background/50 to-background pointer-events-none" />
+      
+      {/* Divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+        </div>
+      </div>
     </section>
   );
 };
