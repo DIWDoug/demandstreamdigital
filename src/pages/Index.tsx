@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import WhoWeAre from "@/components/sections/WhoWeAre";
@@ -20,6 +21,11 @@ import Footer from "@/components/sections/Footer";
 const Index = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
+      <Helmet>
+        <title>White-Label Digital Marketing Fulfillment for Agencies | Dialed-In Web</title>
+        <meta name="description" content="We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building. Tailored to each client's market, competition, and scope." />
+        <link rel="canonical" href="https://dialedinweb.com/" />
+      </Helmet>
       <Header />
       <Hero />
       <WhoWeAre />
