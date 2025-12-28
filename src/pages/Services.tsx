@@ -14,6 +14,7 @@ import NotStaffingStatement from "@/components/services/NotStaffingStatement";
 import ServicesDirectory from "@/components/services/ServicesDirectory";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
+import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 
 const Services = () => {
   return (
@@ -46,6 +47,9 @@ const Services = () => {
       
       {/* 5. Core Service Areas */}
       <CoreServiceAreas />
+      
+      {/* Testimonials */}
+      <ServicesTestimonials />
       
       {/* 6. Scope & Activation Rules */}
       <ScopeRules />
