@@ -161,17 +161,13 @@ const SixMonthRoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">
-            Example Engagement
+            How Engagements Typically Unfold
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
-            White Label Marketing: 6-Month Roadmap
+            A Pattern, Not a Package
           </h2>
-          <p className="text-lg text-text-secondary leading-relaxed mb-3">
-            Heavy lifting upfront, then ongoing optimization.{" "}
-            <span className="text-foreground font-medium">Here's what gets delivered.</span>
-          </p>
-          <p className="text-sm text-text-muted italic">
-            This is a typical engagement pattern, not a fixed package. Execution adapts to performance data and client priorities.
+          <p className="text-lg text-text-secondary leading-relaxed">
+            Most engagements follow a similar rhythm: heavy lifting upfront, then ongoing optimization based on what the data says. This is a common shape, not a locked scope—execution adapts as priorities shift.
           </p>
         </div>
 
@@ -308,7 +304,7 @@ const SixMonthRoadmap = () => {
 
         {/* Bottom note */}
         <p className="mt-8 text-text-muted text-sm text-center">
-          Digital inbound marketing requires a 6-month agreement. Every engagement is scoped individually based on goals.
+          Inbound marketing requires a 6-month agreement. What happens inside that window is shaped by your client's goals and performance data.
         </p>
       </div>
     </section>
