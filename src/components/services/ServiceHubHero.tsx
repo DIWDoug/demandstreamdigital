@@ -1,11 +1,18 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface ServiceHubHeroProps {
   title: string;
   description: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-const ServiceHubHero = ({ title, description }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps) => {
   return (
     <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
       {/* Enhanced abstract data texture overlay - matching homepage */}
@@ -61,12 +68,26 @@ const ServiceHubHero = ({ title, description }: ServiceHubHeroProps) => {
 
       <div className="container mx-auto px-6 lg:px-8 py-20 lg:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in">
-            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full">
-              White-Label Services
-            </span>
-          </div>
+          {/* Breadcrumbs at top */}
+          {breadcrumbs && breadcrumbs.length > 0 && (
+            <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-sm mb-8 animate-fade-in">
+              <Link to="/" className="text-text-muted hover:text-foreground transition-colors">
+                Home
+              </Link>
+              {breadcrumbs.map((item, index) => (
+                <span key={index} className="flex items-center gap-2">
+                  <span className="text-text-muted">/</span>
+                  {item.href ? (
+                    <Link to={item.href} className="text-text-muted hover:text-foreground transition-colors">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span className="text-accent-blue">{item.label}</span>
+                  )}
+                </span>
+              ))}
+            </nav>
+          )}
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>

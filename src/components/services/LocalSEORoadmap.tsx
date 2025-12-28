@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { CheckCircle, FileSearch, Target, Wrench, FileText, Link2, TrendingUp } from "lucide-react";
 
-interface MonthData {
-  month: number;
+interface PhaseData {
+  phase: number;
   title: string;
   focus: string;
   icon: typeof FileSearch;
@@ -11,9 +11,9 @@ interface MonthData {
   deliverables: string[];
 }
 
-const roadmapData: MonthData[] = [
+const roadmapData: PhaseData[] = [
   {
-    month: 1,
+    phase: 1,
     title: "Discovery & Foundation",
     focus: "Audit, Research & Strategy",
     icon: FileSearch,
@@ -33,11 +33,11 @@ const roadmapData: MonthData[] = [
       "Keyword Research Document with search volumes and difficulty",
       "Competitive Analysis with actionable insights",
       "Link Detox Report with disavow recommendations (if needed)",
-      "6-Month Strategic Roadmap customized to goals"
+      "Strategic Roadmap customized to goals"
     ]
   },
   {
-    month: 2,
+    phase: 2,
     title: "Technical & On-Page",
     focus: "Fix, Optimize & Structure",
     icon: Wrench,
@@ -58,7 +58,7 @@ const roadmapData: MonthData[] = [
     ]
   },
   {
-    month: 3,
+    phase: 3,
     title: "Content Development",
     focus: "Create & Publish",
     icon: FileText,
@@ -79,7 +79,7 @@ const roadmapData: MonthData[] = [
     ]
   },
   {
-    month: 4,
+    phase: 4,
     title: "Authority Building",
     focus: "Links & Citations",
     icon: Link2,
@@ -100,7 +100,7 @@ const roadmapData: MonthData[] = [
     ]
   },
   {
-    month: 5,
+    phase: 5,
     title: "Optimization & Scale",
     focus: "Refine & Expand",
     icon: Target,
@@ -121,13 +121,13 @@ const roadmapData: MonthData[] = [
     ]
   },
   {
-    month: 6,
+    phase: 6,
     title: "Results & Roadmap",
     focus: "Report & Plan Forward",
     icon: TrendingUp,
     color: "hsl(340, 70%, 50%)",
     activities: [
-      "Comprehensive 6-month performance analysis",
+      "Comprehensive performance analysis",
       "Ranking improvements documented",
       "Traffic and conversion attribution",
       "ROI analysis and reporting",
@@ -135,17 +135,17 @@ const roadmapData: MonthData[] = [
       "Ongoing maintenance plan established"
     ],
     deliverables: [
-      "6-Month Results Report with full metrics",
+      "Campaign Results Report with full metrics",
       "Year-over-year comparison (if applicable)",
-      "Phase 2 strategic recommendations",
+      "Next phase strategic recommendations",
       "Ongoing optimization plan and calendar"
     ]
   }
 ];
 
 const LocalSEORoadmap = () => {
-  const [activeMonth, setActiveMonth] = useState(1);
-  const activeData = roadmapData.find(m => m.month === activeMonth) || roadmapData[0];
+  const [activePhase, setActivePhase] = useState(1);
+  const activeData = roadmapData.find(p => p.phase === activePhase) || roadmapData[0];
 
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -165,50 +165,53 @@ const LocalSEORoadmap = () => {
             What to Expect
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-            Your 6-Month Local SEO Roadmap
+            Your Local SEO Roadmap
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            Every local SEO engagement follows a proven framework. Here's what a typical 6-month campaign looks like—from initial audit through measurable results. We customize the specifics to each client's market, competition, and goals.
+            Every local SEO engagement follows a proven framework. Here's what a typical campaign looks like—from initial audit through measurable results. 
+            <span className="block mt-3 text-foreground font-medium">
+              Timeline is budget-dependent. SEO is time. How quickly we move between phases depends on your investment level and competitive landscape.
+            </span>
           </p>
         </div>
 
         {/* Timeline navigation */}
         <div className="mb-12">
           <div className="flex flex-wrap gap-2 lg:gap-0 lg:grid lg:grid-cols-6">
-            {roadmapData.map((month) => {
-              const isActive = month.month === activeMonth;
-              const Icon = month.icon;
+            {roadmapData.map((phase) => {
+              const isActive = phase.phase === activePhase;
+              const Icon = phase.icon;
               
               return (
                 <button
-                  key={month.month}
-                  onClick={() => setActiveMonth(month.month)}
+                  key={phase.phase}
+                  onClick={() => setActivePhase(phase.phase)}
                   className={`relative flex-1 min-w-[140px] lg:min-w-0 p-4 lg:p-6 text-left transition-all duration-300 border-b-2 lg:border-b-4 ${
                     isActive 
                       ? "bg-surface-elevated/50" 
                       : "hover:bg-surface-elevated/30"
                   }`}
                   style={{
-                    borderColor: isActive ? month.color : "hsl(var(--border))"
+                    borderColor: isActive ? phase.color : "hsl(var(--border))"
                   }}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <Icon 
                       className="w-5 h-5 transition-colors duration-300"
-                      style={{ color: isActive ? month.color : "hsl(var(--text-muted))" }}
+                      style={{ color: isActive ? phase.color : "hsl(var(--text-muted))" }}
                     />
                     <span 
                       className={`text-sm font-semibold transition-colors duration-300 ${
                         isActive ? "text-foreground" : "text-text-muted"
                       }`}
                     >
-                      Month {month.month}
+                      Phase {phase.phase}
                     </span>
                   </div>
                   <h3 className={`text-sm lg:text-base font-medium transition-colors duration-300 ${
                     isActive ? "text-foreground" : "text-text-secondary"
                   }`}>
-                    {month.title}
+                    {phase.title}
                   </h3>
                 </button>
               );
@@ -216,10 +219,10 @@ const LocalSEORoadmap = () => {
           </div>
         </div>
 
-        {/* Active month details */}
+        {/* Active phase details */}
         <div 
           className="grid lg:grid-cols-2 gap-8 lg:gap-12 animate-fade-in"
-          key={activeMonth}
+          key={activePhase}
         >
           {/* Activities */}
           <div 
@@ -306,14 +309,14 @@ const LocalSEORoadmap = () => {
             {/* Progress indicator */}
             <div className="mt-8 pt-6 border-t border-border">
               <div className="flex items-center justify-between text-sm text-text-muted mb-2">
-                <span>Campaign Progress</span>
-                <span>{Math.round((activeMonth / 6) * 100)}% Complete</span>
+                <span>Roadmap Progress</span>
+                <span>Phase {activePhase} of 6</span>
               </div>
               <div className="h-2 bg-surface-dark rounded-full overflow-hidden">
                 <div 
                   className="h-full rounded-full transition-all duration-500"
                   style={{
-                    width: `${(activeMonth / 6) * 100}%`,
+                    width: `${(activePhase / 6) * 100}%`,
                     background: `linear-gradient(90deg, ${activeData.color}, ${activeData.color}80)`
                   }}
                 />
@@ -325,9 +328,9 @@ const LocalSEORoadmap = () => {
         {/* Bottom note */}
         <div className="mt-12 p-6 rounded-xl bg-surface-elevated/50 border border-border">
           <p className="text-text-secondary text-center">
-            <span className="font-semibold text-foreground">Flexible by design:</span>{" "}
-            This roadmap adapts to your client's specific situation. Some campaigns move faster, others require more foundation work. 
-            We'll customize the timeline during discovery to match competitive dynamics and business priorities.
+            <span className="font-semibold text-foreground">Pace is flexible:</span>{" "}
+            Some clients move through all six phases in six months. Others spread it across a year. 
+            The timeline adapts to your budget, competitive dynamics, and business priorities—but the sequence remains proven.
           </p>
         </div>
       </div>
