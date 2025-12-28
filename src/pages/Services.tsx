@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
-import MidPageCTA from "@/components/sections/MidPageCTA";
+
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import ServicesFramework from "@/components/services/ServicesFramework";
@@ -38,9 +38,6 @@ const Services = () => {
       
       {/* Testimonials - Social proof after framework */}
       <ServicesTestimonials />
-      
-      {/* Mid-page CTA */}
-      <MidPageCTA variant="light" />
       
       {/* Deep Expertise - Same as Homepage */}
       <TopicalExpertise />
