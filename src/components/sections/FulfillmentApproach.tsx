@@ -27,6 +27,19 @@ const FulfillmentApproach = () => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="reveal-section py-20 lg:py-28 bg-surface-elevated relative overflow-hidden"
     >
+      {/* Subtle dot grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
+          backgroundSize: '32px 32px'
+        }}
+      />
+      
+      {/* Subtle gradient orbs for depth */}
+      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      
       {/* Subtle accent line */}
       <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent" />
       
