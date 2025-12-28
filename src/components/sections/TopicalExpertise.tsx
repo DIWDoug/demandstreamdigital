@@ -254,42 +254,48 @@ const TopicalExpertise = () => {
                 {hub.summary}
               </p>
 
-              {/* Spokes - expanded content */}
+              {/* Spokes - always in DOM for crawlability, visually hidden when collapsed */}
               <div 
-                className={`overflow-hidden transition-all duration-300 ${
-                  isExpanded(index) ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
+                className={`transition-all duration-300 ${
+                  isExpanded(index) 
+                    ? "grid-rows-[1fr] opacity-100" 
+                    : "grid-rows-[0fr] opacity-0 pointer-events-none"
                 }`}
+                style={{ display: 'grid' }}
+                aria-hidden={!isExpanded(index)}
               >
-                <div className="pt-4 border-t border-border space-y-5">
-                  {hub.spokes.map((spoke, spokeIndex) => (
-                    <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                      <a 
-                        href="#contact" 
-                        className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          e.preventDefault();
-                          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                      >
-                        {spoke.title} →
-                      </a>
-                      <p className="text-text-secondary text-sm leading-relaxed mt-1">
-                        {spoke.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <div className="overflow-hidden">
+                  <div className="pt-4 border-t border-border space-y-5">
+                    {hub.spokes.map((spoke, spokeIndex) => (
+                      <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
+                        <a 
+                          href="#contact" 
+                          className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          {spoke.title} →
+                        </a>
+                        <p className="text-text-secondary text-sm leading-relaxed mt-1">
+                          {spoke.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
 
-                {/* CTA within expanded card - Olive for action */}
-                <div className="mt-6 pt-4 border-t border-border">
-                  <a 
-                    href="#contact" 
-                    className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Discuss {hub.title} for your agency →
-                  </a>
+                  {/* CTA within expanded card */}
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <a 
+                      href="#contact" 
+                      className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Discuss {hub.title} for your agency →
+                    </a>
+                  </div>
                 </div>
               </div>
 
