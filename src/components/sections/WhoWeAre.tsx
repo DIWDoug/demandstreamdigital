@@ -13,7 +13,7 @@ const WhoWeAre = () => {
               A Message From Doug
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              You Didn't Start Your Agency to Feel This Stuck
+              Most Agencies Don't Lose Clients Because of Results
             </h2>
             
             {/* Personal Letter Style Content */}
@@ -22,23 +22,35 @@ const WhoWeAre = () => {
               <span className="absolute -left-2 -top-4 text-6xl text-cta/40 font-serif leading-none">"</span>
               
               <p className="pl-6">
-                You wanted freedom. You wanted to build something of your own. You wanted to help local businesses grow while finally getting off the hamster wheel. I get it. That was me too.
+                They lose them because fulfillment quietly falls apart.
+              </p>
+
+              <p className="pl-6">
+                It usually doesn't happen all at once. It shows up as scope getting blurry. Communication getting reactive. Margins thinning. Teams doing more work just to keep things steady. Everyone feels it, but no one names it.
               </p>
               
               <p className="pl-6">
-                <span className="text-foreground font-semibold">But then reality hit.</span> The freelancers you hired ghosted you mid-project. The 'experts' you trusted delivered work you had to redo yourself at 2am. And every new client felt like a gamble because you never knew if your team would actually come through.
+                <span className="text-foreground font-semibold">I've seen this pattern enough times to know it's not a people problem. It's a model problem.</span>
               </p>
               
               <p className="pl-6">
-                You started spending more time managing chaos than growing your business. More time apologizing to clients than celebrating wins. More time wondering if you made the right choice than actually enjoying the work.
+                Most white-label fulfillment is built to be sold easily, not delivered cleanly over time. Packages look neat on paper, but real markets don't behave that way. Cities differ. Competition shifts. Clients evolve. And the gap between what was sold and what's required grows quietly month after month.
               </p>
               
               <p className="pl-6">
-                And the worst part? You felt alone. Like every other agency owner had it figured out except you.
+                <span className="text-foreground font-semibold">Dialed-In Web exists because I didn't want to keep pretending that was sustainable.</span>
+              </p>
+
+              <p className="pl-6">
+                We built this to support agencies who care about doing the work right, setting honest expectations, and protecting their reputation with clients. That means clear scope. Defined standards. And execution that adapts without becoming chaotic.
+              </p>
+
+              <p className="pl-6">
+                This isn't for agencies chasing shortcuts or volume at any cost. It's for operators who want fulfillment they can stand behind and explain without hedging.
               </p>
               
               <p className="pl-6">
-                <span className="text-foreground font-semibold">That's exactly why I built Dialed-In Web.</span> To be the partner I wished I had. The one who actually delivers. Who answers the phone. Who treats your clients like my own, because your reputation is on the line, and I don't take that lightly.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
+                If that's how you run your business, we should talk.<span className="text-6xl text-cta/40 font-serif leading-none align-bottom ml-1">"</span>
               </p>
             </div>
 
