@@ -60,14 +60,14 @@ const ServicesTestimonials = () => {
           </div>
 
           {/* Quote Cards */}
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm"
+                className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-sm"
               >
-                <Quote className="h-8 w-8 text-cta/30 mb-4" />
-                <p className="text-slate-600 text-sm mb-6 leading-relaxed">
+                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-cta/30 mb-3 sm:mb-4" />
+                <p className="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed line-clamp-6 sm:line-clamp-none">
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t border-slate-200 pt-4">

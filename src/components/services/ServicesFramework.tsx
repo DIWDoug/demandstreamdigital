@@ -30,7 +30,7 @@ const ServicesFramework = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left Column - Header */}
-            <div className="lg:sticky lg:top-32 lg:self-start">
+            <div className="lg:sticky lg:top-32 lg:self-start text-center lg:text-left">
               <p className="text-cta text-sm font-medium tracking-wider uppercase mb-4">
                 Our Framework
               </p>
