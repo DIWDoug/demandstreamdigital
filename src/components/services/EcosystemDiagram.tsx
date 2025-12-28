@@ -140,24 +140,32 @@ const EcosystemDiagram = () => {
                   <button
                     key={area.id}
                     onClick={() => setActiveArea(area)}
-                    className={`w-full flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 text-left ${
+                    className={`w-full p-4 rounded-xl border transition-all duration-200 text-left ${
                       isActive 
                         ? "bg-white border-cta/30 shadow-sm" 
                         : "bg-white/50 border-gray-200 hover:bg-white hover:border-gray-300"
                     }`}
                   >
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      isActive ? "bg-cta/10" : "bg-gray-100"
-                    }`}>
-                      <area.icon className={`h-5 w-5 ${isActive ? "text-cta" : "text-gray-500"}`} />
-                    </div>
-                    <span className={`font-medium ${isActive ? "text-gray-900" : "text-gray-700"}`}>
-                      {area.label}
-                    </span>
-                    {isActive && (
-                      <span className="ml-auto text-xs font-medium uppercase tracking-wider text-cta bg-cta/10 px-2 py-1 rounded">
-                        Active
+                    <div className="flex items-center gap-4">
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                        isActive ? "bg-cta/10" : "bg-gray-100"
+                      }`}>
+                        <area.icon className={`h-5 w-5 ${isActive ? "text-cta" : "text-gray-500"}`} />
+                      </div>
+                      <span className={`font-medium ${isActive ? "text-gray-900" : "text-gray-700"}`}>
+                        {area.label}
                       </span>
+                      {isActive && (
+                        <span className="ml-auto text-xs font-medium uppercase tracking-wider text-cta bg-cta/10 px-2 py-1 rounded flex-shrink-0">
+                          Active
+                        </span>
+                      )}
+                    </div>
+                    {/* Expanded description */}
+                    {isActive && (
+                      <p className="mt-3 pl-14 text-sm text-gray-600 leading-relaxed animate-fade-in">
+                        {area.description}
+                      </p>
                     )}
                   </button>
                 );
