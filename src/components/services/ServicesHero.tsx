@@ -20,8 +20,7 @@ const ServicesHero = () => {
               <span className="text-gradient-primary">Executed as a System</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
-              You keep the client relationship. You stay in control of strategy. 
-              We handle execution—consistently, at scale—so you can grow without the overhead.
+              You retain the client relationship and strategic control. We execute behind the scenes through scoped roadmaps, documented standards, and recurring reporting, delivering consistent and scalable execution without added overhead.
             </p>
             <a 
               href="#contact" 
