@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Mail, Award } from "lucide-react";
 
 const hubs = [
   {
     icon: MapPin,
     title: "Local SEO",
-    summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
+    slug: "local-seo",
+    summary: "White label local SEO services that dominate organic search results and drive qualified traffic from your clients' service areas.",
     spokes: [
       { title: "On-Page Local Optimization", description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance." },
       { title: "Technical SEO for Multi-Location", description: "Site architecture, internal linking, and crawlability fixes for service area hierarchy." },
@@ -18,7 +20,8 @@ const hubs = [
   {
     icon: Map,
     title: "Google Maps Optimization",
-    summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
+    slug: "google-maps",
+    summary: "White label Google Maps optimization to own the local 3-pack and drive calls directly from Google Business Profile listings.",
     spokes: [
       { title: "Google Business Profile Management", description: "Complete profile optimization including categories, attributes, services, and posts." },
       { title: "Review Generation & Response", description: "Systematic review acquisition and professional response management." },
@@ -31,7 +34,8 @@ const hubs = [
   {
     icon: MousePointerClick,
     title: "Paid Media",
-    summary: "Capture high-intent local searches with campaigns built for calls and conversions.",
+    slug: "paid-media",
+    summary: "White label paid media management for Google Ads and Meta ads—campaigns built for calls and conversions.",
     spokes: [
       { title: "Local Search Campaign Structure", description: "Service area targeting and keyword strategies for local lead generation." },
       { title: "Landing Page Optimization", description: "Conversion-focused pages with local trust signals and form optimization." },
@@ -44,7 +48,8 @@ const hubs = [
   {
     icon: Share2,
     title: "Meta Ads",
-    summary: "Build local awareness and capture demand through targeted social advertising.",
+    slug: "paid-media",
+    summary: "White label social advertising on Facebook and Instagram to build local awareness and capture demand.",
     spokes: [
       { title: "Local Audience Targeting", description: "Geographic, demographic, and interest-based audiences for each service area." },
       { title: "Creative Strategy & Production", description: "Thumb-stopping ad creative and video content optimized for local service businesses." },
@@ -57,7 +62,8 @@ const hubs = [
   {
     icon: Mail,
     title: "Email Marketing",
-    summary: "Nurture leads and drive repeat business through strategic email campaigns.",
+    slug: "email-marketing",
+    summary: "White label email marketing to nurture leads and drive repeat business through strategic campaigns and automation.",
     spokes: [
       { title: "Campaign Strategy & Design", description: "Custom templates and send schedules that maximize engagement." },
       { title: "Automation Sequences", description: "Welcome series and nurture flows that convert leads into customers." },
@@ -70,7 +76,8 @@ const hubs = [
   {
     icon: Award,
     title: "Authority Building",
-    summary: "Establish trust signals and credibility markers that support ranking stability.",
+    slug: "authority",
+    summary: "White label authority building to establish trust signals and credibility markers that support ranking stability.",
     spokes: [
       { title: "Digital PR & Media Placements", description: "Press distribution and earned media that builds authority." },
       { title: "Industry Directory Listings", description: "Strategic placement in industry-specific directories and associations." },
@@ -106,14 +113,14 @@ const ServicesExpertise = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-3">
-              Specialized Knowledge
+              White Label Inbound Marketing Services
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Deep Expertise Across Local Marketing
+              Deep Expertise Across Inbound Marketing
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Each service area is backed by specialized knowledge and proven processes. 
-              Click any topic to explore what's included.
+              Each white label inbound marketing service is backed by specialized knowledge and proven processes. 
+              Click any topic to explore what&apos;s included, or visit the service page for full details.
             </p>
           </div>
 
@@ -151,7 +158,7 @@ const ServicesExpertise = () => {
                 {/* Spokes - Crawlable */}
                 <div 
                   className={`transition-all duration-300 overflow-hidden ${
-                    isExpanded(index) ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    isExpanded(index) ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="pt-4 border-t border-border/50 space-y-4">
@@ -162,6 +169,15 @@ const ServicesExpertise = () => {
                       </div>
                     ))}
                   </div>
+                  
+                  {/* Internal link to service page */}
+                  <Link 
+                    to={`/services/${hub.slug}`}
+                    className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-accent-blue hover:underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    View full {hub.title} service details →
+                  </Link>
                 </div>
 
                 {!isExpanded(index) && (

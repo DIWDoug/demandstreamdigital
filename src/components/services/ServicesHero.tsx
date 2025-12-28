@@ -13,15 +13,15 @@ const ServicesHero = () => {
           {/* Left: Text content */}
           <div>
             <p className="text-cta font-medium uppercase tracking-widest text-sm mb-4">
-              White-Label Fulfillment
+              White Label Inbound Marketing
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15]">
-              Digital Marketing Fulfillment,{" "}
+              White Label Inbound Marketing{" "}
               <span className="text-gradient-primary">Executed as a System</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
-              White-label SEO, paid media, and retention execution for agencies that value 
-              clarity, scope discipline, and long-term client relationships.
+              Full-service white label inbound marketing for agencies: SEO, paid media, email, 
+              and authority building—coordinated fulfillment that scales with your client roster.
             </p>
             <a 
               href="#contact" 
