@@ -80,17 +80,11 @@ const ServiceHubHero = ({ title, description }: ServiceHubHeroProps) => {
             {description}
           </p>
           
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
+          {/* CTA */}
+          <div className="animate-fade-in">
             <a href="#contact" className="btn-cta group">
               Schedule a Discovery Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a 
-              href="#services" 
-              className="text-foreground hover:text-cta transition-colors font-medium"
-            >
-              View All {title} Services →
             </a>
           </div>
         </div>
