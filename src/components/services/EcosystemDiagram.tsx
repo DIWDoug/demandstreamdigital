@@ -119,16 +119,6 @@ const EcosystemDiagram = () => {
                   <line x1="320" y1="80" x2="80" y2="320" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
                 </svg>
               </div>
-
-              {/* Selected area info - below diagram */}
-              <div className="text-center mt-6 max-w-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {activeArea.label}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {activeArea.description}
-                </p>
-              </div>
             </div>
 
             {/* Area List */}
