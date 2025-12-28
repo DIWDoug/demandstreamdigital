@@ -53,12 +53,12 @@ export const hubs: Hub[] = [
     title: "Local SEO",
     slug: "local-seo",
     summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
-    heroDescription: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients. Our white-label local SEO fulfillment covers everything from on-page optimization to link building—executed with the precision your agency reputation demands.",
+    heroDescription: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients. Our white-label local SEO fulfillment covers everything from on-page optimization to link building, executed with the precision your agency reputation demands.",
     whyItMatters: {
       headline: "Why Local SEO Matters for Your Clients",
-      description: "46% of all Google searches have local intent. When someone searches for services in their area, your clients need to appear—not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",
+      description: "46% of all Google searches have local intent. When someone searches for services in their area, your clients need to appear, not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",
       points: [
-        { icon: Target, title: "Capture High-Intent Traffic", description: "Local searchers are ready to buy. They're not researching—they're looking for a provider right now." },
+        { icon: Target, title: "Capture High-Intent Traffic", description: "Local searchers are ready to buy. They're not researching. They're looking for a provider right now." },
         { icon: TrendingUp, title: "Compound Returns Over Time", description: "Unlike paid ads, SEO builds equity. Rankings achieved today continue driving leads months and years later." },
         { icon: Shield, title: "Defend Against Competitors", description: "If you're not ranking, your client's competitors are taking those calls. Local SEO is defensive as much as offensive." }
       ]
@@ -82,7 +82,7 @@ export const hubs: Hub[] = [
         "Direct access to your dedicated strategist",
         "Transparent communication on strategy and progress",
         "Scalable processes that grow with your agency",
-        "No contracts—just quality work that keeps you coming back"
+        "No contracts. Just quality work that keeps you coming back"
       ]
     },
     faqs: [
@@ -152,7 +152,7 @@ export const hubs: Hub[] = [
         title: "Local Content Strategy",
         slug: "local-content-strategy",
         description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries.",
-        fullDescription: "Content is what separates local SEO winners from also-rans. We develop content strategies that capture search demand across the entire customer journey—from awareness queries to high-intent 'near me' searches. Every piece of content is designed to serve both users and search engines while building topical authority in your client's industry.",
+        fullDescription: "Content is what separates local SEO winners from also-rans. We develop content strategies that capture search demand across the entire customer journey, from awareness queries to high-intent 'near me' searches. Every piece of content is designed to serve both users and search engines while building topical authority in your client's industry.",
         benefits: [
           "Capture long-tail search queries competitors miss",
           "Build topical authority in the client's industry",
@@ -180,7 +180,7 @@ export const hubs: Hub[] = [
         title: "Local Link Acquisition",
         slug: "local-link-acquisition",
         description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals.",
-        fullDescription: "Links remain a critical ranking factor, but for local SEO, the right links matter more than raw quantity. We focus on acquiring links from locally-relevant sources—local news sites, community organizations, industry associations, and business directories that signal geographic relevance to search engines.",
+        fullDescription: "Links remain a critical ranking factor, but for local SEO, the right links matter more than raw quantity. We focus on acquiring links from locally-relevant sources: local news sites, community organizations, industry associations, and business directories that signal geographic relevance to search engines.",
         benefits: [
           "Improved domain authority for local rankings",
           "Geographic relevance signals from local links",
@@ -270,12 +270,12 @@ export const hubs: Hub[] = [
     title: "Google Maps Optimization",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-    heroDescription: "We help agencies dominate Google Maps results for their clients. From Google Business Profile optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives more calls than any other SERP feature—we help you own it.",
+    heroDescription: "We help agencies dominate Google Maps results for their clients. From Google Business Profile optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives more calls than any other SERP feature. We help you own it.",
     whyItMatters: {
       headline: "Why Google Maps Matters for Local Businesses",
       description: "The local 3-pack appears in 93% of local searches. These three map listings capture the majority of clicks for local intent queries. If your clients aren't in the pack, they're invisible to most local searchers.",
       points: [
-        { icon: Zap, title: "Direct Response Channel", description: "Maps listings drive calls, directions, and website visits directly from search results—no click-through required." },
+        { icon: Zap, title: "Direct Response Channel", description: "Maps listings drive calls, directions, and website visits directly from search results. No click-through required." },
         { icon: Users, title: "Trust Through Reviews", description: "Star ratings and review counts build instant credibility. A strong GBP profile converts browsers into callers." },
         { icon: Target, title: "High-Intent Traffic", description: "Someone searching on Maps is looking to buy now. This is the highest-intent traffic in local marketing." }
       ]
@@ -313,7 +313,7 @@ export const hubs: Hub[] = [
         title: "Google Business Profile Management",
         slug: "google-business-profile-management",
         description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results.",
-        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps. We optimize every element—from primary and secondary categories to business attributes, services, products, and description. A fully optimized profile signals relevance to Google and builds trust with potential customers.",
+        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps. We optimize every element, from primary and secondary categories to business attributes, services, products, and description. A fully optimized profile signals relevance to Google and builds trust with potential customers.",
         benefits: ["Improved visibility in local pack results", "Higher engagement from search browsers", "Better conversion from views to actions", "Competitive advantage over incomplete profiles", "Foundation for all Maps optimization"],
         deliverables: ["Complete GBP audit and optimization", "Category and attribute optimization", "Service and product catalog setup", "Business description optimization", "Photo strategy and management", "Weekly GBP posts"],
         process: ["Profile audit against best practices", "Competitive GBP analysis", "Optimization implementation", "Photo and media optimization", "Ongoing post management", "Performance monitoring"]
@@ -331,7 +331,7 @@ export const hubs: Hub[] = [
         title: "Citation Building & Cleanup",
         slug: "citation-building-cleanup",
         description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms that validate business legitimacy.",
-        fullDescription: "Citations—mentions of your client's business name, address, and phone number—are a core ranking factor for local search. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
+        fullDescription: "Citations (mentions of your client's business name, address, and phone number) are a core ranking factor for local search. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
         benefits: ["Improved local pack rankings", "Consistent business information across the web", "Enhanced trust signals for Google", "Referral traffic from directory listings", "Foundation for local authority"],
         deliverables: ["Citation audit and cleanup", "Core citation building (50+ sites)", "Data aggregator submissions", "Industry-specific directory submissions", "Ongoing citation monitoring", "NAP consistency maintenance"],
         process: ["Current citation audit", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory identification and submission", "Ongoing monitoring and maintenance"]
@@ -384,7 +384,7 @@ export const hubs: Hub[] = [
       headline: "Our Paid Media Approach",
       description: "We build campaigns from the ground up with local lead generation in mind. Here's how we deliver results:",
       steps: [
-        { number: "01", title: "Strategy & Structure", description: "Campaign architecture designed for local markets—geographic targeting, keyword strategies, and account structure that maximizes efficiency." },
+        { number: "01", title: "Strategy & Structure", description: "Campaign architecture designed for local markets: geographic targeting, keyword strategies, and account structure that maximizes efficiency." },
         { number: "02", title: "Creative Development", description: "Ad copy, extensions, and creative assets built to drive local conversions. We test continuously to improve performance." },
         { number: "03", title: "Landing Page Optimization", description: "Conversion-focused landing pages with local trust signals, click-to-call functionality, and optimized forms." },
         { number: "04", title: "Bid Management", description: "Smart bidding strategies and budget allocation that maximize lead volume within profitability targets." },
@@ -413,7 +413,7 @@ export const hubs: Hub[] = [
         title: "Local Search Campaign Structure",
         slug: "local-search-campaign-structure",
         description: "Service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation economics.",
-        fullDescription: "The structure of a paid search campaign determines its ceiling for performance. We build campaign architectures specifically designed for local lead generation—with geographic targeting, keyword organization, and account structure that maximizes Quality Score and conversion efficiency.",
+        fullDescription: "The structure of a paid search campaign determines its ceiling for performance. We build campaign architectures specifically designed for local lead generation, with geographic targeting, keyword organization, and account structure that maximizes Quality Score and conversion efficiency.",
         benefits: ["Higher Quality Scores and lower CPCs", "Better targeting precision", "Easier optimization and scaling", "Cleaner performance data", "Foundation for long-term success"],
         deliverables: ["Campaign structure strategy", "Geographic targeting setup", "Keyword research and organization", "Ad group structure", "Campaign settings optimization", "Audience layer implementation"],
         process: ["Market and competitor analysis", "Keyword research and mapping", "Campaign architecture design", "Build and launch", "Initial optimization period", "Ongoing refinement"]
@@ -422,7 +422,7 @@ export const hubs: Hub[] = [
         title: "Landing Page Optimization",
         slug: "landing-page-optimization",
         description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization for maximum lead capture.",
-        fullDescription: "Traffic without conversion is wasted spend. We build and optimize landing pages designed specifically for local lead generation—with trust signals, clear calls-to-action, mobile optimization, and forms that convert visitors into leads.",
+        fullDescription: "Traffic without conversion is wasted spend. We build and optimize landing pages designed specifically for local lead generation, with trust signals, clear calls-to-action, mobile optimization, and forms that convert visitors into leads.",
         benefits: ["Higher conversion rates", "Lower cost per lead", "Better Quality Scores", "Improved mobile experience", "Clear performance attribution"],
         deliverables: ["Landing page design and development", "A/B testing framework", "Form optimization", "Click-to-call implementation", "Trust signal integration", "Page speed optimization"],
         process: ["Current page audit", "Competitive analysis", "New page development or optimization", "A/B testing implementation", "Ongoing conversion optimization"]
@@ -473,7 +473,7 @@ export const hubs: Hub[] = [
     heroDescription: "We create and manage email marketing programs that nurture leads, drive repeat business, and maximize customer lifetime value. Our white-label email marketing services help agencies offer comprehensive digital marketing without the overhead of building an email team.",
     whyItMatters: {
       headline: "Why Email Marketing Matters",
-      description: "Email delivers the highest ROI of any marketing channel—$42 for every $1 spent on average. For local businesses, email turns one-time customers into repeat buyers and keeps the business top-of-mind between purchases.",
+      description: "Email delivers the highest ROI of any marketing channel ($42 for every $1 spent on average). For local businesses, email turns one-time customers into repeat buyers and keeps the business top-of-mind between purchases.",
       points: [
         { icon: TrendingUp, title: "Highest ROI Channel", description: "No other marketing channel matches email's return on investment. It's direct, personal, and incredibly cost-effective." },
         { icon: Users, title: "Owned Audience", description: "Unlike social media followers, an email list is an owned asset. Algorithm changes can't take it away." },
@@ -482,7 +482,7 @@ export const hubs: Hub[] = [
     },
     ourApproach: {
       headline: "Our Email Marketing Approach",
-      description: "We build email programs that work—from strategy through execution and optimization:",
+      description: "We build email programs that work, from strategy through execution and optimization:",
       steps: [
         { number: "01", title: "Strategy Development", description: "Audience analysis, journey mapping, and campaign planning that aligns email with business goals and customer behavior." },
         { number: "02", title: "Template & Design", description: "On-brand email templates that look great on every device and drive the actions you want subscribers to take." },
@@ -522,7 +522,7 @@ export const hubs: Hub[] = [
         title: "Automation Sequences",
         slug: "automation-sequences",
         description: "Welcome series, nurture flows, and re-engagement campaigns that work around the clock to convert leads into customers.",
-        fullDescription: "Email automation is the ultimate efficiency play. We build triggered sequences that nurture leads, onboard new customers, re-engage lapsed subscribers, and drive repeat purchases—all automatically.",
+        fullDescription: "Email automation is the ultimate efficiency play. We build triggered sequences that nurture leads, onboard new customers, re-engage lapsed subscribers, and drive repeat purchases. All automatically.",
         benefits: ["24/7 lead nurturing", "Consistent follow-up without manual effort", "Higher conversion rates", "Improved customer experience", "Scalable engagement"],
         deliverables: ["Automation strategy and mapping", "Welcome sequence development", "Nurture flow creation", "Re-engagement campaigns", "Triggered email setup", "Performance monitoring"],
         process: ["Journey mapping", "Sequence strategy", "Email development", "Technical setup", "Testing and launch", "Ongoing optimization"]
@@ -573,7 +573,7 @@ export const hubs: Hub[] = [
     heroDescription: "We build the trust signals and authority markers that establish long-term ranking stability and brand credibility. Our white-label authority building services help agencies deliver comprehensive reputation and visibility campaigns that create lasting competitive advantages.",
     whyItMatters: {
       headline: "Why Authority Building Matters",
-      description: "Search engines increasingly prioritize E-E-A-T—Experience, Expertise, Authoritativeness, and Trustworthiness. Authority building creates the signals that demonstrate these qualities, supporting both rankings and customer confidence.",
+      description: "Search engines increasingly prioritize E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness). Authority building creates the signals that demonstrate these qualities, supporting both rankings and customer confidence.",
       points: [
         { icon: Shield, title: "Ranking Stability", description: "Authority signals create ranking resilience. Sites with strong authority recover faster from algorithm updates and resist competitive pressure." },
         { icon: TrendingUp, title: "Compound Growth", description: "Authority builds on itself. Media coverage leads to more coverage. Links lead to more links. Each win makes the next one easier." },
@@ -603,7 +603,7 @@ export const hubs: Hub[] = [
       ]
     },
     faqs: [
-      { question: "How is this different from link building?", answer: "Link building is one component of authority building, but authority encompasses much more—media coverage, reviews, brand mentions, industry recognition, and overall reputation. We take a holistic approach to building credibility." },
+      { question: "How is this different from link building?", answer: "Link building is one component of authority building, but authority encompasses much more: media coverage, reviews, brand mentions, industry recognition, and overall reputation. We take a holistic approach to building credibility." },
       { question: "How long does it take to build authority?", answer: "Authority building is a long-term strategy. You may see initial wins within 2-3 months, but the compound effects of authority development typically become significant at 6-12 months and continue growing over time." },
       { question: "Can you guarantee media placements?", answer: "We can't guarantee specific placements as editorial decisions are outside our control. However, our proven outreach processes and media relationships consistently generate quality placements for our clients." },
       { question: "Do you handle crisis reputation management?", answer: "Our focus is proactive authority building rather than reactive crisis management. However, we can help develop strategies to address reputation challenges as part of a comprehensive authority building program." }
@@ -613,7 +613,7 @@ export const hubs: Hub[] = [
         title: "Digital PR & Media Placements",
         slug: "digital-pr-media-placements",
         description: "Press release distribution, journalist outreach, and earned media coverage that builds brand authority and backlink profiles.",
-        fullDescription: "Digital PR generates the kind of coverage that builds real authority—mentions in respected publications, quotes in industry media, and features that position your clients as leaders in their space.",
+        fullDescription: "Digital PR generates the kind of coverage that builds real authority: mentions in respected publications, quotes in industry media, and features that position your clients as leaders in their space.",
         benefits: ["Media coverage and brand visibility", "High-authority backlinks", "Third-party credibility", "Thought leadership positioning", "Increased brand awareness"],
         deliverables: ["PR strategy development", "Press release writing and distribution", "Journalist outreach campaigns", "Media list development", "Coverage tracking and reporting", "Opportunity monitoring"],
         process: ["Story angle development", "Target media identification", "Press material creation", "Outreach execution", "Follow-up and relationship building", "Coverage monitoring and reporting"]
@@ -670,14 +670,14 @@ export const hubs: Hub[] = [
     title: "Reporting & Analytics",
     slug: "reporting",
     summary: "Transparent dashboards and white-label reports that prove value and retain clients.",
-    heroDescription: "We provide white-label reporting and analytics dashboards that help agencies demonstrate value and retain clients. From rank tracking to ROI analysis, our reporting services give you the data story your clients need to see—presented with your branding and ready for delivery.",
+    heroDescription: "We provide white-label reporting and analytics dashboards that help agencies demonstrate value and retain clients. From rank tracking to ROI analysis, our reporting services give you the data story your clients need to see, presented with your branding and ready for delivery.",
     whyItMatters: {
       headline: "Why Reporting Matters for Client Retention",
-      description: "Clients don't leave agencies because of poor results—they leave because they don't understand their results. Clear, consistent reporting is the difference between retained clients and churned accounts.",
+      description: "Clients don't leave agencies because of poor results. They leave because they don't understand their results. Clear, consistent reporting is the difference between retained clients and churned accounts.",
       points: [
         { icon: CheckCircle, title: "Prove Your Value", description: "When clients can see exactly what they're getting, they stay. Reports transform abstract services into tangible results." },
         { icon: Users, title: "Build Trust", description: "Transparency builds relationships. Regular reporting demonstrates accountability and keeps clients engaged with their investment." },
-        { icon: TrendingUp, title: "Drive Strategy", description: "Good reporting isn't just for clients—it informs your strategy. Data-driven decisions lead to better results for everyone." }
+        { icon: TrendingUp, title: "Drive Strategy", description: "Good reporting isn't just for clients. It informs your strategy. Data-driven decisions lead to better results for everyone." }
       ]
     },
     ourApproach: {
@@ -686,7 +686,7 @@ export const hubs: Hub[] = [
       steps: [
         { number: "01", title: "Requirements Gathering", description: "Understanding what matters to each client—the KPIs they care about, the format they prefer, and the story you need to tell." },
         { number: "02", title: "Dashboard Development", description: "Custom-branded dashboards that give clients real-time visibility into the metrics that matter most." },
-        { number: "03", title: "Report Design", description: "Monthly reports that combine data with narrative—not just what happened, but why it matters and what's next." },
+        { number: "03", title: "Report Design", description: "Monthly reports that combine data with narrative. Not just what happened, but why it matters and what's next." },
         { number: "04", title: "Delivery Setup", description: "Automated delivery schedules that ensure clients receive reports consistently, on time, every time." },
         { number: "05", title: "Continuous Improvement", description: "Ongoing refinement based on client feedback and evolving needs to keep reporting relevant and valuable." }
       ]
@@ -758,7 +758,7 @@ export const hubs: Hub[] = [
         title: "Client Presentation Decks",
         slug: "client-presentation-decks",
         description: "Professional slide decks and QBR materials that help you communicate wins and strategic recommendations to clients.",
-        fullDescription: "Sometimes clients need more than a report—they need a presentation. We create professional slide decks for quarterly business reviews and strategic discussions.",
+        fullDescription: "Sometimes clients need more than a report. They need a presentation. We create professional slide decks for quarterly business reviews and strategic discussions.",
         benefits: ["Professional presentation materials", "Client-ready slides", "Strategic narrative support", "QBR preparation", "Win communication"],
         deliverables: ["Presentation template development", "Monthly or quarterly slide updates", "Executive summary slides", "Strategy recommendation slides", "Visual design", "Speaker notes"],
         process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"]

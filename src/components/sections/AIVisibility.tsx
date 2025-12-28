@@ -39,13 +39,13 @@ const AIVisibility = () => {
                   We didn't pivot to AI. Our approach was already there.
                 </h3>
                 <p className="text-text-secondary mb-4">
-                  AI models don't just scrape websites — they evaluate authority signals, 
+                  AI models don't just scrape websites. They evaluate authority signals, 
                   content depth, citation consistency, and reputation markers. These are the 
                   exact foundations of our Local Growth Engine framework.
                 </p>
                 <p className="text-text-secondary">
                   Clients optimized with our methodology are already appearing in ChatGPT recommendations, 
-                  Gemini responses, and Google's AI Overviews — without any additional "AI SEO" work.
+                  Gemini responses, and Google's AI Overviews, without any additional "AI SEO" work.
                 </p>
               </div>
               
