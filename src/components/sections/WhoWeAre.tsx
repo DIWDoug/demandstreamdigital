@@ -69,7 +69,7 @@ const WhoWeAre = () => {
                 <span className="absolute -left-3 -top-8 text-6xl text-cta/25 font-handwriting leading-none select-none">"</span>
                 
                 <div className="font-handwriting space-y-6 text-lg lg:text-xl leading-relaxed pl-4 border-l-2 border-cta/20">
-                  <p className="text-text-secondary italic">
+                  <p className="text-text-secondary">
                     They lose them because fulfillment quietly falls apart.
                   </p>
 
