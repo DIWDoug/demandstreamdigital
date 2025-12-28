@@ -1,4 +1,8 @@
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
+
 const FulfillmentApproach = () => {
+  const sectionRef = useScrollReveal();
+  
   const pillars = [
     {
       title: "Scope Comes Before Services",
@@ -19,20 +23,32 @@ const FulfillmentApproach = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-elevated">
+    <section 
+      ref={sectionRef as React.RefObject<HTMLElement>}
+      className="reveal-section py-20 lg:py-28 bg-surface-elevated relative overflow-hidden"
+    >
+      {/* Subtle accent line */}
+      <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent" />
+      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Two-column layout */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left Column - Header */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-sans font-semibold text-foreground mb-6">
-                How We Approach Fulfillment Instead
+            <div className="lg:sticky lg:top-32 lg:self-start">
+              <div className="inline-block mb-4">
+                <span className="text-accent-blue text-sm font-medium tracking-wider uppercase">
+                  Our Framework
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold text-foreground mb-6 leading-tight">
+                How We Approach Fulfillment{" "}
+                <span className="text-text-secondary">Instead</span>
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-4 max-w-xl">
                 Custom fulfillment only works if it's controlled. Our approach is built to adapt to different markets and clients without introducing chaos, scope creep, or operational drag.
               </p>
-              <p className="text-text-secondary text-lg leading-relaxed max-w-xl">
+              <p className="text-foreground text-lg leading-relaxed max-w-xl font-medium">
                 Instead of starting with pre-set services, we start with structure.
               </p>
             </div>
@@ -42,23 +58,41 @@ const FulfillmentApproach = () => {
               {pillars.map((pillar, index) => (
                 <div 
                   key={index}
-                  className={`py-6 ${index !== pillars.length - 1 ? 'border-b border-border/30' : ''}`}
+                  className={`group py-8 transition-all duration-300 hover:pl-4 ${
+                    index !== pillars.length - 1 ? 'border-b border-border/30' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <strong className="block text-foreground text-lg font-semibold mb-2">
-                    {pillar.title}
-                  </strong>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {pillar.body}
-                  </p>
+                  <div className="flex gap-4">
+                    {/* Number indicator */}
+                    <div className="flex-shrink-0">
+                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <div>
+                      <strong className="block text-foreground text-lg font-semibold mb-2 group-hover:text-accent-blue transition-colors duration-300">
+                        {pillar.title}
+                      </strong>
+                      <p className="text-text-secondary text-sm leading-relaxed">
+                        {pillar.body}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Closing Line */}
-          <p className="text-center text-text-secondary text-lg mt-16">
-            This approach gives agencies flexibility without sacrificing control.
-          </p>
+          <div className="mt-20 pt-12 border-t border-border/20">
+            <p className="text-center text-text-secondary text-xl max-w-2xl mx-auto">
+              This approach gives agencies{" "}
+              <span className="text-foreground font-medium">flexibility</span>{" "}
+              without sacrificing{" "}
+              <span className="text-foreground font-medium">control</span>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
