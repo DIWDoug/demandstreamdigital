@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building based on each client's market, competition, and scope. Not rigid tiers.
+            We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building based on each client's market, competition, and scope. Never rigid tiers.
           </p>
 
           {/* Punchy tagline */}
