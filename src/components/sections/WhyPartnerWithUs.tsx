@@ -50,7 +50,7 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
-            What Partnership Looks Like <span className="text-[hsl(76,42%,35%)]">in Practice</span>
+            What Partnership Looks Like in Practice
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             This isn't about features or promises.<br />

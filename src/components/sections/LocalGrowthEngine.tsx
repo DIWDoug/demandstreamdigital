@@ -110,7 +110,7 @@ const LocalGrowthEngine = () => {
             <p className="text-gray-500 text-base mb-1">Discover How To</p>
             <h2 className="text-gray-900 mb-3" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}>
               Scale Your Agency<br />
-              <span className="text-[hsl(76,42%,35%)]">Without the Chaos</span>
+              Without the Chaos
             </h2>
             
             <div className="w-12 h-0.5 bg-[hsl(76,42%,41%)] mb-5" />
