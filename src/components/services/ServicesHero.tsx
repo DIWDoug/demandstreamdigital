@@ -19,8 +19,8 @@ const ServicesHero = () => {
               White Label Inbound Marketing{" "}
               <span className="text-gradient-primary">Executed as a System</span>
             </h1>
-            <p className="text-lg text-text-secondary leading-relaxed mb-8">
-              Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes through scoped roadmaps, documented standards, and recurring reporting, delivering consistent and scalable execution without added overhead.
+            <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-6 sm:mb-8">
+              Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes—delivering consistent, scalable results without added overhead.
             </p>
             <a 
               href="#contact" 
