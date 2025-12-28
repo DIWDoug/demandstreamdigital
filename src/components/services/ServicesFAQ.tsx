@@ -67,8 +67,6 @@ const faqSchema = {
 const ServicesFAQ = () => {
   return (
     <section className="py-20 lg:py-28 section-light relative">
-      {/* Gradient transition from dark section */}
-      <div className="section-divider absolute top-0" />
       
       <Helmet>
         <script type="application/ld+json">

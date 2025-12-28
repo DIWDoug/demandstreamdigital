@@ -148,7 +148,7 @@ const SixMonthRoadmap = () => {
   const sectionRef = useScrollReveal();
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-20 bg-surface-dark relative overflow-hidden reveal-section">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-surface-elevated relative overflow-hidden reveal-section">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
