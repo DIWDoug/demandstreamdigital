@@ -78,8 +78,8 @@ const LocalSEO = () => {
       <LocalSEOStats />
       <AlternatingContent blocks={localSeoContent} />
       <RankingFactorsInfographic />
-      <LocalSEORoadmap />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
+      <LocalSEORoadmap />
       <WhyPartnerWithUs />
       <Testimonials />
       <FAQ />
