@@ -16,12 +16,11 @@ const ServicesHero = () => {
               White Label Inbound Marketing
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15]">
-              White Label Inbound Marketing{" "}
-              <span className="text-gradient-primary">Executed as a System</span>
+              Full-Service White Label Inbound Marketing{" "}
+              <span className="text-gradient-primary">for Agencies</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
-              You keep the client relationship. You stay in control of strategy. 
-              We handle execution—consistently, at scale—so you can grow without the overhead.
+              SEO, paid media, email, and authority building—coordinated fulfillment that scales with your client roster.
             </p>
             <a 
               href="#contact" 
