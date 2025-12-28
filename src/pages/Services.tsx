@@ -5,8 +5,6 @@ import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
-import WhyChooseUs from "@/components/services/WhyChooseUs";
-import WhyHireUs from "@/components/services/WhyHireUs";
 import BenefitsOfPartnering from "@/components/services/BenefitsOfPartnering";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesFramework from "@/components/services/ServicesFramework";
@@ -45,19 +43,11 @@ const Services = () => {
       {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
       
-      {/* Why Choose a White Label Partner? */}
-      <WhyChooseUs />
-      
-      <SectionDivider />
-      
-      {/* Why Hire Us? - 6 Reasons Grid */}
-      <WhyHireUs />
+      {/* Why Agencies Actually Use This */}
+      <WhyPartnerWithUs />
       
       {/* Benefits of Partnering - Numbered List */}
       <BenefitsOfPartnering />
-      
-      {/* Why Agencies Actually Use This - From Homepage */}
-      <WhyPartnerWithUs />
       
       <SectionDivider />
       
