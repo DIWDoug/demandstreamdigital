@@ -3,45 +3,39 @@ import { Link } from "react-router-dom";
 
 const serviceAreas = [
   { 
-    label: "Buyer Persona & Strategy Development", 
+    label: "Know Exactly Who You're Targeting", 
     icon: Target, 
     slug: "local-seo",
-    output: "Clear target audience profiles that drive campaign focus",
     description: "Documented buyer personas with behavioral insights, purchase triggers, and messaging frameworks your team can use immediately."
   },
   { 
-    label: "SEO & Content Strategy", 
+    label: "Rank Higher & Get Found Organically", 
     icon: Eye,
     slug: "local-seo",
-    output: "Organic traffic growth and improved search rankings",
     description: "Higher keyword positions, increased organic sessions, and content that ranks—measured monthly with transparent reporting."
   },
   { 
-    label: "Pay-Per-Click Campaigns", 
+    label: "Generate Leads at Predictable Cost", 
     icon: MousePointerClick,
     slug: "paid-media",
-    output: "Qualified leads at a predictable cost-per-acquisition",
     description: "More conversions, lower CPA, and optimized ad spend with full transparency on what's working and what's being tested."
   },
   { 
-    label: "Social Media Management", 
+    label: "Build Brand Presence That Engages", 
     icon: Users,
     slug: "paid-media",
-    output: "Consistent brand presence and measurable engagement",
     description: "Scheduled content, growing follower counts, increased engagement rates, and social-driven leads tracked to source."
   },
   { 
-    label: "Lead Generation & Nurturing", 
+    label: "Fill the Pipeline with Qualified Leads", 
     icon: TrendingUp,
     slug: "authority",
-    output: "A growing pipeline of qualified, sales-ready prospects",
     description: "More MQLs entering the funnel, higher conversion rates through nurture sequences, and documented lead scores."
   },
   { 
-    label: "Email Marketing & Automation", 
+    label: "Convert Subscribers into Customers", 
     icon: RefreshCcw,
     slug: "email-marketing",
-    output: "Automated sequences that convert subscribers to customers",
     description: "Higher open rates, improved click-throughs, and automated workflows that move leads toward purchase without manual effort."
   },
 ];
@@ -76,12 +70,9 @@ const EcosystemDiagram = () => {
                 <div className="p-3 rounded-xl bg-cta/10 text-cta w-fit mb-4 group-hover:bg-cta group-hover:text-white transition-colors duration-300">
                   <area.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-gray-900 font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
+                <h3 className="text-gray-900 font-semibold text-lg mb-3 group-hover:text-cta transition-colors">
                   {area.label}
                 </h3>
-                <p className="text-cta/90 font-medium text-sm mb-3">
-                  → {area.output}
-                </p>
                 <p className="text-gray-600 text-sm leading-relaxed flex-1">
                   {area.description}
                 </p>
