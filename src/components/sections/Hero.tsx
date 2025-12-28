@@ -105,13 +105,12 @@ const Hero = () => {
           </h2>
 
 
-          {/* CTA Button */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a 
               href="#contact" 
               className="btn-cta group"
             >
-              Schedule a Discovery Call
+              Request a Partner Fit Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
