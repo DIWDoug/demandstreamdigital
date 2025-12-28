@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ";
+import LocalSEOFAQ from "@/components/services/LocalSEOFAQ";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
@@ -22,7 +22,7 @@ const LocalSEO = () => {
     { label: hub.title }
   ];
 
-  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, Google Maps optimization, and links—delivered as your own.";
+  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, Google Maps optimization, and links. Delivered as your own.";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -49,7 +49,7 @@ const LocalSEO = () => {
       <LocalSEORoadmap />
       <Testimonials />
       <MidPageCTA variant="light" />
-      <FAQ />
+      <LocalSEOFAQ />
       <ContactForm />
       <Footer />
     </div>
