@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 interface ContentBlock {
   eyebrow: string;
@@ -14,8 +15,10 @@ interface AlternatingContentProps {
 }
 
 const AlternatingContent = ({ blocks }: AlternatingContentProps) => {
+  const sectionRef = useScrollReveal();
+  
   return (
-    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 lg:py-28 section-light relative overflow-hidden reveal-section">
       {/* Background texture */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-40 -right-32 w-[500px] h-[500px] rounded-full bg-[hsl(224,60%,55%)]/5 blur-3xl" />

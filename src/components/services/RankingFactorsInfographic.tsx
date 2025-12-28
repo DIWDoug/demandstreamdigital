@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Globe, Sparkles, TrendingUp, ChevronRight } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 interface RankingFactor {
   rank: number;
@@ -86,11 +87,12 @@ const categories: Category[] = [
 
 const RankingFactorsInfographic = () => {
   const [activeCategory, setActiveCategory] = useState<string>("local-pack");
+  const sectionRef = useScrollReveal();
   
   const activeCat = categories.find(c => c.id === activeCategory) || categories[0];
 
   return (
-    <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
-
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 const testimonials = [
   {
     quote: "They're an exceptionally dependable agency partner. They're trustworthy, they communicate clearly, and really consistently, which sometimes is rare in today's world.",
@@ -31,8 +31,10 @@ const videoTestimonials = [
 ];
 
 const Testimonials = () => {
+  const sectionRef = useScrollReveal();
+  
   return (
-    <section className="py-24 lg:py-32 bg-background">
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-background reveal-section">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">

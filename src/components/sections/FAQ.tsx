@@ -9,8 +9,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const FAQ = () => {
+  const sectionRef = useScrollReveal();
   const faqs = [
     {
       question: "How does white-label fulfillment work?",
@@ -107,7 +109,7 @@ const FAQ = () => {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <section className="py-24 lg:py-32 section-light">
+    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

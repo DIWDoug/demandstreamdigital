@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle, FileSearch, Target, Wrench, FileText, Link2, TrendingUp } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 interface PhaseData {
   phase: number;
@@ -146,9 +147,10 @@ const roadmapData: PhaseData[] = [
 const LocalSEORoadmap = () => {
   const [activePhase, setActivePhase] = useState(1);
   const activeData = roadmapData.find(p => p.phase === activePhase) || roadmapData[0];
+  const sectionRef = useScrollReveal();
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
