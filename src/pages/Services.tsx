@@ -55,7 +55,7 @@ const Services = () => {
                 </div>
                 
                 {/* Title */}
-                <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-cta transition-colors">
+                <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent-blue transition-colors">
                   {hub.title}
                 </h2>
                 
