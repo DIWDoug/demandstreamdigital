@@ -122,7 +122,7 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
                   />
                 </div>
                 <Button type="submit" className="w-full btn-cta group">
-                  Schedule Discovery Call
+                  Start a Conversation
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>
