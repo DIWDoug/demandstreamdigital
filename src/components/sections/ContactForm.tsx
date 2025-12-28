@@ -153,7 +153,7 @@ const ContactForm = () => {
 
 
                 <button type="submit" className="btn-cta w-full group">
-                  REQUEST PARTNER CONSULTATION
+                  Explore a Partnership
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
 
