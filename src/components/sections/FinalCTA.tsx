@@ -32,6 +32,9 @@ const FinalCTA = () => {
               (214) 307-2995
             </a>
           </div>
+          <p className="text-sm text-text-muted italic mt-6">
+            Short conversation to understand your agency, your clients, and whether partnership makes sense.
+          </p>
         </div>
       </div>
     </section>

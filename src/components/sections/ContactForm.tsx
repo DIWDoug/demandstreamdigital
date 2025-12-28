@@ -158,8 +158,8 @@ const ContactForm = () => {
                 </button>
 
                 {/* Trust signal below CTA */}
-                <p className="text-xs text-text-muted text-center mt-4">
-                  No contracts. No pressure. Just a conversation about your fulfillment needs.
+                <p className="text-sm text-text-muted italic text-center mt-4">
+                  Short conversation to understand your agency, your clients, and whether partnership makes sense.
                 </p>
 
                 {/* Partner Quote */}

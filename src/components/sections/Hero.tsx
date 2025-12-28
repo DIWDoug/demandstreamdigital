@@ -117,6 +117,9 @@ const Hero = () => {
               Start a Partner Conversation
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
+            <p className="text-sm text-text-muted italic mt-4">
+              Short conversation to understand your agency, your clients, and whether partnership makes sense.
+            </p>
           </div>
         </div>
       </div>
