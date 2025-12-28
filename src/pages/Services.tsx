@@ -56,9 +56,6 @@ const Services = () => {
       
       {/* FAQ */}
       <ServicesFAQ />
-      
-      {/* Final CTA */}
-      <ServicesFinalCTA />
 
       <Footer />
     </div>
