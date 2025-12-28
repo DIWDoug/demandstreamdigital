@@ -112,7 +112,7 @@ const RankingFactorsInfographic = () => {
             Local Search Ranking Factors
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            We track 187 ranking signals across every campaign. Here's what moves the needle for local visibility—organized by where your clients need to show up.*
+            We track 187 ranking signals across every campaign. Here's what moves the needle for local visibility, organized by where your clients need to show up.*
           </p>
         </div>
 
@@ -273,7 +273,7 @@ const RankingFactorsInfographic = () => {
               >
                 <p className="text-sm text-text-secondary leading-relaxed">
                   <span className="font-semibold text-foreground">Key insight:</span>{" "}
-                  {activeCategory === "local-pack" && "GBP category selection remains the single most controllable ranking factor. Choose your primary category carefully—it directly signals relevance to Google."}
+                  {activeCategory === "local-pack" && "GBP category selection remains the single most controllable ranking factor. Choose your primary category carefully. It directly signals relevance to Google."}
                   {activeCategory === "local-organic" && "Quality backlinks and dedicated service pages are essential. Generic sites with thin content struggle to compete in local organic results."}
                   {activeCategory === "ai-visibility" && "This is the newest frontier in local search. Citations are becoming 'the new link' as AI systems use them to validate business legitimacy."}
                   {activeCategory === "conversion" && "Rankings mean nothing without conversions. A strong review profile with recent activity is often the difference between a call and a bounce."}

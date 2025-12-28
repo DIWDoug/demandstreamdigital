@@ -105,7 +105,7 @@ const LocalMarketingEcosystem = () => {
             Local SEO Is One Piece of the <span className="text-cta">360° Ecosystem</span>
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            The most effective local marketing strategies aren't siloed—they're interconnected. 
+            The most effective local marketing strategies aren't siloed. They're interconnected. 
             When organic visibility, paid media, reputation, and email work together, results compound. 
             We help agencies deliver the complete picture.
           </p>
