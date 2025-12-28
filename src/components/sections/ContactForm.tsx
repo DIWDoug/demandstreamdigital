@@ -157,10 +157,6 @@ const ContactForm = () => {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
 
-                {/* Trust signal below CTA */}
-                <p className="text-sm text-text-muted italic text-center mt-4">
-                  Short conversation to understand your agency, your clients, and whether partnership makes sense.
-                </p>
 
                 {/* Partner Quote */}
                 <div className="mt-8 pt-6 border-t border-border">
