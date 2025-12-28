@@ -95,26 +95,6 @@ const ServicesFAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
-
-          {/* Internal linking for SEO */}
-          <div className="mt-12 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-            <p className="text-sm text-gray-600 mb-4">
-              <strong className="text-gray-900">Explore our white label inbound marketing services:</strong>
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/services/local-seo" className="text-sm text-cta hover:underline">Local SEO</Link>
-              <span className="text-gray-300">•</span>
-              <Link to="/services/google-maps" className="text-sm text-cta hover:underline">Google Maps</Link>
-              <span className="text-gray-300">•</span>
-              <Link to="/services/paid-media" className="text-sm text-cta hover:underline">Paid Media</Link>
-              <span className="text-gray-300">•</span>
-              <Link to="/services/email-marketing" className="text-sm text-cta hover:underline">Email Marketing</Link>
-              <span className="text-gray-300">•</span>
-              <Link to="/services/authority" className="text-sm text-cta hover:underline">Authority Building</Link>
-              <span className="text-gray-300">•</span>
-              <Link to="/services/reporting" className="text-sm text-cta hover:underline">Reporting</Link>
-            </div>
-          </div>
         </div>
       </div>
     </section>
