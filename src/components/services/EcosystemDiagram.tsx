@@ -54,7 +54,9 @@ const EcosystemDiagram = () => {
   const [activeArea, setActiveArea] = useState(systemAreas[0]);
 
   return (
-    <section className="py-20 lg:py-28 bg-[#f8f7f4]">
+    <section className="py-20 lg:py-28 section-light relative">
+      {/* Gradient transition from dark section */}
+      <div className="section-divider absolute top-0" />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
