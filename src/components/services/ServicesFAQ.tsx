@@ -9,36 +9,44 @@ import { Link } from "react-router-dom";
 
 const faqs = [
   {
-    question: "What is white label inbound marketing?",
-    answer: "White label inbound marketing is when an agency outsources the execution of digital marketing services—like SEO, paid media, email marketing, and content—to a fulfillment partner who delivers the work under the agency's brand. The agency maintains the client relationship while the fulfillment partner handles strategy and execution."
+    question: "What is white label inbound marketing and how does it work?",
+    answer: "White label inbound marketing is a partnership model where agencies outsource digital marketing execution to a fulfillment partner who delivers all work under the agency's brand. The agency owns the client relationship and strategic direction. The fulfillment partner handles day-to-day execution—SEO, paid media, email marketing, content, reporting—invisibly. The end client never knows a partner is involved."
   },
   {
-    question: "What services are included in your white label inbound marketing?",
-    answer: "Our white label inbound marketing includes six core service areas: Local SEO (on-page, technical, content, links), Google Maps optimization, paid media (Google Ads and Meta ads), email marketing and automation, authority building (digital PR, citations, reviews), and comprehensive reporting. Each service can be engaged individually or as part of a coordinated system."
+    question: "Why do agencies use white label digital marketing?",
+    answer: "Agencies use white label digital marketing to expand service offerings without hiring specialists, maintain quality through documented processes, and scale accounts without proportional overhead increases. It eliminates recruitment costs, training time, and management burden while providing immediate access to specialized expertise across multiple marketing disciplines."
   },
   {
-    question: "Can we start with a single service before committing to full inbound marketing?",
-    answer: "Yes. Many agency partners begin with a single service—often Local SEO or Google Ads—to establish trust and working rhythm. Standalone services are scoped intentionally and executed with the same standards as full white label inbound marketing partnerships."
+    question: "How does white labeling help an agency scale?",
+    answer: "White labeling removes the constraint of internal capacity. Agencies can accept new clients and service lines immediately without hiring delays. Fixed overhead stays controlled while revenue grows. This model also reduces risk—if client volume fluctuates, you're not carrying underutilized staff."
   },
   {
-    question: "How does your white label fulfillment pricing work?",
-    answer: "We price based on scope and hours, not rigid packages. A typical full-service white label inbound marketing engagement runs $2,000-$5,000/month depending on the number of channels activated and client complexity. We operate at approximately $50-60/hour for execution."
+    question: "What is the difference between white label and outsourcing?",
+    answer: "Traditional outsourcing often means fragmented freelancers or offshore teams handling isolated tasks. White label fulfillment is a complete system: strategy, execution, reporting, and ongoing optimization across all channels—delivered as a coordinated service under your brand with consistent standards and accountability."
   },
   {
-    question: "How do scope changes work mid-campaign?",
-    answer: "Scope is reviewed during monthly planning. Mid-cycle changes are not introduced without proper planning. This protects execution quality and prevents reactive resourcing decisions that compromise results."
+    question: "How do I ensure the quality of white label SEO and marketing services?",
+    answer: "Quality assurance comes from documented processes, transparent reporting, and clear communication rhythms. We provide detailed work logs, monthly performance reviews, and defined quality standards for every deliverable. You maintain oversight and approval authority. Our reputation depends on your client results."
   },
   {
-    question: "Are you a staffing company or a white label execution partner?",
-    answer: "We are a white label execution partner, not a staffing agency. We do not place people or rent headcount. We own fulfillment end-to-end with documented standards, proven systems, and accountability for results."
+    question: "Who communicates with the end client in a white label model?",
+    answer: "You do. The agency maintains all client communication. We operate behind the scenes, providing you with reports, strategy recommendations, and execution updates that you present under your brand. Some partners prefer we join calls silently or draft responses for them to send—we adapt to your preference."
   },
   {
-    question: "What makes your white label inbound marketing different?",
-    answer: "We execute inbound marketing as a coordinated system, not siloed services. Visibility, authority, paid media, conversion infrastructure, measurement, and retention all work together. This systems approach delivers better results than disconnected tactics."
+    question: "Can I rebrand reports and dashboards as my own?",
+    answer: "Yes. All deliverables—reports, strategy documents, audits, dashboards—are designed to be white labeled. We remove our branding and structure everything for you to present directly to clients. Many partners add their logo and customize the presentation layer."
   },
   {
-    question: "Do you require long-term contracts for white label partnerships?",
-    answer: "We operate on rolling agreements with a defined 30-day notice period. This supports proper planning and execution stability—designed for healthy partnerships, not lock-ins. Most partners stay for years because the work performs."
+    question: "How much does white label digital marketing cost?",
+    answer: "A typical full-service white label inbound marketing engagement runs $2,000-$5,000/month depending on the number of channels activated and client complexity. Single-service engagements start lower. We price based on scope and hours at approximately $50-60/hour for execution—allowing you healthy margin on standard agency rates."
+  },
+  {
+    question: "How do agencies price white label services for profit?",
+    answer: "Most agency partners apply a 40-60% markup on our rates. If we charge $3,000/month for fulfillment, you might bill your client $5,000-$6,000. Your margin covers client management, strategic oversight, and relationship development. The math works because you're not carrying full-time specialist salaries."
+  },
+  {
+    question: "Is white label marketing ethical for clients?",
+    answer: "Yes. Agencies routinely use specialized partners, contractors, and vendors to deliver services—it's standard practice. What matters is results and accountability. Your client hired you for outcomes, not to verify who executes each task. Transparency with your team is recommended; disclosure to clients is your choice."
   }
 ];
 
