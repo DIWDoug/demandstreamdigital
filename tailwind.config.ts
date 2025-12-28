@@ -84,7 +84,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Lora', 'Georgia', 'serif'],
-        handwriting: ['"Dancing Script"', 'cursive'],
+        handwriting: ['"Patrick Hand"', 'cursive'],
       },
       borderRadius: {
         lg: "var(--radius)",
