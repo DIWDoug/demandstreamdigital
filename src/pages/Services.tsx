@@ -8,6 +8,7 @@ import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 import WhyChooseUs from "@/components/services/WhyChooseUs";
 import WhyHireUs from "@/components/services/WhyHireUs";
 import BenefitsOfPartnering from "@/components/services/BenefitsOfPartnering";
+import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
 import ServicesExpertise from "@/components/services/ServicesExpertise";
@@ -54,6 +55,9 @@ const Services = () => {
       
       {/* Benefits of Partnering - Numbered List */}
       <BenefitsOfPartnering />
+      
+      {/* Why Agencies Actually Use This - From Homepage */}
+      <WhyPartnerWithUs />
       
       <SectionDivider />
       
