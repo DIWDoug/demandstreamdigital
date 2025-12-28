@@ -164,7 +164,7 @@ const SixMonthRoadmap = () => {
             Example Engagement
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
-            6-Month Roadmap
+            White Label Marketing: 6-Month Roadmap
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
             Heavy lifting upfront, then ongoing optimization.{" "}

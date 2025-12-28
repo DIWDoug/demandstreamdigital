@@ -12,7 +12,7 @@ const ServicesFinalCTA = () => {
             Ready to Start?
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5">
-            Looking for a Fulfillment Partner,<br className="hidden md:block" /> Not Just a Vendor?
+            Partner With a White Label Marketing Team,<br className="hidden md:block" /> Not Just a Vendor
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
             If your agency values clarity, consistency, and disciplined execution, 
