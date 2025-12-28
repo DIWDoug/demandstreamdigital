@@ -1,6 +1,8 @@
 import { ShieldCheck, Eye, Rocket, Calculator, Zap, MessageCircle, ArrowRight } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const WhyPartnerWithUs = () => {
+  const sectionRef = useScrollReveal();
   const allBenefits = [
     {
       icon: ShieldCheck,
@@ -35,7 +37,7 @@ const WhyPartnerWithUs = () => {
   ];
 
   return (
-    <section className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative">
+    <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative reveal-section">
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">

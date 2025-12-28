@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { SpokeDetail } from "@/data/services";
+import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 interface ServiceSpokesGridProps {
   hubSlug: string;
@@ -9,8 +10,10 @@ interface ServiceSpokesGridProps {
 }
 
 const ServiceSpokesGrid = ({ hubSlug, hubTitle, spokes }: ServiceSpokesGridProps) => {
+  const sectionRef = useScrollReveal();
+  
   return (
-    <section id="services" className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section ref={sectionRef} id="services" className="py-20 lg:py-28 section-light relative overflow-hidden reveal-section">
       {/* Subtle background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-[hsl(224,60%,55%)]/10 blur-3xl" />
