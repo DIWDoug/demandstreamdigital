@@ -77,7 +77,7 @@ const ServicesFAQ = () => {
       </Helmet>
       
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
               Common Questions
@@ -87,22 +87,23 @@ const ServicesFAQ = () => {
             </h2>
           </div>
           
-          <Accordion type="single" collapsible className="space-y-3">
+          <div className="grid md:grid-cols-2 gap-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`faq-${index}`}
-                className="border border-gray-200 rounded-xl px-6 bg-white data-[state=open]:border-cta/30 shadow-sm"
-              >
-                <AccordionTrigger className="text-left text-gray-900 hover:no-underline py-5 text-base font-medium">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600 text-sm pb-5 leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+              <Accordion key={index} type="single" collapsible>
+                <AccordionItem 
+                  value={`faq-${index}`}
+                  className="border border-gray-200 rounded-xl px-6 bg-white data-[state=open]:border-cta/30 shadow-sm"
+                >
+                  <AccordionTrigger className="text-left text-gray-900 hover:no-underline py-5 text-base font-medium">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-sm pb-5 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             ))}
-          </Accordion>
+          </div>
         </div>
       </div>
     </section>
