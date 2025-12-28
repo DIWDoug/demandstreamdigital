@@ -3,7 +3,7 @@ import SubtleOrbs from "@/components/SubtleOrbs";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
+    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-gradient-radial from-accent-blue/10 to-transparent blur-3xl" />

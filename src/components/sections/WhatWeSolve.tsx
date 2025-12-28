@@ -126,7 +126,7 @@ const WhatWeSolve = () => {
 
   return (
     <TooltipProvider>
-      <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-surface-dark relative">
+      <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-background relative">
         {/* Section divider from ContinuingEducation */}
         <div className="absolute top-0 left-0 right-0">
           <div className="section-divider" />
