@@ -34,7 +34,7 @@ const Testimonials = () => {
   const sectionRef = useScrollReveal();
   
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 bg-background reveal-section">
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-surface-dark reveal-section">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
