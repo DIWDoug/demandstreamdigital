@@ -35,7 +35,7 @@ const SystemDiagram = () => {
 
             {/* Surrounding Nodes */}
             {nodes.map((node, index) => {
-              const radius = 42; // percentage from center
+              const radius = 42;
               const angleRad = (node.angle * Math.PI) / 180;
               const x = 50 + radius * Math.cos(angleRad);
               const y = 50 + radius * Math.sin(angleRad);
@@ -62,7 +62,7 @@ const SystemDiagram = () => {
               );
             })}
 
-            {/* Connection Lines (subtle) */}
+            {/* Connection Lines */}
             <svg 
               className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-1000 ${isVisible ? 'opacity-30' : 'opacity-0'}`}
               viewBox="0 0 100 100"
@@ -92,8 +92,8 @@ const SystemDiagram = () => {
 
           {/* Caption */}
           <p className="text-text-muted text-sm text-center max-w-2xl mx-auto leading-relaxed">
-            These execution areas are activated and prioritized based on scope and planning cadence. 
-            They are not bundled or deployed universally.
+            These execution areas can be engaged individually or as part of a coordinated system, 
+            depending on scope and planning cadence. They are not bundled or deployed universally.
           </p>
         </div>
       </div>

@@ -8,10 +8,11 @@ const ServicesFinalCTA = () => {
       <div className="container mx-auto px-6 lg:px-8 relative">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Ready to Scope a Partnership?
+            Looking for a Fulfillment Partner, Not Just a Vendor?
           </h2>
           <p className="text-text-secondary mb-8">
-            Tell us about your agency and your clients. We'll determine fit and define scope before any work begins.
+            If your agency values clarity, consistency, and disciplined execution, let's start a 
+            conversation and see if a partnership makes sense.
           </p>
           <a 
             href="#contact" 

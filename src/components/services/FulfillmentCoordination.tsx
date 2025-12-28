@@ -4,17 +4,17 @@ const blocks = [
   {
     icon: Compass,
     title: "Scope Before Work",
-    description: "All execution is defined before it begins. We don't absorb requests informally or expand scope by default."
+    description: "Every engagement begins with defined scope. What gets executed, how it's prioritized, and how success is measured are established before work starts, regardless of whether the engagement is standalone or multi-service."
   },
   {
     icon: Clock,
     title: "Cadence Over Chaos",
-    description: "Work follows a defined monthly rhythm. Changes are reviewed and applied in the next planning window, not reactively."
+    description: "Fulfillment runs on a monthly planning cycle. We don't pivot mid-stream based on short-term noise. Adjustments are reviewed deliberately, not reactively."
   },
   {
     icon: CheckSquare,
     title: "Standards Over Checklists",
-    description: "Fulfillment quality is maintained through systems and accountability, not task tracking or micromanagement."
+    description: "Execution is guided by judgment and standards, not box-checking. The goal is durable performance and client retention, not activity for activity's sake."
   }
 ];
 
@@ -33,7 +33,7 @@ const FulfillmentCoordination = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-surface-elevated border border-border/50 mb-4">
                   <block.icon className="h-5 w-5 text-text-muted" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
                   {block.title}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed">

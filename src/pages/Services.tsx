@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import AntiPackageBlock from "@/components/services/AntiPackageBlock";
+import StandaloneServicesBlock from "@/components/services/StandaloneServicesBlock";
 import SystemDiagram from "@/components/services/SystemDiagram";
 import FulfillmentCoordination from "@/components/services/FulfillmentCoordination";
 import CoreServiceAreas from "@/components/services/CoreServiceAreas";
@@ -30,7 +31,10 @@ const Services = () => {
       {/* 2. Anti-Package Framing Block */}
       <AntiPackageBlock />
       
-      {/* 3. System Overview Diagram */}
+      {/* 3. Standalone Services Framing */}
+      <StandaloneServicesBlock />
+      
+      {/* 4. System Overview Diagram */}
       <SystemDiagram />
       
       {/* 4. How Fulfillment Is Coordinated */}

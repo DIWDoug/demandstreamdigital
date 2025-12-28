@@ -10,10 +10,10 @@ const NotStaffingStatement = () => {
           </div>
           <div>
             <h4 className="text-foreground font-medium mb-1">
-              We are not a staffing company.
+              We are not a staffing company disguised as an agency.
             </h4>
             <p className="text-text-secondary text-sm">
-              We deliver execution with standards and accountability. We don't place people—we own fulfillment.
+              We own execution, standards, and accountability for the work we deliver.
             </p>
           </div>
         </div>
