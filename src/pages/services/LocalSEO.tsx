@@ -6,7 +6,6 @@ import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhyItMatters from "@/components/services/WhyItMatters";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
 import AlternatingContent from "@/components/services/AlternatingContent";
@@ -16,7 +15,6 @@ import { getHubBySlug } from "@/data/services";
 
 // Images for alternating content
 import localSearchImage from "@/assets/local-search-landscape.jpg";
-import rankingFactorsImage from "@/assets/ranking-factors-analysis.jpg";
 import aiVisibilityImage from "@/assets/ai-search-visibility.jpg";
 
 const LocalSEO = () => {
@@ -31,7 +29,7 @@ const LocalSEO = () => {
   // More persuasive hero description emphasizing 360° connected approach
   const heroDescription = "Local SEO is one piece of a 360° local marketing ecosystem—and every piece is connected. When organic rankings, Google Maps visibility, review reputation, and paid media work together, the results compound. We help agencies deliver the organic foundation that makes everything else more effective. This is white-label SEO fulfillment built for agencies who understand that sustainable growth requires integration, not isolation.";
 
-  // Expanded content for alternating sections
+  // Streamlined alternating content (2 blocks)
   const localSeoContent = [
     {
       eyebrow: "The Local Search Landscape",
@@ -45,19 +43,6 @@ const LocalSEO = () => {
       ],
       imageSrc: localSearchImage,
       imageAlt: "Person searching for local businesses on smartphone with map pins visible"
-    },
-    {
-      eyebrow: "Ranking Factors That Matter",
-      headline: "What Actually Drives Local Rankings in 2026",
-      description: "According to the latest research from Whitespark and 47 leading local SEO experts, the top ranking factors have shifted. Primary GBP category selection remains crucial, but behavioral signals and AI search visibility are now critical components of any comprehensive local strategy. We track 187 ranking factors across every campaign to ensure your clients stay ahead of algorithm changes.",
-      bullets: [
-        "Google Business Profile optimization remains the foundation of local visibility",
-        "Review velocity and sentiment directly impact local pack positions",
-        "On-page signals including NAP consistency and local schema markup",
-        "Link signals from locally-relevant, authoritative sources"
-      ],
-      imageSrc: rankingFactorsImage,
-      imageAlt: "Marketing team analyzing SEO analytics dashboard with charts and data visualizations"
     },
     {
       eyebrow: "Beyond Traditional SEO",
@@ -91,10 +76,6 @@ const LocalSEO = () => {
         />
       </div>
       <LocalSEOStats />
-      <WhyItMatters 
-        eyebrow="Why Local SEO Matters"
-        {...hub.whyItMatters} 
-      />
       <AlternatingContent blocks={localSeoContent} />
       <RankingFactorsInfographic />
       <LocalSEORoadmap />
