@@ -1,4 +1,4 @@
-import { Target, Shield, Layers, RefreshCcw } from "lucide-react";
+import { Target, Shield, Layers, RefreshCcw, AlertCircle } from "lucide-react";
 
 const pillars = [
   {
@@ -20,6 +20,11 @@ const pillars = [
     icon: RefreshCcw,
     title: "Built to Adapt Without Resetting",
     body: "Markets change. Our structure allows execution to adjust intentionally over time without restarting or blowing up scope."
+  },
+  {
+    icon: AlertCircle,
+    title: "When Things Go Wrong, We Own It",
+    body: "Issues surface through us, not around us. We flag problems early, take responsibility for execution gaps, and provide clear paths to resolution—so you're never blindsided in front of a client."
   }
 ];
 
