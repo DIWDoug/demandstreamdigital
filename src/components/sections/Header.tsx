@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
@@ -31,29 +34,40 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Helper to handle anchor links - either scroll on home page or navigate to home + anchor
+  const getAnchorHref = (anchor: string) => {
+    return isHomePage ? anchor : `/${anchor}`;
+  };
+
   const serviceCategories = [
     {
       title: "LOCAL SEO",
+      href: "/services/local-seo",
       items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
     },
     {
       title: "GOOGLE MAPS",
+      href: "/services/google-maps",
       items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
     },
     {
       title: "PAID MEDIA",
+      href: "/services/paid-media",
       items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
     },
     {
       title: "EMAIL MARKETING",
+      href: "/services/email-marketing",
       items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
     },
     {
       title: "AUTHORITY",
+      href: "/services/authority",
       items: ["PR Placements", "Local Citations", "Industry Directories", "Brand Mentions", "Reputation Signals", "Trust Building"]
     },
     {
       title: "REPORTING",
+      href: "/services/reporting",
       items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
     }
   ];
@@ -78,7 +92,7 @@ const Header = () => {
           {/* Logo & Nav together */}
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <a href="/" className="flex items-center overflow-hidden">
+            <Link to="/" className="flex items-center overflow-hidden">
               <img 
                 src={logo} 
                 alt="Dialed-In Web" 
@@ -88,7 +102,7 @@ const Header = () => {
                     : "h-5 md:h-6"
                 }`}
               />
-            </a>
+            </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-0">
@@ -104,7 +118,7 @@ const Header = () => {
               {navLinks.map((link, index) => (
                 <a
                   key={index}
-                  href={link.href}
+                  href={getAnchorHref(link.href)}
                   className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
                 >
                   {link.label}
@@ -131,7 +145,7 @@ const Header = () => {
                       Every local market is different. We build custom scopes based on city size, competition, industry vertical, and your client's actual goals. Let's chat about what you need.
                     </p>
                     <a 
-                      href="#contact" 
+                      href={getAnchorHref("#contact")} 
                       className="inline-block mt-4 text-xs font-medium text-cta hover:text-cta-glow transition-colors"
                       onClick={() => setIsPricingOpen(false)}
                     >
@@ -154,7 +168,7 @@ const Header = () => {
                 (214) 307-2995
               </span>
             </a>
-            <a href="#contact" className="btn-cta text-sm py-2.5 px-6">
+            <a href={getAnchorHref("#contact")} className="btn-cta text-sm py-2.5 px-6">
               Schedule a Discovery Call
             </a>
             <button 
@@ -188,19 +202,23 @@ const Header = () => {
                     className="opacity-0 animate-fade-in"
                     style={{ animationDelay: `${index * 75}ms`, animationFillMode: 'forwards' }}
                   >
-                    <h4 className="text-[11px] font-semibold text-foreground uppercase tracking-widest mb-4">
+                    <Link 
+                      to={category.href}
+                      className="text-[11px] font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-cta transition-colors"
+                      onClick={() => setIsMegaMenuOpen(false)}
+                    >
                       {category.title}
-                    </h4>
+                    </Link>
                     <ul className="space-y-2">
                       {category.items.map((item, itemIndex) => (
                         <li key={itemIndex}>
-                          <a 
-                            href="#services"
+                          <Link 
+                            to={category.href}
                             className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
                             {item}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -227,14 +245,21 @@ const Header = () => {
                 <div className="pl-4 pb-4 grid grid-cols-2 gap-4">
                   {serviceCategories.map((category, index) => (
                     <div key={index}>
-                      <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-2">
+                      <Link 
+                        to={category.href}
+                        className="text-xs font-semibold text-foreground uppercase tracking-widest mb-2 block hover:text-cta transition-colors"
+                        onClick={() => {
+                          setIsMegaMenuOpen(false);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
                         {category.title}
-                      </h4>
+                      </Link>
                       <ul className="space-y-1">
                         {category.items.slice(0, 3).map((item, itemIndex) => (
                           <li key={itemIndex}>
-                            <a 
-                              href="#services"
+                            <Link 
+                              to={category.href}
                               className="text-xs text-text-secondary hover:text-foreground transition-colors"
                               onClick={() => {
                                 setIsMegaMenuOpen(false);
@@ -242,7 +267,7 @@ const Header = () => {
                               }}
                             >
                               {item}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -254,7 +279,7 @@ const Header = () => {
               {navLinks.map((link, index) => (
                 <a
                   key={index}
-                  href={link.href}
+                  href={getAnchorHref(link.href)}
                   className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -270,7 +295,7 @@ const Header = () => {
                   (214) 307-2995
                 </a>
                 <a 
-                  href="#contact" 
+                  href={getAnchorHref("#contact")} 
                   className="btn-cta text-center mt-3 w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
