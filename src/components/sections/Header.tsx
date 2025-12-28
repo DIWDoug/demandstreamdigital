@@ -42,32 +42,32 @@ const Header = () => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
-      href: "/services/local-seo",
+      href: "/inbound-marketing-services/local-seo",
       items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
     },
     {
       title: "GOOGLE MAPS",
-      href: "/services/google-maps",
+      href: "/inbound-marketing-services/google-maps",
       items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
     },
     {
       title: "PAID MEDIA",
-      href: "/services/paid-media",
+      href: "/inbound-marketing-services/paid-media",
       items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
     },
     {
       title: "EMAIL MARKETING",
-      href: "/services/email-marketing",
+      href: "/inbound-marketing-services/email-marketing",
       items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
     },
     {
       title: "AUTHORITY",
-      href: "/services/authority",
+      href: "/inbound-marketing-services/authority",
       items: ["PR Placements", "Local Citations", "Industry Directories", "Brand Mentions", "Reputation Signals", "Trust Building"]
     },
     {
       title: "REPORTING",
-      href: "/services/reporting",
+      href: "/inbound-marketing-services/reporting",
       items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
     }
   ];

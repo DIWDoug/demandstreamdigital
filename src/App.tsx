@@ -34,15 +34,15 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/inbound-marketing-services" element={<Services />} />
             
             {/* Service Hub Pages */}
-            <Route path="/services/local-seo" element={<LocalSEO />} />
-            <Route path="/services/google-maps" element={<GoogleMaps />} />
-            <Route path="/services/paid-media" element={<PaidMedia />} />
-            <Route path="/services/email-marketing" element={<EmailMarketing />} />
-            <Route path="/services/authority" element={<Authority />} />
-            <Route path="/services/reporting" element={<Reporting />} />
+            <Route path="/inbound-marketing-services/local-seo" element={<LocalSEO />} />
+            <Route path="/inbound-marketing-services/google-maps" element={<GoogleMaps />} />
+            <Route path="/inbound-marketing-services/paid-media" element={<PaidMedia />} />
+            <Route path="/inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
+            <Route path="/inbound-marketing-services/authority" element={<Authority />} />
+            <Route path="/inbound-marketing-services/reporting" element={<Reporting />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

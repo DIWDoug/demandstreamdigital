@@ -36,7 +36,7 @@ const ServiceSpokesGrid = ({ hubSlug, hubTitle, spokes }: ServiceSpokesGridProps
           {spokes.map((spoke, index) => (
             <Link
               key={index}
-              to={`/services/${hubSlug}/${spoke.slug}`}
+              to={`/inbound-marketing-services/${hubSlug}/${spoke.slug}`}
               className="group p-6 rounded-xl bg-white border border-gray-200 hover:border-[hsl(224,60%,55%)]/30 hover:translate-y-[-2px] transition-all duration-300 shadow-sm hover:shadow-lg"
             >
               <div className="flex items-start justify-between mb-4">

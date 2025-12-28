@@ -21,7 +21,7 @@ const positions = [
 
 const GrowthEngineDiagram = () => {
   return (
-    <div className="relative w-full aspect-square max-w-xs lg:max-w-sm">
+    <div className="relative w-full aspect-square max-w-[280px] sm:max-w-xs lg:max-w-sm mx-auto">
       {/* Outer glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-cta/20 via-accent-blue/10 to-cta/20 rounded-full blur-2xl" />
       

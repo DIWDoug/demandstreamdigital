@@ -175,7 +175,7 @@ const ServicesExpertise = () => {
                   
                   {/* Internal link to service page */}
                   <Link 
-                    to={`/services/${hub.slug}`}
+                    to={`/inbound-marketing-services/${hub.slug}`}
                     className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-accent-blue hover:underline"
                     onClick={(e) => e.stopPropagation()}
                   >

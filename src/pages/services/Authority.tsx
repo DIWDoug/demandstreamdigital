@@ -18,7 +18,7 @@ const Authority = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/services" },
+    { label: "Services", href: "/inbound-marketing-services" },
     { label: hub.title }
   ];
 
