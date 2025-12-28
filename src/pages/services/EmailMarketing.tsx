@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import Breadcrumbs from "@/components/services/Breadcrumbs";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import StatsBar from "@/components/services/StatsBar";
 import WhyItMatters from "@/components/services/WhyItMatters";
@@ -19,6 +20,11 @@ const EmailMarketing = () => {
   const hub = getHubBySlug("email-marketing");
   if (!hub) return null;
 
+  const breadcrumbItems = [
+    { label: "Services", href: "/services" },
+    { label: hub.title }
+  ];
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -28,6 +34,9 @@ const EmailMarketing = () => {
       </Helmet>
       
       <Header />
+      <div className="pt-16">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
       <ServiceHubHero icon={hub.icon} title={hub.title} description={hub.heroDescription} />
       <StatsBar />
       <WhyItMatters {...hub.whyItMatters} />

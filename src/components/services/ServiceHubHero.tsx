@@ -9,7 +9,7 @@ interface ServiceHubHeroProps {
 
 const ServiceHubHero = ({ icon: Icon, title, description }: ServiceHubHeroProps) => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <section className="relative pt-16 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-background to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cta/5 rounded-full blur-3xl" />
