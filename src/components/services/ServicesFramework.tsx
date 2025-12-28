@@ -1,4 +1,6 @@
 import { Target, Shield, Layers, RefreshCcw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const pillars = [
   {
@@ -81,14 +83,11 @@ const ServicesFramework = () => {
             </div>
           </div>
 
-          {/* Closing Line */}
-          <div className="mt-16 pt-10 border-t border-border/20">
-            <p className="text-center text-text-secondary text-lg max-w-2xl mx-auto">
-              This gives agencies{" "}
-              <span className="text-foreground font-medium">flexibility</span>{" "}
-              without sacrificing{" "}
-              <span className="text-foreground font-medium">control</span>.
-            </p>
+          {/* CTA */}
+          <div className="mt-16 pt-10 border-t border-border/20 text-center">
+            <Button asChild size="lg" className="bg-accent-blue hover:bg-accent-blue/90">
+              <Link to="#contact">Start a Conversation</Link>
+            </Button>
           </div>
         </div>
       </div>
