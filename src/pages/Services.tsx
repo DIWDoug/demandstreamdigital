@@ -28,11 +28,6 @@ const Services = () => {
       {/* Hero */}
       <ServicesHero />
       
-      {/* Divider: Hero to White Label */}
-      <div className="relative">
-        <WaveDivider position="bottom" />
-      </div>
-      
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
