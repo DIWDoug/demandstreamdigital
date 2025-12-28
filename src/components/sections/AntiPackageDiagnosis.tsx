@@ -15,7 +15,7 @@ const AntiPackageDiagnosis = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-elevated">
+    <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -33,7 +33,7 @@ const AntiPackageDiagnosis = () => {
             {diagnosticCards.map((card, index) => (
               <div 
                 key={index}
-                className="bg-background/50 rounded-xl p-6 lg:p-8 border border-border/30 shadow-sm"
+                className="bg-surface-elevated/50 rounded-xl p-6 lg:p-8 border border-border/30 shadow-sm"
               >
                 <strong className="block text-lg font-semibold text-foreground mb-3">
                   {card.title}
