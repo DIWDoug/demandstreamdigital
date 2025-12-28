@@ -5,6 +5,9 @@ import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
+import WhyChooseUs from "@/components/services/WhyChooseUs";
+import WhyHireUs from "@/components/services/WhyHireUs";
+import BenefitsOfPartnering from "@/components/services/BenefitsOfPartnering";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
 import ServicesExpertise from "@/components/services/ServicesExpertise";
@@ -35,21 +38,32 @@ const Services = () => {
       
       <SectionDivider />
       
-      {/* What is White Label Inbound Marketing? - Compressed */}
+      {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
-      {/* Service Areas - Static Grid */}
+      {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
+      
+      {/* Why Choose a White Label Partner? */}
+      <WhyChooseUs />
+      
+      <SectionDivider />
+      
+      {/* Why Hire Us? - 6 Reasons Grid */}
+      <WhyHireUs />
+      
+      {/* Benefits of Partnering - Numbered List */}
+      <BenefitsOfPartnering />
       
       <SectionDivider />
       
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
       
-      {/* Testimonials - Moved higher per redline */}
+      {/* Testimonials */}
       <ServicesTestimonials />
       
-      {/* 6-Month Roadmap - Simplified to outcomes */}
+      {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
       
       <SectionDivider />
