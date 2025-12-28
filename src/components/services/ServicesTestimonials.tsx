@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight, Phone } from "lucide-react";
 
 const testimonials = [
   {
@@ -76,6 +76,29 @@ const ServicesTestimonials = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Integrated CTA */}
+          <div className="mt-14 pt-10 border-t border-border/20">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <a 
+                href="#contact" 
+                className="btn-cta group flex items-center gap-2"
+              >
+                Start a Conversation
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              
+              <span className="text-sm font-medium text-text-muted">or</span>
+              
+              <a 
+                href="tel:2143072995"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle hover:bg-surface-elevated transition-colors font-medium text-sm"
+              >
+                <Phone className="h-4 w-4" />
+                (214) 307-2995
+              </a>
+            </div>
           </div>
         </div>
       </div>
