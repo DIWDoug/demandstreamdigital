@@ -8,7 +8,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
   const isLight = variant === "light";
   
   return (
-    <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-surface-dark"}`}>
+    <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-background"}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           {/* Primary CTA Button */}
