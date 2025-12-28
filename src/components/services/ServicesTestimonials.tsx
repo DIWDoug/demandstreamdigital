@@ -34,10 +34,10 @@ const ServicesTestimonials = () => {
               Partner Feedback
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              The Risk They Were <span className="text-accent-blue">Worried About</span>
+              What Agency Partners <span className="text-accent-blue">Say</span>
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Rigid packages. Blown margins. Inconsistent execution. These agencies came in with real concerns—and left with systems that held up.
+              Real feedback from agencies who've made the switch to system-driven fulfillment.
             </p>
           </div>
 
