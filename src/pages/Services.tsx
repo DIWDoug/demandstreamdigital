@@ -34,11 +34,11 @@ const Services = () => {
       {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
       
+      {/* Testimonials - Social proof early */}
+      <ServicesTestimonials />
+      
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
-      
-      {/* Testimonials */}
-      <ServicesTestimonials />
       
       {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
