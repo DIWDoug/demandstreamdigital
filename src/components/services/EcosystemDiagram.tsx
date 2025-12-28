@@ -76,8 +76,11 @@ const EcosystemDiagram = () => {
                 <div className="p-3 rounded-xl bg-cta/10 text-cta w-fit mb-4 group-hover:bg-cta group-hover:text-white transition-colors duration-300">
                   <area.icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-gray-900 font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
+                <p className="text-cta text-xs font-medium uppercase tracking-wider mb-2">
                   {area.label}
+                </p>
+                <h3 className="text-gray-900 font-semibold text-lg mb-3 group-hover:text-cta transition-colors leading-snug">
+                  {area.output}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-1">
                   {area.description}
