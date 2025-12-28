@@ -33,11 +33,8 @@ const Services = () => {
         <hr className="border-t border-border/30" />
       </div>
       
-      {/* What is White Label Inbound Marketing? */}
+      {/* What is Inbound Marketing? */}
       <WhiteLabelExplainer />
-      
-      {/* Service Areas - Rich Descriptions Grid */}
-      <EcosystemDiagram />
       
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
