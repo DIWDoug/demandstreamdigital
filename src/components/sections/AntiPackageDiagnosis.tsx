@@ -20,8 +20,11 @@ const AntiPackageDiagnosis = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-background relative">
+      {/* Gradient transition from hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background/0 via-background/50 to-background pointer-events-none" />
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <h2 className="text-3xl md:text-4xl font-sans font-semibold text-foreground text-center mb-6">
