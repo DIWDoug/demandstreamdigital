@@ -7,7 +7,7 @@ const testimonials = [
     role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "The last thing you want to worry about is, is your partner doing a good job? Are they reliable? Doug and his team just absolutely crushed it.",
+    quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
   },
