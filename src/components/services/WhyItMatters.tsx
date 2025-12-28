@@ -1,18 +1,25 @@
 import type { LucideIcon } from "lucide-react";
 
 interface WhyItMattersProps {
+  eyebrow?: string;
   headline: string;
   description: string;
   points: { icon: LucideIcon; title: string; description: string }[];
 }
 
-const WhyItMatters = ({ headline, description, points }: WhyItMattersProps) => {
+const WhyItMatters = ({ eyebrow = "Why It Matters", headline, description, points }: WhyItMattersProps) => {
   return (
     <section className="py-20 lg:py-28 section-light relative">
       <div className="section-divider absolute top-0" />
       <div className="container mx-auto px-6 lg:px-8">
+        {/* Header with eyebrow */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{headline}</h2>
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(76,42%,35%)] mb-4">
+            {eyebrow}
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+            {headline}
+          </h2>
           <p className="text-lg text-gray-600 leading-relaxed">{description}</p>
         </div>
         
@@ -20,7 +27,7 @@ const WhyItMatters = ({ headline, description, points }: WhyItMattersProps) => {
           {points.map((point, index) => (
             <div 
               key={index} 
-              className="text-center p-8 rounded-xl bg-gradient-to-br from-white to-[#F0F0ED] border border-gray-300/50"
+              className="text-center p-8 rounded-xl bg-gradient-to-br from-white to-[#F0F0ED] border border-gray-300/50 hover:shadow-lg transition-shadow duration-300"
               style={{ boxShadow: 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)' }}
             >
               <div className="inline-flex items-center justify-center p-4 rounded-xl bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 mb-5">
