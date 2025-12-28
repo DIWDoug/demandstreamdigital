@@ -265,7 +265,7 @@ const TopicalExpertise = () => {
                     <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
                       <a 
                         href="#contact" 
-                        className="text-sm font-medium text-foreground hover:text-cta transition-colors"
+                        className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
                         onClick={(e) => {
                           e.stopPropagation();
                           e.preventDefault();
@@ -281,11 +281,11 @@ const TopicalExpertise = () => {
                   ))}
                 </div>
 
-                {/* CTA within expanded card */}
+                {/* CTA within expanded card - Olive for action */}
                 <div className="mt-6 pt-4 border-t border-border">
                   <a 
                     href="#contact" 
-                    className="text-cta hover:text-cta-glow text-sm font-medium transition-colors"
+                    className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Discuss {hub.title} for your agency →

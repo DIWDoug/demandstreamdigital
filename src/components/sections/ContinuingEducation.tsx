@@ -57,7 +57,7 @@ const ContinuingEducation = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-sm text-cta uppercase tracking-widest mb-6 font-medium">
+          <p className="text-sm text-accent-blue uppercase tracking-widest mb-6 font-medium">
             Always Growing
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -72,8 +72,8 @@ const ContinuingEducation = () => {
           {/* What We're Studying - Scrolling */}
           <div className="p-8 rounded-2xl bg-surface-elevated/50 border border-border/50 backdrop-blur-sm overflow-hidden">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-xl bg-cta/10 border border-cta/20">
-                <BookOpen className="w-6 h-6 text-cta" />
+              <div className="p-3 rounded-xl bg-accent-blue/10 border border-accent-blue/20">
+                <BookOpen className="w-6 h-6 text-accent-blue" />
               </div>
               <h3 className="text-xl font-bold text-foreground">What We're Studying Now</h3>
             </div>
@@ -88,7 +88,7 @@ const ContinuingEducation = () => {
               <div className="animate-scroll-vertical">
                 {[...currentlyStudying, ...currentlyStudying].map((topic, index) => (
                   <div key={index} className="flex items-start gap-3 py-3">
-                    <div className="w-2 h-2 rounded-full bg-cta mt-2 shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-accent-blue mt-2 shrink-0" />
                     <span className="text-text-secondary text-sm">{topic}</span>
                   </div>
                 ))}
@@ -106,7 +106,7 @@ const ContinuingEducation = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {industryVoices.map((voice, index) => (
-                <div key={index} className="p-4 rounded-lg bg-surface-dark/50 border border-border/30 transition-all duration-300 hover:border-cta/40 hover:bg-surface-dark/80 hover:scale-[1.02] cursor-default">
+                <div key={index} className="p-4 rounded-lg bg-surface-dark/50 border border-border/30 transition-all duration-300 hover:border-accent-blue/40 hover:bg-surface-dark/80 hover:scale-[1.02] cursor-default">
                   <p className="font-semibold text-foreground text-sm">{voice.name}</p>
                   <p className="text-text-muted text-xs">{voice.focus}</p>
                 </div>
@@ -118,7 +118,7 @@ const ContinuingEducation = () => {
         {/* Bottom Statement */}
         <div className="max-w-3xl mx-auto text-center mt-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <GraduationCap className="w-5 h-5 text-cta" />
+            <GraduationCap className="w-5 h-5 text-accent-blue" />
             <span className="text-sm text-text-muted uppercase tracking-wider font-medium">Our Commitment</span>
           </div>
           <p className="text-text-secondary italic">
