@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "How much does white label digital marketing cost?",
-    answer: "A typical full-service white label inbound marketing engagement runs $2,000-$5,000/month depending on the number of channels activated and client complexity. Single-service engagements start lower. We price based on scope and hours at approximately $50-60/hour for execution—allowing you healthy margin on standard agency rates."
+    answer: "A typical full-service white label inbound marketing engagement runs $2,000-$5,000/month depending on the number of channels activated and client complexity. This includes 40-45 hours of execution per month. Single-service engagements start lower and scale with scope."
   },
   {
     question: "How do agencies price white label services for profit?",
