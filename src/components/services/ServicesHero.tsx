@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import GrowthEngineDiagram from "./GrowthEngineDiagram";
 
 const ServicesHero = () => {
   return (
@@ -32,20 +32,9 @@ const ServicesHero = () => {
             </a>
           </div>
 
-          {/* Right: Image */}
+          {/* Right: Growth Engine Diagram */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-64 h-64 lg:w-80 lg:h-80">
-              <div className="absolute inset-0 bg-gradient-to-br from-cta/20 to-accent-blue/20 rounded-2xl rotate-3" />
-              <img 
-                src={dougHeadshot}
-                alt="Doug Bryson - DialedIn Web founder"
-                className="relative w-full h-full object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-3 -right-3 bg-surface-elevated border border-border/50 rounded-lg px-4 py-2 shadow-lg">
-                <p className="text-xs text-text-muted">Founder</p>
-                <p className="text-sm font-semibold text-foreground">Doug Bryson</p>
-              </div>
-            </div>
+            <GrowthEngineDiagram />
           </div>
         </div>
       </div>
