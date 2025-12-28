@@ -43,13 +43,13 @@ const LocalSEO = () => {
       </div>
       <LocalSEOStats />
       <LocalMarketingEcosystem />
-      <MidPageCTA variant="dark" />
+      <MidPageCTA variant="light" />
       <RankingFactorsInfographic />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <MidPageCTA variant="light" />
       <LocalSEORoadmap />
       <Testimonials />
-      <MidPageCTA variant="dark" />
+      <MidPageCTA variant="light" />
       <FAQ />
       <ContactForm />
       <Footer />
