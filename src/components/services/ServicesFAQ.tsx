@@ -58,7 +58,10 @@ const faqSchema = {
 
 const ServicesFAQ = () => {
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark">
+    <section className="py-20 lg:py-28 section-light relative">
+      {/* Gradient transition from dark section */}
+      <div className="section-divider absolute top-0" />
+      
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -68,10 +71,10 @@ const ServicesFAQ = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
               Common Questions
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               White Label Inbound Marketing FAQ
             </h2>
           </div>
@@ -81,12 +84,12 @@ const ServicesFAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`faq-${index}`}
-                className="border border-border/40 rounded-xl px-6 bg-surface-elevated data-[state=open]:border-accent-blue/30"
+                className="border border-gray-200 rounded-xl px-6 bg-white data-[state=open]:border-cta/30 shadow-sm"
               >
-                <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-base font-medium">
+                <AccordionTrigger className="text-left text-gray-900 hover:no-underline py-5 text-base font-medium">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-text-secondary text-sm pb-5 leading-relaxed">
+                <AccordionContent className="text-gray-600 text-sm pb-5 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -94,22 +97,22 @@ const ServicesFAQ = () => {
           </Accordion>
 
           {/* Internal linking for SEO */}
-          <div className="mt-12 p-6 bg-surface-elevated border border-border/40 rounded-xl">
-            <p className="text-sm text-text-secondary mb-4">
-              <strong className="text-foreground">Explore our white label inbound marketing services:</strong>
+          <div className="mt-12 p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
+            <p className="text-sm text-gray-600 mb-4">
+              <strong className="text-gray-900">Explore our white label inbound marketing services:</strong>
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/services/local-seo" className="text-sm text-accent-blue hover:underline">Local SEO</Link>
-              <span className="text-border">•</span>
-              <Link to="/services/google-maps" className="text-sm text-accent-blue hover:underline">Google Maps</Link>
-              <span className="text-border">•</span>
-              <Link to="/services/paid-media" className="text-sm text-accent-blue hover:underline">Paid Media</Link>
-              <span className="text-border">•</span>
-              <Link to="/services/email-marketing" className="text-sm text-accent-blue hover:underline">Email Marketing</Link>
-              <span className="text-border">•</span>
-              <Link to="/services/authority" className="text-sm text-accent-blue hover:underline">Authority Building</Link>
-              <span className="text-border">•</span>
-              <Link to="/services/reporting" className="text-sm text-accent-blue hover:underline">Reporting</Link>
+              <Link to="/services/local-seo" className="text-sm text-cta hover:underline">Local SEO</Link>
+              <span className="text-gray-300">•</span>
+              <Link to="/services/google-maps" className="text-sm text-cta hover:underline">Google Maps</Link>
+              <span className="text-gray-300">•</span>
+              <Link to="/services/paid-media" className="text-sm text-cta hover:underline">Paid Media</Link>
+              <span className="text-gray-300">•</span>
+              <Link to="/services/email-marketing" className="text-sm text-cta hover:underline">Email Marketing</Link>
+              <span className="text-gray-300">•</span>
+              <Link to="/services/authority" className="text-sm text-cta hover:underline">Authority Building</Link>
+              <span className="text-gray-300">•</span>
+              <Link to="/services/reporting" className="text-sm text-cta hover:underline">Reporting</Link>
             </div>
           </div>
         </div>
