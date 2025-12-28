@@ -25,18 +25,18 @@ const videoTestimonials = [
 
 const ServicesTestimonials = () => {
   return (
-    <section className="py-20 lg:py-28 section-light">
+    <section className="py-20 lg:py-28 bg-surface-dark">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-3">
               Partner Feedback
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              What Agency Partners <span className="text-cta">Say</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What Agency Partners <span className="text-accent-blue">Say</span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-text-secondary max-w-2xl mx-auto">
               Real feedback from agencies who've made the switch to system-driven fulfillment.
             </p>
           </div>
@@ -46,7 +46,7 @@ const ServicesTestimonials = () => {
             {videoTestimonials.map((video, index) => (
               <div 
                 key={index} 
-                className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 bg-white shadow-lg"
+                className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface-elevated shadow-lg"
               >
                 <iframe
                   src={`https://www.youtube.com/embed/${video.id}`}
@@ -64,15 +64,15 @@ const ServicesTestimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="bg-white border border-slate-200 rounded-xl p-5 sm:p-6 shadow-sm"
+                className="bg-surface-elevated border border-border/50 rounded-xl p-5 sm:p-6"
               >
-                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-cta/30 mb-3 sm:mb-4" />
-                <p className="text-slate-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed line-clamp-6 sm:line-clamp-none">
+                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-accent-blue/30 mb-3 sm:mb-4" />
+                <p className="text-text-secondary text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed line-clamp-6 sm:line-clamp-none">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-slate-200 pt-4">
-                  <p className="text-slate-900 font-medium text-sm">{testimonial.author}</p>
-                  <p className="text-slate-500 text-xs">{testimonial.role}</p>
+                <div className="border-t border-border/30 pt-4">
+                  <p className="text-foreground font-medium text-sm">{testimonial.author}</p>
+                  <p className="text-text-muted text-xs">{testimonial.role}</p>
                 </div>
               </div>
             ))}

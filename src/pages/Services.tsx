@@ -40,7 +40,7 @@ const Services = () => {
       <ServicesTestimonials />
       
       {/* Mid-page CTA */}
-      <MidPageCTA variant="dark" />
+      <MidPageCTA variant="light" />
       
       {/* Deep Expertise - Same as Homepage */}
       <TopicalExpertise />
