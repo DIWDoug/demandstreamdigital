@@ -33,7 +33,7 @@ const AntiPackageDiagnosis = () => {
             {diagnosticCards.map((card, index) => (
               <div 
                 key={index}
-                className="bg-background/50 rounded-xl p-6 lg:p-8"
+                className="bg-background/50 rounded-xl p-6 lg:p-8 border border-border/30 shadow-sm"
               >
                 <strong className="block text-lg font-semibold text-foreground mb-3">
                   {card.title}
