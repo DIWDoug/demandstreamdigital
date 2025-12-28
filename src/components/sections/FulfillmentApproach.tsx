@@ -1,22 +1,27 @@
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { Circle, Square, Hexagon, Diamond } from "lucide-react";
 
 const FulfillmentApproach = () => {
   const sectionRef = useScrollReveal();
   
   const pillars = [
     {
+      icon: Circle,
       title: "Scope Comes Before Services",
       body: "Every engagement begins with a clear understanding of the client's market, competition, and goals. Scope is defined intentionally before work begins, so execution matches reality instead of assumptions."
     },
     {
+      icon: Square,
       title: "Clear Standards and Guardrails",
       body: "Custom does not mean open-ended. Deliverables, communication rhythms, and boundaries are clearly defined upfront, protecting expectations, margins, and accountability."
     },
     {
+      icon: Hexagon,
       title: "Systems-Driven, Human-Led Execution",
       body: "We use systems and AI-assisted workflows to accelerate research, planning, and execution. Specialists make the decisions that matter, while systems remove friction and inconsistency."
     },
     {
+      icon: Diamond,
       title: "Built to Adapt Without Resetting Everything",
       body: "Markets change. Algorithms shift. Competition evolves. Our structure allows execution to adjust intentionally over time without restarting the engagement or blowing up scope."
     }
@@ -80,16 +85,16 @@ const FulfillmentApproach = () => {
                   }}
                 >
                   <div className="flex gap-4">
-                    {/* Number indicator */}
+                    {/* Abstract icon indicator */}
                     <div className="flex-shrink-0">
                       <span 
-                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white scale-0 animate-scale-in"
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-blue/10 text-accent-blue transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white scale-0 animate-scale-in"
                         style={{ 
                           animationDelay: `${index * 150 + 100}ms`,
                           animationFillMode: 'forwards'
                         }}
                       >
-                        {String(index + 1).padStart(2, '0')}
+                        <pillar.icon className="w-3.5 h-3.5" strokeWidth={2} />
                       </span>
                     </div>
                     <div>
