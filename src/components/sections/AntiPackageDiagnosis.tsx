@@ -41,7 +41,7 @@ const AntiPackageDiagnosis = () => {
             {diagnosticCards.map((card, index) => (
               <div 
                 key={index}
-                className="bg-surface-elevated rounded-xl p-6 lg:p-8 border border-border/30"
+                className="bg-surface-dark rounded-xl p-6 lg:p-8 border border-border/30"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">

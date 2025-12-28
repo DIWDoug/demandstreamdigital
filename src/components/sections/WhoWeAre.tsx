@@ -4,7 +4,7 @@ import wylerPhoto from "@/assets/wyler.jpg";
 
 const WhoWeAre = () => {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left: Content */}
