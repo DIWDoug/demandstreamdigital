@@ -5,8 +5,10 @@ import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import FitCriteria from "@/components/services/FitCriteria";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
-import ServiceAreasGrid from "@/components/services/ServiceAreasGrid";
-import HowWeWork from "@/components/services/HowWeWork";
+import ServicesFramework from "@/components/services/ServicesFramework";
+import CoreServicesEngine from "@/components/services/CoreServicesEngine";
+import ServicesExpertise from "@/components/services/ServicesExpertise";
+import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
@@ -30,11 +32,20 @@ const Services = () => {
       {/* Ecosystem Diagram */}
       <EcosystemDiagram />
       
-      {/* Service Areas */}
-      <ServiceAreasGrid />
+      {/* Our Framework */}
+      <ServicesFramework />
       
-      {/* How We Work */}
-      <HowWeWork />
+      {/* Core Services - Growth Engine */}
+      <CoreServicesEngine />
+      
+      {/* Deep Expertise */}
+      <ServicesExpertise />
+      
+      {/* Testimonials */}
+      <ServicesTestimonials />
+      
+      {/* Fulfillment in 6 Clear Steps + Contact Form */}
+      <ContactForm />
       
       {/* FAQ */}
       <ServicesFAQ />
@@ -42,7 +53,6 @@ const Services = () => {
       {/* Final CTA */}
       <ServicesFinalCTA />
 
-      <ContactForm />
       <Footer />
     </div>
   );
