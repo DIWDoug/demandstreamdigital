@@ -89,22 +89,22 @@ const LocalMarketingEcosystem = () => {
   const ActiveIcon = activeData.icon;
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section">
+    <section ref={sectionRef} className="py-20 lg:py-28 section-light relative overflow-hidden reveal-section">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-cta/5 blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[hsl(224,60%,55%)]/5 blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(224,60%,55%)] mb-4">
             The Bigger Picture
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
-            Local SEO Is One Piece of the <span className="text-cta">360° Ecosystem</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+            Local SEO Is One Piece of the <span className="text-[hsl(76,42%,41%)]">360° Ecosystem</span>
           </h2>
-          <p className="text-lg text-text-secondary leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             The most effective local marketing strategies aren't siloed. They're interconnected. 
             When organic visibility, paid media, reputation, and email work together, results compound. 
             We help agencies deliver the complete picture.
@@ -116,7 +116,7 @@ const LocalMarketingEcosystem = () => {
           <div className="relative">
             <div className="aspect-square max-w-[500px] mx-auto relative">
               {/* Outer ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-border/30" />
+              <div className="absolute inset-0 rounded-full border-2 border-gray-200" />
               
               {/* Service nodes positioned around the circle */}
               {services.map((service, index) => {
@@ -128,44 +128,44 @@ const LocalMarketingEcosystem = () => {
                 const isActive = service.id === activeService;
                 const isLocalSeo = service.id === "local-seo";
                 
-                return (
-                  <button
-                    key={service.id}
-                    onClick={() => setActiveService(service.id)}
-                    className={`absolute w-14 h-14 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isActive 
-                        ? "bg-cta scale-110 shadow-lg shadow-cta/30" 
-                        : isLocalSeo
-                          ? "bg-surface-elevated border-2 border-cta/50 hover:border-cta"
-                          : "bg-surface-elevated border border-border hover:border-accent-blue/50"
-                    }`}
+                  return (
+                    <button
+                      key={service.id}
+                      onClick={() => setActiveService(service.id)}
+                      className={`absolute w-14 h-14 -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        isActive 
+                          ? "bg-[hsl(76,42%,41%)] scale-110 shadow-lg shadow-[hsl(76,42%,41%)]/30" 
+                          : isLocalSeo
+                            ? "bg-white border-2 border-[hsl(76,42%,41%)]/50 hover:border-[hsl(76,42%,41%)]"
+                            : "bg-white border border-gray-200 hover:border-[hsl(224,60%,55%)]/50"
+                      }`}
                     style={{
                       left: `${x}%`,
                       top: `${y}%`,
                     }}
                     aria-label={service.title}
                   >
-                    <Icon 
-                      className={`w-6 h-6 transition-colors ${
-                        isActive ? "text-white" : "text-text-secondary"
-                      }`} 
+                      <Icon 
+                        className={`w-6 h-6 transition-colors ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }`} 
                     />
                   </button>
                 );
               })}
 
               {/* Center content */}
-              <div className="absolute inset-[15%] rounded-full bg-surface-elevated border border-border flex flex-col items-center justify-center p-6 text-center">
+              <div className="absolute inset-[15%] rounded-full bg-white border border-gray-200 flex flex-col items-center justify-center p-6 text-center shadow-sm">
                 <div 
                   className="w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-colors duration-300"
                   style={{ backgroundColor: "hsl(76, 42%, 41%, 0.15)" }}
                 >
-                  <ActiveIcon className="w-8 h-8 text-cta" />
+                  <ActiveIcon className="w-8 h-8 text-[hsl(76,42%,41%)]" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {activeData.title}
                 </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   {activeData.description}
                 </p>
               </div>
@@ -213,31 +213,31 @@ const LocalMarketingEcosystem = () => {
                   onClick={() => setActiveService(service.id)}
                   className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${
                     isActive 
-                      ? "bg-surface-elevated border-cta/30" 
-                      : "bg-transparent border-border hover:border-border-subtle hover:bg-surface-elevated/50"
+                      ? "bg-white border-[hsl(76,42%,41%)]/30 shadow-sm" 
+                      : "bg-transparent border-gray-200 hover:border-gray-300 hover:bg-white/50"
                   }`}
                 >
                   <div className="flex items-center gap-4">
                     <div 
                       className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                        isActive ? "bg-cta/20" : "bg-surface-card"
+                        isActive ? "bg-[hsl(76,42%,41%)]/20" : "bg-gray-100"
                       }`}
                     >
                       <Icon 
                         className={`w-5 h-5 transition-colors duration-300 ${
-                          isActive ? "text-cta" : "text-text-secondary group-hover:text-foreground"
+                          isActive ? "text-[hsl(76,42%,41%)]" : "text-gray-500 group-hover:text-gray-700"
                         }`} 
                       />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
                         <h4 className={`font-medium transition-colors ${
-                          isActive ? "text-foreground" : "text-text-secondary group-hover:text-foreground"
+                          isActive ? "text-gray-900" : "text-gray-600 group-hover:text-gray-900"
                         }`}>
                           {service.title}
                         </h4>
                         {isLocalSeo && (
-                          <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-cta/20 text-cta font-semibold">
+                          <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-[hsl(76,42%,41%)]/20 text-[hsl(76,42%,41%)] font-semibold">
                             You are here
                           </span>
                         )}
@@ -246,7 +246,7 @@ const LocalMarketingEcosystem = () => {
                     {service.link && (
                       <Link 
                         to={service.link}
-                        className="text-xs text-accent-blue opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="text-xs text-[hsl(224,60%,55%)] opacity-0 group-hover:opacity-100 transition-opacity"
                         onClick={(e) => e.stopPropagation()}
                       >
                         Learn more →
