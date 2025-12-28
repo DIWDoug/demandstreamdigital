@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: "What's the difference between the Local Pack and organic results?",
-      answer: "The Local Pack (map 3-pack) is powered primarily by Google Business Profile optimization, while organic results depend on website authority and on-page SEO. Most local businesses need both—the Pack drives immediate calls, while organic captures research-phase traffic. We build strategies that dominate both."
+      answer: "The Local Pack (map 3-pack) is powered primarily by Google Business Profile optimization, while organic results depend on website authority and on-page SEO. Most local businesses need both. The Pack drives immediate calls, while organic captures research-phase traffic. We build strategies that dominate both."
     },
     {
       question: "What is a Google Business Profile and why does it matter?",
@@ -83,7 +83,7 @@ const FAQ = () => {
     },
     {
       question: "Do you offer local SEO audits?",
-      answer: "Yes. Our audits cover GBP optimization status, citation accuracy, review profile analysis, on-page local signals, competitor benchmarking, and backlink profile assessment. Audits identify quick wins and long-term opportunities—perfect for onboarding new clients or diagnosing stalled campaigns."
+      answer: "Yes. Our audits cover GBP optimization status, citation accuracy, review profile analysis, on-page local signals, competitor benchmarking, and backlink profile assessment. Audits identify quick wins and long-term opportunities, perfect for onboarding new clients or diagnosing stalled campaigns."
     },
     {
       question: "What's included in ongoing local SEO management?",
