@@ -25,7 +25,7 @@ const videoTestimonials = [
 
 const ServicesTestimonials = () => {
   return (
-    <section className="py-20 lg:py-28 bg-surface-elevated">
+    <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

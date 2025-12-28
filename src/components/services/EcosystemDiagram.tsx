@@ -42,8 +42,7 @@ const serviceAreas = [
 
 const EcosystemDiagram = () => {
   return (
-    <section className="py-16 lg:py-20 section-light relative">
-      <div className="section-divider absolute top-0" />
+    <section className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
