@@ -45,7 +45,7 @@ const ServicesFramework = () => {
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
                 How We Approach{" "}
-                <span className="text-text-secondary">Fulfillment</span>
+                <span className="text-text-secondary">White Label Fulfillment</span>
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-4">
                 Custom fulfillment only works if it's controlled. Our approach adapts 

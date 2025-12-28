@@ -70,7 +70,7 @@ const ServicesExpertise = () => {
               White Label Services
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Deep Expertise, Modular Delivery
+              White Label Inbound Marketing Services
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
               Each service solves a specific problem. Click to explore what's included, 
