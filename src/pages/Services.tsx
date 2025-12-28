@@ -3,6 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
+import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import FitCriteria from "@/components/services/FitCriteria";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 import ServicesFramework from "@/components/services/ServicesFramework";
@@ -26,6 +27,9 @@ const Services = () => {
       
       {/* Hero */}
       <ServicesHero />
+      
+      {/* What is White Label Inbound Marketing? */}
+      <WhiteLabelExplainer />
       
       {/* Who This Works For */}
       <FitCriteria />
