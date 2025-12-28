@@ -71,53 +71,105 @@ const roadmapData: PhaseData[] = [
   {
     phase: 3,
     month: "Month 3",
-    title: "Authority & Scale",
-    focus: "Trust Signals + Growth",
+    title: "Authority Building",
+    focus: "Trust Signals + PR",
     icon: TrendingUp,
     color: "hsl(35, 90%, 50%)",
     hours: "~42 hours",
     activities: [
       "Digital PR outreach for earned media",
       "Industry directory submissions",
+      "Guest post opportunities pitched",
+      "Local sponsorship outreach",
       "Email automation sequences setup",
-      "Landing page A/B testing",
-      "Keyword expansion to secondary terms",
+      "Landing page A/B testing initiated",
       "Ad creative refresh and testing",
-      "Review velocity maintained",
-      "Quarterly strategy review and planning"
+      "Review velocity maintained"
     ],
     deliverables: [
       "PR placements or submissions in progress",
-      "Email automation flows live",
-      "A/B test results with winning variants",
-      "Quarterly Performance Report",
-      "Next quarter strategic roadmap"
+      "Directory listings live",
+      "Email automation flows configured",
+      "A/B test variants running",
+      "Month 2 Performance Report"
     ]
   },
   {
     phase: 4,
-    month: "Months 4–6",
-    title: "Ongoing Management",
-    focus: "Optimize, Maintain, Grow",
+    month: "Month 4",
+    title: "Scale & Optimize",
+    focus: "Keyword Expansion + Growth",
     icon: Settings,
     color: "hsl(280, 60%, 55%)",
-    hours: "~42 hrs/month",
+    hours: "~42 hours",
     activities: [
-      "Continuous campaign optimization across channels",
-      "Content creation and publishing (ongoing)",
-      "Link building and authority work",
-      "Review management and response",
-      "Monthly reporting with insights",
-      "Seasonal adjustments and promotions",
-      "New opportunity identification",
-      "Strategy refinement based on data"
+      "Keyword expansion to secondary terms",
+      "Additional service area pages",
+      "Continued content production (2-4 pieces)",
+      "Link building momentum maintained",
+      "Campaign budget reallocation based on data",
+      "Conversion rate optimization",
+      "GBP posting and engagement optimization",
+      "Quarterly strategy review"
     ],
     deliverables: [
-      "Monthly Performance Reports",
+      "Expanded keyword targeting live",
+      "New service area pages indexed",
+      "Quarterly Performance Report",
+      "Budget optimization recommendations",
+      "Q2 strategic roadmap"
+    ]
+  },
+  {
+    phase: 5,
+    month: "Month 5",
+    title: "Momentum & Refinement",
+    focus: "Continuous Improvement",
+    icon: Zap,
+    color: "hsl(190, 70%, 45%)",
+    hours: "~42 hours",
+    activities: [
+      "Campaign optimization across all channels",
+      "Content creation and publishing",
+      "Link building and authority work",
+      "Review management and response",
+      "Seasonal adjustments and promotions",
+      "New opportunity identification",
+      "Email nurture sequence refinement",
+      "Competitor monitoring and response"
+    ],
+    deliverables: [
+      "Monthly Performance Report",
       "Ongoing content published",
       "Continued backlink acquisition",
-      "Campaign optimization logs",
-      "6-Month Results Summary and next phase plan"
+      "Campaign optimization log",
+      "Seasonal campaign adjustments"
+    ]
+  },
+  {
+    phase: 6,
+    month: "Month 6",
+    title: "Results & Roadmap",
+    focus: "Report + Plan Forward",
+    icon: TrendingUp,
+    color: "hsl(340, 70%, 50%)",
+    hours: "~42 hours",
+    activities: [
+      "Comprehensive 6-month performance analysis",
+      "ROI attribution and reporting",
+      "Ranking improvements documented",
+      "Traffic and conversion analysis",
+      "Next phase strategy development",
+      "Ongoing maintenance plan established",
+      "Budget recommendations for growth",
+      "Client success presentation"
+    ],
+    deliverables: [
+      "6-Month Results Report with full metrics",
+      "ROI analysis and attribution",
+      "Next phase strategic recommendations",
+      "Ongoing optimization plan",
+      "Growth roadmap for months 7-12"
     ]
   }
 ];
@@ -156,7 +208,7 @@ const SixMonthRoadmap = () => {
 
         {/* Timeline navigation */}
         <div className="mb-12">
-          <div className="flex flex-wrap gap-2 lg:gap-0 lg:grid lg:grid-cols-4">
+          <div className="flex flex-wrap gap-2 lg:gap-0 lg:grid lg:grid-cols-6">
             {roadmapData.map((phase) => {
               const isActive = phase.phase === activePhase;
               const Icon = phase.icon;
@@ -282,13 +334,13 @@ const SixMonthRoadmap = () => {
             <div className="mt-8 pt-6 border-t border-border">
               <div className="flex items-center justify-between text-sm text-text-muted mb-2">
                 <span>Roadmap Progress</span>
-                <span>{activePhase === 4 ? "Months 4–6" : `Month ${activePhase}`} of 6</span>
+                <span>Month {activePhase} of 6</span>
               </div>
               <div className="h-2 bg-background rounded-full overflow-hidden">
                 <div 
                   className="h-full rounded-full transition-all duration-500"
                   style={{
-                    width: activePhase === 4 ? "100%" : `${(activePhase / 4) * 100}%`,
+                    width: `${(activePhase / 6) * 100}%`,
                     background: `linear-gradient(90deg, ${activeData.color}, ${activeData.color}80)`
                   }}
                 />
