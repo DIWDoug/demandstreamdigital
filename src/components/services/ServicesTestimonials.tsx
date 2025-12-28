@@ -34,10 +34,10 @@ const ServicesTestimonials = () => {
               Partner Feedback
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why They <span className="text-accent-blue">Stayed</span>
+              The Risk They Were <span className="text-accent-blue">Worried About</span>
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Flexibility. Consistency. No surprises. Here's what kept these partnerships going.
+              Rigid packages. Blown margins. Inconsistent execution. These agencies came in with real concerns—and left with systems that held up.
             </p>
           </div>
 
