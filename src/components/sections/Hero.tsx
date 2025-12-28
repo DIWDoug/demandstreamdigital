@@ -100,10 +100,14 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-14 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
             We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building based on each client's market, competition, and scope—not rigid tiers.
           </p>
 
+          {/* Punchy tagline */}
+          <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            No cookie-cutter packages. No one-size-fits-all execution.
+          </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a 
