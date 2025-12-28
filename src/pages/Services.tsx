@@ -14,8 +14,8 @@ import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
 const SectionDivider = () => (
-  <div className="container mx-auto px-4">
-    <hr className="border-t border-border/30" />
+  <div className="container mx-auto px-4 py-8">
+    <hr className="border-t-2 border-primary/40" />
   </div>
 );
 
