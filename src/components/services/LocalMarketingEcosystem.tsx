@@ -89,7 +89,7 @@ const LocalMarketingEcosystem = () => {
   const ActiveIcon = activeData.icon;
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-cta/5 blur-[150px]" />

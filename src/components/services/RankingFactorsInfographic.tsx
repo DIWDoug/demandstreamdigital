@@ -92,7 +92,7 @@ const RankingFactorsInfographic = () => {
   const activeCat = categories.find(c => c.id === activeCategory) || categories[0];
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 

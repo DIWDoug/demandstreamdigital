@@ -150,7 +150,7 @@ const LocalSEORoadmap = () => {
   const sectionRef = useScrollReveal();
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section">
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
