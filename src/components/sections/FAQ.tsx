@@ -31,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: "Do you require long-term contracts?",
-      answer: "We operate on rolling agreements with a defined 30-day notice period. This structure supports proper planning, resourcing, and execution stability. It's designed for healthy partnerships, not lock-ins."
+      answer: "Inbound marketing engagements require a 6-month agreement. This reflects the front-loaded nature of the work—strategy, setup, and foundational execution happen early. After that, we operate on rolling agreements with a 30-day notice period. This structure supports proper planning, resourcing, and execution stability."
     },
     {
       question: "What happens if one of our clients cancels mid-engagement?",
