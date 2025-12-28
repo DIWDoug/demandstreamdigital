@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import FitCriteria from "@/components/services/FitCriteria";
+import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 import ServiceAreasGrid from "@/components/services/ServiceAreasGrid";
 import HowWeWork from "@/components/services/HowWeWork";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -25,6 +26,9 @@ const Services = () => {
       
       {/* Who This Works For */}
       <FitCriteria />
+      
+      {/* Ecosystem Diagram */}
+      <EcosystemDiagram />
       
       {/* Service Areas */}
       <ServiceAreasGrid />
