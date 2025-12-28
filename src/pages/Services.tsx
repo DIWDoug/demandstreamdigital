@@ -15,7 +15,7 @@ import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-4 py-8">
-    <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+    <hr className="border-t-2 border-primary/40" />
   </div>
 );
 
