@@ -39,11 +39,11 @@ const Services = () => {
       {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
       
-      {/* Testimonials - Social proof early */}
-      <ServicesTestimonials />
-      
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
+      
+      {/* Testimonials - Social proof after framework */}
+      <ServicesTestimonials />
       
       {/* Light divider */}
       <div className="container mx-auto px-4">
