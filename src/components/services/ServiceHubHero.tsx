@@ -87,8 +87,8 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
           {/* Right Column - Contact Form */}
           <div className="animate-fade-in">
             <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 lg:p-8 shadow-xl">
-              <h2 className="text-xl font-semibold text-foreground mb-2">Get Started Today</h2>
-              <p className="text-sm text-text-muted mb-6">Schedule a discovery call with our team.</p>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Let's Talk</h2>
+              <p className="text-sm text-text-muted mb-6">See if we're a good fit for your agency.</p>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
