@@ -7,8 +7,13 @@ interface ServiceBenefitsProps {
 
 const ServiceBenefits = ({ headline, items }: ServiceBenefitsProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+      {/* Subtle background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-accent-blue/5 blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">{headline}</h2>
           <div className="grid md:grid-cols-2 gap-4">

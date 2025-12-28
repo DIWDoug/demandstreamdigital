@@ -2,16 +2,16 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
+import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
 import Breadcrumbs from "@/components/services/Breadcrumbs";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import StatsBar from "@/components/services/StatsBar";
 import WhyItMatters from "@/components/services/WhyItMatters";
 import OurApproach from "@/components/services/OurApproach";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
-import WhyChooseUs from "@/components/services/WhyChooseUs";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
-import BookCTA from "@/components/services/BookCTA";
-import ServiceFAQ from "@/components/services/ServiceFAQ";
 import ServiceHubCTA from "@/components/services/ServiceHubCTA";
 import RelatedHubs from "@/components/services/RelatedHubs";
 import { getHubBySlug } from "@/data/services";
@@ -37,15 +37,15 @@ const PaidMedia = () => {
       <div className="pt-16">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
-      <ServiceHubHero icon={hub.icon} title={hub.title} description={hub.heroDescription} />
-      <StatsBar />
+      <ServiceHubHero title={hub.title} description={hub.heroDescription} />
       <WhyItMatters {...hub.whyItMatters} />
-      <OurApproach {...hub.ourApproach} />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <WhyChooseUs />
+      <OurApproach {...hub.ourApproach} />
+      <WhyPartnerWithUs />
       <ServiceBenefits {...hub.benefits} />
-      <BookCTA />
-      <ServiceFAQ hubTitle={hub.title} faqs={hub.faqs} />
+      <LocalGrowthEngine />
+      <Testimonials />
+      <FAQ />
       <ServiceHubCTA hubTitle={hub.title} />
       <RelatedHubs currentSlug={hub.slug} />
       <ContactForm />

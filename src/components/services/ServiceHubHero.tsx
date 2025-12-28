@@ -1,40 +1,87 @@
 import { ArrowRight } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 
 interface ServiceHubHeroProps {
-  icon: LucideIcon;
   title: string;
   description: string;
 }
 
-const ServiceHubHero = ({ icon: Icon, title, description }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({ title, description }: ServiceHubHeroProps) => {
   return (
-    <section className="relative pt-16 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-background to-background" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cta/5 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto px-6 lg:px-8 relative">
+    <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
+      {/* Enhanced abstract data texture overlay - matching homepage */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[120px] bg-gradient-radial from-cta/25 via-accent-blue/15 to-transparent" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[60px] bg-gradient-to-bl from-accent-blue/35 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full blur-[70px] bg-gradient-to-tr from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+      </div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Primary green particles */}
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 rounded-full bg-cta animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${10 + Math.random() * 15}s`,
+              animationDelay: `${Math.random() * 5}s`,
+              opacity: 0.3 + Math.random() * 0.2,
+            }}
+          />
+        ))}
+        {/* Blue accent particles */}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`blue-${i}`}
+            className="absolute w-1.5 h-1.5 rounded-full bg-accent-blue animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${12 + Math.random() * 12}s`,
+              animationDelay: `${Math.random() * 6}s`,
+              opacity: 0.25 + Math.random() * 0.2,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
+
+      <div className="container mx-auto px-6 lg:px-8 py-20 lg:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Icon badge */}
-          <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-accent-blue/10 border border-accent-blue/20 mb-8">
-            <Icon className="h-8 w-8 text-accent-blue" />
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in">
+            <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full">
+              White-Label Services
+            </span>
           </div>
-          
+
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
             White-Label{" "}
-            <span className="text-gradient-primary">{title}</span>
-            {" "}Services
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{title}</span>{" "}
+            Services
           </h1>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed animate-fade-in">
             {description}
           </p>
           
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in">
             <a href="#contact" className="btn-cta group">
               Schedule a Discovery Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -43,7 +90,7 @@ const ServiceHubHero = ({ icon: Icon, title, description }: ServiceHubHeroProps)
               href="#services" 
               className="text-foreground hover:text-cta transition-colors font-medium"
             >
-              View All Services →
+              View All {title} Services →
             </a>
           </div>
         </div>
