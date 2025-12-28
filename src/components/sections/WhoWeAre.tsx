@@ -66,9 +66,9 @@ const WhoWeAre = () => {
               {/* Letter Content */}
               <div className="relative">
                 {/* Opening quote mark */}
-                <span className="absolute -left-4 -top-8 text-7xl text-cta/30 font-serif leading-none select-none">"</span>
+                <span className="absolute -left-3 -top-8 text-6xl text-cta/25 font-handwriting leading-none select-none">"</span>
                 
-                <div className="space-y-6 text-base lg:text-lg leading-relaxed pl-4 border-l-2 border-cta/20">
+                <div className="font-handwriting space-y-6 text-base lg:text-lg leading-relaxed pl-4 border-l-2 border-cta/20">
                   <p className="text-text-secondary italic">
                     They lose them because fulfillment quietly falls apart.
                   </p>
@@ -104,12 +104,7 @@ const WhoWeAre = () => {
 
                 {/* Signature */}
                 <div className="mt-8 pt-6 border-t border-border/30">
-                  <span 
-                    className="text-3xl text-cta block"
-                    style={{ fontFamily: 'Kalam, cursive' }}
-                  >
-                    — Doug
-                  </span>
+                  <span className="font-handwriting text-3xl text-cta block">— Doug</span>
                 </div>
               </div>
             </div>
