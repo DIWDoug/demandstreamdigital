@@ -1,38 +1,40 @@
-import { Search, MapPin, Star, TrendingUp } from "lucide-react";
+import { Target, MapPin, Star, Sparkles } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
 const stats = [
   {
-    icon: Search,
-    value: 46,
-    suffix: "%",
-    label: "of Google searches have local intent",
-    source: "Search Engine Roundtable"
+    icon: Target,
+    value: 1,
+    suffix: "#",
+    prefix: true,
+    label: "GBP Category is top local pack ranking factor",
+    source: "Whitespark 2026"
   },
   {
     icon: MapPin,
-    value: 42,
-    suffix: "%",
-    label: "of local searchers click Map Pack results",
-    source: "Backlinko 2024"
+    value: 47,
+    suffix: "",
+    label: "expert contributors analyzed 187 ranking factors",
+    source: "Whitespark 2026"
   },
   {
     icon: Star,
-    value: 83,
-    suffix: "%",
-    label: "of consumers use Google for local reviews",
-    source: "BrightLocal 2025"
+    value: 5,
+    suffix: "★",
+    label: "star ratings are #1 conversion driver",
+    source: "Whitespark 2026"
   },
   {
-    icon: TrendingUp,
-    value: 80,
-    suffix: "%",
-    label: "of US consumers search locally weekly",
-    source: "SOCi 2024"
+    icon: Sparkles,
+    value: 3,
+    suffix: "",
+    prefix: true,
+    label: "new AI visibility factors added for 2026",
+    source: "Whitespark 2026"
   }
 ];
 
-const AnimatedCounter = ({ value, suffix, isVisible }: { value: number; suffix: string; isVisible: boolean }) => {
+const AnimatedCounter = ({ value, suffix, prefix, isVisible }: { value: number; suffix: string; prefix?: boolean; isVisible: boolean }) => {
   const [count, setCount] = useState(0);
   
   useEffect(() => {
@@ -56,7 +58,7 @@ const AnimatedCounter = ({ value, suffix, isVisible }: { value: number; suffix: 
     return () => clearInterval(timer);
   }, [isVisible, value]);
   
-  return <>{count}{suffix}</>;
+  return <>{prefix ? suffix : ''}{count}{!prefix ? suffix : ''}</>;
 };
 
 const LocalSEOStats = () => {
@@ -94,7 +96,7 @@ const LocalSEOStats = () => {
                 <stat.icon className="w-6 h-6 text-cta" />
               </div>
               <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} isVisible={isVisible} />
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} isVisible={isVisible} />
               </div>
               <p className="text-text-secondary text-sm md:text-base mb-1">
                 {stat.label}
