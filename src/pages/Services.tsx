@@ -33,9 +33,6 @@ const Services = () => {
       {/* 2. Anti-Package Framing Block */}
       <AntiPackageBlock />
       
-      {/* Stats Section */}
-      <ServicesStats />
-      
       {/* 3. Standalone Services Framing */}
       <StandaloneServicesBlock />
       
