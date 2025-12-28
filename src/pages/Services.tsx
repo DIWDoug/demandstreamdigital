@@ -4,11 +4,10 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
-import EcosystemDiagram from "@/components/services/EcosystemDiagram";
+import ServicesExpertise from "@/components/services/ServicesExpertise";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
-import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
@@ -39,8 +38,8 @@ const Services = () => {
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
-      {/* Service Areas - Rich Descriptions Grid */}
-      <EcosystemDiagram />
+      {/* Service Offerings - Expandable Cards */}
+      <ServicesExpertise />
       
       {/* Why Agencies Actually Use This */}
       <WhyPartnerWithUs />
@@ -55,11 +54,6 @@ const Services = () => {
       
       {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
-      
-      <SectionDivider />
-      
-      {/* Deep Expertise - Service Cards */}
-      <ServicesExpertise />
       
       <SectionDivider />
       
