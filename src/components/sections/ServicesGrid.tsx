@@ -70,7 +70,7 @@ const ServicesGrid = () => {
           {/* Content */}
               <div className="absolute inset-0 p-5 sm:p-8 lg:p-12 flex flex-col justify-center text-white max-w-3xl">
                 <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Partner-Exclusive Service</span>
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-4 leading-tight">
               Digital Inbound Marketing
             </h3>
             <p className="text-base text-white/80 leading-relaxed mb-6 max-w-xl">
@@ -109,7 +109,7 @@ const ServicesGrid = () => {
               
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                <h3 className="text-lg lg:text-xl font-bold mb-3 leading-tight">
+                <h3 className="text-lg lg:text-xl font-semibold mb-3 leading-tight">
                   {service.title}
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-6 line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
@@ -156,7 +156,7 @@ const ServicesGrid = () => {
               
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                <h3 className="text-lg font-bold mb-2 leading-tight">
+                <h3 className="text-lg font-semibold mb-2 leading-tight">
                   {service.title}
                 </h3>
                 <p className="text-sm text-white/80 leading-relaxed mb-4 line-clamp-3">

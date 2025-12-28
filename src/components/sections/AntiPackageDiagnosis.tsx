@@ -27,7 +27,7 @@ const AntiPackageDiagnosis = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <h2 className="text-3xl md:text-4xl font-sans font-semibold text-foreground text-center mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground text-center mb-6 text-balance">
             Why Most White-Label Digital Marketing Packages Break&nbsp;Down
           </h2>
 
