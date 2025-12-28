@@ -1,11 +1,23 @@
-import { ArrowRight } from "lucide-react";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wylerPhoto from "@/assets/wyler.jpg";
 
 const WhoWeAre = () => {
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden bg-background">
-      <div className="container mx-auto px-6 lg:px-8">
+      {/* Subtle dot grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}
+      />
+      
+      {/* Subtle gradient orbs */}
+      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-cta/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header - Full Width */}
           <div className="text-center mb-12 lg:mb-16">
@@ -91,17 +103,8 @@ const WhoWeAre = () => {
                 </div>
 
                 {/* Signature */}
-                <div className="mt-8 pt-6 border-t border-border/30 flex items-center justify-between">
+                <div className="mt-8 pt-6 border-t border-border/30">
                   <p className="text-3xl text-cta" style={{ fontFamily: "'Kalam', cursive" }}>— Doug</p>
-                  
-                  {/* CTA Button */}
-                  <a 
-                    href="#contact" 
-                    className="btn-cta group inline-flex"
-                  >
-                    Let's Talk
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </a>
                 </div>
               </div>
             </div>
