@@ -73,7 +73,7 @@ const ServicesFramework = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 pt-10 border-t border-slate-200">
+          <div className="mt-14 pt-10 border-t border-slate-200">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a 
                 href="#contact" 
