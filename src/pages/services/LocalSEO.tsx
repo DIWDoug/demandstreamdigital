@@ -12,6 +12,8 @@ import WhyItMatters from "@/components/services/WhyItMatters";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
+import AlternatingContent from "@/components/services/AlternatingContent";
+import OurApproach from "@/components/services/OurApproach";
 import { getHubBySlug } from "@/data/services";
 
 const LocalSEO = () => {
@@ -21,6 +23,43 @@ const LocalSEO = () => {
   const breadcrumbItems = [
     { label: "Services", href: "/services" },
     { label: hub.title }
+  ];
+
+  // Expanded content for alternating sections
+  const localSeoContent = [
+    {
+      eyebrow: "The Local Search Landscape",
+      headline: "Your Clients Are Missing 46% of Google Searches",
+      description: "Nearly half of all Google searches have local intent. When someone types 'plumber near me' or 'best dentist in [city],' they're not browsing—they're ready to call. The 2026 Whitespark Local Search Ranking Factors report confirms what we've seen across hundreds of campaigns: businesses that invest in local SEO capture high-intent traffic their competitors never see.",
+      bullets: [
+        "Local pack results appear in 93% of location-based searches",
+        "42% of local searchers click on Google Maps 3-pack listings",
+        "80% of US consumers search for local businesses weekly",
+        "Mobile local searches lead to store visits within 24 hours at a rate of 76%"
+      ]
+    },
+    {
+      eyebrow: "Ranking Factors That Matter",
+      headline: "What Actually Drives Local Rankings in 2026",
+      description: "According to the latest research from Whitespark and 47 leading local SEO experts, the top ranking factors have shifted. Primary GBP category selection remains crucial, but behavioral signals and AI search visibility are now critical components of any comprehensive local strategy. We track 187 ranking factors across every campaign to ensure your clients stay ahead of algorithm changes.",
+      bullets: [
+        "Google Business Profile optimization remains the foundation of local visibility",
+        "Review velocity and sentiment directly impact local pack positions",
+        "On-page signals including NAP consistency and local schema markup",
+        "Link signals from locally-relevant, authoritative sources"
+      ]
+    },
+    {
+      eyebrow: "Beyond Traditional SEO",
+      headline: "AI Search Visibility Is the New Frontier",
+      description: "Large language models like ChatGPT and Google's AI Overviews are changing how consumers discover local businesses. The 2026 ranking factors study introduced AI visibility as a new measurement category. Presence on expert-curated 'best of' lists, dedicated service pages, and prominence on industry-relevant domains now influence how AI systems recommend businesses. We're building these signals into every local SEO campaign.",
+      bullets: [
+        "Citations are becoming 'the new link' for AI search visibility",
+        "Dedicated pages for each service improve AI comprehension",
+        "Expert curated lists carry significant weight in AI recommendations",
+        "Structured data helps AI systems understand business offerings"
+      ]
+    }
   ];
 
   return (
@@ -37,7 +76,17 @@ const LocalSEO = () => {
         <Breadcrumbs items={breadcrumbItems} />
       </div>
       <LocalSEOStats />
-      <WhyItMatters {...hub.whyItMatters} />
+      <WhyItMatters 
+        eyebrow="Why Local SEO Matters"
+        {...hub.whyItMatters} 
+      />
+      <AlternatingContent blocks={localSeoContent} />
+      <OurApproach 
+        eyebrow="How We Deliver Results"
+        headline={hub.ourApproach.headline}
+        description={hub.ourApproach.description}
+        steps={hub.ourApproach.steps}
+      />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <WhyPartnerWithUs />
       <ServiceBenefits {...hub.benefits} />
