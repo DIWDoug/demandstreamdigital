@@ -12,7 +12,7 @@ const testimonials = [
     role: "Digital Marketing Agency Owner, Florida"
   },
   {
-    quote: "Our retention rate on SEO is extremely high. I can go to sleep every night knowing that we're doing everything we can to help a client.",
+    quote: "The biggest win was reliability. Strategy changes client to client, but execution has to stay consistent. Having a team we could trust to adapt strategies without constant oversight made it possible to scale without adding internal headcount.",
     author: "Florida Agency Owner",
     role: "Digital Marketing Agency Owner"
   }
