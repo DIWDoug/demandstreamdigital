@@ -13,7 +13,7 @@ import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
 import AlternatingContent from "@/components/services/AlternatingContent";
-import OurApproach from "@/components/services/OurApproach";
+import LocalSEORoadmap from "@/components/services/LocalSEORoadmap";
 import RankingFactorsInfographic from "@/components/services/RankingFactorsInfographic";
 import { getHubBySlug } from "@/data/services";
 
@@ -94,12 +94,7 @@ const LocalSEO = () => {
       />
       <AlternatingContent blocks={localSeoContent} />
       <RankingFactorsInfographic />
-      <OurApproach 
-        eyebrow="How We Deliver Results"
-        headline={hub.ourApproach.headline}
-        description={hub.ourApproach.description}
-        steps={hub.ourApproach.steps}
-      />
+      <LocalSEORoadmap />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <WhyPartnerWithUs />
       <ServiceBenefits {...hub.benefits} />
