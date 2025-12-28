@@ -3,14 +3,11 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
-import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
-import Breadcrumbs from "@/components/services/Breadcrumbs";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhyItMatters from "@/components/services/WhyItMatters";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
 import AlternatingContent from "@/components/services/AlternatingContent";
 import LocalSEORoadmap from "@/components/services/LocalSEORoadmap";
@@ -103,8 +100,6 @@ const LocalSEO = () => {
       <LocalSEORoadmap />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <WhyPartnerWithUs />
-      <ServiceBenefits {...hub.benefits} />
-      <LocalGrowthEngine />
       <Testimonials />
       <FAQ />
       <ContactForm />
