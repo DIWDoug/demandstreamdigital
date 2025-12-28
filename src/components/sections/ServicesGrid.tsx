@@ -68,8 +68,8 @@ const ServicesGrid = () => {
           <div className="absolute inset-0 bg-[hsl(76,42%,28%)]/75 mix-blend-multiply" />
           
           {/* Content */}
-          <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-center text-white max-w-3xl">
-            <span className="text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Partner-Exclusive Service</span>
+              <div className="absolute inset-0 p-5 sm:p-8 lg:p-12 flex flex-col justify-center text-white max-w-3xl">
+                <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/70 mb-3 font-medium">Partner-Exclusive Service</span>
             <h3 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight">
               Digital Inbound Marketing
             </h3>
