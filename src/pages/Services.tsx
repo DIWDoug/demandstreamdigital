@@ -53,8 +53,6 @@ const Services = () => {
       {/* Deep Expertise - Same as Homepage */}
       <TopicalExpertise />
       
-      {/* Deep Expertise - Service Cards */}
-      <ServicesExpertise />
       
       {/* Contact Form */}
       <ContactForm />
