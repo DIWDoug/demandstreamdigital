@@ -11,6 +11,8 @@ const hubs = [
       { title: "Technical SEO for Multi-Location", description: "Site architecture, internal linking, and crawlability fixes for service area hierarchy." },
       { title: "Local Content Strategy", description: "Service area pages, location-specific content, and FAQ sections that capture long-tail queries." },
       { title: "Local Link Acquisition", description: "Outreach to local publications and community organizations that build geographic authority." },
+      { title: "Keyword Research & Mapping", description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages." },
+      { title: "Competitor & Market Analysis", description: "Deep analysis of local competitors' strategies, ranking factors, and market opportunities." },
     ]
   },
   {
@@ -22,6 +24,8 @@ const hubs = [
       { title: "Review Generation & Response", description: "Systematic review acquisition and professional response management." },
       { title: "Citation Building & Cleanup", description: "NAP consistency across 50+ directories and data aggregators." },
       { title: "Local Pack Ranking Strategy", description: "Proximity optimization and category targeting for high-intent searches." },
+      { title: "Photo & Media Optimization", description: "Professional photo management, virtual tours, and visual content strategies." },
+      { title: "Multi-Location GBP Management", description: "Scalable systems for managing dozens or hundreds of locations with consistent branding." },
     ]
   },
   {
@@ -33,6 +37,8 @@ const hubs = [
       { title: "Landing Page Optimization", description: "Conversion-focused pages with local trust signals and form optimization." },
       { title: "Bid Strategy & Budget Allocation", description: "Smart bidding and budget pacing that maximizes lead volume." },
       { title: "Call Tracking & Attribution", description: "Call recording, lead scoring, and multi-touch attribution." },
+      { title: "Ad Copy & Extension Testing", description: "Continuous A/B testing of headlines, descriptions, and callouts to improve performance." },
+      { title: "Negative Keyword Management", description: "Ongoing search term analysis and refinement to eliminate waste and improve lead quality." },
     ]
   },
   {
@@ -41,9 +47,11 @@ const hubs = [
     summary: "Build local awareness and capture demand through targeted social advertising.",
     spokes: [
       { title: "Local Audience Targeting", description: "Geographic, demographic, and interest-based audiences for each service area." },
-      { title: "Creative Strategy", description: "Thumb-stopping ad creative optimized for local service businesses." },
-      { title: "Retargeting Campaigns", description: "Website visitor retargeting that keeps clients top-of-mind." },
+      { title: "Creative Strategy & Production", description: "Thumb-stopping ad creative and video content optimized for local service businesses." },
+      { title: "Retargeting & Lookalike Campaigns", description: "Website visitor retargeting and lookalike audience expansion." },
       { title: "Lead Form Optimization", description: "Native lead forms and landing page integration for conversions." },
+      { title: "Campaign Budget Optimization", description: "Strategic budget allocation across campaigns and ad sets to maximize ROAS." },
+      { title: "Performance Reporting & Insights", description: "Detailed analytics dashboards, audience insights, and actionable recommendations." },
     ]
   },
   {
@@ -53,8 +61,10 @@ const hubs = [
     spokes: [
       { title: "Campaign Strategy & Design", description: "Custom templates and send schedules that maximize engagement." },
       { title: "Automation Sequences", description: "Welcome series and nurture flows that convert leads into customers." },
-      { title: "List Management", description: "Clean list hygiene and segmentation for better deliverability." },
+      { title: "List Management & Segmentation", description: "Clean list hygiene and audience segmentation for better deliverability." },
       { title: "Performance Analytics", description: "Open rates, A/B testing insights, and ROI analysis." },
+      { title: "Drip Campaign Development", description: "Multi-touch email sequences tailored to buyer stages that move prospects toward conversion." },
+      { title: "Deliverability & Compliance", description: "SPF, DKIM, DMARC configuration, CAN-SPAM compliance, and sender reputation management." },
     ]
   },
   {
@@ -64,8 +74,10 @@ const hubs = [
     spokes: [
       { title: "Digital PR & Media Placements", description: "Press distribution and earned media that builds authority." },
       { title: "Industry Directory Listings", description: "Strategic placement in industry-specific directories and associations." },
-      { title: "Local Sponsorships", description: "Community event sponsorships that create authentic local signals." },
+      { title: "Local Sponsorships & Partnerships", description: "Community event sponsorships that create authentic local signals." },
+      { title: "Reputation & Trust Management", description: "Review monitoring, sentiment analysis, and brand mention tracking." },
       { title: "Thought Leadership Content", description: "Expert articles and guest posts that position clients as authorities." },
+      { title: "Awards & Recognition Strategy", description: "Strategic award submissions and certification pursuits that build credibility." },
     ]
   }
 ];
