@@ -3,68 +3,67 @@ import { Check, ArrowRight } from "lucide-react";
 const phases = [
   {
     month: "Month 1",
-    title: "Foundation",
-    focus: "Discovery & Setup",
+    title: "Build & Launch",
+    focus: "Foundation + First Campaigns",
+    hours: "~42 hrs",
     items: [
-      "Technical SEO audit & fixes",
+      "Technical SEO audit & priority fixes",
       "GBP optimization & verification",
-      "Tracking & analytics setup",
+      "Tracking, analytics & call tracking setup",
+      "Service area pages created",
+      "Citation building initiated",
+      "Google Ads campaign launched",
+      "Landing page optimization",
+      "Review generation activated",
       "Baseline reporting configured",
     ],
   },
   {
     month: "Month 2",
-    title: "Visibility",
-    focus: "Local SEO & Maps",
+    title: "Expand & Refine",
+    focus: "Multi-Channel + Optimization",
+    hours: "~42 hrs",
     items: [
-      "On-page local optimization",
-      "Service area page buildout",
-      "Citation building begins",
-      "Review generation activated",
+      "Meta/social ads launched",
+      "Retargeting campaigns live",
+      "Google Ads bid optimization",
+      "Local link outreach begins",
+      "Content calendar execution",
+      "GBP posting schedule active",
+      "Citation cleanup continues",
+      "First month performance review",
     ],
   },
   {
     month: "Month 3",
-    title: "Acceleration",
-    focus: "Paid Media Launch",
-    items: [
-      "Google Ads campaign launch",
-      "Landing page optimization",
-      "Call tracking integration",
-      "Initial bid strategy testing",
-    ],
-  },
-  {
-    month: "Month 4",
-    title: "Expansion",
-    focus: "Multi-Channel Growth",
-    items: [
-      "Meta/social ads activated",
-      "Retargeting campaigns live",
-      "Local link acquisition",
-      "Content calendar execution",
-    ],
-  },
-  {
-    month: "Month 5",
-    title: "Authority",
-    focus: "Trust & Credibility",
+    title: "Authority & Scale",
+    focus: "Trust Signals + Growth",
+    hours: "~42 hrs",
     items: [
       "Digital PR outreach",
       "Industry directory submissions",
+      "Email automation setup",
+      "Landing page A/B testing",
+      "Keyword expansion",
+      "Ad creative refresh",
       "Review velocity maintained",
-      "Thought leadership content",
+      "Quarterly strategy review",
     ],
   },
   {
-    month: "Month 6",
-    title: "Optimization",
-    focus: "Retention & Scale",
+    month: "Months 4–6",
+    title: "Ongoing Management",
+    focus: "Optimize, Maintain, Grow",
+    hours: "~42 hrs/mo",
     items: [
-      "Email automation sequences",
-      "Performance optimization",
-      "Quarterly strategy review",
-      "Roadmap for next phase",
+      "Continuous campaign optimization",
+      "Content creation & publishing",
+      "Link building & authority work",
+      "Review management & response",
+      "Monthly reporting & insights",
+      "Seasonal adjustments",
+      "New opportunity identification",
+      "Strategy refinement",
     ],
   },
 ];
@@ -77,48 +76,40 @@ const SixMonthRoadmap = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-3">
-              Example Engagement
+              Example: $2,500/mo Engagement
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              A 6-Month Roadmap
+              6-Month Roadmap
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Here's how a coordinated local marketing engagement might unfold. 
-              Your roadmap is scoped to your goals—this is just one example.
+              At ~$60/hr, that's roughly 42 hours of execution per month. Here's how a full 
+              digital inbound marketing engagement unfolds—heavy lifting upfront, then ongoing optimization.
             </p>
           </div>
 
           {/* Timeline */}
           <div className="relative">
-            {/* Connection line - desktop */}
-            <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-0.5 bg-gradient-to-r from-accent-blue/20 via-cta/40 to-accent-blue/20" />
-
-            {/* Phases grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-4">
+            {/* Phases grid - 4 columns */}
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
               {phases.map((phase, index) => (
                 <div key={index} className="relative group">
                   {/* Month indicator */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-cta/10 border-2 border-cta/30 flex items-center justify-center text-cta font-bold text-sm">
-                      {index + 1}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-cta/10 border-2 border-cta/30 flex items-center justify-center text-cta font-bold">
+                      {index === 3 ? "4–6" : index + 1}
                     </div>
-                    <div className="lg:hidden">
+                    <div>
                       <p className="text-xs text-text-muted uppercase tracking-wider">{phase.month}</p>
                       <p className="text-sm font-semibold text-foreground">{phase.title}</p>
                     </div>
-                    {/* Arrow connector - mobile/tablet */}
-                    {index < phases.length - 1 && (
-                      <ArrowRight className="h-4 w-4 text-text-muted ml-auto lg:hidden" />
-                    )}
                   </div>
 
                   {/* Card */}
                   <div className="bg-surface-elevated border border-border/50 rounded-xl p-5 h-full group-hover:border-accent-blue/30 transition-colors">
-                    <div className="hidden lg:block mb-3">
-                      <p className="text-xs text-text-muted uppercase tracking-wider">{phase.month}</p>
-                      <p className="text-base font-semibold text-foreground">{phase.title}</p>
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-accent-blue text-xs font-medium">{phase.focus}</p>
+                      <span className="text-xs text-text-muted bg-surface-dark px-2 py-0.5 rounded">{phase.hours}</span>
                     </div>
-                    <p className="text-accent-blue text-xs font-medium mb-3">{phase.focus}</p>
                     <ul className="space-y-2">
                       {phase.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-2 text-text-secondary text-xs">
@@ -135,8 +126,8 @@ const SixMonthRoadmap = () => {
 
           {/* Disclaimer */}
           <p className="text-center text-text-muted text-sm mt-10 max-w-xl mx-auto">
-            Every engagement is scoped individually. Timelines, priorities, and channels 
-            are determined during discovery—not predetermined by package tiers.
+            Every engagement is scoped individually. This example assumes full-service 
+            digital inbound marketing—your scope may include fewer channels.
           </p>
         </div>
       </div>
