@@ -35,7 +35,7 @@ const LocalSEO = () => {
     {
       eyebrow: "The Local Search Landscape",
       headline: "Your Clients Are Missing 46% of Google Searches",
-      description: "Nearly half of all Google searches have local intent. When someone types 'plumber near me' or 'best dentist in [city],' they're not browsing—they're ready to call. The 2026 Whitespark Local Search Ranking Factors report confirms what we've seen across hundreds of campaigns: businesses that invest in local SEO capture high-intent traffic their competitors never see.",
+      description: "Nearly half of all Google searches have local intent. When someone types 'plumber near me' or 'best dentist in [city],' they're not browsing—they're ready to call. We've seen it across hundreds of campaigns: businesses that invest in local SEO capture high-intent traffic their competitors never see.",
       bullets: [
         "Local pack results appear in 93% of location-based searches",
         "42% of local searchers click on Google Maps 3-pack listings",
@@ -48,7 +48,7 @@ const LocalSEO = () => {
     {
       eyebrow: "Beyond Traditional SEO",
       headline: "AI Search Visibility Is the New Frontier",
-      description: "Large language models like ChatGPT and Google's AI Overviews are changing how consumers discover local businesses. The 2026 ranking factors study introduced AI visibility as a new measurement category. Presence on expert-curated 'best of' lists, dedicated service pages, and prominence on industry-relevant domains now influence how AI systems recommend businesses. We're building these signals into every local SEO campaign.",
+      description: "Large language models like ChatGPT and Google's AI Overviews are changing how consumers discover local businesses. AI visibility is now a critical ranking factor. Presence on expert-curated 'best of' lists, dedicated service pages, and prominence on industry-relevant domains influence how AI systems recommend businesses. We build these signals into every campaign.",
       bullets: [
         "Citations are becoming 'the new link' for AI search visibility",
         "Dedicated pages for each service improve AI comprehension",
