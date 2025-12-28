@@ -3,18 +3,11 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
-import AntiPackageBlock from "@/components/services/AntiPackageBlock";
-import StandaloneServicesBlock from "@/components/services/StandaloneServicesBlock";
-import SystemDiagram from "@/components/services/SystemDiagram";
-import ServicesStats from "@/components/services/ServicesStats";
-import FulfillmentCoordination from "@/components/services/FulfillmentCoordination";
-import CoreServiceAreas from "@/components/services/CoreServiceAreas";
-import ScopeRules from "@/components/services/ScopeRules";
-import NotStaffingStatement from "@/components/services/NotStaffingStatement";
-import ServicesDirectory from "@/components/services/ServicesDirectory";
+import FitCriteria from "@/components/services/FitCriteria";
+import ServiceAreasGrid from "@/components/services/ServiceAreasGrid";
+import HowWeWork from "@/components/services/HowWeWork";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
-import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 
 const Services = () => {
   return (
@@ -27,40 +20,22 @@ const Services = () => {
       
       <Header />
       
-      {/* 1. Hero Section */}
+      {/* Hero */}
       <ServicesHero />
       
-      {/* 2. Anti-Package Framing Block */}
-      <AntiPackageBlock />
+      {/* Who This Works For */}
+      <FitCriteria />
       
-      {/* 3. Standalone Services Framing */}
-      <StandaloneServicesBlock />
+      {/* Service Areas */}
+      <ServiceAreasGrid />
       
-      {/* 4. System Overview Diagram */}
-      <SystemDiagram />
+      {/* How We Work */}
+      <HowWeWork />
       
-      {/* 4. How Fulfillment Is Coordinated */}
-      <FulfillmentCoordination />
-      
-      {/* 5. Core Service Areas */}
-      <CoreServiceAreas />
-      
-      {/* Testimonials */}
-      <ServicesTestimonials />
-      
-      {/* 6. Scope & Activation Rules */}
-      <ScopeRules />
-      
-      {/* 7. Not Staffing Statement */}
-      <NotStaffingStatement />
-      
-      {/* 8. Services Directory */}
-      <ServicesDirectory />
-      
-      {/* 9. Services-Specific FAQs */}
+      {/* FAQ */}
       <ServicesFAQ />
       
-      {/* 10. Final CTA */}
+      {/* Final CTA */}
       <ServicesFinalCTA />
 
       <ContactForm />
