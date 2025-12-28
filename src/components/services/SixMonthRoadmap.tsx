@@ -199,7 +199,7 @@ const SixMonthRoadmap = () => {
             6-Month Roadmap
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            At ~$60/hr, that's roughly 42 hours of execution per month. Here's how a full digital inbound marketing engagement unfolds.
+            Approximately 40-45 hours of execution per month. Here's how a full digital inbound marketing engagement unfolds.
             <span className="block mt-3 text-foreground font-medium">
               Heavy lifting upfront, then ongoing optimization and growth.
             </span>
