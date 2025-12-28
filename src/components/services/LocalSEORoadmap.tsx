@@ -170,7 +170,7 @@ const LocalSEORoadmap = () => {
             Your Local SEO Roadmap
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            Every local SEO engagement follows a proven framework. Here's what a typical campaign looks like—from initial audit through measurable results. 
+            Every local SEO engagement follows a proven framework. Here's what a typical campaign looks like, from initial audit through measurable results. 
             <span className="block mt-3 text-foreground font-medium">
               Timeline is budget-dependent. SEO is time. How quickly we move between phases depends on your investment level and competitive landscape.
             </span>
@@ -332,7 +332,7 @@ const LocalSEORoadmap = () => {
           <p className="text-text-secondary text-center">
             <span className="font-semibold text-foreground">Pace is flexible:</span>{" "}
             Some clients move through all six phases in six months. Others spread it across a year. 
-            The timeline adapts to your budget, competitive dynamics, and business priorities—but the sequence remains proven.
+            The timeline adapts to your budget, competitive dynamics, and business priorities, but the sequence remains proven.
           </p>
         </div>
       </div>

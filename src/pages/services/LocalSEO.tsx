@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
@@ -21,8 +22,8 @@ const LocalSEO = () => {
     { label: hub.title }
   ];
 
-  // More persuasive hero description emphasizing 360° connected approach
-  const heroDescription = "Local SEO is one piece of a 360° local marketing ecosystem—and every piece is connected. When organic rankings, Google Maps visibility, review reputation, and paid media work together, the results compound. We help agencies deliver the organic foundation that makes everything else more effective. This is white-label SEO fulfillment built for agencies who understand that sustainable growth requires integration, not isolation.";
+  // More persuasive hero description emphasizing 360° connected approach (em dash removed)
+  const heroDescription = "Local SEO is one piece of a 360° local marketing ecosystem, and every piece is connected. When organic rankings, Google Maps visibility, review reputation, and paid media work together, the results compound. We help agencies deliver the organic foundation that makes everything else more effective. This is white-label SEO fulfillment built for agencies who understand that sustainable growth requires integration, not isolation.";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -42,10 +43,13 @@ const LocalSEO = () => {
       </div>
       <LocalSEOStats />
       <LocalMarketingEcosystem />
+      <MidPageCTA variant="dark" />
       <RankingFactorsInfographic />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
+      <MidPageCTA variant="light" />
       <LocalSEORoadmap />
       <Testimonials />
+      <MidPageCTA variant="dark" />
       <FAQ />
       <ContactForm />
       <Footer />
