@@ -6,6 +6,7 @@ import ServicesHero from "@/components/services/ServicesHero";
 import AntiPackageBlock from "@/components/services/AntiPackageBlock";
 import StandaloneServicesBlock from "@/components/services/StandaloneServicesBlock";
 import SystemDiagram from "@/components/services/SystemDiagram";
+import ServicesStats from "@/components/services/ServicesStats";
 import FulfillmentCoordination from "@/components/services/FulfillmentCoordination";
 import CoreServiceAreas from "@/components/services/CoreServiceAreas";
 import ScopeRules from "@/components/services/ScopeRules";
@@ -30,6 +31,9 @@ const Services = () => {
       
       {/* 2. Anti-Package Framing Block */}
       <AntiPackageBlock />
+      
+      {/* Stats Section */}
+      <ServicesStats />
       
       {/* 3. Standalone Services Framing */}
       <StandaloneServicesBlock />
