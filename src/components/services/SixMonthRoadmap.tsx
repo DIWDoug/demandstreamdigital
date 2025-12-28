@@ -161,10 +161,10 @@ const SixMonthRoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">
-            How Engagements Typically Unfold
+            6-Month Roadmap
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
-            A Pattern, Not a Package
+            How Engagements Typically Unfold
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
             Most engagements follow a similar rhythm: heavy lifting upfront, then ongoing optimization based on what the data says. This is a common shape, not a locked scope—execution adapts as priorities shift.
