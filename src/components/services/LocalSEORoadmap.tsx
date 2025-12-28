@@ -22,6 +22,8 @@ const roadmapData: MonthData[] = [
       "Complete site audit and existing inventory assessment",
       "Comprehensive keyword research and opportunity mapping",
       "Competitive landscape and backlink gap analysis",
+      "Competitive citation gap analysis",
+      "Link detox evaluation and toxic backlink assessment",
       "Technical SEO foundation evaluation",
       "Hub and spoke content gap analysis",
       "Tone, style, and brand voice documentation"
@@ -30,6 +32,7 @@ const roadmapData: MonthData[] = [
       "SEO Audit Report with prioritized recommendations",
       "Keyword Research Document with search volumes and difficulty",
       "Competitive Analysis with actionable insights",
+      "Link Detox Report with disavow recommendations (if needed)",
       "6-Month Strategic Roadmap customized to goals"
     ]
   },
