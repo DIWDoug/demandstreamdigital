@@ -1,38 +1,38 @@
-import { ShieldCheck, Eye, Rocket, Calculator, Zap, MessageCircle, ArrowRight } from "lucide-react";
+import { FileText, Users, MessageSquare, Target, TrendingUp, XCircle, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const WhyPartnerWithUs = () => {
   const sectionRef = useScrollReveal();
   const allBenefits = [
     {
-      icon: ShieldCheck,
-      title: "Trust",
-      description: "We treat your business like it's our own. Your clients, your reputation, your margins: we protect them all."
+      icon: FileText,
+      title: "Clear Scope. No Guesswork.",
+      description: "Agencies know exactly what's included, how work progresses, and how changes are handled. Scope is discussed early and revisited intentionally, not discovered after problems show up."
     },
     {
-      icon: Eye,
-      title: "Clarity",
-      description: "Complete transparency on services you're selling. No black boxes, just clear deliverables you can confidently communicate."
+      icon: Users,
+      title: "Work You Can Explain to Clients",
+      description: "Fulfillment is delivered in a way agencies can confidently walk clients through, without hedging, scrambling, or overpromising. The work makes sense, and so does the story behind it."
     },
     {
-      icon: Rocket,
-      title: "Execution",
-      description: "Held to the highest standard. Structured workflows and attention to detail that reflects the quality your agency is known for."
+      icon: MessageSquare,
+      title: "Fewer Fire Drills. Cleaner Communication.",
+      description: "Structured updates and direct communication reduce back-and-forth and prevent small issues from turning into reactive emergencies. Problems surface early, when they're still easy to solve."
     },
     {
-      icon: Calculator,
-      title: "Custom Pricing, Not Packages",
-      description: "We use AI to analyze market factors and build pricing that fits each client. No cookie-cutter packages. Every scope reflects real competitive conditions."
+      icon: Target,
+      title: "Execution That Doesn't Drift",
+      description: "Work is reviewed, adjusted, and guided with intent. Execution doesn't slowly slide into box-checking or autopilot just because the account is \"live.\""
     },
     {
-      icon: Zap,
-      title: "Scale Without Overhead",
-      description: "Take on more clients while maintaining your service level. No hiring, training, or managing additional staff."
+      icon: TrendingUp,
+      title: "Built for Long-Term Retention",
+      description: "Execution is paced for sustainability, not short-term optics. That helps agencies retain clients, protect margins, and grow without burning out their team or constantly resetting expectations."
     },
     {
-      icon: MessageCircle,
-      title: "Direct Communication",
-      description: "Access our team directly. No call centers, just clear, responsive communication when you need it."
+      icon: XCircle,
+      title: "Not a Fit for Everyone",
+      description: "This partnership works best for agencies that value clarity, patience, and disciplined execution. If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit."
     }
   ];
 
@@ -44,10 +44,11 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Why Agencies Choose Us as Their <span className="text-[hsl(76,42%,35%)]">Fulfillment Partner</span>
+            What Partnership Looks Like <span className="text-[hsl(76,42%,35%)]">in Practice</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We're a white-label digital marketing partner built by marketers, not a staffing company. Our team delivers agency-grade execution under your brand.
+            This isn't about features or promises.<br />
+            It's about what actually changes when fulfillment is handled with discipline instead of guesswork.
           </p>
         </div>
 
