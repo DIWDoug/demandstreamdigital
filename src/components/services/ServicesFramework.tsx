@@ -1,6 +1,4 @@
-import { Target, Shield, Layers, RefreshCcw } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Target, Shield, Layers, RefreshCcw, ArrowRight, Phone } from "lucide-react";
 
 const pillars = [
   {
@@ -84,10 +82,26 @@ const ServicesFramework = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 pt-10 border-t border-border/20 text-center">
-            <Button asChild size="lg" className="bg-accent-blue hover:bg-accent-blue/90">
-              <Link to="#contact">Start a Conversation</Link>
-            </Button>
+          <div className="mt-16 pt-10 border-t border-border/20">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <a 
+                href="#contact" 
+                className="btn-cta group flex items-center gap-2"
+              >
+                Let's Talk Partnership
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              
+              <span className="text-sm font-medium text-text-muted">or</span>
+              
+              <a 
+                href="tel:2143072995"
+                className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle hover:bg-surface-elevated transition-colors font-medium text-sm"
+              >
+                <Phone className="h-4 w-4" />
+                (214) 307-2995
+              </a>
+            </div>
           </div>
         </div>
       </div>
