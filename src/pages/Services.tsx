@@ -5,7 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
-import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
+
 import ServicesFramework from "@/components/services/ServicesFramework";
 import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
 import ServicesExpertise from "@/components/services/ServicesExpertise";
@@ -41,9 +41,6 @@ const Services = () => {
       
       {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
-      
-      {/* Why Agencies Actually Use This */}
-      <WhyPartnerWithUs />
       
       <SectionDivider />
       
