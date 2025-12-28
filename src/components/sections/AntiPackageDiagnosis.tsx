@@ -1,14 +1,19 @@
+import { MapPin, Layers, ClipboardList } from "lucide-react";
+
 const AntiPackageDiagnosis = () => {
   const diagnosticCards = [
     {
+      icon: MapPin,
       title: "Markets Aren't Interchangeable",
       body: "Different cities, industries, and competitive landscapes require different effort, pacing, and tactics. Pre-set packages assume uniformity where it doesn't exist."
     },
     {
+      icon: Layers,
       title: "Packages Hide Scope Problems",
       body: "Fixed tiers rarely reflect real-world requirements. As campaigns evolve, scope expands quietly, teams over-deliver, and margins erode."
     },
     {
+      icon: ClipboardList,
       title: "Execution Becomes Box-Checking",
       body: "When fulfillment is defined by packages, execution follows checklists instead of judgment. The work gets done, but it stops adapting."
     }
@@ -35,6 +40,7 @@ const AntiPackageDiagnosis = () => {
                 key={index}
                 className="bg-surface-elevated/50 rounded-xl p-6 lg:p-8 border border-border/30 shadow-sm"
               >
+                <card.icon className="h-5 w-5 text-text-muted mb-4" />
                 <strong className="block text-lg font-semibold text-foreground mb-3">
                   {card.title}
                 </strong>
