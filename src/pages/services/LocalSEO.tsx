@@ -17,6 +17,11 @@ import OurApproach from "@/components/services/OurApproach";
 import RankingFactorsInfographic from "@/components/services/RankingFactorsInfographic";
 import { getHubBySlug } from "@/data/services";
 
+// Images for alternating content
+import localSearchImage from "@/assets/local-search-landscape.jpg";
+import rankingFactorsImage from "@/assets/ranking-factors-analysis.jpg";
+import aiVisibilityImage from "@/assets/ai-search-visibility.jpg";
+
 const LocalSEO = () => {
   const hub = getHubBySlug("local-seo");
   if (!hub) return null;
@@ -37,7 +42,9 @@ const LocalSEO = () => {
         "42% of local searchers click on Google Maps 3-pack listings",
         "80% of US consumers search for local businesses weekly",
         "Mobile local searches lead to store visits within 24 hours at a rate of 76%"
-      ]
+      ],
+      imageSrc: localSearchImage,
+      imageAlt: "Person searching for local businesses on smartphone with map pins visible"
     },
     {
       eyebrow: "Ranking Factors That Matter",
@@ -48,7 +55,9 @@ const LocalSEO = () => {
         "Review velocity and sentiment directly impact local pack positions",
         "On-page signals including NAP consistency and local schema markup",
         "Link signals from locally-relevant, authoritative sources"
-      ]
+      ],
+      imageSrc: rankingFactorsImage,
+      imageAlt: "Marketing team analyzing SEO analytics dashboard with charts and data visualizations"
     },
     {
       eyebrow: "Beyond Traditional SEO",
@@ -59,7 +68,9 @@ const LocalSEO = () => {
         "Dedicated pages for each service improve AI comprehension",
         "Expert curated lists carry significant weight in AI recommendations",
         "Structured data helps AI systems understand business offerings"
-      ]
+      ],
+      imageSrc: aiVisibilityImage,
+      imageAlt: "Abstract AI neural network visualization representing artificial intelligence in search"
     }
   ];
 
