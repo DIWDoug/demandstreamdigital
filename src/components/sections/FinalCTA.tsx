@@ -13,7 +13,7 @@ const FinalCTA = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6 text-foreground">
-            Ready to <span className="text-pop">Scale Your Agency</span> Without the Overhead?
+            Ready to <span className="text-accent-blue">Scale Your Agency</span> Without the Overhead?
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
             A white-label digital marketing partner built for agencies that value execution, reliability, and long-term success. 90% client retention rate.

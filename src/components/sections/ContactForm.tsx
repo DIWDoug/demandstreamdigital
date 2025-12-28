@@ -58,7 +58,7 @@ const ContactForm = () => {
           {/* Centered Header */}
           <div className="text-center mb-16">
             <h2 className="mb-4 text-foreground">
-              Fulfillment in <span className="text-pop">6 Clear Steps</span>
+              Fulfillment in <span className="text-accent-blue">6 Clear Steps</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
               A predictable process designed for agencies that value control, execution, and client delight.
