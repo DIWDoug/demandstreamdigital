@@ -22,8 +22,7 @@ const LocalSEO = () => {
     { label: hub.title }
   ];
 
-  // More persuasive hero description emphasizing 360° connected approach (em dash removed)
-  const heroDescription = "Local SEO is one piece of a 360° local marketing ecosystem, and every piece is connected. When organic rankings, Google Maps visibility, review reputation, and paid media work together, the results compound. We help agencies deliver the organic foundation that makes everything else more effective. This is white-label SEO fulfillment built for agencies who understand that sustainable growth requires integration, not isolation.";
+  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, and links—delivered as your own.";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
