@@ -76,20 +76,34 @@ const EcosystemDiagram = () => {
 
           {/* Diagram + List Layout */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Circular Diagram + Selected Info */}
+            {/* Circular Diagram with center text */}
             <div className="flex flex-col items-center">
-              <div className="relative aspect-square max-w-md lg:max-w-lg w-full">
-                {/* Outer circle */}
-                <div className="absolute inset-6 rounded-full border-2 border-dashed border-gray-300" />
+              <div className="relative aspect-square max-w-sm sm:max-w-md lg:max-w-lg w-full">
+                {/* Solid outer ring - green */}
+                <div className="absolute inset-8 sm:inset-10 rounded-full border-[3px] border-cta/60" />
                 
-                {/* Center icon */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-cta/10 border-2 border-cta/30 flex items-center justify-center">
-                    <activeArea.icon className="h-7 w-7 lg:h-8 lg:w-8 text-cta" />
-                  </div>
+                {/* Inner connecting lines */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
+                  {/* Connection web between nodes */}
+                  <line x1="200" y1="40" x2="360" y2="120" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                  <line x1="360" y1="120" x2="360" y2="280" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                  <line x1="360" y1="280" x2="200" y2="360" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                  <line x1="200" y1="360" x2="40" y2="280" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                  <line x1="40" y1="280" x2="40" y2="120" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                  <line x1="40" y1="120" x2="200" y2="40" stroke="hsl(76, 42%, 41%)" strokeWidth="2" strokeOpacity="0.3" />
+                </svg>
+
+                {/* Center text content */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-40 sm:w-48 lg:w-56 px-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                    {activeArea.label}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                    {activeArea.description}
+                  </p>
                 </div>
 
-                {/* Surrounding nodes */}
+                {/* Surrounding nodes - dark circles with white icons */}
                 {systemAreas.map((area, index) => {
                   const position = nodePositions[index];
                   const isActive = area.id === activeArea.id;
@@ -98,26 +112,18 @@ const EcosystemDiagram = () => {
                     <button
                       key={area.id}
                       onClick={() => setActiveArea(area)}
-                      className={`absolute w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      className={`absolute w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg ${
                         isActive 
-                          ? "bg-cta text-white scale-110 shadow-lg" 
-                          : "bg-white border border-gray-200 text-gray-500 hover:border-cta/50 hover:text-cta shadow-sm"
+                          ? "bg-cta text-white scale-110 ring-4 ring-cta/30" 
+                          : "bg-gray-900 text-white hover:bg-gray-800"
                       }`}
                       style={position}
                       title={area.label}
                     >
-                      <area.icon className="h-5 w-5 lg:h-6 lg:w-6" />
+                      <area.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </button>
                   );
                 })}
-
-                {/* Dashed connection lines */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
-                  <line x1="50" y1="200" x2="350" y2="200" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
-                  <line x1="200" y1="50" x2="200" y2="350" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
-                  <line x1="80" y1="80" x2="320" y2="320" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
-                  <line x1="320" y1="80" x2="80" y2="320" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
-                </svg>
               </div>
             </div>
 
