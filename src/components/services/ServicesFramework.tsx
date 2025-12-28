@@ -47,11 +47,8 @@ const ServicesFramework = () => {
                 How We Approach{" "}
                 <span className="text-text-secondary">White Label Fulfillment</span>
               </h2>
-              <p className="text-text-secondary text-lg leading-relaxed mb-4">
-                Custom fulfillment only works when it is controlled. Our approach adapts to different markets without introducing chaos or scope creep. We start with structure, not services, scoping each engagement based on real factors like location count, competition, and client goals rather than preset packages.
-              </p>
               <p className="text-text-secondary text-lg leading-relaxed">
-                When performance dips or priorities change, nothing happens in the dark. We surface issues early, align on adjustments, and document changes before execution shifts. Scope does not quietly expand, deliverables do not drift, and responsibility is never unclear. You stay informed, in control, and protected from surprises while we handle the work behind the scenes.
+                Custom fulfillment only works when it is controlled. We scope each engagement based on real factors—location count, competition, and goals—rather than preset packages. When priorities shift, we surface issues early, align on adjustments, and document changes before execution moves. You stay informed and in control while we handle the work.
               </p>
             </div>
 
