@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import AntiPackageDiagnosis from "@/components/sections/AntiPackageDiagnosis";
+import FulfillmentApproach from "@/components/sections/FulfillmentApproach";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -30,6 +31,7 @@ const Index = () => {
       <Header />
       <Hero />
       <AntiPackageDiagnosis />
+      <FulfillmentApproach />
       <WhoWeAre />
       <WhyPartnerWithUs />
       <div id="services">
