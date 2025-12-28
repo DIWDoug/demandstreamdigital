@@ -38,7 +38,7 @@ const AntiPackageDiagnosis = () => {
                 <strong className="block text-lg font-semibold text-foreground mb-3">
                   {card.title}
                 </strong>
-                <p className="text-text-secondary text-sm leading-relaxed">
+                <p className="text-text-secondary text-sm leading-7">
                   {card.body}
                 </p>
               </div>
