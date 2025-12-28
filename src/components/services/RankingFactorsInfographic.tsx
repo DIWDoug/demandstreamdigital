@@ -106,14 +106,13 @@ const RankingFactorsInfographic = () => {
         {/* Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">
-            2026 Research
+            What Actually Matters
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
             Local Search Ranking Factors
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            Based on Whitespark's comprehensive study with 47 industry experts analyzing 187 ranking signals. 
-            Understanding these factors is essential for any successful local SEO campaign.
+            We track 187 ranking signals across every campaign. Here's what moves the needle for local visibility—organized by where your clients need to show up.*
           </p>
         </div>
 
@@ -180,16 +179,8 @@ const RankingFactorsInfographic = () => {
             {/* Source attribution */}
             <div className="pt-4 mt-4 border-t border-border">
               <p className="text-xs text-text-muted">
-                Source: Whitespark Local Search Ranking Factors 2026
+                *Ranking factors informed by Whitespark's 2026 Local Search Ranking Factors study
               </p>
-              <a 
-                href="https://whitespark.ca/local-search-ranking-factors/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xs text-accent-blue hover:underline"
-              >
-                View full research →
-              </a>
             </div>
           </div>
 
