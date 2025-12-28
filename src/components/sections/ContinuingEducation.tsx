@@ -60,7 +60,7 @@ const ContinuingEducation = () => {
           <p className="text-sm text-accent-blue uppercase tracking-widest mb-6 font-medium">
             Always Growing
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
             Continuing Education
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
@@ -75,7 +75,7 @@ const ContinuingEducation = () => {
               <div className="p-3 rounded-xl bg-accent-blue/10 border border-accent-blue/20">
                 <BookOpen className="w-6 h-6 text-accent-blue" />
               </div>
-              <h3 className="text-xl font-bold text-foreground">What We're Studying Now</h3>
+              <h3 className="text-xl font-semibold text-foreground">What We're Studying Now</h3>
             </div>
             
             {/* Scrolling container */}
@@ -102,7 +102,7 @@ const ContinuingEducation = () => {
               <div className="p-3 rounded-xl bg-accent-blue/10 border border-accent-blue/20">
                 <Users className="w-6 h-6 text-accent-blue" />
               </div>
-              <h3 className="text-xl font-bold text-foreground">Industry Voices We Follow</h3>
+              <h3 className="text-xl font-semibold text-foreground">Industry Voices We Follow</h3>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {industryVoices.map((voice, index) => (
