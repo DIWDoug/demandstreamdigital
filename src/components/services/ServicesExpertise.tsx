@@ -5,9 +5,9 @@ import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Mail, Award } from
 const hubs = [
   {
     icon: MapPin,
-    title: "Dominate Local Organic Search",
+    title: "Local SEO",
     slug: "local-seo",
-    summary: "White label local SEO services that put your clients at the top of organic results and drive qualified traffic from their service areas.",
+    summary: "White label local SEO services that dominate organic search results and drive qualified traffic from your clients' service areas.",
     spokes: [
       { title: "On-Page Local Optimization", description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance." },
       { title: "Technical SEO for Multi-Location", description: "Site architecture, internal linking, and crawlability fixes for service area hierarchy." },
@@ -19,9 +19,9 @@ const hubs = [
   },
   {
     icon: Map,
-    title: "Own the Local 3-Pack",
+    title: "Google Maps Optimization",
     slug: "google-maps",
-    summary: "White label Google Maps optimization that secures top positions in the local pack and drives calls directly from Google Business Profiles.",
+    summary: "White label Google Maps optimization to own the local 3-pack and drive calls directly from Google Business Profile listings.",
     spokes: [
       { title: "Google Business Profile Management", description: "Complete profile optimization including categories, attributes, services, and posts." },
       { title: "Review Generation & Response", description: "Systematic review acquisition and professional response management." },
@@ -33,9 +33,9 @@ const hubs = [
   },
   {
     icon: MousePointerClick,
-    title: "Turn Ad Spend Into Leads",
+    title: "Paid Media",
     slug: "paid-media",
-    summary: "White label Google Ads management that converts clicks into calls and form fills—with clear attribution and no wasted spend.",
+    summary: "White label paid media management for Google Ads and Meta ads—campaigns built for calls and conversions.",
     spokes: [
       { title: "Local Search Campaign Structure", description: "Service area targeting and keyword strategies for local lead generation." },
       { title: "Landing Page Optimization", description: "Conversion-focused pages with local trust signals and form optimization." },
@@ -47,9 +47,9 @@ const hubs = [
   },
   {
     icon: Share2,
-    title: "Build Local Awareness on Social",
+    title: "Meta Ads",
     slug: "paid-media",
-    summary: "White label Meta Ads on Facebook and Instagram that build brand recognition and capture demand in local markets.",
+    summary: "White label social advertising on Facebook and Instagram to build local awareness and capture demand.",
     spokes: [
       { title: "Local Audience Targeting", description: "Geographic, demographic, and interest-based audiences for each service area." },
       { title: "Creative Strategy & Production", description: "Thumb-stopping ad creative and video content optimized for local service businesses." },
@@ -61,9 +61,9 @@ const hubs = [
   },
   {
     icon: Mail,
-    title: "Nurture Leads Into Customers",
+    title: "Email Marketing",
     slug: "email-marketing",
-    summary: "White label email marketing that moves prospects through the funnel and drives repeat business through automation.",
+    summary: "White label email marketing to nurture leads and drive repeat business through strategic campaigns and automation.",
     spokes: [
       { title: "Campaign Strategy & Design", description: "Custom templates and send schedules that maximize engagement." },
       { title: "Automation Sequences", description: "Welcome series and nurture flows that convert leads into customers." },
@@ -75,9 +75,9 @@ const hubs = [
   },
   {
     icon: Award,
-    title: "Establish Trust & Credibility",
+    title: "Authority Building",
     slug: "authority",
-    summary: "White label authority building that creates the trust signals and credibility markers that support long-term ranking stability.",
+    summary: "White label authority building to establish trust signals and credibility markers that support ranking stability.",
     spokes: [
       { title: "Digital PR & Media Placements", description: "Press distribution and earned media that builds authority." },
       { title: "Industry Directory Listings", description: "Strategic placement in industry-specific directories and associations." },
