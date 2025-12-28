@@ -33,7 +33,7 @@ const WhyItMatters = ({ eyebrow = "Why It Matters", headline, description, point
               <div className="inline-flex items-center justify-center p-4 rounded-xl bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 mb-5">
                 <point.icon className="h-6 w-6 text-[hsl(76,42%,35%)]" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">{point.title}</h3>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">{point.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{point.description}</p>
             </div>
           ))}

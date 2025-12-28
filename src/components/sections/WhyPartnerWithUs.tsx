@@ -49,7 +49,7 @@ const WhyPartnerWithUs = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
             What Partnership Looks Like <span className="text-[hsl(76,42%,35%)]">in Practice</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const WhyPartnerWithUs = () => {
               }`}>
                 <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-[hsl(76,42%,35%)]'}`} strokeWidth={1.5} />
               </div>
-              <h3 className={`text-xl font-bold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
+              <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
                 {benefit.title}
               </h3>
               <p className={`text-sm leading-relaxed ${benefit.isQualifier ? 'text-gray-500' : 'text-gray-600'}`}>
