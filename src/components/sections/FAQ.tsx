@@ -4,74 +4,50 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const FAQ = () => {
   const sectionRef = useScrollReveal();
   const faqs = [
-    // Partnership-Focused Questions
     {
-      question: "How does white-label fulfillment work?",
-      answer: (
-        <>
-          We operate entirely behind the scenes. You maintain the client relationship, set pricing, and own communication. We handle execution under your brand.{" "}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <span className="underline decoration-dotted cursor-help">Clients never know we exist</span>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>We're like marketing ninjas. But with fewer throwing stars. 🥷</p>
-            </TooltipContent>
-          </Tooltip>
-          .
-        </>
-      )
+      question: "How does a white-label partnership with Dialed-In Web work?",
+      answer: "We operate as a fulfillment partner, not a task vendor. Scope, cadence, and responsibilities are defined upfront and executed independently of day-to-day agency shifts. The relationship is built around consistency, not constant adjustment."
+    },
+    {
+      question: "Who is this not a fit for?",
+      answer: "This is not for agencies looking to outsource tasks, rent headcount, or absorb rapid client volume. We work best with small, disciplined agencies managing a focused client roster. If your model relies on constant pivots or scale at all costs, this won't be a fit."
+    },
+    {
+      question: "Are you a staffing company or an outsourced team?",
+      answer: "No. We are not a staffing company disguised as an agency. We deliver marketing execution with standards, systems, and accountability. We don't place people. We own fulfillment."
+    },
+    {
+      question: "What size agencies do you typically work with?",
+      answer: "We partner with agencies operating intentionally, not at mass scale. Most of our partners manage between 1 and 20 active clients at a time. This allows us to maintain scope discipline and protect execution quality on both sides."
+    },
+    {
+      question: "Where is your team based?",
+      answer: "Our team is globally distributed by design. We operate across the United States, Portugal, South Africa, Mexico, the Philippines, Nigeria, and Pakistan, with leadership and client success based in the U.S. and Europe. This structure allows us to maintain execution standards and deliver custom fulfillment without forcing an unsustainable, U.S.-only cost model."
     },
     {
       question: "Do you require long-term contracts?",
-      answer: (
-        <>
-          No. We work on a month-to-month basis with a{" "}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <span className="underline decoration-dotted cursor-help">30-day notice policy</span>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>We don't believe in holding people hostage. Bad for morale. 🔓</p>
-            </TooltipContent>
-          </Tooltip>
-          . Our retention comes from results, not lock-in agreements.
-        </>
-      )
+      answer: "We operate on rolling agreements with a defined 30-day notice period. This structure supports proper planning, resourcing, and execution stability. It's designed for healthy partnerships, not lock-ins."
     },
     {
-      question: "How do you scope and price campaigns?",
-      answer: "We don't use fixed packages. Every engagement starts with a discovery call to understand the client's market, competition, and goals. From there, we build a custom scope and price that protects your margins while delivering the right level of effort."
+      question: "What happens if one of our clients cancels mid-engagement?",
+      answer: "Our fulfillment operates independently of your client contracts. If a client disengages without proper notice, the agreed 30-day fulfillment period still applies. This policy protects execution quality and prevents reactive resourcing decisions."
     },
     {
-      question: "What's your communication process like?",
-      answer: "You get direct access to your dedicated strategist via email and scheduled calls. We provide proactive updates, respond within one business day, and flag issues before they become problems. No ticket systems or support queues."
+      question: "Can we make mid-month scope changes or pivots?",
+      answer: "We don't pivot fulfillment mid-cycle based on changing priorities. Work is planned and resourced on a defined monthly cadence, independent of internal agency shifts. Changes are reviewed and applied in the next planning window."
     },
     {
-      question: "How do you handle reporting?",
-      answer: "We provide white-labeled reports designed for client conversations. Clear outcomes, progress tracking, and next steps. Reports are ready for your client presentations with your branding, not ours."
-    },
-    {
-      question: "What industries do you work with?",
-      answer: "We focus on local service businesses: legal, medical, home services, automotive, real estate, and similar verticals. Our strategies are built for location-based visibility where proximity and trust signals matter most."
-    },
-    {
-      question: "How long does it take to see results?",
-      answer: "Initial improvements can happen within weeks. Meaningful ranking gains typically take 3-6 months depending on competition. We set realistic expectations upfront and provide monthly progress tracking so you can communicate timelines confidently."
+      question: "How do you scope and price fulfillment work?",
+      answer: "All work is scoped intentionally before execution begins. We don't absorb new requests informally or expand scope by default. This keeps expectations clear and delivery consistent."
     },
     {
       question: "What happens if something isn't working?",
-      answer: "We monitor performance continuously and adjust strategy proactively. If results aren't tracking, we diagnose the issue, propose adjustments, and implement changes. You're never left wondering what's happening or why."
+      answer: "Performance is reviewed during structured check-ins, not in reaction to short-term noise. Adjustments are made deliberately, within scope and planning cadence. We don't chase panic fixes or constant resets."
     }
   ];
 
