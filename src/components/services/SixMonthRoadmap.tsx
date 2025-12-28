@@ -166,9 +166,12 @@ const SixMonthRoadmap = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
             White Label Marketing: 6-Month Roadmap
           </h2>
-          <p className="text-lg text-text-secondary leading-relaxed">
+          <p className="text-lg text-text-secondary leading-relaxed mb-3">
             Heavy lifting upfront, then ongoing optimization.{" "}
             <span className="text-foreground font-medium">Here's what gets delivered.</span>
+          </p>
+          <p className="text-sm text-text-muted italic">
+            This is a typical engagement pattern, not a fixed package. Execution adapts to performance data and client priorities.
           </p>
         </div>
 
