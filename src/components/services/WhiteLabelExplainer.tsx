@@ -40,6 +40,64 @@ const WhiteLabelExplainer = () => {
               your reports, and your results—while we handle the execution behind the scenes.
             </p>
           </div>
+
+          {/* Contrast Section */}
+          <div className="mt-12 pt-10 border-t border-border/20">
+            <h3 className="text-xl font-semibold text-foreground mb-3">
+              How This Differs From Typical White Label Providers
+            </h3>
+            <p className="text-text-secondary text-base mb-6">
+              Most white label providers focus on tasks and volume. We focus on controlled execution, accountability, and long-term delivery.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Typical Column */}
+              <div>
+                <p className="text-text-muted text-xs uppercase tracking-wider mb-3">Typical White Label</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-text-secondary text-sm">
+                    <span className="text-text-muted mt-1">—</span>
+                    Task-based execution
+                  </li>
+                  <li className="flex items-start gap-2 text-text-secondary text-sm">
+                    <span className="text-text-muted mt-1">—</span>
+                    Cheapest-wins fulfillment
+                  </li>
+                  <li className="flex items-start gap-2 text-text-secondary text-sm">
+                    <span className="text-text-muted mt-1">—</span>
+                    Disconnected specialists
+                  </li>
+                  <li className="flex items-start gap-2 text-text-secondary text-sm">
+                    <span className="text-text-muted mt-1">—</span>
+                    Inconsistent delivery over time
+                  </li>
+                </ul>
+              </div>
+              
+              {/* Our Approach Column */}
+              <div>
+                <p className="text-accent-blue text-xs uppercase tracking-wider mb-3">Our Approach</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-foreground text-sm">
+                    <span className="text-accent-blue mt-1">✓</span>
+                    Scoped, system-driven execution
+                  </li>
+                  <li className="flex items-start gap-2 text-foreground text-sm">
+                    <span className="text-accent-blue mt-1">✓</span>
+                    Standards before scale
+                  </li>
+                  <li className="flex items-start gap-2 text-foreground text-sm">
+                    <span className="text-accent-blue mt-1">✓</span>
+                    Dedicated delivery team
+                  </li>
+                  <li className="flex items-start gap-2 text-foreground text-sm">
+                    <span className="text-accent-blue mt-1">✓</span>
+                    Continuity month after month
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
