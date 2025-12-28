@@ -15,6 +15,26 @@ const FAQ = () => {
   const sectionRef = useScrollReveal();
   const faqs = [
     {
+      question: "What actually drives local search rankings?",
+      answer: "Google evaluates three core factors: relevance (how well your client matches search intent), distance (proximity to the searcher), and prominence (online authority through reviews, citations, and backlinks). We optimize across all three pillars to maximize visibility in both the Local Pack and organic results."
+    },
+    {
+      question: "What's the difference between the Local Pack and organic results?",
+      answer: "The Local Pack (map 3-pack) is powered primarily by Google Business Profile optimization, while organic results depend on website authority and on-page SEO. Most local businesses need both—the Pack drives immediate calls, while organic captures research-phase traffic. We build strategies that dominate both."
+    },
+    {
+      question: "How important is NAP consistency really?",
+      answer: "Critical. Name, Address, and Phone number consistency across directories, social profiles, and your client's website is a foundational trust signal. Inconsistencies confuse both Google and potential customers. We audit and correct NAP data across structured citations (Yelp, Yellow Pages) and unstructured mentions (blogs, news articles)."
+    },
+    {
+      question: "How do reviews impact local rankings?",
+      answer: "Reviews influence both rankings and conversions. Google considers review quantity, velocity, star rating, and keyword mentions. Equally important: response rate. Businesses that actively respond to reviews signal trustworthiness. We help establish review generation systems and response workflows."
+    },
+    {
+      question: "What role do local backlinks play?",
+      answer: "Local backlinks signal geographic relevance to Google. Links from local news sites, chambers of commerce, sponsorships, and complementary local businesses carry significant weight. We build geo-relevant link profiles through community partnerships and local PR opportunities."
+    },
+    {
       question: "How does white-label fulfillment work?",
       answer: (
         <>
@@ -32,14 +52,10 @@ const FAQ = () => {
       )
     },
     {
-      question: "What's the onboarding process like?",
-      answer: "Onboarding typically takes 1-2 weeks. We'll gather access credentials, review current campaigns or profiles, and align on expectations. From there, we follow structured workflows with predictable delivery cycles."
-    },
-    {
       question: "Do you require long-term contracts?",
       answer: (
         <>
-          No. We don't require long-term contracts. We work on a month-to-month basis with a{" "}
+          No. We work on a month-to-month basis with a{" "}
           <Tooltip>
             <TooltipTrigger asChild>
               <span className="underline decoration-dotted cursor-help">30-day notice policy</span>
@@ -53,53 +69,16 @@ const FAQ = () => {
       )
     },
     {
-      question: "How quickly can you ramp up for new projects?",
-      answer: "Fast. Our team is structured to scale with your needs, whether you land a large client or need extra hands on short notice. No lengthy onboarding or training delays on your end."
-    },
-    {
-      question: "Is your pricing transparent?",
-      answer: "Yes. We use flat-rate pricing with no hidden fees. You'll know exactly what you're paying upfront. No surprise charges for revisions, reporting, or additional requests."
-    },
-    {
-      question: "How is quality guaranteed?",
-      answer: "We use proven systems, structured workflows, and industry expertise built over years of local marketing execution. Clear communication and predictable delivery cycles keep accountability high."
-    },
-    {
-      question: "When should I use white-label vs. hiring in-house?",
-      answer: "White-label is ideal when you have unpredictable workloads, want to scale without overhead, or need specialized expertise immediately. It lets you say yes to more work without the commitment of full-time hires."
-    },
-    {
-      question: "Who handles client communication?",
-      answer: "You do. We stay completely invisible. All strategy discussions, updates, and reporting go through you. Your clients never interact with us directly."
-    },
-    {
-      question: "How do you handle reporting?",
-      answer: "We provide white-labeled reports you can share directly with clients. Reports are clear, focused on outcomes, and designed to support your client conversations."
+      question: "How do you handle multi-location businesses?",
+      answer: "Each location gets its own optimized Google Business Profile, location-specific landing pages, and targeted citation building. We create scalable systems that maintain consistency while allowing for location-specific customization—essential for franchise and multi-location clients."
     },
     {
       question: "What industries do you specialize in?",
-      answer: "We focus on local service businesses: legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation."
+      answer: "We focus on local service businesses: legal, medical, home services, and similar verticals. Our strategies are built for location-based visibility and lead generation where proximity and trust signals matter most."
     },
     {
-      question: "Can I start with just one service?",
-      answer: "Absolutely. Many partners start with Local SEO or Google Ads, then expand as trust builds. There's no minimum service requirement."
-    },
-    {
-      question: "What makes you different from other white-label partners?",
-      answer: (
-        <>
-          We're an agency built by marketers, not a staffing company. Our team has{" "}
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <span className="underline decoration-dotted cursor-help">hands-on experience</span>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Real campaigns. Real clients. Real 2am "why isn't this working" moments. ☕</p>
-            </TooltipContent>
-          </Tooltip>
-          {" "}running campaigns, so we understand the nuances of client expectations and agency operations.
-        </>
-      )
+      question: "How do you report on local SEO performance?",
+      answer: "We provide white-labeled reports tracking Local Pack rankings, organic visibility, citation health, review metrics, and website traffic from local searches. Reports are designed for client conversations—clear outcomes, not vanity metrics."
     }
   ];
 
