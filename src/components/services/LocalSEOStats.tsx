@@ -82,26 +82,31 @@ const LocalSEOStats = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-20 bg-surface-dark border-y border-border">
+    <section ref={sectionRef} className="py-12 lg:py-16 bg-surface-dark/50 backdrop-blur-sm">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {stats.map((stat, index) => (
             <div 
               key={index} 
-              className="text-center group"
+              className="relative p-6 rounded-xl bg-surface-elevated/50 border border-border/50 text-center group hover:border-cta/30 transition-all duration-300"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-cta/10 border border-cta/20 mb-4 group-hover:bg-cta/20 transition-colors">
-                <stat.icon className="w-6 h-6 text-cta" />
+              {/* Subtle glow on hover */}
+              <div className="absolute inset-0 rounded-xl bg-cta/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative z-10">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-cta/10 mb-3">
+                  <stat.icon className="w-5 h-5 text-cta" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-foreground mb-1 tabular-nums">
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} isVisible={isVisible} />
+                </div>
+                <p className="text-text-secondary text-sm leading-snug mb-2">
+                  {stat.label}
+                </p>
+                <p className="text-text-muted text-[10px] uppercase tracking-wider">
+                  {stat.source}
+                </p>
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} isVisible={isVisible} />
-              </div>
-              <p className="text-text-secondary text-sm md:text-base mb-1">
-                {stat.label}
-              </p>
-              <p className="text-text-muted text-xs">
-                Source: {stat.source}
-              </p>
             </div>
           ))}
         </div>
