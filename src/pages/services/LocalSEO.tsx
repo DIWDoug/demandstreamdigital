@@ -11,6 +11,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhyItMatters from "@/components/services/WhyItMatters";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
+import LocalSEOStats from "@/components/services/LocalSEOStats";
 import { getHubBySlug } from "@/data/services";
 
 const LocalSEO = () => {
@@ -35,6 +36,7 @@ const LocalSEO = () => {
         <ServiceHubHero title={hub.title} description={hub.heroDescription} />
         <Breadcrumbs items={breadcrumbItems} />
       </div>
+      <LocalSEOStats />
       <WhyItMatters {...hub.whyItMatters} />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <WhyPartnerWithUs />
