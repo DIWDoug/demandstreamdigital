@@ -5,13 +5,9 @@ import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
-import EcosystemDiagram from "@/components/services/EcosystemDiagram";
-
 import ServicesFramework from "@/components/services/ServicesFramework";
-import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
-import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
 const Services = () => {
   return (
