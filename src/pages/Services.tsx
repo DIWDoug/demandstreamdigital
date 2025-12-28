@@ -11,7 +11,12 @@ import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
-import WaveDivider from "@/components/WaveDivider";
+
+const SectionDivider = () => (
+  <div className="container mx-auto px-4">
+    <hr className="border-t border-border/30" />
+  </div>
+);
 
 const Services = () => {
   return (
@@ -28,10 +33,7 @@ const Services = () => {
       {/* Hero */}
       <ServicesHero />
       
-      {/* Divider line */}
-      <div className="container mx-auto px-4">
-        <hr className="border-t border-border/30" />
-      </div>
+      <SectionDivider />
       
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
@@ -39,10 +41,7 @@ const Services = () => {
       {/* Ecosystem Diagram */}
       <EcosystemDiagram />
       
-      {/* Divider: Ecosystem to Framework */}
-      <div className="relative">
-        <WaveDivider position="bottom" />
-      </div>
+      <SectionDivider />
       
       {/* Our Framework */}
       <ServicesFramework />
@@ -50,27 +49,27 @@ const Services = () => {
       {/* 6-Month Roadmap Example */}
       <SixMonthRoadmap />
       
-      {/* Divider: Roadmap to Expertise */}
-      <div className="relative">
-        <WaveDivider position="bottom" />
-      </div>
+      <SectionDivider />
       
       {/* Deep Expertise */}
       <ServicesExpertise />
       
-      {/* Divider: Expertise to Testimonials */}
-      <div className="relative">
-        <WaveDivider position="bottom" />
-      </div>
+      <SectionDivider />
       
       {/* Testimonials */}
       <ServicesTestimonials />
       
-      {/* Fulfillment in 6 Clear Steps + Contact Form */}
+      <SectionDivider />
+      
+      {/* Contact Form */}
       <ContactForm />
+      
+      <SectionDivider />
       
       {/* FAQ */}
       <ServicesFAQ />
+      
+      <SectionDivider />
       
       {/* Final CTA */}
       <ServicesFinalCTA />
