@@ -96,27 +96,14 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
             White-Label{" "}
             <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span>{" "}
-            You Can Trust
+            for Agencies
           </h1>
 
-          {/* Subheadline - more breathing room */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Dialed-In Web is a white-label digital marketing partner that helps agencies scale without the{" "}
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <span className="underline decoration-dotted cursor-help">hiring headaches</span>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>You know the ones. The "where's my deliverable?" ones. 💆</p>
-              </TooltipContent>
-            </Tooltip>
-            . We handle the execution so you can focus on growth.
-          </p>
+          {/* Subheadline */}
+          <h2 className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-14 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            Without cookie-cutter packages or one-size-fits-all execution
+          </h2>
 
-          {/* Premium positioning line */}
-          <p className="text-base md:text-lg text-text-muted italic mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Built for agencies focused on client retention and sustainable growth.
-          </p>
 
           {/* CTA Button */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
