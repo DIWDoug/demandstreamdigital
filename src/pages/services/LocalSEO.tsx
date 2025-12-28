@@ -11,6 +11,7 @@ import LocalSEOStats from "@/components/services/LocalSEOStats";
 import AlternatingContent from "@/components/services/AlternatingContent";
 import LocalSEORoadmap from "@/components/services/LocalSEORoadmap";
 import RankingFactorsInfographic from "@/components/services/RankingFactorsInfographic";
+import LocalMarketingEcosystem from "@/components/services/LocalMarketingEcosystem";
 import { getHubBySlug } from "@/data/services";
 
 // Images for alternating content
@@ -76,6 +77,7 @@ const LocalSEO = () => {
         />
       </div>
       <LocalSEOStats />
+      <LocalMarketingEcosystem />
       <AlternatingContent blocks={localSeoContent} />
       <RankingFactorsInfographic />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
