@@ -3,9 +3,35 @@
 @tailwind utilities;
 
 /* Premium Agency Design System - Dialed-In Web
-   Dark mode with restrained accent colors
-   Green = ACTION ONLY (CTAs)
-   All other elements use charcoal/gray palette
+   
+   ═══════════════════════════════════════════════════════════════
+   BRAND COLOR SYSTEM
+   ═══════════════════════════════════════════════════════════════
+   
+   OLIVE GREEN (--cta / hsl(76,42%,41%))
+   ────────────────────────────────────────
+   = ACTION + IDENTITY
+   • All CTA buttons (primary actions)
+   • Light section icons & accents
+   • Doug/Personal elements (signature, letter)
+   • Brand touchpoints & dividers
+   • Link hover states on light backgrounds
+   
+   BLUE (--accent-blue / hsl(224,60%,55%))
+   ────────────────────────────────────────
+   = INFORMATION + NAVIGATION
+   • Headline accent words (especially on dark)
+   • Dark section icons & borders
+   • Navigation tabs & active states
+   • Framework/methodology elements
+   • Interactive affordances (links, hovers on dark)
+   
+   THE RULES:
+   • Light sections → Olive accents
+   • Dark sections → Blue accents  
+   • CTAs → ALWAYS Olive (any background)
+   • Headline highlights → Blue (visual pop)
+   ═══════════════════════════════════════════════════════════════
 */
 
 /* Fonts loaded via index.html for better performance */
