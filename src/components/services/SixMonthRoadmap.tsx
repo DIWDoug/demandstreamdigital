@@ -83,17 +83,17 @@ const roadmapData: PhaseData[] = [
     title: "Scale & Optimize",
     outcome: "Keyword expansion complete. Budget optimized based on data.",
     activities: [
-      "Keyword expansion research",
-      "Content scaling",
-      "Budget reallocation based on ROI",
-      "A/B testing implementation",
-      "Conversion rate optimization"
+      "Secondary keyword targeting based on Month 1-3 performance data",
+      "Content production scaled to 2-3x initial volume",
+      "Paid media budget reallocation to top-performing campaigns",
+      "Landing page A/B testing with conversion tracking",
+      "Email list segmentation and personalized nurture paths"
     ],
     deliverables: [
-      "Expanded keyword targets",
-      "Increased content volume",
-      "Optimized budget allocation",
-      "CRO recommendations"
+      "Expanded keyword strategy document with 50+ new targets",
+      "Published content batch (blog posts, location pages)",
+      "Optimized budget allocation report with ROI by channel",
+      "CRO audit with prioritized recommendations"
     ],
     icon: Settings,
     color: "hsl(280, 60%, 55%)",
@@ -104,17 +104,17 @@ const roadmapData: PhaseData[] = [
     title: "Momentum",
     outcome: "Continuous optimization. Seasonal adjustments implemented.",
     activities: [
-      "Seasonal campaign adjustments",
-      "Competitor gap analysis",
-      "Advanced remarketing",
-      "Content refresh program",
-      "Performance benchmarking"
+      "Seasonal campaign development and scheduling",
+      "Competitor gap analysis with actionable opportunities",
+      "Advanced remarketing audience setup (site visitors, converters)",
+      "Underperforming content refresh and republish",
+      "Performance benchmarking against industry standards"
     ],
     deliverables: [
-      "Seasonal campaigns live",
-      "Competitor analysis report",
-      "Remarketing audiences built",
-      "Updated content calendar"
+      "Seasonal campaign assets and launch schedule",
+      "Competitor analysis report with keyword gaps",
+      "Remarketing audience segments (5-10 custom audiences)",
+      "Content refresh log with before/after metrics"
     ],
     icon: Zap,
     color: "hsl(190, 70%, 45%)",
@@ -125,17 +125,17 @@ const roadmapData: PhaseData[] = [
     title: "Results & Roadmap",
     outcome: "6-month ROI documented. Next phase strategy delivered.",
     activities: [
-      "Comprehensive performance review",
-      "ROI calculation and documentation",
-      "Strategy refinement",
-      "Next phase planning",
-      "Growth opportunity identification"
+      "Comprehensive performance audit across all channels",
+      "ROI calculation with documented cost-per-lead by source",
+      "Strategy refinement based on 6-month learnings",
+      "Next-phase roadmap development with prioritized initiatives",
+      "Quarterly review presentation preparation"
     ],
     deliverables: [
-      "6-month performance report",
-      "ROI documentation",
-      "Next phase roadmap",
-      "Growth recommendations"
+      "6-month performance report with YoY comparisons",
+      "Channel-by-channel ROI documentation",
+      "Next 6-month strategic roadmap",
+      "Executive summary for client presentation"
     ],
     icon: TrendingUp,
     color: "hsl(340, 70%, 50%)",
