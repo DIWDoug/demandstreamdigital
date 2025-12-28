@@ -507,6 +507,36 @@
   .reveal-children.visible > *:nth-child(5) { transition-delay: 400ms; }
   .reveal-children.visible > *:nth-child(6) { transition-delay: 500ms; }
 
+  /* Fade in up animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out;
+  }
+
+  /* Scale in animation */
+  @keyframes scale-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
   /* Subtle noise texture overlay */
   .noise-overlay {
     position: relative;
