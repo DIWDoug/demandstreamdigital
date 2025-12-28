@@ -92,7 +92,7 @@ const WhoWeAre = () => {
 
                 {/* Signature */}
                 <div className="mt-8 pt-6 border-t border-border/30 flex items-center justify-between">
-                  <p className="font-handwriting text-3xl text-cta">— Doug</p>
+                  <p className="text-3xl text-cta" style={{ fontFamily: "'Kalam', cursive" }}>— Doug</p>
                   
                   {/* CTA Button */}
                   <a 
