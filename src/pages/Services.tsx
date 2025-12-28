@@ -11,6 +11,7 @@ import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
+import WaveDivider from "@/components/WaveDivider";
 
 const Services = () => {
   return (
@@ -27,19 +28,40 @@ const Services = () => {
       {/* Hero */}
       <ServicesHero />
       
+      {/* Divider: Hero to White Label */}
+      <div className="relative">
+        <WaveDivider position="bottom" />
+      </div>
+      
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
       {/* Ecosystem Diagram */}
       <EcosystemDiagram />
       
+      {/* Divider: Ecosystem to Framework */}
+      <div className="relative">
+        <WaveDivider position="bottom" />
+      </div>
+      
       {/* Our Framework */}
       <ServicesFramework />
       
       {/* 6-Month Roadmap Example */}
       <SixMonthRoadmap />
+      
+      {/* Divider: Roadmap to Expertise */}
+      <div className="relative">
+        <WaveDivider position="bottom" />
+      </div>
+      
       {/* Deep Expertise */}
       <ServicesExpertise />
+      
+      {/* Divider: Expertise to Testimonials */}
+      <div className="relative">
+        <WaveDivider position="bottom" />
+      </div>
       
       {/* Testimonials */}
       <ServicesTestimonials />
