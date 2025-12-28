@@ -22,7 +22,7 @@ const LocalSEO = () => {
     { label: hub.title }
   ];
 
-  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, and links—delivered as your own.";
+  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, Google Maps optimization, and links—delivered as your own.";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
