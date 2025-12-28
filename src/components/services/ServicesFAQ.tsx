@@ -7,28 +7,28 @@ import {
 
 const faqs = [
   {
-    question: "Can we activate only one service area?",
-    answer: "Service areas aren't activated in isolation—they're coordinated based on scope. If your client only needs one category of execution, we'll scope and plan accordingly. But activation is always defined by what the work requires, not by selecting from a menu."
+    question: "Can we start with a single service?",
+    answer: "Yes. Some partners begin with a single service to establish trust and working rhythm. Standalone services are scoped intentionally and executed with the same standards as full partnerships."
   },
   {
     question: "How do scope changes work?",
-    answer: "Scope changes are reviewed during structured planning windows, not reactively. If priorities shift mid-cycle, we acknowledge the request and evaluate it for the next planning period. This protects execution quality and prevents constant resets."
+    answer: "Scope is reviewed during monthly planning. Mid-cycle changes are not introduced."
   },
   {
-    question: "What does coordinated fulfillment mean here?",
-    answer: "It means work across channels is planned and executed together, not as isolated tasks. Local SEO, Maps optimization, paid media, and other activities inform each other. This prevents siloed execution and keeps strategy coherent."
+    question: "What does custom fulfillment mean here?",
+    answer: "Customization refers to strategy and prioritization, not unlimited requests or reactive changes."
   },
   {
-    question: "What happens if one of our clients cancels?",
-    answer: "Our fulfillment operates independently of your client contracts. If a client disengages without proper notice, the agreed 30-day fulfillment period still applies. This protects execution quality and prevents reactive resourcing decisions."
+    question: "What happens if a client cancels?",
+    answer: "Fulfillment operates independently of client churn and follows the agreed notice period."
   },
   {
-    question: "Are you a staffing company or an execution partner?",
-    answer: "We're an execution partner. We don't place people or rent headcount. We own fulfillment with standards, systems, and accountability. The work is ours to deliver—not yours to manage."
+    question: "Are you staffing or execution?",
+    answer: "We are an execution partner, not a staffing provider."
   },
   {
     question: "Where is your team based?",
-    answer: "Our team is globally distributed by design, with leadership and client success based in the U.S. and Europe. This structure allows us to maintain execution standards without forcing an unsustainable, single-region cost model."
+    answer: "Our team is globally distributed to support quality execution and sustainable delivery."
   }
 ];
 

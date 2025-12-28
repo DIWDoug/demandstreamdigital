@@ -1,6 +1,7 @@
 const rules = [
-  "Monthly planning cadence defines all work",
-  "No mid-cycle pivots or reactive scope changes",
+  "Fulfillment is planned on a monthly cadence",
+  "Standalone or multi-service engagements are scoped intentionally",
+  "We do not pivot execution mid-cycle",
   "Scope changes are reviewed during planning windows",
   "Fulfillment operates independently of end-client churn"
 ];

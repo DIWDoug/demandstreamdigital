@@ -12,84 +12,96 @@ import {
 interface ServiceBlockProps {
   title: string;
   slug: string;
-  description: string;
+  roleDescription: string;
   capabilities: string[];
   spokes: { title: string; slug: string }[];
 }
 
-const serviceDescriptions: Record<string, { description: string; capabilities: string[] }> = {
+const serviceContent: Record<string, { roleDescription: string; capabilities: string[] }> = {
   "local-seo": {
-    description: "Organic visibility for service-area businesses. We optimize for local search intent, build geographic authority, and capture demand where your clients operate.",
+    roleDescription: "Local SEO provides the organic foundation for visibility in local search results. It supports Google Maps performance, authority building, and conversion efforts. Local SEO can be engaged as a standalone service or as part of a coordinated fulfillment system.",
     capabilities: [
-      "On-page optimization for location-specific pages",
-      "Technical SEO for multi-location architecture",
-      "Local content strategy and development",
-      "Keyword research and intent mapping",
-      "Competitor and market analysis"
+      "On-page optimization aligned to local intent",
+      "Local landing page structure and internal linking",
+      "Competitive gap analysis and prioritization",
+      "Content alignment for service and location relevance",
+      "Foundational SEO hygiene and technical clarity"
     ]
   },
   "google-maps": {
-    description: "Google Business Profile optimization and local pack visibility. We manage the elements that drive calls, directions, and high-intent traffic from Maps results.",
+    roleDescription: "Google Maps execution focuses on proximity-driven visibility and high-intent local searches. It works alongside Local SEO and authority signals. Google Maps can be engaged independently or as part of a coordinated system.",
     capabilities: [
-      "GBP audit and optimization",
-      "Review generation and response management",
-      "Citation building and consistency",
-      "Local pack ranking strategy",
-      "Multi-location GBP management"
+      "Google Business Profile optimization and hygiene",
+      "Category and service alignment",
+      "Review velocity and trust signal coordination",
+      "Local relevance and engagement signals",
+      "Ongoing monitoring and maintenance"
     ]
   },
   "paid-media": {
-    description: "Paid acquisition across search and social channels. We build and manage campaigns that convert, with transparent reporting and scope-defined budgets.",
+    roleDescription: "Paid media captures demand when and where it makes sense. It can operate as a standalone channel or alongside organic visibility and conversion infrastructure to ensure spend is intentional and measurable.",
     capabilities: [
-      "Google Ads search and display campaigns",
-      "Meta advertising (Facebook/Instagram)",
-      "Landing page strategy",
-      "Conversion tracking implementation",
-      "Budget allocation and optimization"
+      "Search and performance-based ad execution",
+      "Budget pacing and guardrails",
+      "Landing page and intent alignment",
+      "Conversion tracking hygiene",
+      "Ongoing optimization within defined scope"
     ]
   },
   "authority": {
-    description: "Trust signals that support rankings and conversions. We build credibility through strategic placements, content, and digital PR that reinforces expertise.",
+    roleDescription: "Authority building reinforces trust signals that support rankings, Maps visibility, and conversion confidence. It may be engaged independently but is most effective when coordinated with visibility and content efforts.",
     capabilities: [
-      "Local link acquisition",
-      "Digital PR and media placements",
-      "Content syndication",
-      "Industry authority building",
-      "Citation and directory optimization"
+      "Link strategy aligned to brand and risk profile",
+      "Anchor text diversification and quality control",
+      "Supporting content for authority assets",
+      "Entity reinforcement signals",
+      "Long-term authority pacing"
     ]
   },
   "reporting": {
-    description: "Measurement infrastructure and performance reporting. We build the tracking, dashboards, and reporting cadence that keeps everyone aligned on results.",
+    roleDescription: "Measurement provides clarity without vanity metrics. Reporting can support standalone services or coordinated execution, always designed to inform agency decisions and client communication.",
     capabilities: [
-      "Analytics setup and configuration",
-      "Custom dashboard development",
-      "Call tracking integration",
-      "Monthly performance reporting",
-      "Goal and conversion tracking"
+      "KPI definition and alignment",
+      "Local and organic visibility tracking",
+      "Paid media performance clarity",
+      "Attribution context and limitations",
+      "Executive-level reporting structure"
     ]
   },
   "email-marketing": {
-    description: "Retention and re-engagement through email and retargeting. We help clients stay connected with past customers and nurture leads that aren't ready to convert.",
+    roleDescription: "Retention and re-engagement support ongoing relationships and improve conversion efficiency. These efforts may be deployed independently or alongside acquisition channels to stabilize performance.",
     capabilities: [
-      "Email campaign strategy and execution",
-      "List segmentation and management",
-      "Retargeting campaign setup",
-      "Automation workflows",
-      "Performance optimization"
+      "Retargeting audience strategy",
+      "Email campaign support and cadence",
+      "Offer and seasonal planning",
+      "Review and reputation alignment",
+      "Consistency across touchpoints"
     ]
   }
 };
 
-const ServiceBlock = ({ title, slug, description, capabilities, spokes }: ServiceBlockProps) => {
+const linkLabels: Record<string, string> = {
+  "local-seo": "View Local SEO Execution",
+  "google-maps": "View Google Maps Execution",
+  "paid-media": "View Paid Media Execution",
+  "authority": "View Authority Execution",
+  "reporting": "View Reporting Framework",
+  "email-marketing": "View Retention Execution"
+};
+
+const ServiceBlock = ({ title, slug, roleDescription, capabilities, spokes }: ServiceBlockProps) => {
   const [capabilitiesOpen, setCapabilitiesOpen] = useState(false);
 
   return (
     <div className="border-b border-border/30 pb-10 mb-10 last:border-0 last:pb-0 last:mb-0">
-      <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-3">
+      <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
         {title}
       </h3>
+      <p className="text-xs text-text-muted uppercase tracking-wide mb-4">
+        Role in the system
+      </p>
       <p className="text-text-secondary leading-relaxed mb-6 max-w-3xl">
-        {description}
+        {roleDescription}
       </p>
 
       <Accordion type="single" collapsible className="mb-6">
@@ -124,7 +136,7 @@ const ServiceBlock = ({ title, slug, description, capabilities, spokes }: Servic
           {capabilitiesOpen && (
             <div className="mt-4 pl-6 border-l border-border/30">
               <p className="text-xs text-text-muted mb-3">
-                These capabilities support execution and are not deployed independently.
+                These capabilities support {title} execution and are not deployed independently.
               </p>
               <ul className="space-y-1">
                 {spokes.map((spoke, index) => (
@@ -147,7 +159,7 @@ const ServiceBlock = ({ title, slug, description, capabilities, spokes }: Servic
         to={`/services/${slug}`}
         className="inline-flex items-center gap-2 text-sm text-cta hover:text-cta/80 transition-colors"
       >
-        View {title} details
+        {linkLabels[slug] || `View ${title} details`}
         <ArrowRight className="h-4 w-4" />
       </Link>
     </div>
@@ -163,13 +175,13 @@ const CoreServiceAreas = () => {
             Core Service Areas
           </h2>
           <p className="text-text-secondary mb-12">
-            Each area represents a category of execution, not a standalone offering. 
-            Scope determines which capabilities are activated and how they're coordinated.
+            Each area represents a category of execution that can be engaged individually or as part 
+            of a coordinated system. Scope determines which capabilities are activated and how they're prioritized.
           </p>
 
           {hubs.map((hub, index) => {
-            const details = serviceDescriptions[hub.slug] || {
-              description: hub.summary,
+            const content = serviceContent[hub.slug] || {
+              roleDescription: hub.summary,
               capabilities: hub.spokes.slice(0, 5).map(s => s.title)
             };
             
@@ -178,8 +190,8 @@ const CoreServiceAreas = () => {
                 key={index}
                 title={hub.title}
                 slug={hub.slug}
-                description={details.description}
-                capabilities={details.capabilities}
+                roleDescription={content.roleDescription}
+                capabilities={content.capabilities}
                 spokes={hub.spokes.map(s => ({ title: s.title, slug: s.slug }))}
               />
             );

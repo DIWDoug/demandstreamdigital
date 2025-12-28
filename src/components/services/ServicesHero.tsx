@@ -8,15 +8,17 @@ const ServicesHero = () => {
       <div className="container mx-auto px-6 lg:px-8 relative">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-text-muted font-medium uppercase tracking-widest text-sm mb-4">
-            White-Label Fulfillment
+            White-Label Fulfillment Services
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-            Coordinated Execution,{" "}
-            <span className="text-gradient-primary">Not Service Bundles</span>
+            Digital Marketing Fulfillment,{" "}
+            <span className="text-gradient-primary">Executed as a System</span>
           </h1>
           <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mb-10">
-            Fulfillment is activated by scope and planning cadence—not by selecting from a menu. 
-            We coordinate execution across channels based on what your client actually needs.
+            We provide white-label SEO, paid media, and retention execution for agencies that value 
+            clarity, scope discipline, and long-term client relationships. Services can be engaged 
+            individually or as part of a coordinated system, always executed with the same standards 
+            and planning cadence.
           </p>
           <a 
             href="#contact" 
