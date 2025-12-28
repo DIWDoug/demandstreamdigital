@@ -87,8 +87,8 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
           {/* Right Column - Contact Form */}
           <div className="animate-fade-in">
             <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 lg:p-8 shadow-xl">
-              <h2 className="text-xl font-semibold text-foreground mb-2">Let's Talk</h2>
-              <p className="text-sm text-text-muted mb-6">See if we're a good fit for your agency.</p>
+              <h2 className="text-xl font-semibold text-foreground mb-2">Apply to Partner</h2>
+              <p className="text-sm text-text-muted mb-6">We work with a select group of agencies. Let's see if we're a fit.</p>
               
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -122,13 +122,13 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
                   />
                 </div>
                 <Button type="submit" className="w-full btn-cta group">
-                  Start a Conversation
+                  Submit Application
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>
               
               <p className="text-xs text-text-muted text-center mt-4">
-                No contracts. No obligations. Just a conversation.
+                We review every application within 24 hours.
               </p>
             </div>
           </div>
