@@ -58,17 +58,17 @@ const EcosystemDiagram = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-16 max-w-3xl">
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
-              The Bigger Picture
+              The Complete System
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              A Coordinated{" "}
-              <span className="text-cta">Fulfillment System</span>
+              Digital Inbound Marketing{" "}
+              <span className="text-cta">as a Growth Engine</span>
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Effective local marketing isn't siloed. These six execution areas work together 
-              as a system—activated and prioritized based on scope, not bundled by default.
+              as a coordinated system—activated and prioritized based on scope, not bundled by default.
             </p>
           </div>
 

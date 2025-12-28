@@ -6,7 +6,7 @@ import ServicesHero from "@/components/services/ServicesHero";
 import FitCriteria from "@/components/services/FitCriteria";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 import ServicesFramework from "@/components/services/ServicesFramework";
-import CoreServicesEngine from "@/components/services/CoreServicesEngine";
+
 import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -35,8 +35,6 @@ const Services = () => {
       {/* Our Framework */}
       <ServicesFramework />
       
-      {/* Core Services - Growth Engine */}
-      <CoreServicesEngine />
       
       {/* Deep Expertise */}
       <ServicesExpertise />
