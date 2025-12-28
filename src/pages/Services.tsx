@@ -13,12 +13,6 @@ import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
-const SectionDivider = () => (
-  <div className="container mx-auto px-4 py-8">
-    <hr className="border-t-2 border-primary/40" />
-  </div>
-);
-
 const Services = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -34,20 +28,14 @@ const Services = () => {
       {/* Hero */}
       <ServicesHero />
       
-      <SectionDivider />
-      
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
       {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
       
-      <SectionDivider />
-      
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
-      
-      <SectionDivider />
       
       {/* Testimonials */}
       <ServicesTestimonials />
@@ -55,22 +43,14 @@ const Services = () => {
       {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
       
-      <SectionDivider />
-      
       {/* Deep Expertise - Service Cards */}
       <ServicesExpertise />
-      
-      <SectionDivider />
       
       {/* Contact Form */}
       <ContactForm />
       
-      <SectionDivider />
-      
       {/* FAQ */}
       <ServicesFAQ />
-      
-      <SectionDivider />
       
       {/* Final CTA */}
       <ServicesFinalCTA />
