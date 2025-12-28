@@ -9,11 +9,8 @@ import FAQ from "@/components/sections/FAQ";
 import Breadcrumbs from "@/components/services/Breadcrumbs";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhyItMatters from "@/components/services/WhyItMatters";
-import OurApproach from "@/components/services/OurApproach";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
-import ServiceHubCTA from "@/components/services/ServiceHubCTA";
-import RelatedHubs from "@/components/services/RelatedHubs";
 import { getHubBySlug } from "@/data/services";
 
 const Authority = () => {
@@ -35,19 +32,16 @@ const Authority = () => {
       
       <Header />
       <div className="pt-16">
+        <ServiceHubHero title={hub.title} description={hub.heroDescription} />
         <Breadcrumbs items={breadcrumbItems} />
       </div>
-      <ServiceHubHero title={hub.title} description={hub.heroDescription} />
       <WhyItMatters {...hub.whyItMatters} />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <OurApproach {...hub.ourApproach} />
       <WhyPartnerWithUs />
       <ServiceBenefits {...hub.benefits} />
       <LocalGrowthEngine />
       <Testimonials />
       <FAQ />
-      <ServiceHubCTA hubTitle={hub.title} />
-      <RelatedHubs currentSlug={hub.slug} />
       <ContactForm />
       <Footer />
     </div>
