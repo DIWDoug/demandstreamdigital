@@ -2,12 +2,12 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 
 import ServicesFramework from "@/components/services/ServicesFramework";
-import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
 import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -50,8 +50,8 @@ const Services = () => {
         <hr className="border-t border-border/30" />
       </div>
       
-      {/* 6-Month Roadmap */}
-      <SixMonthRoadmap />
+      {/* Deep Expertise - Same as Homepage */}
+      <TopicalExpertise />
       
       {/* Deep Expertise - Service Cards */}
       <ServicesExpertise />
