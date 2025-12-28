@@ -206,9 +206,31 @@ const SixMonthRoadmap = () => {
           </p>
         </div>
 
-        {/* Timeline navigation */}
+        {/* Timeline navigation - Dropdown on mobile, tabs on desktop */}
         <div className="mb-12">
-          <div className="flex flex-wrap gap-2 lg:gap-0 lg:grid lg:grid-cols-6">
+          {/* Mobile dropdown */}
+          <div className="lg:hidden">
+            <select
+              value={activePhase}
+              onChange={(e) => setActivePhase(Number(e.target.value))}
+              className="w-full p-4 rounded-xl bg-surface-elevated border border-border text-foreground text-base font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta/50"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 1rem center',
+                backgroundSize: '1.5rem'
+              }}
+            >
+              {roadmapData.map((phase) => (
+                <option key={phase.phase} value={phase.phase}>
+                  {phase.month}: {phase.title} ({phase.hours})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Desktop tabs */}
+          <div className="hidden lg:grid lg:grid-cols-6">
             {roadmapData.map((phase) => {
               const isActive = phase.phase === activePhase;
               const Icon = phase.icon;
@@ -217,7 +239,7 @@ const SixMonthRoadmap = () => {
                 <button
                   key={phase.phase}
                   onClick={() => setActivePhase(phase.phase)}
-                  className={`relative flex-1 min-w-[140px] lg:min-w-0 p-4 lg:p-6 text-left transition-all duration-300 border-b-2 lg:border-b-4 rounded-t-lg ${
+                  className={`relative p-6 text-left transition-all duration-300 border-b-4 rounded-t-lg ${
                     isActive 
                       ? "bg-surface-elevated" 
                       : "hover:bg-surface-elevated/50"
@@ -239,7 +261,7 @@ const SixMonthRoadmap = () => {
                       {phase.month}
                     </span>
                   </div>
-                  <h3 className={`text-sm lg:text-base font-medium transition-colors duration-300 ${
+                  <h3 className={`text-base font-medium transition-colors duration-300 ${
                     isActive ? "text-foreground" : "text-text-secondary"
                   }`}>
                     {phase.title}
