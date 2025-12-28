@@ -24,7 +24,7 @@ const WhoWeAre = () => {
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
               An Honest Word on Fulfillment
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
               Most Agencies Don't Lose Clients Because of Results
             </h2>
           </div>
