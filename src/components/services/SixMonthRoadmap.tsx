@@ -305,7 +305,7 @@ const SixMonthRoadmap = () => {
 
         {/* Bottom note */}
         <p className="mt-8 text-text-muted text-sm text-center">
-          Every engagement is scoped individually. Your roadmap may include fewer channels or adjusted timelines based on goals.
+          Digital inbound marketing requires a 6-month agreement. Every engagement is scoped individually based on goals.
         </p>
       </div>
     </section>
