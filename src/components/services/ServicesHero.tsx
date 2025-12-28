@@ -20,8 +20,8 @@ const ServicesHero = () => {
               <span className="text-gradient-primary">Executed as a System</span>
             </h1>
             <p className="text-lg text-text-secondary leading-relaxed mb-8">
-              Full-service white label inbound marketing for agencies: SEO, paid media, email, 
-              and authority building—coordinated fulfillment that scales with your client roster.
+              You keep the client relationship. You stay in control of strategy. 
+              We handle execution—consistently, at scale—so you can grow without the overhead.
             </p>
             <a 
               href="#contact" 

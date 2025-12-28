@@ -35,29 +35,27 @@ const Services = () => {
       
       <SectionDivider />
       
-      {/* What is White Label Inbound Marketing? */}
+      {/* What is White Label Inbound Marketing? - Compressed */}
       <WhiteLabelExplainer />
       
-      {/* Ecosystem Diagram */}
+      {/* Service Areas - Static Grid */}
       <EcosystemDiagram />
       
       <SectionDivider />
       
-      {/* Our Framework */}
+      {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
       
-      {/* 6-Month Roadmap Example */}
+      {/* Testimonials - Moved higher per redline */}
+      <ServicesTestimonials />
+      
+      {/* 6-Month Roadmap - Simplified to outcomes */}
       <SixMonthRoadmap />
       
       <SectionDivider />
       
-      {/* Deep Expertise */}
+      {/* Deep Expertise - Service Cards */}
       <ServicesExpertise />
-      
-      <SectionDivider />
-      
-      {/* Testimonials */}
-      <ServicesTestimonials />
       
       <SectionDivider />
       
