@@ -45,6 +45,11 @@ const Services = () => {
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
       
+      {/* Light divider */}
+      <div className="container mx-auto px-4">
+        <hr className="border-t border-border/30" />
+      </div>
+      
       {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
       
