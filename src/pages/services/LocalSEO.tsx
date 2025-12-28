@@ -14,6 +14,7 @@ import ServiceBenefits from "@/components/services/ServiceBenefits";
 import LocalSEOStats from "@/components/services/LocalSEOStats";
 import AlternatingContent from "@/components/services/AlternatingContent";
 import OurApproach from "@/components/services/OurApproach";
+import RankingFactorsInfographic from "@/components/services/RankingFactorsInfographic";
 import { getHubBySlug } from "@/data/services";
 
 const LocalSEO = () => {
@@ -81,6 +82,7 @@ const LocalSEO = () => {
         {...hub.whyItMatters} 
       />
       <AlternatingContent blocks={localSeoContent} />
+      <RankingFactorsInfographic />
       <OurApproach 
         eyebrow="How We Deliver Results"
         headline={hub.ourApproach.headline}
