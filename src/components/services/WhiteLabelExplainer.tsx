@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+
 
 const WhiteLabelExplainer = () => {
   return (
@@ -15,9 +15,9 @@ const WhiteLabelExplainer = () => {
             </h2>
           </div>
 
-          {/* Compressed Content - One Strong Paragraph */}
-          <div className="prose prose-lg prose-invert max-w-none">
-            <p className="text-text-secondary text-lg leading-relaxed mb-6">
+          {/* Full Description for SEO Value */}
+          <div className="prose prose-lg prose-invert max-w-none space-y-6">
+            <p className="text-text-secondary text-lg leading-relaxed">
               White label inbound marketing is a fulfillment partnership where we execute digital marketing 
               under your agency's brand. Strategy documents, reports, client communications—everything 
               stays invisible to your end client. You retain the relationship and strategic oversight. 
@@ -25,14 +25,20 @@ const WhiteLabelExplainer = () => {
               coordinated system, not disconnected services.
             </p>
 
-            <div className="flex items-start gap-3 p-4 bg-surface-elevated border border-border/50 rounded-xl">
-              <CheckCircle2 className="h-5 w-5 text-cta mt-0.5 flex-shrink-0" />
-              <p className="text-foreground text-sm m-0">
-                <strong>Key distinction:</strong> We are not a staffing agency or contractor marketplace. 
-                We own fulfillment end-to-end with documented standards, proven systems, and direct 
-                accountability for results.
-              </p>
-            </div>
+            <p className="text-text-secondary text-lg leading-relaxed">
+              Unlike traditional outsourcing models that rely on fragmented freelancers or offshore teams, 
+              white label inbound marketing provides agencies with a dedicated fulfillment partner who 
+              understands the complete customer journey. From technical SEO audits and Google Business 
+              Profile optimization to paid media management and email nurture sequences, every service 
+              is designed to work together—driving qualified leads through a coordinated inbound strategy.
+            </p>
+
+            <p className="text-text-secondary text-lg leading-relaxed">
+              This model allows marketing agencies to scale service offerings without hiring specialists, 
+              maintain consistent quality across client accounts, and focus on what they do best: 
+              building client relationships and developing strategy. The end client sees only your brand, 
+              your reports, and your results—while we handle the execution behind the scenes.
+            </p>
           </div>
         </div>
       </div>

@@ -7,6 +7,8 @@ interface PhaseData {
   month: string;
   title: string;
   outcome: string;
+  activities: string[];
+  deliverables: string[];
   icon: typeof Rocket;
   color: string;
 }
@@ -17,6 +19,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 1",
     title: "Build & Launch",
     outcome: "Foundation live. Tracking active. First campaigns running.",
+    activities: [
+      "Technical SEO audit and fixes",
+      "Google Business Profile optimization",
+      "Analytics and tracking setup",
+      "Initial paid media campaigns",
+      "Content calendar development"
+    ],
+    deliverables: [
+      "Technical audit report",
+      "Optimized GBP listings",
+      "Tracking dashboard",
+      "First campaign live"
+    ],
     icon: Rocket,
     color: "hsl(76, 42%, 41%)",
   },
@@ -25,6 +40,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 2",
     title: "Expand & Refine",
     outcome: "Multi-channel campaigns active. First performance data analyzed.",
+    activities: [
+      "Content production begins",
+      "Link building outreach",
+      "Paid media optimization",
+      "Email sequence development",
+      "Review generation strategy"
+    ],
+    deliverables: [
+      "First content pieces published",
+      "Initial backlinks secured",
+      "Campaign performance report",
+      "Email sequences live"
+    ],
     icon: Zap,
     color: "hsl(224, 60%, 55%)",
   },
@@ -33,6 +61,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 3",
     title: "Authority Building",
     outcome: "Trust signals established. PR and directory placements secured.",
+    activities: [
+      "PR outreach and placements",
+      "Industry directory submissions",
+      "Guest posting campaign",
+      "Citation building",
+      "Social proof collection"
+    ],
+    deliverables: [
+      "Media mentions secured",
+      "Directory listings live",
+      "Guest posts published",
+      "Citation report"
+    ],
     icon: TrendingUp,
     color: "hsl(35, 90%, 50%)",
   },
@@ -41,6 +82,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 4",
     title: "Scale & Optimize",
     outcome: "Keyword expansion complete. Budget optimized based on data.",
+    activities: [
+      "Keyword expansion research",
+      "Content scaling",
+      "Budget reallocation based on ROI",
+      "A/B testing implementation",
+      "Conversion rate optimization"
+    ],
+    deliverables: [
+      "Expanded keyword targets",
+      "Increased content volume",
+      "Optimized budget allocation",
+      "CRO recommendations"
+    ],
     icon: Settings,
     color: "hsl(280, 60%, 55%)",
   },
@@ -49,6 +103,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 5",
     title: "Momentum",
     outcome: "Continuous optimization. Seasonal adjustments implemented.",
+    activities: [
+      "Seasonal campaign adjustments",
+      "Competitor gap analysis",
+      "Advanced remarketing",
+      "Content refresh program",
+      "Performance benchmarking"
+    ],
+    deliverables: [
+      "Seasonal campaigns live",
+      "Competitor analysis report",
+      "Remarketing audiences built",
+      "Updated content calendar"
+    ],
     icon: Zap,
     color: "hsl(190, 70%, 45%)",
   },
@@ -57,6 +124,19 @@ const roadmapData: PhaseData[] = [
     month: "Month 6",
     title: "Results & Roadmap",
     outcome: "6-month ROI documented. Next phase strategy delivered.",
+    activities: [
+      "Comprehensive performance review",
+      "ROI calculation and documentation",
+      "Strategy refinement",
+      "Next phase planning",
+      "Growth opportunity identification"
+    ],
+    deliverables: [
+      "6-month performance report",
+      "ROI documentation",
+      "Next phase roadmap",
+      "Growth recommendations"
+    ],
     icon: TrendingUp,
     color: "hsl(340, 70%, 50%)",
   }
@@ -163,7 +243,7 @@ const SixMonthRoadmap = () => {
           </div>
         </div>
 
-        {/* Active phase outcome */}
+        {/* Active phase details */}
         <div 
           className="rounded-2xl border p-8 bg-surface-elevated animate-fade-in"
           style={{ borderColor: `${activeData.color}30` }}
@@ -182,9 +262,44 @@ const SixMonthRoadmap = () => {
             </div>
           </div>
           
-          <div className="flex items-start gap-3">
+          <div className="flex items-start gap-3 mb-8">
             <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: activeData.color }} />
             <p className="text-lg text-foreground font-medium">{activeData.outcome}</p>
+          </div>
+
+          {/* Activities and Deliverables */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Key Activities */}
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">Key Activities</h4>
+              <ul className="space-y-3">
+                {activeData.activities.map((activity, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div 
+                      className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                      style={{ background: activeData.color }}
+                    />
+                    <span className="text-text-secondary">{activity}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Deliverables */}
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">Deliverables</h4>
+              <ul className="space-y-3">
+                {activeData.deliverables.map((deliverable, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle 
+                      className="w-4 h-4 mt-0.5 flex-shrink-0" 
+                      style={{ color: activeData.color }} 
+                    />
+                    <span className="text-text-secondary">{deliverable}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
