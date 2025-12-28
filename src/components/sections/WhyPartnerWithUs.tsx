@@ -1,36 +1,36 @@
-import { FileText, Users, MessageSquare, Target, UserCheck, XCircle, ArrowRight } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Compass, Filter, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const WhyPartnerWithUs = () => {
   const sectionRef = useScrollReveal();
   const allBenefits = [
     {
-      icon: FileText,
+      icon: ClipboardCheck,
       title: "Clear Scope. No Guesswork.",
       description: "Agencies know what's included, how work moves forward, and how changes are handled. Scope is defined early and revisited intentionally, not discovered after issues appear."
     },
     {
-      icon: Users,
+      icon: MessageSquareText,
       title: "Work You Can Explain to Clients",
       description: "Fulfillment is delivered in a way agencies can confidently walk clients through, without hedging, scrambling, or overpromising. The work makes sense, and so does the rationale behind it."
     },
     {
-      icon: MessageSquare,
+      icon: BellOff,
       title: "Fewer Fire Drills. Cleaner Communication.",
       description: "Structured updates and direct communication reduce back-and-forth and prevent small issues from turning into reactive emergencies. Problems surface early, while they're still easy to solve."
     },
     {
-      icon: UserCheck,
+      icon: GraduationCap,
       title: "Marketers, Not Rented Headcount.",
       description: "We're not a staffing company assigning whoever is available. Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards, not generalists filling seats."
     },
     {
-      icon: Target,
+      icon: Compass,
       title: "Execution That Doesn't Drift.",
       description: "Work is reviewed, guided, and adjusted with intent. Execution doesn't quietly slide into box-checking or autopilot just because an account is live."
     },
     {
-      icon: XCircle,
+      icon: Filter,
       title: "Not a Fit for Everyone.",
       description: "This partnership works best for agencies that value clarity, patience, and disciplined execution. If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit."
     }
