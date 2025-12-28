@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 const testimonials = [
   {
-    quote: "They're an exceptionally dependable agency partner. They're trustworthy, they communicate clearly, and really consistently, which sometimes is rare in today's world.",
+    quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
     author: "Trevor Anderson",
     role: "Founder & CEO, Anderson Collaborative"
   },
