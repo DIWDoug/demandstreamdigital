@@ -75,26 +75,20 @@ const EcosystemDiagram = () => {
           </div>
 
           {/* Diagram + List Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Circular Diagram */}
-            <div className="relative aspect-square max-w-sm lg:max-w-md mx-auto w-full">
+            <div className="relative aspect-square max-w-md lg:max-w-lg mx-auto w-full">
               {/* Outer circle */}
-              <div className="absolute inset-8 rounded-full border-2 border-dashed border-gray-300" />
+              <div className="absolute inset-6 rounded-full border-2 border-dashed border-gray-300" />
               
-              {/* Center content */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-44">
-                <div className="w-14 h-14 rounded-full bg-cta/10 border-2 border-cta/30 flex items-center justify-center mx-auto mb-3">
-                  <activeArea.icon className="h-6 w-6 text-cta" />
+              {/* Center icon only - no text overlay */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-cta/10 border-2 border-cta/30 flex items-center justify-center">
+                  <activeArea.icon className="h-7 w-7 lg:h-8 lg:w-8 text-cta" />
                 </div>
-                <h3 className="text-base font-semibold text-gray-900 mb-2">
-                  {activeArea.label}
-                </h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  {activeArea.description}
-                </p>
               </div>
 
-              {/* Surrounding nodes */}
+              {/* Surrounding nodes - larger and better positioned */}
               {systemAreas.map((area, index) => {
                 const position = nodePositions[index];
                 const isActive = area.id === activeArea.id;
@@ -103,15 +97,15 @@ const EcosystemDiagram = () => {
                   <button
                     key={area.id}
                     onClick={() => setActiveArea(area)}
-                    className={`absolute w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    className={`absolute w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isActive 
                         ? "bg-cta text-white scale-110 shadow-lg" 
-                        : "bg-white border border-gray-200 text-gray-500 hover:border-cta/50 hover:text-cta"
+                        : "bg-white border border-gray-200 text-gray-500 hover:border-cta/50 hover:text-cta shadow-sm"
                     }`}
                     style={position}
                     title={area.label}
                   >
-                    <area.icon className="h-5 w-5" />
+                    <area.icon className="h-5 w-5 lg:h-6 lg:w-6" />
                   </button>
                 );
               })}
@@ -119,12 +113,12 @@ const EcosystemDiagram = () => {
               {/* Dashed connection lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400">
                 {/* Horizontal line */}
-                <line x1="60" y1="200" x2="340" y2="200" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
+                <line x1="50" y1="200" x2="350" y2="200" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
                 {/* Vertical line */}
-                <line x1="200" y1="60" x2="200" y2="340" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
+                <line x1="200" y1="50" x2="200" y2="350" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
                 {/* Diagonal lines */}
-                <line x1="90" y1="90" x2="310" y2="310" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
-                <line x1="310" y1="90" x2="90" y2="310" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
+                <line x1="80" y1="80" x2="320" y2="320" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
+                <line x1="320" y1="80" x2="80" y2="320" stroke="#d1d5db" strokeWidth="1" strokeDasharray="6,6" />
               </svg>
             </div>
 
