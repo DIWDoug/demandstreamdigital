@@ -164,7 +164,7 @@ const ContactForm = () => {
                     "They're trustworthy, they communicate clearly and really consistently, which is sometimes rare in today's world."
                   </p>
                   <p className="text-xs text-text-muted text-center mt-2">
-                    — Trevor Anderson, Founder & CEO, Anderson Collaborative
+                    Trevor Anderson, Founder & CEO, Anderson Collaborative
                   </p>
                 </div>
               </form>

@@ -74,7 +74,7 @@ const ServicesGrid = () => {
               Digital Inbound Marketing
             </h3>
             <p className="text-base text-white/80 leading-relaxed mb-6 max-w-xl">
-              The complete growth engine your clients need—strategic content, technical SEO, and targeted campaigns orchestrated to generate predictable, sustainable lead flow you can stake your reputation on.
+              The complete growth engine your clients need. Strategic content, technical SEO, and targeted campaigns orchestrated to generate predictable, sustainable lead flow you can stake your reputation on.
             </p>
             
             {/* Arrow button - transforms to LEARN MORE on hover */}
