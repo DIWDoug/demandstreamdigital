@@ -6,7 +6,7 @@ import ServicesHero from "@/components/services/ServicesHero";
 import FitCriteria from "@/components/services/FitCriteria";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
 import ServicesFramework from "@/components/services/ServicesFramework";
-
+import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
 import ServicesExpertise from "@/components/services/ServicesExpertise";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -35,7 +35,8 @@ const Services = () => {
       {/* Our Framework */}
       <ServicesFramework />
       
-      
+      {/* 6-Month Roadmap Example */}
+      <SixMonthRoadmap />
       {/* Deep Expertise */}
       <ServicesExpertise />
       
