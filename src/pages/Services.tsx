@@ -5,7 +5,6 @@ import ContactForm from "@/components/sections/ContactForm";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
-import BenefitsOfPartnering from "@/components/services/BenefitsOfPartnering";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import SixMonthRoadmap from "@/components/services/SixMonthRoadmap";
@@ -45,9 +44,6 @@ const Services = () => {
       
       {/* Why Agencies Actually Use This */}
       <WhyPartnerWithUs />
-      
-      {/* Benefits of Partnering - Numbered List */}
-      <BenefitsOfPartnering />
       
       <SectionDivider />
       
