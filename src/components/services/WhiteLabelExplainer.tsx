@@ -1,26 +1,11 @@
-import { CheckCircle2, Users, Layers, TrendingUp } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const WhiteLabelExplainer = () => {
-  const benefits = [
-    {
-      icon: Users,
-      title: "Your Brand, Our Execution",
-      description: "All deliverables carry your agency's branding. Your clients never know we exist."
-    },
-    {
-      icon: Layers,
-      title: "Coordinated System",
-      description: "SEO, paid media, email, and authority building work together—not as disconnected services."
-    },
-    {
-      icon: TrendingUp,
-      title: "Scalable Capacity",
-      description: "Add client accounts without adding headcount. We scale with your growth."
-    }
-  ];
-
   return (
     <section className="py-20 lg:py-28 bg-background relative">
+      {/* Gradient transition from hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background/0 via-background/50 to-background pointer-events-none" />
+      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -34,7 +19,7 @@ const WhiteLabelExplainer = () => {
           </div>
 
           {/* Main Content */}
-          <div className="prose prose-lg prose-invert max-w-none mb-12">
+          <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-text-secondary text-lg leading-relaxed mb-6">
               White label inbound marketing is a partnership model where agencies outsource the execution of 
               digital marketing services to a specialized fulfillment partner. The partner delivers all work 
@@ -64,26 +49,6 @@ const WhiteLabelExplainer = () => {
                 accountability for results.
               </p>
             </div>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="p-6 bg-surface-elevated border border-border/50 rounded-xl"
-              >
-                <div className="p-2 rounded-lg bg-cta/10 border border-cta/20 w-fit mb-4">
-                  <benefit.icon className="h-5 w-5 text-cta" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-text-secondary text-sm">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
