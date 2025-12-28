@@ -75,9 +75,9 @@ const EcosystemDiagram = () => {
           </div>
 
           {/* Diagram + List Layout */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Circular Diagram */}
-            <div className="relative aspect-square max-w-md mx-auto w-full">
+            <div className="relative aspect-square max-w-sm lg:max-w-md mx-auto w-full">
               {/* Outer circle */}
               <div className="absolute inset-8 rounded-full border-2 border-dashed border-gray-300" />
               

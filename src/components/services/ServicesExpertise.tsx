@@ -107,7 +107,10 @@ const ServicesExpertise = () => {
   const isExpanded = (index: number) => expandedIndices.has(index);
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark">
+    <section className="py-20 lg:py-28 bg-surface-dark relative">
+      {/* Gradient transition from light section */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-surface-dark/0 to-surface-dark pointer-events-none" />
+      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
