@@ -47,7 +47,7 @@ const WhoWeAre = () => {
               href="#contact" 
               className="btn-cta group inline-flex"
             >
-              Let's Get Started
+              Let's Talk Partnership
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
