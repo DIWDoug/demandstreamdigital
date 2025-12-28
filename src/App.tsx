@@ -3,9 +3,18 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { useKonamiCode } from "./hooks/useKonamiCode";
+
+// Service Hub Pages
+import LocalSEO from "./pages/services/LocalSEO";
+import GoogleMaps from "./pages/services/GoogleMaps";
+import PaidMedia from "./pages/services/PaidMedia";
+import EmailMarketing from "./pages/services/EmailMarketing";
+import Authority from "./pages/services/Authority";
+import Reporting from "./pages/services/Reporting";
 
 const queryClient = new QueryClient();
 
@@ -15,20 +24,31 @@ const KonamiCodeListener = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <KonamiCodeListener />
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <KonamiCodeListener />
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            
+            {/* Service Hub Pages */}
+            <Route path="/services/local-seo" element={<LocalSEO />} />
+            <Route path="/services/google-maps" element={<GoogleMaps />} />
+            <Route path="/services/paid-media" element={<PaidMedia />} />
+            <Route path="/services/email-marketing" element={<EmailMarketing />} />
+            <Route path="/services/authority" element={<Authority />} />
+            <Route path="/services/reporting" element={<Reporting />} />
+            
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
