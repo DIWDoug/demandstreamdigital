@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import EcosystemDiagram from "@/components/services/EcosystemDiagram";
@@ -37,20 +36,14 @@ const Services = () => {
       {/* What is White Label Inbound Marketing? */}
       <WhiteLabelExplainer />
       
-      {/* Service Areas - Outcome-Based Grid */}
+      {/* Service Areas - Rich Descriptions Grid */}
       <EcosystemDiagram />
-      
-      {/* Mid-page CTA */}
-      <MidPageCTA variant="light" />
       
       {/* Testimonials - Social proof early */}
       <ServicesTestimonials />
       
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
-      
-      {/* Mid-page CTA */}
-      <MidPageCTA variant="dark" />
       
       {/* 6-Month Roadmap */}
       <SixMonthRoadmap />
