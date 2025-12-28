@@ -67,19 +67,28 @@ const FulfillmentApproach = () => {
             </div>
 
             {/* Right Column - Pillars */}
-            <div className="space-y-0">
+            <div className="reveal-children space-y-0">
               {pillars.map((pillar, index) => (
                 <div 
                   key={index}
-                  className={`group py-8 transition-all duration-300 hover:pl-4 ${
+                  className={`group py-8 transition-all duration-300 hover:pl-4 opacity-0 translate-y-4 animate-fade-in-up ${
                     index !== pillars.length - 1 ? 'border-b border-border/30' : ''
                   }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  style={{ 
+                    animationDelay: `${index * 150}ms`,
+                    animationFillMode: 'forwards'
+                  }}
                 >
                   <div className="flex gap-4">
                     {/* Number indicator */}
                     <div className="flex-shrink-0">
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white">
+                      <span 
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-semibold transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white scale-0 animate-scale-in"
+                        style={{ 
+                          animationDelay: `${index * 150 + 100}ms`,
+                          animationFillMode: 'forwards'
+                        }}
+                      >
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
