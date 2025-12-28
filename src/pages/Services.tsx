@@ -14,8 +14,18 @@ import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesFinalCTA from "@/components/services/ServicesFinalCTA";
 
 const SectionDivider = () => (
-  <div className="container mx-auto px-4 py-8">
-    <hr className="border-t-2 border-primary/40" />
+  <div className="container mx-auto px-4 py-12">
+    <div className="relative flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      </div>
+      <div className="absolute inset-0 flex items-center">
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent blur-sm" />
+      </div>
+      <div className="relative px-4 bg-background">
+        <div className="w-2 h-2 rotate-45 bg-primary/60 shadow-[0_0_10px_hsl(var(--primary)/0.5)]" />
+      </div>
+    </div>
   </div>
 );
 
