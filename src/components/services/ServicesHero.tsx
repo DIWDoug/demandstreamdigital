@@ -1,36 +1,52 @@
 import { ArrowRight } from "lucide-react";
+import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 const ServicesHero = () => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-background to-background" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-cta/5 rounded-full blur-3xl opacity-60" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cta/5 rounded-full blur-3xl opacity-50" />
       
       <div className="container mx-auto px-6 lg:px-8 relative">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-cta font-medium uppercase tracking-widest text-sm mb-6">
-            White-Label Fulfillment
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-[1.1]">
-            Digital Marketing Fulfillment,{" "}
-            <span className="text-gradient-primary">Executed as a System</span>
-          </h1>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-6">
-            White-label SEO, paid media, and retention execution for agencies that value 
-            clarity, scope discipline, and long-term client relationships.
-          </p>
-          <p className="text-base text-text-muted max-w-2xl mx-auto leading-relaxed mb-10">
-            No rigid packages. Services are scoped intentionally and executed on a monthly 
-            planning cadence—whether you engage one channel or coordinate across many.
-          </p>
-          <a 
-            href="#contact" 
-            className="btn-cta group inline-flex items-center text-lg px-8 py-4"
-          >
-            Start a Partner Conversation
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </a>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
+          {/* Left: Text content */}
+          <div>
+            <p className="text-cta font-medium uppercase tracking-widest text-sm mb-4">
+              White-Label Fulfillment
+            </p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15]">
+              Digital Marketing Fulfillment,{" "}
+              <span className="text-gradient-primary">Executed as a System</span>
+            </h1>
+            <p className="text-lg text-text-secondary leading-relaxed mb-8">
+              White-label SEO, paid media, and retention execution for agencies that value 
+              clarity, scope discipline, and long-term client relationships.
+            </p>
+            <a 
+              href="#contact" 
+              className="btn-cta group inline-flex items-center px-6 py-3"
+            >
+              Start a Partner Conversation
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          {/* Right: Image */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-64 h-64 lg:w-80 lg:h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-cta/20 to-accent-blue/20 rounded-2xl rotate-3" />
+              <img 
+                src={dougHeadshot}
+                alt="Doug Bryson - DialedIn Web founder"
+                className="relative w-full h-full object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-3 -right-3 bg-surface-elevated border border-border/50 rounded-lg px-4 py-2 shadow-lg">
+                <p className="text-xs text-text-muted">Founder</p>
+                <p className="text-sm font-semibold text-foreground">Doug Bryson</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
