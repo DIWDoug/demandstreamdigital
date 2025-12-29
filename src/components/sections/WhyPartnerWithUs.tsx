@@ -50,11 +50,11 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
-            What Partnership Looks Like in Practice
+            Your Current Partner Is Costing You Clients
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            This isn't about features or promises.<br />
-            It's about what actually changes when fulfillment is handled with discipline instead of guesswork.
+            Missed deadlines. Unexplained ranking drops. Work you can't defend in a client call.<br />
+            Here's what changes when fulfillment is handled with discipline.
           </p>
         </div>
 
