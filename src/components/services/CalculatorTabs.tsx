@@ -156,7 +156,7 @@ const ROICalculatorContent = () => {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
-              <p className="text-sm text-text-muted">Select your industry to auto-fill typical rates</p>
+              <p className="text-sm text-text-muted">Select your client's industry to auto-fill typical rates</p>
             </div>
           </div>
           <button
@@ -210,44 +210,44 @@ const ROICalculatorContent = () => {
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
           <InputField 
-            label="Website Visitors (Monthly)" 
+            label="Client's Website Visitors (Monthly)" 
             value={visitors} 
             onChange={setVisitors}
-            tooltip="The average number of unique visitors to your website each month. You can find this in Google Analytics under Audience > Overview."
+            tooltip="Your client's average monthly unique visitors. Ask them to check Google Analytics, or estimate based on their market size and current marketing efforts."
           />
           <InputField 
             label="Lead Conversion Rate (%)" 
             value={leadConversionRate} 
             onChange={setLeadConversionRate} 
             suffix="%"
-            tooltip="The percentage of website visitors who become leads (fill out a form, call, or make contact). Industry average is typically 2-5%. Calculate as: (Monthly Leads ÷ Monthly Visitors) × 100"
+            tooltip="Percentage of website visitors who become leads. Industry average is 2-5%. Use this to show clients the impact of conversion optimization work."
           />
           <InputField 
             label="Lead-to-Customer Rate (%)" 
             value={leadToCustomerRate} 
             onChange={setLeadToCustomerRate} 
             suffix="%"
-            tooltip="The percentage of leads that convert into paying customers. Also called 'close rate' or 'sales conversion rate'. Calculate as: (New Customers ÷ Total Leads) × 100"
+            tooltip="Your client's close rate—percentage of leads that become paying customers. This depends on their sales process. Typical B2B is 15-30%, local services 25-40%."
           />
           <InputField 
-            label="Average Revenue Per Customer ($)" 
+            label="Avg. Customer Value ($)" 
             value={revenuePerCustomer} 
             onChange={setRevenuePerCustomer}
-            tooltip="The average amount of revenue generated from each new customer. For recurring services, use lifetime value (LTV). For one-time purchases, use average transaction value."
+            tooltip="Average revenue per customer for your client. For recurring services, use lifetime value (LTV). This is key to demonstrating marketing ROI."
           />
           <InputField 
-            label="Marketing Cost ($)" 
+            label="Monthly Retainer ($)" 
             value={marketingCost} 
             onChange={setMarketingCost}
-            tooltip="Your total monthly marketing spend including agency fees, ad spend, software subscriptions, and any other marketing-related costs."
+            tooltip="The monthly retainer you charge this client, plus any ad spend. Use this to demonstrate the ROI of your services."
           />
         </div>
 
         <div className="grid grid-cols-2 gap-4 content-start">
-          <ResultCard label="Total Leads Generated" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
-          <ResultCard label="Total New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
-          <ResultCard label="Inbound Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
-          <ResultCard label="Marketing ROI" value={`${results.roi}%`} sublabel="Return on marketing investment" icon={TrendingUp} highlight={results.roi > 100} />
+          <ResultCard label="Leads for Client" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
+          <ResultCard label="New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
+          <ResultCard label="Client Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
+          <ResultCard label="Client's Marketing ROI" value={`${results.roi}%`} sublabel="Return on their investment with you" icon={TrendingUp} highlight={results.roi > 100} />
         </div>
       </div>
 
@@ -259,7 +259,7 @@ const ROICalculatorContent = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-foreground">Growth Forecast</h3>
-            <p className="text-sm text-text-muted">See how incremental improvements impact your revenue</p>
+            <p className="text-sm text-text-muted">Show clients how incremental improvements impact their revenue</p>
           </div>
         </div>
 
@@ -308,13 +308,13 @@ const ROICalculatorContent = () => {
               <p className="text-2xl font-bold text-cta">
                 +${growthForecast.combinedRevenue.toLocaleString()}
               </p>
-              <p className="text-xs text-text-muted mt-2">Additional monthly revenue</p>
+              <p className="text-xs text-text-muted mt-2">Additional client revenue/month</p>
             </div>
           </div>
         </div>
 
         <p className="text-xs text-text-muted mt-6 text-center">
-          These projections show potential revenue gains from improving your conversion rate or increasing website traffic through inbound marketing.
+          Use these projections to demonstrate the value of your services. Show clients how improved conversion rates and increased traffic translate to real revenue.
         </p>
       </div>
     </div>
