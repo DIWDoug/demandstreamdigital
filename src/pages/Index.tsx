@@ -10,16 +10,14 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
-
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
-
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
+import WaveDivider from "@/components/WaveDivider";
 
 const Index = () => {
   return (
@@ -32,26 +30,49 @@ const Index = () => {
       <Header />
       <Hero />
       <TrustReel />
-      <AntiPackageDiagnosis />
+      
+      {/* Wave transition into AntiPackageDiagnosis */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <AntiPackageDiagnosis />
+      </div>
+      
       <FulfillmentApproach />
       <WhoWeAre />
       <WhyPartnerWithUs />
+      
       <div id="services">
         <ServicesGrid />
       </div>
-      <TopicalExpertise />
-      <LocalGrowthEngine />
       
+      {/* Wave transition into TopicalExpertise */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <TopicalExpertise />
+      </div>
+      
+      <LocalGrowthEngine />
       <ContinuingEducation />
       
-      <div id="about">
-        <WhatWeSolve />
+      {/* Wave transition into WhatWeSolve */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <div id="about">
+          <WhatWeSolve />
+        </div>
       </div>
+      
       <MidPageCTA variant="dark" />
+      
       <div id="testimonials">
         <Testimonials />
       </div>
-      <ContactForm />
+      
+      {/* Wave transition into ContactForm */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <ContactForm />
+      </div>
       
       <FAQ />
       <FinalCTA />
