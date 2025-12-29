@@ -63,7 +63,7 @@ const ContinuingEducation = () => {
             Continuing Education
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            The digital landscape never stops evolving, and neither do we. Our team is committed to continuous learning, staying ahead of algorithm changes, and mastering emerging strategies before they become mainstream.
+            The digital landscape never stops evolving, and neither do we. Our team stays ahead of algorithm changes and masters emerging strategies before they go mainstream.
           </p>
         </div>
 
