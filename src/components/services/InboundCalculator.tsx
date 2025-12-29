@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { MapPin, Building, Globe, FileText, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Calculator, Phone, ChevronDown, Check, Users, Clock } from "lucide-react";
+import { MapPin, Building, Globe, FileText, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Calculator, Phone, ChevronDown, Check, Users, Clock, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
@@ -66,6 +66,7 @@ const InboundCalculator = () => {
   const [metroSearch, setMetroSearch] = useState("");
   const [showMetroDropdown, setShowMetroDropdown] = useState(false);
   const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
+  const [customMsrpRate, setCustomMsrpRate] = useState(135); // Default midpoint of $120-$150
 
   const filteredMetros = useMemo(() => searchMetros(metroSearch), [metroSearch]);
   const industriesByCategory = useMemo(() => getIndustriesByCategory(), []);
@@ -151,9 +152,9 @@ const InboundCalculator = () => {
         const hoursHigh = Math.round(serviceData.hours * locMult * mult * 1.25 * 10) / 10;
         const oemLow = Math.round(hoursLow * OEM_HOURLY_RATE / 25) * 25;
         const oemHigh = Math.round(hoursHigh * OEM_HOURLY_RATE / 25) * 25;
-        // MSRP uses agency hourly rates ($120-$150/hr)
-        const msrpLow = Math.round(hoursLow * MSRP_HOURLY_LOW / 25) * 25;
-        const msrpHigh = Math.round(hoursHigh * MSRP_HOURLY_HIGH / 25) * 25;
+        // MSRP uses custom adjustable rate
+        const msrpLow = Math.round(hoursLow * customMsrpRate / 25) * 25;
+        const msrpHigh = Math.round(hoursHigh * customMsrpRate / 25) * 25;
         totalHoursLow += hoursLow;
         totalHoursHigh += hoursHigh;
         breakdown.push({ service: serviceData.label, hoursLow, hoursHigh, oemLow, oemHigh, msrpLow, msrpHigh });
@@ -169,9 +170,12 @@ const InboundCalculator = () => {
       oemTotalLow = Math.max(oemTotalLow, MIN_MONTHLY);
     }
     
-    // MSRP uses typical agency retainer rates
-    const msrpTotalLow = Math.round(totalHoursLow * MSRP_HOURLY_LOW / 25) * 25;
-    const msrpTotalHigh = Math.round(totalHoursHigh * MSRP_HOURLY_HIGH / 25) * 25;
+    // MSRP uses custom adjustable rate
+    const msrpTotalLow = Math.round(totalHoursLow * customMsrpRate / 25) * 25;
+    const msrpTotalHigh = Math.round(totalHoursHigh * customMsrpRate / 25) * 25;
+    
+    // Calculate margin percentage
+    const marginPercent = Math.round(((customMsrpRate - OEM_HOURLY_RATE) / OEM_HOURLY_RATE) * 100);
 
     return { 
       oemLow: oemTotalLow, 
@@ -182,8 +186,8 @@ const InboundCalculator = () => {
       totalHoursHigh,
       breakdown,
       oemHourlyRate: OEM_HOURLY_RATE,
-      msrpHourlyLow: MSRP_HOURLY_LOW,
-      msrpHourlyHigh: MSRP_HOURLY_HIGH,
+      msrpHourlyRate: customMsrpRate,
+      marginPercent,
       marketInfo: {
         metro: formData.metro,
         industry: formData.industry,
@@ -687,17 +691,39 @@ const InboundCalculator = () => {
                   </div>
                 </div>
 
-                {/* MSRP Pricing */}
+                {/* MSRP Pricing with Adjustable Rate */}
                 <div className="bg-accent-blue/5 rounded-xl p-6 border border-accent-blue/30">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-accent-blue bg-accent-blue/10 px-2 py-1 rounded">Typical Agency Retainer (MSRP)</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-accent-blue bg-accent-blue/10 px-2 py-1 rounded">Your Client Price (MSRP)</span>
+                    <span className="text-sm text-cta font-medium">{estimate.marginPercent}% margin</span>
                   </div>
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">
+                  <p className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     ${estimate.msrpLow.toLocaleString()} – ${estimate.msrpHigh.toLocaleString()}
                   </p>
-                  <p className="text-text-muted text-sm mt-2">
-                    @ ${estimate.msrpHourlyLow}–${estimate.msrpHourlyHigh}/hr agency rates
-                  </p>
+                  
+                  {/* Adjustable Rate Slider */}
+                  <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
+                    <div className="flex items-center justify-between mb-3">
+                      <label className="text-sm text-text-secondary flex items-center gap-2">
+                        <DollarSign className="h-4 w-4" />
+                        Your hourly rate
+                      </label>
+                      <span className="text-lg font-bold text-foreground">${customMsrpRate}/hr</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="80"
+                      max="200"
+                      step="5"
+                      value={customMsrpRate}
+                      onChange={(e) => setCustomMsrpRate(Number(e.target.value))}
+                      className="w-full h-2 bg-border rounded-lg appearance-none cursor-pointer accent-accent-blue"
+                    />
+                    <div className="flex justify-between text-xs text-text-muted mt-1">
+                      <span>$80/hr</span>
+                      <span>$200/hr</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div>
@@ -723,8 +749,7 @@ const InboundCalculator = () => {
 
                 <div className="bg-surface-dark border border-border/30 rounded-xl p-4">
                   <p className="text-sm text-text-secondary">
-                    <strong className="text-foreground">Note:</strong> OEM at ${OEM_HOURLY_RATE}/hr, MSRP at ${MSRP_HOURLY_LOW}–${MSRP_HOURLY_HIGH}/hr typical agency rates. 
-                    Factors in market size, industry competition, CPC benchmarks, and digital asset status.
+                    <strong className="text-foreground">Note:</strong> OEM at ${OEM_HOURLY_RATE}/hr. Adjust the slider to set your agency's hourly rate and see your margin.
                   </p>
                 </div>
 
