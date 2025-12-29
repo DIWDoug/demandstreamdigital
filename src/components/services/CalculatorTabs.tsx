@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, UserCheck, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock, BarChart3 } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Users, UserCheck, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock, BarChart3, Info } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, industryBenchmarks, type Industry, type IndustryBenchmark } from "@/data/industries";
@@ -71,15 +72,33 @@ const ROICalculatorContent = () => {
     label, 
     value, 
     onChange, 
-    suffix 
+    suffix,
+    tooltip
   }: { 
     label: string; 
     value: number; 
     onChange: (val: number) => void;
     suffix?: string;
+    tooltip?: string;
   }) => (
     <div>
-      <label className="block text-sm text-text-muted mb-2 font-body">{label}</label>
+      <div className="flex items-center gap-2 mb-2">
+        <label className="block text-sm text-text-muted font-body">{label}</label>
+        {tooltip && (
+          <TooltipProvider delayDuration={0}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
+                  <Info className="h-3.5 w-3.5" />
+                </button>
+              </TooltipTrigger>
+              <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
+                <p className="text-sm font-body">{tooltip}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        )}
+      </div>
       <div className="relative">
         <input
           type="number"
@@ -190,11 +209,38 @@ const ROICalculatorContent = () => {
       {/* Main Calculator Grid */}
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
-          <InputField label="Website Visitors (Monthly)" value={visitors} onChange={setVisitors} />
-          <InputField label="Lead Conversion Rate (%)" value={leadConversionRate} onChange={setLeadConversionRate} suffix="%" />
-          <InputField label="Lead-to-Customer Rate (%)" value={leadToCustomerRate} onChange={setLeadToCustomerRate} suffix="%" />
-          <InputField label="Average Revenue Per Customer ($)" value={revenuePerCustomer} onChange={setRevenuePerCustomer} />
-          <InputField label="Marketing Cost ($)" value={marketingCost} onChange={setMarketingCost} />
+          <InputField 
+            label="Website Visitors (Monthly)" 
+            value={visitors} 
+            onChange={setVisitors}
+            tooltip="The average number of unique visitors to your website each month. You can find this in Google Analytics under Audience > Overview."
+          />
+          <InputField 
+            label="Lead Conversion Rate (%)" 
+            value={leadConversionRate} 
+            onChange={setLeadConversionRate} 
+            suffix="%"
+            tooltip="The percentage of website visitors who become leads (fill out a form, call, or make contact). Industry average is typically 2-5%. Calculate as: (Monthly Leads ÷ Monthly Visitors) × 100"
+          />
+          <InputField 
+            label="Lead-to-Customer Rate (%)" 
+            value={leadToCustomerRate} 
+            onChange={setLeadToCustomerRate} 
+            suffix="%"
+            tooltip="The percentage of leads that convert into paying customers. Also called 'close rate' or 'sales conversion rate'. Calculate as: (New Customers ÷ Total Leads) × 100"
+          />
+          <InputField 
+            label="Average Revenue Per Customer ($)" 
+            value={revenuePerCustomer} 
+            onChange={setRevenuePerCustomer}
+            tooltip="The average amount of revenue generated from each new customer. For recurring services, use lifetime value (LTV). For one-time purchases, use average transaction value."
+          />
+          <InputField 
+            label="Marketing Cost ($)" 
+            value={marketingCost} 
+            onChange={setMarketingCost}
+            tooltip="Your total monthly marketing spend including agency fees, ad spend, software subscriptions, and any other marketing-related costs."
+          />
         </div>
 
         <div className="grid grid-cols-2 gap-4 content-start">
