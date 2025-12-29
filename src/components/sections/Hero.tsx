@@ -1,4 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Hero = () => {
   return (
@@ -70,36 +75,40 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 lg:px-8 pt-48 pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Micro-Eyebrow - context, not content */}
-          <p className="text-xs text-text-muted uppercase tracking-[0.25em] mb-6 animate-fade-in-up">
-            AI-Enhanced · White-Label Partner
-          </p>
-
-          {/* H1 - SEO anchor (visually demoted: smaller, muted, spacing below) */}
-          <h1 className="text-sm md:text-base text-text-muted/70 font-medium mb-8 animate-fade-in-up tracking-widest uppercase">
-            White-Label Digital Marketing Fulfillment for Agencies
-          </h1>
-
-          {/* H2 - Primary visual headline (the star) */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground leading-[1.1]" style={{ animationDelay: "0.1s" }}>
-            Fulfillment You Can Actually Rely On
-          </h2>
-
-          {/* Subhead - supporting copy */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.15s" }}>
-            We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building—scoped intentionally, executed consistently, and never forced into rigid packages.
-          </p>
-
-          {/* Payoff Line - PROMOTED: 3 lines, larger, more contrast */}
-          <div className="mb-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <p className="text-lg md:text-xl text-foreground/90 font-medium leading-loose">
-              Your clients stay longer.<br />
-              Your margins stop leaking.<br />
-              Fulfillment finally feels under control.
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full cursor-help">
+                  AI-Enhanced
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>No, we didn't just ask ChatGPT to write this. Mostly. 🤖</p>
+              </TooltipContent>
+            </Tooltip>
+            <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
+              White-Label Digital Marketing Partner
             </p>
           </div>
 
-          {/* CTA - more breathing room */}
+          {/* Main Headline - improved line height */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
+            White-Label{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span>{" "}
+            for Agencies
+          </h1>
+
+          {/* Subheadline - Conversational, benefit-focused */}
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            White-label SEO, local search, paid media, and authority building for agencies who need fulfillment that works. Scoped to each client's market, not squeezed into tiers.
+          </p>
+
+          {/* Tagline - Calm confidence */}
+          <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            Clients stay longer. Margins stay healthy. You focus on growth.
+          </p>
+
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a 
               href="#contact" 
