@@ -519,7 +519,7 @@ const About = () => {
                   <div className="pt-3 border-t border-border/50 space-y-2">
                     <p className="text-xs text-accent-blue font-semibold">iProspect</p>
                     <p className="text-xs text-text-secondary">Reliant Energy. Enterprise paid media.</p>
-                    <p className="text-xs text-text-secondary mt-2 italic">Coaching world: Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
+                    <p className="text-xs text-text-secondary mt-2 italic">Coaching world: Kevin Hutto, Kevin Nations, Shanda Sumpter, Taki Moore</p>
                   </div>
                 </div>
 
