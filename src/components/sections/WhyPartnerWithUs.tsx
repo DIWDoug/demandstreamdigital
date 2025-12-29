@@ -7,13 +7,13 @@ const WhyPartnerWithUs = () => {
     {
       icon: ClipboardCheck,
       title: "Clear Scope. No Guesswork.",
-      description: "You'll know what's included, how work progresses, and how changes are handled—before issues surface.",
+      description: "You'll know what's included, how work progresses, and how changes are handled before issues surface.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
       title: "Work You Can Defend",
-      description: "Every deliverable is structured so you can walk clients through it with confidence—no hedging required.",
+      description: "Every deliverable is structured so you can walk clients through it with confidence. No hedging required.",
       isQualifier: false
     },
     {
@@ -25,7 +25,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: GraduationCap,
       title: "Marketers, Not Rented Headcount",
-      description: "Experienced specialists who understand SEO and local markets—not generalists filling seats.",
+      description: "Experienced specialists who understand SEO and local markets. Not generalists filling seats.",
       isQualifier: false
     },
     {
@@ -37,7 +37,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: Filter,
       title: "Not for Everyone",
-      description: "This works for agencies that value clarity and disciplined execution—not shortcuts or volume at all costs.",
+      description: "This works for agencies that value clarity and disciplined execution. Not shortcuts or volume at all costs.",
       isQualifier: true
     }
   ];

@@ -39,7 +39,7 @@ const ServicesFramework = () => {
                 <span className="text-slate-500">White Label Fulfillment</span>
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
-                Custom fulfillment only works when it is controlled. We scope each engagement based on real factors—location count, competition, and goals—rather than preset packages. When priorities shift, we surface issues early, align on adjustments, and document changes before execution moves. You stay informed and in control while we handle the work.
+                Custom fulfillment only works when it is controlled. We scope each engagement based on real factors: location count, competition, and goals. When priorities shift, we surface issues early, align on adjustments, and document changes before execution moves. You stay informed and in control while we handle the work.
               </p>
             </div>
 

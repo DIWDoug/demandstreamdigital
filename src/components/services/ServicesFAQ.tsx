@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What is white label inbound marketing and how does it work?",
-    answer: "White label inbound marketing is a partnership model where agencies outsource digital marketing execution to a fulfillment partner who delivers all work under the agency's brand. The agency owns the client relationship and strategic direction. The fulfillment partner handles day-to-day execution—SEO, paid media, email marketing, content, reporting—invisibly. The end client never knows a partner is involved."
+    answer: "White label inbound marketing is a partnership model where agencies outsource digital marketing execution to a fulfillment partner who delivers all work under the agency's brand. The agency owns the client relationship and strategic direction. The fulfillment partner handles day-to-day execution (SEO, paid media, email marketing, content, reporting) invisibly. The end client never knows a partner is involved."
   },
   {
     question: "Why do agencies use white label digital marketing?",

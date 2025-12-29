@@ -6,7 +6,7 @@ const OnboardingRoadmap = () => {
       icon: MessageSquare,
       week: "Week 1",
       title: "Discovery Call",
-      description: "We learn about your agency, clients, current challenges, and what success looks like. No pitch—just conversation."
+      description: "We learn about your agency, clients, current challenges, and what success looks like. No pitch. Just conversation."
     },
     {
       icon: FileSearch,
