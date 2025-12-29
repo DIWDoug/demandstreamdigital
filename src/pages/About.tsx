@@ -340,46 +340,115 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Timeline */}
-      <section className="py-16 lg:py-20 bg-background">
+      {/* The True Timeline */}
+      <section className="py-16 lg:py-24 bg-background overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                Our Journey
+                The True Timeline
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                14 Years of Evolution
+                14 Years. Many Pivots. One Mission.
               </h2>
-              <p className="font-serif text-text-secondary">
-                The reviews below span our entire journey. Here's how we've grown.
+              <p className="font-serif text-text-secondary max-w-2xl mx-auto">
+                The path from scrappy startup to agency partner wasn't a straight line. 
+                Here's the real journey.
               </p>
             </div>
             
+            {/* Winding Path Timeline */}
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border hidden md:block" />
-              
-              <div className="space-y-8">
-                {[
-                  { year: "2011", name: "Dialed-In Marketing Solutions", description: "Founded to help local businesses get found online" },
-                  { year: "2013", name: "Dialed-In Local", description: "Refocused on local SEO and Google Maps optimization" },
-                  { year: "2017", name: "Dialed-In Web", description: "Expanded to full-service digital marketing" },
-                  { year: "2021", name: "White-Label Focus", description: "Pivoted to serving agencies while maintaining select direct relationships" },
-                  { year: "2025", name: "Dialed-In Web", description: "Full inbound marketing system for agency partners" }
-                ].map((milestone, index) => (
-                  <div key={index} className={`flex items-center gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                    <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                      <div className="bg-surface-dark border border-border rounded-xl p-4 lg:p-5 inline-block">
-                        <p className="text-cta font-semibold text-lg">{milestone.year}</p>
-                        <p className="text-foreground font-medium">{milestone.name}</p>
-                        <p className="text-sm text-text-secondary font-serif">{milestone.description}</p>
-                      </div>
+              {/* SVG Path connecting the dots */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" preserveAspectRatio="none">
+                <path 
+                  d="M 10% 8% Q 30% 8%, 50% 18% T 90% 28% Q 70% 38%, 50% 48% T 10% 58% Q 30% 68%, 50% 78% T 90% 88%"
+                  fill="none"
+                  stroke="hsl(var(--border))"
+                  strokeWidth="2"
+                  strokeDasharray="8 4"
+                  className="opacity-50"
+                />
+              </svg>
+
+              <div className="grid gap-6 lg:gap-8">
+                {/* Row 1 - Left aligned */}
+                <div className="flex justify-start">
+                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
+                      '11
                     </div>
-                    <div className="hidden md:flex w-4 h-4 bg-cta rounded-full border-4 border-background z-10" />
-                    <div className="flex-1 hidden md:block" />
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">Dialed-In Marketing Solutions</p>
+                      <p className="text-sm text-text-secondary font-serif">Founded to help local businesses get found online. Learning the ropes, making mistakes, figuring it out.</p>
+                    </div>
                   </div>
-                ))}
+                </div>
+
+                {/* Row 2 - Center-right */}
+                <div className="flex justify-center lg:justify-end lg:pr-20">
+                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
+                      '13
+                    </div>
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">Dialed-In Local</p>
+                      <p className="text-sm text-text-secondary font-serif">Refocused on local SEO and Google Maps optimization. Found the niche.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Row 3 - Left-center */}
+                <div className="flex justify-center lg:justify-start lg:pl-32">
+                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
+                      '17
+                    </div>
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">Dialed-In Web</p>
+                      <p className="text-sm text-text-secondary font-serif">Expanded to full-service digital marketing. Built out the team.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Row 4 - Right aligned */}
+                <div className="flex justify-center lg:justify-end">
+                  <div className="bg-surface-dark border border-accent-blue/30 rounded-2xl p-5 lg:p-6 max-w-md relative group hover:border-accent-blue/50 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-12 h-10 bg-accent-blue rounded-full flex items-center justify-center text-white font-bold text-xs">
+                      '19-21
+                    </div>
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">Expert-Vetted Upwork Freelancer</p>
+                      <p className="text-sm text-text-secondary font-serif">Managed $100K-$150K paid advertising campaigns, SEO clients, and everything in between. Proving the process works at scale.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Row 5 - Center */}
+                <div className="flex justify-center">
+                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
+                      '21
+                    </div>
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">White-Label Focus</p>
+                      <p className="text-sm text-text-secondary font-serif">Pivoted to serving agencies while maintaining select direct relationships.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Row 6 - Left-center */}
+                <div className="flex justify-start lg:pl-16">
+                  <div className="bg-gradient-to-br from-cta/10 to-accent-blue/10 border border-cta/30 rounded-2xl p-5 lg:p-6 max-w-md relative group hover:border-cta/50 transition-colors">
+                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
+                      '25
+                    </div>
+                    <div className="pl-4">
+                      <p className="text-foreground font-semibold mb-1">Dialed-In Web: The System</p>
+                      <p className="text-sm text-text-secondary font-serif">Full inbound marketing operating system for agency partners. Everything we learned, packaged into one cohesive approach.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
