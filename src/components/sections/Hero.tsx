@@ -1,9 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const Hero = () => {
   return (
@@ -75,44 +70,36 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 lg:px-8 pt-48 pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-6 animate-fade-in-up">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full cursor-help">
-                  AI-Enhanced
-                </span>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>No, we didn't just ask ChatGPT to write this. Mostly. 🤖</p>
-              </TooltipContent>
-            </Tooltip>
-            <span className="text-sm text-text-muted uppercase tracking-widest font-medium">
-              White-Label Partner
-            </span>
-          </div>
+          {/* Micro-Eyebrow - context, not content */}
+          <p className="text-xs text-text-muted uppercase tracking-[0.25em] mb-6 animate-fade-in-up">
+            AI-Enhanced · White-Label Partner
+          </p>
 
-          {/* H1 - SEO anchor (smaller, neutral weight) */}
-          <h1 className="text-lg md:text-xl text-text-secondary font-medium mb-4 animate-fade-in-up tracking-wide">
+          {/* H1 - SEO anchor (visually demoted: smaller, muted, spacing below) */}
+          <h1 className="text-sm md:text-base text-text-muted/70 font-medium mb-8 animate-fade-in-up tracking-widest uppercase">
             White-Label Digital Marketing Fulfillment for Agencies
           </h1>
 
-          {/* H2 - Persuasive lead (styled as visual headline) */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
-            Fulfillment You Can{" "}
-            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Actually Rely On</span>
+          {/* H2 - Primary visual headline (the star) */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground leading-[1.1]" style={{ animationDelay: "0.1s" }}>
+            Fulfillment You Can Actually Rely On
           </h2>
 
-          {/* Subheadline - Supporting copy */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+          {/* Subhead - supporting copy */}
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.15s" }}>
             We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building—scoped intentionally, executed consistently, and never forced into rigid packages.
           </p>
 
-          {/* Payoff Line - Cashvertising lever */}
-          <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Your clients stay longer. Your margins stop leaking. Fulfillment finally feels under control.
-          </p>
+          {/* Payoff Line - PROMOTED: 3 lines, larger, more contrast */}
+          <div className="mb-16 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg md:text-xl text-foreground/90 font-medium leading-loose">
+              Your clients stay longer.<br />
+              Your margins stop leaking.<br />
+              Fulfillment finally feels under control.
+            </p>
+          </div>
 
+          {/* CTA - more breathing room */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <a 
               href="#contact" 
