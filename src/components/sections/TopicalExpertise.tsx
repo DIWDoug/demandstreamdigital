@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Mail, Award } from "lucide-react";
 
 const TopicalExpertise = () => {
@@ -8,6 +9,7 @@ const TopicalExpertise = () => {
     {
       icon: MapPin,
       title: "Local SEO",
+      slug: "local-seo",
       summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
       spokes: [
         {
@@ -39,6 +41,7 @@ const TopicalExpertise = () => {
     {
       icon: Map,
       title: "Google Maps Optimization",
+      slug: "google-maps",
       summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
       spokes: [
         {
@@ -70,6 +73,7 @@ const TopicalExpertise = () => {
     {
       icon: MousePointerClick,
       title: "Google Ads Management",
+      slug: "paid-media",
       summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
       spokes: [
         {
@@ -101,6 +105,7 @@ const TopicalExpertise = () => {
     {
       icon: Share2,
       title: "Meta Ads (Facebook & Instagram)",
+      slug: "paid-media",
       summary: "Build local awareness and capture demand through targeted social advertising.",
       spokes: [
         {
@@ -132,6 +137,7 @@ const TopicalExpertise = () => {
     {
       icon: Mail,
       title: "Email Marketing",
+      slug: "email-marketing",
       summary: "Nurture leads and drive repeat business through strategic email campaigns and automation.",
       spokes: [
         {
@@ -163,6 +169,7 @@ const TopicalExpertise = () => {
     {
       icon: Award,
       title: "Authority Building",
+      slug: "authority",
       summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
       spokes: [
         {
@@ -287,13 +294,21 @@ const TopicalExpertise = () => {
                   </div>
 
                   {/* CTA within expanded card */}
-                  <div className="mt-6 pt-4 border-t border-border">
+                  <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
+                    <Link 
+                      to={`/inbound-marketing-services/${hub.slug}`}
+                      className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Learn more about {hub.title} →
+                    </Link>
+                    <span className="hidden sm:inline text-text-muted">|</span>
                     <a 
                       href="#contact" 
                       className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Discuss {hub.title} for your agency →
+                      Discuss for your agency →
                     </a>
                   </div>
                 </div>
