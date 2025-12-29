@@ -46,7 +46,7 @@ const ContinuingEducation = () => {
   ];
 
   return (
-    <section className="pt-32 lg:pt-40 pb-24 lg:pb-32 bg-surface-dark relative overflow-hidden">
+    <section className="pt-28 lg:pt-32 pb-24 lg:pb-32 bg-surface-dark relative overflow-hidden">
       {/* Background accent */}
       {/* Background accent */}
       <div className="absolute inset-0 opacity-5">
