@@ -11,7 +11,7 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-import ContinuingEducation from "@/components/sections/ContinuingEducation";
+
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
@@ -54,7 +54,6 @@ const Index = () => {
       </div>
       
       <LocalGrowthEngine />
-      <ContinuingEducation />
       
       {/* Layered wave transition into WhatWeSolve */}
       <div className="relative">
