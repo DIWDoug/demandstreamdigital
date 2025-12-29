@@ -150,9 +150,10 @@ const About = () => {
               <span className="text-accent-blue">For Marketers</span>
             </h1>
             <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
-              Since 2011, we've helped agencies deliver results they can stand behind. 
-              No cookie-cutter packages. No crossed fingers. Just work that's scoped 
-              to each client's actual market.
+              Since 2011, we've helped agencies and small-to-medium businesses 
+              deliver full inbound marketing results: SEO, paid advertising, 
+              conversion rate optimization, email marketing, and more. 
+              All working together as one system.
             </p>
           </div>
         </div>
