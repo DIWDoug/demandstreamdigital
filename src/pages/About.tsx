@@ -514,11 +514,11 @@ const About = () => {
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Agency life confirmed it wasn't for me, but the results spoke: 180% retainment on Reliant Energy through a pay-per-performance campaign. Generated close to a million dollars in retainer fees for that one client. Also Zero Energy, Bounce Energy. All through good paid advertising.
+                    Agency life confirmed it wasn't for me, but the results spoke: 180% retainment on Reliant Energy through a pay-per-performance campaign. Generated close to a million dollars in retainer fees for that one client. All through good paid advertising.
                   </p>
                   <div className="pt-3 border-t border-border/50 space-y-2">
                     <p className="text-xs text-accent-blue font-semibold">iProspect</p>
-                    <p className="text-xs text-text-secondary">Reliant Energy, Zero Energy, Bounce Energy. Enterprise paid media.</p>
+                    <p className="text-xs text-text-secondary">Reliant Energy. Enterprise paid media.</p>
                     <p className="text-xs text-text-secondary mt-2 italic">Coaching world: Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
                   </div>
                 </div>
