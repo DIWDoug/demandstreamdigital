@@ -3,20 +3,6 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import johnSantos from "@/assets/team/john-santos.jpg";
-import samantaLeal from "@/assets/team/samanta-leal.jpg";
-import sheraFabian from "@/assets/team/shera-fabian.jpg";
-import iraSalvador from "@/assets/team/ira-salvador.jpg";
-import biancaLapuz from "@/assets/team/bianca-lapuz.jpg";
-import richardBaylon from "@/assets/team/richard-baylon.jpg";
-import desireeAbbariao from "@/assets/team/desiree-abbariao.jpg";
-import shaneSuniga from "@/assets/team/shane-suniga.jpg";
-import leilaniMaravillas from "@/assets/team/leilani-maravillas.jpg";
-import jamesBelmes from "@/assets/team/james-belmes.jpg";
-import martiniMabifa from "@/assets/team/martini-mabifa.jpg";
-import ariaOng from "@/assets/team/aria-ong.jpg";
-import belAniano from "@/assets/team/bel-aniano.jpg";
-import lanilynErauda from "@/assets/team/lanilyn-erauda.jpg";
 import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
 
 const About = () => {
@@ -63,72 +49,72 @@ const About = () => {
     {
       name: "John Joseph Santos",
       role: "COO",
-      image: johnSantos
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
     },
     {
       name: "Samanta Sanchezborja Leal",
       role: "Client Success Manager",
-      image: samantaLeal
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-6.webp"
     },
     {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
-      image: sheraFabian
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-1.webp"
     },
     {
       name: "Ira Salvador",
       role: "Project Manager",
-      image: iraSalvador
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Ira-Salvador-min.png"
     },
     {
       name: "Bianca Lapuz",
       role: "Executive Assistant",
-      image: biancaLapuz
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
     },
     {
       name: "Richard Baylon",
       role: "Senior Content Strategist",
-      image: richardBaylon
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-10.webp"
     },
     {
       name: "Desiree Abbariao",
       role: "Content Strategist",
-      image: desireeAbbariao
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-3.webp"
     },
     {
       name: "Shane Suniga",
       role: "OnPage Specialist",
-      image: shaneSuniga
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Shane.webp"
     },
     {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
-      image: leilaniMaravillas
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Leilani-Maravillas-min.png"
     },
     {
       name: "James Brylle Belmes",
       role: "Citations Specialist",
-      image: jamesBelmes
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-2.webp"
     },
     {
       name: "Martini Mabifa",
       role: "SEO Web Developer",
-      image: martiniMabifa
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Martini.jpg"
     },
     {
       name: "Aria Jazzmine Ong",
       role: "SEO Support",
-      image: ariaOng
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-5.webp"
     },
     {
       name: "Bel Aniano",
       role: "Marketing Coordinator",
-      image: belAniano
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
     },
     {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
-      image: lanilynErauda
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
     }
   ];
 
@@ -304,7 +290,7 @@ const About = () => {
             </div>
 
             {/* Team Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
               {teamMembers.filter(m => !m.featured).map((member, index) => (
                 <div 
                   key={index}
