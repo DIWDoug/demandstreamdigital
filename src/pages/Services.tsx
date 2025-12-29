@@ -4,7 +4,6 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import TrustReel from "@/components/sections/TrustReel";
-import WaveDivider from "@/components/WaveDivider";
 
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
@@ -15,6 +14,12 @@ import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
+
+const SectionDivider = () => (
+  <div className="container mx-auto px-6 lg:px-8">
+    <hr className="border-t border-border/40" />
+  </div>
+);
 
 const Services = () => {
   return (
@@ -37,53 +42,42 @@ const Services = () => {
       {/* What is Inbound Marketing? */}
       <WhiteLabelExplainer />
       
-      {/* Wave transition into Pain Points */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--surface-dark))" toColor="hsl(var(--background))" variant="wave" />
-        <InboundPainPoints />
-      </div>
+      <SectionDivider />
       
-      {/* Curve transition into Fit Qualifier */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-light))" variant="curve" flip />
-        <FitQualifier />
-      </div>
+      {/* Pain Points - why in-house breaks down */}
+      <InboundPainPoints />
       
-      {/* Our Framework - How We Approach Fulfillment */}
+      {/* Fit Qualifier - who this is for (light section, no divider needed) */}
+      <FitQualifier />
+      
+      {/* Our Framework - How We Approach Fulfillment (also light) */}
       <ServicesFramework />
       
-      {/* Wave transition into Testimonials */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--surface-light))" toColor="hsl(var(--surface-dark))" variant="wave" />
-        <ServicesTestimonials />
-      </div>
+      <SectionDivider />
       
-      {/* Tilt transition into Roadmap */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--surface-dark))" toColor="hsl(var(--background))" variant="tilt" />
-        <OnboardingRoadmap />
-      </div>
+      {/* Testimonials - Social proof after framework */}
+      <ServicesTestimonials />
       
-      {/* Layered wave into TopicalExpertise */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="layered" />
-        <TopicalExpertise />
-      </div>
+      <SectionDivider />
+      
+      {/* Onboarding Roadmap - how it works */}
+      <OnboardingRoadmap />
+      
+      <SectionDivider />
+      
+      {/* Deep Expertise - hub/spoke with internal links */}
+      <TopicalExpertise />
       
       {/* Pricing Framework - transparent ranges before FAQ */}
       <PricingFramework />
       
-      {/* Curve transition into FAQ */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--surface-dark))" toColor="hsl(var(--surface-light))" variant="curve" />
-        <ServicesFAQ />
-      </div>
+      {/* FAQ - Answer objections before conversion (light section) */}
+      <ServicesFAQ />
       
-      {/* Wave transition into Contact */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--surface-light))" toColor="hsl(var(--surface-dark))" variant="wave" flip />
-        <ContactForm />
-      </div>
+      <SectionDivider />
+      
+      {/* Contact Form */}
+      <ContactForm />
 
       <Footer />
     </div>
