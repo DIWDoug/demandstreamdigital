@@ -44,7 +44,7 @@ const initialFormData: FormData = {
 };
 
 // Pricing configuration
-const OEM_HOURLY_RATE = 50;        // Partner/wholesale rate
+const OEM_HOURLY_RATE = 65;        // Partner/wholesale rate
 const MSRP_HOURLY_LOW = 120;       // Typical agency rate low
 const MSRP_HOURLY_HIGH = 150;      // Typical agency rate high
 const MIN_MONTHLY = 500;           // Minimum monthly for small markets
