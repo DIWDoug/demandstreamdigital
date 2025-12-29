@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import AgencyCalculator from "./pages/AgencyCalculator";
+import About from "./pages/About";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
 // Service Hub Pages
@@ -39,6 +40,7 @@ const App = () => (
           <BackToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
             <Route path="/inbound-marketing-services" element={<Services />} />
             <Route path="/agency-calculator" element={<AgencyCalculator />} />
             
