@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3 } from "lucide-react";
+import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 
@@ -109,6 +109,27 @@ const ServicesGrid = () => {
                   </span>
                 </Link>
               ))}
+              
+              {/* Calculator CTA Card */}
+              <Link 
+                to="/agency-calculator"
+                className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
+              >
+                <div className="flex items-center gap-4">
+                  <span className="w-12 h-12 rounded-xl bg-cta/20 text-cta flex items-center justify-center group-hover:bg-cta group-hover:text-white transition-colors">
+                    <Calculator className="w-6 h-6" strokeWidth={2} />
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-cta transition-colors">
+                      Agency Partner Calculator
+                    </h3>
+                    <p className="text-text-secondary text-sm">
+                      Estimate ROI and investment for your next client conversation.
+                    </p>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
