@@ -43,8 +43,7 @@ const About = () => {
     {
       name: "Doug Bryson",
       role: "CEO & Founder",
-      image: dougHeadshot,
-      featured: true
+      image: dougHeadshot
     },
     {
       name: "John Joseph Santos",
@@ -102,15 +101,19 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
     },
     {
-      name: "Bel Aniano",
-      role: "Marketing Coordinator",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
-    },
-    {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
     }
+  ];
+
+  // Pyramid layout: 1, 2, 3, 4, 3 = 13 members
+  const pyramidRows = [
+    teamMembers.slice(0, 1),   // Row 1: 1 member (Doug)
+    teamMembers.slice(1, 3),   // Row 2: 2 members
+    teamMembers.slice(3, 6),   // Row 3: 3 members
+    teamMembers.slice(6, 10),  // Row 4: 4 members
+    teamMembers.slice(10, 13), // Row 5: 3 members
   ];
 
   return (
@@ -257,53 +260,33 @@ const About = () => {
               </h2>
             </div>
 
-            {/* Featured Team Member - Doug */}
-            <div className="mb-12">
-              <div className="bg-background border border-border rounded-2xl p-8 lg:p-10 flex flex-col md:flex-row items-center gap-8">
-                <div className="relative w-40 h-40 lg:w-48 lg:h-48 flex-shrink-0">
-                  <img 
-                    src={dougHeadshot}
-                    alt="Doug Bryson, CEO & Founder"
-                    className="w-full h-full object-cover rounded-2xl"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-cta rounded-full flex items-center justify-center">
-                    <Award className="w-4 h-4 text-cta-foreground" />
-                  </div>
-                </div>
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-semibold text-foreground mb-1">
-                    Doug Bryson
-                  </h3>
-                  <p className="text-cta font-medium mb-4">CEO & Founder</p>
-                  <p className="font-serif text-text-secondary leading-relaxed max-w-xl">
-                    Running agencies since 2011. A practitioner who learned the work by doing it, 
-                    not just managing it. Built Dialed-In Web to offer the fulfillment partner 
-                    he wished he had when outsourcing was a coin flip.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Team Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-              {teamMembers.filter(m => !m.featured).map((member, index) => (
+            {/* Team Pyramid */}
+            <div className="flex flex-col items-center gap-4 lg:gap-6">
+              {pyramidRows.map((row, rowIndex) => (
                 <div 
-                  key={index}
-                  className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors"
+                  key={rowIndex}
+                  className="flex flex-wrap justify-center gap-4 lg:gap-6"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img 
-                      src={member.image}
-                      alt={`${member.name}, ${member.role}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-xs text-text-secondary line-clamp-2">
-                    {member.role}
-                  </p>
+                  {row.map((member, index) => (
+                    <div 
+                      key={index}
+                      className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors w-36 lg:w-44"
+                    >
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img 
+                          src={member.image}
+                          alt={`${member.name}, ${member.role}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-xs text-text-secondary line-clamp-2">
+                        {member.role}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
