@@ -31,11 +31,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-surface-dark border-t border-border relative overflow-hidden" role="contentinfo">
+    <footer className="bg-background relative overflow-hidden -mt-32 lg:-mt-48 pt-40 lg:pt-56" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
-      
-      {/* Spacer */}
-      <div className="h-8" />
 
       {/* Service Categories Grid */}
       <div className="py-12 border-b border-border">
