@@ -102,19 +102,24 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
     },
     {
+      name: "Mohammed Bilal",
+      role: "Web Developer",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
+    },
+    {
       name: "Wyler",
       role: "Chief Morale Officer",
       image: wyler
     }
   ];
 
-  // Pyramid layout: 1, 2, 3, 4, 3 = 13 members
+  // Pyramid layout: 1, 2, 3, 4, 4 = 14 members
   const pyramidRows = [
     teamMembers.slice(0, 1),   // Row 1: 1 (Doug)
     teamMembers.slice(1, 3),   // Row 2: 2 (Shera, Ira)
     teamMembers.slice(3, 6),   // Row 3: 3 (Samanta, Lanilyn, Martini)
     teamMembers.slice(6, 10),  // Row 4: 4 (Richard, Desiree, Leilani, James)
-    teamMembers.slice(10, 13), // Row 5: 3 (Bel, Bianca, Wyler)
+    teamMembers.slice(10, 14), // Row 5: 4 (Bel, Bianca, Mohammed, Wyler)
   ];
 
   return (
