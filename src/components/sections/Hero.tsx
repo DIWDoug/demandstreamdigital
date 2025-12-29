@@ -77,7 +77,7 @@ const Hero = () => {
 
           {/* Single dominant headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
-            White-Label Digital Marketing Fulfillment for Agencies
+            White-Label <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span> for Agencies
           </h1>
 
           {/* Supporting sentence */}
