@@ -1,33 +1,47 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
+import type { LucideIcon } from "lucide-react";
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const services: Service[] = [
   {
+    icon: MapPin,
     title: "White Label SEO",
     description: "Technical audits, on-page optimization, and strategic content development for organic rankings.",
     href: "/services/local-seo",
   },
   {
+    icon: Map,
     title: "White Label GBP SEO",
     description: "Google Business Profile optimization, review systems, and citation building for local pack dominance.",
     href: "/services/google-maps",
   },
   {
+    icon: MousePointerClick,
     title: "White Label Paid Advertising",
     description: "Google Ads and Meta campaigns engineered for lead generation and measurable ROI.",
     href: "/services/paid-media",
   },
   {
+    icon: Share2,
     title: "White Label Authority Building",
     description: "Digital PR, link building, and citation management that compounds trust signals over time.",
     href: "/services/authority",
   },
   {
+    icon: Mail,
     title: "White Label Email Marketing",
     description: "Automated nurture sequences and lifecycle campaigns that convert leads into loyal customers.",
     href: "/services/email-marketing",
   },
   {
+    icon: BarChart3,
     title: "White Label Reporting",
     description: "Branded dashboards and executive summaries that strengthen client relationships.",
     href: "/services/reporting",
@@ -77,12 +91,12 @@ const ServicesGrid = () => {
                   to={service.href}
                   className="group relative p-6 rounded-xl bg-surface-card border border-border/50 hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/5"
                 >
-                  {/* Number badge */}
-                  <span className="absolute top-4 right-4 w-7 h-7 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-bold flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
-                    {index + 1}
+                  {/* Icon badge */}
+                  <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
+                    <service.icon className="w-4 h-4" strokeWidth={2} />
                   </span>
                   
-                  <h3 className="text-foreground font-semibold mb-2 pr-8 group-hover:text-accent-blue transition-colors">
+                  <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-accent-blue transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-text-secondary text-sm leading-relaxed">
