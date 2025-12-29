@@ -2,8 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
-import AntiPackageDiagnosis from "@/components/sections/AntiPackageDiagnosis";
-import FulfillmentApproach from "@/components/sections/FulfillmentApproach";
+import ProblemSolution from "@/components/sections/ProblemSolution";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import FitQualifier from "@/components/services/FitQualifier";
@@ -11,7 +10,6 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
@@ -32,13 +30,11 @@ const Index = () => {
       <Hero />
       <TrustReel />
       
-      {/* Wave transition into AntiPackageDiagnosis */}
+      {/* Wave transition into Problem/Solution */}
       <div className="relative">
         <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="wave" />
-        <AntiPackageDiagnosis />
+        <ProblemSolution />
       </div>
-      
-      <FulfillmentApproach />
       <WhoWeAre />
       <WhyPartnerWithUs />
       <FitQualifier />
