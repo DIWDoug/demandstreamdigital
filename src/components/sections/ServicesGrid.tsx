@@ -12,37 +12,37 @@ interface Service {
 const services: Service[] = [
   {
     icon: MapPin,
-    title: "White Label SEO",
+    title: "Local SEO",
     description: "Technical audits, on-page optimization, and strategic content development for organic rankings.",
     href: "/services/local-seo",
   },
   {
     icon: Map,
-    title: "White Label GBP SEO",
+    title: "Google Business Profile",
     description: "Google Business Profile optimization, review systems, and citation building for local pack dominance.",
     href: "/services/google-maps",
   },
   {
     icon: MousePointerClick,
-    title: "White Label Paid Advertising",
+    title: "Paid Advertising",
     description: "Google Ads and Meta campaigns engineered for lead generation and measurable ROI.",
     href: "/services/paid-media",
   },
   {
     icon: Share2,
-    title: "White Label Authority Building",
+    title: "Authority Building",
     description: "Digital PR, link building, and citation management that compounds trust signals over time.",
     href: "/services/authority",
   },
   {
     icon: Mail,
-    title: "White Label Email Marketing",
+    title: "Email Marketing",
     description: "Automated nurture sequences and lifecycle campaigns that convert leads into loyal customers.",
     href: "/services/email-marketing",
   },
   {
     icon: BarChart3,
-    title: "White Label Reporting",
+    title: "Reporting",
     description: "Branded dashboards and executive summaries that strengthen client relationships.",
     href: "/services/reporting",
   }
@@ -64,7 +64,7 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
-                Inbound Marketing,<br />
+                White Label Inbound Marketing,<br />
                 <span className="text-accent-blue">Fully Executed</span>
               </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
