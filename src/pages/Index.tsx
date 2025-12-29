@@ -68,14 +68,14 @@ const Index = () => {
         <Testimonials />
       </div>
       
+      <FAQ />
+      
       {/* Tilt transition into ContactForm */}
       <div className="relative">
         <WaveDivider position="top" fromColor="hsl(var(--cta) / 0.15)" toColor="hsl(var(--surface-dark))" variant="tilt" />
         <ContactForm />
       </div>
       
-      <FAQ />
-      <FinalCTA />
       <Footer />
     </div>
   );
