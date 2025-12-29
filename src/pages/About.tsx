@@ -340,6 +340,52 @@ const About = () => {
         </div>
       </section>
 
+      {/* Company Timeline */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                Our Journey
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+                14 Years of Evolution
+              </h2>
+              <p className="font-serif text-text-secondary">
+                The reviews below span our entire journey. Here's how we've grown.
+              </p>
+            </div>
+            
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border hidden md:block" />
+              
+              <div className="space-y-8">
+                {[
+                  { year: "2011", name: "Dialed-In Marketing Solutions", description: "Founded to help local businesses get found online" },
+                  { year: "2013", name: "Dialed-In Local", description: "Refocused on local SEO and Google Maps optimization" },
+                  { year: "2017", name: "Dialed-In Web", description: "Expanded to full-service digital marketing" },
+                  { year: "2020", name: "White-Label Focus", description: "Pivoted to serving agencies as a fulfillment partner" },
+                  { year: "2024", name: "Dialed-In Web", description: "Full inbound marketing system for agency partners" }
+                ].map((milestone, index) => (
+                  <div key={index} className={`flex items-center gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                      <div className="bg-surface-dark border border-border rounded-xl p-4 lg:p-5 inline-block">
+                        <p className="text-cta font-semibold text-lg">{milestone.year}</p>
+                        <p className="text-foreground font-medium">{milestone.name}</p>
+                        <p className="text-sm text-text-secondary font-serif">{milestone.description}</p>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex w-4 h-4 bg-cta rounded-full border-4 border-background z-10" />
+                    <div className="flex-1 hidden md:block" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Real Reviews from Real Clients */}
       <section className="py-20 lg:py-28 bg-surface-dark">
         <div className="container mx-auto px-6 lg:px-8">
@@ -351,6 +397,9 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
                 Real Reviews <span className="text-cta">from Real Clients</span>
               </h2>
+              <p className="font-serif text-text-secondary mt-4 max-w-2xl mx-auto">
+                These reviews span 12+ years across different company names. We've kept them all for transparency.
+              </p>
             </div>
 
             <Carousel
