@@ -397,15 +397,15 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">Next Level Fitness</p>
-                      <p className="text-xs text-text-secondary">#1 for "Nashville Personal Trainer"</p>
+                      <p className="text-xs text-text-secondary">Page 1: "Nashville Personal Trainer," "Personal Trainer Near Me," "Nashville Fitness"</p>
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">Southside Grill</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Nashville Brunch Restaurant"</p>
+                      <p className="text-xs text-text-secondary">Page 1 for multiple brunch and lunch keywords</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Cherry Blow Dry Bar</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Nashville Blow Dry Bar"</p>
+                      <p className="text-xs text-cta font-semibold">Darfan's Restaurant</p>
+                      <p className="text-xs text-text-secondary">Top ranking: "Nashville Romantic Restaurants." Several hundred reviews through strategic review campaign.</p>
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">HandyPro + Veteran's Auto</p>
@@ -428,7 +428,7 @@ const About = () => {
                       <p className="text-xs text-text-secondary">Local SEO and reputation management (2014)</p>
                     </div>
                     <div>
-                      <p className="text-xs text-text-secondary italic">+ Pharo Pediatric, Darfan's Restaurants, G7 Marketing, Local Search Masters contract work</p>
+                      <p className="text-xs text-text-secondary italic">+ Pharo Pediatric, G7 Marketing, Local Search Masters contract work</p>
                     </div>
                   </div>
                 </div>
@@ -505,23 +505,25 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* 2019 - iProspect + Coaching */}
+                {/* 2019-2020 - iProspect + Coaching */}
                 <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 relative">
                   <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
-                      <span className="text-accent-blue font-bold text-sm">'19</span>
+                      <span className="text-accent-blue font-bold text-xs">'19-20</span>
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2019</p>
+                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2019-2020</p>
                       <p className="text-lg font-semibold text-foreground">iProspect + Coaching</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    6 months at a major global agency. Enterprise-level paid media. Plus high-ticket funnel builds for the coaching world.
+                    Agency life confirmed it wasn't for me, but the results spoke: 180% retainment on Reliant Energy through a pay-per-performance campaign. Generated close to a million dollars in retainer fees for that one client. Also Zero Energy, Bounce Energy. All through good paid advertising.
                   </p>
-                  <div className="pt-3 border-t border-border/50">
-                    <p className="text-xs text-text-secondary">Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
+                  <div className="pt-3 border-t border-border/50 space-y-2">
+                    <p className="text-xs text-accent-blue font-semibold">iProspect</p>
+                    <p className="text-xs text-text-secondary">Reliant Energy, Zero Energy, Bounce Energy. Enterprise paid media.</p>
+                    <p className="text-xs text-text-secondary mt-2 italic">Coaching world: Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
                   </div>
                 </div>
 
