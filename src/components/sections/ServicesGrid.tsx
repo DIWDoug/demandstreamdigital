@@ -60,7 +60,7 @@ const ServicesGrid = () => {
             <Link
               key={index}
               to={service.href}
-              className="group relative p-8 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
+              className="group relative p-8 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/40 hover:shadow-lg border-l-4 border-l-primary/20 hover:border-l-primary"
             >
               {/* Number indicator */}
               <span className="absolute top-6 right-6 text-5xl font-semibold text-muted/10 select-none">
