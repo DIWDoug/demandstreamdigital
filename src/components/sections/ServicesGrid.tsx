@@ -1,149 +1,129 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MapPin, Map, MousePointerClick, Share2, Mail, BarChart3 } from "lucide-react";
 
 const services = [
   {
+    icon: MapPin,
     title: "White Label SEO",
-    description: "Comprehensive technical SEO audits, on-page optimization, and strategic content development designed to improve organic rankings for local businesses. We handle site architecture, schema markup, internal linking, and keyword targeting—delivering measurable visibility gains your agency can confidently present to clients.",
+    description: "Technical audits, on-page optimization, and strategic content development for organic rankings.",
     href: "/services/local-seo",
-    gradient: "from-primary/20 via-primary/5 to-transparent",
-    pattern: "radial-gradient(circle at 90% 10%, hsl(var(--primary) / 0.25) 0%, transparent 50%)"
   },
   {
+    icon: Map,
     title: "White Label GBP SEO",
-    description: "Google Business Profile optimization that drives local pack visibility and increases qualified calls. Our team manages profile completeness, category optimization, photo strategies, review generation systems, and citation building across authoritative directories to establish local dominance for your clients.",
+    description: "Google Business Profile optimization, review systems, and citation building for local pack dominance.",
     href: "/services/google-maps",
-    gradient: "from-cta/20 via-cta/5 to-transparent",
-    pattern: "radial-gradient(circle at 10% 90%, hsl(var(--cta) / 0.2) 0%, transparent 50%)"
   },
   {
+    icon: MousePointerClick,
     title: "White Label Paid Advertising",
-    description: "Performance-driven Google Ads and Meta advertising campaigns engineered for lead generation and measurable ROI. We architect campaign structures, manage bidding strategies, create compelling ad copy, and continuously optimize for conversions—giving your clients accountable growth they can track.",
+    description: "Google Ads and Meta campaigns engineered for lead generation and measurable ROI.",
     href: "/services/paid-media",
-    gradient: "from-primary/15 via-transparent to-cta/15",
-    pattern: "radial-gradient(circle at 80% 80%, hsl(var(--primary) / 0.2) 0%, transparent 45%)"
   },
   {
+    icon: Share2,
     title: "White Label Authority Building",
-    description: "Strategic digital PR, citation management, and link building that compounds trust signals over time. We secure placements on authoritative sites, manage NAP consistency, and build the credibility infrastructure that creates lasting competitive advantages for local businesses.",
+    description: "Digital PR, link building, and citation management that compounds trust signals over time.",
     href: "/services/authority",
-    gradient: "from-cta/15 via-transparent to-primary/15",
-    pattern: "radial-gradient(circle at 20% 20%, hsl(var(--cta) / 0.22) 0%, transparent 50%)"
   },
   {
+    icon: Mail,
     title: "White Label Email Marketing",
-    description: "Automated nurture sequences, targeted retention campaigns, and lifecycle marketing that converts leads into loyal customers. We design email flows, segment audiences, craft compelling copy, and optimize send timing to keep your clients top-of-mind and drive repeat business month after month.",
+    description: "Automated nurture sequences and lifecycle campaigns that convert leads into loyal customers.",
     href: "/services/email-marketing",
-    gradient: "from-primary/20 via-primary/8 to-transparent",
-    pattern: "radial-gradient(circle at 95% 50%, hsl(var(--primary) / 0.25) 0%, transparent 55%)"
   },
   {
-    title: "White Label Reporting & Analytics",
-    description: "Branded dashboards and executive summaries that make your agency look like the expert you are. We consolidate data from multiple sources, highlight meaningful metrics, and deliver clear performance narratives that strengthen client relationships and demonstrate ongoing value.",
+    icon: BarChart3,
+    title: "White Label Reporting",
+    description: "Branded dashboards and executive summaries that strengthen client relationships.",
     href: "/services/reporting",
-    gradient: "from-cta/12 via-transparent to-primary/12",
-    pattern: "radial-gradient(circle at 5% 60%, hsl(var(--primary) / 0.18) 0%, transparent 45%), radial-gradient(circle at 90% 30%, hsl(var(--cta) / 0.18) 0%, transparent 45%)"
   }
 ];
 
 const ServicesGrid = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative">
-      {/* Smooth transition from WhyPartnerWithUs dark section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-surface-dark to-transparent pointer-events-none" />
+    <section className="py-20 lg:py-28 bg-surface-elevated relative overflow-hidden">
+      {/* Subtle dot grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
+          backgroundSize: '32px 32px'
+        }}
+      />
+      
+      {/* Subtle gradient orbs */}
+      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      
+      {/* Subtle accent line */}
+      <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent" />
       
       <div className="container mx-auto px-6 lg:px-8">
-        {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="mb-6 text-foreground">
-            Premium Fulfillment for Selective Partners
-          </h2>
-          <p className="text-lg text-text-secondary">
-            Enterprise-grade execution, delivered invisibly under your brand.
-          </p>
-          
-          {/* Green divider */}
-          <div className="w-24 h-1 bg-cta mx-auto mt-8 rounded-full" />
-        </div>
-
-        {/* Featured Service - Digital Inbound Marketing */}
-        <Link
-          to="/services"
-          className="group relative block max-w-6xl mx-auto mb-12 p-8 md:p-12 bg-surface-dark rounded-xl border border-border overflow-hidden"
-        >
-          {/* Subtle gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-cta/5 pointer-events-none" />
-          
-          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="max-w-2xl">
-              <span className="text-xs uppercase tracking-widest text-primary mb-3 block font-medium">
-                Core Service
-              </span>
-              <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                White Label Digital Inbound Marketing
-              </h3>
-              <p className="text-text-secondary leading-relaxed">
-                The complete growth engine your clients need. Strategic content, technical SEO, and targeted campaigns orchestrated to generate predictable, sustainable lead flow.
-              </p>
-            </div>
-            
-            <div className="flex-shrink-0">
-              <span className="inline-flex items-center gap-2 px-6 py-3 bg-cta text-cta-foreground font-semibold rounded-lg transition-all duration-300 group-hover:gap-3">
-                Learn More
-                <ArrowRight className="h-5 w-5" />
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        {/* Services Grid - Clean, static cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.href}
-              className="group relative p-8 bg-card border border-border rounded-lg transition-all duration-300 hover:border-primary/40 hover:shadow-lg border-l-4 border-l-primary/20 hover:border-l-primary overflow-hidden"
-            >
-              {/* Abstract gradient background */}
-              <div 
-                className={`absolute inset-0 bg-gradient-to-br ${service.gradient} pointer-events-none`}
-              />
-              {/* Geometric pattern overlay */}
-              <div 
-                className="absolute inset-0 pointer-events-none opacity-60"
-                style={{ background: service.pattern }}
-              />
-              
-              {/* Number indicator */}
-              <span className="absolute top-6 right-6 text-4xl font-semibold text-muted/10 select-none">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              
-              <div className="relative z-10 pr-8">
-                <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-text-secondary leading-relaxed text-sm">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-primary mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
+        <div className="max-w-6xl mx-auto">
+          {/* Two-column layout */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Left Column - Inbound Marketing Overview */}
+            <div className="lg:sticky lg:top-32 lg:self-start">
+              <div className="inline-block mb-4">
+                <span className="text-accent-blue text-sm font-medium tracking-wider uppercase">
+                  Core Service
                 </span>
               </div>
-            </Link>
-          ))}
-        </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
+                White Label{" "}
+                <span className="text-text-secondary">Inbound Marketing</span>
+              </h2>
+              <p className="text-text-secondary text-lg leading-relaxed mb-6 max-w-xl">
+                Inbound marketing isn't a single service—it's the orchestration of multiple channels working together to attract, convert, and retain customers for your clients.
+              </p>
+              <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
+                Each component reinforces the others. SEO drives organic visibility. Paid media accelerates growth. Email nurtures leads. Authority building compounds trust. Together, they create a system that generates predictable, sustainable results.
+              </p>
+              
+              <Link 
+                to="/services"
+                className="btn-cta group inline-flex items-center gap-2"
+              >
+                Explore the Full System
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Link
-            to="/services"
-            className="inline-flex items-center text-primary font-medium hover:underline underline-offset-4"
-          >
-            View all services
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+            {/* Right Column - Services List */}
+            <div className="space-y-0">
+              {services.map((service, index) => (
+                <Link 
+                  key={index}
+                  to={service.href}
+                  className={`group py-6 transition-all duration-300 hover:pl-4 flex gap-4 ${
+                    index !== services.length - 1 ? 'border-b border-border/30' : ''
+                  }`}
+                >
+                  {/* Icon */}
+                  <div className="flex-shrink-0">
+                    <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent-blue/10 text-accent-blue transition-all duration-300 group-hover:bg-accent-blue group-hover:text-white">
+                      <service.icon className="w-4 h-4" strokeWidth={2} />
+                    </span>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-foreground text-lg font-semibold group-hover:text-accent-blue transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <ArrowRight className="h-4 w-4 text-text-muted opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" />
+                    </div>
+                    <p className="text-text-secondary text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
