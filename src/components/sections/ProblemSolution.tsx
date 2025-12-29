@@ -20,8 +20,8 @@ const ProblemSolution = () => {
     {
       icon: Settings,
       title: "Execution",
-      subtitle: "Adapted to real markets",
-      body: "Every market is different. We scope work to match the actual competitive landscape, not force it into a template. Execution stays intentional as conditions change."
+      subtitle: "Scoped to each market",
+      body: "Every client's market is different. We scope work to match the actual competitive landscape and adjust as conditions change. No templates. No forcing square pegs into round holes."
     }
   ];
 
@@ -79,10 +79,10 @@ const ProblemSolution = () => {
             ))}
           </div>
 
-          {/* Supporting Context */}
+          {/* Supporting Context - brings in customization rationale */}
           <div className="text-center">
             <p className="text-text-muted text-base max-w-2xl mx-auto mb-8">
-              Most fulfillment models optimize for ease of sale, not long-term delivery. We took a different path: scope before services, standards before scale, and honest expectations from the start.
+              Pre-built packages look clean on paper but rarely match real-world requirements. We took a different path: scope before services, standards before scale, and honest expectations from the start.
             </p>
             <a 
               href="#about" 
