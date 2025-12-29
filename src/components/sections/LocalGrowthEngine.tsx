@@ -27,13 +27,13 @@ const LocalGrowthEngine = () => {
   };
 
   return (
-    <section className="relative">
-      {/* Dark background that extends full width */}
-      <div className="bg-surface-dark py-24 lg:py-32">
+    <section className="relative z-10">
+      {/* Dark background - shorter to allow card to bleed */}
+      <div className="bg-surface-dark pt-32 pb-32 lg:pt-40 lg:pb-40">
         <div className="container mx-auto px-6 lg:px-8">
-          {/* Bleed-over card */}
+          {/* Bleed-over card with negative margins to overlap sections */}
           <div 
-            className="relative rounded-3xl overflow-hidden"
+            className="relative rounded-3xl overflow-hidden -mt-16 -mb-24 lg:-mt-20 lg:-mb-32"
             style={{
               background: 'linear-gradient(180deg, #F8F7F4 0%, #EFEDE8 100%)',
               boxShadow: '0 25px 80px -20px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1)'
