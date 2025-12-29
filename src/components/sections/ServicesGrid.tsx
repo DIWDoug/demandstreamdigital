@@ -3,33 +3,33 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: "Local SEO",
+    title: "White Label SEO",
     description: "Technical optimization, content strategy, and local search dominance.",
     href: "/services/local-seo"
   },
   {
-    title: "Google Business Profile",
+    title: "White Label GBP SEO",
     description: "Profile optimization, review management, and local pack visibility.",
     href: "/services/google-maps"
   },
   {
-    title: "Paid Media",
+    title: "White Label Paid Advertising",
     description: "Google Ads, Meta campaigns, and performance-driven acquisition.",
     href: "/services/paid-media"
   },
   {
-    title: "Authority Building",
+    title: "White Label Authority Building",
     description: "Digital PR, citation management, and brand presence expansion.",
     href: "/services/authority"
   },
   {
-    title: "Email Marketing",
+    title: "White Label Email Marketing",
     description: "Nurture sequences, retention campaigns, and lifecycle automation.",
     href: "/services/email-marketing"
   },
   {
-    title: "Reporting & Analytics",
-    description: "White-label dashboards, client reporting, and performance insights.",
+    title: "White Label Reporting & Analytics",
+    description: "Dashboards, client reporting, and performance insights.",
     href: "/services/reporting"
   }
 ];
