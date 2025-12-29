@@ -47,7 +47,7 @@ const About = () => {
     },
     {
       name: "John Joseph Santos",
-      role: "COO",
+      role: "OnPage SEO & Paid Ads Specialist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
     },
     {
@@ -66,9 +66,9 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Ira-Salvador-min.png"
     },
     {
-      name: "Bianca Lapuz",
-      role: "Executive Assistant",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
+      name: "Lanilyn Erauda",
+      role: "SOP Specialist",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
     },
     {
       name: "Richard Baylon",
@@ -101,10 +101,10 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
     },
     {
-      name: "Lanilyn Erauda",
-      role: "SOP Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
-    }
+      name: "Bianca Lapuz",
+      role: "Marketing Coordinator",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
+    },
   ];
 
   // Pyramid layout: 1, 2, 3, 4, 3 = 13 members
