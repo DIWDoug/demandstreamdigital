@@ -15,6 +15,13 @@ const ROICalculatorContent = () => {
   const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
   const [marketingCost, setMarketingCost] = useState(5000);
 
+  // Calculate revenue for given conversion rate and traffic
+  const calculateRevenue = (convRate: number, traffic: number) => {
+    const leads = Math.round(traffic * (convRate / 100));
+    const customers = Math.round(leads * (leadToCustomerRate / 100));
+    return customers * revenuePerCustomer;
+  };
+
   const results = useMemo(() => {
     const totalLeads = Math.round(visitors * (leadConversionRate / 100));
     const newCustomers = Math.round(totalLeads * (leadToCustomerRate / 100));
@@ -25,6 +32,30 @@ const ROICalculatorContent = () => {
 
     return { totalLeads, newCustomers, inboundRevenue, roi };
   }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, marketingCost]);
+
+  // Growth forecast calculations
+  const growthForecast = useMemo(() => {
+    const baseRevenue = results.inboundRevenue;
+    
+    // Conversion rate improvements
+    const conversionIncreases = [0.5, 1, 1.5, 2];
+    const conversionGrowth = conversionIncreases.map(increase => ({
+      increase,
+      revenue: calculateRevenue(leadConversionRate + increase, visitors) - baseRevenue
+    }));
+
+    // Traffic improvements
+    const trafficIncreases = [10, 25, 50, 100];
+    const trafficGrowth = trafficIncreases.map(increase => ({
+      increase,
+      revenue: calculateRevenue(leadConversionRate, visitors * (1 + increase / 100)) - baseRevenue
+    }));
+
+    // Combined improvements (1% conversion + 30% traffic)
+    const combinedRevenue = calculateRevenue(leadConversionRate + 1, visitors * 1.3) - baseRevenue;
+
+    return { conversionGrowth, trafficGrowth, combinedRevenue };
+  }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, results.inboundRevenue]);
 
   const InputField = ({ 
     label, 
@@ -86,20 +117,90 @@ const ROICalculatorContent = () => {
   );
 
   return (
-    <div className="grid lg:grid-cols-2 gap-8">
-      <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
-        <InputField label="Website Visitors (Monthly)" value={visitors} onChange={setVisitors} />
-        <InputField label="Lead Conversion Rate (%)" value={leadConversionRate} onChange={setLeadConversionRate} suffix="%" />
-        <InputField label="Lead-to-Customer Rate (%)" value={leadToCustomerRate} onChange={setLeadToCustomerRate} suffix="%" />
-        <InputField label="Average Revenue Per Customer ($)" value={revenuePerCustomer} onChange={setRevenuePerCustomer} />
-        <InputField label="Marketing Cost ($)" value={marketingCost} onChange={setMarketingCost} />
+    <div className="space-y-8">
+      {/* Main Calculator Grid */}
+      <div className="grid lg:grid-cols-2 gap-8">
+        <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
+          <InputField label="Website Visitors (Monthly)" value={visitors} onChange={setVisitors} />
+          <InputField label="Lead Conversion Rate (%)" value={leadConversionRate} onChange={setLeadConversionRate} suffix="%" />
+          <InputField label="Lead-to-Customer Rate (%)" value={leadToCustomerRate} onChange={setLeadToCustomerRate} suffix="%" />
+          <InputField label="Average Revenue Per Customer ($)" value={revenuePerCustomer} onChange={setRevenuePerCustomer} />
+          <InputField label="Marketing Cost ($)" value={marketingCost} onChange={setMarketingCost} />
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 content-start">
+          <ResultCard label="Total Leads Generated" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
+          <ResultCard label="Total New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
+          <ResultCard label="Inbound Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
+          <ResultCard label="Marketing ROI" value={`${results.roi}%`} sublabel="Return on marketing investment" icon={TrendingUp} highlight={results.roi > 100} />
+        </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 content-start">
-        <ResultCard label="Total Leads Generated" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
-        <ResultCard label="Total New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
-        <ResultCard label="Inbound Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
-        <ResultCard label="Marketing ROI" value={`${results.roi}%`} sublabel="Return on marketing investment" icon={TrendingUp} highlight={results.roi > 100} />
+      {/* Growth Forecast Section */}
+      <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 rounded-lg bg-cta/10">
+            <TrendingUp className="h-5 w-5 text-cta" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-foreground">Growth Forecast</h3>
+            <p className="text-sm text-text-muted">See how incremental improvements impact your revenue</p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Conversion Rate Improvements */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider">Conversion Rate +</h4>
+            <div className="space-y-2">
+              {growthForecast.conversionGrowth.map(({ increase, revenue }) => (
+                <div key={increase} className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border/30">
+                  <span className="text-sm text-foreground">+{increase}%</span>
+                  <span className={cn(
+                    "text-sm font-semibold",
+                    revenue > 0 ? "text-cta" : "text-text-muted"
+                  )}>
+                    {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Traffic Improvements */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider">Website Traffic +</h4>
+            <div className="space-y-2">
+              {growthForecast.trafficGrowth.map(({ increase, revenue }) => (
+                <div key={increase} className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border/30">
+                  <span className="text-sm text-foreground">+{increase}%</span>
+                  <span className={cn(
+                    "text-sm font-semibold",
+                    revenue > 0 ? "text-cta" : "text-text-muted"
+                  )}>
+                    {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Combined Impact */}
+          <div className="space-y-3">
+            <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider">Combined Impact</h4>
+            <div className="p-4 rounded-xl bg-cta/5 border border-cta/30 h-[calc(100%-2rem)] flex flex-col justify-center">
+              <p className="text-xs text-text-muted mb-1">+1% Conversion & +30% Traffic</p>
+              <p className="text-2xl font-bold text-cta">
+                +${growthForecast.combinedRevenue.toLocaleString()}
+              </p>
+              <p className="text-xs text-text-muted mt-2">Additional monthly revenue</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-xs text-text-muted mt-6 text-center">
+          These projections show potential revenue gains from improving your conversion rate or increasing website traffic through inbound marketing.
+        </p>
       </div>
     </div>
   );
