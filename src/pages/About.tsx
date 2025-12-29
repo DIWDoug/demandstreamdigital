@@ -358,54 +358,52 @@ const About = () => {
             
             {/* Timeline Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-              {/* 2011 */}
-              <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
+              {/* 2011-2015 - Nashville Days */}
+              <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 lg:col-span-2">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
                     <span className="text-cta font-bold text-sm">'11</span>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-cta uppercase tracking-wide">March 2011</p>
-                    <p className="text-lg font-semibold text-foreground">The Beginning</p>
+                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2011-2015</p>
+                    <p className="text-lg font-semibold text-foreground">The Nashville Days</p>
                   </div>
                 </div>
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  Nashville songwriter turned digital marketer. Tower Records closed. Publishing deal ended. A new road opened.
+                  Nashville songwriter turned digital marketer. Tower Records closed. Publishing deal ended. A new road opened. Found the local SEO niche and started ranking businesses across multiple industries.
                 </p>
-                <div className="pt-3 border-t border-border/50 space-y-2">
+                <div className="pt-3 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div>
                     <p className="text-xs text-cta font-semibold">Angel Maids</p>
                     <p className="text-xs text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Still one of the most recognized cleaning companies in all of Nashville.</p>
                   </div>
                   <div>
-                    <p className="text-xs text-cta font-semibold">Maid Right of Williamson County (2014)</p>
-                    <p className="text-xs text-text-secondary">Local SEO and reputation management</p>
+                    <p className="text-xs text-cta font-semibold">Wash N Roll</p>
+                    <p className="text-xs text-text-secondary">Page 1: "Nashville Car Wash," "Brentwood Car Wash," "Brentwood Truck Wash." Hundreds of reviews. Social media + coupon recoupment.</p>
                   </div>
-                </div>
-              </div>
-
-              {/* 2013-2015 */}
-              <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                    <span className="text-cta font-bold text-sm">'13</span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2013-2015</p>
-                    <p className="text-lg font-semibold text-foreground">Dialed-In Local</p>
-                  </div>
-                </div>
-                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  Found the local SEO niche. Built reputation in Nashville. Started ranking businesses across multiple industries.
-                </p>
-                <div className="pt-3 border-t border-border/50 space-y-2">
                   <div>
                     <p className="text-xs text-cta font-semibold">Sonya Smithson DDS</p>
                     <p className="text-xs text-text-secondary">Page 1: "Brentwood Dentist," "Brentwood Sedation Dentist," "Brentwood Family Dentistry"</p>
                   </div>
                   <div>
+                    <p className="text-xs text-cta font-semibold">Next Level Fitness</p>
+                    <p className="text-xs text-text-secondary">#1 for "Nashville Personal Trainer"</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Southside Grill</p>
+                    <p className="text-xs text-text-secondary">Page 1: "Nashville Brunch Restaurant"</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Cherry Blow Dry Bar</p>
+                    <p className="text-xs text-text-secondary">Page 1: "Nashville Blow Dry Bar"</p>
+                  </div>
+                  <div>
                     <p className="text-xs text-cta font-semibold">HandyPro + Veteran's Auto</p>
                     <p className="text-xs text-text-secondary">Page 1: "Nashville Handyman," "Nashville Auto Service"</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Armor Roofing</p>
+                    <p className="text-xs text-text-secondary">Page 1 for multiple roofing and gutter terms</p>
                   </div>
                   <div>
                     <p className="text-xs text-cta font-semibold">Joseph Dillon / Equitable Mediation</p>
@@ -413,9 +411,15 @@ const About = () => {
                   </div>
                   <div>
                     <p className="text-xs text-cta font-semibold">Love & Pho</p>
-                    <p className="text-xs text-text-secondary">Online reputation + rankings for Nashville pho keywords</p>
+                    <p className="text-xs text-text-secondary">Reputation + rankings for Nashville pho keywords</p>
                   </div>
-                  <p className="text-xs text-text-secondary italic">+ Pharo Pediatric, Darfan's Restaurants, G7 Marketing</p>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Maid Right of Williamson County</p>
+                    <p className="text-xs text-text-secondary">Local SEO and reputation management (2014)</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-text-secondary italic">+ Pharo Pediatric, Darfan's Restaurants, G7 Marketing, Local Search Masters contract work</p>
+                  </div>
                 </div>
               </div>
 
@@ -431,12 +435,17 @@ const About = () => {
                   </div>
                 </div>
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  Worked inside agencies to understand operations from the other side.
+                  Learned what it really meant to focus on the big picture. The 360. This is where the paid advertising adventure started.
                 </p>
-                <div className="pt-3 border-t border-border/50">
-                  <p className="text-xs text-accent-blue font-semibold mb-1">Horton Group (Nashville)</p>
-                  <p className="text-xs text-accent-blue font-semibold mb-1">More Cabbage (Dallas)</p>
-                  <p className="text-xs text-text-secondary">Enterprise clients. Agency workflows. Team dynamics.</p>
+                <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div>
+                    <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville)</p>
+                    <p className="text-xs text-text-secondary">Learned inbound marketing. SEO + paid media integration.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-accent-blue font-semibold">More Cabbage (Dallas)</p>
+                    <p className="text-xs text-text-secondary">Enterprise clients. Agency workflows.</p>
+                  </div>
                 </div>
               </div>
 
@@ -460,7 +469,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* 2019 - iProspect */}
+              {/* 2019 - iProspect + Coaching */}
               <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -468,12 +477,41 @@ const About = () => {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2019</p>
-                    <p className="text-lg font-semibold text-foreground">iProspect</p>
+                    <p className="text-lg font-semibold text-foreground">iProspect + Coaching</p>
                   </div>
                 </div>
-                <p className="font-serif text-text-secondary text-sm leading-relaxed">
-                  6 months at a major global agency. Enterprise-level paid media campaigns. Fortune 500 processes.
+                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
+                  6 months at a major global agency. Enterprise-level paid media. Plus high-ticket funnel builds for the coaching world.
                 </p>
+                <div className="pt-3 border-t border-border/50">
+                  <p className="text-xs text-text-secondary">Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
+                </div>
+              </div>
+
+              {/* 2019-2020 - Direct Clients */}
+              <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
+                    <span className="text-cta font-bold text-xs">'19-20</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2019-2020</p>
+                    <p className="text-lg font-semibold text-foreground">National Clients</p>
+                  </div>
+                </div>
+                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
+                  Expanded to national-scale SEO and reputation work.
+                </p>
+                <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
+                    <p className="text-xs text-text-secondary">National moving company. SEO + reputation.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Car Spa (Dallas, 11 locations)</p>
+                    <p className="text-xs text-text-secondary">Page 1: "National Carwash," "Carwash Near Me"</p>
+                  </div>
+                </div>
               </div>
 
               {/* 2019-2021 - Upwork */}
@@ -497,25 +535,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* 2019 - Coaching */}
-              <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                    <span className="text-cta font-bold text-sm">'19</span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2019</p>
-                    <p className="text-lg font-semibold text-foreground">Coaching World</p>
-                  </div>
-                </div>
-                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  High-ticket funnel builds and online course launches.
-                </p>
-                <div className="pt-3 border-t border-border/50">
-                  <p className="text-xs text-text-secondary">Kevin Hutto, Kevin Nations, Shanda Sumpter, Talking More</p>
-                </div>
-              </div>
-
               {/* 2021-2022 */}
               <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
                 <div className="flex items-center gap-3 mb-4">
@@ -528,11 +547,17 @@ const About = () => {
                   </div>
                 </div>
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  Pivoted to serving agencies while maintaining select direct relationships.
+                  Pivoted to serving agencies. Managed several million dollars in paid advertising + SEO.
                 </p>
-                <div className="pt-3 border-t border-border/50">
-                  <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
-                  <p className="text-xs text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
+                <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Anderson Collaborative + Florida Agency</p>
+                    <p className="text-xs text-text-secondary">Several million in paid ads + SEO across both accounts</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
+                    <p className="text-xs text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
+                  </div>
                 </div>
               </div>
 
