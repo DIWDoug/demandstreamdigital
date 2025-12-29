@@ -10,6 +10,46 @@ export interface Industry {
   seoComplexity: number; // 1-5 scale
 }
 
+// Industry benchmark data for ROI calculator
+export interface IndustryBenchmark {
+  id: string;
+  name: string;
+  category: string;
+  conversionRate: number; // Website visitor to lead (%)
+  closeRate: number; // Lead to customer (%)
+  avgCustomerValue: number; // Average revenue per customer ($)
+}
+
+export const industryBenchmarks: IndustryBenchmark[] = [
+  // Legal
+  { id: "legal", name: "Legal Services", category: "Legal", conversionRate: 3.5, closeRate: 25, avgCustomerValue: 4500 },
+  // Medical & Healthcare
+  { id: "dental", name: "Dental Practice", category: "Medical", conversionRate: 4.2, closeRate: 35, avgCustomerValue: 800 },
+  { id: "medical-spa", name: "Med Spa / Cosmetic", category: "Medical", conversionRate: 3.8, closeRate: 28, avgCustomerValue: 1500 },
+  { id: "chiropractic", name: "Chiropractic", category: "Medical", conversionRate: 4.5, closeRate: 32, avgCustomerValue: 600 },
+  // Home Services
+  { id: "hvac", name: "HVAC", category: "Home Services", conversionRate: 3.2, closeRate: 30, avgCustomerValue: 1200 },
+  { id: "plumbing", name: "Plumbing", category: "Home Services", conversionRate: 3.8, closeRate: 35, avgCustomerValue: 450 },
+  { id: "roofing", name: "Roofing", category: "Home Services", conversionRate: 2.8, closeRate: 22, avgCustomerValue: 8500 },
+  { id: "remodeling", name: "Home Remodeling", category: "Home Services", conversionRate: 2.5, closeRate: 18, avgCustomerValue: 15000 },
+  // Real Estate
+  { id: "real-estate", name: "Real Estate", category: "Real Estate", conversionRate: 2.2, closeRate: 12, avgCustomerValue: 8500 },
+  // Financial Services
+  { id: "accounting", name: "Accounting / CPA", category: "Financial", conversionRate: 3.0, closeRate: 28, avgCustomerValue: 2500 },
+  { id: "insurance", name: "Insurance", category: "Financial", conversionRate: 2.8, closeRate: 20, avgCustomerValue: 1800 },
+  // Fitness & Wellness
+  { id: "fitness", name: "Gym / Fitness", category: "Fitness", conversionRate: 5.5, closeRate: 40, avgCustomerValue: 500 },
+  { id: "spa", name: "Spa / Wellness", category: "Fitness", conversionRate: 4.8, closeRate: 38, avgCustomerValue: 350 },
+  // B2B / Professional Services
+  { id: "saas", name: "SaaS / Software", category: "Professional", conversionRate: 2.5, closeRate: 15, avgCustomerValue: 5000 },
+  { id: "marketing-agency", name: "Marketing Agency", category: "Professional", conversionRate: 2.8, closeRate: 18, avgCustomerValue: 3500 },
+  { id: "it-services", name: "IT Services / MSP", category: "Professional", conversionRate: 2.2, closeRate: 22, avgCustomerValue: 4200 },
+  // Education
+  { id: "education", name: "Education / Training", category: "Education", conversionRate: 4.0, closeRate: 25, avgCustomerValue: 1200 },
+  // E-commerce (general reference)
+  { id: "ecommerce", name: "E-commerce", category: "Retail", conversionRate: 2.8, closeRate: 45, avgCustomerValue: 85 },
+];
+
 export const industries: Industry[] = [
   // Legal
   { id: "legal-personal-injury", name: "Personal Injury Law", category: "Legal", avgCpc: 150, competition: "very-high", seoComplexity: 5 },
