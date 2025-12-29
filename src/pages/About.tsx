@@ -493,7 +493,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">Car Spa (11 locations)</p>
-                      <p className="text-xs text-text-secondary">Page 1: "National Carwash," "Carwash Near Me"</p>
+                      <p className="text-xs text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
                     </div>
                     <div>
                       <p className="text-xs text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
