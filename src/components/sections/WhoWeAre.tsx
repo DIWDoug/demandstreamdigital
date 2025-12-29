@@ -102,7 +102,11 @@ const WhoWeAre = () => {
                   </p>
 
                   <p className="text-text-secondary">
-                    Fulfillment that's scoped to the actual market. Work you can explain without flinching. Execution that doesn't require you to cross your fingers and hope.
+                    Not as a visionary trying to scale. As a marketer who learned the work by doing it. I've been the one in the trenches. Building campaigns. Fixing what broke. Understanding why things actually rank.
+                  </p>
+
+                  <p className="text-text-secondary">
+                    This is fulfillment built by a marketer, for marketers. Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
                   </p>
                   
                   <p className="text-text-secondary">
