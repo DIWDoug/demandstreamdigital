@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background relative pt-32 lg:pt-40" role="contentinfo">
+    <footer className="bg-background relative pt-28 lg:pt-32" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
 
       {/* Service Categories Grid */}

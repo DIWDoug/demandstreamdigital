@@ -29,12 +29,12 @@ const LocalGrowthEngine = () => {
   return (
     <section className="relative">
       {/* Light background that stops where the card bleeds */}
-      <div className="absolute inset-0 section-light" style={{ bottom: '6rem' }} />
+      <div className="absolute inset-0 section-light" style={{ bottom: '5rem' }} />
       
       <div className="relative py-16 lg:py-20 pb-8">
         <div className="container mx-auto px-6 lg:px-8">
           {/* Bleed-over Card */}
-          <div className="relative z-20 bg-white rounded-2xl p-8 lg:p-12 shadow-2xl border border-gray-200 mb-[-6rem]">
+          <div className="relative z-20 bg-white rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-gray-200/80 mb-[-5rem]">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Fanned Book Stack */}
               <div className="relative flex justify-center items-center min-h-[350px] lg:min-h-[420px]">
