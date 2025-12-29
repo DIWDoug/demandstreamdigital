@@ -45,17 +45,17 @@ const Services = () => {
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
       
-      {/* Pricing Framework - transparent ranges */}
-      <PricingFramework />
+      {/* Testimonials - Social proof after framework */}
+      <ServicesTestimonials />
       
       {/* Onboarding Roadmap - how it works */}
       <OnboardingRoadmap />
       
-      {/* Testimonials - Social proof */}
-      <ServicesTestimonials />
-      
       {/* Deep Expertise - hub/spoke with internal links */}
       <TopicalExpertise />
+      
+      {/* Pricing Framework - transparent ranges before FAQ */}
+      <PricingFramework />
       
       {/* FAQ - Answer objections before conversion */}
       <ServicesFAQ />
