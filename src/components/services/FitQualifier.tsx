@@ -1,6 +1,12 @@
-import { Check, X, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { cn } from "@/lib/utils";
 
 const FitQualifier = () => {
+  const [openGoodFit, setOpenGoodFit] = useState<number | null>(null);
+  const [openNotFit, setOpenNotFit] = useState<number | null>(null);
+
   const goodFit = [
     {
       point: "You're running an established agency",
@@ -74,14 +80,29 @@ const FitQualifier = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">This Could Work Well</h3>
               </div>
-              <ul className="space-y-5">
+              <ul className="space-y-3">
                 {goodFit.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-cta shrink-0 mt-0.5" />
-                    <div>
-                      <span className="text-foreground font-medium block mb-1">{item.point}</span>
-                      <span className="text-text-muted text-sm leading-relaxed">{item.detail}</span>
-                    </div>
+                  <li key={index}>
+                    <Collapsible 
+                      open={openGoodFit === index}
+                      onOpenChange={(open) => setOpenGoodFit(open ? index : null)}
+                    >
+                      <CollapsibleTrigger className="flex items-center gap-3 w-full text-left group cursor-pointer py-2">
+                        <Check className="h-5 w-5 text-cta shrink-0" />
+                        <span className="text-foreground font-medium flex-1">{item.point}</span>
+                        <ChevronDown 
+                          className={cn(
+                            "h-4 w-4 text-text-muted transition-transform duration-200",
+                            openGoodFit === index && "rotate-180"
+                          )} 
+                        />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                        <p className="text-text-muted text-sm leading-relaxed pl-8 pb-2 pt-1">
+                          {item.detail}
+                        </p>
+                      </CollapsibleContent>
+                    </Collapsible>
                   </li>
                 ))}
               </ul>
@@ -95,14 +116,29 @@ const FitQualifier = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">Probably Not a Fit</h3>
               </div>
-              <ul className="space-y-5">
+              <ul className="space-y-3">
                 {notFit.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <X className="h-5 w-5 text-red-400 shrink-0 mt-0.5" />
-                    <div>
-                      <span className="text-foreground font-medium block mb-1">{item.point}</span>
-                      <span className="text-text-muted text-sm leading-relaxed">{item.detail}</span>
-                    </div>
+                  <li key={index}>
+                    <Collapsible 
+                      open={openNotFit === index}
+                      onOpenChange={(open) => setOpenNotFit(open ? index : null)}
+                    >
+                      <CollapsibleTrigger className="flex items-center gap-3 w-full text-left group cursor-pointer py-2">
+                        <X className="h-5 w-5 text-red-400 shrink-0" />
+                        <span className="text-foreground font-medium flex-1">{item.point}</span>
+                        <ChevronDown 
+                          className={cn(
+                            "h-4 w-4 text-text-muted transition-transform duration-200",
+                            openNotFit === index && "rotate-180"
+                          )} 
+                        />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                        <p className="text-text-muted text-sm leading-relaxed pl-8 pb-2 pt-1">
+                          {item.detail}
+                        </p>
+                      </CollapsibleContent>
+                    </Collapsible>
                   </li>
                 ))}
               </ul>
