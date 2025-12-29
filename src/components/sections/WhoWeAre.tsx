@@ -21,8 +21,11 @@ const WhoWeAre = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header - Full Width */}
           <div className="text-center mb-12 lg:mb-16">
+            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              Why We Built This
+            </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
-              Why I Built This
+              Agencies Deserve Partners They Can Trust
             </h2>
           </div>
 
