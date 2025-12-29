@@ -105,8 +105,12 @@ const WhoWeAre = () => {
                     Not as a visionary trying to scale. As a marketer who learned the work by doing it. I've been the one in the trenches. Building campaigns. Fixing what broke. Understanding why things actually rank.
                   </p>
 
+                  <p className="text-foreground font-medium">
+                    This is fulfillment built by a marketer, for marketers.
+                  </p>
+                  
                   <p className="text-text-secondary">
-                    This is fulfillment built by a marketer, for marketers. Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
+                    Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
                   </p>
                   
                   <p className="text-text-secondary">
