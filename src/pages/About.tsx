@@ -440,11 +440,11 @@ const About = () => {
                   <circle cx="100" cy="60" r="22" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="3" />
                   <text x="100" y="66" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '12px' }}>MAR</text>
                 </g>
-                <foreignObject x="20" y="85" width="160" height="90">
+                <foreignObject x="20" y="85" width="160" height="100">
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2011</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Marketing Solutions</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Nashville songwriter turned digital marketer. Bought Laura Betterly's local startup agency. Angel Maids: first client, 15→75+ cleanings/week.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Nashville songwriter turned marketer. Angel Maids: page 1 for 20+ keywords. Most recognized house cleaner in Nashville by 2013.</p>
                   </div>
                 </foreignObject>
                 
