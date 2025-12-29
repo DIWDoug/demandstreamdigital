@@ -1,62 +1,70 @@
-import { useState } from "react";
-import { MapPin, Building, Globe, FileText, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Calculator, Phone } from "lucide-react";
+import { useState, useMemo } from "react";
+import { MapPin, Building, Globe, FileText, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Calculator, Phone, ChevronDown, Check, Users, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
+import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
 
 type Step = 1 | 2 | 3 | 4;
 
 interface FormData {
-  // Step 1: Client Profile
+  // Step 1: Market Profile
+  metro: Metro | null;
+  industry: Industry | null;
   locations: string;
-  competition: string;
-  market: string;
   
-  // Step 2: Current Assets
+  // Step 2: Digital Presence
   websiteAge: string;
-  contentStatus: string;
+  websiteAuthority: string;
   gbpStatus: string;
   citationHealth: string;
   
-  // Step 3: Services
+  // Step 3: Current Marketing
+  socialMedia: string;
+  existingAds: string;
+  contentStatus: string;
+  emailList: string;
+  
+  // Step 4: Services
   services: string[];
 }
 
 const initialFormData: FormData = {
+  metro: null,
+  industry: null,
   locations: "",
-  competition: "",
-  market: "",
   websiteAge: "",
-  contentStatus: "",
+  websiteAuthority: "",
   gbpStatus: "",
   citationHealth: "",
+  socialMedia: "",
+  existingAds: "",
+  contentStatus: "",
+  emailList: "",
   services: []
 };
 
-// Base pricing and multipliers
+// Base pricing for services
 const baseServicePricing: Record<string, { base: number; label: string }> = {
-  localSeo: { base: 800, label: "Local SEO" },
-  gbp: { base: 400, label: "Google Business Profile" },
-  googleAds: { base: 600, label: "Google Ads" },
-  metaAds: { base: 600, label: "Meta Ads" },
-  email: { base: 500, label: "Email Marketing" },
-  authority: { base: 700, label: "Authority Building" }
-};
-
-const multipliers = {
-  locations: { "1": 1, "2-5": 1.8, "6-20": 3, "20+": 5 },
-  competition: { low: 0.8, moderate: 1, high: 1.3, "hyper-competitive": 1.6 },
-  market: { "small-town": 0.8, metro: 1, "multi-city": 1.4 },
-  websiteAge: { new: 1.3, "1-3": 1.1, "3+": 1 },
-  contentStatus: { none: 1.3, some: 1.1, substantial: 1 },
-  gbpStatus: { unclaimed: 1.2, basic: 1.1, optimized: 1 },
-  citationHealth: { unknown: 1.15, messy: 1.2, clean: 1 }
+  localSeo: { base: 750, label: "Local SEO" },
+  gbp: { base: 350, label: "Google Business Profile" },
+  googleAds: { base: 550, label: "Google Ads" },
+  metaAds: { base: 500, label: "Meta Ads" },
+  email: { base: 450, label: "Email Marketing" },
+  authority: { base: 600, label: "Authority Building" }
 };
 
 const InboundCalculator = () => {
   const [step, setStep] = useState<Step>(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [showResults, setShowResults] = useState(false);
+  const [metroSearch, setMetroSearch] = useState("");
+  const [showMetroDropdown, setShowMetroDropdown] = useState(false);
+  const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
 
-  const updateField = (field: keyof FormData, value: string | string[]) => {
+  const filteredMetros = useMemo(() => searchMetros(metroSearch), [metroSearch]);
+  const industriesByCategory = useMemo(() => getIndustriesByCategory(), []);
+
+  const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -72,10 +80,12 @@ const InboundCalculator = () => {
   const canProceed = () => {
     switch (step) {
       case 1:
-        return formData.locations && formData.competition && formData.market;
+        return formData.metro && formData.industry && formData.locations;
       case 2:
-        return formData.websiteAge && formData.contentStatus && formData.gbpStatus && formData.citationHealth;
+        return formData.websiteAge && formData.websiteAuthority && formData.gbpStatus && formData.citationHealth;
       case 3:
+        return formData.socialMedia && formData.existingAds && formData.contentStatus && formData.emailList;
+      case 4:
         return formData.services.length > 0;
       default:
         return true;
@@ -83,36 +93,76 @@ const InboundCalculator = () => {
   };
 
   const calculateEstimate = () => {
-    const locMult = multipliers.locations[formData.locations as keyof typeof multipliers.locations] || 1;
-    const compMult = multipliers.competition[formData.competition as keyof typeof multipliers.competition] || 1;
-    const marketMult = multipliers.market[formData.market as keyof typeof multipliers.market] || 1;
-    const webMult = multipliers.websiteAge[formData.websiteAge as keyof typeof multipliers.websiteAge] || 1;
-    const contentMult = multipliers.contentStatus[formData.contentStatus as keyof typeof multipliers.contentStatus] || 1;
-    const gbpMult = multipliers.gbpStatus[formData.gbpStatus as keyof typeof multipliers.gbpStatus] || 1;
-    const citMult = multipliers.citationHealth[formData.citationHealth as keyof typeof multipliers.citationHealth] || 1;
+    if (!formData.metro || !formData.industry) return null;
 
-    const complexityMultiplier = (compMult + marketMult + webMult + contentMult + gbpMult + citMult) / 6;
+    // Location multipliers
+    const tierMult = tierMultipliers[formData.metro.tier];
+    const locMult = { "1": 1, "2-5": 1.8, "6-20": 3, "20+": 5 }[formData.locations] || 1;
     
+    // Industry multipliers
+    const cpcMult = getCpcMultiplier(formData.industry.avgCpc);
+    const seoMult = getSeoComplexityMultiplier(formData.industry.seoComplexity);
+    const compMult = competitionMultipliers[formData.industry.competition];
+    
+    // Asset multipliers
+    const webAgeMult = { "new": 1.3, "1-3": 1.1, "3+": 1 }[formData.websiteAge] || 1;
+    const webAuthMult = { "low": 1.25, "medium": 1.1, "high": 1 }[formData.websiteAuthority] || 1;
+    const gbpMult = { "unclaimed": 1.2, "basic": 1.1, "optimized": 1 }[formData.gbpStatus] || 1;
+    const citMult = { "unknown": 1.15, "messy": 1.2, "clean": 1 }[formData.citationHealth] || 1;
+    
+    // Marketing status multipliers
+    const socialMult = { "none": 1.15, "dormant": 1.05, "active": 1 }[formData.socialMedia] || 1;
+    const adsMult = { "none": 1.1, "paused": 1.05, "running": 1 }[formData.existingAds] || 1;
+    const contentMult = { "none": 1.3, "minimal": 1.15, "substantial": 1 }[formData.contentStatus] || 1;
+    const emailMult = { "none": 1.15, "small": 1.05, "established": 1 }[formData.emailList] || 1;
+
+    // Calculate combined multipliers by service type
+    const seoMultiplier = (tierMult + seoMult + compMult + webAgeMult + webAuthMult + citMult + contentMult) / 7;
+    const gbpMultiplier = (tierMult + compMult + gbpMult + citMult) / 4;
+    const adsMultiplier = (tierMult + cpcMult + compMult + adsMult) / 4;
+    const socialMultiplier = (tierMult + socialMult + contentMult) / 3;
+    const emailMultiplier = (emailMult + contentMult) / 2;
+    const authorityMultiplier = (tierMult + compMult + webAuthMult + contentMult) / 4;
+
+    const serviceMultipliers: Record<string, number> = {
+      localSeo: seoMultiplier,
+      gbp: gbpMultiplier,
+      googleAds: adsMultiplier,
+      metaAds: socialMultiplier,
+      email: emailMultiplier,
+      authority: authorityMultiplier
+    };
+
     let totalLow = 0;
     let totalHigh = 0;
     const breakdown: { service: string; low: number; high: number }[] = [];
 
     formData.services.forEach(service => {
       const pricing = baseServicePricing[service];
+      const mult = serviceMultipliers[service] || 1;
       if (pricing) {
-        const low = Math.round(pricing.base * locMult * complexityMultiplier * 0.85 / 50) * 50;
-        const high = Math.round(pricing.base * locMult * complexityMultiplier * 1.25 / 50) * 50;
+        const low = Math.round(pricing.base * locMult * mult * 0.85 / 25) * 25;
+        const high = Math.round(pricing.base * locMult * mult * 1.25 / 25) * 25;
         totalLow += low;
         totalHigh += high;
         breakdown.push({ service: pricing.label, low, high });
       }
     });
 
-    return { totalLow, totalHigh, breakdown };
+    return { 
+      totalLow, 
+      totalHigh, 
+      breakdown,
+      marketInfo: {
+        metro: formData.metro,
+        industry: formData.industry,
+        avgCpc: formData.industry.avgCpc
+      }
+    };
   };
 
   const handleNext = () => {
-    if (step < 3) {
+    if (step < 4) {
       setStep((step + 1) as Step);
     } else {
       setShowResults(true);
@@ -129,6 +179,7 @@ const InboundCalculator = () => {
 
   const resetCalculator = () => {
     setFormData(initialFormData);
+    setMetroSearch("");
     setStep(1);
     setShowResults(false);
   };
@@ -136,11 +187,13 @@ const InboundCalculator = () => {
   const OptionButton = ({ 
     selected, 
     onClick, 
-    children 
+    children,
+    className
   }: { 
     selected: boolean; 
     onClick: () => void; 
     children: React.ReactNode;
+    className?: string;
   }) => (
     <button
       type="button"
@@ -149,7 +202,8 @@ const InboundCalculator = () => {
         "px-4 py-3 rounded-lg border text-sm font-medium transition-all text-left",
         selected
           ? "bg-cta/10 border-cta text-cta"
-          : "bg-surface-elevated border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-foreground"
+          : "bg-surface-elevated border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-foreground",
+        className
       )}
     >
       {children}
@@ -209,7 +263,7 @@ const InboundCalculator = () => {
               Estimate Your Monthly Investment
             </h2>
             <p className="text-text-secondary text-lg">
-              Answer a few questions about your client to get a ballpark range. Final pricing is scoped per engagement.
+              Answer a few questions about your client's market and digital presence. Final pricing is scoped per engagement.
             </p>
           </div>
 
@@ -217,13 +271,13 @@ const InboundCalculator = () => {
           {!showResults && (
             <div className="mb-8">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-text-muted">Step {step} of 3</span>
-                <span className="text-sm text-text-muted">{Math.round((step / 3) * 100)}%</span>
+                <span className="text-sm text-text-muted">Step {step} of 4</span>
+                <span className="text-sm text-text-muted">{Math.round((step / 4) * 100)}%</span>
               </div>
               <div className="h-2 bg-surface-elevated rounded-full overflow-hidden">
                 <div 
                   className="h-full bg-gradient-to-r from-accent-blue to-cta transition-all duration-300"
-                  style={{ width: `${(step / 3) * 100}%` }}
+                  style={{ width: `${(step / 4) * 100}%` }}
                 />
               </div>
             </div>
@@ -232,19 +286,126 @@ const InboundCalculator = () => {
           {/* Calculator Card */}
           <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 md:p-8">
             
-            {/* Step 1: Client Profile */}
+            {/* Step 1: Market Profile */}
             {step === 1 && !showResults && (
               <div className="space-y-6">
+                {/* Metro Search */}
                 <div>
                   <label className="block text-foreground font-medium mb-3">
-                    How many locations does this client have?
+                    What metro area is this client in?
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      value={formData.metro ? `${formData.metro.name}, ${formData.metro.state}` : metroSearch}
+                      onChange={(e) => {
+                        setMetroSearch(e.target.value);
+                        updateField("metro", null);
+                        setShowMetroDropdown(true);
+                      }}
+                      onFocus={() => setShowMetroDropdown(true)}
+                      placeholder="Search for a city..."
+                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border/50 text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue"
+                    />
+                    {formData.metro && (
+                      <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+                        <span className="text-xs text-text-muted bg-accent-blue/10 px-2 py-1 rounded">
+                          {formData.metro.tier} · {formatPopulation(formData.metro.population)}
+                        </span>
+                        <Check className="h-4 w-4 text-cta" />
+                      </div>
+                    )}
+                    {showMetroDropdown && filteredMetros.length > 0 && !formData.metro && (
+                      <div className="absolute z-10 w-full mt-1 bg-surface-dark border border-border rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                        {filteredMetros.map((metro) => (
+                          <button
+                            key={`${metro.name}-${metro.state}`}
+                            type="button"
+                            onClick={() => {
+                              updateField("metro", metro);
+                              setMetroSearch("");
+                              setShowMetroDropdown(false);
+                            }}
+                            className="w-full px-4 py-3 text-left hover:bg-surface-elevated transition-colors flex items-center justify-between"
+                          >
+                            <span className="text-foreground">{metro.name}, {metro.state}</span>
+                            <span className="text-xs text-text-muted">
+                              {formatPopulation(metro.population)}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Industry Dropdown */}
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    What industry is this client in?
+                  </label>
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setShowIndustryDropdown(!showIndustryDropdown)}
+                      className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border/50 text-left flex items-center justify-between"
+                    >
+                      <span className={formData.industry ? "text-foreground" : "text-text-muted"}>
+                        {formData.industry ? formData.industry.name : "Select an industry..."}
+                      </span>
+                      <div className="flex items-center gap-2">
+                        {formData.industry && (
+                          <span className="text-xs text-text-muted bg-accent-blue/10 px-2 py-1 rounded">
+                            ~${formData.industry.avgCpc} CPC
+                          </span>
+                        )}
+                        <ChevronDown className={cn(
+                          "h-4 w-4 text-text-muted transition-transform",
+                          showIndustryDropdown && "rotate-180"
+                        )} />
+                      </div>
+                    </button>
+                    {showIndustryDropdown && (
+                      <div className="absolute z-10 w-full mt-1 bg-surface-dark border border-border rounded-lg shadow-lg max-h-72 overflow-y-auto">
+                        {Object.entries(industriesByCategory).map(([category, items]) => (
+                          <div key={category}>
+                            <div className="px-4 py-2 text-xs font-medium text-text-muted uppercase tracking-wider bg-surface-elevated">
+                              {category}
+                            </div>
+                            {items.map((industry) => (
+                              <button
+                                key={industry.id}
+                                type="button"
+                                onClick={() => {
+                                  updateField("industry", industry);
+                                  setShowIndustryDropdown(false);
+                                }}
+                                className="w-full px-4 py-2.5 text-left hover:bg-surface-elevated transition-colors flex items-center justify-between"
+                              >
+                                <span className="text-foreground text-sm">{industry.name}</span>
+                                <span className="text-xs text-text-muted">
+                                  ${industry.avgCpc} CPC
+                                </span>
+                              </button>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Locations */}
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    How many locations?
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     {[
-                      { value: "1", label: "1 location" },
-                      { value: "2-5", label: "2-5 locations" },
-                      { value: "6-20", label: "6-20 locations" },
-                      { value: "20+", label: "20+ locations" }
+                      { value: "1", label: "1" },
+                      { value: "2-5", label: "2-5" },
+                      { value: "6-20", label: "6-20" },
+                      { value: "20+", label: "20+" }
                     ].map(opt => (
                       <OptionButton
                         key={opt.value}
@@ -256,56 +417,10 @@ const InboundCalculator = () => {
                     ))}
                   </div>
                 </div>
-
-                <div>
-                  <label className="block text-foreground font-medium mb-3">
-                    How competitive is their market?
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      { value: "low", label: "Low competition", desc: "Few local competitors" },
-                      { value: "moderate", label: "Moderate", desc: "Average competition" },
-                      { value: "high", label: "High competition", desc: "Many strong competitors" },
-                      { value: "hyper-competitive", label: "Hyper-competitive", desc: "Saturated market" }
-                    ].map(opt => (
-                      <OptionButton
-                        key={opt.value}
-                        selected={formData.competition === opt.value}
-                        onClick={() => updateField("competition", opt.value)}
-                      >
-                        <div>
-                          <div>{opt.label}</div>
-                          <div className="text-xs text-text-muted mt-0.5">{opt.desc}</div>
-                        </div>
-                      </OptionButton>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-foreground font-medium mb-3">
-                    What type of market are they in?
-                  </label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {[
-                      { value: "small-town", label: "Small town" },
-                      { value: "metro", label: "Metro area" },
-                      { value: "multi-city", label: "Multi-city" }
-                    ].map(opt => (
-                      <OptionButton
-                        key={opt.value}
-                        selected={formData.market === opt.value}
-                        onClick={() => updateField("market", opt.value)}
-                      >
-                        {opt.label}
-                      </OptionButton>
-                    ))}
-                  </div>
-                </div>
               </div>
             )}
 
-            {/* Step 2: Current Assets */}
+            {/* Step 2: Digital Presence */}
             {step === 2 && !showResults && (
               <div className="space-y-6">
                 <div>
@@ -314,19 +429,16 @@ const InboundCalculator = () => {
                   </label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
-                      { value: "new", label: "New / None", desc: "< 1 year" },
-                      { value: "1-3", label: "Established", desc: "1-3 years" },
-                      { value: "3+", label: "Mature", desc: "3+ years" }
+                      { value: "new", label: "< 1 year" },
+                      { value: "1-3", label: "1-3 years" },
+                      { value: "3+", label: "3+ years" }
                     ].map(opt => (
                       <OptionButton
                         key={opt.value}
                         selected={formData.websiteAge === opt.value}
                         onClick={() => updateField("websiteAge", opt.value)}
                       >
-                        <div>
-                          <div>{opt.label}</div>
-                          <div className="text-xs text-text-muted mt-0.5">{opt.desc}</div>
-                        </div>
+                        {opt.label}
                       </OptionButton>
                     ))}
                   </div>
@@ -334,20 +446,23 @@ const InboundCalculator = () => {
 
                 <div>
                   <label className="block text-foreground font-medium mb-3">
-                    What's their existing content situation?
+                    Website domain authority?
                   </label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
-                      { value: "none", label: "Little/None" },
-                      { value: "some", label: "Some content" },
-                      { value: "substantial", label: "Substantial" }
+                      { value: "low", label: "Low / Unknown", desc: "DA < 20" },
+                      { value: "medium", label: "Medium", desc: "DA 20-40" },
+                      { value: "high", label: "Strong", desc: "DA 40+" }
                     ].map(opt => (
                       <OptionButton
                         key={opt.value}
-                        selected={formData.contentStatus === opt.value}
-                        onClick={() => updateField("contentStatus", opt.value)}
+                        selected={formData.websiteAuthority === opt.value}
+                        onClick={() => updateField("websiteAuthority", opt.value)}
                       >
-                        {opt.label}
+                        <div>
+                          <div>{opt.label}</div>
+                          <div className="text-xs text-text-muted mt-0.5">{opt.desc}</div>
+                        </div>
                       </OptionButton>
                     ))}
                   </div>
@@ -359,9 +474,9 @@ const InboundCalculator = () => {
                   </label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
-                      { value: "unclaimed", label: "Unclaimed/New" },
+                      { value: "unclaimed", label: "Unclaimed" },
                       { value: "basic", label: "Basic setup" },
-                      { value: "optimized", label: "Well optimized" }
+                      { value: "optimized", label: "Optimized" }
                     ].map(opt => (
                       <OptionButton
                         key={opt.value}
@@ -381,8 +496,8 @@ const InboundCalculator = () => {
                   <div className="grid grid-cols-3 gap-3">
                     {[
                       { value: "unknown", label: "Unknown" },
-                      { value: "messy", label: "Messy/Inconsistent" },
-                      { value: "clean", label: "Clean/Consistent" }
+                      { value: "messy", label: "Inconsistent" },
+                      { value: "clean", label: "Clean" }
                     ].map(opt => (
                       <OptionButton
                         key={opt.value}
@@ -397,8 +512,97 @@ const InboundCalculator = () => {
               </div>
             )}
 
-            {/* Step 3: Services */}
+            {/* Step 3: Current Marketing */}
             {step === 3 && !showResults && (
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    Social media presence?
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { value: "none", label: "None / New" },
+                      { value: "dormant", label: "Dormant" },
+                      { value: "active", label: "Active" }
+                    ].map(opt => (
+                      <OptionButton
+                        key={opt.value}
+                        selected={formData.socialMedia === opt.value}
+                        onClick={() => updateField("socialMedia", opt.value)}
+                      >
+                        {opt.label}
+                      </OptionButton>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    Existing paid ad accounts?
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { value: "none", label: "None" },
+                      { value: "paused", label: "Paused / Old" },
+                      { value: "running", label: "Running" }
+                    ].map(opt => (
+                      <OptionButton
+                        key={opt.value}
+                        selected={formData.existingAds === opt.value}
+                        onClick={() => updateField("existingAds", opt.value)}
+                      >
+                        {opt.label}
+                      </OptionButton>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    Existing content (blogs, pages)?
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { value: "none", label: "None" },
+                      { value: "minimal", label: "Minimal" },
+                      { value: "substantial", label: "Substantial" }
+                    ].map(opt => (
+                      <OptionButton
+                        key={opt.value}
+                        selected={formData.contentStatus === opt.value}
+                        onClick={() => updateField("contentStatus", opt.value)}
+                      >
+                        {opt.label}
+                      </OptionButton>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-foreground font-medium mb-3">
+                    Email list size?
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { value: "none", label: "None" },
+                      { value: "small", label: "< 1,000" },
+                      { value: "established", label: "1,000+" }
+                    ].map(opt => (
+                      <OptionButton
+                        key={opt.value}
+                        selected={formData.emailList === opt.value}
+                        onClick={() => updateField("emailList", opt.value)}
+                      >
+                        {opt.label}
+                      </OptionButton>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Step 4: Services */}
+            {step === 4 && !showResults && (
               <div className="space-y-6">
                 <div>
                   <label className="block text-foreground font-medium mb-3">
@@ -420,7 +624,22 @@ const InboundCalculator = () => {
             {/* Results */}
             {showResults && estimate && (
               <div className="space-y-6">
-                <div className="text-center pb-6 border-b border-border/30">
+                {/* Market Context */}
+                <div className="flex flex-wrap items-center gap-3 pb-4 border-b border-border/30">
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-accent-blue/10 rounded-full">
+                    <MapPin className="h-3.5 w-3.5 text-accent-blue" />
+                    <span className="text-sm text-foreground">{estimate.marketInfo.metro.name}, {estimate.marketInfo.metro.state}</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-accent-blue/10 rounded-full">
+                    <Building className="h-3.5 w-3.5 text-accent-blue" />
+                    <span className="text-sm text-foreground">{estimate.marketInfo.industry.name}</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-1.5 bg-cta/10 rounded-full">
+                    <span className="text-sm text-cta">~${estimate.marketInfo.avgCpc} avg CPC</span>
+                  </div>
+                </div>
+
+                <div className="text-center py-6">
                   <p className="text-text-muted text-sm uppercase tracking-wider mb-2">Estimated Monthly Investment</p>
                   <p className="text-4xl md:text-5xl font-bold text-foreground">
                     ${estimate.totalLow.toLocaleString()} – ${estimate.totalHigh.toLocaleString()}
@@ -447,8 +666,8 @@ const InboundCalculator = () => {
 
                 <div className="bg-accent-blue/5 border border-accent-blue/20 rounded-xl p-4">
                   <p className="text-sm text-text-secondary">
-                    <strong className="text-foreground">Note:</strong> This is a ballpark estimate based on typical engagements. 
-                    Final pricing depends on detailed scope, specific goals, and timeline. Let's talk to get a precise quote.
+                    <strong className="text-foreground">Note:</strong> This estimate factors in market size, industry competition, CPC benchmarks, and current digital assets. 
+                    Final pricing depends on detailed scope and specific goals.
                   </p>
                 </div>
 
@@ -505,7 +724,7 @@ const InboundCalculator = () => {
                       : "bg-surface-dark text-text-muted cursor-not-allowed"
                   )}
                 >
-                  {step === 3 ? "Calculate Estimate" : "Next"}
+                  {step === 4 ? "Calculate Estimate" : "Next"}
                   <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
