@@ -69,28 +69,44 @@ const WhoWeAre = () => {
                 <span className="absolute -left-3 -top-8 text-6xl text-cta/25 font-handwriting leading-none select-none">"</span>
                 
                 <div className="font-handwriting space-y-6 text-lg lg:text-xl leading-relaxed pl-4 border-l-2 border-cta/20">
-                  <p className="text-text-secondary">
-                    After years of watching agencies struggle with fulfillment partners who overpromise and underdeliver, I decided to build something different.
-                  </p>
-
-                  <p className="text-text-secondary">
-                    The pattern was always the same: things start strong, then communication gets reactive, scope gets blurry, and margins thin out. Everyone feels it, but the structure makes it hard to fix.
-                  </p>
-                  
                   <p className="text-foreground font-medium">
-                    Dialed-In Web exists because I believe agencies deserve better.
-                  </p>
-                  
-                  <p className="text-text-secondary">
-                    We built this to support agencies who care about doing the work right, setting honest expectations, and protecting their reputation with clients. That means clear scope, defined standards, and execution that adapts without becoming chaotic.
+                    I've been running agencies since 2011.
                   </p>
 
                   <p className="text-text-secondary">
-                    This isn't for everyone. It's for operators who want fulfillment they can trust, explain, and stand behind.
+                    I've sat through the BNI meetings. Done the cold outreach. Outsourced work to vendors I'd never met, crossing my fingers that what came back would be something I could actually send to a client.
+                  </p>
+
+                  <p className="text-text-secondary">
+                    Sometimes it was fine. Sometimes it was a disaster. And the worst part? I never really knew what I was going to get until it landed in my inbox.
                   </p>
                   
                   <p className="text-text-secondary">
-                    If that's how you run your business, we should talk.
+                    I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, blame the client. Move on. Repeat.
+                  </p>
+
+                  <p className="text-foreground font-medium">
+                    Then I realized the obvious thing nobody wants to admit:
+                  </p>
+
+                  <p className="text-text-secondary">
+                    One size doesn't fit all. Every market is different. Every client is different. And when you force cookie-cutter deliverables onto unique situations, you're in a race to the bottom. Nobody wins.
+                  </p>
+                  
+                  <p className="text-text-secondary">
+                    The other problem? Most agency people can't explain SEO in a way that builds trust. They hedge. They use jargon. Clients feel confused, then skeptical, then gone.
+                  </p>
+
+                  <p className="text-foreground font-medium">
+                    So I built something different.
+                  </p>
+
+                  <p className="text-text-secondary">
+                    Fulfillment that's scoped to the actual market. Work you can explain without flinching. Execution that doesn't require you to cross your fingers and hope.
+                  </p>
+                  
+                  <p className="text-text-secondary">
+                    If that sounds like what you've been looking for, let's talk.
                   </p>
                 </div>
 
