@@ -53,7 +53,7 @@ const WhyPartnerWithUs = () => {
             Fulfillment Shouldn't Be the Reason You Lose Clients
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Missed deadlines. Unexplained ranking drops. Work you can't defend in a client call.<br />
+            Missed deadlines. Unexplained ranking drops. Work you can't defend.<br />
             Here's what changes when fulfillment is handled with discipline.
           </p>
         </div>
