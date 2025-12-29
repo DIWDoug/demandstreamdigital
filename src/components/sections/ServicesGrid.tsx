@@ -68,7 +68,7 @@ const ServicesGrid = () => {
                 Core Service
               </span>
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">
-                Digital Inbound Marketing
+                White Label Digital Inbound Marketing
               </h3>
               <p className="text-text-secondary leading-relaxed">
                 The complete growth engine your clients need. Strategic content, technical SEO, and targeted campaigns orchestrated to generate predictable, sustainable lead flow.
