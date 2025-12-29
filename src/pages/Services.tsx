@@ -9,7 +9,7 @@ import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import InboundPainPoints from "@/components/services/InboundPainPoints";
 import FitQualifier from "@/components/services/FitQualifier";
-import PricingFramework from "@/components/services/PricingFramework";
+import InboundCalculator from "@/components/services/InboundCalculator";
 import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
@@ -68,8 +68,8 @@ const Services = () => {
       {/* Deep Expertise - hub/spoke with internal links */}
       <TopicalExpertise />
       
-      {/* Pricing Framework - transparent ranges before FAQ */}
-      <PricingFramework />
+      {/* Investment Calculator */}
+      <InboundCalculator />
       
       {/* FAQ - Answer objections before conversion (light section) */}
       <ServicesFAQ />
