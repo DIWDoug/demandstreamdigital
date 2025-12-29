@@ -101,12 +101,12 @@ const Hero = () => {
 
           {/* Subheadline - Conversational, benefit-focused */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            White-label SEO, local search, paid media, and authority building for agencies who need fulfillment that actually works. Scoped to each client's market, not forced into tiers.
+            White-label SEO, local search, paid media, and authority building for agencies who need fulfillment that works. Scoped to each client's market, not squeezed into tiers.
           </p>
 
           {/* Tagline - Calm confidence */}
           <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Your clients stay. Your margins stay. You sleep better.
+            Clients stay longer. Margins stay healthy. You focus on growth.
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>

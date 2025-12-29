@@ -76,7 +76,7 @@ const ProblemSolution = () => {
                 Why Package-Based Fulfillment Breaks Down
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                It's not that fulfillment partners are bad at their jobs. It's that rigid packages weren't designed for work this variable.
+                Most fulfillment partners do solid work. The model just wasn't designed for how variable this work actually is.
               </p>
             </div>
 
@@ -123,7 +123,7 @@ const ProblemSolution = () => {
                 How We Do It Differently
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                Every engagement starts with scope and standards, not packages and tiers. When things change, we surface it early and adjust intentionally.
+                Every engagement starts with scope and standards. When things change, we surface it early and adjust together.
               </p>
             </div>
 

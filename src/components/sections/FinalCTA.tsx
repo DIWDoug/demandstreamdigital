@@ -33,7 +33,7 @@ const FinalCTA = () => {
             </a>
           </div>
           <p className="text-sm text-text-muted italic mt-6">
-            Short conversation to understand your agency, your clients, and whether partnership makes sense.
+            A short conversation to understand your agency, your clients, and whether we're a fit.
           </p>
         </div>
       </div>
