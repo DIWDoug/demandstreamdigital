@@ -1,4 +1,4 @@
-import { ClipboardCheck, BellOff, GraduationCap, Compass, Filter, ArrowRight } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Compass, Filter, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const WhyPartnerWithUs = () => {
@@ -6,8 +6,14 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "Clarity You Can Pass to Clients",
-      description: "Every deliverable is structured so you understand the scope and can explain it confidently to your clients.",
+      title: "Clear Scope From Day One",
+      description: "You'll know exactly what's included and how the work moves forward. No surprises, no scope creep.",
+      isQualifier: false
+    },
+    {
+      icon: MessageSquareText,
+      title: "Work You Can Walk Clients Through",
+      description: "Every deliverable is structured so you can explain it confidently. Your clients understand the value.",
       isQualifier: false
     },
     {
@@ -18,8 +24,8 @@ const WhyPartnerWithUs = () => {
     },
     {
       icon: GraduationCap,
-      title: "Experienced Specialists",
-      description: "Real marketers who know SEO and local markets. People who've done this for years, not junior VAs.",
+      title: "Actual Marketers Doing the Work",
+      description: "Experienced specialists who know SEO and local markets. People who've done this for years.",
       isQualifier: false
     },
     {
