@@ -7,28 +7,28 @@ const stats = [
     value: 46,
     suffix: "%",
     label: "of Google searches have local intent",
-    source: "Search Engine Roundtable"
+    source: "— Search Engine Roundtable"
   },
   {
     icon: MapPin,
     value: 42,
     suffix: "%",
     label: "of local searchers click Map Pack results",
-    source: "Backlinko 2024"
+    source: "— Backlinko 2024"
   },
   {
     icon: Star,
     value: 83,
     suffix: "%",
     label: "of consumers use Google for local reviews",
-    source: "BrightLocal 2025"
+    source: "— BrightLocal 2025"
   },
   {
     icon: TrendingUp,
     value: 80,
     suffix: "%",
     label: "of US consumers search locally weekly",
-    source: "SOCi 2024"
+    source: "— SOCi 2024"
   }
 ];
 
