@@ -536,7 +536,7 @@ const About = () => {
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2021-2022</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">White-Label Pivot</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">John Piraino: $150K/mo Amazon ads across 25 SKUs until exit. ASAP Apartment Finders: still page 1 for Dallas apartment locator keywords today.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">John Perieteanu: $150K/mo Amazon ads across 25 SKUs until exit. ASAP Apartment Finders: still page 1 for Dallas apartment locator keywords today.</p>
                   </div>
                 </foreignObject>
                 
