@@ -50,7 +50,7 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
-            Your Current Partner Is Costing You Clients
+            Fulfillment Shouldn't Be the Reason You Lose Clients
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Missed deadlines. Unexplained ranking drops. Work you can't defend in a client call.<br />
