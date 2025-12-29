@@ -6,38 +6,38 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "Clear Scope From Day One",
-      description: "You'll know exactly what's included and how the work moves forward. No surprises, no scope creep.",
+      title: "Clear Scope. Fewer Headaches.",
+      description: "Everyone knows what's included, how work moves forward, and how changes are handled. No gray areas. No quiet scope drift.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Work You Can Walk Clients Through",
-      description: "Every deliverable is structured so you can explain it confidently. Your clients understand the value.",
+      title: "Work You Can Confidently Explain to Clients",
+      description: "Execution is delivered in a way you can stand behind—without hedging, over-explaining, or scrambling when questions come up.",
       isQualifier: false
     },
     {
       icon: BellOff,
       title: "Problems Surface Early",
-      description: "Regular updates and direct communication mean small issues get caught before they become big ones.",
-      isQualifier: false
-    },
-    {
-      icon: GraduationCap,
-      title: "Actual Marketers Doing the Work",
-      description: "Experienced specialists who know SEO and local markets. People who've done this for years.",
+      description: "Structured communication and defined check-ins catch issues before they become client-facing problems.",
       isQualifier: false
     },
     {
       icon: Compass,
-      title: "Consistent Quality Over Time",
-      description: "The work stays sharp month after month. Accounts don't quietly drift into autopilot.",
+      title: "Execution That Doesn't Drift",
+      description: "Work is reviewed and adjusted with intent. It doesn't slide into autopilot just because an account is live.",
+      isQualifier: false
+    },
+    {
+      icon: GraduationCap,
+      title: "Marketers, Not Rented Headcount",
+      description: "We're not a staffing company assigning whoever is available. Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards.",
       isQualifier: false
     },
     {
       icon: Filter,
-      title: "We're Selective Too",
-      description: "This works best for agencies who value clarity and patience over shortcuts and aggressive timelines.",
+      title: "Not a Fit for Everyone",
+      description: "If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit. This works best for agencies who value clarity and consistency.",
       isQualifier: true
     }
   ];
