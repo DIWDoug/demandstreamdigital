@@ -6,6 +6,7 @@ import AntiPackageDiagnosis from "@/components/sections/AntiPackageDiagnosis";
 import FulfillmentApproach from "@/components/sections/FulfillmentApproach";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
+import FitQualifier from "@/components/services/FitQualifier";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
@@ -40,6 +41,7 @@ const Index = () => {
       <FulfillmentApproach />
       <WhoWeAre />
       <WhyPartnerWithUs />
+      <FitQualifier />
       
       <div id="services">
         <ServicesGrid />
