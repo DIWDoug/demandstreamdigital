@@ -12,13 +12,13 @@ const WhatWeSolve = () => {
   const tabs = [
     {
       label: "Expertise",
-      yourRole: "You stay in your lane: strategy, relationships, and growing your agency. Leave the technical heavy lifting to people who live and breathe it every day.",
+      yourRole: "You stay in your lane: strategy, relationships, and growing your agency. The technical execution gets handled by people who've done it for years.",
       yourRoleDetails: [
         "Answer client questions with confidence, backed by real specialists",
         "Offer services you couldn't staff internally without major overhead",
-        "Stop pretending to be an expert in everything"
+        "Focus on what you're best at instead of stretching thin"
       ],
-      ourRole: "We go deep so you don't have to. Local search, paid media, reputation. Our team eats, sleeps, and breathes this stuff. You get senior-level execution without the senior-level payroll.",
+      ourRole: "We go deep so you don't have to. Local search, paid media, reputation management. You get senior-level execution without the senior-level payroll.",
       ourRoleDetails: [
         "Specialists who've run thousands of local campaigns",
         "Constant training on platform changes and algorithm shifts",
@@ -27,28 +27,28 @@ const WhatWeSolve = () => {
     },
     {
       label: "Transparency",
-      yourRole: "You stay informed without doing the work. No mysteries, no vague updates. Just straight answers and real data you can relay to clients without breaking a sweat.",
+      yourRole: "You stay informed without doing the work. No mysteries, no vague updates. Just clear answers and real data you can share with clients.",
       yourRoleDetails: [
         "Check campaign status anytime without chasing anyone down",
-        "Get heads-up on issues before they become client problems",
+        "Get a heads-up on issues before they reach your clients",
         "Actually understand what's happening so you can speak to it"
       ],
-      ourRole: "We keep you in the loop with clear reporting and honest communication. You'll never be blindsided in a client meeting or left scrambling for answers.",
+      ourRole: "We keep you in the loop with clear reporting and honest communication. You'll never be caught off guard in a client meeting.",
       ourRoleDetails: [
         "Weekly updates written for humans, not search nerds",
         "Live dashboards you can screenshot and send",
-        "No jargon dumps. Just what matters and why"
+        "Plain language. Just what matters and why"
       ]
     },
     {
       label: "Growth",
-      yourRole: "You focus on landing new business and expanding existing accounts. We make sure you can actually deliver what you sell, so you stop leaving money on the table.",
+      yourRole: "You focus on landing new business and expanding existing accounts. We make sure you can actually deliver what you sell.",
       yourRoleDetails: [
-        "Pitch bigger deals knowing you have the bench to back it up",
-        "Stop turning away work because you're maxed out",
+        "Pitch bigger deals knowing you have the capacity to back it up",
+        "Take on new clients without worrying about bandwidth",
         "Scale revenue without scaling headcount first"
       ],
-      ourRole: "We arm you with proof: real results, real case studies, real numbers. When a prospect asks if you can handle their account, you won't have to bluff.",
+      ourRole: "We give you proof: real results, real case studies, real numbers. When a prospect asks if you can handle their account, you'll have the answer.",
       ourRoleDetails: [
         "Battle-tested results you can reference in proposals",
         "Fast onboarding so new clients feel handled from day one",
@@ -57,13 +57,13 @@ const WhatWeSolve = () => {
     },
     {
       label: "Workflow",
-      yourRole: "You run your agency, not a fulfillment center. Your mornings go to strategy and sales, not chasing deliverables or managing task lists.",
+      yourRole: "You run your agency, not a fulfillment center. Your time goes to strategy and sales, not chasing deliverables or managing task lists.",
       yourRoleDetails: [
-        "Reclaim the time you lose to project management chaos",
-        "Trust that deadlines get hit without your constant oversight",
-        "Build the business instead of babysitting the work"
+        "Reclaim the hours you lose to project management",
+        "Trust that deadlines get hit without constant check-ins",
+        "Build the business instead of managing the work"
       ],
-      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, zero fire drills. Your operations become boring, in the best way.",
+      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, minimal surprises.",
       ourRoleDetails: [
         "Structured sprints with clear milestones and owners",
         "Dedicated account managers who know your clients by name",
@@ -72,28 +72,28 @@ const WhatWeSolve = () => {
     },
     {
       label: "White Label",
-      yourRole: "You own the client relationship completely. Every report, every update, every win comes from you. We're invisible by design.",
+      yourRole: "You own the client relationship completely. Every report, every update, every win comes from you. We stay behind the scenes.",
       yourRoleDetails: [
         "Present our work as your own without any awkward explanations",
         "Control when and how clients hear about results",
         "Build your brand equity, not someone else's"
       ],
-      ourRole: "We disappear behind your brand. Custom reports, your colors, your voice. Your clients will never know we exist, and that's exactly the point.",
+      ourRole: "We disappear behind your brand. Custom reports, your colors, your voice. Your clients never know we exist.",
       ourRoleDetails: [
         "Fully branded deliverables ready for client presentation",
         "Summaries written the way you'd write them",
-        "Zero co-branding, zero 'powered by' footers, zero visibility"
+        "No co-branding, no 'powered by' footers, no visibility"
       ]
     },
     {
       label: "Execution",
-      yourRole: "You set the pricing, you keep the margin, you control the packages. We never touch your client relationships or your revenue model.",
+      yourRole: "You set the pricing, you keep the margin, you control how services are packaged. We handle delivery.",
       yourRoleDetails: [
         "Mark up our work however your market supports",
         "Bundle services in ways that make sense for your positioning",
         "Protect your margins without cutting corners on quality"
       ],
-      ourRole: "We deliver the work consistently, reliably, at the standard your reputation depends on. Every campaign, every month, no drop-offs.",
+      ourRole: "We deliver the work consistently, at the standard your reputation depends on. Every campaign, every month.",
       ourRoleDetails: [
         "Processes refined over a decade of local marketing",
         "QA checkpoints before anything goes live",
