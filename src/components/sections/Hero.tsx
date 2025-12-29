@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Subheadline - Conversational, benefit-focused */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            White-label SEO, local search, paid media, and authority building for agencies who need fulfillment that works. Scoped to each client's market, not squeezed into tiers.
+            We partner with agencies to deliver white-label SEO, local search, paid media, and authority building—scoped intentionally, executed consistently, and never forced into rigid packages.
           </p>
 
           {/* Tagline - Calm confidence */}
