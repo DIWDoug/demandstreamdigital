@@ -365,8 +365,8 @@ const About = () => {
                   { year: "2011", name: "Dialed-In Marketing Solutions", description: "Founded to help local businesses get found online" },
                   { year: "2013", name: "Dialed-In Local", description: "Refocused on local SEO and Google Maps optimization" },
                   { year: "2017", name: "Dialed-In Web", description: "Expanded to full-service digital marketing" },
-                  { year: "2020", name: "White-Label Focus", description: "Pivoted to serving agencies as a fulfillment partner" },
-                  { year: "2024", name: "Dialed-In Web", description: "Full inbound marketing system for agency partners" }
+                  { year: "2021", name: "White-Label Focus", description: "Pivoted to serving agencies while maintaining select direct relationships" },
+                  { year: "2025", name: "Dialed-In Web", description: "Full inbound marketing system for agency partners" }
                 ].map((milestone, index) => (
                   <div key={index} className={`flex items-center gap-6 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
