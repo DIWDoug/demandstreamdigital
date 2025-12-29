@@ -22,10 +22,10 @@ const WhoWeAre = () => {
           {/* Header - Full Width */}
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              Why We Built This
+              An Honest Word on Fulfillment
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
-              Agencies Deserve Partners They Can Trust
+              Why I Built This
             </h2>
           </div>
 
