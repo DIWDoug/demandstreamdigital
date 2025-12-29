@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Subheadline - Pain-first with SEO keywords */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Tired of fulfillment chaos eating your margins? We deliver white-label SEO, local search, paid media, and authority building—scoped to each client's market, not forced into rigid packages.
+            Tired of fulfillment chaos eating your margins? We deliver white-label SEO, local search, paid media, and authority building—scoped to each client's market.
           </p>
 
           {/* Punchy tagline - consequence + promise */}

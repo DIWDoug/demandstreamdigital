@@ -126,15 +126,11 @@ const LocalGrowthEngine = () => {
                 </h3>
                 
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  If you're an agency owner looking to add local marketing services without hiring specialists 
-                  or burning through freelancers, you've found the right resource. The Local Growth Engine 
-                  is the methodology behind $2M+ in retainer revenue generated for our agency partners.
+                  If you're an agency owner looking to add local marketing services without hiring specialists or burning through freelancers, this is for you. The Local Growth Engine is the methodology behind $2M+ in retainer revenue for our partners.
                 </p>
 
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                  Inside, you'll discover the three-layer system we use to deliver consistent results across 
-                  Local SEO, Google Maps, paid media, and reputation management. All white-labeled and 
-                  built for scale.
+                  Inside, you'll discover the three-layer system we use across Local SEO, Google Maps, paid media, and reputation management. All white-labeled and built for scale.
                 </p>
 
                 {/* Email signup or CTA */}
