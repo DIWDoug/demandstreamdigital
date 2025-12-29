@@ -3,9 +3,14 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
+import TrustReel from "@/components/sections/TrustReel";
 
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
+import InboundPainPoints from "@/components/services/InboundPainPoints";
+import FitQualifier from "@/components/services/FitQualifier";
+import PricingFramework from "@/components/services/PricingFramework";
+import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
@@ -25,21 +30,31 @@ const Services = () => {
       {/* Hero */}
       <ServicesHero />
       
-      {/* Light divider */}
-      <div className="container mx-auto px-4">
-        <hr className="border-t border-border/30" />
-      </div>
+      {/* Trust Reel - credibility whisper */}
+      <TrustReel />
       
       {/* What is Inbound Marketing? */}
       <WhiteLabelExplainer />
       
+      {/* Pain Points - why in-house breaks down */}
+      <InboundPainPoints />
+      
+      {/* Fit Qualifier - who this is for */}
+      <FitQualifier />
+      
       {/* Our Framework - How We Approach Fulfillment */}
       <ServicesFramework />
       
-      {/* Testimonials - Social proof after framework */}
+      {/* Pricing Framework - transparent ranges */}
+      <PricingFramework />
+      
+      {/* Onboarding Roadmap - how it works */}
+      <OnboardingRoadmap />
+      
+      {/* Testimonials - Social proof */}
       <ServicesTestimonials />
       
-      {/* Deep Expertise - Same as Homepage */}
+      {/* Deep Expertise - hub/spoke with internal links */}
       <TopicalExpertise />
       
       {/* FAQ - Answer objections before conversion */}
