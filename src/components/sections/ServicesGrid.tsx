@@ -68,7 +68,7 @@ const ServicesGrid = () => {
                 <span className="text-accent-blue">Fully Executed</span>
               </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
-                Inbound isn't a single tactic—it's multiple channels working as one system to attract, convert, and retain customers.
+                Inbound isn't a single tactic. It's multiple channels working as one system to attract, convert, and retain customers.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
                 Each service reinforces the others. Together, they create predictable growth your clients can count on.

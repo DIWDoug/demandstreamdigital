@@ -34,7 +34,7 @@ const WhiteLabelExplainer = () => {
                 Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Content ties it all together.
               </p>
               <p className="text-text-secondary leading-relaxed">
-                When these channels work as a coordinated system—not siloed tactics—the compounding effect drives consistent, measurable growth over time.
+                When these channels work as a coordinated system instead of siloed tactics, the compounding effect drives consistent, measurable growth over time.
               </p>
             </div>
 

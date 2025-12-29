@@ -76,7 +76,7 @@ const AIVisibility = () => {
             <div className="text-center p-6">
               <p className="text-3xl font-bold text-cta mb-2">Zero</p>
               <p className="text-text-secondary text-sm">
-                Additional cost for AI visibility—it's built into our standard fulfillment
+                Additional cost for AI visibility. It's built into our standard fulfillment.
               </p>
             </div>
             <div className="text-center p-6">

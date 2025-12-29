@@ -19,7 +19,7 @@ const ContactForm = () => {
   const steps = [
     {
       title: "Discovery & Alignment",
-      content: "We start with a deep-dive conversation to understand your agency's goals, client base, and fulfillment needs. No cookie-cutter approaches—just clarity."
+      content: "We start with a deep-dive conversation to understand your agency's goals, client base, and fulfillment needs. No cookie-cutter approaches. Just clarity."
     },
     {
       title: "Scope & Pricing",

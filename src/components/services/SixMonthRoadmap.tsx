@@ -167,7 +167,7 @@ const SixMonthRoadmap = () => {
             How Engagements Typically Unfold
           </h2>
           <p className="text-lg text-text-secondary leading-relaxed">
-            Most engagements follow a similar rhythm: heavy lifting upfront, then ongoing optimization based on what the data says. This is a common shape, not a locked scope—execution adapts as priorities shift.
+            Most engagements follow a similar rhythm: heavy lifting upfront, then ongoing optimization based on what the data says. This is a common shape, not a locked scope. Execution adapts as priorities shift.
           </p>
         </div>
 

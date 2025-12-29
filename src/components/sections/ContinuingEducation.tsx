@@ -121,7 +121,7 @@ const ContinuingEducation = () => {
             <span className="text-sm text-text-muted uppercase tracking-wider font-medium">Our Commitment</span>
           </div>
           <p className="text-text-secondary italic">
-            "When you partner with us, you're not just getting today's best practices—you're getting a team that's already preparing for tomorrow's."
+            "When you partner with us, you're not just getting today's best practices. You're getting a team that's already preparing for tomorrow's."
           </p>
         </div>
       </div>
