@@ -445,9 +445,13 @@ const About = () => {
                     <p className="text-lg font-semibold text-foreground">Dialed-In Web</p>
                   </div>
                 </div>
-                <p className="font-serif text-text-secondary text-sm leading-relaxed">
+                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                   Full-service agency. Built the team. Expanded beyond local SEO into web development, paid media, and comprehensive digital marketing.
                 </p>
+                <div className="pt-3 border-t border-border/50">
+                  <p className="text-xs text-cta font-semibold">ASAP Apartment Finders</p>
+                  <p className="text-xs text-text-secondary">Most leads they ever received. Still page 1 for Dallas apartment locator keywords today.</p>
+                </div>
               </div>
 
               {/* 2019 - iProspect */}
@@ -487,14 +491,14 @@ const About = () => {
                 </div>
               </div>
 
-              {/* 2020 - Coaching */}
+              {/* 2019 - Coaching */}
               <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                    <span className="text-cta font-bold text-sm">'20</span>
+                    <span className="text-cta font-bold text-sm">'19</span>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2020</p>
+                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2019</p>
                     <p className="text-lg font-semibold text-foreground">Coaching World</p>
                   </div>
                 </div>
@@ -520,15 +524,9 @@ const About = () => {
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                   Pivoted to serving agencies while maintaining select direct relationships.
                 </p>
-                <div className="pt-3 border-t border-border/50 space-y-2">
-                  <div>
-                    <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
-                    <p className="text-xs text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-cta font-semibold">ASAP Apartment Finders</p>
-                    <p className="text-xs text-text-secondary">Still page 1 for Dallas apartment locator keywords today</p>
-                  </div>
+                <div className="pt-3 border-t border-border/50">
+                  <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
+                  <p className="text-xs text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
                 </div>
               </div>
 
