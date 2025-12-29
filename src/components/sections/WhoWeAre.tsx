@@ -113,6 +113,9 @@ const WhoWeAre = () => {
                 {/* Signature */}
                 <div className="mt-8 pt-6 border-t border-border/30">
                   <span className="font-handwriting text-4xl text-cta block">— Doug</span>
+                  <p className="text-sm text-text-secondary mt-3">
+                    15 years in the industry. 100+ clients. Millions in ad spend managed. Hundreds of websites ranked. 4.8 stars on Google.
+                  </p>
                 </div>
               </div>
             </div>
