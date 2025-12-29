@@ -1,4 +1,4 @@
-import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Compass, Filter, ArrowRight } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Compass, Filter, ArrowRight, Target } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const WhyPartnerWithUs = () => {
@@ -13,7 +13,13 @@ const WhyPartnerWithUs = () => {
     {
       icon: MessageSquareText,
       title: "Work You Can Confidently Explain to Clients",
-      description: "Execution is delivered in a way you can stand behind—without hedging, over-explaining, or scrambling when questions come up.",
+      description: "Execution is delivered in a way you can stand behind without hedging, over-explaining, or scrambling when questions come up.",
+      isQualifier: false
+    },
+    {
+      icon: Target,
+      title: "Scoped to Each Client's Market",
+      description: "No two markets are the same. We build campaigns around actual competition and opportunity, so clients see real progress and stay longer.",
       isQualifier: false
     },
     {
@@ -23,15 +29,9 @@ const WhyPartnerWithUs = () => {
       isQualifier: false
     },
     {
-      icon: Compass,
-      title: "Execution That Doesn't Drift",
-      description: "Work is reviewed and adjusted with intent. It doesn't slide into autopilot just because an account is live.",
-      isQualifier: false
-    },
-    {
       icon: GraduationCap,
       title: "Marketers, Not Rented Headcount",
-      description: "We're not a staffing company assigning whoever is available. Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards.",
+      description: "Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards.",
       isQualifier: false
     },
     {
