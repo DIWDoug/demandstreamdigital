@@ -6,38 +6,38 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "Clear Scope. No Guesswork.",
-      description: "You'll know what's included, how work progresses, and how changes are handled before issues surface.",
+      title: "Clear Scope From Day One",
+      description: "You'll know exactly what's included and how the work moves forward. No surprises, no scope creep.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Work You Can Defend",
-      description: "Every deliverable is structured so you can walk clients through it with confidence. No hedging required.",
+      title: "Work You Can Walk Clients Through",
+      description: "Every deliverable is structured so you can explain it confidently. Your clients understand the value.",
       isQualifier: false
     },
     {
       icon: BellOff,
-      title: "Fewer Fire Drills",
-      description: "Structured updates and direct communication catch small issues before they become client emergencies.",
+      title: "Problems Surface Early",
+      description: "Regular updates and direct communication mean small issues get caught before they become big ones.",
       isQualifier: false
     },
     {
       icon: GraduationCap,
-      title: "Marketers, Not Rented Headcount",
-      description: "Experienced specialists who understand SEO and local markets. Not generalists filling seats.",
+      title: "Actual Marketers Doing the Work",
+      description: "Experienced specialists who know SEO and local markets. People who've done this for years.",
       isQualifier: false
     },
     {
       icon: Compass,
-      title: "Execution That Doesn't Drift",
-      description: "Work is reviewed and adjusted with intent. No quiet slide into autopilot or box-checking.",
+      title: "Consistent Quality Over Time",
+      description: "The work stays sharp month after month. Accounts don't quietly drift into autopilot.",
       isQualifier: false
     },
     {
       icon: Filter,
-      title: "Not for Everyone",
-      description: "This works for agencies that value clarity and disciplined execution. Not shortcuts or volume at all costs.",
+      title: "We're Selective Too",
+      description: "This works best for agencies who value clarity and patience over shortcuts and aggressive timelines.",
       isQualifier: true
     }
   ];
@@ -50,11 +50,10 @@ const WhyPartnerWithUs = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
-            Fulfillment Shouldn't Be the Reason You Lose Clients
+            What Actually Changes When Fulfillment Works
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Missed deadlines. Unexplained ranking drops. Work you can't defend.<br />
-            Here's what changes when fulfillment is handled with discipline.
+            You've probably worked with partners who overpromised and underdelivered. Here's how we're different.
           </p>
         </div>
 
