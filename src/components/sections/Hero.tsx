@@ -106,7 +106,7 @@ const Hero = () => {
 
           {/* Tagline - Calm confidence */}
           <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Clients stay longer. Margins stay healthy. You focus on growth.
+            Your clients stay longer. Your margins stop leaking. Fulfillment finally feels under control.
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
