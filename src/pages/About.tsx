@@ -3,7 +3,21 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import { Users, Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
+import johnSantos from "@/assets/team/john-santos.jpg";
+import samantaLeal from "@/assets/team/samanta-leal.jpg";
+import sheraFabian from "@/assets/team/shera-fabian.jpg";
+import iraSalvador from "@/assets/team/ira-salvador.jpg";
+import biancaLapuz from "@/assets/team/bianca-lapuz.jpg";
+import richardBaylon from "@/assets/team/richard-baylon.jpg";
+import desireeAbbariao from "@/assets/team/desiree-abbariao.jpg";
+import shaneSuniga from "@/assets/team/shane-suniga.jpg";
+import leilaniMaravillas from "@/assets/team/leilani-maravillas.jpg";
+import jamesBelmes from "@/assets/team/james-belmes.jpg";
+import martiniMabifa from "@/assets/team/martini-mabifa.jpg";
+import ariaOng from "@/assets/team/aria-ong.jpg";
+import belAniano from "@/assets/team/bel-aniano.jpg";
+import lanilynErauda from "@/assets/team/lanilyn-erauda.jpg";
+import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -49,72 +63,72 @@ const About = () => {
     {
       name: "John Joseph Santos",
       role: "COO",
-      image: null
+      image: johnSantos
     },
     {
       name: "Samanta Sanchezborja Leal",
       role: "Client Success Manager",
-      image: null
+      image: samantaLeal
     },
     {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
-      image: null
+      image: sheraFabian
     },
     {
       name: "Ira Salvador",
       role: "Project Manager",
-      image: null
+      image: iraSalvador
     },
     {
       name: "Bianca Lapuz",
       role: "Executive Assistant",
-      image: null
+      image: biancaLapuz
     },
     {
       name: "Richard Baylon",
       role: "Senior Content Strategist",
-      image: null
+      image: richardBaylon
     },
     {
       name: "Desiree Abbariao",
       role: "Content Strategist",
-      image: null
+      image: desireeAbbariao
     },
     {
       name: "Shane Suniga",
       role: "OnPage Specialist",
-      image: null
+      image: shaneSuniga
     },
     {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
-      image: null
+      image: leilaniMaravillas
     },
     {
       name: "James Brylle Belmes",
       role: "Citations Specialist",
-      image: null
+      image: jamesBelmes
     },
     {
       name: "Martini Mabifa",
       role: "SEO Web Developer",
-      image: null
+      image: martiniMabifa
     },
     {
       name: "Aria Jazzmine Ong",
       role: "SEO Support",
-      image: null
+      image: ariaOng
     },
     {
       name: "Bel Aniano",
       role: "Marketing Coordinator",
-      image: null
+      image: belAniano
     },
     {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
-      image: null
+      image: lanilynErauda
     }
   ];
 
@@ -296,8 +310,12 @@ const About = () => {
                   key={index}
                   className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-surface-dark flex items-center justify-center">
-                    <Users className="w-6 h-6 text-text-secondary" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img 
+                      src={member.image}
+                      alt={`${member.name}, ${member.role}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-1">
                     {member.name}
