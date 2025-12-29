@@ -41,7 +41,7 @@ const OnboardingRoadmap = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-background relative">
+    <section className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -49,10 +49,10 @@ const OnboardingRoadmap = () => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               The Process
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               How Onboarding Works
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
               From first call to full execution in about three weeks. Here's what to expect.
             </p>
           </div>
@@ -60,7 +60,7 @@ const OnboardingRoadmap = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line - hidden on mobile */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-blue/50 via-cta/50 to-accent-blue/50" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cta/50 via-slate-300 to-cta/50" />
 
             <div className="space-y-8 lg:space-y-0">
               {steps.map((step, index) => (
@@ -72,26 +72,26 @@ const OnboardingRoadmap = () => {
                 >
                   {/* Card */}
                   <div className={`
-                    bg-surface-dark border border-border/30 rounded-xl p-6 
-                    hover:border-accent-blue/30 transition-colors
+                    bg-white border border-slate-200 rounded-xl p-6 shadow-sm
+                    hover:border-cta/30 transition-colors
                     ${index % 2 === 0 ? 'lg:text-right lg:col-start-1' : 'lg:col-start-2'}
                   `}>
                     <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                      <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center shrink-0">
-                        <step.icon className="h-5 w-5 text-accent-blue" />
+                      <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center shrink-0">
+                        <step.icon className="h-5 w-5 text-cta" />
                       </div>
                       <div>
                         <span className="text-cta text-xs font-medium uppercase tracking-wider">{step.week}</span>
-                        <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
+                        <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
                       </div>
                     </div>
-                    <p className="text-text-secondary text-sm leading-relaxed">
+                    <p className="text-slate-600 text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
 
                   {/* Timeline dot - hidden on mobile */}
-                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-accent-blue border-4 border-background" />
+                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cta border-4 border-white shadow-sm" />
 
                   {/* Empty space for alternating layout */}
                   <div className={`hidden lg:block ${index % 2 === 0 ? 'lg:col-start-2' : 'lg:col-start-1'}`} />

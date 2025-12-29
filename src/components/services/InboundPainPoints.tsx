@@ -25,18 +25,18 @@ const InboundPainPoints = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-background relative">
+    <section className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-14">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               The Reality
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
               Why In-House Inbound Marketing Breaks Down
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               It's not a strategy problem. It's an execution and economics problem. Here's what we see agencies struggle with.
             </p>
           </div>
@@ -46,17 +46,17 @@ const InboundPainPoints = () => {
             {painPoints.map((point, index) => (
               <div 
                 key={index}
-                className="bg-surface-dark rounded-xl p-6 lg:p-8 border border-border/30 hover:border-accent-blue/30 transition-colors"
+                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-cta/30 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
-                    <point.icon className="h-5 w-5 text-accent-blue" />
+                  <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
+                    <point.icon className="h-5 w-5 text-cta" />
                   </div>
-                  <strong className="text-lg font-semibold text-foreground">
+                  <strong className="text-lg font-semibold text-slate-900">
                     {point.title}
                   </strong>
                 </div>
-                <p className="text-text-secondary text-sm leading-7">
+                <p className="text-slate-600 text-sm leading-7">
                   {point.body}
                 </p>
               </div>
@@ -64,7 +64,7 @@ const InboundPainPoints = () => {
           </div>
 
           {/* Transition Line */}
-          <p className="text-center text-text-secondary text-lg mt-14">
+          <p className="text-center text-slate-600 text-lg mt-14">
             You don't need another vendor. You need an execution partner who operates as an extension of your team.
           </p>
         </div>
