@@ -349,11 +349,10 @@ const About = () => {
                 The True Timeline
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                From Nashville Songwriter to Digital Marketer
+                From Nashville Songwriter to Full-Service Agency
               </h2>
               <p className="font-serif text-text-secondary max-w-2xl mx-auto">
-                Tower Records closed. The publishing deal ended. And a new road opened up.
-                Every detour taught something. Every pivot led somewhere better.
+                Experience equals wisdom. Make enough mistakes and you get to call it history.
               </p>
             </div>
             
