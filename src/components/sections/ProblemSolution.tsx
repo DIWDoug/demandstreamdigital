@@ -7,18 +7,18 @@ const ProblemSolution = () => {
   const problems = [
     {
       icon: MapPin,
-      title: "Every Market Is Different",
-      body: "A plumber in Austin faces different competition than one in Seattle. Cookie-cutter packages treat them the same way, and the results show it."
+      title: "Markets Aren't Interchangeable",
+      body: "Different cities, industries, and competitive landscapes demand different levels of effort and pacing. Pre-set packages assume uniformity where it doesn't exist."
     },
     {
       icon: Layers,
-      title: "Scope Gets Messy Fast",
-      body: "Campaigns evolve. New priorities emerge. Fixed tiers don't flex with reality, so teams either cut corners or quietly over-deliver and lose margin."
+      title: "Packages Hide Scope Problems",
+      body: "Fixed tiers rarely reflect real-world requirements. As campaigns evolve, scope expands quietly, teams over-deliver, and margins erode."
     },
     {
       icon: ClipboardList,
-      title: "Checklists Replace Thinking",
-      body: "When fulfillment is defined by a package, execution becomes routine. The work gets done, but nobody's asking if it's still the right work."
+      title: "Execution Becomes Box-Checking",
+      body: "When fulfillment is defined by packages, work follows checklists instead of judgment. The work gets done, but it stops adapting."
     }
   ];
 
