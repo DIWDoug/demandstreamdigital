@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, UserCheck, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Users, UserCheck, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
-import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
+import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, industryBenchmarks, type Industry, type IndustryBenchmark } from "@/data/industries";
 import { useMemo } from "react";
 
 type CalculatorTab = "roi" | "investment";
@@ -14,6 +14,16 @@ const ROICalculatorContent = () => {
   const [leadToCustomerRate, setLeadToCustomerRate] = useState(10);
   const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
   const [marketingCost, setMarketingCost] = useState(5000);
+  const [selectedBenchmark, setSelectedBenchmark] = useState<IndustryBenchmark | null>(null);
+  const [showBenchmarks, setShowBenchmarks] = useState(false);
+
+  const applyBenchmark = (benchmark: IndustryBenchmark) => {
+    setLeadConversionRate(benchmark.conversionRate);
+    setLeadToCustomerRate(benchmark.closeRate);
+    setRevenuePerCustomer(benchmark.avgCustomerValue);
+    setSelectedBenchmark(benchmark);
+    setShowBenchmarks(false);
+  };
 
   // Calculate revenue for given conversion rate and traffic
   const calculateRevenue = (convRate: number, traffic: number) => {
@@ -118,6 +128,65 @@ const ROICalculatorContent = () => {
 
   return (
     <div className="space-y-8">
+      {/* Industry Benchmarks Panel */}
+      <div className="bg-surface-elevated rounded-2xl p-6 border border-border/30">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-accent-blue/10">
+              <BarChart3 className="h-5 w-5 text-accent-blue" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
+              <p className="text-sm text-text-muted">Select your industry to auto-fill typical rates</p>
+            </div>
+          </div>
+          <button
+            onClick={() => setShowBenchmarks(!showBenchmarks)}
+            className="px-4 py-2 rounded-lg bg-accent-blue/10 text-accent-blue text-sm font-medium hover:bg-accent-blue/20 transition-colors flex items-center gap-2"
+          >
+            {selectedBenchmark ? selectedBenchmark.name : "Select Industry"}
+            <ChevronDown className={cn("h-4 w-4 transition-transform", showBenchmarks && "rotate-180")} />
+          </button>
+        </div>
+
+        {showBenchmarks && (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-4 p-4 rounded-xl bg-surface-dark border border-border/30">
+            {industryBenchmarks.map((benchmark) => (
+              <button
+                key={benchmark.id}
+                onClick={() => applyBenchmark(benchmark)}
+                className={cn(
+                  "p-3 rounded-lg text-left transition-all border",
+                  selectedBenchmark?.id === benchmark.id
+                    ? "bg-accent-blue/10 border-accent-blue/50 text-foreground"
+                    : "bg-surface-elevated border-border/30 text-text-muted hover:border-accent-blue/30 hover:text-foreground"
+                )}
+              >
+                <p className="text-sm font-medium truncate">{benchmark.name}</p>
+                <p className="text-xs text-text-muted mt-1">{benchmark.conversionRate}% conv · {benchmark.closeRate}% close</p>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {selectedBenchmark && !showBenchmarks && (
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <div className="p-3 rounded-lg bg-surface-dark border border-border/30">
+              <p className="text-xs text-text-muted mb-1">Avg. Conversion Rate</p>
+              <p className="text-lg font-semibold text-foreground">{selectedBenchmark.conversionRate}%</p>
+            </div>
+            <div className="p-3 rounded-lg bg-surface-dark border border-border/30">
+              <p className="text-xs text-text-muted mb-1">Avg. Close Rate</p>
+              <p className="text-lg font-semibold text-foreground">{selectedBenchmark.closeRate}%</p>
+            </div>
+            <div className="p-3 rounded-lg bg-surface-dark border border-border/30">
+              <p className="text-xs text-text-muted mb-1">Avg. Customer Value</p>
+              <p className="text-lg font-semibold text-foreground">${selectedBenchmark.avgCustomerValue.toLocaleString()}</p>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Main Calculator Grid */}
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
