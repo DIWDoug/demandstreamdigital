@@ -13,37 +13,37 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "Technical audits, on-page optimization, and strategic content development for organic rankings.",
+    description: "Show up when local customers search. We handle technical fixes, content, and on-page work that builds organic visibility over time.",
     href: "/services/local-seo",
   },
   {
     icon: Map,
     title: "Google Business Profile",
-    description: "Google Business Profile optimization, review systems, and citation building for local pack dominance.",
+    description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
     href: "/services/google-maps",
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "Google Ads and Meta campaigns engineered for lead generation and measurable ROI.",
+    description: "Turn ad spend into leads. Google and Meta campaigns built to generate calls, forms, and measurable ROI.",
     href: "/services/paid-media",
   },
   {
     icon: Share2,
     title: "Authority Building",
-    description: "Digital PR, link building, and citation management that compounds trust signals over time.",
+    description: "Earn the trust that rankings require. Digital PR, quality backlinks, and citation management that compounds over time.",
     href: "/services/authority",
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Automated nurture sequences and lifecycle campaigns that convert leads into loyal customers.",
+    description: "Stay top of mind and close more deals. Automated sequences that nurture leads into loyal, repeat customers.",
     href: "/services/email-marketing",
   },
   {
     icon: BarChart3,
     title: "Reporting",
-    description: "Branded dashboards and executive summaries that strengthen client relationships.",
+    description: "Keep clients confident with clear results. Branded dashboards and summaries that make your agency look sharp.",
     href: "/services/reporting",
   }
 ];
