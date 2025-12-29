@@ -53,7 +53,7 @@ const WhyPartnerWithUs = () => {
             What Actually Changes When Fulfillment Works
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            You've probably worked with partners who overpromised and underdelivered. Here's how we're different.
+            When fulfillment runs smoothly, everything else gets easier. Here's what that looks like.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ const WhyPartnerWithUs = () => {
             href="#about" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(76,42%,41%)] text-white font-semibold rounded-lg hover:bg-[hsl(76,42%,35%)] transition-colors group"
           >
-            Meet the Team Behind the Magic
+            Meet the Team Behind the Work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
