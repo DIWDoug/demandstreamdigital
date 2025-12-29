@@ -408,8 +408,43 @@ const About = () => {
                     rating: 5
                   },
                   {
-                    quote: "Recommends Dialed In Web.",
-                    name: "James Annon",
+                    quote: "I have worked with Doug and the Dialed-In Local team for many years in a variety of capacities. Doug is incredibly talented at what he does. He has a great business mind and is adept at understanding the unique needs, goals and visions of his clients.",
+                    name: "Rebecca Daneault",
+                    rating: 5
+                  },
+                  {
+                    quote: "I've worked with Doug and Dialed-In Local for several years now and am always impressed with their broad technical knowledge of the constantly changing landscape of online marketing. Not only do they understand it, they take the time to explain it in terms that make sense.",
+                    name: "Chris Farr",
+                    rating: 5
+                  },
+                  {
+                    quote: "Doug does a great job providing customized and well-managed services for clients. He was able to appropriately size his SEO and design services to what I wanted. I can be pretty particular sometimes and Doug helped me right-size what I needed.",
+                    name: "Daxon Edwards",
+                    rating: 5
+                  },
+                  {
+                    quote: "Dialed-In Local is definitely where I go for all things web. Doug's understanding of the web market has been a huge resource for my web presence in Nashville. Being an IT Company by trait we tend to learn technology based systems quickly, and Doug keeps up with the best of them.",
+                    name: "Tommy Wolosin",
+                    rating: 5
+                  },
+                  {
+                    quote: "After wasting a lot of time and money with other marketing companies, I was pretty burned out and was starting to feel like it was all a scam. I was beginning to think the only real priority for these companies was taking my money. Then I found Dialed-In and everything changed.",
+                    name: "Jack Haynes",
+                    rating: 5
+                  },
+                  {
+                    quote: "Doug has done an awesome job getting our sales up for our e-commerce store. In fact, we are seeing a 10x return based on the work he has done. Highly recommend using this company.",
+                    name: "Free Sunshields",
+                    rating: 5
+                  },
+                  {
+                    quote: "Doug and his team have been great to work with. His monthly reporting really lets me see what his team is doing on a monthly basis. The results have been great. I really enjoy working with such a professional company! Keep up the good work!",
+                    name: "East Coast Window Films",
+                    rating: 5
+                  },
+                  {
+                    quote: "Doug is very professional, organized and knowledgable. He always goes above and beyond. You will not only get an SEO manager but you'll get a partnership. I would give them six stars if there was an option.",
+                    name: "Advanced Apartment Locators",
                     rating: 5
                   }
                 ].map((review, index) => (
