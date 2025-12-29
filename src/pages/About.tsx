@@ -82,11 +82,6 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-3.webp"
     },
     {
-      name: "Shane Suniga",
-      role: "OnPage Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Shane.webp"
-    },
-    {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Leilani-Maravillas-min.png"
@@ -102,9 +97,9 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Martini.jpg"
     },
     {
-      name: "Aria Jazzmine Ong",
-      role: "SEO Support",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-5.webp"
+      name: "Bel Aniano",
+      role: "Marketing Coordinator",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
     },
     {
       name: "Bel Aniano",
