@@ -73,8 +73,8 @@ const ServicesFramework = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-14 pt-10 border-t border-slate-200">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="mt-16 pt-12 border-t border-slate-200">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 py-4">
               <a 
                 href="#contact" 
                 className="btn-cta group flex items-center gap-2"
