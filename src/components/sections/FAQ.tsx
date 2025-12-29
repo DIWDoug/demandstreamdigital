@@ -11,43 +11,43 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How does a white-label partnership with Dialed-In Web work?",
-      answer: "We operate as a fulfillment partner, not a task vendor. Scope, cadence, and responsibilities are defined upfront and executed independently of day-to-day agency shifts. The relationship is built around consistency, not constant adjustment."
+      answer: "We operate as a fulfillment partner with defined scope, clear communication rhythms, and consistent delivery. You maintain full client ownership while we handle execution behind the scenes."
     },
     {
-      question: "Who is this not a fit for?",
-      answer: "This is not for agencies looking to outsource tasks, rent headcount, or absorb rapid client volume. We work best with small, disciplined agencies managing a focused client roster. If your model relies on constant pivots or scale at all costs, this won't be a fit."
+      question: "Who is this the best fit for?",
+      answer: "Agencies that value trust, clarity, and consistent execution. Most of our partners manage between 5 and 20 active clients and prioritize client retention over rapid volume growth."
     },
     {
       question: "Are you a staffing company or an outsourced team?",
-      answer: "No. We are not a staffing company disguised as an agency. We deliver marketing execution with standards, systems, and accountability. We don't place people. We own fulfillment."
+      answer: "Neither. We deliver marketing execution with standards, systems, and accountability. You get a dedicated team that understands your clients, not rotating contractors."
     },
     {
       question: "What size agencies do you typically work with?",
-      answer: "We partner with agencies operating intentionally, not at mass scale. Most of our partners manage between 1 and 20 active clients at a time. This allows us to maintain scope discipline and protect execution quality on both sides."
+      answer: "We partner with agencies operating intentionally, typically managing 1 to 20 active clients. This allows us to maintain quality and build real working relationships on both sides."
     },
     {
       question: "Where is your team based?",
-      answer: "Our team is globally distributed by design. We operate across the United States, Portugal, South Africa, Mexico, the Philippines, Nigeria, and Pakistan, with leadership and client success based in the U.S. and Europe. This structure allows us to maintain execution standards and deliver custom fulfillment without forcing an unsustainable, U.S.-only cost model."
+      answer: "Our team is globally distributed with leadership based in the U.S. This structure allows us to maintain execution standards while offering sustainable pricing for long-term partnerships."
     },
     {
       question: "Do you require long-term contracts?",
-      answer: "Inbound marketing engagements require a 6-month agreement. This reflects the front-loaded nature of the work: strategy, setup, and foundational execution happen early. After that, we operate on rolling agreements with a 30-day notice period. This structure supports proper planning, resourcing, and execution stability."
+      answer: "We start with a 6-month agreement because meaningful results take time to build. After that, we operate on rolling agreements with 30-day notice. This gives both sides stability and flexibility."
     },
     {
       question: "What happens if one of our clients cancels mid-engagement?",
-      answer: "Our fulfillment operates independently of your client contracts. If a client disengages without proper notice, the agreed 30-day fulfillment period still applies. This policy protects execution quality and prevents reactive resourcing decisions."
+      answer: "We understand that client relationships change. We ask for 30 days notice so we can wrap up work properly and transition cleanly. No penalties, just professional courtesy."
     },
     {
-      question: "Can we make mid-month scope changes or pivots?",
-      answer: "We don't pivot fulfillment mid-cycle based on changing priorities. Work is planned and resourced on a defined monthly cadence, independent of internal agency shifts. Changes are reviewed and applied in the next planning window."
+      question: "Can we adjust scope mid-month?",
+      answer: "We plan work monthly to ensure quality delivery. For changes, we'll discuss timing and fit them into the next planning window. This keeps expectations clear for everyone."
     },
     {
       question: "How do you scope and price fulfillment work?",
-      answer: "All work is scoped intentionally before execution begins. We don't absorb new requests informally or expand scope by default. This keeps expectations clear and delivery consistent."
+      answer: "We scope work upfront based on the client's market and goals, then price transparently. You always know what's included before work begins, which protects your margins and client relationships."
     },
     {
       question: "What happens if something isn't working?",
-      answer: "Performance is reviewed during structured check-ins, not in reaction to short-term noise. Adjustments are made deliberately, within scope and planning cadence. We don't chase panic fixes or constant resets."
+      answer: "We review performance together during regular check-ins and adjust deliberately. If something needs to change, we'll surface it early and work through it together."
     }
   ];
 
