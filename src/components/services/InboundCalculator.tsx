@@ -693,13 +693,18 @@ const InboundCalculator = () => {
 
                 {/* MSRP Pricing with Adjustable Rate */}
                 <div className="bg-accent-blue/5 rounded-xl p-6 border border-accent-blue/30">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-semibold uppercase tracking-wider text-accent-blue bg-accent-blue/10 px-2 py-1 rounded">Your Client Price (MSRP)</span>
                     <span className="text-sm text-cta font-medium">{estimate.marginPercent}% margin</span>
                   </div>
-                  <p className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">
                     ${estimate.msrpLow.toLocaleString()} – ${estimate.msrpHigh.toLocaleString()}
                   </p>
+                  <div className="flex items-center gap-2 mt-2 mb-4">
+                    <span className="text-sm text-green-400 font-medium">
+                      +${(estimate.msrpLow - estimate.oemLow).toLocaleString()} – ${(estimate.msrpHigh - estimate.oemHigh).toLocaleString()} profit/mo
+                    </span>
+                  </div>
                   
                   {/* Adjustable Rate Slider */}
                   <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
