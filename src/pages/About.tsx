@@ -444,7 +444,7 @@ const About = () => {
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2011</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Marketing Solutions</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Nashville songwriter turned marketer. Angel Maids: page 1 for 20+ keywords. Most recognized house cleaner in Nashville by 2013.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Angel Maids: 15→75+ cleanings/week. Page 1 for 20+ keywords. Most recognized Nashville house cleaner by 2013.</p>
                   </div>
                 </foreignObject>
                 
@@ -453,11 +453,11 @@ const About = () => {
                   <circle cx="600" cy="140" r="22" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="3" />
                   <text x="600" y="146" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '12px' }}>'13</text>
                 </g>
-                <foreignObject x="520" y="165" width="160" height="90">
+                <foreignObject x="520" y="165" width="160" height="100">
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2013</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Local</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Found the local SEO niche. Pharo Pediatric Dentistry, Darfan's Restaurants, Sonya Smithson DDS: page 1 for Brentwood dentist keywords.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Pharo Pediatric, Darfan's Restaurants. Sonya Smithson DDS: page 1 for "Brentwood Dentist," "Brentwood Sedation Dentist," "Brentwood Family Dentistry."</p>
                   </div>
                 </foreignObject>
                 
@@ -466,11 +466,11 @@ const About = () => {
                   <circle cx="1100" cy="100" r="22" fill="hsl(var(--surface-dark))" stroke="hsl(var(--accent-blue))" strokeWidth="3" />
                   <text x="1100" y="106" textAnchor="middle" className="fill-accent-blue font-bold" style={{ fontSize: '12px' }}>'15</text>
                 </g>
-                <foreignObject x="960" y="20" width="180" height="70">
+                <foreignObject x="940" y="20" width="200" height="80">
                   <div className="text-right px-1">
                     <p className="text-xs font-bold text-accent-blue">2015</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">Agency Side</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Horton Group (Nashville), More Cabbage (Dallas). Handyman + Veteran's Auto: page 1.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Horton Group (Nashville), More Cabbage (Dallas). Handyman: page 1 "Nashville Handyman." Veteran's Auto: page 1 "Nashville Auto Service."</p>
                   </div>
                 </foreignObject>
                 
@@ -479,11 +479,11 @@ const About = () => {
                   <circle cx="400" cy="360" r="22" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="3" />
                   <text x="400" y="366" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '12px' }}>'17</text>
                 </g>
-                <foreignObject x="320" y="385" width="160" height="90">
+                <foreignObject x="300" y="385" width="200" height="100">
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2017</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Web</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Full-service. Built the team. Joseph Dillon: page 1 for Chicago divorce mediation. G7 Marketing, Love & Pho.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Full-service agency. Joseph Dillon: page 1 "Chicago Divorce Mediation." Love & Pho: grew online reputation + rankings for Nashville pho keywords.</p>
                   </div>
                 </foreignObject>
                 
@@ -492,11 +492,11 @@ const About = () => {
                   <circle cx="500" cy="600" r="20" fill="hsl(var(--surface-dark))" stroke="hsl(var(--accent-blue))" strokeWidth="3" />
                   <text x="500" y="606" textAnchor="middle" className="fill-accent-blue font-bold" style={{ fontSize: '11px' }}>'19</text>
                 </g>
-                <foreignObject x="540" y="560" width="160" height="70">
+                <foreignObject x="540" y="560" width="180" height="70">
                   <div className="text-left px-1">
                     <p className="text-xs font-bold text-accent-blue">2019</p>
                     <p className="text-sm font-semibold text-foreground leading-tight">iProspect</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">6 months at a major agency. Enterprise-level campaigns.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">6 months at a major agency. Enterprise-level paid media campaigns.</p>
                   </div>
                 </foreignObject>
                 
@@ -506,11 +506,11 @@ const About = () => {
                   <circle cx="1100" cy="640" r="20" fill="hsl(var(--surface-dark))" />
                   <text x="1100" y="646" textAnchor="middle" className="fill-accent-blue font-bold" style={{ fontSize: '10px' }}>'19-21</text>
                 </g>
-                <foreignObject x="910" y="670" width="200" height="100">
+                <foreignObject x="890" y="670" width="220" height="110">
                   <div className="text-right px-1">
                     <p className="text-xs font-bold text-accent-blue">2019-2021</p>
-                    <p className="text-sm font-semibold text-accent-blue leading-tight">Expert-Vetted Upwork Freelancer</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Top 1% of all Upwork. $2M+ in business. $100K-$150K paid ad campaigns. SEO, Amazon, everything.</p>
+                    <p className="text-sm font-semibold text-accent-blue leading-tight">Expert-Vetted Upwork</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Top 1% of all Upwork freelancers. $2M+ in client revenue generated. Managed $100K-$150K/mo paid ad campaigns. SEO, Amazon PPC, the works.</p>
                   </div>
                 </foreignObject>
                 
@@ -519,11 +519,11 @@ const About = () => {
                   <circle cx="400" cy="900" r="20" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="3" />
                   <text x="400" y="906" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '11px' }}>'20</text>
                 </g>
-                <foreignObject x="440" y="860" width="180" height="80">
+                <foreignObject x="440" y="860" width="200" height="90">
                   <div className="text-left px-1">
                     <p className="text-xs font-bold text-cta">2020</p>
-                    <p className="text-sm font-semibold text-foreground leading-tight">Kevin Hutto / Coaching World</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Online coaching campaigns. Talking More, Kevin Nations, Shanda Sumpter.</p>
+                    <p className="text-sm font-semibold text-foreground leading-tight">Coaching & Info Products</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Kevin Hutto, Kevin Nations, Shanda Sumpter. High-ticket funnel builds and online course launches.</p>
                   </div>
                 </foreignObject>
                 
@@ -532,11 +532,11 @@ const About = () => {
                   <circle cx="100" cy="1020" r="24" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="3" />
                   <text x="100" y="1026" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '11px' }}>'21</text>
                 </g>
-                <foreignObject x="20" y="1050" width="180" height="100">
+                <foreignObject x="10" y="1050" width="190" height="110">
                   <div className="text-center px-1">
                     <p className="text-xs font-bold text-cta">2021-2022</p>
-                    <p className="text-sm font-semibold text-foreground leading-tight">White-Label Focus</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">Pivoted to agencies. John Piraino: $150K/mo Amazon ads across 25 products until he sold the business. ASAP Apartment Finders: still page 1 today.</p>
+                    <p className="text-sm font-semibold text-foreground leading-tight">White-Label Pivot</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">John Piraino: $150K/mo Amazon ads across 25 SKUs until exit. ASAP Apartment Finders: still page 1 for Dallas apartment locator keywords today.</p>
                   </div>
                 </foreignObject>
                 
@@ -546,11 +546,11 @@ const About = () => {
                   <circle cx="1050" cy="1340" r="22" fill="hsl(var(--surface-dark))" />
                   <text x="1050" y="1346" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '12px' }}>'25</text>
                 </g>
-                <foreignObject x="800" y="1280" width="230" height="80">
+                <foreignObject x="780" y="1280" width="250" height="90">
                   <div className="text-right px-1">
                     <p className="text-xs font-bold text-cta">2025</p>
                     <p className="text-sm font-semibold text-cta leading-tight">The Inbound Marketing System</p>
-                    <p className="text-xs text-text-secondary font-serif mt-1">14 years. 100+ clients. Millions in ad spend. Everything learned, packaged into one operating system.</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">14 years. 100+ clients. Millions in ad spend managed. Hundreds of websites ranked. 4.8 stars on Google. Everything packaged into one system.</p>
                   </div>
                 </foreignObject>
                 
