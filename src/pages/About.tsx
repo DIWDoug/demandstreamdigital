@@ -446,6 +446,11 @@ const About = () => {
                     quote: "Doug is very professional, organized and knowledgable. He always goes above and beyond. You will not only get an SEO manager but you'll get a partnership. I would give them six stars if there was an option.",
                     name: "Advanced Apartment Locators",
                     rating: 5
+                  },
+                  {
+                    quote: "This is an unethical spam-shop. If you want your business advertised in the same way as Hot Teen Webcam Girls, mail-order Viagra, and knockoff designer handbags, these are the folks who can give you a black eye all over the Internet.",
+                    name: "James D. Macdonald",
+                    rating: 1
                   }
                 ].map((review, index) => (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2">
@@ -454,10 +459,10 @@ const About = () => {
                         "{review.quote}"
                       </p>
                       <div>
-                        <p className="text-cta font-semibold mb-2">{review.name}</p>
+                        <p className={`font-semibold mb-2 ${review.rating === 1 ? 'text-text-secondary' : 'text-cta'}`}>{review.name}</p>
                         <div className="flex gap-1">
                           {[...Array(review.rating)].map((_, i) => (
-                            <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                            <svg key={i} className={`w-5 h-5 fill-current ${review.rating === 1 ? 'text-text-secondary' : 'text-yellow-400'}`} viewBox="0 0 20 20">
                               <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                             </svg>
                           ))}
