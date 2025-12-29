@@ -47,14 +47,19 @@ const About = () => {
       image: dougHeadshot
     },
     {
-      name: "Shera Lee Fabian",
-      role: "Senior Project Manager",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-1.webp"
+      name: "John Joseph Santos",
+      role: "OnPage SEO & Paid Ads Specialist",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
     },
     {
       name: "Wyler",
       role: "Chief Morale Officer",
       image: wyler
+    },
+    {
+      name: "Shera Lee Fabian",
+      role: "Senior Project Manager",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-1.webp"
     },
     {
       name: "Ira Salvador",
@@ -78,7 +83,7 @@ const About = () => {
     },
     {
       name: "Richard Baylon",
-      role: "Senior Content Strategist",
+      role: "Content Strategist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-10.webp"
     },
     {
@@ -92,8 +97,8 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Leilani-Maravillas-min.png"
     },
     {
-      name: "James Brylle Belmes",
-      role: "Citations Specialist",
+      name: "James Belmes",
+      role: "Link Building Specialist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-2.webp"
     },
     {
@@ -113,13 +118,13 @@ const About = () => {
     }
   ];
 
-  // Pyramid layout: 1, 3, 3, 4, 3 = 14 members
+  // Pyramid layout: 1, 2, 3, 4, 5 = 15 members
   const pyramidRows = [
     teamMembers.slice(0, 1),   // Row 1: 1 (Doug)
-    teamMembers.slice(1, 4),   // Row 2: 3 (Shera, Wyler, Ira)
-    teamMembers.slice(4, 7),   // Row 3: 3 (Samanta, Lanilyn, Martini)
-    teamMembers.slice(7, 11),  // Row 4: 4 (Richard, Desiree, Leilani, James)
-    teamMembers.slice(11, 14), // Row 5: 3 (Bel, Bianca, Mohammed)
+    teamMembers.slice(1, 3),   // Row 2: 2 (JJ, Wyler)
+    teamMembers.slice(3, 6),   // Row 3: 3 (Shera, Ira, Samanta)
+    teamMembers.slice(6, 10),  // Row 4: 4 (Lanilyn, Martini, Richard, Desiree)
+    teamMembers.slice(10, 15), // Row 5: 5 (Leilani, James, Bel, Bianca, Mohammed)
   ];
 
   return (
