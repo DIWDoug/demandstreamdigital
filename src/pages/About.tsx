@@ -372,9 +372,15 @@ const About = () => {
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                   Nashville songwriter turned digital marketer. Tower Records closed. Publishing deal ended. A new road opened.
                 </p>
-                <div className="pt-3 border-t border-border/50">
-                  <p className="text-xs text-cta font-semibold mb-1">Angel Maids</p>
-                  <p className="text-xs text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Most recognized Nashville house cleaner by 2013.</p>
+                <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Angel Maids</p>
+                    <p className="text-xs text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Still one of the most recognized cleaning companies in all of Nashville.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-cta font-semibold">Maid Right of Williamson County (2014)</p>
+                    <p className="text-xs text-text-secondary">Local SEO and reputation management</p>
+                  </div>
                 </div>
               </div>
 
