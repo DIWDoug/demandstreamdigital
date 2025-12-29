@@ -46,9 +46,8 @@ const ContinuingEducation = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark relative overflow-hidden">
-      {/* Top divider from LocalGrowthEngine light section */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#FCFCFA] to-transparent opacity-10" />
+    <section className="pt-32 lg:pt-40 pb-24 lg:pb-32 bg-surface-dark relative overflow-hidden">
+      {/* Background accent */}
       {/* Background accent */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-cta/30 to-transparent blur-3xl" />
