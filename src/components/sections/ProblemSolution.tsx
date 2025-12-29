@@ -75,8 +75,14 @@ const ProblemSolution = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
                 Why Package-Based Fulfillment Breaks Down
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                Most fulfillment partners do solid work. The model just wasn't designed for how variable this work actually is.
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-4">
+                The problem usually isn't bad providers. It's structure. Standardized packages force uniform execution onto work that's inherently variable.
+              </p>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-4">
+                When markets differ, competition shifts, and priorities change, rigid fulfillment models start to crack.
+              </p>
+              <p className="text-lg text-foreground/90 font-medium max-w-2xl mx-auto">
+                When that happens, agencies don't just lose performance—they lose time, trust, and confidence in front of clients.
               </p>
             </div>
 
