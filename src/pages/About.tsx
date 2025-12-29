@@ -448,14 +448,10 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Learned what it really meant to focus on the big picture. The 360. This is where the paid advertising adventure started.
                   </p>
-                  <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div className="pt-3 border-t border-border/50">
                     <div>
                       <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville)</p>
                       <p className="text-xs text-text-secondary">Learned inbound marketing. SEO + paid media integration.</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-accent-blue font-semibold">More Cabbage (Dallas)</p>
-                      <p className="text-xs text-text-secondary">Enterprise clients. Agency workflows.</p>
                     </div>
                   </div>
                 </div>
@@ -485,7 +481,7 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">Advanced Locators</p>
-                      <p className="text-xs text-text-secondary">Dallas apartment locator SEO + paid advertising</p>
+                      <p className="text-xs text-text-secondary">Paid advertising (social + search). 400+ leads in one month.</p>
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">Elite Dental</p>
