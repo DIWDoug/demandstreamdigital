@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
+import TrustReel from "@/components/sections/TrustReel";
 import AntiPackageDiagnosis from "@/components/sections/AntiPackageDiagnosis";
 import FulfillmentApproach from "@/components/sections/FulfillmentApproach";
 import WhoWeAre from "@/components/sections/WhoWeAre";
@@ -30,6 +31,7 @@ const Index = () => {
       </Helmet>
       <Header />
       <Hero />
+      <TrustReel />
       <AntiPackageDiagnosis />
       <FulfillmentApproach />
       <WhoWeAre />
