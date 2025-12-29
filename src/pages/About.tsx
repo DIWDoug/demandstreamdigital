@@ -3,6 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import wyler from "@/assets/wyler.jpg";
 import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
 
 const About = () => {
@@ -105,15 +106,20 @@ const About = () => {
       role: "Marketing Coordinator",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
     },
+    {
+      name: "Wyler",
+      role: "Chief Morale Officer",
+      image: wyler
+    }
   ];
 
-  // Pyramid layout: 1, 2, 3, 4, 3 = 13 members
+  // Pyramid layout: 1, 2, 3, 4, 4 = 14 members
   const pyramidRows = [
     teamMembers.slice(0, 1),   // Row 1: 1 member (Doug)
     teamMembers.slice(1, 3),   // Row 2: 2 members
     teamMembers.slice(3, 6),   // Row 3: 3 members
     teamMembers.slice(6, 10),  // Row 4: 4 members
-    teamMembers.slice(10, 13), // Row 5: 3 members
+    teamMembers.slice(10, 14), // Row 5: 4 members
   ];
 
   return (
