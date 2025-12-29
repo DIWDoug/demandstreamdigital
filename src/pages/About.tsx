@@ -2,6 +2,9 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import WhoWeAre from "@/components/sections/WhoWeAre";
+import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
+import Testimonials from "@/components/sections/Testimonials";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
@@ -282,7 +285,7 @@ const About = () => {
                   {row.map((member, index) => (
                     <div 
                       key={index}
-                      className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors w-36 lg:w-44"
+                      className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors w-40 lg:w-48"
                     >
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
                         <img 
@@ -291,10 +294,10 @@ const About = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h4 className="text-sm font-semibold text-foreground mb-1 line-clamp-1">
+                      <h4 className="text-sm font-semibold text-foreground mb-1">
                         {member.name}
                       </h4>
-                      <p className="text-xs text-text-secondary line-clamp-2">
+                      <p className="text-xs text-text-secondary">
                         {member.role}
                       </p>
                     </div>
@@ -305,6 +308,15 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Why We Built This */}
+      <WhoWeAre />
+
+      {/* What Actually Changes When Fulfillment Works */}
+      <WhyPartnerWithUs />
+
+      {/* What Agency Partners Say */}
+      <Testimonials />
 
       {/* Contact CTA */}
       <ContactForm />
