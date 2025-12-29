@@ -21,7 +21,7 @@ const ProblemSolution = () => {
       icon: Settings,
       title: "Execution",
       subtitle: "Scoped to each market",
-      body: "Every client's market is different. We scope work to match the actual competitive landscape and adjust as conditions change. No templates. No forcing square pegs into round holes."
+      body: "When work matches the actual competitive landscape, clients see real progress and stay longer. We scope intentionally so you protect margins and avoid the quiet scope creep that erodes profitability."
     }
   ];
 
