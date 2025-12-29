@@ -7,37 +7,37 @@ const WhyPartnerWithUs = () => {
     {
       icon: ClipboardCheck,
       title: "Clear Scope. No Guesswork.",
-      description: "Agencies know what's included, how work moves forward, and how changes are handled. Scope is defined early and revisited intentionally, not discovered after issues appear.",
+      description: "You'll know what's included, how work progresses, and how changes are handled—before issues surface.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Work You Can Explain to Clients",
-      description: "Fulfillment is delivered in a way agencies can confidently walk clients through, without hedging, scrambling, or overpromising. The work makes sense, and so does the rationale behind it.",
+      title: "Work You Can Defend",
+      description: "Every deliverable is structured so you can walk clients through it with confidence—no hedging required.",
       isQualifier: false
     },
     {
       icon: BellOff,
-      title: "Fewer Fire Drills. Cleaner Communication.",
-      description: "Structured updates and direct communication reduce back-and-forth and prevent small issues from turning into reactive emergencies. Problems surface early, while they're still easy to solve.",
+      title: "Fewer Fire Drills",
+      description: "Structured updates and direct communication catch small issues before they become client emergencies.",
       isQualifier: false
     },
     {
       icon: GraduationCap,
-      title: "Marketers, Not Rented Headcount.",
-      description: "We're not a staffing company assigning whoever is available. Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards, not generalists filling seats.",
+      title: "Marketers, Not Rented Headcount",
+      description: "Experienced specialists who understand SEO and local markets—not generalists filling seats.",
       isQualifier: false
     },
     {
       icon: Compass,
-      title: "Execution That Doesn't Drift.",
-      description: "Work is reviewed, guided, and adjusted with intent. Execution doesn't quietly slide into box-checking or autopilot just because an account is live.",
+      title: "Execution That Doesn't Drift",
+      description: "Work is reviewed and adjusted with intent. No quiet slide into autopilot or box-checking.",
       isQualifier: false
     },
     {
       icon: Filter,
-      title: "Not a Fit for Everyone.",
-      description: "This partnership works best for agencies that value clarity, patience, and disciplined execution. If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit.",
+      title: "Not for Everyone",
+      description: "This works for agencies that value clarity and disciplined execution—not shortcuts or volume at all costs.",
       isQualifier: true
     }
   ];
