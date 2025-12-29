@@ -47,16 +47,6 @@ const About = () => {
       image: dougHeadshot
     },
     {
-      name: "John Joseph Santos",
-      role: "OnPage SEO & Paid Ads Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
-    },
-    {
-      name: "Samanta Sanchezborja Leal",
-      role: "Client Success Manager",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-6.webp"
-    },
-    {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-1.webp"
@@ -67,9 +57,19 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Ira-Salvador-min.png"
     },
     {
+      name: "Samanta Sanchezborja Leal",
+      role: "Client Success Manager",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-6.webp"
+    },
+    {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
+    },
+    {
+      name: "Martini Mabifa",
+      role: "SEO Web Developer",
+      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Martini.jpg"
     },
     {
       name: "Richard Baylon",
@@ -92,11 +92,6 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-2.webp"
     },
     {
-      name: "Martini Mabifa",
-      role: "SEO Web Developer",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Martini.jpg"
-    },
-    {
       name: "Bel Aniano",
       role: "Marketing Coordinator",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
@@ -113,13 +108,13 @@ const About = () => {
     }
   ];
 
-  // Pyramid layout: 1, 2, 3, 4, 4 = 14 members
+  // Pyramid layout: 1, 2, 3, 4, 3 = 13 members
   const pyramidRows = [
-    teamMembers.slice(0, 1),   // Row 1: 1 member (Doug)
-    teamMembers.slice(1, 3),   // Row 2: 2 members
-    teamMembers.slice(3, 6),   // Row 3: 3 members
-    teamMembers.slice(6, 10),  // Row 4: 4 members
-    teamMembers.slice(10, 14), // Row 5: 4 members
+    teamMembers.slice(0, 1),   // Row 1: 1 (Doug)
+    teamMembers.slice(1, 3),   // Row 2: 2 (Shera, Ira)
+    teamMembers.slice(3, 6),   // Row 3: 3 (Samanta, Lanilyn, Martini)
+    teamMembers.slice(6, 10),  // Row 4: 4 (Richard, Desiree, Leilani, James)
+    teamMembers.slice(10, 13), // Row 5: 3 (Bel, Bianca, Wyler)
   ];
 
   return (
