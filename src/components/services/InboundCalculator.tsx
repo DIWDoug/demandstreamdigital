@@ -44,9 +44,10 @@ const initialFormData: FormData = {
 };
 
 // Pricing configuration
-const OEM_HOURLY_RATE = 50; // Partner/wholesale rate
-const MSRP_MARKUP = 1.75;   // Suggested 75% markup for client pricing
-const MIN_MONTHLY = 500;    // Minimum monthly for small markets
+const OEM_HOURLY_RATE = 50;        // Partner/wholesale rate
+const MSRP_HOURLY_LOW = 120;       // Typical agency rate low
+const MSRP_HOURLY_HIGH = 150;      // Typical agency rate high
+const MIN_MONTHLY = 500;           // Minimum monthly for small markets
 
 // Base hours per month for services
 const baseServiceHours: Record<string, { hours: number; label: string }> = {
@@ -150,8 +151,9 @@ const InboundCalculator = () => {
         const hoursHigh = Math.round(serviceData.hours * locMult * mult * 1.25 * 10) / 10;
         const oemLow = Math.round(hoursLow * OEM_HOURLY_RATE / 25) * 25;
         const oemHigh = Math.round(hoursHigh * OEM_HOURLY_RATE / 25) * 25;
-        const msrpLow = Math.round(oemLow * MSRP_MARKUP / 25) * 25;
-        const msrpHigh = Math.round(oemHigh * MSRP_MARKUP / 25) * 25;
+        // MSRP uses agency hourly rates ($120-$150/hr)
+        const msrpLow = Math.round(hoursLow * MSRP_HOURLY_LOW / 25) * 25;
+        const msrpHigh = Math.round(hoursHigh * MSRP_HOURLY_HIGH / 25) * 25;
         totalHoursLow += hoursLow;
         totalHoursHigh += hoursHigh;
         breakdown.push({ service: serviceData.label, hoursLow, hoursHigh, oemLow, oemHigh, msrpLow, msrpHigh });
@@ -167,8 +169,9 @@ const InboundCalculator = () => {
       oemTotalLow = Math.max(oemTotalLow, MIN_MONTHLY);
     }
     
-    const msrpTotalLow = Math.round(oemTotalLow * MSRP_MARKUP / 25) * 25;
-    const msrpTotalHigh = Math.round(oemTotalHigh * MSRP_MARKUP / 25) * 25;
+    // MSRP uses typical agency retainer rates
+    const msrpTotalLow = Math.round(totalHoursLow * MSRP_HOURLY_LOW / 25) * 25;
+    const msrpTotalHigh = Math.round(totalHoursHigh * MSRP_HOURLY_HIGH / 25) * 25;
 
     return { 
       oemLow: oemTotalLow, 
@@ -178,8 +181,9 @@ const InboundCalculator = () => {
       totalHoursLow,
       totalHoursHigh,
       breakdown,
-      hourlyRate: OEM_HOURLY_RATE,
-      markup: MSRP_MARKUP,
+      oemHourlyRate: OEM_HOURLY_RATE,
+      msrpHourlyLow: MSRP_HOURLY_LOW,
+      msrpHourlyHigh: MSRP_HOURLY_HIGH,
       marketInfo: {
         metro: formData.metro,
         industry: formData.industry,
@@ -679,20 +683,20 @@ const InboundCalculator = () => {
                       <Clock className="h-4 w-4" />
                       <span>{estimate.totalHoursLow.toFixed(0)} – {estimate.totalHoursHigh.toFixed(0)} hrs/mo</span>
                     </div>
-                    <span className="text-text-muted text-sm">@ ${estimate.hourlyRate}/hr</span>
+                    <span className="text-text-muted text-sm">@ ${estimate.oemHourlyRate}/hr</span>
                   </div>
                 </div>
 
                 {/* MSRP Pricing */}
                 <div className="bg-accent-blue/5 rounded-xl p-6 border border-accent-blue/30">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-accent-blue bg-accent-blue/10 px-2 py-1 rounded">Suggested Client Price (MSRP)</span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-accent-blue bg-accent-blue/10 px-2 py-1 rounded">Typical Agency Retainer (MSRP)</span>
                   </div>
                   <p className="text-3xl md:text-4xl font-bold text-foreground">
                     ${estimate.msrpLow.toLocaleString()} – ${estimate.msrpHigh.toLocaleString()}
                   </p>
                   <p className="text-text-muted text-sm mt-2">
-                    {Math.round((estimate.markup - 1) * 100)}% margin built in
+                    @ ${estimate.msrpHourlyLow}–${estimate.msrpHourlyHigh}/hr agency rates
                   </p>
                 </div>
 
@@ -719,7 +723,7 @@ const InboundCalculator = () => {
 
                 <div className="bg-surface-dark border border-border/30 rounded-xl p-4">
                   <p className="text-sm text-text-secondary">
-                    <strong className="text-foreground">Note:</strong> OEM pricing at ${OEM_HOURLY_RATE}/hr. MSRP includes {Math.round((MSRP_MARKUP - 1) * 100)}% margin. 
+                    <strong className="text-foreground">Note:</strong> OEM at ${OEM_HOURLY_RATE}/hr, MSRP at ${MSRP_HOURLY_LOW}–${MSRP_HOURLY_HIGH}/hr typical agency rates. 
                     Factors in market size, industry competition, CPC benchmarks, and digital asset status.
                   </p>
                 </div>
