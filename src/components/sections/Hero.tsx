@@ -99,14 +99,14 @@ const Hero = () => {
             for Agencies
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline - Pain-first with SEO keywords */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building based on each client's market, competition, and scope. Never rigid tiers.
+            Tired of fulfillment chaos eating your margins? We deliver white-label SEO, local search, paid media, and authority building—scoped to each client's market, not forced into rigid packages.
           </p>
 
-          {/* Punchy tagline */}
+          {/* Punchy tagline - consequence + promise */}
           <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            No cookie-cutter packages. No one-size-fits-all execution.
+            Stop losing clients to inconsistent execution. Start scaling with confidence.
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
