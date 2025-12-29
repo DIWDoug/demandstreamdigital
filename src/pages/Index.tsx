@@ -33,7 +33,7 @@ const Index = () => {
       
       {/* Wave transition into AntiPackageDiagnosis */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="wave" />
         <AntiPackageDiagnosis />
       </div>
       
@@ -45,18 +45,18 @@ const Index = () => {
         <ServicesGrid />
       </div>
       
-      {/* Wave transition into TopicalExpertise */}
+      {/* Curved transition into TopicalExpertise */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="curve" flip />
         <TopicalExpertise />
       </div>
       
       <LocalGrowthEngine />
       <ContinuingEducation />
       
-      {/* Wave transition into WhatWeSolve */}
+      {/* Layered wave transition into WhatWeSolve */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <WaveDivider position="top" fromColor="hsl(var(--primary))" toColor="hsl(var(--surface-dark))" variant="layered" />
         <div id="about">
           <WhatWeSolve />
         </div>
@@ -68,9 +68,9 @@ const Index = () => {
         <Testimonials />
       </div>
       
-      {/* Wave transition into ContactForm */}
+      {/* Tilt transition into ContactForm */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" />
+        <WaveDivider position="top" fromColor="hsl(var(--cta) / 0.15)" toColor="hsl(var(--surface-dark))" variant="tilt" />
         <ContactForm />
       </div>
       
