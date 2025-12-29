@@ -43,14 +43,17 @@ const initialFormData: FormData = {
   services: []
 };
 
-// Base pricing for services
-const baseServicePricing: Record<string, { base: number; label: string }> = {
-  localSeo: { base: 750, label: "Local SEO" },
-  gbp: { base: 350, label: "Google Business Profile" },
-  googleAds: { base: 550, label: "Google Ads" },
-  metaAds: { base: 500, label: "Meta Ads" },
-  email: { base: 450, label: "Email Marketing" },
-  authority: { base: 600, label: "Authority Building" }
+// Hourly rate for pricing calculations
+const HOURLY_RATE = 60;
+
+// Base hours per month for services (will be multiplied by hourly rate)
+const baseServiceHours: Record<string, { hours: number; label: string }> = {
+  localSeo: { hours: 12.5, label: "Local SEO" },         // ~$750 at $60/hr
+  gbp: { hours: 6, label: "Google Business Profile" },   // ~$360 at $60/hr
+  googleAds: { hours: 9, label: "Google Ads" },          // ~$540 at $60/hr
+  metaAds: { hours: 8, label: "Meta Ads" },              // ~$480 at $60/hr
+  email: { hours: 7.5, label: "Email Marketing" },       // ~$450 at $60/hr
+  authority: { hours: 10, label: "Authority Building" }  // ~$600 at $60/hr
 };
 
 const InboundCalculator = () => {
@@ -133,26 +136,34 @@ const InboundCalculator = () => {
       authority: authorityMultiplier
     };
 
-    let totalLow = 0;
-    let totalHigh = 0;
-    const breakdown: { service: string; low: number; high: number }[] = [];
+    let totalHoursLow = 0;
+    let totalHoursHigh = 0;
+    const breakdown: { service: string; hoursLow: number; hoursHigh: number; low: number; high: number }[] = [];
 
     formData.services.forEach(service => {
-      const pricing = baseServicePricing[service];
+      const serviceData = baseServiceHours[service];
       const mult = serviceMultipliers[service] || 1;
-      if (pricing) {
-        const low = Math.round(pricing.base * locMult * mult * 0.85 / 25) * 25;
-        const high = Math.round(pricing.base * locMult * mult * 1.25 / 25) * 25;
-        totalLow += low;
-        totalHigh += high;
-        breakdown.push({ service: pricing.label, low, high });
+      if (serviceData) {
+        const hoursLow = Math.round(serviceData.hours * locMult * mult * 0.85 * 10) / 10;
+        const hoursHigh = Math.round(serviceData.hours * locMult * mult * 1.25 * 10) / 10;
+        const low = Math.round(hoursLow * HOURLY_RATE / 25) * 25;
+        const high = Math.round(hoursHigh * HOURLY_RATE / 25) * 25;
+        totalHoursLow += hoursLow;
+        totalHoursHigh += hoursHigh;
+        breakdown.push({ service: serviceData.label, hoursLow, hoursHigh, low, high });
       }
     });
+
+    const totalLow = Math.round(totalHoursLow * HOURLY_RATE / 25) * 25;
+    const totalHigh = Math.round(totalHoursHigh * HOURLY_RATE / 25) * 25;
 
     return { 
       totalLow, 
       totalHigh, 
+      totalHoursLow,
+      totalHoursHigh,
       breakdown,
+      hourlyRate: HOURLY_RATE,
       marketInfo: {
         metro: formData.metro,
         industry: formData.industry,
@@ -644,7 +655,13 @@ const InboundCalculator = () => {
                   <p className="text-4xl md:text-5xl font-bold text-foreground">
                     ${estimate.totalLow.toLocaleString()} – ${estimate.totalHigh.toLocaleString()}
                   </p>
-                  <p className="text-text-muted text-sm mt-2">per month</p>
+                  <div className="flex items-center justify-center gap-4 mt-3">
+                    <div className="flex items-center gap-1.5 text-text-muted text-sm">
+                      <Clock className="h-4 w-4" />
+                      <span>{estimate.totalHoursLow.toFixed(0)} – {estimate.totalHoursHigh.toFixed(0)} hrs/mo</span>
+                    </div>
+                    <span className="text-text-muted text-sm">@ ${estimate.hourlyRate}/hr</span>
+                  </div>
                 </div>
 
                 <div>
@@ -655,7 +672,10 @@ const InboundCalculator = () => {
                         key={index}
                         className="flex items-center justify-between py-3 border-b border-border/20 last:border-0"
                       >
-                        <span className="text-text-secondary">{item.service}</span>
+                        <div className="flex flex-col">
+                          <span className="text-text-secondary">{item.service}</span>
+                          <span className="text-xs text-text-muted">{item.hoursLow.toFixed(1)} – {item.hoursHigh.toFixed(1)} hrs</span>
+                        </div>
                         <span className="text-foreground font-medium">
                           ${item.low.toLocaleString()} – ${item.high.toLocaleString()}
                         </span>
@@ -666,7 +686,7 @@ const InboundCalculator = () => {
 
                 <div className="bg-accent-blue/5 border border-accent-blue/20 rounded-xl p-4">
                   <p className="text-sm text-text-secondary">
-                    <strong className="text-foreground">Note:</strong> This estimate factors in market size, industry competition, CPC benchmarks, and current digital assets. 
+                    <strong className="text-foreground">Note:</strong> Pricing based on ${HOURLY_RATE}/hr and factors in market size, industry competition, CPC benchmarks, and current digital assets. 
                     Final pricing depends on detailed scope and specific goals.
                   </p>
                 </div>
