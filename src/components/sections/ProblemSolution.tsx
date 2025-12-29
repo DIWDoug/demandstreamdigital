@@ -1,47 +1,27 @@
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import { MapPin, Layers, ClipboardList, Target, Shield, RefreshCcw } from "lucide-react";
+import { Shield, MessageSquare, Settings, ArrowRight } from "lucide-react";
 
 const ProblemSolution = () => {
   const sectionRef = useScrollReveal();
 
-  const problems = [
-    {
-      icon: MapPin,
-      title: "Markets Aren't Interchangeable",
-      body: "Different cities, industries, and competitive landscapes demand different levels of effort and pacing. Pre-set packages assume uniformity where it doesn't exist."
-    },
-    {
-      icon: Layers,
-      title: "Packages Hide Scope Problems",
-      body: "Fixed tiers rarely reflect real-world requirements. As campaigns evolve, scope expands quietly, teams over-deliver, and margins erode."
-    },
-    {
-      icon: ClipboardList,
-      title: "Execution Becomes Box-Checking",
-      body: "When fulfillment is defined by packages, work follows checklists instead of judgment. The work gets done, but it stops adapting."
-    }
-  ];
-
-  const solutions = [
-    {
-      icon: Target,
-      title: "Scope Comes Before Services",
-      body: "Every engagement begins with a clear understanding of the client's market, competition, and goals. We define scope intentionally before work begins."
-    },
+  const pillars = [
     {
       icon: Shield,
-      title: "Clear Standards and Guardrails",
-      body: "Custom does not mean open-ended. Deliverables, communication rhythms, and boundaries are defined upfront, protecting expectations and margins."
+      title: "Trust",
+      subtitle: "Earned through consistency",
+      body: "You need a partner who shows up the same way every month. We deliver on defined commitments, surface issues early, and never leave you guessing about the status of client work."
     },
     {
-      icon: Layers,
-      title: "Systems-Driven, Human-Led",
-      body: "We use AI-assisted workflows to accelerate research and execution. Specialists make the decisions that matter, while systems remove friction."
+      icon: MessageSquare,
+      title: "Clarity",
+      subtitle: "Work you can explain",
+      body: "Your team should be able to confidently discuss what's happening and why. We structure execution and reporting so you can stand behind the work without hedging or scrambling."
     },
     {
-      icon: RefreshCcw,
-      title: "Built to Adapt",
-      body: "Markets change. Algorithms shift. Our structure allows execution to adjust intentionally over time without restarting or blowing up scope."
+      icon: Settings,
+      title: "Execution",
+      subtitle: "Adapted to real markets",
+      body: "Every market is different. We scope work to match the actual competitive landscape, not force it into a template. Execution stays intentional as conditions change."
     }
   ];
 
@@ -64,99 +44,53 @@ const ProblemSolution = () => {
       <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           
-          {/* Problem Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <span className="text-red-400/80 text-sm font-medium tracking-wider uppercase mb-4 block">
-                The Problem
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
-                Why Package-Based Fulfillment Breaks Down
-              </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                Most fulfillment partners do solid work. The model just wasn't designed for how variable this work actually is.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {problems.map((problem, index) => (
-                <div 
-                  key={index}
-                  className="bg-background/50 rounded-xl p-6 border border-border/30"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center shrink-0">
-                      <problem.icon className="h-4 w-4 text-red-400/80" />
-                    </div>
-                    <strong className="text-base font-semibold text-foreground">
-                      {problem.title}
-                    </strong>
-                  </div>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {problem.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Divider with arrow */}
-          <div className="flex items-center justify-center mb-20">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-            <div className="mx-6 w-12 h-12 rounded-full bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center">
-              <svg className="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </div>
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-          </div>
-
-          {/* Solution Section */}
-          <div>
-            <div className="text-center mb-12">
-              <span className="text-accent-blue text-sm font-medium tracking-wider uppercase mb-4 block">
-                Our Approach
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
-                How We Do It Differently
-              </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                Every engagement starts with scope and standards. When things change, we surface it early and adjust together.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {solutions.map((solution, index) => (
-                <div 
-                  key={index}
-                  className="group bg-background/50 rounded-xl p-6 border border-border/30 hover:border-accent-blue/30 transition-all duration-300"
-                >
-                  <div className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center shrink-0 group-hover:bg-accent-blue/20 transition-colors">
-                      <solution.icon className="h-4 w-4 text-accent-blue" />
-                    </div>
-                    <div>
-                      <strong className="block text-foreground text-base font-semibold mb-2 group-hover:text-accent-blue transition-colors">
-                        {solution.title}
-                      </strong>
-                      <p className="text-text-secondary text-sm leading-relaxed">
-                        {solution.body}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Closing Line */}
-            <p className="text-center text-text-secondary text-lg mt-12 max-w-xl mx-auto">
-              This approach gives agencies{" "}
-              <span className="text-foreground font-medium">flexibility</span>{" "}
-              without sacrificing{" "}
-              <span className="text-foreground font-medium">control</span>.
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
+              Trust. Clarity. Execution.
+            </h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              These three things determine whether fulfillment strengthens your agency or quietly erodes it. We built our entire approach around getting them right.
             </p>
+          </div>
+
+          {/* Three Pillars */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+            {pillars.map((pillar, index) => (
+              <div 
+                key={index}
+                className="group bg-background/50 rounded-xl p-6 lg:p-8 border border-border/30 hover:border-accent-blue/30 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-5 group-hover:bg-accent-blue/20 transition-colors">
+                  <pillar.icon className="h-5 w-5 text-accent-blue" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-1">
+                  {pillar.title}
+                </h3>
+                <p className="text-accent-blue text-sm font-medium mb-4">
+                  {pillar.subtitle}
+                </p>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {pillar.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Supporting Context */}
+          <div className="text-center">
+            <p className="text-text-muted text-base max-w-2xl mx-auto mb-8">
+              Most fulfillment models optimize for ease of sale, not long-term delivery. We took a different path: scope before services, standards before scale, and honest expectations from the start.
+            </p>
+            <a 
+              href="#about" 
+              className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
+            >
+              See how we work
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
         </div>
       </div>

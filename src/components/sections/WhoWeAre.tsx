@@ -22,10 +22,10 @@ const WhoWeAre = () => {
           {/* Header - Full Width */}
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              An Honest Word on Fulfillment
+              Why We Built This
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
-              Most Agencies Don't Lose Clients Because of Results
+              Agencies Deserve Partners They Can Trust
             </h2>
           </div>
 
@@ -70,31 +70,23 @@ const WhoWeAre = () => {
                 
                 <div className="font-handwriting space-y-6 text-lg lg:text-xl leading-relaxed pl-4 border-l-2 border-cta/20">
                   <p className="text-text-secondary">
-                    They lose them because fulfillment quietly falls apart.
+                    After years of watching agencies struggle with fulfillment partners who overpromise and underdeliver, I decided to build something different.
                   </p>
 
                   <p className="text-text-secondary">
-                    It usually doesn't happen all at once. It shows up as scope getting blurry. Communication getting reactive. Margins thinning. Teams doing more work just to keep things steady. Everyone feels it, but no one names it.
+                    The pattern was always the same: things start strong, then communication gets reactive, scope gets blurry, and margins thin out. Everyone feels it, but the structure makes it hard to fix.
                   </p>
                   
                   <p className="text-foreground font-medium">
-                    I've seen this pattern enough times to know it's not a people problem. It's a model problem.
+                    Dialed-In Web exists because I believe agencies deserve better.
                   </p>
                   
                   <p className="text-text-secondary">
-                    Most white-label fulfillment is built to be sold easily, not delivered cleanly over time. Packages look neat on paper, but real markets don't behave that way. Cities differ. Competition shifts. Clients evolve. And the gap between what was sold and what's required grows quietly month after month.
-                  </p>
-                  
-                  <p className="text-foreground font-medium">
-                    Dialed-In Web exists because I didn't want to keep pretending that was sustainable.
+                    We built this to support agencies who care about doing the work right, setting honest expectations, and protecting their reputation with clients. That means clear scope, defined standards, and execution that adapts without becoming chaotic.
                   </p>
 
                   <p className="text-text-secondary">
-                    We built this to support agencies who care about doing the work right, setting honest expectations, and protecting their reputation with clients. That means clear scope. Defined standards. And execution that adapts without becoming chaotic.
-                  </p>
-
-                  <p className="text-text-secondary">
-                    This isn't for agencies chasing shortcuts or volume at any cost. It's for operators who want fulfillment they can stand behind and explain without hedging.
+                    This isn't for everyone. It's for operators who want fulfillment they can trust, explain, and stand behind.
                   </p>
                   
                   <p className="text-text-secondary">

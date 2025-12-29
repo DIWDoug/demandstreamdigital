@@ -3,17 +3,17 @@ import { Quote } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 const testimonials = [
   {
-    quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
+    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
     author: "Trevor Anderson",
     role: "Founder & CEO, Anderson Collaborative"
   },
   {
-    quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
+    quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
   },
   {
-    quote: "The biggest win was reliability. Strategy changes client to client, but execution has to stay consistent. Having a team we could trust to adapt strategies without constant oversight made it possible to scale without adding internal headcount.",
+    quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
     author: "Florida Agency Owner",
     role: "Digital Marketing Agency Owner"
   }
@@ -42,7 +42,7 @@ const Testimonials = () => {
             What Agency Partners <span className="text-accent-blue">Say</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-text-secondary">
-            Real feedback from agencies who've made the switch to system-driven fulfillment.
+            Real feedback from agencies who value trust, clarity, and consistent execution.
           </p>
         </div>
 

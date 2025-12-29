@@ -80,14 +80,14 @@ const Hero = () => {
             White-Label <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span> for Agencies
           </h1>
 
-          {/* Supporting sentence */}
+          {/* Supporting sentence - benefit first */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Custom SEO, local search, paid media, and authority building—scoped to each client's market and executed without rigid packages.
+            SEO, local search, paid media, and authority building. Scoped to each client's market, delivered with standards you can stand behind.
           </p>
 
-          {/* Payoff sentence - smaller, optional feel */}
+          {/* Payoff sentence */}
           <p className="text-base text-text-muted mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Clients stay longer. Margins stay healthy. Fulfillment feels predictable again.
+            Clients stay longer. Margins stay healthy. Fulfillment becomes predictable.
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
