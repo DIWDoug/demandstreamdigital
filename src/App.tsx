@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
+import AgencyCalculator from "./pages/AgencyCalculator";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
 // Service Hub Pages
@@ -35,6 +36,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/inbound-marketing-services" element={<Services />} />
+            <Route path="/agency-calculator" element={<AgencyCalculator />} />
             
             {/* Service Hub Pages */}
             <Route path="/inbound-marketing-services/local-seo" element={<LocalSEO />} />

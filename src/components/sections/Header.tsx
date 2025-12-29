@@ -75,6 +75,7 @@ const Header = () => {
   const navLinks = [
     { label: "About", href: "#about" },
     { label: "Results", href: "#testimonials" },
+    { label: "Calculator", href: "/agency-calculator", isRoute: true },
     { label: "Contact", href: "#contact" }
   ];
 
@@ -116,13 +117,23 @@ const Header = () => {
               </button>
               
               {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={getAnchorHref(link.href)}
-                  className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={index}
+                    to={link.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={index}
+                    href={getAnchorHref(link.href)}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               
               {/* Pricing Dropdown */}
@@ -277,14 +288,25 @@ const Header = () => {
               )}
               
               {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={getAnchorHref(link.href)}
-                  className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={index}
+                    to={link.href}
+                    className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={index}
+                    href={getAnchorHref(link.href)}
+                    className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <div className="pt-4 mt-2 border-t border-border">
                 <a 
