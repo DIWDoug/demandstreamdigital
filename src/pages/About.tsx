@@ -340,116 +340,191 @@ const About = () => {
         </div>
       </section>
 
-      {/* The True Timeline */}
+      {/* The True Timeline - Road Map */}
       <section className="py-16 lg:py-24 bg-background overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
                 The True Timeline
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                14 Years. Many Pivots. One Mission.
+                14 Years on the Road
               </h2>
               <p className="font-serif text-text-secondary max-w-2xl mx-auto">
-                The path from scrappy startup to agency partner wasn't a straight line. 
-                Here's the real journey.
+                Every detour taught something. Every pivot led somewhere better.
               </p>
             </div>
             
-            {/* Winding Path Timeline */}
+            {/* Road Map SVG */}
             <div className="relative">
-              {/* SVG Path connecting the dots */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" preserveAspectRatio="none">
-                <path 
-                  d="M 10% 8% Q 30% 8%, 50% 18% T 90% 28% Q 70% 38%, 50% 48% T 10% 58% Q 30% 68%, 50% 78% T 90% 88%"
+              <svg 
+                viewBox="0 0 1000 700" 
+                className="w-full h-auto"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                {/* Road Background/Shadow */}
+                <path
+                  d="M 80 80 
+                     C 250 80, 300 180, 500 180 
+                     C 700 180, 750 80, 920 120
+                     C 980 140, 980 280, 920 320
+                     C 750 400, 550 350, 400 400
+                     C 250 450, 200 380, 80 420
+                     C 20 440, 20 560, 80 580
+                     C 200 620, 400 600, 600 620"
+                  fill="none"
+                  stroke="hsl(var(--muted))"
+                  strokeWidth="60"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="opacity-20"
+                />
+                
+                {/* Main Road */}
+                <path
+                  d="M 80 80 
+                     C 250 80, 300 180, 500 180 
+                     C 700 180, 750 80, 920 120
+                     C 980 140, 980 280, 920 320
+                     C 750 400, 550 350, 400 400
+                     C 250 450, 200 380, 80 420
+                     C 20 440, 20 560, 80 580
+                     C 200 620, 400 600, 600 620"
                   fill="none"
                   stroke="hsl(var(--border))"
-                  strokeWidth="2"
-                  strokeDasharray="8 4"
-                  className="opacity-50"
+                  strokeWidth="44"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
+                
+                {/* Road Center Dashes */}
+                <path
+                  d="M 80 80 
+                     C 250 80, 300 180, 500 180 
+                     C 700 180, 750 80, 920 120
+                     C 980 140, 980 280, 920 320
+                     C 750 400, 550 350, 400 400
+                     C 250 450, 200 380, 80 420
+                     C 20 440, 20 560, 80 580
+                     C 200 620, 400 600, 600 620"
+                  fill="none"
+                  stroke="hsl(var(--cta))"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeDasharray="20 12"
+                  className="opacity-70"
+                />
+                
+                {/* Stop 1: 2011 */}
+                <g>
+                  <circle cx="80" cy="80" r="26" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="4" />
+                  <text x="80" y="86" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '14px' }}>'11</text>
+                </g>
+                <foreignObject x="0" y="110" width="160" height="70">
+                  <div className="text-center px-2">
+                    <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Marketing Solutions</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">The beginning. Learning the ropes.</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Stop 2: 2013 */}
+                <g>
+                  <circle cx="500" cy="180" r="26" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="4" />
+                  <text x="500" y="186" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '14px' }}>'13</text>
+                </g>
+                <foreignObject x="420" y="210" width="160" height="70">
+                  <div className="text-center px-2">
+                    <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Local</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Found the local SEO niche.</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Stop 3: 2017 */}
+                <g>
+                  <circle cx="920" cy="120" r="26" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="4" />
+                  <text x="920" y="126" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '14px' }}>'17</text>
+                </g>
+                <foreignObject x="820" y="150" width="160" height="70">
+                  <div className="text-center px-2">
+                    <p className="text-sm font-semibold text-foreground leading-tight">Dialed-In Web</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Full-service. Built the team.</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Stop 4: 2019-21 - Upwork (highlighted) */}
+                <g>
+                  <circle cx="920" cy="320" r="30" fill="hsl(var(--accent-blue))" className="animate-pulse" style={{ animationDuration: '3s' }} />
+                  <circle cx="920" cy="320" r="22" fill="hsl(var(--surface-dark))" />
+                  <text x="920" y="326" textAnchor="middle" className="fill-accent-blue font-bold" style={{ fontSize: '12px' }}>'19-21</text>
+                </g>
+                <foreignObject x="760" y="250" width="150" height="60">
+                  <div className="text-right px-2">
+                    <p className="text-sm font-semibold text-accent-blue leading-tight">Upwork Expert</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">$100K+ campaigns managed</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Stop 5: 2021 */}
+                <g>
+                  <circle cx="80" cy="420" r="26" fill="hsl(var(--surface-dark))" stroke="hsl(var(--cta))" strokeWidth="4" />
+                  <text x="80" y="426" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '14px' }}>'21</text>
+                </g>
+                <foreignObject x="0" y="450" width="160" height="80">
+                  <div className="text-center px-2">
+                    <p className="text-sm font-semibold text-foreground leading-tight">White-Label Focus</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Pivoted to agencies. Kept select directs.</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Stop 6: 2025 - Destination */}
+                <g>
+                  <circle cx="600" cy="620" r="34" fill="hsl(var(--cta))" className="drop-shadow-lg" />
+                  <circle cx="600" cy="620" r="24" fill="hsl(var(--surface-dark))" />
+                  <text x="600" y="626" textAnchor="middle" className="fill-cta font-bold" style={{ fontSize: '14px' }}>'25</text>
+                </g>
+                <foreignObject x="660" y="580" width="200" height="80">
+                  <div className="text-left px-2">
+                    <p className="text-sm font-semibold text-cta leading-tight">The System</p>
+                    <p className="text-xs text-text-secondary font-serif mt-1">Full inbound marketing operating system. Everything learned, packaged.</p>
+                  </div>
+                </foreignObject>
+                
+                {/* Doug Avatar on the road */}
+                <g>
+                  <circle cx="400" cy="400" r="28" fill="hsl(var(--background))" stroke="hsl(var(--accent-blue))" strokeWidth="4" className="drop-shadow-lg" />
+                  <defs>
+                    <clipPath id="dougRoadAvatar">
+                      <circle cx="400" cy="400" r="24" />
+                    </clipPath>
+                  </defs>
+                  <image 
+                    href={dougHeadshot} 
+                    x="376" 
+                    y="376" 
+                    width="48" 
+                    height="48" 
+                    clipPath="url(#dougRoadAvatar)"
+                    preserveAspectRatio="xMidYMid slice"
+                  />
+                </g>
+                
+                {/* Direction arrows */}
+                <polygon points="260,120 275,130 260,140" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="700,155 715,165 700,175" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="970,220 980,235 960,235" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="600,380 585,370 585,390" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="200,440 185,430 185,450" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="40,500 50,515 30,515" fill="hsl(var(--cta))" className="opacity-50" />
+                <polygon points="350,610 365,600 365,620" fill="hsl(var(--cta))" className="opacity-50" />
+                
+                {/* "You are here" label near Doug */}
+                <foreignObject x="430" y="380" width="100" height="40">
+                  <div className="bg-accent-blue/90 text-white text-xs font-semibold px-2 py-1 rounded-full text-center whitespace-nowrap">
+                    On the road
+                  </div>
+                </foreignObject>
               </svg>
-
-              <div className="grid gap-6 lg:gap-8">
-                {/* Row 1 - Left aligned */}
-                <div className="flex justify-start">
-                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
-                      '11
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">Dialed-In Marketing Solutions</p>
-                      <p className="text-sm text-text-secondary font-serif">Founded to help local businesses get found online. Learning the ropes, making mistakes, figuring it out.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Row 2 - Center-right */}
-                <div className="flex justify-center lg:justify-end lg:pr-20">
-                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
-                      '13
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">Dialed-In Local</p>
-                      <p className="text-sm text-text-secondary font-serif">Refocused on local SEO and Google Maps optimization. Found the niche.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Row 3 - Left-center */}
-                <div className="flex justify-center lg:justify-start lg:pl-32">
-                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
-                      '17
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">Dialed-In Web</p>
-                      <p className="text-sm text-text-secondary font-serif">Expanded to full-service digital marketing. Built out the team.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Row 4 - Right aligned */}
-                <div className="flex justify-center lg:justify-end">
-                  <div className="bg-surface-dark border border-accent-blue/30 rounded-2xl p-5 lg:p-6 max-w-md relative group hover:border-accent-blue/50 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-12 h-10 bg-accent-blue rounded-full flex items-center justify-center text-white font-bold text-xs">
-                      '19-21
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">Expert-Vetted Upwork Freelancer</p>
-                      <p className="text-sm text-text-secondary font-serif">Managed $100K-$150K paid advertising campaigns, SEO clients, and everything in between. Proving the process works at scale.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Row 5 - Center */}
-                <div className="flex justify-center">
-                  <div className="bg-surface-dark border border-border rounded-2xl p-5 lg:p-6 max-w-sm relative group hover:border-cta/30 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
-                      '21
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">White-Label Focus</p>
-                      <p className="text-sm text-text-secondary font-serif">Pivoted to serving agencies while maintaining select direct relationships.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Row 6 - Left-center */}
-                <div className="flex justify-start lg:pl-16">
-                  <div className="bg-gradient-to-br from-cta/10 to-accent-blue/10 border border-cta/30 rounded-2xl p-5 lg:p-6 max-w-md relative group hover:border-cta/50 transition-colors">
-                    <div className="absolute -top-3 -left-3 w-10 h-10 bg-cta rounded-full flex items-center justify-center text-cta-foreground font-bold text-sm">
-                      '25
-                    </div>
-                    <div className="pl-4">
-                      <p className="text-foreground font-semibold mb-1">Dialed-In Web: The System</p>
-                      <p className="text-sm text-text-secondary font-serif">Full inbound marketing operating system for agency partners. Everything we learned, packaged into one cohesive approach.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
