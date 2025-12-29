@@ -28,7 +28,7 @@ const WhiteLabelExplainer = () => {
                 What is inbound marketing?
               </h2>
               <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-                Inbound marketing is a system for attracting customers through relevant content and experiences—while strategically using paid media to accelerate visibility as you build long-term assets.
+                Inbound marketing is a system for attracting customers through relevant content and experiences while strategically using paid media to accelerate visibility as you build long-term assets.
               </p>
               <p className="text-text-secondary mb-6 leading-relaxed">
                 Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Content ties it all together.
