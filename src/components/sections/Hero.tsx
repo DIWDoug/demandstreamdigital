@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 lg:px-8 pt-48 pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Eyebrow */}
-          <div className="flex items-center justify-center gap-3 mb-8 animate-fade-in-up">
+          <div className="flex items-center justify-center gap-3 mb-6 animate-fade-in-up">
             <Tooltip>
               <TooltipTrigger asChild>
                 <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-cta/10 text-cta border border-cta/20 rounded-full cursor-help">
@@ -87,26 +87,30 @@ const Hero = () => {
                 <p>No, we didn't just ask ChatGPT to write this. Mostly. 🤖</p>
               </TooltipContent>
             </Tooltip>
-            <p className="text-sm md:text-base text-foreground uppercase tracking-widest font-medium">
-              White-Label Digital Marketing Partner
-            </p>
+            <span className="text-sm text-text-muted uppercase tracking-widest font-medium">
+              White-Label Partner
+            </span>
           </div>
 
-          {/* Main Headline - improved line height */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-10 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
-            White-Label{" "}
-            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span>{" "}
-            for Agencies
+          {/* H1 - SEO anchor (smaller, neutral weight) */}
+          <h1 className="text-lg md:text-xl text-text-secondary font-medium mb-4 animate-fade-in-up tracking-wide">
+            White-Label Digital Marketing Fulfillment for Agencies
           </h1>
 
-          {/* Subheadline - Conversational, benefit-focused */}
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            White-label SEO, local search, paid media, and authority building for agencies who need fulfillment that works. Scoped to each client's market, not squeezed into tiers.
+          {/* H2 - Persuasive lead (styled as visual headline) */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.15" }}>
+            Fulfillment You Can{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Actually Rely On</span>
+          </h2>
+
+          {/* Subheadline - Supporting copy */}
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building—scoped intentionally, executed consistently, and never forced into rigid packages.
           </p>
 
-          {/* Tagline - Calm confidence */}
+          {/* Payoff Line - Cashvertising lever */}
           <p className="text-base md:text-lg text-text-muted font-medium mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Clients stay longer. Margins stay healthy. You focus on growth.
+            Your clients stay longer. Your margins stop leaking. Fulfillment finally feels under control.
           </p>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
