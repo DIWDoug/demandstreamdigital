@@ -709,12 +709,12 @@ const About = () => {
                     rating: 5
                   }
                 ].map((review, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 h-auto">
-                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8">
-                      <p className="font-serif text-text-secondary leading-relaxed mb-6">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2">
+                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 h-full flex flex-col">
+                      <p className="font-serif text-text-secondary leading-relaxed mb-6 flex-grow">
                         "{review.quote}"
                       </p>
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between mt-auto">
                         <div>
                           <p className={`font-semibold mb-1 ${review.rating === 1 ? 'text-text-secondary' : 'text-cta'}`}>{review.name}</p>
                           <div className="flex gap-1">
@@ -734,7 +734,7 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-center gap-4 -mt-2">
+              <div className="flex justify-center gap-4 mt-4">
                 <CarouselPrevious className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
                 <CarouselNext className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
               </div>
