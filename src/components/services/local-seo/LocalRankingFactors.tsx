@@ -84,12 +84,12 @@ const LocalRankingFactors = () => {
 
           {/* Tabs */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-1 rounded-xl">
+            <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-200 p-1.5 rounded-xl">
               {factorGroups.map((group) => (
                 <TabsTrigger
                   key={group.id}
                   value={group.id}
-                  className="rounded-lg py-3 px-4 text-sm font-medium data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-sm text-slate-600"
+                  className="rounded-lg py-3 px-4 text-sm font-semibold data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-md text-slate-700"
                 >
                   <span className="hidden sm:inline">{group.title}</span>
                   <span className="sm:hidden">{group.title.split(" ")[0]}</span>
