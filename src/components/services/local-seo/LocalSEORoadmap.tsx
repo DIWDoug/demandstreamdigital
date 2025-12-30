@@ -17,22 +17,28 @@ const roadmapData: PhaseData[] = [
     phase: 1,
     month: "Month 1",
     title: "Foundation & Baseline",
-    outcome: "GBP audited and optimized. All gaps identified. Content strategy mapped.",
+    outcome: "GBP optimized. Gaps identified. Keyword strategy mapped. On-page work begins.",
     activities: [
       "Baseline metrics report: GBP, GA4 organic, GSC, rankings",
       "Year-over-year comparison analysis",
+      "Keyword research and keyword mapping",
       "Backlink gap analysis",
       "Citation gap analysis",
       "GBP audit and optimization",
       "Topical and geographical content gap analysis",
-      "Hub and spoke content architecture planning"
+      "Hub and spoke content architecture planning",
+      "On-page optimization audit",
+      "On-page optimization implementation (if time permits)",
+      "Schema audit and implementation (if time permits)"
     ],
     deliverables: [
       "Baseline metrics report with YoY comparison",
+      "Keyword research and mapping document",
       "Backlink and citation gap analysis",
       "Optimized GBP with enhanced categories",
       "Tone and style guide",
-      "Content calendar with foundational topics"
+      "Content calendar with foundational topics",
+      "On-page audit with priority recommendations"
     ],
     icon: FileSearch,
     color: "hsl(76, 42%, 41%)",
@@ -41,10 +47,10 @@ const roadmapData: PhaseData[] = [
     phase: 2,
     month: "Month 2",
     title: "On-Page & Content Launch",
-    outcome: "Priority pages optimized. First service pages live. Citations submitted.",
+    outcome: "Priority pages optimized. Schema deployed. First service pages live. Citations submitted.",
     activities: [
-      "On-page optimization for priority pages",
-      "Schema markup implementation",
+      "On-page optimization for priority pages (continued from Month 1)",
+      "Schema markup implementation (if not completed in Month 1)",
       "First service pages created (AI-assisted with human editing)",
       "Internal linking structure built",
       "Foundational citation submissions (structured and unstructured)",
@@ -172,7 +178,7 @@ const LocalSEORoadmap = () => {
             From Foundation to Measurable ROI in 6 Months
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            No guessing. No vague promises. Here is exactly what happens each month, what you will see, and what your clients get. This is a proven sequence, adapted to each market's competitive reality.
+            Based on a $1,200/month engagement (20 hours). No guessing. No vague promises. Here is exactly what happens each month, what you will see, and what your clients get.
           </p>
         </div>
 
