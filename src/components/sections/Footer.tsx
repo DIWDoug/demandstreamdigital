@@ -18,7 +18,7 @@ const Footer = () => {
       ]
     },
     {
-      title: "GOOGLE MAPS",
+      title: "GBP SEO",
       hubSlug: "google-maps",
       items: [
         { label: "GBP Optimization", slug: "gbp-management" },

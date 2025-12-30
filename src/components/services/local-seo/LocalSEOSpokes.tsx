@@ -40,9 +40,9 @@ const spokes: Spoke[] = [
     icon: Link2,
   },
   {
-    title: "Google Business Profile Optimization",
-    slug: "google-business-profile",
-    description: "Full Google Business Profile optimization designed to maximize local pack visibility and user trust.",
+    title: "GBP SEO",
+    slug: "gbp-seo",
+    description: "Full Google Business Profile optimization with hub-spoke content strategy to maximize local pack visibility and user trust.",
     icon: MapPin,
   },
   {

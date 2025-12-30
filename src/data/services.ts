@@ -365,13 +365,13 @@ export const hubs: Hub[] = [
   },
   {
     icon: Map,
-    title: "Google Maps Optimization",
+    title: "GBP SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-    heroDescription: "We help agencies dominate Google Maps results for their clients. From Google Business Profile optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives more calls than any other SERP feature. We help you own it.",
+    heroDescription: "We help agencies dominate Google Maps results for their clients. From GBP optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives 42% of clicks on local search results. We help you own it.",
     whyItMatters: {
-      headline: "Why Google Maps Matters for Local Businesses",
-      description: "The local 3-pack appears in 93% of local searches. These three map listings capture the majority of clicks for local intent queries. If your clients aren't in the pack, they're invisible to most local searchers.",
+      headline: "Why GBP SEO Matters for Local Businesses",
+      description: "The local 3-pack appears in 93% of local searches. These three map listings capture the majority of clicks for local intent queries. If your clients are not in the pack, they are invisible to most local searchers.",
       points: [
         { icon: Zap, title: "Direct Response Channel", description: "Maps listings drive calls, directions, and website visits directly from search results. No click-through required." },
         { icon: Users, title: "Trust Through Reviews", description: "Star ratings and review counts build instant credibility. A strong GBP profile converts browsers into callers." },
@@ -379,8 +379,8 @@ export const hubs: Hub[] = [
       ]
     },
     ourApproach: {
-      headline: "Our Google Maps Optimization Approach",
-      description: "We've optimized thousands of Google Business Profiles across every industry. Here's our proven process:",
+      headline: "Our GBP SEO Approach",
+      description: "We have optimized thousands of Google Business Profiles across every industry. Here is our proven process:",
       steps: [
         { number: "01", title: "Profile Audit & Optimization", description: "Complete GBP audit covering categories, attributes, services, products, description, and all profile elements that influence visibility." },
         { number: "02", title: "Review Strategy", description: "Systematic review generation campaigns and professional response management that builds trust and improves rankings." },

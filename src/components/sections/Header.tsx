@@ -46,7 +46,7 @@ const Header = () => {
       items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
     },
     {
-      title: "GOOGLE MAPS",
+      title: "GBP SEO",
       href: "/white-label-inbound-marketing-services/google-maps",
       items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
     },
