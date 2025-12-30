@@ -1,4 +1,4 @@
-import { FileText, Settings, PenTool, Link2, Search, MapPin, BarChart3, Star } from "lucide-react";
+import { FileText, Settings, PenTool, Link2, Search, MapPin, BarChart3, Star, Bot } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 interface Spoke {
@@ -56,6 +56,12 @@ const spokes: Spoke[] = [
     slug: "reputation-management",
     description: "Review generation strategy, response management, and reputation monitoring to build trust and improve local rankings.",
     icon: Star,
+  },
+  {
+    title: "AEO for Local",
+    slug: "aeo-local",
+    description: "Answer engine optimization that positions your business for AI-powered search results, voice queries, and featured snippets.",
+    icon: Bot,
   },
 ];
 
