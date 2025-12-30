@@ -35,9 +35,9 @@ const spokes: Spoke[] = [
     icon: PenTool,
   },
   {
-    title: "Local Link Acquisition",
+    title: "Link Building",
     slug: "local-link-acquisition",
-    description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals.",
+    description: "Citations, structured and unstructured foundational links, sponsorships, and local link opportunities that build geographic authority.",
     icon: Link2,
   },
   {
