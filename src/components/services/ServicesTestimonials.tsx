@@ -2,6 +2,11 @@ import { Quote, ArrowRight, Phone } from "lucide-react";
 
 const testimonials = [
   {
+    quote: "If you're looking for somebody that can help you make money online, that is what Doug and his team are there for.",
+    author: "Cole",
+    role: "Agency Owner, Dallas"
+  },
+  {
     quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
     author: "Trevor Anderson",
     role: "Founder & CEO, Anderson Collaborative"
@@ -10,11 +15,6 @@ const testimonials = [
     quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
-  },
-  {
-    quote: "The biggest win was reliability. Strategy changes client to client, but execution has to stay consistent. Having a team we could trust to adapt strategies without constant oversight made it possible to scale without adding internal headcount.",
-    author: "Florida Agency Owner",
-    role: "Digital Marketing Agency Owner"
   }
 ];
 
