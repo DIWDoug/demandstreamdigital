@@ -283,33 +283,26 @@ const About = () => {
               </h2>
             </div>
 
-            {/* Team Pyramid */}
-            <div className="flex flex-col items-center gap-4 lg:gap-6">
-              {pyramidRows.map((row, rowIndex) => (
+            {/* Team Grid - Large Photos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+              {teamMembers.map((member, index) => (
                 <div 
-                  key={rowIndex}
-                  className="flex flex-wrap justify-center gap-4 lg:gap-6"
+                  key={index}
+                  className="group text-center"
                 >
-                  {row.map((member, index) => (
-                    <div 
-                      key={index}
-                      className="bg-background border border-border rounded-xl p-4 lg:p-5 text-center hover:border-cta/30 transition-colors w-40 lg:w-48"
-                    >
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden">
-                        <img 
-                          src={member.image}
-                          alt={`${member.name}, ${member.role}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <h4 className="text-sm font-semibold text-foreground mb-1">
-                        {member.name}
-                      </h4>
-                      <p className="text-xs text-text-secondary">
-                        {member.role}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-background border border-border group-hover:border-cta/30 transition-colors">
+                    <img 
+                      src={member.image}
+                      alt={`${member.name}, ${member.role}`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-text-secondary">
+                    {member.role}
+                  </p>
                 </div>
               ))}
             </div>
