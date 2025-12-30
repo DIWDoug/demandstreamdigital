@@ -188,41 +188,87 @@ const About = () => {
       </section>
 
       {/* Mission */}
-      <section className="py-16 lg:py-24 relative bg-surface-dark">
+      <section className="py-16 lg:py-24 relative bg-surface-dark overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              Our Mission
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Fulfillment That Keeps Clients
-            </h2>
-            <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
-              We exist to help agencies deliver white-label digital marketing 
-              that actually works. Sustainable strategies, scoped to each client's 
-              industry and local market. Work you can explain without flinching. 
-              Results that protect your margins and your reputation.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image placeholder - left side */}
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent-blue/20 to-cta/10 border border-border overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-cta/20 flex items-center justify-center">
+                        <Eye className="w-8 h-8 text-cta" />
+                      </div>
+                      <p className="text-sm text-text-secondary font-serif">Focused on sustainable growth</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Content - right side */}
+              <div>
+                <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                  Our Mission
+                </p>
+                <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
+                  Fulfillment That Keeps Clients
+                </h2>
+                <p className="font-serif text-lg text-text-secondary leading-relaxed">
+                  <span className="text-cta font-semibold">Dialed In Web</span>'s mission is to help agencies 
+                  increase their clients' leads, traffic, and sales by delivering quality, sustainable 
+                  digital inbound marketing strategies that are tailor-made to suit the client's 
+                  industry and local presence, while also helping them maintain a positive online reputation.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Vision */}
-      <section className="py-16 lg:py-24 relative bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              Our Vision
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Partners, Not Vendors
-            </h2>
-            <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
-              We believe agencies deserve fulfillment partners they can trust. 
-              By taking execution off your plate through a mutually invested 
-              partnership, you can focus on what you do best: growing your 
-              agency and delighting your clients.
-            </p>
+      <section className="py-20 lg:py-28 relative bg-background overflow-hidden">
+        {/* Subtle background pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.015]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
+            backgroundSize: '40px 40px'
+          }}
+        />
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Content - left side */}
+              <div>
+                <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                  Our Vision
+                </p>
+                <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
+                  Partners, Not Vendors
+                </h2>
+                <p className="font-serif text-lg text-text-secondary leading-relaxed">
+                  <span className="text-cta font-semibold">Dialed In Web</span> has a vision of helping 
+                  agencies grow their clients' businesses in order to support the dreams of business owners 
+                  and founders while also contributing to the growth of local economies. By joining agencies 
+                  on the journey of growing their clients through a mutually invested partnership, 
+                  Dialed In Web takes inbound marketing off their shoulders, allowing them to focus on 
+                  what they do best: running their agencies and delighting their clients.
+                </p>
+              </div>
+              
+              {/* Stats card - right side */}
+              <div className="relative flex justify-center lg:justify-end">
+                <div className="bg-surface-dark border border-border rounded-2xl p-10 lg:p-12 text-center max-w-sm">
+                  <p className="text-7xl lg:text-8xl font-bold text-cta mb-2" style={{ fontFamily: 'Inter Variable, sans-serif' }}>
+                    14
+                  </p>
+                  <p className="text-lg text-text-secondary font-serif">
+                    Years of experience
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
