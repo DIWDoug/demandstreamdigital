@@ -9,11 +9,11 @@ import LocalSEOExplainer from "@/components/services/local-seo/LocalSEOExplainer
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
 import LocalSEOFitQualifier from "@/components/services/local-seo/LocalSEOFitQualifier";
-import OurApproach from "@/components/services/OurApproach";
+import LocalSEORoadmap from "@/components/services/local-seo/LocalSEORoadmap";
+import LocalSEOSystemContext from "@/components/services/local-seo/LocalSEOSystemContext";
 import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
 import HubBenefits from "@/components/services/HubBenefits";
 import HubFAQ from "@/components/services/HubFAQ";
-import OtherServices from "@/components/services/OtherServices";
 import { getHubBySlug } from "@/data/services";
 
 const SectionDivider = () => (
@@ -58,7 +58,7 @@ const LocalSEO = () => {
       {/* Pain Points - why one-size-fits-all fails */}
       <LocalSEOPainPoints />
       
-      {/* Local Ranking Factors - reviews, GBP, authority signals */}
+      {/* Local Ranking Factors - interactive hover */}
       <LocalRankingFactors />
       
       <SectionDivider />
@@ -66,8 +66,8 @@ const LocalSEO = () => {
       {/* Fit Qualifier - who this is for */}
       <LocalSEOFitQualifier />
       
-      {/* Our Approach - the process */}
-      <OurApproach {...hub.ourApproach} />
+      {/* Our Approach - 6-month roadmap */}
+      <LocalSEORoadmap />
       
       <SectionDivider />
       
@@ -85,8 +85,8 @@ const LocalSEO = () => {
       {/* FAQ */}
       <HubFAQ title={hub.title} faqs={hub.faqs} />
       
-      {/* Other Services */}
-      <OtherServices currentHubSlug={hub.slug} />
+      {/* Local SEO as part of the system */}
+      <LocalSEOSystemContext />
       
       {/* Contact */}
       <ContactForm />
