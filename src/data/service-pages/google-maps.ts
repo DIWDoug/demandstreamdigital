@@ -12,10 +12,10 @@ export const googleMapsConfig: ServicePageConfig = {
   hero: {
     headline: "White Label GBP SEO for",
     highlightedText: "Digital Agencies",
-    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies that align website pages with GBP services and products.",
-    qualifierLine: "Built to protect retention, defend margins, and win Maps visibility in competitive markets.",
+    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies—built to protect retention, defend margins, and win Maps visibility in competitive markets.",
+    qualifierLine: "You stay the hero. We handle the execution that keeps clients ranking and renewing.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "You stay the hero. We handle the execution that keeps clients ranking and renewing."
+    ctaSubtext: "Built for agencies managing local visibility at scale."
   },
 
   problem: {
@@ -44,9 +44,9 @@ export const googleMapsConfig: ServicePageConfig = {
         body: "The Vicinity Update made location the dominant factor. Without a strategy that accounts for proximity, your clients lose visibility outside their immediate area."
       }
     ],
-    systemClosing: "All four failures share one root problem: no operating system for ongoing GBP management.",
-    closingLine: "We manage Google Business Profiles with the consistency and strategy they require.",
-    closingHighlight: "Your clients stay visible. You keep the margin you earned.",
+    systemClosing: "",
+    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system—",
+    closingHighlight: "so your clients stay visible and you keep the margin you earned.",
     ctaText: "See How We Manage GBP"
   },
 
@@ -177,8 +177,8 @@ export const googleMapsConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    executionNote: "Execution is handled entirely under your brand, with clear checkpoints and white-labeled deliverables.",
-    footerNote: "Phase duration varies by market competitiveness and scope. Most clients see meaningful pack movement within 3-4 months."
+    executionNote: "",
+    footerNote: "Execution is handled entirely under your brand with clear checkpoints. Phase duration varies by market competitiveness—most clients see meaningful pack movement within 3-4 months."
   },
 
   buildingBlocks: {

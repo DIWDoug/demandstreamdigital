@@ -189,14 +189,14 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
         </div>
 
         {/* Execution Note */}
-        {config.executionNote && (
+        {config.executionNote && config.executionNote.length > 0 && (
           <p className="mt-8 text-text-secondary text-base text-center">
             {config.executionNote}
           </p>
         )}
 
         {/* Bottom note */}
-        <p className="mt-4 text-text-muted text-sm text-center">
+        <p className={`${config.executionNote && config.executionNote.length > 0 ? 'mt-4' : 'mt-8'} text-text-muted text-sm text-center`}>
           {config.footerNote}
         </p>
       </div>
