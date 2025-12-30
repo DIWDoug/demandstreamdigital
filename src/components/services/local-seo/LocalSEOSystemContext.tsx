@@ -71,16 +71,7 @@ const services: Service[] = [
   }
 ];
 
-const checklistItems = [
-  "Local SEO",
-  "Google Maps",
-  "Paid Media",
-  "Reputation Management",
-  "Email Marketing",
-  "Authority Building",
-  "Reporting",
-  "Retargeting"
-];
+// Removed static checklistItems - now using services array directly
 
 const LocalSEOSystemContext = () => {
   const centerService = services.find(s => s.isCenter);
@@ -110,13 +101,17 @@ const LocalSEOSystemContext = () => {
                 That's why we don't offer siloed services. Every engagement is designed to compound—so your clients see results that grow over time, not one-off wins that fade.
               </p>
 
-              {/* Checklist */}
+              {/* Checklist - linked to services */}
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-8">
-                {checklistItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-2">
+                {services.map((service) => (
+                  <Link 
+                    key={service.id} 
+                    to={service.href}
+                    className="flex items-center gap-2 group"
+                  >
                     <CheckCircle className="w-5 h-5 text-cta flex-shrink-0" />
-                    <span className="text-slate-700 font-medium">{item}</span>
-                  </div>
+                    <span className="text-slate-700 font-medium group-hover:text-cta transition-colors">{service.title}</span>
+                  </Link>
                 ))}
               </div>
 
@@ -142,35 +137,35 @@ const LocalSEOSystemContext = () => {
                 </p>
               </div>
 
-              {/* Orbit icons */}
+              {/* Orbit icons - linked to services */}
               {orbitServices.map((service, index) => {
                 const angle = (index * 360) / orbitServices.length - 90;
                 const radius = 150;
-                const mdRadius = 180;
                 const Icon = service.icon;
                 
                 // Highlight the top icon (first one)
                 const isHighlighted = index === 0;
                 
                 return (
-                  <div
+                  <Link
                     key={service.id}
-                    className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all cursor-pointer hover:scale-110"
+                    to={service.href}
+                    className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all hover:scale-110 group"
                     style={{
                       transform: `translate(calc(${Math.cos((angle * Math.PI) / 180) * radius}px), calc(${Math.sin((angle * Math.PI) / 180) * radius}px))`,
                     }}
                     title={service.title}
                   >
                     {/* Background circle */}
-                    <div className={`absolute inset-0 rounded-full ${
+                    <div className={`absolute inset-0 rounded-full transition-colors ${
                       isHighlighted 
-                        ? "bg-cta" 
-                        : "bg-slate-100 border border-slate-300"
+                        ? "bg-cta group-hover:bg-cta/90" 
+                        : "bg-slate-100 border border-slate-300 group-hover:border-cta group-hover:bg-cta/10"
                     }`} />
-                    <Icon className={`relative z-10 w-5 h-5 md:w-6 md:h-6 ${
-                      isHighlighted ? "text-white" : "text-slate-600"
+                    <Icon className={`relative z-10 w-5 h-5 md:w-6 md:h-6 transition-colors ${
+                      isHighlighted ? "text-white" : "text-slate-600 group-hover:text-cta"
                     }`} />
-                  </div>
+                  </Link>
                 );
               })}
             </div>
