@@ -1,10 +1,49 @@
+import { Helmet } from "react-helmet-async";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wylerPhoto from "@/assets/wyler.jpg";
 
 const WhoWeAre = () => {
+  // Author schema for E-E-A-T and AI/LLM visibility
+  const authorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Doug Bryson",
+    "jobTitle": "CEO & Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Dialed-In Web"
+    },
+    "description": "Digital marketing veteran with 14+ years of hands-on experience. Started ranking local businesses in Nashville in 2011. Managed millions in paid advertising. Expert-vetted Upwork specialist. Author of The Local Growth Engine.",
+    "knowsAbout": [
+      "Local SEO",
+      "Google Business Profile Optimization", 
+      "Google Ads",
+      "Meta Ads",
+      "Amazon PPC",
+      "White-Label Agency Fulfillment",
+      "Inbound Marketing Strategy"
+    ],
+    "alumniOf": [
+      { "@type": "Organization", "name": "Horton Group" },
+      { "@type": "Organization", "name": "iProspect" }
+    ],
+    "award": "Expert-Vetted Upwork Freelancer (Top 1%)",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Certification",
+      "name": "Expert-Vetted Upwork Specialist"
+    }
+  };
+
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden bg-background">
-      {/* Subtle dot grid pattern */}
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(authorSchema)}
+        </script>
+      </Helmet>
+      <section className="py-24 lg:py-32 relative overflow-hidden bg-background">
+        {/* Subtle dot grid pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -127,7 +166,8 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
