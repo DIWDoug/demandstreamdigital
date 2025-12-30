@@ -19,6 +19,7 @@ const testimonials = [
 ];
 
 const videoTestimonials = [
+  { id: "DlOyjDWaCZo", title: "Agency Partner Testimonial" },
   { id: "dR2Yxbldi1Q", title: "Agency Partner Testimonial" },
   { id: "i66XV1on6pM", title: "Florida Agency Owner Testimonial" }
 ];
