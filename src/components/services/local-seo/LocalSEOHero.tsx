@@ -64,19 +64,18 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ lineHeight: "1.1", animationDelay: "0.1s" }}>
-            White-Label{" "}
-            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Local SEO</span>{" "}
-            for Agencies
+            Get Your Clients Into the{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Local 3-Pack</span>
           </h1>
           
-          {/* Supporting sentence */}
+          {/* Supporting sentence - benefit-first */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Technical SEO, on-page optimization, content strategy, link building, and Google Business Profile management. Scoped to each market, not forced into a template.
+            More calls. More leads. More customers walking through the door. White-label local SEO that delivers results you can point to when clients ask what they're paying for.
           </p>
 
-          {/* Payoff sentence */}
+          {/* Payoff sentence - specificity */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Your clients rank. Your margins stay healthy. Fulfillment becomes predictable.
+            Avg. 47% increase in organic visibility within 6 months. Your brand. Our execution.
           </p>
 
           {/* Simple email/website form */}

@@ -16,20 +16,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 1,
     month: "Month 1",
-    title: "Foundation & Audit",
-    outcome: "Technical foundation set. Keyword strategy mapped. GBP optimized.",
+    title: "Foundation & Quick Wins",
+    outcome: "GBP optimized. Technical issues fixed. First ranking improvements visible.",
     activities: [
-      "Comprehensive technical SEO audit",
-      "Keyword research and mapping to pages",
-      "Google Business Profile optimization",
-      "NAP audit and citation cleanup initiation",
-      "Analytics and rank tracking setup"
+      "Full technical audit with prioritized fixes",
+      "Keyword research targeting buyer-intent searches",
+      "Google Business Profile fully optimized",
+      "NAP cleanup across major directories",
+      "Baseline tracking for rankings, traffic, and leads"
     ],
     deliverables: [
-      "Technical audit report with priorities",
-      "Keyword strategy document",
-      "Optimized GBP listing",
-      "Baseline rankings report"
+      "Technical audit with action items",
+      "Keyword map with monthly targets",
+      "Optimized GBP with enhanced categories",
+      "Rankings baseline report"
     ],
     icon: FileSearch,
     color: "hsl(76, 42%, 41%)",
@@ -37,20 +37,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 2,
     month: "Month 2",
-    title: "On-Page & Content",
-    outcome: "Core pages optimized. First content published. Schema deployed.",
+    title: "On-Page & Content Launch",
+    outcome: "Priority pages ranking. First service area pages live. Schema deployed.",
     activities: [
-      "On-page optimization for priority pages",
-      "Title tags, meta descriptions, header structure",
-      "LocalBusiness schema implementation",
-      "Service area page creation or optimization",
-      "Initial content production"
+      "On-page optimization for top 10 priority pages",
+      "Title tags and meta descriptions rewritten for CTR",
+      "LocalBusiness and Service schema implemented",
+      "First 2-4 service area pages created",
+      "Internal linking structure improved"
     ],
     deliverables: [
-      "Optimized priority pages (5-10)",
-      "Schema markup live and validated",
-      "First service area pages published",
-      "Internal linking improvements"
+      "10 fully optimized pages",
+      "Schema markup validated in Search Console",
+      "Service area pages published",
+      "First ranking movement report"
     ],
     icon: Rocket,
     color: "hsl(224, 60%, 55%)",
@@ -58,20 +58,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 3,
     month: "Month 3",
-    title: "Authority Building",
-    outcome: "Link acquisition active. Citations complete. Review strategy launched.",
+    title: "Authority & Review Velocity",
+    outcome: "Links acquired. Citations complete. Reviews flowing in weekly.",
     activities: [
-      "Local link outreach campaigns",
+      "Local link outreach to 20+ relevant sites",
       "Citation building across 50+ directories",
-      "Review generation strategy implementation",
-      "Guest posting and local PR outreach",
+      "Review generation campaign launched",
+      "Guest post or local PR placement",
       "Content production continues"
     ],
     deliverables: [
-      "First backlinks secured",
-      "Citation report with live listings",
-      "Review campaign framework",
-      "Published content pieces"
+      "5-10 quality backlinks secured",
+      "Full citation report with live listings",
+      "Review campaign generating 3+ reviews/week",
+      "Published blog or guest content"
     ],
     icon: TrendingUp,
     color: "hsl(35, 90%, 50%)",
@@ -79,20 +79,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 4,
     month: "Month 4",
-    title: "Expansion",
-    outcome: "Secondary keywords targeted. Content scaled. Rankings improving.",
+    title: "Expansion & Acceleration",
+    outcome: "Secondary keywords targeted. Traffic up 30%+. Lead volume increasing.",
     activities: [
-      "Secondary keyword targeting based on data",
-      "Content production scaled (blog, location pages)",
-      "Competitor gap analysis",
-      "Underperforming page optimization",
-      "Continued link acquisition"
+      "Secondary keyword targeting based on performance",
+      "Content scaled to 4-6 new pages",
+      "Competitor gap analysis for missed opportunities",
+      "Underperforming pages refreshed",
+      "Link acquisition continues"
     ],
     deliverables: [
-      "Expanded keyword targets (25+)",
-      "Additional content published",
-      "Competitor analysis report",
-      "Monthly performance report"
+      "Expanded keyword targets (30+)",
+      "New content published",
+      "Competitor analysis with action items",
+      "Traffic and lead growth report"
     ],
     icon: Zap,
     color: "hsl(280, 60%, 55%)",
@@ -100,20 +100,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 5,
     month: "Month 5",
-    title: "Optimization",
-    outcome: "Data-driven refinements. Seasonal adjustments. Rankings consolidating.",
+    title: "Optimization & Refinement",
+    outcome: "Rankings consolidating. Conversion rates improving. ROI becoming clear.",
     activities: [
       "Performance analysis and strategy refinement",
-      "Seasonal content and keyword adjustments",
-      "Content refresh for underperforming pieces",
-      "Advanced GBP optimization (posts, Q&A)",
+      "Seasonal keyword adjustments",
+      "Content refresh for top performers",
+      "Advanced GBP: posts, Q&A, products",
       "Link profile diversification"
     ],
     deliverables: [
-      "Strategy refinement document",
-      "Refreshed content pieces",
-      "GBP engagement report",
-      "Updated keyword rankings"
+      "Updated strategy based on data",
+      "Refreshed high-value content",
+      "GBP engagement optimization",
+      "Mid-campaign ROI projection"
     ],
     icon: Settings,
     color: "hsl(190, 70%, 45%)",
@@ -121,20 +121,20 @@ const roadmapData: PhaseData[] = [
   {
     phase: 6,
     month: "Month 6",
-    title: "Results & Roadmap",
-    outcome: "6-month ROI documented. Next phase strategy delivered.",
+    title: "Results & Next Phase",
+    outcome: "Documented ROI. Client retention secured. Roadmap for continued growth.",
     activities: [
-      "Comprehensive performance audit",
-      "ROI calculation and lead attribution",
-      "Strategy refinement based on learnings",
-      "Next-phase roadmap development",
-      "Quarterly review preparation"
+      "Comprehensive 6-month performance audit",
+      "Lead attribution and ROI calculation",
+      "Strategy refinement for next phase",
+      "Next 6-month roadmap development",
+      "Client-ready executive summary"
     ],
     deliverables: [
-      "6-month performance report",
-      "ROI documentation by channel",
-      "Next 6-month strategic roadmap",
-      "Executive summary for clients"
+      "6-month performance report with ROI",
+      "Lead and revenue attribution",
+      "Next phase strategic roadmap",
+      "White-labeled executive summary"
     ],
     icon: TrendingUp,
     color: "hsl(340, 70%, 50%)",
@@ -151,13 +151,13 @@ const LocalSEORoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
-            Our Local SEO Approach
+            The 6-Month Roadmap
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
-            How Local SEO Engagements Unfold
+            From Foundation to Measurable ROI in 6 Months
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Local SEO requires consistent effort over time. Here is how a typical engagement progresses. This is a common shape, not a locked scope. Execution adapts based on market data and competitive dynamics.
+            No guessing. No vague promises. Here is exactly what happens each month, what you will see, and what your clients get. This is a proven sequence, adapted to each market's competitive reality.
           </p>
         </div>
 
@@ -294,7 +294,7 @@ const LocalSEORoadmap = () => {
 
         {/* Bottom note */}
         <p className="mt-8 text-slate-500 text-sm text-center">
-          Sustainable local SEO requires consistent effort. Most meaningful results emerge within 3-6 months.
+          Most clients see measurable ranking and traffic improvements by month 3. Sustainable, compounding results emerge by month 6.
         </p>
       </div>
     </section>
