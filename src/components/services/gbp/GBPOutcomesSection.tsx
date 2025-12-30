@@ -11,7 +11,7 @@ const GBPOutcomesSection = () => {
             What Actually Changes When GBP Works
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            The outcomes your clients experience when GBP SEO is done right.
+            What changes when profiles enter the map pack and authority compounds.
           </p>
         </div>
 
@@ -26,15 +26,11 @@ const GBPOutcomesSection = () => {
               Direct Response From the Map Pack
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
-              Calls, directions, and website clicks flow directly from optimized profiles—supported by accurate{" "}
+              Calls, directions, and website clicks begin flowing as profiles enter the map pack, supported by{" "}
               <Link to="/white-label-inbound-marketing-services/reporting" className="text-cta hover:underline">
-                call tracking
+                call and conversion tracking
               </Link>{" "}
-              and{" "}
-              <Link to="/white-label-inbound-marketing-services/reporting" className="text-cta hover:underline">
-                conversion tracking
-              </Link>{" "}
-              that proves value to your clients.
+              that proves ROI.
             </p>
           </div>
 
@@ -47,7 +43,7 @@ const GBPOutcomesSection = () => {
               GBP and Website Signals in Alignment
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
-              GBP services and products match the website. Reinforced by{" "}
+              GBP services and website content are aligned through{" "}
               <Link to="/white-label-inbound-marketing-services/local-seo" className="text-cta hover:underline">
                 Local SEO
               </Link>
@@ -57,9 +53,9 @@ const GBPOutcomesSection = () => {
               </Link>
               , and{" "}
               <Link to="/white-label-inbound-marketing-services/local-seo/local-keyword-strategy" className="text-cta hover:underline">
-                local keyword strategy
+                keyword strategy
               </Link>{" "}
-              that Google can trust.
+              Google trusts.
             </p>
           </div>
 
@@ -90,13 +86,13 @@ const GBPOutcomesSection = () => {
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               <Link to="/white-label-inbound-marketing-services/local-seo/content-development" className="text-cta hover:underline">
-                Service and product pages
+                Service pages
               </Link>
-              , supporting FAQs, and{" "}
+              , FAQs, and{" "}
               <Link to="/white-label-inbound-marketing-services/local-seo" className="text-cta hover:underline">
-                location-based content
+                location content
               </Link>{" "}
-              are developed and internally linked to reinforce GBP topical authority.
+              are internally linked to create the topical authority required for map pack visibility.
             </p>
           </div>
         </div>
