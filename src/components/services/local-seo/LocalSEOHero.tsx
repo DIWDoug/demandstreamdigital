@@ -75,7 +75,7 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
 
           {/* Qualifier line */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Built for competitive local markets.
+            You stay the hero. We handle the local marketing that keeps them paying.
           </p>
 
           {/* Simple email/website form */}
