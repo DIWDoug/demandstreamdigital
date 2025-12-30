@@ -1,57 +1,108 @@
+import { useState } from "react";
 import { Star, MapPin, Link2, FileText, Clock, MessageSquare, Building2, Navigation } from "lucide-react";
 import rankingFactorsImage from "@/assets/ranking-factors-analysis.jpg";
 
+interface Factor {
+  icon: typeof Star;
+  label: string;
+  weight: string;
+  description: string;
+  detail: {
+    title: string;
+    body: string;
+  };
+}
+
 const LocalRankingFactors = () => {
-  const factors = [
+  const [activeFactor, setActiveFactor] = useState<number | null>(null);
+
+  const factors: Factor[] = [
     {
       icon: MapPin,
       label: "Google Business Profile",
       weight: "32%",
-      description: "Proximity, categories, keywords in business name, and profile completeness"
+      description: "Proximity, categories, keywords in business name, and profile completeness",
+      detail: {
+        title: "GBP Signals Dominate",
+        body: "Google Business Profile signals account for 32% of local pack rankings. Proximity to the searcher, primary category selection, and keywords in the business name are the top individual factors. Complete, active profiles consistently outrank sparse ones."
+      }
     },
     {
       icon: Star,
       label: "Reviews & Ratings",
       weight: "20%",
-      description: "Review quantity, recency, velocity, and response management"
+      description: "Review quantity, recency, velocity, and response management",
+      detail: {
+        title: "Reviews Now at 20%",
+        body: "Review signals have grown from 16% to 20% of local ranking factors. Review recency is now the 11th most influential factor overall. A strategic review campaign with consistent response management is essential for competitive markets."
+      }
     },
     {
       icon: FileText,
       label: "On-Page Signals",
       weight: "15%",
-      description: "NAP consistency, keyword presence, and domain authority"
+      description: "NAP consistency, keyword presence, and domain authority",
+      detail: {
+        title: "On-Page Foundation",
+        body: "On-page signals account for 15% of rankings. This includes NAP consistency, location keywords in title tags and content, domain authority, and mobile-friendliness. Technical SEO remains foundational even as proximity gains weight."
+      }
     },
     {
       icon: MessageSquare,
       label: "Behavioral Signals",
       weight: "9%",
-      description: "Click-through rates, mobile clicks-to-call, and real-time engagement"
+      description: "Click-through rates, mobile clicks-to-call, and real-time engagement",
+      detail: {
+        title: "User Behavior Matters",
+        body: "Behavioral signals at 9% include click-through rates from search results, mobile clicks-to-call, and dwell time. Google watches how users interact with listings to gauge relevance and quality."
+      }
     },
     {
       icon: Link2,
       label: "Link Authority",
       weight: "8%",
-      description: "Quality and local relevance of inbound links"
+      description: "Quality and local relevance of inbound links",
+      detail: {
+        title: "Links Still Matter",
+        body: "Link signals at 8% continue a downward trend but remain important for competitive markets. Local relevance matters more than raw domain authority. Links from local news, chambers of commerce, and industry associations carry extra weight."
+      }
     },
     {
       icon: Building2,
       label: "Citation Signals",
       weight: "6%",
-      description: "Accuracy across directories, critical for AI visibility"
+      description: "Accuracy across directories, critical for AI visibility",
+      detail: {
+        title: "Citations for AI Visibility",
+        body: "Citation signals at 6% are foundational for NAP consistency. More importantly, citations feed the data sources that AI models like ChatGPT and Gemini use to recommend businesses. Accurate citations mean better AI visibility."
+      }
     },
     {
       icon: Clock,
       label: "Business Hours",
       weight: "5th Factor",
-      description: "Openness at search time now directly impacts visibility"
+      description: "Openness at search time now directly impacts visibility",
+      detail: {
+        title: "Open Businesses Win",
+        body: "Business hours openness is now the 5th most influential individual factor. Businesses effectively disappear from the local pack after they close. Extended hours or 24/7 availability creates a ranking advantage."
+      }
     },
     {
       icon: Navigation,
       label: "Proximity",
       weight: "#1 Factor",
-      description: "Physical distance is now the dominant ranking signal"
+      description: "Physical distance is now the dominant ranking signal",
+      detail: {
+        title: "Vicinity Update Changed Everything",
+        body: "The Vicinity Update made physical proximity the dominant ranking factor. Rankings are now dynamic, changing based on where the searcher is standing. This is why cookie-cutter packages fail: every market has different proximity dynamics."
+      }
     }
   ];
+
+  const activeDetail = activeFactor !== null ? factors[activeFactor].detail : {
+    title: "The Vicinity Update Changed Everything",
+    body: "Google's Vicinity Update made physical proximity the dominant ranking factor. Rankings are now dynamic, changing based on where a user is standing. This is why cookie-cutter packages fail. We scope every engagement to the actual competitive landscape."
+  };
 
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -66,53 +117,68 @@ const LocalRankingFactors = () => {
               What Actually Moves the Needle
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-              Based on Whitespark's 2026 Local Search Ranking Factors research, these signals guide where we focus effort and why cookie-cutter approaches fail.
+              Based on Whitespark's 2026 Local Search Ranking Factors research. Hover over any factor to learn more.
             </p>
           </div>
 
-          {/* Two Column: Factors + Vicinity Callout */}
+          {/* Two Column: Factors + Dynamic Callout */}
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Left: Factor Grid */}
             <div className="grid grid-cols-2 gap-4">
               {factors.map((factor, index) => (
-                <div 
+                <button
                   key={index}
-                  className="bg-surface-elevated border border-border/50 rounded-xl p-4 hover:border-cta/30 transition-colors"
+                  onMouseEnter={() => setActiveFactor(index)}
+                  onMouseLeave={() => setActiveFactor(null)}
+                  onClick={() => setActiveFactor(activeFactor === index ? null : index)}
+                  className={`bg-surface-elevated border rounded-xl p-4 text-left transition-all duration-200 ${
+                    activeFactor === index 
+                      ? "border-cta ring-2 ring-cta/20 scale-[1.02]" 
+                      : "border-border/50 hover:border-cta/30"
+                  }`}
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-lg bg-cta/10 flex items-center justify-center shrink-0">
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                      activeFactor === index ? "bg-cta/20" : "bg-cta/10"
+                    }`}>
                       <factor.icon className="w-4 h-4 text-cta" />
                     </div>
-                    <span className="text-cta font-bold text-lg">{factor.weight}</span>
+                    <span className={`font-bold text-lg transition-colors ${
+                      activeFactor === index ? "text-cta" : "text-cta"
+                    }`}>{factor.weight}</span>
                   </div>
                   <p className="text-foreground font-semibold text-sm mb-1">{factor.label}</p>
                   <p className="text-text-muted text-xs leading-relaxed">{factor.description}</p>
-                </div>
+                </button>
               ))}
             </div>
 
-            {/* Right: Vicinity Update + Reviews Callout */}
+            {/* Right: Dynamic Callout */}
             <div className="space-y-6">
-              {/* Vicinity Update Card */}
-              <div className="bg-surface-elevated border border-cta/30 rounded-2xl p-6">
+              {/* Dynamic Detail Card */}
+              <div 
+                className="bg-surface-elevated border border-cta/30 rounded-2xl p-6 transition-all duration-300"
+                key={activeFactor}
+              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-xl bg-cta/10 flex items-center justify-center">
-                    <Navigation className="w-5 h-5 text-cta" />
+                    {activeFactor !== null ? (
+                      (() => {
+                        const Icon = factors[activeFactor].icon;
+                        return <Icon className="w-5 h-5 text-cta" />;
+                      })()
+                    ) : (
+                      <Navigation className="w-5 h-5 text-cta" />
+                    )}
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">The Vicinity Update Changed Everything</h3>
+                  <h3 className="text-xl font-semibold text-foreground">{activeDetail.title}</h3>
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                  Google's Vicinity Update made physical proximity the dominant ranking factor for local results. Rankings are now dynamic, changing based on where a user is standing, sometimes street by street.
-                </p>
-                <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                  This is why cookie-cutter packages fail. A business in a dense urban market competes differently than one in a suburban area. A lawyer in downtown Chicago faces different proximity dynamics than a plumber in a small town.
-                </p>
-                <p className="text-foreground text-sm font-medium">
-                  One-size-fits-all SEO ignores these realities. We scope every engagement to the actual competitive landscape.
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {activeDetail.body}
                 </p>
               </div>
 
-              {/* Reviews Callout */}
+              {/* Image with static callout */}
               <div className="relative">
                 <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border/50 bg-surface-elevated">
                   <img 
@@ -123,14 +189,11 @@ const LocalRankingFactors = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
                 </div>
                 
-                {/* Reviews Stat Overlay */}
+                {/* Static source attribution */}
                 <div className="absolute bottom-4 left-4 right-4 bg-surface-dark/95 backdrop-blur-sm rounded-xl p-4 border border-border/50">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Star className="w-5 h-5 text-cta" />
-                    <p className="text-foreground font-semibold">Reviews Now at 20%</p>
-                  </div>
+                  <p className="text-foreground font-semibold text-sm mb-1">Source: Whitespark 2026</p>
                   <p className="text-text-muted text-xs">
-                    Review signals have grown from 16% to 20% of local ranking factors. Review recency is now the 11th most influential factor overall. A strategic review campaign is essential.
+                    Ranking factor weights based on the annual Local Search Ranking Factors survey of industry practitioners.
                   </p>
                 </div>
               </div>
