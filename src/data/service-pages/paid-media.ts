@@ -12,8 +12,8 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Your clients need leads today, not in six months. We build and manage Google Ads and Meta campaigns that generate qualified local leads at scale—executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We handle the paid media execution that keeps clients growing and confident.",
+    subheadline: "Your clients need leads today, not in six months. We build and manage Google Ads and Meta campaigns that generate qualified local leads at scale, executed entirely under your brand.",
+    qualifierLine: "You stay the hero. We handle the execution that keeps clients growing and confident.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
   },
@@ -44,14 +44,14 @@ export const paidMediaConfig: ServicePageConfig = {
         body: "Clients receive data dumps instead of insights. Impressions and clicks mean nothing if you cannot connect them to leads and revenue."
       }
     ],
-    closingLine: "We build campaigns from the ground up for local lead generation.",
-    closingHighlight: "Clients get leads they can count. You keep the margin you earned.",
+    closingLine: "We build campaigns from the ground up for local lead generation",
+    closingHighlight: "so clients get leads they can count and you keep the margin you earned.",
     ctaText: "See How We Build Campaigns"
   },
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "The outcomes your clients experience when campaigns are built right.",
+    subheadline: "What changes when campaigns are built for local lead generation and optimized weekly.",
     items: [
       {
         icon: Zap,
@@ -61,17 +61,17 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         icon: Target,
         title: "Spend Connects to Revenue",
-        description: "Every dollar is tracked. Call tracking, form attribution, and conversion data prove exactly what the investment produces."
+        description: "Every dollar is tracked. Call tracking, form attribution, and conversion data prove what the investment produces."
       },
       {
         icon: TrendingUp,
-        title: "Performance Improves Month Over Month",
-        description: "Daily optimization and weekly refinement compound into continuously improving results. Campaigns get better, not stale."
+        title: "Performance Compounds Monthly",
+        description: "Daily optimization and weekly refinement compound into continuously improving results."
       },
       {
         icon: DollarSign,
         title: "Scalable Growth When Ready",
-        description: "When campaigns work, scale them up. Predictable lead generation that matches business capacity and growth goals."
+        description: "When campaigns work, scale them up. Predictable lead generation that matches capacity and growth goals."
       }
     ]
   },
@@ -79,7 +79,7 @@ export const paidMediaConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Strategy to Scale",
-    subheadline: "Every campaign is built for the specific market and goals. This is how we sequence the work.",
+    subheadline: "Every campaign is built for the specific market and goals, sequenced to generate leads first, then optimize and expand.",
     phases: [
       {
         phase: 1,
@@ -155,24 +155,24 @@ export const paidMediaConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Phase duration varies by budget, market, and goals. Most clients see meaningful lead flow within the first 2-4 weeks."
+    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. Most clients see meaningful lead flow within 2-4 weeks."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Components of Paid Media Management",
-    subheadline: "Each component is scoped based on budget, goals, and market dynamics—not templated packages.",
+    subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
       {
         title: "Campaign Strategy & Structure",
         slug: "campaign-strategy-structure",
-        description: "Campaign architecture designed for local lead generation with proper targeting, organization, and efficiency.",
+        description: "Campaign architecture for local lead generation with proper targeting, organization, and efficiency.",
         icon: Target
       },
       {
         title: "Ad Copy & Creative",
         slug: "ad-copy-creative",
-        description: "Compelling ad copy, extensions, and creative assets built to drive local conversions with continuous testing.",
+        description: "Compelling ad copy, extensions, and creative assets built to drive local conversions.",
         icon: FileText
       },
       {
@@ -184,13 +184,13 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         title: "Bid Management",
         slug: "bid-management",
-        description: "Smart bidding strategies and budget allocation that maximize lead volume within profitability targets.",
+        description: "Smart bidding strategies and budget allocation to maximize lead volume within profitability targets.",
         icon: DollarSign
       },
       {
         title: "Call Tracking & Attribution",
         slug: "call-tracking-attribution",
-        description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization.",
+        description: "Call recording, lead scoring, and multi-touch attribution to prove ROI and inform optimization.",
         icon: BarChart3
       },
       {
@@ -288,8 +288,8 @@ export const paidMediaConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "Paid Media Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "Effective local marketing is interconnected.",
-    body: "Paid media fills the pipeline while SEO builds. Retargeting keeps you top of mind. Email nurtures leads. We offer each service independently, but the magic happens when they work in concert.",
+    intro: "Effective local marketing is interconnected. Paid media fills the pipeline while SEO builds, retargeting keeps you top of mind, and email nurtures leads.",
+    body: "We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns for immediate lead generation.", href: "/white-label-inbound-marketing-services/paid-media", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
