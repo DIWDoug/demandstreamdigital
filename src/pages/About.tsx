@@ -326,14 +326,14 @@ const About = () => {
                 From Those Who Know Us Best
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-                Clients We've Served Over the Years
+                A Handful of Clients We've Supported Over the Years
               </h2>
             </div>
             <div className="bg-white rounded-2xl p-8 lg:p-12">
               <img 
                 src={clientLogosBanner} 
                 alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain grayscale"
               />
             </div>
           </div>
