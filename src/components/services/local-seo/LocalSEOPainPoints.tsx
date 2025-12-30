@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 const LocalSEOPainPoints = () => {
   const painPoints = [
     {
+      icon: Users,
+      title: "Impossible Expectations Kill Retention",
+      body: "When pricing does not reflect competitive reality, clients expect results you cannot deliver. Then you lose them, and the revenue walks out the door."
+    },
+    {
       icon: Package,
       title: "One Package for Every Market. No Market Gets Results.",
       body: "Your plumber in Boise and personal injury lawyer in Chicago need completely different strategies. Cookie-cutter packages ignore this reality and deliver mediocre results for everyone."
@@ -17,11 +22,6 @@ const LocalSEOPainPoints = () => {
       icon: TrendingDown,
       title: "Clients Do Not Understand the Value",
       body: "They see rankings, not the money those rankings save. Without that context, every invoice feels like a question mark."
-    },
-    {
-      icon: Users,
-      title: "Impossible Expectations Kill Retention",
-      body: "When pricing does not reflect competitive reality, clients expect results you cannot deliver. Then you lose them, and the revenue walks out the door."
     }
   ];
 
@@ -38,7 +38,7 @@ const LocalSEOPainPoints = () => {
               Why Most White-Label SEO Fails Your Clients
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              You have seen it before. The package looked great on paper, but six months later your clients are frustrated, threatening to leave, and you are scrambling to explain why rankings have not moved.
+              Six months in, clients are frustrated, threatening to leave, and you are explaining why rankings have not moved.
             </p>
           </div>
 

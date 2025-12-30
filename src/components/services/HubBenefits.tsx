@@ -21,21 +21,6 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
         description: "Clients appear in the local 3-pack for their highest-intent keywords. Phone rings more often from people ready to book."
       },
       {
-        icon: MessageSquareText,
-        title: "Reviews That Build Trust",
-        description: "A steady stream of fresh, authentic reviews signals credibility to both Google and future customers."
-      },
-      {
-        icon: Zap,
-        title: "Website Traffic That Converts",
-        description: "Organic visitors who find what they're looking for, stay longer, and take action. Not vanity metrics."
-      },
-      {
-        icon: Users,
-        title: "Visibility Across AI Platforms",
-        description: "Optimized content and authority signals help clients surface in ChatGPT, Gemini, and AI Overviews. Not just traditional search."
-      },
-      {
         icon: TrendingUp,
         title: "Rankings That Compound Over Time",
         description: "Each month builds on the last. Content, links, and signals accumulate into lasting visibility your clients can count on."
@@ -44,6 +29,11 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
         icon: ClipboardCheck,
         title: "Clear Reporting They Understand",
         description: "Monthly reports that show progress in plain language. Rankings, traffic, calls, and leads. No jargon, no confusion."
+      },
+      {
+        icon: Users,
+        title: "Visibility Across AI Platforms",
+        description: "Optimized content and authority signals help clients surface in ChatGPT, Gemini, and AI Overviews. Not just traditional search."
       }
     ]
   },
