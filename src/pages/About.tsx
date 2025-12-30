@@ -609,23 +609,6 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* 2024-2025 - Building the Team */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 hover:scale-[1.02] relative">
-                  <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateX(-50%)' }} />
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
-                      <span className="text-accent-blue font-bold text-xs">'24-25</span>
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2024-2025</p>
-                      <p className="text-lg font-semibold text-foreground">Building the Team</p>
-                    </div>
-                  </div>
-                  <p className="font-serif text-text-secondary text-sm leading-relaxed">
-                    Assembled a dedicated execution team to scale the inbound marketing system.
-                  </p>
-                </div>
-
               {/* 2025 - The System */}
               <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-lg hover:shadow-cta/20 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-3 right-3 bg-cta text-white text-xs font-bold px-2 py-1 rounded-full">
