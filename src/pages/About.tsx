@@ -333,7 +333,7 @@ const About = () => {
               <img 
                 src={clientLogosBanner} 
                 alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain grayscale brightness-0 invert opacity-70"
+                className="w-full h-auto object-contain opacity-60"
               />
             </div>
           </div>
