@@ -1,6 +1,28 @@
-import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Hero = () => {
+  const [step, setStep] = useState(1);
+  const [website, setWebsite] = useState("");
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleStep1Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (website.trim()) {
+      setStep(2);
+    }
+  };
+
+  const handleStep2Submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", { website, ...formData });
+    // TODO: Handle form submission
+  };
+
   return (
     <section className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
       {/* Enhanced abstract data texture overlay */}
@@ -90,14 +112,81 @@ const Hero = () => {
             Clients stay longer. Margins stay healthy. Fulfillment becomes predictable.
           </p>
 
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <a 
-              href="#contact" 
-              className="btn-cta group"
-            >
-              Start a Partner Conversation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
+          {/* Two-Step Form */}
+          <div className="animate-fade-in-up max-w-xl mx-auto" style={{ animationDelay: "0.3s" }}>
+            {step === 1 ? (
+              <form onSubmit={handleStep1Submit} className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="url"
+                  placeholder="yourwebsite.com"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                  required
+                  className="flex-1 px-5 py-4 rounded-lg bg-background/80 backdrop-blur-sm border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                />
+                <button
+                  type="submit"
+                  className="btn-cta group whitespace-nowrap"
+                >
+                  Get a Proposal
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </button>
+              </form>
+            ) : (
+              <div className="bg-background/90 backdrop-blur-md border border-border rounded-xl p-6 sm:p-8 shadow-2xl">
+                {/* Step indicator */}
+                <div className="flex items-center gap-3 mb-6 text-left">
+                  <div className="flex items-center gap-2 text-cta">
+                    <CheckCircle className="h-5 w-5" />
+                    <span className="text-sm font-medium">{website}</span>
+                  </div>
+                  <button 
+                    onClick={() => setStep(1)} 
+                    className="text-xs text-text-muted hover:text-foreground transition-colors underline"
+                  >
+                    Edit
+                  </button>
+                </div>
+
+                <form onSubmit={handleStep2Submit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      required
+                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Work Email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                    />
+                  </div>
+                  <input
+                    type="tel"
+                    placeholder="Phone (SMS-enabled)"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full btn-cta group justify-center"
+                  >
+                    Get My Proposal
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </button>
+                  <p className="text-xs text-text-muted text-center pt-2">
+                    This starts a conversation, not a sales call.
+                  </p>
+                </form>
+              </div>
+            )}
           </div>
         </div>
       </div>
