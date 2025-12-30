@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, MapPin, Sparkles, Star, Mail, Globe, BarChart3, Share2, CheckCircle, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -73,6 +74,10 @@ const services: Service[] = [
 
 const LocalSEOSystemContext = () => {
   const orbitServices = services.filter(s => !s.isCenter);
+  const centerService = services.find(s => s.isCenter)!;
+  const [hoveredService, setHoveredService] = useState<Service | null>(null);
+
+  const displayService = hoveredService || centerService;
 
   return (
     <section className="py-20 lg:py-28 section-light relative overflow-hidden">
@@ -132,23 +137,22 @@ const LocalSEOSystemContext = () => {
                 }}
               />
               
-              {/* Center content - text only, no background */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] text-center">
-                <p className="text-slate-900 font-bold text-2xl mb-2">Local SEO</p>
+              {/* Center content - dynamic based on hover */}
+              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] text-center transition-all duration-300">
+                <p className="text-slate-900 font-bold text-2xl mb-2">{displayService.title}</p>
                 <p className="text-slate-500 text-sm leading-relaxed">
-                  Search engine optimization helps potential customers find you through organic searches.
+                  {displayService.description}
                 </p>
               </div>
 
-              {/* Orbit icons - positioned ON the circle line, no links */}
+              {/* Orbit icons - positioned ON the circle line */}
               {orbitServices.map((service, index) => {
                 // Start from top (-90deg) and go clockwise
                 const angle = (index * 360) / orbitServices.length - 90;
                 const radius = 160; // Matches half of 320px circle
                 const Icon = service.icon;
                 
-                // Highlight the left-side icon (around 180deg = index ~3-4)
-                const isHighlighted = index === 4;
+                const isHovered = hoveredService?.id === service.id;
                 
                 // Calculate position
                 const x = Math.cos((angle * Math.PI) / 180) * radius;
@@ -157,18 +161,20 @@ const LocalSEOSystemContext = () => {
                 return (
                   <div
                     key={service.id}
-                    className="absolute w-14 h-14 rounded-full flex items-center justify-center"
+                    className="absolute w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
                     style={{
                       left: '50%',
                       top: '50%',
                       transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                     }}
                     title={service.title}
+                    onMouseEnter={() => setHoveredService(service)}
+                    onMouseLeave={() => setHoveredService(null)}
                   >
-                    {/* Background circle - dark by default, green for highlighted */}
-                    <div className={`absolute inset-0 rounded-full ${
-                      isHighlighted 
-                        ? "bg-cta" 
+                    {/* Background circle - lights up on hover */}
+                    <div className={`absolute inset-0 rounded-full transition-all duration-200 ${
+                      isHovered 
+                        ? "bg-cta shadow-lg shadow-cta/40" 
                         : "bg-slate-800"
                     }`} />
                     <Icon className="relative z-10 w-6 h-6 text-white" />
