@@ -157,19 +157,19 @@ const LocalRankingFactors = () => {
             <div className="space-y-0">
               {/* Image */}
               <div className="relative">
-                <div className="aspect-[16/9] rounded-t-2xl overflow-hidden border border-b-0 border-border/50 bg-surface-elevated">
+                <div className="aspect-[16/9] rounded-t-2xl overflow-hidden border border-b-0 border-slate-200 bg-white">
                   <img 
                     src={rankingFactorsImage} 
                     alt="Local search ranking factors analysis" 
                     className="w-full h-full object-cover opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
                 </div>
               </div>
               
               {/* Dynamic Detail Card - updates on hover */}
               <div 
-                className="bg-surface-dark/95 backdrop-blur-sm rounded-b-2xl p-5 border border-t-0 border-border/50 transition-all duration-300"
+                className="bg-slate-50 rounded-b-2xl p-5 border border-t-0 border-slate-200 transition-all duration-300"
                 key={activeFactor}
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -184,11 +184,11 @@ const LocalRankingFactors = () => {
                     )}
                   </div>
                   <div>
-                    <p className="text-foreground font-semibold text-sm">{activeDetail.title}</p>
-                    <p className="text-text-muted text-xs">Source: Whitespark 2026</p>
+                    <p className="text-slate-900 font-semibold text-sm">{activeDetail.title}</p>
+                    <p className="text-slate-400 text-xs">Source: Whitespark 2026</p>
                   </div>
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {activeDetail.body}
                 </p>
               </div>
