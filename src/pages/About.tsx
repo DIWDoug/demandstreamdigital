@@ -182,15 +182,8 @@ const About = () => {
             
             {/* Right - Description */}
             <div className="lg:border-l lg:border-border/50 lg:pl-12">
-              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed mb-4">
-                Since 2011, we've helped agencies keep clients longer by delivering 
-                inbound marketing that actually works: SEO, paid advertising, 
-                email marketing, and more. All scoped to the market, 
-                explained in plain English, and executed by practitioners 
-                who've done the work themselves.
-              </p>
-              <p className="font-serif text-base text-text-muted leading-relaxed">
-                Since 2011, we've worked directly with small and mid-sized businesses and alongside agencies, building and fulfilling inbound marketing campaigns across local, regional, and national markets.
+              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
+                Since 2011, we've worked directly with small and mid-sized businesses and alongside agencies—building and fulfilling inbound marketing campaigns across local, regional, and national markets. SEO, paid advertising, email marketing, and more. All scoped to the market, explained in plain English, and executed by practitioners who've done the work themselves.
               </p>
             </div>
           </div>
@@ -237,10 +230,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 From Nashville Songwriter to Full-Service Agency
               </h2>
-              <p className="font-serif text-text-secondary max-w-2xl mx-auto mb-4">
-                This isn't a resume. It's the journey of how I came to help you today.
-              </p>
-              <p className="text-sm text-text-muted max-w-3xl mx-auto">
+              <p className="text-text-secondary max-w-3xl mx-auto">
                 Each phase below represents constraints learned, mistakes corrected, and systems refined that now inform how we scope, execute, and support our clients today.
               </p>
             </div>
@@ -550,7 +540,7 @@ const About = () => {
                 Real Reviews <span className="text-cta">from Real Clients</span>
               </h2>
               <p className="font-serif text-text-secondary mt-4 max-w-2xl mx-auto">
-                These reviews span 12+ years across different company names. We've kept them all for transparency.
+                These reviews span 14 years across different company names. We've kept them all for transparency.
               </p>
             </div>
 
@@ -750,7 +740,7 @@ const About = () => {
                 Our Team
               </h2>
               <p className="text-text-secondary max-w-2xl mx-auto">
-                This is a delivery-first team built for execution, communication, and long-term client support—not a sales organization.
+                A delivery-first team built for execution, communication, and long-term client support.
               </p>
             </div>
 

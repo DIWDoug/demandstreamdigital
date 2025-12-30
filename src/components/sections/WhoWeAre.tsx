@@ -137,7 +137,7 @@ const WhoWeAre = () => {
                   </p>
 
                   <p className="text-foreground font-medium">
-                    This experience is now codified into how we scope, execute, and communicate every engagement.
+                    This experience now shapes how we scope, execute, and communicate every engagement.
                   </p>
                   
                   <p className="text-text-secondary">

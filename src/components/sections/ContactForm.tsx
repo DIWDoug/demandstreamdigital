@@ -63,11 +63,8 @@ const ContactForm = () => {
               <h2 className="mb-4 text-foreground">
                 Fulfillment in <span className="text-accent-blue">6 Clear Steps</span>
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-3">
-                A predictable process designed for agencies that value control, execution, and client delight.
-              </p>
-              <p className="text-sm text-text-muted italic max-w-2xl mx-auto">
-                All steps are executed behind the scenes, under your brand, with you retaining full client ownership.
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+                A predictable process designed for agencies that value control and client delight. All steps are executed behind the scenes, under your brand, with you retaining full client ownership.
               </p>
             </div>
 
