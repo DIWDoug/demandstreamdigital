@@ -265,53 +265,53 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Nashville songwriter turned digital marketer. Tower Records closed. Publishing deal ended. A new road opened. Found the local SEO niche and started ranking businesses across multiple industries.
                   </p>
-                  <div className="pt-3 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <p className="text-xs text-cta font-semibold">Angel Maids</p>
-                      <p className="text-xs text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Still one of the most recognized cleaning companies in all of Nashville.</p>
+                      <p className="text-sm text-cta font-semibold">Angel Maids</p>
+                      <p className="text-sm text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Still one of the most recognized cleaning companies in all of Nashville.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Wash N Roll</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Nashville Car Wash," "Brentwood Car Wash," "Brentwood Truck Wash." Hundreds of reviews. Social media + coupon recoupment.</p>
+                      <p className="text-sm text-cta font-semibold">Wash N Roll</p>
+                      <p className="text-sm text-text-secondary">Page 1: "Nashville Car Wash," "Brentwood Car Wash," "Brentwood Truck Wash." Hundreds of reviews. Social media + coupon recoupment.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Sonya Smithson DDS</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Brentwood Dentist," "Brentwood Sedation Dentist," "Brentwood Family Dentistry"</p>
+                      <p className="text-sm text-cta font-semibold">Sonya Smithson DDS</p>
+                      <p className="text-sm text-text-secondary">Page 1: "Brentwood Dentist," "Brentwood Sedation Dentist," "Brentwood Family Dentistry"</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Next Level Fitness</p>
-                      <p className="text-xs text-text-secondary">#1 for "Nashville Personal Trainer." Page 1: "Personal Trainer Near Me," "Nashville Fitness"</p>
+                      <p className="text-sm text-cta font-semibold">Next Level Fitness</p>
+                      <p className="text-sm text-text-secondary">#1 for "Nashville Personal Trainer." Page 1: "Personal Trainer Near Me," "Nashville Fitness"</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Southside Grill</p>
-                      <p className="text-xs text-text-secondary">Page 1 for multiple brunch and lunch keywords</p>
+                      <p className="text-sm text-cta font-semibold">Southside Grill</p>
+                      <p className="text-sm text-text-secondary">Page 1 for multiple brunch and lunch keywords</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Darfon's Restaurant</p>
-                      <p className="text-xs text-text-secondary">Top ranking: "Nashville Romantic Restaurants." Several hundred reviews through strategic review campaign.</p>
+                      <p className="text-sm text-cta font-semibold">Darfon's Restaurant</p>
+                      <p className="text-sm text-text-secondary">Top ranking: "Nashville Romantic Restaurants." Several hundred reviews through strategic review campaign.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">HandyPro + Veteran's Auto</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Nashville Handyman," "Nashville Auto Service"</p>
+                      <p className="text-sm text-cta font-semibold">HandyPro + Veteran's Auto</p>
+                      <p className="text-sm text-text-secondary">Page 1: "Nashville Handyman," "Nashville Auto Service"</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Armor Roofing</p>
-                      <p className="text-xs text-text-secondary">Page 1 for multiple roofing and gutter terms</p>
+                      <p className="text-sm text-cta font-semibold">Armor Roofing</p>
+                      <p className="text-sm text-text-secondary">Page 1 for multiple roofing and gutter terms</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Joseph Dillon / Equitable Mediation</p>
-                      <p className="text-xs text-text-secondary">Page 1: "Chicago Divorce Mediation"</p>
+                      <p className="text-sm text-cta font-semibold">Joseph Dillon / Equitable Mediation</p>
+                      <p className="text-sm text-text-secondary">Page 1: "Chicago Divorce Mediation"</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Love & Pho</p>
-                      <p className="text-xs text-text-secondary">Reputation + rankings for Nashville pho keywords</p>
+                      <p className="text-sm text-cta font-semibold">Love & Pho</p>
+                      <p className="text-sm text-text-secondary">Reputation + rankings for Nashville pho keywords</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Maid Right of Williamson County</p>
-                      <p className="text-xs text-text-secondary">Local SEO and reputation management (2014)</p>
+                      <p className="text-sm text-cta font-semibold">Maid Right of Williamson County</p>
+                      <p className="text-sm text-text-secondary">Local SEO and reputation management (2014)</p>
                     </div>
                     <div>
-                      <p className="text-xs text-text-secondary italic">+ Farrow Pediatric Dentistry, G7 Marketing, Local Search Masters contract work</p>
+                      <p className="text-sm text-text-secondary italic">+ Farrow Pediatric Dentistry, G7 Marketing, Local Search Masters contract work</p>
                     </div>
                   </div>
                 </div>
@@ -331,10 +331,10 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Freelancing wasn't for me at that stage. Sold my clientele to Horton Group and joined their team. Learned what it really meant to focus on the big picture: the 360. This is where the paid advertising adventure started.
                   </p>
-                  <div className="pt-3 border-t border-border/50">
+                  <div className="pt-4 border-t border-border/50">
                     <div>
-                      <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville, 2014-2015)</p>
-                      <p className="text-xs text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
+                      <p className="text-sm text-accent-blue font-semibold">Horton Group (Nashville, 2014-2015)</p>
+                      <p className="text-sm text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
                     </div>
                   </div>
                 </div>
@@ -357,25 +357,25 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Moved to Dallas. Heavy focus on paid advertising and SEO. Dominated the apartment locator niche.
                   </p>
-                  <div className="pt-3 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <p className="text-xs text-cta font-semibold">ASAP Apartment Finders</p>
-                      <p className="text-xs text-text-secondary">Most leads they ever received. Still page 1 for Dallas apartment locator keywords today.</p>
+                      <p className="text-sm text-cta font-semibold">ASAP Apartment Finders</p>
+                      <p className="text-sm text-text-secondary">Most leads they ever received. Still page 1 for Dallas apartment locator keywords today.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Advanced Locators</p>
-                      <p className="text-xs text-text-secondary">Paid advertising (social + search). 400+ leads in one month.</p>
+                      <p className="text-sm text-cta font-semibold">Advanced Locators</p>
+                      <p className="text-sm text-text-secondary">Paid advertising (social + search). 400+ leads in one month.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Elite Dental</p>
-                      <p className="text-xs text-text-secondary">Page 1 for several "Uptown Dentist" keywords</p>
+                      <p className="text-sm text-cta font-semibold">Elite Dental</p>
+                      <p className="text-sm text-text-secondary">Page 1 for several "Uptown Dentist" keywords</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Couch Crazy</p>
-                      <p className="text-xs text-text-secondary">E-commerce SEO + paid advertising</p>
+                      <p className="text-sm text-cta font-semibold">Couch Crazy</p>
+                      <p className="text-sm text-text-secondary">E-commerce SEO + paid advertising</p>
                     </div>
                     <div className="md:col-span-2">
-                      <p className="text-xs text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
+                      <p className="text-sm text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
                     </div>
                   </div>
                 </div>
@@ -395,14 +395,14 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Agency life confirmed it wasn't for me, but the results spoke: 180% retainment on Reliant Energy through a pay-per-performance campaign. Generated close to a million dollars in retainer fees for that one client. All through good paid advertising.
                   </p>
-                  <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div className="pt-4 border-t border-border/50 space-y-3">
                     <div>
-                      <p className="text-xs text-accent-blue font-semibold">iProspect</p>
-                      <p className="text-xs text-text-secondary">Reliant Energy. Enterprise paid media.</p>
+                      <p className="text-sm text-accent-blue font-semibold">iProspect</p>
+                      <p className="text-sm text-text-secondary">Reliant Energy. Enterprise paid media.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-accent-blue font-semibold">Kevin Hutto (Coaching)</p>
-                      <p className="text-xs text-text-secondary">Worked under the well-known digital marketing influencer. Managed clients: Kevin Nations, Shanda Sumpter, Taki Moore, Kisma.</p>
+                      <p className="text-sm text-accent-blue font-semibold">Kevin Hutto (Coaching)</p>
+                      <p className="text-sm text-text-secondary">Worked under the well-known digital marketing influencer. Managed clients: Kevin Nations, Shanda Sumpter, Taki Moore, Kisma.</p>
                     </div>
                   </div>
                 </div>
@@ -425,14 +425,14 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Expanded to national-scale SEO and reputation work.
                   </p>
-                  <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div className="pt-4 border-t border-border/50 space-y-3">
                     <div>
-                      <p className="text-xs text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
-                      <p className="text-xs text-text-secondary">National moving company. SEO + reputation.</p>
+                      <p className="text-sm text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
+                      <p className="text-sm text-text-secondary">National moving company. SEO + reputation.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Car Spa (11 locations)</p>
-                      <p className="text-xs text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
+                      <p className="text-sm text-cta font-semibold">Car Spa (11 locations)</p>
+                      <p className="text-sm text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
                     </div>
                   </div>
                 </div>
@@ -452,10 +452,10 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Top 1% of all Upwork freelancers for paid advertising and SEO.
                   </p>
-                  <div className="pt-3 border-t border-accent-blue/20 space-y-1">
+                  <div className="pt-4 border-t border-accent-blue/20 space-y-2">
                     <p className="text-sm text-foreground font-semibold">$2M+ in client revenue generated</p>
                     <p className="text-sm text-foreground font-semibold">$100K-$150K/mo paid ad campaigns</p>
-                    <p className="text-xs text-text-secondary">SEO, Amazon PPC, Google Ads, Meta Ads, the works.</p>
+                    <p className="text-sm text-text-secondary">SEO, Amazon PPC, Google Ads, Meta Ads, the works.</p>
                   </div>
                 </div>
 
@@ -474,18 +474,18 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Pivoted to serving agencies. Managed several million dollars in paid advertising + SEO.
                   </p>
-                  <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div className="pt-4 border-t border-border/50 space-y-3">
                     <div>
-                      <p className="text-xs text-cta font-semibold">Anderson Collaborative</p>
-                      <p className="text-xs text-text-secondary">Millions in paid advertising managed. Multi-location franchises supported. National customized furniture websites. Still partners today.</p>
+                      <p className="text-sm text-cta font-semibold">Anderson Collaborative</p>
+                      <p className="text-sm text-text-secondary">Millions in paid advertising managed. Multi-location franchises supported. National customized furniture websites. Still partners today.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Tampa Bay Agency</p>
-                      <p className="text-xs text-text-secondary">SMB clients: dog training, dental, digital marketing, tourism, photography, metabolic weight loss (national), heavy machinery lube skids, Kohler generators. Still partners today.</p>
+                      <p className="text-sm text-cta font-semibold">Tampa Bay Agency</p>
+                      <p className="text-sm text-text-secondary">SMB clients: dog training, dental, digital marketing, tourism, photography, metabolic weight loss (national), heavy machinery lube skids, Kohler generators. Still partners today.</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
-                      <p className="text-xs text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
+                      <p className="text-sm text-cta font-semibold">John Perieteanu / Amazon</p>
+                      <p className="text-sm text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
                     </div>
                   </div>
                 </div>
@@ -507,22 +507,22 @@ const About = () => {
                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                   Everything learned, packaged into one inbound marketing operating system.
                 </p>
-                <div className="pt-3 border-t border-cta/20 grid grid-cols-2 gap-2">
+                <div className="pt-4 border-t border-cta/20 grid grid-cols-2 gap-3">
                   <div className="text-center">
-                    <p className="text-lg font-bold text-foreground">14</p>
-                    <p className="text-xs text-text-secondary">Years</p>
+                    <p className="text-xl font-bold text-foreground">14</p>
+                    <p className="text-sm text-text-secondary">Years</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-foreground">100+</p>
-                    <p className="text-xs text-text-secondary">Clients</p>
+                    <p className="text-xl font-bold text-foreground">100+</p>
+                    <p className="text-sm text-text-secondary">Clients</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-foreground">4.8★</p>
-                    <p className="text-xs text-text-secondary">Google</p>
+                    <p className="text-xl font-bold text-foreground">4.8★</p>
+                    <p className="text-sm text-text-secondary">Google</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-lg font-bold text-foreground">$M+</p>
-                    <p className="text-xs text-text-secondary">Ad Spend</p>
+                    <p className="text-xl font-bold text-foreground">$M+</p>
+                    <p className="text-sm text-text-secondary">Ad Spend</p>
                   </div>
                 </div>
               </div>
