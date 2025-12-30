@@ -26,7 +26,7 @@ const LocalSEOFitQualifier = () => {
     },
     {
       point: "Your clients can provide necessary access and feedback",
-      detail: "Effective local SEO requires access to Google Business Profile, website CMS, and occasionally Google Analytics. We also need timely feedback on content drafts and occasional input for review generation campaigns."
+      detail: "Effective local SEO requires access to GBP, website CMS, and occasionally Google Analytics. We also need timely feedback on content drafts and occasional input for review generation campaigns."
     },
     {
       point: "You value long-term client retention over quick wins",
