@@ -17,12 +17,12 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
     benefits: [
       {
         icon: Target,
-        title: "More Calls From the Map Pack",
-        description: "Clients appear in the local 3-pack for their highest-intent keywords. Phone rings more often from people ready to book."
+        title: "More Leads From Local Search",
+        description: "Clients rank for high-intent local keywords. More visibility means more inquiries from people actively searching for what they offer."
       },
       {
         icon: TrendingUp,
-        title: "Rankings That Compound Over Time",
+        title: "Traffic That Compounds Over Time",
         description: "Each month builds on the last. Content, links, and signals accumulate into lasting visibility your clients can count on."
       },
       {
@@ -32,8 +32,8 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
       },
       {
         icon: Users,
-        title: "Visibility Across AI Platforms",
-        description: "Optimized content and authority signals help clients surface in ChatGPT, Gemini, and AI Overviews. Not just traditional search."
+        title: "More Sales From Organic Visibility",
+        description: "When the right people find your clients at the right time, conversions follow. Local SEO turns searchers into customers."
       }
     ]
   },
