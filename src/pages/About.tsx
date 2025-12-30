@@ -4,12 +4,10 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
-import Testimonials from "@/components/sections/Testimonials";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 import clientLogosBanner from "@/assets/client-logos-banner.png";
-import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -19,39 +17,6 @@ import {
 } from "@/components/ui/carousel";
 
 const About = () => {
-  const values = [
-    {
-      icon: Shield,
-      title: "Integrity",
-      description: "We do what we say we're going to do. Our own reputation reflects the standards we hold for our clients."
-    },
-    {
-      icon: Eye,
-      title: "Transparency",
-      description: "Full reports on every activity. Strategies agreed upon in advance. No surprises, no hidden work."
-    },
-    {
-      icon: Handshake,
-      title: "Partnership",
-      description: "This works best as a mutual investment. We're not order-takers. We're invested in your outcomes."
-    },
-    {
-      icon: Clock,
-      title: "Consistency",
-      description: "Low turnover, familiar faces. You'll know who you're working with, and they'll know your business."
-    },
-    {
-      icon: CheckCircle2,
-      title: "Ethical Practices",
-      description: "White-hat only. Every tactic aligns with Google's quality guidelines. Sustainable results, not shortcuts."
-    },
-    {
-      icon: Award,
-      title: "Competency",
-      description: "Delivered by experienced practitioners who invest in continuous learning. Not rented headcount."
-    }
-  ];
-
   const teamMembers = [
     {
       name: "Doug Bryson",
@@ -135,15 +100,6 @@ const About = () => {
     }
   ];
 
-  // Pyramid layout: 1, 2, 3, 4, 5 = 15 members
-  const pyramidRows = [
-    teamMembers.slice(0, 1),   // Row 1: 1 (Doug)
-    teamMembers.slice(1, 3),   // Row 2: 2 (JJ, Wyler)
-    teamMembers.slice(3, 6),   // Row 3: 3 (Shera, Ira, Samanta)
-    teamMembers.slice(6, 10),  // Row 4: 4 (Lanilyn, Martini, Richard, Desiree)
-    teamMembers.slice(10, 15), // Row 5: 5 (Leilani, James, Bel, Bianca, Mohammed)
-  ];
-
   return (
     <>
       <Helmet>
@@ -201,14 +157,12 @@ const About = () => {
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
               { label: 'Mission', href: '#mission' },
-              { label: 'Vision', href: '#vision' },
-              { label: 'Values', href: '#values' },
+              { label: 'Who We Are', href: '#who-we-are' },
+              { label: 'Timeline', href: '#timeline' },
               { label: 'Team', href: '#team' },
               { label: 'Clients', href: '#clients' },
-              { label: 'Timeline', href: '#timeline' },
-              { label: 'Who We Are', href: '#who-we-are' },
-              { label: 'Why Us', href: '#why-us' },
               { label: 'Reviews', href: '#reviews' },
+              { label: 'Why Us', href: '#why-us' },
               { label: 'Contact', href: '#contact' },
             ].map((item) => (
               <a
@@ -223,11 +177,12 @@ const About = () => {
         </div>
       </nav>
 
-      {/* Mission */}
+      {/* Mission & Vision Combined */}
       <section id="mission" className="py-16 lg:py-24 relative bg-surface-dark overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Mission */}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-28">
               {/* Image - left side */}
               <div className="relative">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
@@ -257,25 +212,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Vision */}
-      <section id="vision" className="py-20 lg:py-28 relative bg-background overflow-hidden scroll-mt-32">
-        {/* Subtle background pattern */}
-        <div 
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-6xl mx-auto">
+            {/* Vision */}
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Content - left side */}
-              <div>
+              <div className="order-2 lg:order-1">
                 <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
                   Our Vision
                 </p>
@@ -293,7 +234,7 @@ const About = () => {
               </div>
               
               {/* Image with stats overlay - right side */}
-              <div className="relative">
+              <div className="relative order-1 lg:order-2">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                   <img 
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
@@ -316,113 +257,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
-      <section id="values" className="py-20 lg:py-28 relative bg-background scroll-mt-32">
-        <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
-            backgroundSize: '32px 32px'
-          }}
-        />
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 lg:mb-16">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                What We Stand For
-              </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
-                Our Values
-              </h2>
-            </div>
+      {/* Who We Are - Moved Up */}
+      <div id="who-we-are" className="scroll-mt-32">
+        <WhoWeAre />
+      </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {values.map((value, index) => (
-                <div 
-                  key={index}
-                  className="bg-surface-dark border border-border rounded-xl p-6 lg:p-8 hover:border-cta/30 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center mb-5">
-                    <value.icon className="w-6 h-6 text-cta" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="font-serif text-text-secondary leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section id="team" className="py-20 lg:py-28 relative bg-surface-dark scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 lg:mb-16">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                The People Behind the Work
-              </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
-                Our Team
-              </h2>
-            </div>
-
-            {/* Team Grid - Large Photos */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
-              {teamMembers.map((member, index) => (
-                <div 
-                  key={index}
-                  className="group text-center"
-                >
-                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-background border border-border group-hover:border-cta/30 transition-colors">
-                    <img 
-                      src={member.image}
-                      alt={`${member.name}, ${member.role}`}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-sm text-text-secondary">
-                    {member.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* From Those Who Know Us Best - Client Logos */}
-      <section id="clients" className="py-16 lg:py-20 bg-background scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                From Those Who Know Us Best
-              </p>
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-                A Handful of Clients We've Supported Over the Years
-              </h2>
-            </div>
-            <div className="relative border border-border/30 rounded-2xl p-6 md:p-8 lg:p-12 bg-white overflow-hidden">
-              <img 
-                src={clientLogosBanner} 
-                alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The True Timeline - Road Map */}
-      <section id="timeline" className="py-16 lg:py-24 bg-background overflow-hidden scroll-mt-32">
+      {/* The True Timeline */}
+      <section id="timeline" className="py-16 lg:py-24 bg-surface-dark overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -449,7 +290,7 @@ const About = () => {
                 <div className="hidden lg:block absolute top-24 left-0 right-0 border-t-2 border-dashed border-cta/20" />
                 
                 {/* 2011-2015 - Nashville Days */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
                   <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -515,7 +356,7 @@ const About = () => {
                 </div>
 
                 {/* 2015 - Agency Side */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -541,7 +382,7 @@ const About = () => {
                 <div className="hidden lg:block absolute top-[calc(50%-80px)] left-0 right-0 border-t-2 border-dashed border-accent-blue/20" />
 
                 {/* 2015-2019 - Dallas Days */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
                   <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -579,7 +420,7 @@ const About = () => {
                 </div>
 
                 {/* 2019-2020 - iProspect + Coaching */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -609,7 +450,7 @@ const About = () => {
                 <div className="hidden lg:block absolute bottom-[280px] left-0 right-0 border-t-2 border-dashed border-cta/20" />
 
                 {/* 2019-2020 - National Clients */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -658,7 +499,7 @@ const About = () => {
                 </div>
 
                 {/* 2021-2022 */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -730,8 +571,71 @@ const About = () => {
         </div>
       </section>
 
+      {/* Team */}
+      <section id="team" className="py-20 lg:py-28 relative bg-background scroll-mt-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 lg:mb-16">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                The People Behind the Work
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
+                Our Team
+              </h2>
+            </div>
+
+            {/* Team Grid - Large Photos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+              {teamMembers.map((member, index) => (
+                <div 
+                  key={index}
+                  className="group text-center"
+                >
+                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-surface-dark border border-border group-hover:border-cta/30 transition-colors">
+                    <img 
+                      src={member.image}
+                      alt={`${member.name}, ${member.role}`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-text-secondary">
+                    {member.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos */}
+      <section id="clients" className="py-16 lg:py-20 bg-surface-dark scroll-mt-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                From Those Who Know Us Best
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+                A Handful of Clients We've Supported Over the Years
+              </h2>
+            </div>
+            <div className="relative border border-border/30 rounded-2xl p-6 md:p-8 lg:p-12 bg-white overflow-hidden">
+              <img 
+                src={clientLogosBanner} 
+                alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Real Reviews from Real Clients */}
-      <section id="reviews" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
+      <section id="reviews" className="py-20 lg:py-28 bg-background scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
@@ -865,7 +769,7 @@ const About = () => {
                   }
                 ].map((review, index) => (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2">
-                    <div className="bg-background border border-border rounded-2xl p-6 lg:p-8 h-full">
+                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 h-full">
                       <p className="font-serif text-text-secondary leading-relaxed mb-6">
                         "{review.quote}"
                       </p>
@@ -887,26 +791,18 @@ const About = () => {
                 ))}
               </CarouselContent>
               <div className="flex justify-center gap-4 mt-8">
-                <CarouselPrevious className="static translate-y-0 bg-background border-border hover:bg-cta/10 hover:border-cta/30" />
-                <CarouselNext className="static translate-y-0 bg-background border-border hover:bg-cta/10 hover:border-cta/30" />
+                <CarouselPrevious className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
+                <CarouselNext className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
               </div>
             </Carousel>
           </div>
         </div>
       </section>
 
-      {/* Why We Built This */}
-      <div id="who-we-are" className="scroll-mt-32">
-        <WhoWeAre />
-      </div>
-
-      {/* What Actually Changes When Fulfillment Works */}
+      {/* Why Partner With Us */}
       <div id="why-us" className="scroll-mt-32">
         <WhyPartnerWithUs />
       </div>
-
-      {/* What Agency Partners Say */}
-      <Testimonials />
 
       {/* Contact CTA */}
       <div id="contact" className="scroll-mt-32">
