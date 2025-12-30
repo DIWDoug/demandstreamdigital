@@ -9,43 +9,55 @@ const LocalSEOFitQualifier = () => {
 
   const goodFit = [
     {
-      point: "Your clients are service-area businesses",
-      detail: "Local SEO works best for businesses serving geographic areas: contractors, medical practices, law firms, restaurants, and similar service providers."
+      point: "Your clients have a physical address on their Google Business Profile",
+      detail: "We specialize in local SEO for businesses with verified, address-visible GBP listings. This includes storefronts, offices, and service-area businesses that display their address. We do not work with address-hidden or service-area-only profiles."
     },
     {
-      point: "You need multi-location expertise",
-      detail: "We've handled everything from single locations to 100+ location franchises. Scaling local SEO without duplicate content issues requires specific processes."
+      point: "You serve clients in competitive local markets",
+      detail: "Local SEO delivers the most value when there is real competition for rankings. If your clients operate in metros or competitive suburbs where multiple businesses fight for the same keywords, our approach makes the difference."
     },
     {
-      point: "You want rankings, not just reports",
-      detail: "We focus on outcomes. Rankings, traffic, and leads matter more than vanity metrics and activity logs."
+      point: "You want measurable results, not just activity reports",
+      detail: "We focus on outcomes: improved rankings, increased organic traffic, and more qualified leads. Monthly reports show what moved, not just what we did. If metrics are not improving, we adjust the strategy."
     },
     {
-      point: "You understand competitive markets take time",
-      detail: "A plumber in a small town may see results in weeks. A personal injury lawyer in LA takes months. We set realistic timelines based on actual market data."
+      point: "You understand that competitive markets require time",
+      detail: "A plumber in a small town may see movement in weeks. A personal injury attorney in Los Angeles takes months. We set realistic timelines based on actual market data during discovery, not optimistic guesses."
     },
     {
-      point: "Client cooperation is available",
-      detail: "Review generation, GBP access, and content approvals require client participation. We can't do local SEO in a vacuum."
+      point: "Your clients can provide necessary access and feedback",
+      detail: "Effective local SEO requires access to Google Business Profile, website CMS, and occasionally Google Analytics. We also need timely feedback on content drafts and occasional input for review generation campaigns."
+    },
+    {
+      point: "You value long-term client retention over quick wins",
+      detail: "Our approach is built for sustainable rankings that compound over time. If your goal is keeping clients for years rather than churning through new ones, this partnership makes sense."
     }
   ];
 
   const notFit = [
     {
+      point: "Your clients only have service-area profiles without addresses",
+      detail: "Address-hidden GBP listings (true service-area businesses) compete differently and often require strategies outside our core specialty. We focus on businesses with visible physical locations."
+    },
+    {
       point: "You need e-commerce or national SEO",
-      detail: "Our specialization is local. If your clients sell products online or target national audiences, we're not the right fit."
+      detail: "Our expertise is local search. If your clients sell products online, target national audiences, or need enterprise-level SEO, we are not the right fit."
     },
     {
-      point: "You're selling SEO as a loss leader",
-      detail: "Quality local SEO has real costs. If you're pricing below market to win deals, the math won't work for either of us."
+      point: "You are primarily comparing vendors on price",
+      detail: "Quality local SEO has real costs. If budget is the primary factor and you are looking for the cheapest option, the math will not work for either of us."
     },
     {
-      point: "You expect rankings in 30 days",
-      detail: "Quick wins sometimes happen, but setting that expectation creates problems. Sustainable local SEO takes 3-6 months to show meaningful results."
+      point: "You need rankings in 30 days",
+      detail: "Quick wins occasionally happen, but setting that expectation creates problems. Sustainable local SEO takes three to six months to show meaningful, lasting results."
     },
     {
-      point: "You want to white-label without learning",
-      detail: "We handle fulfillment, but you still need to understand enough to have client conversations and set expectations."
+      point: "Client participation is not available",
+      detail: "We handle execution, but local SEO cannot happen in a vacuum. If clients cannot provide GBP access, approve content, or participate in review campaigns, results will suffer."
+    },
+    {
+      point: "You want to resell without understanding the work",
+      detail: "We operate white-label, but you still need enough knowledge to set expectations and answer basic client questions. If you want a completely hands-off resale, this is not the right partnership."
     }
   ];
 
@@ -62,7 +74,7 @@ const LocalSEOFitQualifier = () => {
               Is White-Label Local SEO Right for You?
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Local SEO is our specialty. Here's who we work best with.
+              Local SEO is our specialty. We are selective about partnerships because fit matters more than volume. Here is who we work best with.
             </p>
           </div>
 
@@ -74,7 +86,7 @@ const LocalSEOFitQualifier = () => {
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cta/10 flex items-center justify-center shrink-0">
                   <Check className="h-4 w-4 md:h-5 md:w-5 text-cta" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-foreground">Ideal for Local SEO</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground">This Partnership Works When</h3>
               </div>
               <ul className="space-y-2 md:space-y-3">
                 {goodFit.map((item, index) => (
