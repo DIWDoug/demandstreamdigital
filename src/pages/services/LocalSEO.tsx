@@ -5,7 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
-import LocalSEOExplainer from "@/components/services/local-seo/LocalSEOExplainer";
+
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
 import SEOValueExplainer from "@/components/services/local-seo/SEOValueExplainer";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
@@ -49,9 +49,6 @@ const LocalSEO = () => {
       
       {/* Trust Reel - credibility whisper */}
       <TrustReel />
-      
-      {/* What is Local SEO? - Explainer with pillar grid */}
-      <LocalSEOExplainer />
       
       <SectionDivider />
       
