@@ -64,8 +64,8 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ lineHeight: "1.1", animationDelay: "0.1s" }}>
-            Get Your Clients on the{" "}
-            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">First Page of Google</span>
+            White Label SEO for{" "}
+            <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Agencies</span>
           </h1>
           
           {/* Supporting sentence - benefit-first */}
