@@ -79,7 +79,7 @@ const LocalSEOSystemContext = () => {
               <span className="text-cta">360° Ecosystem</span>
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed">
-              The most effective local marketing strategies are not siloed. They are interconnected. When organic visibility, paid media, reputation, and email work together, results compound. We help agencies deliver the complete picture.
+              Effective local marketing is not siloed. It is interconnected. When organic, paid, reputation, and email work together, each channel makes the others stronger. That is what we build.
             </p>
           </div>
 

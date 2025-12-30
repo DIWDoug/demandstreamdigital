@@ -4,7 +4,7 @@ const LocalSEOPainPoints = () => {
   const painPoints = [
     {
       icon: Package,
-      title: "Same Package, Different Markets, Bad Results",
+      title: "One Package for Every Market. No Market Gets Results.",
       body: "Your plumber in Boise and personal injury lawyer in Chicago need completely different strategies. Cookie-cutter packages ignore this reality and deliver mediocre results for everyone."
     },
     {
@@ -15,7 +15,7 @@ const LocalSEOPainPoints = () => {
     {
       icon: TrendingDown,
       title: "Clients Do Not Understand the Value",
-      body: "Your clients see rankings, not the SEO value behind them. They do not know what those clicks would cost if they were paying for ads. Without that context, they question why they are paying you at all."
+      body: "They see rankings, not the money those rankings save. Without that context, every invoice feels like a question mark."
     },
     {
       icon: Users,
@@ -31,7 +31,7 @@ const LocalSEOPainPoints = () => {
           {/* Section Header */}
           <div className="text-center mb-14">
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
-              The Problem
+              The Pattern We See
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
               Why Most White-Label SEO Fails Your Clients
@@ -65,7 +65,7 @@ const LocalSEOPainPoints = () => {
 
           {/* Transition Line */}
           <p className="text-center text-slate-600 text-lg mt-14">
-            <span className="font-semibold text-slate-900">There is a better way.</span> We scope every engagement to the actual competitive landscape. Your clients get what they need, and you keep the margin you earned.
+            We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Your clients get what they need. You keep the margin you earned.</span>
           </p>
         </div>
       </div>

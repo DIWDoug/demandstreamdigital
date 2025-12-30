@@ -111,13 +111,13 @@ const LocalRankingFactors = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              2026 Ranking Factors
+              Latest Ranking Factors
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
               What Actually Moves the Needle
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-              Based on Whitespark's 2026 Local Search Ranking Factors research. Hover over any factor to learn more.
+              Based on Whitespark's Local Search Ranking Factors research. The data behind every strategy we build.
             </p>
           </div>
 
