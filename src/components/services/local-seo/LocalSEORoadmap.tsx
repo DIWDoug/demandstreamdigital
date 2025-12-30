@@ -172,13 +172,13 @@ const LocalSEORoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
-            The 6-Month Roadmap
+            A Typical 6-Month Framework
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
-            From Foundation to Measurable ROI in 6 Months
+            How Local SEO Campaigns Generally Unfold
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            No guessing. No vague promises. Here is exactly what happens each month, what you will see, and what your clients get. Scope and pacing are adapted to each market's competitive reality.
+            Every engagement is scoped to the market. This framework shows how we typically sequence the work, but timing, depth, and priorities shift based on competitive reality and client needs.
           </p>
         </div>
 
