@@ -1,6 +1,6 @@
 import { FileText, Settings, PenTool, Link2, Search, MapPin, BarChart3, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-
+import { Link } from "react-router-dom";
 interface Spoke {
   title: string;
   slug: string;
@@ -83,16 +83,17 @@ const LocalSEOSpokes = () => {
               const Icon = spoke.icon;
               
               return (
-                <div
+                <Link
                   key={spoke.slug}
-                  className="bg-surface-elevated border border-border/50 rounded-xl p-6"
+                  to={`/white-label-inbound-marketing-services/local-seo/${spoke.slug}`}
+                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-cta/30 hover:bg-surface-elevated/80 transition-all duration-200 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-cta/20 transition-colors">
                       <Icon className="w-6 h-6 text-cta" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-foreground font-semibold text-lg mb-2">
+                      <h3 className="text-foreground font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
                         {spoke.title}
                       </h3>
                       <p className="text-text-secondary text-sm leading-relaxed">
@@ -100,7 +101,7 @@ const LocalSEOSpokes = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -111,16 +112,17 @@ const LocalSEOSpokes = () => {
               const Icon = spoke.icon;
               
               return (
-                <div
+                <Link
                   key={spoke.slug}
-                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                  to={`/white-label-inbound-marketing-services/local-seo/${spoke.slug}`}
+                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] hover:border-cta/30 hover:bg-surface-elevated/80 transition-all duration-200 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-cta/20 transition-colors">
                       <Icon className="w-6 h-6 text-cta" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-foreground font-semibold text-lg mb-2">
+                      <h3 className="text-foreground font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
                         {spoke.title}
                       </h3>
                       <p className="text-text-secondary text-sm leading-relaxed">
@@ -128,7 +130,7 @@ const LocalSEOSpokes = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
