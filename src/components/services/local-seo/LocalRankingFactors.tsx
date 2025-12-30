@@ -1,4 +1,4 @@
-import { Star, MapPin, Link2, FileText, Settings, MessageSquare, Building2, TrendingUp } from "lucide-react";
+import { Star, MapPin, Link2, FileText, Clock, MessageSquare, Building2, Navigation } from "lucide-react";
 import rankingFactorsImage from "@/assets/ranking-factors-analysis.jpg";
 
 const LocalRankingFactors = () => {
@@ -7,49 +7,49 @@ const LocalRankingFactors = () => {
       icon: MapPin,
       label: "Google Business Profile",
       weight: "32%",
-      description: "Proximity, categories, and profile completeness"
+      description: "Proximity, categories, keywords in business name, and profile completeness"
     },
     {
       icon: Star,
       label: "Reviews & Ratings",
-      weight: "16%",
-      description: "Review quantity, velocity, and response management"
+      weight: "20%",
+      description: "Review quantity, recency, velocity, and response management"
     },
     {
       icon: FileText,
       label: "On-Page Signals",
-      weight: "19%",
+      weight: "15%",
       description: "NAP consistency, keyword presence, and domain authority"
-    },
-    {
-      icon: Link2,
-      label: "Link Authority",
-      weight: "11%",
-      description: "Quality and relevance of inbound links"
-    },
-    {
-      icon: Building2,
-      label: "Citation Consistency",
-      weight: "7%",
-      description: "Accuracy across directories and data aggregators"
     },
     {
       icon: MessageSquare,
       label: "Behavioral Signals",
+      weight: "9%",
+      description: "Click-through rates, mobile clicks-to-call, and real-time engagement"
+    },
+    {
+      icon: Link2,
+      label: "Link Authority",
       weight: "8%",
-      description: "Click-through rates, mobile clicks-to-call, and engagement"
+      description: "Quality and local relevance of inbound links"
     },
     {
-      icon: Settings,
-      label: "Personalization",
-      weight: "4%",
-      description: "Search history and location-based personalization"
+      icon: Building2,
+      label: "Citation Signals",
+      weight: "6%",
+      description: "Accuracy across directories, critical for AI visibility"
     },
     {
-      icon: TrendingUp,
-      label: "Social Signals",
-      weight: "3%",
-      description: "Social engagement and brand mentions"
+      icon: Clock,
+      label: "Business Hours",
+      weight: "5th Factor",
+      description: "Openness at search time now directly impacts visibility"
+    },
+    {
+      icon: Navigation,
+      label: "Proximity",
+      weight: "#1 Factor",
+      description: "Physical distance is now the dominant ranking signal"
     }
   ];
 
@@ -60,18 +60,18 @@ const LocalRankingFactors = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              What Actually Matters
+              2026 Ranking Factors
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Local Search Ranking Factors
+              What Actually Moves the Needle
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-              Understanding what Google weighs helps focus effort where it matters. These factors, based on industry research from Whitespark and BrightLocal, guide our prioritization.
+              Based on Whitespark's 2026 Local Search Ranking Factors research, these signals guide where we focus effort and why cookie-cutter approaches fail.
             </p>
           </div>
 
-          {/* Two Column: Factors + Image */}
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Two Column: Factors + Vicinity Callout */}
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Left: Factor Grid */}
             <div className="grid grid-cols-2 gap-4">
               {factors.map((factor, index) => (
@@ -91,23 +91,48 @@ const LocalRankingFactors = () => {
               ))}
             </div>
 
-            {/* Right: Visual/Image */}
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-border/50 bg-surface-elevated">
-                <img 
-                  src={rankingFactorsImage} 
-                  alt="Local search ranking factors analysis visualization" 
-                  className="w-full h-full object-cover opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-              </div>
-              
-              {/* Callout */}
-              <div className="absolute bottom-4 left-4 right-4 bg-surface-dark/95 backdrop-blur-sm rounded-xl p-4 border border-border/50">
-                <p className="text-foreground font-semibold text-sm mb-1">Reviews Matter More Than Ever</p>
-                <p className="text-text-muted text-xs">
-                  Review signals have grown from 10% to 16% of local ranking factors over the past five years. A strategic review campaign is no longer optional.
+            {/* Right: Vicinity Update + Reviews Callout */}
+            <div className="space-y-6">
+              {/* Vicinity Update Card */}
+              <div className="bg-surface-elevated border border-cta/30 rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-cta/10 flex items-center justify-center">
+                    <Navigation className="w-5 h-5 text-cta" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">The Vicinity Update Changed Everything</h3>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                  Google's Vicinity Update made physical proximity the dominant ranking factor for local results. Rankings are now dynamic, changing based on where a user is standing, sometimes street by street.
                 </p>
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                  This is why cookie-cutter packages fail. A business in a dense urban market competes differently than one in a suburban area. A lawyer in downtown Chicago faces different proximity dynamics than a plumber in a small town.
+                </p>
+                <p className="text-foreground text-sm font-medium">
+                  One-size-fits-all SEO ignores these realities. We scope every engagement to the actual competitive landscape.
+                </p>
+              </div>
+
+              {/* Reviews Callout */}
+              <div className="relative">
+                <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border/50 bg-surface-elevated">
+                  <img 
+                    src={rankingFactorsImage} 
+                    alt="Local search ranking factors analysis" 
+                    className="w-full h-full object-cover opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                </div>
+                
+                {/* Reviews Stat Overlay */}
+                <div className="absolute bottom-4 left-4 right-4 bg-surface-dark/95 backdrop-blur-sm rounded-xl p-4 border border-border/50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Star className="w-5 h-5 text-cta" />
+                    <p className="text-foreground font-semibold">Reviews Now at 20%</p>
+                  </div>
+                  <p className="text-text-muted text-xs">
+                    Review signals have grown from 16% to 20% of local ranking factors. Review recency is now the 11th most influential factor overall. A strategic review campaign is essential.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
