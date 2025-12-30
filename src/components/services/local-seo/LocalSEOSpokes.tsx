@@ -1,4 +1,4 @@
-import { FileText, Settings, PenTool, Link2, Search, MapPin } from "lucide-react";
+import { FileText, Settings, PenTool, Link2, Search, MapPin, BarChart3, Star } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Spoke {
@@ -44,6 +44,18 @@ const spokes: Spoke[] = [
     slug: "google-business-profile",
     description: "Full Google Business Profile optimization designed to maximize local pack visibility and user trust.",
     icon: MapPin,
+  },
+  {
+    title: "Analytics & Reporting",
+    slug: "analytics-reporting",
+    description: "Tracking setup, goal configuration, and monthly performance reporting that connects SEO activity to business outcomes.",
+    icon: BarChart3,
+  },
+  {
+    title: "Reputation Management",
+    slug: "reputation-management",
+    description: "Review generation strategy, response management, and reputation monitoring to build trust and improve local rankings.",
+    icon: Star,
   },
 ];
 
