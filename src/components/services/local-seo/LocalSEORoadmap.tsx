@@ -15,8 +15,8 @@ const roadmapData: PhaseData[] = [
   {
     phase: 1,
     name: "Foundation",
-    title: "Baseline, Architecture & Initial Implementation",
-    description: "Comprehensive discovery, technical setup, and foundational work that sets the stage for everything that follows.",
+    title: "Establishing Control, Clarity & Measurable Baselines",
+    description: "Comprehensive discovery, technical setup, and foundational work that removes ambiguity and sets the stage for everything that follows.",
     activities: [
       "Baseline metrics and year-over-year comparison analysis",
       "Keyword research and mapping",
@@ -51,8 +51,8 @@ const roadmapData: PhaseData[] = [
   {
     phase: 2,
     name: "Performance",
-    title: "Optimization, Refinement & Authority Building",
-    description: "Refining what's working, capturing quick wins, and building sustainable authority signals.",
+    title: "Reducing Risk, Capturing Quick Wins & Building Authority",
+    description: "Refining what is working, capturing low-hanging fruit, and building sustainable authority signals that compound.",
     activities: [
       "On-page audit revisions where needed",
       "GSC keyword hunting for low-hanging fruit",
@@ -74,8 +74,8 @@ const roadmapData: PhaseData[] = [
   {
     phase: 3,
     name: "Momentum",
-    title: "Scaling & Compounding Growth",
-    description: "Leveraging early wins to accelerate visibility and capture expanding market share.",
+    title: "Leveraging Wins & Accelerating Market Share",
+    description: "Early wins create leverage. This phase accelerates visibility and captures expanding market share before competitors adjust.",
     activities: [
       "Aggressive content scaling based on performance data",
       "High-value link acquisition campaigns",
@@ -94,8 +94,8 @@ const roadmapData: PhaseData[] = [
   {
     phase: 4,
     name: "Peak",
-    title: "Market Dominance & Sustained Leadership",
-    description: "Maintaining top positions while expanding into adjacent opportunities.",
+    title: "Defending Position & Expanding Opportunity",
+    description: "Maintaining top positions while expanding into adjacent opportunities. Control, not complacency.",
     activities: [
       "Defensive SEO to protect rankings",
       "New service area or location expansion",
