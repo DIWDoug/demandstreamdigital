@@ -562,8 +562,8 @@ const About = () => {
               <CarouselContent className="-ml-4">
                 {[
                   {
-                    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
-                    name: "Trevor Anderson",
+                    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
+                    name: "Cole",
                     date: "December 2025",
                     rating: 5
                   },
