@@ -434,17 +434,21 @@ const About = () => {
                       <span className="text-accent-blue font-bold text-sm">'15</span>
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2015</p>
+                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2014-2015</p>
                       <p className="text-lg font-semibold text-foreground">Agency Training</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Freelancing wasn't for me at that stage. Sold my clientele to Horton Group and joined their team. Learned what it really meant to focus on the big picture: the 360. This is where the paid advertising adventure started.
                   </p>
-                  <div className="pt-3 border-t border-border/50">
+                  <div className="pt-3 border-t border-border/50 space-y-2">
                     <div>
-                      <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville)</p>
+                      <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville, 2014-2015)</p>
                       <p className="text-xs text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-accent-blue font-semibold">iProspect</p>
+                      <p className="text-xs text-text-secondary">Enterprise paid media agency experience.</p>
                     </div>
                   </div>
                 </div>
