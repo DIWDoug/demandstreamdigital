@@ -74,7 +74,7 @@ const LocalSEOFitQualifier = () => {
               We Are Selective About Who We Work With
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Fit matters more than volume. Here is who gets the best results from this partnership, and who would be better served elsewhere.
+              Fit matters more than volume. This is who gets results, and who should look elsewhere.
             </p>
           </div>
 

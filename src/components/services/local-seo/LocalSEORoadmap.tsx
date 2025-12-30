@@ -123,13 +123,13 @@ const LocalSEORoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
-            Our Phased Approach
+            The Framework
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
             From Foundation to Peak Performance
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Every engagement is scoped to the market. This framework shows how we typically sequence the work, but timing, depth, and priorities shift based on competitive reality and client needs.
+            Every engagement is scoped to the market. This is how the work sequences, adapted to competitive reality.
           </p>
         </div>
 

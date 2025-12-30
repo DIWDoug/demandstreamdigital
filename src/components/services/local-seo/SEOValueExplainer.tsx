@@ -142,7 +142,7 @@ const SEOValueExplainer = () => {
 
           {/* Bottom CTA line */}
           <p className="text-center text-text-secondary text-lg mt-10">
-            <span className="text-foreground font-semibold">Clients who understand value stay longer.</span> We give you the reports that make the value impossible to ignore.
+            <span className="text-foreground font-semibold">Clients who understand value stay longer.</span> We give you reports that make cancellations awkward.
           </p>
         </div>
       </div>

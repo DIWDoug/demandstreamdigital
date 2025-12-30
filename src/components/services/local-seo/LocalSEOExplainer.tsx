@@ -22,19 +22,19 @@ const LocalSEOExplainer = () => {
             {/* Left: Text Content */}
             <div>
               <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-                Why Local SEO Matters
+                The Opportunity
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 46% of Google Searches Have Local Intent
               </h2>
               <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-                When someone searches "plumber near me" or "best dentist in Austin," they are ready to buy. Local SEO puts your clients in front of these high-intent customers at the exact moment they are looking.
+                When someone searches "plumber near me" or "best dentist in Austin," they have their wallet out. Local SEO puts your clients in front of these buyers before competitors even know they exist.
               </p>
               <p className="text-text-secondary mb-6 leading-relaxed">
                 The businesses that show up in the local 3-pack and top organic results capture 70% of the clicks. Everyone else fights over scraps.
               </p>
               <p className="text-text-secondary leading-relaxed">
-                We handle the technical work, the content, the links, and the ongoing optimization. You take credit for the results.
+                The technical work, the content, the links, the optimization. We handle it all. Your name stays on the invoice.
               </p>
             </div>
 
