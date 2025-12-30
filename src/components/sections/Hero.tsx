@@ -8,6 +8,7 @@ const Hero = () => {
     fullName: "",
     email: "",
     phone: "",
+    revenue: "",
   });
 
   const handleStep1Submit = (e: React.FormEvent) => {
@@ -167,13 +168,27 @@ const Hero = () => {
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
                     />
                   </div>
-                  <input
-                    type="tel"
-                    placeholder="Phone (SMS-enabled)"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
-                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input
+                      type="tel"
+                      placeholder="Phone (SMS-enabled)"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                    />
+                    <select
+                      value={formData.revenue}
+                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base appearance-none"
+                    >
+                      <option value="" className="text-text-muted">Monthly Revenue (optional)</option>
+                      <option value="under-25k">Under $25k</option>
+                      <option value="25k-50k">$25k - $50k</option>
+                      <option value="50k-100k">$50k - $100k</option>
+                      <option value="100k-250k">$100k - $250k</option>
+                      <option value="250k+">$250k+</option>
+                    </select>
+                  </div>
                   <button
                     type="submit"
                     className="w-full btn-cta group justify-center"
