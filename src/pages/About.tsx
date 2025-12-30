@@ -7,6 +7,7 @@ import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import Testimonials from "@/components/sections/Testimonials";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
+import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 import clientLogosBanner from "@/assets/client-logos-banner.png";
 import { Eye, Shield, Handshake, Clock, Award, CheckCircle2 } from "lucide-react";
 import {
@@ -126,6 +127,11 @@ const About = () => {
       name: "Mohammed Bilal",
       role: "Web Developer",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
+    },
+    {
+      name: "Monique Baetiong",
+      role: "CPA",
+      image: moniqueBaetiong
     }
   ];
 
