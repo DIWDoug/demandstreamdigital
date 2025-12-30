@@ -3,14 +3,12 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import Testimonials from "@/components/sections/Testimonials";
-import LocalSEOFAQ from "@/components/services/LocalSEOFAQ";
-import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import WhyItMatters from "@/components/services/WhyItMatters";
+import OurApproach from "@/components/services/OurApproach";
 import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
-import LocalSEOStats from "@/components/services/LocalSEOStats";
-import LocalSEORoadmap from "@/components/services/LocalSEORoadmap";
-import RankingFactorsInfographic from "@/components/services/RankingFactorsInfographic";
-import LocalMarketingEcosystem from "@/components/services/LocalMarketingEcosystem";
+import ServiceBenefits from "@/components/services/ServiceBenefits";
+import HubFAQ from "@/components/services/HubFAQ";
 import { getHubBySlug } from "@/data/services";
 
 const LocalSEO = () => {
@@ -21,8 +19,6 @@ const LocalSEO = () => {
     { label: "Services", href: "/inbound-marketing-services" },
     { label: hub.title }
   ];
-
-  const heroDescription = "White-label SEO fulfillment that powers your agency's local marketing stack. On-page, technical, content, Google Maps optimization, and links. Delivered as your own.";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -36,20 +32,16 @@ const LocalSEO = () => {
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title} 
-          description={heroDescription}
+          description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
         />
       </div>
-      <LocalSEOStats />
-      <LocalMarketingEcosystem />
-      <MidPageCTA variant="light" />
-      <RankingFactorsInfographic />
+      <WhyItMatters {...hub.whyItMatters} />
+      <OurApproach {...hub.ourApproach} />
       <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <MidPageCTA variant="light" />
-      <LocalSEORoadmap />
+      <ServiceBenefits {...hub.benefits} />
       <Testimonials />
-      <MidPageCTA variant="light" />
-      <LocalSEOFAQ />
+      <HubFAQ title={hub.title} faqs={hub.faqs} />
       <ContactForm />
       <Footer />
     </div>
