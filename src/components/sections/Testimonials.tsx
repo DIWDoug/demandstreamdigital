@@ -51,7 +51,7 @@ const Testimonials = () => {
         </div>
 
         {/* Video Testimonials */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
           {videoTestimonials.map((video, index) => (
             <div 
               key={index} 
