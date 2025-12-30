@@ -167,8 +167,8 @@ export const googleMapsConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Google Maps Optimization",
-    subheadline: "Each component is scoped based on market competition and client goals—not templated packages.",
+    headline: "The Components of GBP SEO",
+    subheadline: "Each component is scoped based on market competition and client goals, not templated packages.",
     blocks: [
       {
         title: "GBP Profile Optimization",
@@ -293,7 +293,7 @@ export const googleMapsConfig: ServicePageConfig = {
 
   ecosystem: {
     eyebrow: "The Bigger Picture",
-    headline: "Google Maps Is One Piece of the",
+    headline: "GBP SEO Is One Piece of the",
     highlightedText: "360° Ecosystem",
     intro: "Effective local marketing is interconnected.",
     body: "Google Maps visibility improves when supported by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
