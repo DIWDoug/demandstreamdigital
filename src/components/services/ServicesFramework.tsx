@@ -76,7 +76,7 @@ const ServicesFramework = () => {
           <div className="mt-16 pt-12 border-t border-slate-200">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 py-4">
               <a 
-                href="#contact" 
+                href="/#hero" 
                 className="btn-cta group flex items-center gap-2"
               >
                 Let's Talk Partnership

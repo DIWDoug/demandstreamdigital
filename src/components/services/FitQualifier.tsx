@@ -148,7 +148,7 @@ const FitQualifier = () => {
           {/* CTA */}
           <div className="text-center mt-12">
             <a 
-              href="#contact" 
+              href="/#hero" 
               className="btn-cta group inline-flex items-center gap-2"
             >
               Let's See If We're a Match
