@@ -5,13 +5,13 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
-
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
 import SEOValueExplainer from "@/components/services/local-seo/SEOValueExplainer";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
 import LocalSEOFitQualifier from "@/components/services/local-seo/LocalSEOFitQualifier";
 import LocalSEORoadmap from "@/components/services/local-seo/LocalSEORoadmap";
 import LocalSEOSystemContext from "@/components/services/local-seo/LocalSEOSystemContext";
+import LocalSEOSpokes from "@/components/services/local-seo/LocalSEOSpokes";
 import HubBenefits from "@/components/services/HubBenefits";
 import HubFAQ from "@/components/services/HubFAQ";
 import { getHubBySlug } from "@/data/services";
@@ -60,7 +60,10 @@ const LocalSEO = () => {
       
       <SectionDivider />
       
-      {/* 3. WHAT MOVES THE NEEDLE - data-backed ranking factors */}
+      {/* 3. THE SPOKES - what's included in Local SEO */}
+      <LocalSEOSpokes />
+      
+      <SectionDivider />
       <LocalRankingFactors />
       
       <SectionDivider />
