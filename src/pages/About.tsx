@@ -410,18 +410,11 @@ const About = () => {
                 A Handful of Clients We've Supported Over the Years
               </h2>
             </div>
-            <div className="relative border border-border/50 rounded-2xl p-6 md:p-8 lg:p-12 bg-surface-dark/30 overflow-hidden">
-              {/* Gradient overlays for smooth edge blending */}
-              <div className="absolute inset-0 pointer-events-none z-10">
-                <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-surface-dark/80 to-transparent" />
-                <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-surface-dark/80 to-transparent" />
-                <div className="absolute top-0 left-0 right-0 h-8 md:h-12 bg-gradient-to-b from-surface-dark/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-8 md:h-12 bg-gradient-to-t from-surface-dark/60 to-transparent" />
-              </div>
+            <div className="relative border border-border/30 rounded-2xl p-6 md:p-8 lg:p-12 bg-white overflow-hidden">
               <img 
                 src={clientLogosBanner} 
                 alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain opacity-70"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
