@@ -140,7 +140,7 @@ const LocalSEOSystemContext = () => {
                 </p>
               </div>
 
-              {/* Orbit icons - positioned ON the circle line */}
+              {/* Orbit icons - positioned ON the circle line, no links */}
               {orbitServices.map((service, index) => {
                 // Start from top (-90deg) and go clockwise
                 const angle = (index * 360) / orbitServices.length - 90;
@@ -155,10 +155,9 @@ const LocalSEOSystemContext = () => {
                 const y = Math.sin((angle * Math.PI) / 180) * radius;
                 
                 return (
-                  <Link
+                  <div
                     key={service.id}
-                    to={service.href}
-                    className="absolute w-14 h-14 rounded-full flex items-center justify-center transition-all hover:scale-110 group"
+                    className="absolute w-14 h-14 rounded-full flex items-center justify-center"
                     style={{
                       left: '50%',
                       top: '50%',
@@ -167,13 +166,13 @@ const LocalSEOSystemContext = () => {
                     title={service.title}
                   >
                     {/* Background circle - dark by default, green for highlighted */}
-                    <div className={`absolute inset-0 rounded-full transition-colors ${
+                    <div className={`absolute inset-0 rounded-full ${
                       isHighlighted 
-                        ? "bg-cta group-hover:bg-cta/90" 
-                        : "bg-slate-800 group-hover:bg-slate-700"
+                        ? "bg-cta" 
+                        : "bg-slate-800"
                     }`} />
                     <Icon className="relative z-10 w-6 h-6 text-white" />
-                  </Link>
+                  </div>
                 );
               })}
             </div>

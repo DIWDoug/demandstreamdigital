@@ -1,22 +1,54 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FileText, Settings, PenTool, Link2, Search, BarChart3 } from "lucide-react";
-import { getHubBySlug } from "@/data/services";
+import { ArrowRight, FileText, Settings, PenTool, Link2, Search, MapPin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-// Map spoke slugs to icons
-const spokeIcons: Record<string, LucideIcon> = {
-  "on-page-local-optimization": FileText,
-  "technical-seo-multi-location": Settings,
-  "local-content-strategy": PenTool,
-  "local-link-acquisition": Link2,
-  "keyword-research-mapping": Search,
-  "competitor-market-analysis": BarChart3,
-};
+interface Spoke {
+  title: string;
+  slug: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const spokes: Spoke[] = [
+  {
+    title: "On-Page SEO",
+    slug: "on-page-local-optimization",
+    description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market.",
+    icon: FileText,
+  },
+  {
+    title: "Technical SEO",
+    slug: "technical-seo-multi-location",
+    description: "Site architecture, internal linking, crawlability, and Core Web Vitals optimization that help search engines understand your client's service areas.",
+    icon: Settings,
+  },
+  {
+    title: "Local Keyword Strategy",
+    slug: "keyword-research-mapping",
+    description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages for maximum organic visibility.",
+    icon: Search,
+  },
+  {
+    title: "Content Development",
+    slug: "local-content-strategy",
+    description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries and build topical authority.",
+    icon: PenTool,
+  },
+  {
+    title: "Local Link Acquisition",
+    slug: "local-link-acquisition",
+    description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals.",
+    icon: Link2,
+  },
+  {
+    title: "Google Business Profile Optimization",
+    slug: "google-business-profile",
+    description: "Complete GBP optimization including categories, attributes, photos, posts, and Q&A management to maximize local pack visibility.",
+    icon: MapPin,
+  },
+];
 
 const LocalSEOSpokes = () => {
-  const hub = getHubBySlug("local-seo");
-  if (!hub) return null;
-
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
@@ -36,8 +68,8 @@ const LocalSEOSpokes = () => {
 
           {/* Spokes Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {hub.spokes.map((spoke) => {
-              const Icon = spokeIcons[spoke.slug] || FileText;
+            {spokes.map((spoke) => {
+              const Icon = spoke.icon;
               
               return (
                 <Link
