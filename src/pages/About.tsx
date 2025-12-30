@@ -565,120 +565,147 @@ const About = () => {
                     quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
                     name: "Cole",
                     date: "December 2025",
+                    services: "PPC, Local SEO, National SEO, AEO",
                     rating: 5
                   },
                   {
                     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
                     name: "Jeremy",
                     date: "December 2025",
+                    services: "Local SEO, PPC, Web Design",
+                    rating: 5
+                  },
+                  {
+                    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
+                    name: "Trevor Anderson",
+                    date: "December 2025",
+                    services: "PPC, Local SEO, Franchise Marketing",
                     rating: 5
                   },
                   {
                     quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
                     name: "Florida Agency Owner",
                     date: "2024",
+                    services: "Local SEO, PPC",
                     rating: 5
                   },
                   {
                     quote: "I don't write many reviews but after having a great experience with Dialed-In, I had to let everyone know! Doug helped us create our website and was with us every step of the way. This was the first time I had built a website and didn't know what to expect or even where to begin, but Doug answered all of our questions and made the process so easy. Doug has proven he has great business ethics and is always professional. I highly recommend this business for anyone looking to enhance their online presence, website, or increase business. Thanks again for the amazing work on our website!",
                     name: "David Dorn",
                     date: "2018",
+                    services: "Web Design",
                     rating: 5
                   },
                   {
                     quote: "Doug is incredible to work with. I was blown away at how quickly he caught onto what I was hoping to build. Without much direction he had setup campaigns pulling artwork and copy without even having to tell him what to do. Streamlined my process and generated successful campaigns. Would hire again in a heartbeat and will refer him to others.",
                     name: "Brian Sperry",
                     date: "2020",
+                    services: "PPC",
                     rating: 5
                   },
                   {
                     quote: "Dialedin Local has done an exceptional job with our SEO management. We have seen consistent improvements and sales growth since working with Doug. I highly recommend them!",
                     name: "Curtis Feather",
                     date: "2016",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "The Dialed-In Web team have always been professional and knowledgable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
                     name: "Cynthia Cavoto",
                     date: "2019",
+                    services: "Local SEO, Web Design",
                     rating: 5
                   },
                   {
                     quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team at Dialed-In did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price and in many cases, went above and beyond what they promised. Dialed-In Web is your firm.",
                     name: "Joseph Dillon",
                     date: "2017",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "We at Veterans Auto Services have really appreciated Dialed-In. Doug Bryson was great to work with. He closely monitored our companies reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view the public. Thank you Doug and Dialed-In for all that you do. You have brought success to our door and we thank you. I highly recommend their services.",
                     name: "Wendy Burns",
                     date: "2015",
+                    services: "Local SEO, Reputation Management",
                     rating: 5
                   },
                   {
                     quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Dialed-In Local. From the first time we met with Doug we felt confident in his ability to help us. He has proven that he has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed. Highly recommend.",
                     name: "Car Spa",
                     date: "2014",
+                    services: "National SEO, Multi-Location SEO",
                     rating: 5
                   },
                   {
                     quote: "I would highly recommend Doug at Dialed in Local to any business looking to grow with SEO. Doug is a great business partner and an excellent communicator. My rankings have shown tremendous growth in a very short period of time. Highly recommended!",
                     name: "ASAP Apartment Finders",
                     date: "2016",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "I've worked with Doug for several years now as a consultant. Although I'm not a client, we've worked very closely together on several projects. I've had the opportunity to see how he works from the inside of his business and would recommend him to anyone who wants to build their business through online marketing. Doug lives his values in every way, and strives to put his client's success above everything else. He's an extremely dedicated partner with his clients and works hard to help them achieve their goals. But the best thing about working with Dialed-In is Doug himself. He's a savvy businessman with a big heart who knows how to talk to his clients about the complicated world of SEO and inbound digital marketing in words us normal folks can understand. Doug gets the job done, and has a huge team of professionals he can call on to make sure his clients are happy and successful. I'd recommend him without hesitation!",
                     name: "Rebecca Macfarlane",
                     date: "2017",
+                    services: "Consulting",
                     rating: 5
                   },
                   {
                     quote: "I have worked with Doug and the Dialed-In Local team for many years in a variety of capacities. Doug is incredibly talented at what he does. He has a great business mind and is adept at understanding the unique needs, goals and visions of his clients.",
                     name: "Rebecca Daneault",
                     date: "2015",
+                    services: "Local SEO, Consulting",
                     rating: 5
                   },
                   {
                     quote: "I've worked with Doug and Dialed-In Local for several years now and am always impressed with their broad technical knowledge of the constantly changing landscape of online marketing. Not only do they understand it, they take the time to explain it in terms that make sense.",
                     name: "Chris Farr",
                     date: "2016",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "Doug does a great job providing customized and well-managed services for clients. He was able to appropriately size his SEO and design services to what I wanted. I can be pretty particular sometimes and Doug helped me right-size what I needed.",
                     name: "Daxon Edwards",
                     date: "2018",
+                    services: "Local SEO, Web Design",
                     rating: 5
                   },
                   {
                     quote: "Dialed-In Local is definitely where I go for all things web. Doug's understanding of the web market has been a huge resource for my web presence in Nashville. Being an IT Company by trait we tend to learn technology based systems quickly, and Doug keeps up with the best of them.",
                     name: "Tommy Wolosin",
                     date: "2014",
+                    services: "Local SEO, Web Design",
                     rating: 5
                   },
                   {
                     quote: "After wasting a lot of time and money with other marketing companies, I was pretty burned out and was starting to feel like it was all a scam. I was beginning to think the only real priority for these companies was taking my money. Then I found Dialed-In and everything changed.",
                     name: "Jack Haynes",
                     date: "2019",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "Doug has done an awesome job getting our sales up for our e-commerce store. In fact, we are seeing a 10x return based on the work he has done. Highly recommend using this company.",
                     name: "Free Sunshields",
                     date: "2020",
+                    services: "E-commerce SEO, PPC",
                     rating: 5
                   },
                   {
                     quote: "Doug and his team have been great to work with. His monthly reporting really lets me see what his team is doing on a monthly basis. The results have been great. I really enjoy working with such a professional company! Keep up the good work!",
                     name: "East Coast Window Films",
                     date: "2021",
+                    services: "Local SEO",
                     rating: 5
                   },
                   {
                     quote: "Doug is very professional, organized and knowledgable. He always goes above and beyond. You will not only get an SEO manager but you'll get a partnership. I would give them six stars if there was an option.",
                     name: "Advanced Apartment Locators",
                     date: "2022",
+                    services: "Local SEO, PPC",
                     rating: 5
                   }
                 ].map((review, index) => (
@@ -698,7 +725,10 @@ const About = () => {
                             ))}
                           </div>
                         </div>
-                        <span className={`text-xs ${review.rating === 1 ? 'text-text-secondary/60' : 'text-text-secondary'}`}>{review.date}</span>
+                        <div className="text-right">
+                          <span className={`text-xs block ${review.rating === 1 ? 'text-text-secondary/60' : 'text-text-secondary'}`}>{review.date}</span>
+                          <span className="text-xs text-accent-blue">{review.services}</span>
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
