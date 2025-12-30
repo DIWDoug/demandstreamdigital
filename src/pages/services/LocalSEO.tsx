@@ -6,9 +6,10 @@ import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhyItMatters from "@/components/services/WhyItMatters";
 import OurApproach from "@/components/services/OurApproach";
-import ServiceSpokesGrid from "@/components/services/ServiceSpokesGrid";
+import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
 import ServiceBenefits from "@/components/services/ServiceBenefits";
 import HubFAQ from "@/components/services/HubFAQ";
+import OtherServices from "@/components/services/OtherServices";
 import { getHubBySlug } from "@/data/services";
 
 const LocalSEO = () => {
@@ -25,7 +26,7 @@ const LocalSEO = () => {
       <Helmet>
         <title>White-Label Local SEO Services for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label local SEO fulfillment for agencies. On-page optimization, technical SEO, content strategy, and link building that drives organic visibility for your clients." />
-        <link rel="canonical" href="https://dialedinweb.com/services/local-seo" />
+        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/local-seo" />
       </Helmet>
       
       <Header />
@@ -38,10 +39,11 @@ const LocalSEO = () => {
       </div>
       <WhyItMatters {...hub.whyItMatters} />
       <OurApproach {...hub.ourApproach} />
-      <ServiceSpokesGrid hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
+      <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       <ServiceBenefits {...hub.benefits} />
       <Testimonials />
       <HubFAQ title={hub.title} faqs={hub.faqs} />
+      <OtherServices currentHubSlug={hub.slug} />
       <ContactForm />
       <Footer />
     </div>

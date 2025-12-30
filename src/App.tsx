@@ -20,7 +20,7 @@ import PaidMedia from "./pages/services/PaidMedia";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import Authority from "./pages/services/Authority";
 import Reporting from "./pages/services/Reporting";
-
+import SpokePage from "./pages/services/SpokePage";
 const queryClient = new QueryClient();
 
 const KonamiCodeListener = () => {
@@ -51,6 +51,9 @@ const App = () => (
             <Route path="/inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
             <Route path="/inbound-marketing-services/authority" element={<Authority />} />
             <Route path="/inbound-marketing-services/reporting" element={<Reporting />} />
+            
+            {/* Service Spoke Pages (sub-services) */}
+            <Route path="/inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
