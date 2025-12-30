@@ -3,16 +3,16 @@ import type { ServicePageConfig } from "@/types/servicePage";
 
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
-  title: "Google Maps Optimization",
-  metaTitle: "White-Label Google Maps Optimization for Agencies | Dialed-In Web",
-  metaDescription: "White-label Google Maps and GBP optimization for agencies. Review management, citation building, and local pack ranking strategies that dominate map results.",
+  title: "GBP SEO",
+  metaTitle: "White-Label GBP SEO & Google Maps Optimization for Agencies | Dialed-In Web",
+  metaDescription: "White-label GBP SEO and Google Maps optimization for agencies. Review management, citation building, and local pack ranking strategies that dominate map results.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/google-maps",
-  keywords: "white label google maps, GBP optimization, local pack ranking, review management, citation building",
+  keywords: "white label GBP SEO, google business profile optimization, local pack ranking, review management, citation building",
 
   hero: {
-    headline: "White Label Google Maps Optimization for",
+    headline: "White Label GBP SEO for",
     highlightedText: "Digital Agencies",
-    subheadline: "The local 3-pack drives more calls than any other SERP feature. We help your clients dominate it—with GBP optimization, review strategy, and citation management executed entirely under your brand.",
+    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies that align website pages with GBP services and products.",
     qualifierLine: "You stay the hero. We handle the Maps optimization that keeps clients ranking and renewing.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies managing local visibility at scale."
@@ -51,27 +51,27 @@ export const googleMapsConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When GBP Works",
-    subheadline: "The outcomes your clients experience when Google Maps optimization is done right.",
+    subheadline: "The outcomes your clients experience when GBP SEO is done right.",
     items: [
       {
         icon: Zap,
         title: "Direct Response From the Map Pack",
-        description: "Calls, directions, and website clicks flow directly from optimized profiles. No middleman, no friction. The phone rings from people ready to buy."
+        description: "Calls, directions, and website clicks flow directly from optimized profiles. No middleman, no friction. Every call answered within seconds through our call answering service partners ensures no lead is lost."
       },
       {
         icon: Star,
-        title: "Reviews That Build Trust and Rankings",
-        description: "Systematic review generation and professional responses build social proof that converts browsers into callers while improving local pack position."
+        title: "GBP and Website Signals in Alignment",
+        description: "GBP services and products match the website. The website matches the GBP. Google receives consistent signals filtered throughout all content, reinforcing relevance and trust."
       },
       {
         icon: TrendingUp,
-        title: "Local Pack Visibility That Compounds",
-        description: "Consistent optimization builds prominence over time. Rankings achieved today keep delivering tomorrow. Each month builds on the last."
+        title: "Rich Snippets and 120% Profile Optimization",
+        description: "Profiles optimized beyond baseline populate rich snippets automatically. Every attribute, service, product, and category maximized for visibility."
       },
       {
         icon: Target,
-        title: "Wider Geographic Reach",
-        description: "Strategic optimization helps clients appear in searches beyond their immediate location. Serving more of their target market, not just their block."
+        title: "Hub-Spoke Content Strategy Execution",
+        description: "Service and product pages built around GBP topical maps. FAQs, supporting content, and location pages all internally linked with intentional topical relevance."
       }
     ]
   },
@@ -84,16 +84,22 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         phase: 1,
         name: "Foundation",
-        title: "Audit, Optimization & Citation Cleanup",
-        description: "Comprehensive GBP audit, initial optimization, and citation foundation that establishes control and removes inconsistencies.",
+        title: "Audit, Gap Analysis & Citation Foundation",
+        description: "Comprehensive GBP audit, service gap analysis between GBP and website, competitor analysis, and citation foundation that establishes control.",
         activities: [
           "Complete GBP audit against best practices",
+          "Service gap analysis: GBP services vs. website pages",
+          "Competitor analysis for core ranking terms",
+          "Content recommendations based on competitor build-out",
           "Category and attribute optimization",
           "Business description rewrite",
           "Service and product catalog setup",
           "Photo audit and initial optimization",
-          "Citation audit and inconsistency identification",
+          "Competitor citation audit via Whitespark",
           "Core citation submissions (50+ directories)",
+          "Unstructured citations: image, audio, video syndication",
+          "Social foundation setup for natural syndication",
+          "Industry association recommendations (Chamber of Commerce, trade associations, vertical directories)",
           "Data aggregator submissions",
           "Review audit and baseline establishment",
           "Review response SOP development",
@@ -197,7 +203,7 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         title: "Local Pack Strategy",
         slug: "local-pack-strategy",
-        description: "Proximity optimization, competitive analysis, and strategic targeting to win positions in the 3-pack.",
+        description: "GBP service and product gap analysis and optimization. Topical map matching between profile and website pages.",
         icon: Target
       }
     ]
