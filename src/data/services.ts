@@ -275,6 +275,35 @@ export const hubs: Hub[] = [
           "Strategic recommendation development",
           "Ongoing competitive monitoring"
         ]
+      },
+      {
+        title: "AEO for Local",
+        slug: "aeo-local",
+        description: "Answer engine optimization that positions your business for AI-powered search results, voice queries, and featured snippets.",
+        fullDescription: "AI-powered search is reshaping how customers find local businesses. ChatGPT, Google's AI Overviews, Perplexity, and voice assistants are increasingly the first touchpoint for local searches. We optimize your clients' content and digital presence to appear in these AI-generated answers—not just traditional search results.",
+        benefits: [
+          "Visibility in AI-generated search summaries and overviews",
+          "Featured snippet capture for voice search queries",
+          "Future-proofing against the shift to conversational search",
+          "Structured data that AI engines can parse and cite",
+          "Competitive advantage as AI search adoption accelerates"
+        ],
+        deliverables: [
+          "AI visibility audit across ChatGPT, Gemini, and Perplexity",
+          "Structured data and schema markup optimization",
+          "FAQ content development for conversational queries",
+          "Entity optimization for knowledge graph inclusion",
+          "Voice search keyword integration",
+          "Monthly AI visibility tracking and reporting"
+        ],
+        process: [
+          "Baseline audit of current AI search visibility",
+          "Competitive AI presence analysis",
+          "Schema and structured data implementation",
+          "Content optimization for conversational queries",
+          "Entity and knowledge graph optimization",
+          "Ongoing monitoring and refinement"
+        ]
       }
     ]
   },
