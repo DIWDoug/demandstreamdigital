@@ -14,8 +14,8 @@ const LocalSEOPainPoints = () => {
     },
     {
       icon: TrendingDown,
-      title: "Rankings Plateau, Clients Leave",
-      body: "Generic tactics work until they do not. When rankings stall at position 7 or 8, clients start questioning their investment. You need a partner who knows how to push through."
+      title: "Clients Do Not Understand the Value",
+      body: "Your clients see rankings, not the SEO value behind them. They do not know what those clicks would cost if they were paying for ads. Without that context, they question why they are paying you at all."
     },
     {
       icon: Users,
