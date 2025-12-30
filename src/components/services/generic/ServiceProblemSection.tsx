@@ -7,6 +7,7 @@ interface ProblemConfig {
   headline: string;
   intro: string;
   painPoints: PainPoint[];
+  systemClosing?: string;
   closingLine: string;
   closingHighlight: string;
   ctaText: string;
@@ -56,8 +57,15 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             ))}
           </div>
 
+          {/* System Closing (optional) */}
+          {config.systemClosing && (
+            <p className="text-center text-slate-700 text-lg font-medium mt-10">
+              {config.systemClosing}
+            </p>
+          )}
+
           {/* Transition Line + CTA */}
-          <div className="text-center mt-14 space-y-6">
+          <div className="text-center mt-10 space-y-6">
             <p className="text-slate-600 text-lg">
               {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>

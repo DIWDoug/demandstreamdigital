@@ -95,6 +95,7 @@ export interface ServicePageConfig {
     headline: string;
     intro: string;
     painPoints: PainPoint[];
+    systemClosing?: string; // Optional summary line after pain points
     closingLine: string;
     closingHighlight: string;
     ctaText: string;
@@ -123,6 +124,7 @@ export interface ServicePageConfig {
     headline: string;
     subheadline: string;
     phases: RoadmapPhase[];
+    executionNote?: string; // Optional line about white-label execution
     footerNote: string;
   };
 

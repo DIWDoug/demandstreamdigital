@@ -13,9 +13,9 @@ export const googleMapsConfig: ServicePageConfig = {
     headline: "White Label GBP SEO for",
     highlightedText: "Digital Agencies",
     subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies that align website pages with GBP services and products.",
-    qualifierLine: "You stay the hero. We handle the Maps optimization that keeps clients ranking and renewing.",
+    qualifierLine: "Built to protect retention, defend margins, and win Maps visibility in competitive markets.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies managing local visibility at scale."
+    ctaSubtext: "You stay the hero. We handle the execution that keeps clients ranking and renewing."
   },
 
   problem: {
@@ -44,6 +44,7 @@ export const googleMapsConfig: ServicePageConfig = {
         body: "The Vicinity Update made location the dominant factor. Without a strategy that accounts for proximity, your clients lose visibility outside their immediate area."
       }
     ],
+    systemClosing: "All four failures share one root problem: no operating system for ongoing GBP management.",
     closingLine: "We manage Google Business Profiles with the consistency and strategy they require.",
     closingHighlight: "Your clients stay visible. You keep the margin you earned.",
     ctaText: "See How We Manage GBP"
@@ -176,6 +177,7 @@ export const googleMapsConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
+    executionNote: "Execution is handled entirely under your brand, with clear checkpoints and white-labeled deliverables.",
     footerNote: "Phase duration varies by market competitiveness and scope. Most clients see meaningful pack movement within 3-4 months."
   },
 
@@ -247,6 +249,10 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         point: "You value retention over quick wins",
         detail: "Our approach builds sustainable visibility that compounds over time. If your goal is keeping clients for years, this partnership makes sense."
+      },
+      {
+        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
       }
     ],
     notFit: [
@@ -282,7 +288,9 @@ export const googleMapsConfig: ServicePageConfig = {
         items: [
           { question: "How long does it take to see Google Maps results?", answer: "Most clients see meaningful movement in local pack positions within 2-4 months. Competitive markets may take longer. We set realistic expectations during discovery based on actual market data." },
           { question: "How do you improve Google Maps rankings?", answer: "Maps rankings depend on three factors: relevance, distance, and prominence. We optimize relevance through category and keyword optimization, build prominence through reviews and citations, and help businesses serve wider areas through strategic content and optimization." },
-          { question: "Can you guarantee first-page rankings?", answer: "No legitimate agency can guarantee specific rankings. What we can guarantee is consistent, strategic optimization based on proven methodologies. Our track record demonstrates the results this approach produces." }
+          { question: "Can you guarantee first-page rankings?", answer: "No legitimate agency can guarantee specific rankings. What we can guarantee is consistent, strategic optimization based on proven methodologies. Our track record demonstrates the results this approach produces." },
+          { question: "What is the difference between GBP optimization and Local SEO?", answer: "GBP optimization focuses specifically on Google Business Profile visibility—rankings in the local 3-pack and Maps. Local SEO is broader, encompassing organic search results, on-page optimization, technical SEO, and link building. GBP optimization is one component of a complete local SEO strategy, and the two work together. Strong GBP signals reinforce organic rankings, and strong organic content reinforces GBP relevance." },
+          { question: "How does GBP SEO support AI search and local answers?", answer: "AI search systems like Google's AI Overviews and conversational assistants pull information from trusted, well-structured sources. A fully optimized GBP with consistent NAP data, reviews, and schema markup increases the likelihood of being cited in AI-generated local answers. Our optimization approach accounts for both traditional pack rankings and emerging AI visibility factors." }
         ]
       },
       {
@@ -309,10 +317,10 @@ export const googleMapsConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "GBP SEO Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "Effective local marketing is interconnected.",
-    body: "Google Maps visibility improves when supported by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
+    intro: "GBP SEO acts as the demand capture layer.",
+    body: "Supported by authority, relevance, and conversion infrastructure across the ecosystem. Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack with optimized profiles and reviews.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Star, id: "reputation", title: "Reputation", description: "Build trust with review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
