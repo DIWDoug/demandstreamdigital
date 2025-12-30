@@ -12,7 +12,7 @@ const PricingFramework = () => {
     },
     {
       icon: MapPin,
-      title: "Google Maps / GBP",
+      title: "GBP SEO",
       range: "$400 – $800",
       unit: "/month",
       includes: ["Profile optimization", "Review management", "Citations", "Posting schedule"],

@@ -52,7 +52,7 @@ const MIN_MONTHLY = 500;           // Minimum monthly for small markets
 // Base hours per month for services
 const baseServiceHours: Record<string, { hours: number; label: string }> = {
   localSeo: { hours: 10, label: "Local SEO" },
-  gbp: { hours: 5, label: "Google Business Profile" },
+  gbp: { hours: 5, label: "GBP SEO" },
   googleAds: { hours: 8, label: "Google Ads" },
   metaAds: { hours: 7, label: "Meta Ads" },
   email: { hours: 6, label: "Email Marketing" },
