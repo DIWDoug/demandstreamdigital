@@ -18,7 +18,7 @@ const services: Service[] = [
   },
   {
     icon: Map,
-    title: "Google Business Profile",
+    title: "GBP SEO",
     description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
     href: "/services/google-maps",
   },
