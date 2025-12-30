@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import logo from "@/assets/dialedinweb-logo.png";
@@ -6,27 +7,75 @@ const Footer = () => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
-      items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
+      hubSlug: "local-seo",
+      items: [
+        { label: "On-Page Optimization", slug: "on-page-local-optimization" },
+        { label: "Technical SEO", slug: "technical-seo-multi-location" },
+        { label: "Local Keyword Strategy", slug: "keyword-research-mapping" },
+        { label: "Content Development", slug: "local-content-strategy" },
+        { label: "Link Building", slug: "local-link-acquisition" },
+        { label: "Competitor Analysis", slug: "competitor-market-analysis" }
+      ]
     },
     {
       title: "GOOGLE MAPS",
-      items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
+      hubSlug: "google-maps",
+      items: [
+        { label: "GBP Optimization", slug: "gbp-management" },
+        { label: "Review Management", slug: "review-generation" },
+        { label: "Citation Building", slug: "citation-building" },
+        { label: "Local Pack Strategy", slug: "local-pack-ranking" },
+        { label: "Photo Optimization", slug: "photo-media-optimization" },
+        { label: "Multi-Location GBP", slug: "multi-location-gbp" }
+      ]
     },
     {
       title: "PAID MEDIA",
-      items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
+      hubSlug: "paid-media",
+      items: [
+        { label: "Google Ads", slug: "google-ads-management" },
+        { label: "Meta Ads", slug: "meta-ads-management" },
+        { label: "Local Service Ads", slug: "local-service-ads" },
+        { label: "Retargeting", slug: "retargeting-campaigns" },
+        { label: "Landing Pages", slug: "landing-page-optimization" },
+        { label: "Conversion Tracking", slug: "conversion-tracking" }
+      ]
     },
     {
       title: "EMAIL MARKETING",
-      items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
+      hubSlug: "email-marketing",
+      items: [
+        { label: "Campaign Strategy", slug: "campaign-strategy" },
+        { label: "List Management", slug: "list-management" },
+        { label: "Automation Flows", slug: "automation-flows" },
+        { label: "Newsletter Design", slug: "newsletter-design" },
+        { label: "A/B Testing", slug: "ab-testing" },
+        { label: "Performance Analytics", slug: "performance-analytics" }
+      ]
     },
     {
       title: "AUTHORITY",
-      items: ["PR Placements", "Local Citations", "Industry Directories", "Brand Mentions", "Reputation Signals", "Trust Building"]
+      hubSlug: "authority",
+      items: [
+        { label: "PR Placements", slug: "pr-placements" },
+        { label: "Digital PR", slug: "digital-pr" },
+        { label: "Industry Directories", slug: "industry-directories" },
+        { label: "Brand Mentions", slug: "brand-mentions" },
+        { label: "Reputation Signals", slug: "reputation-signals" },
+        { label: "Trust Building", slug: "trust-building" }
+      ]
     },
     {
       title: "REPORTING",
-      items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
+      hubSlug: "reporting",
+      items: [
+        { label: "White-Label Dashboards", slug: "white-label-dashboards" },
+        { label: "Monthly Reports", slug: "monthly-reports" },
+        { label: "Rank Tracking", slug: "rank-tracking" },
+        { label: "Call Tracking", slug: "call-tracking" },
+        { label: "ROI Analysis", slug: "roi-analysis" },
+        { label: "Client Presentations", slug: "client-presentations" }
+      ]
     }
   ];
 
@@ -40,15 +89,21 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
             {serviceCategories.map((category, index) => (
               <div key={index}>
-                <h4 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
+                <Link 
+                  to={`/white-label-inbound-marketing-services/${category.hubSlug}`}
+                  className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-cta transition-colors"
+                >
                   {category.title}
-                </h4>
+                </Link>
                 <ul className="space-y-2">
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
-                      <span className="text-xs text-text-secondary hover:text-foreground transition-colors cursor-default">
-                        {item}
-                      </span>
+                      <Link 
+                        to={`/white-label-inbound-marketing-services/${category.hubSlug}/${item.slug}`}
+                        className="text-xs text-text-secondary hover:text-cta transition-colors"
+                      >
+                        {item.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -79,11 +134,13 @@ const Footer = () => {
 
             {/* Center - Logo */}
             <div className="flex justify-center order-first md:order-none mb-4 md:mb-0">
-              <img 
-                src={logo} 
-                alt="Dialed-In Web" 
-                className="h-8 brightness-0 invert opacity-80"
-              />
+              <Link to="/">
+                <img 
+                  src={logo} 
+                  alt="Dialed-In Web" 
+                  className="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </Link>
             </div>
 
             {/* Right - Social Icons */}
@@ -144,12 +201,12 @@ const Footer = () => {
               <p className="text-xs text-text-muted">
                 © {new Date().getFullYear()} Dialed-In Web. All Rights Reserved.
               </p>
-              <a 
-                href="#"
+              <Link 
+                to="/privacy"
                 className="text-xs text-text-muted hover:text-text-secondary transition-colors"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
