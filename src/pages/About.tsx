@@ -674,8 +674,8 @@ const About = () => {
                     rating: 5
                   }
                 ].map((review, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2">
-                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 h-full">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 h-auto">
+                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8">
                       <p className="font-serif text-text-secondary leading-relaxed mb-6">
                         "{review.quote}"
                       </p>
