@@ -79,83 +79,83 @@ export const paidMediaConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Strategy to Scale",
-    subheadline: "Every campaign is built for the specific market and goals, sequenced to generate leads first, then optimize and expand.",
+    subheadline: "Every campaign is built for the specific platform, audience, and market—sequenced to generate leads first, then optimize and expand across channels.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
-        title: "Strategy, Structure & Launch",
-        description: "Campaign architecture designed for local lead generation, with proper tracking and attribution from day one.",
+        title: "Research, Strategy & Infrastructure",
+        description: "Comprehensive analysis and tracking setup before any spend goes out the door.",
         activities: [
           "Market and competitor analysis",
-          "Keyword research and mapping",
-          "Campaign structure design",
-          "Geographic targeting configuration",
-          "Ad copy development and testing setup",
-          "Extension creation and optimization",
-          "Landing page audit or development",
+          "Campaign structure design by platform",
+          "Ad copy development and testing matrix",
+          "Landing page audit and development",
+          "Conversion tracking setup and linking",
+          "Offline conversion setup (if applicable)",
           "Call tracking implementation",
-          "Conversion tracking setup",
-          "Bid strategy selection",
           "Budget allocation framework",
-          "Campaign launch and initial monitoring"
+          "Conversion value definition"
         ],
         icon: Target,
         color: "hsl(76, 42%, 41%)"
       },
       {
         phase: 2,
-        name: "Optimization",
-        title: "Refinement & Efficiency",
-        description: "Data-driven optimization that reduces waste and improves lead quality and volume.",
+        name: "Audience",
+        title: "Targeting & Segmentation",
+        description: "Platform-specific audience strategies—search intent for Google, behaviors and interests for Meta, engagement-based retargeting across both.",
         activities: [
-          "Search term analysis and negative keyword management",
-          "Ad copy A/B testing",
-          "Bid adjustments by device, location, time",
-          "Quality Score improvement",
-          "Landing page conversion optimization",
-          "Audience refinement",
-          "Budget reallocation based on performance",
-          "Weekly optimization cycles"
+          "Keyword research and mapping (Google/LSA)",
+          "Interest and behavior audience setup (Meta)",
+          "Lookalike audience development (Meta)",
+          "Custom audience segmentation (Meta)",
+          "Fans, friends of fans, and engagement targeting",
+          "Geographic and demographic layering",
+          "Retargeting audience setup (engagement-based)",
+          "Negative audience and keyword exclusions"
         ],
         icon: Settings,
         color: "hsl(224, 60%, 55%)"
       },
       {
         phase: 3,
-        name: "Expansion",
-        title: "Scaling What Works",
-        description: "Expanding successful campaigns into new keywords, audiences, and channels.",
+        name: "Optimization",
+        title: "Refinement & Efficiency",
+        description: "Data-driven optimization across platforms that reduces waste and improves lead quality and volume.",
         activities: [
-          "New keyword expansion",
-          "Audience expansion testing",
-          "New campaign type testing (Display, YouTube, etc.)",
-          "Geographic expansion where applicable",
-          "Increased budget deployment",
-          "Cross-channel strategy (Google + Meta)",
-          "Retargeting campaign development"
+          "Search term analysis and negative keyword management",
+          "Ad copy and creative A/B testing",
+          "Bid adjustments by device, location, time",
+          "Quality Score and relevance improvement",
+          "Landing page conversion optimization",
+          "Audience performance analysis and refinement",
+          "Budget reallocation based on performance",
+          "Weekly optimization cycles across all platforms"
         ],
         icon: TrendingUp,
         color: "hsl(35, 90%, 50%)"
       },
       {
         phase: 4,
-        name: "Dominance",
-        title: "Market Leadership & Sustained Performance",
-        description: "Maintaining competitive advantage while maximizing efficiency at scale.",
+        name: "Scale",
+        title: "Expansion & Cross-Channel Synergy",
+        description: "Expanding successful campaigns into new keywords, audiences, and channels while maintaining efficiency.",
         activities: [
-          "Competitive monitoring and response",
-          "Advanced bidding strategies",
+          "New keyword and interest expansion",
+          "Lookalike expansion and seed audience testing",
+          "Cross-channel retargeting (Google Display + Meta)",
+          "New campaign type testing (YouTube, Reels, etc.)",
+          "Geographic expansion where applicable",
+          "Increased budget deployment on winners",
           "Attribution modeling refinement",
-          "Quarterly strategic reviews",
-          "New platform feature adoption",
-          "Long-term growth planning"
+          "Quarterly strategic reviews and growth planning"
         ],
         icon: BarChart3,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. Most clients see meaningful lead flow within 2-4 weeks."
+    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. The framework applies across Google, Meta, LSA, and retargeting—each platform gets the audience strategy it requires."
   },
 
   buildingBlocks: {
