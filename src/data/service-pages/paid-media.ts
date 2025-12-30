@@ -12,8 +12,8 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Your clients need leads today, not in six months. We build and manage Google Ads and Meta campaigns that generate qualified local leads at scale, executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We handle the execution that keeps clients growing and confident.",
+    subheadline: "Paid media success isn't about building the perfect campaign—it's about whittling away everything that's keeping it from working. We cut the waste so spend connects to leads.",
+    qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
   },
@@ -51,7 +51,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "What changes when campaigns are built for local lead generation and optimized weekly.",
+    subheadline: "Each week, we whittle away inefficiencies—bad keywords, weak audiences, underperforming ads—until what's left is a campaign that works.",
     items: [
       {
         icon: Zap,
@@ -60,13 +60,13 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         icon: Target,
-        title: "Spend Connects to Revenue",
-        description: "Every dollar is tracked. Call tracking, form attribution, and conversion data prove what the investment produces."
+        title: "Waste Gets Eliminated Weekly",
+        description: "Negative keywords, excluded audiences, paused underperformers. We cut what doesn't work so budget flows to what does."
       },
       {
         icon: TrendingUp,
-        title: "Performance Compounds Monthly",
-        description: "Daily optimization and weekly refinement compound into continuously improving results."
+        title: "Efficiency Compounds Monthly",
+        description: "Each optimization removes friction. Cost per lead drops as we refine targeting, messaging, and audience signals."
       },
       {
         icon: DollarSign,
@@ -121,16 +121,16 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Optimization",
-        title: "Refinement & Efficiency",
-        description: "Data-driven optimization across platforms that reduces waste and improves lead quality and volume.",
+        title: "Whittling Away Waste",
+        description: "This is where campaigns get good. We cut what doesn't work—bad keywords in Google, weak audiences in Meta, underperforming placements everywhere.",
         activities: [
-          "Search term analysis and negative keyword management",
+          "Search term analysis and negative keyword exclusions",
+          "Audience performance analysis and pruning",
+          "Placement and position optimization (Meta)",
           "Ad copy and creative A/B testing",
           "Bid adjustments by device, location, time",
-          "Quality Score and relevance improvement",
           "Landing page conversion optimization",
-          "Audience performance analysis and refinement",
-          "Budget reallocation based on performance",
+          "Budget reallocation to proven winners",
           "Weekly optimization cycles across all platforms"
         ],
         icon: TrendingUp,
@@ -155,7 +155,7 @@ export const paidMediaConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. The framework applies across Google, Meta, LSA, and retargeting—each platform gets the audience strategy it requires."
+    footerNote: "Every platform requires different whittling. Google means negative keywords and search term exclusions. Meta means testing audiences, interests, and placements. The goal is always the same: cut the waste so budget flows to what works."
   },
 
   buildingBlocks: {
