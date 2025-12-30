@@ -586,7 +586,7 @@ const About = () => {
                       <span className="text-cta font-bold text-sm">'21</span>
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-cta uppercase tracking-wide">2021-2022</p>
+                      <p className="text-xs font-bold text-cta uppercase tracking-wide">2021-Present</p>
                       <p className="text-lg font-semibold text-foreground">White-Label Pivot</p>
                     </div>
                   </div>
@@ -596,7 +596,7 @@ const About = () => {
                   <div className="pt-3 border-t border-border/50 space-y-2">
                     <div>
                       <p className="text-xs text-cta font-semibold">Anderson Collaborative + Florida Agency</p>
-                      <p className="text-xs text-text-secondary">Several million in paid ads + SEO across both accounts</p>
+                      <p className="text-xs text-text-secondary">Several million in paid ads + SEO across both accounts. Still partners to this day.</p>
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
