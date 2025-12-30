@@ -192,11 +192,16 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
-              { label: 'Our Mission', href: '#mission' },
-              { label: 'Our Vision', href: '#vision' },
-              { label: 'Our Values', href: '#values' },
-              { label: 'Our Team', href: '#team' },
+              { label: 'Mission', href: '#mission' },
+              { label: 'Vision', href: '#vision' },
+              { label: 'Values', href: '#values' },
+              { label: 'Team', href: '#team' },
+              { label: 'Clients', href: '#clients' },
+              { label: 'Timeline', href: '#timeline' },
+              { label: 'Who We Are', href: '#who-we-are' },
+              { label: 'Why Us', href: '#why-us' },
               { label: 'Reviews', href: '#reviews' },
+              { label: 'Contact', href: '#contact' },
             ].map((item) => (
               <a
                 key={item.href}
@@ -379,7 +384,7 @@ const About = () => {
       </section>
 
       {/* From Those Who Know Us Best - Client Logos */}
-      <section className="py-16 lg:py-20 bg-background">
+      <section id="clients" className="py-16 lg:py-20 bg-background scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
@@ -409,7 +414,7 @@ const About = () => {
       </section>
 
       {/* The True Timeline - Road Map */}
-      <section className="py-16 lg:py-24 bg-background overflow-hidden">
+      <section id="timeline" className="py-16 lg:py-24 bg-background overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -883,16 +888,22 @@ const About = () => {
       </section>
 
       {/* Why We Built This */}
-      <WhoWeAre />
+      <div id="who-we-are" className="scroll-mt-32">
+        <WhoWeAre />
+      </div>
 
       {/* What Actually Changes When Fulfillment Works */}
-      <WhyPartnerWithUs />
+      <div id="why-us" className="scroll-mt-32">
+        <WhyPartnerWithUs />
+      </div>
 
       {/* What Agency Partners Say */}
       <Testimonials />
 
       {/* Contact CTA */}
-      <ContactForm />
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
       
       <Footer />
     </>
