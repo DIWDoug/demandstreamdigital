@@ -120,7 +120,7 @@ const Hero = () => {
             {step === 1 ? (
               <form onSubmit={handleStep1Submit} className="flex flex-col sm:flex-row gap-3">
                 <input
-                  type="url"
+                  type="text"
                   placeholder="yourwebsite.com"
                   value={website}
                   onChange={(e) => setWebsite(e.target.value)}
@@ -181,9 +181,10 @@ const Hero = () => {
                     <select
                       value={formData.revenue}
                       onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base appearance-none"
                     >
-                      <option value="" className="text-text-muted">Monthly Revenue (optional)</option>
+                      <option value="" className="text-text-muted">Monthly Revenue *</option>
                       <option value="under-25k">Under $25k</option>
                       <option value="25k-50k">$25k - $50k</option>
                       <option value="50k-100k">$50k - $100k</option>
