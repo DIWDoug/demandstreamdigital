@@ -187,8 +187,31 @@ const About = () => {
         </div>
       </section>
 
+      {/* Anchor Navigation */}
+      <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
+            {[
+              { label: 'Our Mission', href: '#mission' },
+              { label: 'Our Vision', href: '#vision' },
+              { label: 'Our Values', href: '#values' },
+              { label: 'Our Team', href: '#team' },
+              { label: 'Reviews', href: '#reviews' },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm md:text-base font-medium text-white/90 hover:text-white whitespace-nowrap transition-colors duration-200 px-2 py-1"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+
       {/* Mission */}
-      <section className="py-16 lg:py-24 relative bg-surface-dark overflow-hidden">
+      <section id="mission" className="py-16 lg:py-24 relative bg-surface-dark overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -227,7 +250,7 @@ const About = () => {
       </section>
 
       {/* Vision */}
-      <section className="py-20 lg:py-28 relative bg-background overflow-hidden">
+      <section id="vision" className="py-20 lg:py-28 relative bg-background overflow-hidden scroll-mt-32">
         {/* Subtle background pattern */}
         <div 
           className="absolute inset-0 opacity-[0.015]"
@@ -274,7 +297,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 lg:py-28 relative bg-background">
+      <section id="values" className="py-20 lg:py-28 relative bg-background scroll-mt-32">
         <div 
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -316,7 +339,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 lg:py-28 relative bg-surface-dark">
+      <section id="team" className="py-20 lg:py-28 relative bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
@@ -695,7 +718,7 @@ const About = () => {
       </section>
 
       {/* Real Reviews from Real Clients */}
-      <section className="py-20 lg:py-28 bg-surface-dark">
+      <section id="reviews" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
