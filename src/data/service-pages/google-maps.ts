@@ -12,7 +12,7 @@ export const googleMapsConfig: ServicePageConfig = {
   hero: {
     headline: "White Label GBP SEO for",
     highlightedText: "Digital Agencies",
-    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies—built to protect retention, defend margins, and win Maps visibility in competitive markets.",
+    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies. Built to protect retention, defend margins, and win Maps visibility in competitive markets.",
     qualifierLine: "You stay the hero. We handle the execution that keeps clients ranking and renewing.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies managing local visibility at scale."
@@ -45,7 +45,7 @@ export const googleMapsConfig: ServicePageConfig = {
       }
     ],
     systemClosing: "",
-    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system—",
+    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system,",
     closingHighlight: "so your clients stay visible and you keep the margin you earned.",
     ctaText: "See How We Manage GBP"
   },

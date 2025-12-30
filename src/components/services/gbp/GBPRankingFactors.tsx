@@ -29,7 +29,7 @@ const GBPRankingFactors = () => {
 
           {/* Interpretation Line */}
           <p className="text-center mt-8 text-slate-700 text-lg font-medium max-w-3xl mx-auto">
-            This is why our execution prioritizes GBP signals, review velocity, citations, and website alignment—instead of vanity metrics.
+            This is why our execution prioritizes GBP signals, review velocity, citations, and website alignment over vanity metrics.
           </p>
 
           {/* Source Link */}
