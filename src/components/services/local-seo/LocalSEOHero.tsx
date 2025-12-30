@@ -70,12 +70,12 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
           
           {/* Supporting sentence - benefit-first */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Your clients want more calls, more leads, and more customers walking through their door. We make that happen under your brand, with reporting clear enough that they never ask "what am I paying for?"
+            Stop explaining why SEO takes time. Start showing clients their phones ringing from Google searches. We handle the fulfillment under your brand with reporting so clear, renewals become formalities.
           </p>
 
           {/* Payoff sentence - specificity */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Clients stay longer when results speak for themselves. Your brand. Our execution.
+            You stay the hero. We stay invisible.
           </p>
 
           {/* Simple email/website form */}
