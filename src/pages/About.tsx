@@ -480,6 +480,10 @@ const About = () => {
                       <p className="text-sm text-text-secondary">SMB clients: dog training, dental, digital marketing, tourism, photography, metabolic weight loss (national), heavy machinery lube skids, Kohler generators. Still partners today.</p>
                     </div>
                     <div>
+                      <p className="text-sm text-cta font-semibold">Cole's Agency (Dallas)</p>
+                      <p className="text-sm text-text-secondary">7-year partnership. Theme parks, water parks, live music festivals, international e-commerce (tens of millions in annual sales), and billion-dollar energy companies.</p>
+                    </div>
+                    <div>
                       <p className="text-sm text-cta font-semibold">John Perieteanu / Amazon</p>
                       <p className="text-sm text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
                     </div>
