@@ -164,40 +164,52 @@ export const paidMediaConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
       {
-        title: "Campaign Strategy & Structure",
-        slug: "campaign-strategy-structure",
-        description: "Campaign architecture for local lead generation with proper targeting, organization, and efficiency.",
+        title: "Google Ads Management",
+        slug: "google-ads-management",
+        description: "Search, display, and shopping campaigns built for local lead generation and performance.",
+        icon: Search
+      },
+      {
+        title: "Meta Ads Management",
+        slug: "meta-ads-management",
+        description: "Facebook and Instagram campaigns that reach local audiences and drive qualified leads.",
         icon: Target
       },
       {
-        title: "Ad Copy & Creative",
-        slug: "ad-copy-creative",
-        description: "Compelling ad copy, extensions, and creative assets built to drive local conversions.",
-        icon: FileText
+        title: "Local Service Ads",
+        slug: "local-service-ads",
+        description: "Google-verified LSAs that put your clients at the top of local search with pay-per-lead pricing.",
+        icon: Map
       },
       {
-        title: "Landing Page Optimization",
-        slug: "landing-page-optimization",
+        title: "Retargeting Campaigns",
+        slug: "retargeting-campaigns",
+        description: "Display and social retargeting that keeps your clients top of mind with past visitors.",
+        icon: Share2
+      },
+      {
+        title: "Landing Page Design",
+        slug: "landing-page-design",
         description: "Conversion-focused landing pages with local trust signals, click-to-call, and optimized forms.",
         icon: MousePointerClick
       },
       {
-        title: "Bid Management",
-        slug: "bid-management",
-        description: "Smart bidding strategies and budget allocation to maximize lead volume within profitability targets.",
-        icon: DollarSign
+        title: "Conversion Tracking",
+        slug: "conversion-tracking",
+        description: "Proper tracking setup that connects every click to form fills, calls, and revenue.",
+        icon: Settings
       },
       {
         title: "Call Tracking & Attribution",
         slug: "call-tracking-attribution",
-        description: "Call recording, lead scoring, and multi-touch attribution to prove ROI and inform optimization.",
+        description: "Call recording, dynamic number insertion, and multi-touch attribution for complete visibility.",
         icon: BarChart3
       },
       {
-        title: "Ongoing Optimization",
-        slug: "ongoing-optimization",
-        description: "Daily monitoring, weekly optimization, and monthly strategy reviews for continuous improvement.",
-        icon: Settings
+        title: "ROI Analysis & Reporting",
+        slug: "roi-analysis-reporting",
+        description: "White-labeled reports that connect ad spend to leads and revenue your clients understand.",
+        icon: DollarSign
       }
     ]
   },
