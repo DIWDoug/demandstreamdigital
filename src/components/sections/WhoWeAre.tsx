@@ -109,7 +109,7 @@ const WhoWeAre = () => {
                 
                 <div className="font-handwriting space-y-6 text-lg lg:text-xl leading-relaxed pl-4 border-l-2 border-cta/20">
                   <p className="text-foreground font-medium">
-                    I've been running agencies since 2011.
+                    <span className="float-left text-5xl lg:text-6xl font-semibold text-cta leading-none mr-2 mt-1">I</span>'ve been running agencies since 2011.
                   </p>
 
                   <p className="text-text-secondary">
