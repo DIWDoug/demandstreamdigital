@@ -113,27 +113,19 @@ const WhoWeAre = () => {
                   </p>
 
                   <p className="text-text-secondary">
-                    I've sat through the BNI meetings. Done the cold outreach. Outsourced work to vendors I'd never met, crossing my fingers that what came back would be something I could actually send to a client.
-                  </p>
-
-                  <p className="text-text-secondary">
-                    Sometimes it was fine. Sometimes it was a disaster. And the worst part? I never really knew what I was going to get until it landed in my inbox.
+                    I've outsourced work to vendors I'd never met, hoping what came back was something I could send to a client. Sometimes it was fine. Sometimes it was a disaster. I never knew what I'd get until it landed in my inbox.
                   </p>
                   
                   <p className="text-text-secondary">
-                    I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, blame the client. Move on. Repeat.
+                    I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, move on. Repeat.
                   </p>
 
                   <p className="text-foreground font-medium">
-                    Then I realized the obvious thing nobody wants to admit:
+                    Then I realized the obvious thing:
                   </p>
 
                   <p className="text-text-secondary">
-                    One size doesn't fit all. Every market is different. Every client is different. And when you force cookie-cutter deliverables onto unique situations, you're in a race to the bottom. Nobody wins.
-                  </p>
-                  
-                  <p className="text-text-secondary">
-                    The other problem? Most agency people can't explain SEO in a way that builds trust. They hedge. They use jargon. Clients feel confused, then skeptical, then gone.
+                    Every market is different. Every client is different. Cookie-cutter deliverables forced onto unique situations is a race to the bottom.
                   </p>
 
                   <p className="text-foreground font-medium">
@@ -141,11 +133,11 @@ const WhoWeAre = () => {
                   </p>
 
                   <p className="text-text-secondary">
-                    Not as a visionary trying to scale. As a marketer who learned the work by doing it. I've been the one in the trenches. Building campaigns. Fixing what broke. Understanding why things actually rank.
+                    Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches—building campaigns, fixing what broke, understanding why things actually rank.
                   </p>
 
                   <p className="text-foreground font-medium">
-                    This is fulfillment built by a marketer, for marketers.
+                    This experience is now codified into how we scope, execute, and communicate every engagement.
                   </p>
                   
                   <p className="text-text-secondary">

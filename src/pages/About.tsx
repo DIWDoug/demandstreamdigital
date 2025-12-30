@@ -182,12 +182,15 @@ const About = () => {
             
             {/* Right - Description */}
             <div className="lg:border-l lg:border-border/50 lg:pl-12">
-              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
+              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed mb-4">
                 Since 2011, we've helped agencies keep clients longer by delivering 
                 inbound marketing that actually works: SEO, paid advertising, 
                 email marketing, and more. All scoped to the market, 
                 explained in plain English, and executed by practitioners 
                 who've done the work themselves.
+              </p>
+              <p className="font-serif text-base text-text-muted leading-relaxed">
+                Since 2011, we've worked directly with small and mid-sized businesses and alongside agencies, building and fulfilling inbound marketing campaigns across local, regional, and national markets.
               </p>
             </div>
           </div>
@@ -229,13 +232,16 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                The True Timeline
+                The Operating Experience Behind Dialed-In Web
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 From Nashville Songwriter to Full-Service Agency
               </h2>
-              <p className="font-serif text-text-secondary max-w-2xl mx-auto">
+              <p className="font-serif text-text-secondary max-w-2xl mx-auto mb-4">
                 This isn't a resume. It's the journey of how I came to help you today.
+              </p>
+              <p className="text-sm text-text-muted max-w-3xl mx-auto">
+                Each phase below represents constraints learned, mistakes corrected, and systems refined that now inform how we scope, execute, and support our clients today.
               </p>
             </div>
             
@@ -538,7 +544,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                What Clients Say
+                What Agencies and Business Owners Say
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
                 Real Reviews <span className="text-cta">from Real Clients</span>
@@ -676,12 +682,6 @@ const About = () => {
                     name: "Advanced Apartment Locators",
                     date: "2022",
                     rating: 5
-                  },
-                  {
-                    quote: "This is an unethical spam-shop. If you want your business advertised in the same way as Hot Teen Webcam Girls, mail-order Viagra, and knockoff designer handbags, these are the folks who can give you a black eye all over the Internet.",
-                    name: "James D. Macdonald",
-                    date: "2013",
-                    rating: 1
                   }
                 ].map((review, index) => (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2">
@@ -746,9 +746,12 @@ const About = () => {
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
                 The People Behind the Work
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
                 Our Team
               </h2>
+              <p className="text-text-secondary max-w-2xl mx-auto">
+                This is a delivery-first team built for execution, communication, and long-term client support—not a sales organization.
+              </p>
             </div>
 
             {/* Team Grid - Large Photos */}
