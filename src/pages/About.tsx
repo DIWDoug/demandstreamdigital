@@ -352,7 +352,7 @@ const About = () => {
                 From Nashville Songwriter to Full-Service Agency
               </h2>
               <p className="font-serif text-text-secondary max-w-2xl mx-auto">
-                Experience equals wisdom. Make enough mistakes and you get to call it history.
+                Never been afraid to get my hands dirty. That's the only way to really learn this stuff.
               </p>
             </div>
             
@@ -446,12 +446,12 @@ const About = () => {
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Learned what it really meant to focus on the big picture. The 360. This is where the paid advertising adventure started.
+                    Freelancing wasn't for me at that stage. Sold my clientele to Horton Group and joined their team. Learned what it really meant to focus on the big picture: the 360. This is where the paid advertising adventure started.
                   </p>
                   <div className="pt-3 border-t border-border/50">
                     <div>
                       <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville)</p>
-                      <p className="text-xs text-text-secondary">Learned inbound marketing. SEO + paid media integration.</p>
+                      <p className="text-xs text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
                     </div>
                   </div>
                 </div>
