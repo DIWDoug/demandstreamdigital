@@ -228,18 +228,17 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Image placeholder - left side */}
+              {/* Image - left side */}
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent-blue/20 to-cta/10 border border-border overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-cta/20 flex items-center justify-center">
-                        <Eye className="w-8 h-8 text-cta" />
-                      </div>
-                      <p className="text-sm text-text-secondary font-serif">Focused on sustainable growth</p>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
+                    alt="Team collaboration and strategy session"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+                {/* Decorative accent */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cta/20 rounded-2xl -z-10" />
               </div>
               
               {/* Content - right side */}
@@ -293,13 +292,21 @@ const About = () => {
                 </p>
               </div>
               
-              {/* Stats card - right side */}
-              <div className="relative flex justify-center lg:justify-end">
-                <div className="bg-surface-dark border border-border rounded-2xl p-10 lg:p-12 text-center max-w-sm">
-                  <p className="text-7xl lg:text-8xl font-bold text-cta mb-2" style={{ fontFamily: 'Inter Variable, sans-serif' }}>
+              {/* Image with stats overlay - right side */}
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
+                    alt="Professional team working together"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Stats overlay card */}
+                <div className="absolute -bottom-6 -left-6 bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 text-center shadow-xl">
+                  <p className="text-5xl lg:text-6xl font-bold text-cta mb-1" style={{ fontFamily: 'Inter Variable, sans-serif' }}>
                     14
                   </p>
-                  <p className="text-lg text-text-secondary font-serif">
+                  <p className="text-sm text-text-secondary font-serif">
                     Years of experience
                   </p>
                 </div>
