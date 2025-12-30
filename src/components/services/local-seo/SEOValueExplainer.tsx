@@ -27,7 +27,7 @@ const SEOValueExplainer = () => {
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
               <div>
                 <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Client Dashboard</p>
-                <p className="text-slate-900 font-semibold">[clientdomain.com] SEO Value Report</p>
+                <p className="text-slate-900 font-semibold">Your Client's SEO Value Report</p>
               </div>
               <span className="text-xs text-slate-400">Updated Monthly</span>
             </div>
