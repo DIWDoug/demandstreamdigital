@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
+import WaveDivider from "@/components/WaveDivider";
 import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
 import SEOValueExplainer from "@/components/services/local-seo/SEOValueExplainer";
@@ -16,9 +17,30 @@ import HubBenefits from "@/components/services/HubBenefits";
 import HubFAQ from "@/components/services/HubFAQ";
 import { getHubBySlug } from "@/data/services";
 
-const SectionDivider = () => (
-  <div className="container mx-auto px-6 lg:px-8">
-    <hr className="border-t border-border/40" />
+// Wave section wrapper for transitions between light/dark sections
+const WaveSection = ({ children, fromLight = false, toLight = false }: { 
+  children: React.ReactNode; 
+  fromLight?: boolean;
+  toLight?: boolean;
+}) => (
+  <div className="relative">
+    {fromLight && (
+      <WaveDivider 
+        position="top" 
+        fromColor="hsl(var(--background))" 
+        toColor="#f8fafc"
+        variant="curve"
+      />
+    )}
+    {children}
+    {toLight && (
+      <WaveDivider 
+        position="bottom" 
+        fromColor="#f8fafc"
+        toColor="hsl(var(--background))"
+        variant="curve"
+      />
+    )}
   </div>
 );
 
@@ -50,47 +72,121 @@ const LocalSEO = () => {
       {/* Trust Reel - credibility whisper */}
       <TrustReel />
       
-      <SectionDivider />
+      {/* Wave transition to light section */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="hsl(var(--background))" 
+          toColor="#f8fafc"
+          variant="curve"
+        />
+      </div>
       
-      {/* 1. THE PROBLEM - why one-size-fits-all fails */}
+      {/* 1. THE PROBLEM - why one-size-fits-all fails (light) */}
       <LocalSEOPainPoints />
       
-      {/* 2. THE SOLUTION - our phased approach */}
+      {/* 2. THE SOLUTION - our phased approach (light continues) */}
       <LocalSEORoadmap />
       
-      <SectionDivider />
+      {/* Wave transition back to dark */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="#f8fafc"
+          toColor="hsl(var(--background))"
+          variant="curve"
+          flip
+        />
+      </div>
       
-      {/* 3. THE SPOKES - what's included in Local SEO */}
+      {/* 3. THE SPOKES - what's included in Local SEO (dark) */}
       <LocalSEOSpokes />
       
-      <SectionDivider />
+      {/* Wave transition to light */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="hsl(var(--background))" 
+          toColor="#f8fafc"
+          variant="curve"
+        />
+      </div>
+      
+      {/* 4. RANKING FACTORS (light) */}
       <LocalRankingFactors />
       
-      <SectionDivider />
-      
-      {/* 4. THE VALUE CONVERSATION - how to communicate ROI */}
+      {/* 5. THE VALUE CONVERSATION - how to communicate ROI (light continues) */}
       <SEOValueExplainer />
       
-      <SectionDivider />
+      {/* Wave transition back to dark */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="#f8fafc"
+          toColor="hsl(var(--background))"
+          variant="curve"
+          flip
+        />
+      </div>
       
-      {/* 5. OUTCOMES - what actually changes */}
+      {/* 6. OUTCOMES - what actually changes (dark) */}
       <HubBenefits hubSlug={hub.slug} />
       
-      {/* 6. QUALIFICATION - is this right for you */}
+      {/* Wave transition to light */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="hsl(var(--background))" 
+          toColor="#f8fafc"
+          variant="curve"
+        />
+      </div>
+      
+      {/* 7. QUALIFICATION - is this right for you (light) */}
       <LocalSEOFitQualifier />
       
-      {/* 7. SOCIAL PROOF */}
+      {/* Wave transition back to dark */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="#f8fafc"
+          toColor="hsl(var(--background))"
+          variant="curve"
+          flip
+        />
+      </div>
+      
+      {/* 8. SOCIAL PROOF (dark) */}
       <Testimonials />
       
-      {/* 8. OBJECTIONS - FAQ */}
+      {/* 9. OBJECTIONS - FAQ (dark continues) */}
       <HubFAQ title={hub.title} faqs={hub.faqs} />
       
-      <SectionDivider />
+      {/* Wave transition to light */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="hsl(var(--background))" 
+          toColor="#f8fafc"
+          variant="curve"
+        />
+      </div>
       
-      {/* 9. THE BIGGER PICTURE - 360° ecosystem cross-sell */}
+      {/* 10. THE BIGGER PICTURE - 360° ecosystem cross-sell (light) */}
       <LocalSEOSystemContext />
       
-      {/* 10. FINAL CTA */}
+      {/* Wave transition back to dark for CTA */}
+      <div className="relative">
+        <WaveDivider 
+          position="bottom" 
+          fromColor="#f8fafc"
+          toColor="hsl(var(--background))"
+          variant="curve"
+          flip
+        />
+      </div>
+      
+      {/* 11. FINAL CTA (dark) */}
       <ContactForm />
       
       <Footer />
