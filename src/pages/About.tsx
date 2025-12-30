@@ -157,32 +157,40 @@ const About = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden bg-background">
+      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden bg-surface-dark">
+        {/* Background image with overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
+            backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80')`,
           }}
         />
-        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-cta/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-surface-dark/90" />
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-surface-dark via-surface-dark/80 to-transparent" />
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              About Dialed-In Web
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-              Built by a Marketer, <br className="hidden md:block" />
-              <span className="text-accent-blue">For Marketers</span>
-            </h1>
-            <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto">
-              Since 2011, we've helped agencies and small-to-medium businesses 
-              deliver full inbound marketing results: SEO, paid advertising, 
-              conversion rate optimization, email marketing, and more. 
-              All working together as one system.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            {/* Left - Title */}
+            <div>
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                About Dialed-In Web
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1]">
+                Built by a Marketer, <span className="text-accent-blue">For Marketers</span>
+              </h1>
+            </div>
+            
+            {/* Right - Description */}
+            <div className="lg:border-l lg:border-border/50 lg:pl-12">
+              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
+                Since 2011, we've helped agencies and small-to-medium businesses 
+                deliver full inbound marketing results: SEO, paid advertising, 
+                conversion rate optimization, email marketing, and more. 
+                All working together as one system.
+              </p>
+            </div>
           </div>
         </div>
       </section>
