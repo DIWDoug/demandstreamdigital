@@ -5,31 +5,31 @@ const services = [
   {
     icon: Map,
     title: "Google Maps",
-    description: "GBP optimization, review management, and local pack visibility",
+    description: "84% of local searches happen here. Dominate the map pack with optimized profiles and reviews.",
     href: "/inbound-marketing-services/google-maps"
   },
   {
     icon: MousePointerClick,
     title: "Paid Media",
-    description: "Google Ads and Meta campaigns that accelerate visibility",
+    description: "Accelerate results with Google Ads and Meta. Get leads while SEO compounds.",
     href: "/inbound-marketing-services/paid-media"
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Nurture sequences that convert leads into customers",
+    description: "Turn one-time customers into repeat buyers. Automated sequences that drive revenue on autopilot.",
     href: "/inbound-marketing-services/email-marketing"
   },
   {
     icon: Award,
     title: "Authority Building",
-    description: "PR, backlinks, and trust signals that compound over time",
+    description: "PR placements and backlinks that build trust with Google and customers alike.",
     href: "/inbound-marketing-services/authority"
   },
   {
     icon: BarChart3,
     title: "Reporting",
-    description: "White-labeled dashboards and monthly performance reports",
+    description: "White-labeled dashboards your clients love. Show the value, keep the retention.",
     href: "/inbound-marketing-services/reporting"
   }
 ];
@@ -42,13 +42,13 @@ const LocalSEOSystemContext = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              The Bigger Picture
+              The Complete System
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Local SEO Is One Piece of the System
+              Local SEO Works Best as Part of a System
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto">
-              Local SEO drives organic visibility, but it works best as part of a coordinated inbound marketing system. Here is how the other pieces connect.
+              SEO drives organic visibility, but the best results come when every channel works together. Here is how the other pieces multiply what local SEO delivers.
             </p>
           </div>
 

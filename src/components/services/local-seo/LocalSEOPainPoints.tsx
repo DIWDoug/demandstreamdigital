@@ -4,23 +4,23 @@ const LocalSEOPainPoints = () => {
   const painPoints = [
     {
       icon: Package,
-      title: "One-Size-Fits-All Doesn't Exist",
-      body: "A plumber in Boise competes differently than a personal injury lawyer in Chicago. Cookie-cutter packages ignore the competitive dynamics that actually determine what it takes to rank."
+      title: "Same Package, Different Markets, Bad Results",
+      body: "Your plumber in Boise and personal injury lawyer in Chicago need completely different strategies. Cookie-cutter packages ignore this reality and deliver mediocre results for everyone."
     },
     {
       icon: Target,
-      title: "Markets Vary Dramatically",
-      body: "City size, population density, and local competition intensity all affect what's required. What works in a small town won't move the needle in a major metro."
+      title: "Underspending in Hard Markets, Overspending in Easy Ones",
+      body: "Fixed-price packages mean you overdeliver where you did not need to and underdeliver where it mattered most. Your hardest clients get the worst results."
     },
     {
       icon: TrendingDown,
-      title: "Generic Tactics Burn Budget",
-      body: "Agencies selling fixed-price packages often deliver fixed-effort work. The result: over-serving easy markets and under-delivering in competitive ones."
+      title: "Rankings Plateau, Clients Leave",
+      body: "Generic tactics work until they do not. When rankings stall at position 7 or 8, clients start questioning their investment. You need a partner who knows how to push through."
     },
     {
       icon: Users,
-      title: "Client Expectations Get Misaligned",
-      body: "When pricing doesn't reflect market reality, clients either overpay for simple wins or get frustrated when competitive markets take longer than promised."
+      title: "Impossible Expectations Kill Retention",
+      body: "When pricing does not reflect competitive reality, clients expect results you cannot deliver. Then you lose them, and the revenue walks out the door."
     }
   ];
 
@@ -34,10 +34,10 @@ const LocalSEOPainPoints = () => {
               The Problem
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
-              Why Package-Based Local SEO Falls Short
+              Why Most White-Label SEO Fails Your Clients
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Most white-label providers sell the same package to every agency. That's convenient for them, but it creates problems for you and your clients.
+              You have seen it before. The package looked great on paper, but six months later your clients are frustrated, threatening to leave, and you are scrambling to explain why rankings have not moved.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ const LocalSEOPainPoints = () => {
 
           {/* Transition Line */}
           <p className="text-center text-slate-600 text-lg mt-14">
-            We scope every engagement to the actual market. Your clients get what they need, and you protect your margins.
+            <span className="font-semibold text-slate-900">There is a better way.</span> We scope every engagement to the actual competitive landscape. Your clients get what they need, and you keep the margin you earned.
           </p>
         </div>
       </div>

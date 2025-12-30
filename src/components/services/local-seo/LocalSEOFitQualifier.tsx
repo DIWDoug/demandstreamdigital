@@ -68,13 +68,13 @@ const LocalSEOFitQualifier = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              The Right Fit
+              Before We Talk
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              Is White-Label Local SEO Right for You?
+              We Are Selective About Who We Work With
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              Local SEO is our specialty. We are selective about partnerships because fit matters more than volume. Here is who we work best with.
+              Fit matters more than volume. Here is who gets the best results from this partnership, and who would be better served elsewhere.
             </p>
           </div>
 

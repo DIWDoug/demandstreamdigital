@@ -1,12 +1,12 @@
 import { Settings, FileText, Link2, MapPin, Star, Search } from "lucide-react";
 
 const pillars = [
-  { icon: Settings, label: "Technical Foundation", description: "Site architecture, crawlability, and schema markup" },
-  { icon: FileText, label: "On-Page Optimization", description: "Visual and technical page-level optimization" },
-  { icon: Search, label: "Content Development", description: "Service pages, location content, and blog strategy" },
-  { icon: Link2, label: "Authority Building", description: "Local links, citations, and PR campaigns" },
-  { icon: MapPin, label: "Google Business Profile", description: "Profile optimization and ongoing management" },
-  { icon: Star, label: "Reviews & Reputation", description: "Review generation and response management" },
+  { icon: Settings, label: "Technical Foundation", description: "Fast, crawlable, mobile-first sites that Google rewards" },
+  { icon: FileText, label: "On-Page Optimization", description: "Pages that rank for the searches your clients need to own" },
+  { icon: Search, label: "Content That Converts", description: "Service pages and blogs that attract ready-to-buy customers" },
+  { icon: Link2, label: "Authority Building", description: "Links and citations that signal trust to search engines" },
+  { icon: MapPin, label: "Google Business Profile", description: "The listing that drives 84% of local discovery searches" },
+  { icon: Star, label: "Reviews That Sell", description: "A steady stream of 5-star reviews that close deals before the first call" },
 ];
 
 const LocalSEOExplainer = () => {
@@ -22,19 +22,19 @@ const LocalSEOExplainer = () => {
             {/* Left: Text Content */}
             <div>
               <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-                The Foundation
+                Why Local SEO Matters
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                What is Local SEO?
+                46% of Google Searches Have Local Intent
               </h2>
               <p className="text-text-secondary text-lg mb-6 leading-relaxed">
-                Local SEO is the practice of optimizing a business's online presence to attract customers from local searches. When someone searches for "plumber near me" or "best dentist in Austin," local SEO determines which businesses appear.
+                When someone searches "plumber near me" or "best dentist in Austin," they are ready to buy. Local SEO puts your clients in front of these high-intent customers at the exact moment they are looking.
               </p>
               <p className="text-text-secondary mb-6 leading-relaxed">
-                It encompasses everything from technical website optimization to Google Business Profile management, content strategy, citation building, and review generation. Each component reinforces the others to build a comprehensive local presence.
+                The businesses that show up in the local 3-pack and top organic results capture 70% of the clicks. Everyone else fights over scraps.
               </p>
               <p className="text-text-secondary leading-relaxed">
-                Unlike national SEO, local SEO requires understanding geographic signals, local search behavior, and the unique ranking factors that determine visibility in the local pack and organic results.
+                We handle the technical work, the content, the links, and the ongoing optimization. You take credit for the results.
               </p>
             </div>
 
