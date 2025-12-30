@@ -367,7 +367,7 @@ const About = () => {
                 <div className="hidden lg:block absolute top-24 left-0 right-0 border-t-2 border-dashed border-cta/20" />
                 
                 {/* 2011-2015 - Nashville Days */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 lg:col-span-2 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 hover:scale-[1.02] lg:col-span-2 relative">
                   <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -433,7 +433,7 @@ const About = () => {
                 </div>
 
                 {/* 2015 - Agency Side */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 hover:scale-[1.02] relative">
                   <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -447,14 +447,10 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Freelancing wasn't for me at that stage. Sold my clientele to Horton Group and joined their team. Learned what it really meant to focus on the big picture: the 360. This is where the paid advertising adventure started.
                   </p>
-                  <div className="pt-3 border-t border-border/50 space-y-2">
+                  <div className="pt-3 border-t border-border/50">
                     <div>
                       <p className="text-xs text-accent-blue font-semibold">Horton Group (Nashville, 2014-2015)</p>
                       <p className="text-xs text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
-                    </div>
-                    <div>
-                      <p className="text-xs text-accent-blue font-semibold">iProspect</p>
-                      <p className="text-xs text-text-secondary">Enterprise paid media agency experience.</p>
                     </div>
                   </div>
                 </div>
@@ -463,7 +459,7 @@ const About = () => {
                 <div className="hidden lg:block absolute top-[calc(50%-80px)] left-0 right-0 border-t-2 border-dashed border-accent-blue/20" />
 
                 {/* 2015-2019 - Dallas Days */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 lg:col-span-2 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 hover:scale-[1.02] lg:col-span-2 relative">
                   <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -505,7 +501,7 @@ const About = () => {
                 </div>
 
                 {/* 2019-2020 - iProspect + Coaching */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 hover:scale-[1.02] relative">
                   <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -530,7 +526,7 @@ const About = () => {
                 <div className="hidden lg:block absolute bottom-[280px] left-0 right-0 border-t-2 border-dashed border-cta/20" />
 
                 {/* 2019-2020 - National Clients */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 hover:scale-[1.02] relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -551,7 +547,7 @@ const About = () => {
                 </div>
 
                 {/* 2019-2021 - Upwork */}
-                <div className="group bg-accent-blue/5 border-2 border-accent-blue rounded-2xl p-6 hover:shadow-lg hover:shadow-accent-blue/20 transition-all duration-300 relative">
+                <div className="group bg-accent-blue/5 border-2 border-accent-blue rounded-2xl p-6 hover:shadow-lg hover:shadow-accent-blue/20 hover:scale-[1.02] transition-all duration-300 relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-accent-blue/30 border-2 border-accent-blue" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center animate-pulse" style={{ animationDuration: '3s' }}>
@@ -573,7 +569,7 @@ const About = () => {
                 </div>
 
                 {/* 2021-2022 */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-lg hover:shadow-cta/10 hover:scale-[1.02] relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
@@ -600,7 +596,7 @@ const About = () => {
                 </div>
 
                 {/* 2024-2025 - Building the Team */}
-                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 relative">
+                <div className="group bg-surface-dark border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/10 hover:scale-[1.02] relative">
                   <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -617,7 +613,7 @@ const About = () => {
                 </div>
 
               {/* 2025 - The System */}
-              <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-lg hover:shadow-cta/20 transition-all duration-300 relative overflow-hidden">
+              <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-lg hover:shadow-cta/20 hover:scale-[1.02] transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-3 right-3 bg-cta text-white text-xs font-bold px-2 py-1 rounded-full">
                   NOW
                 </div>
