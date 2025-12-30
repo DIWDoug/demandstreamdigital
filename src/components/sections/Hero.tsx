@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
       {/* Enhanced abstract data texture overlay */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
