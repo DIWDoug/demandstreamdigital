@@ -153,34 +153,11 @@ const LocalRankingFactors = () => {
               ))}
             </div>
 
-            {/* Right: Dynamic Callout */}
-            <div className="space-y-6">
-              {/* Dynamic Detail Card */}
-              <div 
-                className="bg-surface-elevated border border-cta/30 rounded-2xl p-6 transition-all duration-300"
-                key={activeFactor}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-cta/10 flex items-center justify-center">
-                    {activeFactor !== null ? (
-                      (() => {
-                        const Icon = factors[activeFactor].icon;
-                        return <Icon className="w-5 h-5 text-cta" />;
-                      })()
-                    ) : (
-                      <Navigation className="w-5 h-5 text-cta" />
-                    )}
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">{activeDetail.title}</h3>
-                </div>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  {activeDetail.body}
-                </p>
-              </div>
-
-              {/* Image with static callout */}
+            {/* Right: Image with Dynamic Callout */}
+            <div className="space-y-0">
+              {/* Image */}
               <div className="relative">
-                <div className="aspect-[16/9] rounded-2xl overflow-hidden border border-border/50 bg-surface-elevated">
+                <div className="aspect-[16/9] rounded-t-2xl overflow-hidden border border-b-0 border-border/50 bg-surface-elevated">
                   <img 
                     src={rankingFactorsImage} 
                     alt="Local search ranking factors analysis" 
@@ -188,14 +165,32 @@ const LocalRankingFactors = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
                 </div>
-                
-                {/* Static source attribution */}
-                <div className="absolute bottom-4 left-4 right-4 bg-surface-dark/95 backdrop-blur-sm rounded-xl p-4 border border-border/50">
-                  <p className="text-foreground font-semibold text-sm mb-1">Source: Whitespark 2026</p>
-                  <p className="text-text-muted text-xs">
-                    Ranking factor weights based on the annual Local Search Ranking Factors survey of industry practitioners.
-                  </p>
+              </div>
+              
+              {/* Dynamic Detail Card - updates on hover */}
+              <div 
+                className="bg-surface-dark/95 backdrop-blur-sm rounded-b-2xl p-5 border border-t-0 border-border/50 transition-all duration-300"
+                key={activeFactor}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center">
+                    {activeFactor !== null ? (
+                      (() => {
+                        const Icon = factors[activeFactor].icon;
+                        return <Icon className="w-4 h-4 text-cta" />;
+                      })()
+                    ) : (
+                      <Navigation className="w-4 h-4 text-cta" />
+                    )}
+                  </div>
+                  <div>
+                    <p className="text-foreground font-semibold text-sm">{activeDetail.title}</p>
+                    <p className="text-text-muted text-xs">Source: Whitespark 2026</p>
+                  </div>
                 </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {activeDetail.body}
+                </p>
               </div>
             </div>
           </div>

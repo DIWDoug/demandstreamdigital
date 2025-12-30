@@ -1,8 +1,8 @@
 import { Settings, FileText, Link2, MapPin, Star, Search } from "lucide-react";
 
 const pillars = [
-  { icon: Settings, label: "Technical Foundation", description: "Fast, crawlable, mobile-first sites that Google rewards" },
-  { icon: FileText, label: "On-Page Optimization", description: "Pages that rank for the searches your clients need to own" },
+  { icon: Settings, label: "Technical Foundations", description: "Fast, crawlable, mobile-first sites that Google rewards" },
+  { icon: FileText, label: "Visible Optimization", description: "Title tags, meta descriptions, and content your clients can actually see working" },
   { icon: Search, label: "Content That Converts", description: "Service pages and blogs that attract ready-to-buy customers" },
   { icon: Link2, label: "Authority Building", description: "Links and citations that signal trust to search engines" },
   { icon: MapPin, label: "Google Business Profile", description: "The listing that drives 84% of local discovery searches" },
