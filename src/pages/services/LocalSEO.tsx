@@ -7,6 +7,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
 import LocalSEOExplainer from "@/components/services/local-seo/LocalSEOExplainer";
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
+import SEOValueExplainer from "@/components/services/local-seo/SEOValueExplainer";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
 import LocalSEOFitQualifier from "@/components/services/local-seo/LocalSEOFitQualifier";
 import LocalSEORoadmap from "@/components/services/local-seo/LocalSEORoadmap";
@@ -57,6 +58,9 @@ const LocalSEO = () => {
       
       {/* Pain Points - why one-size-fits-all fails */}
       <LocalSEOPainPoints />
+      
+      {/* SEO Value Explainer - showing clients the real value */}
+      <SEOValueExplainer />
       
       {/* Local Ranking Factors - interactive hover */}
       <LocalRankingFactors />
