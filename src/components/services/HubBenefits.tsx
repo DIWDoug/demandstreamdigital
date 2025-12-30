@@ -139,7 +139,7 @@ const HubBenefits = ({ hubSlug }: HubBenefitsProps) => {
               <div className="inline-flex items-center justify-center p-4 rounded-xl mb-5 bg-cta/10 border border-cta/20">
                 <benefit.icon className="w-7 h-7 text-cta" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground text-balance">
                 {benefit.title}
               </h3>
               <p className="text-sm leading-relaxed text-text-secondary">
