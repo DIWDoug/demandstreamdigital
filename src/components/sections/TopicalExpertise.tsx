@@ -40,12 +40,12 @@ const TopicalExpertise = () => {
     },
     {
       icon: Map,
-      title: "Google Maps Optimization",
+      title: "GBP SEO",
       slug: "google-maps",
       summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
       spokes: [
         {
-          title: "Google Business Profile Management",
+          title: "GBP Profile Management",
           description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results."
         },
         {

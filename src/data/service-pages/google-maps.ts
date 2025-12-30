@@ -298,7 +298,7 @@ export const googleMapsConfig: ServicePageConfig = {
     intro: "Effective local marketing is interconnected.",
     body: "Google Maps visibility improves when supported by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack with optimized profiles and reviews.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack with optimized profiles and reviews.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Star, id: "reputation", title: "Reputation", description: "Build trust with review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
