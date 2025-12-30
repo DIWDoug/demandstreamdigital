@@ -3,7 +3,6 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
-import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
@@ -200,13 +199,11 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
-              { label: 'Mission', href: '#mission' },
               { label: 'Who We Are', href: '#who-we-are' },
               { label: 'Timeline', href: '#timeline' },
-              { label: 'Team', href: '#team' },
-              { label: 'Clients', href: '#clients' },
               { label: 'Reviews', href: '#reviews' },
-              { label: 'Why Us', href: '#why-us' },
+              { label: 'Clients', href: '#clients' },
+              { label: 'Team', href: '#team' },
               { label: 'Contact', href: '#contact' },
             ].map((item) => (
               <a
@@ -221,94 +218,7 @@ const About = () => {
         </div>
       </nav>
 
-      {/* Mission & Vision Combined */}
-      <section id="mission" className="py-16 lg:py-24 relative bg-surface-dark overflow-hidden scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            {/* Mission */}
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-28">
-              {/* Image - left side */}
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" 
-                    alt="Team collaboration and strategy session"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Decorative accent */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cta/20 rounded-2xl -z-10" />
-              </div>
-              
-              {/* Content - right side */}
-              <div>
-                <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                  Our Mission
-                </p>
-                <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                  You Keep More Clients
-                </h2>
-                <p className="font-serif text-lg text-text-secondary leading-relaxed mb-4">
-                  When fulfillment is scoped to the market and executed with care, 
-                  clients see results they can understand. They stay longer. 
-                  Your margins stay healthy. Referrals come easier.
-                </p>
-                <p className="font-serif text-lg text-text-secondary leading-relaxed">
-                  We deliver SEO, paid advertising, and inbound marketing 
-                  strategies tailored to each client's industry and competitive landscape. 
-                  Not templates. Not guesswork. Work you can explain without flinching.
-                </p>
-              </div>
-            </div>
-
-            {/* Vision */}
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Content - left side */}
-              <div className="order-2 lg:order-1">
-                <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                  Our Vision
-                </p>
-                <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                  Your Backend Team, Not a Vendor
-                </h2>
-                <p className="font-serif text-lg text-text-secondary leading-relaxed mb-4">
-                  Most white-label relationships feel transactional. 
-                  You send a brief, you get a deliverable, you hope it works. 
-                  That's not how we operate.
-                </p>
-                <p className="font-serif text-lg text-text-secondary leading-relaxed">
-                  We invest in understanding your clients' businesses so you can 
-                  focus on relationships and growth. When something breaks, 
-                  we fix it. When strategy needs to pivot, we're already thinking about it. 
-                  That's what partners do.
-                </p>
-              </div>
-              
-              {/* Image with stats overlay - right side */}
-              <div className="relative order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" 
-                    alt="Professional team working together"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Stats overlay card */}
-                <div className="absolute -bottom-6 -left-6 bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 text-center shadow-xl">
-                  <p className="text-5xl lg:text-6xl font-bold text-cta mb-1" style={{ fontFamily: 'Inter Variable, sans-serif' }}>
-                    14
-                  </p>
-                  <p className="text-sm text-text-secondary font-serif">
-                    Years of experience
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Are - Moved Up */}
+      {/* Who We Are */}
       <div id="who-we-are" className="scroll-mt-32">
         <WhoWeAre />
       </div>
@@ -622,69 +532,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section id="team" className="py-20 lg:py-28 relative bg-background scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 lg:mb-16">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                The People Behind the Work
-              </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
-                Our Team
-              </h2>
-            </div>
-
-            {/* Team Grid - Large Photos */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
-              {teamMembers.map((member, index) => (
-                <div 
-                  key={index}
-                  className="group text-center"
-                >
-                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-surface-dark border border-border group-hover:border-cta/30 transition-colors">
-                    <img 
-                      src={member.image}
-                      alt={`${member.name}, ${member.role}`}
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h4>
-                  <p className="text-sm text-text-secondary">
-                    {member.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <section id="clients" className="py-16 lg:py-20 bg-surface-dark scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                From Those Who Know Us Best
-              </p>
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
-                A Handful of Clients We've Supported Over the Years
-              </h2>
-            </div>
-            <div className="relative border border-border/30 rounded-2xl p-6 md:p-8 lg:p-12 bg-white overflow-hidden">
-              <img 
-                src={clientLogosBanner} 
-                alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Real Reviews from Real Clients */}
       <section id="reviews" className="py-20 lg:py-28 bg-background scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -868,10 +715,68 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Partner With Us */}
-      <div id="why-us" className="scroll-mt-32">
-        <WhyPartnerWithUs />
-      </div>
+      {/* Client Logos */}
+      <section id="clients" className="py-16 lg:py-20 bg-surface-dark scroll-mt-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                From Those Who Know Us Best
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+                A Handful of Clients We've Supported Over the Years
+              </h2>
+            </div>
+            <div className="relative border border-border/30 rounded-2xl p-6 md:p-8 lg:p-12 bg-white overflow-hidden">
+              <img 
+                src={clientLogosBanner} 
+                alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section id="team" className="py-20 lg:py-28 relative bg-background scroll-mt-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 lg:mb-16">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                The People Behind the Work
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
+                Our Team
+              </h2>
+            </div>
+
+            {/* Team Grid - Large Photos */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+              {teamMembers.map((member, index) => (
+                <div 
+                  key={index}
+                  className="group text-center"
+                >
+                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-surface-dark border border-border group-hover:border-cta/30 transition-colors">
+                    <img 
+                      src={member.image}
+                      alt={`${member.name}, ${member.role}`}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-text-secondary">
+                    {member.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Contact CTA */}
       <div id="contact" className="scroll-mt-32">
