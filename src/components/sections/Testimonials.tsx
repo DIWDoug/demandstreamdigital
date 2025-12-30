@@ -11,11 +11,6 @@ const testimonials = [
     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
-  },
-  {
-    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
-    author: "Trevor Anderson",
-    role: "Founder & CEO, Anderson Collaborative"
   }
 ];
 
