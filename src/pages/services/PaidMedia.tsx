@@ -17,7 +17,7 @@ const PaidMedia = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -26,7 +26,7 @@ const PaidMedia = () => {
       <Helmet>
         <title>White-Label Paid Media Management for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label Google Ads and Meta Ads management for agencies. Local search campaigns, landing page optimization, and ROI-focused paid media that generates leads." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/paid-media" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/paid-media" />
       </Helmet>
       
       <Header />

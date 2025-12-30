@@ -27,7 +27,7 @@ const LocalSEO = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -36,7 +36,7 @@ const LocalSEO = () => {
       <Helmet>
         <title>White-Label Local SEO Services for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label local SEO fulfillment for agencies. On-page optimization, technical SEO, content strategy, link building, GBP management, and review generation that drives organic visibility for your clients." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/local-seo" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/local-seo" />
         <meta name="keywords" content="white label local SEO, white label SEO services, local SEO fulfillment, agency SEO partner, local search optimization" />
       </Helmet>
       

@@ -296,7 +296,7 @@ const TopicalExpertise = () => {
                   {/* CTA within expanded card */}
                   <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
                     <Link 
-                      to={`/inbound-marketing-services/${hub.slug}`}
+                      to={`/white-label-inbound-marketing-services/${hub.slug}`}
                       className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >

@@ -42,32 +42,32 @@ const Header = () => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
-      href: "/inbound-marketing-services/local-seo",
+      href: "/white-label-inbound-marketing-services/local-seo",
       items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
     },
     {
       title: "GOOGLE MAPS",
-      href: "/inbound-marketing-services/google-maps",
+      href: "/white-label-inbound-marketing-services/google-maps",
       items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
     },
     {
       title: "PAID MEDIA",
-      href: "/inbound-marketing-services/paid-media",
+      href: "/white-label-inbound-marketing-services/paid-media",
       items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
     },
     {
       title: "EMAIL MARKETING",
-      href: "/inbound-marketing-services/email-marketing",
+      href: "/white-label-inbound-marketing-services/email-marketing",
       items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
     },
     {
       title: "AUTHORITY",
-      href: "/inbound-marketing-services/authority",
+      href: "/white-label-inbound-marketing-services/authority",
       items: ["PR Placements", "Local Citations", "Industry Directories", "Brand Mentions", "Reputation Signals", "Trust Building"]
     },
     {
       title: "REPORTING",
-      href: "/inbound-marketing-services/reporting",
+      href: "/white-label-inbound-marketing-services/reporting",
       items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
     }
   ];

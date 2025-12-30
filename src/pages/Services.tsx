@@ -27,7 +27,7 @@ const Services = () => {
       <Helmet>
         <title>White Label Inbound Marketing Services for Agencies | Dialed-In Web</title>
         <meta name="description" content="White label inbound marketing fulfillment for agencies. SEO, Google Ads, Meta ads, email marketing, and authority building—executed as a coordinated system, not siloed services." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
         <meta name="keywords" content="white label inbound marketing, white label SEO, white label digital marketing, agency fulfillment, white label PPC, white label email marketing" />
       </Helmet>
       

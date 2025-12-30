@@ -17,7 +17,7 @@ const GoogleMaps = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -26,7 +26,7 @@ const GoogleMaps = () => {
       <Helmet>
         <title>White-Label Google Maps Optimization for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label Google Maps and GBP optimization for agencies. Review management, citation building, and local pack ranking strategies that dominate map results." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/google-maps" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/google-maps" />
       </Helmet>
       
       <Header />

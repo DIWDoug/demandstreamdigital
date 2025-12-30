@@ -7,7 +7,7 @@ const services = [
     id: "local-seo",
     title: "Local SEO",
     description: "Organic visibility in local search results and Google Maps. The foundation that makes every other channel more effective.",
-    href: "/inbound-marketing-services/local-seo",
+    href: "/white-label-inbound-marketing-services/local-seo",
     isCenter: true
   },
   {
@@ -15,49 +15,49 @@ const services = [
     id: "google-maps",
     title: "Google Maps",
     description: "Dominate the map pack with optimized profiles, reviews, and local engagement.",
-    href: "/inbound-marketing-services/google-maps"
+    href: "/white-label-inbound-marketing-services/google-maps"
   },
   {
     icon: Sparkles,
     id: "paid-media",
     title: "Paid Media",
     description: "Accelerate results with Google Ads and Meta while SEO compounds.",
-    href: "/inbound-marketing-services/paid-media"
+    href: "/white-label-inbound-marketing-services/paid-media"
   },
   {
     icon: Star,
     id: "reputation",
     title: "Reputation",
     description: "Build trust with review generation and management that converts.",
-    href: "/inbound-marketing-services/google-maps"
+    href: "/white-label-inbound-marketing-services/google-maps"
   },
   {
     icon: Mail,
     id: "email-marketing",
     title: "Email Marketing",
     description: "Turn one-time customers into repeat buyers with automated sequences.",
-    href: "/inbound-marketing-services/email-marketing"
+    href: "/white-label-inbound-marketing-services/email-marketing"
   },
   {
     icon: Globe,
     id: "authority",
     title: "Authority Building",
     description: "PR placements and backlinks that build trust with Google and customers.",
-    href: "/inbound-marketing-services/authority"
+    href: "/white-label-inbound-marketing-services/authority"
   },
   {
     icon: BarChart3,
     id: "reporting",
     title: "Reporting",
     description: "White-labeled dashboards your clients love. Show the value, keep the retention.",
-    href: "/inbound-marketing-services/reporting"
+    href: "/white-label-inbound-marketing-services/reporting"
   },
   {
     icon: Share2,
     id: "retargeting",
     title: "Retargeting",
     description: "Stay top of mind with display and social retargeting campaigns.",
-    href: "/inbound-marketing-services/paid-media"
+    href: "/white-label-inbound-marketing-services/paid-media"
   }
 ];
 
