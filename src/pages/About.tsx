@@ -711,6 +711,24 @@ const About = () => {
               <CarouselContent className="-ml-4">
                 {[
                   {
+                    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
+                    name: "Trevor Anderson",
+                    date: "2024",
+                    rating: 5
+                  },
+                  {
+                    quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
+                    name: "Jeremy",
+                    date: "2024",
+                    rating: 5
+                  },
+                  {
+                    quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
+                    name: "Florida Agency Owner",
+                    date: "2024",
+                    rating: 5
+                  },
+                  {
                     quote: "I don't write many reviews but after having a great experience with Dialed-In, I had to let everyone know! Doug helped us create our website and was with us every step of the way. This was the first time I had built a website and didn't know what to expect or even where to begin, but Doug answered all of our questions and made the process so easy. Doug has proven he has great business ethics and is always professional. I highly recommend this business for anyone looking to enhance their online presence, website, or increase business. Thanks again for the amazing work on our website!",
                     name: "David Dorn",
                     date: "2018",
