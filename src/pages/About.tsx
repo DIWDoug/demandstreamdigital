@@ -187,49 +187,42 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 lg:py-28 relative bg-surface-dark">
+      {/* Mission */}
+      <section className="py-16 lg:py-24 relative bg-surface-dark">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-              {/* Mission */}
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-cta/10 rounded-full blur-2xl" />
-                <div className="relative bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
-                  <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                    Our Mission
-                  </p>
-                  <h2 className="text-2xl lg:text-3xl font-semibold text-foreground mb-6">
-                    Fulfillment That Keeps Clients
-                  </h2>
-                  <p className="font-serif text-text-secondary leading-relaxed">
-                    We exist to help agencies deliver white-label digital marketing 
-                    that actually works. Sustainable strategies, scoped to each client's 
-                    industry and local market. Work you can explain without flinching. 
-                    Results that protect your margins and your reputation.
-                  </p>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              Our Mission
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+              Fulfillment That Keeps Clients
+            </h2>
+            <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
+              We exist to help agencies deliver white-label digital marketing 
+              that actually works. Sustainable strategies, scoped to each client's 
+              industry and local market. Work you can explain without flinching. 
+              Results that protect your margins and your reputation.
+            </p>
+          </div>
+        </div>
+      </section>
 
-              {/* Vision */}
-              <div className="relative">
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent-blue/10 rounded-full blur-2xl" />
-                <div className="relative bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
-                  <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                    Our Vision
-                  </p>
-                  <h2 className="text-2xl lg:text-3xl font-semibold text-foreground mb-6">
-                    Partners, Not Vendors
-                  </h2>
-                  <p className="font-serif text-text-secondary leading-relaxed">
-                    We believe agencies deserve fulfillment partners they can trust. 
-                    By taking execution off your plate through a mutually invested 
-                    partnership, you can focus on what you do best: growing your 
-                    agency and delighting your clients.
-                  </p>
-                </div>
-              </div>
-            </div>
+      {/* Vision */}
+      <section className="py-16 lg:py-24 relative bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              Our Vision
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+              Partners, Not Vendors
+            </h2>
+            <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
+              We believe agencies deserve fulfillment partners they can trust. 
+              By taking execution off your plate through a mutually invested 
+              partnership, you can focus on what you do best: growing your 
+              agency and delighting your clients.
+            </p>
           </div>
         </div>
       </section>
