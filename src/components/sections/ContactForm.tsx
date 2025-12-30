@@ -147,7 +147,7 @@ const ContactForm = () => {
                         required
                         value={formData.revenue}
                         onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
-                        className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground text-sm focus:outline-none focus:border-accent-blue transition-colors"
+                        className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors appearance-none"
                       >
                         <option value="">Select revenue range</option>
                         <option value="under-25k">Under $25,000</option>
