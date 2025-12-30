@@ -304,6 +304,62 @@ export const hubs: Hub[] = [
           "Entity and knowledge graph optimization",
           "Ongoing monitoring and refinement"
         ]
+      },
+      {
+        title: "Analytics & Reporting",
+        slug: "analytics-reporting",
+        description: "Tracking setup, goal configuration, and monthly performance reporting that connects SEO activity to business outcomes.",
+        fullDescription: "Without proper tracking, you can't prove value. We implement comprehensive analytics infrastructure that captures every meaningful user action—from organic visits to calls to form submissions. Then we translate that data into client-ready reports that demonstrate ROI and inform ongoing strategy.",
+        benefits: [
+          "Clear attribution of SEO efforts to business results",
+          "Monthly reports that justify ongoing investment",
+          "Data-driven optimization decisions",
+          "Goal tracking that captures calls, forms, and conversions",
+          "Competitive benchmarking and trend analysis"
+        ],
+        deliverables: [
+          "Google Analytics 4 setup and configuration",
+          "Goal and conversion tracking implementation",
+          "Call tracking integration",
+          "Custom dashboard creation",
+          "Monthly performance reports (white-labeled)",
+          "Quarterly strategy review presentations"
+        ],
+        process: [
+          "Analytics audit and gap identification",
+          "Tracking implementation and verification",
+          "Baseline performance documentation",
+          "Monthly report generation and delivery",
+          "Quarterly performance reviews and strategy refinement"
+        ]
+      },
+      {
+        title: "Reputation Management",
+        slug: "reputation-management",
+        description: "Review generation strategy, response management, and reputation monitoring to build trust and improve local rankings.",
+        fullDescription: "Reviews are the new word-of-mouth. They influence rankings, click-through rates, and conversion. We implement systematic review generation campaigns, manage responses professionally, and monitor reputation across platforms to protect and enhance your clients' online presence.",
+        benefits: [
+          "Increased review volume and improved star ratings",
+          "Professional response management that builds trust",
+          "Early warning on negative reviews and reputation threats",
+          "Improved local pack rankings through review signals",
+          "Competitive advantage through social proof"
+        ],
+        deliverables: [
+          "Review generation campaign setup and management",
+          "Review response drafting (all platforms)",
+          "Reputation monitoring and alerts",
+          "Competitor review benchmarking",
+          "Monthly reputation reports",
+          "Crisis response protocols"
+        ],
+        process: [
+          "Current reputation audit and competitive analysis",
+          "Review generation strategy development",
+          "Campaign implementation and workflow setup",
+          "Ongoing response management",
+          "Monthly performance tracking and optimization"
+        ]
       }
     ]
   },
