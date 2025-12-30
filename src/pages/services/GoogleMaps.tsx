@@ -1,53 +1,8 @@
-import { Helmet } from "react-helmet-async";
-import Header from "@/components/sections/Header";
-import Footer from "@/components/sections/Footer";
-import ContactForm from "@/components/sections/ContactForm";
-import Testimonials from "@/components/sections/Testimonials";
-import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhyItMatters from "@/components/services/WhyItMatters";
-import OurApproach from "@/components/services/OurApproach";
-import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
-import HubFAQ from "@/components/services/HubFAQ";
-import OtherServices from "@/components/services/OtherServices";
-import { getHubBySlug } from "@/data/services";
+import ServicePageLayout from "@/components/services/ServicePageLayout";
+import { googleMapsConfig } from "@/data/service-pages/google-maps";
 
 const GoogleMaps = () => {
-  const hub = getHubBySlug("google-maps");
-  if (!hub) return null;
-
-  const breadcrumbItems = [
-    { label: "Services", href: "/white-label-inbound-marketing-services" },
-    { label: hub.title }
-  ];
-
-  return (
-    <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>White-Label Google Maps Optimization for Agencies | Dialed-In Web</title>
-        <meta name="description" content="White-label Google Maps and GBP optimization for agencies. Review management, citation building, and local pack ranking strategies that dominate map results." />
-        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/google-maps" />
-      </Helmet>
-      
-      <Header />
-      <div className="pt-16">
-        <ServiceHubHero 
-          title={hub.title} 
-          description={hub.heroDescription}
-          breadcrumbs={breadcrumbItems}
-        />
-      </div>
-      <WhyItMatters {...hub.whyItMatters} />
-      <OurApproach {...hub.ourApproach} />
-      <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <ServiceBenefits {...hub.benefits} />
-      <Testimonials />
-      <HubFAQ title={hub.title} faqs={hub.faqs} />
-      <OtherServices currentHubSlug={hub.slug} />
-      <ContactForm />
-      <Footer />
-    </div>
-  );
+  return <ServicePageLayout config={googleMapsConfig} />;
 };
 
 export default GoogleMaps;
