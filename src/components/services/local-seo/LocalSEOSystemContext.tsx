@@ -129,22 +129,24 @@ const LocalSEOSystemContext = () => {
               {/* Outer orbit circle - solid thin black line */}
               <div className="absolute w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full border border-slate-800" />
               
-              {/* Center content - no background circle, just text */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] h-[160px] md:w-[180px] md:h-[180px] text-center">
-                <p className="text-slate-900 font-bold text-xl md:text-2xl mb-2">SEO</p>
-                <p className="text-slate-500 text-xs md:text-sm px-2 leading-relaxed">
-                  Search engine optimization helps potential customers find you through organic searches on places like Google and Bing.
+              {/* Center content - text only, no background */}
+              <div className="relative z-10 flex flex-col items-center justify-center w-[140px] h-[140px] md:w-[160px] md:h-[160px] text-center">
+                <p className="text-slate-900 font-bold text-xl md:text-2xl mb-2">Local SEO</p>
+                <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
+                  Search engine optimization helps potential customers find you through organic searches.
                 </p>
               </div>
 
-              {/* Orbit icons - linked to services */}
+              {/* Orbit icons - positioned on the circle, dark backgrounds */}
               {orbitServices.map((service, index) => {
+                // Start from top (-90deg) and go clockwise
                 const angle = (index * 360) / orbitServices.length - 90;
-                const radius = 150;
+                const radius = 150; // Half of 300px circle
+                const mdRadius = 180; // Half of 360px circle
                 const Icon = service.icon;
                 
-                // Highlight the top icon (first one)
-                const isHighlighted = index === 0;
+                // Highlight the left icon (Local SEO hub position - index 5 for ~180deg)
+                const isHighlighted = index === 5;
                 
                 return (
                   <Link
@@ -152,19 +154,21 @@ const LocalSEOSystemContext = () => {
                     to={service.href}
                     className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all hover:scale-110 group"
                     style={{
-                      transform: `translate(calc(${Math.cos((angle * Math.PI) / 180) * radius}px), calc(${Math.sin((angle * Math.PI) / 180) * radius}px))`,
+                      left: '50%',
+                      top: '50%',
+                      marginLeft: '-24px',
+                      marginTop: '-24px',
+                      transform: `translate(${Math.cos((angle * Math.PI) / 180) * radius}px, ${Math.sin((angle * Math.PI) / 180) * radius}px)`,
                     }}
                     title={service.title}
                   >
-                    {/* Background circle */}
+                    {/* Background circle - dark by default, green for highlighted */}
                     <div className={`absolute inset-0 rounded-full transition-colors ${
                       isHighlighted 
                         ? "bg-cta group-hover:bg-cta/90" 
-                        : "bg-slate-100 border border-slate-300 group-hover:border-cta group-hover:bg-cta/10"
+                        : "bg-slate-800 group-hover:bg-slate-700"
                     }`} />
-                    <Icon className={`relative z-10 w-5 h-5 md:w-6 md:h-6 transition-colors ${
-                      isHighlighted ? "text-white" : "text-slate-600 group-hover:text-cta"
-                    }`} />
+                    <Icon className="relative z-10 w-5 h-5 md:w-6 md:h-6 text-white" />
                   </Link>
                 );
               })}
