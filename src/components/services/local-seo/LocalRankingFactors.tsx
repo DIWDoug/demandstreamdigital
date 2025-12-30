@@ -26,6 +26,19 @@ const LocalRankingFactors = () => {
               className="w-full h-auto"
             />
           </div>
+
+          {/* Source Link */}
+          <p className="text-center mt-6 text-slate-500 text-sm">
+            Source:{" "}
+            <a 
+              href="https://whitespark.ca/local-search-ranking-factors/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-cta hover:text-cta/80 underline transition-colors"
+            >
+              Whitespark 2026 Local Search Ranking Factors
+            </a>
+          </p>
         </div>
       </div>
     </section>
