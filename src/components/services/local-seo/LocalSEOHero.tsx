@@ -68,14 +68,14 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
             <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Agencies</span>
           </h1>
           
-          {/* Supporting sentence - benefit-first */}
+          {/* Supporting sentence - benefit-first, Cashvertising style */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Stop explaining why SEO takes time. Start showing clients their phones ringing from Google searches. We handle the fulfillment under your brand with reporting so clear, renewals become formalities.
+            Your clients want one thing: <span className="text-foreground font-medium">their phone ringing from local search</span>. We deliver local SEO fulfillment that makes it happen—scoped to their market, reported in dollars, executed under your brand.
           </p>
 
           {/* Payoff sentence - specificity */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            You stay the hero. We stay invisible.
+            You stay the hero. We handle the local marketing that keeps them paying.
           </p>
 
           {/* Simple email/website form */}

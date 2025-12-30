@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layers, TrendingUp, Zap, Target, CheckCircle } from "lucide-react";
+import { Layers, TrendingUp, Zap, Target, CheckCircle, ChevronDown } from "lucide-react";
 
 interface PhaseData {
   phase: number;
@@ -115,6 +115,7 @@ const roadmapData: PhaseData[] = [
 
 const LocalSEORoadmap = () => {
   const [activePhase, setActivePhase] = useState(1);
+  const [showAllActivities, setShowAllActivities] = useState(false);
   const activeData = roadmapData.find(p => p.phase === activePhase) || roadmapData[0];
 
   return (
@@ -242,8 +243,9 @@ const LocalSEORoadmap = () => {
           {/* Activities */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">What This Phase Includes</h4>
+            {/* Show first 6 by default, rest expandable - all content in DOM for crawlability */}
             <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
-              {activeData.activities.map((activity, index) => (
+              {activeData.activities.slice(0, 6).map((activity, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle 
                     className="w-4 h-4 mt-0.5 flex-shrink-0" 
@@ -253,6 +255,36 @@ const LocalSEORoadmap = () => {
                 </li>
               ))}
             </ul>
+            
+            {activeData.activities.length > 6 && (
+              <>
+                {/* Remaining activities - always in DOM for SEO, visibility controlled */}
+                <ul 
+                  className={`grid md:grid-cols-2 gap-x-8 gap-y-3 mt-3 transition-all duration-300 overflow-hidden ${
+                    showAllActivities ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                  aria-hidden={!showAllActivities}
+                >
+                  {activeData.activities.slice(6).map((activity, index) => (
+                    <li key={index + 6} className="flex items-start gap-3">
+                      <CheckCircle 
+                        className="w-4 h-4 mt-0.5 flex-shrink-0" 
+                        style={{ color: activeData.color }} 
+                      />
+                      <span className="text-text-secondary">{activity}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button
+                  onClick={() => setShowAllActivities(!showAllActivities)}
+                  className="mt-4 flex items-center gap-2 text-sm font-medium text-cta hover:text-cta/80 transition-colors"
+                >
+                  <span>{showAllActivities ? "Show less" : `Show all ${activeData.activities.length} activities`}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAllActivities ? "rotate-180" : ""}`} />
+                </button>
+              </>
+            )}
           </div>
         </div>
 

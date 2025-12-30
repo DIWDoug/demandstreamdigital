@@ -83,80 +83,35 @@ const LocalSEOSystemContext = () => {
             </p>
           </div>
 
-          {/* Two Column Layout: Diagram + Service List */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left: Circular Diagram */}
-            <div className="relative flex items-center justify-center">
-              {/* Outer circle - dashed */}
-              <div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-2 border-dashed border-border" />
-              
-              {/* Inner circle - solid light */}
-              <div className="absolute w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full bg-surface-elevated border border-border" />
-              
+          {/* Two Column Layout: Simple Visual + Service List */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Left: Simple Hub Visual */}
+            <div className="bg-surface-elevated rounded-2xl border border-border p-8 lg:p-10">
               {/* Center - Local SEO */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[200px] h-[200px] md:w-[240px] md:h-[240px]">
-                <div className="w-14 h-14 rounded-full bg-cta flex items-center justify-center mb-3 shadow-lg">
-                  <Search className="w-6 h-6 text-white" />
+              <div className="flex flex-col items-center text-center mb-8">
+                <div className="w-16 h-16 rounded-full bg-cta flex items-center justify-center mb-4 shadow-lg">
+                  <Search className="w-7 h-7 text-white" />
                 </div>
-                <p className="text-foreground font-semibold text-lg mb-1">Local SEO</p>
-                <p className="text-text-muted text-xs text-center px-4 leading-relaxed">
-                  Organic visibility in local search results and Google Maps. The foundation that makes every other channel more effective.
+                <p className="text-foreground font-semibold text-xl mb-2">Local SEO</p>
+                <p className="text-text-secondary text-sm max-w-xs">
+                  The foundation that makes every other channel more effective.
                 </p>
               </div>
-
-              {/* Orbit icons */}
-              {orbitServices.map((service, index) => {
-                const angle = (index * 360) / orbitServices.length - 90; // Start from top
-                const radius = 160; // Distance from center (adjust for md)
-                const x = Math.cos((angle * Math.PI) / 180) * radius;
-                const y = Math.sin((angle * Math.PI) / 180) * radius;
-                
-                return (
+              
+              {/* Connected Services Grid */}
+              <div className="grid grid-cols-4 gap-3">
+                {orbitServices.map((service) => (
                   <div
                     key={service.id}
-                    className="absolute w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-elevated border border-border flex items-center justify-center shadow-sm hover:border-cta/50 hover:shadow-md transition-all cursor-pointer"
-                    style={{
-                      transform: `translate(${x}px, ${y}px)`,
-                    }}
+                    className="flex flex-col items-center gap-2 p-3 rounded-xl bg-surface-dark border border-border hover:border-cta/30 transition-colors"
                     title={service.title}
                   >
-                    <service.icon className="w-4 h-4 md:w-5 md:h-5 text-text-muted" />
+                    <div className="w-10 h-10 rounded-lg bg-surface-elevated flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-text-muted" />
+                    </div>
+                    <span className="text-xs text-text-muted text-center leading-tight">{service.title}</span>
                   </div>
-                );
-              })}
-
-              {/* Dashed lines from center to orbit */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="-200 -200 400 400">
-                {orbitServices.map((_, index) => {
-                  const angle = (index * 360) / orbitServices.length - 90;
-                  const innerRadius = 60;
-                  const outerRadius = 130;
-                  const x1 = Math.cos((angle * Math.PI) / 180) * innerRadius;
-                  const y1 = Math.sin((angle * Math.PI) / 180) * innerRadius;
-                  const x2 = Math.cos((angle * Math.PI) / 180) * outerRadius;
-                  const y2 = Math.sin((angle * Math.PI) / 180) * outerRadius;
-                  
-                  return (
-                    <line
-                      key={index}
-                      x1={x1}
-                      y1={y1}
-                      x2={x2}
-                      y2={y2}
-                      stroke="hsl(var(--border))"
-                      strokeWidth="1.5"
-                      strokeDasharray="4 4"
-                    />
-                  );
-                })}
-              </svg>
-
-              {/* Top accent icon (larger, highlighted) */}
-              <div 
-                className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full bg-cta flex items-center justify-center shadow-lg"
-                style={{ top: '-10px', left: '50%', transform: 'translateX(-50%)' }}
-              >
-                <Search className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                ))}
               </div>
             </div>
 

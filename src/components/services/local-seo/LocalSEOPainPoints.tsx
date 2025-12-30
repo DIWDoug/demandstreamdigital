@@ -1,4 +1,5 @@
-import { Package, Target, TrendingDown, Users } from "lucide-react";
+import { Package, Target, TrendingDown, Users, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LocalSEOPainPoints = () => {
   const painPoints = [
@@ -63,10 +64,19 @@ const LocalSEOPainPoints = () => {
             ))}
           </div>
 
-          {/* Transition Line */}
-          <p className="text-center text-slate-600 text-lg mt-14">
-            We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Your clients get what they need. You keep the margin you earned.</span>
-          </p>
+          {/* Transition Line + CTA */}
+          <div className="text-center mt-14 space-y-6">
+            <p className="text-slate-600 text-lg">
+              We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Your clients get what they need. You keep the margin you earned.</span>
+            </p>
+            <Link 
+              to="#contact" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
+            >
+              See How We Scope Local SEO
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
