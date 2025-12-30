@@ -1,199 +1,150 @@
 import { useState } from "react";
-import { Star, MapPin, Link2, FileText, Clock, MessageSquare, Building2, Navigation } from "lucide-react";
-import rankingFactorsImage from "@/assets/ranking-factors-analysis.jpg";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 interface Factor {
-  icon: typeof Star;
   label: string;
-  weight: string;
-  description: string;
-  detail: {
-    title: string;
-    body: string;
-  };
+  weight: number;
+  color: string;
 }
 
+interface FactorGroup {
+  id: string;
+  title: string;
+  subtitle: string;
+  factors: Factor[];
+}
+
+const factorGroups: FactorGroup[] = [
+  {
+    id: "local-pack",
+    title: "Local Pack/Maps",
+    subtitle: "Ranking Factors",
+    factors: [
+      { label: "GBP signals", weight: 32, color: "bg-rose-500" },
+      { label: "Review signals", weight: 20, color: "bg-fuchsia-400" },
+      { label: "On-page signals", weight: 15, color: "bg-violet-600" },
+      { label: "Behavioural signals", weight: 9, color: "bg-blue-500" },
+      { label: "Link signals", weight: 8, color: "bg-violet-500" },
+      { label: "Citation signals", weight: 6, color: "bg-emerald-500" },
+      { label: "Personalization", weight: 6, color: "bg-cyan-400" },
+      { label: "Social signals", weight: 4, color: "bg-blue-600" },
+    ],
+  },
+  {
+    id: "local-organic",
+    title: "Local Organic",
+    subtitle: "Ranking Factors",
+    factors: [
+      { label: "On-page signals", weight: 33, color: "bg-violet-600" },
+      { label: "Link signals", weight: 24, color: "bg-violet-500" },
+      { label: "Behavioural signals", weight: 10, color: "bg-blue-500" },
+      { label: "Personalization", weight: 8, color: "bg-cyan-400" },
+      { label: "GBP signals", weight: 7, color: "bg-rose-500" },
+      { label: "Citation signals", weight: 7, color: "bg-emerald-500" },
+      { label: "Review signals", weight: 6, color: "bg-fuchsia-400" },
+      { label: "Social signals", weight: 5, color: "bg-blue-600" },
+    ],
+  },
+  {
+    id: "ai-search",
+    title: "AI Search",
+    subtitle: "Visibility Factors",
+    factors: [
+      { label: "On-page signals", weight: 24, color: "bg-violet-600" },
+      { label: "Review signals", weight: 16, color: "bg-fuchsia-400" },
+      { label: "Citation signals", weight: 13, color: "bg-emerald-500" },
+      { label: "Link signals", weight: 13, color: "bg-violet-500" },
+      { label: "GBP signals", weight: 12, color: "bg-rose-500" },
+      { label: "Personalization", weight: 9, color: "bg-cyan-400" },
+      { label: "Social signals", weight: 9, color: "bg-cyan-500" },
+      { label: "Behavioural signals", weight: 4, color: "bg-blue-500" },
+    ],
+  },
+];
+
 const LocalRankingFactors = () => {
-  const [activeFactor, setActiveFactor] = useState<number | null>(null);
-
-  const factors: Factor[] = [
-    {
-      icon: MapPin,
-      label: "Google Business Profile",
-      weight: "32%",
-      description: "Proximity, categories, keywords in business name, and profile completeness",
-      detail: {
-        title: "GBP Signals Dominate",
-        body: "Google Business Profile signals account for 32% of local pack rankings. Proximity to the searcher, primary category selection, and keywords in the business name are the top individual factors. Complete, active profiles consistently outrank sparse ones."
-      }
-    },
-    {
-      icon: Star,
-      label: "Reviews & Ratings",
-      weight: "20%",
-      description: "Review quantity, recency, velocity, and response management",
-      detail: {
-        title: "Reviews Now at 20%",
-        body: "Review signals have grown from 16% to 20% of local ranking factors. Review recency is now the 11th most influential factor overall. A strategic review campaign with consistent response management is essential for competitive markets."
-      }
-    },
-    {
-      icon: FileText,
-      label: "On-Page Signals",
-      weight: "15%",
-      description: "NAP consistency, keyword presence, and domain authority",
-      detail: {
-        title: "On-Page Foundation",
-        body: "On-page signals account for 15% of rankings. This includes NAP consistency, location keywords in title tags and content, domain authority, and mobile-friendliness. Technical SEO remains foundational even as proximity gains weight."
-      }
-    },
-    {
-      icon: MessageSquare,
-      label: "Behavioral Signals",
-      weight: "9%",
-      description: "Click-through rates, mobile clicks-to-call, and real-time engagement",
-      detail: {
-        title: "User Behavior Matters",
-        body: "Behavioral signals at 9% include click-through rates from search results, mobile clicks-to-call, and dwell time. Google watches how users interact with listings to gauge relevance and quality."
-      }
-    },
-    {
-      icon: Link2,
-      label: "Link Authority",
-      weight: "8%",
-      description: "Quality and local relevance of inbound links",
-      detail: {
-        title: "Links Still Matter",
-        body: "Link signals at 8% continue a downward trend but remain important for competitive markets. Local relevance matters more than raw domain authority. Links from local news, chambers of commerce, and industry associations carry extra weight."
-      }
-    },
-    {
-      icon: Building2,
-      label: "Citation Signals",
-      weight: "6%",
-      description: "Accuracy across directories, critical for AI visibility",
-      detail: {
-        title: "Citations for AI Visibility",
-        body: "Citation signals at 6% are foundational for NAP consistency. More importantly, citations feed the data sources that AI models like ChatGPT and Gemini use to recommend businesses. Accurate citations mean better AI visibility."
-      }
-    },
-    {
-      icon: Clock,
-      label: "Business Hours",
-      weight: "5th Factor",
-      description: "Openness at search time now directly impacts visibility",
-      detail: {
-        title: "Open Businesses Win",
-        body: "Business hours openness is now the 5th most influential individual factor. Businesses effectively disappear from the local pack after they close. Extended hours or 24/7 availability creates a ranking advantage."
-      }
-    },
-    {
-      icon: Navigation,
-      label: "Proximity",
-      weight: "#1 Factor",
-      description: "Physical distance is now the dominant ranking signal",
-      detail: {
-        title: "Vicinity Update Changed Everything",
-        body: "The Vicinity Update made physical proximity the dominant ranking factor. Rankings are now dynamic, changing based on where the searcher is standing. This is why cookie-cutter packages fail: every market has different proximity dynamics."
-      }
-    }
-  ];
-
-  const activeDetail = activeFactor !== null ? factors[activeFactor].detail : {
-    title: "The Vicinity Update Changed Everything",
-    body: "Google's Vicinity Update made physical proximity the dominant ranking factor. Rankings are now dynamic, changing based on where a user is standing. This is why cookie-cutter packages fail. We scope every engagement to the actual competitive landscape."
-  };
+  const [activeTab, setActiveTab] = useState("local-pack");
 
   return (
     <section className="py-20 lg:py-28 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-14">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              Latest Ranking Factors
+          <div className="text-center mb-12">
+            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+              2026 Research
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6">
-              What Actually Moves the Needle
+              Local Search Ranking Factor Groups
             </h2>
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
-              Based on Whitespark's Local Search Ranking Factors research. The data behind every strategy we build.
+              Based on Whitespark's 2026 Local Search Ranking Factors research. The data behind every strategy we build.
             </p>
           </div>
 
-          {/* Two Column: Factors + Dynamic Callout */}
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            {/* Left: Factor Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {factors.map((factor, index) => (
-                <button
-                  key={index}
-                  onMouseEnter={() => setActiveFactor(index)}
-                  onMouseLeave={() => setActiveFactor(null)}
-                  onClick={() => setActiveFactor(activeFactor === index ? null : index)}
-                  className={`bg-white border rounded-xl p-4 text-left transition-all duration-200 ${
-                    activeFactor === index 
-                      ? "border-cta ring-2 ring-cta/20 scale-[1.02]" 
-                      : "border-slate-200 hover:border-cta/30"
-                  }`}
+          {/* Tabs */}
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-1 rounded-xl">
+              {factorGroups.map((group) => (
+                <TabsTrigger
+                  key={group.id}
+                  value={group.id}
+                  className="rounded-lg py-3 px-4 text-sm font-medium data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-sm text-slate-600"
                 >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
-                      activeFactor === index ? "bg-cta/20" : "bg-cta/10"
-                    }`}>
-                      <factor.icon className="w-4 h-4 text-cta" />
-                    </div>
-                    <span className={`font-bold text-lg transition-colors ${
-                      activeFactor === index ? "text-cta" : "text-cta"
-                    }`}>{factor.weight}</span>
-                  </div>
-                  <p className="text-slate-900 font-semibold text-sm mb-1">{factor.label}</p>
-                  <p className="text-slate-500 text-xs leading-relaxed">{factor.description}</p>
-                </button>
+                  <span className="hidden sm:inline">{group.title}</span>
+                  <span className="sm:hidden">{group.title.split(" ")[0]}</span>
+                </TabsTrigger>
               ))}
-            </div>
+            </TabsList>
 
-            {/* Right: Image with Dynamic Callout */}
-            <div className="space-y-0">
-              {/* Image */}
-              <div className="relative">
-                <div className="aspect-[16/9] rounded-t-2xl overflow-hidden border border-b-0 border-slate-200 bg-white">
-                  <img 
-                    src={rankingFactorsImage} 
-                    alt="Local search ranking factors analysis" 
-                    className="w-full h-full object-cover opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
-                </div>
-              </div>
-              
-              {/* Dynamic Detail Card - updates on hover */}
-              <div 
-                className="bg-slate-50 rounded-b-2xl p-5 border border-t-0 border-slate-200 transition-all duration-300"
-                key={activeFactor}
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center">
-                    {activeFactor !== null ? (
-                      (() => {
-                        const Icon = factors[activeFactor].icon;
-                        return <Icon className="w-4 h-4 text-cta" />;
-                      })()
-                    ) : (
-                      <Navigation className="w-4 h-4 text-cta" />
-                    )}
+            {factorGroups.map((group) => (
+              <TabsContent key={group.id} value={group.id} className="mt-0">
+                <div className="bg-slate-900 rounded-2xl p-8 lg:p-10">
+                  {/* Tab Header */}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+                      {group.title}
+                    </h3>
+                    <p className="text-slate-400 uppercase tracking-wider text-sm">
+                      {group.subtitle}
+                    </p>
                   </div>
-                  <div>
-                    <p className="text-slate-900 font-semibold text-sm">{activeDetail.title}</p>
-                    <p className="text-slate-400 text-xs">Source: Whitespark 2026</p>
+
+                  {/* Color Bar Visualization */}
+                  <div className="flex h-12 md:h-14 rounded-lg overflow-hidden mb-8">
+                    {group.factors.map((factor, idx) => (
+                      <div
+                        key={idx}
+                        className={`${factor.color} transition-all duration-300 hover:opacity-80`}
+                        style={{ width: `${factor.weight}%` }}
+                        title={`${factor.weight}% ${factor.label}`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Factor List */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {group.factors.map((factor, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${factor.color} flex-shrink-0`} />
+                        <span className="text-white text-sm">
+                          <span className="font-bold">{factor.weight}%</span>{" "}
+                          <span className="text-slate-300">{factor.label}</span>
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Source */}
+                  <div className="mt-8 pt-6 border-t border-slate-700 flex items-center justify-between">
+                    <p className="text-slate-500 text-sm">
+                      Source: Whitespark 2026 Local Search Ranking Factors
+                    </p>
                   </div>
                 </div>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {activeDetail.body}
-                </p>
-              </div>
-            </div>
-          </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </div>
     </section>
