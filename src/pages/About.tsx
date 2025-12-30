@@ -491,8 +491,7 @@ const About = () => {
                       <p className="text-xs text-text-secondary">E-commerce SEO + paid advertising</p>
                     </div>
                     <div>
-                      <p className="text-xs text-cta font-semibold">Car Spa (11 locations)</p>
-                      <p className="text-xs text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
+                      <p className="text-xs text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
                     </div>
                     <div>
                       <p className="text-xs text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
@@ -545,9 +544,15 @@ const About = () => {
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
                     Expanded to national-scale SEO and reputation work.
                   </p>
-                  <div className="pt-3 border-t border-border/50">
-                    <p className="text-xs text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
-                    <p className="text-xs text-text-secondary">National moving company. SEO + reputation.</p>
+                  <div className="pt-3 border-t border-border/50 space-y-2">
+                    <div>
+                      <p className="text-xs text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
+                      <p className="text-xs text-text-secondary">National moving company. SEO + reputation.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-cta font-semibold">Car Spa (11 locations)</p>
+                      <p className="text-xs text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
+                    </div>
                   </div>
                 </div>
 
