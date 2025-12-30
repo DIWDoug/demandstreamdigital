@@ -79,13 +79,41 @@ const LocalSEOSpokes = () => {
 
           {/* Spokes Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {spokes.map((spoke) => {
+            {spokes.slice(0, 6).map((spoke) => {
               const Icon = spoke.icon;
               
               return (
                 <div
                   key={spoke.slug}
                   className="bg-surface-elevated border border-border/50 rounded-xl p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-cta" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-foreground font-semibold text-lg mb-2">
+                        {spoke.title}
+                      </h3>
+                      <p className="text-text-secondary text-sm leading-relaxed">
+                        {spoke.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          
+          {/* Centered last row */}
+          <div className="flex justify-center gap-6 mt-6">
+            {spokes.slice(6).map((spoke) => {
+              const Icon = spoke.icon;
+              
+              return (
+                <div
+                  key={spoke.slug}
+                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
