@@ -12,93 +12,93 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Every day without a working campaign costs your client $500+ in lost leads. We build Google Ads, Meta Ads, and Local Service Ads that generate 15-40 qualified leads per month, executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We make the phone ring.",
+    subheadline: "Your clients need leads today, not in six months. We build and manage Google Ads and Meta campaigns that generate qualified local leads at scale, executed entirely under your brand.",
+    qualifierLine: "You stay the hero. We handle the execution that keeps clients growing and confident.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "For agencies tired of explaining poor results."
+    ctaSubtext: "Built for agencies who need results they can stand behind."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Your Clients Are Bleeding $3,000/Month on Broken Campaigns",
-    intro: "You know exactly how this ends. $2,500 in ad spend. 47 clicks. 2 junk leads. And a client asking why they should keep paying you.",
+    headline: "Why Most White-Label PPC Fails Your Clients",
+    intro: "You have seen this before. The campaigns launched, spend is flowing, but leads are weak, costs are high, and you are left explaining why the numbers do not match the promises.",
     painPoints: [
       {
         icon: Target,
-        title: "$127 Per Lead Instead of $35",
-        body: "Generic campaigns burn 3x the budget they should. A plumber in Phoenix competes differently than one in Seattle. Template setups bleed money from day one."
+        title: "Generic Campaigns, Generic Results",
+        body: "Cookie-cutter campaign structures ignore local market dynamics. A service business in Dallas competes differently than one in Portland. Template campaigns deliver template results."
       },
       {
         icon: DollarSign,
-        title: "Zero Proof When the Invoice Arrives",
-        body: "No call tracking. No form attribution. No way to prove that $3,000 generated anything. Every monthly invoice becomes a churn conversation."
+        title: "Spend Without Strategy",
+        body: "Budget goes out the door without clear conversion goals or attribution. When you cannot prove ROI, every invoice becomes a negotiation."
       },
       {
         icon: Settings,
-        title: "Campaigns That Nobody Is Watching",
-        body: "Search terms filling with garbage. Bids drifting 40% above target. Performance degrading week over week while your vendor runs a weekly 10-minute check."
+        title: "Set It and Forget It Management",
+        body: "Campaigns need daily attention, not weekly glances. Search terms go unchecked, bids drift, and performance degrades while no one is watching."
       },
       {
         icon: FileText,
-        title: "Reports That Make Clients More Confused",
-        body: "12 pages of impressions, CTR, and quality scores. Zero connection to revenue. Clients have no idea if the investment is working."
+        title: "Reports That Confuse Rather Than Clarify",
+        body: "Clients receive data dumps instead of insights. Impressions and clicks mean nothing if you cannot connect them to leads and revenue."
       }
     ],
-    closingLine: "We build campaigns that generate 15-40 leads per month at $25-50 per lead",
-    closingHighlight: "so you can show clients exactly what their money produced.",
+    closingLine: "We build campaigns from the ground up for local lead generation",
+    closingHighlight: "so clients get leads they can count and you keep the margin you earned.",
     ctaText: "See How We Build Campaigns"
   },
 
   outcomes: {
-    headline: "What Changes When Campaigns Actually Work",
-    subheadline: "Specific, measurable results within 30 days.",
+    headline: "What Actually Changes When Paid Media Works",
+    subheadline: "What changes when campaigns are built for local lead generation and optimized weekly.",
     items: [
       {
         icon: Zap,
-        title: "First Leads Within 7 Days",
-        description: "Campaigns launch in 1-2 weeks. Qualified calls and form fills start the first week of spend. Not the first quarter."
+        title: "Leads Start Flowing Immediately",
+        description: "Unlike SEO, paid media delivers from day one. Qualified leads within the first week, not the first quarter."
       },
       {
         icon: Target,
-        title: "Every Dollar Tracked to Revenue",
-        description: "Call tracking, form attribution, and CRM integration. Show clients that $2,500 generated 47 leads worth $94,000 in closed revenue."
+        title: "Spend Connects to Revenue",
+        description: "Every dollar is tracked. Call tracking, form attribution, and conversion data prove what the investment produces."
       },
       {
         icon: TrendingUp,
-        title: "Cost Per Lead Drops 30-50% by Month 3",
-        description: "Daily bid adjustments, weekly negative keyword updates, and monthly strategy refinement compound into consistently improving efficiency."
+        title: "Performance Compounds Monthly",
+        description: "Daily optimization and weekly refinement compound into continuously improving results."
       },
       {
         icon: DollarSign,
-        title: "Predictable Growth You Can Scale",
-        description: "Once a campaign produces $35 leads at 4:1 ROAS, scale the budget and watch revenue follow."
+        title: "Scalable Growth When Ready",
+        description: "When campaigns work, scale them up. Predictable lead generation that matches capacity and growth goals."
       }
     ]
   },
 
   roadmap: {
     eyebrow: "The Framework",
-    headline: "From Zero to 40+ Leads Per Month",
-    subheadline: "A proven 4-phase system that generates leads in week one and compounds performance every month.",
+    headline: "From Strategy to Scale",
+    subheadline: "Every campaign is built for the specific market and goals, sequenced to generate leads first, then optimize and expand.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
-        title: "Launch in 10-14 Days",
-        description: "Campaign architecture built for your client's specific market, with tracking that proves every dollar.",
+        title: "Strategy, Structure & Launch",
+        description: "Campaign architecture designed for local lead generation, with proper tracking and attribution from day one.",
         activities: [
-          "Competitor ad analysis and gap identification",
-          "Keyword research with cost-per-lead projections",
-          "Campaign structure for local lead generation",
-          "Geographic and demographic targeting",
-          "Ad copy written to beat competitor CTR",
-          "All extensions configured for maximum visibility",
+          "Market and competitor analysis",
+          "Keyword research and mapping",
+          "Campaign structure design",
+          "Geographic targeting configuration",
+          "Ad copy development and testing setup",
+          "Extension creation and optimization",
           "Landing page audit or development",
-          "Call tracking with recording enabled",
-          "Conversion tracking across all touchpoints",
-          "Bid strategy matched to budget and goals",
+          "Call tracking implementation",
+          "Conversion tracking setup",
+          "Bid strategy selection",
           "Budget allocation framework",
-          "Campaign launch with 72-hour monitoring"
+          "Campaign launch and initial monitoring"
         ],
         icon: Target,
         color: "hsl(76, 42%, 41%)"
@@ -106,17 +106,17 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         phase: 2,
         name: "Optimization",
-        title: "Cut Cost Per Lead 30-50%",
-        description: "Daily attention that eliminates waste and drives efficiency most vendors ignore.",
+        title: "Refinement & Efficiency",
+        description: "Data-driven optimization that reduces waste and improves lead quality and volume.",
         activities: [
-          "Daily search term review and negative keyword updates",
-          "Ad copy A/B testing with statistical significance",
-          "Bid adjustments by device, location, and hour",
-          "Quality Score improvement for lower CPCs",
-          "Landing page conversion rate optimization",
-          "Audience refinement based on lead quality",
-          "Budget reallocation to top performers",
-          "Weekly optimization cycles with documented changes"
+          "Search term analysis and negative keyword management",
+          "Ad copy A/B testing",
+          "Bid adjustments by device, location, time",
+          "Quality Score improvement",
+          "Landing page conversion optimization",
+          "Audience refinement",
+          "Budget reallocation based on performance",
+          "Weekly optimization cycles"
         ],
         icon: Settings,
         color: "hsl(224, 60%, 55%)"
@@ -124,16 +124,16 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Expansion",
-        title: "Scale to 60+ Leads Per Month",
-        description: "Once unit economics work, expand into new keywords, audiences, and channels.",
+        title: "Scaling What Works",
+        description: "Expanding successful campaigns into new keywords, audiences, and channels.",
         activities: [
-          "New keyword expansion into adjacent services",
-          "Audience expansion with lookalike targeting",
-          "Display and YouTube remarketing campaigns",
-          "Geographic expansion into new service areas",
-          "Budget increases matched to lead capacity",
+          "New keyword expansion",
+          "Audience expansion testing",
+          "New campaign type testing (Display, YouTube, etc.)",
+          "Geographic expansion where applicable",
+          "Increased budget deployment",
           "Cross-channel strategy (Google + Meta)",
-          "Retargeting sequences for unconverted traffic"
+          "Retargeting campaign development"
         ],
         icon: TrendingUp,
         color: "hsl(35, 90%, 50%)"
@@ -141,21 +141,21 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         phase: 4,
         name: "Dominance",
-        title: "Own the Market",
-        description: "Maintain competitive advantage while maximizing efficiency at scale.",
+        title: "Market Leadership & Sustained Performance",
+        description: "Maintaining competitive advantage while maximizing efficiency at scale.",
         activities: [
-          "Competitive monitoring and rapid response",
-          "Advanced bidding strategies for market leadership",
-          "Attribution modeling across all channels",
-          "Quarterly strategic reviews with growth planning",
+          "Competitive monitoring and response",
+          "Advanced bidding strategies",
+          "Attribution modeling refinement",
+          "Quarterly strategic reviews",
           "New platform feature adoption",
-          "Long-term expansion and diversification"
+          "Long-term growth planning"
         ],
         icon: BarChart3,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Everything happens under your brand. First leads typically arrive within 7-10 days of launch."
+    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. Most clients see meaningful lead flow within 2-4 weeks."
   },
 
   buildingBlocks: {
@@ -216,50 +216,50 @@ export const paidMediaConfig: ServicePageConfig = {
 
   qualification: {
     eyebrow: "Before We Talk",
-    headline: "This Works When the Conditions Are Right",
-    subheadline: "Paid media is powerful, but it requires the right setup to succeed. Here is who sees results.",
+    headline: "We Are Selective About Who We Work With",
+    subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "Minimum $2,000/month ad spend",
-        detail: "Below this threshold, there is not enough data to optimize. $2,000+ generates the 50-100 clicks per week needed to prove what works."
+        point: "Your clients have realistic budget expectations",
+        detail: "We recommend minimum $2,000/month in ad spend for local campaigns. Less than that rarely generates enough data or leads to prove value."
       },
       {
-        point: "Clients who answer the phone",
-        detail: "We can generate 40 calls per month. If 30% go to voicemail, 12 leads are wasted. Clients need systems to capture every opportunity."
+        point: "You want accountability, not just activity",
+        detail: "We focus on leads and revenue, not impressions and clicks. Our reporting connects spend to outcomes so you can prove ROI."
       },
       {
-        point: "You want leads, not impressions",
-        detail: "Our reports show cost per lead, cost per acquisition, and revenue attribution. If you want vanity metrics, we are not the right partner."
+        point: "Your clients can handle lead volume",
+        detail: "Paid media can turn on quickly. Clients need the capacity to answer calls and follow up with leads, or the investment is wasted."
       },
       {
-        point: "You need a reliable fulfillment partner",
-        detail: "Agencies come to us after inconsistent vendors burned client trust. We execute with documented scope and clear accountability."
+        point: "You understand paid media requires investment",
+        detail: "Management fees plus ad spend. This is not a cheap channel, but the ROI justifies the investment when done right."
       },
       {
-        point: "Month 3 matters more than week 1",
-        detail: "First-week campaigns are good. Third-month campaigns are 40% more efficient. We partner with agencies who value compounding performance."
+        point: "You value long-term optimization over quick launches",
+        detail: "Campaigns improve over time with data. We partner with agencies who understand that month three is better than month one."
       }
     ],
     notFit: [
       {
         point: "Ad spend under $1,500/month",
-        detail: "There is not enough budget to generate statistical significance. We cannot recommend paid media until spend supports proper optimization."
+        detail: "Below this threshold, there is not enough budget to generate meaningful data or results. We cannot recommend paid media for micro-budgets."
       },
       {
-        point: "Expecting 50 leads in week one",
-        detail: "Campaigns launch fast, but optimization takes 4-8 weeks. Week one delivers leads. Month three delivers efficiency."
+        point: "Expecting overnight results without optimization time",
+        detail: "Campaigns launch quickly, but optimization takes weeks. Expecting fully refined performance in week one sets everyone up for disappointment."
       },
       {
-        point: "No CRM or lead tracking",
-        detail: "If we cannot see which leads became customers, we cannot optimize for revenue. Closed-loop attribution is required."
+        point: "Clients who cannot track or follow up with leads",
+        detail: "If leads go unanswered or cannot be tracked, we cannot optimize effectively and cannot prove value."
       },
       {
-        point: "Price is the only factor",
-        detail: "Quality paid media costs $1,000-2,500/month in management fees. If you are shopping on price alone, the cheapest option will cost more in wasted spend."
+        point: "Price is the only decision factor",
+        detail: "Quality paid media management requires investment. If you are shopping purely on management fee, we are not the right fit."
       },
       {
-        point: "Setup only, no ongoing management",
-        detail: "Campaigns degrade without daily attention. We do not offer launch-and-leave services."
+        point: "One-time campaign setup with no ongoing management",
+        detail: "Paid media requires continuous optimization. We do not offer setup-only services."
       }
     ],
     ctaText: "Let's Discuss Your Clients"
@@ -271,26 +271,26 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         category: "Results & Performance",
         items: [
-          { question: "How fast will leads start coming in?", answer: "Campaigns launch in 10-14 days. Most clients see qualified leads within the first 7 days of ad spend. First-month volume is good. Third-month efficiency is 30-50% better." },
-          { question: "What cost per lead should we expect?", answer: "Depends on market and service. Local service businesses typically see $25-75 per lead. We track CPL weekly and optimize to drive it down consistently." },
-          { question: "What happens if a campaign underperforms?", answer: "We monitor daily and optimize weekly. If a campaign is not hitting targets by week 3, we diagnose root cause and pivot strategy. Our goal is always improvement, not maintenance." }
+          { question: "How quickly will we see results?", answer: "Campaigns can launch within 1-2 weeks and typically generate leads within the first week of running. Performance improves over time as we gather data and optimize." },
+          { question: "What kind of ROI can we expect?", answer: "ROI varies by industry and market, but our goal is always positive return on ad spend. We track cost per lead and work to continuously improve it." },
+          { question: "What if a campaign is not performing?", answer: "We monitor campaigns daily and make optimization decisions weekly. If something is not working, we identify it quickly and pivot. Our goal is always to improve performance, not just maintain it." }
         ]
       },
       {
         category: "Services & Scope",
         items: [
-          { question: "Which platforms do you manage?", answer: "Google Search, Google Display, Google Local Service Ads, YouTube, Facebook, and Instagram. Most local clients start with Google Search and expand once unit economics are proven." },
-          { question: "Do you build landing pages?", answer: "Yes. We develop conversion-optimized landing pages with local trust signals, click-to-call, and forms designed to convert. Landing page quality directly impacts cost per lead." },
-          { question: "How do you prove ROI to clients?", answer: "Call tracking with recording, form attribution, and CRM integration. Our reports show exactly how many leads came from each campaign and what revenue they generated." },
-          { question: "What is the minimum ad spend?", answer: "$2,000/month minimum for local campaigns. Below this, there is not enough data to optimize effectively. We help agencies set appropriate budgets based on market competition." }
+          { question: "Do you manage both Google Ads and Meta Ads?", answer: "Yes. We are certified in both platforms and manage campaigns across Google Search, Display, Local Service Ads, and the full Meta ecosystem including Facebook and Instagram." },
+          { question: "Do you create landing pages?", answer: "Yes. We can develop conversion-optimized landing pages as part of campaign management. Strong landing pages are critical to campaign success." },
+          { question: "How do you track and report on ROI?", answer: "We implement call tracking, form tracking, and conversion attribution so you can show clients exactly what their ad spend produces. Our reports connect spend to leads." },
+          { question: "What is your minimum ad spend requirement?", answer: "We recommend minimum $2,000/month in ad spend for local campaigns to generate meaningful data and results. We work with agencies to determine appropriate budgets based on market competition and goals." }
         ]
       },
       {
         category: "Partnership & Process",
         items: [
-          { question: "Is everything truly white-label?", answer: "100%. All reports, communications, and deliverables are branded as your agency. Your clients never know we exist. You maintain the relationship and the margin." },
-          { question: "Do you require contracts?", answer: "No. Month-to-month with 30-day notice. We keep clients through performance, not lock-in. Average client tenure is 18+ months because the results compound." },
-          { question: "What access do you need to start?", answer: "Google Ads and/or Meta Ads account access, website access for tracking pixels, and ideally CRM access so we can optimize for closed revenue, not just leads." }
+          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship." },
+          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements." },
+          { question: "What access do you need?", answer: "We need Google Ads and/or Meta Ads account access, website access for tracking implementation, and ideally CRM access for closed-loop attribution." }
         ]
       }
     ]
