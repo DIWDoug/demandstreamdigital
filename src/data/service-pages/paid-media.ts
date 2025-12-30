@@ -95,7 +95,10 @@ export const paidMediaConfig: ServicePageConfig = {
           "Offline conversion setup (if applicable)",
           "Call tracking implementation",
           "Budget allocation framework",
-          "Conversion value definition"
+          "Conversion value definition",
+          "Master negative keyword lists (Google)",
+          "Mobile app placement exclusions (Google Display)",
+          "AdRoll retargeting pixel setup"
         ],
         icon: Target,
         color: "hsl(76, 42%, 41%)"
@@ -125,6 +128,8 @@ export const paidMediaConfig: ServicePageConfig = {
         description: "This is where campaigns get good. We cut what doesn't work—bad keywords in Google, weak audiences in Meta, underperforming placements everywhere.",
         activities: [
           "Search term analysis and negative keyword exclusions",
+          "Master negative placement management (Google Display)",
+          "Mobile app and low-quality site exclusions",
           "Audience performance analysis and pruning",
           "Placement and position optimization (Meta)",
           "Ad copy and creative A/B testing",
@@ -182,9 +187,9 @@ export const paidMediaConfig: ServicePageConfig = {
         icon: Map
       },
       {
-        title: "Retargeting Campaigns",
+        title: "Retargeting & Display",
         slug: "retargeting-campaigns",
-        description: "Display and social retargeting that keeps your clients top of mind with past visitors.",
+        description: "Display and social retargeting via Google Display, Meta, and AdRoll to keep clients top of mind.",
         icon: Share2
       },
       {
