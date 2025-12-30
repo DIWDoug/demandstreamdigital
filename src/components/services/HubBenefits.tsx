@@ -1,0 +1,169 @@
+import { ClipboardCheck, MessageSquareText, Target, BellOff, GraduationCap, Users, Zap, TrendingUp, type LucideIcon } from "lucide-react";
+
+interface BenefitItem {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+interface HubBenefitsProps {
+  hubSlug: string;
+}
+
+const benefitsByHub: Record<string, { headline: string; subheadline: string; benefits: BenefitItem[] }> = {
+  "local-seo": {
+    headline: "What Actually Changes When Local SEO Works",
+    subheadline: "When fulfillment runs smoothly, everything else gets easier. Here's what that looks like.",
+    benefits: [
+      {
+        icon: Target,
+        title: "Scoped to Each Client's Market",
+        description: "No two markets compete the same. We analyze local competition and build campaigns around actual opportunity, so clients see real progress."
+      },
+      {
+        icon: MessageSquareText,
+        title: "Work You Can Confidently Explain",
+        description: "Every deliverable is built to be client-presentable. No hedging, no scrambling when questions come up."
+      },
+      {
+        icon: ClipboardCheck,
+        title: "Clear Scope. Fewer Headaches.",
+        description: "Everyone knows what's included, how work moves forward, and how changes are handled. No gray areas."
+      },
+      {
+        icon: BellOff,
+        title: "Problems Surface Early",
+        description: "Structured check-ins and proactive communication catch issues before they become client-facing problems."
+      },
+      {
+        icon: GraduationCap,
+        title: "Marketers, Not Rented Headcount",
+        description: "Fulfillment is handled by experienced local SEO specialists who understand ranking factors and execution standards."
+      },
+      {
+        icon: TrendingUp,
+        title: "Clients Stay Longer",
+        description: "When work is scoped correctly and delivered consistently, retention improves. That's margin you keep."
+      }
+    ]
+  },
+  "google-maps": {
+    headline: "What Actually Changes When GBP Works",
+    subheadline: "Consistent Google Business Profile management transforms client results. Here's what that looks like.",
+    benefits: [
+      {
+        icon: Zap,
+        title: "Direct Response from Maps",
+        description: "Calls, directions, and website clicks flow directly from optimized profiles. No middleman, no friction."
+      },
+      {
+        icon: MessageSquareText,
+        title: "Review Strategy That Builds Trust",
+        description: "Systematic review generation and professional responses that convert browsers into callers."
+      },
+      {
+        icon: ClipboardCheck,
+        title: "Citation Consistency Handled",
+        description: "NAP accuracy across 50+ directories, cleaned up and maintained without you chasing discrepancies."
+      },
+      {
+        icon: BellOff,
+        title: "Proactive Issue Resolution",
+        description: "Suspension risks, spam reviews, and guideline changes caught early. No surprises for you or your clients."
+      },
+      {
+        icon: GraduationCap,
+        title: "GBP Specialists, Not Generalists",
+        description: "Team members who live in Google Business Profile daily, not checking a box on a broader checklist."
+      },
+      {
+        icon: TrendingUp,
+        title: "Local Pack Visibility Compounds",
+        description: "Consistent optimization builds prominence over time. Rankings achieved today keep delivering."
+      }
+    ]
+  }
+};
+
+// Default fallback for hubs not yet customized
+const defaultBenefits: { headline: string; subheadline: string; benefits: BenefitItem[] } = {
+  headline: "What Actually Changes When Fulfillment Works",
+  subheadline: "When fulfillment runs smoothly, everything else gets easier.",
+  benefits: [
+    {
+      icon: ClipboardCheck,
+      title: "Clear Scope. Fewer Headaches.",
+      description: "Everyone knows what's included and how work moves forward. No gray areas."
+    },
+    {
+      icon: MessageSquareText,
+      title: "Work You Can Confidently Explain",
+      description: "Execution delivered in a way you can stand behind without hedging."
+    },
+    {
+      icon: Target,
+      title: "Scoped to Each Client's Market",
+      description: "Campaigns built around actual competition and opportunity."
+    },
+    {
+      icon: BellOff,
+      title: "Problems Surface Early",
+      description: "Structured communication catches issues before they become client-facing problems."
+    },
+    {
+      icon: GraduationCap,
+      title: "Marketers, Not Rented Headcount",
+      description: "Experienced specialists who understand execution standards."
+    },
+    {
+      icon: TrendingUp,
+      title: "Clients Stay Longer",
+      description: "Better work means better retention. That's margin you keep."
+    }
+  ]
+};
+
+const HubBenefits = ({ hubSlug }: HubBenefitsProps) => {
+  const content = benefitsByHub[hubSlug] || defaultBenefits;
+
+  return (
+    <section className="py-20 lg:py-28 section-light relative">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
+            {content.headline}
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            {content.subheadline}
+          </p>
+        </div>
+
+        {/* 6 Benefits Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {content.benefits.map((benefit) => (
+            <div 
+              key={benefit.title}
+              className="text-center p-8 rounded-xl border bg-gradient-to-br from-white to-[#F0F0ED] border-gray-300/50"
+              style={{ 
+                boxShadow: 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)' 
+              }}
+            >
+              <div className="inline-flex items-center justify-center p-4 rounded-xl mb-5 bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20">
+                <benefit.icon className="w-7 h-7 text-[hsl(76,42%,35%)]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold mb-3 text-gray-900">
+                {benefit.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-600">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HubBenefits;

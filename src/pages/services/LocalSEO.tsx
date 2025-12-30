@@ -11,7 +11,7 @@ import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFac
 import LocalSEOFitQualifier from "@/components/services/local-seo/LocalSEOFitQualifier";
 import OurApproach from "@/components/services/OurApproach";
 import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
+import HubBenefits from "@/components/services/HubBenefits";
 import HubFAQ from "@/components/services/HubFAQ";
 import OtherServices from "@/components/services/OtherServices";
 import { getHubBySlug } from "@/data/services";
@@ -78,8 +78,8 @@ const LocalSEO = () => {
       {/* Hub Spoke Diagram - specific services */}
       <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
       
-      {/* What You Get */}
-      <ServiceBenefits {...hub.benefits} />
+      {/* What Actually Changes - rich benefit cards */}
+      <HubBenefits hubSlug={hub.slug} />
       
       <SectionDivider />
       
