@@ -13,37 +13,37 @@ interface HubBenefitsProps {
 const benefitsByHub: Record<string, { headline: string; subheadline: string; benefits: BenefitItem[] }> = {
   "local-seo": {
     headline: "What Actually Changes When Local SEO Works",
-    subheadline: "When fulfillment runs smoothly, everything else gets easier. Here's what that looks like.",
+    subheadline: "The outcomes your clients experience when execution is done right.",
     benefits: [
       {
         icon: Target,
-        title: "Scoped to Each Client's Market",
-        description: "No two markets compete the same. We analyze local competition and build campaigns around actual opportunity, so clients see real progress."
+        title: "More Calls From the Map Pack",
+        description: "Clients appear in the local 3-pack for their highest-intent keywords. Phone rings more often from people ready to book."
       },
       {
         icon: MessageSquareText,
-        title: "Work You Can Confidently Explain",
-        description: "Every deliverable is built to be client-presentable. No hedging, no scrambling when questions come up."
+        title: "Reviews That Build Trust",
+        description: "A steady stream of fresh, authentic reviews signals credibility to both Google and future customers."
       },
       {
-        icon: ClipboardCheck,
-        title: "Clear Scope. Fewer Headaches.",
-        description: "Everyone knows what's included, how work moves forward, and how changes are handled. No gray areas."
+        icon: Zap,
+        title: "Website Traffic That Converts",
+        description: "Organic visitors who find what they're looking for, stay longer, and take action. Not vanity metrics."
       },
       {
-        icon: BellOff,
-        title: "Problems Surface Early",
-        description: "Structured check-ins and proactive communication catch issues before they become client-facing problems."
-      },
-      {
-        icon: GraduationCap,
-        title: "Marketers, Not Rented Headcount",
-        description: "Fulfillment is handled by experienced local SEO specialists who understand ranking factors and execution standards."
+        icon: Users,
+        title: "Visibility Across AI Platforms",
+        description: "Optimized content and authority signals help clients surface in ChatGPT, Gemini, and AI Overviews. Not just traditional search."
       },
       {
         icon: TrendingUp,
-        title: "Clients Stay Longer",
-        description: "When work is scoped correctly and delivered consistently, retention improves. That's margin you keep."
+        title: "Rankings That Compound Over Time",
+        description: "Each month builds on the last. Content, links, and signals accumulate into lasting visibility your clients can count on."
+      },
+      {
+        icon: ClipboardCheck,
+        title: "Clear Reporting They Understand",
+        description: "Monthly reports that show progress in plain language. Rankings, traffic, calls, and leads. No jargon, no confusion."
       }
     ]
   },
