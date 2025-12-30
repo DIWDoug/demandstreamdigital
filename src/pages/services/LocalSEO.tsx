@@ -52,38 +52,40 @@ const LocalSEO = () => {
       
       <SectionDivider />
       
-      {/* Pain Points - why one-size-fits-all fails */}
+      {/* 1. THE PROBLEM - why one-size-fits-all fails */}
       <LocalSEOPainPoints />
       
-      {/* SEO Value Explainer - showing clients the real value */}
-      <SEOValueExplainer />
-      
-      {/* Local Ranking Factors - interactive hover */}
-      <LocalRankingFactors />
-      
-      <SectionDivider />
-      
-      {/* Fit Qualifier - who this is for */}
-      <LocalSEOFitQualifier />
-      
-      {/* Our Approach - 6-month roadmap */}
+      {/* 2. THE SOLUTION - our phased approach */}
       <LocalSEORoadmap />
       
       <SectionDivider />
       
-      {/* What Actually Changes - rich benefit cards */}
+      {/* 3. WHAT MOVES THE NEEDLE - data-backed ranking factors */}
+      <LocalRankingFactors />
+      
+      {/* 4. THE VALUE CONVERSATION - how to communicate ROI */}
+      <SEOValueExplainer />
+      
+      <SectionDivider />
+      
+      {/* 5. OUTCOMES - what actually changes */}
       <HubBenefits hubSlug={hub.slug} />
       
-      {/* Testimonials */}
+      {/* 6. QUALIFICATION - is this right for you */}
+      <LocalSEOFitQualifier />
+      
+      {/* 7. SOCIAL PROOF */}
       <Testimonials />
       
-      {/* FAQ */}
+      {/* 8. OBJECTIONS - FAQ */}
       <HubFAQ title={hub.title} faqs={hub.faqs} />
       
-      {/* Local SEO as part of the system - 360° ecosystem */}
+      <SectionDivider />
+      
+      {/* 9. THE BIGGER PICTURE - 360° ecosystem cross-sell */}
       <LocalSEOSystemContext />
       
-      {/* Contact */}
+      {/* 10. FINAL CTA */}
       <ContactForm />
       
       <Footer />
