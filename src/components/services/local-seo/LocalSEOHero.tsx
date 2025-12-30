@@ -70,12 +70,12 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
           
           {/* Supporting sentence - benefit-first, Cashvertising style */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            Local SEO fulfillment scoped to their market, reported in dollars, executed under your brand.
+            Your clients want one thing: their phone ringing from local search. We deliver local SEO fulfillment scoped to competitive reality, reported in dollars, and executed entirely under your brand.
           </p>
 
           {/* Qualifier line */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            You stay the hero. We handle the local marketing that keeps them paying.
+            You stay the hero. We handle the local SEO execution that keeps clients paying and confident.
           </p>
 
           {/* Simple email/website form */}
@@ -98,7 +98,7 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
               </button>
             </form>
             <p className="text-xs text-text-muted text-center mt-4">
-              This starts a conversation, not a sales call.
+              Built for agencies serving competitive local markets.
             </p>
           </div>
         </div>

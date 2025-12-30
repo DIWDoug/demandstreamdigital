@@ -6,22 +6,22 @@ const LocalSEOPainPoints = () => {
     {
       icon: Users,
       title: "Impossible Expectations Kill Retention",
-      body: "When pricing does not reflect competitive reality, clients expect results you cannot deliver. Then you lose them, and the revenue walks out the door."
+      body: "When pricing ignores competitive reality, expectations break first. Results fall short, trust erodes, and retention suffers."
     },
     {
       icon: Package,
-      title: "One Package for Every Market. No Market Gets Results.",
-      body: "Your plumber in Boise and personal injury lawyer in Chicago need completely different strategies. Cookie-cutter packages ignore this reality and deliver mediocre results for everyone."
+      title: "One Package for Every Market. Predictable Disappointment.",
+      body: "A plumber in Boise and a personal injury lawyer in Chicago do not need the same strategy. Cookie-cutter packages ignore competitive reality and deliver diluted results everywhere."
     },
     {
       icon: Target,
       title: "Underspending in Hard Markets, Overspending in Easy Ones",
-      body: "Fixed-price packages mean you overdeliver where you did not need to and underdeliver where it mattered most. Your hardest clients get the worst results."
+      body: "Fixed pricing forces you to overdeliver where it is unnecessary and underdeliver where competition is fierce. The clients who need the most support feel it first."
     },
     {
       icon: TrendingDown,
       title: "Clients Do Not Understand the Value",
-      body: "They see rankings, not the money those rankings save. Without that context, every invoice feels like a question mark."
+      body: "Clients see rankings. They do not see the revenue those rankings replace. Without that context, every invoice invites doubt."
     }
   ];
 
@@ -38,7 +38,7 @@ const LocalSEOPainPoints = () => {
               Why Most White-Label SEO Fails Your Clients
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Six months in, clients are frustrated, threatening to leave, and you are explaining why rankings have not moved.
+              You have seen this before. The package looked good on paper, but six months later clients are frustrated, questioning the spend, and you are left explaining why results never matched expectations.
             </p>
           </div>
 
@@ -64,10 +64,9 @@ const LocalSEOPainPoints = () => {
             ))}
           </div>
 
-          {/* Transition Line + CTA */}
           <div className="text-center mt-14 space-y-6">
             <p className="text-slate-600 text-lg">
-              We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Your clients get what they need. You keep the margin you earned.</span>
+              We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Clients get what they need, expectations stay grounded, and you keep the margin you earned.</span>
             </p>
             <Link 
               to="#contact" 

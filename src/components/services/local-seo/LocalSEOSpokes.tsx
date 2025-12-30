@@ -12,13 +12,13 @@ const spokes: Spoke[] = [
   {
     title: "On-Page SEO",
     slug: "on-page-local-optimization",
-    description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market.",
+    description: "Location-specific optimization that removes ambiguity for search engines and reinforces relevance in each target market.",
     icon: FileText,
   },
   {
     title: "Technical SEO",
     slug: "technical-seo-multi-location",
-    description: "Site architecture, internal linking, crawlability, and Core Web Vitals optimization that help search engines understand your client's service areas.",
+    description: "Technical improvements that ensure search engines can crawl, understand, and trust the site across all service areas.",
     icon: Settings,
   },
   {
@@ -36,13 +36,13 @@ const spokes: Spoke[] = [
   {
     title: "Link Building",
     slug: "local-link-acquisition",
-    description: "Citations, structured and unstructured foundational links, sponsorships, and local link opportunities that build geographic authority.",
+    description: "Geographic and industry-relevant links that establish legitimacy and authority where it actually matters.",
     icon: Link2,
   },
   {
     title: "Google Business Profile Optimization",
     slug: "google-business-profile",
-    description: "Complete GBP optimization including categories, attributes, photos, posts, and Q&A management to maximize local pack visibility.",
+    description: "Full Google Business Profile optimization designed to maximize local pack visibility and user trust.",
     icon: MapPin,
   },
 ];
@@ -55,10 +55,10 @@ const LocalSEOSpokes = () => {
           {/* Header */}
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
-              What Gets Scoped
+              The Levers We Pull
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-              What Gets Scoped In or Out Based on Market
+              The Levers We Pull Based on Market Reality
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               Each component is scoped based on market competition and client goals—not templated packages.

@@ -48,7 +48,7 @@ const LocalSEOFitQualifier = () => {
       detail: "Quality local SEO has real costs. If budget is the primary factor and you are looking for the cheapest option, the math will not work for either of us."
     },
     {
-      point: "You need rankings in 30 days",
+      point: "Short-term ranking expectations drive poor outcomes",
       detail: "Quick wins occasionally happen, but setting that expectation creates problems. Sustainable local SEO takes three to six months to show meaningful, lasting results."
     },
     {
