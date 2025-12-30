@@ -71,10 +71,7 @@ const services: Service[] = [
   }
 ];
 
-// Removed static checklistItems - now using services array directly
-
 const LocalSEOSystemContext = () => {
-  const centerService = services.find(s => s.isCenter);
   const orbitServices = services.filter(s => !s.isCenter);
 
   return (
@@ -98,7 +95,7 @@ const LocalSEOSystemContext = () => {
               </p>
               
               <p className="text-slate-600 leading-relaxed mb-8">
-                That's why we don't offer siloed services. Every engagement is designed to compound—so your clients see results that grow over time, not one-off wins that fade.
+                We offer each service independently, but the magic happens when they work in concert. Explore our full suite of white-label services to see how they can compound results for your clients.
               </p>
 
               {/* Checklist - linked to services */}
@@ -124,41 +121,48 @@ const LocalSEOSystemContext = () => {
               </Link>
             </div>
 
-            {/* Right: Circular Orbit Diagram */}
+            {/* Right: Circular Orbit Diagram - icons ON the circle */}
             <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[480px]">
-              {/* Outer orbit circle - solid thin black line */}
-              <div className="absolute w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full border border-slate-800" />
+              {/* Orbit circle - solid thin black line */}
+              <div 
+                className="absolute rounded-full border border-slate-800"
+                style={{
+                  width: '320px',
+                  height: '320px',
+                }}
+              />
               
               {/* Center content - text only, no background */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[140px] h-[140px] md:w-[160px] md:h-[160px] text-center">
-                <p className="text-slate-900 font-bold text-xl md:text-2xl mb-2">Local SEO</p>
-                <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
+              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] text-center">
+                <p className="text-slate-900 font-bold text-2xl mb-2">Local SEO</p>
+                <p className="text-slate-500 text-sm leading-relaxed">
                   Search engine optimization helps potential customers find you through organic searches.
                 </p>
               </div>
 
-              {/* Orbit icons - positioned on the circle, dark backgrounds */}
+              {/* Orbit icons - positioned ON the circle line */}
               {orbitServices.map((service, index) => {
                 // Start from top (-90deg) and go clockwise
                 const angle = (index * 360) / orbitServices.length - 90;
-                const radius = 150; // Half of 300px circle
-                const mdRadius = 180; // Half of 360px circle
+                const radius = 160; // Matches half of 320px circle
                 const Icon = service.icon;
                 
-                // Highlight the left icon (Local SEO hub position - index 5 for ~180deg)
-                const isHighlighted = index === 5;
+                // Highlight the left-side icon (around 180deg = index ~3-4)
+                const isHighlighted = index === 4;
+                
+                // Calculate position
+                const x = Math.cos((angle * Math.PI) / 180) * radius;
+                const y = Math.sin((angle * Math.PI) / 180) * radius;
                 
                 return (
                   <Link
                     key={service.id}
                     to={service.href}
-                    className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all hover:scale-110 group"
+                    className="absolute w-14 h-14 rounded-full flex items-center justify-center transition-all hover:scale-110 group"
                     style={{
                       left: '50%',
                       top: '50%',
-                      marginLeft: '-24px',
-                      marginTop: '-24px',
-                      transform: `translate(${Math.cos((angle * Math.PI) / 180) * radius}px, ${Math.sin((angle * Math.PI) / 180) * radius}px)`,
+                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                     }}
                     title={service.title}
                   >
@@ -168,7 +172,7 @@ const LocalSEOSystemContext = () => {
                         ? "bg-cta group-hover:bg-cta/90" 
                         : "bg-slate-800 group-hover:bg-slate-700"
                     }`} />
-                    <Icon className="relative z-10 w-5 h-5 md:w-6 md:h-6 text-white" />
+                    <Icon className="relative z-10 w-6 h-6 text-white" />
                   </Link>
                 );
               })}
