@@ -710,11 +710,11 @@ const About = () => {
                   }
                 ].map((review, index) => (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2">
-                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 h-full flex flex-col">
-                      <p className="font-serif text-text-secondary leading-relaxed mb-6 flex-grow">
+                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8">
+                      <p className="font-serif text-text-secondary leading-relaxed mb-6">
                         "{review.quote}"
                       </p>
-                      <div className="flex items-center justify-between mt-auto">
+                      <div className="flex items-center justify-between">
                         <div>
                           <p className={`font-semibold mb-1 ${review.rating === 1 ? 'text-text-secondary' : 'text-cta'}`}>{review.name}</p>
                           <div className="flex gap-1">
