@@ -88,7 +88,7 @@ const About = () => {
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
     },
     {
-      name: "Mohammed Bilal",
+      name: "Muhammad Bilal",
       role: "Web Developer",
       image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
     },
