@@ -6,6 +6,7 @@ import WhoWeAre from "@/components/sections/WhoWeAre";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
+import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import clientLogosBanner from "@/assets/client-logos-banner.png";
 import {
   Carousel,
@@ -90,7 +91,7 @@ const About = () => {
     {
       name: "Muhammad Bilal",
       role: "Web Developer",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
+      image: muhammadBilal
     },
     {
       name: "Monique Baetiong",
