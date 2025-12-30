@@ -12,7 +12,6 @@ import LocalSEOFitQualifier from "@/components/services/local-seo/LocalSEOFitQua
 import LocalSEORoadmap from "@/components/services/local-seo/LocalSEORoadmap";
 import LocalSEOSystemContext from "@/components/services/local-seo/LocalSEOSystemContext";
 import LocalSEOSpokes from "@/components/services/local-seo/LocalSEOSpokes";
-import LocalSEORelatedServices from "@/components/services/local-seo/LocalSEORelatedServices";
 import HubBenefits from "@/components/services/HubBenefits";
 import LocalSEOGroupedFAQ from "@/components/services/local-seo/LocalSEOGroupedFAQ";
 import { getHubBySlug } from "@/data/services";
@@ -78,9 +77,6 @@ const LocalSEO = () => {
       
       <SectionDivider />
       <LocalRankingFactors />
-      
-      {/* Related Services - internal linking */}
-      <LocalSEORelatedServices />
       
       <SectionDivider />
       
