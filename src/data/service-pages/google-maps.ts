@@ -12,7 +12,7 @@ export const googleMapsConfig: ServicePageConfig = {
   hero: {
     headline: "White Label GBP SEO for",
     highlightedText: "Digital Agencies",
-    subheadline: "The local 3-pack drives 42% of clicks on local search results. We help your clients dominate it with GBP optimization, review strategy, citation management, and hub-spoke content strategies. Built to protect retention, defend margins, and win Maps visibility in competitive markets.",
+    subheadline: "The local 3-pack drives 42% of local search clicks. We help your clients enter and hold those positions through disciplined GBP optimization, review velocity, citation control, and hub-spoke content strategies built for competitive markets.",
     qualifierLine: "You stay the hero. We handle the execution that keeps clients ranking and renewing.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies managing local visibility at scale."
@@ -45,8 +45,8 @@ export const googleMapsConfig: ServicePageConfig = {
       }
     ],
     systemClosing: "",
-    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system,",
-    closingHighlight: "so your clients stay visible and you keep the margin you earned.",
+    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system",
+    closingHighlight: "so visibility compounds instead of decaying, and margins stay protected.",
     ctaText: "See How We Manage GBP"
   },
 
@@ -80,7 +80,7 @@ export const googleMapsConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Profile Audit to Pack Dominance",
-    subheadline: "Every engagement is scoped to the market. This is how the work sequences, adapted to competitive reality.",
+    subheadline: "Every engagement is scoped to the market and sequenced to earn map pack visibility first, then expand it.",
     phases: [
       {
         phase: 1,
@@ -178,7 +178,7 @@ export const googleMapsConfig: ServicePageConfig = {
       }
     ],
     executionNote: "",
-    footerNote: "Execution is handled entirely under your brand with clear checkpoints. Phase duration varies by market competitiveness—most clients see meaningful pack movement within 3-4 months."
+    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. Phase duration varies by market competitiveness. Most clients see meaningful pack movement within 3-4 months."
   },
 
   buildingBlocks: {
@@ -189,37 +189,37 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         title: "GBP Profile Optimization",
         slug: "gbp-profile-optimization",
-        description: "Complete profile optimization including categories, attributes, services, products, and description that maximizes relevance signals.",
+        description: "Profile optimization across categories, attributes, services, products, and descriptions to maximize relevance signals.",
         icon: MapPin
       },
       {
         title: "Review Generation & Response",
         slug: "review-generation-response",
-        description: "Systematic review acquisition and professional response management that builds trust and improves rankings.",
+        description: "Systematic review acquisition and response management to build trust and improve rankings.",
         icon: Star
       },
       {
         title: "Citation Building & Cleanup",
         slug: "citation-building-cleanup",
-        description: "NAP consistency across 50+ directories and data aggregators that validate business information and build authority.",
+        description: "NAP consistency across 50+ directories and data aggregators to validate business information and build authority.",
         icon: Globe
       },
       {
         title: "GBP Posting & Content",
         slug: "gbp-posting-content",
-        description: "Regular posts, offers, and updates that signal activity to Google and engage potential customers.",
+        description: "Regular posts, offers, and updates to signal activity to Google and engage potential customers.",
         icon: MessageSquare
       },
       {
         title: "Photo & Media Management",
         slug: "photo-media-management",
-        description: "Professional photo strategy, geotagging, and ongoing visual content that increases engagement and trust.",
+        description: "Photo strategy, geotagging, and visual content to increase engagement and trust.",
         icon: Map
       },
       {
         title: "Local Pack Strategy",
         slug: "local-pack-strategy",
-        description: "GBP service and product gap analysis and optimization. Topical map matching between profile and website pages.",
+        description: "GBP service and product gap analysis with topical map matching between profile and website pages.",
         icon: Target
       }
     ]
@@ -317,8 +317,8 @@ export const googleMapsConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "GBP SEO Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "GBP SEO acts as the demand capture layer.",
-    body: "Supported by authority, relevance, and conversion infrastructure across the ecosystem. Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
+    intro: "GBP SEO acts as the demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
+    body: "Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
