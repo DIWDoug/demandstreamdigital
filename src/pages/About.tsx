@@ -427,7 +427,7 @@ const About = () => {
                       <p className="text-xs text-text-secondary">Local SEO and reputation management (2014)</p>
                     </div>
                     <div>
-                      <p className="text-xs text-text-secondary italic">+ Pharo Pediatric, G7 Marketing, Local Search Masters contract work</p>
+                      <p className="text-xs text-text-secondary italic">+ Farrow Pediatric Dentistry, G7 Marketing, Local Search Masters contract work</p>
                     </div>
                   </div>
                 </div>
