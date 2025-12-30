@@ -16,20 +16,23 @@ const roadmapData: PhaseData[] = [
   {
     phase: 1,
     month: "Month 1",
-    title: "Foundation & Quick Wins",
-    outcome: "GBP optimized. Technical issues fixed. First ranking improvements visible.",
+    title: "Foundation & Baseline",
+    outcome: "GBP audited and optimized. All gaps identified. Content strategy mapped.",
     activities: [
-      "Full technical audit with prioritized fixes",
-      "Keyword research targeting buyer-intent searches",
-      "Google Business Profile fully optimized",
-      "NAP cleanup across major directories",
-      "Baseline tracking for rankings, traffic, and leads"
+      "Baseline metrics report: GBP, GA4 organic, GSC, rankings",
+      "Year-over-year comparison analysis",
+      "Backlink gap analysis",
+      "Citation gap analysis",
+      "GBP audit and optimization",
+      "Topical and geographical content gap analysis",
+      "Hub and spoke content architecture planning"
     ],
     deliverables: [
-      "Technical audit with action items",
-      "Keyword map with monthly targets",
+      "Baseline metrics report with YoY comparison",
+      "Backlink and citation gap analysis",
       "Optimized GBP with enhanced categories",
-      "Rankings baseline report"
+      "Tone and style guide",
+      "Content calendar with foundational topics"
     ],
     icon: FileSearch,
     color: "hsl(76, 42%, 41%)",
@@ -38,19 +41,24 @@ const roadmapData: PhaseData[] = [
     phase: 2,
     month: "Month 2",
     title: "On-Page & Content Launch",
-    outcome: "Priority pages ranking. First service area pages live. Schema deployed.",
+    outcome: "Priority pages optimized. First service pages live. Citations submitted.",
     activities: [
-      "On-page optimization for top 10 priority pages",
-      "Title tags and meta descriptions rewritten for CTR",
-      "LocalBusiness and Service schema implemented",
-      "First 2-4 service area pages created",
-      "Internal linking structure improved"
+      "On-page optimization for priority pages",
+      "Schema markup implementation",
+      "First service pages created (AI-assisted with human editing)",
+      "Internal linking structure built",
+      "Foundational citation submissions (structured and unstructured)",
+      "Data aggregator submissions if applicable",
+      "GBP posts begin (ongoing through month 6)",
+      "Review campaign recommendations developed"
     ],
     deliverables: [
-      "10 fully optimized pages",
+      "Priority pages fully optimized",
       "Schema markup validated in Search Console",
       "Service area pages published",
-      "First ranking movement report"
+      "Foundational citations submitted",
+      "Local link building recommendations",
+      "Review campaign strategy document"
     ],
     icon: Rocket,
     color: "hsl(224, 60%, 55%)",
@@ -59,19 +67,22 @@ const roadmapData: PhaseData[] = [
     phase: 3,
     month: "Month 3",
     title: "Authority & Review Velocity",
-    outcome: "Links acquired. Citations complete. Reviews flowing in weekly.",
+    outcome: "Links acquired. Review campaign live. Topical content expanding.",
     activities: [
-      "Local link outreach to 20+ relevant sites",
-      "Citation building across 50+ directories",
+      "Local link outreach to relevant sites",
+      "Citation building continues",
       "Review generation campaign launched",
-      "Guest post or local PR placement",
-      "Content production continues"
+      "Guest posts or local PR placement (budget dependent)",
+      "Topical and geographical supporting content created",
+      "Reddit SEO if applicable",
+      "GBP posts continue"
     ],
     deliverables: [
-      "5-10 quality backlinks secured",
+      "Quality backlinks secured",
       "Full citation report with live listings",
-      "Review campaign generating 3+ reviews/week",
-      "Published blog or guest content"
+      "Review campaign generating reviews weekly",
+      "Supporting content published",
+      "Authority link building report"
     ],
     icon: TrendingUp,
     color: "hsl(35, 90%, 50%)",
@@ -79,20 +90,22 @@ const roadmapData: PhaseData[] = [
   {
     phase: 4,
     month: "Month 4",
-    title: "Expansion & Acceleration",
-    outcome: "Secondary keywords targeted. Traffic up 30%+. Lead volume increasing.",
+    title: "Audit & Low-Hanging Fruit",
+    outcome: "On-page refined. Quick wins captured. Authority building diversified.",
     activities: [
-      "Secondary keyword targeting based on performance",
-      "Content scaled to 4-6 new pages",
-      "Competitor gap analysis for missed opportunities",
-      "Underperforming pages refreshed",
-      "Link acquisition continues"
+      "On-page audit and revision where needed",
+      "GSC keyword hunting for low-hanging fruit",
+      "Authority link building continues",
+      "Structured and unstructured citations as needed",
+      "Guest posts if possible",
+      "GBP posts continue",
+      "Content production continues"
     ],
     deliverables: [
-      "Expanded keyword targets (30+)",
-      "New content published",
-      "Competitor analysis with action items",
-      "Traffic and lead growth report"
+      "On-page audit report with revisions",
+      "Low-hanging fruit keyword targets",
+      "Updated link building report",
+      "Traffic and ranking movement report"
     ],
     icon: Zap,
     color: "hsl(280, 60%, 55%)",
@@ -100,20 +113,21 @@ const roadmapData: PhaseData[] = [
   {
     phase: 5,
     month: "Month 5",
-    title: "Optimization & Refinement",
-    outcome: "Rankings consolidating. Conversion rates improving. ROI becoming clear.",
+    title: "Diversification & Scale",
+    outcome: "Authority channels diversified. Rankings consolidating. Pipeline building.",
     activities: [
-      "Performance analysis and strategy refinement",
-      "Seasonal keyword adjustments",
-      "Content refresh for top performers",
-      "Advanced GBP: posts, Q&A, products",
-      "Link profile diversification"
+      "Local authority diversification: unstructured citations, Reddit, local links",
+      "Topical and geographical content expansion",
+      "GBP posts continue",
+      "Citation maintenance and expansion",
+      "Link profile diversification",
+      "Performance analysis and refinement"
     ],
     deliverables: [
-      "Updated strategy based on data",
-      "Refreshed high-value content",
-      "GBP engagement optimization",
-      "Mid-campaign ROI projection"
+      "Diversified authority report",
+      "New supporting content published",
+      "GBP engagement metrics",
+      "Mid-campaign performance review"
     ],
     icon: Settings,
     color: "hsl(190, 70%, 45%)",
@@ -128,7 +142,8 @@ const roadmapData: PhaseData[] = [
       "Lead attribution and ROI calculation",
       "Strategy refinement for next phase",
       "Next 6-month roadmap development",
-      "Client-ready executive summary"
+      "GBP posts continue",
+      "Ongoing authority and content work"
     ],
     deliverables: [
       "6-month performance report with ROI",
