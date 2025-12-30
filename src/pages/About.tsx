@@ -363,6 +363,10 @@ const About = () => {
                       <p className="text-sm text-text-secondary">Paid advertising (social + search). 400+ leads in one month.</p>
                     </div>
                     <div>
+                      <p className="text-sm text-cta font-semibold">Car Spa (11 locations)</p>
+                      <p className="text-sm text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
+                    </div>
+                    <div>
                       <p className="text-sm text-cta font-semibold">Elite Dental</p>
                       <p className="text-sm text-text-secondary">Page 1 for several "Uptown Dentist" keywords</p>
                     </div>
@@ -370,7 +374,7 @@ const About = () => {
                       <p className="text-sm text-cta font-semibold">Couch Crazy</p>
                       <p className="text-sm text-text-secondary">E-commerce SEO + paid advertising</p>
                     </div>
-                    <div className="md:col-span-2">
+                    <div>
                       <p className="text-sm text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
                     </div>
                   </div>
