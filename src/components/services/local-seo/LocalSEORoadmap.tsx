@@ -280,7 +280,7 @@ const LocalSEORoadmap = () => {
                   onClick={() => setShowAllActivities(!showAllActivities)}
                   className="mt-4 flex items-center gap-2 text-sm font-medium text-cta hover:text-cta/80 transition-colors"
                 >
-                  <span>{showAllActivities ? "Show less" : `Show all ${activeData.activities.length} activities`}</span>
+                  <span>{showAllActivities ? "Show less" : "View full execution checklist"}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAllActivities ? "rotate-180" : ""}`} />
                 </button>
               </>

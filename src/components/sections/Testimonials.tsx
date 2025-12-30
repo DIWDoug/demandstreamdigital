@@ -11,11 +11,6 @@ const testimonials = [
     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida"
-  },
-  {
-    quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
-    author: "Florida Agency Owner",
-    role: "Digital Marketing Agency Owner"
   }
 ];
 
@@ -65,7 +60,7 @@ const Testimonials = () => {
         </div>
 
         {/* Quote Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 

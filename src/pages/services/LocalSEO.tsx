@@ -13,7 +13,7 @@ import LocalSEORoadmap from "@/components/services/local-seo/LocalSEORoadmap";
 import LocalSEOSystemContext from "@/components/services/local-seo/LocalSEOSystemContext";
 import LocalSEOSpokes from "@/components/services/local-seo/LocalSEOSpokes";
 import HubBenefits from "@/components/services/HubBenefits";
-import HubFAQ from "@/components/services/HubFAQ";
+import LocalSEOGroupedFAQ from "@/components/services/local-seo/LocalSEOGroupedFAQ";
 import { getHubBySlug } from "@/data/services";
 
 const SectionDivider = () => (
@@ -47,7 +47,7 @@ const LocalSEO = () => {
         <LocalSEOHero breadcrumbs={breadcrumbItems} />
       </div>
       
-      {/* Trust Reel - credibility whisper */}
+      {/* Trust Reel - credibility whisper (single instance) */}
       <TrustReel />
       
       <SectionDivider />
@@ -55,12 +55,24 @@ const LocalSEO = () => {
       {/* 1. THE PROBLEM - why one-size-fits-all fails */}
       <LocalSEOPainPoints />
       
-      {/* 2. THE SOLUTION - our phased approach */}
+      <SectionDivider />
+      
+      {/* 2. THE VALUE CONVERSATION - how to communicate ROI */}
+      <SEOValueExplainer />
+      
+      <SectionDivider />
+      
+      {/* 3. OUTCOMES - what actually changes */}
+      <HubBenefits hubSlug={hub.slug} />
+      
+      <SectionDivider />
+      
+      {/* 4. THE FRAMEWORK - phased approach */}
       <LocalSEORoadmap />
       
       <SectionDivider />
       
-      {/* 3. THE SPOKES - what's included in Local SEO */}
+      {/* 5. THE SPOKES - what's included in Local SEO */}
       <LocalSEOSpokes />
       
       <SectionDivider />
@@ -68,22 +80,14 @@ const LocalSEO = () => {
       
       <SectionDivider />
       
-      {/* 4. THE VALUE CONVERSATION - how to communicate ROI */}
-      <SEOValueExplainer />
-      
-      <SectionDivider />
-      
-      {/* 5. OUTCOMES - what actually changes */}
-      <HubBenefits hubSlug={hub.slug} />
-      
       {/* 6. QUALIFICATION - is this right for you */}
       <LocalSEOFitQualifier />
       
       {/* 7. SOCIAL PROOF */}
       <Testimonials />
       
-      {/* 8. OBJECTIONS - FAQ */}
-      <HubFAQ title={hub.title} faqs={hub.faqs} />
+      {/* 8. OBJECTIONS - FAQ (grouped by category) */}
+      <LocalSEOGroupedFAQ />
       
       <SectionDivider />
       
