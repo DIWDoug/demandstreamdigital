@@ -352,7 +352,7 @@ const About = () => {
                 From Nashville Songwriter to Full-Service Agency
               </h2>
               <p className="font-serif text-text-secondary max-w-2xl mx-auto">
-                You can't run the restaurant until you've washed the dishes. This is 14 years of washing dishes.
+                This isn't a resume. It's the journey to how I can help you today.
               </p>
             </div>
             
