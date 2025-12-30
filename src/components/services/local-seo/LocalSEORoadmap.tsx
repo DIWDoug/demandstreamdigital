@@ -1,164 +1,115 @@
 import { useState } from "react";
-import { Rocket, Zap, TrendingUp, Settings, FileSearch, CheckCircle } from "lucide-react";
+import { Layers, TrendingUp, Zap, Target, CheckCircle } from "lucide-react";
 
 interface PhaseData {
   phase: number;
-  month: string;
+  name: string;
   title: string;
-  outcome: string;
+  description: string;
   activities: string[];
-  deliverables: string[];
-  icon: typeof Rocket;
+  icon: typeof Layers;
   color: string;
 }
 
 const roadmapData: PhaseData[] = [
   {
     phase: 1,
-    month: "Month 1",
-    title: "Foundation & Baseline",
-    outcome: "GBP optimized. Gaps identified. Keyword strategy mapped. On-page work begins.",
+    name: "Foundation",
+    title: "Baseline, Architecture & Initial Implementation",
+    description: "Comprehensive discovery, technical setup, and foundational work that sets the stage for everything that follows.",
     activities: [
-      "Baseline metrics report: GBP, GA4 organic, GSC, rankings",
-      "Year-over-year comparison analysis",
-      "Keyword research and keyword mapping",
-      "Backlink gap analysis",
-      "Citation gap analysis",
+      "Baseline metrics and year-over-year comparison analysis",
+      "Keyword research and mapping",
+      "On-page optimization audit and implementation",
+      "Backlink and citation gap analysis",
       "GBP audit and optimization",
       "Topical and geographical content gap analysis",
-      "Hub and spoke content architecture planning",
-      "On-page optimization audit",
-      "On-page optimization implementation (scope dependent)",
-      "Schema audit and implementation (scope dependent)"
+      "Hub-and-spoke content architecture planning",
+      "Schema (AIO) audit and implementation",
+      "Foundational citation building",
+      "Foundational link building",
+      "Local link building opportunity evaluations",
+      "Analytics, tracking, and dashboard setups",
+      "Baseline ranking connections established",
+      "Priority pages mapped, rewritten, and deployed",
+      "GBP service pages written and rolled out",
+      "Internal linking hub-and-spoke methodology implemented",
+      "Data aggregator submissions through partners",
+      "GBP posting schedule established",
+      "Review campaign audit and recommendations",
+      "Photo optimization and drip feed syndication",
+      "Introduction to local link outreach (resource links, chambers, associations, event sponsorships)",
+      "Unstructured citation submissions",
+      "Guest post opportunity submissions (if budget allows)",
+      "Topical and geographical supporting content rolled out",
+      "Reddit account warming for SEO purposes",
+      "Authority link building initiated"
     ],
-    deliverables: [
-      "Baseline metrics report with YoY comparison",
-      "Keyword research and mapping document",
-      "Backlink and citation gap analysis",
-      "Optimized GBP with enhanced categories",
-      "Tone and style guide",
-      "Content calendar with foundational topics",
-      "On-page audit with priority recommendations"
-    ],
-    icon: FileSearch,
+    icon: Layers,
     color: "hsl(76, 42%, 41%)",
   },
   {
     phase: 2,
-    month: "Month 2",
-    title: "On-Page & Content Launch",
-    outcome: "Priority pages optimized. Schema deployed. First service pages live. Citations submitted.",
+    name: "Performance",
+    title: "Optimization, Refinement & Authority Building",
+    description: "Refining what's working, capturing quick wins, and building sustainable authority signals.",
     activities: [
-      "On-page optimization for priority pages",
-      "Schema markup implementation",
-      "First service pages created (AI-assisted with human editing)",
-      "Internal linking structure built",
-      "Foundational citation submissions (structured and unstructured)",
-      "Data aggregator submissions if applicable",
-      "GBP posts begin (ongoing through month 6)",
-      "Review campaign recommendations developed"
+      "On-page audit revisions where needed",
+      "GSC keyword hunting for low-hanging fruit",
+      "Authority link building continues",
+      "Structured and unstructured citations as needed",
+      "Guest post or authority link building where possible",
+      "GBP optimization and syndication",
+      "Continuation of topical and geographical content",
+      "Local authority diversification syndication",
+      "Topical and geographical content expansion",
+      "GBP maintenance and optimization",
+      "Citation submission cleanup and finalization",
+      "Quarterly link detox and evaluation",
+      "Roadmap for next 6 months developed"
     ],
-    deliverables: [
-      "Priority pages fully optimized",
-      "Schema markup validated in Search Console",
-      "Service area pages published",
-      "Foundational citations submitted",
-      "Local link building recommendations",
-      "Review campaign strategy document"
-    ],
-    icon: Rocket,
+    icon: TrendingUp,
     color: "hsl(224, 60%, 55%)",
   },
   {
     phase: 3,
-    month: "Month 3",
-    title: "Authority & Review Velocity",
-    outcome: "Links acquired. Review campaign live. Topical content expanding.",
+    name: "Momentum",
+    title: "Scaling & Compounding Growth",
+    description: "Leveraging early wins to accelerate visibility and capture expanding market share.",
     activities: [
-      "Local link outreach to relevant sites",
-      "Citation building continues",
-      "Review generation campaign launched",
-      "Guest posts or local PR placement (scope dependent)",
-      "Topical and geographical supporting content created",
-      "Reddit SEO if applicable",
-      "GBP posts continue"
+      "Aggressive content scaling based on performance data",
+      "High-value link acquisition campaigns",
+      "Expanded geographical targeting where applicable",
+      "Advanced schema implementation",
+      "Conversion rate optimization on top-performing pages",
+      "Review velocity acceleration",
+      "Competitive gap exploitation",
+      "Local PR and community partnerships",
+      "Content refresh and consolidation strategy",
+      "Authority building through thought leadership content"
     ],
-    deliverables: [
-      "Quality backlinks secured",
-      "Full citation report with live listings",
-      "Review campaign generating reviews weekly",
-      "Supporting content published",
-      "Authority link building report"
-    ],
-    icon: TrendingUp,
+    icon: Zap,
     color: "hsl(35, 90%, 50%)",
   },
   {
     phase: 4,
-    month: "Month 4",
-    title: "Audit & Low-Hanging Fruit",
-    outcome: "On-page refined. Quick wins captured. Authority building diversified.",
+    name: "Peak",
+    title: "Market Dominance & Sustained Leadership",
+    description: "Maintaining top positions while expanding into adjacent opportunities.",
     activities: [
-      "On-page audit and revision where needed",
-      "GSC keyword hunting for low-hanging fruit",
-      "Authority link building continues",
-      "Structured and unstructured citations as needed",
-      "Guest posts if applicable",
-      "GBP posts continue",
-      "Content production continues"
+      "Defensive SEO to protect rankings",
+      "New service area or location expansion",
+      "Competitor monitoring and response strategy",
+      "Brand search optimization",
+      "Featured snippet and AI visibility optimization",
+      "Cross-channel integration (paid + organic synergy)",
+      "Advanced analytics and attribution modeling",
+      "Long-term content strategy development",
+      "Authority maintenance and reputation management",
+      "Quarterly strategic reviews and roadmap updates"
     ],
-    deliverables: [
-      "On-page audit report with revisions",
-      "Low-hanging fruit keyword targets",
-      "Updated link building report",
-      "Traffic and ranking movement report"
-    ],
-    icon: Zap,
+    icon: Target,
     color: "hsl(280, 60%, 55%)",
-  },
-  {
-    phase: 5,
-    month: "Month 5",
-    title: "Diversification & Scale",
-    outcome: "Authority channels diversified. Rankings consolidating. Pipeline building.",
-    activities: [
-      "Local authority diversification: unstructured citations, Reddit, local links",
-      "Topical and geographical content expansion",
-      "GBP posts continue",
-      "Citation maintenance and expansion",
-      "Link profile diversification",
-      "Performance analysis and refinement"
-    ],
-    deliverables: [
-      "Diversified authority report",
-      "New supporting content published",
-      "GBP engagement metrics",
-      "Mid-campaign performance review"
-    ],
-    icon: Settings,
-    color: "hsl(190, 70%, 45%)",
-  },
-  {
-    phase: 6,
-    month: "Month 6",
-    title: "Results & Next Phase",
-    outcome: "Documented ROI. Client retention secured. Roadmap for continued growth.",
-    activities: [
-      "Comprehensive 6-month performance audit",
-      "Lead attribution and ROI calculation",
-      "Strategy refinement for next phase",
-      "Next 6-month roadmap development",
-      "GBP posts continue",
-      "Ongoing authority and content work"
-    ],
-    deliverables: [
-      "6-month performance report with ROI",
-      "Lead and revenue attribution",
-      "Next phase strategic roadmap",
-      "White-labeled executive summary"
-    ],
-    icon: TrendingUp,
-    color: "hsl(340, 70%, 50%)",
   }
 ];
 
@@ -172,10 +123,10 @@ const LocalSEORoadmap = () => {
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
-            A Typical 6-Month Framework
+            Our Phased Approach
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
-            How Local SEO Campaigns Generally Unfold
+            From Foundation to Peak Performance
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
             Every engagement is scoped to the market. This framework shows how we typically sequence the work, but timing, depth, and priorities shift based on competitive reality and client needs.
@@ -199,7 +150,7 @@ const LocalSEORoadmap = () => {
             >
               {roadmapData.map((phase) => (
                 <option key={phase.phase} value={phase.phase}>
-                  {phase.month}: {phase.title}
+                  Phase {phase.phase}: {phase.name}
                 </option>
               ))}
             </select>
@@ -208,11 +159,11 @@ const LocalSEORoadmap = () => {
           {/* Desktop timeline */}
           <div className="hidden lg:flex items-center justify-between relative">
             {/* Connecting line */}
-            <div className="absolute top-6 left-6 right-6 h-0.5 bg-slate-300" />
+            <div className="absolute top-6 left-12 right-12 h-0.5 bg-slate-300" />
             <div 
-              className="absolute top-6 left-6 h-0.5 transition-all duration-500"
+              className="absolute top-6 left-12 h-0.5 transition-all duration-500"
               style={{
-                width: `${((activePhase - 1) / 5) * 100}%`,
+                width: `${((activePhase - 1) / 3) * 100}%`,
                 background: activeData.color
               }}
             />
@@ -226,7 +177,7 @@ const LocalSEORoadmap = () => {
                 <button
                   key={phase.phase}
                   onClick={() => setActivePhase(phase.phase)}
-                  className="relative z-10 flex flex-col items-center group"
+                  className="relative z-10 flex flex-col items-center group flex-1"
                 >
                   <div 
                     className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
@@ -242,10 +193,15 @@ const LocalSEORoadmap = () => {
                   >
                     <Icon className={`w-5 h-5 ${isActive || isPast ? "text-white" : "text-slate-500"}`} />
                   </div>
-                  <span className={`mt-3 text-sm font-medium transition-colors ${
+                  <span className={`mt-3 text-sm font-semibold transition-colors ${
                     isActive ? "text-slate-900" : "text-slate-500"
                   }`}>
-                    {phase.month}
+                    {phase.name}
+                  </span>
+                  <span className={`text-xs transition-colors ${
+                    isActive ? "text-slate-600" : "text-slate-400"
+                  }`}>
+                    Phase {phase.phase}
                   </span>
                 </button>
               );
@@ -268,54 +224,32 @@ const LocalSEORoadmap = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-slate-900">{activeData.title}</h3>
-              <p className="text-slate-500 text-sm">{activeData.month}</p>
+              <p className="text-slate-500 text-sm">Phase {activeData.phase}: {activeData.name}</p>
             </div>
           </div>
           
-          <div className="flex items-start gap-3 mb-8">
-            <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: activeData.color }} />
-            <p className="text-lg text-slate-900 font-medium">{activeData.outcome}</p>
-          </div>
+          <p className="text-lg text-slate-700 mb-8">{activeData.description}</p>
 
-          {/* Activities and Deliverables */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Key Activities */}
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">Key Activities</h4>
-              <ul className="space-y-3">
-                {activeData.activities.map((activity, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div 
-                      className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                      style={{ background: activeData.color }}
-                    />
-                    <span className="text-slate-600">{activity}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Deliverables */}
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">Deliverables</h4>
-              <ul className="space-y-3">
-                {activeData.deliverables.map((deliverable, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle 
-                      className="w-4 h-4 mt-0.5 flex-shrink-0" 
-                      style={{ color: activeData.color }} 
-                    />
-                    <span className="text-slate-600">{deliverable}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Activities */}
+          <div>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">What This Phase Includes</h4>
+            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+              {activeData.activities.map((activity, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle 
+                    className="w-4 h-4 mt-0.5 flex-shrink-0" 
+                    style={{ color: activeData.color }} 
+                  />
+                  <span className="text-slate-600">{activity}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         {/* Bottom note */}
         <p className="mt-8 text-slate-500 text-sm text-center">
-          Most clients see measurable ranking and traffic improvements by month 3. Sustainable, compounding results emerge by month 6.
+          Phase duration varies by market competitiveness and scope. Most clients progress through all four phases within 6 to 12 months.
         </p>
       </div>
     </section>
