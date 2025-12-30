@@ -325,7 +325,7 @@ const About = () => {
                 From Nashville Songwriter to Full-Service Agency
               </h2>
               <p className="font-serif text-text-secondary max-w-2xl mx-auto">
-                This isn't a resume. It's the journey to how I can help you today.
+                This isn't a resume. It's the journey of how I came to help you today.
               </p>
             </div>
             
