@@ -63,6 +63,8 @@ const LocalSEO = () => {
       {/* 3. WHAT MOVES THE NEEDLE - data-backed ranking factors */}
       <LocalRankingFactors />
       
+      <SectionDivider />
+      
       {/* 4. THE VALUE CONVERSATION - how to communicate ROI */}
       <SEOValueExplainer />
       
