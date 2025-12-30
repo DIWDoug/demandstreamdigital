@@ -129,8 +129,8 @@ const HubBenefits = ({ hubSlug }: HubBenefitsProps) => {
           </p>
         </div>
 
-        {/* 6 Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* Benefits Grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {content.benefits.map((benefit) => (
             <div 
               key={benefit.title}
