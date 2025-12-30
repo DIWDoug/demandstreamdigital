@@ -131,10 +131,10 @@ const LocalRankingFactors = () => {
                   onMouseEnter={() => setActiveFactor(index)}
                   onMouseLeave={() => setActiveFactor(null)}
                   onClick={() => setActiveFactor(activeFactor === index ? null : index)}
-                  className={`bg-surface-elevated border rounded-xl p-4 text-left transition-all duration-200 ${
+                  className={`bg-white border rounded-xl p-4 text-left transition-all duration-200 ${
                     activeFactor === index 
                       ? "border-cta ring-2 ring-cta/20 scale-[1.02]" 
-                      : "border-border/50 hover:border-cta/30"
+                      : "border-slate-200 hover:border-cta/30"
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -147,8 +147,8 @@ const LocalRankingFactors = () => {
                       activeFactor === index ? "text-cta" : "text-cta"
                     }`}>{factor.weight}</span>
                   </div>
-                  <p className="text-foreground font-semibold text-sm mb-1">{factor.label}</p>
-                  <p className="text-text-muted text-xs leading-relaxed">{factor.description}</p>
+                  <p className="text-slate-900 font-semibold text-sm mb-1">{factor.label}</p>
+                  <p className="text-slate-500 text-xs leading-relaxed">{factor.description}</p>
                 </button>
               ))}
             </div>
