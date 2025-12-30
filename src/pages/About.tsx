@@ -696,7 +696,7 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-center gap-4 mt-8">
+              <div className="flex justify-center gap-4 mt-4 md:mt-6">
                 <CarouselPrevious className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
                 <CarouselNext className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
               </div>
