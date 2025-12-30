@@ -131,29 +131,22 @@ const LocalSEOSystemContext = () => {
 
             {/* Right: Circular Orbit Diagram */}
             <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[480px]">
-              {/* Outer orbit circle */}
-              <div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-2 border-dashed border-slate-300" />
+              {/* Outer orbit circle - solid thin black line */}
+              <div className="absolute w-[300px] h-[300px] md:w-[360px] md:h-[360px] rounded-full border border-slate-800" />
               
-              {/* Inner circle background */}
-              <div className="absolute w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-full bg-white border border-slate-200 shadow-sm" />
-              
-              {/* Center content */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] h-[160px] md:w-[200px] md:h-[200px] text-center">
-                <div className="w-12 h-12 rounded-full bg-cta flex items-center justify-center mb-3 shadow-lg">
-                  <Search className="w-6 h-6 text-white" />
-                </div>
-                <p className="text-slate-900 font-semibold text-lg mb-1">Local SEO</p>
-                <p className="text-slate-500 text-xs px-4 leading-relaxed">
-                  The foundation that powers every other channel.
+              {/* Center content - no background circle, just text */}
+              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] h-[160px] md:w-[180px] md:h-[180px] text-center">
+                <p className="text-slate-900 font-bold text-xl md:text-2xl mb-2">SEO</p>
+                <p className="text-slate-500 text-xs md:text-sm px-2 leading-relaxed">
+                  Search engine optimization helps potential customers find you through organic searches on places like Google and Bing.
                 </p>
               </div>
 
               {/* Orbit icons */}
               {orbitServices.map((service, index) => {
                 const angle = (index * 360) / orbitServices.length - 90;
-                const radius = 160;
-                const x = Math.cos((angle * Math.PI) / 180) * radius;
-                const y = Math.sin((angle * Math.PI) / 180) * radius;
+                const radius = 150;
+                const mdRadius = 180;
                 const Icon = service.icon;
                 
                 // Highlight the top icon (first one)
@@ -162,50 +155,24 @@ const LocalSEOSystemContext = () => {
                 return (
                   <div
                     key={service.id}
-                    className={`absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center shadow-md transition-all cursor-pointer hover:scale-110 ${
-                      isHighlighted 
-                        ? "bg-cta border-2 border-cta" 
-                        : "bg-white border-2 border-slate-200 hover:border-cta/50"
-                    }`}
+                    className="absolute w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all cursor-pointer hover:scale-110"
                     style={{
-                      transform: `translate(${x}px, ${y}px)`,
+                      transform: `translate(calc(${Math.cos((angle * Math.PI) / 180) * radius}px), calc(${Math.sin((angle * Math.PI) / 180) * radius}px))`,
                     }}
                     title={service.title}
                   >
-                    <Icon className={`w-5 h-5 md:w-6 md:h-6 ${
+                    {/* Background circle */}
+                    <div className={`absolute inset-0 rounded-full ${
+                      isHighlighted 
+                        ? "bg-cta" 
+                        : "bg-slate-100 border border-slate-300"
+                    }`} />
+                    <Icon className={`relative z-10 w-5 h-5 md:w-6 md:h-6 ${
                       isHighlighted ? "text-white" : "text-slate-600"
                     }`} />
                   </div>
                 );
               })}
-
-              {/* Dashed connector lines from center to orbit */}
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', width: '400px', height: '400px' }}>
-                <g transform="translate(200, 200)">
-                  {orbitServices.map((_, index) => {
-                    const angle = (index * 360) / orbitServices.length - 90;
-                    const innerRadius = 50;
-                    const outerRadius = 130;
-                    const x1 = Math.cos((angle * Math.PI) / 180) * innerRadius;
-                    const y1 = Math.sin((angle * Math.PI) / 180) * innerRadius;
-                    const x2 = Math.cos((angle * Math.PI) / 180) * outerRadius;
-                    const y2 = Math.sin((angle * Math.PI) / 180) * outerRadius;
-                    
-                    return (
-                      <line
-                        key={index}
-                        x1={x1}
-                        y1={y1}
-                        x2={x2}
-                        y2={y2}
-                        stroke="#cbd5e1"
-                        strokeWidth="1.5"
-                        strokeDasharray="4 4"
-                      />
-                    );
-                  })}
-                </g>
-              </svg>
             </div>
           </div>
         </div>
