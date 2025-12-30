@@ -106,8 +106,32 @@ const About = () => {
         <title>About Us | Dialed-In Web - White-Label Digital Marketing</title>
         <meta 
           name="description" 
-          content="Meet the team behind Dialed-In Web. Built by marketers, for marketers. Learn about our mission, vision, and values driving agency success." 
+          content="Meet the team behind Dialed-In Web. 14 years of experience, 100+ clients served, millions in ad spend managed. Built by marketers, for marketers." 
         />
+        {/* Author/Organization Schema for AI/LLM visibility */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Dialed-In Web",
+            "url": "https://dialedinweb.com",
+            "logo": "https://dialedinweb.com/logo.png",
+            "foundingDate": "2011",
+            "founder": {
+              "@type": "Person",
+              "name": "Doug Bryson",
+              "jobTitle": "CEO & Founder",
+              "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and agency operations. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
+              "knowsAbout": ["Local SEO", "Paid Advertising", "Google Ads", "Meta Ads", "Amazon PPC", "White-Label Marketing", "Agency Operations"],
+              "sameAs": [
+                "https://www.upwork.com/freelancers/~01dougbryson",
+                "https://www.linkedin.com/in/dougbryson"
+              ]
+            },
+            "areaServed": "United States",
+            "serviceType": ["White-Label SEO", "White-Label PPC", "Digital Marketing Fulfillment"]
+          })}
+        </script>
       </Helmet>
 
       <Header />
@@ -133,18 +157,38 @@ const About = () => {
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
                 About Dialed-In Web
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1] mb-6">
                 Built by a Marketer, <span className="text-accent-blue">For Marketers</span>
               </h1>
+              {/* Credibility stats - Cashvertising: specificity builds trust */}
+              <div className="flex flex-wrap gap-6 lg:gap-8">
+                <div>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">14</p>
+                  <p className="text-sm text-text-secondary">Years</p>
+                </div>
+                <div>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">100+</p>
+                  <p className="text-sm text-text-secondary">Clients</p>
+                </div>
+                <div>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">$M+</p>
+                  <p className="text-sm text-text-secondary">Ad Spend</p>
+                </div>
+                <div>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">4.8★</p>
+                  <p className="text-sm text-text-secondary">Google</p>
+                </div>
+              </div>
             </div>
             
             {/* Right - Description */}
             <div className="lg:border-l lg:border-border/50 lg:pl-12">
               <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
-                Since 2011, we've helped agencies and small-to-medium businesses 
-                deliver full inbound marketing results: SEO, paid advertising, 
-                conversion rate optimization, email marketing, and more. 
-                All working together as one system.
+                Since 2011, we've helped agencies keep clients longer by delivering 
+                inbound marketing that actually works: SEO, paid advertising, 
+                email marketing, and more. All scoped to the market, 
+                explained in plain English, and executed by practitioners 
+                who've done the work themselves.
               </p>
             </div>
           </div>
@@ -202,13 +246,17 @@ const About = () => {
                   Our Mission
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                  Fulfillment That Keeps Clients
+                  You Keep More Clients
                 </h2>
+                <p className="font-serif text-lg text-text-secondary leading-relaxed mb-4">
+                  When fulfillment is scoped to the market and executed with care, 
+                  clients see results they can understand. They stay longer. 
+                  Your margins stay healthy. Referrals come easier.
+                </p>
                 <p className="font-serif text-lg text-text-secondary leading-relaxed">
-                  <span className="text-cta font-semibold">Dialed In Web</span>'s mission is to help agencies 
-                  increase their clients' leads, traffic, and sales by delivering quality, sustainable 
-                  digital inbound marketing strategies that are tailor-made to suit the client's 
-                  industry and local presence, while also helping them maintain a positive online reputation.
+                  We deliver SEO, paid advertising, and inbound marketing 
+                  strategies tailored to each client's industry and competitive landscape. 
+                  Not templates. Not guesswork. Work you can explain without flinching.
                 </p>
               </div>
             </div>
@@ -221,15 +269,18 @@ const About = () => {
                   Our Vision
                 </p>
                 <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                  Partners, Not Vendors
+                  Your Backend Team, Not a Vendor
                 </h2>
+                <p className="font-serif text-lg text-text-secondary leading-relaxed mb-4">
+                  Most white-label relationships feel transactional. 
+                  You send a brief, you get a deliverable, you hope it works. 
+                  That's not how we operate.
+                </p>
                 <p className="font-serif text-lg text-text-secondary leading-relaxed">
-                  <span className="text-cta font-semibold">Dialed In Web</span> has a vision of helping 
-                  agencies grow their clients' businesses in order to support the dreams of business owners 
-                  and founders while also contributing to the growth of local economies. By joining agencies 
-                  on the journey of growing their clients through a mutually invested partnership, 
-                  Dialed In Web takes inbound marketing off their shoulders, allowing them to focus on 
-                  what they do best: running their agencies and delighting their clients.
+                  We invest in understanding your clients' businesses so you can 
+                  focus on relationships and growth. When something breaks, 
+                  we fix it. When strategy needs to pivot, we're already thinking about it. 
+                  That's what partners do.
                 </p>
               </div>
               
