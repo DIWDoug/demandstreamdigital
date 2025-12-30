@@ -22,7 +22,7 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
       },
       {
         icon: TrendingUp,
-        title: "Traffic That Compounds Over Time",
+        title: "Local Visibility That Compounds Over Time",
         description: "Each month builds on the last. Content, links, and signals accumulate into lasting visibility your clients can count on."
       },
       {
@@ -32,7 +32,7 @@ const benefitsByHub: Record<string, { headline: string; subheadline: string; ben
       },
       {
         icon: Users,
-        title: "More Sales From Organic Visibility",
+        title: "More Sales From Local Organic Visibility",
         description: "When the right people find your clients at the right time, conversions follow. Local SEO turns searchers into customers."
       }
     ]
