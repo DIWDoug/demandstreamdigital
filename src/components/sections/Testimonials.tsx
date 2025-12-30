@@ -16,6 +16,10 @@ const testimonials = [
 
 const videoTestimonials = [
   {
+    id: "DlOyjDWaCZo",
+    title: "Agency Partner Testimonial"
+  },
+  {
     id: "dR2Yxbldi1Q",
     title: "Agency Partner Testimonial"
   },
