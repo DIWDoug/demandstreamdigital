@@ -9,6 +9,8 @@ const Hero = () => {
     email: "",
     phone: "",
     revenue: "",
+    consent: false,
+    notRobot: false,
   });
 
   const handleStep1Submit = (e: React.FormEvent) => {
@@ -189,11 +191,39 @@ const Hero = () => {
                       <option value="250k+">$250k+</option>
                     </select>
                   </div>
+
+                  {/* Consent checkbox */}
+                  <label className="flex items-start gap-3 text-left cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={formData.consent}
+                      onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                      required
+                      className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
+                    />
+                    <span className="text-xs text-text-muted leading-relaxed">
+                      I consent to automated marketing messages from DialedIn Web via email and/or SMS by entering my information. View our{" "}
+                      <a href="/privacy" className="text-accent-blue hover:underline">Privacy Policy</a>.
+                    </span>
+                  </label>
+
+                  {/* Robot checkbox */}
+                  <label className="flex items-center gap-3 text-left cursor-pointer p-3 rounded-lg border border-border bg-background/50">
+                    <input
+                      type="checkbox"
+                      checked={formData.notRobot}
+                      onChange={(e) => setFormData({ ...formData, notRobot: e.target.checked })}
+                      required
+                      className="w-5 h-5 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
+                    />
+                    <span className="text-sm text-foreground">I'm not a robot</span>
+                  </label>
+
                   <button
                     type="submit"
                     className="w-full btn-cta group justify-center"
                   >
-                    Get My Proposal
+                    Submit and Pick a Time
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </button>
                   <p className="text-xs text-text-muted text-center pt-2">
