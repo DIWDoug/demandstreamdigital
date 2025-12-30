@@ -2,9 +2,9 @@ import { Quote, ArrowRight, Phone } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "If you're looking for somebody that can help you make money online, that is what Doug and his team are there for.",
+    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
     author: "Cole",
-    role: "Agency Owner, Dallas"
+    role: "Agency Owner, Dallas — 10 Years in Business"
   },
   {
     quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",

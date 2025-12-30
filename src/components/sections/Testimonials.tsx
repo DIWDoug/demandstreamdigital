@@ -3,9 +3,9 @@ import { Quote } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 const testimonials = [
   {
-    quote: "If you're looking for somebody that can help you make money online, that is what Doug and his team are there for.",
+    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
     author: "Cole", 
-    role: "Agency Owner, Dallas"
+    role: "Agency Owner, Dallas — 10 Years in Business"
   },
   {
     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
