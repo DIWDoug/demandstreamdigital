@@ -595,8 +595,12 @@ const About = () => {
                   </p>
                   <div className="pt-3 border-t border-border/50 space-y-2">
                     <div>
-                      <p className="text-xs text-cta font-semibold">Anderson Collaborative + Florida Agency</p>
-                      <p className="text-xs text-text-secondary">Several million in paid ads + SEO across both accounts. Still partners to this day.</p>
+                      <p className="text-xs text-cta font-semibold">Anderson Collaborative</p>
+                      <p className="text-xs text-text-secondary">Millions in paid advertising managed. Multi-location franchises supported. National customized furniture websites. Still partners today.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-cta font-semibold">Tampa Bay Agency</p>
+                      <p className="text-xs text-text-secondary">SMB clients: dog training, dental, digital marketing, tourism, photography, metabolic weight loss (national), heavy machinery lube skids, Kohler generators. Still partners today.</p>
                     </div>
                     <div>
                       <p className="text-xs text-cta font-semibold">John Perieteanu / Amazon</p>
