@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
+import WaveDivider from "@/components/WaveDivider";
 import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
 import LocalSEOExplainer from "@/components/services/local-seo/LocalSEOExplainer";
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
@@ -49,6 +50,11 @@ const LocalSEO = () => {
       
       {/* Trust Reel - credibility whisper */}
       <TrustReel />
+      
+      {/* Wave transition to light section */}
+      <div className="relative">
+        <WaveDivider position="bottom" fromColor="hsl(var(--background))" toColor="hsl(var(--section-light))" variant="wave" />
+      </div>
       
       {/* What is Local SEO? - Explainer with pillar grid */}
       <LocalSEOExplainer />
