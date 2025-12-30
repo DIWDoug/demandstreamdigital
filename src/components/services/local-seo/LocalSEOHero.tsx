@@ -70,12 +70,12 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
           
           {/* Supporting sentence - benefit-first */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            More calls. More leads. More customers walking through the door. White-label local SEO that delivers results you can point to when clients ask what they are paying for.
+            Your clients want more calls, more leads, and more customers walking through their door. We make that happen under your brand, with reporting clear enough that they never ask "what am I paying for?"
           </p>
 
           {/* Payoff sentence - specificity */}
           <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Avg. 47% increase in organic visibility year over year. Your brand. Our execution.
+            Clients stay longer when results speak for themselves. Your brand. Our execution.
           </p>
 
           {/* Simple email/website form */}
