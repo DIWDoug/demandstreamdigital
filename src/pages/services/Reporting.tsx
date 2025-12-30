@@ -17,7 +17,7 @@ const Reporting = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -26,7 +26,7 @@ const Reporting = () => {
       <Helmet>
         <title>White-Label Reporting & Analytics for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label reporting and analytics dashboards for agencies. Rank tracking, call attribution, ROI analysis, and client presentations that prove value and retain clients." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/reporting" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/reporting" />
       </Helmet>
       
       <Header />

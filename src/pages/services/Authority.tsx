@@ -17,7 +17,7 @@ const Authority = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -26,7 +26,7 @@ const Authority = () => {
       <Helmet>
         <title>White-Label Authority Building for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label authority building and digital PR for agencies. Media placements, directory listings, reputation management, and thought leadership that builds trust." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/authority" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/authority" />
       </Helmet>
       
       <Header />

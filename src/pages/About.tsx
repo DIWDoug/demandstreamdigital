@@ -560,13 +560,13 @@ const About = () => {
                   {
                     quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
                     name: "Trevor Anderson",
-                    date: "2024",
+                    date: "December 2025",
                     rating: 5
                   },
                   {
                     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
                     name: "Jeremy",
-                    date: "2024",
+                    date: "December 2025",
                     rating: 5
                   },
                   {

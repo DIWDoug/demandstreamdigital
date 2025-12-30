@@ -17,7 +17,7 @@ const EmailMarketing = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
@@ -26,7 +26,7 @@ const EmailMarketing = () => {
       <Helmet>
         <title>White-Label Email Marketing for Agencies | Dialed-In Web</title>
         <meta name="description" content="White-label email marketing fulfillment for agencies. Campaign strategy, automation sequences, list management, and performance analytics that drive conversions." />
-        <link rel="canonical" href="https://dialedinweb.com/inbound-marketing-services/email-marketing" />
+        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/email-marketing" />
       </Helmet>
       
       <Header />

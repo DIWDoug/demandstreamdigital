@@ -18,7 +18,7 @@ const SpokePage = () => {
       <div className="dark min-h-screen bg-background text-foreground flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Service Not Found</h1>
-          <Link to="/inbound-marketing-services" className="text-cta hover:underline">
+          <Link to="/white-label-inbound-marketing-services" className="text-cta hover:underline">
             Back to Services
           </Link>
         </div>
@@ -27,8 +27,8 @@ const SpokePage = () => {
   }
 
   const breadcrumbItems = [
-    { label: "Services", href: "/inbound-marketing-services" },
-    { label: hub.title, href: `/inbound-marketing-services/${hub.slug}` },
+    { label: "Services", href: "/white-label-inbound-marketing-services" },
+    { label: hub.title, href: `/white-label-inbound-marketing-services/${hub.slug}` },
     { label: spoke.title }
   ];
 
@@ -73,7 +73,7 @@ const SpokePage = () => {
 
           {/* Back link */}
           <Link 
-            to={`/inbound-marketing-services/${hub.slug}`}
+            to={`/white-label-inbound-marketing-services/${hub.slug}`}
             className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-foreground transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -173,7 +173,7 @@ const SpokePage = () => {
               {siblingSpokes.slice(0, 6).map((sibling) => (
                 <Link
                   key={sibling.slug}
-                  to={`/inbound-marketing-services/${hub.slug}/${sibling.slug}`}
+                  to={`/white-label-inbound-marketing-services/${hub.slug}/${sibling.slug}`}
                   className="group p-4 rounded-xl bg-white border border-gray-200 hover:border-cta/30 hover:shadow-md transition-all"
                 >
                   <h3 className="text-sm font-semibold text-gray-900 group-hover:text-cta transition-colors mb-1">

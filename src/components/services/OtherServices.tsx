@@ -27,7 +27,7 @@ const OtherServices = ({ currentHubSlug }: OtherServicesProps) => {
             return (
               <Link
                 key={hub.slug}
-                to={`/inbound-marketing-services/${hub.slug}`}
+                to={`/white-label-inbound-marketing-services/${hub.slug}`}
                 className="group p-6 rounded-xl bg-white border border-gray-200 hover:border-cta/30 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-4">

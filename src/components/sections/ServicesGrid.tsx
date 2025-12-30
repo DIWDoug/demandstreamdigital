@@ -75,7 +75,7 @@ const ServicesGrid = () => {
               </p>
               
               <Link 
-                to="/inbound-marketing-services"
+                to="/white-label-inbound-marketing-services"
                 className="btn-cta group inline-flex items-center gap-2"
               >
                 See the Full Breakdown
