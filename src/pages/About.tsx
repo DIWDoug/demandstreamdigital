@@ -329,11 +329,11 @@ const About = () => {
                 A Handful of Clients We've Supported Over the Years
               </h2>
             </div>
-            <div className="bg-white rounded-2xl p-8 lg:p-12">
+            <div className="p-8 lg:p-12">
               <img 
                 src={clientLogosBanner} 
                 alt="Client logos including Cherry Blow Dry Bar, Armor Roofing, Wash N Roll, Angel Maids, and more"
-                className="w-full h-auto object-contain grayscale"
+                className="w-full h-auto object-contain grayscale brightness-0 invert opacity-70"
               />
             </div>
           </div>
