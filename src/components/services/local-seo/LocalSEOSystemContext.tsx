@@ -66,7 +66,7 @@ const LocalSEOSystemContext = () => {
   const orbitServices = services.filter(s => !s.isCenter);
 
   return (
-    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -74,11 +74,11 @@ const LocalSEOSystemContext = () => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               The Bigger Picture
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight">
               Local SEO Is One Piece of the{" "}
               <span className="text-cta">360° Ecosystem</span>
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
+            <p className="text-text-secondary text-lg leading-relaxed">
               Effective local marketing is not siloed. It is interconnected. When organic, paid, reputation, and email work together, each channel makes the others stronger. That is what we build.
             </p>
           </div>
@@ -88,18 +88,18 @@ const LocalSEOSystemContext = () => {
             {/* Left: Circular Diagram */}
             <div className="relative flex items-center justify-center">
               {/* Outer circle - dashed */}
-              <div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-2 border-dashed border-slate-300" />
+              <div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-2 border-dashed border-border" />
               
               {/* Inner circle - solid light */}
-              <div className="absolute w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full bg-slate-100 border border-slate-200" />
+              <div className="absolute w-[200px] h-[200px] md:w-[240px] md:h-[240px] rounded-full bg-surface-elevated border border-border" />
               
               {/* Center - Local SEO */}
               <div className="relative z-10 flex flex-col items-center justify-center w-[200px] h-[200px] md:w-[240px] md:h-[240px]">
                 <div className="w-14 h-14 rounded-full bg-cta flex items-center justify-center mb-3 shadow-lg">
                   <Search className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-slate-900 font-semibold text-lg mb-1">Local SEO</p>
-                <p className="text-slate-500 text-xs text-center px-4 leading-relaxed">
+                <p className="text-foreground font-semibold text-lg mb-1">Local SEO</p>
+                <p className="text-text-muted text-xs text-center px-4 leading-relaxed">
                   Organic visibility in local search results and Google Maps. The foundation that makes every other channel more effective.
                 </p>
               </div>
@@ -114,13 +114,13 @@ const LocalSEOSystemContext = () => {
                 return (
                   <div
                     key={service.id}
-                    className="absolute w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center shadow-sm hover:border-cta/50 hover:shadow-md transition-all cursor-pointer"
+                    className="absolute w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-elevated border border-border flex items-center justify-center shadow-sm hover:border-cta/50 hover:shadow-md transition-all cursor-pointer"
                     style={{
                       transform: `translate(${x}px, ${y}px)`,
                     }}
                     title={service.title}
                   >
-                    <service.icon className="w-4 h-4 md:w-5 md:h-5 text-slate-500" />
+                    <service.icon className="w-4 h-4 md:w-5 md:h-5 text-text-muted" />
                   </div>
                 );
               })}
@@ -143,7 +143,7 @@ const LocalSEOSystemContext = () => {
                       y1={y1}
                       x2={x2}
                       y2={y2}
-                      stroke="#cbd5e1"
+                      stroke="hsl(var(--border))"
                       strokeWidth="1.5"
                       strokeDasharray="4 4"
                     />
@@ -169,15 +169,15 @@ const LocalSEOSystemContext = () => {
                   className={`flex items-center gap-4 p-4 rounded-xl border transition-all ${
                     service.isCenter 
                       ? "bg-cta/5 border-cta/30" 
-                      : "bg-white border-slate-200 hover:border-cta/30 hover:bg-slate-50"
+                      : "bg-surface-elevated border-border hover:border-cta/30 hover:bg-surface-dark"
                   }`}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
-                    service.isCenter ? "bg-cta/10" : "bg-slate-100"
+                    service.isCenter ? "bg-cta/10" : "bg-surface-dark"
                   }`}>
-                    <service.icon className={`w-5 h-5 ${service.isCenter ? "text-cta" : "text-slate-500"}`} />
+                    <service.icon className={`w-5 h-5 ${service.isCenter ? "text-cta" : "text-text-muted"}`} />
                   </div>
-                  <span className={`font-medium ${service.isCenter ? "text-slate-900" : "text-slate-700"}`}>
+                  <span className={`font-medium ${service.isCenter ? "text-foreground" : "text-text-secondary"}`}>
                     {service.title}
                   </span>
                   {service.isCenter && (

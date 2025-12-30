@@ -118,17 +118,17 @@ const LocalSEORoadmap = () => {
   const activeData = roadmapData.find(p => p.phase === activePhase) || roadmapData[0];
 
   return (
-    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
             The Framework
           </span>
-          <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
             From Foundation to Peak Performance
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
+          <p className="text-lg text-text-secondary leading-relaxed">
             Every engagement is scoped to the market. This is how the work sequences, adapted to competitive reality.
           </p>
         </div>
@@ -140,7 +140,7 @@ const LocalSEORoadmap = () => {
             <select
               value={activePhase}
               onChange={(e) => setActivePhase(Number(e.target.value))}
-              className="w-full p-4 rounded-xl bg-white border border-slate-300 text-slate-900 text-base font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta/50"
+              className="w-full p-4 rounded-xl bg-surface-elevated border border-border text-foreground text-base font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta/50"
               style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                 backgroundRepeat: 'no-repeat',
@@ -159,7 +159,7 @@ const LocalSEORoadmap = () => {
           {/* Desktop timeline */}
           <div className="hidden lg:flex items-center justify-between relative">
             {/* Connecting line */}
-            <div className="absolute top-6 left-12 right-12 h-0.5 bg-slate-300" />
+            <div className="absolute top-6 left-12 right-12 h-0.5 bg-border" />
             <div 
               className="absolute top-6 left-12 h-0.5 transition-all duration-500"
               style={{
@@ -182,24 +182,24 @@ const LocalSEORoadmap = () => {
                   <div 
                     className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isActive 
-                        ? "ring-4 ring-offset-2 ring-offset-white ring-cta/40" 
+                        ? "ring-4 ring-offset-2 ring-offset-background ring-cta/40" 
                         : isPast 
                           ? "opacity-60" 
-                          : "bg-white border border-slate-300 hover:border-slate-400"
+                          : "bg-surface-elevated border border-border hover:border-text-muted"
                     }`}
                     style={{
                       background: isActive || isPast ? phase.color : undefined
                     }}
                   >
-                    <Icon className={`w-5 h-5 ${isActive || isPast ? "text-white" : "text-slate-500"}`} />
+                    <Icon className={`w-5 h-5 ${isActive || isPast ? "text-white" : "text-text-muted"}`} />
                   </div>
                   <span className={`mt-3 text-sm font-semibold transition-colors ${
-                    isActive ? "text-slate-900" : "text-slate-500"
+                    isActive ? "text-foreground" : "text-text-muted"
                   }`}>
                     {phase.name}
                   </span>
                   <span className={`text-xs transition-colors ${
-                    isActive ? "text-slate-600" : "text-slate-400"
+                    isActive ? "text-text-secondary" : "text-text-muted"
                   }`}>
                     Phase {phase.phase}
                   </span>
@@ -211,15 +211,15 @@ const LocalSEORoadmap = () => {
 
         {/* Active phase details */}
         <div 
-          className="rounded-2xl border p-8 bg-white shadow-sm animate-fade-in"
+          className="rounded-2xl border p-8 bg-surface-elevated shadow-sm animate-fade-in"
           style={{ borderColor: `${activeData.color}40` }}
           key={activePhase}
         >
           {/* Phase 1 duration callout */}
           {activePhase === 1 && (
-            <div className="flex items-center gap-2 mb-6 px-4 py-2.5 rounded-lg bg-slate-100 border border-slate-200 w-fit">
-              <span className="text-sm text-slate-600">
-                <span className="font-semibold text-slate-800">Longest phase:</span> Foundation typically spans 2 to 4 months depending on scope and market complexity.
+            <div className="flex items-center gap-2 mb-6 px-4 py-2.5 rounded-lg bg-surface-dark border border-border w-fit">
+              <span className="text-sm text-text-secondary">
+                <span className="font-semibold text-foreground">Longest phase:</span> Foundation typically spans 2 to 4 months depending on scope and market complexity.
               </span>
             </div>
           )}
@@ -232,16 +232,16 @@ const LocalSEORoadmap = () => {
               <activeData.icon className="w-6 h-6" style={{ color: activeData.color }} />
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-slate-900">{activeData.title}</h3>
-              <p className="text-slate-500 text-sm">Phase {activeData.phase}: {activeData.name}</p>
+              <h3 className="text-xl font-semibold text-foreground">{activeData.title}</h3>
+              <p className="text-text-muted text-sm">Phase {activeData.phase}: {activeData.name}</p>
             </div>
           </div>
           
-          <p className="text-lg text-slate-700 mb-8">{activeData.description}</p>
+          <p className="text-lg text-text-secondary mb-8">{activeData.description}</p>
 
           {/* Activities */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-4">What This Phase Includes</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">What This Phase Includes</h4>
             <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
               {activeData.activities.map((activity, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -249,7 +249,7 @@ const LocalSEORoadmap = () => {
                     className="w-4 h-4 mt-0.5 flex-shrink-0" 
                     style={{ color: activeData.color }} 
                   />
-                  <span className="text-slate-600">{activity}</span>
+                  <span className="text-text-secondary">{activity}</span>
                 </li>
               ))}
             </ul>
@@ -257,7 +257,7 @@ const LocalSEORoadmap = () => {
         </div>
 
         {/* Bottom note */}
-        <p className="mt-8 text-slate-500 text-sm text-center">
+        <p className="mt-8 text-text-muted text-sm text-center">
           Phase duration varies by market competitiveness and scope. Most clients progress through all four phases within 6 to 12 months.
         </p>
       </div>

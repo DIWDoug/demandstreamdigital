@@ -28,7 +28,7 @@ const HubFAQ = ({ title, faqs }: HubFAQProps) => {
   };
 
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section className="py-20 lg:py-28 bg-surface-dark relative">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -41,7 +41,7 @@ const HubFAQ = ({ title, faqs }: HubFAQProps) => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
               Common Questions
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               {title} FAQ
             </h2>
           </div>
@@ -51,12 +51,12 @@ const HubFAQ = ({ title, faqs }: HubFAQProps) => {
               <Accordion key={index} type="single" collapsible>
                 <AccordionItem 
                   value={`faq-${index}`}
-                  className="border border-gray-200 rounded-xl px-6 bg-white data-[state=open]:border-cta/30 shadow-sm"
+                  className="border border-border rounded-xl px-6 bg-surface-elevated data-[state=open]:border-cta/30"
                 >
-                  <AccordionTrigger className="text-left text-gray-900 hover:no-underline py-5 text-base font-medium">
+                  <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-base font-medium">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 text-sm pb-5 leading-relaxed">
+                  <AccordionContent className="text-text-secondary text-sm pb-5 leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

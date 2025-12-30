@@ -105,7 +105,7 @@ const LocalRankingFactors = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -113,10 +113,10 @@ const LocalRankingFactors = () => {
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               Latest Ranking Factors
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6">
               What Actually Moves the Needle
             </h2>
-            <p className="text-text-secondary text-lg max-w-3xl mx-auto">
+            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
               Based on Whitespark's Local Search Ranking Factors research. The data behind every strategy we build.
             </p>
           </div>
