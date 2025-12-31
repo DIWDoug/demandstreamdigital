@@ -567,26 +567,26 @@ export const hubs: Hub[] = [
     icon: Mail,
     title: "Email Marketing",
     slug: "email-marketing",
-    summary: "Nurture leads and drive repeat business through strategic email campaigns and automation.",
-    heroDescription: "We create and manage email marketing programs that nurture leads, drive repeat business, and maximize customer lifetime value. Our white-label email marketing services help agencies offer comprehensive digital marketing without the overhead of building an email team.",
+    summary: "Nurture local customers and drive repeat business through strategic email programs.",
+    heroDescription: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that respect subscriber expectations, deliver value consistently, and drive repeat revenue for your agency's local business clients.",
     whyItMatters: {
-      headline: "Why Email Marketing Matters",
-      description: "Email delivers the highest ROI of any marketing channel ($42 for every $1 spent on average). Email is both science and art: technical infrastructure meets persuasive storytelling. For local businesses, email turns one-time customers into repeat buyers.",
+      headline: "Why Email Marketing Matters for Local Businesses",
+      description: "Email is granted media: subscribers and inbox providers control whether your message gets through. For local businesses, email keeps customers coming back between visits and drives repeat revenue that compounds over time.",
       points: [
-        { icon: TrendingUp, title: "Highest ROI Channel", description: "No other marketing channel matches email's return on investment. Direct, personal, and incredibly cost-effective when executed properly." },
-        { icon: Users, title: "Owned Audience Asset", description: "Unlike social media followers, an email list is an owned asset. Algorithm changes cannot take it away. You control the relationship." },
-        { icon: Zap, title: "Conversion Funnels That Scale", description: "Automated sequences systematically move subscribers from awareness to purchase. Freebie magnets attract. Nurture sequences convert." }
+        { icon: TrendingUp, title: "Highest ROI Channel", description: "Email delivers $42 for every $1 spent on average. For local businesses with repeat customers, that ROI compounds with each return visit." },
+        { icon: Users, title: "Granted Media Asset", description: "Unlike social media, email reaches inboxes directly. But permission is foundational. Respect subscriber expectations or inbox providers will block you." },
+        { icon: Zap, title: "Repeat Revenue Engine", description: "Automated sequences remind past customers to return, promote seasonal services, and drive bookings without manual effort." }
       ]
     },
     ourApproach: {
-      headline: "Our Email Marketing Approach",
-      description: "We build email programs that balance technical precision with persuasive craft:",
+      headline: "Our Local Email Marketing Approach",
+      description: "We build email programs that meet the Hierarchy of Subscriber Needs: respectful, functional, valuable, and remarkable:",
       steps: [
-        { number: "01", title: "Customer Insight Mapping", description: "Understanding the target audience's specific needs, behaviors, and motivations to write copy that resonates." },
-        { number: "02", title: "Freebie Magnet Strategy", description: "Developing compelling lead magnets and opt-in incentives that inspire sign-ups and build quality lists." },
-        { number: "03", title: "Conversion Funnel Build", description: "Automated sequences that systematically move subscribers from initial awareness to purchase." },
-        { number: "04", title: "Segmentation & Targeting", description: "Delivering the right message to the right person based on behavior, demographics, and stage." },
-        { number: "05", title: "Performance Optimization", description: "Analyzing deliverability, open rates, and conversions to continuously improve resource allocation." }
+        { number: "01", title: "Permission Foundation", description: "Proper opt-in practices, authentication setup, and list hygiene that protect sender reputation and ensure inbox placement." },
+        { number: "02", title: "Functional Infrastructure", description: "Templates that render on mobile, working links, proper tracking. The technical foundation that makes everything else work." },
+        { number: "03", title: "Valuable Content", description: "Service information, seasonal offers, and educational content that gives subscribers a reason to open and engage." },
+        { number: "04", title: "Lifecycle Automation", description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock." },
+        { number: "05", title: "Local Segmentation", description: "Service-based and geographic targeting that delivers relevant offers to the right local customers." }
       ]
     },
     benefits: {
@@ -608,58 +608,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "Freebie Magnets & List Growth",
-        slug: "freebie-magnets-list-growth",
-        description: "Lead magnets, opt-in forms, and incentive strategies that build lists with qualified subscribers who want to hear from you.",
-        fullDescription: "List growth starts with value. We develop compelling freebie magnets (guides, checklists, templates, discounts) that give subscribers a reason to opt in. Combined with strategic form placement and landing pages, we build lists with qualified prospects.",
-        benefits: ["Qualified subscriber acquisition", "Higher opt-in conversion rates", "Better list quality from day one", "Clear value exchange with subscribers", "Foundation for all email marketing"],
-        deliverables: ["Freebie magnet strategy", "Lead magnet content development", "Opt-in form design", "Landing page creation", "Thank-you sequence setup", "List growth tracking"],
-        process: ["Audience value analysis", "Magnet concept development", "Content creation", "Form and page build", "Integration and testing", "Performance monitoring"]
+        title: "Permission & List Building",
+        slug: "permission-list-building",
+        description: "Proper opt-in practices and list growth that build quality subscriber relationships from day one.",
+        fullDescription: "Permission is foundational. We establish proper opt-in practices, verify existing lists, and build growth strategies that attract engaged local subscribers. Quality over quantity protects sender reputation and maximizes engagement.",
+        benefits: ["Strong permission foundation", "Protected sender reputation", "Higher engagement rates", "Reduced spam complaints", "Quality subscriber acquisition"],
+        deliverables: ["Permission audit", "Opt-in form optimization", "List verification and cleanup", "Growth strategy development", "Compliance review", "Best practice documentation"],
+        process: ["Current list assessment", "Permission gap identification", "Opt-in optimization", "Growth tactic implementation", "Ongoing monitoring"]
       },
       {
-        title: "Conversion Funnels",
-        slug: "conversion-funnels",
-        description: "Automated sequences that systematically move subscribers from initial awareness to purchase decision.",
-        fullDescription: "Conversion funnels turn subscribers into customers through systematic nurturing. We map the buyer journey, develop stage-appropriate content, and build automated sequences that educate, build trust, and drive action at the right moment.",
-        benefits: ["Systematic lead conversion", "Automated sales process", "Stage-appropriate messaging", "Higher customer acquisition", "Predictable revenue from email"],
-        deliverables: ["Funnel strategy and mapping", "Welcome sequence development", "Nurture flow creation", "Sales sequence build", "Trigger configuration", "Conversion tracking"],
-        process: ["Buyer journey mapping", "Sequence strategy", "Email content development", "Technical build", "Testing and launch", "Ongoing optimization"]
+        title: "Deliverability & Authentication",
+        slug: "deliverability-authentication",
+        description: "SPF, DKIM, DMARC configuration and inbox placement optimization that protects sender reputation.",
+        fullDescription: "Getting emails into the inbox is the first requirement for success. We configure technical authentication, monitor deliverability metrics, and maintain sender reputation so every email has the best chance of reaching subscribers.",
+        benefits: ["Higher inbox placement", "Protected sender reputation", "Reduced spam filtering", "Improved open rates", "Technical compliance"],
+        deliverables: ["SPF, DKIM, DMARC setup", "Deliverability audit", "Sender reputation monitoring", "Bounce and complaint management", "Blacklist monitoring", "Technical documentation"],
+        process: ["Technical audit", "Authentication configuration", "Monitoring setup", "Ongoing maintenance", "Issue resolution"]
       },
       {
-        title: "Segmentation & Targeting",
-        slug: "segmentation-targeting",
-        description: "Behavior-based and demographic segmentation that delivers the right message to the right person at the right time.",
-        fullDescription: "Relevance drives results. We segment lists based on subscriber behavior, demographics, purchase history, and engagement patterns. This enables personalized messaging at scale without manual effort.",
-        benefits: ["Higher engagement rates", "More relevant messaging", "Reduced unsubscribes", "Better conversion rates", "Scalable personalization"],
-        deliverables: ["Segmentation strategy", "Segment creation and management", "Behavioral trigger setup", "Tagging system implementation", "Dynamic content configuration", "Segment performance tracking"],
-        process: ["Current list analysis", "Segmentation strategy development", "Technical implementation", "Content customization", "Testing and refinement", "Ongoing optimization"]
+        title: "Subscriber Lifecycle Automation",
+        slug: "subscriber-lifecycle-automation",
+        description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock.",
+        fullDescription: "Automation handles the subscriber lifecycle from first opt-in to re-engagement. Welcome sequences orient new subscribers. Post-service follow-ups request reviews. Re-engagement campaigns win back lapsed customers. All automatically.",
+        benefits: ["24/7 subscriber nurturing", "Consistent follow-up", "Review generation integration", "Lapsed customer recovery", "Scalable engagement"],
+        deliverables: ["Welcome sequence development", "Post-service automation", "Review request integration", "Re-engagement campaigns", "Lifecycle mapping", "Performance tracking"],
+        process: ["Lifecycle mapping", "Sequence strategy", "Email development", "Technical setup", "Testing and launch", "Ongoing optimization"]
       },
       {
-        title: "Subject Line Modeling",
-        slug: "subject-line-modeling",
-        description: "Proven formulas and A/B testing that increase open rates and drive email engagement.",
-        fullDescription: "The subject line determines whether emails get opened. We apply proven formulas, conduct systematic A/B testing, and continuously optimize to maximize open rates. Better opens mean more conversions.",
-        benefits: ["Higher open rates", "Data-driven optimization", "Proven formula application", "Continuous improvement", "Better overall email performance"],
-        deliverables: ["Subject line strategy", "Formula library development", "A/B testing program", "Performance analysis", "Best practice documentation", "Ongoing optimization"],
-        process: ["Current performance analysis", "Formula identification", "Testing program setup", "Systematic experimentation", "Results analysis", "Strategy refinement"]
+        title: "Local Segmentation",
+        slug: "local-segmentation",
+        description: "Service-based and geographic targeting that delivers relevant offers to the right local customers.",
+        fullDescription: "Relevance drives results for local businesses. We segment by service history, location, purchase behavior, and engagement patterns. The right offer reaches the right customer at the right time.",
+        benefits: ["Higher engagement rates", "More relevant messaging", "Reduced unsubscribes", "Better conversion rates", "Local market targeting"],
+        deliverables: ["Segmentation strategy", "Service-based segments", "Geographic targeting", "Behavioral triggers", "Dynamic content setup", "Segment performance tracking"],
+        process: ["Customer data analysis", "Segmentation strategy", "Technical implementation", "Content customization", "Testing and refinement"]
       },
       {
-        title: "Performance Metrics",
-        slug: "performance-metrics",
-        description: "Deliverability, open rates, click rates, and conversion tracking that informs optimization and proves value.",
-        fullDescription: "Data drives email optimization. We track all key metrics, monitor deliverability, analyze conversion rates, and provide insights that inform strategy. Performance metrics prove value and guide resource allocation.",
-        benefits: ["Clear performance visibility", "Data-driven decisions", "Demonstrated ROI", "Optimization guidance", "Client-ready reporting"],
-        deliverables: ["Analytics dashboard setup", "KPI tracking configuration", "Regular performance reports", "Deliverability monitoring", "Conversion attribution", "Optimization recommendations"],
-        process: ["Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular analysis", "Insight development", "Strategy adjustment"]
+        title: "Campaign Strategy & Design",
+        slug: "campaign-strategy-design",
+        description: "Seasonal campaigns, service promotions, and brand-consistent templates for local businesses.",
+        fullDescription: "Local businesses have seasonal patterns and service-specific opportunities. We develop campaign calendars that align with local market rhythms, design templates that reflect brand standards, and create content that gives subscribers value.",
+        benefits: ["Seasonal relevance", "Brand consistency", "Local market alignment", "Higher engagement", "Professional presentation"],
+        deliverables: ["Campaign calendar", "Template design", "Seasonal campaign development", "Service promotion sequences", "A/B testing program", "Performance reporting"],
+        process: ["Local market analysis", "Calendar development", "Template design", "Content creation", "Testing and optimization"]
       },
       {
-        title: "Brand Consistency & Design",
-        slug: "brand-consistency-design",
-        description: "Templates and voice guidelines that align email identity with the overall business brand.",
-        fullDescription: "Email should feel like an extension of the brand. We develop templates that reflect brand standards, establish voice guidelines for consistency, and ensure every email reinforces brand identity while driving action.",
-        benefits: ["Consistent brand experience", "Professional presentation", "Improved recognition", "Higher trust and engagement", "Scalable design system"],
-        deliverables: ["Template design and development", "Brand voice guidelines", "Email style guide", "Mobile optimization", "Template library", "Design maintenance"],
-        process: ["Brand analysis", "Template design", "Voice development", "Testing across devices", "Documentation", "Ongoing updates"]
+        title: "Performance & Inactivity Management",
+        slug: "performance-inactivity-management",
+        description: "Metrics tracking, list hygiene, and subscriber cleanup that maintains program health.",
+        fullDescription: "Healthy email programs require ongoing maintenance. We track key metrics, manage inactive subscribers, and maintain list hygiene. Inactivity management protects deliverability and ensures resources focus on engaged subscribers.",
+        benefits: ["Clear performance visibility", "Protected deliverability", "Reduced sending costs", "Higher engagement rates", "Program health maintenance"],
+        deliverables: ["Analytics dashboard", "Performance reporting", "Inactivity identification", "Re-engagement sequences", "List pruning protocols", "Ongoing hygiene maintenance"],
+        process: ["Tracking setup", "Baseline establishment", "Ongoing monitoring", "Inactivity management", "Regular reporting"]
       }
     ]
   },
