@@ -21,30 +21,30 @@ export const emailMarketingConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most Email Marketing Fails",
-    intro: "You have seen this before. The email platform is set up, occasional campaigns go out, but open rates are declining, automations are stale, and the list is slowly dying from neglect.",
+    intro: "You have seen this before. The email platform is set up, occasional campaigns go out, but open rates decline, automations grow stale, and the list slowly dies from neglect. Email is both science and art: technical infrastructure meets persuasive storytelling. Most programs nail neither.",
     painPoints: [
       {
         icon: FileText,
-        title: "Sporadic Sends, Not Strategy",
-        body: "Emails go out when someone remembers, not on a strategic schedule. Subscribers forget who you are between random blasts."
+        title: "No Freebie Magnet Strategy",
+        body: "Sign-up forms exist but offer no compelling reason to subscribe. Without valuable lead magnets, list growth stalls and quality suffers."
       },
       {
         icon: Settings,
-        title: "Automations Built Once, Never Optimized",
-        body: "Welcome sequences and drip campaigns set up years ago, never touched since. Performance degrades while the market moves on."
+        title: "Broken Conversion Funnels",
+        body: "Welcome sequences built once and never optimized. No systematic path from subscriber to customer. Leads enter but never convert."
       },
       {
         icon: Users,
-        title: "List Health Ignored",
-        body: "Dead subscribers, bouncing emails, and declining deliverability. The list becomes a liability instead of an asset."
+        title: "Segmentation Is an Afterthought",
+        body: "Every subscriber gets the same message regardless of behavior or stage. The right message never reaches the right person at the right time."
       },
       {
         icon: Target,
-        title: "No Segmentation, No Relevance",
-        body: "Every subscriber gets the same message regardless of their interests or stage. Irrelevant emails drive unsubscribes and spam complaints."
+        title: "Metrics Without Meaning",
+        body: "Open rates tracked but never acted on. No deliverability monitoring. No revenue attribution. Data collected but never converted to insight."
       }
     ],
-    closingLine: "We build email programs that work—strategy, automation, and ongoing optimization.",
+    closingLine: "We build email programs that balance technical precision with persuasive craft.",
     closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
     ctaText: "Start the Conversation"
   },
@@ -56,22 +56,22 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         icon: TrendingUp,
         title: "Revenue From Owned Audience",
-        description: "Unlike social or paid, the email list is an owned asset. Algorithm changes cannot take it away. Direct line to customers who asked to hear from you."
+        description: "Unlike social or paid, the email list is an owned asset. Algorithm changes cannot take it away. A direct line to customers who asked to hear from you."
       },
       {
         icon: Repeat,
-        title: "Repeat Business on Autopilot",
-        description: "Automation sequences work around the clock. Nurturing leads, onboarding customers, and driving repeat purchases without manual effort."
+        title: "Conversion Funnels That Execute",
+        description: "Automated sequences move subscribers from awareness to purchase systematically. Freebie magnets attract. Nurture sequences educate. Conversion emails close."
       },
       {
         icon: Zap,
-        title: "Engagement That Compounds",
-        description: "Consistent, valuable emails build relationship equity. Open rates improve. Trust deepens. Lifetime value increases."
+        title: "Segmentation That Scales Relevance",
+        description: "The right message reaches the right person at the right time. Behavior-based targeting delivers personalization without manual effort."
       },
       {
         icon: Target,
-        title: "Right Message, Right Time",
-        description: "Segmentation and automation deliver relevant content based on subscriber behavior and stage. Personalization at scale."
+        title: "Metrics That Drive Decisions",
+        description: "Deliverability, open rates, click rates, and conversions tracked and optimized. Data informs strategy. Performance compounds over time."
       }
     ]
   },
@@ -84,18 +84,18 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 1,
         name: "Foundation",
-        title: "Strategy, Templates & Core Automations",
-        description: "Establishing the infrastructure and essential sequences that form the backbone of email marketing.",
+        title: "Freebie Magnets & Core Infrastructure",
+        description: "Building the lead capture system and technical foundation that makes everything else possible.",
         activities: [
           "Email program audit and assessment",
-          "Audience and journey analysis",
-          "Strategy and calendar development",
-          "Template design and development",
+          "Customer insight mapping and audience analysis",
+          "Freebie magnet strategy development",
+          "Opt-in form design and placement",
+          "Template design with brand consistency",
           "Welcome sequence creation",
-          "Core automation setup",
-          "List hygiene and segmentation",
+          "Technical setup: SPF, DKIM, DMARC",
           "Tracking and analytics configuration",
-          "Deliverability audit and fixes"
+          "Deliverability baseline establishment"
         ],
         icon: Settings,
         color: "hsl(76, 42%, 41%)"
@@ -103,16 +103,16 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 2,
         name: "Execution",
-        title: "Campaigns, Testing & Optimization",
-        description: "Regular campaign sends with continuous testing and improvement.",
+        title: "Conversion Funnels & Campaign Cadence",
+        description: "Building automated sequences that systematically move subscribers toward purchase.",
         activities: [
+          "Conversion funnel mapping and build",
+          "Nurture sequence development",
           "Campaign calendar execution",
-          "A/B testing program",
-          "Subject line optimization",
-          "Content performance analysis",
+          "Subject line modeling and testing",
+          "A/B testing program launch",
           "Send time optimization",
           "Engagement monitoring",
-          "List growth initiatives",
           "Monthly performance reporting"
         ],
         icon: Mail,
@@ -121,16 +121,16 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Expansion",
-        title: "Advanced Automation & Segmentation",
-        description: "Building sophisticated automation and personalization that increases relevance and revenue.",
+        title: "Segmentation & Behavioral Targeting",
+        description: "Delivering the right message to the right person based on behavior and demographics.",
         activities: [
           "Advanced segmentation development",
           "Behavioral trigger sequences",
           "Re-engagement campaigns",
-          "Cart abandonment (if applicable)",
-          "Post-purchase sequences",
-          "VIP/loyalty programs",
-          "Cross-sell/upsell automation"
+          "Cart abandonment sequences",
+          "Post-purchase flows",
+          "VIP and loyalty programs",
+          "Cross-sell and upsell automation"
         ],
         icon: Target,
         color: "hsl(35, 90%, 50%)"
@@ -138,13 +138,13 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 4,
         name: "Optimization",
-        title: "Continuous Improvement & Scale",
-        description: "Refining what works and scaling email as a core revenue channel.",
+        title: "Performance Analysis & Scale",
+        description: "Turning metrics into insight and insight into improved results.",
         activities: [
-          "Program-wide performance analysis",
-          "Automation refinement",
-          "Advanced personalization",
-          "Deliverability optimization",
+          "Deliverability and open rate optimization",
+          "Conversion rate analysis",
+          "Resource allocation refinement",
+          "Automation performance tuning",
           "List health maintenance",
           "Quarterly strategic reviews",
           "New opportunity identification"
@@ -159,42 +159,42 @@ export const emailMarketingConfig: ServicePageConfig = {
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Components of Email Marketing",
-    subheadline: "Each component is scoped based on business model, audience, and goals—not templated packages.",
+    subheadline: "Each component is scoped based on business model, audience, and goals. Not templated packages.",
     blocks: [
       {
-        title: "Campaign Strategy & Design",
-        slug: "campaign-strategy-design",
-        description: "Custom templates, compelling copy, and strategic send schedules that maximize engagement and conversions.",
+        title: "Freebie Magnets & List Growth",
+        slug: "freebie-magnets-list-growth",
+        description: "Lead magnets, opt-in forms, and incentive strategies that build lists with qualified subscribers.",
         icon: FileText
       },
       {
-        title: "Automation Sequences",
-        slug: "automation-sequences",
-        description: "Welcome series, nurture flows, and re-engagement campaigns that work around the clock.",
+        title: "Conversion Funnels",
+        slug: "conversion-funnels",
+        description: "Automated sequences that move subscribers from awareness to purchase systematically.",
         icon: Settings
       },
       {
-        title: "List Management & Segmentation",
-        slug: "list-management",
-        description: "Clean list hygiene, audience segmentation, and targeted messaging that improves deliverability.",
+        title: "Segmentation & Targeting",
+        slug: "segmentation-targeting",
+        description: "Behavior-based and demographic segmentation that delivers the right message to the right person.",
         icon: Users
       },
       {
-        title: "A/B Testing & Optimization",
-        slug: "testing-optimization",
-        description: "Continuous testing of subject lines, content, and timing to improve performance over time.",
+        title: "Subject Line Modeling",
+        slug: "subject-line-modeling",
+        description: "Proven formulas and A/B testing that increase open rates and drive engagement.",
         icon: Target
       },
       {
-        title: "Performance Analytics",
-        slug: "performance-analytics",
-        description: "Open rates, click tracking, ROI analysis, and insights that inform strategy and prove value.",
+        title: "Performance Metrics",
+        slug: "performance-metrics",
+        description: "Deliverability, open rates, click rates, and conversion tracking that informs optimization.",
         icon: BarChart3
       },
       {
-        title: "Deliverability & Compliance",
-        slug: "deliverability-compliance",
-        description: "SPF, DKIM, DMARC configuration, CAN-SPAM compliance, and sender reputation management.",
+        title: "Brand Consistency & Design",
+        slug: "brand-consistency-design",
+        description: "Templates and voice guidelines that align email identity with the overall business brand.",
         icon: Zap
       }
     ]
