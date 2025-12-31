@@ -5,10 +5,11 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
+import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
 // Generic section components
-import ServiceHeroGeneric from "@/components/services/generic/ServiceHeroGeneric";
+import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceProblemSection from "@/components/services/generic/ServiceProblemSection";
 import ServiceRoadmapSection from "@/components/services/generic/ServiceRoadmapSection";
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
@@ -27,6 +28,9 @@ const SectionDivider = () => (
 );
 
 const GoogleMaps = () => {
+  const hub = getHubBySlug("google-maps");
+  if (!hub) return null;
+
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: "Services", href: "/white-label-inbound-marketing-services" },
     { label: googleMapsConfig.title }
@@ -43,10 +47,11 @@ const GoogleMaps = () => {
       
       <Header />
       
-      {/* 1. HERO */}
+      {/* 1. HERO - Split layout with form */}
       <div className="pt-16">
-        <ServiceHeroGeneric 
-          config={googleMapsConfig.hero}
+        <ServiceHubHero 
+          title={hub.title}
+          description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
         />
       </div>

@@ -4,7 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
-import LocalSEOHero from "@/components/services/local-seo/LocalSEOHero";
+import ServiceHubHero from "@/components/services/ServiceHubHero";
 import LocalSEOPainPoints from "@/components/services/local-seo/LocalSEOPainPoints";
 import SEOValueExplainer from "@/components/services/local-seo/SEOValueExplainer";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
@@ -42,9 +42,13 @@ const LocalSEO = () => {
       
       <Header />
       
-      {/* Hero - center-aligned with simple form */}
+      {/* Hero - Split layout with form */}
       <div className="pt-16">
-        <LocalSEOHero breadcrumbs={breadcrumbItems} />
+        <ServiceHubHero 
+          title={hub.title}
+          description={hub.heroDescription}
+          breadcrumbs={breadcrumbItems}
+        />
       </div>
       
       {/* Trust Reel - credibility whisper (single instance) */}
