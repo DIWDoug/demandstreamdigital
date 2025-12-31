@@ -50,7 +50,7 @@ export const googleMapsConfig: ServicePageConfig = {
       }
     ],
     systemClosing: "",
-    closingLine: "All four failures share one root problem: no operating system for ongoing GBP management. We provide that system",
+    closingLine: "All five failures share one root problem: no operating system for ongoing GBP management. We provide that system",
     closingHighlight: "so visibility compounds instead of decaying, and margins stay protected.",
     ctaText: "Schedule a Discovery Call"
   },
