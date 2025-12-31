@@ -32,6 +32,13 @@ import schemaBusinessImg from "@/assets/spoke/schema-business.png";
 import schemaServiceImg from "@/assets/spoke/schema-service.png";
 import schemaRichImg from "@/assets/spoke/schema-rich.png";
 
+// Review Management illustrations
+import reviewGenerationImg from "@/assets/spoke/review-generation.png";
+import reviewPsychologyImg from "@/assets/spoke/review-psychology.png";
+import reviewResponseImg from "@/assets/spoke/review-response.png";
+import reviewPlatformsImg from "@/assets/spoke/review-platforms.png";
+import reviewMonitoringImg from "@/assets/spoke/review-monitoring.png";
+
 interface SubPoint {
   title: string;
   description: string;
@@ -729,6 +736,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Friendly reminders on receipts, packaging, and follow-up emails." },
         { title: "Email Automation Integration", description: "Pairs with Email Marketing automation flows for hands-off review generation at scale via post-service sequences." }
       ],
+      imageSrc: reviewGenerationImg,
+      imageAlt: "Review generation strategy mind map",
       ctaText: "Start Review Generation",
       ctaHref: "#contact"
     },
@@ -744,6 +753,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Staff Training", description: "Verbal requests work when rapport exists. Train staff to ask when customers seem happy." },
         { title: "Social Prompts", description: "Ask specific questions on social media that prompt review-style responses with platform links." }
       ],
+      imageSrc: reviewPsychologyImg,
+      imageAlt: "Customer review psychology and motivations",
       ctaText: "Get Review Strategy",
       ctaHref: "#contact"
     },
@@ -759,6 +770,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Service Keywords", description: "Natural service and location mentions in responses. AI systems parse response content for recommendations." },
         { title: "Brand Voice", description: "Responses match client personality. Never sound robotic or templated. Professional, warm, or casual as appropriate." }
       ],
+      imageSrc: reviewResponseImg,
+      imageAlt: "Review response management workflow",
       ctaText: "Get Response Management",
       ctaHref: "#contact"
     },
@@ -774,6 +787,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "First-Party Reviews", description: "Feature honest reviews on your own website. Diversification protects against platform filtering." },
         { title: "NextDoor Presence", description: "16% of reviewers focus here. Hyperlocal platform for neighborhood businesses." }
       ],
+      imageSrc: reviewPlatformsImg,
+      imageAlt: "Multi-platform review diversification strategy",
       ctaText: "Diversify Reviews",
       ctaHref: "#contact"
     },
@@ -789,6 +804,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Recency Tracking", description: "39% of customers filter for recent reviews. We track velocity to ensure fresh review flow." },
         { title: "Monthly Reporting", description: "Review metrics, sentiment trends, platform performance, and AI visibility in client reports." }
       ],
+      imageSrc: reviewMonitoringImg,
+      imageAlt: "Review monitoring and alerts dashboard",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
