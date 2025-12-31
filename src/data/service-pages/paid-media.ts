@@ -42,6 +42,11 @@ export const paidMediaConfig: ServicePageConfig = {
         icon: FileText,
         title: "Reporting That Obscures Reality",
         body: "Clients receive dashboards full of clicks and impressions instead of clarity. Data without context creates confusion, not confidence."
+      },
+      {
+        icon: TrendingUp,
+        title: "No Process for Scaling Winners",
+        body: "When something works, there is no system to expand it. Budget stays flat. Opportunities are missed. Growth stalls at the first plateau."
       }
     ],
     closingLine: "We build paid media specifically for local lead generation, with structure, tracking, and optimization",

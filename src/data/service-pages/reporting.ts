@@ -42,6 +42,11 @@ export const reportingConfig: ServicePageConfig = {
         icon: Users,
         title: "Generic Templates for Every Client",
         body: "The same report regardless of client goals or preferences. What matters to a plumber differs from what matters to a law firm. One-size-fits-none."
+      },
+      {
+        icon: TrendingUp,
+        title: "No Story of Progress",
+        body: "Each report exists in isolation. No comparison to last month. No trend lines. No narrative arc. Clients cannot see whether things are improving or declining."
       }
     ],
     closingLine: "We build reporting that tells the story your clients need to hear.",
