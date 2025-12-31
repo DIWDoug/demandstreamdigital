@@ -12,7 +12,7 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Paid media success isn't about building the perfect campaign—it's about whittling away everything that's keeping it from working. We cut the waste so spend connects to leads.",
+    subheadline: "Paid media success is not about building the perfect campaign. It is about whittling away everything that keeps it from working. We cut the waste so spend connects to leads.",
     qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
@@ -51,7 +51,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "Each week, we whittle away inefficiencies—bad keywords, weak audiences, underperforming ads—until what's left is a campaign that works.",
+    subheadline: "Each week, we whittle away inefficiencies: bad keywords, weak audiences, underperforming ads. What remains is a campaign that works.",
     items: [
       {
         icon: Zap,
