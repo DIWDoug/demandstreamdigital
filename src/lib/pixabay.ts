@@ -78,56 +78,58 @@ export async function searchPixabayImages(options: SearchOptions): Promise<Pixab
 
 /**
  * Keyword mapping for spoke pages to relevant Pixabay search terms
+ * Updated with better search terms for higher quality image results
  */
 export const spokeKeywordMap: Record<string, string> = {
   // Local SEO spokes
-  'on-page-optimization': 'website optimization SEO',
-  'technical-seo': 'website code development',
-  'local-keyword-strategy': 'keyword research analytics',
-  'content-development': 'content writing marketing',
-  'link-building': 'network connection business',
-  'schema-markup': 'code programming web',
-  'nap-citations': 'business directory listing',
+  'on-page-optimization': 'website design laptop professional',
+  'technical-seo': 'computer server technology infrastructure',
+  'local-keyword-strategy': 'search analytics data computer',
+  'content-development': 'writer content laptop professional',
+  'link-building': 'network connection handshake business',
+  'schema-markup': 'code programming developer screen',
+  'nap-citations': 'business directory map location',
   
   // GBP SEO spokes
-  'gbp-optimization': 'google business profile',
-  'review-management': 'customer reviews feedback',
-  'citation-building': 'business listings directory',
-  'photo-optimization': 'photography camera professional',
-  'qa-management': 'customer questions answers',
-  'post-scheduling': 'social media calendar',
+  'gbp-optimization': 'store front business local',
+  'review-management': 'customer feedback stars rating',
+  'citation-building': 'business listing local map',
+  'photo-optimization': 'professional photography camera studio',
+  'qa-management': 'customer service support help',
+  'post-scheduling': 'calendar planning schedule social',
   
   // Paid Media spokes
-  'google-ads': 'google advertising digital',
-  'meta-ads': 'facebook advertising social',
-  'local-service-ads': 'local service contractor',
-  'retargeting-campaigns': 'remarketing advertising',
-  'landing-page-design': 'landing page web design',
-  'conversion-tracking': 'analytics data tracking',
+  'google-ads': 'digital advertising computer marketing',
+  'meta-ads': 'social media advertising mobile',
+  'local-service-ads': 'local contractor service professional',
+  'retargeting-campaigns': 'target marketing advertising digital',
+  'landing-page-design': 'web design creative laptop',
+  'conversion-tracking': 'analytics dashboard computer data',
   
   // Email Marketing spokes
-  'campaign-strategy': 'email marketing strategy',
-  'list-management': 'email list database',
-  'automation-flows': 'automation workflow email',
-  'newsletter-design': 'newsletter email design',
-  'ab-testing': 'AB testing optimization',
-  'performance-analytics': 'analytics dashboard metrics',
+  'campaign-strategy': 'email marketing laptop professional',
+  'list-management': 'database customer management computer',
+  'automation-flows': 'automation workflow technology process',
+  'newsletter-design': 'email newsletter design creative',
+  'ab-testing': 'testing comparison analytics data',
+  'performance-analytics': 'analytics dashboard charts metrics',
   
   // Authority Building spokes
-  'local-links': 'link building outreach',
-  'unstructured-citations': 'video podcast media content',
-  'brand-mentions': 'brand awareness marketing',
-  'anchor-text': 'SEO text optimization',
-  'sponsorships': 'sponsorship partnership business',
-  'reputation-signals': 'reputation management trust',
+  'local-links': 'partnership handshake business professional',
+  'unstructured-citations': 'video podcast microphone media',
+  'brand-mentions': 'brand marketing awareness social',
+  'anchor-text': 'SEO optimization text content',
+  'sponsorships': 'sponsorship community event partnership',
+  'reputation-signals': 'trust reputation five stars',
+  'guest-posts-niche-edits': 'writing blog content laptop',
   
   // Reporting spokes
-  'white-label-dashboards': 'dashboard analytics reporting',
-  'monthly-reports': 'report business analytics',
-  'rank-tracking': 'ranking SEO tracking',
-  'call-tracking': 'phone call analytics',
-  'roi-analysis': 'ROI investment analysis',
-  'client-presentations': 'presentation business meeting'
+  'white-label-dashboards': 'dashboard analytics computer screen',
+  'monthly-reports': 'report document analytics business',
+  'rank-tracking': 'ranking chart growth analytics',
+  'call-tracking': 'phone call business professional',
+  'roi-analysis': 'investment growth chart finance',
+  'client-presentations': 'presentation meeting business professional'
 };
 
 /**
