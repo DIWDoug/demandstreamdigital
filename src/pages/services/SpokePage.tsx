@@ -11,7 +11,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import SpokeAlternatingBlocks from "@/components/services/SpokeAlternatingBlocks";
 import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
-import { spokeContentBlocks } from "@/data/spoke-content-blocks";
+import SpokeProcessTimeline from "@/components/services/SpokeProcessTimeline";
+import { spokeContentBlocks, spokeFAQs } from "@/data/spoke-content-blocks";
 import {
   Accordion,
   AccordionContent,
@@ -241,33 +242,8 @@ const SpokePage = () => {
 
       <SectionDivider />
 
-      {/* Process Section */}
-      <section className="py-16 lg:py-20 bg-surface-dark">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
-                How We Execute
-              </p>
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                Our Process
-              </h2>
-            </div>
-            <div className="space-y-6">
-              {spoke.process.map((step, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-cta/20 border border-cta/30 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-semibold text-cta">{String(index + 1).padStart(2, '0')}</span>
-                  </div>
-                  <div className="pt-2">
-                    <p className="text-text-secondary">{step}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Process Timeline Section */}
+      <SpokeProcessTimeline steps={spoke.process} spokeTitle={spoke.title} />
 
       <SectionDivider />
 
@@ -289,8 +265,8 @@ const SpokePage = () => {
         />
       )}
 
-      {/* FAQ Section */}
-      {hub.faqs && hub.faqs.length > 0 && (
+      {/* FAQ Section - Use spoke-specific FAQs if available, fallback to hub FAQs */}
+      {(spokeFAQs[spokeSlug || ""] || hub.faqs) && (
         <>
           <SectionDivider />
           <section className="py-16 lg:py-20 bg-surface-dark">
@@ -302,13 +278,13 @@ const SpokePage = () => {
                     Common Questions
                   </p>
                   <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                    Frequently Asked Questions
+                    {spoke.title} FAQ
                   </h2>
                 </div>
 
                 {/* FAQ Accordion */}
                 <Accordion type="single" collapsible className="space-y-3">
-                  {hub.faqs.slice(0, 5).map((faq, index) => (
+                  {(spokeFAQs[spokeSlug || ""] || hub.faqs.slice(0, 5)).map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`faq-${index}`}
