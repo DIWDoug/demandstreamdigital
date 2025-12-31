@@ -57,11 +57,13 @@ const PaidMediaCalculator = () => {
     const totalSetup = SETUP_FEE * platforms;
     const suggestedClientSetup = 599 * platforms; // Recommended client setup fee
     const setupMargin = suggestedClientSetup - totalSetup;
+    const setupMarginPercent = suggestedClientSetup > 0 ? Math.round((setupMargin / suggestedClientSetup) * 100) : 0;
     
     // Annual projections (setup fee is per account, first month only)
     const annualRevenue = (clientRetainer * 12) + suggestedClientSetup;
     const annualOEM = totalSetup + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
+    const annualMarginPercent = annualRevenue > 0 ? Math.round((annualMargin / annualRevenue) * 100) : 0;
     
     // Margin percentage
     const marginPercent = clientRetainer > 0 ? Math.round((monthlyMargin / clientRetainer) * 100) : 0;
@@ -77,6 +79,7 @@ const PaidMediaCalculator = () => {
       totalSetup,
       suggestedClientSetup,
       setupMargin,
+      setupMarginPercent,
       spendHeadroom,
       suggestedPerPlatform,
       suggestedRetainer,
@@ -86,6 +89,7 @@ const PaidMediaCalculator = () => {
       annualRevenue,
       annualOEM,
       annualMargin,
+      annualMarginPercent,
       marginPercent
     };
   }, [adSpend, platforms, customRetainer]);
@@ -304,7 +308,7 @@ const PaidMediaCalculator = () => {
                       Recommend charging client: <span className="text-primary font-medium">{formatCurrency(calculations.suggestedClientSetup)}</span>
                     </p>
                     <p className="text-xs text-green-400 mt-0.5">
-                      +{formatCurrency(calculations.setupMargin)} margin
+                      +{formatCurrency(calculations.setupMargin)} margin ({calculations.setupMarginPercent}%)
                     </p>
                   </div>
                 </div>
@@ -331,9 +335,12 @@ const PaidMediaCalculator = () => {
                 </h3>
                 
                 <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Zap className="w-4 h-4 text-green-400" />
-                    <span className="text-sm text-muted-foreground">Monthly</span>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-green-400" />
+                      <span className="text-sm text-muted-foreground">Monthly</span>
+                    </div>
+                    <span className="text-sm font-semibold text-green-400">{calculations.marginPercent}%</span>
                   </div>
                   <p className="text-3xl font-bold text-green-400">
                     {formatCurrency(calculations.monthlyMargin)}
@@ -360,6 +367,7 @@ const PaidMediaCalculator = () => {
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Your Margin</p>
                   <p className="text-xl font-bold text-green-400">{formatCurrency(calculations.annualMargin)}</p>
+                  <p className="text-xs text-green-400 mt-0.5">{calculations.annualMarginPercent}%</p>
                 </div>
               </div>
             </div>
