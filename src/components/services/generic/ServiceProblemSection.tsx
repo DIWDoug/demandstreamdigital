@@ -27,10 +27,10 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
               {config.headline}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               {config.intro}
             </p>
           </div>
@@ -40,17 +40,17 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             {config.painPoints.map((point, index) => (
               <div 
                 key={index}
-                className="bg-card rounded-xl p-6 lg:p-8 border border-border shadow-sm hover:border-cta/30 transition-colors"
+                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-cta/30 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
                     <point.icon className="h-5 w-5 text-cta" />
                   </div>
-                  <strong className="text-lg font-semibold text-foreground">
+                  <strong className="text-lg font-semibold text-slate-900">
                     {point.title}
                   </strong>
                 </div>
-                <p className="text-muted-foreground text-sm leading-7">
+                <p className="text-slate-600 text-sm leading-7">
                   {point.body}
                 </p>
               </div>
@@ -59,15 +59,15 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
 
           {/* System Closing (optional) */}
           {config.systemClosing && config.systemClosing.length > 0 && (
-            <p className="text-center text-foreground text-lg font-medium mt-10">
+            <p className="text-center text-slate-700 text-lg font-medium mt-10">
               {config.systemClosing}
             </p>
           )}
 
           {/* Transition Line + CTA */}
           <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-6`}>
-            <p className="text-muted-foreground text-lg">
-              {config.closingLine} <span className="font-semibold text-foreground">{config.closingHighlight}</span>
+            <p className="text-slate-600 text-lg">
+              {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>
             <Link 
               to="#contact" 
