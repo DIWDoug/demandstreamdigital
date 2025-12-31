@@ -2302,5 +2302,98 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
+  ],
+
+  "unstructured-citations": [
+    {
+      category: "What Are Unstructured Citations",
+      headline: "Authority Signals Beyond Business Directories",
+      description: "Unstructured citations are brand mentions embedded in media-rich content rather than structured NAP listings. They appear in videos, podcasts, infographics, press releases, and Web 2.0 platforms—signals that search engines and AI systems increasingly value for entity authority.",
+      subPoints: [
+        { title: "Definition", description: "Any mention of a business name, brand, or URL that isn't in a traditional directory format. These validate entity existence to search engines." },
+        { title: "Why They Matter", description: "Google and AI systems triangulate entity data from diverse sources. Unstructured citations from varied media formats strengthen entity graphs." },
+        { title: "Difference from NAP Citations", description: "NAP citations are structured listings (name, address, phone). Unstructured citations are organic mentions in content, media, and discussions." },
+        { title: "Authority Signal", description: "When brands appear across multiple content formats, it signals real-world relevance beyond paid directory listings." },
+        { title: "AI Visibility", description: "Large language models and AI Overviews increasingly cite video transcripts, podcast mentions, and social discussions as authority signals." },
+        { title: "Compound Effect", description: "Each unstructured citation creates a new pathway for discovery—both by users and by AI crawlers indexing diverse content." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Video Citations",
+      headline: "Brand Mentions in Video Content",
+      description: "Video citations include mentions of a business in YouTube videos, Vimeo content, TikTok, and other video platforms. Transcriptions are indexed by search engines, making video mentions powerful authority signals.",
+      subPoints: [
+        { title: "YouTube Mentions", description: "Brand mentions in YouTube descriptions, titles, and spoken content (transcribed) create indexable citations." },
+        { title: "Video Testimonials", description: "Customer testimonials mentioning the business create authentic third-party validation signals." },
+        { title: "Tutorial Content", description: "How-to videos mentioning tools, services, or businesses drive both citations and referral traffic." },
+        { title: "Interview Features", description: "Being featured in industry interviews or podcasts with video components creates high-authority citations." },
+        { title: "Transcript Indexing", description: "Google transcribes and indexes spoken mentions. Video content = text content for SEO purposes." },
+        { title: "Multi-Platform", description: "Citations distributed across YouTube, Vimeo, TikTok, and embedded video create diverse signal sources." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Audio Citations",
+      headline: "Podcast and Audio Mentions",
+      description: "Audio citations come from podcast appearances, radio mentions, and audio content platforms. As podcast indexing improves, these mentions become increasingly valuable for entity authority.",
+      subPoints: [
+        { title: "Podcast Features", description: "Guest appearances on industry podcasts generate high-quality citations with contextual relevance." },
+        { title: "Show Notes", description: "Podcast show notes typically include backlinks and brand mentions that get indexed." },
+        { title: "Audio Transcription", description: "Platforms like Spotify and Apple now index podcast transcripts, making spoken mentions crawlable." },
+        { title: "Interview Syndication", description: "A single podcast interview often gets published to multiple platforms and directories." },
+        { title: "Niche Authority", description: "Industry-specific podcasts attract targeted audiences and create topical authority signals." },
+        { title: "Long-Form Context", description: "Extended audio content provides rich context around brand mentions, strengthening relevance signals." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Image Citations",
+      headline: "Visual Content and Infographic Mentions",
+      description: "Image citations occur when brands are mentioned in infographics, visual guides, and image-based content that gets shared and embedded across the web. Alt text and surrounding context create indexable mentions.",
+      subPoints: [
+        { title: "Infographic Distribution", description: "Branded infographics shared across sites generate citations in alt text, captions, and attribution." },
+        { title: "Visual Guides", description: "How-to images and process diagrams with brand attribution create citation opportunities." },
+        { title: "Image Search Visibility", description: "Properly attributed images appear in Google Image search, creating additional discovery pathways." },
+        { title: "Pinterest & Visual Platforms", description: "Pin descriptions and image metadata on visual platforms create indexable brand mentions." },
+        { title: "Embeddable Assets", description: "Creating shareable visual assets encourages organic embedding and citation across third-party sites." },
+        { title: "Schema Attribution", description: "ImageObject schema with creator and contributor markup strengthens citation signals." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Web 2.0 Citations",
+      headline: "Social and Community Platform Mentions",
+      description: "Web 2.0 citations include brand mentions on social platforms, forums, and user-generated content sites. These signals are increasingly important for AI systems that scrape discussion platforms for entity validation.",
+      subPoints: [
+        { title: "Reddit Mentions", description: "Brand mentions in relevant subreddits create organic citations that AI systems heavily weight." },
+        { title: "Quora Answers", description: "Thoughtful responses mentioning brands create high-context citations indexed by search engines." },
+        { title: "Facebook Groups", description: "Active participation in industry groups generates mentions within engaged communities." },
+        { title: "Medium & Blogs", description: "Articles on Medium, Blogger, and WordPress.com create citations with full content context." },
+        { title: "Forum Participation", description: "Industry-specific forums and communities offer niche citation opportunities." },
+        { title: "AI Training Data", description: "Web 2.0 content feeds LLM training sets. Mentions on these platforms influence AI recommendation systems." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Press Release Citations",
+      headline: "Syndicated News Distribution",
+      description: "Press release citations leverage news syndication networks to distribute brand mentions across hundreds of news sites and media outlets. When done strategically, they create a burst of diverse citations.",
+      subPoints: [
+        { title: "Wire Distribution", description: "Press releases distributed via newswires appear on hundreds of news sites simultaneously." },
+        { title: "News Site Pickup", description: "Legitimate news angles can generate organic pickup by journalists and publications." },
+        { title: "Google News Visibility", description: "Syndicated releases often appear in Google News, creating high-visibility citations." },
+        { title: "Anchor Diversity", description: "Press releases allow strategic anchor text placement within natural editorial context." },
+        { title: "Entity Validation", description: "News mentions signal to search engines that a business is newsworthy and relevant." },
+        { title: "AI Overview Sourcing", description: "Google and AI systems treat news mentions as trust signals for entity information." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
   ]
 };

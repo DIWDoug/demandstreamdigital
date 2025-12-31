@@ -162,9 +162,9 @@ export const authorityConfig: ServicePageConfig = {
         icon: Globe
       },
       {
-        title: "Citation Building",
-        slug: "citations",
-        description: "Industry-specific and local directory listings that signal relevance.",
+        title: "Unstructured Citations",
+        slug: "unstructured-citations",
+        description: "Video, audio, image, press release, and Web 2.0 mentions beyond directories.",
         icon: FileText
       },
       {

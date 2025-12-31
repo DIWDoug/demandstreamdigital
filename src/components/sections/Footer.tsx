@@ -58,7 +58,7 @@ const Footer = () => {
       hubSlug: "local-authority-building",
       items: [
         { label: "Local Links", slug: "local-links" },
-        { label: "Citations", slug: "citations" },
+        { label: "Unstructured Citations", slug: "unstructured-citations" },
         { label: "Brand Mentions", slug: "brand-mentions" },
         { label: "Guest Posts & Niche Edits", slug: "guest-posts-niche-edits" },
         { label: "Sponsorships", slug: "sponsorships" },
