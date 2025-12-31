@@ -168,6 +168,12 @@ export const authorityConfig: ServicePageConfig = {
         icon: FileText
       },
       {
+        title: "Anchor Text Diversification",
+        slug: "anchor-text",
+        description: "Natural anchor profiles that avoid penalties and maximize ranking power.",
+        icon: Shield
+      },
+      {
         title: "Local Sponsorships & Partnerships",
         slug: "local-partnerships",
         description: "Community involvement that creates authentic geographic authority.",
@@ -183,12 +189,6 @@ export const authorityConfig: ServicePageConfig = {
         title: "Review & Reputation Signals",
         slug: "reputation-signals",
         description: "Review generation and response management that builds trust.",
-        icon: Shield
-      },
-      {
-        title: "Brand Mentions & Social Proof",
-        slug: "brand-mentions",
-        description: "Unlinked mentions and social signals that reinforce credibility.",
         icon: Users
       }
     ]
