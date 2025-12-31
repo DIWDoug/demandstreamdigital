@@ -43,32 +43,74 @@ const Header = () => {
     {
       title: "LOCAL SEO",
       href: "/white-label-inbound-marketing-services/local-seo",
-      items: ["On-Page Optimization", "Technical SEO Audits", "Local Keyword Strategy", "Content Development", "Link Building", "Schema Markup"]
+      items: [
+        { label: "On-Page Optimization", slug: "on-page-optimization" },
+        { label: "Technical SEO Audits", slug: "technical-seo-audits" },
+        { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
+        { label: "Content Development", slug: "content-development" },
+        { label: "Link Building", slug: "link-building" },
+        { label: "Schema Markup", slug: "schema-markup" }
+      ]
     },
     {
       title: "GBP SEO",
       href: "/white-label-inbound-marketing-services/google-maps",
-      items: ["GBP Optimization", "Review Management", "Citation Building", "Photo Optimization", "Q&A Management", "Post Scheduling"]
+      items: [
+        { label: "GBP Optimization", slug: "gbp-optimization" },
+        { label: "Review Management", slug: "review-management" },
+        { label: "Citation Building", slug: "citation-building" },
+        { label: "Photo Optimization", slug: "photo-optimization" },
+        { label: "Q&A Management", slug: "qa-management" },
+        { label: "Post Scheduling", slug: "post-scheduling" }
+      ]
     },
     {
       title: "PAID MEDIA",
       href: "/white-label-inbound-marketing-services/paid-media",
-      items: ["Google Ads", "Meta Ads", "Local Service Ads", "Retargeting Campaigns", "Landing Page Design", "Conversion Tracking"]
+      items: [
+        { label: "Google Ads", slug: "google-ads" },
+        { label: "Meta Ads", slug: "meta-ads" },
+        { label: "Local Service Ads", slug: "local-service-ads" },
+        { label: "Retargeting Campaigns", slug: "retargeting-campaigns" },
+        { label: "Landing Page Design", slug: "landing-page-design" },
+        { label: "Conversion Tracking", slug: "conversion-tracking" }
+      ]
     },
     {
       title: "EMAIL MARKETING",
       href: "/white-label-inbound-marketing-services/email-marketing",
-      items: ["Campaign Strategy", "List Management", "Automation Flows", "Newsletter Design", "A/B Testing", "Performance Analytics"]
+      items: [
+        { label: "Campaign Strategy", slug: "campaign-strategy" },
+        { label: "List Management", slug: "list-management" },
+        { label: "Automation Flows", slug: "automation-flows" },
+        { label: "Newsletter Design", slug: "newsletter-design" },
+        { label: "A/B Testing", slug: "ab-testing" },
+        { label: "Performance Analytics", slug: "performance-analytics" }
+      ]
     },
     {
       title: "AUTHORITY",
       href: "/white-label-inbound-marketing-services/local-authority-building",
-      items: ["Local Links", "Citations", "Brand Mentions", "Anchor Text", "Sponsorships", "Reputation Signals"]
+      items: [
+        { label: "Local Links", slug: "local-links" },
+        { label: "Citations", slug: "citations" },
+        { label: "Brand Mentions", slug: "brand-mentions" },
+        { label: "Anchor Text", slug: "anchor-text" },
+        { label: "Sponsorships", slug: "sponsorships" },
+        { label: "Reputation Signals", slug: "reputation-signals" }
+      ]
     },
     {
       title: "REPORTING",
       href: "/white-label-inbound-marketing-services/reporting",
-      items: ["White-Label Dashboards", "Monthly Reports", "Rank Tracking", "Call Tracking", "ROI Analysis", "Client Presentations"]
+      items: [
+        { label: "White-Label Dashboards", slug: "white-label-dashboards" },
+        { label: "Monthly Reports", slug: "monthly-reports" },
+        { label: "Rank Tracking", slug: "rank-tracking" },
+        { label: "Call Tracking", slug: "call-tracking" },
+        { label: "ROI Analysis", slug: "roi-analysis" },
+        { label: "Client Presentations", slug: "client-presentations" }
+      ]
     }
   ];
 
@@ -224,11 +266,11 @@ const Header = () => {
                       {category.items.map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <Link 
-                            to={category.href}
+                            to={`${category.href}/${item.slug}`}
                             className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
-                            {item}
+                            {item.label}
                           </Link>
                         </li>
                       ))}
@@ -270,14 +312,14 @@ const Header = () => {
                         {category.items.slice(0, 3).map((item, itemIndex) => (
                           <li key={itemIndex}>
                             <Link 
-                              to={category.href}
+                              to={`${category.href}/${item.slug}`}
                               className="text-xs text-text-secondary hover:text-foreground transition-colors"
                               onClick={() => {
                                 setIsMegaMenuOpen(false);
                                 setIsMobileMenuOpen(false);
                               }}
                             >
-                              {item}
+                              {item.label}
                             </Link>
                           </li>
                         ))}
