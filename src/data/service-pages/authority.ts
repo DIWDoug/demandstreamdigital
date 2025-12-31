@@ -26,22 +26,22 @@ export const authorityConfig: ServicePageConfig = {
       {
         icon: Globe,
         title: "Links Without Relevance",
-        body: "Quantity over quality. Generic placements Google ignores or penalizes. The link count grows, but rankings never move."
+        body: "Generic directory links Google ignores. The link count grows, but local rankings never move because there's no geographic or industry relevance."
       },
       {
         icon: FileText,
-        title: "PR Without Pickup",
-        body: "Press releases sent to wires no journalist reads. No earned coverage. Money spent on distribution with nothing to show for it."
+        title: "Citations Without Strategy",
+        body: "NAP listings scattered across low-quality directories. No focus on the industry-specific and local sources that actually influence rankings."
       },
       {
         icon: Shield,
         title: "No Strategy, Just Tactics",
-        body: "Disconnected efforts that never compound into credibility. Random acts of link building without a coherent authority plan."
+        body: "Random acts of link building without a coherent authority plan. Effort wasted on activities that don't compound into local credibility."
       },
       {
         icon: Users,
-        title: "Missing Local Authority Signals",
-        body: "National links for local businesses. No geographic trust signals. The community connections that move local rankings are ignored."
+        title: "Missing Community Signals",
+        body: "No local sponsorships, chamber memberships, or community involvement. The trust signals that differentiate local businesses are completely absent."
       }
     ],
     closingLine: "We build authority the hard way: strategically, earned, and compounding.",
@@ -156,40 +156,40 @@ export const authorityConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on industry, market, and competitive landscape—not templated packages.",
     blocks: [
       {
-        title: "Digital PR & Media Placements",
-        slug: "digital-pr-media",
-        description: "Earned coverage that builds credibility and backlinks.",
-        icon: FileText
-      },
-      {
-        title: "Thought Leadership Content",
-        slug: "thought-leadership",
-        description: "Expert articles and commentary that position clients as authorities.",
-        icon: Users
-      },
-      {
-        title: "Quality Link Acquisition",
-        slug: "link-acquisition",
-        description: "Strategic link building using proven, ethical techniques.",
+        title: "Local Link Acquisition",
+        slug: "local-links",
+        description: "Strategic links from local publications, blogs, and community sites.",
         icon: Globe
       },
       {
-        title: "Industry Directory Listings",
-        slug: "industry-directories",
-        description: "Selective placements that signal expertise and legitimacy.",
-        icon: Award
+        title: "Citation Building",
+        slug: "citations",
+        description: "Industry-specific and local directory listings that signal relevance.",
+        icon: FileText
       },
       {
         title: "Local Sponsorships & Partnerships",
         slug: "local-partnerships",
-        description: "Authentic community-based authority signals.",
+        description: "Community involvement that creates authentic geographic authority.",
         icon: Handshake
       },
       {
-        title: "Reputation Management",
-        slug: "reputation-management",
-        description: "Review monitoring and proactive trust building.",
+        title: "Industry Directory Listings",
+        slug: "industry-directories",
+        description: "Professional association and niche directory placements.",
+        icon: Award
+      },
+      {
+        title: "Review & Reputation Signals",
+        slug: "reputation-signals",
+        description: "Review generation and response management that builds trust.",
         icon: Shield
+      },
+      {
+        title: "Brand Mentions & Social Proof",
+        slug: "brand-mentions",
+        description: "Unlinked mentions and social signals that reinforce credibility.",
+        icon: Users
       }
     ]
   },
