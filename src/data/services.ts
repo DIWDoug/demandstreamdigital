@@ -568,7 +568,7 @@ export const hubs: Hub[] = [
     title: "Email Marketing",
     slug: "email-marketing",
     summary: "Nurture local customers and drive repeat business through strategic email programs.",
-    heroDescription: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that respect subscriber expectations, deliver value consistently, and drive repeat revenue for your agency's local business clients.",
+    heroDescription: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently and drive repeat revenue for your agency's local business clients.",
     whyItMatters: {
       headline: "Why Email Marketing Matters for Local Businesses",
       description: "Local customers need your client's services periodically, not constantly. Between visits, email keeps the relationship warm, builds authority, and ensures the business is the first call when the need arises.",
