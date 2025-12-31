@@ -85,7 +85,9 @@ export interface ServicePageConfig {
     headline: string;
     highlightedText: string;
     subheadline: string;
+    bullets?: string[]; // Optional bullet points for anti-package stances
     qualifierLine: string;
+    integrationNote?: string; // Optional note about service integration
     ctaText: string;
     ctaSubtext: string;
   };
