@@ -1,34 +1,45 @@
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Zap } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Zap, Layers } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const PaidMediaCalculator = () => {
-  const [clientRetainer, setClientRetainer] = useState<number>(1500);
+  const [adSpend, setAdSpend] = useState<number>(3000);
+  const [platforms, setPlatforms] = useState<number>(1);
+  const [customRetainer, setCustomRetainer] = useState<number | null>(null);
 
   const SETUP_FEE = 250;
   const OEM_RATE = 0.20;
+  const SUGGESTED_FEE_RATE = 0.20;
+  const MIN_RETAINER = 500;
 
   const calculations = useMemo(() => {
-    const retainer = Math.max(clientRetainer, 0);
+    // Suggested agency fee: 20% of ad spend or $500 min (per platform)
+    const suggestedPerPlatform = Math.max(adSpend * SUGGESTED_FEE_RATE, MIN_RETAINER);
+    const suggestedRetainer = suggestedPerPlatform * platforms;
     
-    // OEM Cost: 20% of client retainer
-    const monthlyOEM = Math.round(retainer * OEM_RATE);
+    // Use custom retainer if set, otherwise use suggested
+    const clientRetainer = customRetainer !== null ? customRetainer : suggestedRetainer;
     
-    // Your margin: 80% of client retainer
-    const monthlyMargin = retainer - monthlyOEM;
+    // OEM Cost: 20% of retainer
+    const monthlyOEM = Math.round(clientRetainer * OEM_RATE);
+    
+    // Your margin
+    const monthlyMargin = clientRetainer - monthlyOEM;
     
     // First month includes setup
     const firstMonthOEM = SETUP_FEE + monthlyOEM;
-    const firstMonthMargin = retainer - firstMonthOEM;
+    const firstMonthMargin = clientRetainer - firstMonthOEM;
     
     // Annual projections
-    const annualRevenue = retainer * 12;
+    const annualRevenue = clientRetainer * 12;
     const annualOEM = SETUP_FEE + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
     
     return {
-      retainer,
+      suggestedPerPlatform,
+      suggestedRetainer,
+      clientRetainer,
       monthlyOEM,
       monthlyMargin,
       firstMonthOEM,
@@ -37,7 +48,7 @@ const PaidMediaCalculator = () => {
       annualOEM,
       annualMargin
     };
-  }, [clientRetainer]);
+  }, [adSpend, platforms, customRetainer]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -46,6 +57,14 @@ const PaidMediaCalculator = () => {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
     }).format(value);
+  };
+
+  const handleRetainerChange = (value: number) => {
+    setCustomRetainer(value);
+  };
+
+  const resetToSuggested = () => {
+    setCustomRetainer(null);
   };
 
   return (
@@ -61,43 +80,109 @@ const PaidMediaCalculator = () => {
             Calculate Your Paid Media Margin
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Enter what you charge your client. Your OEM cost is 20% — you keep the rest.
+            Typical agency fee: 20% of ad spend or $500, whichever is greater. Your OEM cost: 20% of the retainer per platform.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Pricing Rules Summary */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-1">One-Time Setup</p>
+              <p className="text-sm text-muted-foreground mb-1">Setup Fee</p>
               <p className="text-2xl font-bold text-foreground">{formatCurrency(SETUP_FEE)}</p>
+              <p className="text-xs text-muted-foreground">one-time</p>
             </div>
             <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-1">Monthly OEM Rate</p>
+              <p className="text-sm text-muted-foreground mb-1">Suggested Client Fee</p>
               <p className="text-2xl font-bold text-foreground">20%</p>
-              <p className="text-xs text-muted-foreground">of client retainer</p>
+              <p className="text-xs text-muted-foreground">of ad spend or $500 min</p>
+            </div>
+            <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
+              <p className="text-sm text-muted-foreground mb-1">Your OEM Cost</p>
+              <p className="text-2xl font-bold text-foreground">20%</p>
+              <p className="text-xs text-muted-foreground">of retainer, per platform</p>
             </div>
           </div>
 
           {/* Calculator Card */}
           <div className="bg-card border border-border rounded-xl p-8">
-            {/* Input */}
-            <div className="mb-8">
-              <Label htmlFor="retainer" className="text-base font-medium text-foreground mb-3 block">
-                Your Client's Monthly Retainer
-              </Label>
-              <div className="relative">
-                <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  id="retainer"
-                  type="number"
-                  min={0}
-                  step={100}
-                  value={clientRetainer}
-                  onChange={(e) => setClientRetainer(Number(e.target.value))}
-                  className="pl-10 text-xl h-14 bg-background border-border"
-                  placeholder="Enter client retainer"
-                />
+            {/* Inputs */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div>
+                <Label htmlFor="adSpend" className="text-base font-medium text-foreground mb-3 block">
+                  Monthly Ad Spend
+                </Label>
+                <div className="relative">
+                  <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    id="adSpend"
+                    type="number"
+                    min={0}
+                    step={500}
+                    value={adSpend}
+                    onChange={(e) => {
+                      setAdSpend(Number(e.target.value));
+                      setCustomRetainer(null);
+                    }}
+                    className="pl-10 text-lg h-12 bg-background border-border"
+                    placeholder="Ad spend"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="platforms" className="text-base font-medium text-foreground mb-3 block">
+                  Platforms
+                </Label>
+                <div className="relative">
+                  <Layers className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <select
+                    id="platforms"
+                    value={platforms}
+                    onChange={(e) => {
+                      setPlatforms(Number(e.target.value));
+                      setCustomRetainer(null);
+                    }}
+                    className="w-full pl-10 pr-4 text-lg h-12 bg-background border border-border rounded-md text-foreground"
+                  >
+                    <option value={1}>1 Platform</option>
+                    <option value={2}>2 Platforms</option>
+                    <option value={3}>3 Platforms</option>
+                    <option value={4}>4 Platforms</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="retainer" className="text-base font-medium text-foreground mb-3 block flex items-center justify-between">
+                  <span>Client Retainer</span>
+                  {customRetainer !== null && (
+                    <button
+                      onClick={resetToSuggested}
+                      className="text-xs text-primary hover:underline"
+                    >
+                      Reset to suggested
+                    </button>
+                  )}
+                </Label>
+                <div className="relative">
+                  <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    id="retainer"
+                    type="number"
+                    min={0}
+                    step={100}
+                    value={customRetainer !== null ? customRetainer : calculations.suggestedRetainer}
+                    onChange={(e) => handleRetainerChange(Number(e.target.value))}
+                    className="pl-10 text-lg h-12 bg-background border-border"
+                    placeholder="Retainer"
+                  />
+                </div>
+                {customRetainer === null && (
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Suggested: {formatCurrency(calculations.suggestedPerPlatform)}/platform
+                  </p>
+                )}
               </div>
             </div>
 
@@ -123,7 +208,7 @@ const PaidMediaCalculator = () => {
                 <div className="bg-background border border-border rounded-lg p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Monthly (20%)</span>
+                    <span className="text-sm text-muted-foreground">Monthly (20% of retainer)</span>
                   </div>
                   <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(calculations.monthlyOEM)}
