@@ -100,11 +100,13 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What is your approach to anchor text?", answer: "Natural distribution: branded anchors, naked URLs, generic terms, and occasional keyword-rich anchors. Over-optimization triggers penalties." }
   ],
   "schema-markup": [
-    { question: "What schema types do you implement?", answer: "LocalBusiness, Organization, Service, FAQ, Review, Breadcrumb, and Article schema. Additional types added based on content and rich result opportunities." },
-    { question: "How do you test schema implementation?", answer: "Google Rich Results Test, Schema.org validator, and Search Console enhancement reports. We verify eligibility for all applicable rich results." },
-    { question: "Does schema directly improve rankings?", answer: "Schema itself is not a direct ranking factor. However, rich results from schema can significantly improve click-through rates, which indirectly benefits rankings." },
-    { question: "How often should schema be updated?", answer: "Updated when business information changes, new services are added, or Google announces new supported schema types. Quarterly reviews recommended." },
-    { question: "Can schema help with AI search visibility?", answer: "Yes. Structured data helps LLMs understand entity relationships, business details, and content structure. Clean schema improves chances of accurate AI citations and AI Overview inclusion." }
+    { question: "What schema types do you implement?", answer: "LocalBusiness, Organization, Person, Service, FAQ, Review, Breadcrumb, Article, and Product schema. We use an @graph structure to connect entities—your business, its founder, services, and locations—into a page-level knowledge graph that machines understand explicitly." },
+    { question: "How do you test schema implementation?", answer: "Three-step validation: Schema.org validator catches syntax errors, Google Rich Results Test confirms eligibility, and Classy Schema visualization verifies entity connections. We check that relationships render correctly before deployment." },
+    { question: "What is connected schema and why does it matter?", answer: "Connected schema uses @id properties to link entities together. Instead of isolated markup, we create relationships—Organization connected to Person (founder), LocalBusiness connected to Service offerings. This context is how machines understand your business without NLP guesswork." },
+    { question: "How do sameAs and knowsAbout properties help?", answer: "sameAs links your entity to authoritative sources like LinkedIn, Crunchbase, and social profiles. knowsAbout connects to Wikipedia/Wikidata concepts for topic disambiguation. Both strengthen E-E-A-T signals for traditional search and improve AI system accuracy." },
+    { question: "Does schema directly improve rankings?", answer: "Schema itself is not a direct ranking factor. However, it reduces the computational work search engines need to understand your content, enables rich results that improve CTR, and increases AI citation accuracy—all of which compound into ranking benefits." },
+    { question: "How often should schema be updated?", answer: "Updated when business information changes, new services are added, team members change, or Google announces new supported types. Quarterly reviews recommended. We also monitor for syntax errors that can silently break markup." },
+    { question: "Can schema help with AI search visibility?", answer: "Absolutely. AI systems like ChatGPT, Perplexity, and Google AI Overviews rely on structured data to understand, summarize, and cite content accurately. Clean, connected schema gives these systems explicit answers rather than forcing NLP interpretation of unstructured text." }
   ],
   "nap-citations": [
     { question: "What is a NAP citation?", answer: "A citation is any online mention of your business name, address, and phone number. Citations on trusted directories validate business identity with Google and feed the sources AI systems reference." },
@@ -571,33 +573,33 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "schema-markup": [
     {
-      category: "Business Identity",
-      headline: "Structured Data That Defines You",
-      description: "Schema tells search engines what your business is, where it operates, and what it offers.",
+      category: "Connected Entity Schema",
+      headline: "Page-Level Knowledge Graphs",
+      description: "We build connected schema using @graph structures with unique @id properties—creating explicit relationships between your business, founders, services, and locations that machines understand without interpretation.",
       subPoints: [
-        { title: "LocalBusiness", description: "Name, address, phone, hours, service area, payment methods, business type." },
-        { title: "Organization", description: "Brand identity, logo, social profiles, and founding information." },
-        { title: "Person Schema", description: "Team member markup building E-E-A-T. Expertise connected to entity." },
-        { title: "Contact Points", description: "Multiple contact methods structured. Sales, support, billing distinguished." },
-        { title: "Same-As Links", description: "Social and directory profiles linked to business entity." },
-        { title: "Geo Coordinates", description: "Precise location and service area polygons. Powers map integrations." }
+        { title: "LocalBusiness + Organization", description: "Core identity schema with legalName, taxID, founder, and contactPoint properties." },
+        { title: "Person Schema", description: "Founder and team markup with worksFor, knowsAbout, and sameAs for E-E-A-T authority." },
+        { title: "@id Connections", description: "Unique identifiers linking entities. Person → Organization → Service all connected." },
+        { title: "sameAs Validation", description: "LinkedIn, Crunchbase, social profiles linked to validate entity with external sources." },
+        { title: "knowsAbout Topics", description: "Wikipedia/Wikidata links for topic disambiguation. Expertise connected to entities." },
+        { title: "Geo Coordinates", description: "hasMap linking to GBP. Precise location and service area polygons." }
       ],
       imageSrc: schemaBusinessImg,
-      imageAlt: "Business identity schema types",
+      imageAlt: "Connected entity schema graph structure",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Service Schema",
-      headline: "Structured Data for What You Offer",
-      description: "Service schema helps search engines understand offerings. Enables rich results with details.",
+      category: "Service & Product Schema",
+      headline: "Structured Data for Offerings",
+      description: "Service schema connects offerings to your LocalBusiness entity. Enables rich results with pricing, availability, and ratings that AI systems can cite accurately.",
       subPoints: [
-        { title: "Service Definitions", description: "Individual services with descriptions, areas, duration, and pricing." },
-        { title: "Service Areas", description: "Geographic coverage matching GBP. City, region, or radius-based." },
-        { title: "Pricing Schema", description: "Starting prices, ranges, and promotions structured for rich results." },
-        { title: "Aggregate Ratings", description: "Review data structured for star displays. Count, average, best/worst." },
-        { title: "Area Nesting", description: "Service area nested within LocalBusiness. Geographic signals strengthened." },
-        { title: "Offer Catalogs", description: "Full service catalogs structured. Offerings discoverable via schema." }
+        { title: "Service Definitions", description: "Individual services with areaServed, offers, and aggregateRating properties." },
+        { title: "hasOfferCatalog", description: "Full service catalogs structured. Offerings discoverable via schema and AI parsing." },
+        { title: "Pricing & Offers", description: "priceRange, priceCurrency, and availability structured for rich results." },
+        { title: "Aggregate Ratings", description: "reviewCount, ratingValue, bestRating for star displays in SERPs." },
+        { title: "makesOffer Property", description: "Service-based businesses linking what they offer directly to entity." },
+        { title: "mainEntity Connections", description: "Service pages declaring primary topic. Strengthens page-entity relationship." }
       ],
       imageSrc: schemaServiceImg,
       imageAlt: "Service and offer schema markup",
@@ -606,19 +608,34 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     },
     {
       category: "Rich Result Schema",
-      headline: "Rich Results for Every Content Type",
-      description: "Beyond identity, schema unlocks enhanced search appearances for FAQ, reviews, articles, and more.",
+      headline: "Enhanced Search Appearances",
+      description: "Beyond identity, schema unlocks rich results for FAQ, reviews, articles, and more—expanding SERP real estate and feeding AI systems quotable structured answers.",
       subPoints: [
-        { title: "FAQ Schema", description: "Q&A pairs for FAQ rich results. Targets PAA and expands SERP real estate." },
-        { title: "Review Schema", description: "Customer reviews structured for ratings display. Author, date, rating marked." },
-        { title: "Article Schema", description: "Blog content structured for News, Discover, and Top Stories eligibility." },
-        { title: "HowTo Schema", description: "Step content for rich results. Images, tools, and supplies included." },
-        { title: "Breadcrumbs", description: "Navigation hierarchy for breadcrumb displays. Improves CTR." },
-        { title: "Video Schema", description: "Media structured for carousels. Thumbnails, duration, descriptions." }
+        { title: "FAQPage Schema", description: "Q&A pairs for FAQ rich results. Expands SERP footprint and feeds AI Overviews." },
+        { title: "Review Schema", description: "Customer reviews with author, datePublished, reviewRating for star displays." },
+        { title: "Article Schema", description: "Blog content with author Person schema linked. News and Discover eligibility." },
+        { title: "BreadcrumbList", description: "Navigation hierarchy for breadcrumb displays. Improves CTR and site understanding." },
+        { title: "HowTo Schema", description: "Step-by-step content with images, tools, totalTime for rich results." },
+        { title: "WebPage + WebSite", description: "Homepage and key pages structured with isPartOf relationships to website entity." }
       ],
       imageSrc: schemaRichImg,
       imageAlt: "Content rich result schema types",
       ctaText: "Schedule a Consultation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Validation & Monitoring",
+      headline: "Three-Step Schema Verification",
+      description: "Schema markup is only valuable if it's error-free and connected properly. We use a rigorous validation workflow before deployment and ongoing monitoring after.",
+      subPoints: [
+        { title: "Schema.org Validator", description: "Syntax error detection. Missing commas and braces silently break markup." },
+        { title: "Rich Results Test", description: "Google's tool confirms eligibility for specific rich result types." },
+        { title: "Classy Schema Visualization", description: "Entity relationship mapping. Verifies connections render as knowledge graph." },
+        { title: "Search Console Monitoring", description: "Enhancement reports track valid items, errors, and warnings over time." },
+        { title: "ChatGPT Verification", description: "LLM summarization test. If AI can't parse your schema, neither can others." },
+        { title: "Quarterly Audits", description: "Schema reviewed when business info changes. Syntax errors caught before impact." }
+      ],
+      ctaText: "Request Schema Audit",
       ctaHref: "#contact"
     }
   ],
