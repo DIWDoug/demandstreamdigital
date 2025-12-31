@@ -42,6 +42,11 @@ export const localSEOConfig: ServicePageConfig = {
         icon: Shield,
         title: "Authority Requirements Differ",
         body: "Some markets require aggressive local link building. Others require citation cleanup and consistency. Generic packages apply the same tactics everywhere."
+      },
+      {
+        icon: TrendingUp,
+        title: "Reviews Drive Visibility",
+        body: "Review velocity, recency, and response quality influence local rankings. Most packages ignore review strategy entirely or treat it as an afterthought."
       }
     ],
     systemClosing: "Effective local SEO requires scoping to the actual market, not templated deliverables.",
