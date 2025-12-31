@@ -167,6 +167,12 @@ export const authorityConfig: ServicePageConfig = {
         icon: FileText
       },
       {
+        title: "Brand Mentions & Social Signals",
+        slug: "brand-mentions",
+        description: "Reddit, Quora, and Facebook group mentions that AI engines index and reference.",
+        icon: Share2
+      },
+      {
         title: "Anchor Text Diversification",
         slug: "anchor-text",
         description: "Natural anchor profiles that avoid penalties and maximize ranking power.",
@@ -177,12 +183,6 @@ export const authorityConfig: ServicePageConfig = {
         slug: "local-partnerships",
         description: "Community involvement that creates authentic geographic authority.",
         icon: Handshake
-      },
-      {
-        title: "Industry Directory Listings",
-        slug: "industry-directories",
-        description: "Professional association and niche directory placements.",
-        icon: Award
       },
       {
         title: "Review & Reputation Signals",
