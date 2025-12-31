@@ -134,7 +134,7 @@ const PaidMediaCalculator = () => {
               href="#start-conversation" 
               className="text-sm text-primary hover:underline font-medium"
             >
-              E-commerce? Request a custom quote →
+              E-commerce or franchises? Request a custom quote →
             </a>
           </div>
         </div>
