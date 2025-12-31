@@ -9,9 +9,15 @@ interface BreadcrumbItem {
   href?: string;
 }
 
+interface HeroDescription {
+  intro: string;
+  bullets: string[];
+  closing: string;
+}
+
 interface ServiceHubHeroProps {
   title: string;
-  description: string;
+  description: string | HeroDescription;
   breadcrumbs?: BreadcrumbItem[];
   integrationNote?: string;
 }
@@ -80,9 +86,28 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
             </h1>
             
             {/* Short description - promise paragraph */}
-            <p className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-6">
-              {description}
-            </p>
+            {typeof description === 'string' ? (
+              <p className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-6">
+                {description}
+              </p>
+            ) : (
+              <div className="max-w-xl animate-fade-in mb-6">
+                <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-4">
+                  {description.intro}
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {description.bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-center gap-3 text-text-secondary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-base text-text-muted leading-relaxed">
+                  {description.closing}
+                </p>
+              </div>
+            )}
             
             {/* Integration Note - explanation paragraph, slightly muted */}
             {integrationNote && (
