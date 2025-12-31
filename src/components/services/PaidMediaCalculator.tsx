@@ -1,7 +1,20 @@
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Zap, Layers } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Zap } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+
+// Platform logos
+import googleAdsLogo from "@/assets/logos/google-ads.png";
+import metaLogo from "@/assets/logos/meta.svg";
+import microsoftLogo from "@/assets/logos/microsoft.svg";
+import linkedinLogo from "@/assets/logos/linkedin.svg";
+
+const PLATFORMS = [
+  { id: "google", name: "Google Ads", logo: googleAdsLogo },
+  { id: "meta", name: "Meta", logo: metaLogo },
+  { id: "microsoft", name: "Microsoft", logo: microsoftLogo },
+  { id: "linkedin", name: "LinkedIn", logo: linkedinLogo },
+];
 
 // Hybrid pricing: flat fee per account with spend caps
 const OEM_TIERS = [
@@ -14,8 +27,10 @@ const OEM_TIERS = [
 
 const PaidMediaCalculator = () => {
   const [adSpend, setAdSpend] = useState<number>(5000);
-  const [platforms, setPlatforms] = useState<number>(1);
+  const [selectedPlatforms, setSelectedPlatforms] = useState<string[]>(["google"]);
   const [customRetainer, setCustomRetainer] = useState<number | null>(null);
+
+  const platforms = selectedPlatforms.length || 1;
 
   const SETUP_FEE = 299; // Per-account setup: GTM, GA, tracking, audiences, restructuring
   const SUGGESTED_FEE_RATE = 0.20;
@@ -153,90 +168,112 @@ const PaidMediaCalculator = () => {
           {/* Calculator Card */}
           <div className="bg-card border border-border rounded-xl p-8">
             {/* Inputs */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div>
-                <Label htmlFor="adSpend" className="text-base font-medium text-foreground mb-3 block">
-                  Monthly Ad Spend
-                </Label>
-                <div className="relative">
-                  <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <Input
-                    id="adSpend"
-                    type="number"
-                    min={0}
-                    step={500}
-                    value={adSpend}
-                    onChange={(e) => {
-                      setAdSpend(Number(e.target.value));
-                      setCustomRetainer(null);
-                    }}
-                    className="pl-10 text-lg h-12 bg-background border-border"
-                    placeholder="Ad spend"
-                  />
-                </div>
-                {calculations.spendHeadroom !== null && calculations.spendHeadroom > 0 && (
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {formatCurrency(calculations.spendHeadroom)} headroom in this tier
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <Label htmlFor="platforms" className="text-base font-medium text-foreground mb-3 block">
-                  Accounts
-                </Label>
-                <div className="relative">
-                  <Layers className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <select
-                    id="platforms"
-                    value={platforms}
-                    onChange={(e) => {
-                      setPlatforms(Number(e.target.value));
-                      setCustomRetainer(null);
-                    }}
-                    className="w-full pl-10 pr-4 text-lg h-12 bg-background border border-border rounded-md text-foreground"
-                  >
-                    <option value={1}>1 Account</option>
-                    <option value={2}>2 Accounts</option>
-                    <option value={3}>3 Accounts</option>
-                    <option value={4}>4 Accounts</option>
-                  </select>
-                </div>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {formatCurrency(calculations.currentTier.oem)} × {platforms} = {formatCurrency(calculations.monthlyOEM)}
-                </p>
-              </div>
-
-              <div>
-                <Label htmlFor="retainer" className="text-base font-medium text-foreground mb-3 block flex items-center justify-between">
-                  <span>Client Retainer</span>
-                  {customRetainer !== null && (
-                    <button
-                      onClick={resetToSuggested}
-                      className="text-xs text-primary hover:underline"
-                    >
-                      Reset
-                    </button>
+            <div className="space-y-6 mb-8">
+              {/* Ad Spend & Retainer Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="adSpend" className="text-base font-medium text-foreground mb-3 block">
+                    Monthly Ad Spend
+                  </Label>
+                  <div className="relative">
+                    <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                    <Input
+                      id="adSpend"
+                      type="number"
+                      min={0}
+                      step={500}
+                      value={adSpend}
+                      onChange={(e) => {
+                        setAdSpend(Number(e.target.value));
+                        setCustomRetainer(null);
+                      }}
+                      className="pl-10 text-lg h-12 bg-background border-border"
+                      placeholder="Ad spend"
+                    />
+                  </div>
+                  {calculations.spendHeadroom !== null && calculations.spendHeadroom > 0 && (
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {formatCurrency(calculations.spendHeadroom)} headroom in this tier
+                    </p>
                   )}
-                </Label>
-                <div className="relative">
-                  <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <Input
-                    id="retainer"
-                    type="number"
-                    min={0}
-                    step={100}
-                    value={customRetainer !== null ? customRetainer : calculations.suggestedRetainer}
-                    onChange={(e) => handleRetainerChange(Number(e.target.value))}
-                    className="pl-10 text-lg h-12 bg-background border-border"
-                    placeholder="Retainer"
-                  />
                 </div>
-                {customRetainer === null && (
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Suggested: 20% of spend or $500 min
-                  </p>
-                )}
+
+                <div>
+                  <Label htmlFor="retainer" className="text-base font-medium text-foreground mb-3 block flex items-center justify-between">
+                    <span>Client Retainer</span>
+                    {customRetainer !== null && (
+                      <button
+                        onClick={resetToSuggested}
+                        className="text-xs text-primary hover:underline"
+                      >
+                        Reset
+                      </button>
+                    )}
+                  </Label>
+                  <div className="relative">
+                    <DollarSign className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                    <Input
+                      id="retainer"
+                      type="number"
+                      min={0}
+                      step={100}
+                      value={customRetainer !== null ? customRetainer : calculations.suggestedRetainer}
+                      onChange={(e) => handleRetainerChange(Number(e.target.value))}
+                      className="pl-10 text-lg h-12 bg-background border-border"
+                      placeholder="Retainer"
+                    />
+                  </div>
+                  {customRetainer === null && (
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Suggested: 20% of spend or $500 min
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              {/* Platforms Row */}
+              <div>
+                <Label className="text-base font-medium text-foreground mb-3 block">
+                  Platforms
+                </Label>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {PLATFORMS.map((platform) => {
+                    const isSelected = selectedPlatforms.includes(platform.id);
+                    return (
+                      <button
+                        key={platform.id}
+                        type="button"
+                        onClick={() => {
+                          if (isSelected) {
+                            if (selectedPlatforms.length > 1) {
+                              setSelectedPlatforms(selectedPlatforms.filter(p => p !== platform.id));
+                            }
+                          } else {
+                            setSelectedPlatforms([...selectedPlatforms, platform.id]);
+                          }
+                          setCustomRetainer(null);
+                        }}
+                        className={`flex flex-col items-center gap-2 p-4 rounded-lg border transition-all ${
+                          isSelected 
+                            ? 'bg-primary/20 border-primary' 
+                            : 'bg-background/50 border-border/50 hover:border-border'
+                        }`}
+                      >
+                        <img 
+                          src={platform.logo} 
+                          alt={platform.name} 
+                          className="h-8 w-auto object-contain"
+                        />
+                        <span className={`text-xs font-medium ${isSelected ? 'text-primary' : 'text-muted-foreground'}`}>
+                          {platform.name}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="text-xs text-muted-foreground mt-2">
+                  {platforms} {platforms === 1 ? 'platform' : 'platforms'} × {formatCurrency(calculations.currentTier.oem)} = {formatCurrency(calculations.monthlyOEM)}/mo
+                </p>
               </div>
             </div>
 
