@@ -112,10 +112,21 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
               ))}
             </div>
           ) : (
-            /* Flat Blocks Grid */
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {config.blocks.map(renderBlock)}
-            </div>
+            /* Flat Blocks Grid - handles 7 items with centered last row */
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {config.blocks.slice(0, 6).map(renderBlock)}
+              </div>
+              
+              {/* Center any remaining blocks (7th, etc.) */}
+              {config.blocks.length > 6 && (
+                <div className="flex justify-center mt-6">
+                  <div className="w-full max-w-md">
+                    {config.blocks.slice(6).map(renderBlock)}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

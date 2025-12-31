@@ -220,8 +220,6 @@ export const hubs: Hub[] = [
     title: "GBP SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-    heroHeadline: "Earn and Hold Google Maps Visibility",
-    heroSubtitle: "White-Label GBP SEO Services",
     heroDescription: {
       intro: "We help agencies earn and hold Google Maps visibility for their clients through white-label GBP optimization built for competitive local markets.",
       bullets: [
