@@ -243,49 +243,49 @@ export const googleMapsConfig: ServicePageConfig = {
     goodFit: [
       {
         point: "Verified GBPs with physical addresses",
-        detail: ""
+        detail: "We specialize in GBP optimization for businesses with address-visible profiles. Storefronts, offices, and service-area businesses that display their address."
       },
       {
         point: "Competitive local markets",
-        detail: ""
+        detail: "GBP optimization delivers the most value when there is real competition for the local pack. Competitive metros and suburbs are our specialty."
       },
       {
         point: "Ongoing management, not one-time optimization",
-        detail: ""
+        detail: "Google Maps visibility requires ongoing effort. We partner with agencies who understand that GBP management is a continuous service, not a project."
       },
       {
         point: "Willingness to participate in review generation",
-        detail: ""
+        detail: "Review velocity requires client cooperation. Businesses need to ask customers for reviews. We provide the systems; they need to use them."
       },
       {
         point: "Focus on retention over quick wins",
-        detail: ""
+        detail: "Our approach builds sustainable visibility that compounds over time. If your goal is keeping clients for years, this partnership makes sense."
       },
       {
         point: "Need to replace inconsistent vendors",
-        detail: ""
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
       }
     ],
     notFit: [
       {
         point: "Service-area businesses without visible addresses",
-        detail: ""
+        detail: "Address-hidden GBP listings compete differently. Our core specialty is businesses with visible physical locations."
       },
       {
         point: "Expectations of pack positions in days",
-        detail: ""
+        detail: "GBP optimization takes time. Meaningful visibility improvements typically require 2-4 months of consistent effort."
       },
       {
         point: "Price is the primary decision factor",
-        detail: ""
+        detail: "Quality GBP management has real costs. If budget is the primary factor, the math will not work for either of us."
       },
       {
         point: "Inability or refusal to ask for reviews",
-        detail: ""
+        detail: "Review velocity is critical. If clients will not participate in review generation, results will suffer."
       },
       {
         point: "One-time optimization with no continuity",
-        detail: ""
+        detail: "GBP visibility degrades without ongoing attention. We do not offer one-time optimization services."
       }
     ],
     ctaText: "Let's Discuss Your Clients"
