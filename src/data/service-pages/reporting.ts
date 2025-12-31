@@ -293,7 +293,7 @@ export const reportingConfig: ServicePageConfig = {
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Star, id: "reputation", title: "Reputation", description: "Review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "PR and backlinks.", href: "/white-label-inbound-marketing-services/authority" },
+      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations.", href: "/local-authority-building" },
       { icon: Share2, id: "retargeting", title: "Retargeting", description: "Stay top of mind.", href: "/white-label-inbound-marketing-services/paid-media" }
     ],
     ctaText: "Explore All Services",

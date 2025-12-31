@@ -6,7 +6,7 @@ export const authorityConfig: ServicePageConfig = {
   title: "Authority Building",
   metaTitle: "White-Label Authority Building for Agencies | Dialed-In Web",
   metaDescription: "White-label authority building services for agencies. Local link acquisition, citation building, and off-page SEO that creates lasting ranking power.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/authority",
+  canonicalUrl: "https://dialedinweb.com/local-authority-building",
   keywords: "white label link building, local authority building, citation building, off-page SEO, local link acquisition",
 
   hero: {
@@ -281,7 +281,7 @@ export const authorityConfig: ServicePageConfig = {
     intro: "Links and citations accelerate every other channel when they're done right.",
     body: "Off-page authority supports local rankings. Quality backlinks build domain strength. Citations reinforce geographic relevance. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/white-label-inbound-marketing-services/authority", isCenter: true },
+      { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/local-authority-building", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },

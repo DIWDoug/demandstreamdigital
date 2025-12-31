@@ -49,7 +49,7 @@ const App = () => (
             <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
             <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
             <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
-            <Route path="/white-label-inbound-marketing-services/authority" element={<Authority />} />
+            <Route path="/local-authority-building" element={<Authority />} />
             <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
             
             {/* Service Spoke Pages (sub-services) */}
