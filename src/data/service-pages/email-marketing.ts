@@ -294,16 +294,14 @@ export const emailMarketingConfig: ServicePageConfig = {
     headline: "Email Marketing Is One Piece of the",
     highlightedText: "360° Ecosystem",
     intro: "Effective local marketing is interconnected.",
-    body: "Email nurtures leads from SEO and paid media. Automations convert website visitors. Reputation content builds trust. We offer each service independently, but the magic happens when they work in concert.",
+    body: "Email nurtures leads from SEO and paid media. Automations convert website visitors. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads and drive repeat business.", href: "/white-label-inbound-marketing-services/email-marketing", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/white-label-inbound-marketing-services/local-seo" },
-      { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
-      { icon: Star, id: "reputation", title: "Reputation", description: "Review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations.", href: "/white-label-inbound-marketing-services/local-authority-building" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" },
-      { icon: Share2, id: "retargeting", title: "Retargeting", description: "Stay top of mind.", href: "/white-label-inbound-marketing-services/paid-media" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing-services"

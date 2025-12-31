@@ -28,10 +28,10 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
           {/* Secondary CTA - Phone */}
           <a 
             href="tel:2143072995"
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-colors font-medium text-sm ${
+            className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all font-medium text-sm ${
               isLight 
-                ? "border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400" 
-                : "border-border text-text-secondary hover:text-foreground hover:border-border-subtle hover:bg-surface-elevated"
+                ? "border-gray-300 text-gray-700 hover:bg-accent-blue hover:border-accent-blue hover:text-white" 
+                : "border-border text-text-secondary hover:text-white hover:border-accent-blue hover:bg-accent-blue"
             }`}
           >
             <Phone className="h-4 w-4" />
