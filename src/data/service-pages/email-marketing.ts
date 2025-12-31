@@ -11,91 +11,90 @@ export const emailMarketingConfig: ServicePageConfig = {
 
   hero: {
     headline: "White Label Email Marketing for",
-    highlightedText: "Digital Agencies",
-    subheadline: "Email delivers the highest ROI of any marketing channel. We create and manage email programs that nurture leads, drive repeat business, and maximize customer lifetime value—executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We handle the email execution that keeps revenue flowing.",
+    highlightedText: "Local Business Clients",
+    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that respect subscriber expectations, deliver value consistently, and drive repeat revenue.",
+    qualifierLine: "You stay the hero. We handle the email execution that keeps customers coming back.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies who understand that the list is the asset."
+    ctaSubtext: "Built for agencies serving local service businesses and retailers."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Most Email Marketing Fails",
-    intro: "You have seen this before. The email platform is set up, occasional campaigns go out, but open rates decline, automations grow stale, and the list slowly dies from neglect. Email is both science and art: technical infrastructure meets persuasive storytelling. Most programs nail neither.",
+    headline: "Why Most Local Business Email Fails",
+    intro: "Email is granted media: subscribers and inbox providers control whether your message gets through. Most local business email programs fail because they treat the inbox like a billboard instead of a relationship. Technical infrastructure breaks down. Subscriber expectations go unmet. The list becomes a liability.",
     painPoints: [
       {
         icon: FileText,
-        title: "No Freebie Magnet Strategy",
-        body: "Sign-up forms exist but offer no compelling reason to subscribe. Without valuable lead magnets, list growth stalls and quality suffers."
+        title: "Respectful: Permission Eroded",
+        body: "Lists built on weak opt-ins and purchased contacts. Subscribers do not remember signing up. Spam complaints rise. Inbox providers start blocking."
       },
       {
         icon: Settings,
-        title: "Broken Conversion Funnels",
-        body: "Welcome sequences built once and never optimized. No systematic path from subscriber to customer. Leads enter but never convert."
+        title: "Functional: Technical Failures",
+        body: "Emails render poorly on mobile. Links break. Authentication (SPF, DKIM, DMARC) is misconfigured. Messages land in spam instead of the inbox."
       },
       {
         icon: Users,
-        title: "Segmentation Is an Afterthought",
-        body: "Every subscriber gets the same message regardless of behavior or stage. The right message never reaches the right person at the right time."
+        title: "Valuable: No Subscriber Value",
+        body: "Every email is a sales pitch. No educational content. No service information. Subscribers tune out because there is nothing worth opening."
       },
       {
         icon: Target,
-        title: "Metrics Without Meaning",
-        body: "Open rates tracked but never acted on. No deliverability monitoring. No revenue attribution. Data collected but never converted to insight."
+        title: "Remarkable: Nothing Worth Sharing",
+        body: "Generic blasts that could come from any business. No local relevance. No special offers. Nothing that makes customers want to tell their friends."
       }
     ],
-    closingLine: "We build email programs that balance technical precision with persuasive craft.",
+    closingLine: "We build email programs that meet the Hierarchy of Subscriber Needs: respectful, functional, valuable, and remarkable.",
     closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
     ctaText: "Start the Conversation"
   },
 
   outcomes: {
-    headline: "What Actually Changes When Email Works",
-    subheadline: "The outcomes your clients experience when email is done right.",
+    headline: "What Changes for Local Businesses",
+    subheadline: "The outcomes your clients experience when email meets subscriber needs.",
     items: [
       {
         icon: TrendingUp,
-        title: "Revenue From Owned Audience",
-        description: "Unlike social or paid, the email list is an owned asset. Algorithm changes cannot take it away. A direct line to customers who asked to hear from you."
+        title: "Repeat Revenue on Autopilot",
+        description: "Local businesses thrive on repeat customers. Automated sequences remind past customers to return, promote seasonal services, and drive bookings without manual effort."
       },
       {
         icon: Repeat,
-        title: "Conversion Funnels That Execute",
-        description: "Automated sequences move subscribers from awareness to purchase systematically. Freebie magnets attract. Nurture sequences educate. Conversion emails close."
+        title: "Top-of-Mind Between Visits",
+        description: "For service businesses with long buying cycles, email keeps the brand present. When the customer is ready to buy again, your client is the first call."
       },
       {
         icon: Zap,
-        title: "Segmentation That Scales Relevance",
-        description: "The right message reaches the right person at the right time. Behavior-based targeting delivers personalization without manual effort."
+        title: "Inbox Placement That Protects Reputation",
+        description: "Proper authentication and list hygiene ensure emails reach the inbox. Deliverability protects sender reputation and maximizes every send."
       },
       {
         icon: Target,
-        title: "Metrics That Drive Decisions",
-        description: "Deliverability, open rates, click rates, and conversions tracked and optimized. Data informs strategy. Performance compounds over time."
+        title: "Local Relevance at Scale",
+        description: "Segmentation by service area, purchase history, and engagement. The right offer reaches the right customer at the right time."
       }
     ]
   },
 
   roadmap: {
     eyebrow: "The Framework",
-    headline: "From Setup to Revenue Engine",
-    subheadline: "Every email program is built for the specific business and audience. This is how we sequence the work.",
+    headline: "From Setup to Local Revenue Engine",
+    subheadline: "Every email program is built for the specific business and local market. This is how we sequence the work.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
-        title: "Freebie Magnets & Core Infrastructure",
-        description: "Building the lead capture system and technical foundation that makes everything else possible.",
+        title: "Permission, Infrastructure & Welcome",
+        description: "Building the technical foundation and permission practices that make everything else possible.",
         activities: [
           "Email program audit and assessment",
-          "Customer insight mapping and audience analysis",
-          "Freebie magnet strategy development",
-          "Opt-in form design and placement",
-          "Template design with brand consistency",
-          "Welcome sequence creation",
-          "Technical setup: SPF, DKIM, DMARC",
-          "Tracking and analytics configuration",
-          "Deliverability baseline establishment"
+          "Authentication setup: SPF, DKIM, DMARC",
+          "List hygiene and permission verification",
+          "Opt-in form optimization",
+          "Welcome sequence development",
+          "Template design for local brand",
+          "Deliverability baseline establishment",
+          "Tracking and analytics configuration"
         ],
         icon: Settings,
         color: "hsl(76, 42%, 41%)"
@@ -103,14 +102,14 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 2,
         name: "Execution",
-        title: "Conversion Funnels & Campaign Cadence",
-        description: "Building automated sequences that systematically move subscribers toward purchase.",
+        title: "Campaigns & Subscriber Lifecycle",
+        description: "Regular campaigns and automated sequences that move subscribers through their lifecycle.",
         activities: [
-          "Conversion funnel mapping and build",
-          "Nurture sequence development",
-          "Campaign calendar execution",
-          "Subject line modeling and testing",
-          "A/B testing program launch",
+          "Campaign calendar for local relevance",
+          "Seasonal and service-specific campaigns",
+          "Post-service follow-up sequences",
+          "Review request automation",
+          "Subject line testing program",
           "Send time optimization",
           "Engagement monitoring",
           "Monthly performance reporting"
@@ -121,16 +120,16 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Expansion",
-        title: "Segmentation & Behavioral Targeting",
-        description: "Delivering the right message to the right person based on behavior and demographics.",
+        title: "Segmentation & Behavioral Triggers",
+        description: "Delivering the right message to the right local customer based on behavior and service history.",
         activities: [
-          "Advanced segmentation development",
-          "Behavioral trigger sequences",
-          "Re-engagement campaigns",
-          "Cart abandonment sequences",
-          "Post-purchase flows",
-          "VIP and loyalty programs",
-          "Cross-sell and upsell automation"
+          "Service-based segmentation",
+          "Purchase history targeting",
+          "Re-engagement campaigns for lapsed customers",
+          "VIP and loyalty recognition",
+          "Cross-sell sequences for related services",
+          "Referral program integration",
+          "Seasonal win-back campaigns"
         ],
         icon: Target,
         color: "hsl(35, 90%, 50%)"
@@ -138,14 +137,13 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 4,
         name: "Optimization",
-        title: "Performance Analysis & Scale",
-        description: "Turning metrics into insight and insight into improved results.",
+        title: "Continuous Improvement & Scale",
+        description: "Turning subscriber data into insight and insight into improved local results.",
         activities: [
-          "Deliverability and open rate optimization",
-          "Conversion rate analysis",
-          "Resource allocation refinement",
+          "Deliverability and inbox placement optimization",
+          "Inactivity management and list pruning",
           "Automation performance tuning",
-          "List health maintenance",
+          "Cross-channel integration with local SEO",
           "Quarterly strategic reviews",
           "New opportunity identification"
         ],
@@ -153,48 +151,48 @@ export const emailMarketingConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Phase duration varies by list size, platform, and goals. Most clients see measurable engagement improvements within 4-6 weeks."
+    footerNote: "Phase duration varies by list size, platform, and goals. Most local business clients see measurable engagement improvements within 4-6 weeks."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Email Marketing",
-    subheadline: "Each component is scoped based on business model, audience, and goals. Not templated packages.",
+    headline: "The Components of Local Email Marketing",
+    subheadline: "Each component is scoped based on the local business model, customer base, and goals.",
     blocks: [
       {
-        title: "Freebie Magnets & List Growth",
-        slug: "freebie-magnets-list-growth",
-        description: "Lead magnets, opt-in forms, and incentive strategies that build lists with qualified subscribers.",
+        title: "Permission & List Building",
+        slug: "permission-list-building",
+        description: "Proper opt-in practices and list growth that build quality subscriber relationships from day one.",
         icon: FileText
       },
       {
-        title: "Conversion Funnels",
-        slug: "conversion-funnels",
-        description: "Automated sequences that move subscribers from awareness to purchase systematically.",
+        title: "Deliverability & Authentication",
+        slug: "deliverability-authentication",
+        description: "SPF, DKIM, DMARC configuration and inbox placement optimization that protects sender reputation.",
         icon: Settings
       },
       {
-        title: "Segmentation & Targeting",
-        slug: "segmentation-targeting",
-        description: "Behavior-based and demographic segmentation that delivers the right message to the right person.",
+        title: "Subscriber Lifecycle Automation",
+        slug: "subscriber-lifecycle-automation",
+        description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock.",
         icon: Users
       },
       {
-        title: "Subject Line Modeling",
-        slug: "subject-line-modeling",
-        description: "Proven formulas and A/B testing that increase open rates and drive engagement.",
+        title: "Local Segmentation",
+        slug: "local-segmentation",
+        description: "Service-based and geographic targeting that delivers relevant offers to the right local customers.",
         icon: Target
       },
       {
-        title: "Performance Metrics",
-        slug: "performance-metrics",
-        description: "Deliverability, open rates, click rates, and conversion tracking that informs optimization.",
+        title: "Campaign Strategy & Design",
+        slug: "campaign-strategy-design",
+        description: "Seasonal campaigns, service promotions, and brand-consistent templates for local businesses.",
         icon: BarChart3
       },
       {
-        title: "Brand Consistency & Design",
-        slug: "brand-consistency-design",
-        description: "Templates and voice guidelines that align email identity with the overall business brand.",
+        title: "Performance & Inactivity Management",
+        slug: "performance-inactivity-management",
+        description: "Metrics tracking, list hygiene, and subscriber cleanup that maintains program health.",
         icon: Zap
       }
     ]
