@@ -36,16 +36,16 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
               <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
                 {config.eyebrow}
               </p>
-              <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
                 {config.headline}{" "}
                 <span className="text-cta">{config.highlightedText}</span>
               </h2>
               
-              <p className="text-slate-600 text-lg leading-relaxed mb-4">
-                <strong className="text-slate-900">{config.intro}</strong>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                <strong className="text-foreground">{config.intro}</strong>
               </p>
               
-              <p className="text-slate-600 leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 {config.body}
               </p>
 
@@ -58,7 +58,7 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                     className="flex items-center gap-2 group"
                   >
                     <CheckCircle className="w-5 h-5 text-cta flex-shrink-0" />
-                    <span className="text-slate-700 font-medium group-hover:text-cta transition-colors">{service.title}</span>
+                    <span className="text-foreground font-medium group-hover:text-cta transition-colors">{service.title}</span>
                   </Link>
                 ))}
               </div>
@@ -76,7 +76,7 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
             <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[480px]">
               {/* Orbit circle */}
               <div 
-                className="absolute rounded-full border border-slate-800"
+                className="absolute rounded-full border border-border"
                 style={{
                   width: '320px',
                   height: '320px',
@@ -85,8 +85,8 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
               
               {/* Center content - dynamic based on hover */}
               <div className="relative z-10 flex flex-col items-center justify-center w-[160px] text-center transition-all duration-300">
-                <p className="text-slate-900 font-bold text-2xl mb-2">{displayService.title}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-foreground font-bold text-2xl mb-2">{displayService.title}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {displayService.description}
                 </p>
               </div>
@@ -118,9 +118,9 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                     <div className={`absolute inset-0 rounded-full transition-all duration-200 ${
                       isHovered 
                         ? "bg-cta shadow-lg shadow-cta/40" 
-                        : "bg-slate-800"
+                        : "bg-surface-elevated border border-border"
                     }`} />
-                    <Icon className="relative z-10 w-6 h-6 text-white" />
+                    <Icon className={`relative z-10 w-6 h-6 ${isHovered ? "text-white" : "text-foreground"}`} />
                   </div>
                 );
               })}
