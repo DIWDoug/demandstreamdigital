@@ -205,7 +205,7 @@ export const localSEOConfig: ServicePageConfig = {
       { point: "Your clients expect top rankings within weeks", detail: "If you're promising fast results to close deals, we're not the right partner for that conversation." },
       { point: "Clients have service-area-only or address-hidden listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
       { point: "There's no willingness to invest in content and links", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
-      { point: "You need guaranteed specific ranking positions", detail: "No one can guarantee rankings. We focus on systematic improvement and transparent reporting on progress." }
+      { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either lying or using black hat tactics that deliver temporary results and long-term penalties. We focus on sustainable, systematic improvement." }
     ],
     ctaText: "Start the Conversation"
   },
