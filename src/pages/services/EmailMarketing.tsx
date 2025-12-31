@@ -2,15 +2,26 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhyItMatters from "@/components/services/WhyItMatters";
-import OurApproach from "@/components/services/OurApproach";
-import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
-import HubFAQ from "@/components/services/HubFAQ";
-import OtherServices from "@/components/services/OtherServices";
+import { 
+  ServiceProblemSection,
+  ServiceOutcomesSection,
+  ServiceRoadmapSection,
+  ServiceBuildingBlocksSection,
+  ServiceFitQualifierSection,
+  ServiceGroupedFAQ,
+  ServiceEcosystemSection
+} from "@/components/services/generic";
+import { emailMarketingConfig } from "@/data/service-pages/email-marketing";
 import { getHubBySlug } from "@/data/services";
+
+const SectionDivider = () => (
+  <div className="w-full">
+    <hr className="border-t border-border/30" />
+  </div>
+);
 
 const EmailMarketing = () => {
   const hub = getHubBySlug("email-marketing");
@@ -24,9 +35,9 @@ const EmailMarketing = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White-Label Email Marketing for Agencies | Dialed-In Web</title>
-        <meta name="description" content="White-label email marketing fulfillment for agencies. Campaign strategy, automation sequences, list management, and performance analytics that drive conversions." />
-        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/email-marketing" />
+        <title>{emailMarketingConfig.metaTitle}</title>
+        <meta name="description" content={emailMarketingConfig.metaDescription} />
+        <link rel="canonical" href={emailMarketingConfig.canonicalUrl} />
       </Helmet>
       
       <Header />
@@ -37,13 +48,37 @@ const EmailMarketing = () => {
           breadcrumbs={breadcrumbItems}
         />
       </div>
-      <WhyItMatters {...hub.whyItMatters} />
-      <OurApproach {...hub.ourApproach} />
-      <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <ServiceBenefits {...hub.benefits} />
+      
+      <TrustReel />
+      
+      <SectionDivider />
+      
+      <ServiceProblemSection config={emailMarketingConfig.problem} />
+      
+      <ServiceOutcomesSection config={emailMarketingConfig.outcomes} />
+      
+      <SectionDivider />
+      
+      <ServiceRoadmapSection config={emailMarketingConfig.roadmap} />
+      
+      <SectionDivider />
+      
+      <ServiceBuildingBlocksSection config={emailMarketingConfig.buildingBlocks} />
+      
+      <SectionDivider />
+      
+      <ServiceFitQualifierSection config={emailMarketingConfig.qualification} />
+      
       <Testimonials />
-      <HubFAQ title={hub.title} faqs={hub.faqs} />
-      <OtherServices currentHubSlug={hub.slug} />
+      
+      <SectionDivider />
+      
+      <ServiceGroupedFAQ config={emailMarketingConfig.faq} />
+      
+      <SectionDivider />
+      
+      <ServiceEcosystemSection config={emailMarketingConfig.ecosystem} />
+      
       <ContactForm />
       <Footer />
     </div>

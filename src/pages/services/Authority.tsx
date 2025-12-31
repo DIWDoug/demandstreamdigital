@@ -2,15 +2,26 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhyItMatters from "@/components/services/WhyItMatters";
-import OurApproach from "@/components/services/OurApproach";
-import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
-import HubFAQ from "@/components/services/HubFAQ";
-import OtherServices from "@/components/services/OtherServices";
+import { 
+  ServiceProblemSection,
+  ServiceOutcomesSection,
+  ServiceRoadmapSection,
+  ServiceBuildingBlocksSection,
+  ServiceFitQualifierSection,
+  ServiceGroupedFAQ,
+  ServiceEcosystemSection
+} from "@/components/services/generic";
+import { authorityConfig } from "@/data/service-pages/authority";
 import { getHubBySlug } from "@/data/services";
+
+const SectionDivider = () => (
+  <div className="w-full">
+    <hr className="border-t border-border/30" />
+  </div>
+);
 
 const Authority = () => {
   const hub = getHubBySlug("authority");
@@ -24,9 +35,9 @@ const Authority = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White-Label Authority Building for Agencies | Dialed-In Web</title>
-        <meta name="description" content="White-label authority building and digital PR for agencies. Media placements, directory listings, reputation management, and thought leadership that builds trust." />
-        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/authority" />
+        <title>{authorityConfig.metaTitle}</title>
+        <meta name="description" content={authorityConfig.metaDescription} />
+        <link rel="canonical" href={authorityConfig.canonicalUrl} />
       </Helmet>
       
       <Header />
@@ -37,13 +48,37 @@ const Authority = () => {
           breadcrumbs={breadcrumbItems}
         />
       </div>
-      <WhyItMatters {...hub.whyItMatters} />
-      <OurApproach {...hub.ourApproach} />
-      <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <ServiceBenefits {...hub.benefits} />
+      
+      <TrustReel />
+      
+      <SectionDivider />
+      
+      <ServiceProblemSection config={authorityConfig.problem} />
+      
+      <ServiceOutcomesSection config={authorityConfig.outcomes} />
+      
+      <SectionDivider />
+      
+      <ServiceRoadmapSection config={authorityConfig.roadmap} />
+      
+      <SectionDivider />
+      
+      <ServiceBuildingBlocksSection config={authorityConfig.buildingBlocks} />
+      
+      <SectionDivider />
+      
+      <ServiceFitQualifierSection config={authorityConfig.qualification} />
+      
       <Testimonials />
-      <HubFAQ title={hub.title} faqs={hub.faqs} />
-      <OtherServices currentHubSlug={hub.slug} />
+      
+      <SectionDivider />
+      
+      <ServiceGroupedFAQ config={authorityConfig.faq} />
+      
+      <SectionDivider />
+      
+      <ServiceEcosystemSection config={authorityConfig.ecosystem} />
+      
       <ContactForm />
       <Footer />
     </div>
