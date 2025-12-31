@@ -71,11 +71,12 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Does technical SEO need ongoing attention?", answer: "Yes. New locations, CMS updates, and Google requirements change. Quarterly technical reviews catch problems before they tank local rankings." }
   ],
   "local-keyword-strategy": [
-    { question: "How many keywords do you research per market?", answer: "We focus on quality over quantity. Typically 50-200 highly relevant keywords per service area, mapped by intent and priority rather than bulk lists." },
+    { question: "How do you identify seed keywords?", answer: "We start with your services, products, and customer pain points. These become seed keywords that we expand with location modifiers like city names, neighborhoods, landmarks, and ZIP codes." },
+    { question: "What's the difference between implicit and explicit local keywords?", answer: "Explicit keywords specify a location ('plumber Dallas'). Implicit keywords don't mention location but still trigger local results ('emergency plumber'). We target both to capture full search demand." },
+    { question: "How do you find competitor keyword gaps?", answer: "We analyze which keywords competitors rank for that you don't. These 'untapped' opportunities often represent quick wins where you're missing visibility." },
     { question: "Do you account for 'near me' searches?", answer: "Absolutely. 'Near me' and implicit local queries are core to local keyword strategy. We map these to appropriate page types and GBP optimization." },
-    { question: "How often should keyword strategy be updated?", answer: "Full strategy reviews quarterly. Ongoing monitoring catches new opportunities and shifting search patterns between reviews." },
-    { question: "What data sources do you use?", answer: "Search Console impression data, SEMrush/Ahrefs for volume estimates, Google Ads Keyword Planner for local modifiers, and SERP analysis for intent validation." },
-    { question: "How do you handle multi-location keyword mapping?", answer: "Each location gets distinct keyword mapping to prevent cannibalization. Hub pages target broader terms while location pages target geo-modified queries." }
+    { question: "How do you handle multi-location keyword research?", answer: "Each location gets distinct keyword research and mapping. Different markets have different search behaviors. We prevent cannibalization across locations." },
+    { question: "How do keywords inform GBP optimization?", answer: "Keyword research informs GBP category selection and description optimization. Alignment between website keywords and GBP signals strengthens local rankings." }
   ],
   "content-development": [
     { question: "Who writes the content?", answer: "Our in-house content team with local SEO expertise. We never use AI-generated content without substantial human editing and subject matter expertise." },
@@ -396,50 +397,50 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "local-keyword-strategy": [
     {
-      category: "Market Research",
-      headline: "Find What Your Market Searches",
-      description: "Effective local SEO starts with understanding real search behavior in each market. Generic lists miss the nuances.",
+      category: "Seed Development",
+      headline: "Build Your Keyword Foundation",
+      description: "Local keyword research starts with seed keywords built from your business, not generic lists. We identify terms from services, products, and customer pain points.",
       subPoints: [
-        { title: "Local Volume", description: "Search demand analyzed per city, not national averages. Markets differ dramatically." },
-        { title: "Competitor Mining", description: "Every keyword competitors rank for identified. Gaps and opportunities found." },
-        { title: "Long-Tail Discovery", description: "Lower-competition phrases with high conversion intent. Closest to purchase decisions." },
-        { title: "PAA Expansion", description: "Google's People Also Ask reveals real questions. Each becomes content opportunity." },
-        { title: "Seasonal Mapping", description: "Demand fluctuations tracked. Content planned before peaks, not after." },
-        { title: "GSC Mining", description: "Existing impressions reveal keywords you almost rank for. Low-hanging fruit first." }
+        { title: "Service Terms", description: "Every service you offer becomes a seed keyword. Variations and synonyms captured." },
+        { title: "Product Terms", description: "Specific products and brands people search for. Inventory-aligned keywords." },
+        { title: "Pain Point Terms", description: "Problems customers face that you solve. 'Leaky faucet' not just 'plumber'." },
+        { title: "Location Modifiers", description: "Cities, neighborhoods, landmarks, ZIP codes, and street names combined with seeds." },
+        { title: "Near Me Variations", description: "'Near me' and spatial terms that make local intent explicit." },
+        { title: "Competitor Seeds", description: "Terms competitors rank for mined and added to seed list." }
       ],
       imageSrc: keywordResearchImg,
-      imageAlt: "Local keyword research methodology",
+      imageAlt: "Seed keyword development methodology",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
       category: "Intent Classification",
-      headline: "Understanding Why People Search",
-      description: "Search intent determines what content should rank. Wrong intent means page one is impossible.",
+      headline: "Implicit vs Explicit Local Intent",
+      description: "Local queries have local intent, but that intent can be explicit or implicit. We identify both types to capture full search demand.",
       subPoints: [
-        { title: "Informational", description: "Users seeking education. Blog posts, guides, and how-to content. Builds authority." },
-        { title: "Commercial", description: "Users comparing options. Comparison pages and reviews capture this stage." },
-        { title: "Transactional", description: "Users ready to act. Service pages with clear CTAs convert these searches." },
-        { title: "Local Signals", description: "'Near me' and city terms trigger local pack. Different optimization required." },
-        { title: "SERP Analysis", description: "Results Google shows reveal intent. We analyze before targeting any keyword." },
-        { title: "Mismatch Fixes", description: "Pages targeting wrong intent identified. Content realigned or pages created." }
+        { title: "Explicit Keywords", description: "'Plumber Dallas' or 'dentist near me.' Location specified, intent clear." },
+        { title: "Implicit Keywords", description: "'Emergency plumber' or 'same day dentist.' No location, but Google delivers local results." },
+        { title: "Local Pack Triggers", description: "Keywords that trigger the local pack identified. Different optimization required." },
+        { title: "SERP Analysis", description: "What Google shows reveals intent. We analyze before targeting any keyword." },
+        { title: "Intent Mismatch", description: "Pages targeting wrong intent identified. Content realigned or new pages created." },
+        { title: "Transactional Focus", description: "Users ready to act get priority. Service pages with clear CTAs convert these searches." }
       ],
       imageSrc: keywordIntentImg,
-      imageAlt: "Search intent classification framework",
+      imageAlt: "Local intent classification framework",
       ctaText: "Get Keyword Strategy",
       ctaHref: "#contact"
     },
     {
-      category: "Strategic Mapping",
-      headline: "Every Keyword Mapped to a Page",
-      description: "Keywords without destinations are wasted. Cannibalization splits authority. We prevent both.",
+      category: "Gap Analysis & Mapping",
+      headline: "Every Keyword Mapped to a URL",
+      description: "Competitor gap analysis reveals terms rivals rank for that you're missing. Keyword mapping ensures every target has a destination page.",
       subPoints: [
-        { title: "One-to-One Mapping", description: "Each keyword assigned to one page. No internal competition or diluted authority." },
-        { title: "Gap Identification", description: "Keywords needing new pages flagged. Roadmap prioritizes highest impact." },
-        { title: "Cannibalization Fix", description: "Competing pages consolidated or differentiated. Authority concentrated." },
-        { title: "Priority Scoring", description: "Keywords ranked by volume, difficulty, intent, and value. Focus on ROI." },
-        { title: "Cluster Planning", description: "Keywords grouped into hub-spoke clusters for comprehensive topical coverage." },
-        { title: "Tracking Setup", description: "Target keywords added to tools with geo-targeting. Progress measured." }
+        { title: "Competitor Gap", description: "Keywords competitors rank for but you don't. Untapped opportunities prioritized." },
+        { title: "Personal Difficulty", description: "Difficulty scored based on your site's authority vs top rankers. Feasibility assessed." },
+        { title: "One-to-One Mapping", description: "Each keyword assigned to one URL. No internal competition or diluted authority." },
+        { title: "New Page Identification", description: "Keywords needing new pages flagged. Location pages, service pages, or blog content." },
+        { title: "Multi-Location Sets", description: "Each location gets distinct keyword mapping. No cannibalization across markets." },
+        { title: "GBP Alignment", description: "Keywords inform GBP categories and description. Website and profile signal consistency." }
       ],
       imageSrc: keywordMappingImg,
       imageAlt: "Keyword-to-page mapping strategy",
