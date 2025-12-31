@@ -101,13 +101,13 @@ export const authorityConfig: ServicePageConfig = {
         phase: 2,
         name: "Acquisition",
         title: "Active Link Building",
-        description: "Consistent outreach generating quality local links and citations.",
+        description: "Consistent outreach generating quality local links, citations, and brand mentions.",
         activities: [
           "Local blog and publication outreach",
           "Community sponsorship execution",
           "Industry directory submissions",
-          "Chamber and association memberships",
           "Citation building across verticals",
+          "Reddit and Quora engagement",
           "Anchor text diversification"
         ],
         icon: TrendingUp,
@@ -117,11 +117,11 @@ export const authorityConfig: ServicePageConfig = {
         phase: 3,
         name: "Expansion",
         title: "Deepening Local Presence",
-        description: "Building on initial wins to expand geographic and industry authority.",
+        description: "Building on initial wins to expand authority across channels AI engines index.",
         activities: [
           "Secondary market link building",
           "Niche directory placements",
-          "Local event sponsorships",
+          "Facebook group participation",
           "Review generation campaigns",
           "Unstructured citation building",
           "Guest post placements"
@@ -137,7 +137,7 @@ export const authorityConfig: ServicePageConfig = {
         activities: [
           "Ongoing link acquisition",
           "Competitor monitoring",
-          "Link profile health checks",
+          "Brand mention monitoring",
           "Citation consistency audits",
           "Quarterly authority reviews",
           "Anchor text rebalancing"
