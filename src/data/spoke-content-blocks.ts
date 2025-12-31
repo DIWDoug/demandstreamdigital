@@ -939,11 +939,11 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Technical Optimization",
       headline: "Photos Optimized for Search",
-      description: "Photo optimization goes beyond quality. We ensure every image works for both users and search engines through proper naming, metadata, and formatting.",
+      description: "Photo optimization goes beyond quality. We ensure every image works for both users and search engines through proper naming, metadata, and geotagging using tools like GeoImgr and LeadSnap.",
       subPoints: [
-        { title: "Geotagging", description: "Location data embedded in image EXIF metadata. Geographic signals reinforced for local relevance." },
-        { title: "Descriptive Filenames", description: "Optimized filenames with keywords—'hotel-room-sea-view.jpg' not 'IMG_1234.jpg'. Incorporate relevant keywords." },
-        { title: "Alt Text & Captions", description: "Google extracts descriptions. Keywords and context included naturally for accessibility and search." },
+        { title: "Geotagging Tools", description: "We use GeoImgr and LeadSnap to embed precise location data in image EXIF metadata. Geographic signals reinforce local relevance." },
+        { title: "Descriptive Filenames", description: "Optimized filenames with keywords—'hvac-repair-dallas-tx.jpg' not 'IMG_1234.jpg'. Location and service keywords included." },
+        { title: "Alt Text & Captions", description: "Google extracts descriptions. Keywords and context included naturally for accessibility and search visibility." },
         { title: "Size Optimization", description: "Images compressed for fast loading without quality loss. Adheres to Google's format requirements." },
         { title: "Format Selection", description: "Proper formats for different photo types. JPG for photos, PNG for logos. Quality preserved." },
         { title: "Aspect Ratios", description: "Photos cropped to display correctly in GBP interface without awkward cuts or distortion." }
@@ -952,13 +952,28 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "#contact"
     },
     {
+      category: "Service-Area Photo Strategy",
+      headline: "Customer Photos Prove Service Radius",
+      description: "For service-area businesses, customer-uploaded review photos are geotagging gold. When a customer posts a photo from their home with their review, that image is tagged to their location—authentic proof you serve that area.",
+      subPoints: [
+        { title: "Review Photo Requests", description: "We encourage customers to upload photos with their reviews. iPhones and most smartphones geotag images by default—free geographic signals." },
+        { title: "Service Area Proof", description: "A customer's photo from their home signals to Google that your HVAC, plumbing, or landscaping company actually served that location." },
+        { title: "Authentic Signals", description: "User-generated geotagged photos are more credible than business-uploaded images. They're real proof of service delivery." },
+        { title: "Geographic Expansion", description: "As customers in new areas leave photo reviews, your service footprint expands organically in Google's eyes." },
+        { title: "Review Training", description: "We provide scripts for asking customers to include photos. Simple requests dramatically increase photo submission rates." },
+        { title: "Competitor Advantage", description: "Most service businesses don't leverage customer photo geotagging. This is an underutilized ranking signal." }
+      ],
+      ctaText: "Start Service-Area Strategy",
+      ctaHref: "#contact"
+    },
+    {
       category: "User Photo Management",
       headline: "Control Your Visual Narrative",
-      description: "Google lets customers add images to your GBP. We monitor user-generated content to protect brand image and ensure inappropriate photos are removed.",
+      description: "Google lets customers add images to your GBP. We monitor user-generated content to protect brand image while amplifying positive customer photos that help rankings.",
       subPoints: [
         { title: "UGC Monitoring", description: "User-uploaded photos reviewed weekly. Inappropriate, inaccurate, or off-brand content flagged immediately." },
         { title: "Removal Requests", description: "Policy-violating photos reported for removal via Google's process. Brand reputation protected." },
-        { title: "Positive Amplification", description: "Great customer photos highlighted through owner responses. Authentic UGC builds trust." },
+        { title: "Positive Amplification", description: "Great customer photos highlighted through owner responses. Geotagged customer photos especially valuable." },
         { title: "Photo Dominance", description: "Your photos should dominate your listing. We ensure owner content outweighs random user uploads." },
         { title: "Competitor Awareness", description: "Competitor photos or spam on your listing identified and addressed through proper channels." },
         { title: "Trend Analysis", description: "What customers photograph reveals what they value. Insights extracted for marketing and service improvement." }
