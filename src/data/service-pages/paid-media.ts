@@ -26,22 +26,22 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         icon: Target,
         title: "No Conversion Values Defined",
-        body: "Without conversion values—even arbitrary ones—there is no way to prioritize leads or tell Google what matters. The algorithm optimizes for volume instead of quality, and you cannot prove ROI."
+        body: "Without conversion values, there is no way to prioritize leads or tell Google what matters. The algorithm optimizes for volume instead of quality, and you cannot prove ROI."
       },
       {
         icon: DollarSign,
         title: "Search Terms Go Unchecked",
-        body: "The number one reason campaigns fail is poor search term hygiene. Irrelevant queries drain budget daily while no one reviews and excludes them. This compounds into wasted spend."
+        body: "The number one reason campaigns fail is poor search term hygiene. Irrelevant queries drain budget daily while no one reviews and excludes them."
       },
       {
         icon: Settings,
-        title: "Set It and Forget It Management",
-        body: "Campaigns need daily attention, not weekly glances. Search terms go unchecked, negative placements pile up, and Performance Max runs wild without proper exclusions."
+        title: "Ad Copy Exhaustion",
+        body: "The same ads run for months without testing or refresh. Performance degrades as audiences tune out, and competitors outpace stale messaging."
       },
       {
         icon: FileText,
-        title: "Reports That Confuse Rather Than Clarify",
-        body: "Clients receive data dumps instead of insights. Impressions and clicks mean nothing if you cannot connect them to leads and revenue."
+        title: "Catch-All Targeting",
+        body: "Broad audiences generate volume, but volume is not quality. Without proper segmentation, you pay for clicks that never convert into qualified leads."
       }
     ],
     closingLine: "We build campaigns from the ground up for local lead generation",
