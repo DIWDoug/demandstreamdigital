@@ -107,9 +107,17 @@ const PaidMediaCalculator = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Flat fee per account with spend caps. One-time setup covers GTM, tracking, audiences, and restructuring.
           </p>
-          <p className="text-sm text-muted-foreground mt-3">
-            For <span className="text-foreground">lead generation</span> and <span className="text-foreground">live ticket/experiential</span> campaigns. E-commerce requires a custom quote.
-          </p>
+          <div className="flex items-center justify-center gap-2 mt-3 flex-wrap">
+            <p className="text-sm text-muted-foreground">
+              For <span className="text-foreground">lead generation</span> and <span className="text-foreground">live ticket/experiential</span> campaigns.
+            </p>
+            <a 
+              href="#start-conversation" 
+              className="text-sm text-primary hover:underline font-medium"
+            >
+              E-commerce? Request a custom quote →
+            </a>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
