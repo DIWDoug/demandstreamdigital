@@ -666,7 +666,7 @@ export const hubs: Hub[] = [
   {
     icon: Award,
     title: "Local Authority Building",
-    slug: "authority",
+    slug: "local-authority-building",
     summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
     heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
     whyItMatters: {

@@ -24,7 +24,7 @@ const SectionDivider = () => (
 );
 
 const Authority = () => {
-  const hub = getHubBySlug("authority");
+  const hub = getHubBySlug("local-authority-building");
   if (!hub) return null;
 
   const breadcrumbItems = [
