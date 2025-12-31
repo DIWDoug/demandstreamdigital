@@ -3,36 +3,43 @@ import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wylerPhoto from "@/assets/wyler.jpg";
 
 const WhoWeAre = () => {
-  // Author schema for E-E-A-T and AI/LLM visibility
+  // Author schema for E-E-A-T and AI/LLM visibility - following Backlinko best practices
   const authorSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://dialedinweb.com/#founder",
     "name": "Doug Bryson",
     "jobTitle": "CEO & Founder",
     "worksFor": {
       "@type": "Organization",
-      "name": "Dialed-In Web"
+      "@id": "https://dialedinweb.com/#organization",
+      "name": "Dialed-In Web",
+      "url": "https://dialedinweb.com"
     },
     "description": "Digital marketing veteran with 14+ years of hands-on experience. Started ranking local businesses in Nashville in 2011. Managed millions in paid advertising. Expert-vetted Upwork specialist. Author of The Local Growth Engine.",
     "knowsAbout": [
-      "Local SEO",
-      "Google Business Profile Optimization", 
-      "Google Ads",
-      "Meta Ads",
-      "Amazon PPC",
-      "White-Label Agency Fulfillment",
-      "Inbound Marketing Strategy"
+      { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
+      { "@type": "Thing", "name": "Google Business Profile Optimization" },
+      { "@type": "Thing", "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
+      { "@type": "Thing", "name": "Meta Advertising" },
+      { "@type": "Thing", "name": "Amazon PPC" },
+      { "@type": "Thing", "name": "White-Label Agency Fulfillment" },
+      { "@type": "Thing", "name": "Inbound Marketing", "sameAs": "https://en.wikipedia.org/wiki/Inbound_marketing" }
     ],
     "alumniOf": [
       { "@type": "Organization", "name": "Horton Group" },
-      { "@type": "Organization", "name": "iProspect" }
+      { "@type": "Organization", "name": "iProspect", "sameAs": "https://en.wikipedia.org/wiki/IProspect" }
     ],
     "award": "Expert-Vetted Upwork Freelancer (Top 1%)",
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
       "name": "Expert-Vetted Upwork Specialist"
-    }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/dougbryson",
+      "https://www.upwork.com/freelancers/~01dougbryson"
+    ]
   };
 
   return (
