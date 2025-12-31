@@ -508,58 +508,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "Local Search Campaign Structure",
-        slug: "local-search-campaign-structure",
-        description: "Service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation economics.",
-        fullDescription: "The structure of a paid search campaign determines its ceiling for performance. We build campaign architectures specifically designed for local lead generation, with geographic targeting, keyword organization, and account structure that maximizes Quality Score and conversion efficiency.",
-        benefits: ["Higher Quality Scores and lower CPCs", "Better targeting precision", "Easier optimization and scaling", "Cleaner performance data", "Foundation for long-term success"],
-        deliverables: ["Campaign structure strategy", "Geographic targeting setup", "Keyword research and organization", "Ad group structure", "Campaign settings optimization", "Audience layer implementation"],
-        process: ["Market and competitor analysis", "Keyword research and mapping", "Campaign architecture design", "Build and launch", "Initial optimization period", "Ongoing refinement"]
+        title: "Google Ads",
+        slug: "google-ads",
+        description: "Search, display, and Performance Max campaigns built for local lead generation and measurable ROI.",
+        fullDescription: "Google Ads remains the highest-intent advertising platform for local businesses. We build and manage search campaigns, display remarketing, and Performance Max strategies specifically designed for local lead generation economics.",
+        benefits: ["Highest-intent traffic capture", "Immediate visibility for money keywords", "Scalable lead generation", "Precise geographic targeting", "Measurable cost per lead"],
+        deliverables: ["Campaign structure and buildout", "Keyword research and mapping", "Ad copy development", "Extension optimization", "Bid strategy configuration", "Ongoing optimization and reporting"],
+        process: ["Market and competitor analysis", "Campaign architecture design", "Build and launch", "Initial optimization period", "Weekly refinement", "Monthly strategy review"]
       },
       {
-        title: "Landing Page Optimization",
-        slug: "landing-page-optimization",
-        description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization for maximum lead capture.",
-        fullDescription: "Traffic without conversion is wasted spend. We build and optimize landing pages designed specifically for local lead generation, with trust signals, clear calls-to-action, mobile optimization, and forms that convert visitors into leads.",
+        title: "Meta Ads",
+        slug: "meta-ads",
+        description: "Facebook and Instagram campaigns for local awareness, lead generation, and retargeting at scale.",
+        fullDescription: "Meta's targeting capabilities make it ideal for local businesses looking to build awareness and generate leads. We manage campaigns across Facebook and Instagram with creative, audience, and placement strategies optimized for local conversions.",
+        benefits: ["Broad local awareness building", "Precise demographic targeting", "Visual storytelling capability", "Lower cost per impression", "Strong retargeting performance"],
+        deliverables: ["Campaign structure and setup", "Audience research and building", "Creative development", "Placement optimization", "Lead form or landing page strategy", "Performance reporting"],
+        process: ["Audience research", "Campaign architecture", "Creative development", "Launch and testing", "Ongoing optimization", "Scale winning combinations"]
+      },
+      {
+        title: "Local Service Ads",
+        slug: "local-service-ads",
+        description: "Google Guaranteed campaigns that generate calls directly from search results for service businesses.",
+        fullDescription: "Local Service Ads put verified businesses at the top of search results with a Google Guarantee badge. We manage LSA campaigns including profile optimization, review management, and bid strategies to maximize call volume for service-area businesses.",
+        benefits: ["Top-of-page visibility", "Google Guaranteed trust signal", "Pay-per-lead model", "Direct phone calls from search", "High-intent local prospects"],
+        deliverables: ["LSA profile setup and optimization", "Service category configuration", "Review strategy integration", "Budget and bid management", "Lead dispute management", "Performance tracking and reporting"],
+        process: ["Eligibility verification", "Profile optimization", "Service area configuration", "Launch and monitoring", "Ongoing bid management", "Lead quality review"]
+      },
+      {
+        title: "Retargeting Campaigns",
+        slug: "retargeting-campaigns",
+        description: "Display, social, and search remarketing that brings warm prospects back to convert.",
+        fullDescription: "Most visitors don't convert on the first visit. Retargeting keeps your client's business in front of interested prospects across Google Display, YouTube, Meta, and search until they're ready to take action.",
+        benefits: ["Higher conversion rates from warm traffic", "Lower cost per acquisition", "Extended brand visibility", "Multi-platform reach", "Nurture prospects to conversion"],
+        deliverables: ["Audience segmentation strategy", "Retargeting pixel implementation", "Creative development by funnel stage", "Cross-platform campaign setup", "Frequency management", "Attribution reporting"],
+        process: ["Audience analysis and segmentation", "Pixel and tracking setup", "Creative strategy development", "Campaign launch", "Performance optimization", "Cross-platform coordination"]
+      },
+      {
+        title: "Landing Page Design",
+        slug: "landing-page-design",
+        description: "Conversion-focused pages with local trust signals, click-to-call, and form optimization.",
+        fullDescription: "Traffic without conversion is wasted spend. We design and build landing pages specifically for local lead generation with trust signals, clear calls-to-action, mobile optimization, and forms that convert visitors into leads.",
         benefits: ["Higher conversion rates", "Lower cost per lead", "Better Quality Scores", "Improved mobile experience", "Clear performance attribution"],
         deliverables: ["Landing page design and development", "A/B testing framework", "Form optimization", "Click-to-call implementation", "Trust signal integration", "Page speed optimization"],
-        process: ["Current page audit", "Competitive analysis", "New page development or optimization", "A/B testing implementation", "Ongoing conversion optimization"]
+        process: ["Current page audit", "Competitive analysis", "Design and development", "A/B testing implementation", "Ongoing conversion optimization"]
       },
       {
-        title: "Bid Strategy & Budget Allocation",
-        slug: "bid-strategy-budget-allocation",
-        description: "Smart bidding configurations and budget pacing that maximize lead volume within client profitability targets.",
-        fullDescription: "Bid management is where campaigns are won or lost. We configure smart bidding strategies based on campaign goals, manage budget allocation across campaigns and ad groups, and continuously optimize to maximize lead volume within profitability constraints.",
-        benefits: ["Maximized lead volume within budget", "Efficient spend allocation", "Automated optimization at scale", "Data-driven bid decisions", "Profitability-focused management"],
-        deliverables: ["Bid strategy selection and configuration", "Budget allocation framework", "ROAS/CPA target setting", "Bid adjustment implementation", "Budget pacing management", "Performance monitoring"],
-        process: ["Goal and constraint definition", "Strategy selection", "Initial configuration", "Learning period monitoring", "Ongoing optimization"]
-      },
-      {
-        title: "Call Tracking & Attribution",
-        slug: "call-tracking-attribution",
-        description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions.",
-        fullDescription: "For local businesses, phone calls are often the most valuable conversion. We implement call tracking that connects every call to its source, enabling true ROI measurement and data-driven optimization decisions.",
-        benefits: ["True ROI measurement", "Call source attribution", "Lead quality insights", "Optimization data", "Client-ready reporting"],
-        deliverables: ["Call tracking setup and configuration", "Dynamic number insertion", "Call recording implementation", "Integration with ad platforms", "Attribution modeling", "Call analytics reporting"],
-        process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration"]
-      },
-      {
-        title: "Ad Copy & Extension Testing",
-        slug: "ad-copy-extension-testing",
-        description: "Continuous A/B testing of headlines, descriptions, callouts, and sitelinks to improve quality scores and conversion rates.",
-        fullDescription: "Ad copy is your first impression. We continuously test headlines, descriptions, and extensions to improve click-through rates, Quality Scores, and ultimately conversion rates. Every test is designed to generate actionable insights.",
-        benefits: ["Higher click-through rates", "Improved Quality Scores", "Lower cost per click", "Better conversion rates", "Continuous improvement"],
-        deliverables: ["Ad copy strategy and development", "Extension creation and optimization", "A/B testing framework", "Performance analysis", "Winning ad identification", "Ongoing creative refresh"],
-        process: ["Competitive ad analysis", "Initial ad development", "Testing framework setup", "Ongoing testing and analysis", "Winner implementation and iteration"]
-      },
-      {
-        title: "Negative Keyword Management",
-        slug: "negative-keyword-management",
-        description: "Ongoing search term analysis and negative keyword refinement to eliminate waste and improve lead quality.",
-        fullDescription: "Every dollar spent on irrelevant clicks is a dollar wasted. We maintain aggressive negative keyword management to ensure ad spend goes only toward qualified prospects, improving both efficiency and lead quality.",
-        benefits: ["Reduced wasted spend", "Improved lead quality", "Higher conversion rates", "Better ROI", "Cleaner campaign data"],
-        deliverables: ["Search term analysis", "Negative keyword lists", "Account-level negatives", "Campaign-level refinement", "Ongoing monitoring", "Waste reduction reporting"],
-        process: ["Initial search term audit", "Negative list development", "Implementation across campaigns", "Ongoing search term review", "Continuous refinement"]
+        title: "Conversion Tracking",
+        slug: "conversion-tracking",
+        description: "Call tracking, form tracking, and multi-touch attribution that proves ROI and informs optimization.",
+        fullDescription: "For local businesses, every lead needs to be tracked back to its source. We implement comprehensive conversion tracking including call recording, form submissions, and multi-touch attribution so you can prove ROI and make data-driven decisions.",
+        benefits: ["True ROI measurement", "Call and form attribution", "Lead quality insights", "Optimization data", "Client-ready reporting"],
+        deliverables: ["Call tracking setup", "Form tracking implementation", "Dynamic number insertion", "Google Tag Manager configuration", "Attribution modeling", "Conversion reporting dashboard"],
+        process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration", "Ongoing maintenance"]
       }
     ]
   },
