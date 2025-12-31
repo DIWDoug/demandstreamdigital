@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { CheckCircle, ChevronDown } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import type { RoadmapPhase } from "@/types/servicePage";
+import { cn } from "@/lib/utils";
 
 interface RoadmapConfig {
   eyebrow: string;
@@ -16,9 +18,7 @@ interface ServiceRoadmapSectionProps {
 }
 
 const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
-  const [activePhase, setActivePhase] = useState(1);
-  const [showAllActivities, setShowAllActivities] = useState(false);
-  const activeData = config.phases.find(p => p.phase === activePhase) || config.phases[0];
+  const [expandedPhase, setExpandedPhase] = useState<number | null>(1); // Phase 1 expanded by default
 
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -36,167 +36,123 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="mb-8">
-          {/* Mobile dropdown */}
-          <div className="lg:hidden">
-            <select
-              value={activePhase}
-              onChange={(e) => setActivePhase(Number(e.target.value))}
-              className="w-full p-4 rounded-xl bg-surface-elevated border border-border text-foreground text-base font-medium appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta/50"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'right 1rem center',
-                backgroundSize: '1.5rem'
-              }}
-            >
-              {config.phases.map((phase) => (
-                <option key={phase.phase} value={phase.phase}>
-                  Phase {phase.phase}: {phase.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Desktop timeline */}
-          <div className="hidden lg:flex items-center justify-between relative">
-            {/* Connecting line */}
-            <div className="absolute top-6 left-12 right-12 h-0.5 bg-border" />
-            <div 
-              className="absolute top-6 left-12 h-0.5 transition-all duration-500"
-              style={{
-                width: `${((activePhase - 1) / (config.phases.length - 1)) * 100}%`,
-                background: activeData.color
-              }}
-            />
+        {/* Collapsible Phases */}
+        <div className="max-w-4xl space-y-4">
+          {config.phases.map((phase) => {
+            const isExpanded = expandedPhase === phase.phase;
+            const Icon = phase.icon;
+            const isPhaseOne = phase.phase === 1;
             
-            {config.phases.map((phase) => {
-              const isActive = phase.phase === activePhase;
-              const isPast = phase.phase < activePhase;
-              const Icon = phase.icon;
-              
-              return (
-                <button
-                  key={phase.phase}
-                  onClick={() => setActivePhase(phase.phase)}
-                  className="relative z-10 flex flex-col items-center group flex-1"
+            return (
+              <Collapsible
+                key={phase.phase}
+                open={isExpanded}
+                onOpenChange={(open) => setExpandedPhase(open ? phase.phase : null)}
+              >
+                <CollapsibleTrigger 
+                  className={cn(
+                    "w-full rounded-xl border p-5 transition-all text-left group cursor-pointer",
+                    isExpanded 
+                      ? "bg-surface-elevated border-border/50" 
+                      : "bg-surface-elevated/50 border-border/30 hover:border-border/50",
+                    isPhaseOne && !isExpanded && "ring-1 ring-cta/20"
+                  )}
+                  style={{ 
+                    borderLeftWidth: '4px',
+                    borderLeftColor: phase.color 
+                  }}
                 >
-                  <div 
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isActive 
-                        ? "ring-4 ring-offset-2 ring-offset-background ring-cta/40" 
-                        : isPast 
-                          ? "opacity-60" 
-                          : "bg-surface-elevated border border-border hover:border-text-muted"
-                    }`}
-                    style={{
-                      background: isActive || isPast ? phase.color : undefined
-                    }}
-                  >
-                    <Icon className={`w-5 h-5 ${isActive || isPast ? "text-white" : "text-text-muted"}`} />
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      <div 
+                        className={cn(
+                          "w-10 h-10 rounded-lg flex items-center justify-center transition-all",
+                          isPhaseOne ? "w-12 h-12" : ""
+                        )}
+                        style={{ background: `${phase.color}20` }}
+                      >
+                        <Icon 
+                          className={cn("w-5 h-5", isPhaseOne && "w-6 h-6")} 
+                          style={{ color: phase.color }} 
+                        />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
+                            Phase {phase.phase}
+                          </span>
+                          {isPhaseOne && (
+                            <span className="text-xs font-medium text-cta bg-cta/10 px-2 py-0.5 rounded">
+                              Foundation
+                            </span>
+                          )}
+                        </div>
+                        <h3 className={cn(
+                          "font-semibold text-foreground",
+                          isPhaseOne ? "text-lg" : "text-base"
+                        )}>
+                          {phase.title}
+                        </h3>
+                      </div>
+                    </div>
+                    <ChevronDown 
+                      className={cn(
+                        "w-5 h-5 text-text-muted transition-transform duration-200",
+                        isExpanded && "rotate-180"
+                      )} 
+                    />
                   </div>
-                  <span className={`mt-3 text-sm font-semibold transition-colors ${
-                    isActive ? "text-foreground" : "text-text-muted"
-                  }`}>
-                    {phase.name}
-                  </span>
-                  <span className={`text-xs transition-colors ${
-                    isActive ? "text-text-secondary" : "text-text-muted"
-                  }`}>
-                    Phase {phase.phase}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Active phase details */}
-        <div 
-          className="rounded-2xl border p-8 bg-surface-elevated shadow-sm animate-fade-in"
-          style={{ borderColor: `${activeData.color}40` }}
-          key={activePhase}
-        >
-          {/* Phase 1 duration callout */}
-          {activePhase === 1 && (
-            <div className="flex items-center gap-2 mb-6 px-4 py-2.5 rounded-lg bg-surface-dark border border-border w-fit">
-              <span className="text-sm text-text-secondary">
-                <span className="font-semibold text-foreground">Longest phase:</span> Foundation typically spans 2 to 4 months depending on scope and market complexity.
-              </span>
-            </div>
-          )}
-          
-          <div className="flex items-center gap-4 mb-6">
-            <div 
-              className="w-12 h-12 rounded-xl flex items-center justify-center"
-              style={{ background: `${activeData.color}15` }}
-            >
-              <activeData.icon className="w-6 h-6" style={{ color: activeData.color }} />
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">{activeData.title}</h3>
-              <p className="text-text-muted text-sm">Phase {activeData.phase}: {activeData.name}</p>
-            </div>
-          </div>
-          
-          <p className="text-lg text-text-secondary mb-8">{activeData.description}</p>
-
-          {/* Activities */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">What This Phase Includes</h4>
-            <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
-              {activeData.activities.slice(0, 6).map((activity, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle 
-                    className="w-4 h-4 mt-0.5 flex-shrink-0" 
-                    style={{ color: activeData.color }} 
-                  />
-                  <span className="text-text-secondary">{activity}</span>
-                </li>
-              ))}
-            </ul>
-            
-            {activeData.activities.length > 6 && (
-              <>
-                <ul 
-                  className={`grid md:grid-cols-2 gap-x-8 gap-y-3 mt-3 transition-all duration-300 overflow-hidden ${
-                    showAllActivities ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                  aria-hidden={!showAllActivities}
-                >
-                  {activeData.activities.slice(6).map((activity, index) => (
-                    <li key={index + 6} className="flex items-start gap-3">
-                      <CheckCircle 
-                        className="w-4 h-4 mt-0.5 flex-shrink-0" 
-                        style={{ color: activeData.color }} 
-                      />
-                      <span className="text-text-secondary">{activity}</span>
-                    </li>
-                  ))}
-                </ul>
+                </CollapsibleTrigger>
                 
-                <button
-                  onClick={() => setShowAllActivities(!showAllActivities)}
-                  className="mt-4 flex items-center gap-2 text-sm font-medium text-cta hover:text-cta/80 transition-colors"
-                >
-                  <span>{showAllActivities ? "Show less" : "View full execution checklist"}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAllActivities ? "rotate-180" : ""}`} />
-                </button>
-              </>
-            )}
-          </div>
+                <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                  <div 
+                    className="rounded-b-xl border border-t-0 p-6 bg-surface-elevated"
+                    style={{ borderColor: `${phase.color}40` }}
+                  >
+                    {/* Phase 1 duration callout */}
+                    {isPhaseOne && (
+                      <div className="flex items-center gap-2 mb-5 px-4 py-2.5 rounded-lg bg-surface-dark border border-border w-fit">
+                        <span className="text-sm text-text-secondary">
+                          <span className="font-semibold text-foreground">Longest phase:</span> Foundation typically spans 2 to 4 months depending on scope and market complexity.
+                        </span>
+                      </div>
+                    )}
+                    
+                    <p className="text-text-secondary mb-6">{phase.description}</p>
+
+                    {/* Activities */}
+                    <div>
+                      <h4 className="text-xs font-semibold uppercase tracking-wider text-text-muted mb-4">
+                        What This Phase Includes
+                      </h4>
+                      <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+                        {phase.activities.map((activity, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <CheckCircle 
+                              className="w-4 h-4 mt-0.5 flex-shrink-0" 
+                              style={{ color: phase.color }} 
+                            />
+                            <span className="text-text-secondary text-sm">{activity}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            );
+          })}
         </div>
 
         {/* Execution Note */}
         {config.executionNote && config.executionNote.length > 0 && (
-          <p className="mt-8 text-text-secondary text-base text-center">
+          <p className="mt-8 text-text-secondary text-base text-center max-w-4xl">
             {config.executionNote}
           </p>
         )}
 
         {/* Bottom note */}
-        <p className={`${config.executionNote && config.executionNote.length > 0 ? 'mt-4' : 'mt-8'} text-text-muted text-sm text-center`}>
+        <p className={`${config.executionNote && config.executionNote.length > 0 ? 'mt-4' : 'mt-8'} text-text-muted text-sm text-center max-w-4xl`}>
           {config.footerNote}
         </p>
       </div>

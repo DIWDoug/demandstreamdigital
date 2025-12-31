@@ -73,22 +73,22 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
             )}
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-5 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
               White-Label{" "}
               <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{title}</span>{" "}
               Services
             </h1>
             
-            {/* Short description */}
-            <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-4">
+            {/* Short description - promise paragraph */}
+            <p className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-6">
               {description}
             </p>
             
-            {/* Integration Note - subtle callout */}
+            {/* Integration Note - explanation paragraph, slightly muted */}
             {integrationNote && (
-              <div className="flex items-start gap-3 p-3 rounded-lg bg-accent-blue/5 border border-accent-blue/20 max-w-xl animate-fade-in">
-                <Link2 className="h-4 w-4 text-accent-blue mt-0.5 flex-shrink-0" />
-                <p className="text-sm text-text-muted leading-relaxed">
+              <div className="flex items-start gap-3 p-4 rounded-lg bg-accent-blue/5 border border-accent-blue/20 max-w-xl animate-fade-in">
+                <Link2 className="h-4 w-4 text-accent-blue mt-1 flex-shrink-0" />
+                <p className="text-sm text-text-muted/80 leading-relaxed">
                   {integrationNote}
                 </p>
               </div>

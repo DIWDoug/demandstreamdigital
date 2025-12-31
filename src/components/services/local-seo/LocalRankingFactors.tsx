@@ -2,19 +2,19 @@ import rankingFactorsImage from "@/assets/ranking-factor-groups.png";
 
 const LocalRankingFactors = () => {
   return (
-    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section className="py-14 lg:py-20 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+          {/* Header - more compact */}
+          <div className="text-center mb-8">
+            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
               2026 Research
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">
               Local Search Ranking Factor Groups
             </h2>
-            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
-              Based on Whitespark's 2026 Local Search Ranking Factors research. The data behind every strategy we build.
+            <p className="text-slate-600 text-base max-w-2xl mx-auto">
+              Based on Whitespark's 2026 Local Search Ranking Factors research.
             </p>
           </div>
 
@@ -27,8 +27,13 @@ const LocalRankingFactors = () => {
             />
           </div>
 
+          {/* Caption - why this matters */}
+          <p className="text-center mt-5 text-slate-500 text-sm italic">
+            This research informs how we prioritize local SEO work in each market.
+          </p>
+
           {/* Source Link */}
-          <p className="text-center mt-6 text-slate-500 text-sm">
+          <p className="text-center mt-2 text-slate-400 text-xs">
             Source:{" "}
             <a 
               href="https://whitespark.ca/local-search-ranking-factors/" 

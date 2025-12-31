@@ -35,26 +35,35 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             </p>
           </div>
 
-          {/* Pain Point Cards */}
+          {/* Pain Point Cards - First card is featured */}
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
-            {config.painPoints.map((point, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-cta/30 transition-colors"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
-                    <point.icon className="h-5 w-5 text-cta" />
+            {config.painPoints.map((point, index) => {
+              const isFirst = index === 0;
+              return (
+                <div 
+                  key={index}
+                  className={`bg-white rounded-xl p-6 lg:p-8 border shadow-sm hover:border-cta/30 transition-colors ${
+                    isFirst 
+                      ? 'border-cta/20 ring-1 ring-cta/10 sm:col-span-2 lg:col-span-1' 
+                      : 'border-slate-200'
+                  }`}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+                      isFirst ? 'bg-cta/15' : 'bg-cta/10'
+                    }`}>
+                      <point.icon className={`h-5 w-5 text-cta ${isFirst ? 'h-6 w-6' : ''}`} />
+                    </div>
+                    <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl' : 'text-lg'}`}>
+                      {point.title}
+                    </strong>
                   </div>
-                  <strong className="text-lg font-semibold text-slate-900">
-                    {point.title}
-                  </strong>
+                  <p className="text-slate-500 text-sm leading-7">
+                    {point.body}
+                  </p>
                 </div>
-                <p className="text-slate-600 text-sm leading-7">
-                  {point.body}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* System Closing (optional) */}
