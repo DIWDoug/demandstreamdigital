@@ -198,11 +198,11 @@ export const hubs: Hub[] = [
       {
         title: "Schema Markup",
         slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results and AI Overview citations.",
-        fullDescription: "Schema markup helps search engines and AI systems understand your client's business. We implement LocalBusiness, Service, FAQ, and Review schema to unlock rich snippets in traditional search and improve accuracy in AI-generated results.",
-        benefits: ["Enhanced search result appearance with rich snippets", "Rich snippet eligibility for stars, hours, and FAQs", "Better search engine understanding of business entities", "Improved click-through rates from enhanced listings", "AI Overview citation eligibility through structured data", "Competitive differentiation in traditional and AI search"],
-        deliverables: ["Schema audit and recommendations", "LocalBusiness schema implementation", "Service schema markup", "FAQ schema for key pages", "Review schema integration", "Schema testing and validation", "AI visibility verification"],
-        process: ["Current schema audit", "Opportunity identification", "Schema development", "Implementation", "Testing and validation", "AI citation monitoring", "Ongoing monitoring"]
+        description: "Connected @graph schema with LocalBusiness, Organization, Person, and Service entities that unlocks rich results and AI citations.",
+        fullDescription: "Schema markup helps search engines and AI systems understand your client's business without NLP interpretation. We implement connected @graph structures using @id properties to link LocalBusiness, Organization, Person, and Service entities into page-level knowledge graphs. This includes sameAs links to social profiles, knowsAbout properties for topical authority, and rigorous three-step validation before deployment.",
+        benefits: ["Page-level knowledge graphs with connected entities", "Rich result eligibility for stars, FAQs, and breadcrumbs", "AI Overview citation accuracy through explicit structured data", "E-E-A-T signals via Person schema with knowsAbout properties", "sameAs validation linking to authoritative external sources", "Reduced NLP guesswork for search engines and LLMs"],
+        deliverables: ["Connected schema audit with relationship mapping", "@graph structure with @id entity connections", "LocalBusiness + Organization + Person schema", "Service schema with offers and ratings", "FAQ and Article schema for content pages", "Three-step validation (Schema.org, Rich Results, Classy Schema)", "AI citation verification via LLM testing"],
+        process: ["Current schema audit and visualization", "Entity relationship planning", "@graph structure development", "sameAs and knowsAbout implementation", "Three-step validation workflow", "Deployment and Search Console monitoring", "Quarterly audits and AI visibility checks"]
       },
       {
         title: "NAP Citations",
