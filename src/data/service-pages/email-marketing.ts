@@ -42,6 +42,11 @@ export const emailMarketingConfig: ServicePageConfig = {
         icon: Target,
         title: "Forgotten Between Visits",
         body: "Customers need HVAC service once a year. Dental cleanings twice. Without consistent, valuable touchpoints, the business fades from memory when it matters most."
+      },
+      {
+        icon: TrendingUp,
+        title: "No Automation Beyond Welcome",
+        body: "A welcome email exists, then nothing. No post-service follow-ups. No win-back sequences. No review requests. The list sits idle between manual blasts."
       }
     ],
     closingLine: "We build email programs that nurture relationships, stay top of mind, and convert when the timing is right.",

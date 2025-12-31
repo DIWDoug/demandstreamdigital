@@ -26,7 +26,7 @@ export const authorityConfig: ServicePageConfig = {
       {
         icon: Globe,
         title: "Links Without Relevance",
-        body: "Generic directory links Google ignores. The link count grows, but local rankings never move because there's no geographic or industry relevance."
+        body: "Generic directory links Google ignores. The link count grows, but local rankings never move because there is no geographic or industry relevance."
       },
       {
         icon: FileText,
@@ -36,12 +36,17 @@ export const authorityConfig: ServicePageConfig = {
       {
         icon: Shield,
         title: "No Strategy, Just Tactics",
-        body: "Random acts of link building without a coherent authority plan. Effort wasted on activities that don't compound into local credibility."
+        body: "Random acts of link building without a coherent authority plan. Effort wasted on activities that do not compound into local credibility."
       },
       {
         icon: Users,
         title: "Missing Community Signals",
         body: "No local sponsorships, chamber memberships, or community involvement. The trust signals that differentiate local businesses are completely absent."
+      },
+      {
+        icon: TrendingUp,
+        title: "No Anchor Text Discipline",
+        body: "Over-optimized anchors trigger penalties. Under-optimized anchors waste link equity. Without intentional anchor strategy, links underperform or backfire."
       }
     ],
     closingLine: "We build authority the hard way: strategically, earned, and compounding.",

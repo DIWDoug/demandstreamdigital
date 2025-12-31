@@ -42,6 +42,11 @@ export const googleMapsConfig: ServicePageConfig = {
         icon: Target,
         title: "No Strategy for Proximity Dynamics",
         body: "The Vicinity Update made location the dominant factor. Without a strategy that accounts for proximity, your clients lose visibility outside their immediate area."
+      },
+      {
+        icon: Layers,
+        title: "GBP and Website Are Disconnected",
+        body: "Services listed in GBP do not match website pages. Categories are misaligned. Google receives mixed signals, and rich snippets never populate."
       }
     ],
     systemClosing: "",
