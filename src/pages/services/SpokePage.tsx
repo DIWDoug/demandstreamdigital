@@ -10,6 +10,8 @@ import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import SpokeAlternatingBlocks, { onPageOptimizationBlocks } from "@/components/services/SpokeAlternatingBlocks";
+import ServiceEcosystemSection from "@/components/services/generic/ServiceEcosystemSection";
+import { localSEOConfig } from "@/data/service-pages/local-seo";
 import {
   Accordion,
   AccordionContent,
@@ -399,6 +401,14 @@ const SpokePage = () => {
               </div>
             </div>
           </section>
+        </>
+      )}
+
+      {/* 360° Ecosystem Orbit Diagram - for Local SEO spokes */}
+      {hubSlug === "local-seo" && (
+        <>
+          <SectionDivider />
+          <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
         </>
       )}
 
