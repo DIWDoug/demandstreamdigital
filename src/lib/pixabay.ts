@@ -77,6 +77,69 @@ export async function searchPixabayImages(options: SearchOptions): Promise<Pixab
 }
 
 /**
+ * Keyword mapping for spoke pages to relevant Pixabay search terms
+ */
+export const spokeKeywordMap: Record<string, string> = {
+  // Local SEO spokes
+  'on-page-optimization': 'website optimization SEO',
+  'technical-seo': 'website code development',
+  'local-keyword-strategy': 'keyword research analytics',
+  'content-development': 'content writing marketing',
+  'link-building': 'network connection business',
+  'schema-markup': 'code programming web',
+  'nap-citations': 'business directory listing',
+  
+  // GBP SEO spokes
+  'gbp-optimization': 'google business profile',
+  'review-management': 'customer reviews feedback',
+  'citation-building': 'business listings directory',
+  'photo-optimization': 'photography camera professional',
+  'qa-management': 'customer questions answers',
+  'post-scheduling': 'social media calendar',
+  
+  // Paid Media spokes
+  'google-ads': 'google advertising digital',
+  'meta-ads': 'facebook advertising social',
+  'local-service-ads': 'local service contractor',
+  'retargeting-campaigns': 'remarketing advertising',
+  'landing-page-design': 'landing page web design',
+  'conversion-tracking': 'analytics data tracking',
+  
+  // Email Marketing spokes
+  'campaign-strategy': 'email marketing strategy',
+  'list-management': 'email list database',
+  'automation-flows': 'automation workflow email',
+  'newsletter-design': 'newsletter email design',
+  'ab-testing': 'AB testing optimization',
+  'performance-analytics': 'analytics dashboard metrics',
+  
+  // Authority Building spokes
+  'local-links': 'link building outreach',
+  'citations': 'business citations directory',
+  'brand-mentions': 'brand awareness marketing',
+  'anchor-text': 'SEO text optimization',
+  'sponsorships': 'sponsorship partnership business',
+  'reputation-signals': 'reputation management trust',
+  
+  // Reporting spokes
+  'white-label-dashboards': 'dashboard analytics reporting',
+  'monthly-reports': 'report business analytics',
+  'rank-tracking': 'ranking SEO tracking',
+  'call-tracking': 'phone call analytics',
+  'roi-analysis': 'ROI investment analysis',
+  'client-presentations': 'presentation business meeting'
+};
+
+/**
+ * Get the best Pixabay search keyword for a spoke
+ * @param spokeSlug The spoke URL slug
+ * @returns The mapped keyword or a sensible default
+ */
+export function getSpokeKeyword(spokeSlug: string): string {
+  return spokeKeywordMap[spokeSlug] || 'digital marketing business';
+}
+
+/**
  * Get a single high-quality image for a given search term
  * @param query Search query
  * @returns URL of the large image or null if not found
