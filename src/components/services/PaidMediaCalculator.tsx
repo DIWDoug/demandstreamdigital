@@ -17,7 +17,7 @@ const PaidMediaCalculator = () => {
   const [platforms, setPlatforms] = useState<number>(1);
   const [customRetainer, setCustomRetainer] = useState<number | null>(null);
 
-  const SETUP_FEE = 0; // No setup fee like Agency Elevation
+  const SETUP_FEE = 299; // Per-account setup: GTM, GA, tracking, audiences, restructuring
   const SUGGESTED_FEE_RATE = 0.20;
   const MIN_RETAINER = 500;
 
@@ -38,9 +38,10 @@ const PaidMediaCalculator = () => {
     // Your margin
     const monthlyMargin = clientRetainer - monthlyOEM;
     
-    // Annual projections (no setup fee now)
+    // Annual projections (setup fee is per account, first month only)
     const annualRevenue = clientRetainer * 12;
-    const annualOEM = monthlyOEM * 12;
+    const totalSetup = SETUP_FEE * platforms;
+    const annualOEM = totalSetup + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
     
     // Margin percentage
@@ -54,6 +55,7 @@ const PaidMediaCalculator = () => {
     return {
       currentTier,
       nextTier,
+      totalSetup,
       spendHeadroom,
       suggestedPerPlatform,
       suggestedRetainer,
@@ -97,7 +99,7 @@ const PaidMediaCalculator = () => {
             Calculate Your Paid Media Margin
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Flat fee per account with spend caps. No setup fees. No contracts.
+            Flat fee per account with spend caps. One-time setup covers GTM, tracking, audiences, and restructuring.
           </p>
         </div>
 
@@ -108,7 +110,7 @@ const PaidMediaCalculator = () => {
               <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
                 Per Account Pricing
               </h3>
-              <span className="text-xs text-primary font-medium">No setup fees</span>
+              <span className="text-xs text-muted-foreground">+ {formatCurrency(SETUP_FEE)} setup per account</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {OEM_TIERS.map((tier, index) => (
@@ -232,14 +234,27 @@ const PaidMediaCalculator = () => {
                 
                 <div className="bg-background border border-border rounded-lg p-5">
                   <div className="flex items-center gap-2 mb-2">
+                    <Zap className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground">Setup (one-time)</span>
+                  </div>
+                  <p className="text-2xl font-bold text-foreground">
+                    {formatCurrency(calculations.totalSetup)}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {formatCurrency(SETUP_FEE)} × {platforms} {platforms === 1 ? 'account' : 'accounts'}
+                  </p>
+                </div>
+                
+                <div className="bg-background border border-border rounded-lg p-5">
+                  <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-4 h-4 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">Monthly</span>
                   </div>
-                  <p className="text-3xl font-bold text-foreground">
+                  <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(calculations.monthlyOEM)}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {platforms} {platforms === 1 ? 'account' : 'accounts'} at {formatCurrency(calculations.currentTier.oem)} each
+                    {formatCurrency(calculations.currentTier.oem)} × {platforms} {platforms === 1 ? 'account' : 'accounts'}
                   </p>
                 </div>
               </div>
