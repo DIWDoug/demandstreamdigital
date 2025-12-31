@@ -1,4 +1,4 @@
-import { MousePointerClick, Zap, Target, TrendingUp, DollarSign, BarChart3, FileText, Settings, Search, Map, Sparkles, Star, Mail, Globe, Share2 } from "lucide-react";
+import { MousePointerClick, Zap, Target, TrendingUp, DollarSign, BarChart3, FileText, Settings, Search, Map, Sparkles, Star, Mail, Globe, Share2, Layers } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const paidMediaConfig: ServicePageConfig = {
@@ -215,6 +215,12 @@ export const paidMediaConfig: ServicePageConfig = {
         slug: "roi-analysis-reporting",
         description: "White-labeled reports that connect ad spend to leads and revenue your clients understand.",
         icon: DollarSign
+      },
+      {
+        title: "Funnel Strategy",
+        slug: "funnel-strategy",
+        description: "Top, middle, and bottom of funnel campaigns aligned to conversion goals and buyer intent.",
+        icon: Layers
       }
     ]
   },
@@ -233,8 +239,8 @@ export const paidMediaConfig: ServicePageConfig = {
         detail: "We focus on leads and revenue, not impressions and clicks. Our reporting connects spend to outcomes so you can prove ROI."
       },
       {
-        point: "Your clients can handle lead volume",
-        detail: "Paid media can turn on quickly. Clients need the capacity to answer calls and follow up with leads, or the investment is wasted."
+        point: "Your clients answer the phone and respond to leads fast",
+        detail: "Paid media generates leads quickly. If calls go to voicemail or form submissions sit for days, the investment is wasted and we cannot optimize effectively."
       },
       {
         point: "You understand paid media requires investment",
@@ -255,8 +261,8 @@ export const paidMediaConfig: ServicePageConfig = {
         detail: "Campaigns launch quickly, but optimization takes weeks. Expecting fully refined performance in week one sets everyone up for disappointment."
       },
       {
-        point: "Clients who cannot track or follow up with leads",
-        detail: "If leads go unanswered or cannot be tracked, we cannot optimize effectively and cannot prove value."
+        point: "Clients who do not answer the phone or follow up with leads",
+        detail: "If calls go to voicemail or leads sit untouched, we cannot optimize effectively and the spend is wasted. Fast response is non-negotiable."
       },
       {
         point: "Price is the only decision factor",
