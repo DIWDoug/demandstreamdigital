@@ -44,6 +44,7 @@ export interface BuildingBlock {
   slug: string;
   description: string;
   icon: LucideIcon;
+  cluster?: string; // Optional cluster grouping for visual organization
 }
 
 export interface FitCriterion {
