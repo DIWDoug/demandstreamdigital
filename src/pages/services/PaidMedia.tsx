@@ -17,6 +17,7 @@ import ServiceBuildingBlocksSection from "@/components/services/generic/ServiceB
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
 import ServiceGroupedFAQ from "@/components/services/generic/ServiceGroupedFAQ";
 import ServiceEcosystemSection from "@/components/services/generic/ServiceEcosystemSection";
+import PaidMediaCalculator from "@/components/services/PaidMediaCalculator";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -84,7 +85,12 @@ const PaidMedia = () => {
       {/* 8. SOCIAL PROOF */}
       <Testimonials />
       
-      {/* 9. FAQ */}
+      {/* 9. PRICING CALCULATOR */}
+      <PaidMediaCalculator />
+      
+      <SectionDivider />
+      
+      {/* 10. FAQ */}
       <ServiceGroupedFAQ config={paidMediaConfig.faq} />
       
       <SectionDivider />
