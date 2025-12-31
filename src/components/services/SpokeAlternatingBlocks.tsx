@@ -2,6 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 
+// Import generated illustrations
+import visibleElementsImg from "@/assets/spoke/visible-elements.png";
+import technicalMarkupImg from "@/assets/spoke/technical-markup.png";
+import fullFunnelImg from "@/assets/spoke/full-funnel.png";
+
 interface SubPoint {
   title: string;
   description: string;
@@ -168,6 +173,8 @@ export const onPageOptimizationBlocks: ContentBlock[] = [
         description: "Every page is connected to its topical cluster. Internal links build authority and guide both users and crawlers through your content architecture."
       }
     ],
+    imageSrc: visibleElementsImg,
+    imageAlt: "On-page SEO visible elements illustration showing webpage with title tags, meta descriptions, and header hierarchy",
     ctaText: "Start the Conversation",
     ctaHref: "#contact"
   },
@@ -193,6 +200,8 @@ export const onPageOptimizationBlocks: ContentBlock[] = [
         description: "Every image optimized for screen readers and search engines. Accessibility isn't optional—it's a ranking factor and user experience imperative."
       }
     ],
+    imageSrc: technicalMarkupImg,
+    imageAlt: "Technical SEO schema markup illustration showing JSON-LD structured data and LocalBusiness schema",
     ctaText: "Schedule a Consultation",
     ctaHref: "#contact"
   },
@@ -218,6 +227,8 @@ export const onPageOptimizationBlocks: ContentBlock[] = [
         description: "We still pay attention to keyword density where it matters, combined with LSI signals and semantic variations that signal comprehensive coverage."
       }
     ],
+    imageSrc: fullFunnelImg,
+    imageAlt: "Marketing funnel illustration showing awareness, consideration, and decision content stages",
     ctaText: "Get a Custom Audit",
     ctaHref: "#contact"
   }
