@@ -107,8 +107,9 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                 const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
                 
                 return (
-                  <div
+                  <Link
                     key={service.id}
+                    to={service.href}
                     className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
                     style={{
                       left: '50%',
@@ -125,7 +126,7 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                         : "bg-slate-800"
                     }`} />
                     <Icon className="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                  </div>
+                  </Link>
                 );
               })}
             </div>
