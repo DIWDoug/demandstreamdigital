@@ -3,18 +3,30 @@ import { Calculator, DollarSign, TrendingUp, Zap, Layers } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+// Tiered OEM pricing based on ad spend
+const OEM_TIERS = [
+  { minSpend: 0, maxSpend: 2499, oem: 299, label: "Under $2,500" },
+  { minSpend: 2500, maxSpend: 4999, oem: 399, label: "$2,500 – $5,000" },
+  { minSpend: 5000, maxSpend: 9999, oem: 499, label: "$5,000 – $10,000" },
+  { minSpend: 10000, maxSpend: 24999, oem: 749, label: "$10,000 – $25,000" },
+  { minSpend: 25000, maxSpend: Infinity, oem: 999, label: "$25,000+" },
+];
+
 const PaidMediaCalculator = () => {
-  const [adSpend, setAdSpend] = useState<number>(3000);
+  const [adSpend, setAdSpend] = useState<number>(5000);
   const [platforms, setPlatforms] = useState<number>(1);
   const [customRetainer, setCustomRetainer] = useState<number | null>(null);
 
   const SETUP_FEE = 250;
-  const OEM_RATE = 0.20;
   const SUGGESTED_FEE_RATE = 0.20;
   const MIN_RETAINER = 500;
-  const MIN_OEM = 300;
 
   const calculations = useMemo(() => {
+    // Find the current tier based on ad spend
+    const currentTier = OEM_TIERS.find(
+      tier => adSpend >= tier.minSpend && adSpend <= tier.maxSpend
+    ) || OEM_TIERS[0];
+    
     // Suggested agency fee: 20% of ad spend or $500 min (per platform)
     const suggestedPerPlatform = Math.max(adSpend * SUGGESTED_FEE_RATE, MIN_RETAINER);
     const suggestedRetainer = suggestedPerPlatform * platforms;
@@ -22,8 +34,8 @@ const PaidMediaCalculator = () => {
     // Use custom retainer if set, otherwise use suggested
     const clientRetainer = customRetainer !== null ? customRetainer : suggestedRetainer;
     
-    // OEM Cost: 20% of retainer or $300 minimum
-    const monthlyOEM = Math.max(Math.round(clientRetainer * OEM_RATE), MIN_OEM);
+    // OEM Cost: tiered based on ad spend, multiplied by platforms
+    const monthlyOEM = currentTier.oem * platforms;
     
     // Your margin
     const monthlyMargin = clientRetainer - monthlyOEM;
@@ -37,18 +49,11 @@ const PaidMediaCalculator = () => {
     const annualOEM = SETUP_FEE + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
     
-    // Minimum ad spend to avoid hitting the $300 floor
-    // Need: clientRetainer >= $1,500 (so 20% = $300)
-    // clientRetainer = max(adSpend * 0.20, $500) * platforms
-    // So: max(adSpend * 0.20, $500) >= $1,500 / platforms
-    const retainerPerPlatformNeeded = MIN_OEM / OEM_RATE / platforms;
-    const minAdSpendForMargin = retainerPerPlatformNeeded > MIN_RETAINER 
-      ? retainerPerPlatformNeeded / SUGGESTED_FEE_RATE 
-      : null; // null means any spend works (floor already met by min retainer)
-    
-    const isAtFloor = clientRetainer * OEM_RATE < MIN_OEM;
+    // Margin percentage
+    const marginPercent = clientRetainer > 0 ? Math.round((monthlyMargin / clientRetainer) * 100) : 0;
     
     return {
+      currentTier,
       suggestedPerPlatform,
       suggestedRetainer,
       clientRetainer,
@@ -59,8 +64,7 @@ const PaidMediaCalculator = () => {
       annualRevenue,
       annualOEM,
       annualMargin,
-      minAdSpendForMargin,
-      isAtFloor
+      marginPercent
     };
   }, [adSpend, platforms, customRetainer]);
 
@@ -94,27 +98,37 @@ const PaidMediaCalculator = () => {
             Calculate Your Paid Media Margin
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Typical agency fee: 20% of ad spend or $500, whichever is greater. Your OEM cost: 20% of the retainer per platform.
+            Simple tiered pricing based on client ad spend. You set your retainer — we charge a flat OEM fee per platform.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Pricing Rules Summary */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-1">Setup Fee</p>
-              <p className="text-2xl font-bold text-foreground">{formatCurrency(SETUP_FEE)}</p>
-              <p className="text-xs text-muted-foreground">one-time</p>
+          {/* Tiered Pricing Table */}
+          <div className="bg-card/50 border border-border/50 rounded-lg p-6 mb-8">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                OEM Cost per Platform
+              </h3>
+              <span className="text-xs text-muted-foreground">+ {formatCurrency(SETUP_FEE)} setup</span>
             </div>
-            <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-1">Suggested Client Fee</p>
-              <p className="text-2xl font-bold text-foreground">20%</p>
-              <p className="text-xs text-muted-foreground">of ad spend or $500 min</p>
-            </div>
-            <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
-              <p className="text-sm text-muted-foreground mb-1">Your OEM Cost</p>
-              <p className="text-2xl font-bold text-foreground">20%</p>
-              <p className="text-xs text-muted-foreground">of retainer, $300 min</p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+              {OEM_TIERS.map((tier, index) => (
+                <div 
+                  key={index}
+                  className={`rounded-lg p-3 text-center transition-all ${
+                    calculations.currentTier === tier 
+                      ? 'bg-primary/20 border-2 border-primary' 
+                      : 'bg-background/50 border border-border/50'
+                  }`}
+                >
+                  <p className="text-xs text-muted-foreground mb-1">{tier.label}</p>
+                  <p className={`text-lg font-bold ${
+                    calculations.currentTier === tier ? 'text-primary' : 'text-foreground'
+                  }`}>
+                    {formatCurrency(tier.oem)}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -142,6 +156,9 @@ const PaidMediaCalculator = () => {
                     placeholder="Ad spend"
                   />
                 </div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Tier: {calculations.currentTier.label}
+                </p>
               </div>
 
               <div>
@@ -165,6 +182,9 @@ const PaidMediaCalculator = () => {
                     <option value={4}>4 Platforms</option>
                   </select>
                 </div>
+                <p className="text-xs text-muted-foreground mt-1">
+                  OEM: {formatCurrency(calculations.currentTier.oem)} × {platforms}
+                </p>
               </div>
 
               <div>
@@ -200,32 +220,13 @@ const PaidMediaCalculator = () => {
               </div>
             </div>
 
-            {/* Minimum Ad Spend Recommendation */}
-            {calculations.isAtFloor && calculations.minAdSpendForMargin && (
-              <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-amber-400 mt-2 shrink-0"></div>
-                  <div>
-                    <p className="text-sm font-medium text-amber-200">
-                      You're at floor pricing
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      To stay above the $300 minimum, recommend at least{' '}
-                      <span className="font-semibold text-foreground">{formatCurrency(calculations.minAdSpendForMargin)}</span> monthly ad spend
-                      {platforms > 1 && ` across ${platforms} platforms`}.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
             {/* Results Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {/* Your Cost */}
               <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide flex items-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${calculations.isAtFloor ? 'bg-amber-400' : 'bg-muted-foreground'}`}></span>
-                  Your Cost (OEM) {calculations.isAtFloor && <span className="text-xs text-amber-400 font-normal normal-case">(at floor)</span>}
+                  <span className="w-2 h-2 rounded-full bg-muted-foreground"></span>
+                  Your Cost (OEM)
                 </h3>
                 
                 <div className="bg-background border border-border rounded-lg p-5">
@@ -241,7 +242,9 @@ const PaidMediaCalculator = () => {
                 <div className="bg-background border border-border rounded-lg p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Monthly (20% or $300 min)</span>
+                    <span className="text-sm text-muted-foreground">
+                      Monthly ({formatCurrency(calculations.currentTier.oem)} × {platforms})
+                    </span>
                   </div>
                   <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(calculations.monthlyOEM)}
@@ -253,7 +256,7 @@ const PaidMediaCalculator = () => {
               <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wide flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                  Your Margin (80%)
+                  Your Margin ({calculations.marginPercent}%)
                 </h3>
                 
                 <div className="bg-green-500/5 border border-green-500/20 rounded-lg p-5">
