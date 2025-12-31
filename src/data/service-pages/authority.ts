@@ -10,12 +10,12 @@ export const authorityConfig: ServicePageConfig = {
   keywords: "white label link building, local authority building, citation building, off-page SEO, local link acquisition",
 
   hero: {
-    headline: "White-Label Local Authority Building",
-    highlightedText: "Services",
+    headline: "White Label Local Authority Building for",
+    highlightedText: "Digital Agencies",
     subheadline: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time.",
-    qualifierLine: "White-label link building and citation management for agencies serving local businesses in competitive markets.",
-    ctaText: "Schedule a Discovery Call",
-    ctaSubtext: "Start a Conversation"
+    qualifierLine: "You stay the hero. We handle the link building and citation management that makes rankings defensible.",
+    ctaText: "Start the Conversation",
+    ctaSubtext: "Built for agencies serving local businesses in competitive markets."
   },
 
   problem: {
@@ -46,7 +46,7 @@ export const authorityConfig: ServicePageConfig = {
     ],
     closingLine: "We build authority the hard way: strategically, earned, and compounding.",
     closingHighlight: "That's why it lasts.",
-    ctaText: "Schedule a Discovery Call"
+    ctaText: "Start the Conversation"
   },
 
   outcomes: {
@@ -196,7 +196,7 @@ export const authorityConfig: ServicePageConfig = {
   qualification: {
     eyebrow: "Before We Talk",
     headline: "We Are Selective About Who We Work With",
-    subheadline: "Fit matters more than volume. Authority only works when it's earned.",
+    subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
         point: "Your clients are willing to invest in long-term credibility",
@@ -213,6 +213,10 @@ export const authorityConfig: ServicePageConfig = {
       {
         point: "You value quality placements over link volume",
         detail: "Our focus is relevant, earned links from real sites. Not bulk directory submissions or low-quality link packages."
+      },
+      {
+        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
       }
     ],
     notFit: [
