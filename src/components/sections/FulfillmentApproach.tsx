@@ -1,5 +1,75 @@
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Target, Shield, Layers, RefreshCcw } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { searchPixabayImages } from "@/lib/pixabay";
+
+// Lazy Pixabay image for the section
+const LazyPixabayBackground = ({ keyword }: { keyword: string }) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px', threshold: 0.1 }
+    );
+
+    if (imgRef.current) observer.observe(imgRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const fetchImage = async () => {
+      try {
+        const response = await searchPixabayImages({
+          query: keyword,
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 5,
+          minWidth: 1200,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (response.hits.length > 0) {
+          setImageUrl(response.hits[0].largeImageURL);
+        }
+      } catch (error) {
+        console.error('Error fetching image:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchImage();
+  }, [isInView, keyword]);
+
+  return (
+    <div ref={imgRef} className="absolute inset-0 overflow-hidden">
+      {imageUrl && !isLoading && (
+        <>
+          <img
+            src={imageUrl}
+            alt="Business partnership and collaboration"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-elevated via-surface-elevated/95 to-surface-elevated/80" />
+        </>
+      )}
+    </div>
+  );
+};
 
 const FulfillmentApproach = () => {
   const sectionRef = useScrollReveal();
@@ -32,6 +102,9 @@ const FulfillmentApproach = () => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="reveal-section py-20 lg:py-28 bg-surface-elevated relative overflow-hidden"
     >
+      {/* Pixabay background image */}
+      <LazyPixabayBackground keyword="business teamwork partnership handshake" />
+      
       {/* Subtle dot grid pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
@@ -48,7 +121,7 @@ const FulfillmentApproach = () => {
       {/* Subtle accent line */}
       <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent" />
       
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Two-column layout */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">

@@ -1,5 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { useState, useEffect, useRef } from "react";
+import { searchPixabayImages } from "@/lib/pixabay";
 
 interface ContentBlock {
   eyebrow: string;
@@ -8,14 +10,123 @@ interface ContentBlock {
   bullets?: string[];
   imageSrc?: string;
   imageAlt?: string;
+  pixabayKeyword?: string; // Optional keyword for Pixabay lookup
 }
 
 interface AlternatingContentProps {
   blocks: ContentBlock[];
 }
 
+// Lazy-loaded Pixabay image component
+const LazyPixabayImage = ({ 
+  keyword, 
+  alt, 
+  fallbackKeyword = "digital marketing business" 
+}: { 
+  keyword: string; 
+  alt: string;
+  fallbackKeyword?: string;
+}) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '100px', threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Fetch image when in view
+  useEffect(() => {
+    if (!isInView) return;
+
+    const fetchImage = async () => {
+      try {
+        const response = await searchPixabayImages({
+          query: keyword,
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 3,
+          minWidth: 800,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (response.hits.length > 0) {
+          setImageUrl(response.hits[0].largeImageURL);
+        } else {
+          // Fallback
+          const fallbackResponse = await searchPixabayImages({
+            query: fallbackKeyword,
+            imageType: 'photo',
+            orientation: 'horizontal',
+            perPage: 3,
+            minWidth: 800,
+            safeSearch: true
+          });
+          if (fallbackResponse.hits.length > 0) {
+            setImageUrl(fallbackResponse.hits[0].largeImageURL);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching Pixabay image:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchImage();
+  }, [isInView, keyword, fallbackKeyword]);
+
+  return (
+    <div ref={imgRef} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+      {/* Glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-cta/20 rounded-2xl blur-2xl opacity-50 -z-10 translate-y-4" />
+      
+      {/* Loading skeleton */}
+      {(isLoading || !isInView) && (
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 animate-pulse rounded-2xl" />
+      )}
+      
+      {/* Actual image */}
+      {imageUrl && (
+        <img
+          src={imageUrl}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          className={`w-full h-full object-cover rounded-2xl shadow-2xl transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          onLoad={() => setIsLoading(false)}
+        />
+      )}
+    </div>
+  );
+};
+
 const AlternatingContent = ({ blocks }: AlternatingContentProps) => {
   const sectionRef = useScrollReveal();
+  
+  // Generate keywords based on headline/eyebrow
+  const getKeyword = (block: ContentBlock) => {
+    if (block.pixabayKeyword) return block.pixabayKeyword;
+    // Generate from eyebrow or headline
+    return block.eyebrow.toLowerCase().replace(/[^a-z0-9\s]/g, '') || 'business marketing';
+  };
   
   return (
     <section ref={sectionRef} className="py-20 lg:py-28 section-light relative overflow-hidden reveal-section">
@@ -29,6 +140,7 @@ const AlternatingContent = ({ blocks }: AlternatingContentProps) => {
         <div className="space-y-24 lg:space-y-32">
           {blocks.map((block, index) => {
             const isReversed = index % 2 === 1;
+            const descriptiveAlt = block.imageAlt || `${block.eyebrow} - ${block.headline} | Professional marketing services`;
             
             return (
               <div
@@ -74,39 +186,17 @@ const AlternatingContent = ({ blocks }: AlternatingContentProps) => {
                       <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-cta/20 rounded-2xl blur-2xl opacity-50 -z-10 translate-y-4" />
                       <img
                         src={block.imageSrc}
-                        alt={block.imageAlt || block.headline}
+                        alt={descriptiveAlt}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-auto rounded-2xl shadow-2xl"
                       />
                     </div>
                   ) : (
-                    /* Abstract visual placeholder */
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-surface-elevated to-surface-card border border-border rounded-2xl" />
-                      {/* Decorative elements */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-3/4 h-3/4 relative">
-                          {/* Floating geometric shapes */}
-                          <div className="absolute top-0 left-1/4 w-20 h-20 rounded-full bg-accent-blue/20 animate-pulse" style={{ animationDuration: "4s" }} />
-                          <div className="absolute bottom-1/4 right-0 w-32 h-32 rounded-full bg-cta/15 animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }} />
-                          <div className="absolute bottom-0 left-0 w-24 h-24 rounded-lg bg-accent-blue/10 rotate-12 animate-pulse" style={{ animationDuration: "6s", animationDelay: "2s" }} />
-                          {/* Grid lines */}
-                          <div className="absolute inset-0 opacity-20">
-                            <div 
-                              className="w-full h-full"
-                              style={{
-                                backgroundImage: `linear-gradient(hsl(var(--accent-blue)/0.3) 1px, transparent 1px),
-                                                 linear-gradient(90deg, hsl(var(--accent-blue)/0.3) 1px, transparent 1px)`,
-                                backgroundSize: '30px 30px'
-                              }}
-                            />
-                          </div>
-                          {/* Central icon area */}
-                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-xl bg-surface-elevated border border-border flex items-center justify-center">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cta to-cta-glow" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <LazyPixabayImage 
+                      keyword={getKeyword(block)} 
+                      alt={descriptiveAlt}
+                    />
                   )}
                 </div>
               </div>
