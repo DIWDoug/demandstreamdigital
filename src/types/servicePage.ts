@@ -24,7 +24,7 @@ export interface PainPoint {
 }
 
 export interface Outcome {
-  icon: LucideIcon;
+  icon?: LucideIcon; // Optional - if not provided, number will be displayed
   title: string;
   description: string;
 }

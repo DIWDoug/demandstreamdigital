@@ -59,22 +59,18 @@ export const paidMediaConfig: ServicePageConfig = {
     subheadline: "Proactive strategy paired with systematic refinement. Budget flows toward what converts, away from what does not.",
     items: [
       {
-        icon: Zap,
         title: "Leads Start Flowing Immediately",
         description: "Paid media delivers qualified leads within days, not quarters."
       },
       {
-        icon: Target,
         title: "Waste Gets Cut Weekly",
         description: "Underperforming keywords, audiences, and placements are identified and removed every week."
       },
       {
-        icon: TrendingUp,
         title: "Efficiency Compounds Monthly",
         description: "Ongoing refinement lowers cost per lead as targeting and messaging improve."
       },
       {
-        icon: DollarSign,
         title: "Scalable Growth When Ready",
         description: "Proven campaigns scale predictably when capacity and goals align."
       }

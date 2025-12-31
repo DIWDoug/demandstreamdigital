@@ -59,22 +59,18 @@ export const emailMarketingConfig: ServicePageConfig = {
     subheadline: "The outcomes your clients experience when email is done right.",
     items: [
       {
-        icon: TrendingUp,
         title: "Repeat Revenue on Autopilot",
         description: "Local businesses thrive on repeat customers. Automated sequences remind past customers to return, promote seasonal services, and drive bookings without manual effort."
       },
       {
-        icon: Repeat,
         title: "Top-of-Mind Between Visits",
         description: "For service businesses with long buying cycles, email keeps the brand present. When the customer is ready to buy again, your client is the first call."
       },
       {
-        icon: Zap,
         title: "Inbox Placement That Protects Reputation",
         description: "Proper authentication and list hygiene ensure emails reach the inbox. Deliverability protects sender reputation and maximizes every send."
       },
       {
-        icon: Target,
         title: "Local Relevance at Scale",
         description: "Segmentation by service area, purchase history, and engagement. The right offer reaches the right customer at the right time."
       }
