@@ -12,7 +12,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Email Marketing for",
     highlightedText: "Local Business Clients",
-    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that respect subscriber expectations, deliver value consistently, and drive repeat revenue.",
+    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently, respect the inbox, and drive repeat revenue.",
     qualifierLine: "You stay the hero. We handle the email execution that keeps customers coming back.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies serving local service businesses and retailers."
@@ -102,8 +102,8 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 2,
         name: "Execution",
-        title: "Campaigns & Subscriber Lifecycle",
-        description: "Regular campaigns and automated sequences that move subscribers through their lifecycle.",
+        title: "Campaigns & Automated Follow-Ups",
+        description: "Regular campaigns and automated sequences that keep customers engaged and coming back.",
         activities: [
           "Campaign calendar for local relevance",
           "Seasonal and service-specific campaigns",
@@ -120,8 +120,8 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Expansion",
-        title: "Segmentation & Behavioral Triggers",
-        description: "Delivering the right message to the right local customer based on behavior and service history.",
+        title: "Segmentation & Targeting",
+        description: "Delivering the right message to the right local customer based on their history and interests.",
         activities: [
           "Service-based segmentation",
           "Purchase history targeting",
@@ -172,9 +172,9 @@ export const emailMarketingConfig: ServicePageConfig = {
         icon: Settings
       },
       {
-        title: "Subscriber Lifecycle Automation",
-        slug: "subscriber-lifecycle-automation",
-        description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock.",
+        title: "Automated Follow-Ups",
+        slug: "automated-follow-ups",
+        description: "Welcome sequences, post-service follow-ups, and win-back campaigns that work around the clock.",
         icon: Users
       },
       {
