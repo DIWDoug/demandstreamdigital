@@ -103,7 +103,7 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
                 </div>
                 <div>
                   <Input
-                    type="url"
+                    type="text"
                     placeholder="Website URL"
                     value={formData.website}
                     onChange={(e) => setFormData({ ...formData, website: e.target.value })}
