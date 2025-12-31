@@ -57,12 +57,12 @@ const Footer = () => {
       title: "AUTHORITY",
       hubSlug: "local-authority-building",
       items: [
-        { label: "PR Placements", slug: "pr-placements" },
-        { label: "Digital PR", slug: "digital-pr" },
-        { label: "Industry Directories", slug: "industry-directories" },
+        { label: "PR Placement", slug: "pr-placement" },
+        { label: "Local Citations", slug: "local-citations" },
         { label: "Brand Mentions", slug: "brand-mentions" },
-        { label: "Reputation Signals", slug: "reputation-signals" },
-        { label: "Trust Building", slug: "trust-building" }
+        { label: "Guest Posts & Niche Edits", slug: "guest-posts-niche-edits" },
+        { label: "Trust-Building Links", slug: "trust-building-links" },
+        { label: "Local Authority", slug: "local-authority-building" }
       ]
     },
     {
