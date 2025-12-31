@@ -60,22 +60,18 @@ export const localSEOConfig: ServicePageConfig = {
     subheadline: "These outcomes only appear when strategy matches market reality.",
     items: [
       {
-        icon: TrendingUp,
         title: "Organic Local Visibility That Compounds",
         description: "Rankings achieved today continue driving leads months and years later. Unlike paid ads, SEO builds equity."
       },
       {
-        icon: Target,
         title: "Qualified Local Traffic",
         description: "Local searchers are ready to buy. They are not researching. They are looking for a provider right now."
       },
       {
-        icon: Shield,
         title: "Competitive Defense in Local Search",
         description: "If you are not ranking, your client's competitors are taking those calls. Local SEO is defensive as much as offensive."
       },
       {
-        icon: Zap,
         title: "Sales From Local Organic Visibility",
         description: "Organic traffic converts at higher rates because searchers trust earned results over paid placements."
       }
