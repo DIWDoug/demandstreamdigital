@@ -708,58 +708,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "Digital PR & Media Placements",
-        slug: "digital-pr-media-placements",
-        description: "Press release distribution, journalist outreach, and earned media coverage that builds brand authority and backlink profiles.",
-        fullDescription: "Digital PR generates the kind of coverage that builds real authority: mentions in respected publications, quotes in industry media, and features that position your clients as leaders in their space.",
-        benefits: ["Media coverage and brand visibility", "High-authority backlinks", "Third-party credibility", "Thought leadership positioning", "Increased brand awareness"],
-        deliverables: ["PR strategy development", "Press release writing and distribution", "Journalist outreach campaigns", "Media list development", "Coverage tracking and reporting", "Opportunity monitoring"],
-        process: ["Story angle development", "Target media identification", "Press material creation", "Outreach execution", "Follow-up and relationship building", "Coverage monitoring and reporting"]
+        title: "PR Placement",
+        slug: "pr-placement",
+        description: "Strategic journalist outreach through Featured.com (formerly HARO), Qwoted, and direct media pitching for earned coverage.",
+        fullDescription: "We secure earned media coverage through systematic journalist outreach. Using platforms like Featured.com (formerly HARO) and Qwoted, we connect your clients with journalists actively seeking expert sources. This generates high-authority backlinks and third-party credibility that paid placements cannot replicate.",
+        benefits: ["High-authority editorial backlinks", "Third-party credibility and trust", "Brand visibility in respected publications", "Thought leadership positioning", "Organic media relationships over time"],
+        deliverables: ["Featured.com/HARO monitoring and response", "Qwoted opportunity identification", "Direct journalist outreach campaigns", "Story angle development", "Quote and source preparation", "Coverage tracking and reporting"],
+        process: ["Media opportunity identification", "Story angle and hook development", "Source preparation with client", "Pitch and response execution", "Follow-up and relationship building", "Coverage documentation and link tracking"]
       },
       {
-        title: "Industry Directory Listings",
-        slug: "industry-directory-listings",
-        description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites that signal expertise.",
-        fullDescription: "Industry directories and professional associations provide contextually relevant signals of expertise and legitimacy. We identify and secure placements in the directories that matter for each client's industry.",
-        benefits: ["Industry-relevant authority signals", "Niche backlinks", "Professional credibility", "Referral traffic potential", "Competitive parity or advantage"],
-        deliverables: ["Industry directory research", "Association identification", "Application and submission management", "Profile optimization", "Listing maintenance", "Performance tracking"],
-        process: ["Industry landscape analysis", "Opportunity prioritization", "Application preparation", "Submission and follow-up", "Profile optimization", "Ongoing maintenance"]
+        title: "Local Citations",
+        slug: "local-citations",
+        description: "Industry-specific directories, general citation platforms, and professional association listings that validate business legitimacy.",
+        fullDescription: "Citations build the foundational authority signals that search engines use to validate business legitimacy. We secure placements across industry-specific directories (dental, legal, heavy machinery, etc.), general citation platforms, and professional associations relevant to each client's vertical.",
+        benefits: ["Industry-relevant authority signals", "NAP consistency across the web", "Vertical-specific credibility", "Referral traffic from directories", "Foundation for local authority"],
+        deliverables: ["Industry directory research and submission", "General citation building (50+ sites)", "Professional association identification", "Data aggregator submissions", "NAP consistency audit and maintenance", "Citation performance tracking"],
+        process: ["Industry landscape analysis", "Directory opportunity prioritization", "Application and submission execution", "Profile optimization", "Ongoing monitoring and maintenance", "Performance reporting"]
       },
       {
-        title: "Local Sponsorship & Partnerships",
-        slug: "local-sponsorship-partnerships",
-        description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement that create authentic local signals.",
-        fullDescription: "Local sponsorships and partnerships create authentic community connections that search engines recognize as legitimate authority signals. These efforts also build genuine community goodwill and local brand awareness.",
-        benefits: ["Authentic local authority signals", "Community brand building", "Local link acquisition", "Event marketing opportunities", "Genuine relationship development"],
-        deliverables: ["Sponsorship opportunity research", "Partnership strategy", "Outreach and negotiation", "Sponsorship management", "Link and mention acquisition", "Community engagement tracking"],
-        process: ["Opportunity identification", "Value assessment", "Outreach execution", "Agreement negotiation", "Activation support", "Benefit tracking"]
+        title: "Brand Mentions",
+        slug: "brand-mentions",
+        description: "Strategic presence on Reddit, Quora, and social platforms that builds organic brand visibility and topical relevance.",
+        fullDescription: "Brand mentions across discussion platforms create organic signals that search engines increasingly value. We build strategic presence on Reddit, Quora, and relevant social platforms through genuine engagement that positions your clients as helpful resources in their space.",
+        benefits: ["Organic brand visibility", "Topical relevance signals", "Community trust building", "Referral traffic from engaged audiences", "Unstructured citation value"],
+        deliverables: ["Reddit community identification and engagement", "Quora topic monitoring and responses", "Social platform brand monitoring", "Mention opportunity identification", "Strategic response development", "Brand mention tracking and reporting"],
+        process: ["Platform and community research", "Engagement strategy development", "Ongoing monitoring setup", "Strategic response execution", "Mention documentation", "Performance analysis"]
       },
       {
-        title: "Reputation & Trust Management",
-        slug: "reputation-trust-management",
-        description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation.",
-        fullDescription: "Online reputation directly impacts both search visibility and customer conversion. We monitor, manage, and proactively build reputation to protect brand perception and support marketing goals.",
-        benefits: ["Protected brand reputation", "Improved sentiment over time", "Early issue identification", "Trust signal development", "Customer confidence building"],
-        deliverables: ["Reputation monitoring setup", "Sentiment tracking and analysis", "Review platform management", "Brand mention monitoring", "Reputation reporting", "Proactive reputation building"],
-        process: ["Current reputation audit", "Monitoring infrastructure setup", "Baseline establishment", "Ongoing monitoring and management", "Proactive improvement initiatives"]
+        title: "Guest Posts & Niche Edits",
+        slug: "guest-posts-niche-edits",
+        description: "Quality content placements and contextual link insertions on relevant industry and local publications.",
+        fullDescription: "Guest posting and niche edits provide contextually relevant backlinks from established publications. We secure placements through genuine editorial relationships, creating content that provides value to readers while building your client's authority profile.",
+        benefits: ["Contextually relevant backlinks", "Industry publication visibility", "Thought leadership positioning", "Referral traffic potential", "Long-term link equity"],
+        deliverables: ["Publication outreach and relationship building", "Guest post content creation", "Niche edit opportunity identification", "Link placement negotiation", "Content quality assurance", "Link tracking and reporting"],
+        process: ["Target publication identification", "Outreach and pitch development", "Content creation or edit identification", "Placement negotiation", "Quality verification", "Link documentation and monitoring"]
       },
       {
-        title: "Thought Leadership Content",
-        slug: "thought-leadership-content",
-        description: "Expert articles, guest posts, and industry commentary that positions clients as trusted authorities in their field.",
-        fullDescription: "Thought leadership content establishes expertise and generates authority signals through earned placements on industry publications and influential platforms.",
-        benefits: ["Demonstrated expertise", "Authority-building backlinks", "Industry visibility", "Speaking and media opportunities", "Competitive differentiation"],
-        deliverables: ["Content strategy development", "Guest post outreach and placement", "Byline article creation", "Industry commentary opportunities", "Expert interview coordination", "Content performance tracking"],
-        process: ["Topic and angle development", "Target publication identification", "Content creation", "Placement outreach", "Publication and promotion", "Performance tracking"]
+        title: "Trust-Building Links",
+        slug: "trust-building-links",
+        description: "Foundational link-building through Web 2.0 properties, document uploads, and manual outreach that establishes baseline authority.",
+        fullDescription: "Trust-building links form the foundation of a healthy backlink profile. We execute manual link-building through Web 2.0 platforms, document sharing sites, and other foundational tactics that create the baseline authority every domain needs before more aggressive strategies take effect.",
+        benefits: ["Baseline authority establishment", "Diverse link profile foundation", "Supporting signals for higher-authority links", "Consistent link velocity", "Risk-managed link building"],
+        deliverables: ["Web 2.0 property creation and linking", "Document uploads (PDF, presentations)", "Social profile establishment", "Foundational directory submissions", "Link velocity management", "Portfolio diversity tracking"],
+        process: ["Current profile audit", "Foundation gap identification", "Platform selection and prioritization", "Content creation for placements", "Submission and verification", "Ongoing portfolio maintenance"]
       },
       {
-        title: "Awards & Recognition Strategy",
-        slug: "awards-recognition-strategy",
-        description: "Strategic award submissions, certification pursuits, and accolade promotion that builds credibility and differentiates from competitors.",
-        fullDescription: "Awards and recognition provide powerful third-party validation. We identify relevant awards, prepare compelling submissions, and help clients leverage wins for maximum impact.",
-        benefits: ["Third-party credibility", "Competitive differentiation", "Marketing assets and content", "Employee and customer pride", "Media coverage opportunities"],
-        deliverables: ["Award opportunity research", "Submission calendar development", "Application preparation", "Win promotion strategy", "Badge and logo usage guidance", "Ongoing opportunity identification"],
-        process: ["Award landscape analysis", "Opportunity prioritization", "Submission preparation", "Application submission", "Win promotion", "Ongoing opportunity monitoring"]
+        title: "Local Authority Building",
+        slug: "local-authority-building",
+        description: "Local associations, community blogs, press releases, and geographic link opportunities that establish regional relevance.",
+        fullDescription: "Local authority requires geographic relevance signals that national link building cannot provide. We target local associations, community blogs, chamber of commerce memberships, and Google-embedded press releases that establish your client as a trusted local business.",
+        benefits: ["Geographic relevance signals", "Community trust and visibility", "Local publication backlinks", "Association credibility", "Press release distribution value"],
+        deliverables: ["Local association identification and outreach", "Community blog placement", "Chamber of commerce submissions", "Press release writing and distribution", "Local sponsorship opportunity research", "Geographic link tracking"],
+        process: ["Local opportunity research", "Association and community outreach", "Press release development", "Placement execution", "Link documentation", "Local authority reporting"]
       }
     ]
   },
