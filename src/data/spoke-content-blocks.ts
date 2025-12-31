@@ -39,6 +39,24 @@ import reviewResponseImg from "@/assets/spoke/review-response.png";
 import reviewPlatformsImg from "@/assets/spoke/review-platforms.png";
 import reviewMonitoringImg from "@/assets/spoke/review-monitoring.png";
 
+// Stock images for spokes without custom illustrations
+import citationBuildingImg from "@/assets/stock/citation-building.jpg";
+import reviewManagementImg from "@/assets/stock/review-management.jpg";
+import photoOptimizationImg from "@/assets/stock/photo-optimization.jpg";
+import qaManagementImg from "@/assets/stock/qa-management.jpg";
+import postSchedulingImg from "@/assets/stock/post-scheduling.jpg";
+import googleAdsImg from "@/assets/stock/google-ads.jpg";
+import metaAdsImg from "@/assets/stock/meta-ads.jpg";
+import emailMarketingImg from "@/assets/stock/email-marketing.jpg";
+import localSeoImg from "@/assets/stock/local-seo.jpg";
+import gbpOptimizationImg from "@/assets/stock/gbp-optimization.jpg";
+import linkBuildingImg from "@/assets/stock/link-building.jpg";
+import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
+import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
+import reportingImg from "@/assets/stock/reporting.jpg";
+import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
+import retargetingImg from "@/assets/stock/retargeting.jpg";
+
 interface SubPoint {
   title: string;
   description: string;
@@ -667,6 +685,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Comparison", description: "Citation counts and sources compared against local pack leaders to identify opportunities." },
         { title: "AI Source Audit", description: "Yelp, TripAdvisor, Healthgrades, and vertical directories checked for AI Overview eligibility." }
       ],
+      imageSrc: citationBuildingImg,
+      imageAlt: "Citation audit and management process",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -734,6 +754,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Attributes", description: "Every applicable attribute checked—accessibility, payment methods, amenities. AI Overviews pull attribute data for recommendations." },
         { title: "Hours & Special Hours", description: "Accurate hours including holidays. Incorrect hours trigger negative reviews and AI inaccuracies." }
       ],
+      imageSrc: gbpOptimizationImg,
+      imageAlt: "Google Business Profile optimization dashboard",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -933,6 +955,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Authenticity First", description: "Original photos only—never stock photos. Stock images lack originality and often don't represent your business accurately." },
         { title: "Photo Calendar", description: "Monthly photo additions scheduled. Fresh content signals activity and keeps profile current." }
       ],
+      imageSrc: photoOptimizationImg,
+      imageAlt: "Photo optimization and visual content strategy",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -996,6 +1020,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Differentiators", description: "Questions that let you highlight competitive advantages." },
         { title: "Local Context", description: "Questions about service areas, parking, and local details." }
       ],
+      imageSrc: qaManagementImg,
+      imageAlt: "Q&A management and customer engagement",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1044,6 +1070,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Event Promotion", description: "Upcoming events and sales highlighted with dedicated posts. Event posts get special treatment in GBP display." },
         { title: "Purchase Intent Focus", description: "Every post answers: what can the customer buy, book, or do right now? Social-style posts get ignored." }
       ],
+      imageSrc: postSchedulingImg,
+      imageAlt: "Social media and GBP post scheduling",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1096,6 +1124,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Ad Scheduling", description: "Ads shown during business hours or peak conversion times. Budget concentrated." },
         { title: "Device Optimization", description: "Bids adjusted by device based on conversion performance data." }
       ],
+      imageSrc: googleAdsImg,
+      imageAlt: "Google Ads campaign management dashboard",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1144,6 +1174,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Lookalike Audiences", description: "Best customers expanded to similar prospects. Scale with quality." },
         { title: "Exclusions", description: "Existing customers and irrelevant segments excluded. Budget protected." }
       ],
+      imageSrc: metaAdsImg,
+      imageAlt: "Meta ads audience targeting strategy",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1192,6 +1224,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Profile Optimization", description: "Photos, description, and highlights optimized for conversion." },
         { title: "Review Integration", description: "Google reviews prominently displayed. Social proof drives calls." }
       ],
+      imageSrc: localServiceAdsImg,
+      imageAlt: "Local Service Ads profile setup",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1240,6 +1274,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Abandonment Recovery", description: "Form starters and quote requesters specifically targeted." },
         { title: "Cross-Device", description: "Users followed across devices. Desktop research, mobile conversion." }
       ],
+      imageSrc: retargetingImg,
+      imageAlt: "Retargeting campaign audience segmentation",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1388,6 +1424,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitive Analysis", description: "Competitor email programs analyzed. Opportunities identified." },
         { title: "KPI Definition", description: "Success metrics defined upfront. Measurement framework established." }
       ],
+      imageSrc: emailMarketingImg,
+      imageAlt: "Email marketing campaign strategy",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1695,6 +1733,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Contributed Content", description: "Bylined articles placed in relevant publications." },
         { title: "Event Coverage", description: "Local events used for coverage opportunities." }
       ],
+      imageSrc: linkBuildingImg,
+      imageAlt: "Local link building and outreach",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -1987,6 +2027,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
         { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
       ],
+      imageSrc: reportingImg,
+      imageAlt: "White-label dashboard and reporting",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
