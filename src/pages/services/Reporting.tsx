@@ -2,15 +2,26 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhyItMatters from "@/components/services/WhyItMatters";
-import OurApproach from "@/components/services/OurApproach";
-import HubSpokeDiagram from "@/components/services/HubSpokeDiagram";
-import ServiceBenefits from "@/components/services/ServiceBenefits";
-import HubFAQ from "@/components/services/HubFAQ";
-import OtherServices from "@/components/services/OtherServices";
+import { 
+  ServiceProblemSection,
+  ServiceOutcomesSection,
+  ServiceRoadmapSection,
+  ServiceBuildingBlocksSection,
+  ServiceFitQualifierSection,
+  ServiceGroupedFAQ,
+  ServiceEcosystemSection
+} from "@/components/services/generic";
+import { reportingConfig } from "@/data/service-pages/reporting";
 import { getHubBySlug } from "@/data/services";
+
+const SectionDivider = () => (
+  <div className="w-full">
+    <hr className="border-t border-border/30" />
+  </div>
+);
 
 const Reporting = () => {
   const hub = getHubBySlug("reporting");
@@ -24,9 +35,9 @@ const Reporting = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White-Label Reporting & Analytics for Agencies | Dialed-In Web</title>
-        <meta name="description" content="White-label reporting and analytics dashboards for agencies. Rank tracking, call attribution, ROI analysis, and client presentations that prove value and retain clients." />
-        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services/reporting" />
+        <title>{reportingConfig.metaTitle}</title>
+        <meta name="description" content={reportingConfig.metaDescription} />
+        <link rel="canonical" href={reportingConfig.canonicalUrl} />
       </Helmet>
       
       <Header />
@@ -37,13 +48,37 @@ const Reporting = () => {
           breadcrumbs={breadcrumbItems}
         />
       </div>
-      <WhyItMatters {...hub.whyItMatters} />
-      <OurApproach {...hub.ourApproach} />
-      <HubSpokeDiagram hubSlug={hub.slug} hubTitle={hub.title} spokes={hub.spokes} />
-      <ServiceBenefits {...hub.benefits} />
+      
+      <TrustReel />
+      
+      <SectionDivider />
+      
+      <ServiceProblemSection config={reportingConfig.problem} />
+      
+      <ServiceOutcomesSection config={reportingConfig.outcomes} />
+      
+      <SectionDivider />
+      
+      <ServiceRoadmapSection config={reportingConfig.roadmap} />
+      
+      <SectionDivider />
+      
+      <ServiceBuildingBlocksSection config={reportingConfig.buildingBlocks} />
+      
+      <SectionDivider />
+      
+      <ServiceFitQualifierSection config={reportingConfig.qualification} />
+      
       <Testimonials />
-      <HubFAQ title={hub.title} faqs={hub.faqs} />
-      <OtherServices currentHubSlug={hub.slug} />
+      
+      <SectionDivider />
+      
+      <ServiceGroupedFAQ config={reportingConfig.faq} />
+      
+      <SectionDivider />
+      
+      <ServiceEcosystemSection config={reportingConfig.ecosystem} />
+      
       <ContactForm />
       <Footer />
     </div>
