@@ -282,11 +282,25 @@ export const hubs: Hub[] = [
       {
         title: "Review Management",
         slug: "review-management",
-        description: "Systematic review generation, professional responses, and reputation building that drives rankings and AI visibility.",
-        fullDescription: "Reviews now account for 20% of local ranking factors according to the 2026 Whitespark study. We implement systematic review generation campaigns and professional response management. Responses aren't just good customer service, they're an SEO signal and feed the content AI systems parse when generating recommendations.",
-        benefits: ["Increased review volume and velocity for ranking signals", "Improved star rating over time through systematic generation", "Better conversion from profile views to actions", "AI Overview source eligibility through Yelp, TripAdvisor, and vertical platforms", "Response content that AI systems extract for recommendations", "Competitive advantage in review quantity, recency, and quality"],
-        deliverables: ["Review generation campaign with direct links and QR codes", "Review request templates for email, text, and receipts", "Professional response drafting for all reviews including negatives", "Review monitoring and real-time alerts", "Monthly review performance reports with sentiment analysis", "AI platform monitoring for Yelp, TripAdvisor, and industry sites"],
-        process: ["Review audit and competitive analysis", "Generation campaign strategy with timing optimization", "Template and workflow development", "Ongoing response drafting with AI-friendly content", "Performance tracking and sentiment monitoring"]
+        description: "Systematic review generation, professional responses, and reputation monitoring across all platforms that matter for rankings and AI visibility.",
+        fullDescription: "Reviews account for 20% of local ranking factors and 93% of consumers read local reviews before choosing a business. We implement systematic review generation using proven tactics: 51% of customers leave reviews when asked, but 30% skip reviews because the process is confusing. We eliminate friction with direct links, clear instructions, and multi-channel requests timed to peak satisfaction moments.",
+        benefits: [
+          "Increased review volume: 51% of customers leave reviews when asked directly",
+          "Platform diversification across Google (66%), Facebook (42%), Yelp (36%), and industry sites",
+          "Response strategy that exceeds expectations (60% expect response within 2 days)",
+          "AI Overview eligibility through Yelp, TripAdvisor, and vertical platforms AI systems cite",
+          "Review recency signals: 39% of customers filter for recent reviews first",
+          "Trust signals that drive conversion: businesses with 4.5+ stars get 4x more clicks"
+        ],
+        deliverables: [
+          "Review generation campaign with direct links, QR codes, and multiple platform options",
+          "Multi-channel request strategy: email (54% prefer), in-person (45%), SMS (29%)",
+          "Personalized request templates that convert and reminder sequences",
+          "Professional response drafting within 24-48 hours for all reviews",
+          "Monthly review performance reports with sentiment analysis",
+          "AI platform monitoring for Yelp, TripAdvisor, OpenTable, and industry directories"
+        ],
+        process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"]
       },
       {
         title: "Citation Building",
