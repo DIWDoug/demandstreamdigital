@@ -21,7 +21,7 @@ export const authorityConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most Authority Building Fails",
-    intro: "You've seen this before. Links are acquired, press releases go out, but authority never compounds. Rankings stay fragile, and the credibility gap never closes.",
+    intro: "You've seen this before. Links are acquired, citations are built, but local authority never compounds. Rankings stay fragile, and competitors with real community presence keep winning.",
     painPoints: [
       {
         icon: Globe,
