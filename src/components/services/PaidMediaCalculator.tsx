@@ -148,11 +148,11 @@ const PaidMediaCalculator = () => {
               </h3>
               <span className="text-xs text-muted-foreground">+ {formatCurrency(SETUP_FEE)} setup per account</span>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="flex md:grid md:grid-cols-5 gap-3 overflow-x-auto pb-2 -mx-2 px-2 md:mx-0 md:px-0 md:overflow-visible">
               {OEM_TIERS.map((tier, index) => (
                 <div 
                   key={index}
-                  className={`rounded-lg p-3 text-center transition-all ${
+                  className={`flex-shrink-0 w-28 md:w-auto rounded-lg p-3 text-center transition-all ${
                     calculations.currentTier === tier 
                       ? 'bg-primary/20 border-2 border-primary' 
                       : 'bg-background/50 border border-border/50'
