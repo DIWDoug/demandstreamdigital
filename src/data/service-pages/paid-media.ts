@@ -252,12 +252,16 @@ export const paidMediaConfig: ServicePageConfig = {
         detail: "Below this threshold, there is not enough budget to generate meaningful data or results."
       },
       {
+        point: "No internal process for closing leads",
+        detail: "We generate leads, we do not close them. If calls go unanswered or your client lacks a sales process, the investment will not convert to revenue."
+      },
+      {
         point: "Expecting overnight results without optimization time",
         detail: "Campaigns launch quickly, but optimization takes weeks. Expecting fully refined performance in week one sets everyone up for disappointment."
       },
       {
-        point: "Clients who do not answer the phone or follow up with leads",
-        detail: "If calls go to voicemail or leads sit untouched, we cannot optimize effectively and the spend is wasted."
+        point: "Looking for sales training or conversion coaching",
+        detail: "Our job ends when the lead comes in. What happens after the form fill or phone call is up to your client's team."
       },
       {
         point: "Price is the only decision factor",
