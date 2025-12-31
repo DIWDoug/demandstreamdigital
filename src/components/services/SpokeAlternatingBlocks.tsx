@@ -1,13 +1,21 @@
-import { Check, Eye, Settings, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
+
+interface SubPoint {
+  title: string;
+  description: string;
+}
 
 interface ContentBlock {
-  eyebrow: string;
+  category: string;
   headline: string;
   description: string;
-  bullets: string[];
-  accentColor: "cta" | "blue" | "slate";
-  icon: React.ReactNode;
+  subPoints: SubPoint[];
+  imageSrc?: string;
+  imageAlt?: string;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 interface SpokeAlternatingBlocksProps {
@@ -17,213 +25,201 @@ interface SpokeAlternatingBlocksProps {
 const SpokeAlternatingBlocks = ({ blocks }: SpokeAlternatingBlocksProps) => {
   const sectionRef = useScrollReveal();
   
-  const getAccentClasses = (accent: ContentBlock["accentColor"]) => {
-    switch (accent) {
-      case "cta":
-        return {
-          eyebrow: "text-cta",
-          iconBg: "bg-cta/10",
-          iconColor: "text-cta",
-          checkBg: "bg-cta/10",
-          checkColor: "text-cta",
-          border: "border-cta/20",
-          glow: "from-cta/20 to-cta/5"
-        };
-      case "blue":
-        return {
-          eyebrow: "text-accent-blue",
-          iconBg: "bg-accent-blue/10",
-          iconColor: "text-accent-blue",
-          checkBg: "bg-accent-blue/10",
-          checkColor: "text-accent-blue",
-          border: "border-accent-blue/20",
-          glow: "from-accent-blue/20 to-accent-blue/5"
-        };
-      default:
-        return {
-          eyebrow: "text-slate-500",
-          iconBg: "bg-slate-100",
-          iconColor: "text-slate-600",
-          checkBg: "bg-slate-100",
-          checkColor: "text-slate-600",
-          border: "border-slate-200",
-          glow: "from-slate-200/50 to-slate-100/30"
-        };
-    }
-  };
-  
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 section-light relative overflow-hidden reveal-section">
-      {/* Background texture */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-accent-blue/3 blur-3xl" />
-        <div className="absolute bottom-1/4 -left-32 w-[500px] h-[500px] rounded-full bg-cta/3 blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="space-y-0">
-          {blocks.map((block, index) => {
-            const isReversed = index % 2 === 1;
-            const accent = getAccentClasses(block.accentColor);
-            
-            return (
-              <div
-                key={index}
-                className={`grid lg:grid-cols-2 gap-0 items-stretch ${
-                  isReversed ? "" : ""
-                }`}
-              >
-                {/* Content Card */}
-                <div 
-                  className={`relative p-8 lg:p-12 ${
-                    isReversed ? "lg:order-2" : ""
-                  } ${index === 0 ? "rounded-tl-2xl" : ""} ${
-                    index === blocks.length - 1 && !isReversed ? "rounded-bl-2xl" : ""
-                  } ${
-                    index === blocks.length - 1 && isReversed ? "rounded-br-2xl" : ""
-                  }`}
-                  style={{
-                    background: "linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%)"
-                  }}
-                >
-                  {/* Left accent line */}
-                  <div className={`absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b ${accent.glow} rounded-full`} />
+    <section ref={sectionRef} className="reveal-section">
+      {blocks.map((block, index) => {
+        const isReversed = index % 2 === 1;
+        const isLight = index % 2 === 0;
+        
+        return (
+          <div
+            key={index}
+            className={`py-16 lg:py-24 ${isLight ? "section-light" : "bg-surface-dark"}`}
+          >
+            <div className="container mx-auto px-6 lg:px-8">
+              <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${isReversed ? "" : ""}`}>
+                
+                {/* Content Side */}
+                <div className={`space-y-6 ${isReversed ? "lg:order-2" : ""}`}>
+                  {/* Category Badge */}
+                  <span className={`inline-block text-xs font-bold uppercase tracking-[0.2em] ${isLight ? "text-cta" : "text-cta"}`}>
+                    {block.category}
+                  </span>
                   
-                  {/* Content */}
-                  <div className="pl-6 space-y-5">
-                    {/* Icon + Eyebrow */}
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-xl ${accent.iconBg} flex items-center justify-center`}>
-                        {block.icon}
+                  {/* Main Headline */}
+                  <h2 className={`text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight ${isLight ? "text-slate-900" : "text-foreground"}`}>
+                    {block.headline}
+                  </h2>
+                  
+                  {/* Description */}
+                  <p className={`text-base leading-relaxed ${isLight ? "text-slate-600" : "text-text-secondary"}`}>
+                    {block.description}
+                  </p>
+                  
+                  {/* Sub-points */}
+                  <div className="space-y-5 pt-2">
+                    {block.subPoints.map((point, pointIndex) => (
+                      <div key={pointIndex} className="space-y-1">
+                        <h3 className={`text-lg font-semibold ${isLight ? "text-slate-800" : "text-foreground"}`}>
+                          {point.title}
+                        </h3>
+                        <p className={`text-sm leading-relaxed ${isLight ? "text-slate-600" : "text-text-muted"}`}>
+                          {point.description}
+                        </p>
                       </div>
-                      <span className={`text-xs font-bold uppercase tracking-[0.2em] ${accent.eyebrow}`}>
-                        {block.eyebrow}
-                      </span>
-                    </div>
-                    
-                    {/* Headline */}
-                    <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 leading-tight">
-                      {block.headline}
-                    </h2>
-                    
-                    {/* Description */}
-                    <p className="text-base text-slate-600 leading-relaxed">
-                      {block.description}
-                    </p>
-                    
-                    {/* Bullets */}
-                    <ul className="space-y-3 pt-2">
-                      {block.bullets.map((bullet, bulletIndex) => (
-                        <li key={bulletIndex} className="flex items-start gap-3">
-                          <div className={`w-5 h-5 rounded-full ${accent.checkBg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                            <Check className={`w-3 h-3 ${accent.checkColor}`} />
-                          </div>
-                          <span className="text-sm text-slate-600">{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    ))}
                   </div>
+                  
+                  {/* CTA */}
+                  {block.ctaText && (
+                    <div className="pt-4">
+                      <Link 
+                        to={block.ctaHref || "#contact"}
+                        className="inline-flex items-center gap-2 btn-cta group"
+                      >
+                        {block.ctaText}
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
 
-                {/* Visual Block */}
-                <div 
-                  className={`relative min-h-[300px] lg:min-h-0 ${
-                    isReversed ? "lg:order-1" : ""
-                  } ${index === 0 && isReversed ? "rounded-tl-2xl" : ""} ${
-                    index === 0 && !isReversed ? "rounded-tr-2xl" : ""
-                  } ${
-                    index === blocks.length - 1 && isReversed ? "rounded-bl-2xl" : ""
-                  } ${
-                    index === blocks.length - 1 && !isReversed ? "rounded-br-2xl" : ""
-                  }`}
-                  style={{
-                    background: `linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(220 40% 13%) 100%)`
-                  }}
-                >
-                  {/* Abstract visual */}
-                  <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-                    {/* Grid pattern */}
-                    <div 
-                      className="absolute inset-0 opacity-[0.04]"
-                      style={{
-                        backgroundImage: `linear-gradient(hsl(var(--cta)) 1px, transparent 1px),
-                                         linear-gradient(90deg, hsl(var(--cta)) 1px, transparent 1px)`,
-                        backgroundSize: '40px 40px'
-                      }}
-                    />
-                    
-                    {/* Floating elements */}
-                    <div className="relative w-3/4 h-3/4">
-                      <div 
-                        className={`absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-gradient-to-br ${accent.glow} blur-2xl animate-pulse`}
-                        style={{ animationDuration: "4s" }}
+                {/* Image Side */}
+                <div className={`${isReversed ? "lg:order-1" : ""}`}>
+                  {block.imageSrc ? (
+                    <div className="relative">
+                      {/* Glow effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cta/20 to-accent-blue/20 rounded-2xl blur-2xl opacity-40 -z-10 translate-y-4" />
+                      <img
+                        src={block.imageSrc}
+                        alt={block.imageAlt || block.headline}
+                        className="w-full h-auto rounded-2xl shadow-2xl border border-border/20"
                       />
+                    </div>
+                  ) : (
+                    /* Abstract visual placeholder */
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                       <div 
-                        className={`absolute bottom-1/4 right-1/4 w-32 h-32 rounded-full bg-gradient-to-tl ${accent.glow} blur-2xl animate-pulse`}
-                        style={{ animationDuration: "5s", animationDelay: "1s" }}
+                        className={`absolute inset-0 ${isLight ? "bg-gradient-to-br from-slate-100 to-slate-200" : "bg-gradient-to-br from-surface-elevated to-surface-card"} border border-border/30 rounded-2xl`}
                       />
-                      
-                      {/* Central indicator */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <div className={`w-20 h-20 rounded-2xl ${accent.iconBg} flex items-center justify-center border ${accent.border}`}>
-                          <span className="text-3xl font-bold text-white/80">{String(index + 1).padStart(2, '0')}</span>
+                      {/* Grid pattern */}
+                      <div 
+                        className="absolute inset-0 opacity-[0.06]"
+                        style={{
+                          backgroundImage: `linear-gradient(hsl(var(--cta)) 1px, transparent 1px),
+                                           linear-gradient(90deg, hsl(var(--cta)) 1px, transparent 1px)`,
+                          backgroundSize: '30px 30px'
+                        }}
+                      />
+                      {/* Floating elements */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-3/4 h-3/4 relative">
+                          <div 
+                            className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-cta/10 animate-pulse"
+                            style={{ animationDuration: "4s" }}
+                          />
+                          <div 
+                            className="absolute bottom-1/4 right-1/4 w-28 h-28 rounded-full bg-accent-blue/10 animate-pulse"
+                            style={{ animationDuration: "5s", animationDelay: "1s" }}
+                          />
+                          {/* Step number */}
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <div className={`w-20 h-20 rounded-2xl ${isLight ? "bg-white border-slate-200" : "bg-surface-elevated border-border/50"} border flex items-center justify-center shadow-lg`}>
+                              <span className={`text-3xl font-bold ${isLight ? "text-cta" : "text-cta"}`}>
+                                {String(index + 1).padStart(2, '0')}
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
-            );
-          })}
-        </div>
-      </div>
+            </div>
+          </div>
+        );
+      })}
     </section>
   );
 };
 
-// Pre-configured blocks for On-Page Optimization
+// Pre-configured blocks for On-Page Optimization (Dialed In style)
 export const onPageOptimizationBlocks: ContentBlock[] = [
   {
-    eyebrow: "Visible Elements",
-    headline: "What Users See. What Search Engines Read.",
-    description: "The visible layer of on-page optimization covers everything consumers interact with directly. We optimize for both readability and search intent.",
-    bullets: [
-      "Intent-focused title tags (we prioritize intent over arbitrary character limits)",
-      "CTR-optimized meta descriptions written like ad copy, following Backlinko best practices",
-      "Header hierarchies (H1-H6) aligned with natural language and LSI signals",
-      "Hub-spoke internal linking architecture for topical authority",
-      "Image alt text optimized for accessibility and screen readers"
+    category: "Visible Elements",
+    headline: "Superior On-Page Optimization",
+    description: "The visible layer of on-page optimization covers everything consumers interact with directly. We optimize for both readability and search intent, treating every element as an opportunity to signal relevance.",
+    subPoints: [
+      {
+        title: "Intent-Focused Title Tags",
+        description: "We prioritize search intent over arbitrary character limits. Title tags up to 100 characters when the context demands it, always leading with the primary keyword and intent signal."
+      },
+      {
+        title: "CTR-Optimized Meta Descriptions",
+        description: "Following Backlinko best practices, meta descriptions are written like ad copy. The goal is click-through rate, not keyword stuffing."
+      },
+      {
+        title: "Header Hierarchy & LSI Signals",
+        description: "H1-H6 tags aligned with natural language patterns and latent semantic indexing. The structure tells search engines exactly what the page is about."
+      },
+      {
+        title: "Hub-Spoke Internal Linking",
+        description: "Every page is connected to its topical cluster. Internal links build authority and guide both users and crawlers through your content architecture."
+      }
     ],
-    accentColor: "cta",
-    icon: <Eye className="w-5 h-5 text-cta" />
+    ctaText: "Start the Conversation",
+    ctaHref: "#contact"
   },
   {
-    eyebrow: "Technical Markup",
+    category: "Technical Markup",
     headline: "Structured Data That Earns Rich Results",
-    description: "Technical on-page goes beyond visible content. Comprehensive schema markup tells search engines exactly what your content means, unlocking enhanced SERP features.",
-    bullets: [
-      "LocalBusiness schema for local search visibility",
-      "Organization and About schema for brand authority",
-      "Service schema for service-area businesses",
-      "FAQ schema targeting People Also Ask features",
-      "Testimonials and review markup for trust signals"
+    description: "Technical on-page goes beyond visible content. Comprehensive schema markup tells search engines exactly what your content means, unlocking enhanced SERP features and AI engine visibility.",
+    subPoints: [
+      {
+        title: "LocalBusiness & Organization Schema",
+        description: "Core identity markup that powers Knowledge Panels, map integrations, and brand entity signals across Google's ecosystem."
+      },
+      {
+        title: "Service & About Schema",
+        description: "Service-area businesses get structured markup that clarifies what you do, where you do it, and the scope of your offerings."
+      },
+      {
+        title: "FAQ & Testimonials Markup",
+        description: "FAQ schema targets People Also Ask features. Review schema builds trust signals directly in search results."
+      },
+      {
+        title: "Image Alt Text & Accessibility",
+        description: "Every image optimized for screen readers and search engines. Accessibility isn't optional—it's a ranking factor and user experience imperative."
+      }
     ],
-    accentColor: "blue",
-    icon: <Settings className="w-5 h-5 text-accent-blue" />
+    ctaText: "Schedule a Consultation",
+    ctaHref: "#contact"
   },
   {
-    eyebrow: "Full-Funnel Content",
+    category: "Full-Funnel Content",
     headline: "Awareness to Decision. Mapped and Optimized.",
-    description: "We approach on-page optimization with the entire customer journey in mind. Each content type is treated uniquely based on where it sits in the funnel.",
-    bullets: [
-      "Top-of-funnel awareness content (state-of-industry, educational)",
-      "Middle-funnel consideration content (comparisons, guides)",
-      "Bottom-funnel decision content (service pages, case studies)",
-      "Keyword density analysis where still relevant",
-      "Content optimization based on LSI signals and semantic relevance"
+    description: "We approach on-page optimization with the entire customer journey in mind. Each content type is treated uniquely based on where it sits in the funnel and what the user needs at that stage.",
+    subPoints: [
+      {
+        title: "Top-of-Funnel Awareness Content",
+        description: "State-of-industry articles, educational guides, and thought leadership that captures early-stage searchers and establishes topical authority."
+      },
+      {
+        title: "Middle-Funnel Consideration Content",
+        description: "Comparison pages, detailed guides, and 'how to choose' content that moves prospects from awareness to active evaluation."
+      },
+      {
+        title: "Bottom-Funnel Decision Content",
+        description: "Service pages, case studies, and conversion-focused content designed to capture users ready to take action."
+      },
+      {
+        title: "Keyword Density & Semantic Relevance",
+        description: "We still pay attention to keyword density where it matters, combined with LSI signals and semantic variations that signal comprehensive coverage."
+      }
     ],
-    accentColor: "slate",
-    icon: <TrendingUp className="w-5 h-5 text-slate-600" />
+    ctaText: "Get a Custom Audit",
+    ctaHref: "#contact"
   }
 ];
 
