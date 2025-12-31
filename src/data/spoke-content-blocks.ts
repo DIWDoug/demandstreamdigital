@@ -118,11 +118,12 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
   ],
   // GBP SEO FAQs
   "gbp-optimization": [
-    { question: "How long until GBP changes affect rankings?", answer: "Profile optimizations can show impact within 1-2 weeks. Competitive markets may take longer as other signals like reviews and citations need to build." },
+    { question: "How long until GBP changes affect rankings?", answer: "Profile optimizations can show impact within 1-2 weeks. Competitive markets may take longer as other signals like reviews and citations need to build. Google's data shows completed profiles are 70% more likely to receive visits." },
     { question: "Do you need access to the GBP account?", answer: "Yes. We need manager-level access to make optimizations, respond to reviews, and create posts. Owner access remains with the business." },
-    { question: "Can you help with new GBP verification?", answer: "Yes. We guide clients through the verification process and troubleshoot issues. Verification method depends on business type and Google's requirements." },
-    { question: "How do secondary categories affect rankings?", answer: "Secondary categories expand the range of searches your listing appears for. We research competitor categories and add relevant ones to maximize keyword coverage." },
-    { question: "Does GBP optimization help with AI Overviews?", answer: "Yes. AI Overviews often pull directly from GBP data including description, services, hours, and attributes. A complete, accurate profile improves AI citation accuracy." }
+    { question: "Can you help with new GBP verification?", answer: "Yes. We guide clients through verification—phone, text, email, video call, or postcard depending on what Google offers. Businesses with Search Console-verified domains can often get instant verification." },
+    { question: "How do secondary categories affect rankings?", answer: "Secondary categories expand the range of searches your listing appears for. We research competitor categories and add up to 9 relevant ones to maximize keyword coverage and AI query matching." },
+    { question: "What makes a good business description?", answer: "750 characters maximum, with the first 250 being most critical. We include relevant keywords naturally (no stuffing), address customer pain points, and explain how your services solve problems. This supports both rankings and E-E-A-T signals." },
+    { question: "Does GBP optimization help with AI Overviews?", answer: "Yes. AI Overviews pull directly from GBP data including description, services, hours, and attributes. A complete, accurate profile with strong E-E-A-T signals improves AI citation accuracy." }
   ],
   "review-management": [
     { question: "Can you guarantee a certain star rating?", answer: "No. We implement systems that generate more reviews from satisfied customers, which typically improves ratings over time. Businesses with 4.5+ stars get nearly 4x more clicks than those below 4 stars, so the investment matters." },
@@ -141,19 +142,21 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Why do citations matter for AI visibility?", answer: "AI Overviews cite trusted third-party sources like Yelp and industry directories. Accurate, consistent listings on these platforms increase AI citation eligibility." }
   ],
   "photo-optimization": [
-    { question: "Do you take photos for GBP?", answer: "We optimize photos you provide. If professional photography is needed, we can recommend local photographers." },
-    { question: "How many photos should a GBP have?", answer: "We recommend at least 10-15 high-quality photos covering interior, exterior, team, and services. More is better if quality is maintained." },
-    { question: "Can users upload inappropriate photos?", answer: "Yes, but we monitor for this and report policy violations for removal. We also ensure your photos dominate the listing." }
+    { question: "Do you take photos for GBP?", answer: "We optimize photos you provide. If professional photography is needed, we can recommend local photographers. Original photos only—we never use stock photos as they lack authenticity and often don't represent your business accurately." },
+    { question: "How many photos should a GBP have?", answer: "We recommend at least 10-15 high-quality photos covering interior, exterior, team, products, and services. More is better if quality is maintained. Your cover photo is most critical—it's what appears next to your listing in the Map Pack." },
+    { question: "How do you optimize photo filenames?", answer: "We rename files with descriptive keywords like 'hotel-room-sea-view.jpg' instead of generic 'IMG_1234.jpg'. This helps Google understand the image content for both search and accessibility." },
+    { question: "Can users upload inappropriate photos?", answer: "Yes, anyone can add photos. We monitor weekly for policy violations and submit removal requests to Google. We also ensure your photos dominate the listing so user uploads don't control your visual narrative." }
   ],
   "qa-management": [
-    { question: "Can anyone ask questions on GBP?", answer: "Yes. Any Google user can ask questions, and any user can answer. This is why proactive management and monitoring are essential." },
-    { question: "How many questions should we seed?", answer: "We typically seed 10-15 questions covering common customer inquiries, objections, and keyword-rich topics." },
-    { question: "Can questions be removed?", answer: "Questions violating Google policies can be reported for removal. Legitimate questions cannot be removed but can be answered authoritatively." }
+    { question: "Can anyone ask questions on GBP?", answer: "Yes. Any Google user can ask questions, and any user can answer—even competitors. This is why proactive management and monitoring are essential to control the narrative." },
+    { question: "How many questions should we seed?", answer: "We typically seed 10-15 questions covering common customer inquiries, objections, and keyword-rich topics. This pre-emptively answers what customers want to know before random users provide incorrect information." },
+    { question: "Can questions be removed?", answer: "Questions violating Google policies can be reported for removal. Legitimate questions cannot be removed but can be answered authoritatively. We respond within 24 hours before incorrect community answers spread." }
   ],
   "post-scheduling": [
-    { question: "How often should we post to GBP?", answer: "Weekly posting is our standard. More frequent posting shows diminishing returns for most businesses." },
-    { question: "What types of posts work best?", answer: "Offers with clear CTAs typically drive the most engagement. Updates and events also perform well when timely and relevant." },
-    { question: "How long do GBP posts stay visible?", answer: "Posts remain visible for 6 months, but they're most effective in the first 7 days. Regular posting ensures fresh content." }
+    { question: "How often should we post to GBP?", answer: "Weekly posting is our standard. GBP expert Darren Shaw notes that most businesses treat GBP like social media—but it's the one platform people visit with intent to buy. We focus on conversion-driving posts, not engagement metrics." },
+    { question: "What types of posts work best?", answer: "Offers with clear CTAs typically drive the most engagement and conversions. Updates and events also perform well when timely and relevant. Every post should answer: what can the customer buy, book, or do right now?" },
+    { question: "How long do GBP posts stay visible?", answer: "Posts remain visible for 6 months, but they're most effective in the first 7 days. Regular weekly posting ensures fresh content signals activity to Google." },
+    { question: "What CTA buttons are available?", answer: "Book, Order online, Buy, Learn more, Sign up, and Call now. We match button type to post purpose—'Order online' for restaurants, 'Book' for appointments, 'Call now' for service businesses." }
   ],
   // Paid Media FAQs
   "google-ads": [
@@ -696,13 +699,13 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Profile Foundation",
       headline: "Complete GBP Profiles That Rank",
-      description: "An incomplete profile is an invisible profile. We optimize every element Google uses for local pack placement and AI Overview citations.",
+      description: "Google's data shows users are 70% more likely to visit businesses with completed profiles and 50% more likely to purchase. We optimize every element Google uses for local pack placement and AI Overview citations.",
       subPoints: [
         { title: "Primary Category", description: "The single most important ranking factor. Selected based on search volume and competitive analysis." },
         { title: "Secondary Categories", description: "Up to 9 additional categories that expand visibility for related services and AI query matching." },
-        { title: "Business Description", description: "750 characters optimized for keywords and AI extraction. First 250 characters most critical." },
-        { title: "Service Catalog", description: "Complete service listings with descriptions and pricing that match website content for signal consistency." },
-        { title: "Attributes", description: "Every applicable attribute checked. AI Overviews pull attribute data for recommendations." },
+        { title: "Business Description", description: "750 characters optimized for keywords without stuffing. First 250 characters most critical—addressing customer pain points and solutions." },
+        { title: "Service & Product Catalogs", description: "Complete listings with descriptions, pricing, photos, and CTAs that match website content for E-E-A-T signal consistency." },
+        { title: "Attributes", description: "Every applicable attribute checked—accessibility, payment methods, amenities. AI Overviews pull attribute data for recommendations." },
         { title: "Hours & Special Hours", description: "Accurate hours including holidays. Incorrect hours trigger negative reviews and AI inaccuracies." }
       ],
       ctaText: "Start the Conversation",
@@ -711,14 +714,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Competitive Positioning",
       headline: "Outrank the Current Pack Leaders",
-      description: "Entering the local pack requires understanding who's there and why. We analyze and exploit competitive gaps.",
+      description: "Entering the local pack requires understanding who's there and why. Google's E-E-A-T signals favor businesses that demonstrate Experience, Expertise, Authoritativeness, and Trust—which a complete profile reinforces.",
       subPoints: [
         { title: "Pack Analysis", description: "Current pack holders dissected. Categories, reviews, citations, and signals documented." },
         { title: "Gap Identification", description: "Missing attributes, services, and content that competitors have and you lack." },
         { title: "Signal Matching", description: "Reviews, citations, and website signals aligned to match or exceed pack leaders." },
         { title: "Proximity Strategy", description: "Service area optimization to expand reach beyond physical location." },
         { title: "Velocity Planning", description: "Review and citation acquisition paced to close gaps systematically." },
-        { title: "Monitoring", description: "Weekly pack tracking to catch position changes and respond quickly." }
+        { title: "E-E-A-T Alignment", description: "Profile optimization reinforcing expertise and trust signals Google's algorithms prioritize." }
       ],
       ctaText: "Get Competitive Analysis",
       ctaHref: "#contact"
@@ -726,14 +729,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Ongoing Optimization",
       headline: "Profiles That Stay Optimized",
-      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates, competitive pressure, and AI search changes.",
+      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates, competitive pressure, and AI search changes with weekly activity.",
       subPoints: [
-        { title: "Weekly Posts", description: "Fresh content signals activity. Offers, updates, and events scheduled weekly." },
-        { title: "Photo Updates", description: "New photos monthly. Geotagged, optimized, and strategically captioned." },
-        { title: "Q&A Management", description: "Questions seeded proactively. Community questions answered within 24 hours." },
-        { title: "Review Monitoring", description: "New reviews flagged immediately. Response drafts provided same day." },
-        { title: "Insights Analysis", description: "Monthly performance review. Search queries, actions, and direction requests tracked." },
-        { title: "AI Visibility Check", description: "AI Overview citations monitored. Profile data verified for accuracy in AI-generated results." }
+        { title: "Weekly Posts", description: "Fresh content signals activity. Offers, updates, and events scheduled weekly—treating GBP as purchase intent, not social media." },
+        { title: "Photo Updates", description: "New photos monthly. Original images only—no stock photos. Geotagged, descriptively named, and strategically captioned." },
+        { title: "Q&A Management", description: "Questions seeded proactively. Community questions answered within 24 hours before incorrect info spreads." },
+        { title: "Review Monitoring", description: "New reviews flagged immediately. Response drafts provided same day. 60% of reviewers expect response within 2 days." },
+        { title: "Insights Analysis", description: "Monthly performance review. Search queries, interactions, directions, website clicks, and calls tracked." },
+        { title: "AI Visibility Check", description: "AI Overview citations monitored. Profile data verified for accuracy in AI-generated local results." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -880,14 +883,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Photo Strategy",
       headline: "Visual Content That Converts",
-      description: "GBP photos directly impact engagement and conversions. We develop comprehensive visual strategies.",
+      description: "GBP photos directly impact engagement and conversions. Your cover photo is the first thing customers see in the Map Pack—it must draw users in and accurately represent your business.",
       subPoints: [
-        { title: "Photo Audit", description: "Current photos reviewed for quality, relevance, and competitive benchmarking." },
-        { title: "Category Coverage", description: "Interior, exterior, team, products, and services. All categories filled." },
-        { title: "Cover Photo", description: "Hero image optimized for maximum impact. First impression matters." },
-        { title: "Logo Quality", description: "Logo uploaded at proper resolution. No pixelation or cropping issues." },
-        { title: "Competitor Analysis", description: "Visual strategies of pack leaders analyzed and exceeded." },
-        { title: "Photo Calendar", description: "Monthly photo additions scheduled. Fresh content signals activity." }
+        { title: "Photo Audit", description: "Current photos reviewed for quality, relevance, and competitive benchmarking against pack leaders." },
+        { title: "Category Coverage", description: "Interior, exterior, team, products, and services. All categories filled with 10-15+ high-quality images minimum." },
+        { title: "Cover Photo", description: "Hero image optimized for maximum impact. Most likely to appear next to your listing in the Map Pack—first impression matters." },
+        { title: "Logo Quality", description: "Logo uploaded at proper resolution. No pixelation, cropping issues, or outdated branding." },
+        { title: "Authenticity First", description: "Original photos only—never stock photos. Stock images lack originality and often don't represent your business accurately." },
+        { title: "Photo Calendar", description: "Monthly photo additions scheduled. Fresh content signals activity and keeps profile current." }
       ],
       ctaText: "Start Photo Strategy",
       ctaHref: "#contact"
@@ -895,14 +898,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Technical Optimization",
       headline: "Photos Optimized for Search",
-      description: "Photo optimization goes beyond quality. We ensure every image works for both users and search engines.",
+      description: "Photo optimization goes beyond quality. We ensure every image works for both users and search engines through proper naming, metadata, and formatting.",
       subPoints: [
-        { title: "Geotagging", description: "Location data embedded in image metadata. Geographic signals reinforced." },
-        { title: "File Naming", description: "Descriptive filenames with keywords. Not IMG_1234.jpg." },
-        { title: "Alt Text", description: "Google extracts descriptions. Keywords and context included naturally." },
-        { title: "Size Optimization", description: "Images compressed for fast loading without quality loss." },
-        { title: "Format Selection", description: "Proper formats for different photo types. Quality preserved." },
-        { title: "Aspect Ratios", description: "Photos cropped to display correctly in GBP interface." }
+        { title: "Geotagging", description: "Location data embedded in image EXIF metadata. Geographic signals reinforced for local relevance." },
+        { title: "Descriptive Filenames", description: "Optimized filenames with keywords—'hotel-room-sea-view.jpg' not 'IMG_1234.jpg'. Incorporate relevant keywords." },
+        { title: "Alt Text & Captions", description: "Google extracts descriptions. Keywords and context included naturally for accessibility and search." },
+        { title: "Size Optimization", description: "Images compressed for fast loading without quality loss. Adheres to Google's format requirements." },
+        { title: "Format Selection", description: "Proper formats for different photo types. JPG for photos, PNG for logos. Quality preserved." },
+        { title: "Aspect Ratios", description: "Photos cropped to display correctly in GBP interface without awkward cuts or distortion." }
       ],
       ctaText: "Get Photo Optimization",
       ctaHref: "#contact"
@@ -910,14 +913,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "User Photo Management",
       headline: "Control Your Visual Narrative",
-      description: "Customers upload photos too. We monitor and manage user-generated content to protect brand image.",
+      description: "Google lets customers add images to your GBP. We monitor user-generated content to protect brand image and ensure inappropriate photos are removed.",
       subPoints: [
-        { title: "UGC Monitoring", description: "User-uploaded photos reviewed weekly. Inappropriate content flagged." },
-        { title: "Removal Requests", description: "Policy-violating photos reported for removal. Brand protected." },
-        { title: "Positive Amplification", description: "Great customer photos highlighted through owner responses." },
-        { title: "Photo Tagging", description: "User photos tagged with relevant categories when helpful." },
-        { title: "Competition Awareness", description: "Competitor photos on your listing identified and addressed." },
-        { title: "Trend Analysis", description: "What customers photograph reveals what they value. Insights extracted." }
+        { title: "UGC Monitoring", description: "User-uploaded photos reviewed weekly. Inappropriate, inaccurate, or off-brand content flagged immediately." },
+        { title: "Removal Requests", description: "Policy-violating photos reported for removal via Google's process. Brand reputation protected." },
+        { title: "Positive Amplification", description: "Great customer photos highlighted through owner responses. Authentic UGC builds trust." },
+        { title: "Photo Dominance", description: "Your photos should dominate your listing. We ensure owner content outweighs random user uploads." },
+        { title: "Competitor Awareness", description: "Competitor photos or spam on your listing identified and addressed through proper channels." },
+        { title: "Trend Analysis", description: "What customers photograph reveals what they value. Insights extracted for marketing and service improvement." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -975,15 +978,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "post-scheduling": [
     {
       category: "Content Strategy",
-      headline: "Posts That Drive Engagement",
-      description: "GBP posts signal activity and provide conversion opportunities. We develop content calendars that perform.",
+      headline: "Posts That Drive Conversions, Not Just Engagement",
+      description: "As GBP expert Darren Shaw notes: 'GBP is the one platform people visit with intent to BUY.' We treat posts as conversion opportunities, not social media content.",
       subPoints: [
-        { title: "Post Types", description: "Updates, offers, events, and products. Each type serves different purposes." },
-        { title: "Content Calendar", description: "Monthly calendar planned in advance. Consistent publishing schedule." },
-        { title: "Seasonal Alignment", description: "Content aligned with holidays, seasons, and business cycles." },
-        { title: "Promotion Strategy", description: "Offers and specials timed for maximum impact and urgency." },
-        { title: "Event Promotion", description: "Upcoming events and sales highlighted with dedicated posts." },
-        { title: "Evergreen Content", description: "Service highlights and value propositions that work year-round." }
+        { title: "Post Types", description: "Updates, offers, events, and products. Offers with clear CTAs typically drive the most engagement and conversions." },
+        { title: "Content Calendar", description: "Monthly calendar planned in advance. Weekly posting is our standard—more frequent shows diminishing returns." },
+        { title: "Seasonal Alignment", description: "Content aligned with holidays, seasons, and business cycles. Timely and relevant beats evergreen for engagement." },
+        { title: "Promotion Strategy", description: "Offers and specials with urgency and clear calls to action. Posts remain visible for 6 months but are most effective in the first 7 days." },
+        { title: "Event Promotion", description: "Upcoming events and sales highlighted with dedicated posts. Event posts get special treatment in GBP display." },
+        { title: "Purchase Intent Focus", description: "Every post answers: what can the customer buy, book, or do right now? Social-style posts get ignored." }
       ],
       ctaText: "Start Post Strategy",
       ctaHref: "#contact"
@@ -991,29 +994,29 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Post Optimization",
       headline: "Maximum Impact Per Post",
-      description: "Every post is an opportunity to appear in search results and drive action. We optimize every element.",
+      description: "Every post is an opportunity to appear in search results and drive action. We optimize every element for clicks and conversions.",
       subPoints: [
-        { title: "Keyword Integration", description: "Target keywords included naturally in post content." },
-        { title: "Compelling CTAs", description: "Clear calls to action. Call now, learn more, book online." },
-        { title: "Image Selection", description: "Eye-catching images that stop scrollers and reinforce message." },
-        { title: "Character Limits", description: "Content optimized for display. First 100 characters most visible." },
-        { title: "Link Strategy", description: "Destination URLs tracked for attribution. Landing pages matched to offers." },
-        { title: "Button Selection", description: "CTA buttons matched to post purpose. Book, order, call, or shop." }
+        { title: "Keyword Integration", description: "Target keywords included naturally in post content. First 100 characters most visible in previews." },
+        { title: "Compelling CTAs", description: "Clear calls to action with appropriate buttons: Book, Order online, Buy, Learn more, Sign up, or Call now." },
+        { title: "Image Selection", description: "Eye-catching original images—never stock photos. Images that stop scrollers and reinforce the message." },
+        { title: "Character Optimization", description: "Content optimized for display. Front-load value proposition in first 100 characters." },
+        { title: "Link Strategy", description: "Destination URLs tracked for attribution. Landing pages matched to offers for conversion optimization." },
+        { title: "Button Matching", description: "CTA button type matched to post purpose. 'Order online' for restaurants, 'Book' for appointments, 'Call now' for services." }
       ],
       ctaText: "Get Post Optimization",
       ctaHref: "#contact"
     },
     {
       category: "Performance Tracking",
-      headline: "Measure What Matters",
-      description: "Post performance reveals what your audience cares about. We track, analyze, and optimize continuously.",
+      headline: "Measure What Drives Business",
+      description: "Post performance reveals what your audience cares about. We track interactions, search queries, directions, website clicks, and calls—the metrics that matter.",
       subPoints: [
-        { title: "View Tracking", description: "Post views tracked to identify content that gets attention." },
-        { title: "Click Analysis", description: "CTA clicks measured. Which posts drive action?" },
-        { title: "Content Testing", description: "Different content types tested. Data drives strategy evolution." },
-        { title: "Timing Analysis", description: "Post timing optimized based on engagement patterns." },
-        { title: "Competitive Benchmarking", description: "Competitor posting frequency and content analyzed." },
-        { title: "Monthly Reporting", description: "Post performance included in GBP reports. Insights shared." }
+        { title: "Interaction Tracking", description: "Calls, bookings, direction requests, and website clicks tracked. Total interactions measured over time." },
+        { title: "Search Query Analysis", description: "Which search terms trigger your profile? We identify keywords driving visibility and optimize accordingly." },
+        { title: "Click Analysis", description: "CTA clicks measured by post type. Which content drives action? Data drives strategy evolution." },
+        { title: "Direction Requests", description: "Users requesting directions signal high purchase intent. We track this as a key conversion indicator." },
+        { title: "Year-Over-Year Comparison", description: "Performance compared across time periods to eliminate seasonality and identify real trends." },
+        { title: "Monthly Reporting", description: "Complete GBP performance dashboard. Search queries, interactions, and post engagement in client reports." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"

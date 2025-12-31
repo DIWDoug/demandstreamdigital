@@ -27,7 +27,7 @@ export const googleMapsConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most GBP Management Fails Your Clients",
-    intro: "You have seen this before. The profile was claimed and optimized once, but months later visibility is flat, reviews have stalled, and competitors are outranking your client in their own backyard.",
+    intro: "You have seen this before. The profile was claimed and optimized once, but months later visibility is flat, reviews have stalled, and competitors are outranking your client in their own backyard. Google's own data shows users are 70% more likely to visit businesses with completed profiles and 50% more likely to purchase—yet most profiles remain incomplete.",
     painPoints: [
       {
         icon: Users,
@@ -37,12 +37,12 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         icon: Star,
         title: "Reviews Are Inconsistent or Ignored",
-        body: "Review velocity matters. So does response quality. Sporadic review generation and template responses signal neglect to both Google and potential customers."
+        body: "Review velocity matters. So does response quality. 60% of reviewers expect a response within 2 days. Sporadic review generation and template responses signal neglect to both Google and potential customers."
       },
       {
         icon: Globe,
         title: "Citations Are Incomplete or Inconsistent",
-        body: "NAP inconsistencies across directories confuse search engines and erode trust signals. Incomplete citation profiles leave authority on the table."
+        body: "NAP inconsistencies across directories confuse search engines and erode trust signals. Incomplete citation profiles leave authority on the table and hurt E-E-A-T signals."
       },
       {
         icon: Target,
@@ -52,7 +52,7 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         icon: Layers,
         title: "GBP and Website Are Disconnected",
-        body: "Services listed in GBP do not match website pages. Categories misalign, signals fragment, and rich snippets fail to populate."
+        body: "Services listed in GBP do not match website pages. Categories misalign, signals fragment, and rich snippets fail to populate. E-E-A-T suffers when Google cannot verify expertise across properties."
       }
     ],
     systemClosing: "",
