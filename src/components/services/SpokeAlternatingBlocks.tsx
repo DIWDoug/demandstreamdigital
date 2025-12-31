@@ -1,27 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
-
-// Import generated illustrations
-import visibleElementsImg from "@/assets/spoke/visible-elements.png";
-import technicalMarkupImg from "@/assets/spoke/technical-markup.png";
-import fullFunnelImg from "@/assets/spoke/full-funnel.png";
-
-interface SubPoint {
-  title: string;
-  description: string;
-}
-
-interface ContentBlock {
-  category: string;
-  headline: string;
-  description: string;
-  subPoints: SubPoint[];
-  imageSrc?: string;
-  imageAlt?: string;
-  ctaText?: string;
-  ctaHref?: string;
-}
+import type { ContentBlock } from "@/data/spoke-content-blocks";
 
 interface SpokeAlternatingBlocksProps {
   blocks: ContentBlock[];
@@ -148,90 +128,5 @@ const SpokeAlternatingBlocks = ({ blocks }: SpokeAlternatingBlocksProps) => {
     </section>
   );
 };
-
-// Pre-configured blocks for On-Page Optimization (Dialed In style)
-export const onPageOptimizationBlocks: ContentBlock[] = [
-  {
-    category: "Visible Elements",
-    headline: "Superior On-Page Optimization",
-    description: "The visible layer of on-page optimization covers everything consumers interact with directly. We optimize for both readability and search intent, treating every element as an opportunity to signal relevance.",
-    subPoints: [
-      {
-        title: "Intent-Focused Title Tags",
-        description: "We prioritize search intent over arbitrary character limits. Title tags up to 100 characters when the context demands it, always leading with the primary keyword and intent signal."
-      },
-      {
-        title: "CTR-Optimized Meta Descriptions",
-        description: "Following Backlinko best practices, meta descriptions are written like ad copy. The goal is click-through rate, not keyword stuffing."
-      },
-      {
-        title: "Header Hierarchy & LSI Signals",
-        description: "H1-H6 tags aligned with natural language patterns and latent semantic indexing. The structure tells search engines exactly what the page is about."
-      },
-      {
-        title: "Hub-Spoke Internal Linking",
-        description: "Every page is connected to its topical cluster. Internal links build authority and guide both users and crawlers through your content architecture."
-      }
-    ],
-    imageSrc: visibleElementsImg,
-    imageAlt: "On-page SEO visible elements illustration showing webpage with title tags, meta descriptions, and header hierarchy",
-    ctaText: "Start the Conversation",
-    ctaHref: "#contact"
-  },
-  {
-    category: "Technical Markup",
-    headline: "Structured Data That Earns Rich Results",
-    description: "Technical on-page goes beyond visible content. Comprehensive schema markup tells search engines exactly what your content means, unlocking enhanced SERP features and AI engine visibility.",
-    subPoints: [
-      {
-        title: "LocalBusiness & Organization Schema",
-        description: "Core identity markup that powers Knowledge Panels, map integrations, and brand entity signals across Google's ecosystem."
-      },
-      {
-        title: "Service & About Schema",
-        description: "Service-area businesses get structured markup that clarifies what you do, where you do it, and the scope of your offerings."
-      },
-      {
-        title: "FAQ & Testimonials Markup",
-        description: "FAQ schema targets People Also Ask features. Review schema builds trust signals directly in search results."
-      },
-      {
-        title: "Image Alt Text & Accessibility",
-        description: "Every image optimized for screen readers and search engines. Accessibility isn't optional—it's a ranking factor and user experience imperative."
-      }
-    ],
-    imageSrc: technicalMarkupImg,
-    imageAlt: "Technical SEO schema markup illustration showing JSON-LD structured data and LocalBusiness schema",
-    ctaText: "Schedule a Consultation",
-    ctaHref: "#contact"
-  },
-  {
-    category: "Full-Funnel Content",
-    headline: "Awareness to Decision. Mapped and Optimized.",
-    description: "We approach on-page optimization with the entire customer journey in mind. Each content type is treated uniquely based on where it sits in the funnel and what the user needs at that stage.",
-    subPoints: [
-      {
-        title: "Top-of-Funnel Awareness Content",
-        description: "State-of-industry articles, educational guides, and thought leadership that captures early-stage searchers and establishes topical authority."
-      },
-      {
-        title: "Middle-Funnel Consideration Content",
-        description: "Comparison pages, detailed guides, and 'how to choose' content that moves prospects from awareness to active evaluation."
-      },
-      {
-        title: "Bottom-Funnel Decision Content",
-        description: "Service pages, case studies, and conversion-focused content designed to capture users ready to take action."
-      },
-      {
-        title: "Keyword Density & Semantic Relevance",
-        description: "We still pay attention to keyword density where it matters, combined with LSI signals and semantic variations that signal comprehensive coverage."
-      }
-    ],
-    imageSrc: fullFunnelImg,
-    imageAlt: "Marketing funnel illustration showing awareness, consideration, and decision content stages",
-    ctaText: "Get a Custom Audit",
-    ctaHref: "#contact"
-  }
-];
 
 export default SpokeAlternatingBlocks;
