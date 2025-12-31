@@ -56,6 +56,8 @@ const GoogleMaps = () => {
           description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
           integrationNote={hub.integrationNote}
+          heroHeadline={hub.heroHeadline}
+          heroSubtitle={hub.heroSubtitle}
         />
       </div>
       

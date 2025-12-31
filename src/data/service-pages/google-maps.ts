@@ -10,12 +10,18 @@ export const googleMapsConfig: ServicePageConfig = {
   keywords: "white label GBP SEO, google business profile optimization, local pack ranking, review management, citation building",
 
   hero: {
-    headline: "White Label GBP SEO for",
-    highlightedText: "Digital Agencies",
-    subheadline: "The local 3-pack drives 42% of local search clicks. We help your clients enter and hold those positions through disciplined GBP optimization, review velocity, citation control, and hub-spoke content strategies built for competitive markets.",
-    qualifierLine: "You stay the hero. We handle the execution that keeps clients ranking and renewing.",
+    headline: "Earn and Hold Google Maps Visibility",
+    highlightedText: "White-Label GBP SEO Services",
+    subheadline: "We help agencies earn and hold Google Maps visibility for their clients through white-label GBP optimization built for competitive local markets.",
+    bullets: [
+      "No cookie-cutter profile setups",
+      "No generic posting calendars",
+      "No ignoring competitive signals"
+    ],
+    qualifierLine: "Every engagement is scoped to the local pack landscape, category dynamics, and client capacity so execution matches the market.",
+    integrationNote: "GBP SEO, Local SEO, and Authority Building overlap by design. Engaged independently they create lift, but coordinated they drive durable map pack visibility.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies managing local visibility at scale."
+    ctaSubtext: "Tell us about your agency. We'll take it from there."
   },
 
   problem: {
@@ -41,12 +47,12 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         icon: Target,
         title: "No Strategy for Proximity Dynamics",
-        body: "The Vicinity Update made location the dominant factor. Without a strategy that accounts for proximity, your clients lose visibility outside their immediate area."
+        body: "The Vicinity Update made location the dominant factor. Without a proximity-aware strategy, visibility collapses outside the immediate area."
       },
       {
         icon: Layers,
         title: "GBP and Website Are Disconnected",
-        body: "Services listed in GBP do not match website pages. Categories are misaligned. Google receives mixed signals, and rich snippets never populate."
+        body: "Services listed in GBP do not match website pages. Categories misalign, signals fragment, and rich snippets fail to populate."
       }
     ],
     systemClosing: "",
@@ -57,27 +63,27 @@ export const googleMapsConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When GBP Works",
-    subheadline: "The outcomes your clients experience when GBP SEO is done right.",
+    subheadline: "What changes as profiles enter the map pack and authority compounds",
     items: [
       {
         icon: Zap,
         title: "Direct Response From the Map Pack",
-        description: "Calls, directions, and website clicks flow directly from optimized profiles. No middleman, no friction. Every call answered within seconds through our call answering service partners ensures no lead is lost."
+        description: "Calls, directions, and website clicks flow directly from optimized profiles without friction or wasted demand."
       },
       {
         icon: Star,
         title: "GBP and Website Signals in Alignment",
-        description: "GBP services and products match the website. The website matches the GBP. Google receives consistent signals filtered throughout all content, reinforcing relevance and trust."
+        description: "GBP services and products align directly with the website, creating consistent signals Google can trust."
       },
       {
         icon: TrendingUp,
         title: "Rich Snippets and 120% Profile Optimization",
-        description: "Profiles optimized beyond baseline populate rich snippets automatically. Every attribute, service, product, and category maximized for visibility."
+        description: "Profiles optimized beyond baseline populate rich snippets automatically. Attributes, services, products, and categories are maximized for visibility."
       },
       {
         icon: Target,
         title: "Hub-Spoke Content Strategy Execution",
-        description: "Service and product pages built around GBP topical maps. FAQs, supporting content, and location pages all internally linked with intentional topical relevance."
+        description: "Service pages, FAQs, and location content are internally linked to create the topical authority required for map pack visibility."
       }
     ]
   },
@@ -85,7 +91,7 @@ export const googleMapsConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Profile Audit to Pack Dominance",
-    subheadline: "Every engagement is scoped to the market and sequenced to earn map pack visibility first, then expand it.",
+    subheadline: "Every engagement is scoped to the market and sequenced to earn map pack visibility first, then compound it.",
     phases: [
       {
         phase: 1,
@@ -187,9 +193,9 @@ export const googleMapsConfig: ServicePageConfig = {
   },
 
   buildingBlocks: {
-    eyebrow: "The Levers We Pull",
+    eyebrow: "Earn and Hold Google Maps Visibility",
     headline: "The Levers We Pull Based on Market Reality",
-    subheadline: "Each component is scoped based on market competition and client goals, not templated packages.",
+    subheadline: "The components below are applied based on market competition and client goals, not templates.",
     blocks: [
       {
         title: "GBP Profile Optimization",
@@ -212,7 +218,7 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         title: "GBP Posting & Content",
         slug: "post-scheduling",
-        description: "Regular posts, offers, and updates to signal activity to Google and engage potential customers.",
+        description: "Posts, offers, and updates to signal activity to Google and engage searchers.",
         icon: MessageSquare
       },
       {
@@ -222,9 +228,9 @@ export const googleMapsConfig: ServicePageConfig = {
         icon: Map
       },
       {
-        title: "Q&A Management",
+        title: "Local Pack Strategy",
         slug: "qa-management",
-        description: "Proactive question seeding and answer management that builds trust and captures search queries.",
+        description: "Service and product gap analysis with topical map matching between GBP and website pages.",
         icon: Target
       }
     ]
@@ -233,53 +239,53 @@ export const googleMapsConfig: ServicePageConfig = {
   qualification: {
     eyebrow: "Before We Talk",
     headline: "We Are Selective About Who We Work With",
-    subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
+    subheadline: "",
     goodFit: [
       {
-        point: "Your clients have verified Google Business Profiles with physical addresses",
-        detail: "We specialize in GBP optimization for businesses with address-visible profiles. Storefronts, offices, and service-area businesses that display their address."
+        point: "Verified GBPs with physical addresses",
+        detail: ""
       },
       {
-        point: "You serve clients in competitive local markets",
-        detail: "GBP optimization delivers the most value when there is real competition for the local pack. Competitive metros and suburbs are our specialty."
+        point: "Competitive local markets",
+        detail: ""
       },
       {
-        point: "You want consistent management, not one-time optimization",
-        detail: "Google Maps visibility requires ongoing effort. We partner with agencies who understand that GBP management is a continuous service, not a project."
+        point: "Ongoing management, not one-time optimization",
+        detail: ""
       },
       {
-        point: "Your clients can participate in review generation",
-        detail: "Review velocity requires client cooperation. Businesses need to ask customers for reviews. We provide the systems; they need to use them."
+        point: "Willingness to participate in review generation",
+        detail: ""
       },
       {
-        point: "You value retention over quick wins",
-        detail: "Our approach builds sustainable visibility that compounds over time. If your goal is keeping clients for years, this partnership makes sense."
+        point: "Focus on retention over quick wins",
+        detail: ""
       },
       {
-        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
+        point: "Need to replace inconsistent vendors",
+        detail: ""
       }
     ],
     notFit: [
       {
         point: "Service-area businesses without visible addresses",
-        detail: "Address-hidden GBP listings compete differently. Our core specialty is businesses with visible physical locations."
+        detail: ""
       },
       {
-        point: "Clients expecting pack positions in days",
-        detail: "GBP optimization takes time. Meaningful visibility improvements typically require 2-4 months of consistent effort."
+        point: "Expectations of pack positions in days",
+        detail: ""
       },
       {
         point: "Price is the primary decision factor",
-        detail: "Quality GBP management has real costs. If budget is the primary factor, the math will not work for either of us."
+        detail: ""
       },
       {
-        point: "Clients who cannot or will not ask for reviews",
-        detail: "Review velocity is critical. If clients will not participate in review generation, results will suffer."
+        point: "Inability or refusal to ask for reviews",
+        detail: ""
       },
       {
-        point: "One-time optimization with no ongoing management",
-        detail: "GBP visibility degrades without ongoing attention. We do not offer one-time optimization services."
+        point: "One-time optimization with no continuity",
+        detail: ""
       }
     ],
     ctaText: "Let's Discuss Your Clients"

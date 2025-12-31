@@ -20,9 +20,11 @@ interface ServiceHubHeroProps {
   description: string | HeroDescription;
   breadcrumbs?: BreadcrumbItem[];
   integrationNote?: string;
+  heroHeadline?: string; // Optional custom headline
+  heroSubtitle?: string; // Optional custom subtitle
 }
 
-const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle }: ServiceHubHeroProps) => {
   const [formData, setFormData] = useState({
     fullName: "",
     website: "",
@@ -80,11 +82,24 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
             )}
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
-              White-Label{" "}
-              <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{title}</span>{" "}
-              Services
-            </h1>
+            {heroHeadline ? (
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-3 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
+                {heroHeadline}
+              </h1>
+            ) : (
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
+                White-Label{" "}
+                <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{title}</span>{" "}
+                Services
+              </h1>
+            )}
+            
+            {/* Optional Subtitle */}
+            {heroSubtitle && (
+              <p className="text-xl md:text-2xl text-accent-blue font-medium mb-8 animate-fade-in drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">
+                {heroSubtitle}
+              </p>
+            )}
             
             {/* Short description - promise paragraph */}
             {typeof description === 'string' ? (

@@ -27,6 +27,8 @@ export interface Hub {
   title: string;
   slug: string;
   summary: string;
+  heroHeadline?: string; // Optional custom headline (defaults to "White-Label {title} Services")
+  heroSubtitle?: string; // Optional custom subtitle
   heroDescription: string | HeroDescription;
   integrationNote?: string;
   whyItMatters: {
@@ -182,16 +184,18 @@ export const hubs: Hub[] = [
     title: "GBP SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
+    heroHeadline: "Earn and Hold Google Maps Visibility",
+    heroSubtitle: "White-Label GBP SEO Services",
     heroDescription: {
-      intro: "We help agencies dominate Google Maps results for their clients through white-label GBP optimization built around competitive reality.",
+      intro: "We help agencies earn and hold Google Maps visibility for their clients through white-label GBP optimization built for competitive local markets.",
       bullets: [
         "No cookie-cutter profile setups",
         "No generic posting calendars",
-        "No ignoring what competitors are doing"
+        "No ignoring competitive signals"
       ],
-      closing: "Every engagement is scoped to the local pack landscape, category dynamics, and client capacity so execution matches the market, not a checklist."
+      closing: "Every engagement is scoped to the local pack landscape, category dynamics, and client capacity so execution matches the market."
     },
-    integrationNote: "GBP SEO, Local SEO, and Authority Building work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
+    integrationNote: "GBP SEO, Local SEO, and Authority Building overlap by design. Engaged independently they create lift, but coordinated they drive durable map pack visibility.",
     whyItMatters: {
       headline: "Why GBP SEO Matters for Local Businesses",
       description: "The local 3-pack appears in 93% of local searches. These three map listings capture the majority of clicks for local intent queries. If your clients are not in the pack, they are invisible to most local searchers.",
