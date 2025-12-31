@@ -284,7 +284,8 @@ export const paidMediaConfig: ServicePageConfig = {
         items: [
           { question: "How quickly will we see results?", answer: "Campaigns can launch within 1-2 weeks and typically generate leads within the first week of running. Performance improves over time as we gather data and optimize." },
           { question: "What kind of ROI can we expect?", answer: "ROI varies by industry and market, but our goal is always positive return on ad spend. We track cost per lead and work to continuously improve it." },
-          { question: "What if a campaign is not performing?", answer: "We monitor campaigns daily and make optimization decisions weekly. If something is not working, we identify it quickly and pivot. Our goal is always to improve performance, not just maintain it." }
+          { question: "What if a campaign is not performing?", answer: "We monitor campaigns daily and make optimization decisions weekly. If something is not working, we identify it quickly and pivot. Our goal is always to improve performance, not just maintain it." },
+          { question: "Is outsourcing PPC worth it vs. hiring in-house?", answer: "For most agencies, yes. You get senior-level expertise without the overhead of salaries, benefits, and ongoing training. You also avoid the risk of a single employee leaving with all your PPC knowledge." }
         ]
       },
       {
@@ -292,7 +293,9 @@ export const paidMediaConfig: ServicePageConfig = {
         items: [
           { question: "Do you manage both Google Ads and Meta Ads?", answer: "Yes. We are certified in both platforms and manage campaigns across Google Search, Display, Local Service Ads, and the full Meta ecosystem including Facebook and Instagram." },
           { question: "Do you create landing pages?", answer: "Yes. We can develop conversion-optimized landing pages as part of campaign management. Strong landing pages are critical to campaign success." },
-          { question: "How do you track and report on ROI?", answer: "We implement call tracking, form tracking, and conversion attribution so you can show clients exactly what their ad spend produces. Our reports connect spend to leads." },
+          { question: "Who provides the creative assets and ad copy?", answer: "We handle ad copy development and testing. For Meta campaigns requiring images or video, we can work with assets you provide or develop creative as part of the scope." },
+          { question: "How do you handle negative keywords and click fraud?", answer: "We maintain master negative keyword lists, monitor for invalid clicks, and use placement exclusions to prevent wasted spend on low-quality traffic sources like mobile apps." },
+          { question: "Do you help with Local Service Ads eligibility?", answer: "Yes. We can guide clients through the Google Screened verification process, background checks, and license documentation required for LSA eligibility." },
           { question: "What is your minimum ad spend requirement?", answer: "We recommend minimum $2,000/month in ad spend for local campaigns to generate meaningful data and results. We work with agencies to determine appropriate budgets based on market competition and goals." }
         ]
       },
@@ -300,8 +303,12 @@ export const paidMediaConfig: ServicePageConfig = {
         category: "Partnership & Process",
         items: [
           { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship." },
-          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements." },
-          { question: "What access do you need?", answer: "We need Google Ads and/or Meta Ads account access, website access for tracking implementation, and ideally CRM access for closed-loop attribution." }
+          { question: "Do you provide white-labeled reports?", answer: "Yes. All reporting is fully branded with your agency logo and colors. We can deliver via PDF, Looker Studio, or integrate with Agency Analytics." },
+          { question: "What is the setup timeline for new campaigns?", answer: "Typical setup is 5-10 business days for new campaigns, including tracking implementation, account structure, ad copy development, and landing page review." },
+          { question: "Do you sign NDAs?", answer: "Yes. We sign non-disclosure agreements as standard practice. We never contact your clients directly and never solicit your business relationships." },
+          { question: "What certifications does your team hold?", answer: "Our team holds Google Ads certifications across Search, Display, and Video, plus Meta Blueprint certifications for Facebook and Instagram advertising." },
+          { question: "How much should I charge my clients for PPC?", answer: "Most agencies mark up management fees 50-100% above our rates. We can provide pricing guidance based on your market and positioning, but you control your margins." },
+          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements." }
         ]
       }
     ]
