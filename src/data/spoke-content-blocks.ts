@@ -749,13 +749,13 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Review Generation",
       headline: "Systematic Review Acquisition That Works",
-      description: "51% of customers leave reviews when asked directly, but 30% skip reviews because the process is confusing. We eliminate friction and build systems that generate consistent reviews. For automated email sequences, see our Email Marketing Automation Flows.",
+      description: "51% of customers leave reviews when asked directly, but 30% skip reviews because the process is confusing. We eliminate friction and build systems that generate consistent reviews. Reviews are a direct ranking factor for local search.",
       subPoints: [
         { title: "Timing Strategy", description: "Requests sent at optimal moments: shortly after positive service experience, at peak satisfaction. Timing is everything." },
         { title: "Multi-Channel Requests", description: "54% prefer email, 45% prefer in-person, 29% prefer SMS. We deploy all channels based on customer preferences." },
-        { title: "Direct Review Links", description: "Shortened links straight to the review form. No navigation required. 30% skip reviews due to confusing process." },
+        { title: "Direct Review Links", description: "Shortened links straight to the review form shared via email, SMS, or social. No navigation required. 30% skip reviews due to confusing process." },
         { title: "Personalized Templates", description: "Use customer name, reference specific service. Generic requests get ignored." },
-        { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Friendly reminders on receipts, packaging, and follow-up emails." },
+        { title: "Detailed Experience Prompts", description: "Ask customers to describe their experience in detail rather than scripting keywords. Google bolds terms that match search queries naturally." },
         { title: "Email Automation Integration", description: "Pairs with Email Marketing automation flows for hands-off review generation at scale via post-service sequences." }
       ],
       imageSrc: reviewGenerationImg,
@@ -768,12 +768,12 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       headline: "Understanding Why Customers Review",
       description: "Effective review requests tap into customer motivations. 73% write reviews to share their experience, 63% to show appreciation, 38% to provide feedback, and 21% specifically want a response.",
       subPoints: [
-        { title: "Community Motivation", description: "73% want to share experience with others. Frame requests around helping the community." },
+        { title: "Community Motivation", description: "73% want to share experience with others. Frame requests around helping the community find great businesses." },
         { title: "Appreciation Channel", description: "63% use reviews to show gratitude. Mention how much a review would mean to your team." },
-        { title: "Feedback Seekers", description: "38% want businesses to improve. Show in responses that you take feedback to heart." },
-        { title: "Response Expectations", description: "21% write reviews to get a response. Prove you respond to every review to encourage participation." },
-        { title: "Staff Training", description: "Verbal requests work when rapport exists. Train staff to ask when customers seem happy." },
-        { title: "Social Prompts", description: "Ask specific questions on social media that prompt review-style responses with platform links." }
+        { title: "Feedback Seekers", description: "38% want businesses to improve. Show in responses that you take feedback to heart and act on it." },
+        { title: "Response Expectations", description: "21% write reviews to get a response. Prove you respond to every review to encourage more participation." },
+        { title: "Staff Training", description: "Verbal requests work when rapport exists. Train staff to ask when customers seem satisfied with service." },
+        { title: "Natural Keyword Inclusion", description: "Customers who mention specific services help rankings. Google surfaces terms mentioned often as clickable filters." }
       ],
       imageSrc: reviewPsychologyImg,
       imageAlt: "Customer review psychology and motivations",
@@ -783,14 +783,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Response Management",
       headline: "Responses That Build Trust and Rankings",
-      description: "64% of customers expect response to negative reviews, 40% expect response to positive reviews, and 60% expect to hear back within 2 days. Response quality directly impacts whether future customers leave reviews.",
+      description: "64% of customers expect response to negative reviews, 40% expect response to positive reviews, and 60% expect to hear back within 2 days. Response quality directly impacts whether future customers leave reviews and choose your business.",
       subPoints: [
-        { title: "Speed Matters", description: "60% expect response within 2 days. We respond within 24-48 hours to exceed expectations." },
-        { title: "Negative Recovery", description: "46% avoid businesses that argue with customers. 54% avoid businesses that don't solve cited problems. We're empathetic and solution-focused." },
-        { title: "Problem Resolution", description: "Always state how you've addressed concerns. 54% avoid businesses where responses don't solve problems." },
-        { title: "Genuine Apologies", description: "47% avoid businesses that don't apologize when customers cite problems. Acknowledge and take responsibility." },
-        { title: "Service Keywords", description: "Natural service and location mentions in responses. AI systems parse response content for recommendations." },
-        { title: "Brand Voice", description: "Responses match client personality. Never sound robotic or templated. Professional, warm, or casual as appropriate." }
+        { title: "Speed Matters", description: "Respond as quickly as possible. 60% expect response within 2 days. We respond within 24-48 hours to exceed expectations." },
+        { title: "Stay Professional", description: "Negative reviews require calm, measured responses. Never get defensive or confrontational. 46% avoid businesses that argue with customers." },
+        { title: "Acknowledge and Solve", description: "Address their specific concerns directly. 54% avoid businesses where responses don't solve cited problems." },
+        { title: "Offer Direct Contact", description: "For negative reviews, invite customers to contact you directly to discuss the issue. This moves resolution offline and shows commitment." },
+        { title: "Brand Voice Consistency", description: "Responses match client personality and are consistent with all online content. Professional, warm, or casual as appropriate." },
+        { title: "Learn From Feedback", description: "Genuine negative reviews highlight areas for improvement. We help businesses extract actionable insights from criticism." }
       ],
       imageSrc: reviewResponseImg,
       imageAlt: "Review response management workflow",
@@ -800,14 +800,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Platform Diversification",
       headline: "Reviews Across All Platforms That Matter",
-      description: "66% of reviewers focus on Google, but 42% prefer Facebook, 36% focus on Yelp, and 16% use NextDoor. Platform diversity protects reputation if any single platform filters reviews.",
+      description: "66% of reviewers focus on Google, but 42% prefer Facebook, 36% focus on Yelp, and 16% use NextDoor. Platform diversity protects reputation and ensures AI systems find consistent information across sources.",
       subPoints: [
-        { title: "Google Priority", description: "Primary platform for local pack visibility. But not the only platform that matters." },
-        { title: "Facebook Reviews", description: "42% of reviewers spend most time here. Important for social proof and AI source data." },
-        { title: "Yelp Strategy", description: "36% focus on Yelp. Note: Yelp prohibits directly asking for reviews. Build presence through profile completeness." },
-        { title: "Industry Verticals", description: "TripAdvisor, OpenTable, Healthgrades, Avvo. AI Overviews cite industry-specific platforms." },
-        { title: "First-Party Reviews", description: "Feature honest reviews on your own website. Diversification protects against platform filtering." },
-        { title: "NextDoor Presence", description: "16% of reviewers focus here. Hyperlocal platform for neighborhood businesses." }
+        { title: "Google Priority", description: "Primary platform for local pack visibility and star ratings displayed prominently in search results." },
+        { title: "Facebook Reviews", description: "42% of reviewers spend most time here. Important for social proof, referral traffic, and AI source data." },
+        { title: "Yelp Strategy", description: "36% focus on Yelp. Note: Yelp prohibits directly asking for reviews. Build presence through profile completeness and engagement." },
+        { title: "Industry Verticals", description: "TripAdvisor, OpenTable, Healthgrades, Avvo. AI Overviews cite industry-specific platforms for recommendations." },
+        { title: "First-Party Reviews", description: "Feature honest reviews on your own website. Diversification protects against platform filtering algorithms." },
+        { title: "NextDoor Presence", description: "16% of reviewers focus here. Hyperlocal platform ideal for neighborhood service businesses." }
       ],
       imageSrc: reviewPlatformsImg,
       imageAlt: "Multi-platform review diversification strategy",
@@ -817,14 +817,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Reputation Monitoring",
       headline: "Never Miss a Review",
-      description: "AI Overviews cite Yelp, TripAdvisor, and industry directories. We monitor everywhere that matters for rankings and AI visibility with instant alerts.",
+      description: "AI Overviews cite Yelp, TripAdvisor, and industry directories. We monitor everywhere that matters for rankings and AI visibility with instant alerts and centralized response management.",
       subPoints: [
-        { title: "Instant Alerts", description: "New reviews trigger immediate notifications. Response workflows activated same day." },
-        { title: "Multi-Platform Monitoring", description: "Google, Facebook, Yelp, TripAdvisor, and industry sites. All AI source platforms tracked." },
-        { title: "Sentiment Tracking", description: "Overall sentiment trends tracked monthly. Early warning for service issues before they compound." },
-        { title: "Fake Review Detection", description: "Suspicious reviews identified and reported for removal when policy violations exist." },
-        { title: "Recency Tracking", description: "39% of customers filter for recent reviews. We track velocity to ensure fresh review flow." },
-        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, platform performance, and AI visibility in client reports." }
+        { title: "Instant Alerts", description: "New reviews trigger immediate notifications. Response workflows activated same day across all platforms." },
+        { title: "Centralized Dashboard", description: "All reviews from Google, Facebook, Yelp, and industry sites in one place. No platform left unchecked." },
+        { title: "Sentiment Tracking", description: "Overall sentiment trends tracked monthly. Early warning for service issues before they compound into reputation problems." },
+        { title: "Fake Review Detection", description: "Suspicious reviews identified and reported for removal when policy violations exist. We document violations for successful appeals." },
+        { title: "Recency Tracking", description: "39% of customers filter for recent reviews. We track velocity to ensure fresh review flow matches or exceeds competitors." },
+        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, platform performance, competitor comparison, and AI visibility in client reports." }
       ],
       imageSrc: reviewMonitoringImg,
       imageAlt: "Review monitoring and alerts dashboard",
