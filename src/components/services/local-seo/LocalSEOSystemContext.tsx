@@ -53,8 +53,8 @@ const services: Service[] = [
     icon: Globe,
     id: "authority",
     title: "Authority Building",
-    description: "PR placements and backlinks that build trust.",
-    href: "/white-label-inbound-marketing-services/authority"
+    description: "Links and citations that build trust.",
+    href: "/local-authority-building"
   },
   {
     icon: BarChart3,

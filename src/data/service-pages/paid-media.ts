@@ -310,7 +310,7 @@ export const paidMediaConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Star, id: "reputation", title: "Reputation", description: "Build trust with review generation.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "PR and backlinks that build trust.", href: "/white-label-inbound-marketing-services/authority" },
+      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations that build trust.", href: "/local-authority-building" },
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" },
       { icon: Share2, id: "retargeting", title: "Retargeting", description: "Stay top of mind with display ads.", href: "/white-label-inbound-marketing-services/paid-media" }
     ],
