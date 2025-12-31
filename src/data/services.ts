@@ -54,8 +54,8 @@ export const hubs: Hub[] = [
     title: "Local SEO",
     slug: "local-seo",
     summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
-    heroDescription: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients. Our white-label local SEO fulfillment covers everything from on-page optimization to link building, executed with the precision your agency reputation demands.",
-    integrationNote: "Local SEO, GBP SEO, and Authority Building work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
+    heroDescription: "We help agencies deliver comprehensive white-label local SEO services that drive organic visibility, qualified local traffic, and measurable results for their clients. Our local SEO fulfillment spans on-page optimization, technical SEO, and link building, executed with the precision your agency reputation demands.",
+    integrationNote: "Local SEO, Google Business Profile optimization, and authority building work hand in hand. Each service can be engaged independently, but they deliver the strongest results when coordinated as a unified local search strategy.",
     whyItMatters: {
       headline: "Why Local SEO Matters for Your Clients",
       description: "46% of all Google searches have local intent. When someone searches for services in their area, your clients need to appear, not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",

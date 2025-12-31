@@ -21,32 +21,32 @@ export const localSEOConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Cookie-Cutter SEO Packages Fail Local Businesses",
-    intro: "Local SEO is not a checklist. It is a competitive discipline where proximity, relevance, and prominence interact dynamically. Generic packages ignore this reality.",
+    intro: "Local SEO is not a checklist. It is a competitive discipline where proximity, relevance, and prominence interact dynamically in local search and Google Maps. Generic packages ignore this reality.",
     painPoints: [
       {
         icon: MapPin,
         title: "Proximity Changes Everything",
-        body: "Rankings shift based on where the searcher is standing. A business ranking #1 three miles away may not appear at all from across town."
+        body: "Local rankings shift based on where the searcher is standing. A business ranking #1 three miles away may not appear at all from across town."
       },
       {
         icon: Target,
         title: "Competition Varies by Market",
-        body: "A plumber in Boise faces different competition than one in Chicago. Cookie-cutter packages treat them the same."
+        body: "A plumber in Boise faces different local competition than one in Chicago. Cookie-cutter local SEO packages treat them the same."
       },
       {
         icon: Search,
         title: "Intent Signals Are Local",
-        body: "Local searchers have different intent patterns. Understanding these patterns is what separates effective local SEO from wasted effort."
+        body: "Local searchers have distinct intent patterns. Understanding local search intent is what separates effective local SEO from wasted effort."
       },
       {
         icon: Shield,
         title: "Authority Requirements Differ",
-        body: "Some markets need aggressive link building. Others need citation cleanup. Generic packages apply the same tactics everywhere."
+        body: "Some markets require aggressive local link building. Others require citation cleanup and consistency. Generic packages apply the same tactics everywhere."
       }
     ],
     systemClosing: "Effective local SEO requires scoping to the actual market, not templated deliverables.",
-    closingLine: "We scope every engagement to the competitive reality.",
-    closingHighlight: "That's why it works.",
+    closingLine: "We scope every engagement to competitive reality.",
+    closingHighlight: "That is why our local SEO work performs consistently.",
     ctaText: "Start the Conversation"
   },
 
@@ -56,7 +56,7 @@ export const localSEOConfig: ServicePageConfig = {
     items: [
       {
         icon: TrendingUp,
-        title: "Organic Visibility That Compounds",
+        title: "Organic Local Visibility That Compounds",
         description: "Rankings achieved today continue driving leads months and years later. Unlike paid ads, SEO builds equity."
       },
       {
@@ -66,12 +66,12 @@ export const localSEOConfig: ServicePageConfig = {
       },
       {
         icon: Shield,
-        title: "Competitive Defense",
+        title: "Competitive Defense in Local Search",
         description: "If you are not ranking, your client's competitors are taking those calls. Local SEO is defensive as much as offensive."
       },
       {
         icon: Zap,
-        title: "Sales From Organic Visibility",
+        title: "Sales From Local Organic Visibility",
         description: "Organic traffic converts at higher rates because searchers trust earned results over paid placements."
       }
     ]
@@ -80,13 +80,13 @@ export const localSEOConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "How We Execute Local SEO",
-    subheadline: "A phased approach that builds foundation before chasing rankings. Skipping steps breaks the system.",
+    subheadline: "A phased local SEO approach that builds a foundation before chasing rankings. Skipping steps breaks the system.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
         title: "Technical & On-Page Foundation",
-        description: "Audit and fix the fundamentals that determine ranking ceiling.",
+        description: "Audit and fix the fundamentals that determine a site's local ranking ceiling.",
         activities: [
           "Technical SEO audit and fixes",
           "On-page optimization for target locations",
@@ -155,37 +155,37 @@ export const localSEOConfig: ServicePageConfig = {
       {
         title: "On-Page Optimization",
         slug: "on-page-optimization",
-        description: "Location-specific title tags, meta descriptions, headers, and content optimization.",
+        description: "Location-specific title tags, meta descriptions, headers, and on-page local SEO optimization.",
         icon: FileText
       },
       {
         title: "Technical SEO Audits",
         slug: "technical-seo-audits",
-        description: "Site architecture, crawlability, Core Web Vitals, and technical fixes.",
+        description: "Site architecture, crawlability, Core Web Vitals, and technical SEO fixes that support local search performance.",
         icon: Settings
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "Comprehensive keyword discovery, intent analysis, and strategic mapping.",
+        description: "Comprehensive local keyword discovery, local search intent analysis, and strategic mapping.",
         icon: Search
       },
       {
         title: "Content Development",
         slug: "content-development",
-        description: "Service area pages, blog content, and FAQ sections for long-tail queries.",
+        description: "Service area pages, local blog content, and FAQ sections designed to capture long-tail local search queries.",
         icon: FileText
       },
       {
         title: "Link Building",
         slug: "link-building",
-        description: "Outreach to local publications and community organizations.",
+        description: "Outreach to local publications, community organizations, and relevant sites to build geographic authority.",
         icon: Link2
       },
       {
         title: "Schema Markup",
         slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema implementation.",
+        description: "LocalBusiness, Service, FAQ, and Review schema implementation to improve local search visibility.",
         icon: Code
       }
     ]
@@ -194,7 +194,7 @@ export const localSEOConfig: ServicePageConfig = {
   qualification: {
     eyebrow: "Selective Fit",
     headline: "Is This Right for Your Agency?",
-    subheadline: "We work best with agencies who understand that local SEO is a strategic investment, not a quick fix.",
+    subheadline: "We work best with agencies who understand that local SEO is a long-term strategic investment, not a quick fix.",
     goodFit: [
       { point: "Your clients have verified, address-visible GBP listings", detail: "Local SEO requires address-visible Google Business Profiles. Service-area-only listings need a different approach." },
       { point: "You need a reliable fulfillment partner to replace inconsistent vendors", detail: "We become an extension of your team with documented processes and predictable delivery." },
@@ -203,7 +203,7 @@ export const localSEOConfig: ServicePageConfig = {
     ],
     notFit: [
       { point: "Your clients expect top rankings within weeks", detail: "If you're promising fast results to close deals, we're not the right partner for that conversation." },
-      { point: "Clients have service-area-only or address-hidden listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
+      { point: "Clients rely solely on service-area or address-hidden Google Business Profile listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
       { point: "There's no willingness to invest in content and links", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
       { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either lying or using black hat tactics that deliver temporary results and long-term penalties. We focus on sustainable, systematic improvement." }
     ],
@@ -241,7 +241,7 @@ export const localSEOConfig: ServicePageConfig = {
     eyebrow: "The 360° Ecosystem",
     headline: "Local SEO Works Best as Part of a",
     highlightedText: "Coordinated System",
-    intro: "While Local SEO drives organic visibility, it compounds when integrated with the broader inbound ecosystem.",
+    intro: "While local SEO drives organic visibility in search and Google Maps, it compounds when integrated with the broader inbound ecosystem.",
     body: "GBP optimization, authority building, and paid media all reinforce SEO performance. We can engage these services independently or as a unified strategy.",
     services: [
       {
