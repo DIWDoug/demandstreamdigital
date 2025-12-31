@@ -87,14 +87,6 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
           {/* Right Column - Contact Form */}
           <div className="animate-fade-in">
             <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 lg:p-8 shadow-xl">
-              {/* Exclusivity Badge */}
-              <div className="flex items-center gap-2 mb-4 p-3 bg-primary/10 border border-primary/20 rounded-lg">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <p className="text-xs font-medium text-primary">
-                  One agency per city. One agency per niche.
-                </p>
-              </div>
-              
               <h2 className="text-xl font-semibold text-foreground mb-2">Start a Conversation</h2>
               <p className="text-sm text-text-muted mb-6">Tell us about your agency. We'll take it from there.</p>
               
