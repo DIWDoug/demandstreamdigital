@@ -185,7 +185,7 @@ export const authorityConfig: ServicePageConfig = {
       },
       {
         title: "Local Sponsorships & Partnerships",
-        slug: "local-partnerships",
+        slug: "sponsorships",
         description: "Community involvement that creates authentic geographic authority.",
         icon: Handshake
       },

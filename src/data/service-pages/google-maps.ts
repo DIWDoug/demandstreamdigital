@@ -193,38 +193,38 @@ export const googleMapsConfig: ServicePageConfig = {
     blocks: [
       {
         title: "GBP Profile Optimization",
-        slug: "gbp-profile-optimization",
+        slug: "gbp-optimization",
         description: "Profile optimization across categories, attributes, services, products, and descriptions to maximize relevance signals.",
         icon: MapPin
       },
       {
         title: "Review Generation & Response",
-        slug: "review-generation-response",
+        slug: "review-management",
         description: "Systematic review acquisition and response management to build trust and improve rankings.",
         icon: Star
       },
       {
         title: "Citation Building & Cleanup",
-        slug: "citation-building-cleanup",
+        slug: "citation-building",
         description: "NAP consistency across 50+ directories and data aggregators to validate business information and build authority.",
         icon: Globe
       },
       {
         title: "GBP Posting & Content",
-        slug: "gbp-posting-content",
+        slug: "post-scheduling",
         description: "Regular posts, offers, and updates to signal activity to Google and engage potential customers.",
         icon: MessageSquare
       },
       {
         title: "Photo & Media Management",
-        slug: "photo-media-management",
+        slug: "photo-optimization",
         description: "Photo strategy, geotagging, and visual content to increase engagement and trust.",
         icon: Map
       },
       {
-        title: "Local Pack Strategy",
-        slug: "local-pack-strategy",
-        description: "GBP service and product gap analysis with topical map matching between profile and website pages.",
+        title: "Q&A Management",
+        slug: "qa-management",
+        description: "Proactive question seeding and answer management that builds trust and captures search queries.",
         icon: Target
       }
     ]
