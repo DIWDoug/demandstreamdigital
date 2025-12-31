@@ -5,15 +5,15 @@ export const authorityConfig: ServicePageConfig = {
   slug: "authority",
   title: "Authority Building",
   metaTitle: "White-Label Authority Building for Agencies | Dialed-In Web",
-  metaDescription: "White-label authority building services for agencies. Digital PR, link acquisition, reputation management, and thought leadership that builds lasting credibility.",
+  metaDescription: "White-label authority building services for agencies. Local link acquisition, citation building, and off-page SEO that creates lasting ranking power.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/authority",
-  keywords: "white label authority building, digital PR, link building, reputation management, thought leadership",
+  keywords: "white label link building, local authority building, citation building, off-page SEO, local link acquisition",
 
   hero: {
     headline: "White-Label Authority Building",
     highlightedText: "Services",
-    subheadline: "We build the authority signals Google trusts and customers recognize, so rankings hold and brands win long-term.",
-    qualifierLine: "White-label authority building for agencies that want lasting visibility, earned credibility, and defensible rankings across competitive markets.",
+    subheadline: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time.",
+    qualifierLine: "White-label authority building for agencies that want defensible rankings and sustainable local visibility.",
     ctaText: "Schedule a Discovery Call",
     ctaSubtext: "Start a Conversation"
   },
@@ -274,10 +274,10 @@ export const authorityConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "Authority Building Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "Authority accelerates every other channel when it's real.",
-    body: "Authority signals support SEO rankings. Media coverage drives branded search. Reputation builds trust. We offer each service independently, but the magic happens when they work in concert.",
+    intro: "Links and citations accelerate every other channel when they're done right.",
+    body: "Off-page authority supports local rankings. Quality backlinks build domain strength. Citations reinforce geographic relevance. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Award, id: "authority", title: "Authority Building", description: "PR, links, and reputation that build lasting credibility.", href: "/white-label-inbound-marketing-services/authority", isCenter: true },
+      { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/white-label-inbound-marketing-services/authority", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
