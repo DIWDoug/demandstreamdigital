@@ -12,7 +12,7 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Paid media success is not about building the perfect campaign. It is about whittling away everything that keeps it from working. We cut the waste so spend connects to leads.",
+    subheadline: "Paid media works when waste is removed and spend is forced to produce qualified leads.",
     qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
@@ -20,58 +20,58 @@ export const paidMediaConfig: ServicePageConfig = {
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Most White-Label PPC Fails Your Clients",
+    headline: "Why Most White-Label PPC Fails",
     intro: "You have seen this before. The campaigns launched, spend is flowing, but leads are weak, costs are high, and you are left explaining why the numbers do not match the promises.",
     painPoints: [
       {
         icon: Target,
-        title: "Generic Campaigns, Generic Results",
-        body: "Cookie-cutter campaign structures ignore local market dynamics. A service business in Dallas competes differently than one in Portland. Template campaigns deliver template results."
+        title: "Strategy-Free Campaigns",
+        body: "Template campaigns ignore local competition, buyer intent, and capacity. Without a clear lead strategy, spend flows but outcomes stay vague."
       },
       {
         icon: DollarSign,
-        title: "Spend Without Strategy",
-        body: "Budget goes out the door without clear conversion goals or attribution. When you cannot prove ROI, every invoice becomes a negotiation."
+        title: "Spend Without Accountability",
+        body: "Budgets go out the door without clean conversion tracking or attribution. When ROI cannot be proven, every invoice becomes a negotiation."
       },
       {
         icon: Settings,
-        title: "Set It and Forget It Management",
-        body: "Campaigns need daily attention, not weekly glances. Search terms go unchecked, bids drift, and performance degrades while no one is watching."
+        title: "Set-It-and-Forget-It Management",
+        body: "Campaigns need daily attention. Search terms, bids, and audiences drift while performance degrades and no one notices."
       },
       {
         icon: FileText,
-        title: "Reports That Confuse Rather Than Clarify",
-        body: "Clients receive data dumps instead of insights. Impressions and clicks mean nothing if you cannot connect them to leads and revenue."
+        title: "Reporting That Obscures Reality",
+        body: "Clients receive dashboards full of clicks and impressions instead of clarity. Data without context creates confusion, not confidence."
       }
     ],
-    closingLine: "We build campaigns from the ground up for local lead generation",
-    closingHighlight: "so clients get leads they can count and you keep the margin you earned.",
+    closingLine: "We build paid media specifically for local lead generation, with structure, tracking, and optimization",
+    closingHighlight: "agencies can stand behind.",
     ctaText: "See How We Build Campaigns"
   },
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "Each week, we whittle away inefficiencies: bad keywords, weak audiences, underperforming ads. What remains is a campaign that works.",
+    subheadline: "Each week, we whittle away inefficiencies. What remains is a campaign that works.",
     items: [
       {
         icon: Zap,
         title: "Leads Start Flowing Immediately",
-        description: "Unlike SEO, paid media delivers from day one. Qualified leads within the first week, not the first quarter."
+        description: "Paid media delivers qualified leads within days, not quarters."
       },
       {
         icon: Target,
         title: "Waste Gets Eliminated Weekly",
-        description: "Negative keywords, excluded audiences, paused underperformers. We cut what doesn't work so budget flows to what does."
+        description: "Bad keywords, weak audiences, and underperforming ads are actively removed every week."
       },
       {
         icon: TrendingUp,
         title: "Efficiency Compounds Monthly",
-        description: "Each optimization removes friction. Cost per lead drops as we refine targeting, messaging, and audience signals."
+        description: "Ongoing refinement lowers cost per lead as targeting and messaging improve."
       },
       {
         icon: DollarSign,
         title: "Scalable Growth When Ready",
-        description: "When campaigns work, scale them up. Predictable lead generation that matches capacity and growth goals."
+        description: "Proven campaigns scale predictably when capacity and goals align."
       }
     ]
   },
@@ -85,12 +85,11 @@ export const paidMediaConfig: ServicePageConfig = {
         phase: 1,
         name: "Foundation",
         title: "Research, Strategy & Infrastructure",
-        description: "Comprehensive analysis and tracking setup before any spend goes out the door.",
+        description: "Comprehensive analysis and tracking setup before any spend goes out the door. This phase typically spans 2-4 weeks depending on scope.",
         activities: [
           "Market and competitor analysis",
           "Campaign structure design by platform",
-          "Ad copy development and testing matrix",
-          "Landing page audit and development",
+          "Ad copy, testing frameworks, and landing page conversion review",
           "Conversion tracking setup and linking",
           "Offline conversion setup (if applicable)",
           "Call tracking implementation",
@@ -168,59 +167,71 @@ export const paidMediaConfig: ServicePageConfig = {
     headline: "The Components of Paid Media Management",
     subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
+      // Traffic Generation
       {
         title: "Google Ads Management",
         slug: "google-ads-management",
-        description: "Search, display, and shopping campaigns built for local lead generation and performance.",
-        icon: Search
+        description: "Search, display, and shopping campaigns built for local lead generation.",
+        icon: Search,
+        cluster: "Traffic Generation"
       },
       {
         title: "Meta Ads Management",
         slug: "meta-ads-management",
-        description: "Facebook and Instagram campaigns that reach local audiences and drive qualified leads.",
-        icon: Target
+        description: "Facebook and Instagram campaigns that reach local audiences.",
+        icon: Target,
+        cluster: "Traffic Generation"
       },
       {
         title: "Local Service Ads",
         slug: "local-service-ads",
-        description: "Google-verified LSAs that put your clients at the top of local search with pay-per-lead pricing.",
-        icon: Map
+        description: "Google-verified LSAs with pay-per-lead pricing.",
+        icon: Map,
+        cluster: "Traffic Generation"
       },
       {
         title: "Retargeting & Display",
         slug: "retargeting-campaigns",
-        description: "Display and social retargeting via Google Display, Meta, and AdRoll to keep clients top of mind.",
-        icon: Share2
+        description: "Display and social retargeting via Google, Meta, and AdRoll.",
+        icon: Share2,
+        cluster: "Traffic Generation"
       },
+      // Conversion Infrastructure
       {
         title: "Landing Page Design",
         slug: "landing-page-design",
-        description: "Conversion-focused landing pages with local trust signals, click-to-call, and optimized forms.",
-        icon: MousePointerClick
-      },
-      {
-        title: "Conversion Tracking",
-        slug: "conversion-tracking",
-        description: "Proper tracking setup that connects every click to form fills, calls, and revenue.",
-        icon: Settings
-      },
-      {
-        title: "Call Tracking & Attribution",
-        slug: "call-tracking-attribution",
-        description: "Call recording, dynamic number insertion, and multi-touch attribution for complete visibility.",
-        icon: BarChart3
-      },
-      {
-        title: "ROI Analysis & Reporting",
-        slug: "roi-analysis-reporting",
-        description: "White-labeled reports that connect ad spend to leads and revenue your clients understand.",
-        icon: DollarSign
+        description: "Conversion-focused pages with local trust signals and optimized forms.",
+        icon: MousePointerClick,
+        cluster: "Conversion Infrastructure"
       },
       {
         title: "Funnel Strategy",
         slug: "funnel-strategy",
-        description: "Top, middle, and bottom of funnel campaigns aligned to conversion goals and buyer intent.",
-        icon: Layers
+        description: "Top, middle, and bottom of funnel campaigns aligned to buyer intent.",
+        icon: Layers,
+        cluster: "Conversion Infrastructure"
+      },
+      // Measurement & Attribution
+      {
+        title: "Conversion Tracking",
+        slug: "conversion-tracking",
+        description: "Tracking setup that connects clicks to form fills, calls, and revenue.",
+        icon: Settings,
+        cluster: "Measurement & Attribution"
+      },
+      {
+        title: "Call Tracking & Attribution",
+        slug: "call-tracking-attribution",
+        description: "Call recording, dynamic number insertion, and multi-touch attribution.",
+        icon: BarChart3,
+        cluster: "Measurement & Attribution"
+      },
+      {
+        title: "ROI Analysis & Reporting",
+        slug: "roi-analysis-reporting",
+        description: "White-labeled reports connecting spend to leads and revenue.",
+        icon: DollarSign,
+        cluster: "Measurement & Attribution"
       }
     ]
   },
@@ -236,25 +247,21 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         point: "You want accountability, not just activity",
-        detail: "We focus on leads and revenue, not impressions and clicks. Our reporting connects spend to outcomes so you can prove ROI."
+        detail: "We focus on leads and revenue, not impressions and clicks. Our reporting connects spend to outcomes."
       },
       {
         point: "Your clients answer the phone and respond to leads fast",
-        detail: "Paid media generates leads quickly. If calls go to voicemail or form submissions sit for days, the investment is wasted and we cannot optimize effectively."
+        detail: "Paid media generates leads quickly. If calls go to voicemail or form submissions sit for days, the investment is wasted."
       },
       {
-        point: "You understand paid media requires investment",
+        point: "You understand paid media requires disciplined investment",
         detail: "Management fees plus ad spend. This is not a cheap channel, but the ROI justifies the investment when done right."
-      },
-      {
-        point: "You value long-term optimization over quick launches",
-        detail: "Campaigns improve over time with data. We partner with agencies who understand that month three is better than month one."
       }
     ],
     notFit: [
       {
         point: "Ad spend under $1,500/month",
-        detail: "Below this threshold, there is not enough budget to generate meaningful data or results. We cannot recommend paid media for micro-budgets."
+        detail: "Below this threshold, there is not enough budget to generate meaningful data or results."
       },
       {
         point: "Expecting overnight results without optimization time",
@@ -262,15 +269,11 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         point: "Clients who do not answer the phone or follow up with leads",
-        detail: "If calls go to voicemail or leads sit untouched, we cannot optimize effectively and the spend is wasted. Fast response is non-negotiable."
+        detail: "If calls go to voicemail or leads sit untouched, we cannot optimize effectively and the spend is wasted."
       },
       {
         point: "Price is the only decision factor",
         detail: "Quality paid media management requires investment. If you are shopping purely on management fee, we are not the right fit."
-      },
-      {
-        point: "One-time campaign setup with no ongoing management",
-        detail: "Paid media requires continuous optimization. We do not offer setup-only services."
       }
     ],
     ctaText: "Let's Discuss Your Clients"
@@ -282,33 +285,25 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         category: "Results & Performance",
         items: [
-          { question: "How quickly will we see results?", answer: "Campaigns can launch within 1-2 weeks and typically generate leads within the first week of running. Performance improves over time as we gather data and optimize." },
-          { question: "What kind of ROI can we expect?", answer: "ROI varies by industry and market, but our goal is always positive return on ad spend. We track cost per lead and work to continuously improve it." },
-          { question: "What if a campaign is not performing?", answer: "We monitor campaigns daily and make optimization decisions weekly. If something is not working, we identify it quickly and pivot. Our goal is always to improve performance, not just maintain it." },
-          { question: "Is outsourcing PPC worth it vs. hiring in-house?", answer: "For most agencies, yes. You get senior-level expertise without the overhead of salaries, benefits, and ongoing training. You also avoid the risk of a single employee leaving with all your PPC knowledge." }
+          { question: "How quickly will we see results?", answer: "Campaigns launch in 1-2 weeks and typically generate leads within the first week. Performance improves as we gather data and optimize." },
+          { question: "What kind of ROI can we expect?", answer: "ROI varies by industry, but we track cost per lead and work to continuously improve it." },
+          { question: "What if a campaign is not performing?", answer: "We monitor daily and optimize weekly. If something is not working, we pivot quickly." }
         ]
       },
       {
         category: "Services & Scope",
         items: [
-          { question: "Do you manage both Google Ads and Meta Ads?", answer: "Yes. We are certified in both platforms and manage campaigns across Google Search, Display, Local Service Ads, and the full Meta ecosystem including Facebook and Instagram." },
-          { question: "Do you create landing pages?", answer: "Yes. We can develop conversion-optimized landing pages as part of campaign management. Strong landing pages are critical to campaign success." },
-          { question: "Who provides the creative assets and ad copy?", answer: "We handle ad copy development and testing. For Meta campaigns requiring images or video, we can work with assets you provide or develop creative as part of the scope." },
-          { question: "How do you handle negative keywords and click fraud?", answer: "We maintain master negative keyword lists, monitor for invalid clicks, and use placement exclusions to prevent wasted spend on low-quality traffic sources like mobile apps." },
-          { question: "Do you help with Local Service Ads eligibility?", answer: "Yes. We can guide clients through the Google Screened verification process, background checks, and license documentation required for LSA eligibility." },
-          { question: "What is your minimum ad spend requirement?", answer: "We recommend minimum $2,000/month in ad spend for local campaigns to generate meaningful data and results. We work with agencies to determine appropriate budgets based on market competition and goals." }
+          { question: "Do you manage both Google Ads and Meta Ads?", answer: "Yes. We manage Google Search, Display, Local Service Ads, and the full Meta ecosystem." },
+          { question: "Do you create landing pages?", answer: "Yes. We develop conversion-optimized landing pages as part of campaign management." },
+          { question: "What is your minimum ad spend requirement?", answer: "We recommend minimum $2,000/month in ad spend to generate meaningful data and results." }
         ]
       },
       {
         category: "Partnership & Process",
         items: [
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship." },
-          { question: "Do you provide white-labeled reports?", answer: "Yes. All reporting is fully branded with your agency logo and colors. We can deliver via PDF, Looker Studio, or integrate with Agency Analytics." },
-          { question: "What is the setup timeline for new campaigns?", answer: "Typical setup is 5-10 business days for new campaigns, including tracking implementation, account structure, ad copy development, and landing page review." },
-          { question: "Do you sign NDAs?", answer: "Yes. We sign non-disclosure agreements as standard practice. We never contact your clients directly and never solicit your business relationships." },
-          { question: "What certifications does your team hold?", answer: "Our team holds Google Ads certifications across Search, Display, and Video, plus Meta Blueprint certifications for Facebook and Instagram advertising." },
-          { question: "How much should I charge my clients for PPC?", answer: "Most agencies mark up management fees 50-100% above our rates. We can provide pricing guidance based on your market and positioning, but you control your margins." },
-          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements." }
+          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you." },
+          { question: "Do you provide white-labeled reports?", answer: "Yes. All reporting is branded with your agency logo and colors." },
+          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy." }
         ]
       }
     ]
@@ -318,8 +313,8 @@ export const paidMediaConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "Paid Media Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "Effective local marketing is interconnected. Paid media fills the pipeline while SEO builds, retargeting keeps you top of mind, and email nurtures leads.",
-    body: "We offer each service independently, but the magic happens when they work in concert.",
+    intro: "Paid media fills the pipeline while SEO compounds demand and retargeting maintains visibility.",
+    body: "Each service works independently, but performance accelerates when they are aligned.",
     services: [
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns for immediate lead generation.", href: "/white-label-inbound-marketing-services/paid-media", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },

@@ -12,6 +12,43 @@ interface ServiceBuildingBlocksSectionProps {
 }
 
 const ServiceBuildingBlocksSection = ({ config }: ServiceBuildingBlocksSectionProps) => {
+  // Check if blocks have cluster groupings
+  const hasClusters = config.blocks.some(block => block.cluster);
+  
+  // Group blocks by cluster if clusters exist
+  const groupedBlocks = hasClusters 
+    ? config.blocks.reduce((acc, block) => {
+        const cluster = block.cluster || "Other";
+        if (!acc[cluster]) acc[cluster] = [];
+        acc[cluster].push(block);
+        return acc;
+      }, {} as Record<string, BuildingBlock[]>)
+    : null;
+
+  const renderBlock = (block: BuildingBlock) => {
+    const Icon = block.icon;
+    return (
+      <div
+        key={block.slug}
+        className="bg-surface-elevated border border-border/50 rounded-xl p-6"
+      >
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
+            <Icon className="w-6 h-6 text-cta" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-foreground font-semibold text-lg mb-2">
+              {block.title}
+            </h3>
+            <p className="text-text-secondary text-sm leading-relaxed">
+              {block.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
@@ -29,33 +66,27 @@ const ServiceBuildingBlocksSection = ({ config }: ServiceBuildingBlocksSectionPr
             </p>
           </div>
 
-          {/* Blocks Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {config.blocks.map((block) => {
-              const Icon = block.icon;
-              
-              return (
-                <div
-                  key={block.slug}
-                  className="bg-surface-elevated border border-border/50 rounded-xl p-6"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-cta" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-foreground font-semibold text-lg mb-2">
-                        {block.title}
-                      </h3>
-                      <p className="text-text-secondary text-sm leading-relaxed">
-                        {block.description}
-                      </p>
-                    </div>
+          {/* Clustered Blocks */}
+          {groupedBlocks ? (
+            <div className="space-y-12">
+              {Object.entries(groupedBlocks).map(([clusterName, blocks]) => (
+                <div key={clusterName}>
+                  <h3 className="text-lg font-semibold text-foreground mb-6 flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-cta"></span>
+                    {clusterName}
+                  </h3>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {blocks.map(renderBlock)}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ) : (
+            /* Flat Blocks Grid */
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {config.blocks.map(renderBlock)}
+            </div>
+          )}
         </div>
       </div>
     </section>
