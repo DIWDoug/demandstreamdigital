@@ -74,7 +74,7 @@ export const hubs: Hub[] = [
     integrationNote: "Local SEO, Google Business Profile optimization, and authority building work hand in hand. Each service can be engaged independently, but they deliver the strongest results when coordinated as a unified local search strategy.",
     whyItMatters: {
       headline: "Why Local SEO Matters for Your Clients",
-      description: "46% of all Google searches have local intent. When someone searches for services in their area, your clients need to appear, not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",
+      description: "76% of consumers who search for 'near me' visit a business within a day. When someone searches for services in their area, your clients need to appear, not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",
       points: [
         { icon: Target, title: "Capture High-Intent Traffic", description: "Local searchers are ready to buy. They're not researching. They're looking for a provider right now." },
         { icon: TrendingUp, title: "Compound Returns Over Time", description: "Unlike paid ads, SEO builds equity. Rankings achieved today continue driving leads months and years later." },
@@ -197,11 +197,20 @@ export const hubs: Hub[] = [
       {
         title: "Schema Markup",
         slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema implementation that enhances search visibility.",
-        fullDescription: "Schema markup helps search engines understand your client's business and can unlock rich snippets in search results. We implement LocalBusiness, Service, FAQ, and Review schema to maximize visibility and click-through rates.",
-        benefits: ["Enhanced search result appearance", "Rich snippet eligibility", "Better search engine understanding", "Improved click-through rates", "Competitive differentiation in SERPs"],
-        deliverables: ["Schema audit and recommendations", "LocalBusiness schema implementation", "Service schema markup", "FAQ schema for key pages", "Review schema integration", "Schema testing and validation"],
-        process: ["Current schema audit", "Opportunity identification", "Schema development", "Implementation", "Testing and validation", "Ongoing monitoring"]
+        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results and AI Overview citations.",
+        fullDescription: "Schema markup helps search engines and AI systems understand your client's business. We implement LocalBusiness, Service, FAQ, and Review schema to unlock rich snippets in traditional search and improve accuracy in AI-generated results.",
+        benefits: ["Enhanced search result appearance with rich snippets", "Rich snippet eligibility for stars, hours, and FAQs", "Better search engine understanding of business entities", "Improved click-through rates from enhanced listings", "AI Overview citation eligibility through structured data", "Competitive differentiation in traditional and AI search"],
+        deliverables: ["Schema audit and recommendations", "LocalBusiness schema implementation", "Service schema markup", "FAQ schema for key pages", "Review schema integration", "Schema testing and validation", "AI visibility verification"],
+        process: ["Current schema audit", "Opportunity identification", "Schema development", "Implementation", "Testing and validation", "AI citation monitoring", "Ongoing monitoring"]
+      },
+      {
+        title: "NAP Citations",
+        slug: "nap-citations",
+        description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity.",
+        fullDescription: "Citations are mentions of your client's business name, address, and phone number across the web. Consistent NAP data validates business identity with Google and feeds the trusted third-party sources that AI Overviews cite. We audit, clean, and build citations across directories that matter for both traditional local rankings and AI visibility.",
+        benefits: ["Improved local pack rankings through NAP consistency", "AI Overview source eligibility via trusted directories", "Enhanced trust signals for Google's local algorithm", "Referral traffic from high-authority directories", "Foundation for local authority building", "Reduced ranking suppression from conflicting data"],
+        deliverables: ["Complete NAP audit using citation tools", "Incorrect citation correction and cleanup", "Core citation building across 50+ directories", "Data aggregator submissions (Foursquare, Data Axle, Neustar)", "Industry-specific directory submissions", "AI source audit for Yelp, TripAdvisor, and vertical platforms", "Ongoing NAP monitoring and maintenance"],
+        process: ["Current NAP audit with Semrush/BrightLocal", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "AI visibility verification", "Ongoing monitoring and quarterly re-audits"]
       }
     ]
   },
@@ -263,20 +272,20 @@ export const hubs: Hub[] = [
       {
         title: "GBP Optimization",
         slug: "gbp-optimization",
-        description: "Complete profile optimization including categories, attributes, services, products, and description for maximum visibility.",
-        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps. We optimize every element from primary and secondary categories to business attributes, services, products, and description to maximize visibility and conversions.",
-        benefits: ["Improved visibility in local pack", "Higher engagement from searchers", "Better conversion from views to actions", "Competitive advantage", "Foundation for Maps optimization"],
-        deliverables: ["Complete GBP audit and optimization", "Category and attribute optimization", "Service and product catalog setup", "Business description optimization", "Profile completeness maximization", "Ongoing profile maintenance"],
-        process: ["Profile audit against best practices", "Competitive GBP analysis", "Optimization implementation", "Performance monitoring", "Ongoing refinement"]
+        description: "Complete profile optimization including categories, attributes, services, products, and description for maximum visibility and AI citations.",
+        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps and increasingly the source AI Overviews pull for local recommendations. We optimize every element from primary and secondary categories to business attributes, services, products, and description to maximize visibility in the local pack and AI-generated results.",
+        benefits: ["Improved visibility in local pack and AI Overviews", "Higher engagement from searchers through complete profiles", "Better conversion from views to actions", "AI Overview citation eligibility through structured attributes", "Expanded keyword coverage through secondary categories", "Foundation for Maps optimization and AI visibility"],
+        deliverables: ["Complete GBP audit and optimization", "Primary and secondary category optimization", "Business attribute maximization for AI extraction", "Service and product catalog with keyword alignment", "Business description optimization for AI parsing", "Profile completeness maximization", "Ongoing profile maintenance"],
+        process: ["Profile audit against best practices", "Competitive GBP analysis", "Category expansion research", "Optimization implementation", "AI visibility verification", "Performance monitoring", "Ongoing refinement"]
       },
       {
         title: "Review Management",
         slug: "review-management",
-        description: "Systematic review generation strategies and professional response management that builds trust and rankings.",
-        fullDescription: "Reviews are the social proof that converts searchers into customers. We implement systematic review generation campaigns and professional response management that demonstrates the business cares about customer feedback.",
-        benefits: ["Increased review volume and velocity", "Improved star rating over time", "Better conversion from profile views", "Demonstrated customer care", "Competitive advantage in review metrics"],
-        deliverables: ["Review generation campaign setup", "Review request templates", "Response drafting for all reviews", "Review monitoring and alerts", "Monthly review performance reports", "Reputation trend analysis"],
-        process: ["Review audit and competitive analysis", "Generation campaign strategy", "Template and workflow development", "Ongoing response drafting", "Performance tracking"]
+        description: "Systematic review generation, professional responses, and reputation building that drives rankings and AI visibility.",
+        fullDescription: "Reviews now account for 20% of local ranking factors according to the 2026 Whitespark study. We implement systematic review generation campaigns and professional response management. Responses aren't just good customer service, they're an SEO signal and feed the content AI systems parse when generating recommendations.",
+        benefits: ["Increased review volume and velocity for ranking signals", "Improved star rating over time through systematic generation", "Better conversion from profile views to actions", "AI Overview source eligibility through Yelp, TripAdvisor, and vertical platforms", "Response content that AI systems extract for recommendations", "Competitive advantage in review quantity, recency, and quality"],
+        deliverables: ["Review generation campaign with direct links and QR codes", "Review request templates for email, text, and receipts", "Professional response drafting for all reviews including negatives", "Review monitoring and real-time alerts", "Monthly review performance reports with sentiment analysis", "AI platform monitoring for Yelp, TripAdvisor, and industry sites"],
+        process: ["Review audit and competitive analysis", "Generation campaign strategy with timing optimization", "Template and workflow development", "Ongoing response drafting with AI-friendly content", "Performance tracking and sentiment monitoring"]
       },
       {
         title: "Citation Building",

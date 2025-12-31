@@ -49,7 +49,8 @@ const Header = () => {
         { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
         { label: "Content Development", slug: "content-development" },
         { label: "Link Building", slug: "link-building" },
-        { label: "Schema Markup", slug: "schema-markup" }
+        { label: "Schema Markup", slug: "schema-markup" },
+        { label: "NAP Citations", slug: "nap-citations" }
       ]
     },
     {

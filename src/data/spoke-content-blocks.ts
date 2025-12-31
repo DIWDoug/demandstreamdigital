@@ -96,23 +96,36 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "How do you test schema implementation?", answer: "Google Rich Results Test, Schema.org validator, and Search Console enhancement reports. We verify eligibility for all applicable rich results." },
     { question: "Does schema directly improve rankings?", answer: "Schema itself is not a direct ranking factor. However, rich results from schema can significantly improve click-through rates, which indirectly benefits rankings." },
     { question: "How often should schema be updated?", answer: "Updated when business information changes, new services are added, or Google announces new supported schema types. Quarterly reviews recommended." },
-    { question: "Can schema help with AI search visibility?", answer: "Yes. Structured data helps LLMs understand entity relationships, business details, and content structure. Clean schema improves chances of accurate AI citations." }
+    { question: "Can schema help with AI search visibility?", answer: "Yes. Structured data helps LLMs understand entity relationships, business details, and content structure. Clean schema improves chances of accurate AI citations and AI Overview inclusion." }
+  ],
+  "nap-citations": [
+    { question: "What is a NAP citation?", answer: "A citation is any online mention of your business name, address, and phone number. Citations on trusted directories validate business identity with Google and feed the sources AI systems reference." },
+    { question: "How many citations do you build?", answer: "We start with 50+ core citations across major directories and data aggregators, then add industry-specific platforms. Quality and consistency matter more than raw quantity." },
+    { question: "How long until citations impact rankings?", answer: "Most citations appear in Google's index within 2-4 weeks. Ranking impact typically shows within 4-8 weeks as NAP consistency signals propagate." },
+    { question: "Do you clean up incorrect citations?", answer: "Yes. Citation cleanup is the first step. We identify and correct inconsistencies before building new citations. Conflicting NAP data actively hurts rankings." },
+    { question: "Why do citations matter for AI visibility?", answer: "Google's AI Overviews cite trusted third-party sources like Yelp, TripAdvisor, and industry directories. Accurate listings on these platforms increase chances of AI citation." },
+    { question: "What are data aggregators?", answer: "Data aggregators like Foursquare, Data Axle, and Neustar distribute business information to hundreds of directories. Submitting to aggregators ensures consistent NAP across the citation ecosystem." }
   ],
   // GBP SEO FAQs
   "gbp-optimization": [
     { question: "How long until GBP changes affect rankings?", answer: "Profile optimizations can show impact within 1-2 weeks. Competitive markets may take longer as other signals like reviews and citations need to build." },
     { question: "Do you need access to the GBP account?", answer: "Yes. We need manager-level access to make optimizations, respond to reviews, and create posts. Owner access remains with the business." },
-    { question: "Can you help with new GBP verification?", answer: "Yes. We guide clients through the verification process and troubleshoot issues. Verification method depends on business type and Google's requirements." }
+    { question: "Can you help with new GBP verification?", answer: "Yes. We guide clients through the verification process and troubleshoot issues. Verification method depends on business type and Google's requirements." },
+    { question: "How do secondary categories affect rankings?", answer: "Secondary categories expand the range of searches your listing appears for. We research competitor categories and add relevant ones to maximize keyword coverage." },
+    { question: "Does GBP optimization help with AI Overviews?", answer: "Yes. AI Overviews often pull directly from GBP data including description, services, hours, and attributes. A complete, accurate profile improves AI citation accuracy." }
   ],
   "review-management": [
     { question: "Can you guarantee a certain star rating?", answer: "No. We implement systems that generate more reviews from satisfied customers, which typically improves ratings over time. We cannot control individual reviews." },
     { question: "How do you handle fake negative reviews?", answer: "We report policy-violating reviews to Google with documentation. Removal is not guaranteed but we have a strong success rate with legitimate violations." },
-    { question: "Do you respond to reviews as the business?", answer: "We draft responses for your approval. Once templates are established, we can respond directly with pre-approved language." }
+    { question: "Do you respond to reviews as the business?", answer: "We draft responses for your approval. Once templates are established, we can respond directly with pre-approved language." },
+    { question: "Why does review response matter for SEO?", answer: "Google confirms that review responses help strengthen local presence. Response content is also parsed by AI systems when generating recommendations about local businesses." },
+    { question: "What should customers mention in reviews?", answer: "We encourage customers to mention specific services and location. This helps with traditional rankings and increases chances of AI Overviews featuring the business for relevant queries." }
   ],
   "citation-building": [
     { question: "How many citations do you build?", answer: "We start with 50+ core citations and add industry-specific directories. Quality and relevance matter more than raw quantity." },
     { question: "How long until citations are indexed?", answer: "Most citations appear in Google's index within 2-4 weeks. Some directories take longer to be crawled." },
-    { question: "Do you clean up existing incorrect citations?", answer: "Yes. Citation cleanup is included. We identify and correct inconsistencies before building new citations." }
+    { question: "Do you clean up existing incorrect citations?", answer: "Yes. Citation cleanup is included. We identify and correct inconsistencies before building new citations." },
+    { question: "Why do citations matter for AI visibility?", answer: "AI Overviews cite trusted third-party sources like Yelp and industry directories. Accurate, consistent listings on these platforms increase AI citation eligibility." }
   ],
   "photo-optimization": [
     { question: "Do you take photos for GBP?", answer: "We optimize photos you provide. If professional photography is needed, we can recommend local photographers." },
@@ -597,6 +610,54 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
+  "nap-citations": [
+    {
+      category: "Citation Audit",
+      headline: "Find Every Citation Issue",
+      description: "Inconsistent NAP data actively hurts rankings. We audit every existing citation and identify conflicts before they compound.",
+      subPoints: [
+        { title: "Full Citation Scan", description: "Semrush, BrightLocal, and manual research to find every mention of the business online." },
+        { title: "NAP Inconsistencies", description: "Name variations, old addresses, wrong phone numbers identified and documented." },
+        { title: "Duplicate Listings", description: "Multiple listings on the same platform found. Suppression candidates flagged." },
+        { title: "Historic Data", description: "Previous business names, addresses, and numbers tracked for cleanup." },
+        { title: "Competitor Comparison", description: "Citation counts and sources compared against local pack leaders." },
+        { title: "AI Source Audit", description: "Yelp, TripAdvisor, and industry directories checked for AI Overview eligibility." }
+      ],
+      ctaText: "Start Citation Audit",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Citation Correction",
+      headline: "Fix Before You Build",
+      description: "Building new citations on top of inconsistent data wastes effort. We clean up existing issues first.",
+      subPoints: [
+        { title: "Priority Platforms", description: "Major platforms corrected first. Google, Yelp, Facebook, Apple Maps take priority." },
+        { title: "Data Aggregator Updates", description: "Foursquare, Data Axle, Neustar updated to propagate corrections downstream." },
+        { title: "Suppression Requests", description: "Duplicate listings suppressed or merged into single authoritative listings." },
+        { title: "Old Address Removal", description: "Previous locations updated or removed to eliminate confusion." },
+        { title: "Phone Number Standardization", description: "All listings updated to primary business number. Tracking numbers unified." },
+        { title: "Verification", description: "Corrections verified after propagation. Nothing assumed complete until confirmed." }
+      ],
+      ctaText: "Get Citation Cleanup",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Citation Building",
+      headline: "Strategic Directory Submissions",
+      description: "Not all citations are equal. We prioritize directories Google trusts and AI systems cite.",
+      subPoints: [
+        { title: "Core 50+ Directories", description: "Google, Apple Maps, Bing, Yelp, Facebook, and the directories that matter most." },
+        { title: "Data Aggregators", description: "Submissions to Foursquare, Data Axle, and Neustar that feed hundreds of downstream sites." },
+        { title: "Industry Directories", description: "Vertical-specific directories that signal expertise. Competitor gap analysis included." },
+        { title: "Local Directories", description: "Chamber of commerce, local business associations, and community platforms." },
+        { title: "AI Citation Sources", description: "Platforms AI Overviews cite: Yelp, TripAdvisor, OpenTable, and industry-specific sites." },
+        { title: "Ongoing Monitoring", description: "Quarterly audits catch new inconsistencies. NAP maintained over time." }
+      ],
+      ctaText: "Schedule a Consultation",
+      ctaHref: "#contact"
+    }
+  ],
+
   // =============================================
   // GBP SEO SPOKES
   // =============================================
@@ -605,14 +666,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Profile Foundation",
       headline: "Complete GBP Profiles That Rank",
-      description: "An incomplete profile is an invisible profile. We optimize every element Google uses to determine local pack placement.",
+      description: "An incomplete profile is an invisible profile. We optimize every element Google uses for local pack placement and AI Overview citations.",
       subPoints: [
         { title: "Primary Category", description: "The single most important ranking factor. Selected based on search volume and competitive analysis." },
-        { title: "Secondary Categories", description: "Up to 9 additional categories that expand visibility for related services." },
-        { title: "Business Description", description: "750 characters optimized for keywords and conversions. First 250 characters most critical." },
-        { title: "Service Catalog", description: "Complete service listings with descriptions and pricing that match website content." },
-        { title: "Attributes", description: "Every applicable attribute checked. Accessibility, amenities, and service options." },
-        { title: "Hours & Special Hours", description: "Accurate hours including holidays. Incorrect hours trigger negative reviews." }
+        { title: "Secondary Categories", description: "Up to 9 additional categories that expand visibility for related services and AI query matching." },
+        { title: "Business Description", description: "750 characters optimized for keywords and AI extraction. First 250 characters most critical." },
+        { title: "Service Catalog", description: "Complete service listings with descriptions and pricing that match website content for signal consistency." },
+        { title: "Attributes", description: "Every applicable attribute checked. AI Overviews pull attribute data for recommendations." },
+        { title: "Hours & Special Hours", description: "Accurate hours including holidays. Incorrect hours trigger negative reviews and AI inaccuracies." }
       ],
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -635,14 +696,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Ongoing Optimization",
       headline: "Profiles That Stay Optimized",
-      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates and competitive pressure.",
+      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates, competitive pressure, and AI search changes.",
       subPoints: [
         { title: "Weekly Posts", description: "Fresh content signals activity. Offers, updates, and events scheduled weekly." },
         { title: "Photo Updates", description: "New photos monthly. Geotagged, optimized, and strategically captioned." },
         { title: "Q&A Management", description: "Questions seeded proactively. Community questions answered within 24 hours." },
         { title: "Review Monitoring", description: "New reviews flagged immediately. Response drafts provided same day." },
         { title: "Insights Analysis", description: "Monthly performance review. Search queries, actions, and direction requests tracked." },
-        { title: "Algorithm Updates", description: "GBP changes monitored and profiles adjusted as Google evolves requirements." }
+        { title: "AI Visibility Check", description: "AI Overview citations monitored. Profile data verified for accuracy in AI-generated results." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -653,27 +714,27 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Review Generation",
       headline: "Systematic Review Acquisition",
-      description: "Reviews don't happen by accident. We implement systems that generate consistent 5-star reviews from happy customers.",
+      description: "Reviews now account for 20% of local ranking factors. We implement systems that generate consistent reviews from satisfied customers.",
       subPoints: [
-        { title: "Timing Strategy", description: "Review requests sent at optimal moments. Post-service satisfaction windows identified." },
-        { title: "Request Templates", description: "Tested templates that convert. Personal, brief, and friction-free." },
-        { title: "Multi-Channel", description: "Email, SMS, and in-person request strategies tailored to business type." },
+        { title: "Timing Strategy", description: "Review requests sent at optimal moments. Post-service satisfaction windows identified per Backlinko research." },
+        { title: "Request Templates", description: "Tested templates that convert. Personal, brief, and friction-free with direct links." },
+        { title: "Multi-Channel", description: "Email, SMS, QR codes, and receipts. Review request integrated into every customer touchpoint." },
         { title: "Direct Links", description: "Shortened review links that go straight to the review form. No navigation required." },
-        { title: "Staff Training", description: "Scripts and protocols for front-line staff to request reviews naturally." },
-        { title: "Velocity Targets", description: "Monthly review goals set based on competitive analysis and ranking needs." }
+        { title: "Service Mentions", description: "Customers encouraged to mention specific services and location. Helps with AI query matching." },
+        { title: "Velocity Targets", description: "Monthly review goals set based on competitive analysis. Recency matters for rankings." }
       ],
       ctaText: "Start Review Generation",
       ctaHref: "#contact"
     },
     {
       category: "Response Management",
-      headline: "Professional Responses That Build Trust",
-      description: "How you respond to reviews matters as much as the reviews themselves. We craft responses that convert readers.",
+      headline: "Responses That Build Trust and Rankings",
+      description: "Google confirms that replies strengthen local presence. Response content is also parsed by AI systems when generating recommendations.",
       subPoints: [
-        { title: "Positive Responses", description: "Thank customers authentically. Reinforce services and invite return business." },
-        { title: "Negative Recovery", description: "Professional responses that acknowledge concerns and offer resolution offline." },
-        { title: "Response Speed", description: "All reviews responded to within 24-48 hours. Speed signals engagement." },
-        { title: "Keyword Integration", description: "Natural keyword mentions in responses. Services and location terms included." },
+        { title: "Positive Responses", description: "Thank customers authentically. Reinforce services mentioned to feed AI systems." },
+        { title: "Negative Recovery", description: "Professional responses that acknowledge concerns. 92% of consumers consider responses part of customer service." },
+        { title: "Response Speed", description: "All reviews responded to within 24-48 hours. Speed signals active engagement." },
+        { title: "Service Keywords", description: "Natural service and location mentions in responses. AI systems parse response content." },
         { title: "Brand Voice", description: "Responses match client brand personality. Professional, warm, or casual as appropriate." },
         { title: "Legal Safety", description: "Responses crafted to avoid liability while addressing legitimate concerns." }
       ],
@@ -682,15 +743,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     },
     {
       category: "Reputation Monitoring",
-      headline: "Never Miss a Review Again",
-      description: "Reviews appear across platforms. We monitor everywhere and ensure nothing slips through the cracks.",
+      headline: "Monitor Reviews Across All Platforms",
+      description: "AI Overviews cite Yelp, TripAdvisor, and industry directories. We monitor everywhere that matters for rankings and AI visibility.",
       subPoints: [
-        { title: "Multi-Platform", description: "Google, Facebook, Yelp, industry sites. All platforms monitored centrally." },
+        { title: "Multi-Platform", description: "Google, Facebook, Yelp, TripAdvisor, and industry sites. All AI source platforms monitored." },
         { title: "Instant Alerts", description: "New reviews trigger immediate notifications. Response workflows activated." },
         { title: "Sentiment Tracking", description: "Overall sentiment trends tracked monthly. Early warning for service issues." },
-        { title: "Competitor Monitoring", description: "Competitor review volumes and ratings tracked. Benchmark performance." },
+        { title: "AI Platform Focus", description: "Extra attention to platforms AI Overviews cite: Yelp, TripAdvisor, OpenTable, industry verticals." },
         { title: "Fake Review Detection", description: "Suspicious reviews identified and reported for removal when policy violations exist." },
-        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, and competitive position in client reports." }
+        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, and AI visibility in client reports." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
