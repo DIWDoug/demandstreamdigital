@@ -119,15 +119,6 @@ const SpokePage = () => {
                 ))}
               </nav>
 
-              {/* Back link */}
-              <Link 
-                to={`/white-label-inbound-marketing-services/${hub.slug}`}
-                className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-foreground transition-colors mb-6"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to {hub.title}
-              </Link>
-
               {/* Title */}
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-6 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
                 <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{spoke.title}</span>
@@ -140,7 +131,7 @@ const SpokePage = () => {
               
               {/* Hub context */}
               <p className="text-sm text-text-muted/60 italic max-w-xl animate-fade-in">
-                Part of our {hub.title} service. Can be engaged as a standalone component or as part of a comprehensive strategy.
+                Included as part of our {hub.title} service.
               </p>
             </div>
 
@@ -338,16 +329,6 @@ const SpokePage = () => {
                 </div>
               </div>
 
-              {/* Back to Hub CTA */}
-              <div className="text-center mt-10">
-                <Link
-                  to={`/white-label-inbound-marketing-services/${hub.slug}`}
-                  className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  Back to {hub.title} Overview
-                </Link>
-              </div>
             </div>
           </div>
         </section>
