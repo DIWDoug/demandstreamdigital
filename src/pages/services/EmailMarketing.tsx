@@ -18,8 +18,8 @@ import { emailMarketingConfig } from "@/data/service-pages/email-marketing";
 import { getHubBySlug } from "@/data/services";
 
 const SectionDivider = () => (
-  <div className="w-full">
-    <hr className="border-t border-border/30" />
+  <div className="container mx-auto px-6 lg:px-8">
+    <hr className="border-t border-border/40" />
   </div>
 );
 
@@ -41,6 +41,8 @@ const EmailMarketing = () => {
       </Helmet>
       
       <Header />
+      
+      {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title} 
@@ -49,37 +51,50 @@ const EmailMarketing = () => {
         />
       </div>
       
+      {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
+      {/* 3. PROBLEM */}
       <ServiceProblemSection config={emailMarketingConfig.problem} />
       
+      <SectionDivider />
+      
+      {/* 4. OUTCOMES */}
       <ServiceOutcomesSection config={emailMarketingConfig.outcomes} />
       
       <SectionDivider />
       
+      {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={emailMarketingConfig.roadmap} />
       
       <SectionDivider />
       
-      <ServiceBuildingBlocksSection config={emailMarketingConfig.buildingBlocks} />
+      {/* 6. BUILDING BLOCKS */}
+      <ServiceBuildingBlocksSection config={emailMarketingConfig.buildingBlocks} hubSlug="email-marketing" />
       
       <SectionDivider />
       
+      {/* 7. QUALIFICATION */}
       <ServiceFitQualifierSection config={emailMarketingConfig.qualification} />
       
+      {/* 8. TESTIMONIALS */}
       <Testimonials />
       
       <SectionDivider />
       
+      {/* 9. FAQ */}
       <ServiceGroupedFAQ config={emailMarketingConfig.faq} />
       
       <SectionDivider />
       
+      {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={emailMarketingConfig.ecosystem} />
       
+      {/* 11. CONTACT */}
       <ContactForm />
+      
       <Footer />
     </div>
   );

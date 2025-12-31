@@ -10,14 +10,15 @@ import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
 // Generic section components
-import ServiceProblemSection from "@/components/services/generic/ServiceProblemSection";
-import ServiceOutcomesSection from "@/components/services/generic/ServiceOutcomesSection";
-import ServiceRoadmapSection from "@/components/services/generic/ServiceRoadmapSection";
-import ServiceBuildingBlocksSection from "@/components/services/generic/ServiceBuildingBlocksSection";
-import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
-import ServiceGroupedFAQ from "@/components/services/generic/ServiceGroupedFAQ";
-import ServiceEcosystemSection from "@/components/services/generic/ServiceEcosystemSection";
-import PaidMediaCalculator from "@/components/services/PaidMediaCalculator";
+import { 
+  ServiceProblemSection,
+  ServiceOutcomesSection,
+  ServiceRoadmapSection,
+  ServiceBuildingBlocksSection,
+  ServiceFitQualifierSection,
+  ServiceGroupedFAQ,
+  ServiceEcosystemSection
+} from "@/components/services/generic";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -45,7 +46,7 @@ const PaidMedia = () => {
       
       <Header />
       
-      {/* 1. HERO - Split layout with form */}
+      {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title}
@@ -59,7 +60,7 @@ const PaidMedia = () => {
       
       <SectionDivider />
       
-      {/* 3. THE PROBLEM */}
+      {/* 3. PROBLEM */}
       <ServiceProblemSection config={paidMediaConfig.problem} />
       
       <SectionDivider />
@@ -69,36 +70,33 @@ const PaidMedia = () => {
       
       <SectionDivider />
       
-      {/* 5. THE FRAMEWORK */}
+      {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={paidMediaConfig.roadmap} />
       
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} />
+      <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} hubSlug="paid-media" />
       
       <SectionDivider />
       
       {/* 7. QUALIFICATION */}
       <ServiceFitQualifierSection config={paidMediaConfig.qualification} />
       
-      {/* 8. SOCIAL PROOF */}
+      {/* 8. TESTIMONIALS */}
       <Testimonials />
-      
-      {/* 9. PRICING CALCULATOR */}
-      <PaidMediaCalculator />
       
       <SectionDivider />
       
-      {/* 10. FAQ */}
+      {/* 9. FAQ */}
       <ServiceGroupedFAQ config={paidMediaConfig.faq} />
       
       <SectionDivider />
       
-      {/* 10. ECOSYSTEM CROSS-SELL */}
+      {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={paidMediaConfig.ecosystem} />
       
-      {/* 11. FINAL CTA */}
+      {/* 11. CONTACT */}
       <ContactForm />
       
       <Footer />

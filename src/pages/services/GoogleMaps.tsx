@@ -10,15 +10,17 @@ import type { BreadcrumbItem } from "@/types/servicePage";
 
 // Generic section components
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import ServiceProblemSection from "@/components/services/generic/ServiceProblemSection";
-import ServiceRoadmapSection from "@/components/services/generic/ServiceRoadmapSection";
-import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
-import ServiceGroupedFAQ from "@/components/services/generic/ServiceGroupedFAQ";
-import ServiceEcosystemSection from "@/components/services/generic/ServiceEcosystemSection";
+import { 
+  ServiceProblemSection,
+  ServiceOutcomesSection,
+  ServiceRoadmapSection,
+  ServiceBuildingBlocksSection,
+  ServiceFitQualifierSection,
+  ServiceGroupedFAQ,
+  ServiceEcosystemSection
+} from "@/components/services/generic";
 
-// GBP-specific components with internal linking
-import GBPOutcomesSection from "@/components/services/gbp/GBPOutcomesSection";
-import GBPBuildingBlocksSection from "@/components/services/gbp/GBPBuildingBlocksSection";
+// GBP-specific component
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";
 
 const SectionDivider = () => (
@@ -47,7 +49,7 @@ const GoogleMaps = () => {
       
       <Header />
       
-      {/* 1. HERO - Split layout with form */}
+      {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title}
@@ -62,44 +64,46 @@ const GoogleMaps = () => {
       
       <SectionDivider />
       
-      {/* 3. THE PROBLEM */}
+      {/* 3. PROBLEM */}
       <ServiceProblemSection config={googleMapsConfig.problem} />
       
       <SectionDivider />
       
-      {/* 4. OUTCOMES - Custom with internal links */}
-      <GBPOutcomesSection />
+      {/* 4. OUTCOMES */}
+      <ServiceOutcomesSection config={googleMapsConfig.outcomes} />
       
-      {/* 5. WHITESPARK RESEARCH with interpretation */}
+      {/* Ranking Factors - GBP specific */}
       <GBPRankingFactors />
       
       <SectionDivider />
       
-      {/* 6. THE FRAMEWORK */}
+      {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={googleMapsConfig.roadmap} />
       
       <SectionDivider />
       
-      {/* 7. BUILDING BLOCKS - Custom with spoke links */}
-      <GBPBuildingBlocksSection />
+      {/* 6. BUILDING BLOCKS */}
+      <ServiceBuildingBlocksSection config={googleMapsConfig.buildingBlocks} hubSlug="google-maps" />
       
       <SectionDivider />
       
-      {/* 8. QUALIFICATION */}
+      {/* 7. QUALIFICATION */}
       <ServiceFitQualifierSection config={googleMapsConfig.qualification} />
       
-      {/* 9. SOCIAL PROOF */}
+      {/* 8. TESTIMONIALS */}
       <Testimonials />
       
-      {/* 10. FAQ */}
+      <SectionDivider />
+      
+      {/* 9. FAQ */}
       <ServiceGroupedFAQ config={googleMapsConfig.faq} />
       
       <SectionDivider />
       
-      {/* 11. ECOSYSTEM CROSS-SELL */}
+      {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={googleMapsConfig.ecosystem} />
       
-      {/* 12. FINAL CTA */}
+      {/* 11. CONTACT */}
       <ContactForm />
       
       <Footer />
