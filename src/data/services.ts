@@ -16,12 +16,18 @@ export interface HubFAQ {
   answer: string;
 }
 
+export interface HeroDescription {
+  intro: string;
+  bullets: string[];
+  closing: string;
+}
+
 export interface Hub {
   icon: LucideIcon;
   title: string;
   slug: string;
   summary: string;
-  heroDescription: string;
+  heroDescription: string | HeroDescription;
   integrationNote?: string;
   whyItMatters: {
     headline: string;
@@ -54,7 +60,15 @@ export const hubs: Hub[] = [
     title: "Local SEO",
     slug: "local-seo",
     summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
-    heroDescription: "We help agencies deliver white-label local SEO built around competitive reality, not templated packages.",
+    heroDescription: {
+      intro: "We help agencies deliver white-label local SEO built around competitive reality, not templated packages.",
+      bullets: [
+        "No pre-set local SEO packages",
+        "No one-size-fits-all deliverables",
+        "No guessing what a market actually needs"
+      ],
+      closing: "Every engagement is scoped to competition, geography, and client goals so execution matches the market, not a price sheet."
+    },
     integrationNote: "Local SEO, Google Business Profile optimization, and authority building work hand in hand. Each service can be engaged independently, but they deliver the strongest results when coordinated as a unified local search strategy.",
     whyItMatters: {
       headline: "Why Local SEO Matters for Your Clients",
