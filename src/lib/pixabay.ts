@@ -115,7 +115,7 @@ export const spokeKeywordMap: Record<string, string> = {
   
   // Authority Building spokes
   'local-links': 'link building outreach',
-  'citations': 'business citations directory',
+  'unstructured-citations': 'video podcast media content',
   'brand-mentions': 'brand awareness marketing',
   'anchor-text': 'SEO text optimization',
   'sponsorships': 'sponsorship partnership business',

@@ -617,13 +617,13 @@ export const hubs: Hub[] = [
         process: ["Local opportunity research", "Outreach strategy development", "Relationship building", "Placement execution", "Link documentation", "Performance analysis"]
       },
       {
-        title: "Citations",
-        slug: "citations",
-        description: "Industry-specific directories, data aggregators, and professional listings that validate business legitimacy.",
-        fullDescription: "Citations build foundational authority signals that search engines use to validate business legitimacy. We secure placements across industry-specific directories, general citation platforms, data aggregators, and professional associations relevant to each client's vertical.",
-        benefits: ["NAP consistency across the web", "Industry-relevant authority signals", "Vertical-specific credibility", "Referral traffic from directories", "Foundation for local authority"],
-        deliverables: ["Industry directory submissions", "General citation building (50+ sites)", "Data aggregator submissions", "Professional association listings", "NAP consistency audit", "Citation performance tracking"],
-        process: ["Industry landscape analysis", "Directory prioritization", "Submission execution", "Profile optimization", "Ongoing monitoring", "Performance reporting"]
+        title: "Unstructured Citations",
+        slug: "unstructured-citations",
+        description: "Video, image, audio, Web 2.0, and press release citations that build authority beyond traditional directories.",
+        fullDescription: "Unstructured citations are brand mentions embedded in media-rich content rather than structured business listings. Unlike NAP citations in directories, these mentions appear in videos, podcasts, infographics, press releases, and Web 2.0 platforms—signals that search engines and AI systems increasingly value for entity authority.",
+        benefits: ["Media-rich authority signals beyond directories", "AI discovery through diverse content formats", "Entity validation across multiple mediums", "Press release syndication visibility", "Web 2.0 platform presence", "Podcast and video mention leverage"],
+        deliverables: ["Video citation placement strategy", "Image citation and infographic distribution", "Podcast and audio mention coordination", "Web 2.0 platform profile creation", "Press release syndication", "Unstructured citation tracking and reporting"],
+        process: ["Content asset audit", "Platform and channel identification", "Media creation or coordination", "Distribution execution", "Mention documentation", "Performance analysis"]
       },
       {
         title: "Brand Mentions",
