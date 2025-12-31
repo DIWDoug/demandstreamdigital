@@ -32,7 +32,7 @@ const services: Service[] = [
     icon: Share2,
     title: "Authority Building",
     description: "Earn the trust that rankings require. Digital PR, quality backlinks, and citation management that compounds over time.",
-    href: "/services/authority",
+    href: "/white-label-inbound-marketing-services/local-authority-building",
   },
   {
     icon: Mail,

@@ -298,7 +298,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "Google Maps", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Star, id: "reputation", title: "Reputation", description: "Review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations.", href: "/local-authority-building" },
+      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations.", href: "/white-label-inbound-marketing-services/local-authority-building" },
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" },
       { icon: Share2, id: "retargeting", title: "Retargeting", description: "Stay top of mind.", href: "/white-label-inbound-marketing-services/paid-media" }
     ],
