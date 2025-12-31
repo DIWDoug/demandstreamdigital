@@ -10,48 +10,48 @@ export const authorityConfig: ServicePageConfig = {
   keywords: "white label authority building, digital PR, link building, reputation management, thought leadership",
 
   hero: {
-    headline: "White Label Authority Building for",
-    highlightedText: "Digital Agencies",
-    subheadline: "Search engines and customers trust signals they can verify. We build the media coverage, quality links, and third-party validation that establish lasting credibility—executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We handle the authority building that makes rankings stick.",
-    ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies who understand that authority compounds."
+    headline: "White-Label Authority Building",
+    highlightedText: "Services",
+    subheadline: "We build the authority signals Google trusts and customers recognize, so rankings hold and brands win long-term.",
+    qualifierLine: "White-label authority building for agencies that want lasting visibility, earned credibility, and defensible rankings across competitive markets.",
+    ctaText: "Schedule a Discovery Call",
+    ctaSubtext: "Start a Conversation"
   },
 
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most Authority Building Fails",
-    intro: "You have seen this before. Links are acquired, but domain authority barely moves. Press releases go out, but no one picks them up. The authority gap between your clients and their competitors never closes.",
+    intro: "You've seen this before. Links are acquired, press releases go out, but authority never compounds. Rankings stay fragile, and the credibility gap never closes.",
     painPoints: [
       {
         icon: Globe,
         title: "Links Without Relevance",
-        body: "Quantity over quality. Generic directory links and low-authority placements that Google ignores or penalizes. The link count grows, but rankings do not move."
+        body: "Quantity over quality. Generic placements Google ignores or penalizes."
       },
       {
         icon: FileText,
         title: "PR Without Pickup",
-        body: "Press releases distributed to wires that no journalist reads. Money spent on distribution with no earned coverage to show for it."
+        body: "Press releases sent to wires no journalist reads. No earned coverage."
       },
       {
         icon: Shield,
         title: "No Strategy, Just Tactics",
-        body: "Random acts of link building without a coherent authority strategy. Effort is wasted on activities that do not compound into real credibility."
+        body: "Disconnected efforts that never compound into credibility."
       },
       {
         icon: Users,
-        title: "Ignoring Local Authority Signals",
-        body: "National link building for local businesses. Missing the community connections, local sponsorships, and geographic relevance that actually move local rankings."
+        title: "Missing Local Authority Signals",
+        body: "National links for local businesses. No geographic trust signals."
       }
     ],
-    closingLine: "We build authority through strategic, earned efforts that create lasting value.",
-    closingHighlight: "Your clients become the trusted choice. You keep the margin you earned.",
+    closingLine: "We build authority the hard way: strategically, earned, and compounding.",
+    closingHighlight: "That's why it lasts.",
     ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {
     headline: "What Actually Changes When Authority Works",
-    subheadline: "The outcomes your clients experience when credibility is built strategically.",
+    subheadline: "These outcomes only appear when authority is built correctly and consistently.",
     items: [
       {
         icon: Shield,
@@ -79,22 +79,20 @@ export const authorityConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Baseline to Industry Authority",
-    subheadline: "Authority building is a long-term strategy. This is how we sequence the work for maximum compound effect.",
+    subheadline: "Authority building is a long-term strategy. Each phase builds leverage for the next. Skipping steps breaks the system.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
         title: "Audit, Strategy & Initial Outreach",
-        description: "Understanding current authority positioning and establishing the foundation for credibility building.",
+        description: "We assess current authority, identify competitive gaps, and establish the foundation for earned credibility.",
         activities: [
           "Authority audit (links, mentions, reputation)",
           "Competitive authority analysis",
           "Story angle and hook development",
           "Target media list creation",
           "Local sponsorship opportunity research",
-          "Industry directory identification",
-          "Initial outreach campaigns",
-          "Tracking and monitoring setup"
+          "Industry directory identification"
         ],
         icon: Shield,
         color: "hsl(76, 42%, 41%)"
@@ -149,7 +147,7 @@ export const authorityConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Authority building is a long-term strategy. Initial wins may appear in 2-3 months, with compound effects becoming significant at 6-12 months."
+    footerNote: "Foundation typically spans 2-4 months depending on scope and market complexity. Initial wins may appear in 2-3 months. Compounding effects emerge at 6-12 months."
   },
 
   buildingBlocks: {
@@ -160,38 +158,38 @@ export const authorityConfig: ServicePageConfig = {
       {
         title: "Digital PR & Media Placements",
         slug: "digital-pr-media",
-        description: "Press release distribution, journalist outreach, and earned media coverage that builds credibility and backlinks.",
+        description: "Earned coverage that builds credibility and backlinks.",
         icon: FileText
-      },
-      {
-        title: "Quality Link Acquisition",
-        slug: "link-acquisition",
-        description: "Strategic link building using proven techniques: Skyscraper, Broken Link Building, Resource Page Outreach, Best-Of Roundups, and Guestographics.",
-        icon: Globe
-      },
-      {
-        title: "Local Sponsorships & Partnerships",
-        slug: "local-partnerships",
-        description: "Community event sponsorships and local organization involvement that create authentic geographic authority signals.",
-        icon: Handshake
-      },
-      {
-        title: "Industry Directory Listings",
-        slug: "industry-directories",
-        description: "Strategic placement in industry-specific directories and professional associations that signal expertise.",
-        icon: Award
-      },
-      {
-        title: "Reputation Management",
-        slug: "reputation-management",
-        description: "Review monitoring, sentiment tracking, and proactive reputation building that protects brand perception.",
-        icon: Shield
       },
       {
         title: "Thought Leadership Content",
         slug: "thought-leadership",
-        description: "Expert articles, guest posts, and industry commentary that positions clients as trusted authorities.",
+        description: "Expert articles and commentary that position clients as authorities.",
         icon: Users
+      },
+      {
+        title: "Quality Link Acquisition",
+        slug: "link-acquisition",
+        description: "Strategic link building using proven, ethical techniques.",
+        icon: Globe
+      },
+      {
+        title: "Industry Directory Listings",
+        slug: "industry-directories",
+        description: "Selective placements that signal expertise and legitimacy.",
+        icon: Award
+      },
+      {
+        title: "Local Sponsorships & Partnerships",
+        slug: "local-partnerships",
+        description: "Authentic community-based authority signals.",
+        icon: Handshake
+      },
+      {
+        title: "Reputation Management",
+        slug: "reputation-management",
+        description: "Review monitoring and proactive trust building.",
+        icon: Shield
       }
     ]
   },
@@ -199,7 +197,7 @@ export const authorityConfig: ServicePageConfig = {
   qualification: {
     eyebrow: "Before We Talk",
     headline: "We Are Selective About Who We Work With",
-    subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
+    subheadline: "Fit matters more than volume. Authority only works when it's earned.",
     goodFit: [
       {
         point: "Your clients are willing to invest in long-term credibility",
@@ -285,7 +283,7 @@ export const authorityConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "Authority Building Is One Piece of the",
     highlightedText: "360° Ecosystem",
-    intro: "Effective local marketing is interconnected.",
+    intro: "Authority accelerates every other channel when it's real.",
     body: "Authority signals support SEO rankings. Media coverage drives branded search. Reputation builds trust. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Award, id: "authority", title: "Authority Building", description: "PR, links, and reputation that build lasting credibility.", href: "/white-label-inbound-marketing-services/authority", isCenter: true },
