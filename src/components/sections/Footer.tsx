@@ -45,12 +45,12 @@ const Footer = () => {
       title: "EMAIL MARKETING",
       hubSlug: "email-marketing",
       items: [
-        { label: "Campaign Strategy", slug: "campaign-strategy" },
-        { label: "List Management", slug: "list-management" },
-        { label: "Automation Flows", slug: "automation-flows" },
-        { label: "Newsletter Design", slug: "newsletter-design" },
-        { label: "A/B Testing", slug: "ab-testing" },
-        { label: "Performance Analytics", slug: "performance-analytics" }
+        { label: "Freebie Magnets & List Growth", slug: "freebie-magnets-list-growth" },
+        { label: "Conversion Funnels", slug: "conversion-funnels" },
+        { label: "Segmentation & Targeting", slug: "segmentation-targeting" },
+        { label: "Subject Line Modeling", slug: "subject-line-modeling" },
+        { label: "Performance Metrics", slug: "performance-metrics" },
+        { label: "Brand Consistency", slug: "brand-consistency-design" }
       ]
     },
     {

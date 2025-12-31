@@ -571,22 +571,22 @@ export const hubs: Hub[] = [
     heroDescription: "We create and manage email marketing programs that nurture leads, drive repeat business, and maximize customer lifetime value. Our white-label email marketing services help agencies offer comprehensive digital marketing without the overhead of building an email team.",
     whyItMatters: {
       headline: "Why Email Marketing Matters",
-      description: "Email delivers the highest ROI of any marketing channel ($42 for every $1 spent on average). For local businesses, email turns one-time customers into repeat buyers and keeps the business top-of-mind between purchases.",
+      description: "Email delivers the highest ROI of any marketing channel ($42 for every $1 spent on average). Email is both science and art: technical infrastructure meets persuasive storytelling. For local businesses, email turns one-time customers into repeat buyers.",
       points: [
-        { icon: TrendingUp, title: "Highest ROI Channel", description: "No other marketing channel matches email's return on investment. It's direct, personal, and incredibly cost-effective." },
-        { icon: Users, title: "Owned Audience", description: "Unlike social media followers, an email list is an owned asset. Algorithm changes can't take it away." },
-        { icon: Zap, title: "Automation Multiplier", description: "Set up once, convert forever. Email automation works around the clock to nurture leads and drive sales." }
+        { icon: TrendingUp, title: "Highest ROI Channel", description: "No other marketing channel matches email's return on investment. Direct, personal, and incredibly cost-effective when executed properly." },
+        { icon: Users, title: "Owned Audience Asset", description: "Unlike social media followers, an email list is an owned asset. Algorithm changes cannot take it away. You control the relationship." },
+        { icon: Zap, title: "Conversion Funnels That Scale", description: "Automated sequences systematically move subscribers from awareness to purchase. Freebie magnets attract. Nurture sequences convert." }
       ]
     },
     ourApproach: {
       headline: "Our Email Marketing Approach",
-      description: "We build email programs that work, from strategy through execution and optimization:",
+      description: "We build email programs that balance technical precision with persuasive craft:",
       steps: [
-        { number: "01", title: "Strategy Development", description: "Audience analysis, journey mapping, and campaign planning that aligns email with business goals and customer behavior." },
-        { number: "02", title: "Template & Design", description: "On-brand email templates that look great on every device and drive the actions you want subscribers to take." },
-        { number: "03", title: "Automation Setup", description: "Welcome series, nurture sequences, and triggered campaigns that convert leads without manual effort." },
-        { number: "04", title: "Campaign Execution", description: "Regular campaign sends with compelling copy, strategic timing, and ongoing A/B testing." },
-        { number: "05", title: "Performance Analysis", description: "Detailed analytics, deliverability monitoring, and continuous optimization based on results." }
+        { number: "01", title: "Customer Insight Mapping", description: "Understanding the target audience's specific needs, behaviors, and motivations to write copy that resonates." },
+        { number: "02", title: "Freebie Magnet Strategy", description: "Developing compelling lead magnets and opt-in incentives that inspire sign-ups and build quality lists." },
+        { number: "03", title: "Conversion Funnel Build", description: "Automated sequences that systematically move subscribers from initial awareness to purchase." },
+        { number: "04", title: "Segmentation & Targeting", description: "Delivering the right message to the right person based on behavior, demographics, and stage." },
+        { number: "05", title: "Performance Optimization", description: "Analyzing deliverability, open rates, and conversions to continuously improve resource allocation." }
       ]
     },
     benefits: {
@@ -608,58 +608,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "Campaign Strategy & Design",
-        slug: "campaign-strategy-design",
-        description: "Custom email templates, compelling copy, and strategic send schedules that maximize open rates and conversions.",
-        fullDescription: "Effective email marketing starts with strategy. We develop comprehensive campaign strategies that map to customer journeys, design templates that reflect brand standards, and create send schedules optimized for engagement.",
-        benefits: ["Cohesive email program aligned to goals", "Professional, on-brand templates", "Optimized send timing", "Higher engagement rates", "Strategic campaign calendar"],
-        deliverables: ["Email marketing strategy document", "Custom template design", "Campaign calendar", "Copy development", "A/B testing plan", "Performance benchmarks"],
-        process: ["Audience and goal analysis", "Strategy development", "Template design", "Calendar planning", "Implementation", "Ongoing optimization"]
+        title: "Freebie Magnets & List Growth",
+        slug: "freebie-magnets-list-growth",
+        description: "Lead magnets, opt-in forms, and incentive strategies that build lists with qualified subscribers who want to hear from you.",
+        fullDescription: "List growth starts with value. We develop compelling freebie magnets (guides, checklists, templates, discounts) that give subscribers a reason to opt in. Combined with strategic form placement and landing pages, we build lists with qualified prospects.",
+        benefits: ["Qualified subscriber acquisition", "Higher opt-in conversion rates", "Better list quality from day one", "Clear value exchange with subscribers", "Foundation for all email marketing"],
+        deliverables: ["Freebie magnet strategy", "Lead magnet content development", "Opt-in form design", "Landing page creation", "Thank-you sequence setup", "List growth tracking"],
+        process: ["Audience value analysis", "Magnet concept development", "Content creation", "Form and page build", "Integration and testing", "Performance monitoring"]
       },
       {
-        title: "Automation Sequences",
-        slug: "automation-sequences",
-        description: "Welcome series, nurture flows, and re-engagement campaigns that work around the clock to convert leads into customers.",
-        fullDescription: "Email automation is the ultimate efficiency play. We build triggered sequences that nurture leads, onboard new customers, re-engage lapsed subscribers, and drive repeat purchases. All automatically.",
-        benefits: ["24/7 lead nurturing", "Consistent follow-up without manual effort", "Higher conversion rates", "Improved customer experience", "Scalable engagement"],
-        deliverables: ["Automation strategy and mapping", "Welcome sequence development", "Nurture flow creation", "Re-engagement campaigns", "Triggered email setup", "Performance monitoring"],
-        process: ["Journey mapping", "Sequence strategy", "Email development", "Technical setup", "Testing and launch", "Ongoing optimization"]
+        title: "Conversion Funnels",
+        slug: "conversion-funnels",
+        description: "Automated sequences that systematically move subscribers from initial awareness to purchase decision.",
+        fullDescription: "Conversion funnels turn subscribers into customers through systematic nurturing. We map the buyer journey, develop stage-appropriate content, and build automated sequences that educate, build trust, and drive action at the right moment.",
+        benefits: ["Systematic lead conversion", "Automated sales process", "Stage-appropriate messaging", "Higher customer acquisition", "Predictable revenue from email"],
+        deliverables: ["Funnel strategy and mapping", "Welcome sequence development", "Nurture flow creation", "Sales sequence build", "Trigger configuration", "Conversion tracking"],
+        process: ["Buyer journey mapping", "Sequence strategy", "Email content development", "Technical build", "Testing and launch", "Ongoing optimization"]
       },
       {
-        title: "List Management & Segmentation",
-        slug: "list-management-segmentation",
-        description: "Clean list hygiene, audience segmentation, and targeted messaging that improves deliverability and engagement.",
-        fullDescription: "A healthy, well-segmented list is the foundation of email success. We maintain list hygiene, develop segmentation strategies, and ensure targeted messaging reaches the right subscribers at the right time.",
-        benefits: ["Improved deliverability", "Higher engagement rates", "More relevant messaging", "Reduced unsubscribes", "Better sender reputation"],
-        deliverables: ["List audit and cleanup", "Segmentation strategy", "Segment creation and management", "Subscriber tagging system", "List hygiene protocols", "Deliverability monitoring"],
-        process: ["Current list audit", "Segmentation strategy development", "Technical implementation", "Ongoing hygiene maintenance", "Performance monitoring"]
+        title: "Segmentation & Targeting",
+        slug: "segmentation-targeting",
+        description: "Behavior-based and demographic segmentation that delivers the right message to the right person at the right time.",
+        fullDescription: "Relevance drives results. We segment lists based on subscriber behavior, demographics, purchase history, and engagement patterns. This enables personalized messaging at scale without manual effort.",
+        benefits: ["Higher engagement rates", "More relevant messaging", "Reduced unsubscribes", "Better conversion rates", "Scalable personalization"],
+        deliverables: ["Segmentation strategy", "Segment creation and management", "Behavioral trigger setup", "Tagging system implementation", "Dynamic content configuration", "Segment performance tracking"],
+        process: ["Current list analysis", "Segmentation strategy development", "Technical implementation", "Content customization", "Testing and refinement", "Ongoing optimization"]
       },
       {
-        title: "Performance Analytics",
-        slug: "performance-analytics",
-        description: "Open rates, click-through tracking, A/B testing insights, and ROI analysis to continuously optimize campaign performance.",
-        fullDescription: "Data drives email optimization. We track all key metrics, conduct ongoing A/B tests, and provide detailed analytics that inform strategy and demonstrate value to clients.",
-        benefits: ["Clear performance visibility", "Data-driven optimization", "Demonstrated ROI", "Continuous improvement", "Client-ready reporting"],
-        deliverables: ["Analytics dashboard setup", "Regular performance reports", "A/B testing program", "ROI tracking", "Benchmark comparison", "Optimization recommendations"],
-        process: ["Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular analysis and reporting", "Optimization implementation"]
+        title: "Subject Line Modeling",
+        slug: "subject-line-modeling",
+        description: "Proven formulas and A/B testing that increase open rates and drive email engagement.",
+        fullDescription: "The subject line determines whether emails get opened. We apply proven formulas, conduct systematic A/B testing, and continuously optimize to maximize open rates. Better opens mean more conversions.",
+        benefits: ["Higher open rates", "Data-driven optimization", "Proven formula application", "Continuous improvement", "Better overall email performance"],
+        deliverables: ["Subject line strategy", "Formula library development", "A/B testing program", "Performance analysis", "Best practice documentation", "Ongoing optimization"],
+        process: ["Current performance analysis", "Formula identification", "Testing program setup", "Systematic experimentation", "Results analysis", "Strategy refinement"]
       },
       {
-        title: "Drip Campaign Development",
-        slug: "drip-campaign-development",
-        description: "Multi-touch email sequences tailored to buyer stages that systematically move prospects toward conversion.",
-        fullDescription: "Drip campaigns deliver the right message at the right time based on subscriber behavior and stage in the buying journey. We develop multi-touch sequences that educate, nurture, and convert over time.",
-        benefits: ["Systematic lead nurturing", "Stage-appropriate messaging", "Higher conversion rates", "Automated follow-up", "Predictable engagement"],
-        deliverables: ["Drip strategy development", "Sequence mapping", "Email content creation", "Trigger configuration", "Performance tracking", "Ongoing optimization"],
-        process: ["Buyer journey mapping", "Sequence strategy", "Content development", "Technical build", "Launch and testing", "Performance optimization"]
+        title: "Performance Metrics",
+        slug: "performance-metrics",
+        description: "Deliverability, open rates, click rates, and conversion tracking that informs optimization and proves value.",
+        fullDescription: "Data drives email optimization. We track all key metrics, monitor deliverability, analyze conversion rates, and provide insights that inform strategy. Performance metrics prove value and guide resource allocation.",
+        benefits: ["Clear performance visibility", "Data-driven decisions", "Demonstrated ROI", "Optimization guidance", "Client-ready reporting"],
+        deliverables: ["Analytics dashboard setup", "KPI tracking configuration", "Regular performance reports", "Deliverability monitoring", "Conversion attribution", "Optimization recommendations"],
+        process: ["Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular analysis", "Insight development", "Strategy adjustment"]
       },
       {
-        title: "Deliverability & Compliance",
-        slug: "deliverability-compliance",
-        description: "SPF, DKIM, and DMARC configuration, CAN-SPAM compliance, and sender reputation management for maximum inbox placement.",
-        fullDescription: "Getting emails into the inbox is the first requirement for success. We handle technical authentication, compliance requirements, and sender reputation management to maximize deliverability.",
-        benefits: ["Higher inbox placement", "Reduced spam complaints", "Regulatory compliance", "Protected sender reputation", "Consistent deliverability"],
-        deliverables: ["Authentication setup (SPF, DKIM, DMARC)", "Deliverability audit", "Compliance review", "Sender reputation monitoring", "Bounce and complaint management", "Best practice implementation"],
-        process: ["Technical audit", "Authentication configuration", "Compliance review", "Monitoring setup", "Ongoing management"]
+        title: "Brand Consistency & Design",
+        slug: "brand-consistency-design",
+        description: "Templates and voice guidelines that align email identity with the overall business brand.",
+        fullDescription: "Email should feel like an extension of the brand. We develop templates that reflect brand standards, establish voice guidelines for consistency, and ensure every email reinforces brand identity while driving action.",
+        benefits: ["Consistent brand experience", "Professional presentation", "Improved recognition", "Higher trust and engagement", "Scalable design system"],
+        deliverables: ["Template design and development", "Brand voice guidelines", "Email style guide", "Mobile optimization", "Template library", "Design maintenance"],
+        process: ["Brand analysis", "Template design", "Voice development", "Testing across devices", "Documentation", "Ongoing updates"]
       }
     ]
   },
