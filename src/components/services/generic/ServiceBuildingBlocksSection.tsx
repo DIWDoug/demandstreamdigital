@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { BuildingBlock } from "@/types/servicePage";
 
 interface BuildingBlocksConfig {
@@ -9,9 +10,10 @@ interface BuildingBlocksConfig {
 
 interface ServiceBuildingBlocksSectionProps {
   config: BuildingBlocksConfig;
+  hubSlug?: string; // If provided, blocks become links to spoke pages
 }
 
-const ServiceBuildingBlocksSection = ({ config }: ServiceBuildingBlocksSectionProps) => {
+const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocksSectionProps) => {
   // Check if blocks have cluster groupings
   const hasClusters = config.blocks.some(block => block.cluster);
   
@@ -27,17 +29,15 @@ const ServiceBuildingBlocksSection = ({ config }: ServiceBuildingBlocksSectionPr
 
   const renderBlock = (block: BuildingBlock) => {
     const Icon = block.icon;
-    return (
-      <div
-        key={block.slug}
-        className="bg-surface-elevated border border-border/50 rounded-xl p-6"
-      >
+    
+    const blockContent = (
+      <>
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-cta/20 transition-colors">
             <Icon className="w-6 h-6 text-cta" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-foreground font-semibold text-lg mb-2">
+            <h3 className="text-foreground font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
               {block.title}
             </h3>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -45,6 +45,36 @@ const ServiceBuildingBlocksSection = ({ config }: ServiceBuildingBlocksSectionPr
             </p>
           </div>
         </div>
+        {hubSlug && (
+          <div className="mt-4 pt-3 border-t border-border/30">
+            <span className="text-xs text-cta font-medium group-hover:underline">
+              Learn more →
+            </span>
+          </div>
+        )}
+      </>
+    );
+
+    // If hubSlug is provided, render as link to spoke page
+    if (hubSlug) {
+      return (
+        <Link
+          key={block.slug}
+          to={`/white-label-inbound-marketing-services/${hubSlug}/${block.slug}`}
+          className="group bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-cta/30 hover:shadow-lg transition-all"
+        >
+          {blockContent}
+        </Link>
+      );
+    }
+
+    // Otherwise render as static block
+    return (
+      <div
+        key={block.slug}
+        className="bg-surface-elevated border border-border/50 rounded-xl p-6"
+      >
+        {blockContent}
       </div>
     );
   };

@@ -75,7 +75,7 @@ const PaidMedia = () => {
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} />
+      <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} hubSlug="paid-media" />
       
       <SectionDivider />
       
