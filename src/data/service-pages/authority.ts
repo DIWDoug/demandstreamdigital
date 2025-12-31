@@ -203,42 +203,34 @@ export const authorityConfig: ServicePageConfig = {
         detail: "Authority building is not a quick fix. It requires consistent effort over 6-12+ months. We partner with agencies whose clients understand this timeline."
       },
       {
-        point: "You serve clients with genuine expertise worth promoting",
-        detail: "We build authority around real expertise and genuine value. Clients need something worth talking about for media and link opportunities to materialize."
-      },
-      {
-        point: "Your clients can participate in content and story development",
-        detail: "The best authority building leverages client expertise. Quotes, interviews, and input make placements more valuable and more likely."
-      },
-      {
         point: "You understand authority as a ranking factor",
-        detail: "Authority signals support SEO, but this is a distinct service from keyword optimization. We partner with agencies who understand the difference."
+        detail: "Links and citations support local rankings when done right. We partner with agencies who understand how off-page signals compound over time."
       },
       {
-        point: "You value earned media over paid placements",
-        detail: "Our focus is genuine, earned authority—not pay-to-play links or sponsored content disguised as editorial. Real authority comes from real credibility."
+        point: "Your clients have a real business worth promoting",
+        detail: "We build authority around legitimate local businesses. Quality link sources want to associate with real companies doing good work."
+      },
+      {
+        point: "You value quality placements over link volume",
+        detail: "Our focus is relevant, earned links from real sites. Not bulk directory submissions or low-quality link packages."
       }
     ],
     notFit: [
       {
         point: "You work with link brokers or buy links",
-        detail: "We build earned authority through legitimate outreach and relationship-based placements. Link buying creates short-term gains with long-term penalties."
+        detail: "We build earned authority through legitimate outreach. Link buying creates short-term gains with long-term penalties."
       },
       {
-        point: "Expecting quick link quantity over quality",
-        detail: "We do not sell links by the dozen. Our approach is quality over quantity, which means fewer but more impactful placements."
+        point: "Expecting dozens of links per month",
+        detail: "We do not sell links by volume. Our approach prioritizes relevance and quality, which means fewer but more impactful placements."
       },
       {
-        point: "Clients with nothing unique to say",
-        detail: "Authority building requires genuine expertise or story angles. If there is nothing differentiating about the client, media will not care."
+        point: "Clients in spammy or gray-hat industries",
+        detail: "Quality link sources vet who they link to. Businesses in questionable verticals struggle to earn legitimate authority signals."
       },
       {
-        point: "Crisis reputation management needs",
-        detail: "Our focus is proactive authority building. We are not a crisis management firm. Active reputation crises require specialized crisis PR."
-      },
-      {
-        point: "Guaranteed specific placements",
-        detail: "We cannot guarantee specific publications or placements. Editorial decisions are outside our control. We can guarantee consistent, strategic effort."
+        point: "Guaranteed specific placements or DA targets",
+        detail: "We cannot guarantee specific sites or domain authority thresholds. We can guarantee consistent, strategic outreach and quality standards."
       },
       {
         point: "Short-term engagement expectations",
