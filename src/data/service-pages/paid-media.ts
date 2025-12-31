@@ -51,7 +51,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "Each week, we remove what is not working. What remains is a campaign that performs.",
+    subheadline: "Each week, we push budget toward what converts and pull it away from what does not. The result is a campaign that improves continuously.",
     items: [
       {
         icon: Zap,
@@ -123,8 +123,8 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Optimization",
-        title: "Whittling Away Waste",
-        description: "This is where campaigns get good. We cut what doesn't work—bad keywords in Google, weak audiences in Meta, underperforming placements everywhere.",
+        title: "Active Refinement",
+        description: "This is where campaigns get good. We push budget toward what converts and pull it away from what does not—weekly, across every platform.",
         activities: [
           "Search term analysis and negative keyword exclusions",
           "Master negative placement management (Google Display)",
