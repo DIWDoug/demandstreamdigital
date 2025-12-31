@@ -24,24 +24,40 @@ const ServiceOutcomesSection = ({ config }: ServiceOutcomesSectionProps) => {
           </p>
         </div>
 
-        {/* Outcomes Grid */}
+        {/* Outcomes Grid with numbering for visual flow */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {config.items.map((outcome) => (
-            <div 
-              key={outcome.title}
-              className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50"
-            >
-              <div className="inline-flex items-center justify-center p-4 rounded-xl mb-5 bg-cta/10 border border-cta/20">
-                <outcome.icon className="w-7 h-7 text-cta" strokeWidth={1.5} />
+          {config.items.map((outcome, index) => {
+            // Different accent colors for visual distinction
+            const accentColors = [
+              'bg-cta/10 border-cta/20 text-cta',
+              'bg-accent-blue/10 border-accent-blue/20 text-accent-blue',
+              'bg-amber-500/10 border-amber-500/20 text-amber-500',
+              'bg-purple-500/10 border-purple-500/20 text-purple-500'
+            ];
+            const colorClass = accentColors[index % accentColors.length];
+            
+            return (
+              <div 
+                key={outcome.title}
+                className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50"
+              >
+                <div className="flex items-center justify-center gap-3 mb-5">
+                  <span className="text-xs font-bold text-text-muted/60 uppercase tracking-wider">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <div className={`inline-flex items-center justify-center p-4 rounded-xl border ${colorClass}`}>
+                    <outcome.icon className="w-7 h-7" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground text-balance">
+                  {outcome.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-text-secondary">
+                  {outcome.description}
+                </p>
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground text-balance">
-                {outcome.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-text-secondary">
-                {outcome.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

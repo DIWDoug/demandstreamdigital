@@ -42,13 +42,13 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Good Fit */}
             <div className="bg-surface-elevated rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50">
-              <div className="flex items-center gap-3 mb-5 md:mb-6">
-                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cta/10 flex items-center justify-center shrink-0">
-                  <Check className="h-4 w-4 md:h-5 md:w-5 text-cta" />
+              <div className="flex items-center gap-3 mb-6 md:mb-8">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
+                  <Check className="h-4 w-4 md:h-5 md:w-5 text-emerald-500" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-foreground">This Could Work Well</h3>
               </div>
-              <ul className="space-y-2 md:space-y-3">
+              <ul className="space-y-3 md:space-y-4">
                 {config.goodFit.map((item, index) => (
                   <li key={index}>
                     <Collapsible 
@@ -56,7 +56,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                       onOpenChange={(open) => setOpenGoodFit(open ? index : null)}
                     >
                       <CollapsibleTrigger className="flex items-start gap-2.5 md:gap-3 w-full text-left group cursor-pointer py-2.5 md:py-2 min-h-[44px]">
-                        <Check className="h-4 w-4 md:h-5 md:w-5 text-cta shrink-0 mt-0.5" />
+                        <Check className="h-4 w-4 md:h-5 md:w-5 text-emerald-500 shrink-0 mt-0.5" />
                         <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
                         <ChevronDown 
                           className={cn(
@@ -66,7 +66,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                         />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
+                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-3 pt-1">
                           {item.detail}
                         </p>
                       </CollapsibleContent>
@@ -78,13 +78,13 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
 
             {/* Not a Fit */}
             <div className="bg-surface-elevated rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50">
-              <div className="flex items-center gap-3 mb-5 md:mb-6">
-                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
-                  <X className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
+              <div className="flex items-center gap-3 mb-6 md:mb-8">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-slate-500/10 flex items-center justify-center shrink-0">
+                  <X className="h-4 w-4 md:h-5 md:w-5 text-slate-400" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-foreground">Probably Not a Fit</h3>
               </div>
-              <ul className="space-y-2 md:space-y-3">
+              <ul className="space-y-3 md:space-y-4">
                 {config.notFit.map((item, index) => (
                   <li key={index}>
                     <Collapsible 
@@ -92,7 +92,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                       onOpenChange={(open) => setOpenNotFit(open ? index : null)}
                     >
                       <CollapsibleTrigger className="flex items-start gap-2.5 md:gap-3 w-full text-left group cursor-pointer py-2.5 md:py-2 min-h-[44px]">
-                        <X className="h-4 w-4 md:h-5 md:w-5 text-red-400 shrink-0 mt-0.5" />
+                        <X className="h-4 w-4 md:h-5 md:w-5 text-slate-400 shrink-0 mt-0.5" />
                         <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
                         <ChevronDown 
                           className={cn(
@@ -102,7 +102,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                         />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
+                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-3 pt-1">
                           {item.detail}
                         </p>
                       </CollapsibleContent>

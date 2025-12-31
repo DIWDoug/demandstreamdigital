@@ -40,15 +40,15 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
             <h3 className="text-slate-900 font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
               {block.title}
             </h3>
-            <p className="text-slate-600 text-sm leading-relaxed">
+            <p className="text-slate-500 text-sm leading-relaxed">
               {block.description}
             </p>
           </div>
         </div>
         {hubSlug && (
           <div className="mt-4 pt-3 border-t border-slate-200">
-            <span className="text-xs text-cta font-medium group-hover:underline">
-              Learn more →
+            <span className="text-xs text-slate-400 font-medium">
+              Included based on scope
             </span>
           </div>
         )}
