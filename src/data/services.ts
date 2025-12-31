@@ -626,13 +626,13 @@ export const hubs: Hub[] = [
         process: ["Technical audit", "Authentication configuration", "Monitoring setup", "Ongoing maintenance", "Issue resolution"]
       },
       {
-        title: "Subscriber Lifecycle Automation",
-        slug: "subscriber-lifecycle-automation",
-        description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock.",
-        fullDescription: "Automation handles the subscriber lifecycle from first opt-in to re-engagement. Welcome sequences orient new subscribers. Post-service follow-ups request reviews. Re-engagement campaigns win back lapsed customers. All automatically.",
-        benefits: ["24/7 subscriber nurturing", "Consistent follow-up", "Review generation integration", "Lapsed customer recovery", "Scalable engagement"],
-        deliverables: ["Welcome sequence development", "Post-service automation", "Review request integration", "Re-engagement campaigns", "Lifecycle mapping", "Performance tracking"],
-        process: ["Lifecycle mapping", "Sequence strategy", "Email development", "Technical setup", "Testing and launch", "Ongoing optimization"]
+        title: "Automated Follow-Ups",
+        slug: "automated-follow-ups",
+        description: "Welcome sequences, post-service follow-ups, and win-back campaigns that work around the clock.",
+        fullDescription: "Automation keeps the relationship going from first opt-in to win-back. Welcome sequences orient new subscribers. Post-service follow-ups request reviews. Win-back campaigns bring lapsed customers home. All automatically.",
+        benefits: ["24/7 customer nurturing", "Consistent follow-up", "Review generation integration", "Lapsed customer recovery", "Scalable engagement"],
+        deliverables: ["Welcome sequence development", "Post-service automation", "Review request integration", "Win-back campaigns", "Customer journey mapping", "Performance tracking"],
+        process: ["Customer journey mapping", "Sequence strategy", "Email development", "Technical setup", "Testing and launch", "Ongoing optimization"]
       },
       {
         title: "Local Segmentation",
@@ -640,7 +640,7 @@ export const hubs: Hub[] = [
         description: "Service-based and geographic targeting that delivers relevant offers to the right local customers.",
         fullDescription: "Relevance drives results for local businesses. We segment by service history, location, purchase behavior, and engagement patterns. The right offer reaches the right customer at the right time.",
         benefits: ["Higher engagement rates", "More relevant messaging", "Reduced unsubscribes", "Better conversion rates", "Local market targeting"],
-        deliverables: ["Segmentation strategy", "Service-based segments", "Geographic targeting", "Behavioral triggers", "Dynamic content setup", "Segment performance tracking"],
+        deliverables: ["Segmentation strategy", "Service-based segments", "Geographic targeting", "Action-based triggers", "Dynamic content setup", "Segment performance tracking"],
         process: ["Customer data analysis", "Segmentation strategy", "Technical implementation", "Content customization", "Testing and refinement"]
       },
       {

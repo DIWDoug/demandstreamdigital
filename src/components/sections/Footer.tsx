@@ -47,7 +47,7 @@ const Footer = () => {
       items: [
         { label: "Permission & List Building", slug: "permission-list-building" },
         { label: "Deliverability", slug: "deliverability-authentication" },
-        { label: "Lifecycle Automation", slug: "subscriber-lifecycle-automation" },
+        { label: "Automated Follow-Ups", slug: "automated-follow-ups" },
         { label: "Local Segmentation", slug: "local-segmentation" },
         { label: "Campaign Strategy", slug: "campaign-strategy-design" },
         { label: "Inactivity Management", slug: "performance-inactivity-management" }
