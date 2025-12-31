@@ -1,4 +1,4 @@
-import { ArrowRight, Link2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -55,8 +55,9 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
 
       <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - Text */}
-          <div>
+          {/* Left Column - Text with subtle backdrop for contrast */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-background/30 backdrop-blur-sm rounded-2xl -z-10 hidden lg:block" />
             {/* Breadcrumbs */}
             {breadcrumbs && breadcrumbs.length > 0 && (
               <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm mb-6 animate-fade-in">
@@ -92,31 +93,28 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
               </p>
             ) : (
               <div className="max-w-xl animate-fade-in mb-6">
-                <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-4">
+                <p className="text-base text-text-muted leading-snug mb-5">
                   {description.intro}
                 </p>
-                <ul className="space-y-2 mb-4">
+                <ul className="space-y-2 mb-5">
                   {description.bullets.map((bullet, index) => (
-                    <li key={index} className="flex items-center gap-3 text-text-secondary">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-3 text-lg font-medium text-foreground">
+                      <span className="text-accent-blue">—</span>
                       {bullet}
                     </li>
                   ))}
                 </ul>
-                <p className="text-base text-text-muted leading-relaxed">
+                <p className="text-sm text-text-muted/80 leading-snug">
                   {description.closing}
                 </p>
               </div>
             )}
             
-            {/* Integration Note - explanation paragraph, slightly muted */}
+            {/* Integration Note - subtle inline context */}
             {integrationNote && (
-              <div className="flex items-start gap-3 p-4 rounded-lg bg-accent-blue/5 border border-accent-blue/20 max-w-xl animate-fade-in">
-                <Link2 className="h-4 w-4 text-accent-blue mt-1 flex-shrink-0" />
-                <p className="text-sm text-text-muted/80 leading-relaxed">
-                  {integrationNote}
-                </p>
-              </div>
+              <p className="text-sm text-text-muted/60 italic max-w-xl animate-fade-in">
+                {integrationNote}
+              </p>
             )}
           </div>
 
@@ -158,7 +156,7 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: Se
                   />
                 </div>
                 <Button type="submit" className="w-full btn-cta group">
-                  Let's Talk
+                  Start the Conversation
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>
