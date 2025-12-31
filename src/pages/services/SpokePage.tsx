@@ -6,6 +6,12 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import { hubs } from "@/data/services";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -252,6 +258,57 @@ const SpokePage = () => {
             </div>
           </div>
         </section>
+      )}
+
+      {/* FAQ Section */}
+      {hub.faqs && hub.faqs.length > 0 && (
+        <>
+          <SectionDivider />
+          <section className="py-16 lg:py-20 bg-surface-dark">
+            <div className="container mx-auto px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-10">
+                  <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+                    Common Questions
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+                    Frequently Asked Questions
+                  </h2>
+                </div>
+
+                {/* FAQ Accordion */}
+                <Accordion type="single" collapsible className="space-y-3">
+                  {hub.faqs.slice(0, 5).map((faq, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`faq-${index}`}
+                      className="bg-surface-elevated border border-border/50 rounded-xl px-6 data-[state=open]:border-cta/30"
+                    >
+                      <AccordionTrigger className="text-left text-foreground hover:text-cta py-5 text-base font-medium">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-text-secondary pb-5 leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+
+                {/* Link to Hub FAQ */}
+                <div className="text-center mt-8">
+                  <Link
+                    to={`/white-label-inbound-marketing-services/${hub.slug}#faq`}
+                    className="inline-flex items-center gap-2 text-sm text-cta font-medium hover:text-cta/80 transition-colors"
+                  >
+                    View all {hub.title} FAQs
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
       )}
 
       {/* Contact Form */}
