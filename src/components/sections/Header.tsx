@@ -62,7 +62,7 @@ const Header = () => {
     },
     {
       title: "AUTHORITY",
-      href: "/local-authority-building",
+      href: "/white-label-inbound-marketing-services/local-authority-building",
       items: ["Local Links", "Citations", "Brand Mentions", "Anchor Text", "Sponsorships", "Reputation Signals"]
     },
     {

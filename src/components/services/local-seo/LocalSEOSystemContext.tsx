@@ -54,7 +54,7 @@ const services: Service[] = [
     id: "authority",
     title: "Authority Building",
     description: "Links and citations that build trust.",
-    href: "/local-authority-building"
+    href: "/white-label-inbound-marketing-services/local-authority-building"
   },
   {
     icon: BarChart3,
