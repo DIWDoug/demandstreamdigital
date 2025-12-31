@@ -136,10 +136,12 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What are common review request mistakes to avoid?", answer: "Never offer incentives for reviews (forbidden by most platforms). Never use a review kiosk (shared IP triggers filters). Never ask staff or family to review. Never gate reviews by sentiment. These shortcuts backfire." }
   ],
   "citation-building": [
-    { question: "How many citations do you build?", answer: "We start with 50+ core citations and add industry-specific directories. Quality and relevance matter more than raw quantity." },
-    { question: "How long until citations are indexed?", answer: "Most citations appear in Google's index within 2-4 weeks. Some directories take longer to be crawled." },
-    { question: "Do you clean up existing incorrect citations?", answer: "Yes. Citation cleanup is included. We identify and correct inconsistencies before building new citations." },
-    { question: "Why do citations matter for AI visibility?", answer: "AI Overviews cite trusted third-party sources like Yelp and industry directories. Accurate, consistent listings on these platforms increase AI citation eligibility." }
+    { question: "What is a citation and why does it matter?", answer: "A citation is any online reference to your NAP (name, address, phone). Google uses citations to verify business legitimacy and build trust signals. Consistent citations from reputable directories directly impact local rankings and E-E-A-T." },
+    { question: "How many citations do you build?", answer: "We start with 50+ core citations across major directories and data aggregators, then add industry-specific platforms. Quality and consistency matter more than raw quantity." },
+    { question: "How long until citations are indexed?", answer: "Most citations appear in Google's index within 2-4 weeks. Data aggregator submissions propagate to hundreds of downstream sites over 4-8 weeks." },
+    { question: "What happens if citations are inconsistent?", answer: "Conflicting NAP data actively hurts rankings. If Google finds different addresses or phone numbers across directories, it does not know which is accurate and may reduce your visibility. Cleanup comes before building." },
+    { question: "Do you clean up existing incorrect citations?", answer: "Yes. Citation cleanup is the first priority. We audit, identify conflicts, and correct inconsistencies before building new citations. Building on a broken foundation wastes effort." },
+    { question: "Why do citations matter for AI visibility?", answer: "AI Overviews cite trusted third-party sources like Yelp and industry directories. Accurate, consistent listings on these platforms increase AI citation eligibility and improve the accuracy of AI-generated local answers." }
   ],
   "photo-optimization": [
     { question: "Do you take photos for GBP?", answer: "We optimize photos you provide. If professional photography is needed, we can recommend local photographers. Original photos only—we never use stock photos as they lack authenticity and often don't represent your business accurately." },
@@ -834,15 +836,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "citation-building": [
     {
       category: "Core Citations",
-      headline: "Foundation Citations That Matter",
-      description: "Not all citations are equal. We prioritize the directories that Google actually trusts and uses.",
+      headline: "Foundation Citations That Establish Trust",
+      description: "Citations are references to your NAP (name, address, phone) across the web. Google uses them to verify business legitimacy and establish E-E-A-T signals. The more consistent citations from reputable sites, the higher you rank.",
       subPoints: [
-        { title: "Data Aggregators", description: "Submissions to Neustar, Foursquare, and Data Axle that feed hundreds of downstream sites." },
-        { title: "Core Directories", description: "Google, Apple Maps, Bing, Yelp, Facebook, and the 50+ sites that matter most." },
-        { title: "NAP Consistency", description: "Name, address, phone formatted identically everywhere. No variations." },
-        { title: "Category Matching", description: "Business categories aligned with GBP primary and secondary categories." },
-        { title: "Description Optimization", description: "Unique descriptions for major directories. Duplicate content avoided." },
-        { title: "Link Opportunities", description: "Directories that allow website links prioritized for referral traffic." }
+        { title: "Data Aggregators", description: "Submissions to Neustar, Foursquare, and Data Axle that feed hundreds of downstream sites automatically." },
+        { title: "Core Directories", description: "Google, Apple Maps, Bing, Yelp, Facebook, and 50+ sites that directly impact local rankings." },
+        { title: "NAP Consistency", description: "Name, address, phone formatted identically everywhere. Conflicts between citations confuse Google about which information is accurate." },
+        { title: "Category Matching", description: "Business categories aligned with GBP primary and secondary categories for signal consistency." },
+        { title: "Description Optimization", description: "Unique descriptions for major directories. Keywords included naturally without duplication." },
+        { title: "E-E-A-T Foundation", description: "Consistent citations from reputable directories build the trust signals Google's algorithms prioritize." }
       ],
       ctaText: "Start Citation Building",
       ctaHref: "#contact"
@@ -850,29 +852,29 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Industry Citations",
       headline: "Vertical-Specific Authority",
-      description: "Industry directories signal expertise to Google. We identify and secure placements in your vertical.",
+      description: "Industry directories signal expertise and authoritativeness to Google. Trade associations, professional organizations, and vertical platforms reinforce your E-E-A-T credentials.",
       subPoints: [
-        { title: "Industry Research", description: "Comprehensive mapping of directories relevant to each client's vertical." },
-        { title: "Association Listings", description: "Trade associations, professional organizations, and industry bodies." },
-        { title: "Niche Platforms", description: "Vertical-specific review sites and directories that competitors use." },
-        { title: "Credential Verification", description: "Licenses, certifications, and credentials added where platforms support them." },
-        { title: "Local Chambers", description: "Chamber of commerce and local business association memberships secured." },
-        { title: "Competitor Gap Analysis", description: "Directories where competitors appear but client does not." }
+        { title: "Industry Research", description: "Comprehensive mapping of directories relevant to each client's vertical and specialization." },
+        { title: "Association Listings", description: "Trade associations, professional organizations, and industry bodies that validate expertise." },
+        { title: "Niche Platforms", description: "Vertical-specific review sites and directories where competitors have presence." },
+        { title: "Credential Verification", description: "Licenses, certifications, and credentials added where platforms support them for authority signals." },
+        { title: "Local Chambers", description: "Chamber of commerce and local business association memberships that signal community trust." },
+        { title: "Competitor Gap Analysis", description: "Directories where competitors appear but client does not. Citation parity closes ranking gaps." }
       ],
       ctaText: "Get Industry Citations",
       ctaHref: "#contact"
     },
     {
       category: "Citation Cleanup",
-      headline: "Fix What's Broken First",
-      description: "Inconsistent citations hurt rankings. We find and fix every incorrect listing before building new ones.",
+      headline: "Fix Inconsistencies Before Building",
+      description: "NAP conflicts actively hurt rankings. If Google finds conflicting information across directories, it does not know which is accurate and may penalize visibility. We fix every incorrect listing before building new ones.",
       subPoints: [
-        { title: "Audit & Discovery", description: "Comprehensive scan for existing citations. Incorrect, duplicate, and outdated listings found." },
+        { title: "Audit & Discovery", description: "Comprehensive scan for existing citations. Incorrect, duplicate, and outdated listings identified and documented." },
+        { title: "Conflict Resolution", description: "Conflicting NAP details corrected. Google cannot rank what it cannot trust." },
         { title: "Suppression Requests", description: "Duplicate listings suppressed or merged. One authoritative listing per platform." },
-        { title: "Update Submissions", description: "Incorrect information updated to match verified NAP data." },
-        { title: "Old Address Cleanup", description: "Previous locations updated or removed. No confusion about current address." },
-        { title: "Phone Number Fixes", description: "Old numbers, tracking numbers, and variations corrected to primary." },
-        { title: "Ongoing Monitoring", description: "Quarterly audits to catch new inconsistencies as they appear." }
+        { title: "Old Address Cleanup", description: "Previous locations updated or removed. Stale addresses confuse customers and search engines." },
+        { title: "Phone Number Fixes", description: "Old numbers, tracking numbers, and variations corrected to primary. Consistency is non-negotiable." },
+        { title: "Ongoing Monitoring", description: "Quarterly audits catch new inconsistencies before they compound into ranking problems." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
