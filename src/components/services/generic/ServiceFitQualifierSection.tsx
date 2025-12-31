@@ -46,7 +46,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cta/10 flex items-center justify-center shrink-0">
                   <Check className="h-4 w-4 md:h-5 md:w-5 text-cta" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-foreground">This Partnership Works When</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground">This Could Work Well</h3>
               </div>
               <ul className="space-y-2 md:space-y-3">
                 {config.goodFit.map((item, index) => (
@@ -82,7 +82,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
                   <X className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-foreground">This Is Not Built For</h3>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground">Probably Not a Fit</h3>
               </div>
               <ul className="space-y-2 md:space-y-3">
                 {config.notFit.map((item, index) => (
