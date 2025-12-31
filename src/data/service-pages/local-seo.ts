@@ -1,4 +1,4 @@
-import { MapPin, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award } from "lucide-react";
+import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const localSEOConfig: ServicePageConfig = {
@@ -91,14 +91,18 @@ export const localSEOConfig: ServicePageConfig = {
         phase: 1,
         name: "Foundation",
         title: "Technical & On-Page Foundation",
-        description: "Audit and fix the fundamentals that determine a site's local ranking ceiling.",
+        description: "Audit and fix the fundamentals that determine a site's local ranking ceiling. No amount of content or links will move rankings if the foundation is broken.",
         activities: [
-          "Technical SEO audit and fixes",
-          "On-page optimization for target locations",
-          "Schema markup implementation",
-          "NAP consistency audit",
+          "Complete technical SEO audit and priority fix list",
+          "Core Web Vitals optimization",
+          "On-page optimization for target locations and services",
+          "LocalBusiness and Service schema markup implementation",
+          "NAP consistency audit across all platforms",
+          "Internal linking structure optimization",
+          "URL structure and site architecture review",
           "Baseline ranking documentation",
-          "Competitor analysis"
+          "Competitor backlink and content analysis",
+          "Google Search Console and Analytics configuration"
         ],
         icon: Shield,
         color: "hsl(76, 42%, 41%)"
@@ -107,13 +111,17 @@ export const localSEOConfig: ServicePageConfig = {
         phase: 2,
         name: "Authority",
         title: "Content & Link Building",
-        description: "Build the content and authority signals that move rankings.",
+        description: "Build the content and authority signals that move rankings. Content fills topical gaps. Links build domain strength. Both require consistent execution.",
         activities: [
-          "Service area page development",
-          "Local content strategy execution",
-          "Link acquisition from local sources",
-          "Citation building and cleanup",
-          "Review generation strategy"
+          "Service area page development with LLM-ready semantic structure",
+          "Local content strategy execution aligned to keyword map",
+          "FAQ content expansion targeting People Also Ask",
+          "Link acquisition from local publications and community sites",
+          "Citation building across industry and local directories",
+          "Data aggregator submissions for NAP syndication",
+          "Review generation strategy and response templates",
+          "Guest post outreach to relevant local blogs",
+          "Brand mention monitoring and acquisition"
         ],
         icon: TrendingUp,
         color: "hsl(200, 70%, 50%)"
@@ -122,13 +130,17 @@ export const localSEOConfig: ServicePageConfig = {
         phase: 3,
         name: "Velocity",
         title: "Momentum & Expansion",
-        description: "Accelerate what is working and expand geographic reach.",
+        description: "Accelerate what is working and expand geographic reach. Double down on content types driving traffic. Scale link acquisition channels performing well.",
         activities: [
-          "Content expansion based on performance",
-          "Link velocity increase",
-          "New market targeting",
-          "Competitor gap analysis",
-          "Advanced optimization"
+          "Content expansion based on performance data",
+          "Hyperlocal landing pages for high-value service areas",
+          "Link velocity increase through proven channels",
+          "New market targeting based on client capacity",
+          "Competitor gap analysis for content opportunities",
+          "Advanced schema implementation for rich results",
+          "AI Overview optimization through structured content",
+          "Review velocity acceleration campaigns",
+          "Cross-linking between location and service pages"
         ],
         icon: Zap,
         color: "hsl(35, 90%, 50%)"
@@ -136,20 +148,25 @@ export const localSEOConfig: ServicePageConfig = {
       {
         phase: 4,
         name: "Dominance",
-        title: "Market Leadership",
-        description: "Defend positions and maintain competitive advantage.",
+        title: "Market Leadership & Defense",
+        description: "Defend positions and maintain competitive advantage. Rankings earned require ongoing protection. Competitors will target your client's success.",
         activities: [
-          "Defensive optimization",
-          "Competitor monitoring",
-          "Algorithm update adaptation",
-          "Quarterly strategic reviews",
-          "Long-term visibility planning"
+          "Defensive optimization against competitor advances",
+          "Continuous competitor monitoring and response",
+          "Algorithm update adaptation and recovery",
+          "Quarterly strategic reviews and roadmap updates",
+          "Content refresh and consolidation audits",
+          "Link profile health monitoring",
+          "New service and location expansion",
+          "AI visibility tracking and optimization",
+          "Long-term visibility planning and goal setting"
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Phase duration varies by market competitiveness. Most clients see meaningful movement within 3-4 months."
+    executionNote: "Each phase builds on the previous. Foundation work is non-negotiable. Content without technical health underperforms. Links without content have nothing to point to.",
+    footerNote: "Phase duration varies by market competitiveness and client capacity. Most clients see meaningful movement within 3-4 months, with substantial results by month 6."
   },
 
   buildingBlocks: {
@@ -227,48 +244,57 @@ export const localSEOConfig: ServicePageConfig = {
       {
         category: "Results & Timing",
         items: [
-          { question: "How long does it take to see local SEO results?", answer: "Most campaigns show meaningful movement within 3-4 months, with substantial results by month 6. Competitive markets may take longer." },
-          { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." },
-          { question: "How do AI Overviews affect local SEO?", answer: "AI Overviews pull from trusted sources including GBP data, review platforms, and structured website content. Our approach optimizes for both traditional rankings and AI visibility through schema markup, NAP consistency, and LLM-ready content structure." }
+          { question: "How long does it take to see local SEO results?", answer: "Most campaigns show meaningful movement within 3-4 months, with substantial results by month 6. Competitive markets may take longer. We document baseline rankings and track progress monthly so you can see exactly how visibility is improving." },
+          { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. Google's algorithm considers hundreds of factors, many outside anyone's control. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." },
+          { question: "How do AI Overviews affect local SEO?", answer: "AI Overviews pull from trusted sources including GBP data, review platforms, and structured website content. Our approach optimizes for both traditional rankings and AI visibility through schema markup, NAP consistency, and LLM-ready content structure with semantic chunking." },
+          { question: "What happens if rankings drop?", answer: "Ranking fluctuations are normal, especially after algorithm updates. We monitor rankings daily and investigate significant drops immediately. Our approach builds sustainable visibility that recovers faster than competitors relying on shortcuts." },
+          { question: "How do you measure local SEO success?", answer: "We track rankings across target keywords and locations, organic traffic from local searches, GBP impressions and actions, and ultimately leads and conversions. Monthly reports connect activities to outcomes so you can demonstrate value to clients." }
         ]
       },
       {
         category: "Process & Delivery",
         items: [
-          { question: "How do you handle client communication?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points." },
-          { question: "What access do you need from clients?", answer: "We need access to Google Business Profile, website CMS, and ideally Google Analytics and Search Console." }
+          { question: "How do you handle client communication?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. Your clients never know we exist." },
+          { question: "What access do you need from clients?", answer: "We need access to Google Business Profile, website CMS, and ideally Google Analytics and Search Console. We can work with limited access but recommend full access for best results." },
+          { question: "How often do you report on progress?", answer: "We provide comprehensive monthly reports with ranking changes, traffic data, completed activities, and next-month priorities. Dashboards provide real-time visibility between reports." },
+          { question: "What is your content creation process?", answer: "We research topics based on keyword data and competitor gaps, create content briefs, write optimized content with semantic structure for both users and AI, and deliver for your review before publishing." },
+          { question: "How do you build links for local businesses?", answer: "We focus on relevant local sources: community organizations, local publications, industry directories, and sponsorship opportunities. Every link is earned through outreach, not purchased." }
         ]
       },
       {
         category: "Eligibility & Fit",
         items: [
-          { question: "Do you work with service-area businesses?", answer: "We specialize in businesses with verified, address-visible Google Business Profile listings." },
-          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements." }
+          { question: "Do you work with service-area businesses?", answer: "We specialize in businesses with verified, address-visible Google Business Profile listings. Service-area-only businesses require different tactics and may not be the best fit for our core local SEO framework." },
+          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, local SEO is a long-term investment and most meaningful results require 6+ months of consistent effort." },
+          { question: "What industries do you work with?", answer: "We work with local service businesses across most industries: HVAC, plumbing, legal, dental, medical, home services, and more. We have deep experience in competitive verticals where local visibility drives real revenue." },
+          { question: "Can you take over from another SEO provider?", answer: "Yes. We audit existing work, document current rankings, identify quick wins and ongoing issues, and build a transition plan. Most handoffs complete within 2-4 weeks without disruption." },
+          { question: "What if my client has multiple locations?", answer: "We have specific processes for multi-location local SEO including centralized strategy, location-specific execution, and scalable reporting. Pricing scales with location count." }
         ]
       }
     ]
   },
 
   ecosystem: {
-    eyebrow: "The 360° Ecosystem",
-    headline: "Local SEO Works Best as Part of a",
-    highlightedText: "Coordinated System",
+    eyebrow: "The Bigger Picture",
+    headline: "Local SEO Is One Piece of the",
+    highlightedText: "360° Ecosystem",
     intro: "While local SEO drives organic visibility in search and Google Maps, it compounds when integrated with the broader inbound ecosystem.",
     body: "GBP optimization, authority building, and paid media all reinforce SEO performance. We can engage these services independently or as a unified strategy.",
     services: [
       {
         icon: MapPin,
+        id: "local-seo",
+        title: "Local SEO",
+        description: "Organic visibility in local search results.",
+        href: "/white-label-inbound-marketing-services/local-seo",
+        isCenter: true
+      },
+      {
+        icon: Map,
         id: "google-maps",
         title: "GBP SEO",
         description: "Dominate the local 3-pack with optimized Google Business Profiles.",
         href: "/white-label-inbound-marketing-services/google-maps"
-      },
-      {
-        icon: Award,
-        id: "authority",
-        title: "Authority Building",
-        description: "Build the off-page signals that make rankings stick.",
-        href: "/white-label-inbound-marketing-services/local-authority-building"
       },
       {
         icon: Sparkles,
@@ -285,6 +311,13 @@ export const localSEOConfig: ServicePageConfig = {
         href: "/white-label-inbound-marketing-services/email-marketing"
       },
       {
+        icon: Award,
+        id: "authority",
+        title: "Authority Building",
+        description: "Build the off-page signals that make rankings stick.",
+        href: "/white-label-inbound-marketing-services/local-authority-building"
+      },
+      {
         icon: BarChart3,
         id: "reporting",
         title: "Reporting",
@@ -292,7 +325,7 @@ export const localSEOConfig: ServicePageConfig = {
         href: "/white-label-inbound-marketing-services/reporting"
       }
     ],
-    ctaText: "Start the Conversation",
-    ctaHref: "#contact"
+    ctaText: "Explore All Services",
+    ctaHref: "/white-label-inbound-marketing-services"
   }
 };
