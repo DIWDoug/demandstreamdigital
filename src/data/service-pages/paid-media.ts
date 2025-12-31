@@ -164,7 +164,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Paid Media Management",
+    headline: "The Levers We Pull Based on Budget and Goals",
     subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
       {

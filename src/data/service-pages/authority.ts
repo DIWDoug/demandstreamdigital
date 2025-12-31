@@ -151,8 +151,8 @@ export const authorityConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Authority Building",
-    subheadline: "Each component is scoped based on industry, market, and competitive landscape—not templated packages.",
+    headline: "The Levers We Pull Based on Competitive Landscape",
+    subheadline: "Each component is scoped based on industry, market, and competitive landscape.",
     blocks: [
       {
         title: "Local Link Acquisition",

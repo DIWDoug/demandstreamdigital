@@ -183,7 +183,7 @@ export const googleMapsConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of GBP SEO",
+    headline: "The Levers We Pull Based on Market Reality",
     subheadline: "Each component is scoped based on market competition and client goals, not templated packages.",
     blocks: [
       {
