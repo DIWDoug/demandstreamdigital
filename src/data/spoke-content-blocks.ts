@@ -66,9 +66,9 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Why does technical SEO matter for local businesses?", answer: "Multi-location sites create technical complexity. If Google can't crawl and index your location pages, those markets don't exist in search. Technical issues silently kill local visibility." },
     { question: "How long does technical SEO take to show results?", answer: "Indexation fixes show impact within 1-2 weeks. Page speed improvements affect local rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
     { question: "Do you implement fixes or just provide recommendations?", answer: "Both. We provide specifications for developer teams and can implement directly via CMS access. Most technical fixes we handle ourselves." },
-    { question: "What tools do you use for local technical SEO?", answer: "Screaming Frog, Semrush Site Audit, Google Search Console, PageSpeed Insights, and Lighthouse. We validate location page issues across multiple tools." },
+    { question: "What tools do you use for local technical SEO?", answer: "Screaming Frog, site audit tools, Google Search Console, PageSpeed Insights, and Lighthouse. We validate location page issues across multiple tools." },
     { question: "How do you prioritize technical fixes?", answer: "Location page indexation first, then site architecture, then duplicate location content, then mobile speed. We fix what blocks local rankings before marginal optimizations." },
-    { question: "Does technical SEO need ongoing attention?", answer: "Yes. New locations, CMS updates, and Google requirements change. Quarterly technical reviews catch problems before they tank local rankings." }
+    { question: "Does technical SEO help with AI visibility?", answer: "Yes. Clean site structure and schema markup help AI systems understand your content. Structured data improves the accuracy of AI citations and increases chances of appearing in AI-generated local results." }
   ],
   "local-keyword-strategy": [
     { question: "How do you identify seed keywords?", answer: "We start with your services, products, and customer pain points. These become seed keywords that we expand with location modifiers like city names, neighborhoods, landmarks, and ZIP codes." },
@@ -80,16 +80,16 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
   ],
   "content-development": [
     { question: "Who writes the content?", answer: "Our in-house content team with local SEO expertise. We never use AI-generated content without substantial human editing and subject matter expertise." },
-    { question: "How do you ensure content is unique per location?", answer: "Each location page includes market-specific details: local landmarks, regulations, service area specifics, and unique value propositions. No find-and-replace templates." },
+    { question: "How do you ensure content is unique per location?", answer: "Each location page includes market-specific details: local landmarks, regulations, service area specifics, hours, contact info, and unique value propositions. Boilerplate 'doorway pages' with only city names swapped violate Google's guidelines and we never create them." },
     { question: "What is your content approval process?", answer: "Draft delivered for review, single revision round included, then final approval before publishing. Additional revisions available at added cost." },
     { question: "Do you provide ongoing content or one-time pieces?", answer: "Both. We offer one-time content projects and monthly retainer packages for ongoing blog content, location pages, and content refreshes." },
-    { question: "How do you optimize content for featured snippets?", answer: "Structured formatting with clear definitions, numbered lists, and direct answers to common questions. FAQ sections specifically target People Also Ask." }
+    { question: "How do you optimize content for AI visibility?", answer: "Clear section headings, quotable statements, complete answers to questions, and semantic chunking that LLMs can parse and cite accurately. FAQ blocks are particularly effective for AI extraction." }
   ],
   "link-building": [
     { question: "What types of links do you build?", answer: "Editorial links from local news, industry publications, chamber of commerce directories, local sponsorships, and guest contributions. No PBNs or paid link schemes." },
     { question: "How many links per month should we expect?", answer: "Quality over quantity. Typically 5-15 relevant links monthly depending on campaign scope. One link from a trusted local source beats 50 low-quality submissions." },
     { question: "Do you build links to specific pages or just homepage?", answer: "Strategic distribution. Homepage and service pages for authority, location pages for geographic signals, and blog content for topical relevance." },
-    { question: "How do you measure link building success?", answer: "Referring domain growth, Domain Rating/Authority changes, ranking improvements for targeted pages, and referral traffic from acquired links." },
+    { question: "How do you measure link building success?", answer: "Referring domain growth, Domain Authority changes, ranking improvements for targeted pages, and referral traffic from acquired links." },
     { question: "What is your approach to anchor text?", answer: "Natural distribution: branded anchors, naked URLs, generic terms, and occasional keyword-rich anchors. Over-optimization triggers penalties." }
   ],
   "schema-markup": [
@@ -452,15 +452,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "content-development": [
     {
       category: "Location Pages",
-      headline: "Content That Signals Local Relevance",
-      description: "Generic service pages do not rank locally. Google needs proof you serve specific markets.",
+      headline: "Unique Content That Signals Local Relevance",
+      description: "Generic service pages do not rank locally. Google needs proof you serve specific markets. Boilerplate 'doorway pages' with only location names swapped violate guidelines and get penalized.",
       subPoints: [
-        { title: "City-Specific Pages", description: "Unique content per service area. Not templates with city names swapped." },
-        { title: "Local Context", description: "Neighborhoods, landmarks, regulations. Signals that you operate there." },
-        { title: "Area Hierarchy", description: "Primary locations get comprehensive pages. Secondary areas get appropriate depth." },
-        { title: "Conversion Focus", description: "Local phone numbers, embedded maps, and location-specific trust signals." },
-        { title: "Schema Integration", description: "LocalBusiness and Service schema on every location page." },
-        { title: "Link Architecture", description: "Location pages connected to hub structure. Authority flows properly." }
+        { title: "City-Specific Pages", description: "100% unique content per service area. Local landmarks, regulations, service notes. Not templates with city names swapped." },
+        { title: "Local Context", description: "Neighborhoods, landmarks, parking details, and regional specifics. Signals that you actually operate there." },
+        { title: "Area Hierarchy", description: "Primary locations get comprehensive pages. Secondary areas get appropriate depth based on opportunity." },
+        { title: "Conversion Focus", description: "Local phone numbers, embedded Google Maps, hours, and location-specific trust signals." },
+        { title: "Schema Integration", description: "LocalBusiness and Service schema on every location page for rich results and AI visibility." },
+        { title: "Link Architecture", description: "Location pages connected to hub structure. Internal links from homepage and service pages distribute authority." }
       ],
       imageSrc: contentLocationImg,
       imageAlt: "Location page content structure",

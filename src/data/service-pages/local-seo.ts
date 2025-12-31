@@ -164,15 +164,15 @@ export const localSEOConfig: ServicePageConfig = {
         icon: FileText
       },
       {
-        title: "Technical SEO Audits",
-        slug: "technical-seo-audits",
+        title: "Technical SEO",
+        slug: "technical-seo",
         description: "Site architecture, crawlability, Core Web Vitals, and technical SEO fixes that support local search performance.",
         icon: Settings
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "Comprehensive local keyword discovery, local search intent analysis, and strategic mapping.",
+        description: "Seed keyword development, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping.",
         icon: Search
       },
       {
@@ -190,8 +190,14 @@ export const localSEOConfig: ServicePageConfig = {
       {
         title: "Schema Markup",
         slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema implementation to improve local search visibility.",
+        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results and AI Overview citations.",
         icon: Code
+      },
+      {
+        title: "NAP Citations",
+        slug: "nap-citations",
+        description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity for rankings and AI visibility.",
+        icon: Globe
       }
     ]
   },
@@ -222,7 +228,8 @@ export const localSEOConfig: ServicePageConfig = {
         category: "Results & Timing",
         items: [
           { question: "How long does it take to see local SEO results?", answer: "Most campaigns show meaningful movement within 3-4 months, with substantial results by month 6. Competitive markets may take longer." },
-          { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." }
+          { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." },
+          { question: "How do AI Overviews affect local SEO?", answer: "AI Overviews pull from trusted sources including GBP data, review platforms, and structured website content. Our approach optimizes for both traditional rankings and AI visibility through schema markup, NAP consistency, and LLM-ready content structure." }
         ]
       },
       {
