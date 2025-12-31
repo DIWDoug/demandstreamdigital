@@ -720,14 +720,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Review Generation",
       headline: "Systematic Review Acquisition That Works",
-      description: "51% of customers leave reviews when asked directly, but 30% skip reviews because the process is confusing. We eliminate friction and build systems that generate consistent reviews from satisfied customers.",
+      description: "51% of customers leave reviews when asked directly, but 30% skip reviews because the process is confusing. We eliminate friction and build systems that generate consistent reviews. For automated email sequences, see our Email Marketing Automation Flows.",
       subPoints: [
         { title: "Timing Strategy", description: "Requests sent at optimal moments: shortly after positive service experience, at peak satisfaction. Timing is everything." },
         { title: "Multi-Channel Requests", description: "54% prefer email, 45% prefer in-person, 29% prefer SMS. We deploy all channels based on customer preferences." },
         { title: "Direct Review Links", description: "Shortened links straight to the review form. No navigation required. 30% skip reviews due to confusing process." },
         { title: "Personalized Templates", description: "Use customer name, reference specific service. Generic requests get ignored." },
         { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Friendly reminders on receipts, packaging, and follow-up emails." },
-        { title: "Platform Choice", description: "Give customers options: Google, Facebook, Yelp, or industry sites. Let them choose where they're comfortable." }
+        { title: "Email Automation Integration", description: "Pairs with Email Marketing automation flows for hands-off review generation at scale via post-service sequences." }
       ],
       ctaText: "Start Review Generation",
       ctaHref: "#contact"
@@ -1397,14 +1397,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Review Generation Automation",
       headline: "Turn Happy Customers Into Reviews",
-      description: "51% of customers leave reviews when asked directly. We build automated sequences timed to peak satisfaction moments with personalization that converts.",
+      description: "51% of customers leave reviews when asked directly. We build automated sequences timed to peak satisfaction moments with personalization that converts. Integrates with GBP Review Management for full reputation system.",
       subPoints: [
         { title: "Optimal Timing", description: "Requests triggered shortly after positive service experience. Timing is everything for conversion." },
         { title: "Personalized Requests", description: "Customer name, specific service referenced. Generic asks get ignored." },
         { title: "Direct Review Links", description: "Shortened links straight to review form. 30% skip reviews because the process is confusing." },
         { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Automated reminder 3-7 days later." },
-        { title: "Platform Options", description: "54% prefer email, but offer Google, Facebook, Yelp, or industry sites. Let customers choose." },
-        { title: "Gratitude Close", description: "Express appreciation in advance. 63% of reviewers are motivated to show gratitude back." }
+        { title: "Platform Options", description: "Dynamic links to Google, Facebook, Yelp, or industry sites. Let customers choose their preferred platform." },
+        { title: "GBP Integration", description: "Works with GBP Review Management for response workflows, sentiment tracking, and monthly reporting." }
       ],
       ctaText: "Start Review Automation",
       ctaHref: "#contact"
