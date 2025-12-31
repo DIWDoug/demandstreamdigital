@@ -29,16 +29,16 @@ export interface ContentBlock {
 export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "on-page-optimization": [
     {
-      category: "Visible Elements",
-      headline: "Superior On-Page Optimization",
-      description: "The visible layer of on-page optimization covers everything consumers interact with directly. We optimize for both readability and search intent, treating every element as an opportunity to signal relevance.",
+      category: "Title Tags & Meta Descriptions",
+      headline: "Click-Worthy Titles That Rank and Convert",
+      description: "Title tags give search engines a high-level overview of what your page is about. We optimize them for both rankings and click-through rate, because showing up is only half the battle.",
       subPoints: [
-        { title: "Intent-Focused Title Tags", description: "We prioritize search intent over arbitrary character limits. Title tags up to 100 characters when the context demands it." },
-        { title: "CTR-Optimized Meta Descriptions", description: "Following Backlinko best practices, meta descriptions are written like ad copy. The goal is click-through rate." },
-        { title: "Header Hierarchy & LSI Signals", description: "H1-H6 tags aligned with natural language patterns and latent semantic indexing." },
-        { title: "Hub-Spoke Internal Linking", description: "Every page is connected to its topical cluster. Internal links build authority and guide crawlers." },
-        { title: "Image Alt Text & Accessibility", description: "Every image optimized for screen readers and search engines. Descriptive alt text that aids both accessibility and relevance." },
-        { title: "Keyword Density & Semantic Relevance", description: "LSI signals and semantic variations distributed naturally throughout content to signal comprehensive coverage." }
+        { title: "Keyword Placement Strategy", description: "Target keywords placed near the front of the title tag. The closer to the beginning, the stronger the relevance signal." },
+        { title: "Character Length Optimization", description: "Titles kept between 50-60 characters to display fully in search results. Longer when context demands it." },
+        { title: "CTR-Boosting Modifiers", description: "Strategic use of modifiers like 'best,' 'guide,' and location terms to capture long-tail variations." },
+        { title: "Unique Descriptions Per Page", description: "Every page gets a distinct meta description written like ad copy. Google bolds matching terms, which lifts click-through rates." },
+        { title: "Emotional Resonance Without Clickbait", description: "Positive emotional triggers in titles increase CTR by 4%. We use them strategically without crossing into spam territory." },
+        { title: "Freshness Signals", description: "Current year added to titles and descriptions for time-sensitive content. Users want to know your information is current." }
       ],
       imageSrc: visibleElementsImg,
       imageAlt: "SEO mind map showing titles, metas, headers, links, and images",
@@ -46,32 +46,36 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "#contact"
     },
     {
-      category: "Technical Markup",
-      headline: "Structured Data That Earns Rich Results",
-      description: "Technical on-page goes beyond visible content. Comprehensive schema markup tells search engines exactly what your content means.",
+      category: "Content Structure & Keywords",
+      headline: "Strategic Keyword Placement That Signals Relevance",
+      description: "Keywords still matter. But placement, frequency, and context matter more. We optimize content so search engines confidently understand what each page is about.",
       subPoints: [
-        { title: "LocalBusiness & Organization Schema", description: "Core identity markup that powers Knowledge Panels and map integrations." },
-        { title: "Service & About Schema", description: "Structured markup that clarifies what you do, where you do it, and the scope of offerings." },
-        { title: "FAQ & Testimonials Markup", description: "FAQ schema targets People Also Ask features. Review schema builds trust signals." },
-        { title: "Canonical Tags & Hreflang", description: "Proper canonicalization and language signals for multi-location or multilingual sites." }
+        { title: "First 100 Words Rule", description: "Primary keyword appears early in the content. Google weights terms higher when they show up at the beginning." },
+        { title: "Header Hierarchy (H1-H6)", description: "Single H1 per page with target keyword. Subheadings (H2-H6) use semantic variations to reinforce topical coverage." },
+        { title: "Natural Keyword Frequency", description: "Target keywords mentioned multiple times without stuffing. Enough repetition to confirm the topic, not enough to trigger penalties." },
+        { title: "Long-Tail Integration", description: "Related phrases from 'People Also Ask' and 'Related Searches' woven into content for broader coverage." },
+        { title: "Semantic Chunking for LLMs", description: "Content broken into clearly defined sections with descriptive subheads. Each section answers a specific question completely." },
+        { title: "FAQ Sections for AI Visibility", description: "Real questions answered in dedicated FAQ blocks. LLMs extract and cite these more reliably than buried paragraphs." }
       ],
       imageSrc: technicalMarkupImg,
-      imageAlt: "Schema markup mind map showing LocalBusiness, Organization, FAQ, Service, Reviews, About",
+      imageAlt: "Content structure diagram showing headers, keywords, and semantic organization",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     },
     {
-      category: "Full-Funnel Content",
-      headline: "Awareness to Decision. Mapped and Optimized.",
-      description: "We approach on-page optimization with the entire customer journey in mind. Each content type is treated uniquely based on funnel stage.",
+      category: "Internal Links & Images",
+      headline: "The Hidden Signals That Compound Authority",
+      description: "Internal links distribute authority across your site. Optimized images add context for both users and crawlers. Together, they create a web of relevance signals.",
       subPoints: [
-        { title: "Top-of-Funnel Awareness Content", description: "Educational guides and thought leadership that captures early-stage searchers." },
-        { title: "Middle-Funnel Consideration Content", description: "Comparison pages and detailed guides that move prospects from awareness to evaluation." },
-        { title: "Bottom-Funnel Decision Content", description: "Service pages and case studies designed to capture users ready to take action." },
-        { title: "Conversion Path Optimization", description: "Strategic CTA placement and landing page alignment to move users through the funnel." }
+        { title: "Authority Flow Strategy", description: "Links from high-authority pages directed to pages that need ranking boosts. Deliberate internal linking, not random footer links." },
+        { title: "Keyword-Rich Anchor Text", description: "Descriptive anchor text that tells users and search engines what the linked page is about. Natural language, not forced keywords." },
+        { title: "Hub-Spoke Architecture", description: "Pillar pages connected to supporting content. Every page belongs to a topical cluster with clear internal pathways." },
+        { title: "Image Filename Optimization", description: "Descriptive filenames that include relevant keywords. 'on-page-seo-checklist.png' instead of 'IMG_4521.jpg'." },
+        { title: "Alt Text for Accessibility & SEO", description: "Every image gets descriptive alt text that serves screen readers and adds another relevance signal for search engines." },
+        { title: "SEO-Friendly URLs", description: "Short, keyword-inclusive URLs that communicate page topic at a glance. No unnecessary parameters or session IDs." }
       ],
       imageSrc: fullFunnelImg,
-      imageAlt: "Marketing funnel showing TOFU, MOFU, BOFU stages",
+      imageAlt: "Internal linking structure diagram",
       ctaText: "Get a Custom Audit",
       ctaHref: "#contact"
     }
@@ -79,14 +83,16 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "technical-seo-audits": [
     {
-      category: "Site Architecture",
+      category: "Crawlability & Site Architecture",
       headline: "Technical Foundations That Rankings Require",
-      description: "Technical SEO issues silently kill rankings. We audit the invisible infrastructure that determines whether search engines can find, crawl, and index your content.",
+      description: "Technical SEO issues silently kill rankings. If search engines cannot find, crawl, or understand your content, nothing else matters. We audit the invisible infrastructure first.",
       subPoints: [
-        { title: "Crawlability Analysis", description: "Identify what search engines can and cannot access. Fix crawl budget waste and blocked resources." },
-        { title: "Site Structure Optimization", description: "Clear hierarchy that distributes authority and helps users find what they need." },
-        { title: "XML Sitemap & Robots.txt", description: "Properly configured directives that guide crawlers to priority content." },
-        { title: "Internal Link Architecture", description: "Strategic linking that passes authority and establishes topical relationships." }
+        { title: "Crawl Budget Analysis", description: "Identify what search engines can and cannot access. Fix blocked resources, infinite loops, and crawl traps that waste your budget." },
+        { title: "Site Structure Optimization", description: "Clear hierarchy that distributes authority efficiently. Important pages within 3 clicks of the homepage." },
+        { title: "XML Sitemap Configuration", description: "Sitemaps that include only indexable, canonical URLs. No redirects, no 404s, no noindexed pages." },
+        { title: "Robots.txt Audit", description: "Directives reviewed to ensure critical resources are not accidentally blocked. JavaScript and CSS accessible to crawlers." },
+        { title: "Internal Link Architecture", description: "Strategic linking from high-authority pages to priority targets. Orphan pages identified and connected." },
+        { title: "URL Structure Review", description: "Clean, logical URL paths. No dynamic parameters, session IDs, or unnecessary depth." }
       ],
       imageSrc: technicalSeoImg,
       imageAlt: "Technical SEO mind map showing Speed, Audit, Crawl, and Index",
@@ -94,14 +100,16 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "#contact"
     },
     {
-      category: "Performance",
-      headline: "Core Web Vitals and Page Speed",
-      description: "Google uses page experience signals as ranking factors. We optimize the metrics that matter for both rankings and user experience.",
+      category: "Core Web Vitals & Page Experience",
+      headline: "Page Speed That Affects Rankings and Revenue",
+      description: "Google uses page experience signals as ranking factors. Slow pages lose visitors before they even see your content. We optimize the metrics that move the needle.",
       subPoints: [
-        { title: "Largest Contentful Paint (LCP)", description: "Optimize loading performance so main content appears within 2.5 seconds." },
-        { title: "First Input Delay (FID)", description: "Ensure pages respond to user interactions within 100 milliseconds." },
-        { title: "Cumulative Layout Shift (CLS)", description: "Eliminate unexpected layout shifts that frustrate users and hurt rankings." },
-        { title: "Mobile Usability", description: "Responsive design, touch targets, and viewport configuration for mobile-first indexing." }
+        { title: "Largest Contentful Paint (LCP)", description: "Main content loads within 2.5 seconds. Server response, render-blocking resources, and image optimization addressed." },
+        { title: "Interaction to Next Paint (INP)", description: "Pages respond to user interactions within 200 milliseconds. JavaScript execution optimized for responsiveness." },
+        { title: "Cumulative Layout Shift (CLS)", description: "Visual stability maintained during load. No unexpected layout shifts that frustrate users or hurt rankings." },
+        { title: "Mobile-First Performance", description: "Responsive design, appropriate touch targets, and viewport configuration. Mobile experience prioritized since that is how Google indexes." },
+        { title: "Image Optimization", description: "Proper formats (WebP, AVIF), lazy loading for below-fold images, and appropriate sizing to reduce payload." },
+        { title: "Third-Party Script Audit", description: "External scripts evaluated for performance impact. Defer, async, or remove what is slowing the page down." }
       ],
       imageSrc: technicalSeoImg,
       imageAlt: "Technical SEO performance metrics",
@@ -109,14 +117,16 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "#contact"
     },
     {
-      category: "Indexation",
-      headline: "Ensuring Every Important Page Gets Indexed",
-      description: "If search engines cannot index your pages, they cannot rank them. We identify and fix indexation barriers systematically.",
+      category: "Indexation & Structured Data",
+      headline: "Every Important Page Indexed. Every Rich Result Earned.",
+      description: "If search engines cannot index your pages, they cannot rank them. Schema markup unlocks rich results that increase visibility and click-through rates.",
       subPoints: [
-        { title: "Index Coverage Analysis", description: "Review Google Search Console data to identify excluded, errored, and valid pages." },
-        { title: "Duplicate Content Resolution", description: "Canonical tags and content consolidation to prevent keyword cannibalization." },
-        { title: "Redirect Chain Cleanup", description: "Fix redirect chains and loops that waste crawl budget and dilute authority." },
-        { title: "Structured Data Validation", description: "Ensure schema markup is error-free and eligible for rich results." }
+        { title: "Index Coverage Analysis", description: "Google Search Console data reviewed to identify excluded, errored, and crawled-but-not-indexed pages. Root causes fixed." },
+        { title: "Duplicate Content Resolution", description: "Canonical tags properly implemented. Competing pages consolidated to concentrate authority." },
+        { title: "Redirect Chain Cleanup", description: "Redirect chains and loops eliminated. Direct paths from old URLs to current destinations." },
+        { title: "Schema Markup Implementation", description: "LocalBusiness, FAQ, Review, Service, and Organization schema added where appropriate. Validated for rich result eligibility." },
+        { title: "Rich Snippet Optimization", description: "FAQ schema targets People Also Ask. Product and review schema displays ratings in search results." },
+        { title: "HTTPS & Security", description: "Secure protocol confirmed site-wide. Mixed content issues resolved. Security headers reviewed." }
       ],
       imageSrc: technicalSeoImg,
       imageAlt: "Technical SEO indexation diagram",
