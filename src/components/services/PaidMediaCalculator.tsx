@@ -37,6 +37,17 @@ const PaidMediaCalculator = () => {
     const annualOEM = SETUP_FEE + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
     
+    // Minimum ad spend to avoid hitting the $300 floor
+    // Need: clientRetainer >= $1,500 (so 20% = $300)
+    // clientRetainer = max(adSpend * 0.20, $500) * platforms
+    // So: max(adSpend * 0.20, $500) >= $1,500 / platforms
+    const retainerPerPlatformNeeded = MIN_OEM / OEM_RATE / platforms;
+    const minAdSpendForMargin = retainerPerPlatformNeeded > MIN_RETAINER 
+      ? retainerPerPlatformNeeded / SUGGESTED_FEE_RATE 
+      : null; // null means any spend works (floor already met by min retainer)
+    
+    const isAtFloor = clientRetainer * OEM_RATE < MIN_OEM;
+    
     return {
       suggestedPerPlatform,
       suggestedRetainer,
@@ -47,7 +58,9 @@ const PaidMediaCalculator = () => {
       firstMonthMargin,
       annualRevenue,
       annualOEM,
-      annualMargin
+      annualMargin,
+      minAdSpendForMargin,
+      isAtFloor
     };
   }, [adSpend, platforms, customRetainer]);
 
@@ -187,13 +200,32 @@ const PaidMediaCalculator = () => {
               </div>
             </div>
 
+            {/* Minimum Ad Spend Recommendation */}
+            {calculations.isAtFloor && calculations.minAdSpendForMargin && (
+              <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-amber-400 mt-2 shrink-0"></div>
+                  <div>
+                    <p className="text-sm font-medium text-amber-200">
+                      You're at floor pricing
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      To stay above the $300 minimum, recommend at least{' '}
+                      <span className="font-semibold text-foreground">{formatCurrency(calculations.minAdSpendForMargin)}</span> monthly ad spend
+                      {platforms > 1 && ` across ${platforms} platforms`}.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Results Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {/* Your Cost */}
               <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-muted-foreground"></span>
-                  Your Cost (OEM)
+                  <span className={`w-2 h-2 rounded-full ${calculations.isAtFloor ? 'bg-amber-400' : 'bg-muted-foreground'}`}></span>
+                  Your Cost (OEM) {calculations.isAtFloor && <span className="text-xs text-amber-400 font-normal normal-case">(at floor)</span>}
                 </h3>
                 
                 <div className="bg-background border border-border rounded-lg p-5">
