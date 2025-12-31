@@ -9,6 +9,7 @@ import TrustReel from "@/components/sections/TrustReel";
 import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import SpokeAlternatingBlocks, { onPageOptimizationBlocks } from "@/components/services/SpokeAlternatingBlocks";
 import {
   Accordion,
   AccordionContent,
@@ -198,48 +199,53 @@ const SpokePage = () => {
 
       <SectionDivider />
 
-      {/* Benefits & Deliverables Section */}
-      <section className="py-16 lg:py-20 section-light">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-              {/* Benefits */}
-              <div>
-                <h2 className="text-2xl font-semibold text-slate-900 mb-6">
-                  Key Benefits
-                </h2>
-                <ul className="space-y-4">
-                  {spoke.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-cta" />
-                      </div>
-                      <span className="text-slate-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      {/* Toastique-style Alternating Content Blocks */}
+      {spokeSlug === "on-page-optimization" ? (
+        <SpokeAlternatingBlocks blocks={onPageOptimizationBlocks} />
+      ) : (
+        /* Fallback to original Benefits & Deliverables for other spokes */
+        <section className="py-16 lg:py-20 section-light">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                {/* Benefits */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-slate-900 mb-6">
+                    Key Benefits
+                  </h2>
+                  <ul className="space-y-4">
+                    {spoke.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-cta" />
+                        </div>
+                        <span className="text-slate-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              {/* Deliverables */}
-              <div>
-                <h2 className="text-2xl font-semibold text-slate-900 mb-6">
-                  What We Deliver
-                </h2>
-                <ul className="space-y-4">
-                  {spoke.deliverables.map((deliverable, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-accent-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-accent-blue" />
-                      </div>
-                      <span className="text-slate-700">{deliverable}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Deliverables */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-slate-900 mb-6">
+                    What We Deliver
+                  </h2>
+                  <ul className="space-y-4">
+                    {spoke.deliverables.map((deliverable, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-accent-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-accent-blue" />
+                        </div>
+                        <span className="text-slate-700">{deliverable}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <SectionDivider />
 
