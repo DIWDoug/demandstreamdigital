@@ -466,7 +466,7 @@ export const hubs: Hub[] = [
     title: "Local Authority Building",
     slug: "local-authority-building",
     summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
-    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
+    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses. Authority building works hand in hand with Local SEO and GBP SEO. While it can be engaged independently, it delivers the strongest results as part of a coordinated local visibility strategy.",
     whyItMatters: {
       headline: "Why Local Authority Building Matters",
       description: "Off-page signals are a core ranking factor for local search. Backlinks, citations, and community connections tell Google your client's business is legitimate, relevant, and trusted in their market.",
