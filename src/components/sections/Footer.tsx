@@ -55,7 +55,7 @@ const Footer = () => {
     },
     {
       title: "AUTHORITY",
-      hubSlug: "authority",
+      hubSlug: "local-authority-building",
       items: [
         { label: "PR Placements", slug: "pr-placements" },
         { label: "Digital PR", slug: "digital-pr" },
