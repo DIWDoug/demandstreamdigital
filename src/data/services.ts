@@ -106,260 +106,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "On-Page Local Optimization",
-        slug: "on-page-local-optimization",
-        description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market.",
-        fullDescription: "On-page optimization is where local SEO fundamentals meet strategic execution. We optimize every element that search engines use to understand what your client's pages are about and which geographic areas they serve. From title tags that include target locations to schema markup that tells Google exactly where the business operates, we leave no on-page element unoptimized.",
-        benefits: [
-          "Improved keyword rankings for location-specific searches",
-          "Higher click-through rates from search results",
-          "Better understanding by search engines of service areas",
-          "Enhanced rich snippet opportunities in SERPs",
-          "Foundation for all other local SEO activities"
-        ],
-        deliverables: [
-          "Title tag and meta description optimization for all pages",
-          "Header structure optimization (H1-H6)",
-          "LocalBusiness schema markup implementation",
-          "Image optimization with geo-relevant alt text",
-          "Internal linking structure for location pages",
-          "NAP consistency audit and fixes"
-        ],
-        process: [
-          "Comprehensive on-page audit of existing site",
-          "Keyword mapping to pages and locations",
-          "Optimization implementation or detailed instructions",
-          "Schema markup deployment and testing",
-          "Post-implementation verification and reporting"
-        ]
+        title: "On-Page Optimization",
+        slug: "on-page-optimization",
+        description: "Location-specific title tags, meta descriptions, headers, and content that signals relevance for every target market.",
+        fullDescription: "On-page optimization is where local SEO fundamentals meet strategic execution. We optimize every element that search engines use to understand what your client's pages are about and which geographic areas they serve.",
+        benefits: ["Improved keyword rankings for location-specific searches", "Higher click-through rates from search results", "Better understanding by search engines of service areas", "Enhanced rich snippet opportunities", "Foundation for all other local SEO activities"],
+        deliverables: ["Title tag and meta description optimization", "Header structure optimization (H1-H6)", "Image optimization with geo-relevant alt text", "Internal linking structure", "NAP consistency audit and fixes", "Content optimization for target keywords"],
+        process: ["Comprehensive on-page audit", "Keyword mapping to pages", "Optimization implementation", "Post-implementation verification", "Ongoing monitoring"]
       },
       {
-        title: "Technical SEO for Multi-Location",
-        slug: "technical-seo-multi-location",
-        description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy.",
-        fullDescription: "Multi-location businesses face unique technical SEO challenges. How do you structure a site to rank for dozens or hundreds of locations without creating duplicate content issues? How do you help Google understand the relationship between corporate pages and location pages? We've solved these problems across industries from home services to healthcare to retail franchises.",
-        benefits: [
-          "Clear site hierarchy that search engines can crawl efficiently",
-          "No duplicate content penalties across location pages",
-          "Proper canonicalization for multi-location content",
-          "Faster indexing of new location pages",
-          "Scalable structure that grows with the business"
-        ],
-        deliverables: [
-          "Technical SEO audit with prioritized recommendations",
-          "Site architecture recommendations or implementation",
-          "XML sitemap optimization for locations",
-          "Robots.txt optimization",
-          "Page speed optimization for Core Web Vitals",
-          "Mobile usability fixes"
-        ],
-        process: [
-          "Crawl analysis using enterprise tools",
-          "Identification of technical barriers to ranking",
-          "Prioritized roadmap based on impact and effort",
-          "Implementation or developer-ready specifications",
-          "Verification testing and ongoing monitoring"
-        ]
+        title: "Technical SEO Audits",
+        slug: "technical-seo-audits",
+        description: "Site architecture, crawlability, Core Web Vitals, and technical fixes that remove barriers to ranking.",
+        fullDescription: "Technical SEO issues silently kill rankings. We audit site architecture, crawlability, page speed, mobile usability, and indexation to identify and fix the technical barriers preventing your clients from ranking.",
+        benefits: ["Clear site hierarchy for search engines", "Faster page load times", "Improved mobile experience", "Better crawl efficiency", "Scalable structure for growth"],
+        deliverables: ["Technical SEO audit with priorities", "Site architecture recommendations", "XML sitemap optimization", "Robots.txt optimization", "Core Web Vitals improvements", "Mobile usability fixes"],
+        process: ["Crawl analysis", "Technical barrier identification", "Prioritized roadmap", "Implementation or specifications", "Verification and monitoring"]
       },
       {
-        title: "Local Content Strategy",
-        slug: "local-content-strategy",
-        description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries.",
-        fullDescription: "Content is what separates local SEO winners from also-rans. We develop content strategies that capture search demand across the entire customer journey, from awareness queries to high-intent 'near me' searches. Every piece of content is designed to serve both users and search engines while building topical authority in your client's industry.",
-        benefits: [
-          "Capture long-tail search queries competitors miss",
-          "Build topical authority in the client's industry",
-          "Support link building with linkable content assets",
-          "Improve engagement metrics that influence rankings",
-          "Create reusable content frameworks for scale"
-        ],
-        deliverables: [
-          "Content audit and gap analysis",
-          "Service area page templates and content",
-          "Blog content calendar and execution",
-          "FAQ content development",
-          "Content briefs for client-produced content",
-          "Internal linking recommendations"
-        ],
-        process: [
-          "Keyword research and content gap analysis",
-          "Content strategy and calendar development",
-          "Service area page creation or optimization",
-          "Ongoing blog content production",
-          "Performance tracking and optimization"
-        ]
+        title: "Local Keyword Strategy",
+        slug: "local-keyword-strategy",
+        description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages.",
+        fullDescription: "Effective local SEO starts with understanding what people actually search for in each market. We go beyond basic keyword research to understand search intent, seasonal patterns, and competitive dynamics, then map keywords strategically.",
+        benefits: ["Complete picture of search demand", "Strategic targeting without cannibalization", "Understanding of competitive difficulty", "Quick-win opportunity identification", "Foundation for content strategy"],
+        deliverables: ["Comprehensive keyword research", "Search volume and difficulty analysis", "Keyword-to-page mapping", "Content gap identification", "Competitor keyword analysis", "Priority recommendations"],
+        process: ["Seed keyword identification", "Keyword expansion", "Search intent classification", "Competitive analysis", "Strategic mapping", "Priority ranking"]
       },
       {
-        title: "Local Link Acquisition",
-        slug: "local-link-acquisition",
-        description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals.",
-        fullDescription: "Links remain a critical ranking factor, but for local SEO, the right links matter more than raw quantity. We focus on acquiring links from locally-relevant sources: local news sites, community organizations, industry associations, and business directories that signal geographic relevance to search engines.",
-        benefits: [
-          "Improved domain authority for local rankings",
-          "Geographic relevance signals from local links",
-          "Referral traffic from community sources",
-          "Brand visibility in local publications",
-          "Competitive advantage in link-driven rankings"
-        ],
-        deliverables: [
-          "Link opportunity research and outreach list",
-          "Outreach campaign execution",
-          "Guest post content creation",
-          "Local sponsorship identification",
-          "Monthly link acquisition reporting",
-          "Competitor backlink analysis"
-        ],
-        process: [
-          "Competitor backlink analysis",
-          "Local link opportunity identification",
-          "Outreach strategy development",
-          "Personalized outreach execution",
-          "Content creation for placements",
-          "Link tracking and reporting"
-        ]
+        title: "Content Development",
+        slug: "content-development",
+        description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local queries.",
+        fullDescription: "Content is what separates local SEO winners from also-rans. We develop content strategies that capture search demand across the entire customer journey, from awareness queries to high-intent searches.",
+        benefits: ["Capture long-tail queries competitors miss", "Build topical authority", "Support link building efforts", "Improve engagement metrics", "Create reusable content frameworks"],
+        deliverables: ["Content audit and gap analysis", "Service area page content", "Blog content calendar and execution", "FAQ content development", "Content briefs", "Internal linking recommendations"],
+        process: ["Keyword research and gap analysis", "Content strategy development", "Service area page creation", "Ongoing content production", "Performance tracking"]
       },
       {
-        title: "Keyword Research & Mapping",
-        slug: "keyword-research-mapping",
-        description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages for maximum organic visibility.",
-        fullDescription: "Effective local SEO starts with understanding what people actually search for in each market. We go beyond basic keyword research to understand search intent, seasonal patterns, and competitive dynamics. Then we map keywords to pages strategically to avoid cannibalization and maximize ranking potential.",
-        benefits: [
-          "Complete picture of search demand in target markets",
-          "Strategic keyword targeting that avoids cannibalization",
-          "Understanding of competitive difficulty by keyword",
-          "Identification of quick-win opportunities",
-          "Foundation for content and optimization strategy"
-        ],
-        deliverables: [
-          "Comprehensive keyword research document",
-          "Search volume and difficulty analysis",
-          "Keyword-to-page mapping",
-          "Content gap identification",
-          "Competitor keyword analysis",
-          "Priority recommendations by opportunity"
-        ],
-        process: [
-          "Seed keyword identification",
-          "Keyword expansion using multiple data sources",
-          "Search intent classification",
-          "Competitive analysis by keyword",
-          "Strategic mapping to existing and needed pages",
-          "Priority ranking based on opportunity and effort"
-        ]
+        title: "Link Building",
+        slug: "link-building",
+        description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority.",
+        fullDescription: "Links remain a critical ranking factor for local SEO. We focus on acquiring links from locally-relevant sources: local news sites, community organizations, industry associations, and directories that signal geographic relevance.",
+        benefits: ["Improved domain authority", "Geographic relevance signals", "Referral traffic from local sources", "Brand visibility in publications", "Competitive advantage"],
+        deliverables: ["Link opportunity research", "Outreach campaign execution", "Guest post content creation", "Local sponsorship identification", "Monthly acquisition reporting", "Competitor backlink analysis"],
+        process: ["Competitor backlink analysis", "Opportunity identification", "Outreach strategy", "Personalized outreach", "Content creation", "Tracking and reporting"]
       },
       {
-        title: "Competitor & Market Analysis",
-        slug: "competitor-market-analysis",
-        description: "Deep analysis of local competitors' strategies, ranking factors, and market opportunities to identify gaps and advantages.",
-        fullDescription: "You can't win without knowing who you're up against. We analyze the competitive landscape in every target market—understanding who ranks, why they rank, and where the opportunities exist. This intelligence informs every tactical decision from content to links to technical optimization.",
-        benefits: [
-          "Clear understanding of competitive dynamics",
-          "Identification of competitor weaknesses to exploit",
-          "Benchmarks for realistic goal-setting",
-          "Strategic insights that inform all tactics",
-          "Early warning on competitive threats"
-        ],
-        deliverables: [
-          "Competitor identification and profiling",
-          "Ranking analysis by keyword category",
-          "Backlink profile comparison",
-          "Content gap analysis vs. competitors",
-          "Technical comparison and opportunities",
-          "Strategic recommendations based on findings"
-        ],
-        process: [
-          "Competitor identification in each market",
-          "Multi-dimensional competitive analysis",
-          "Strength and weakness assessment",
-          "Opportunity identification",
-          "Strategic recommendation development",
-          "Ongoing competitive monitoring"
-        ]
-      },
-      {
-        title: "AEO for Local",
-        slug: "aeo-local",
-        description: "Answer engine optimization that positions your business for AI-powered search results, voice queries, and featured snippets.",
-        fullDescription: "AI-powered search is reshaping how customers find local businesses. ChatGPT, Google's AI Overviews, Perplexity, and voice assistants are increasingly the first touchpoint for local searches. We optimize your clients' content and digital presence to appear in these AI-generated answers—not just traditional search results.",
-        benefits: [
-          "Visibility in AI-generated search summaries and overviews",
-          "Featured snippet capture for voice search queries",
-          "Future-proofing against the shift to conversational search",
-          "Structured data that AI engines can parse and cite",
-          "Competitive advantage as AI search adoption accelerates"
-        ],
-        deliverables: [
-          "AI visibility audit across ChatGPT, Gemini, and Perplexity",
-          "Structured data and schema markup optimization",
-          "FAQ content development for conversational queries",
-          "Entity optimization for knowledge graph inclusion",
-          "Voice search keyword integration",
-          "Monthly AI visibility tracking and reporting"
-        ],
-        process: [
-          "Baseline audit of current AI search visibility",
-          "Competitive AI presence analysis",
-          "Schema and structured data implementation",
-          "Content optimization for conversational queries",
-          "Entity and knowledge graph optimization",
-          "Ongoing monitoring and refinement"
-        ]
-      },
-      {
-        title: "Analytics & Reporting",
-        slug: "analytics-reporting",
-        description: "Tracking setup, goal configuration, and monthly performance reporting that connects SEO activity to business outcomes.",
-        fullDescription: "Without proper tracking, you can't prove value. We implement comprehensive analytics infrastructure that captures every meaningful user action—from organic visits to calls to form submissions. Then we translate that data into client-ready reports that demonstrate ROI and inform ongoing strategy.",
-        benefits: [
-          "Clear attribution of SEO efforts to business results",
-          "Monthly reports that justify ongoing investment",
-          "Data-driven optimization decisions",
-          "Goal tracking that captures calls, forms, and conversions",
-          "Competitive benchmarking and trend analysis"
-        ],
-        deliverables: [
-          "Google Analytics 4 setup and configuration",
-          "Goal and conversion tracking implementation",
-          "Call tracking integration",
-          "Custom dashboard creation",
-          "Monthly performance reports (white-labeled)",
-          "Quarterly strategy review presentations"
-        ],
-        process: [
-          "Analytics audit and gap identification",
-          "Tracking implementation and verification",
-          "Baseline performance documentation",
-          "Monthly report generation and delivery",
-          "Quarterly performance reviews and strategy refinement"
-        ]
-      },
-      {
-        title: "Reputation Management",
-        slug: "reputation-management",
-        description: "Review generation strategy, response management, and reputation monitoring to build trust and improve local rankings.",
-        fullDescription: "Reviews are the new word-of-mouth. They influence rankings, click-through rates, and conversion. We implement systematic review generation campaigns, manage responses professionally, and monitor reputation across platforms to protect and enhance your clients' online presence.",
-        benefits: [
-          "Increased review volume and improved star ratings",
-          "Professional response management that builds trust",
-          "Early warning on negative reviews and reputation threats",
-          "Improved local pack rankings through review signals",
-          "Competitive advantage through social proof"
-        ],
-        deliverables: [
-          "Review generation campaign setup and management",
-          "Review response drafting (all platforms)",
-          "Reputation monitoring and alerts",
-          "Competitor review benchmarking",
-          "Monthly reputation reports",
-          "Crisis response protocols"
-        ],
-        process: [
-          "Current reputation audit and competitive analysis",
-          "Review generation strategy development",
-          "Campaign implementation and workflow setup",
-          "Ongoing response management",
-          "Monthly performance tracking and optimization"
-        ]
+        title: "Schema Markup",
+        slug: "schema-markup",
+        description: "LocalBusiness, Service, FAQ, and Review schema implementation that enhances search visibility.",
+        fullDescription: "Schema markup helps search engines understand your client's business and can unlock rich snippets in search results. We implement LocalBusiness, Service, FAQ, and Review schema to maximize visibility and click-through rates.",
+        benefits: ["Enhanced search result appearance", "Rich snippet eligibility", "Better search engine understanding", "Improved click-through rates", "Competitive differentiation in SERPs"],
+        deliverables: ["Schema audit and recommendations", "LocalBusiness schema implementation", "Service schema markup", "FAQ schema for key pages", "Review schema integration", "Schema testing and validation"],
+        process: ["Current schema audit", "Opportunity identification", "Schema development", "Implementation", "Testing and validation", "Ongoing monitoring"]
       }
     ]
   },
@@ -408,58 +206,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "Google Business Profile Management",
-        slug: "google-business-profile-management",
-        description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results.",
-        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps. We optimize every element, from primary and secondary categories to business attributes, services, products, and description. A fully optimized profile signals relevance to Google and builds trust with potential customers.",
-        benefits: ["Improved visibility in local pack results", "Higher engagement from search browsers", "Better conversion from views to actions", "Competitive advantage over incomplete profiles", "Foundation for all Maps optimization"],
-        deliverables: ["Complete GBP audit and optimization", "Category and attribute optimization", "Service and product catalog setup", "Business description optimization", "Photo strategy and management", "Weekly GBP posts"],
-        process: ["Profile audit against best practices", "Competitive GBP analysis", "Optimization implementation", "Photo and media optimization", "Ongoing post management", "Performance monitoring"]
+        title: "GBP Optimization",
+        slug: "gbp-optimization",
+        description: "Complete profile optimization including categories, attributes, services, products, and description for maximum visibility.",
+        fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps. We optimize every element from primary and secondary categories to business attributes, services, products, and description to maximize visibility and conversions.",
+        benefits: ["Improved visibility in local pack", "Higher engagement from searchers", "Better conversion from views to actions", "Competitive advantage", "Foundation for Maps optimization"],
+        deliverables: ["Complete GBP audit and optimization", "Category and attribute optimization", "Service and product catalog setup", "Business description optimization", "Profile completeness maximization", "Ongoing profile maintenance"],
+        process: ["Profile audit against best practices", "Competitive GBP analysis", "Optimization implementation", "Performance monitoring", "Ongoing refinement"]
       },
       {
-        title: "Review Generation & Response",
-        slug: "review-generation-response",
-        description: "Systematic review acquisition strategies and professional response management that builds trust and improves rankings.",
-        fullDescription: "Reviews are the social proof that converts searchers into customers. We implement systematic review generation campaigns that build authentic review volume over time, plus professional response management that demonstrates the business cares about customer feedback.",
-        benefits: ["Increased review volume and velocity", "Improved star rating over time", "Better conversion from profile views", "Demonstrated customer care through responses", "Competitive advantage in review metrics"],
-        deliverables: ["Review generation campaign setup", "Review request email/SMS templates", "Response drafting for all reviews", "Review monitoring and alerts", "Monthly review performance reports", "Reputation trend analysis"],
-        process: ["Review audit and competitive analysis", "Generation campaign strategy", "Template and workflow development", "Ongoing response drafting", "Performance tracking and optimization"]
+        title: "Review Management",
+        slug: "review-management",
+        description: "Systematic review generation strategies and professional response management that builds trust and rankings.",
+        fullDescription: "Reviews are the social proof that converts searchers into customers. We implement systematic review generation campaigns and professional response management that demonstrates the business cares about customer feedback.",
+        benefits: ["Increased review volume and velocity", "Improved star rating over time", "Better conversion from profile views", "Demonstrated customer care", "Competitive advantage in review metrics"],
+        deliverables: ["Review generation campaign setup", "Review request templates", "Response drafting for all reviews", "Review monitoring and alerts", "Monthly review performance reports", "Reputation trend analysis"],
+        process: ["Review audit and competitive analysis", "Generation campaign strategy", "Template and workflow development", "Ongoing response drafting", "Performance tracking"]
       },
       {
-        title: "Citation Building & Cleanup",
-        slug: "citation-building-cleanup",
-        description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms that validate business legitimacy.",
-        fullDescription: "Citations (mentions of your client's business name, address, and phone number) are a core ranking factor for local search. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
-        benefits: ["Improved local pack rankings", "Consistent business information across the web", "Enhanced trust signals for Google", "Referral traffic from directory listings", "Foundation for local authority"],
-        deliverables: ["Citation audit and cleanup", "Core citation building (50+ sites)", "Data aggregator submissions", "Industry-specific directory submissions", "Ongoing citation monitoring", "NAP consistency maintenance"],
-        process: ["Current citation audit", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory identification and submission", "Ongoing monitoring and maintenance"]
+        title: "Citation Building",
+        slug: "citation-building",
+        description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms.",
+        fullDescription: "Citations are mentions of your client's business name, address, and phone number across the web. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
+        benefits: ["Improved local pack rankings", "Consistent business information", "Enhanced trust signals for Google", "Referral traffic from directories", "Foundation for local authority"],
+        deliverables: ["Citation audit and cleanup", "Core citation building (50+ sites)", "Data aggregator submissions", "Industry-specific directories", "Ongoing citation monitoring", "NAP consistency maintenance"],
+        process: ["Current citation audit", "Inconsistency cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "Ongoing monitoring"]
       },
       {
-        title: "Local Pack Ranking Strategy",
-        slug: "local-pack-ranking-strategy",
-        description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches.",
-        fullDescription: "Getting into the local 3-pack requires a strategic approach that addresses all ranking factors. We develop custom strategies based on competitive analysis, market dynamics, and business characteristics to systematically improve pack positions.",
-        benefits: ["Higher visibility for money keywords", "More calls and direction requests", "Competitive displacement strategy", "Measurable ranking improvements", "Data-driven optimization"],
-        deliverables: ["Local pack ranking audit", "Competitive gap analysis", "Custom ranking strategy", "Implementation roadmap", "Weekly ranking tracking", "Monthly strategy refinement"],
-        process: ["Current ranking assessment", "Competitive analysis", "Strategy development", "Tactical implementation", "Performance monitoring", "Ongoing optimization"]
-      },
-      {
-        title: "Photo & Media Optimization",
-        slug: "photo-media-optimization",
-        description: "Professional photo management, virtual tours, and visual content strategies that increase engagement and click-through rates.",
-        fullDescription: "Visual content significantly impacts GBP engagement and conversion. We develop photo strategies that showcase the business professionally, implement virtual tours where appropriate, and manage ongoing photo content to keep profiles fresh and engaging.",
-        benefits: ["Higher engagement rates on GBP", "Improved trust and credibility", "Better conversion from views to actions", "Competitive differentiation", "Fresh, updated profile appearance"],
-        deliverables: ["Photo audit and recommendations", "Photo optimization and geotagging", "Virtual tour coordination", "Ongoing photo updates", "User photo management", "Visual content calendar"],
+        title: "Photo Optimization",
+        slug: "photo-optimization",
+        description: "Professional photo management, geotagging, and visual content strategies that increase engagement.",
+        fullDescription: "Visual content significantly impacts GBP engagement and conversion. We develop photo strategies that showcase the business professionally and manage ongoing photo content to keep profiles fresh and engaging.",
+        benefits: ["Higher engagement rates on GBP", "Improved trust and credibility", "Better conversion from views", "Competitive differentiation", "Fresh profile appearance"],
+        deliverables: ["Photo audit and recommendations", "Photo optimization and geotagging", "Cover and logo optimization", "Ongoing photo updates", "User photo management", "Visual content calendar"],
         process: ["Current photo audit", "Competitive visual analysis", "Photo strategy development", "Optimization implementation", "Ongoing content management"]
       },
       {
-        title: "Multi-Location GBP Management",
-        slug: "multi-location-gbp-management",
-        description: "Scalable systems for managing dozens or hundreds of locations with consistent branding and optimized performance.",
-        fullDescription: "Managing GBP at scale requires different processes than single-location optimization. We've built systems to manage hundreds of locations efficiently while maintaining quality and consistency across every profile.",
-        benefits: ["Consistent optimization across all locations", "Scalable processes that don't break", "Centralized reporting and insights", "Efficient multi-location management", "Brand consistency across profiles"],
-        deliverables: ["Multi-location audit and strategy", "Bulk optimization implementation", "Centralized management system", "Location-level reporting", "Scalable review management", "Ongoing optimization at scale"],
-        process: ["Portfolio audit and assessment", "Scalable process development", "Bulk implementation", "Centralized monitoring setup", "Ongoing management and optimization"]
+        title: "Q&A Management",
+        slug: "qa-management",
+        description: "Proactive question seeding, answer management, and monitoring that builds trust and captures search queries.",
+        fullDescription: "The Q&A section of Google Business Profile is often overlooked but influences both rankings and conversions. We proactively seed common questions with helpful answers and monitor for new questions to respond promptly.",
+        benefits: ["Capture additional search queries", "Build trust with potential customers", "Control the narrative", "Reduce repetitive customer inquiries", "Competitive differentiation"],
+        deliverables: ["Q&A audit and strategy", "Question seeding with answers", "Ongoing Q&A monitoring", "Response drafting for new questions", "Competitor Q&A analysis", "Monthly Q&A reporting"],
+        process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"]
+      },
+      {
+        title: "Post Scheduling",
+        slug: "post-scheduling",
+        description: "Weekly GBP posts with offers, updates, and events that keep profiles active and engaging.",
+        fullDescription: "Regular GBP posts signal to Google that the business is active and engaged. We create and schedule weekly posts featuring offers, updates, events, and content that keeps profiles fresh and drives engagement.",
+        benefits: ["Active profile signals to Google", "Increased customer engagement", "Promotion of offers and events", "Fresh content for searchers", "Competitive advantage"],
+        deliverables: ["Post content calendar", "Weekly post creation", "Offer and event posts", "Image selection and optimization", "Post performance tracking", "Monthly engagement reporting"],
+        process: ["Content calendar development", "Post creation and scheduling", "Image optimization", "Performance monitoring", "Calendar refinement"]
       }
     ]
   },
