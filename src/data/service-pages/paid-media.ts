@@ -12,7 +12,7 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Paid media works when waste is actively removed and every dollar is forced to produce qualified leads. We build the campaigns, tracking, and optimization systems that turn ad spend into measurable pipeline—executed entirely under your brand.",
+    subheadline: "Paid media works when strategy is proactive and waste is systematically eliminated. We build the campaigns, tracking, and optimization systems that turn ad spend into measurable pipeline—executed entirely under your brand.",
     qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
@@ -51,7 +51,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "Each week, we push budget toward what converts and pull it away from what does not. The result is a campaign that improves continuously.",
+    subheadline: "Proactive strategy paired with systematic refinement. Budget flows toward what converts, away from what does not.",
     items: [
       {
         icon: Zap,
@@ -60,8 +60,8 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         icon: Target,
-        title: "Waste Gets Removed Weekly",
-        description: "Bad keywords, weak audiences, and underperforming ads are actively removed every week."
+        title: "Waste Gets Cut Weekly",
+        description: "Underperforming keywords, audiences, and placements are identified and removed every week."
       },
       {
         icon: TrendingUp,
@@ -124,7 +124,7 @@ export const paidMediaConfig: ServicePageConfig = {
         phase: 3,
         name: "Optimization",
         title: "Active Refinement",
-        description: "This is where campaigns get good. We push budget toward what converts and pull it away from what does not—weekly, across every platform.",
+        description: "This is where campaigns get good. We identify what converts and double down, while systematically eliminating what does not—weekly, across every platform.",
         activities: [
           "Search term analysis and negative keyword exclusions",
           "Master negative placement management (Google Display)",
@@ -159,7 +159,7 @@ export const paidMediaConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Every platform requires different whittling. Google means negative keywords and search term exclusions. Meta means testing audiences, interests, and placements. The goal is always the same: cut the waste so budget flows to what works."
+    footerNote: "Every platform requires different tactics. Google means negative keywords and search term exclusions. Meta means testing audiences, interests, and placements. The goal is always the same: direct budget toward what converts."
   },
 
   buildingBlocks: {
