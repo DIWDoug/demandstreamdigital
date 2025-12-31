@@ -46,7 +46,7 @@ export const emailMarketingConfig: ServicePageConfig = {
     ],
     closingLine: "We build email programs that work—strategy, automation, and ongoing optimization.",
     closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
-    ctaText: "See How We Build Email Programs"
+    ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {

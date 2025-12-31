@@ -46,7 +46,7 @@ export const paidMediaConfig: ServicePageConfig = {
     ],
     closingLine: "We build paid media specifically for local lead generation, with structure, tracking, and optimization",
     closingHighlight: "agencies can stand behind.",
-    ctaText: "See How We Build Campaigns"
+    ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {
