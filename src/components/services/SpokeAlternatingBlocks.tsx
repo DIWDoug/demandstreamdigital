@@ -119,21 +119,45 @@ const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight,
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
-  // Build a search keyword from the spoke and category
+  // Build a unique search keyword for each block to avoid duplicates
   const buildSearchKeyword = () => {
     // Get spoke-specific keyword if available
     const spokeKeyword = spokeSlug ? getSpokeKeyword(spokeSlug) : null;
     
-    // Build contextual keywords from category and headline
+    // Use category for the primary context
     const categoryWords = category.toLowerCase().replace(/[^a-z\s]/g, '').trim();
-    const headlineWords = headline.toLowerCase().replace(/[^a-z\s]/g, '').split(' ').slice(0, 3).join(' ');
     
-    // Combine for a rich search query
+    // Extract unique words from headline to differentiate blocks
+    const headlineWords = headline.toLowerCase()
+      .replace(/[^a-z\s]/g, '')
+      .split(' ')
+      .filter(w => w.length > 3) // Only meaningful words
+      .slice(0, 2)
+      .join(' ');
+    
+    // Create block-specific search queries to avoid duplicates
+    const blockVariations = [
+      'professional business office',
+      'technology digital modern',
+      'team collaboration meeting',
+      'strategy planning success',
+      'analytics data growth',
+      'marketing creative work'
+    ];
+    
+    // Use block index to pick a variation suffix
+    const variation = blockVariations[blockIndex % blockVariations.length];
+    
+    // Combine for a unique search query per block
     if (spokeKeyword && spokeKeyword !== 'digital marketing business') {
-      return `${spokeKeyword} ${categoryWords}`;
+      // For first block, use spoke keyword; for others, mix with category
+      if (blockIndex === 0) {
+        return spokeKeyword;
+      }
+      return `${categoryWords} ${variation}`;
     }
     
-    return `${categoryWords} ${headlineWords} business professional`;
+    return `${categoryWords} ${headlineWords} ${variation}`;
   };
 
   // Intersection Observer for lazy loading
@@ -177,20 +201,23 @@ const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight,
       }
 
       try {
-        // Fetch from Pixabay with offset based on block index for variety
+        // Fetch from Pixabay - use page offset based on block index for variety
+        const pageNumber = Math.floor(blockIndex / 3) + 1;
         const response = await searchPixabayImages({
           query: searchKeyword,
           imageType: 'photo',
           orientation: 'horizontal',
-          perPage: 10,
+          perPage: 5,
+          page: pageNumber,
           minWidth: 800,
           safeSearch: true,
           order: 'popular'
         });
 
         if (response.hits.length > 0) {
-          // Use block index to select different images for variety
-          const imageIndex = blockIndex % response.hits.length;
+          // Use a combination of block index and keyword hash for variety
+          const keywordHash = searchKeyword.split('').reduce((a, b) => a + b.charCodeAt(0), 0);
+          const imageIndex = (blockIndex + keywordHash) % response.hits.length;
           const url = response.hits[imageIndex].largeImageURL;
           pixabayCache.set(cacheKey, url);
           setImageUrl(url);
@@ -198,12 +225,23 @@ const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight,
           return;
         }
 
-        // Fallback search
+        // Fallback search with block-specific variation
+        const fallbackQueries = [
+          'business professional workspace',
+          'technology computer modern',
+          'team office collaboration',
+          'marketing strategy planning',
+          'digital analytics dashboard',
+          'creative professional work'
+        ];
+        const fallbackQuery = fallbackQueries[blockIndex % fallbackQueries.length];
+        
         const fallbackResponse = await searchPixabayImages({
-          query: 'business professional office',
+          query: fallbackQuery,
           imageType: 'photo',
           orientation: 'horizontal',
-          perPage: 10,
+          perPage: 5,
+          page: blockIndex + 1,
           minWidth: 800,
           safeSearch: true,
           order: 'popular'
