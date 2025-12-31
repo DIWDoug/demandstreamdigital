@@ -12,7 +12,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Email Marketing for",
     highlightedText: "Local Business Clients",
-    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently, respect the inbox, and drive repeat revenue.",
+    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently and drive repeat revenue.",
     qualifierLine: "You stay the hero. We handle the email execution that keeps customers coming back.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies serving local service businesses and retailers."
@@ -51,7 +51,7 @@ export const emailMarketingConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Changes for Local Businesses",
-    subheadline: "The outcomes your clients experience when email meets subscriber needs.",
+    subheadline: "The outcomes your clients experience when email is done right.",
     items: [
       {
         icon: TrendingUp,
@@ -138,7 +138,7 @@ export const emailMarketingConfig: ServicePageConfig = {
         phase: 4,
         name: "Optimization",
         title: "Continuous Improvement & Scale",
-        description: "Turning subscriber data into insight and insight into improved local results.",
+        description: "Using performance data to improve results and identify new opportunities.",
         activities: [
           "Deliverability and inbox placement optimization",
           "Inactivity management and list pruning",
@@ -209,7 +209,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       },
       {
         point: "You understand email as a long-term channel",
-        detail: "Email builds relationship equity over time. We partner with agencies who see email as ongoing program, not a one-time project."
+        detail: "Email builds trust over time. We partner with agencies who see email as an ongoing program, not a one-time project."
       },
       {
         point: "Your clients can provide content input and approvals",
