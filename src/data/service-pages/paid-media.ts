@@ -51,7 +51,7 @@ export const paidMediaConfig: ServicePageConfig = {
 
   outcomes: {
     headline: "What Actually Changes When Paid Media Works",
-    subheadline: "Each week, we whittle away inefficiencies. What remains is a campaign that works.",
+    subheadline: "Each week, we remove what is not working. What remains is a campaign that performs.",
     items: [
       {
         icon: Zap,
@@ -60,7 +60,7 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         icon: Target,
-        title: "Waste Gets Eliminated Weekly",
+        title: "Waste Gets Removed Weekly",
         description: "Bad keywords, weak audiences, and underperforming ads are actively removed every week."
       },
       {
