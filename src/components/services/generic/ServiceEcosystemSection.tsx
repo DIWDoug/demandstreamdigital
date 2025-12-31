@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import type { EcosystemService } from "@/types/servicePage";
@@ -22,8 +22,17 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
   const orbitServices = config.services.filter(s => !s.isCenter);
   const centerService = config.services.find(s => s.isCenter) || config.services[0];
   const [hoveredService, setHoveredService] = useState<EcosystemService | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const displayService = hoveredService || centerService;
+  const orbitRadius = isMobile ? 130 : 160;
 
   return (
     <section className="py-20 lg:py-28 section-light relative overflow-hidden">
@@ -73,20 +82,16 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
             </div>
 
             {/* Right: Circular Orbit Diagram */}
-            <div className="relative flex items-center justify-center min-h-[400px] lg:min-h-[480px]">
-              {/* Orbit circle */}
+            <div className="relative flex items-center justify-center min-h-[320px] sm:min-h-[400px] lg:min-h-[480px]">
+              {/* Orbit circle - scales for mobile */}
               <div 
-                className="absolute rounded-full border border-border"
-                style={{
-                  width: '320px',
-                  height: '320px',
-                }}
+                className="absolute rounded-full border border-border w-[260px] h-[260px] sm:w-[320px] sm:h-[320px]"
               />
               
               {/* Center content - dynamic based on hover */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[160px] text-center transition-all duration-300">
-                <p className="text-foreground font-bold text-2xl mb-2">{displayService.title}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+              <div className="relative z-10 flex flex-col items-center justify-center w-[140px] sm:w-[160px] text-center transition-all duration-300">
+                <p className="text-foreground font-bold text-xl sm:text-2xl mb-2">{displayService.title}</p>
+                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {displayService.description}
                 </p>
               </div>
@@ -94,18 +99,17 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
               {/* Orbit icons */}
               {orbitServices.map((service, index) => {
                 const angle = (index * 360) / orbitServices.length - 90;
-                const radius = 160;
                 const Icon = service.icon;
                 
                 const isHovered = hoveredService?.id === service.id;
                 
-                const x = Math.cos((angle * Math.PI) / 180) * radius;
-                const y = Math.sin((angle * Math.PI) / 180) * radius;
+                const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
+                const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
                 
                 return (
                   <div
                     key={service.id}
-                    className="absolute w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
+                    className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
                     style={{
                       left: '50%',
                       top: '50%',
@@ -120,7 +124,7 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                         ? "bg-cta shadow-lg shadow-cta/40" 
                         : "bg-surface-elevated border border-border"
                     }`} />
-                    <Icon className={`relative z-10 w-6 h-6 ${isHovered ? "text-white" : "text-foreground"}`} />
+                    <Icon className={`relative z-10 w-5 h-5 sm:w-6 sm:h-6 ${isHovered ? "text-white" : "text-foreground"}`} />
                   </div>
                 );
               })}
