@@ -116,11 +116,14 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Does GBP optimization help with AI Overviews?", answer: "Yes. AI Overviews often pull directly from GBP data including description, services, hours, and attributes. A complete, accurate profile improves AI citation accuracy." }
   ],
   "review-management": [
-    { question: "Can you guarantee a certain star rating?", answer: "No. We implement systems that generate more reviews from satisfied customers, which typically improves ratings over time. We cannot control individual reviews." },
-    { question: "How do you handle fake negative reviews?", answer: "We report policy-violating reviews to Google with documentation. Removal is not guaranteed but we have a strong success rate with legitimate violations." },
-    { question: "Do you respond to reviews as the business?", answer: "We draft responses for your approval. Once templates are established, we can respond directly with pre-approved language." },
-    { question: "Why does review response matter for SEO?", answer: "Google confirms that review responses help strengthen local presence. Response content is also parsed by AI systems when generating recommendations about local businesses." },
-    { question: "What should customers mention in reviews?", answer: "We encourage customers to mention specific services and location. This helps with traditional rankings and increases chances of AI Overviews featuring the business for relevant queries." }
+    { question: "Can you guarantee a certain star rating?", answer: "No. We implement systems that generate more reviews from satisfied customers, which typically improves ratings over time. Businesses with 4.5+ stars get nearly 4x more clicks than those below 4 stars, so the investment matters." },
+    { question: "How do you handle fake negative reviews?", answer: "We report policy-violating reviews to Google with documentation. Removal is not guaranteed but we have a strong success rate with legitimate violations. We also focus on building authentic review volume to dilute negative impact." },
+    { question: "Do you respond to reviews as the business?", answer: "We draft responses for your approval. Once templates and brand voice are established, we can respond directly. 60% of reviewers expect a response within 2 days, so speed matters." },
+    { question: "Why does review response matter for SEO and conversions?", answer: "Google confirms responses strengthen local presence. 46% of consumers avoid businesses that argue with customers, and 54% avoid businesses where responses don't solve cited problems. Response quality directly impacts both rankings and conversions." },
+    { question: "What should customers mention in reviews?", answer: "Specific services and location help with traditional rankings and AI visibility. But authenticity matters most. We craft request templates that encourage natural, detailed reviews without scripting customers." },
+    { question: "How many reviews per month should we target?", answer: "That depends on competitive analysis. 39% of customers filter for recent reviews, so consistent monthly velocity matters more than a one-time push. We set targets based on what local pack leaders are generating." },
+    { question: "Which platforms matter beyond Google?", answer: "66% of reviewers focus on Google, but 42% prefer Facebook, 36% Yelp, and 16% NextDoor. AI Overviews also cite Yelp, TripAdvisor, and industry-specific platforms. We recommend platform diversification for both SEO and AI visibility." },
+    { question: "What are common review request mistakes to avoid?", answer: "Never offer incentives for reviews (forbidden by most platforms). Never use a review kiosk (shared IP triggers filters). Never ask staff or family to review. Never gate reviews by sentiment. These shortcuts backfire." }
   ],
   "citation-building": [
     { question: "How many citations do you build?", answer: "We start with 50+ core citations and add industry-specific directories. Quality and relevance matter more than raw quantity." },
@@ -714,45 +717,75 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "review-management": [
     {
       category: "Review Generation",
-      headline: "Systematic Review Acquisition",
-      description: "Reviews now account for 20% of local ranking factors. We implement systems that generate consistent reviews from satisfied customers.",
+      headline: "Systematic Review Acquisition That Works",
+      description: "51% of customers leave reviews when asked directly, but 30% skip reviews because the process is confusing. We eliminate friction and build systems that generate consistent reviews from satisfied customers.",
       subPoints: [
-        { title: "Timing Strategy", description: "Review requests sent at optimal moments. Post-service satisfaction windows identified per Backlinko research." },
-        { title: "Request Templates", description: "Tested templates that convert. Personal, brief, and friction-free with direct links." },
-        { title: "Multi-Channel", description: "Email, SMS, QR codes, and receipts. Review request integrated into every customer touchpoint." },
-        { title: "Direct Links", description: "Shortened review links that go straight to the review form. No navigation required." },
-        { title: "Service Mentions", description: "Customers encouraged to mention specific services and location. Helps with AI query matching." },
-        { title: "Velocity Targets", description: "Monthly review goals set based on competitive analysis. Recency matters for rankings." }
+        { title: "Timing Strategy", description: "Requests sent at optimal moments: shortly after positive service experience, at peak satisfaction. Timing is everything." },
+        { title: "Multi-Channel Requests", description: "54% prefer email, 45% prefer in-person, 29% prefer SMS. We deploy all channels based on customer preferences." },
+        { title: "Direct Review Links", description: "Shortened links straight to the review form. No navigation required. 30% skip reviews due to confusing process." },
+        { title: "Personalized Templates", description: "Use customer name, reference specific service. Generic requests get ignored." },
+        { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Friendly reminders on receipts, packaging, and follow-up emails." },
+        { title: "Platform Choice", description: "Give customers options: Google, Facebook, Yelp, or industry sites. Let them choose where they're comfortable." }
       ],
       ctaText: "Start Review Generation",
       ctaHref: "#contact"
     },
     {
+      category: "Request Psychology",
+      headline: "Understanding Why Customers Review",
+      description: "Effective review requests tap into customer motivations. 73% write reviews to share their experience, 63% to show appreciation, 38% to provide feedback, and 21% specifically want a response.",
+      subPoints: [
+        { title: "Community Motivation", description: "73% want to share experience with others. Frame requests around helping the community." },
+        { title: "Appreciation Channel", description: "63% use reviews to show gratitude. Mention how much a review would mean to your team." },
+        { title: "Feedback Seekers", description: "38% want businesses to improve. Show in responses that you take feedback to heart." },
+        { title: "Response Expectations", description: "21% write reviews to get a response. Prove you respond to every review to encourage participation." },
+        { title: "Staff Training", description: "Verbal requests work when rapport exists. Train staff to ask when customers seem happy." },
+        { title: "Social Prompts", description: "Ask specific questions on social media that prompt review-style responses with platform links." }
+      ],
+      ctaText: "Get Review Strategy",
+      ctaHref: "#contact"
+    },
+    {
       category: "Response Management",
       headline: "Responses That Build Trust and Rankings",
-      description: "Google confirms that replies strengthen local presence. Response content is also parsed by AI systems when generating recommendations.",
+      description: "64% of customers expect response to negative reviews, 40% expect response to positive reviews, and 60% expect to hear back within 2 days. Response quality directly impacts whether future customers leave reviews.",
       subPoints: [
-        { title: "Positive Responses", description: "Thank customers authentically. Reinforce services mentioned to feed AI systems." },
-        { title: "Negative Recovery", description: "Professional responses that acknowledge concerns. 92% of consumers consider responses part of customer service." },
-        { title: "Response Speed", description: "All reviews responded to within 24-48 hours. Speed signals active engagement." },
-        { title: "Service Keywords", description: "Natural service and location mentions in responses. AI systems parse response content." },
-        { title: "Brand Voice", description: "Responses match client brand personality. Professional, warm, or casual as appropriate." },
-        { title: "Legal Safety", description: "Responses crafted to avoid liability while addressing legitimate concerns." }
+        { title: "Speed Matters", description: "60% expect response within 2 days. We respond within 24-48 hours to exceed expectations." },
+        { title: "Negative Recovery", description: "46% avoid businesses that argue with customers. 54% avoid businesses that don't solve cited problems. We're empathetic and solution-focused." },
+        { title: "Problem Resolution", description: "Always state how you've addressed concerns. 54% avoid businesses where responses don't solve problems." },
+        { title: "Genuine Apologies", description: "47% avoid businesses that don't apologize when customers cite problems. Acknowledge and take responsibility." },
+        { title: "Service Keywords", description: "Natural service and location mentions in responses. AI systems parse response content for recommendations." },
+        { title: "Brand Voice", description: "Responses match client personality. Never sound robotic or templated. Professional, warm, or casual as appropriate." }
       ],
       ctaText: "Get Response Management",
       ctaHref: "#contact"
     },
     {
-      category: "Reputation Monitoring",
-      headline: "Monitor Reviews Across All Platforms",
-      description: "AI Overviews cite Yelp, TripAdvisor, and industry directories. We monitor everywhere that matters for rankings and AI visibility.",
+      category: "Platform Diversification",
+      headline: "Reviews Across All Platforms That Matter",
+      description: "66% of reviewers focus on Google, but 42% prefer Facebook, 36% focus on Yelp, and 16% use NextDoor. Platform diversity protects reputation if any single platform filters reviews.",
       subPoints: [
-        { title: "Multi-Platform", description: "Google, Facebook, Yelp, TripAdvisor, and industry sites. All AI source platforms monitored." },
-        { title: "Instant Alerts", description: "New reviews trigger immediate notifications. Response workflows activated." },
-        { title: "Sentiment Tracking", description: "Overall sentiment trends tracked monthly. Early warning for service issues." },
-        { title: "AI Platform Focus", description: "Extra attention to platforms AI Overviews cite: Yelp, TripAdvisor, OpenTable, industry verticals." },
+        { title: "Google Priority", description: "Primary platform for local pack visibility. But not the only platform that matters." },
+        { title: "Facebook Reviews", description: "42% of reviewers spend most time here. Important for social proof and AI source data." },
+        { title: "Yelp Strategy", description: "36% focus on Yelp. Note: Yelp prohibits directly asking for reviews. Build presence through profile completeness." },
+        { title: "Industry Verticals", description: "TripAdvisor, OpenTable, Healthgrades, Avvo. AI Overviews cite industry-specific platforms." },
+        { title: "First-Party Reviews", description: "Feature honest reviews on your own website. Diversification protects against platform filtering." },
+        { title: "NextDoor Presence", description: "16% of reviewers focus here. Hyperlocal platform for neighborhood businesses." }
+      ],
+      ctaText: "Diversify Reviews",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Reputation Monitoring",
+      headline: "Never Miss a Review",
+      description: "AI Overviews cite Yelp, TripAdvisor, and industry directories. We monitor everywhere that matters for rankings and AI visibility with instant alerts.",
+      subPoints: [
+        { title: "Instant Alerts", description: "New reviews trigger immediate notifications. Response workflows activated same day." },
+        { title: "Multi-Platform Monitoring", description: "Google, Facebook, Yelp, TripAdvisor, and industry sites. All AI source platforms tracked." },
+        { title: "Sentiment Tracking", description: "Overall sentiment trends tracked monthly. Early warning for service issues before they compound." },
         { title: "Fake Review Detection", description: "Suspicious reviews identified and reported for removal when policy violations exist." },
-        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, and AI visibility in client reports." }
+        { title: "Recency Tracking", description: "39% of customers filter for recent reviews. We track velocity to ensure fresh review flow." },
+        { title: "Monthly Reporting", description: "Review metrics, sentiment trends, platform performance, and AI visibility in client reports." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
