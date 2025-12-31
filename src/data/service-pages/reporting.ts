@@ -169,31 +169,31 @@ export const reportingConfig: ServicePageConfig = {
       },
       {
         title: "Monthly Performance Reports",
-        slug: "monthly-reports",
+        slug: "monthly-performance-reports",
         description: "Comprehensive reports with executive summaries, detailed metrics, and actionable insights.",
         icon: FileText
       },
       {
         title: "Rank Tracking & Visibility",
-        slug: "rank-tracking",
+        slug: "rank-tracking-visibility",
         description: "Daily rank monitoring for target keywords, local pack positions, and visibility trends.",
         icon: TrendingUp
       },
       {
         title: "Call Tracking & Attribution",
-        slug: "call-tracking",
+        slug: "call-tracking-lead-attribution",
         description: "Dynamic number insertion, call recording, and multi-touch attribution that connects marketing to leads.",
         icon: Phone
       },
       {
         title: "ROI & Revenue Analysis",
-        slug: "roi-analysis",
+        slug: "roi-revenue-analysis",
         description: "Closed-loop reporting that ties marketing activities to revenue outcomes and proves value.",
         icon: Target
       },
       {
         title: "Client Presentation Decks",
-        slug: "presentation-decks",
+        slug: "client-presentation-decks",
         description: "Professional slide decks and QBR materials for strategic client conversations.",
         icon: Users
       }
