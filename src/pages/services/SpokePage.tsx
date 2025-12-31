@@ -9,8 +9,9 @@ import TrustReel from "@/components/sections/TrustReel";
 import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import SpokeAlternatingBlocks, { onPageOptimizationBlocks } from "@/components/services/SpokeAlternatingBlocks";
+import SpokeAlternatingBlocks from "@/components/services/SpokeAlternatingBlocks";
 import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
+import { spokeContentBlocks } from "@/data/spoke-content-blocks";
 import {
   Accordion,
   AccordionContent,
@@ -190,11 +191,11 @@ const SpokePage = () => {
 
       <SectionDivider />
 
-      {/* Toastique-style Alternating Content Blocks */}
-      {spokeSlug === "on-page-optimization" ? (
-        <SpokeAlternatingBlocks blocks={onPageOptimizationBlocks} />
+      {/* Alternating Content Blocks - use spoke-specific content if available */}
+      {spokeContentBlocks[spokeSlug || ""] ? (
+        <SpokeAlternatingBlocks blocks={spokeContentBlocks[spokeSlug || ""]} />
       ) : (
-        /* Fallback to original Benefits & Deliverables for other spokes */
+        /* Fallback to original Benefits & Deliverables for spokes without custom blocks */
         <section className="py-16 lg:py-20 section-light">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
