@@ -85,7 +85,7 @@ export const paidMediaConfig: ServicePageConfig = {
         phase: 1,
         name: "Foundation",
         title: "Research, Strategy & Infrastructure",
-        description: "Comprehensive analysis and tracking setup before any spend goes out the door. This phase typically spans 2-4 weeks depending on scope.",
+        description: "Comprehensive analysis and tracking setup before any spend goes out the door. This phase typically spans 2-4 weeks and includes a one-time setup fee.",
         activities: [
           "Market and competitor analysis",
           "Campaign structure design by platform",
@@ -242,8 +242,8 @@ export const paidMediaConfig: ServicePageConfig = {
         detail: "Paid media generates leads quickly. If calls go to voicemail or form submissions sit for days, the investment is wasted."
       },
       {
-        point: "You understand paid media requires disciplined investment",
-        detail: "Management fees plus ad spend. This is not a cheap channel, but the ROI justifies the investment when done right."
+        point: "You understand paid media requires upfront and ongoing investment",
+        detail: "A one-time setup fee covers foundation work. Monthly management fees plus ad spend follow. This is not a cheap channel, but the ROI justifies it when done right."
       }
     ],
     notFit: [
