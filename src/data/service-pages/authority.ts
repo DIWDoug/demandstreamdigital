@@ -224,6 +224,10 @@ export const authorityConfig: ServicePageConfig = {
     ],
     notFit: [
       {
+        point: "You work with link brokers or buy links",
+        detail: "We build earned authority through legitimate outreach and relationship-based placements. Link buying creates short-term gains with long-term penalties."
+      },
+      {
         point: "Expecting quick link quantity over quality",
         detail: "We do not sell links by the dozen. Our approach is quality over quantity, which means fewer but more impactful placements."
       },
