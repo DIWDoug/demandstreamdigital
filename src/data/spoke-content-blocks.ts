@@ -36,7 +36,9 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Intent-Focused Title Tags", description: "We prioritize search intent over arbitrary character limits. Title tags up to 100 characters when the context demands it." },
         { title: "CTR-Optimized Meta Descriptions", description: "Following Backlinko best practices, meta descriptions are written like ad copy. The goal is click-through rate." },
         { title: "Header Hierarchy & LSI Signals", description: "H1-H6 tags aligned with natural language patterns and latent semantic indexing." },
-        { title: "Hub-Spoke Internal Linking", description: "Every page is connected to its topical cluster. Internal links build authority and guide crawlers." }
+        { title: "Hub-Spoke Internal Linking", description: "Every page is connected to its topical cluster. Internal links build authority and guide crawlers." },
+        { title: "Image Alt Text & Accessibility", description: "Every image optimized for screen readers and search engines. Descriptive alt text that aids both accessibility and relevance." },
+        { title: "Keyword Density & Semantic Relevance", description: "LSI signals and semantic variations distributed naturally throughout content to signal comprehensive coverage." }
       ],
       imageSrc: visibleElementsImg,
       imageAlt: "SEO mind map showing titles, metas, headers, links, and images",
@@ -51,7 +53,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "LocalBusiness & Organization Schema", description: "Core identity markup that powers Knowledge Panels and map integrations." },
         { title: "Service & About Schema", description: "Structured markup that clarifies what you do, where you do it, and the scope of offerings." },
         { title: "FAQ & Testimonials Markup", description: "FAQ schema targets People Also Ask features. Review schema builds trust signals." },
-        { title: "Image Alt Text & Accessibility", description: "Every image optimized for screen readers and search engines." }
+        { title: "Canonical Tags & Hreflang", description: "Proper canonicalization and language signals for multi-location or multilingual sites." }
       ],
       imageSrc: technicalMarkupImg,
       imageAlt: "Schema markup mind map showing LocalBusiness, Organization, FAQ, Service, Reviews, About",
@@ -66,7 +68,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Top-of-Funnel Awareness Content", description: "Educational guides and thought leadership that captures early-stage searchers." },
         { title: "Middle-Funnel Consideration Content", description: "Comparison pages and detailed guides that move prospects from awareness to evaluation." },
         { title: "Bottom-Funnel Decision Content", description: "Service pages and case studies designed to capture users ready to take action." },
-        { title: "Keyword Density & Semantic Relevance", description: "LSI signals and semantic variations that signal comprehensive coverage." }
+        { title: "Conversion Path Optimization", description: "Strategic CTA placement and landing page alignment to move users through the funnel." }
       ],
       imageSrc: fullFunnelImg,
       imageAlt: "Marketing funnel showing TOFU, MOFU, BOFU stages",
