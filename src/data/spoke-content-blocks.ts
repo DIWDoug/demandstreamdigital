@@ -62,12 +62,12 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Do you optimize for voice search and AI?", answer: "Yes. FAQ sections, semantic chunking, and quotable statements are structured for LLM extraction and voice search snippets." }
   ],
   "technical-seo": [
-    { question: "What is technical SEO and why does it matter?", answer: "Technical SEO ensures search engines can find, crawl, render, and index your pages. Even the best content won't rank if Google can't access it properly." },
-    { question: "How long does technical SEO take to show results?", answer: "Indexation fixes can show impact within 1-2 weeks. Page speed improvements affect rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
-    { question: "Do you implement fixes or just provide recommendations?", answer: "Both. We provide specifications for developer teams and can implement directly via CMS access. Most fixes we handle ourselves." },
-    { question: "What tools do you use?", answer: "Screaming Frog, Semrush Site Audit, Google Search Console, PageSpeed Insights, and Lighthouse. We validate findings across multiple tools." },
-    { question: "How do you prioritize technical fixes?", answer: "Indexation blockers first, then crawlability issues, then duplicate content, then page speed. We fix what prevents ranking before optimizing for marginal gains." },
-    { question: "Does technical SEO need ongoing attention?", answer: "Yes. Sites change, CMSs create new issues, and Google updates requirements. We recommend quarterly technical reviews to catch problems early." }
+    { question: "Why does technical SEO matter for local businesses?", answer: "Multi-location sites create technical complexity. If Google can't crawl and index your location pages, those markets don't exist in search. Technical issues silently kill local visibility." },
+    { question: "How long does technical SEO take to show results?", answer: "Indexation fixes show impact within 1-2 weeks. Page speed improvements affect local rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
+    { question: "Do you implement fixes or just provide recommendations?", answer: "Both. We provide specifications for developer teams and can implement directly via CMS access. Most technical fixes we handle ourselves." },
+    { question: "What tools do you use for local technical SEO?", answer: "Screaming Frog, Semrush Site Audit, Google Search Console, PageSpeed Insights, and Lighthouse. We validate location page issues across multiple tools." },
+    { question: "How do you prioritize technical fixes?", answer: "Location page indexation first, then site architecture, then duplicate location content, then mobile speed. We fix what blocks local rankings before marginal optimizations." },
+    { question: "Does technical SEO need ongoing attention?", answer: "Yes. New locations, CMS updates, and Google requirements change. Quarterly technical reviews catch problems before they tank local rankings." }
   ],
   "local-keyword-strategy": [
     { question: "How many keywords do you research per market?", answer: "We focus on quality over quantity. Typically 50-200 highly relevant keywords per service area, mapped by intent and priority rather than bulk lists." },
@@ -312,67 +312,69 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "technical-seo": [
     {
       category: "Site Structure & Architecture",
-      headline: "Flat Structure Makes Everything Easier",
-      description: "Site structure is step one of technical SEO. A strong structure makes every other optimization task simpler and more effective.",
+      headline: "Local Sites Need Flat, Crawlable Structure",
+      description: "Multi-location sites create technical complexity fast. Service pages, location pages, and blog content need clear hierarchy so Google indexes every market correctly.",
       subPoints: [
-        { title: "Flat Architecture", description: "Every page within 3-4 clicks of the homepage. Deep pages get crawled and indexed." },
-        { title: "Organized Hierarchy", description: "Pages grouped logically under categories. No orphan pages without internal links." },
-        { title: "Consistent URL Structure", description: "URLs follow logical patterns. Subfolders give Google context about page relationships." },
-        { title: "Breadcrumbs Navigation", description: "Breadcrumbs add automatic internal links and appear in search results." },
-        { title: "Internal Linking", description: "Strategic links from high-authority pages to priority targets. Authority flows intentionally." },
-        { title: "Category Structure", description: "Clear parent-child relationships. Google understands site hierarchy at a glance." }
+        { title: "Flat Architecture", description: "Every location and service page within 3 clicks of homepage. Deep pages get crawled and indexed." },
+        { title: "Location Hub Structure", description: "City pages grouped under state or region. No orphan location pages without internal links." },
+        { title: "Service Area URLs", description: "URLs follow logical patterns: /locations/dallas/ or /plumber-dallas/. Google understands geographic targeting." },
+        { title: "Breadcrumbs Navigation", description: "Breadcrumbs show location hierarchy and appear in local search results." },
+        { title: "Cross-Linking Strategy", description: "Service pages link to relevant location pages. Location pages link to service details. Authority flows intentionally." },
+        { title: "Siloed Categories", description: "Services, locations, and blog content organized in clear silos. Google understands site purpose at a glance." }
       ],
       imageSrc: technicalCrawlImg,
-      imageAlt: "Flat site architecture diagram",
+      imageAlt: "Local site architecture diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
       category: "Crawling & Indexation",
-      headline: "Get Every Page Found and Indexed",
-      description: "Google needs to find, crawl, render, and index your pages. If any step fails, you don't rank.",
+      headline: "Every Location Page Must Be Indexed",
+      description: "If Google can't find your client's location pages, those markets don't exist in search. Multi-location businesses often have dozens of unindexed pages.",
       subPoints: [
-        { title: "Page Indexing Report", description: "Search Console coverage report reviewed. Excluded and errored pages investigated." },
-        { title: "Crawl Analysis", description: "Screaming Frog and Semrush audits identify blocked resources and crawl traps." },
-        { title: "XML Sitemaps", description: "Sitemaps validated with 100% live pages. No 404s, redirects, or noindexed URLs." },
-        { title: "GSC Inspect Tool", description: "Problem pages inspected individually. Rendering issues identified and fixed." },
-        { title: "Deep Page Linking", description: "Internal links added to pages buried deep in site architecture." },
-        { title: "Robots.txt Review", description: "Directives audited so critical content is not accidentally blocked." }
+        { title: "Page Indexing Report", description: "Search Console coverage reviewed per location. Excluded city pages investigated immediately." },
+        { title: "Location Page Crawl", description: "Screaming Frog validates all location URLs are discoverable and returning 200 status." },
+        { title: "XML Sitemap by Location", description: "Location pages included in sitemap. No 404s, redirects, or noindexed market pages." },
+        { title: "GSC Inspect Tool", description: "Problem location pages inspected individually. Rendering issues blocking local content fixed." },
+        { title: "Service Area Linking", description: "Internal links from homepage and service pages point to each location. No orphaned markets." },
+        { title: "Robots.txt Review", description: "Directives audited so location directories and city pages are not accidentally blocked." }
       ],
       imageSrc: technicalVitalsImg,
-      imageAlt: "Crawling and indexation workflow",
+      imageAlt: "Location page indexation workflow",
       ctaText: "Get Technical Analysis",
       ctaHref: "#contact"
     },
     {
       category: "Duplicate & Thin Content",
-      headline: "Clean Content for Clean Rankings",
-      description: "Duplicate content confuses Google. Thin content wastes crawl budget. Both hurt overall site quality signals.",
+      headline: "Location Pages Must Be Unique",
+      description: "Find-and-replace location pages hurt rankings. Google treats thin location content as doorway pages. Each market needs genuine differentiation.",
       subPoints: [
-        { title: "Duplicate Detection", description: "Raven Tools and Semrush scan for identical content across pages." },
-        { title: "Canonical Implementation", description: "Canonical URLs tell Google which version is the original. Variations consolidated." },
-        { title: "Noindex Deployment", description: "Pages without unique value noindexed. Category and tag pages cleaned up." },
-        { title: "Thin Content Expansion", description: "Pages below quality threshold expanded with genuine value or consolidated." },
-        { title: "Cross-Site Validation", description: "Copyscape batch search confirms content originality across the web." },
-        { title: "Parameter Handling", description: "URL parameters managed to prevent infinite duplicate variations." }
+        { title: "Location Page Audit", description: "Every city page reviewed for unique content. Template-only pages flagged for expansion." },
+        { title: "Canonical Strategy", description: "Service pages canonicalize correctly. Location variations don't compete with each other." },
+        { title: "Thin Content Expansion", description: "Location pages below 500 words expanded with market-specific details, landmarks, and service notes." },
+        { title: "Service Area Differentiation", description: "Neighboring city pages include unique value propositions. No duplicate service descriptions." },
+        { title: "Parameter Handling", description: "URL parameters from filters or tracking don't create duplicate location page variations." },
+        { title: "Noindex Utility Pages", description: "Thank you pages, internal tools, and tag archives noindexed. Only valuable pages compete." }
       ],
       imageSrc: technicalSchemaImg,
-      imageAlt: "Duplicate content resolution diagram",
+      imageAlt: "Location content quality diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     },
     {
       category: "PageSpeed & Core Web Vitals",
-      headline: "Fast Pages Rank Better",
-      description: "Page speed is a direct ranking factor. Every second of load time costs conversions and positions.",
+      headline: "Mobile Speed Wins Local Search",
+      description: "Local searches are overwhelmingly mobile. Slow location pages lose clicks to faster competitors. Core Web Vitals directly affect local rankings.",
       subPoints: [
-        { title: "Page Size Reduction", description: "Total page weight correlates with load time more than any other factor." },
-        { title: "LCP Under 2.5s", description: "Largest Contentful Paint optimized. Render-blocking resources eliminated." },
-        { title: "INP Under 200ms", description: "Interaction to Next Paint passes. JavaScript execution optimized." },
-        { title: "CLS Near Zero", description: "Cumulative Layout Shift prevented. No unexpected element movement." },
-        { title: "Third-Party Script Audit", description: "Each external script adds 34ms average. Non-essential scripts removed." },
-        { title: "Mobile Usability", description: "Lighthouse audit for touch targets, text size, and viewport configuration." }
+        { title: "Location Page Size", description: "Each city page optimized for mobile. Images compressed, scripts deferred." },
+        { title: "LCP Under 2.5s", description: "Hero images and maps load fast. Largest Contentful Paint passes on mobile devices." },
+        { title: "INP Under 200ms", description: "Click-to-call buttons and forms respond instantly. No JavaScript delays on interaction." },
+        { title: "CLS Near Zero", description: "Maps and images don't shift layout. No unexpected movement when location content loads." },
+        { title: "Third-Party Script Audit", description: "Review widgets, chat tools, and tracking pixels. Each adds mobile load time." },
+        { title: "Mobile Usability", description: "Touch targets sized for thumbs. Phone numbers tappable. Forms work on small screens." }
       ],
+      imageSrc: technicalVitalsImg,
+      imageAlt: "Mobile speed optimization for local",
       ctaText: "Get Speed Analysis",
       ctaHref: "#contact"
     }
