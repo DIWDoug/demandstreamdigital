@@ -1,10 +1,72 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { searchPixabayImages } from "@/lib/pixabay";
+
+// Tab-specific Pixabay images
+const tabKeywords: Record<string, string> = {
+  "Expertise": "expert specialist professional",
+  "Transparency": "transparency communication clarity",
+  "Growth": "business growth success",
+  "Workflow": "workflow process efficiency",
+  "White Label": "white label branding agency",
+  "Execution": "execution delivery results"
+};
+
+// Lazy Pixabay image for tab content
+const TabImage = ({ keyword }: { keyword: string }) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const response = await searchPixabayImages({
+          query: keyword,
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 3,
+          minWidth: 600,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (response.hits.length > 0) {
+          setImageUrl(response.hits[0].webformatURL);
+        }
+      } catch (error) {
+        console.error('Error fetching image:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchImage();
+  }, [keyword]);
+
+  if (isLoading) {
+    return <div className="h-32 rounded-lg bg-surface-elevated animate-pulse mb-6" />;
+  }
+
+  if (!imageUrl) return null;
+
+  return (
+    <div className="relative h-32 rounded-lg overflow-hidden mb-6">
+      <img
+        src={imageUrl}
+        alt={`${keyword} concept`}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent" />
+    </div>
+  );
+};
 
 const WhatWeSolve = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -157,8 +219,11 @@ const WhatWeSolve = () => {
               ))}
             </div>
 
-            {/* Tab content - Expanded copy with details */}
+            {/* Tab content - with Pixabay image */}
             <div className="premium-card py-10">
+              {/* Pixabay image for current tab */}
+              <TabImage keyword={tabKeywords[tabs[activeTab].label]} />
+              
               <div className="grid md:grid-cols-2 gap-10 md:gap-12">
                 {/* Your Role */}
                 <div>

@@ -1,12 +1,15 @@
 import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { searchPixabayImages } from "@/lib/pixabay";
 
 interface Service {
   icon: LucideIcon;
   title: string;
   description: string;
   href: string;
+  pixabayKeyword: string;
 }
 
 const services: Service[] = [
@@ -15,38 +18,132 @@ const services: Service[] = [
     title: "Local SEO",
     description: "Show up when local customers search. We handle technical fixes, content, and on-page work that builds organic visibility over time.",
     href: "/services/local-seo",
+    pixabayKeyword: "local business storefront"
   },
   {
     icon: Map,
     title: "GBP SEO",
     description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
     href: "/services/google-maps",
+    pixabayKeyword: "google maps location"
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
     description: "Turn ad spend into leads. Google and Meta campaigns built to generate calls, forms, and measurable ROI.",
     href: "/services/paid-media",
+    pixabayKeyword: "digital advertising marketing"
   },
   {
     icon: Share2,
     title: "Authority Building",
     description: "Earn the trust that rankings require. Digital PR, quality backlinks, and citation management that compounds over time.",
     href: "/white-label-inbound-marketing-services/local-authority-building",
+    pixabayKeyword: "business authority trust"
   },
   {
     icon: Mail,
     title: "Email Marketing",
     description: "Stay top of mind and close more deals. Automated sequences that nurture leads into loyal, repeat customers.",
     href: "/services/email-marketing",
+    pixabayKeyword: "email marketing newsletter"
   },
   {
     icon: BarChart3,
     title: "Reporting",
     description: "Keep clients confident with clear results. Branded dashboards and summaries that make your agency look sharp.",
     href: "/services/reporting",
+    pixabayKeyword: "analytics dashboard reporting"
   }
 ];
+
+// Lazy-loaded service card with Pixabay image
+const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '100px', threshold: 0.1 }
+    );
+
+    if (cardRef.current) observer.observe(cardRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const fetchImage = async () => {
+      try {
+        const response = await searchPixabayImages({
+          query: service.pixabayKeyword,
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 3,
+          minWidth: 400,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (response.hits.length > 0) {
+          setImageUrl(response.hits[0].webformatURL);
+        }
+      } catch (error) {
+        console.error('Error fetching image:', error);
+      }
+    };
+
+    fetchImage();
+  }, [isInView, service.pixabayKeyword]);
+
+  return (
+    <Link 
+      ref={cardRef}
+      to={service.href}
+      className="group relative rounded-xl bg-surface-card border border-border/50 hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/5 overflow-hidden"
+    >
+      {/* Pixabay image background */}
+      {imageUrl && (
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+          <img 
+            src={imageUrl} 
+            alt="" 
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      
+      <div className="relative p-6">
+        {/* Icon badge */}
+        <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
+          <service.icon className="w-4 h-4" strokeWidth={2} />
+        </span>
+        
+        <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-accent-blue transition-colors">
+          {service.title}
+        </h3>
+        <p className="text-text-secondary text-sm leading-relaxed">
+          {service.description}
+        </p>
+        
+        <span className="inline-flex items-center text-xs font-medium text-accent-blue mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+          Learn more
+          <ArrowRight className="ml-1 h-3 w-3" />
+        </span>
+      </div>
+    </Link>
+  );
+};
 
 const ServicesGrid = () => {
   return (
@@ -86,28 +183,7 @@ const ServicesGrid = () => {
             {/* Right Column - Services Grid (3 cols) */}
             <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
-                <Link 
-                  key={index}
-                  to={service.href}
-                  className="group relative p-6 rounded-xl bg-surface-card border border-border/50 hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/5"
-                >
-                  {/* Icon badge */}
-                  <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
-                    <service.icon className="w-4 h-4" strokeWidth={2} />
-                  </span>
-                  
-                  <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-accent-blue transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-text-secondary text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <span className="inline-flex items-center text-xs font-medium text-accent-blue mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </span>
-                </Link>
+                <ServiceCard key={index} service={service} index={index} />
               ))}
               
               {/* Calculator CTA Card */}
