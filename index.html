@@ -26,26 +26,116 @@
     <meta name="twitter:description" content="White-label local marketing fulfillment for agencies. Built for retention-focused agencies." />
     <meta name="twitter:image" content="https://dialedinweb.com/og-image.png" />
 
-    <!-- Structured Data - LocalBusiness -->
+    <!-- Structured Data - Connected Organization + Website + WebPage Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Dialed-In Web",
-      "description": "White-label local SEO, Google Maps optimization, paid media, and email marketing fulfillment for agencies.",
-      "url": "https://dialedinweb.com",
-      "telephone": "+1-214-307-2995",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2703 Elm St",
-        "addressLocality": "Dallas",
-        "addressRegion": "TX",
-        "postalCode": "75226",
-        "addressCountry": "US"
-      },
-      "areaServed": ["United States", "Canada"],
-      "priceRange": "$$",
-      "sameAs": []
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://dialedinweb.com/#organization",
+          "name": "Dialed-In Web",
+          "legalName": "Dialed-In Web LLC",
+          "url": "https://dialedinweb.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dialedinweb.com/logo.png",
+            "@id": "https://dialedinweb.com/#logo"
+          },
+          "description": "White-label local SEO, Google Business Profile optimization, paid media, and email marketing fulfillment for digital agencies.",
+          "foundingDate": "2011",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://dialedinweb.com/#founder",
+            "name": "Doug Bryson",
+            "jobTitle": "CEO & Founder",
+            "sameAs": [
+              "https://www.linkedin.com/in/dougbryson",
+              "https://www.upwork.com/freelancers/~01dougbryson"
+            ]
+          },
+          "telephone": "+1-214-307-2995",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2703 Elm St",
+            "addressLocality": "Dallas",
+            "addressRegion": "TX",
+            "postalCode": "75226",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "32.7872",
+            "longitude": "-96.7854"
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "United States" },
+            { "@type": "Country", "name": "Canada" }
+          ],
+          "priceRange": "$$",
+          "knowsAbout": [
+            { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
+            { "@type": "Thing", "name": "Google Business Profile Optimization" },
+            { "@type": "Thing", "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
+            { "@type": "Thing", "name": "Meta Ads" },
+            { "@type": "Thing", "name": "Email Marketing", "sameAs": "https://en.wikipedia.org/wiki/Email_marketing" },
+            { "@type": "Thing", "name": "White-Label Marketing Services" }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/dialedinweb",
+            "https://twitter.com/DialedInWeb"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-214-307-2995",
+            "contactType": "sales",
+            "availableLanguage": "English"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dialedinweb.com/#website",
+          "url": "https://dialedinweb.com",
+          "name": "Dialed-In Web",
+          "description": "White-label local marketing fulfillment for digital agencies",
+          "publisher": { "@id": "https://dialedinweb.com/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://dialedinweb.com/#webpage",
+          "url": "https://dialedinweb.com",
+          "name": "White-Label Local SEO & Paid Media Partner for Agencies | Dialed-In Web",
+          "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+          "about": { "@id": "https://dialedinweb.com/#organization" },
+          "description": "Scale local SEO, Google Maps optimization, paid media, and email marketing without building internal teams. Built for retention-focused agencies.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dialedinweb.com/#localbusiness",
+          "name": "Dialed-In Web",
+          "image": "https://dialedinweb.com/logo.png",
+          "url": "https://dialedinweb.com",
+          "telephone": "+1-214-307-2995",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2703 Elm St",
+            "addressLocality": "Dallas",
+            "addressRegion": "TX",
+            "postalCode": "75226",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "32.7872",
+            "longitude": "-96.7854"
+          },
+          "areaServed": ["United States", "Canada"],
+          "priceRange": "$$",
+          "parentOrganization": { "@id": "https://dialedinweb.com/#organization" }
+        }
+      ]
     }
     </script>
 
@@ -54,6 +144,7 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": "https://dialedinweb.com/#faq",
       "mainEntity": [
         {
           "@type": "Question",

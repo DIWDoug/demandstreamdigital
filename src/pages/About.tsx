@@ -108,28 +108,68 @@ const About = () => {
           name="description" 
           content="Meet the team behind Dialed-In Web. 14 years of experience, 100+ clients served, millions in ad spend managed. Built by marketers, for marketers." 
         />
-        {/* Author/Organization Schema for AI/LLM visibility */}
+        {/* Connected Organization + Person Schema for AI/LLM visibility */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Dialed-In Web",
-            "url": "https://dialedinweb.com",
-            "logo": "https://dialedinweb.com/logo.png",
-            "foundingDate": "2011",
-            "founder": {
-              "@type": "Person",
-              "name": "Doug Bryson",
-              "jobTitle": "CEO & Founder",
-              "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and agency operations. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
-              "knowsAbout": ["Local SEO", "Paid Advertising", "Google Ads", "Meta Ads", "Amazon PPC", "White-Label Marketing", "Agency Operations"],
-              "sameAs": [
-                "https://www.upwork.com/freelancers/~01dougbryson",
-                "https://www.linkedin.com/in/dougbryson"
-              ]
-            },
-            "areaServed": "United States",
-            "serviceType": ["White-Label SEO", "White-Label PPC", "Digital Marketing Fulfillment"]
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://dialedinweb.com/#organization",
+                "name": "Dialed-In Web",
+                "legalName": "Dialed-In Web LLC",
+                "url": "https://dialedinweb.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://dialedinweb.com/logo.png"
+                },
+                "foundingDate": "2011",
+                "founder": { "@id": "https://dialedinweb.com/#founder" },
+                "areaServed": [
+                  { "@type": "Country", "name": "United States" },
+                  { "@type": "Country", "name": "Canada" }
+                ],
+                "knowsAbout": [
+                  { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
+                  { "@type": "Thing", "name": "Google Business Profile Optimization" },
+                  { "@type": "Thing", "name": "White-Label Marketing Services" },
+                  { "@type": "Thing", "name": "Pay-Per-Click Advertising", "sameAs": "https://en.wikipedia.org/wiki/Pay-per-click" }
+                ],
+                "sameAs": [
+                  "https://www.linkedin.com/company/dialedinweb",
+                  "https://twitter.com/DialedInWeb"
+                ]
+              },
+              {
+                "@type": "Person",
+                "@id": "https://dialedinweb.com/#founder",
+                "name": "Doug Bryson",
+                "jobTitle": "CEO & Founder",
+                "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and agency operations. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
+                "worksFor": { "@id": "https://dialedinweb.com/#organization" },
+                "knowsAbout": [
+                  { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
+                  { "@type": "Thing", "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
+                  { "@type": "Thing", "name": "Meta Advertising" },
+                  { "@type": "Thing", "name": "Amazon PPC" },
+                  { "@type": "Thing", "name": "White-Label Marketing" },
+                  { "@type": "Thing", "name": "Agency Operations" }
+                ],
+                "sameAs": [
+                  "https://www.linkedin.com/in/dougbryson",
+                  "https://www.upwork.com/freelancers/~01dougbryson"
+                ]
+              },
+              {
+                "@type": "AboutPage",
+                "@id": "https://dialedinweb.com/about#webpage",
+                "url": "https://dialedinweb.com/about",
+                "name": "About Us | Dialed-In Web",
+                "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+                "about": { "@id": "https://dialedinweb.com/#organization" },
+                "mainEntity": { "@id": "https://dialedinweb.com/#organization" }
+              }
+            ]
           })}
         </script>
       </Helmet>
