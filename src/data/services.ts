@@ -708,58 +708,58 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "PR Placement",
-        slug: "pr-placement",
-        description: "Strategic journalist outreach through Featured.com (formerly HARO), Qwoted, and direct media pitching for earned coverage.",
-        fullDescription: "We secure earned media coverage through systematic journalist outreach. Using platforms like Featured.com (formerly HARO) and Qwoted, we connect your clients with journalists actively seeking expert sources. This generates high-authority backlinks and third-party credibility that paid placements cannot replicate.",
-        benefits: ["High-authority editorial backlinks", "Third-party credibility and trust", "Brand visibility in respected publications", "Thought leadership positioning", "Organic media relationships over time"],
-        deliverables: ["Featured.com/HARO monitoring and response", "Qwoted opportunity identification", "Direct journalist outreach campaigns", "Story angle development", "Quote and source preparation", "Coverage tracking and reporting"],
-        process: ["Media opportunity identification", "Story angle and hook development", "Source preparation with client", "Pitch and response execution", "Follow-up and relationship building", "Coverage documentation and link tracking"]
+        title: "Local Links",
+        slug: "local-links",
+        description: "Strategic link acquisition from local publications, community blogs, and geographic sources that build regional authority.",
+        fullDescription: "Local authority requires links with geographic relevance. We target local news sites, community blogs, chamber of commerce sites, and regional publications that signal to search engines your client is a trusted local business.",
+        benefits: ["Geographic relevance signals", "Local publication visibility", "Community trust building", "Regional authority establishment", "Competitive differentiation"],
+        deliverables: ["Local publication outreach", "Community blog placements", "Local news coverage", "Regional directory submissions", "Geographic link tracking", "Monthly acquisition reporting"],
+        process: ["Local opportunity research", "Outreach strategy development", "Relationship building", "Placement execution", "Link documentation", "Performance analysis"]
       },
       {
-        title: "Local Citations",
-        slug: "local-citations",
-        description: "Industry-specific directories, general citation platforms, and professional association listings that validate business legitimacy.",
-        fullDescription: "Citations build the foundational authority signals that search engines use to validate business legitimacy. We secure placements across industry-specific directories (dental, legal, heavy machinery, etc.), general citation platforms, and professional associations relevant to each client's vertical.",
-        benefits: ["Industry-relevant authority signals", "NAP consistency across the web", "Vertical-specific credibility", "Referral traffic from directories", "Foundation for local authority"],
-        deliverables: ["Industry directory research and submission", "General citation building (50+ sites)", "Professional association identification", "Data aggregator submissions", "NAP consistency audit and maintenance", "Citation performance tracking"],
-        process: ["Industry landscape analysis", "Directory opportunity prioritization", "Application and submission execution", "Profile optimization", "Ongoing monitoring and maintenance", "Performance reporting"]
+        title: "Citations",
+        slug: "citations",
+        description: "Industry-specific directories, data aggregators, and professional listings that validate business legitimacy.",
+        fullDescription: "Citations build foundational authority signals that search engines use to validate business legitimacy. We secure placements across industry-specific directories, general citation platforms, data aggregators, and professional associations relevant to each client's vertical.",
+        benefits: ["NAP consistency across the web", "Industry-relevant authority signals", "Vertical-specific credibility", "Referral traffic from directories", "Foundation for local authority"],
+        deliverables: ["Industry directory submissions", "General citation building (50+ sites)", "Data aggregator submissions", "Professional association listings", "NAP consistency audit", "Citation performance tracking"],
+        process: ["Industry landscape analysis", "Directory prioritization", "Submission execution", "Profile optimization", "Ongoing monitoring", "Performance reporting"]
       },
       {
         title: "Brand Mentions",
         slug: "brand-mentions",
-        description: "Strategic presence on Reddit, Quora, and social platforms that builds organic brand visibility and topical relevance.",
-        fullDescription: "Brand mentions across discussion platforms create organic signals that search engines increasingly value. We build strategic presence on Reddit, Quora, and relevant social platforms through genuine engagement that positions your clients as helpful resources in their space.",
-        benefits: ["Organic brand visibility", "Topical relevance signals", "Community trust building", "Referral traffic from engaged audiences", "Unstructured citation value"],
-        deliverables: ["Reddit community identification and engagement", "Quora topic monitoring and responses", "Social platform brand monitoring", "Mention opportunity identification", "Strategic response development", "Brand mention tracking and reporting"],
-        process: ["Platform and community research", "Engagement strategy development", "Ongoing monitoring setup", "Strategic response execution", "Mention documentation", "Performance analysis"]
+        description: "Strategic presence on Reddit, Quora, and social platforms that builds organic visibility and feeds AI discovery.",
+        fullDescription: "Brand mentions across discussion platforms create organic signals that search engines and AI systems increasingly value. We build strategic presence on Reddit, Quora, and relevant social platforms through genuine engagement that positions your clients as helpful resources.",
+        benefits: ["Organic brand visibility", "AI discovery signals", "Community trust building", "Topical relevance signals", "Unstructured citation value"],
+        deliverables: ["Reddit community engagement", "Quora topic responses", "Social platform monitoring", "Mention opportunity identification", "Strategic response development", "Brand mention tracking"],
+        process: ["Platform research", "Engagement strategy", "Monitoring setup", "Response execution", "Documentation", "Performance analysis"]
       },
       {
-        title: "Guest Posts & Niche Edits",
-        slug: "guest-posts-niche-edits",
-        description: "Quality content placements and contextual link insertions on relevant industry and local publications.",
-        fullDescription: "Guest posting and niche edits provide contextually relevant backlinks from established publications. We secure placements through genuine editorial relationships, creating content that provides value to readers while building your client's authority profile.",
-        benefits: ["Contextually relevant backlinks", "Industry publication visibility", "Thought leadership positioning", "Referral traffic potential", "Long-term link equity"],
-        deliverables: ["Publication outreach and relationship building", "Guest post content creation", "Niche edit opportunity identification", "Link placement negotiation", "Content quality assurance", "Link tracking and reporting"],
-        process: ["Target publication identification", "Outreach and pitch development", "Content creation or edit identification", "Placement negotiation", "Quality verification", "Link documentation and monitoring"]
+        title: "Anchor Text",
+        slug: "anchor-text",
+        description: "Natural anchor text distribution and diversification that maximizes ranking power without over-optimization.",
+        fullDescription: "Anchor text strategy determines whether links help or hurt. We manage anchor text distribution across all link building efforts to maintain natural profiles that maximize ranking power while avoiding over-optimization penalties.",
+        benefits: ["Natural link profile appearance", "Maximized ranking power", "Penalty risk avoidance", "Strategic keyword targeting", "Long-term profile health"],
+        deliverables: ["Anchor text audit", "Distribution strategy", "Target anchor planning", "Ongoing profile monitoring", "Competitor anchor analysis", "Monthly profile reporting"],
+        process: ["Current profile analysis", "Competitor benchmarking", "Strategy development", "Implementation guidelines", "Ongoing monitoring", "Quarterly review"]
       },
       {
-        title: "Trust-Building Links",
-        slug: "trust-building-links",
-        description: "Foundational link-building through Web 2.0 properties, document uploads, and manual outreach that establishes baseline authority.",
-        fullDescription: "Trust-building links form the foundation of a healthy backlink profile. We execute manual link-building through Web 2.0 platforms, document sharing sites, and other foundational tactics that create the baseline authority every domain needs before more aggressive strategies take effect.",
-        benefits: ["Baseline authority establishment", "Diverse link profile foundation", "Supporting signals for higher-authority links", "Consistent link velocity", "Risk-managed link building"],
-        deliverables: ["Web 2.0 property creation and linking", "Document uploads (PDF, presentations)", "Social profile establishment", "Foundational directory submissions", "Link velocity management", "Portfolio diversity tracking"],
-        process: ["Current profile audit", "Foundation gap identification", "Platform selection and prioritization", "Content creation for placements", "Submission and verification", "Ongoing portfolio maintenance"]
+        title: "Sponsorships",
+        slug: "sponsorships",
+        description: "Local event sponsorships, charity partnerships, and community involvement that generate authentic authority signals.",
+        fullDescription: "Sponsorships create authentic community connections that generate high-quality backlinks and brand visibility. We identify and coordinate local event sponsorships, charity partnerships, and community involvement opportunities that build genuine local authority.",
+        benefits: ["Authentic community connection", "High-quality sponsorship links", "Local brand visibility", "Community goodwill", "PR opportunities"],
+        deliverables: ["Sponsorship opportunity research", "Outreach and coordination", "Link placement verification", "Event participation support", "Coverage documentation", "ROI tracking"],
+        process: ["Opportunity identification", "Value assessment", "Outreach execution", "Sponsorship coordination", "Link verification", "Performance reporting"]
       },
       {
-        title: "Local Authority Building",
-        slug: "local-authority-building",
-        description: "Local associations, community blogs, press releases, and geographic link opportunities that establish regional relevance.",
-        fullDescription: "Local authority requires geographic relevance signals that national link building cannot provide. We target local associations, community blogs, chamber of commerce memberships, and Google-embedded press releases that establish your client as a trusted local business.",
-        benefits: ["Geographic relevance signals", "Community trust and visibility", "Local publication backlinks", "Association credibility", "Press release distribution value"],
-        deliverables: ["Local association identification and outreach", "Community blog placement", "Chamber of commerce submissions", "Press release writing and distribution", "Local sponsorship opportunity research", "Geographic link tracking"],
-        process: ["Local opportunity research", "Association and community outreach", "Press release development", "Placement execution", "Link documentation", "Local authority reporting"]
+        title: "Reputation Signals",
+        slug: "reputation-signals",
+        description: "Review generation, testimonial placements, and trust signals that reinforce authority and credibility.",
+        fullDescription: "Reputation signals reinforce authority through social proof. We implement review generation strategies, secure testimonial placements, and build trust signals across platforms that search engines use to assess business credibility and prominence.",
+        benefits: ["Enhanced trust signals", "Review volume growth", "Third-party credibility", "Prominence factor improvement", "Conversion rate support"],
+        deliverables: ["Review generation strategy", "Testimonial outreach", "Trust badge implementation", "Review platform optimization", "Reputation monitoring", "Monthly reputation reporting"],
+        process: ["Current reputation audit", "Strategy development", "Campaign implementation", "Ongoing monitoring", "Response management", "Performance tracking"]
       }
     ]
   },
