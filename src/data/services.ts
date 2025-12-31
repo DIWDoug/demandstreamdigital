@@ -665,10 +665,10 @@ export const hubs: Hub[] = [
   },
   {
     icon: Award,
-    title: "Authority Building",
+    title: "Local Authority Building",
     slug: "authority",
-    summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
-    heroDescription: "We build the trust signals and authority markers that establish long-term ranking stability and brand credibility. Our white-label authority building services help agencies deliver comprehensive reputation and visibility campaigns that create lasting competitive advantages.",
+    summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
+    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
     whyItMatters: {
       headline: "Why Authority Building Matters",
       description: "Search engines increasingly prioritize E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness). Authority building creates the signals that demonstrate these qualities, supporting both rankings and customer confidence.",
