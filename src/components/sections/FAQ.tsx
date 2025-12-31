@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import faqIllustration from "@/assets/illustrations/faq-mindmap.png";
 
 const FAQ = () => {
   const sectionRef = useScrollReveal();
@@ -57,8 +58,16 @@ const FAQ = () => {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section relative overflow-hidden">
+      {/* Decorative watercolor illustration */}
+      <div className="absolute -top-20 -right-32 w-80 h-80 opacity-[0.08] pointer-events-none hidden lg:block">
+        <img src={faqIllustration} alt="" className="w-full h-full object-contain" aria-hidden="true" />
+      </div>
+      <div className="absolute -bottom-16 -left-24 w-64 h-64 opacity-[0.06] pointer-events-none hidden lg:block rotate-12">
+        <img src={faqIllustration} alt="" className="w-full h-full object-contain" aria-hidden="true" />
+      </div>
+      
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">

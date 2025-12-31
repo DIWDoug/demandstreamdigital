@@ -5,6 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import partnershipIllustration from "@/assets/illustrations/partnership-mindmap.png";
 
 const WhatWeSolve = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -126,12 +127,21 @@ const WhatWeSolve = () => {
 
   return (
     <TooltipProvider>
-      <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-background relative">
+      <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-background relative overflow-hidden">
         {/* Section divider from ContinuingEducation */}
         <div className="absolute top-0 left-0 right-0">
           <div className="section-divider" />
         </div>
-        <div className="container mx-auto px-6 lg:px-8">
+        
+        {/* Decorative watercolor illustration */}
+        <div className="absolute top-32 -right-16 w-56 h-56 opacity-[0.06] pointer-events-none hidden lg:block">
+          <img src={partnershipIllustration} alt="" className="w-full h-full object-contain" aria-hidden="true" />
+        </div>
+        <div className="absolute bottom-16 -left-12 w-48 h-48 opacity-[0.05] pointer-events-none hidden lg:block rotate-[-15deg]">
+          <img src={partnershipIllustration} alt="" className="w-full h-full object-contain" aria-hidden="true" />
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
