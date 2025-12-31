@@ -521,11 +521,11 @@ export const hubs: Hub[] = [
       {
         title: "Automation Flows",
         slug: "automation-flows",
-        description: "Welcome sequences, post-service follow-ups, win-back campaigns, and review request automations.",
-        fullDescription: "Automation keeps the relationship going around the clock. Welcome sequences orient new subscribers. Post-service follow-ups request reviews. Win-back campaigns bring lapsed customers home. All working automatically while you focus on other priorities.",
-        benefits: ["24/7 customer nurturing", "Consistent follow-up execution", "Review generation integration", "Lapsed customer recovery", "Scalable engagement"],
-        deliverables: ["Welcome sequence development", "Post-service automation", "Review request integration", "Win-back campaigns", "Customer journey mapping", "Performance tracking"],
-        process: ["Customer journey mapping", "Sequence strategy development", "Email content creation", "Technical implementation", "Testing and launch", "Ongoing optimization"]
+        description: "Welcome sequences, post-service review requests, win-back campaigns, and behavioral trigger automations.",
+        fullDescription: "Automation keeps relationships running around the clock. Welcome sequences orient new subscribers. Post-service sequences request reviews at peak satisfaction moments (51% of customers leave reviews when asked directly). Win-back campaigns recover lapsed customers. All working automatically with personalization that converts.",
+        benefits: ["24/7 customer nurturing and review generation", "Review requests timed to peak satisfaction moments", "Personalized messaging using customer name and service details", "Multi-channel support: email primary, SMS fallback (29% prefer text)", "Consistent follow-up execution that customers forget without", "Lapsed customer recovery before they go cold"],
+        deliverables: ["Welcome sequence development", "Post-service review request automation with optimal timing", "Direct review links to Google, Facebook, Yelp, or industry sites", "Follow-up reminder sequences (3-7 day cadence)", "Win-back campaigns", "Performance tracking and conversion optimization"],
+        process: ["Customer journey mapping with review touchpoints", "Sequence strategy development", "Personalized email content creation", "Review link generation and platform options", "Technical implementation and CRM integration", "Testing, launch, and ongoing optimization"]
       },
       {
         title: "Newsletter Design",
