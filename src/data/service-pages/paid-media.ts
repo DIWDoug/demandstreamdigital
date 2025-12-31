@@ -12,7 +12,7 @@ export const paidMediaConfig: ServicePageConfig = {
   hero: {
     headline: "White Label Paid Media for",
     highlightedText: "Digital Agencies",
-    subheadline: "Paid media works when strategy is proactive and waste is systematically eliminated. We build the campaigns, tracking, and optimization systems that turn ad spend into measurable pipeline—executed entirely under your brand.",
+    subheadline: "Paid media works when strategy is proactive and waste is cut systematically. We build the campaigns, tracking, and optimization systems that turn ad spend into measurable pipeline—executed entirely under your brand.",
     qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Built for agencies who need results they can stand behind."
