@@ -19,9 +19,6 @@ const SEOValueExplainer = () => {
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
               Your clients see position numbers. They rarely see the thousands in ad spend those rankings quietly replace each month.
             </p>
-            <p className="text-slate-600 text-lg mt-6">
-              <span className="text-slate-900 font-semibold">Clients who understand value stay longer.</span> We give you reports that make cancellations uncomfortable to justify.
-            </p>
           </div>
 
           {/* Dashboard Preview */}
@@ -143,6 +140,10 @@ const SEOValueExplainer = () => {
             ))}
           </div>
 
+          {/* Bottom line */}
+          <p className="text-center text-slate-600 text-lg mt-12">
+            <span className="text-slate-900 font-semibold">Clients who understand value stay longer.</span> We give you reports that make cancellations uncomfortable to justify.
+          </p>
         </div>
       </div>
     </section>
