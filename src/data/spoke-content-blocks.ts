@@ -106,7 +106,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       description: "Title tags give search engines a high-level overview of what your page is about. We optimize them for both rankings and click-through rate.",
       subPoints: [
         { title: "Keyword Placement", description: "Target keywords placed near the front of the title tag. The closer to the beginning, the stronger the relevance signal." },
-        { title: "Character Limits", description: "Titles kept between 50-60 characters to display fully in search results without truncation." },
+        { title: "Character Limits", description: "Titles under 100 characters with priority keywords in the first 60. Google may truncate, but the important terms display." },
         { title: "CTR Modifiers", description: "Strategic use of modifiers like 'best,' 'guide,' and location terms to capture long-tail variations." },
         { title: "Unique Descriptions", description: "Every page gets a distinct meta description written like ad copy. Google bolds matching terms." },
         { title: "Emotional Triggers", description: "Positive emotional hooks in titles increase CTR by 4%. Used strategically, never as clickbait." },
