@@ -162,7 +162,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         title: "Permission & List Building",
         slug: "permission-list-building",
-        description: "Proper opt-in practices and list growth that build quality subscriber relationships from day one.",
+        description: "Proper opt-in practices and list growth that build a quality audience from day one.",
         icon: FileText
       },
       {
@@ -192,7 +192,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         title: "Performance & Inactivity Management",
         slug: "performance-inactivity-management",
-        description: "Metrics tracking, list hygiene, and subscriber cleanup that maintains program health.",
+        description: "Metrics tracking, list hygiene, and cleanup that maintains program health.",
         icon: Zap
       }
     ]
@@ -217,7 +217,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       },
       {
         point: "You value engagement over vanity metrics",
-        detail: "We optimize for opens, clicks, and conversions—not list size alone. A smaller, engaged list beats a large, dead one."
+        detail: "We optimize for opens, clicks, and conversions. Not list size alone. A smaller, engaged list beats a large, dead one."
       },
       {
         point: "Your clients have something worth emailing about",
@@ -277,7 +277,7 @@ export const emailMarketingConfig: ServicePageConfig = {
         category: "Partnership & Process",
         items: [
           { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, content for approval, and talking points. You maintain the client relationship." },
-          { question: "Do you require long-term contracts?", answer: "No mandatory long-term contracts. We work month-to-month. That said, email programs need time to mature—most meaningful results require 3+ months of consistent effort." },
+          { question: "Do you require long-term contracts?", answer: "No mandatory long-term contracts. We work month-to-month. That said, email programs need time to mature. Most meaningful results require 3+ months of consistent effort." },
           { question: "How often do you send campaigns?", answer: "Frequency depends on the business and audience. Most clients benefit from 2-4 campaigns per month plus automated sequences. We develop the right cadence during strategy." }
         ]
       }
