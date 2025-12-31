@@ -22,6 +22,7 @@ export interface Hub {
   slug: string;
   summary: string;
   heroDescription: string;
+  integrationNote?: string;
   whyItMatters: {
     headline: string;
     description: string;
@@ -53,7 +54,8 @@ export const hubs: Hub[] = [
     title: "Local SEO",
     slug: "local-seo",
     summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
-    heroDescription: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients. Our white-label local SEO fulfillment covers everything from on-page optimization to link building, executed with the precision your agency reputation demands. Local SEO and GBP SEO work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
+    heroDescription: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients. Our white-label local SEO fulfillment covers everything from on-page optimization to link building, executed with the precision your agency reputation demands.",
+    integrationNote: "Local SEO and GBP SEO work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
     whyItMatters: {
       headline: "Why Local SEO Matters for Your Clients",
       description: "46% of all Google searches have local intent. When someone searches for services in their area, your clients need to appear, not their competitors. Local SEO is the foundation of sustainable lead generation for service-area businesses.",
@@ -166,7 +168,8 @@ export const hubs: Hub[] = [
     title: "GBP SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-    heroDescription: "We help agencies dominate Google Maps results for their clients. From GBP optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives 42% of clicks on local search results. We help you own it. GBP SEO and Local SEO work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
+    heroDescription: "We help agencies dominate Google Maps results for their clients. From GBP optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives 42% of clicks on local search results. We help you own it.",
+    integrationNote: "GBP SEO and Local SEO work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
     whyItMatters: {
       headline: "Why GBP SEO Matters for Local Businesses",
       description: "The local 3-pack appears in 93% of local searches. These three map listings capture the majority of clicks for local intent queries. If your clients are not in the pack, they are invisible to most local searchers.",
@@ -466,7 +469,8 @@ export const hubs: Hub[] = [
     title: "Local Authority Building",
     slug: "local-authority-building",
     summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
-    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses. Authority building works hand in hand with Local SEO and GBP SEO. While it can be engaged independently, it delivers the strongest results as part of a coordinated local visibility strategy.",
+    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
+    integrationNote: "Authority building works hand in hand with Local SEO and GBP SEO. While it can be engaged independently, it delivers the strongest results as part of a coordinated local visibility strategy.",
     whyItMatters: {
       headline: "Why Local Authority Building Matters",
       description: "Off-page signals are a core ranking factor for local search. Backlinks, citations, and community connections tell Google your client's business is legitimate, relevant, and trusted in their market.",

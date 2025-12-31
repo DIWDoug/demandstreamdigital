@@ -46,6 +46,7 @@ const Authority = () => {
           title={hub.title} 
           description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
+          integrationNote={hub.integrationNote}
         />
       </div>
       

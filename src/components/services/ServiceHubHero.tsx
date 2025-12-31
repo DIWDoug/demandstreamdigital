@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Link2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
@@ -13,9 +13,10 @@ interface ServiceHubHeroProps {
   title: string;
   description: string;
   breadcrumbs?: BreadcrumbItem[];
+  integrationNote?: string;
 }
 
-const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote }: ServiceHubHeroProps) => {
   const [formData, setFormData] = useState({
     fullName: "",
     website: "",
@@ -79,9 +80,19 @@ const ServiceHubHero = ({ title, description, breadcrumbs }: ServiceHubHeroProps
             </h1>
             
             {/* Short description */}
-            <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed animate-fade-in">
+            <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-4">
               {description}
             </p>
+            
+            {/* Integration Note - subtle callout */}
+            {integrationNote && (
+              <div className="flex items-start gap-3 p-3 rounded-lg bg-accent-blue/5 border border-accent-blue/20 max-w-xl animate-fade-in">
+                <Link2 className="h-4 w-4 text-accent-blue mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-text-muted leading-relaxed">
+                  {integrationNote}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Right Column - Contact Form */}
