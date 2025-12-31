@@ -78,58 +78,58 @@ export async function searchPixabayImages(options: SearchOptions): Promise<Pixab
 
 /**
  * Keyword mapping for spoke pages to relevant Pixabay search terms
- * Updated with better search terms for higher quality image results
+ * Carefully curated for contextually accurate imagery
  */
 export const spokeKeywordMap: Record<string, string> = {
   // Local SEO spokes
-  'on-page-optimization': 'website design laptop professional',
-  'technical-seo': 'computer server technology infrastructure',
-  'local-keyword-strategy': 'search analytics data computer',
-  'content-development': 'writer content laptop professional',
-  'link-building': 'network connection handshake business',
-  'schema-markup': 'code programming developer screen',
-  'nap-citations': 'business directory map location',
+  'on-page-optimization': 'website screen laptop seo',
+  'technical-seo': 'website speed mobile responsive',
+  'local-keyword-strategy': 'search magnifying glass keywords',
+  'content-development': 'writing content blog laptop',
+  'link-building': 'chain link connection network',
+  'schema-markup': 'code html programming website',
+  'nap-citations': 'business card directory contact',
   
   // GBP SEO spokes
-  'gbp-optimization': 'store front business local',
-  'review-management': 'customer feedback stars rating',
-  'citation-building': 'business listing local map',
-  'photo-optimization': 'professional photography camera studio',
-  'qa-management': 'customer service support help',
-  'post-scheduling': 'calendar planning schedule social',
+  'gbp-optimization': 'storefront local business shop',
+  'review-management': 'five stars review rating',
+  'citation-building': 'map location pin business',
+  'photo-optimization': 'camera photography business',
+  'qa-management': 'question answer faq help',
+  'post-scheduling': 'calendar schedule planning content',
   
   // Paid Media spokes
-  'google-ads': 'digital advertising computer marketing',
-  'meta-ads': 'social media advertising mobile',
-  'local-service-ads': 'local contractor service professional',
-  'retargeting-campaigns': 'target marketing advertising digital',
-  'landing-page-design': 'web design creative laptop',
-  'conversion-tracking': 'analytics dashboard computer data',
+  'google-ads': 'advertising pay per click marketing',
+  'meta-ads': 'social media facebook instagram',
+  'local-service-ads': 'contractor plumber electrician service',
+  'retargeting-campaigns': 'target audience marketing',
+  'landing-page-design': 'website landing page design',
+  'conversion-tracking': 'analytics funnel conversion data',
   
   // Email Marketing spokes
-  'campaign-strategy': 'email marketing laptop professional',
-  'list-management': 'database customer management computer',
-  'automation-flows': 'automation workflow technology process',
-  'newsletter-design': 'email newsletter design creative',
-  'ab-testing': 'testing comparison analytics data',
-  'performance-analytics': 'analytics dashboard charts metrics',
+  'campaign-strategy': 'email inbox marketing campaign',
+  'list-management': 'contacts database email list',
+  'automation-flows': 'workflow automation process diagram',
+  'newsletter-design': 'newsletter email template design',
+  'ab-testing': 'comparison testing split data',
+  'performance-analytics': 'dashboard metrics kpi charts',
   
   // Authority Building spokes
-  'local-links': 'partnership handshake business professional',
-  'unstructured-citations': 'video podcast microphone media',
-  'brand-mentions': 'brand marketing awareness social',
-  'anchor-text': 'SEO optimization text content',
-  'sponsorships': 'sponsorship community event partnership',
-  'reputation-signals': 'trust reputation five stars',
-  'guest-posts-niche-edits': 'writing blog content laptop',
+  'local-links': 'handshake partnership collaboration',
+  'unstructured-citations': 'podcast video microphone media',
+  'brand-mentions': 'social media brand mention',
+  'anchor-text': 'text link hyperlink web',
+  'sponsorships': 'event sponsorship community sports',
+  'reputation-signals': 'trust badge certificate quality',
+  'guest-posts-niche-edits': 'blogging writing guest author',
   
   // Reporting spokes
-  'white-label-dashboards': 'dashboard analytics computer screen',
-  'monthly-reports': 'report document analytics business',
-  'rank-tracking': 'ranking chart growth analytics',
-  'call-tracking': 'phone call business professional',
-  'roi-analysis': 'investment growth chart finance',
-  'client-presentations': 'presentation meeting business professional'
+  'white-label-dashboards': 'dashboard screen analytics report',
+  'monthly-reports': 'report document chart business',
+  'rank-tracking': 'ranking position chart growth',
+  'call-tracking': 'phone call business mobile',
+  'roi-analysis': 'return investment profit chart',
+  'client-presentations': 'presentation slides meeting boardroom'
 };
 
 /**
