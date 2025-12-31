@@ -1,11 +1,14 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import { hubs } from "@/data/services";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
@@ -21,6 +24,17 @@ const SectionDivider = () => (
 
 const SpokePage = () => {
   const { hubSlug, spokeSlug } = useParams();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    website: "",
+    email: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // TODO: Handle form submission
+  };
   
   // Find the hub and spoke
   const hub = hubs.find((h) => h.slug === hubSlug);
@@ -59,51 +73,122 @@ const SpokePage = () => {
       
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 gradient-hero noise-overlay overflow-hidden">
+      {/* Hero Section - Split layout with form */}
+      <section className="relative min-h-[50vh] gradient-hero noise-overlay flex items-center overflow-hidden">
+        {/* Background effects */}
         <div className="absolute inset-0 opacity-15">
-          <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm mb-6">
-            <Link to="/" className="text-text-muted hover:text-foreground transition-colors">
-              Home
-            </Link>
-            {breadcrumbItems.map((item, index) => (
-              <span key={index} className="flex items-center gap-2">
-                <span className="text-text-muted">/</span>
-                {item.href ? (
-                  <Link to={item.href} className="text-text-muted hover:text-foreground transition-colors">
-                    {item.label}
-                  </Link>
-                ) : (
-                  <span className="text-accent-blue">{item.label}</span>
-                )}
-              </span>
-            ))}
-          </nav>
+        {/* Grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
+                             linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}
+        />
 
-          {/* Back link */}
-          <Link 
-            to={`/white-label-inbound-marketing-services/${hub.slug}`}
-            className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-foreground transition-colors mb-6"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to {hub.title}
-          </Link>
+        <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Text */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-background/30 backdrop-blur-sm rounded-2xl -z-10 hidden lg:block" />
+              
+              {/* Breadcrumbs */}
+              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm mb-6 animate-fade-in">
+                <Link to="/" className="text-text-muted hover:text-foreground transition-colors">
+                  Home
+                </Link>
+                {breadcrumbItems.map((item, index) => (
+                  <span key={index} className="flex items-center gap-2">
+                    <span className="text-text-muted">/</span>
+                    {item.href ? (
+                      <Link to={item.href} className="text-text-muted hover:text-foreground transition-colors">
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <span className="text-accent-blue">{item.label}</span>
+                    )}
+                  </span>
+                ))}
+              </nav>
 
-          <div className="max-w-4xl">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
-              {hub.title}
-            </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6" style={{ lineHeight: "1.15" }}>
-              {spoke.title}
-            </h1>
-            <p className="text-lg text-text-secondary leading-relaxed max-w-3xl">
-              {spoke.fullDescription}
-            </p>
+              {/* Back link */}
+              <Link 
+                to={`/white-label-inbound-marketing-services/${hub.slug}`}
+                className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-foreground transition-colors mb-6"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to {hub.title}
+              </Link>
+
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-6 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
+                <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{spoke.title}</span>
+              </h1>
+              
+              {/* Description */}
+              <p className="text-lg text-text-secondary max-w-xl leading-relaxed animate-fade-in mb-6">
+                {spoke.fullDescription}
+              </p>
+              
+              {/* Hub context */}
+              <p className="text-sm text-text-muted/60 italic max-w-xl animate-fade-in">
+                Part of our {hub.title} service. Can be engaged as a standalone component or as part of a comprehensive strategy.
+              </p>
+            </div>
+
+            {/* Right Column - Contact Form */}
+            <div className="animate-fade-in">
+              <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 lg:p-8 shadow-xl">
+                <h2 className="text-xl font-semibold text-foreground mb-2">Start a Conversation</h2>
+                <p className="text-sm text-text-muted mb-6">Tell us about your agency. We'll take it from there.</p>
+                
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <Input
+                      type="text"
+                      placeholder="Full Name"
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      className="bg-background/50 border-border/50 focus:border-accent-blue"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="text"
+                      placeholder="Website URL"
+                      value={formData.website}
+                      onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                      className="bg-background/50 border-border/50 focus:border-accent-blue"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="bg-background/50 border-border/50 focus:border-accent-blue"
+                      required
+                    />
+                  </div>
+                  <Button type="submit" className="w-full btn-cta group">
+                    Start the Conversation
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </form>
+                
+                <p className="text-xs text-text-muted text-center mt-4">
+                  We typically respond within 24 hours.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
