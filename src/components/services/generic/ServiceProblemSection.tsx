@@ -35,30 +35,41 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             </p>
           </div>
 
-          {/* Pain Point Cards - First card is featured */}
+          {/* Pain Point Cards - First card is featured and spans full width */}
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
             {config.painPoints.map((point, index) => {
               const isFirst = index === 0;
               return (
                 <div 
                   key={index}
-                  className={`bg-white rounded-xl p-6 lg:p-8 border shadow-sm hover:border-cta/30 transition-colors ${
+                  className={`rounded-xl p-6 lg:p-8 border transition-all ${
                     isFirst 
-                      ? 'border-cta/20 ring-1 ring-cta/10 sm:col-span-2 lg:col-span-1' 
-                      : 'border-slate-200'
+                      ? 'sm:col-span-2 bg-gradient-to-br from-white via-white to-cta/5 border-cta/30 shadow-[0_4px_20px_-4px_hsl(var(--cta)/0.15)] relative overflow-hidden' 
+                      : 'bg-white border-slate-200 shadow-sm hover:border-cta/30'
                   }`}
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                      isFirst ? 'bg-cta/15' : 'bg-cta/10'
-                    }`}>
-                      <point.icon className={`h-5 w-5 text-cta ${isFirst ? 'h-6 w-6' : ''}`} />
+                  {/* Featured badge for first card */}
+                  {isFirst && (
+                    <div className="absolute top-4 right-4">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-cta bg-cta/10 px-2.5 py-1 rounded-full">
+                        Key Insight
+                      </span>
                     </div>
-                    <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl' : 'text-lg'}`}>
+                  )}
+                  
+                  <div className={`flex items-center gap-4 ${isFirst ? 'mb-5' : 'mb-4'}`}>
+                    <div className={`rounded-xl flex items-center justify-center shrink-0 ${
+                      isFirst 
+                        ? 'w-14 h-14 bg-cta/15 shadow-sm' 
+                        : 'w-12 h-12 bg-cta/10'
+                    }`}>
+                      <point.icon className={`text-cta ${isFirst ? 'h-7 w-7' : 'h-5 w-5'}`} />
+                    </div>
+                    <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
                       {point.title}
                     </strong>
                   </div>
-                  <p className="text-slate-500 text-sm leading-7">
+                  <p className={`text-slate-500 leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-sm'}`}>
                     {point.body}
                   </p>
                 </div>
