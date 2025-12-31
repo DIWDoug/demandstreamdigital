@@ -610,7 +610,7 @@ export const hubs: Hub[] = [
       {
         title: "Permission & List Building",
         slug: "permission-list-building",
-        description: "Proper opt-in practices and list growth that build quality subscriber relationships from day one.",
+        description: "Proper opt-in practices and list growth that build a quality audience from day one.",
         fullDescription: "Permission is foundational. We establish proper opt-in practices, verify existing lists, and build growth strategies that attract engaged local subscribers. Quality over quantity protects sender reputation and maximizes engagement.",
         benefits: ["Strong permission foundation", "Protected sender reputation", "Higher engagement rates", "Reduced spam complaints", "Quality subscriber acquisition"],
         deliverables: ["Permission audit", "Opt-in form optimization", "List verification and cleanup", "Growth strategy development", "Compliance review", "Best practice documentation"],
@@ -647,7 +647,7 @@ export const hubs: Hub[] = [
         title: "Campaign Strategy & Design",
         slug: "campaign-strategy-design",
         description: "Seasonal campaigns, service promotions, and brand-consistent templates for local businesses.",
-        fullDescription: "Local businesses have seasonal patterns and service-specific opportunities. We develop campaign calendars that align with local market rhythms, design templates that reflect brand standards, and create content that gives subscribers value.",
+        fullDescription: "Local businesses have seasonal patterns and service-specific opportunities. We develop campaign calendars that align with local market rhythms, design templates that reflect brand standards, and create content that delivers value.",
         benefits: ["Seasonal relevance", "Brand consistency", "Local market alignment", "Higher engagement", "Professional presentation"],
         deliverables: ["Campaign calendar", "Template design", "Seasonal campaign development", "Service promotion sequences", "A/B testing program", "Performance reporting"],
         process: ["Local market analysis", "Calendar development", "Template design", "Content creation", "Testing and optimization"]
@@ -655,8 +655,8 @@ export const hubs: Hub[] = [
       {
         title: "Performance & Inactivity Management",
         slug: "performance-inactivity-management",
-        description: "Metrics tracking, list hygiene, and subscriber cleanup that maintains program health.",
-        fullDescription: "Healthy email programs require ongoing maintenance. We track key metrics, manage inactive subscribers, and maintain list hygiene. Inactivity management protects deliverability and ensures resources focus on engaged subscribers.",
+        description: "Metrics tracking, list hygiene, and cleanup that maintains program health.",
+        fullDescription: "Healthy email programs require ongoing maintenance. We track key metrics, manage inactive contacts, and maintain list hygiene. Inactivity management protects deliverability and ensures resources focus on engaged customers.",
         benefits: ["Clear performance visibility", "Protected deliverability", "Reduced sending costs", "Higher engagement rates", "Program health maintenance"],
         deliverables: ["Analytics dashboard", "Performance reporting", "Inactivity identification", "Re-engagement sequences", "List pruning protocols", "Ongoing hygiene maintenance"],
         process: ["Tracking setup", "Baseline establishment", "Ongoing monitoring", "Inactivity management", "Regular reporting"]
