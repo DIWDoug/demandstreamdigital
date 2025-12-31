@@ -126,11 +126,37 @@ export const hubs: Hub[] = [
       {
         title: "On-Page Optimization",
         slug: "on-page-optimization",
-        description: "Location-specific title tags, meta descriptions, headers, and content that signals relevance for every target market.",
-        fullDescription: "On-page optimization is where local SEO fundamentals meet strategic execution. We optimize every element that search engines use to understand what your client's pages are about and which geographic areas they serve.",
-        benefits: ["Improved keyword rankings for location-specific searches", "Higher click-through rates from search results", "Better understanding by search engines of service areas", "Enhanced rich snippet opportunities", "Foundation for all other local SEO activities"],
-        deliverables: ["Title tag and meta description optimization", "Header structure optimization (H1-H6)", "Image optimization with geo-relevant alt text", "Internal linking structure", "NAP consistency audit and fixes", "Content optimization for target keywords"],
-        process: ["Comprehensive on-page audit", "Keyword mapping to pages", "Optimization implementation", "Post-implementation verification", "Ongoing monitoring"]
+        description: "Visible and technical on-page elements optimized for search engines and user experience across the entire funnel.",
+        fullDescription: "On-page optimization is part visible, part technical. We optimize every element search engines use to understand page relevance: header hierarchies following natural language and LSI signals, hub-spoke internal linking, content built around topical authority, and technical markup that earns rich results.",
+        benefits: [
+          "Improved keyword rankings through semantic relevance and LSI optimization",
+          "Higher click-through rates from CTR-focused meta descriptions written like ad copy",
+          "Rich snippet eligibility through comprehensive schema markup",
+          "Clear topical authority via hub-spoke content architecture",
+          "Full-funnel coverage from awareness articles to decision-stage content",
+          "Accessibility compliance with descriptive image alt text"
+        ],
+        deliverables: [
+          "Intent-focused title tags (we prioritize intent over arbitrary character limits)",
+          "CTR-optimized meta descriptions following Backlinko best practices",
+          "Header tag hierarchy (H1-H6) aligned with natural language and LSI",
+          "Hub-spoke internal linking structure",
+          "Content optimization based on LSI signals and semantic relevance",
+          "Image alt text optimization for accessibility and SEO",
+          "FAQ content development targeting People Also Ask",
+          "Schema markup: LocalBusiness, Organization, Service, FAQ, Testimonials, About",
+          "Keyword density analysis where still relevant",
+          "Funnel-mapped content: top (awareness), middle (consideration), bottom (decision)"
+        ],
+        process: [
+          "Comprehensive on-page audit using SEMrush methodology",
+          "Keyword mapping to pages with intent classification",
+          "Header hierarchy and content structure planning",
+          "Visible element optimization (titles, metas, headers, content, images)",
+          "Technical markup implementation (schema, structured data)",
+          "Internal linking architecture execution",
+          "Post-implementation verification and ongoing monitoring"
+        ]
       },
       {
         title: "Technical SEO Audits",
