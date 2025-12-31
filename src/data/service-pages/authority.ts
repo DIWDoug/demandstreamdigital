@@ -78,20 +78,20 @@ export const authorityConfig: ServicePageConfig = {
 
   roadmap: {
     eyebrow: "The Framework",
-    headline: "From Baseline to Industry Authority",
+    headline: "From Baseline to Local Authority",
     subheadline: "Authority building is a long-term strategy. Each phase builds leverage for the next. Skipping steps breaks the system.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
-        title: "Audit, Strategy & Initial Outreach",
-        description: "We assess current authority, identify competitive gaps, and establish the foundation for earned credibility.",
+        title: "Audit & Strategy",
+        description: "We assess current authority signals, identify competitive gaps, and map the local link landscape.",
         activities: [
-          "Authority audit (links, mentions, reputation)",
-          "Competitive authority analysis",
-          "Story angle and hook development",
-          "Target media list creation",
-          "Local sponsorship opportunity research",
+          "Backlink profile audit",
+          "Citation audit and cleanup",
+          "Competitor authority analysis",
+          "Local link opportunity research",
+          "Anchor text profile review",
           "Industry directory identification"
         ],
         icon: Shield,
@@ -99,55 +99,54 @@ export const authorityConfig: ServicePageConfig = {
       },
       {
         phase: 2,
-        name: "Momentum",
-        title: "Active Outreach & Placement",
-        description: "Consistent outreach generating coverage, links, and authority signals.",
+        name: "Acquisition",
+        title: "Active Link Building",
+        description: "Consistent outreach generating quality local links and citations.",
         activities: [
-          "Ongoing journalist outreach",
-          "Guest post placement",
-          "Local sponsorship execution",
+          "Local blog and publication outreach",
+          "Community sponsorship execution",
           "Industry directory submissions",
-          "Award identification and submissions",
-          "Reputation monitoring and management",
-          "Link tracking and reporting"
+          "Chamber and association memberships",
+          "Citation building across verticals",
+          "Anchor text diversification"
         ],
         icon: TrendingUp,
         color: "hsl(224, 60%, 55%)"
       },
       {
         phase: 3,
-        name: "Amplification",
-        title: "Leveraging Wins & Expanding Reach",
-        description: "Building on initial success to accelerate authority growth.",
+        name: "Expansion",
+        title: "Deepening Local Presence",
+        description: "Building on initial wins to expand geographic and industry authority.",
         activities: [
-          "Win promotion and amplification",
-          "Case study development",
-          "Thought leadership content",
-          "Speaking opportunity pursuit",
-          "Industry publication relationships",
-          "Award win leveraging"
+          "Secondary market link building",
+          "Niche directory placements",
+          "Local event sponsorships",
+          "Review generation campaigns",
+          "Unstructured citation building",
+          "Guest post placements"
         ],
         icon: Award,
         color: "hsl(35, 90%, 50%)"
       },
       {
         phase: 4,
-        name: "Leadership",
-        title: "Industry Authority & Sustained Credibility",
-        description: "Maintaining and defending authority position while continuing to build.",
+        name: "Maintenance",
+        title: "Sustained Authority & Defense",
+        description: "Protecting rankings and continuing to build competitive advantage.",
         activities: [
-          "Ongoing media relationships",
-          "Competitive authority monitoring",
-          "Crisis preparedness",
-          "Long-term reputation strategy",
-          "Continuous link maintenance",
-          "Quarterly authority reviews"
+          "Ongoing link acquisition",
+          "Competitor monitoring",
+          "Link profile health checks",
+          "Citation consistency audits",
+          "Quarterly authority reviews",
+          "Anchor text rebalancing"
         ],
         icon: Globe,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Foundation typically spans 2-4 months depending on scope and market complexity. Initial wins may appear in 2-3 months. Compounding effects emerge at 6-12 months."
+    footerNote: "Foundation typically spans 2-4 months depending on scope and market complexity. Initial ranking movement may appear in 2-3 months. Compounding effects emerge at 6-12 months."
   },
 
   buildingBlocks: {
