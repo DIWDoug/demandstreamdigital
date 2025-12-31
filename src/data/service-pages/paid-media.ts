@@ -25,18 +25,18 @@ export const paidMediaConfig: ServicePageConfig = {
     painPoints: [
       {
         icon: Target,
-        title: "Generic Campaigns, Generic Results",
-        body: "Cookie-cutter campaign structures ignore local market dynamics. A service business in Dallas competes differently than one in Portland. Template campaigns deliver template results."
+        title: "No Conversion Values Defined",
+        body: "Without conversion values—even arbitrary ones—there is no way to prioritize leads or tell Google what matters. The algorithm optimizes for volume instead of quality, and you cannot prove ROI."
       },
       {
         icon: DollarSign,
-        title: "Spend Without Strategy",
-        body: "Budget goes out the door without clear conversion goals or attribution. When you cannot prove ROI, every invoice becomes a negotiation."
+        title: "Search Terms Go Unchecked",
+        body: "The number one reason campaigns fail is poor search term hygiene. Irrelevant queries drain budget daily while no one reviews and excludes them. This compounds into wasted spend."
       },
       {
         icon: Settings,
         title: "Set It and Forget It Management",
-        body: "Campaigns need daily attention, not weekly glances. Search terms go unchecked, bids drift, and performance degrades while no one is watching."
+        body: "Campaigns need daily attention, not weekly glances. Search terms go unchecked, negative placements pile up, and Performance Max runs wild without proper exclusions."
       },
       {
         icon: FileText,
@@ -95,7 +95,7 @@ export const paidMediaConfig: ServicePageConfig = {
           "Offline conversion setup (if applicable)",
           "Call tracking implementation",
           "Budget allocation framework",
-          "Conversion value definition",
+          "Conversion value definition and hierarchy",
           "Master negative keyword lists (Google)",
           "Mobile app placement exclusions (Google Display)",
           "AdRoll retargeting pixel setup"
