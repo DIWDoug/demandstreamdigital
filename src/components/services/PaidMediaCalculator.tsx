@@ -9,12 +9,12 @@ const PaidMediaCalculator = () => {
   const [msrpMarkup, setMsrpMarkup] = useState<number>(50);
 
   const MIN_BUDGET = 2000;
-  const MIN_SETUP_FEE = 500;
-  const SETUP_FEE_RATE = 0.10;
-  const MIN_MANAGEMENT_FEE = 400;
+  const MIN_SETUP_FEE = 250;
+  const SETUP_FEE_RATE = 0.05;
+  const MIN_MANAGEMENT_FEE = 200;
   const BASE_TIER_LIMIT = 3000;
-  const BASE_TIER_RATE = 0.20;
-  const EXCESS_TIER_RATE = 0.10;
+  const BASE_TIER_RATE = 0.10;
+  const EXCESS_TIER_RATE = 0.05;
 
   const calculations = useMemo(() => {
     const effectiveBudget = Math.max(budget, MIN_BUDGET);
@@ -97,13 +97,13 @@ const PaidMediaCalculator = () => {
             </div>
             <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
               <p className="text-sm text-muted-foreground mb-1">Setup Fee (OEM)</p>
-              <p className="text-2xl font-bold text-foreground">10%</p>
-              <p className="text-xs text-muted-foreground">or $500 min</p>
+              <p className="text-2xl font-bold text-foreground">5%</p>
+              <p className="text-xs text-muted-foreground">or $250 min</p>
             </div>
             <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
               <p className="text-sm text-muted-foreground mb-1">Management (OEM)</p>
-              <p className="text-2xl font-bold text-foreground">20%/10%</p>
-              <p className="text-xs text-muted-foreground">tiered, or $400 min</p>
+              <p className="text-2xl font-bold text-foreground">10%/5%</p>
+              <p className="text-xs text-muted-foreground">tiered, or $200 min</p>
             </div>
           </div>
 
@@ -269,17 +269,17 @@ const PaidMediaCalculator = () => {
                 <div className="space-y-2">
                   <p className="text-foreground font-medium">Setup Fee</p>
                   <ul className="text-muted-foreground space-y-1 pl-4">
-                    <li>• 10% of monthly ad budget</li>
-                    <li>• $500 minimum (whichever is greater)</li>
+                    <li>• 5% of monthly ad budget</li>
+                    <li>• $250 minimum (whichever is greater)</li>
                     <li>• One-time payment</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
                   <p className="text-foreground font-medium">Management Fee</p>
                   <ul className="text-muted-foreground space-y-1 pl-4">
-                    <li>• 20% on first $3,000 of budget</li>
-                    <li>• 10% on budget above $3,000</li>
-                    <li>• $400 minimum (whichever is greater)</li>
+                    <li>• 10% on first $3,000 of budget</li>
+                    <li>• 5% on budget above $3,000</li>
+                    <li>• $200 minimum (whichever is greater)</li>
                   </ul>
                 </div>
               </div>
