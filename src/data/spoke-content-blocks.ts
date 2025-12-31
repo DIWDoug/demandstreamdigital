@@ -189,9 +189,11 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "How often should we clean our list?", answer: "Ongoing. We remove hard bounces immediately and run re-engagement campaigns before removing inactive subscribers." }
   ],
   "automation-flows": [
-    { question: "What automations should we start with?", answer: "Welcome sequence first, then post-purchase follow-up, then abandonment recovery. Build from there based on results." },
+    { question: "What automations should we start with?", answer: "Welcome sequence first, then post-service review requests, then abandonment recovery. Build from there based on results." },
     { question: "How complex can automations get?", answer: "As complex as needed. We build multi-branch flows with conditional logic, but start simple and add complexity based on data." },
-    { question: "Can automations integrate with our CRM?", answer: "Yes. Most major CRMs integrate with email platforms. We ensure data flows correctly in both directions." }
+    { question: "Can automations integrate with our CRM?", answer: "Yes. Most major CRMs integrate with email platforms. Service dates can automatically trigger review request sequences." },
+    { question: "How do you time review request emails?", answer: "Shortly after positive service experience, at peak satisfaction. Follow-up reminder 3-7 days later. The #1 reason customers don't review is they forget." },
+    { question: "What makes a review request email convert?", answer: "Personalization (use name, reference specific service), direct review links (30% skip because process is confusing), and gratitude (63% of reviewers want to show appreciation)." }
   ],
   "newsletter-design": [
     { question: "Do we need to provide design assets?", answer: "Brand guidelines and logo are helpful. We can work with existing templates or create new designs aligned with your brand." },
@@ -1393,13 +1395,28 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "#contact"
     },
     {
+      category: "Review Generation Automation",
+      headline: "Turn Happy Customers Into Reviews",
+      description: "51% of customers leave reviews when asked directly. We build automated sequences timed to peak satisfaction moments with personalization that converts.",
+      subPoints: [
+        { title: "Optimal Timing", description: "Requests triggered shortly after positive service experience. Timing is everything for conversion." },
+        { title: "Personalized Requests", description: "Customer name, specific service referenced. Generic asks get ignored." },
+        { title: "Direct Review Links", description: "Shortened links straight to review form. 30% skip reviews because the process is confusing." },
+        { title: "Follow-Up Reminders", description: "The #1 reason customers don't review: they forget. Automated reminder 3-7 days later." },
+        { title: "Platform Options", description: "54% prefer email, but offer Google, Facebook, Yelp, or industry sites. Let customers choose." },
+        { title: "Gratitude Close", description: "Express appreciation in advance. 63% of reviewers are motivated to show gratitude back." }
+      ],
+      ctaText: "Start Review Automation",
+      ctaHref: "#contact"
+    },
+    {
       category: "Behavioral Triggers",
       headline: "Automated Response to Actions",
       description: "Behavior triggers timely, relevant emails. We set up automations that respond to what subscribers do.",
       subPoints: [
         { title: "Browse Abandonment", description: "Website visitors reminded of viewed content or services." },
         { title: "Cart Abandonment", description: "Incomplete purchases recovered with reminder sequences." },
-        { title: "Purchase Follow-Up", description: "Post-purchase emails request reviews and encourage repeat business." },
+        { title: "Post-Service Sequence", description: "Thank you, review request, and rebooking reminder. Timed for peak satisfaction." },
         { title: "Milestone Emails", description: "Anniversaries, birthdays, and relationship milestones acknowledged." },
         { title: "Re-Engagement", description: "Inactivity triggers win-back campaigns before subscribers go cold." },
         { title: "Lead Nurture", description: "Prospects nurtured through consideration phase to decision." }
@@ -1410,14 +1427,14 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Integration & Workflow",
       headline: "Connected Systems That Work",
-      description: "Email automation depends on data flow. We ensure systems talk to each other seamlessly.",
+      description: "Email automation depends on data flow. We ensure systems talk to each other seamlessly for review requests, follow-ups, and win-back campaigns.",
       subPoints: [
-        { title: "CRM Integration", description: "Customer data synced bidirectionally. Single source of truth." },
-        { title: "Website Triggers", description: "Website actions trigger appropriate email responses." },
+        { title: "CRM Integration", description: "Customer data synced bidirectionally. Service dates trigger review requests automatically." },
+        { title: "Review Platform Links", description: "Dynamic links to Google, Facebook, Yelp, or industry sites based on customer segment." },
         { title: "Lead Scoring", description: "Engagement updates lead scores for sales prioritization." },
-        { title: "API Connections", description: "Custom integrations built for unique business needs." },
+        { title: "SMS Fallback", description: "29% prefer text requests. Automation triggers SMS when email unopened." },
         { title: "Testing Framework", description: "Automation flows tested before activation. Edge cases handled." },
-        { title: "Monitoring", description: "Automation performance monitored. Issues caught quickly." }
+        { title: "Performance Monitoring", description: "Review generation rates tracked. Sequences optimized based on results." }
       ],
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
