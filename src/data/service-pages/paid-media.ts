@@ -289,6 +289,7 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         category: "Partnership & Process",
         items: [
+          { question: "Is there a setup fee?", answer: "Yes. A one-time setup fee covers foundation work including tracking, strategy, and campaign buildout. This ensures campaigns launch correctly the first time." },
           { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you." },
           { question: "Do you provide white-labeled reports?", answer: "Yes. All reporting is branded with your agency logo and colors." },
           { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy." }
