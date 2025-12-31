@@ -46,7 +46,7 @@ export const reportingConfig: ServicePageConfig = {
     ],
     closingLine: "We build reporting that tells the story your clients need to hear.",
     closingHighlight: "Clients understand their value. You keep the revenue you earned.",
-    ctaText: "See How We Build Reports"
+    ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {

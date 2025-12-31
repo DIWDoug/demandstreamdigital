@@ -46,7 +46,7 @@ export const authorityConfig: ServicePageConfig = {
     ],
     closingLine: "We build authority through strategic, earned efforts that create lasting value.",
     closingHighlight: "Your clients become the trusted choice. You keep the margin you earned.",
-    ctaText: "See How We Build Authority"
+    ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {
