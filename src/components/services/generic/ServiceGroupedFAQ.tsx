@@ -33,7 +33,7 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative">
+    <section id="faq" className="py-20 lg:py-28 bg-surface-dark relative">
       {/* FAQ Schema */}
       <script type="application/ld+json">
         {JSON.stringify(faqSchema)}

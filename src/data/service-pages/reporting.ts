@@ -59,22 +59,18 @@ export const reportingConfig: ServicePageConfig = {
     subheadline: "The outcomes your agency experiences when clients understand their value.",
     items: [
       {
-        icon: CheckCircle,
         title: "Retention Improves Dramatically",
         description: "Clients who understand their results stay longer. Clear reporting transforms month-to-month anxiety into long-term partnerships."
       },
       {
-        icon: Users,
         title: "Client Conversations Get Easier",
         description: "When the report tells the story, you do not have to defend value in every call. Reporting becomes a relationship builder, not a chore."
       },
       {
-        icon: TrendingUp,
         title: "Strategy Improves With Data",
         description: "Good reporting is not just for clients. It informs your decisions. Data-driven strategy leads to better results for everyone."
       },
       {
-        icon: Target,
         title: "Upsells Become Natural",
         description: "When clients see clear ROI, investing more makes sense. Reporting that proves value opens the door to expanded scope."
       }

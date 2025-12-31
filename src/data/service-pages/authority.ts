@@ -59,22 +59,18 @@ export const authorityConfig: ServicePageConfig = {
     subheadline: "These outcomes only appear when off-page signals are built correctly and consistently.",
     items: [
       {
-        icon: Shield,
         title: "Rankings That Resist Algorithm Updates",
         description: "Strong backlink profiles create ranking resilience. Sites with real authority recover faster from updates and resist competitive pressure."
       },
       {
-        icon: TrendingUp,
         title: "Compound Growth Over Time",
         description: "Authority builds on itself. Quality links attract more links. Citations reinforce relevance. Each placement makes the next one easier to earn."
       },
       {
-        icon: Users,
         title: "Local Visibility That Sticks",
         description: "Geographic authority signals strengthen local pack and organic positions. Competitors without local link equity struggle to catch up."
       },
       {
-        icon: Award,
         title: "Competitive Differentiation",
         description: "When competitors cannot match your client's backlink profile and citation depth, they cannot compete on equal footing. Authority creates moats."
       }

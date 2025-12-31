@@ -66,22 +66,18 @@ export const googleMapsConfig: ServicePageConfig = {
     subheadline: "What changes as profiles enter the map pack and authority compounds",
     items: [
       {
-        icon: Zap,
         title: "Direct Response From the Map Pack",
         description: "Calls, directions, and website clicks flow directly from optimized profiles without friction or wasted demand."
       },
       {
-        icon: Star,
         title: "GBP and Website Signals in Alignment",
         description: "GBP services and products align directly with the website, creating consistent signals Google can trust."
       },
       {
-        icon: TrendingUp,
         title: "Rich Snippets and 120% Profile Optimization",
         description: "Profiles optimized beyond baseline populate rich snippets automatically. Attributes, services, products, and categories are maximized for visibility."
       },
       {
-        icon: Target,
         title: "Hub-Spoke Content Strategy Execution",
         description: "Service pages, FAQs, and location content are internally linked to create the topical authority required for map pack visibility."
       }
