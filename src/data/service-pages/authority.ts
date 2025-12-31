@@ -10,10 +10,10 @@ export const authorityConfig: ServicePageConfig = {
   keywords: "white label link building, local authority building, citation building, off-page SEO, local link acquisition",
 
   hero: {
-    headline: "White-Label Authority Building",
+    headline: "White-Label Local Authority Building",
     highlightedText: "Services",
     subheadline: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time.",
-    qualifierLine: "White-label authority building for agencies that want defensible rankings and sustainable local visibility.",
+    qualifierLine: "White-label link building and citation management for agencies serving local businesses in competitive markets.",
     ctaText: "Schedule a Discovery Call",
     ctaSubtext: "Start a Conversation"
   },
