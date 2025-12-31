@@ -182,7 +182,15 @@ export const hubs: Hub[] = [
     title: "GBP SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-    heroDescription: "We help agencies dominate Google Maps results for their clients. From GBP optimization to review management, our white-label GBP services ensure your clients appear prominently when local customers search. The local 3-pack drives 42% of clicks on local search results. We help you own it.",
+    heroDescription: {
+      intro: "We help agencies dominate Google Maps results for their clients through white-label GBP optimization built around competitive reality.",
+      bullets: [
+        "No cookie-cutter profile setups",
+        "No generic posting calendars",
+        "No ignoring what competitors are doing"
+      ],
+      closing: "Every engagement is scoped to the local pack landscape, category dynamics, and client capacity so execution matches the market, not a checklist."
+    },
     integrationNote: "GBP SEO, Local SEO, and Authority Building work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
     whyItMatters: {
       headline: "Why GBP SEO Matters for Local Businesses",
@@ -283,7 +291,15 @@ export const hubs: Hub[] = [
     title: "Paid Media",
     slug: "paid-media",
     summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
-    heroDescription: "We manage Google Ads and Meta Ads campaigns that generate qualified local leads at scale. Our white-label paid media services give agencies the expertise to deliver measurable ROI for their clients without building an internal team. Every campaign is built for conversions, not vanity metrics.",
+    heroDescription: {
+      intro: "We manage white-label paid media campaigns built around lead economics, not vanity metrics.",
+      bullets: [
+        "No one-size-fits-all campaign structures",
+        "No set-it-and-forget-it management",
+        "No hiding behind impressions and clicks"
+      ],
+      closing: "Every campaign is scoped to market competition, client economics, and conversion goals so spend matches reality, not a budget template."
+    },
     whyItMatters: {
       headline: "Why Paid Media Matters for Local Businesses",
       description: "While SEO builds long-term visibility, paid media delivers leads today. For businesses that need immediate results or operate in highly competitive markets, paid advertising is often the fastest path to consistent lead generation.",
@@ -383,7 +399,15 @@ export const hubs: Hub[] = [
     title: "Email Marketing",
     slug: "email-marketing",
     summary: "Nurture local customers and drive repeat business through strategic email programs.",
-    heroDescription: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently and drive repeat revenue for your agency's local business clients.",
+    heroDescription: {
+      intro: "We build white-label email programs that turn one-time customers into repeat revenue, not just subscribers.",
+      bullets: [
+        "No blast-and-pray sending",
+        "No ignoring the customer journey",
+        "No automation without strategy"
+      ],
+      closing: "Every program is scoped to customer lifecycle, service frequency, and business goals so emails drive return visits, not unsubscribes."
+    },
     whyItMatters: {
       headline: "Why Email Marketing Matters for Local Businesses",
       description: "Local customers need your client's services periodically, not constantly. Between visits, email keeps the relationship warm, builds authority, and ensures the business is the first call when the need arises.",
@@ -483,7 +507,15 @@ export const hubs: Hub[] = [
     title: "Local Authority Building",
     slug: "local-authority-building",
     summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
-    heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
+    heroDescription: {
+      intro: "We build white-label authority campaigns that make local rankings stick, not just temporarily improve.",
+      bullets: [
+        "No low-quality link farms",
+        "No ignoring anchor text discipline",
+        "No citation blasts without strategy"
+      ],
+      closing: "Every campaign is scoped to competitive gaps, geographic relevance, and long-term stability so authority compounds, not collapses."
+    },
     integrationNote: "Authority Building, Local SEO, and GBP SEO work hand in hand. While each can be engaged independently, they overlap significantly and deliver the strongest results when coordinated as a unified effort.",
     whyItMatters: {
       headline: "Why Local Authority Building Matters",
@@ -584,7 +616,15 @@ export const hubs: Hub[] = [
     title: "Reporting & Analytics",
     slug: "reporting",
     summary: "Transparent dashboards and white-label reports that prove value and retain clients.",
-    heroDescription: "We provide white-label reporting and analytics dashboards that help agencies demonstrate value and retain clients. From rank tracking to ROI analysis, our reporting services give you the data story your clients need to see, presented with your branding and ready for delivery.",
+    heroDescription: {
+      intro: "We build white-label reporting that proves value and retains clients, not just displays data.",
+      bullets: [
+        "No data dumps without narrative",
+        "No vanity metrics that obscure results",
+        "No reports clients don't understand"
+      ],
+      closing: "Every dashboard is scoped to client priorities, KPIs that matter, and the story you need to tell so reporting drives retention, not confusion."
+    },
     whyItMatters: {
       headline: "Why Reporting Matters for Client Retention",
       description: "Clients don't leave agencies because of poor results. They leave because they don't understand their results. Clear, consistent reporting is the difference between retained clients and churned accounts.",
