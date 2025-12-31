@@ -18,8 +18,8 @@ import { authorityConfig } from "@/data/service-pages/authority";
 import { getHubBySlug } from "@/data/services";
 
 const SectionDivider = () => (
-  <div className="w-full">
-    <hr className="border-t border-border/30" />
+  <div className="container mx-auto px-6 lg:px-8">
+    <hr className="border-t border-border/40" />
   </div>
 );
 
@@ -41,6 +41,8 @@ const Authority = () => {
       </Helmet>
       
       <Header />
+      
+      {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title} 
@@ -50,37 +52,50 @@ const Authority = () => {
         />
       </div>
       
+      {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
+      {/* 3. PROBLEM */}
       <ServiceProblemSection config={authorityConfig.problem} />
       
+      <SectionDivider />
+      
+      {/* 4. OUTCOMES */}
       <ServiceOutcomesSection config={authorityConfig.outcomes} />
       
       <SectionDivider />
       
+      {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={authorityConfig.roadmap} />
       
       <SectionDivider />
       
-      <ServiceBuildingBlocksSection config={authorityConfig.buildingBlocks} />
+      {/* 6. BUILDING BLOCKS */}
+      <ServiceBuildingBlocksSection config={authorityConfig.buildingBlocks} hubSlug="local-authority-building" />
       
       <SectionDivider />
       
+      {/* 7. QUALIFICATION */}
       <ServiceFitQualifierSection config={authorityConfig.qualification} />
       
+      {/* 8. TESTIMONIALS */}
       <Testimonials />
       
       <SectionDivider />
       
+      {/* 9. FAQ */}
       <ServiceGroupedFAQ config={authorityConfig.faq} />
       
       <SectionDivider />
       
+      {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={authorityConfig.ecosystem} />
       
+      {/* 11. CONTACT */}
       <ContactForm />
+      
       <Footer />
     </div>
   );
