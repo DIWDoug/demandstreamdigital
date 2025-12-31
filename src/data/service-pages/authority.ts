@@ -166,7 +166,7 @@ export const authorityConfig: ServicePageConfig = {
       {
         title: "Quality Link Acquisition",
         slug: "link-acquisition",
-        description: "Strategic link building from authoritative, relevant sources that improve domain authority and referral traffic.",
+        description: "Strategic link building using proven techniques: Skyscraper, Broken Link Building, Resource Page Outreach, Best-Of Roundups, and Guestographics.",
         icon: Globe
       },
       {
