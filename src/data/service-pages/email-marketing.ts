@@ -160,40 +160,40 @@ export const emailMarketingConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on the local business model, customer base, and goals.",
     blocks: [
       {
-        title: "Permission & List Building",
-        slug: "permission-list-building",
-        description: "Proper opt-in practices and list growth that build a quality audience from day one.",
-        icon: FileText
-      },
-      {
-        title: "Deliverability & Authentication",
-        slug: "deliverability-authentication",
-        description: "SPF, DKIM, DMARC configuration and inbox placement optimization that protects sender reputation.",
-        icon: Settings
-      },
-      {
-        title: "Automated Follow-Ups",
-        slug: "automated-follow-ups",
-        description: "Welcome sequences, post-service follow-ups, and win-back campaigns that work around the clock.",
-        icon: Users
-      },
-      {
-        title: "Local Segmentation",
-        slug: "local-segmentation",
-        description: "Service-based and geographic targeting that delivers relevant offers to the right local customers.",
+        title: "Campaign Strategy",
+        slug: "campaign-strategy",
+        description: "Editorial calendars, seasonal campaigns, and send cadence planning tailored to local business cycles.",
         icon: Target
       },
       {
-        title: "Campaign Strategy & Design",
-        slug: "campaign-strategy-design",
-        description: "Seasonal campaigns, service promotions, and brand-consistent templates for local businesses.",
-        icon: BarChart3
+        title: "List Management",
+        slug: "list-management",
+        description: "Opt-in practices, list hygiene, segmentation, and subscriber cleanup that protects deliverability.",
+        icon: Users
       },
       {
-        title: "Performance & Inactivity Management",
-        slug: "performance-inactivity-management",
-        description: "Metrics tracking, list hygiene, and cleanup that maintains program health.",
-        icon: Zap
+        title: "Automation Flows",
+        slug: "automation-flows",
+        description: "Welcome sequences, post-service follow-ups, win-back campaigns, and review request automations.",
+        icon: Repeat
+      },
+      {
+        title: "Newsletter Design",
+        slug: "newsletter-design",
+        description: "Brand-consistent templates, mobile-optimized layouts, and compelling visual design.",
+        icon: FileText
+      },
+      {
+        title: "A/B Testing",
+        slug: "ab-testing",
+        description: "Subject line testing, send time optimization, and content experiments that improve performance.",
+        icon: Settings
+      },
+      {
+        title: "Performance Analytics",
+        slug: "performance-analytics",
+        description: "Open rates, click rates, conversion tracking, and revenue attribution reporting.",
+        icon: BarChart3
       }
     ]
   },
