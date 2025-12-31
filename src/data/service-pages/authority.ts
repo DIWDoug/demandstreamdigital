@@ -26,22 +26,22 @@ export const authorityConfig: ServicePageConfig = {
       {
         icon: Globe,
         title: "Links Without Relevance",
-        body: "Quantity over quality. Generic placements Google ignores or penalizes."
+        body: "Quantity over quality. Generic placements Google ignores or penalizes. The link count grows, but rankings never move."
       },
       {
         icon: FileText,
         title: "PR Without Pickup",
-        body: "Press releases sent to wires no journalist reads. No earned coverage."
+        body: "Press releases sent to wires no journalist reads. No earned coverage. Money spent on distribution with nothing to show for it."
       },
       {
         icon: Shield,
         title: "No Strategy, Just Tactics",
-        body: "Disconnected efforts that never compound into credibility."
+        body: "Disconnected efforts that never compound into credibility. Random acts of link building without a coherent authority plan."
       },
       {
         icon: Users,
         title: "Missing Local Authority Signals",
-        body: "National links for local businesses. No geographic trust signals."
+        body: "National links for local businesses. No geographic trust signals. The community connections that move local rankings are ignored."
       }
     ],
     closingLine: "We build authority the hard way: strategically, earned, and compounding.",
