@@ -126,11 +126,11 @@ export const spokeKeywordMap: Record<string, string> = {
   
   // Reporting spokes
   'white-label-dashboards': 'business dashboard analytics screen report',
-  'monthly-reports': 'report document analytics charts professional',
-  'rank-tracking': 'ranking growth chart analytics upward',
-  'call-tracking': 'phone call business communication mobile',
-  'roi-analysis': 'investment return profit growth chart finance',
-  'client-presentations': 'presentation meeting boardroom professional business'
+  'monthly-performance-reports': 'report document analytics charts professional',
+  'rank-tracking-visibility': 'ranking growth chart analytics upward',
+  'call-tracking-lead-attribution': 'phone call business communication mobile',
+  'roi-revenue-analysis': 'investment return profit growth chart finance',
+  'client-presentation-decks': 'presentation meeting boardroom professional business'
 };
 
 /**

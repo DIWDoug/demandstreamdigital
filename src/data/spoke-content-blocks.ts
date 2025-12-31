@@ -288,27 +288,27 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What data sources can you connect?", answer: "Most major platforms with APIs: Google Analytics, Search Console, Ads, Meta, call tracking, CRMs, and more." },
     { question: "How often does dashboard data update?", answer: "Most data refreshes daily. Some sources update hourly. Real-time for certain metrics." }
   ],
-  "monthly-reports": [
+  "monthly-performance-reports": [
     { question: "When are monthly reports delivered?", answer: "By the 5th of each month for the previous month's data. Consistent timing you can count on." },
     { question: "Can we customize report format?", answer: "Yes. We adjust KPIs, sections, detail level, and format based on each client's needs and preferences." },
     { question: "Do you provide talking points for client calls?", answer: "Yes. Each report includes key points, wins to highlight, and suggested framing for challenges." }
   ],
-  "rank-tracking": [
+  "rank-tracking-visibility": [
     { question: "How often do you check rankings?", answer: "Weekly standard. Daily tracking available for competitive situations or during active campaigns." },
     { question: "Do you track mobile and desktop separately?", answer: "Yes. Mobile and desktop rankings can differ significantly. We track both independently." },
     { question: "What about local pack vs organic rankings?", answer: "We track both. Local 3-pack positions are tracked separately from organic website rankings." }
   ],
-  "call-tracking": [
+  "call-tracking-lead-attribution": [
     { question: "Do callers see tracking numbers or real numbers?", answer: "They see tracking numbers that forward instantly to real numbers. Call quality is identical." },
     { question: "Can you use our local area codes?", answer: "Yes. We provision local numbers that match your market for caller trust." },
     { question: "Are calls recorded?", answer: "Recording is optional and disclosed per legal requirements. It's valuable for quality assurance and lead qualification." }
   ],
-  "roi-analysis": [
+  "roi-revenue-analysis": [
     { question: "What if we can't track revenue directly?", answer: "We use lead values based on close rates and average transaction values. Directional ROI is still calculable." },
     { question: "How accurate is ROI calculation?", answer: "Accuracy depends on data quality. With good tracking and CRM integration, we can be very precise. Without, we use reasonable estimates." },
     { question: "Can you prove marketing is profitable?", answer: "In most cases, yes. Clear attribution, reasonable lead values, and consistent tracking let us demonstrate return." }
   ],
-  "client-presentations": [
+  "client-presentation-decks": [
     { question: "Can you present directly to our clients?", answer: "We operate white-label, so you present. But we can join calls for technical questions if introduced appropriately." },
     { question: "What format are presentations?", answer: "PowerPoint/Google Slides standard. PDF exports available. Screen-share optimized." },
     { question: "How far in advance do you need for presentation prep?", answer: "3-5 business days ideal. Rush turnaround possible for existing clients with established templates." }
@@ -2064,7 +2064,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "monthly-reports": [
+  "monthly-performance-reports": [
     {
       category: "Report Structure",
       headline: "Reports That Tell the Story",
@@ -2112,7 +2112,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "rank-tracking": [
+  "rank-tracking-visibility": [
     {
       category: "Tracking Setup",
       headline: "Track What Matters Where It Matters",
@@ -2160,7 +2160,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "call-tracking": [
+  "call-tracking-lead-attribution": [
     {
       category: "Tracking Implementation",
       headline: "Know Where Every Call Comes From",
@@ -2208,7 +2208,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "roi-analysis": [
+  "roi-revenue-analysis": [
     {
       category: "Attribution Framework",
       headline: "Connect Marketing to Revenue",
@@ -2256,7 +2256,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "client-presentations": [
+  "client-presentation-decks": [
     {
       category: "Presentation Design",
       headline: "Slides That Impress and Inform",
