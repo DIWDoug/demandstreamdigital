@@ -26,56 +26,107 @@ export interface ContentBlock {
   ctaHref?: string;
 }
 
+export interface SpokeFAQ {
+  question: string;
+  answer: string;
+}
+
+// Spoke-specific FAQs
+export const spokeFAQs: Record<string, SpokeFAQ[]> = {
+  "on-page-optimization": [
+    { question: "How long until on-page changes affect rankings?", answer: "Most on-page optimizations show measurable impact within 2-4 weeks as Google recrawls and reindexes updated pages. Competitive keywords may take 2-3 months for full effect." },
+    { question: "Do you rewrite all content or just optimize it?", answer: "We optimize existing content structure, headings, and keyword placement. Full rewrites are only recommended when content quality or search intent alignment requires it." },
+    { question: "How do you handle pages already ranking well?", answer: "We apply conservative changes to protect existing rankings while testing improvements. High-performing pages get monitoring rather than aggressive optimization." },
+    { question: "What access do you need for on-page work?", answer: "CMS access for content updates, Google Search Console for performance data, and ideally Analytics access to track user behavior changes." },
+    { question: "Do you optimize for voice search and AI?", answer: "Yes. FAQ sections, semantic chunking, and quotable statements are structured for LLM extraction and voice search snippets." }
+  ],
+  "technical-seo-audits": [
+    { question: "How long does a technical SEO audit take?", answer: "A comprehensive technical audit typically takes 5-7 business days depending on site size. Enterprise sites with thousands of pages may require additional time." },
+    { question: "Do you implement fixes or just provide recommendations?", answer: "We provide prioritized recommendations with implementation specifications. For clients with developer resources, we provide specs. For others, we can implement directly." },
+    { question: "What tools do you use for technical audits?", answer: "Screaming Frog, Sitebulb, Google Search Console, PageSpeed Insights, and custom crawl configurations. We validate findings across multiple tools." },
+    { question: "How do you prioritize technical fixes?", answer: "Issues are ranked by impact on crawlability, indexation, and Core Web Vitals. Critical blockers first, then high-impact quick wins, then incremental improvements." },
+    { question: "Do you audit mobile and desktop separately?", answer: "Google uses mobile-first indexing, so mobile is primary. We audit both but prioritize mobile performance and usability issues." }
+  ],
+  "local-keyword-strategy": [
+    { question: "How many keywords do you research per market?", answer: "We focus on quality over quantity. Typically 50-200 highly relevant keywords per service area, mapped by intent and priority rather than bulk lists." },
+    { question: "Do you account for 'near me' searches?", answer: "Absolutely. 'Near me' and implicit local queries are core to local keyword strategy. We map these to appropriate page types and GBP optimization." },
+    { question: "How often should keyword strategy be updated?", answer: "Full strategy reviews quarterly. Ongoing monitoring catches new opportunities and shifting search patterns between reviews." },
+    { question: "What data sources do you use?", answer: "Search Console impression data, SEMrush/Ahrefs for volume estimates, Google Ads Keyword Planner for local modifiers, and SERP analysis for intent validation." },
+    { question: "How do you handle multi-location keyword mapping?", answer: "Each location gets distinct keyword mapping to prevent cannibalization. Hub pages target broader terms while location pages target geo-modified queries." }
+  ],
+  "content-development": [
+    { question: "Who writes the content?", answer: "Our in-house content team with local SEO expertise. We never use AI-generated content without substantial human editing and subject matter expertise." },
+    { question: "How do you ensure content is unique per location?", answer: "Each location page includes market-specific details: local landmarks, regulations, service area specifics, and unique value propositions. No find-and-replace templates." },
+    { question: "What is your content approval process?", answer: "Draft delivered for review, single revision round included, then final approval before publishing. Additional revisions available at added cost." },
+    { question: "Do you provide ongoing content or one-time pieces?", answer: "Both. We offer one-time content projects and monthly retainer packages for ongoing blog content, location pages, and content refreshes." },
+    { question: "How do you optimize content for featured snippets?", answer: "Structured formatting with clear definitions, numbered lists, and direct answers to common questions. FAQ sections specifically target People Also Ask." }
+  ],
+  "link-building": [
+    { question: "What types of links do you build?", answer: "Editorial links from local news, industry publications, chamber of commerce directories, local sponsorships, and guest contributions. No PBNs or paid link schemes." },
+    { question: "How many links per month should we expect?", answer: "Quality over quantity. Typically 5-15 relevant links monthly depending on campaign scope. One link from a trusted local source beats 50 low-quality submissions." },
+    { question: "Do you build links to specific pages or just homepage?", answer: "Strategic distribution. Homepage and service pages for authority, location pages for geographic signals, and blog content for topical relevance." },
+    { question: "How do you measure link building success?", answer: "Referring domain growth, Domain Rating/Authority changes, ranking improvements for targeted pages, and referral traffic from acquired links." },
+    { question: "What is your approach to anchor text?", answer: "Natural distribution: branded anchors, naked URLs, generic terms, and occasional keyword-rich anchors. Over-optimization triggers penalties." }
+  ],
+  "schema-markup": [
+    { question: "What schema types do you implement?", answer: "LocalBusiness, Organization, Service, FAQ, Review, Breadcrumb, and Article schema. Additional types added based on content and rich result opportunities." },
+    { question: "How do you test schema implementation?", answer: "Google Rich Results Test, Schema.org validator, and Search Console enhancement reports. We verify eligibility for all applicable rich results." },
+    { question: "Does schema directly improve rankings?", answer: "Schema itself is not a direct ranking factor. However, rich results from schema can significantly improve click-through rates, which indirectly benefits rankings." },
+    { question: "How often should schema be updated?", answer: "Updated when business information changes, new services are added, or Google announces new supported schema types. Quarterly reviews recommended." },
+    { question: "Can schema help with AI search visibility?", answer: "Yes. Structured data helps LLMs understand entity relationships, business details, and content structure. Clean schema improves chances of accurate AI citations." }
+  ]
+};
+
 export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "on-page-optimization": [
     {
       category: "Title Tags & Meta Descriptions",
-      headline: "Click-Worthy Titles That Rank and Convert",
-      description: "Title tags give search engines a high-level overview of what your page is about. We optimize them for both rankings and click-through rate, because showing up is only half the battle.",
+      headline: "Titles That Rank and Drive Clicks",
+      description: "Title tags give search engines a high-level overview of what your page is about. We optimize them for both rankings and click-through rate.",
       subPoints: [
-        { title: "Keyword Placement Strategy", description: "Target keywords placed near the front of the title tag. The closer to the beginning, the stronger the relevance signal." },
-        { title: "Character Length Optimization", description: "Titles kept between 50-60 characters to display fully in search results. Longer when context demands it." },
-        { title: "CTR-Boosting Modifiers", description: "Strategic use of modifiers like 'best,' 'guide,' and location terms to capture long-tail variations." },
-        { title: "Unique Descriptions Per Page", description: "Every page gets a distinct meta description written like ad copy. Google bolds matching terms, which lifts click-through rates." },
-        { title: "Emotional Resonance Without Clickbait", description: "Positive emotional triggers in titles increase CTR by 4%. We use them strategically without crossing into spam territory." },
-        { title: "Freshness Signals", description: "Current year added to titles and descriptions for time-sensitive content. Users want to know your information is current." }
+        { title: "Keyword Placement", description: "Target keywords placed near the front of the title tag. The closer to the beginning, the stronger the relevance signal." },
+        { title: "Character Limits", description: "Titles kept between 50-60 characters to display fully in search results without truncation." },
+        { title: "CTR Modifiers", description: "Strategic use of modifiers like 'best,' 'guide,' and location terms to capture long-tail variations." },
+        { title: "Unique Descriptions", description: "Every page gets a distinct meta description written like ad copy. Google bolds matching terms." },
+        { title: "Emotional Triggers", description: "Positive emotional hooks in titles increase CTR by 4%. Used strategically, never as clickbait." },
+        { title: "Freshness Signals", description: "Current year added to titles for time-sensitive content. Users want current information." }
       ],
       imageSrc: visibleElementsImg,
-      imageAlt: "SEO mind map showing titles, metas, headers, links, and images",
+      imageAlt: "Title and meta optimization diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
       category: "Content Structure & Keywords",
-      headline: "Strategic Keyword Placement That Signals Relevance",
-      description: "Keywords still matter. But placement, frequency, and context matter more. We optimize content so search engines confidently understand what each page is about.",
+      headline: "Keyword Placement That Signals Relevance",
+      description: "Keywords still matter. Placement, frequency, and context matter more. We optimize content so search engines understand what each page is about.",
       subPoints: [
-        { title: "First 100 Words Rule", description: "Primary keyword appears early in the content. Google weights terms higher when they show up at the beginning." },
-        { title: "Header Hierarchy (H1-H6)", description: "Single H1 per page with target keyword. Subheadings (H2-H6) use semantic variations to reinforce topical coverage." },
-        { title: "Natural Keyword Frequency", description: "Target keywords mentioned multiple times without stuffing. Enough repetition to confirm the topic, not enough to trigger penalties." },
-        { title: "Long-Tail Integration", description: "Related phrases from 'People Also Ask' and 'Related Searches' woven into content for broader coverage." },
-        { title: "Semantic Chunking for LLMs", description: "Content broken into clearly defined sections with descriptive subheads. Each section answers a specific question completely." },
-        { title: "FAQ Sections for AI Visibility", description: "Real questions answered in dedicated FAQ blocks. LLMs extract and cite these more reliably than buried paragraphs." }
+        { title: "First 100 Words", description: "Primary keyword appears early. Google weights terms higher when they show up at the beginning." },
+        { title: "Header Hierarchy", description: "Single H1 with target keyword. Subheadings use semantic variations to reinforce topical coverage." },
+        { title: "Natural Frequency", description: "Target keywords mentioned multiple times without stuffing. Confirm the topic, avoid penalties." },
+        { title: "Long-Tail Phrases", description: "Related phrases from 'People Also Ask' woven into content for broader coverage." },
+        { title: "LLM-Ready Chunks", description: "Content broken into clear sections with descriptive subheads. Each section answers one question." },
+        { title: "FAQ for AI", description: "Real questions in dedicated FAQ blocks. LLMs extract these more reliably than buried paragraphs." }
       ],
       imageSrc: technicalMarkupImg,
-      imageAlt: "Content structure diagram showing headers, keywords, and semantic organization",
+      imageAlt: "Content structure and keyword hierarchy diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     },
     {
       category: "Internal Links & Images",
-      headline: "The Hidden Signals That Compound Authority",
-      description: "Internal links distribute authority across your site. Optimized images add context for both users and crawlers. Together, they create a web of relevance signals.",
+      headline: "Hidden Signals That Build Authority",
+      description: "Internal links distribute authority. Optimized images add context for users and crawlers. Together, they compound relevance signals.",
       subPoints: [
-        { title: "Authority Flow Strategy", description: "Links from high-authority pages directed to pages that need ranking boosts. Deliberate internal linking, not random footer links." },
-        { title: "Keyword-Rich Anchor Text", description: "Descriptive anchor text that tells users and search engines what the linked page is about. Natural language, not forced keywords." },
-        { title: "Hub-Spoke Architecture", description: "Pillar pages connected to supporting content. Every page belongs to a topical cluster with clear internal pathways." },
-        { title: "Image Filename Optimization", description: "Descriptive filenames that include relevant keywords. 'on-page-seo-checklist.png' instead of 'IMG_4521.jpg'." },
-        { title: "Alt Text for Accessibility & SEO", description: "Every image gets descriptive alt text that serves screen readers and adds another relevance signal for search engines." },
-        { title: "SEO-Friendly URLs", description: "Short, keyword-inclusive URLs that communicate page topic at a glance. No unnecessary parameters or session IDs." }
+        { title: "Authority Flow", description: "Links from high-authority pages directed to pages that need ranking boosts. Deliberate, not random." },
+        { title: "Anchor Text", description: "Descriptive anchors that tell users and search engines what the linked page covers. Natural language." },
+        { title: "Hub-Spoke Links", description: "Pillar pages connected to supporting content. Every page belongs to a topical cluster." },
+        { title: "Image Filenames", description: "Descriptive filenames with keywords. 'on-page-seo-checklist.png' not 'IMG_4521.jpg'." },
+        { title: "Alt Text", description: "Every image gets descriptive alt text for accessibility and SEO relevance signals." },
+        { title: "Clean URLs", description: "Short, keyword-inclusive URLs. No parameters or session IDs cluttering the path." }
       ],
       imageSrc: fullFunnelImg,
-      imageAlt: "Internal linking structure diagram",
+      imageAlt: "Internal linking architecture diagram",
       ctaText: "Get a Custom Audit",
       ctaHref: "#contact"
     }
@@ -83,53 +134,53 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "technical-seo-audits": [
     {
-      category: "Crawlability & Site Architecture",
-      headline: "Technical Foundations That Rankings Require",
-      description: "Technical SEO issues silently kill rankings. If search engines cannot find, crawl, or understand your content, nothing else matters. We audit the invisible infrastructure first.",
+      category: "Crawlability & Architecture",
+      headline: "Technical Foundations for Rankings",
+      description: "Technical SEO issues silently kill rankings. If search engines cannot crawl and understand your content, nothing else matters.",
       subPoints: [
-        { title: "Crawl Budget Analysis", description: "Identify what search engines can and cannot access. Fix blocked resources, infinite loops, and crawl traps that waste your budget." },
-        { title: "Site Structure Optimization", description: "Clear hierarchy that distributes authority efficiently. Important pages within 3 clicks of the homepage." },
-        { title: "XML Sitemap Configuration", description: "Sitemaps that include only indexable, canonical URLs. No redirects, no 404s, no noindexed pages." },
-        { title: "Robots.txt Audit", description: "Directives reviewed to ensure critical resources are not accidentally blocked. JavaScript and CSS accessible to crawlers." },
-        { title: "Internal Link Architecture", description: "Strategic linking from high-authority pages to priority targets. Orphan pages identified and connected." },
-        { title: "URL Structure Review", description: "Clean, logical URL paths. No dynamic parameters, session IDs, or unnecessary depth." }
+        { title: "Crawl Budget", description: "Identify blocked resources, infinite loops, and crawl traps that waste your crawl budget." },
+        { title: "Site Structure", description: "Clear hierarchy that distributes authority. Important pages within 3 clicks of homepage." },
+        { title: "XML Sitemaps", description: "Sitemaps with only indexable, canonical URLs. No redirects, 404s, or noindexed pages." },
+        { title: "Robots.txt", description: "Directives reviewed so critical resources are not accidentally blocked from crawlers." },
+        { title: "Internal Links", description: "Strategic linking from authority pages to priority targets. Orphan pages identified." },
+        { title: "URL Structure", description: "Clean, logical paths. No dynamic parameters, session IDs, or unnecessary depth." }
       ],
       imageSrc: technicalSeoImg,
-      imageAlt: "Technical SEO mind map showing Speed, Audit, Crawl, and Index",
+      imageAlt: "Site architecture and crawlability diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Core Web Vitals & Page Experience",
-      headline: "Page Speed That Affects Rankings and Revenue",
-      description: "Google uses page experience signals as ranking factors. Slow pages lose visitors before they even see your content. We optimize the metrics that move the needle.",
+      category: "Core Web Vitals",
+      headline: "Page Speed That Affects Rankings",
+      description: "Google uses page experience as a ranking factor. Slow pages lose visitors before they see your content.",
       subPoints: [
-        { title: "Largest Contentful Paint (LCP)", description: "Main content loads within 2.5 seconds. Server response, render-blocking resources, and image optimization addressed." },
-        { title: "Interaction to Next Paint (INP)", description: "Pages respond to user interactions within 200 milliseconds. JavaScript execution optimized for responsiveness." },
-        { title: "Cumulative Layout Shift (CLS)", description: "Visual stability maintained during load. No unexpected layout shifts that frustrate users or hurt rankings." },
-        { title: "Mobile-First Performance", description: "Responsive design, appropriate touch targets, and viewport configuration. Mobile experience prioritized since that is how Google indexes." },
-        { title: "Image Optimization", description: "Proper formats (WebP, AVIF), lazy loading for below-fold images, and appropriate sizing to reduce payload." },
-        { title: "Third-Party Script Audit", description: "External scripts evaluated for performance impact. Defer, async, or remove what is slowing the page down." }
+        { title: "LCP Optimization", description: "Main content loads within 2.5 seconds. Server response and render-blocking resources addressed." },
+        { title: "INP Performance", description: "Pages respond to interactions within 200ms. JavaScript execution optimized for speed." },
+        { title: "CLS Prevention", description: "Visual stability during load. No unexpected layout shifts that hurt rankings." },
+        { title: "Mobile-First", description: "Responsive design with proper touch targets. Mobile experience prioritized for indexing." },
+        { title: "Image Formats", description: "WebP/AVIF formats, lazy loading, and proper sizing to reduce payload." },
+        { title: "Script Audit", description: "External scripts evaluated for impact. Defer, async, or remove what slows the page." }
       ],
       imageSrc: technicalSeoImg,
-      imageAlt: "Technical SEO performance metrics",
+      imageAlt: "Core Web Vitals performance metrics",
       ctaText: "Get a Technical Audit",
       ctaHref: "#contact"
     },
     {
-      category: "Indexation & Structured Data",
-      headline: "Every Important Page Indexed. Every Rich Result Earned.",
-      description: "If search engines cannot index your pages, they cannot rank them. Schema markup unlocks rich results that increase visibility and click-through rates.",
+      category: "Indexation & Schema",
+      headline: "Every Page Indexed. Rich Results Earned.",
+      description: "If search engines cannot index pages, they cannot rank them. Schema unlocks rich results that boost visibility.",
       subPoints: [
-        { title: "Index Coverage Analysis", description: "Google Search Console data reviewed to identify excluded, errored, and crawled-but-not-indexed pages. Root causes fixed." },
-        { title: "Duplicate Content Resolution", description: "Canonical tags properly implemented. Competing pages consolidated to concentrate authority." },
-        { title: "Redirect Chain Cleanup", description: "Redirect chains and loops eliminated. Direct paths from old URLs to current destinations." },
-        { title: "Schema Markup Implementation", description: "LocalBusiness, FAQ, Review, Service, and Organization schema added where appropriate. Validated for rich result eligibility." },
-        { title: "Rich Snippet Optimization", description: "FAQ schema targets People Also Ask. Product and review schema displays ratings in search results." },
-        { title: "HTTPS & Security", description: "Secure protocol confirmed site-wide. Mixed content issues resolved. Security headers reviewed." }
+        { title: "Index Coverage", description: "Search Console data reviewed for excluded and errored pages. Root causes fixed." },
+        { title: "Duplicate Resolution", description: "Canonical tags properly implemented. Competing pages consolidated." },
+        { title: "Redirect Cleanup", description: "Redirect chains eliminated. Direct paths from old URLs to destinations." },
+        { title: "Schema Implementation", description: "LocalBusiness, FAQ, Review, and Service schema added and validated." },
+        { title: "Rich Snippets", description: "FAQ schema targets PAA. Product schema displays ratings in results." },
+        { title: "Security & HTTPS", description: "Secure protocol confirmed. Mixed content resolved. Security headers reviewed." }
       ],
-      imageSrc: technicalSeoImg,
-      imageAlt: "Technical SEO indexation diagram",
+      imageSrc: schemaMarkupImg,
+      imageAlt: "Indexation and structured data diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
@@ -137,53 +188,53 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "local-keyword-strategy": [
     {
-      category: "Market Research & Discovery",
-      headline: "Finding What Your Market Actually Searches",
-      description: "Effective local SEO starts with understanding real search behavior in each specific market. Generic keyword lists miss the nuances that drive local rankings.",
+      category: "Market Research",
+      headline: "Find What Your Market Searches",
+      description: "Effective local SEO starts with understanding real search behavior in each market. Generic lists miss the nuances.",
       subPoints: [
-        { title: "Local Search Volume Analysis", description: "Search demand varies dramatically by city. We analyze volume patterns specific to each geographic market, not just national averages." },
-        { title: "Competitor Keyword Mining", description: "Identify every keyword your competitors rank for. Find the gaps where they are weak and the opportunities they have missed entirely." },
-        { title: "Long-Tail Opportunity Discovery", description: "Lower-competition phrases with high conversion intent. These are often the queries closest to a purchase decision." },
-        { title: "People Also Ask Expansion", description: "Google's PAA boxes reveal the questions people actually ask. Each question becomes a content opportunity." },
-        { title: "Seasonal Trend Mapping", description: "Search demand fluctuates throughout the year. We map patterns to plan content before demand peaks, not after." },
-        { title: "Search Console Data Mining", description: "Your existing impressions reveal keywords you are already close to ranking for. Low-hanging fruit identified first." }
+        { title: "Local Volume", description: "Search demand analyzed per city, not national averages. Markets differ dramatically." },
+        { title: "Competitor Mining", description: "Every keyword competitors rank for identified. Gaps and opportunities found." },
+        { title: "Long-Tail Discovery", description: "Lower-competition phrases with high conversion intent. Closest to purchase decisions." },
+        { title: "PAA Expansion", description: "Google's People Also Ask reveals real questions. Each becomes content opportunity." },
+        { title: "Seasonal Mapping", description: "Demand fluctuations tracked. Content planned before peaks, not after." },
+        { title: "GSC Mining", description: "Existing impressions reveal keywords you almost rank for. Low-hanging fruit first." }
       ],
       imageSrc: keywordStrategyImg,
-      imageAlt: "Keywords mind map showing Intent, Volume, Local, Gaps, and Map",
+      imageAlt: "Local keyword research methodology",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
       category: "Intent Classification",
       headline: "Understanding Why People Search",
-      description: "Search intent determines what content should rank. A page optimized for the wrong intent will never reach page one, no matter how well it is written.",
+      description: "Search intent determines what content should rank. Wrong intent means page one is impossible.",
       subPoints: [
-        { title: "Informational Intent", description: "Users seeking answers and education. These queries need blog posts, guides, and how-to content. They build topical authority." },
-        { title: "Commercial Investigation", description: "Users comparing options before deciding. Comparison pages, reviews, and 'best of' lists capture this stage of the journey." },
-        { title: "Transactional Intent", description: "Users ready to take action. Service pages with clear calls to action and trust signals convert these searches." },
-        { title: "Local Intent Signals", description: "Queries with 'near me,' city names, or proximity modifiers trigger the local pack. Different optimization required." },
-        { title: "SERP Feature Analysis", description: "The results Google shows reveal what it thinks the intent is. We analyze the SERP before targeting any keyword." },
-        { title: "Intent Mismatch Identification", description: "Existing pages targeting the wrong intent are identified. Content realigned or new pages created to match." }
+        { title: "Informational", description: "Users seeking education. Blog posts, guides, and how-to content. Builds authority." },
+        { title: "Commercial", description: "Users comparing options. Comparison pages and reviews capture this stage." },
+        { title: "Transactional", description: "Users ready to act. Service pages with clear CTAs convert these searches." },
+        { title: "Local Signals", description: "'Near me' and city terms trigger local pack. Different optimization required." },
+        { title: "SERP Analysis", description: "Results Google shows reveal intent. We analyze before targeting any keyword." },
+        { title: "Mismatch Fixes", description: "Pages targeting wrong intent identified. Content realigned or pages created." }
       ],
       imageSrc: keywordStrategyImg,
-      imageAlt: "Keyword intent classification diagram",
+      imageAlt: "Search intent classification framework",
       ctaText: "Get Keyword Strategy",
       ctaHref: "#contact"
     },
     {
-      category: "Strategic Keyword Mapping",
+      category: "Strategic Mapping",
       headline: "Every Keyword Mapped to a Page",
-      description: "Keywords without a destination are wasted opportunities. Keyword cannibalization happens when multiple pages compete for the same term. We prevent both.",
+      description: "Keywords without destinations are wasted. Cannibalization splits authority. We prevent both.",
       subPoints: [
-        { title: "One Keyword, One Page", description: "Each target keyword assigned to exactly one page. No internal competition, no diluted authority." },
-        { title: "Content Gap Identification", description: "Keywords that need new pages are flagged. The content roadmap prioritizes highest-impact opportunities." },
-        { title: "Cannibalization Resolution", description: "Existing pages competing for the same keywords are consolidated or differentiated. Authority concentrated, not split." },
-        { title: "Priority Scoring", description: "Keywords ranked by a combination of volume, difficulty, intent, and business value. Resources focused on highest ROI targets." },
-        { title: "Topical Cluster Planning", description: "Keywords grouped into hub-spoke clusters. Each cluster builds authority for a core topic through comprehensive coverage." },
-        { title: "Rank Tracking Configuration", description: "Target keywords added to tracking tools with proper geo-targeting. Progress measured against mapped destinations." }
+        { title: "One-to-One Mapping", description: "Each keyword assigned to one page. No internal competition or diluted authority." },
+        { title: "Gap Identification", description: "Keywords needing new pages flagged. Roadmap prioritizes highest impact." },
+        { title: "Cannibalization Fix", description: "Competing pages consolidated or differentiated. Authority concentrated." },
+        { title: "Priority Scoring", description: "Keywords ranked by volume, difficulty, intent, and value. Focus on ROI." },
+        { title: "Cluster Planning", description: "Keywords grouped into hub-spoke clusters for comprehensive topical coverage." },
+        { title: "Tracking Setup", description: "Target keywords added to tools with geo-targeting. Progress measured." }
       ],
       imageSrc: keywordStrategyImg,
-      imageAlt: "Keyword mapping strategy diagram",
+      imageAlt: "Keyword-to-page mapping strategy",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
@@ -191,53 +242,53 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "content-development": [
     {
-      category: "Location-Specific Service Pages",
-      headline: "Service Content That Signals Local Relevance",
-      description: "Generic service pages do not rank in local search. Google needs proof that you serve specific markets. We create content that provides that proof without looking templated.",
+      category: "Location Pages",
+      headline: "Content That Signals Local Relevance",
+      description: "Generic service pages do not rank locally. Google needs proof you serve specific markets.",
       subPoints: [
-        { title: "City-Specific Service Pages", description: "Unique content for each service area. Not find-and-replace templates with city names swapped. Genuinely distinct pages." },
-        { title: "Local Context Integration", description: "References to neighborhoods, landmarks, local regulations, and market conditions. Signals that you actually operate there." },
-        { title: "Service Area Hierarchy", description: "Primary locations get comprehensive pages. Secondary areas get appropriate coverage without cannibalizing the core." },
-        { title: "Conversion-Focused Structure", description: "Clear calls to action, local phone numbers, embedded maps, and trust signals specific to each location." },
-        { title: "Schema Integration", description: "LocalBusiness and Service schema embedded on every location page. Eligibility for rich results established." },
-        { title: "Internal Link Architecture", description: "Location pages connected to the hub structure. Authority flows from pillar content to local landing pages." }
+        { title: "City-Specific Pages", description: "Unique content per service area. Not templates with city names swapped." },
+        { title: "Local Context", description: "Neighborhoods, landmarks, regulations. Signals that you operate there." },
+        { title: "Area Hierarchy", description: "Primary locations get comprehensive pages. Secondary areas get appropriate depth." },
+        { title: "Conversion Focus", description: "Local phone numbers, embedded maps, and location-specific trust signals." },
+        { title: "Schema Integration", description: "LocalBusiness and Service schema on every location page." },
+        { title: "Link Architecture", description: "Location pages connected to hub structure. Authority flows properly." }
       ],
       imageSrc: contentDevelopmentImg,
-      imageAlt: "Content mind map showing Service, Location, Blog, FAQ, and Guide",
+      imageAlt: "Location page content structure",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Blog & Topical Authority",
-      headline: "Content Clusters That Make Service Pages Rank",
-      description: "Service pages alone rarely rank for competitive terms. Supporting content builds the topical authority that signals expertise to search engines and LLMs.",
+      category: "Blog & Authority",
+      headline: "Clusters That Make Service Pages Rank",
+      description: "Service pages alone rarely rank competitively. Supporting content builds topical authority.",
       subPoints: [
-        { title: "Hub-Spoke Architecture", description: "Pillar pages cover core topics comprehensively. Supporting articles link back and cover subtopics in depth." },
-        { title: "FAQ Expansion Strategy", description: "Common questions transformed into standalone articles. Targets People Also Ask features and provides LLM citation fodder." },
-        { title: "Local Industry Coverage", description: "Content relevant to your specific market and industry. Attracts local links and establishes geographic authority." },
-        { title: "Semantic Chunking for AI", description: "Content structured with clear headings, quotable statements, and complete answers. Optimized for LLM extraction and citation." },
-        { title: "Seasonal Content Calendar", description: "Publishing schedule aligned with search demand patterns. Content live before seasonal spikes, not after." },
-        { title: "Information Gain Focus", description: "Original insights, data, and perspectives. Content that adds value beyond what already exists, not just rewrites." }
+        { title: "Hub-Spoke Architecture", description: "Pillar pages cover core topics. Supporting articles link back with depth." },
+        { title: "FAQ Expansion", description: "Questions transformed into articles. Targets PAA and provides LLM fodder." },
+        { title: "Local Industry", description: "Content relevant to your market. Attracts local links and authority." },
+        { title: "AI-Ready Structure", description: "Clear headings, quotable statements, complete answers. LLM-optimized." },
+        { title: "Seasonal Calendar", description: "Publishing aligned with demand. Content live before spikes." },
+        { title: "Information Gain", description: "Original insights and data. Value beyond rewrites of existing content." }
       ],
       imageSrc: contentDevelopmentImg,
-      imageAlt: "Content strategy diagram",
+      imageAlt: "Content cluster strategy diagram",
       ctaText: "Get Content Strategy",
       ctaHref: "#contact"
     },
     {
-      category: "Content Optimization & Refresh",
-      headline: "Making Existing Content Work Harder",
-      description: "Sometimes the best opportunity is improving what you already have. Pages with existing authority and backlinks can be transformed into ranking assets.",
+      category: "Content Refresh",
+      headline: "Make Existing Content Work Harder",
+      description: "Sometimes the best opportunity is improving what exists. Pages with backlinks can transform.",
       subPoints: [
-        { title: "Content Performance Audit", description: "Pages ranked by traffic, rankings, and potential. Underperformers with ranking potential prioritized for optimization." },
-        { title: "Search Intent Realignment", description: "Pages that target the wrong intent are restructured. Content matched to what the SERP actually shows." },
-        { title: "Thin Content Expansion", description: "Pages below 1,000 words expanded with valuable detail. Comprehensive coverage that satisfies the query completely." },
-        { title: "Freshness Updates", description: "Outdated statistics, screenshots, and examples replaced. Current year added to titles where appropriate." },
-        { title: "Consolidation Strategy", description: "Multiple pages competing for the same keyword merged. Authority concentrated instead of split across weak pages." },
-        { title: "Internal Link Injection", description: "Optimized pages connected to the broader site architecture. Links from high-authority pages directed to refreshed content." }
+        { title: "Performance Audit", description: "Pages ranked by traffic, rankings, and potential. Underperformers prioritized." },
+        { title: "Intent Realignment", description: "Pages targeting wrong intent restructured. Content matched to SERP." },
+        { title: "Thin Content Fix", description: "Pages below threshold expanded with valuable detail." },
+        { title: "Freshness Updates", description: "Outdated stats and examples replaced. Current year added where appropriate." },
+        { title: "Consolidation", description: "Multiple pages for same keyword merged. Authority concentrated." },
+        { title: "Link Injection", description: "Optimized pages connected to site architecture from authority pages." }
       ],
       imageSrc: contentDevelopmentImg,
-      imageAlt: "Content optimization diagram",
+      imageAlt: "Content optimization workflow",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
@@ -245,53 +296,53 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "link-building": [
     {
-      category: "Local Link Acquisition",
-      headline: "Geographic Authority Through Community Links",
-      description: "Local link building is not about volume. Links from locally relevant sources signal geographic authority that national competitors cannot replicate.",
+      category: "Local Acquisition",
+      headline: "Geographic Authority Through Links",
+      description: "Local links signal geographic authority that national competitors cannot replicate.",
       subPoints: [
-        { title: "Local News & Publication Outreach", description: "Earn coverage in local news sites, community blogs, and regional industry publications. Editorial links that carry weight." },
-        { title: "Chamber of Commerce & Business Associations", description: "Membership directories from established local organizations. Trusted sources that signal community presence." },
-        { title: "Sponsorship & Event Links", description: "Local sports teams, charity events, school programs, and community initiatives. Real involvement that earns real links." },
-        { title: "Local Business Partnerships", description: "Complementary businesses in the same market. Vendor pages, partner directories, and reciprocal relationships." },
-        { title: "Local Resource Pages", description: "City and county websites, tourism boards, and community resource lists. Government and .edu links where appropriate." },
-        { title: "Hyperlocal Content Promotion", description: "Content about local topics promoted to local audiences. Shares and links from people who care about the market." }
+        { title: "Local Publications", description: "Coverage in local news, community blogs, and regional publications." },
+        { title: "Chambers & Associations", description: "Membership directories from established local organizations." },
+        { title: "Sponsorships", description: "Local sports, charity events, schools. Real involvement, real links." },
+        { title: "Business Partnerships", description: "Complementary businesses. Vendor pages and partner directories." },
+        { title: "Resource Pages", description: "City websites, tourism boards, community lists. Government and .edu links." },
+        { title: "Hyperlocal Promotion", description: "Local content promoted to local audiences. Shares from people who care." }
       ],
       imageSrc: linkBuildingImg,
-      imageAlt: "Links mind map showing Local, Sponsor, Press, Community",
+      imageAlt: "Local link acquisition sources",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Authority & Editorial Links",
+      category: "Authority Links",
       headline: "Earning Links That Move Rankings",
-      description: "Not all links are equal. A single link from a trusted, relevant source can outweigh dozens of low-quality directory submissions.",
+      description: "One link from a trusted source outweighs dozens of low-quality submissions.",
       subPoints: [
-        { title: "Guest Posting on Relevant Sites", description: "Expert content contributed to industry publications and respected blogs. Bylines that build authority and earn links." },
-        { title: "Linkable Asset Creation", description: "Original research, tools, templates, and guides that attract natural editorial links. Content worth linking to." },
-        { title: "Broken Link Reclamation", description: "Find broken links on relevant sites pointing to competitor or dead content. Offer your content as a replacement." },
-        { title: "Unlinked Brand Mention Conversion", description: "Identify mentions of your brand that do not include a link. Reach out and convert mentions to actual links." },
-        { title: "HARO & Journalist Outreach", description: "Respond to journalist queries with expert commentary. Earn links from news sites and major publications." },
-        { title: "Digital PR Campaigns", description: "Newsworthy angles, data studies, and expert commentary that earn coverage. Links from authoritative sources." }
+        { title: "Guest Posting", description: "Expert content on industry publications. Bylines that build authority." },
+        { title: "Linkable Assets", description: "Original research, tools, templates. Content worth linking to." },
+        { title: "Broken Link Reclamation", description: "Find broken links on relevant sites. Offer your content as replacement." },
+        { title: "Unlinked Mentions", description: "Brand mentions without links identified. Converted to actual links." },
+        { title: "HARO Outreach", description: "Expert commentary for journalists. Links from news and major publications." },
+        { title: "Digital PR", description: "Newsworthy angles and data studies. Coverage from authoritative sources." }
       ],
       imageSrc: linkBuildingImg,
-      imageAlt: "Authority link building diagram",
+      imageAlt: "Authority link building tactics",
       ctaText: "Get Link Strategy",
       ctaHref: "#contact"
     },
     {
-      category: "Link Profile Health",
+      category: "Profile Health",
       headline: "Natural Profiles That Avoid Penalties",
-      description: "Over-optimized anchor text triggers penalties. Unnatural link velocity raises flags. We build diverse, natural-looking profiles that search engines reward.",
+      description: "Over-optimized anchors trigger penalties. Unnatural velocity raises flags. We build naturally.",
       subPoints: [
-        { title: "Anchor Text Diversification", description: "Strategic mix of branded, naked URL, generic, and keyword anchors. No single anchor type dominates the profile." },
-        { title: "Link Velocity Management", description: "Steady acquisition that mimics natural growth patterns. No sudden spikes that trigger algorithmic scrutiny." },
-        { title: "Referring Domain Diversity", description: "Links from a variety of sources, not concentrated on a few domains. Broad authority signals across the profile." },
-        { title: "Toxic Link Monitoring", description: "Regular audits to identify spammy or harmful links. Disavow file maintained and submitted when necessary." },
-        { title: "Competitor Gap Analysis", description: "Identify link sources your competitors have that you do not. Prioritize opportunities where outreach is likely to succeed." },
-        { title: "Link Attribution Tracking", description: "New links monitored and attributed to specific campaigns. ROI on link building efforts measured and reported." }
+        { title: "Anchor Diversity", description: "Branded, naked URL, generic, and keyword anchors mixed naturally." },
+        { title: "Velocity Management", description: "Steady acquisition mimicking natural growth. No sudden spikes." },
+        { title: "Domain Diversity", description: "Links from variety of sources. Not concentrated on few domains." },
+        { title: "Toxic Monitoring", description: "Regular audits for harmful links. Disavow file maintained." },
+        { title: "Competitor Gaps", description: "Link sources competitors have identified. Prioritized for outreach." },
+        { title: "Attribution Tracking", description: "New links monitored and attributed to campaigns. ROI measured." }
       ],
       imageSrc: linkBuildingImg,
-      imageAlt: "Anchor text strategy diagram",
+      imageAlt: "Link profile health analysis",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
@@ -299,53 +350,53 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "schema-markup": [
     {
-      category: "Business Identity Schema",
-      headline: "Structured Data That Defines Your Business",
-      description: "Schema markup tells search engines exactly what your business is, where it operates, and what it offers. This powers Knowledge Panels, rich results, and AI visibility.",
+      category: "Business Identity",
+      headline: "Structured Data That Defines You",
+      description: "Schema tells search engines what your business is, where it operates, and what it offers.",
       subPoints: [
-        { title: "LocalBusiness Schema", description: "Core identity markup including business name, address, phone, hours, service area, payment methods, and business type." },
-        { title: "Organization Schema", description: "Brand-level markup that establishes corporate identity, logo, social profiles, and founding information." },
-        { title: "Person & Team Schema", description: "Founder and key team member markup that builds E-E-A-T signals. Connects expertise to the business entity." },
-        { title: "Contact Point Schema", description: "Multiple contact methods structured clearly. Sales, support, and billing contacts distinguished for search engines." },
-        { title: "Same-As & Social Profiles", description: "Official social media and directory profiles linked to the business entity. Reinforces brand identity across platforms." },
-        { title: "Geo Coordinates & Service Area", description: "Precise location data and service area polygons. Powers map integrations and local pack eligibility." }
+        { title: "LocalBusiness", description: "Name, address, phone, hours, service area, payment methods, business type." },
+        { title: "Organization", description: "Brand identity, logo, social profiles, and founding information." },
+        { title: "Person Schema", description: "Team member markup building E-E-A-T. Expertise connected to entity." },
+        { title: "Contact Points", description: "Multiple contact methods structured. Sales, support, billing distinguished." },
+        { title: "Same-As Links", description: "Social and directory profiles linked to business entity." },
+        { title: "Geo Coordinates", description: "Precise location and service area polygons. Powers map integrations." }
       ],
       imageSrc: schemaMarkupImg,
-      imageAlt: "Schema mind map showing Local, FAQ, About, Org, Service",
+      imageAlt: "Business identity schema types",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Service & Offer Schema",
+      category: "Service Schema",
       headline: "Structured Data for What You Offer",
-      description: "Service schema helps search engines understand what you provide and where. This enables rich results that display service details directly in search.",
+      description: "Service schema helps search engines understand offerings. Enables rich results with details.",
       subPoints: [
-        { title: "Service Schema", description: "Individual service definitions with descriptions, service areas, duration estimates, and pricing indicators." },
-        { title: "ServiceArea Schema", description: "Geographic coverage areas that match Google Business Profile settings. City, region, or radius-based definitions." },
-        { title: "Offer & Price Schema", description: "Pricing information structured for rich results. Starting prices, price ranges, and promotional offers." },
-        { title: "AggregateRating Schema", description: "Review and rating data structured for star displays in search results. Rating count, average, and best/worst values." },
-        { title: "AreaServed Nesting", description: "Service area schema nested properly within LocalBusiness markup. Geographic relevance signals strengthened." },
-        { title: "HasOfferCatalog Schema", description: "Full service catalogs structured for search engines. Complete offerings discoverable through structured data." }
+        { title: "Service Definitions", description: "Individual services with descriptions, areas, duration, and pricing." },
+        { title: "Service Areas", description: "Geographic coverage matching GBP. City, region, or radius-based." },
+        { title: "Pricing Schema", description: "Starting prices, ranges, and promotions structured for rich results." },
+        { title: "Aggregate Ratings", description: "Review data structured for star displays. Count, average, best/worst." },
+        { title: "Area Nesting", description: "Service area nested within LocalBusiness. Geographic signals strengthened." },
+        { title: "Offer Catalogs", description: "Full service catalogs structured. Offerings discoverable via schema." }
       ],
       imageSrc: schemaMarkupImg,
-      imageAlt: "Service schema markup diagram",
+      imageAlt: "Service and offer schema markup",
       ctaText: "Get Schema Audit",
       ctaHref: "#contact"
     },
     {
-      category: "Content & Rich Result Schema",
+      category: "Rich Result Schema",
       headline: "Rich Results for Every Content Type",
-      description: "Beyond business identity, schema markup unlocks enhanced search appearances for FAQ content, reviews, articles, how-to guides, and more.",
+      description: "Beyond identity, schema unlocks enhanced search appearances for FAQ, reviews, articles, and more.",
       subPoints: [
-        { title: "FAQ Schema", description: "Question and answer pairs structured for FAQ rich results. Targets People Also Ask features and expands SERP real estate." },
-        { title: "Review & Testimonial Schema", description: "Customer reviews structured for star rating displays. Review author, date, and rating clearly marked." },
-        { title: "Article & Blog Schema", description: "News and blog content structured for Google News, Discover, and Top Stories eligibility." },
-        { title: "HowTo & Step Schema", description: "Step-by-step content formatted for how-to rich results. Images, tools, and supplies included." },
-        { title: "Breadcrumb Schema", description: "Navigation hierarchy structured for breadcrumb displays in search results. Improves click-through rates." },
-        { title: "Video & Image Schema", description: "Media content structured for video carousels and image search. Thumbnails, duration, and descriptions included." }
+        { title: "FAQ Schema", description: "Q&A pairs for FAQ rich results. Targets PAA and expands SERP real estate." },
+        { title: "Review Schema", description: "Customer reviews structured for ratings display. Author, date, rating marked." },
+        { title: "Article Schema", description: "Blog content structured for News, Discover, and Top Stories eligibility." },
+        { title: "HowTo Schema", description: "Step content for rich results. Images, tools, and supplies included." },
+        { title: "Breadcrumbs", description: "Navigation hierarchy for breadcrumb displays. Improves CTR." },
+        { title: "Video Schema", description: "Media structured for carousels. Thumbnails, duration, descriptions." }
       ],
       imageSrc: schemaMarkupImg,
-      imageAlt: "Content schema markup diagram",
+      imageAlt: "Content rich result schema types",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
     }
