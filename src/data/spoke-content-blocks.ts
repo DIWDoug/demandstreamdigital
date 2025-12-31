@@ -7,9 +7,10 @@ import onPageStructureImg from "@/assets/spoke/on-page-structure.png";
 import onPageLinksImg from "@/assets/spoke/on-page-links.png";
 
 // Technical SEO illustrations
-import technicalCrawlImg from "@/assets/spoke/technical-crawl.png";
-import technicalVitalsImg from "@/assets/spoke/technical-vitals.png";
-import technicalSchemaImg from "@/assets/spoke/technical-schema.png";
+import technicalStructureImg from "@/assets/spoke/technical-structure.png";
+import technicalCrawlingImg from "@/assets/spoke/technical-crawling.png";
+import technicalDuplicateImg from "@/assets/spoke/technical-duplicate.png";
+import technicalSpeedImg from "@/assets/spoke/technical-speed.png";
 
 // Keyword Strategy illustrations
 import keywordResearchImg from "@/assets/spoke/keyword-research.png";
@@ -322,7 +323,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Cross-Linking Strategy", description: "Service pages link to relevant location pages. Location pages link to service details. Authority flows intentionally." },
         { title: "Siloed Categories", description: "Services, locations, and blog content organized in clear silos. Google understands site purpose at a glance." }
       ],
-      imageSrc: technicalCrawlImg,
+      imageSrc: technicalStructureImg,
       imageAlt: "Local site architecture diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -339,7 +340,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Service Area Linking", description: "Internal links from homepage and service pages point to each location. No orphaned markets." },
         { title: "Robots.txt Review", description: "Directives audited so location directories and city pages are not accidentally blocked." }
       ],
-      imageSrc: technicalVitalsImg,
+      imageSrc: technicalCrawlingImg,
       imageAlt: "Location page indexation workflow",
       ctaText: "Get Technical Analysis",
       ctaHref: "#contact"
@@ -356,7 +357,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Parameter Handling", description: "URL parameters from filters or tracking don't create duplicate location page variations." },
         { title: "Noindex Utility Pages", description: "Thank you pages, internal tools, and tag archives noindexed. Only valuable pages compete." }
       ],
-      imageSrc: technicalSchemaImg,
+      imageSrc: technicalDuplicateImg,
       imageAlt: "Location content quality diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -373,7 +374,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Third-Party Script Audit", description: "Review widgets, chat tools, and tracking pixels. Each adds mobile load time." },
         { title: "Mobile Usability", description: "Touch targets sized for thumbs. Phone numbers tappable. Forms work on small screens." }
       ],
-      imageSrc: technicalVitalsImg,
+      imageSrc: technicalSpeedImg,
       imageAlt: "Mobile speed optimization for local",
       ctaText: "Get Speed Analysis",
       ctaHref: "#contact"
