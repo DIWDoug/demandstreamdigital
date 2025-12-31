@@ -61,12 +61,13 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What access do you need for on-page work?", answer: "CMS access for content updates, Google Search Console for performance data, and ideally Analytics access to track user behavior changes." },
     { question: "Do you optimize for voice search and AI?", answer: "Yes. FAQ sections, semantic chunking, and quotable statements are structured for LLM extraction and voice search snippets." }
   ],
-  "technical-seo-audits": [
-    { question: "How long does a technical SEO audit take?", answer: "A comprehensive technical audit typically takes 5-7 business days depending on site size. Enterprise sites with thousands of pages may require additional time." },
-    { question: "Do you implement fixes or just provide recommendations?", answer: "We provide prioritized recommendations with implementation specifications. For clients with developer resources, we provide specs. For others, we can implement directly." },
-    { question: "What tools do you use for technical audits?", answer: "Screaming Frog, Sitebulb, Google Search Console, PageSpeed Insights, and custom crawl configurations. We validate findings across multiple tools." },
-    { question: "How do you prioritize technical fixes?", answer: "Issues are ranked by impact on crawlability, indexation, and Core Web Vitals. Critical blockers first, then high-impact quick wins, then incremental improvements." },
-    { question: "Do you audit mobile and desktop separately?", answer: "Google uses mobile-first indexing, so mobile is primary. We audit both but prioritize mobile performance and usability issues." }
+  "technical-seo": [
+    { question: "What is technical SEO and why does it matter?", answer: "Technical SEO ensures search engines can find, crawl, render, and index your pages. Even the best content won't rank if Google can't access it properly." },
+    { question: "How long does technical SEO take to show results?", answer: "Indexation fixes can show impact within 1-2 weeks. Page speed improvements affect rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
+    { question: "Do you implement fixes or just provide recommendations?", answer: "Both. We provide specifications for developer teams and can implement directly via CMS access. Most fixes we handle ourselves." },
+    { question: "What tools do you use?", answer: "Screaming Frog, Semrush Site Audit, Google Search Console, PageSpeed Insights, and Lighthouse. We validate findings across multiple tools." },
+    { question: "How do you prioritize technical fixes?", answer: "Indexation blockers first, then crawlability issues, then duplicate content, then page speed. We fix what prevents ranking before optimizing for marginal gains." },
+    { question: "Does technical SEO need ongoing attention?", answer: "Yes. Sites change, CMSs create new issues, and Google updates requirements. We recommend quarterly technical reviews to catch problems early." }
   ],
   "local-keyword-strategy": [
     { question: "How many keywords do you research per market?", answer: "We focus on quality over quantity. Typically 50-200 highly relevant keywords per service area, mapped by intent and priority rather than bulk lists." },
@@ -308,56 +309,71 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "technical-seo-audits": [
+  "technical-seo": [
     {
-      category: "Crawlability & Architecture",
-      headline: "Technical Foundations for Rankings",
-      description: "Technical SEO issues silently kill rankings. If search engines cannot crawl and understand your content, nothing else matters.",
+      category: "Site Structure & Architecture",
+      headline: "Flat Structure Makes Everything Easier",
+      description: "Site structure is step one of technical SEO. A strong structure makes every other optimization task simpler and more effective.",
       subPoints: [
-        { title: "Crawl Budget", description: "Identify blocked resources, infinite loops, and crawl traps that waste your crawl budget." },
-        { title: "Site Structure", description: "Clear hierarchy that distributes authority. Important pages within 3 clicks of homepage." },
-        { title: "XML Sitemaps", description: "Sitemaps with only indexable, canonical URLs. No redirects, 404s, or noindexed pages." },
-        { title: "Robots.txt", description: "Directives reviewed so critical resources are not accidentally blocked from crawlers." },
-        { title: "Internal Links", description: "Strategic linking from authority pages to priority targets. Orphan pages identified." },
-        { title: "URL Structure", description: "Clean, logical paths. No dynamic parameters, session IDs, or unnecessary depth." }
+        { title: "Flat Architecture", description: "Every page within 3-4 clicks of the homepage. Deep pages get crawled and indexed." },
+        { title: "Organized Hierarchy", description: "Pages grouped logically under categories. No orphan pages without internal links." },
+        { title: "Consistent URL Structure", description: "URLs follow logical patterns. Subfolders give Google context about page relationships." },
+        { title: "Breadcrumbs Navigation", description: "Breadcrumbs add automatic internal links and appear in search results." },
+        { title: "Internal Linking", description: "Strategic links from high-authority pages to priority targets. Authority flows intentionally." },
+        { title: "Category Structure", description: "Clear parent-child relationships. Google understands site hierarchy at a glance." }
       ],
       imageSrc: technicalCrawlImg,
-      imageAlt: "Site architecture and crawlability diagram",
+      imageAlt: "Flat site architecture diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
     {
-      category: "Core Web Vitals",
-      headline: "Page Speed That Affects Rankings",
-      description: "Google uses page experience as a ranking factor. Slow pages lose visitors before they see your content.",
+      category: "Crawling & Indexation",
+      headline: "Get Every Page Found and Indexed",
+      description: "Google needs to find, crawl, render, and index your pages. If any step fails, you don't rank.",
       subPoints: [
-        { title: "LCP Optimization", description: "Main content loads within 2.5 seconds. Server response and render-blocking resources addressed." },
-        { title: "INP Performance", description: "Pages respond to interactions within 200ms. JavaScript execution optimized for speed." },
-        { title: "CLS Prevention", description: "Visual stability during load. No unexpected layout shifts that hurt rankings." },
-        { title: "Mobile-First", description: "Responsive design with proper touch targets. Mobile experience prioritized for indexing." },
-        { title: "Image Formats", description: "WebP/AVIF formats, lazy loading, and proper sizing to reduce payload." },
-        { title: "Script Audit", description: "External scripts evaluated for impact. Defer, async, or remove what slows the page." }
+        { title: "Page Indexing Report", description: "Search Console coverage report reviewed. Excluded and errored pages investigated." },
+        { title: "Crawl Analysis", description: "Screaming Frog and Semrush audits identify blocked resources and crawl traps." },
+        { title: "XML Sitemaps", description: "Sitemaps validated with 100% live pages. No 404s, redirects, or noindexed URLs." },
+        { title: "GSC Inspect Tool", description: "Problem pages inspected individually. Rendering issues identified and fixed." },
+        { title: "Deep Page Linking", description: "Internal links added to pages buried deep in site architecture." },
+        { title: "Robots.txt Review", description: "Directives audited so critical content is not accidentally blocked." }
       ],
       imageSrc: technicalVitalsImg,
-      imageAlt: "Core Web Vitals performance metrics",
-      ctaText: "Get a Technical Audit",
+      imageAlt: "Crawling and indexation workflow",
+      ctaText: "Get Technical Analysis",
       ctaHref: "#contact"
     },
     {
-      category: "Indexation & Schema",
-      headline: "Every Page Indexed. Rich Results Earned.",
-      description: "If search engines cannot index pages, they cannot rank them. Schema unlocks rich results that boost visibility.",
+      category: "Duplicate & Thin Content",
+      headline: "Clean Content for Clean Rankings",
+      description: "Duplicate content confuses Google. Thin content wastes crawl budget. Both hurt overall site quality signals.",
       subPoints: [
-        { title: "Index Coverage", description: "Search Console data reviewed for excluded and errored pages. Root causes fixed." },
-        { title: "Duplicate Resolution", description: "Canonical tags properly implemented. Competing pages consolidated." },
-        { title: "Redirect Cleanup", description: "Redirect chains eliminated. Direct paths from old URLs to destinations." },
-        { title: "Schema Implementation", description: "LocalBusiness, FAQ, Review, and Service schema added and validated." },
-        { title: "Rich Snippets", description: "FAQ schema targets PAA. Product schema displays ratings in results." },
-        { title: "Security & HTTPS", description: "Secure protocol confirmed. Mixed content resolved. Security headers reviewed." }
+        { title: "Duplicate Detection", description: "Raven Tools and Semrush scan for identical content across pages." },
+        { title: "Canonical Implementation", description: "Canonical URLs tell Google which version is the original. Variations consolidated." },
+        { title: "Noindex Deployment", description: "Pages without unique value noindexed. Category and tag pages cleaned up." },
+        { title: "Thin Content Expansion", description: "Pages below quality threshold expanded with genuine value or consolidated." },
+        { title: "Cross-Site Validation", description: "Copyscape batch search confirms content originality across the web." },
+        { title: "Parameter Handling", description: "URL parameters managed to prevent infinite duplicate variations." }
       ],
       imageSrc: technicalSchemaImg,
-      imageAlt: "Indexation and structured data diagram",
+      imageAlt: "Duplicate content resolution diagram",
       ctaText: "Schedule a Consultation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "PageSpeed & Core Web Vitals",
+      headline: "Fast Pages Rank Better",
+      description: "Page speed is a direct ranking factor. Every second of load time costs conversions and positions.",
+      subPoints: [
+        { title: "Page Size Reduction", description: "Total page weight correlates with load time more than any other factor." },
+        { title: "LCP Under 2.5s", description: "Largest Contentful Paint optimized. Render-blocking resources eliminated." },
+        { title: "INP Under 200ms", description: "Interaction to Next Paint passes. JavaScript execution optimized." },
+        { title: "CLS Near Zero", description: "Cumulative Layout Shift prevented. No unexpected element movement." },
+        { title: "Third-Party Script Audit", description: "Each external script adds 34ms average. Non-essential scripts removed." },
+        { title: "Mobile Usability", description: "Lighthouse audit for touch targets, text size, and viewport configuration." }
+      ],
+      ctaText: "Get Speed Analysis",
       ctaHref: "#contact"
     }
   ],

@@ -45,7 +45,7 @@ const Header = () => {
       href: "/white-label-inbound-marketing-services/local-seo",
       items: [
         { label: "On-Page Optimization", slug: "on-page-optimization" },
-        { label: "Technical SEO Audits", slug: "technical-seo-audits" },
+        { label: "Technical SEO", slug: "technical-seo" },
         { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
         { label: "Content Development", slug: "content-development" },
         { label: "Link Building", slug: "link-building" },
