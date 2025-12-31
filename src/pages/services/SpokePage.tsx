@@ -1,10 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Check } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TrustReel from "@/components/sections/TrustReel";
 import { hubs } from "@/data/services";
+
+const SectionDivider = () => (
+  <div className="container mx-auto px-6 lg:px-8">
+    <hr className="border-t border-border/40" />
+  </div>
+);
 
 const SpokePage = () => {
   const { hubSlug, spokeSlug } = useParams();
@@ -32,15 +39,16 @@ const SpokePage = () => {
     { label: spoke.title }
   ];
 
-  // Find sibling spokes for navigation
+  // Find sibling spokes for ecosystem
   const siblingSpokes = hub.spokes.filter((s) => s.slug !== spokeSlug);
+  const HubIcon = hub.icon;
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{spoke.title} | {hub.title} | Dialed-In Web</title>
         <meta name="description" content={spoke.fullDescription.slice(0, 160)} />
-        <link rel="canonical" href={`https://dialedinweb.com/services/${hubSlug}/${spokeSlug}`} />
+        <link rel="canonical" href={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
       </Helmet>
       
       <Header />
@@ -87,21 +95,26 @@ const SpokePage = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6" style={{ lineHeight: "1.15" }}>
               {spoke.title}
             </h1>
-            <p className="text-lg text-text-secondary leading-relaxed">
+            <p className="text-lg text-text-secondary leading-relaxed max-w-3xl">
               {spoke.fullDescription}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Trust Reel */}
+      <TrustReel />
+
+      <SectionDivider />
+
+      {/* Benefits & Deliverables Section */}
       <section className="py-16 lg:py-20 section-light">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               {/* Benefits */}
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-6">
                   Key Benefits
                 </h2>
                 <ul className="space-y-4">
@@ -110,7 +123,7 @@ const SpokePage = () => {
                       <div className="w-5 h-5 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-cta" />
                       </div>
-                      <span className="text-gray-700">{benefit}</span>
+                      <span className="text-slate-700">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -118,7 +131,7 @@ const SpokePage = () => {
 
               {/* Deliverables */}
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-slate-900 mb-6">
                   What We Deliver
                 </h2>
                 <ul className="space-y-4">
@@ -127,7 +140,7 @@ const SpokePage = () => {
                       <div className="w-5 h-5 rounded-full bg-accent-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-accent-blue" />
                       </div>
-                      <span className="text-gray-700">{deliverable}</span>
+                      <span className="text-slate-700">{deliverable}</span>
                     </li>
                   ))}
                 </ul>
@@ -137,20 +150,27 @@ const SpokePage = () => {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* Process Section */}
       <section className="py-16 lg:py-20 bg-surface-dark">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-semibold text-foreground mb-10 text-center">
-              Our Process
-            </h2>
+            <div className="text-center mb-10">
+              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+                How We Execute
+              </p>
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+                Our Process
+              </h2>
+            </div>
             <div className="space-y-6">
               {spoke.process.map((step, index) => (
                 <div key={index} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-cta/20 border border-cta/30 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-semibold text-cta">{index + 1}</span>
+                  <div className="w-10 h-10 rounded-full bg-cta/20 border border-cta/30 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-semibold text-cta">{String(index + 1).padStart(2, '0')}</span>
                   </div>
-                  <div className="pt-1">
+                  <div className="pt-2">
                     <p className="text-text-secondary">{step}</p>
                   </div>
                 </div>
@@ -160,36 +180,83 @@ const SpokePage = () => {
         </div>
       </section>
 
-      {/* Related Services */}
+      <SectionDivider />
+
+      {/* Hub Ecosystem - Sibling Spokes */}
       {siblingSpokes.length > 0 && (
         <section className="py-16 lg:py-20 section-light">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-semibold text-gray-900">
-                Related {hub.title} Services
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              {siblingSpokes.slice(0, 6).map((sibling) => (
+            <div className="max-w-5xl mx-auto">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+                  Part of {hub.title}
+                </p>
+                <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+                  Related Services
+                </h2>
+                <p className="text-slate-600 max-w-2xl mx-auto">
+                  {spoke.title} works alongside these other {hub.title} components for maximum impact.
+                </p>
+              </div>
+
+              {/* Hub-Spoke Visual */}
+              <div className="relative">
+                {/* Center Hub */}
+                <div className="flex justify-center mb-8">
+                  <Link
+                    to={`/white-label-inbound-marketing-services/${hub.slug}`}
+                    className="group relative flex flex-col items-center justify-center w-32 h-32 rounded-full bg-white border-2 border-cta shadow-lg hover:shadow-xl transition-all"
+                  >
+                    <HubIcon className="w-8 h-8 text-cta mb-2" />
+                    <span className="text-xs font-semibold text-slate-900 text-center px-2">{hub.title}</span>
+                    <span className="absolute -bottom-6 text-xs text-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      View Hub →
+                    </span>
+                  </Link>
+                </div>
+
+                {/* Spokes Grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {siblingSpokes.map((sibling) => (
+                    <Link
+                      key={sibling.slug}
+                      to={`/white-label-inbound-marketing-services/${hub.slug}/${sibling.slug}`}
+                      className="group p-5 rounded-xl bg-white border border-slate-200 hover:border-cta/40 hover:shadow-md transition-all"
+                    >
+                      <h3 className="text-sm font-semibold text-slate-900 group-hover:text-cta transition-colors mb-2">
+                        {sibling.title}
+                      </h3>
+                      <p className="text-xs text-slate-600 line-clamp-2 mb-3">
+                        {sibling.description}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-xs text-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn more
+                        <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Back to Hub CTA */}
+              <div className="text-center mt-10">
                 <Link
-                  key={sibling.slug}
-                  to={`/white-label-inbound-marketing-services/${hub.slug}/${sibling.slug}`}
-                  className="group p-4 rounded-xl bg-white border border-gray-200 hover:border-cta/30 hover:shadow-md transition-all"
+                  to={`/white-label-inbound-marketing-services/${hub.slug}`}
+                  className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
                 >
-                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-cta transition-colors mb-1">
-                    {sibling.title}
-                  </h3>
-                  <p className="text-xs text-gray-600 line-clamp-2">
-                    {sibling.description}
-                  </p>
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to {hub.title} Overview
                 </Link>
-              ))}
+              </div>
             </div>
           </div>
         </section>
       )}
 
+      {/* Contact Form */}
       <ContactForm />
+      
       <Footer />
     </div>
   );
