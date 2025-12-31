@@ -167,71 +167,59 @@ export const paidMediaConfig: ServicePageConfig = {
     headline: "The Components of Paid Media Management",
     subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
-      // Traffic Generation
       {
         title: "Google Ads Management",
         slug: "google-ads-management",
         description: "Search, display, and shopping campaigns built for local lead generation.",
-        icon: Search,
-        cluster: "Traffic Generation"
+        icon: Search
       },
       {
         title: "Meta Ads Management",
         slug: "meta-ads-management",
         description: "Facebook and Instagram campaigns that reach local audiences.",
-        icon: Target,
-        cluster: "Traffic Generation"
+        icon: Target
       },
       {
         title: "Local Service Ads",
         slug: "local-service-ads",
         description: "Google-verified LSAs with pay-per-lead pricing.",
-        icon: Map,
-        cluster: "Traffic Generation"
+        icon: Map
       },
       {
         title: "Retargeting & Display",
         slug: "retargeting-campaigns",
         description: "Display and social retargeting via Google, Meta, and AdRoll.",
-        icon: Share2,
-        cluster: "Traffic Generation"
+        icon: Share2
       },
-      // Conversion Infrastructure
       {
         title: "Landing Page Design",
         slug: "landing-page-design",
         description: "Conversion-focused pages with local trust signals and optimized forms.",
-        icon: MousePointerClick,
-        cluster: "Conversion Infrastructure"
+        icon: MousePointerClick
       },
       {
         title: "Funnel Strategy",
         slug: "funnel-strategy",
         description: "Top, middle, and bottom of funnel campaigns aligned to buyer intent.",
-        icon: Layers,
-        cluster: "Conversion Infrastructure"
+        icon: Layers
       },
-      // Measurement & Attribution
       {
         title: "Conversion Tracking",
         slug: "conversion-tracking",
         description: "Tracking setup that connects clicks to form fills, calls, and revenue.",
-        icon: Settings,
-        cluster: "Measurement & Attribution"
+        icon: Settings
       },
       {
         title: "Call Tracking & Attribution",
         slug: "call-tracking-attribution",
         description: "Call recording, dynamic number insertion, and multi-touch attribution.",
-        icon: BarChart3,
-        cluster: "Measurement & Attribution"
+        icon: BarChart3
       },
       {
         title: "ROI Analysis & Reporting",
         slug: "roi-analysis-reporting",
         description: "White-labeled reports connecting spend to leads and revenue.",
-        icon: DollarSign,
-        cluster: "Measurement & Attribution"
+        icon: DollarSign
       }
     ]
   },
