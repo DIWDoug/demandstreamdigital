@@ -670,41 +670,41 @@ export const hubs: Hub[] = [
     summary: "Build the off-page signals that make local rankings stick: quality links, citations, and community authority.",
     heroDescription: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time. White-label link building and citation management for agencies serving local businesses.",
     whyItMatters: {
-      headline: "Why Authority Building Matters",
-      description: "Search engines increasingly prioritize E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness). Authority building creates the signals that demonstrate these qualities, supporting both rankings and customer confidence.",
+      headline: "Why Local Authority Building Matters",
+      description: "Off-page signals are a core ranking factor for local search. Backlinks, citations, and community connections tell Google your client's business is legitimate, relevant, and trusted in their market.",
       points: [
-        { icon: Shield, title: "Ranking Stability", description: "Authority signals create ranking resilience. Sites with strong authority recover faster from algorithm updates and resist competitive pressure." },
-        { icon: TrendingUp, title: "Compound Growth", description: "Authority builds on itself. Media coverage leads to more coverage. Links lead to more links. Each win makes the next one easier." },
-        { icon: Users, title: "Trust That Converts", description: "Authority isn't just for search engines. Media mentions, awards, and third-party validation build customer confidence and improve conversion." }
+        { icon: Shield, title: "Ranking Stability", description: "Strong backlink profiles create ranking resilience. Sites with real authority recover faster from algorithm updates and resist competitive pressure." },
+        { icon: TrendingUp, title: "Compound Growth", description: "Authority builds on itself. Quality links attract more links. Citations reinforce relevance. Each placement makes the next one easier to earn." },
+        { icon: Users, title: "Local Visibility That Sticks", description: "Geographic authority signals strengthen local pack and organic positions. Competitors without local link equity struggle to catch up." }
       ]
     },
     ourApproach: {
-      headline: "Our Authority Building Approach",
-      description: "We build authority through strategic, earned efforts that create lasting value:",
+      headline: "Our Local Authority Building Approach",
+      description: "We build authority through strategic, earned efforts focused on local relevance:",
       steps: [
-        { number: "01", title: "Authority Audit", description: "Analysis of current authority signals, competitive positioning, and opportunity identification for building credibility." },
-        { number: "02", title: "PR & Media Strategy", description: "Strategic media outreach, press release distribution, and journalist relationships that generate earned coverage." },
-        { number: "03", title: "Link Acquisition", description: "Quality link building from authoritative sources that improve domain authority and referral traffic." },
-        { number: "04", title: "Reputation Management", description: "Review monitoring, sentiment tracking, and proactive reputation building that protects and enhances brand perception." },
-        { number: "05", title: "Recognition Strategy", description: "Award submissions, certification pursuits, and accolade promotion that differentiate from competitors." }
+        { number: "01", title: "Authority Audit", description: "Analysis of current backlink profile, citation health, and competitive gaps to identify opportunities." },
+        { number: "02", title: "Local Link Acquisition", description: "Strategic outreach to local publications, blogs, and community sites that build geographic relevance." },
+        { number: "03", title: "Citation Building", description: "Industry-specific and local directory listings that signal expertise and reinforce NAP consistency." },
+        { number: "04", title: "Community Signals", description: "Sponsorships, chamber memberships, and local partnerships that create authentic authority." },
+        { number: "05", title: "Anchor Text Management", description: "Natural anchor profiles that maximize ranking power while avoiding over-optimization penalties." }
       ]
     },
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Strategic PR and media placement campaigns",
-        "Quality link building from authoritative sources",
-        "Reputation monitoring and management",
-        "Award and recognition strategy",
+        "Strategic local link acquisition campaigns",
+        "Citation building across industry directories",
+        "Anchor text diversification and monitoring",
+        "Community sponsorship coordination",
         "Monthly authority building reports",
-        "Long-term credibility development"
+        "Long-term ranking stability"
       ]
     },
     faqs: [
-      { question: "How is this different from link building?", answer: "Link building is one component of authority building, but authority encompasses much more: media coverage, reviews, brand mentions, industry recognition, and overall reputation. We take a holistic approach to building credibility." },
-      { question: "How long does it take to build authority?", answer: "Authority building is a long-term strategy. You may see initial wins within 2-3 months, but the compound effects of authority development typically become significant at 6-12 months and continue growing over time." },
-      { question: "Can you guarantee media placements?", answer: "We can't guarantee specific placements as editorial decisions are outside our control. However, our proven outreach processes and media relationships consistently generate quality placements for our clients." },
-      { question: "Do you handle crisis reputation management?", answer: "Our focus is proactive authority building rather than reactive crisis management. However, we can help develop strategies to address reputation challenges as part of a comprehensive authority building program." }
+      { question: "How is this different from general link building?", answer: "We focus specifically on local relevance: geographic signals, community connections, and industry-specific placements that move local rankings. Generic link building often misses these critical local authority signals." },
+      { question: "How long does it take to see results?", answer: "Initial ranking movement may appear within 2-3 months. Compound effects typically become significant at 6-12 months as authority signals accumulate and reinforce each other." },
+      { question: "Can you guarantee specific DA increases?", answer: "We cannot guarantee specific metric thresholds. Domain authority is a third-party estimate, not a Google metric. We focus on earning quality links that actually move rankings." },
+      { question: "Do you build citations as part of this service?", answer: "Yes. Structured citations on industry directories and local business listings are a core component of our local authority building approach." }
     ],
     spokes: [
       {
