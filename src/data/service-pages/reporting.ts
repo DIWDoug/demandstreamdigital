@@ -46,7 +46,7 @@ export const reportingConfig: ServicePageConfig = {
     ],
     closingLine: "We build reporting that tells the story your clients need to hear.",
     closingHighlight: "Clients understand their value. You keep the revenue you earned.",
-    ctaText: "Schedule a Discovery Call"
+    ctaText: "Start the Conversation"
   },
 
   outcomes: {
@@ -219,6 +219,10 @@ export const reportingConfig: ServicePageConfig = {
       {
         point: "You are willing to invest in reporting infrastructure",
         detail: "Good reporting requires setup investment. Agencies who see reporting as a retention tool, not a cost center, get the most value."
+      },
+      {
+        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
       }
     ],
     notFit: [

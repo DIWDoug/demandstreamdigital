@@ -46,7 +46,7 @@ export const emailMarketingConfig: ServicePageConfig = {
     ],
     closingLine: "We build email programs that work—strategy, automation, and ongoing optimization.",
     closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
-    ctaText: "Schedule a Discovery Call"
+    ctaText: "Start the Conversation"
   },
 
   outcomes: {
@@ -224,6 +224,10 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         point: "Your clients have something worth emailing about",
         detail: "Regular email requires regular value. Clients need offers, content, updates, or insights to share consistently."
+      },
+      {
+        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
       }
     ],
     notFit: [
