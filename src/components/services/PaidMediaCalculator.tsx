@@ -12,6 +12,7 @@ const PaidMediaCalculator = () => {
   const OEM_RATE = 0.20;
   const SUGGESTED_FEE_RATE = 0.20;
   const MIN_RETAINER = 500;
+  const MIN_OEM = 300;
 
   const calculations = useMemo(() => {
     // Suggested agency fee: 20% of ad spend or $500 min (per platform)
@@ -21,8 +22,8 @@ const PaidMediaCalculator = () => {
     // Use custom retainer if set, otherwise use suggested
     const clientRetainer = customRetainer !== null ? customRetainer : suggestedRetainer;
     
-    // OEM Cost: 20% of retainer
-    const monthlyOEM = Math.round(clientRetainer * OEM_RATE);
+    // OEM Cost: 20% of retainer or $300 minimum
+    const monthlyOEM = Math.max(Math.round(clientRetainer * OEM_RATE), MIN_OEM);
     
     // Your margin
     const monthlyMargin = clientRetainer - monthlyOEM;
@@ -100,7 +101,7 @@ const PaidMediaCalculator = () => {
             <div className="bg-card/50 border border-border/50 rounded-lg p-4 text-center">
               <p className="text-sm text-muted-foreground mb-1">Your OEM Cost</p>
               <p className="text-2xl font-bold text-foreground">20%</p>
-              <p className="text-xs text-muted-foreground">of retainer, per platform</p>
+              <p className="text-xs text-muted-foreground">of retainer, $300 min</p>
             </div>
           </div>
 
@@ -208,7 +209,7 @@ const PaidMediaCalculator = () => {
                 <div className="bg-background border border-border rounded-lg p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <TrendingUp className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Monthly (20% of retainer)</span>
+                    <span className="text-sm text-muted-foreground">Monthly (20% or $300 min)</span>
                   </div>
                   <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(calculations.monthlyOEM)}
