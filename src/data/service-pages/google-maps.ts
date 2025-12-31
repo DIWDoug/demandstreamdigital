@@ -334,11 +334,9 @@ export const googleMapsConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/white-label-inbound-marketing-services/google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
-      { icon: Star, id: "reputation", title: "Reputation", description: "Build trust with review generation and management.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/white-label-inbound-marketing-services/email-marketing" },
       { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations that build trust.", href: "/white-label-inbound-marketing-services/local-authority-building" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards your clients love.", href: "/white-label-inbound-marketing-services/reporting" },
-      { icon: Share2, id: "retargeting", title: "Retargeting", description: "Stay top of mind with display and social retargeting.", href: "/white-label-inbound-marketing-services/paid-media" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards your clients love.", href: "/white-label-inbound-marketing-services/reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing-services"

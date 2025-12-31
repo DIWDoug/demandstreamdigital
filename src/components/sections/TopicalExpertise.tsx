@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, MapPin, Map, MousePointerClick, Share2, Mail, Award } from "lucide-react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Mail, Award, BarChart3 } from "lucide-react";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
@@ -13,27 +13,33 @@ const TopicalExpertise = () => {
       summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
       spokes: [
         {
-          title: "On-Page Local Optimization",
+          title: "On-Page Optimization",
+          slug: "on-page-optimization",
           description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market."
         },
         {
-          title: "Technical SEO for Multi-Location",
+          title: "Technical SEO",
+          slug: "technical-seo",
           description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy."
         },
         {
           title: "Local Keyword Strategy",
+          slug: "local-keyword-strategy",
           description: "Seed keyword development from services and pain points, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping."
         },
         {
-          title: "Local Content Strategy",
+          title: "Content Development",
+          slug: "content-development",
           description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries."
         },
         {
-          title: "Local Link Acquisition",
+          title: "Link Building",
+          slug: "link-building",
           description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
         },
         {
           title: "NAP Citations & Schema",
+          slug: "nap-citations",
           description: "NAP consistency audits, citation cleanup, directory submissions, and schema markup that validate business identity for rankings and AI visibility."
         }
       ]
@@ -45,92 +51,72 @@ const TopicalExpertise = () => {
       summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
       spokes: [
         {
-          title: "GBP Profile Management",
+          title: "GBP Optimization",
+          slug: "gbp-optimization",
           description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results and AI Overviews."
         },
         {
-          title: "Review Generation & Response",
+          title: "Review Management",
+          slug: "review-management",
           description: "Systematic review acquisition strategies and professional response management that builds trust, improves rankings, and feeds AI recommendation systems."
         },
         {
-          title: "Citation Building & Cleanup",
+          title: "Citation Building",
+          slug: "citation-building",
           description: "NAP consistency across 50+ directories, data aggregators, and AI-cited platforms like Yelp and TripAdvisor that validate business legitimacy."
         },
         {
-          title: "Local Pack Ranking Strategy",
-          description: "Proximity optimization, category targeting, and competitive analysis to win positions in the local 3-pack for high-intent searches."
-        },
-        {
-          title: "Photo & Media Optimization",
+          title: "Photo Optimization",
+          slug: "photo-optimization",
           description: "Professional photo management, geotagging, and visual content strategies that increase engagement and click-through rates."
         },
         {
-          title: "Multi-Location GBP Management",
-          description: "Scalable systems for managing dozens or hundreds of locations with consistent branding and optimized performance."
+          title: "Q&A Management",
+          slug: "qa-management",
+          description: "Proactive Q&A monitoring and response to control the narrative and improve profile completeness."
+        },
+        {
+          title: "Post Scheduling",
+          slug: "post-scheduling",
+          description: "Strategic GBP posts, offers, and updates that signal activity and engage searchers."
         }
       ]
     },
     {
       icon: MousePointerClick,
-      title: "Google Ads Management",
+      title: "Paid Media",
       slug: "paid-media",
       summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
       spokes: [
         {
-          title: "Local Search Campaign Structure",
-          description: "Service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation economics."
+          title: "Google Ads",
+          slug: "google-ads",
+          description: "Search, display, and shopping campaigns with service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation."
         },
         {
-          title: "Landing Page Optimization",
-          description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization for maximum lead capture."
+          title: "Meta Ads",
+          slug: "meta-ads",
+          description: "Facebook and Instagram campaigns with geographic, demographic, and interest-based audiences tailored to each client's service area."
         },
         {
-          title: "Bid Strategy & Budget Allocation",
-          description: "Smart bidding configurations and budget pacing that maximize lead volume within client profitability targets."
+          title: "Local Service Ads",
+          slug: "local-service-ads",
+          description: "Google-verified LSAs with pay-per-lead pricing for service businesses."
         },
         {
-          title: "Call Tracking & Attribution",
-          description: "Call recording, lead scoring, and multi-touch attribution that proves ROI and informs optimization decisions."
+          title: "Retargeting Campaigns",
+          slug: "retargeting-campaigns",
+          description: "Website visitor retargeting and lookalike audience expansion via Google Display, Meta, and AdRoll."
         },
         {
-          title: "Ad Copy & Extension Testing",
-          description: "Continuous A/B testing of headlines, descriptions, callouts, and sitelinks to improve quality scores and conversion rates."
+          title: "Landing Page Design",
+          slug: "landing-page-design",
+          description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization."
         },
         {
-          title: "Negative Keyword Management",
-          description: "Ongoing search term analysis and negative keyword refinement to eliminate waste and improve lead quality."
-        }
-      ]
-    },
-    {
-      icon: Share2,
-      title: "Meta Ads (Facebook & Instagram)",
-      slug: "paid-media",
-      summary: "Build local awareness and capture demand through targeted social advertising.",
-      spokes: [
-        {
-          title: "Local Audience Targeting",
-          description: "Geographic, demographic, and interest-based audiences tailored to each client's service area and ideal customer profile."
-        },
-        {
-          title: "Creative Strategy & Production",
-          description: "Thumb-stopping ad creative, video content, and carousel formats optimized for local service businesses."
-        },
-        {
-          title: "Retargeting & Lookalike Campaigns",
-          description: "Website visitor retargeting and lookalike audience expansion that keeps clients top-of-mind through the buying journey."
-        },
-        {
-          title: "Lead Form & Conversion Optimization",
-          description: "Native lead forms, Messenger automation, and landing page integration that reduces friction and increases conversion rates."
-        },
-        {
-          title: "Campaign Budget Optimization",
-          description: "Strategic budget allocation across campaigns, ad sets, and placements to maximize return on ad spend."
-        },
-        {
-          title: "Performance Reporting & Insights",
-          description: "Detailed analytics dashboards, audience insights, and actionable recommendations for continuous improvement."
+          title: "Conversion Tracking",
+          slug: "conversion-tracking",
+          description: "Call tracking, form tracking, and multi-touch attribution that proves ROI and informs optimization."
         }
       ]
     },
@@ -141,28 +127,34 @@ const TopicalExpertise = () => {
       summary: "Nurture leads and drive repeat business through strategic email campaigns and automation.",
       spokes: [
         {
-          title: "Campaign Strategy & Design",
-          description: "Custom email templates, compelling copy, and strategic send schedules that maximize open rates and conversions."
+          title: "Campaign Strategy",
+          slug: "campaign-strategy",
+          description: "Editorial calendars, seasonal campaigns, and send cadence planning tailored to local business cycles."
         },
         {
-          title: "Automation Sequences",
-          description: "Welcome series, nurture flows, and re-engagement campaigns that work around the clock to convert leads into customers."
+          title: "List Management",
+          slug: "list-management",
+          description: "Opt-in practices, list hygiene, segmentation, and subscriber cleanup that protects deliverability."
         },
         {
-          title: "List Management & Segmentation",
-          description: "Clean list hygiene, audience segmentation, and targeted messaging that improves deliverability and engagement."
+          title: "Automation Flows",
+          slug: "automation-flows",
+          description: "Welcome sequences, post-service follow-ups, win-back campaigns, and review request automations."
+        },
+        {
+          title: "Newsletter Design",
+          slug: "newsletter-design",
+          description: "Brand-consistent templates, mobile-optimized layouts, and compelling visual design."
+        },
+        {
+          title: "A/B Testing",
+          slug: "ab-testing",
+          description: "Subject line testing, send time optimization, and content experiments that improve performance."
         },
         {
           title: "Performance Analytics",
-          description: "Open rates, click-through tracking, A/B testing insights, and ROI analysis to continuously optimize campaign performance."
-        },
-        {
-          title: "Drip Campaign Development",
-          description: "Multi-touch email sequences tailored to buyer stages that systematically move prospects toward conversion."
-        },
-        {
-          title: "Deliverability & Compliance",
-          description: "SPF, DKIM, and DMARC configuration, CAN-SPAM compliance, and sender reputation management for maximum inbox placement."
+          slug: "performance-analytics",
+          description: "Open rates, click rates, conversion tracking, and revenue attribution reporting."
         }
       ]
     },
@@ -173,28 +165,72 @@ const TopicalExpertise = () => {
       summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
       spokes: [
         {
-          title: "Digital PR & Media Placements",
-          description: "Press release distribution, journalist outreach, and earned media coverage that builds brand authority and backlink profiles."
+          title: "Local Links",
+          slug: "local-links",
+          description: "Outreach to local publications, community organizations, and relevant sites to build geographic authority."
         },
         {
-          title: "Industry Directory Listings",
-          description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites that signal expertise."
+          title: "Citations",
+          slug: "citations",
+          description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites."
         },
         {
-          title: "Local Sponsorship & Partnerships",
-          description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement that create authentic local signals."
+          title: "Brand Mentions",
+          slug: "brand-mentions",
+          description: "Reddit, Quora, and Facebook mentions that feed AI discovery signals and build brand awareness."
         },
         {
-          title: "Reputation & Trust Management",
-          description: "Review monitoring, sentiment analysis, and brand mention tracking that protects and enhances online reputation."
+          title: "Guest Posts & Niche Edits",
+          slug: "guest-posts-niche-edits",
+          description: "Expert articles and strategic link placements on relevant industry and local sites."
         },
         {
-          title: "Thought Leadership Content",
-          description: "Expert articles, guest posts, and industry commentary that positions clients as trusted authorities in their field."
+          title: "Sponsorships",
+          slug: "sponsorships",
+          description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement."
         },
         {
-          title: "Awards & Recognition Strategy",
-          description: "Strategic award submissions, certification pursuits, and accolade promotion that builds credibility and differentiates from competitors."
+          title: "Reputation Signals",
+          slug: "reputation-signals",
+          description: "Review monitoring, sentiment analysis, and brand mention tracking that protects online reputation."
+        }
+      ]
+    },
+    {
+      icon: BarChart3,
+      title: "Reporting",
+      slug: "reporting",
+      summary: "White-label dashboards and reports that prove value and keep clients informed.",
+      spokes: [
+        {
+          title: "White-Label Dashboards",
+          slug: "white-label-dashboards",
+          description: "Custom-branded dashboards that aggregate performance data across all marketing channels."
+        },
+        {
+          title: "Monthly Reports",
+          slug: "monthly-reports",
+          description: "Comprehensive monthly reports with insights, recommendations, and next-step actions."
+        },
+        {
+          title: "Rank Tracking",
+          slug: "rank-tracking",
+          description: "Local and organic rank tracking across target keywords and geographic areas."
+        },
+        {
+          title: "Call Tracking",
+          slug: "call-tracking",
+          description: "Call recording, lead scoring, and attribution that connects marketing to phone leads."
+        },
+        {
+          title: "ROI Analysis",
+          slug: "roi-analysis",
+          description: "Revenue attribution and ROI calculations that justify marketing investment."
+        },
+        {
+          title: "Client Presentations",
+          slug: "client-presentations",
+          description: "Executive summaries and presentation-ready materials for client meetings."
         }
       ]
     }
@@ -275,17 +311,13 @@ const TopicalExpertise = () => {
                   <div className="pt-4 border-t border-border space-y-5">
                     {hub.spokes.map((spoke, spokeIndex) => (
                       <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                        <a 
-                          href="#contact" 
+                        <Link 
+                          to={`/white-label-inbound-marketing-services/${hub.slug}/${spoke.slug}`}
                           className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                          }}
+                          onClick={(e) => e.stopPropagation()}
                         >
                           {spoke.title} →
-                        </a>
+                        </Link>
                         <p className="text-text-secondary text-sm leading-relaxed mt-1">
                           {spoke.description}
                         </p>

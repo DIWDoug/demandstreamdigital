@@ -151,13 +151,22 @@ const Header = () => {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-0">
               {/* Services Mega Menu Trigger */}
-              <button
-                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+              <Link
+                to="/white-label-inbound-marketing-services"
+                onMouseEnter={() => setIsMegaMenuOpen(true)}
+                onClick={(e) => {
+                  if (isMegaMenuOpen) {
+                    // If menu is open, navigate
+                  } else {
+                    e.preventDefault();
+                    setIsMegaMenuOpen(true);
+                  }
+                }}
                 className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
               >
                 Services
                 <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
+              </Link>
               
               {navLinks.map((link, index) => (
                 link.isRoute ? (

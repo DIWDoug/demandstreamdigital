@@ -9,35 +9,35 @@ const Footer = () => {
       title: "LOCAL SEO",
       hubSlug: "local-seo",
       items: [
-        { label: "On-Page Optimization", slug: "on-page-local-optimization" },
-        { label: "Technical SEO", slug: "technical-seo-multi-location" },
-        { label: "Local Keyword Strategy", slug: "keyword-research-mapping" },
-        { label: "Content Development", slug: "local-content-strategy" },
-        { label: "Link Building", slug: "local-link-acquisition" },
-        { label: "Competitor Analysis", slug: "competitor-market-analysis" }
+        { label: "On-Page Optimization", slug: "on-page-optimization" },
+        { label: "Technical SEO", slug: "technical-seo" },
+        { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
+        { label: "Content Development", slug: "content-development" },
+        { label: "Link Building", slug: "link-building" },
+        { label: "Schema Markup", slug: "schema-markup" }
       ]
     },
     {
       title: "GBP SEO",
       hubSlug: "google-maps",
       items: [
-        { label: "GBP Optimization", slug: "gbp-management" },
-        { label: "Review Management", slug: "review-generation" },
+        { label: "GBP Optimization", slug: "gbp-optimization" },
+        { label: "Review Management", slug: "review-management" },
         { label: "Citation Building", slug: "citation-building" },
-        { label: "Local Pack Strategy", slug: "local-pack-ranking" },
-        { label: "Photo Optimization", slug: "photo-media-optimization" },
-        { label: "Multi-Location GBP", slug: "multi-location-gbp" }
+        { label: "Photo Optimization", slug: "photo-optimization" },
+        { label: "Q&A Management", slug: "qa-management" },
+        { label: "Post Scheduling", slug: "post-scheduling" }
       ]
     },
     {
       title: "PAID MEDIA",
       hubSlug: "paid-media",
       items: [
-        { label: "Google Ads", slug: "google-ads-management" },
-        { label: "Meta Ads", slug: "meta-ads-management" },
+        { label: "Google Ads", slug: "google-ads" },
+        { label: "Meta Ads", slug: "meta-ads" },
         { label: "Local Service Ads", slug: "local-service-ads" },
-        { label: "Retargeting", slug: "retargeting-campaigns" },
-        { label: "Landing Pages", slug: "landing-page-optimization" },
+        { label: "Retargeting Campaigns", slug: "retargeting-campaigns" },
+        { label: "Landing Page Design", slug: "landing-page-design" },
         { label: "Conversion Tracking", slug: "conversion-tracking" }
       ]
     },
@@ -45,24 +45,24 @@ const Footer = () => {
       title: "EMAIL MARKETING",
       hubSlug: "email-marketing",
       items: [
-        { label: "Permission & List Building", slug: "permission-list-building" },
-        { label: "Deliverability", slug: "deliverability-authentication" },
-        { label: "Automated Follow-Ups", slug: "automated-follow-ups" },
-        { label: "Local Segmentation", slug: "local-segmentation" },
-        { label: "Campaign Strategy", slug: "campaign-strategy-design" },
-        { label: "Inactivity Management", slug: "performance-inactivity-management" }
+        { label: "Campaign Strategy", slug: "campaign-strategy" },
+        { label: "List Management", slug: "list-management" },
+        { label: "Automation Flows", slug: "automation-flows" },
+        { label: "Newsletter Design", slug: "newsletter-design" },
+        { label: "A/B Testing", slug: "ab-testing" },
+        { label: "Performance Analytics", slug: "performance-analytics" }
       ]
     },
     {
       title: "AUTHORITY",
       hubSlug: "local-authority-building",
       items: [
-        { label: "PR Placement", slug: "pr-placement" },
-        { label: "Local Citations", slug: "local-citations" },
+        { label: "Local Links", slug: "local-links" },
+        { label: "Citations", slug: "citations" },
         { label: "Brand Mentions", slug: "brand-mentions" },
         { label: "Guest Posts & Niche Edits", slug: "guest-posts-niche-edits" },
-        { label: "Trust-Building Links", slug: "trust-building-links" },
-        { label: "Local Authority", slug: "local-authority-building" }
+        { label: "Sponsorships", slug: "sponsorships" },
+        { label: "Reputation Signals", slug: "reputation-signals" }
       ]
     },
     {
