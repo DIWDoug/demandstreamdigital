@@ -21,6 +21,10 @@ const TopicalExpertise = () => {
           description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy."
         },
         {
+          title: "Local Keyword Strategy",
+          description: "Seed keyword development from services and pain points, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping."
+        },
+        {
           title: "Local Content Strategy",
           description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries."
         },
@@ -29,12 +33,8 @@ const TopicalExpertise = () => {
           description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
         },
         {
-          title: "Keyword Research & Mapping",
-          description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages for maximum organic visibility."
-        },
-        {
-          title: "Competitor & Market Analysis",
-          description: "Deep analysis of local competitors' strategies, ranking factors, and market opportunities to identify gaps and advantages."
+          title: "NAP Citations & Schema",
+          description: "NAP consistency audits, citation cleanup, directory submissions, and schema markup that validate business identity for rankings and AI visibility."
         }
       ]
     },
@@ -46,15 +46,15 @@ const TopicalExpertise = () => {
       spokes: [
         {
           title: "GBP Profile Management",
-          description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results."
+          description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results and AI Overviews."
         },
         {
           title: "Review Generation & Response",
-          description: "Systematic review acquisition strategies and professional response management that builds trust and improves rankings."
+          description: "Systematic review acquisition strategies and professional response management that builds trust, improves rankings, and feeds AI recommendation systems."
         },
         {
           title: "Citation Building & Cleanup",
-          description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms that validate business legitimacy."
+          description: "NAP consistency across 50+ directories, data aggregators, and AI-cited platforms like Yelp and TripAdvisor that validate business legitimacy."
         },
         {
           title: "Local Pack Ranking Strategy",
@@ -62,7 +62,7 @@ const TopicalExpertise = () => {
         },
         {
           title: "Photo & Media Optimization",
-          description: "Professional photo management, virtual tours, and visual content strategies that increase engagement and click-through rates."
+          description: "Professional photo management, geotagging, and visual content strategies that increase engagement and click-through rates."
         },
         {
           title: "Multi-Location GBP Management",
@@ -169,7 +169,7 @@ const TopicalExpertise = () => {
     {
       icon: Award,
       title: "Authority Building",
-      slug: "authority",
+      slug: "local-authority-building",
       summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
       spokes: [
         {
