@@ -7,23 +7,23 @@ const FulfillmentApproach = () => {
   const pillars = [
     {
       icon: Target,
-      title: "Scope Comes Before Services",
-      body: "Every engagement begins with a clear understanding of the client's market, competition, and goals. Scope is defined intentionally before work begins, so execution matches reality instead of assumptions."
+      title: "Trust: Scope Comes Before Services",
+      body: "Every engagement begins with a clear understanding of the client's market, competition, and goals. We commit to a defined scope and honor it. When adjustments are needed, you know first."
     },
     {
       icon: Shield,
-      title: "Clear Standards and Guardrails",
-      body: "Custom does not mean open-ended. Deliverables, communication rhythms, and boundaries are clearly defined upfront, protecting expectations, margins, and accountability."
+      title: "Clarity: Clear Standards and Guardrails",
+      body: "Deliverables, communication rhythms, and boundaries are defined upfront. You always know what's included, how work progresses, and how to explain it to your clients."
     },
     {
       icon: Layers,
-      title: "Systems-Driven, Human-Led Execution",
-      body: "We use systems and AI-assisted workflows to accelerate research, planning, and execution. Specialists make the decisions that matter, while systems remove friction and inconsistency."
+      title: "Execution: Systems-Driven, Human-Led",
+      body: "Work moves forward without you managing it. Specialists make the decisions that matter while systems ensure consistency, on-time delivery, and quality you can count on."
     },
     {
       icon: RefreshCcw,
-      title: "Built to Adapt Without Resetting Everything",
-      body: "Markets change. Algorithms shift. Competition evolves. Our structure allows execution to adjust intentionally over time without restarting the engagement or blowing up scope."
+      title: "Built to Adapt Without Breaking Trust",
+      body: "Markets change. Algorithms shift. When adjustments are needed, we surface it early, talk through options, and document changes before moving forward. No surprises."
     }
   ];
 
@@ -114,10 +114,11 @@ const FulfillmentApproach = () => {
           {/* Closing Line */}
           <div className="mt-20 pt-12 border-t border-border/20">
             <p className="text-center text-text-secondary text-xl max-w-2xl mx-auto">
-              This approach gives agencies{" "}
-              <span className="text-foreground font-medium">flexibility</span>{" "}
-              without sacrificing{" "}
-              <span className="text-foreground font-medium">control</span>.
+              Three pillars:{" "}
+              <span className="text-foreground font-medium">Trust</span>,{" "}
+              <span className="text-foreground font-medium">Clarity</span>,{" "}
+              and <span className="text-foreground font-medium">Execution</span>.
+              {" "}Everything else follows.
             </p>
           </div>
         </div>

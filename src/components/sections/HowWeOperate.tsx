@@ -3,12 +3,12 @@ import SubtleOrbs from "@/components/SubtleOrbs";
 
 const HowWeOperate = () => {
   const principles = [
-    { icon: Eye, label: "Transparency" },
+    { icon: Shield, label: "Trust: Commitments Kept" },
+    { icon: Eye, label: "Clarity: Full Transparency" },
+    { icon: CheckCircle, label: "Execution: Seamless Delivery" },
     { icon: Clock, label: "Consistency" },
-    { icon: Shield, label: "White-Glove Delivery" },
     { icon: DollarSign, label: "Margin Protection" },
-    { icon: Lock, label: "Confidentiality" },
-    { icon: CheckCircle, label: "Reliability" }
+    { icon: Lock, label: "Confidentiality" }
   ];
 
   return (

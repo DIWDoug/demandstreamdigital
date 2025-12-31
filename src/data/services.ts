@@ -95,12 +95,12 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Fully white-labeled deliverables with your branding",
-        "Detailed monthly reports ready for client presentation",
-        "Direct access to your dedicated strategist",
-        "Transparent communication on strategy and progress",
+        "Trust: Deliverables match scope. Timelines are honored. No surprises.",
+        "Clarity: Detailed reports and talking points you can present with confidence",
+        "Execution: Work moves forward without you managing it",
+        "Direct access to your dedicated strategist for questions and updates",
         "Scalable processes that grow with your agency",
-        "No contracts. Just quality work that keeps you coming back"
+        "No contracts. Results keep you coming back, not lock-in agreements."
       ]
     },
     faqs: [
@@ -255,12 +255,12 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Complete white-label GBP management",
-        "Review generation campaigns and response drafting",
-        "Citation building and cleanup across 50+ sites",
-        "Weekly local pack ranking tracking",
-        "Monthly reports with actionable insights",
-        "Direct strategist access for questions and updates"
+        "Trust: Defined scope, consistent delivery, no silent failures",
+        "Clarity: Reports and processes you can explain to clients with confidence",
+        "Execution: Work moves forward on schedule without you managing it",
+        "Review generation campaigns with response drafting and approval workflows",
+        "Citation building and cleanup across 50+ directories",
+        "Direct strategist access for questions and real-time updates"
       ]
     },
     faqs: [
@@ -377,11 +377,11 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Complete campaign management across Google and Meta",
-        "Landing page development and optimization",
-        "Call tracking and lead attribution setup",
-        "Weekly optimization and bid management",
-        "Monthly ROI reporting for client presentations",
+        "Trust: Transparent reporting that connects spend to leads. No hidden metrics.",
+        "Clarity: Weekly updates and monthly strategy reviews. You always know what's happening.",
+        "Execution: Daily monitoring, weekly optimization. Campaigns improve without you managing them.",
+        "Landing page development with conversion tracking built in",
+        "Call tracking and lead attribution so ROI is provable",
         "Direct access to certified paid media specialists"
       ]
     },
@@ -485,12 +485,12 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Complete email marketing management",
-        "Custom template design and development",
-        "Automation sequence building",
-        "Regular campaign sends",
-        "List management and hygiene",
-        "Detailed performance reporting"
+        "Trust: Campaigns sent on schedule with approval workflows. No surprises in client inboxes.",
+        "Clarity: Performance reports that show opens, clicks, and revenue. You can explain results with confidence.",
+        "Execution: Automation runs 24/7 without you managing it. Sequences work while you sleep.",
+        "Custom template design matching client brand guidelines",
+        "List management and hygiene that protects deliverability",
+        "Review request automation integrated with GBP strategy"
       ]
     },
     faqs: [
@@ -594,12 +594,12 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Strategic local link acquisition campaigns",
-        "Citation building across industry directories",
-        "Anchor text diversification and monitoring",
-        "Community sponsorship coordination",
-        "Monthly authority building reports",
-        "Long-term ranking stability"
+        "Trust: Ethical, earned links only. No shortcuts that risk client domains.",
+        "Clarity: Monthly reports showing links acquired, anchor distribution, and authority growth.",
+        "Execution: Outreach runs continuously. Links accumulate without you managing campaigns.",
+        "Citation building across industry and local directories",
+        "Anchor text diversification to avoid over-optimization penalties",
+        "Long-term ranking stability that compounds over time"
       ]
     },
     faqs: [
@@ -702,12 +702,12 @@ export const hubs: Hub[] = [
     benefits: {
       headline: "What Your Agency Gets",
       items: [
-        "Completely white-labeled with your branding",
-        "Real-time dashboards clients can access anytime",
-        "Monthly reports with executive summaries",
-        "Automated delivery on your schedule",
-        "Rank tracking and visibility monitoring",
-        "ROI and lead attribution reporting"
+        "Trust: Consistent, on-time delivery. Reports arrive when expected, every time.",
+        "Clarity: Data presented in plain language. You can explain results without translating jargon.",
+        "Execution: Dashboards update automatically. Reports generate without manual effort.",
+        "Real-time dashboards clients can access anytime with your branding",
+        "Talking points for every report so client conversations go smoothly",
+        "ROI and lead attribution that proves your value"
       ]
     },
     faqs: [
