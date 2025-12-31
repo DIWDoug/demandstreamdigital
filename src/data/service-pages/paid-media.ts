@@ -168,58 +168,40 @@ export const paidMediaConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on budget, goals, and market dynamics.",
     blocks: [
       {
-        title: "Google Ads Management",
-        slug: "google-ads-management",
-        description: "Search, display, and shopping campaigns built for local lead generation.",
+        title: "Local Search Campaign Structure",
+        slug: "local-search-campaign-structure",
+        description: "Service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation.",
         icon: Search
       },
       {
-        title: "Meta Ads Management",
-        slug: "meta-ads-management",
-        description: "Facebook and Instagram campaigns that reach local audiences.",
-        icon: Target
-      },
-      {
-        title: "Local Service Ads",
-        slug: "local-service-ads",
-        description: "Google-verified LSAs with pay-per-lead pricing.",
-        icon: Map
-      },
-      {
-        title: "Retargeting & Display",
-        slug: "retargeting-campaigns",
-        description: "Display and social retargeting via Google, Meta, and AdRoll.",
-        icon: Share2
-      },
-      {
-        title: "Landing Page Design",
-        slug: "landing-page-design",
-        description: "Conversion-focused pages with local trust signals and optimized forms.",
+        title: "Landing Page Optimization",
+        slug: "landing-page-optimization",
+        description: "Conversion-focused pages with local trust signals, click-to-call, and optimized forms.",
         icon: MousePointerClick
       },
       {
-        title: "Funnel Strategy",
-        slug: "funnel-strategy",
-        description: "Top, middle, and bottom of funnel campaigns aligned to buyer intent.",
-        icon: Layers
-      },
-      {
-        title: "Conversion Tracking",
-        slug: "conversion-tracking",
-        description: "Tracking setup that connects clicks to form fills, calls, and revenue.",
-        icon: Settings
+        title: "Bid Strategy & Budget Allocation",
+        slug: "bid-strategy-budget-allocation",
+        description: "Smart bidding configurations and budget pacing that maximize lead volume.",
+        icon: DollarSign
       },
       {
         title: "Call Tracking & Attribution",
         slug: "call-tracking-attribution",
-        description: "Call recording, dynamic number insertion, and multi-touch attribution.",
+        description: "Call recording, lead scoring, and multi-touch attribution that proves ROI.",
         icon: BarChart3
       },
       {
-        title: "ROI Analysis & Reporting",
-        slug: "roi-analysis-reporting",
-        description: "White-labeled reports connecting spend to leads and revenue.",
-        icon: DollarSign
+        title: "Ad Copy & Extension Testing",
+        slug: "ad-copy-extension-testing",
+        description: "Continuous A/B testing to improve quality scores and conversion rates.",
+        icon: FileText
+      },
+      {
+        title: "Negative Keyword Management",
+        slug: "negative-keyword-management",
+        description: "Ongoing search term analysis to eliminate waste and improve lead quality.",
+        icon: Settings
       }
     ]
   },
