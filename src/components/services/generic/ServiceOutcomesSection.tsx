@@ -41,13 +41,21 @@ const ServiceOutcomesSection = ({ config }: ServiceOutcomesSectionProps) => {
                 key={outcome.title}
                 className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50"
               >
-                <div className="flex items-center justify-center gap-3 mb-5">
-                  <span className="text-xs font-bold text-text-muted/60 uppercase tracking-wider">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className={`inline-flex items-center justify-center p-4 rounded-xl border ${colorClass}`}>
-                    <outcome.icon className="w-7 h-7" strokeWidth={1.5} />
-                  </div>
+                <div className="flex items-center justify-center mb-5">
+                  {outcome.icon ? (
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-bold text-text-muted/60 uppercase tracking-wider">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <div className={`inline-flex items-center justify-center p-4 rounded-xl border ${colorClass}`}>
+                        <outcome.icon className="w-7 h-7" strokeWidth={1.5} />
+                      </div>
+                    </div>
+                  ) : (
+                    <span className={`text-4xl font-bold ${accentColors[index % accentColors.length].split(' ')[2]}`}>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground text-balance">
                   {outcome.title}
