@@ -246,25 +246,25 @@ export const authorityConfig: ServicePageConfig = {
       {
         category: "Results & Timing",
         items: [
-          { question: "How long does it take to build authority?", answer: "Initial wins may appear within 2-3 months, but the compound effects of authority development typically become significant at 6-12 months and continue growing over time." },
-          { question: "How is authority measured?", answer: "We track domain authority metrics, link profile growth, media mentions, brand search volume, and referral traffic. The best measure is ranking resilience over time." },
-          { question: "Can you guarantee media placements?", answer: "We cannot guarantee specific placements as editorial decisions are outside our control. However, our proven processes and media relationships consistently generate quality placements." }
+          { question: "How long does it take to see results from link building?", answer: "Initial ranking movement may appear within 2-3 months. Compound effects typically become significant at 6-12 months as authority signals accumulate." },
+          { question: "How do you measure authority?", answer: "We track domain rating, referring domains, citation flow, and anchor text distribution. The real measure is sustained ranking improvements over time." },
+          { question: "Can you guarantee specific DA or DR increases?", answer: "We cannot guarantee specific metric thresholds. Domain authority is a third-party estimate, not a Google metric. We focus on earning quality links that move rankings." }
         ]
       },
       {
         category: "Services & Approach",
         items: [
-          { question: "How is this different from link building?", answer: "Link building is one component of authority building, but authority encompasses much more: media coverage, reviews, brand mentions, industry recognition, and overall reputation. We take a holistic approach." },
-          { question: "Do you handle crisis reputation management?", answer: "Our focus is proactive authority building rather than reactive crisis management. However, we can help develop strategies to address reputation challenges as part of a comprehensive program." },
-          { question: "What industries do you work with?", answer: "We have experience across many industries, with particular depth in professional services, home services, healthcare, and legal. The principles of authority building apply broadly." }
+          { question: "What types of links do you build?", answer: "Local publications, industry directories, community sponsorships, guest posts on relevant blogs, and niche-specific resources. Every link is earned through outreach, not purchased." },
+          { question: "How do you handle anchor text?", answer: "We maintain natural anchor text profiles with a mix of branded, naked URL, and contextual anchors. Over-optimization is a penalty risk we actively avoid." },
+          { question: "Do you build citations as part of this service?", answer: "Yes. Structured citations on industry directories and local business listings are part of our authority building approach. We focus on quality and relevance over volume." }
         ]
       },
       {
         category: "Partnership & Process",
         items: [
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, strategy updates, and talking points. You maintain the client relationship." },
-          { question: "Do you require long-term contracts?", answer: "No mandatory long-term contracts, but we strongly recommend 6+ month commitments for authority building to show meaningful results." },
-          { question: "What do you need from clients?", answer: "We need client expertise and availability for quotes, interviews, and content input. The more accessible the client, the better the authority opportunities we can pursue." }
+          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All reporting and deliverables are branded as yours. You maintain the client relationship." },
+          { question: "Do you require long-term contracts?", answer: "No mandatory contracts, but we recommend 6+ month commitments. Authority compounds over time, and short engagements rarely show full potential." },
+          { question: "What do you need from clients to get started?", answer: "Access to their website, current backlink profile, and target keywords. The more context on their competitive landscape, the faster we can build a strategy." }
         ]
       }
     ]
