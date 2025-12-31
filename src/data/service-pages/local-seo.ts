@@ -196,16 +196,16 @@ export const localSEOConfig: ServicePageConfig = {
     headline: "Is This Right for Your Agency?",
     subheadline: "We work best with agencies who understand that local SEO is a strategic investment, not a quick fix.",
     goodFit: [
-      { point: "Verified GBP Listings", detail: "Your clients have verified, address-visible Google Business Profiles." },
-      { point: "Reliable Fulfillment Partner", detail: "You need a partner to replace inconsistent vendors without disruption." },
-      { point: "Long-Term Investment", detail: "Your clients understand SEO is a 6-12 month investment." },
-      { point: "White-Label Execution", detail: "You want execution under your brand with full transparency." }
+      { point: "Your clients have verified, address-visible GBP listings", detail: "Local SEO requires address-visible Google Business Profiles. Service-area-only listings need a different approach." },
+      { point: "You need a reliable fulfillment partner to replace inconsistent vendors", detail: "We become an extension of your team with documented processes and predictable delivery." },
+      { point: "Your clients understand SEO is a 6-12 month investment", detail: "Rankings don't happen overnight. You set realistic expectations and clients are willing to invest in the process." },
+      { point: "You want white-label execution under your brand", detail: "We operate invisibly. Your clients see your brand, your reports, your results." }
     ],
     notFit: [
-      { point: "Instant Rankings Expected", detail: "Clients expect top positions within weeks." },
-      { point: "Address-Hidden Listings", detail: "Service-area-only or address-hidden GBP profiles." },
-      { point: "No Content Investment", detail: "Unwillingness to invest in content and links." },
-      { point: "Guaranteed Positions", detail: "Need for guaranteed specific ranking positions." }
+      { point: "Your clients expect top rankings within weeks", detail: "If you're promising fast results to close deals, we're not the right partner for that conversation." },
+      { point: "Clients have service-area-only or address-hidden listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
+      { point: "There's no willingness to invest in content and links", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
+      { point: "You need guaranteed specific ranking positions", detail: "No one can guarantee rankings. We focus on systematic improvement and transparent reporting on progress." }
     ],
     ctaText: "Start the Conversation"
   },
