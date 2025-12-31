@@ -21,30 +21,30 @@ export const emailMarketingConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most Local Business Email Fails",
-    intro: "Email is granted media: subscribers and inbox providers control whether your message gets through. Most local business email programs fail because they treat the inbox like a billboard instead of a relationship. Technical infrastructure breaks down. Subscriber expectations go unmet. The list becomes a liability.",
+    intro: "Most local business email fails because it treats the inbox like a billboard instead of a relationship. Sporadic blasts without strategy. Technical problems that kill deliverability. No reason for customers to open, let alone act. The list becomes noise instead of an asset.",
     painPoints: [
       {
         icon: FileText,
-        title: "Respectful: Permission Eroded",
+        title: "No Permission Foundation",
         body: "Lists built on weak opt-ins and purchased contacts. Subscribers do not remember signing up. Spam complaints rise. Inbox providers start blocking."
       },
       {
         icon: Settings,
-        title: "Functional: Technical Failures",
-        body: "Emails render poorly on mobile. Links break. Authentication (SPF, DKIM, DMARC) is misconfigured. Messages land in spam instead of the inbox."
+        title: "Technical Breakdowns",
+        body: "Emails render poorly on mobile. Links break. Authentication is misconfigured. Messages land in spam instead of the inbox. The technical foundation crumbles."
       },
       {
         icon: Users,
-        title: "Valuable: No Subscriber Value",
-        body: "Every email is a sales pitch. No educational content. No service information. Subscribers tune out because there is nothing worth opening."
+        title: "No Reason to Open",
+        body: "Every email is a sales pitch. No helpful content. No service tips. No local relevance. Subscribers tune out because there is nothing worth their attention."
       },
       {
         icon: Target,
-        title: "Remarkable: Nothing Worth Sharing",
-        body: "Generic blasts that could come from any business. No local relevance. No special offers. Nothing that makes customers want to tell their friends."
+        title: "Forgotten Between Visits",
+        body: "Customers need HVAC service once a year. Dental cleanings twice. Without consistent, valuable touchpoints, the business fades from memory when it matters most."
       }
     ],
-    closingLine: "We build email programs that meet the Hierarchy of Subscriber Needs: respectful, functional, valuable, and remarkable.",
+    closingLine: "We build email programs that nurture relationships, stay top of mind, and convert when the timing is right.",
     closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
     ctaText: "Start the Conversation"
   },

@@ -571,22 +571,22 @@ export const hubs: Hub[] = [
     heroDescription: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that respect subscriber expectations, deliver value consistently, and drive repeat revenue for your agency's local business clients.",
     whyItMatters: {
       headline: "Why Email Marketing Matters for Local Businesses",
-      description: "Email is granted media: subscribers and inbox providers control whether your message gets through. For local businesses, email keeps customers coming back between visits and drives repeat revenue that compounds over time.",
+      description: "Local customers need your client's services periodically, not constantly. Between visits, email keeps the relationship warm, builds authority, and ensures the business is the first call when the need arises.",
       points: [
         { icon: TrendingUp, title: "Highest ROI Channel", description: "Email delivers $42 for every $1 spent on average. For local businesses with repeat customers, that ROI compounds with each return visit." },
-        { icon: Users, title: "Granted Media Asset", description: "Unlike social media, email reaches inboxes directly. But permission is foundational. Respect subscriber expectations or inbox providers will block you." },
+        { icon: Users, title: "Top-of-Mind Between Visits", description: "HVAC service once a year. Dental cleanings twice. Email fills the gap, keeping the business present until the next need emerges." },
         { icon: Zap, title: "Repeat Revenue Engine", description: "Automated sequences remind past customers to return, promote seasonal services, and drive bookings without manual effort." }
       ]
     },
     ourApproach: {
       headline: "Our Local Email Marketing Approach",
-      description: "We build email programs that meet the Hierarchy of Subscriber Needs: respectful, functional, valuable, and remarkable:",
+      description: "We build email programs that nurture relationships, establish authority, and convert when the timing is right:",
       steps: [
-        { number: "01", title: "Permission Foundation", description: "Proper opt-in practices, authentication setup, and list hygiene that protect sender reputation and ensure inbox placement." },
-        { number: "02", title: "Functional Infrastructure", description: "Templates that render on mobile, working links, proper tracking. The technical foundation that makes everything else work." },
-        { number: "03", title: "Valuable Content", description: "Service information, seasonal offers, and educational content that gives subscribers a reason to open and engage." },
-        { number: "04", title: "Lifecycle Automation", description: "Welcome sequences, post-service follow-ups, and re-engagement campaigns that work around the clock." },
-        { number: "05", title: "Local Segmentation", description: "Service-based and geographic targeting that delivers relevant offers to the right local customers." }
+        { number: "01", title: "Technical Foundation", description: "Proper opt-in practices, authentication setup, and list hygiene that protect sender reputation and ensure inbox placement." },
+        { number: "02", title: "Relationship Nurturing", description: "Content that positions the business as a helpful resource: seasonal tips, maintenance reminders, and local expertise." },
+        { number: "03", title: "Stay Top of Mind", description: "Consistent touchpoints that keep the brand present between service visits, so customers remember who to call." },
+        { number: "04", title: "Convert When Ready", description: "Targeted offers and timely promotions that drive action when the customer is ready to buy." },
+        { number: "05", title: "Build Local Authority", description: "Educational content and community involvement that positions the business as the trusted local expert." }
       ]
     },
     benefits: {
