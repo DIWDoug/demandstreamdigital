@@ -170,11 +170,11 @@ export const hubs: Hub[] = [
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "Comprehensive local keyword discovery, search intent analysis, and strategic mapping to pages.",
-        fullDescription: "Effective local SEO starts with understanding what people actually search for in each market. We go beyond basic keyword research to understand search intent, seasonal patterns, and competitive dynamics, then map keywords strategically.",
-        benefits: ["Complete picture of search demand", "Strategic targeting without cannibalization", "Understanding of competitive difficulty", "Quick-win opportunity identification", "Foundation for content strategy"],
-        deliverables: ["Comprehensive keyword research", "Search volume and difficulty analysis", "Keyword-to-page mapping", "Content gap identification", "Competitor keyword analysis", "Priority recommendations"],
-        process: ["Seed keyword identification", "Keyword expansion", "Search intent classification", "Competitive analysis", "Strategic mapping", "Priority ranking"]
+        description: "Seed keyword development, implicit vs explicit local intent analysis, competitor gap research, and strategic mapping to pages.",
+        fullDescription: "Effective local SEO starts with understanding what people actually search for in each market. We identify seed keywords from your services, products, and customer pain points, then expand with location modifiers including cities, neighborhoods, landmarks, and ZIP codes. We distinguish between explicit local keywords ('plumber Dallas') and implicit keywords that trigger the local pack without location terms. Competitor gap analysis reveals terms rivals rank for that you're missing.",
+        benefits: ["Complete picture of local search demand per market", "Implicit and explicit local keyword coverage", "Strategic targeting without cannibalization", "Competitor keyword gaps identified and prioritized", "Quick-win opportunities from existing impressions", "Foundation for content and GBP strategy"],
+        deliverables: ["Seed keyword development from services, products, and pain points", "Location modifier research including landmarks and ZIP codes", "Implicit vs explicit intent classification", "Local pack trigger analysis", "Competitor keyword gap analysis", "Keyword-to-page mapping with target URLs", "Personal difficulty scoring based on current authority", "Multi-location keyword sets where applicable"],
+        process: ["Seed keyword identification from business offerings", "Location modifier research per market", "Keyword expansion and local intent classification", "Competitor gap analysis", "Personal difficulty evaluation", "Strategic mapping to existing and future pages", "Priority ranking by volume, difficulty, and value"]
       },
       {
         title: "Content Development",
