@@ -1,14 +1,35 @@
 // Spoke-specific content blocks for the alternating layout
 // Each spoke has customized content organized by category
 
-import visibleElementsImg from "@/assets/spoke/visible-elements.png";
-import technicalMarkupImg from "@/assets/spoke/technical-markup.png";
-import fullFunnelImg from "@/assets/spoke/full-funnel.png";
-import technicalSeoImg from "@/assets/spoke/technical-seo.png";
-import keywordStrategyImg from "@/assets/spoke/keyword-strategy.png";
-import contentDevelopmentImg from "@/assets/spoke/content-development.png";
-import linkBuildingImg from "@/assets/spoke/link-building.png";
-import schemaMarkupImg from "@/assets/spoke/schema-markup.png";
+// On-Page Optimization illustrations
+import onPageTitlesImg from "@/assets/spoke/on-page-titles.png";
+import onPageStructureImg from "@/assets/spoke/on-page-structure.png";
+import onPageLinksImg from "@/assets/spoke/on-page-links.png";
+
+// Technical SEO illustrations
+import technicalCrawlImg from "@/assets/spoke/technical-crawl.png";
+import technicalVitalsImg from "@/assets/spoke/technical-vitals.png";
+import technicalSchemaImg from "@/assets/spoke/technical-schema.png";
+
+// Keyword Strategy illustrations
+import keywordResearchImg from "@/assets/spoke/keyword-research.png";
+import keywordIntentImg from "@/assets/spoke/keyword-intent.png";
+import keywordMappingImg from "@/assets/spoke/keyword-mapping.png";
+
+// Content Development illustrations
+import contentLocationImg from "@/assets/spoke/content-location.png";
+import contentBlogImg from "@/assets/spoke/content-blog.png";
+import contentRefreshImg from "@/assets/spoke/content-refresh.png";
+
+// Link Building illustrations
+import linkLocalImg from "@/assets/spoke/link-local.png";
+import linkAuthorityImg from "@/assets/spoke/link-authority.png";
+import linkHealthImg from "@/assets/spoke/link-health.png";
+
+// Schema Markup illustrations
+import schemaBusinessImg from "@/assets/spoke/schema-business.png";
+import schemaServiceImg from "@/assets/spoke/schema-service.png";
+import schemaRichImg from "@/assets/spoke/schema-rich.png";
 
 interface SubPoint {
   title: string;
@@ -91,7 +112,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Emotional Triggers", description: "Positive emotional hooks in titles increase CTR by 4%. Used strategically, never as clickbait." },
         { title: "Freshness Signals", description: "Current year added to titles for time-sensitive content. Users want current information." }
       ],
-      imageSrc: visibleElementsImg,
+      imageSrc: onPageTitlesImg,
       imageAlt: "Title and meta optimization diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -108,7 +129,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "LLM-Ready Chunks", description: "Content broken into clear sections with descriptive subheads. Each section answers one question." },
         { title: "FAQ for AI", description: "Real questions in dedicated FAQ blocks. LLMs extract these more reliably than buried paragraphs." }
       ],
-      imageSrc: technicalMarkupImg,
+      imageSrc: onPageStructureImg,
       imageAlt: "Content structure and keyword hierarchy diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -125,7 +146,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Alt Text", description: "Every image gets descriptive alt text for accessibility and SEO relevance signals." },
         { title: "Clean URLs", description: "Short, keyword-inclusive URLs. No parameters or session IDs cluttering the path." }
       ],
-      imageSrc: fullFunnelImg,
+      imageSrc: onPageLinksImg,
       imageAlt: "Internal linking architecture diagram",
       ctaText: "Get a Custom Audit",
       ctaHref: "#contact"
@@ -145,7 +166,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Internal Links", description: "Strategic linking from authority pages to priority targets. Orphan pages identified." },
         { title: "URL Structure", description: "Clean, logical paths. No dynamic parameters, session IDs, or unnecessary depth." }
       ],
-      imageSrc: technicalSeoImg,
+      imageSrc: technicalCrawlImg,
       imageAlt: "Site architecture and crawlability diagram",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -162,7 +183,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Image Formats", description: "WebP/AVIF formats, lazy loading, and proper sizing to reduce payload." },
         { title: "Script Audit", description: "External scripts evaluated for impact. Defer, async, or remove what slows the page." }
       ],
-      imageSrc: technicalSeoImg,
+      imageSrc: technicalVitalsImg,
       imageAlt: "Core Web Vitals performance metrics",
       ctaText: "Get a Technical Audit",
       ctaHref: "#contact"
@@ -179,7 +200,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Rich Snippets", description: "FAQ schema targets PAA. Product schema displays ratings in results." },
         { title: "Security & HTTPS", description: "Secure protocol confirmed. Mixed content resolved. Security headers reviewed." }
       ],
-      imageSrc: schemaMarkupImg,
+      imageSrc: technicalSchemaImg,
       imageAlt: "Indexation and structured data diagram",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -199,7 +220,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Seasonal Mapping", description: "Demand fluctuations tracked. Content planned before peaks, not after." },
         { title: "GSC Mining", description: "Existing impressions reveal keywords you almost rank for. Low-hanging fruit first." }
       ],
-      imageSrc: keywordStrategyImg,
+      imageSrc: keywordResearchImg,
       imageAlt: "Local keyword research methodology",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -216,7 +237,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "SERP Analysis", description: "Results Google shows reveal intent. We analyze before targeting any keyword." },
         { title: "Mismatch Fixes", description: "Pages targeting wrong intent identified. Content realigned or pages created." }
       ],
-      imageSrc: keywordStrategyImg,
+      imageSrc: keywordIntentImg,
       imageAlt: "Search intent classification framework",
       ctaText: "Get Keyword Strategy",
       ctaHref: "#contact"
@@ -233,7 +254,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Cluster Planning", description: "Keywords grouped into hub-spoke clusters for comprehensive topical coverage." },
         { title: "Tracking Setup", description: "Target keywords added to tools with geo-targeting. Progress measured." }
       ],
-      imageSrc: keywordStrategyImg,
+      imageSrc: keywordMappingImg,
       imageAlt: "Keyword-to-page mapping strategy",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -253,7 +274,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Schema Integration", description: "LocalBusiness and Service schema on every location page." },
         { title: "Link Architecture", description: "Location pages connected to hub structure. Authority flows properly." }
       ],
-      imageSrc: contentDevelopmentImg,
+      imageSrc: contentLocationImg,
       imageAlt: "Location page content structure",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -270,7 +291,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Seasonal Calendar", description: "Publishing aligned with demand. Content live before spikes." },
         { title: "Information Gain", description: "Original insights and data. Value beyond rewrites of existing content." }
       ],
-      imageSrc: contentDevelopmentImg,
+      imageSrc: contentBlogImg,
       imageAlt: "Content cluster strategy diagram",
       ctaText: "Get Content Strategy",
       ctaHref: "#contact"
@@ -287,7 +308,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Consolidation", description: "Multiple pages for same keyword merged. Authority concentrated." },
         { title: "Link Injection", description: "Optimized pages connected to site architecture from authority pages." }
       ],
-      imageSrc: contentDevelopmentImg,
+      imageSrc: contentRefreshImg,
       imageAlt: "Content optimization workflow",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -307,7 +328,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Resource Pages", description: "City websites, tourism boards, community lists. Government and .edu links." },
         { title: "Hyperlocal Promotion", description: "Local content promoted to local audiences. Shares from people who care." }
       ],
-      imageSrc: linkBuildingImg,
+      imageSrc: linkLocalImg,
       imageAlt: "Local link acquisition sources",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -324,7 +345,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "HARO Outreach", description: "Expert commentary for journalists. Links from news and major publications." },
         { title: "Digital PR", description: "Newsworthy angles and data studies. Coverage from authoritative sources." }
       ],
-      imageSrc: linkBuildingImg,
+      imageSrc: linkAuthorityImg,
       imageAlt: "Authority link building tactics",
       ctaText: "Get Link Strategy",
       ctaHref: "#contact"
@@ -341,7 +362,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Gaps", description: "Link sources competitors have identified. Prioritized for outreach." },
         { title: "Attribution Tracking", description: "New links monitored and attributed to campaigns. ROI measured." }
       ],
-      imageSrc: linkBuildingImg,
+      imageSrc: linkHealthImg,
       imageAlt: "Link profile health analysis",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
@@ -361,7 +382,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Same-As Links", description: "Social and directory profiles linked to business entity." },
         { title: "Geo Coordinates", description: "Precise location and service area polygons. Powers map integrations." }
       ],
-      imageSrc: schemaMarkupImg,
+      imageSrc: schemaBusinessImg,
       imageAlt: "Business identity schema types",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
@@ -378,7 +399,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Area Nesting", description: "Service area nested within LocalBusiness. Geographic signals strengthened." },
         { title: "Offer Catalogs", description: "Full service catalogs structured. Offerings discoverable via schema." }
       ],
-      imageSrc: schemaMarkupImg,
+      imageSrc: schemaServiceImg,
       imageAlt: "Service and offer schema markup",
       ctaText: "Get Schema Audit",
       ctaHref: "#contact"
@@ -395,7 +416,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Breadcrumbs", description: "Navigation hierarchy for breadcrumb displays. Improves CTR." },
         { title: "Video Schema", description: "Media structured for carousels. Thumbnails, duration, descriptions." }
       ],
-      imageSrc: schemaMarkupImg,
+      imageSrc: schemaRichImg,
       imageAlt: "Content rich result schema types",
       ctaText: "Schedule a Consultation",
       ctaHref: "#contact"
