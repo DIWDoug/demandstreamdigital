@@ -156,7 +156,7 @@ export const emailMarketingConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Local Email Marketing",
+    headline: "The Levers We Pull Based on Business Model",
     subheadline: "Each component is scoped based on the local business model, customer base, and goals.",
     blocks: [
       {

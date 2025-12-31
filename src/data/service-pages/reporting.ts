@@ -153,8 +153,8 @@ export const reportingConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Components of Agency Reporting",
-    subheadline: "Each component is scoped based on your agency needs and client types—not templated packages.",
+    headline: "The Levers We Pull Based on Agency Needs",
+    subheadline: "Each component is scoped based on your agency needs and client types.",
     blocks: [
       {
         title: "White-Label Dashboards",
