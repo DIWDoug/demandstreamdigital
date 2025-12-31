@@ -257,7 +257,7 @@ const PaidMediaCalculator = () => {
                           }
                           setCustomRetainer(null);
                         }}
-                        className={`flex flex-col items-center gap-2 p-4 rounded-lg border transition-all ${
+                        className={`flex flex-col items-center justify-center gap-2 min-h-[72px] md:min-h-[80px] p-4 md:p-4 rounded-lg border transition-all active:scale-95 ${
                           isSelected 
                             ? 'bg-primary/20 border-primary' 
                             : 'bg-background/50 border-border/50 hover:border-border'
@@ -266,7 +266,7 @@ const PaidMediaCalculator = () => {
                         <img 
                           src={platform.logo} 
                           alt={platform.name} 
-                          className="h-8 w-auto object-contain"
+                          className="h-7 md:h-8 w-auto object-contain"
                         />
                         <span className={`text-xs font-medium ${isSelected ? 'text-primary' : 'text-muted-foreground'}`}>
                           {platform.name}
