@@ -159,13 +159,13 @@ export const hubs: Hub[] = [
         ]
       },
       {
-        title: "Technical SEO Audits",
-        slug: "technical-seo-audits",
-        description: "Site architecture, crawlability, Core Web Vitals, and technical fixes that remove barriers to ranking.",
-        fullDescription: "Technical SEO issues silently kill rankings. We audit site architecture, crawlability, page speed, mobile usability, and indexation to identify and fix the technical barriers preventing your clients from ranking.",
-        benefits: ["Clear site hierarchy for search engines", "Faster page load times", "Improved mobile experience", "Better crawl efficiency", "Scalable structure for growth"],
-        deliverables: ["Technical SEO audit with priorities", "Site architecture recommendations", "XML sitemap optimization", "Robots.txt optimization", "Core Web Vitals improvements", "Mobile usability fixes"],
-        process: ["Crawl analysis", "Technical barrier identification", "Prioritized roadmap", "Implementation or specifications", "Verification and monitoring"]
+        title: "Technical SEO",
+        slug: "technical-seo",
+        description: "Site architecture, crawlability, Core Web Vitals, and indexation fixes that remove barriers to ranking.",
+        fullDescription: "Technical SEO issues silently kill rankings. If Google can't crawl, render, and index your content, nothing else matters. We optimize site architecture, fix crawlability issues, eliminate duplicate content, improve page speed, and ensure mobile usability so search engines can fully access and understand every page.",
+        benefits: ["Flat, organized site architecture that Google can fully crawl", "Faster page load times through size reduction and optimization", "Zero duplicate content issues through canonical and noindex implementation", "Mobile-first usability that passes Core Web Vitals", "Clean URL structure with logical hierarchy"],
+        deliverables: ["Complete technical SEO audit with prioritized fixes", "Site architecture analysis and recommendations", "XML sitemap optimization and validation", "Robots.txt and meta robots configuration", "Core Web Vitals and page speed improvements", "Duplicate content resolution via canonicals and noindex", "Internal linking structure optimization", "Mobile usability issue remediation"],
+        process: ["Crawl analysis with Screaming Frog and Search Console", "Site structure and architecture review", "Indexation issue identification and resolution", "Duplicate and thin content remediation", "Page speed optimization", "Mobile usability verification", "Ongoing monitoring and quarterly re-audits"]
       },
       {
         title: "Local Keyword Strategy",
