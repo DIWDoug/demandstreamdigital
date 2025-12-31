@@ -38,9 +38,13 @@ const PaidMediaCalculator = () => {
     // Your margin
     const monthlyMargin = clientRetainer - monthlyOEM;
     
-    // Annual projections (setup fee is per account, first month only)
-    const annualRevenue = clientRetainer * 12;
+    // Setup fees
     const totalSetup = SETUP_FEE * platforms;
+    const suggestedClientSetup = 599 * platforms; // Recommended client setup fee
+    const setupMargin = suggestedClientSetup - totalSetup;
+    
+    // Annual projections (setup fee is per account, first month only)
+    const annualRevenue = (clientRetainer * 12) + suggestedClientSetup;
     const annualOEM = totalSetup + (monthlyOEM * 12);
     const annualMargin = annualRevenue - annualOEM;
     
@@ -56,6 +60,8 @@ const PaidMediaCalculator = () => {
       currentTier,
       nextTier,
       totalSetup,
+      suggestedClientSetup,
+      setupMargin,
       spendHeadroom,
       suggestedPerPlatform,
       suggestedRetainer,
@@ -233,9 +239,11 @@ const PaidMediaCalculator = () => {
                 </h3>
                 
                 <div className="bg-background border border-border rounded-lg p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Zap className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">Setup (one-time)</span>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm text-muted-foreground">Setup (one-time)</span>
+                    </div>
                   </div>
                   <p className="text-2xl font-bold text-foreground">
                     {formatCurrency(calculations.totalSetup)}
@@ -243,6 +251,14 @@ const PaidMediaCalculator = () => {
                   <p className="text-xs text-muted-foreground mt-1">
                     {formatCurrency(SETUP_FEE)} × {platforms} {platforms === 1 ? 'account' : 'accounts'}
                   </p>
+                  <div className="mt-3 pt-3 border-t border-border/50">
+                    <p className="text-xs text-muted-foreground">
+                      Recommend charging client: <span className="text-primary font-medium">{formatCurrency(calculations.suggestedClientSetup)}</span>
+                    </p>
+                    <p className="text-xs text-green-400 mt-0.5">
+                      +{formatCurrency(calculations.setupMargin)} margin
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="bg-background border border-border rounded-lg p-5">
