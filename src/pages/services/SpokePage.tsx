@@ -194,7 +194,7 @@ const SpokePage = () => {
 
       {/* Alternating Content Blocks - use spoke-specific content if available */}
       {spokeContentBlocks[spokeSlug || ""] ? (
-        <SpokeAlternatingBlocks blocks={spokeContentBlocks[spokeSlug || ""]} />
+        <SpokeAlternatingBlocks blocks={spokeContentBlocks[spokeSlug || ""]} spokeSlug={spokeSlug} />
       ) : (
         /* Fallback to original Benefits & Deliverables for spokes without custom blocks */
         <section className="py-16 lg:py-20 section-light">
