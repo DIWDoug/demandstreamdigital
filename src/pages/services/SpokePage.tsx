@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
-import { ArrowLeft, ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -10,8 +10,7 @@ import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import SpokeAlternatingBlocks, { onPageOptimizationBlocks } from "@/components/services/SpokeAlternatingBlocks";
-import ServiceEcosystemSection from "@/components/services/generic/ServiceEcosystemSection";
-import { localSEOConfig } from "@/data/service-pages/local-seo";
+import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
 import {
   Accordion,
   AccordionContent,
@@ -64,7 +63,6 @@ const SpokePage = () => {
 
   // Find sibling spokes for ecosystem
   const siblingSpokes = hub.spokes.filter((s) => s.slug !== spokeSlug);
-  const HubIcon = hub.icon;
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -272,66 +270,22 @@ const SpokePage = () => {
 
       <SectionDivider />
 
-      {/* Hub Ecosystem - Sibling Spokes */}
+      {/* Spoke Ecosystem Orbit - shows current spoke with siblings */}
       {siblingSpokes.length > 0 && (
-        <section className="py-16 lg:py-20 section-light">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              {/* Header */}
-              <div className="text-center mb-12">
-                <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
-                  Part of {hub.title}
-                </p>
-                <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
-                  Related Services
-                </h2>
-                <p className="text-slate-600 max-w-2xl mx-auto">
-                  {spoke.title} works alongside these other {hub.title} components for maximum impact.
-                </p>
-              </div>
-
-              {/* Hub-Spoke Visual */}
-              <div className="relative">
-                {/* Center Hub */}
-                <div className="flex justify-center mb-8">
-                  <Link
-                    to={`/white-label-inbound-marketing-services/${hub.slug}`}
-                    className="group relative flex flex-col items-center justify-center w-32 h-32 rounded-full bg-white border-2 border-cta shadow-lg hover:shadow-xl transition-all"
-                  >
-                    <HubIcon className="w-8 h-8 text-cta mb-2" />
-                    <span className="text-xs font-semibold text-slate-900 text-center px-2">{hub.title}</span>
-                    <span className="absolute -bottom-6 text-xs text-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      View Hub →
-                    </span>
-                  </Link>
-                </div>
-
-                {/* Spokes Grid */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {siblingSpokes.map((sibling) => (
-                    <Link
-                      key={sibling.slug}
-                      to={`/white-label-inbound-marketing-services/${hub.slug}/${sibling.slug}`}
-                      className="group p-5 rounded-xl bg-white border border-slate-200 hover:border-cta/40 hover:shadow-md transition-all"
-                    >
-                      <h3 className="text-sm font-semibold text-slate-900 group-hover:text-cta transition-colors mb-2">
-                        {sibling.title}
-                      </h3>
-                      <p className="text-xs text-slate-600 line-clamp-2 mb-3">
-                        {sibling.description}
-                      </p>
-                      <span className="inline-flex items-center gap-1 text-xs text-cta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Learn more
-                        <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
+        <SpokeEcosystemOrbit
+          hubTitle={hub.title}
+          hubSlug={hub.slug}
+          currentSpoke={{
+            title: spoke.title,
+            slug: spoke.slug,
+            description: spoke.description
+          }}
+          siblingSpokes={siblingSpokes.map(s => ({
+            title: s.title,
+            slug: s.slug,
+            description: s.description
+          }))}
+        />
       )}
 
       {/* FAQ Section */}
@@ -385,13 +339,6 @@ const SpokePage = () => {
         </>
       )}
 
-      {/* 360° Ecosystem Orbit Diagram - for Local SEO spokes */}
-      {hubSlug === "local-seo" && (
-        <>
-          <SectionDivider />
-          <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
-        </>
-      )}
 
       {/* Contact Form */}
       <ContactForm />
