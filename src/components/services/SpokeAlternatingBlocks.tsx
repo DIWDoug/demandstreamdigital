@@ -2,7 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import type { ContentBlock } from "@/data/spoke-content-blocks";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { searchPixabayImages, getSpokeKeyword } from "@/lib/pixabay";
 
 interface SpokeAlternatingBlocksProps {
   blocks: ContentBlock[];
@@ -75,52 +76,16 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                   )}
                 </div>
 
-                {/* Image Side */}
+                {/* Image Side - Always use PixabayBlockImage for dynamic images */}
                 <div className={`${isReversed ? "lg:order-1" : ""}`}>
-                  {block.imageSrc ? (
-                    <LazyImage 
-                      src={block.imageSrc} 
-                      alt={descriptiveAlt}
-                      isLight={isLight}
-                    />
-                  ) : (
-                    /* Abstract visual placeholder */
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                      <div 
-                        className={`absolute inset-0 ${isLight ? "bg-gradient-to-br from-slate-100 to-slate-200" : "bg-gradient-to-br from-surface-elevated to-surface-card"} border border-border/30 rounded-2xl`}
-                      />
-                      {/* Grid pattern */}
-                      <div 
-                        className="absolute inset-0 opacity-[0.06]"
-                        style={{
-                          backgroundImage: `linear-gradient(hsl(var(--cta)) 1px, transparent 1px),
-                                           linear-gradient(90deg, hsl(var(--cta)) 1px, transparent 1px)`,
-                          backgroundSize: '30px 30px'
-                        }}
-                      />
-                      {/* Floating elements */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-3/4 h-3/4 relative">
-                          <div 
-                            className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-cta/10 animate-pulse"
-                            style={{ animationDuration: "4s" }}
-                          />
-                          <div 
-                            className="absolute bottom-1/4 right-1/4 w-28 h-28 rounded-full bg-accent-blue/10 animate-pulse"
-                            style={{ animationDuration: "5s", animationDelay: "1s" }}
-                          />
-                          {/* Step number */}
-                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <div className={`w-20 h-20 rounded-2xl ${isLight ? "bg-white border-slate-200" : "bg-surface-elevated border-border/50"} border flex items-center justify-center shadow-lg`}>
-                              <span className={`text-3xl font-bold ${isLight ? "text-cta" : "text-cta"}`}>
-                                {String(index + 1).padStart(2, '0')}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  <PixabayBlockImage 
+                    spokeSlug={spokeSlug}
+                    category={block.category}
+                    headline={block.headline}
+                    blockIndex={index}
+                    isLight={isLight}
+                    alt={descriptiveAlt}
+                  />
                 </div>
               </div>
             </div>
@@ -131,45 +96,166 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
   );
 };
 
+// Cache for storing fetched image URLs to avoid redundant API calls
+const pixabayCache = new Map<string, string>();
+
 /**
- * Lazy-loaded image component with loading state
+ * Pixabay-powered image component for content blocks
+ * Fetches images based on spoke context and block content
  */
-interface LazyImageProps {
-  src: string;
-  alt: string;
+interface PixabayBlockImageProps {
+  spokeSlug?: string;
+  category: string;
+  headline: string;
+  blockIndex: number;
   isLight: boolean;
+  alt: string;
 }
 
-const LazyImage = ({ src, alt, isLight }: LazyImageProps) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight, alt }: PixabayBlockImageProps) => {
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  // Build a search keyword from the spoke and category
+  const buildSearchKeyword = () => {
+    // Get spoke-specific keyword if available
+    const spokeKeyword = spokeSlug ? getSpokeKeyword(spokeSlug) : null;
+    
+    // Build contextual keywords from category and headline
+    const categoryWords = category.toLowerCase().replace(/[^a-z\s]/g, '').trim();
+    const headlineWords = headline.toLowerCase().replace(/[^a-z\s]/g, '').split(' ').slice(0, 3).join(' ');
+    
+    // Combine for a rich search query
+    if (spokeKeyword && spokeKeyword !== 'digital marketing business') {
+      return `${spokeKeyword} ${categoryWords}`;
+    }
+    
+    return `${categoryWords} ${headlineWords} business professional`;
+  };
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '200px',
+        threshold: 0.1
+      }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Fetch image when in view
+  useEffect(() => {
+    if (!isInView) return;
+
+    const fetchImage = async () => {
+      setIsLoading(true);
+      setHasError(false);
+
+      const searchKeyword = buildSearchKeyword();
+      const cacheKey = `${spokeSlug || 'default'}-${blockIndex}-${searchKeyword}`;
+
+      // Check cache first
+      if (pixabayCache.has(cacheKey)) {
+        setImageUrl(pixabayCache.get(cacheKey)!);
+        setIsLoading(false);
+        return;
+      }
+
+      try {
+        // Fetch from Pixabay with offset based on block index for variety
+        const response = await searchPixabayImages({
+          query: searchKeyword,
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 10,
+          minWidth: 800,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (response.hits.length > 0) {
+          // Use block index to select different images for variety
+          const imageIndex = blockIndex % response.hits.length;
+          const url = response.hits[imageIndex].largeImageURL;
+          pixabayCache.set(cacheKey, url);
+          setImageUrl(url);
+          setIsLoading(false);
+          return;
+        }
+
+        // Fallback search
+        const fallbackResponse = await searchPixabayImages({
+          query: 'business professional office',
+          imageType: 'photo',
+          orientation: 'horizontal',
+          perPage: 10,
+          minWidth: 800,
+          safeSearch: true,
+          order: 'popular'
+        });
+
+        if (fallbackResponse.hits.length > 0) {
+          const imageIndex = blockIndex % fallbackResponse.hits.length;
+          const url = fallbackResponse.hits[imageIndex].largeImageURL;
+          pixabayCache.set(cacheKey, url);
+          setImageUrl(url);
+        } else {
+          setHasError(true);
+        }
+      } catch (error) {
+        console.error('Error fetching Pixabay image:', error);
+        setHasError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchImage();
+  }, [isInView, spokeSlug, category, headline, blockIndex]);
 
   return (
-    <div className="relative">
+    <div ref={imgRef} className="relative aspect-[4/3]">
       {/* Glow effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-cta/20 to-accent-blue/20 rounded-2xl blur-2xl opacity-40 -z-10 translate-y-4" />
       
       {/* Loading skeleton */}
-      {!isLoaded && !hasError && (
-        <div className={`absolute inset-0 rounded-2xl ${isLight ? 'bg-slate-200' : 'bg-surface-elevated'} animate-pulse`} />
+      {(isLoading || !isInView) && (
+        <div className={`absolute inset-0 rounded-2xl ${isLight ? 'bg-slate-200' : 'bg-surface-elevated'} animate-pulse flex items-center justify-center`}>
+          <div className="w-12 h-12 rounded-full border-2 border-cta/30 border-t-cta animate-spin" />
+        </div>
       )}
       
       {/* Error fallback */}
-      {hasError && (
-        <div className={`aspect-[4/3] rounded-2xl ${isLight ? 'bg-slate-100' : 'bg-surface-elevated'} flex items-center justify-center`}>
+      {hasError && !isLoading && (
+        <div className={`absolute inset-0 rounded-2xl ${isLight ? 'bg-slate-100' : 'bg-surface-elevated'} flex items-center justify-center`}>
           <span className="text-text-muted text-sm">Image unavailable</span>
         </div>
       )}
       
       {/* Actual image with lazy loading */}
-      {!hasError && (
+      {imageUrl && !hasError && (
         <img
-          src={src}
+          src={imageUrl}
           alt={alt}
           loading="lazy"
           decoding="async"
-          className={`w-full h-auto rounded-2xl shadow-2xl border border-border/20 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-          onLoad={() => setIsLoaded(true)}
+          className={`w-full h-full object-cover rounded-2xl shadow-2xl border border-border/20 transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          onLoad={() => setIsLoading(false)}
           onError={() => setHasError(true)}
         />
       )}
