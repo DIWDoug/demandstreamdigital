@@ -174,13 +174,13 @@ export const paidMediaConfig: ServicePageConfig = {
     blocks: [
       {
         title: "Google Ads Management",
-        slug: "google-ads-management",
+        slug: "google-ads",
         description: "Search, display, and shopping campaigns built for local lead generation.",
         icon: Search
       },
       {
         title: "Meta Ads Management",
-        slug: "meta-ads-management",
+        slug: "meta-ads",
         description: "Facebook and Instagram campaigns that reach local audiences.",
         icon: Target
       },
@@ -203,28 +203,10 @@ export const paidMediaConfig: ServicePageConfig = {
         icon: MousePointerClick
       },
       {
-        title: "Funnel Strategy",
-        slug: "funnel-strategy",
-        description: "Top, middle, and bottom of funnel campaigns aligned to buyer intent.",
-        icon: Layers
-      },
-      {
         title: "Conversion Tracking",
         slug: "conversion-tracking",
         description: "Tracking setup that connects clicks to form fills, calls, and revenue.",
         icon: Settings
-      },
-      {
-        title: "Call Tracking & Attribution",
-        slug: "call-tracking-attribution",
-        description: "Call recording, dynamic number insertion, and multi-touch attribution.",
-        icon: BarChart3
-      },
-      {
-        title: "ROI Analysis & Reporting",
-        slug: "roi-analysis-reporting",
-        description: "White-labeled reports connecting spend to leads and revenue.",
-        icon: DollarSign
       }
     ]
   },
