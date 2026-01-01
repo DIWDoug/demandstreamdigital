@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import { Shield, MessageSquare, Settings, ArrowRight } from "lucide-react";
+import { Shield, MessageSquare, Settings } from "lucide-react";
 
 const ProblemSolution = () => {
   const sectionRef = useScrollReveal();
@@ -81,16 +81,9 @@ const ProblemSolution = () => {
 
           {/* Supporting Context - brings in customization rationale */}
           <div className="text-center">
-            <p className="text-text-muted text-base max-w-2xl mx-auto mb-8">
+            <p className="text-text-muted text-base max-w-2xl mx-auto">
               Pre-built packages look clean on paper but rarely match real-world requirements. We took a different path: scope before services, standards before scale, and honest expectations from the start.
             </p>
-            <a 
-              href="#about" 
-              className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
-            >
-              See how we work
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
           </div>
         </div>
       </div>

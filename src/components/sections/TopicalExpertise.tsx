@@ -38,9 +38,14 @@ const TopicalExpertise = () => {
           description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
         },
         {
-          title: "NAP Citations & Schema",
+          title: "Schema Markup",
+          slug: "schema-markup",
+          description: "Structured data implementation including LocalBusiness, FAQ, and service schemas that enhance visibility in search results and AI Overviews."
+        },
+        {
+          title: "NAP Citations",
           slug: "nap-citations",
-          description: "NAP consistency audits, citation cleanup, directory submissions, and schema markup that validate business identity for rankings and AI visibility."
+          description: "NAP consistency audits, citation cleanup, and directory submissions that validate business identity for rankings and AI visibility."
         }
       ]
     },
@@ -170,9 +175,9 @@ const TopicalExpertise = () => {
           description: "Outreach to local publications, community organizations, and relevant sites to build geographic authority."
         },
         {
-          title: "Citations",
-          slug: "citations",
-          description: "Strategic placement in industry-specific directories, professional associations, and accreditation sites."
+          title: "Unstructured Citations",
+          slug: "unstructured-citations",
+          description: "Brand mentions across video, audio, images, Web 2.0, and press releases that feed AI discovery engines."
         },
         {
           title: "Brand Mentions",
@@ -180,9 +185,9 @@ const TopicalExpertise = () => {
           description: "Reddit, Quora, and Facebook mentions that feed AI discovery signals and build brand awareness."
         },
         {
-          title: "Guest Posts & Niche Edits",
-          slug: "guest-posts-niche-edits",
-          description: "Expert articles and strategic link placements on relevant industry and local sites."
+          title: "Anchor Text",
+          slug: "anchor-text",
+          description: "Strategic anchor text diversification across link profiles to maintain natural authority signals."
         },
         {
           title: "Sponsorships",
@@ -208,28 +213,28 @@ const TopicalExpertise = () => {
           description: "Custom-branded dashboards that aggregate performance data across all marketing channels."
         },
         {
-          title: "Monthly Reports",
-          slug: "monthly-reports",
+          title: "Monthly Performance Reports",
+          slug: "monthly-performance-reports",
           description: "Comprehensive monthly reports with insights, recommendations, and next-step actions."
         },
         {
-          title: "Rank Tracking",
-          slug: "rank-tracking",
+          title: "Rank Tracking & Visibility",
+          slug: "rank-tracking-visibility",
           description: "Local and organic rank tracking across target keywords and geographic areas."
         },
         {
-          title: "Call Tracking",
-          slug: "call-tracking",
+          title: "Call Tracking & Attribution",
+          slug: "call-tracking-lead-attribution",
           description: "Call recording, lead scoring, and attribution that connects marketing to phone leads."
         },
         {
-          title: "ROI Analysis",
-          slug: "roi-analysis",
+          title: "ROI & Revenue Analysis",
+          slug: "roi-revenue-analysis",
           description: "Revenue attribution and ROI calculations that justify marketing investment."
         },
         {
-          title: "Client Presentations",
-          slug: "client-presentations",
+          title: "Client Presentation Decks",
+          slug: "client-presentation-decks",
           description: "Executive summaries and presentation-ready materials for client meetings."
         }
       ]
