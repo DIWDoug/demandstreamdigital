@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
@@ -147,13 +148,13 @@ const FitQualifier = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <a 
-              href="/#hero" 
+            <Link 
+              to="/#hero" 
               className="btn-cta group inline-flex items-center gap-2"
             >
               Let's See If We're a Match
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
