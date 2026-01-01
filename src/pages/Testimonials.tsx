@@ -23,7 +23,7 @@ const Testimonials = () => {
       title: "Founder & CEO, Anderson Collaborative",
       location: "Denver, CO",
       tenure: "5 Years Partner",
-      services: ["Reporting", "Local SEO", "Authority Building"],
+      services: ["Local SEO", "National SEO", "Authority Building", "Paid Media", "AEO"],
       rating: 5
     },
     {
@@ -32,7 +32,7 @@ const Testimonials = () => {
       title: "Digital Marketing Agency Owner",
       location: "Florida",
       tenure: "5 Years Partner",
-      services: ["GBP SEO", "Paid Media", "Reputation"],
+      services: ["GBP SEO", "Local SEO", "Paid Media", "AEO", "Authority Building"],
       rating: 5
     }
   ];
