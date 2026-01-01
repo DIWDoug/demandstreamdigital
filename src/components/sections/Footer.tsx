@@ -121,7 +121,7 @@ const Footer = () => {
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 text-sm text-text-secondary mb-2">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>2703 Elm St, Dallas, TX 75226</span>
+                <span>2919 Commerce St, Ste 589, Dallas, TX 75226</span>
               </div>
               <a 
                 href="tel:2143072995"

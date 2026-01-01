@@ -111,7 +111,7 @@ const Contact = () => {
                       </span>
                       <div>
                         <p className="text-sm text-text-muted">Visit us</p>
-                        <p className="text-foreground font-medium">2703 Elm St, Dallas, TX 75226</p>
+                        <p className="text-foreground font-medium">2919 Commerce St, Ste 589, Dallas, TX 75226</p>
                       </div>
                     </div>
                   </div>
