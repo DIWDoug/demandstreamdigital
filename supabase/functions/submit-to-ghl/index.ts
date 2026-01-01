@@ -5,6 +5,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+const GHL_FORM_ID = "nhDPKj4E2XSEVGDkoU7U";
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -19,14 +21,6 @@ serve(async (req) => {
   }
 
   try {
-    const GHL_API_KEY = Deno.env.get("GHL_API_KEY");
-    const GHL_LOCATION_ID = Deno.env.get("GHL_LOCATION_ID");
-
-    if (!GHL_API_KEY || !GHL_LOCATION_ID) {
-      console.error("Missing GHL credentials");
-      throw new Error("Server configuration error");
-    }
-
     const { name, email, phone, revenue }: ContactFormData = await req.json();
 
     // Validate required fields
@@ -46,54 +40,54 @@ serve(async (req) => {
       );
     }
 
-    console.log("Submitting contact to GHL:", { name, email, phone, revenue });
+    console.log("Submitting to GHL form:", { name, email, phone, revenue });
 
-    // Create contact in Go High Level
+    // Submit to GHL form endpoint
     const ghlResponse = await fetch(
-      `https://services.leadconnectorhq.com/contacts/`,
+      `https://services.leadconnectorhq.com/forms/submit`,
       {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${GHL_API_KEY}`,
           "Content-Type": "application/json",
-          "Version": "2021-07-28",
         },
         body: JSON.stringify({
-          locationId: GHL_LOCATION_ID,
-          firstName: name.split(" ")[0],
-          lastName: name.split(" ").slice(1).join(" ") || "",
+          formId: GHL_FORM_ID,
+          name: name,
           email: email,
           phone: phone,
-          source: "Website Contact Form",
-          customFields: [
-            {
-              key: "agency_monthly_revenue",
-              value: revenue
-            }
-          ],
-          tags: ["Website Lead", "Partnership Inquiry"]
+          agency_monthly_revenue: revenue,
+          source: "Website Contact Form"
         }),
       }
     );
 
-    const ghlData = await ghlResponse.json();
+    const responseText = await ghlResponse.text();
+    console.log("GHL response status:", ghlResponse.status);
+    console.log("GHL response:", responseText);
 
     if (!ghlResponse.ok) {
-      console.error("GHL API error:", ghlData);
-      throw new Error(ghlData.message || "Failed to create contact in GHL");
+      console.error("GHL form submission error:", responseText);
+      throw new Error("Failed to submit form to GHL");
     }
 
-    console.log("Contact created successfully:", ghlData);
+    let ghlData;
+    try {
+      ghlData = JSON.parse(responseText);
+    } catch {
+      ghlData = { raw: responseText };
+    }
+
+    console.log("Form submitted successfully:", ghlData);
 
     return new Response(
-      JSON.stringify({ success: true, contactId: ghlData.contact?.id }),
+      JSON.stringify({ success: true, data: ghlData }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
   } catch (error: any) {
     console.error("Error in submit-to-ghl function:", error);
     return new Response(
-      JSON.stringify({ error: error.message || "Failed to submit contact" }),
+      JSON.stringify({ error: error.message || "Failed to submit form" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
