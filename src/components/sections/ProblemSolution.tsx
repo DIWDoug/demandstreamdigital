@@ -82,7 +82,7 @@ const ProblemSolution = () => {
           {/* Supporting Context - brings in customization rationale */}
           <div className="text-center">
             <p className="text-text-muted text-base max-w-2xl mx-auto">
-              Pre-built packages look clean on paper but rarely match real-world requirements. We took a different path: scope before services, standards before scale, and honest expectations from the start.
+              Generic fulfillment treats every client the same. We scope to each market, adapt to each vertical, and build around what actually moves the needle — whether that's search, paid, email, or reputation.
             </p>
           </div>
         </div>
