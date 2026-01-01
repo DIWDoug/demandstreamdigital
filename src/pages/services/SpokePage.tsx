@@ -58,7 +58,7 @@ const SpokePage = () => {
   }
 
   const breadcrumbItems = [
-    { label: "Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title, href: `/white-label-inbound-marketing-services/${hub.slug}` },
     { label: spoke.title }
   ];
