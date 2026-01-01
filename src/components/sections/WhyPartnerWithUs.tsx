@@ -1,4 +1,4 @@
-import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Compass, Filter, ArrowRight, Target } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Filter, ArrowRight, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
@@ -7,38 +7,38 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "Trust: We Do What We Say",
-      description: "No surprises. Deliverables match the scope. Timelines are honored. When something changes, you hear about it first, not last.",
-      isQualifier: false
-    },
-    {
-      icon: Compass,
-      title: "Clarity: You Always Know Where Things Stand",
-      description: "Clear scope documents, defined processes, and regular updates. You can explain the work to clients without hedging or guessing.",
-      isQualifier: false
-    },
-    {
-      icon: Target,
-      title: "Execution: Seamless Process, Consistent Output",
-      description: "Work moves forward without you managing it. Check-ins, reports, and deliverables arrive on schedule. You focus on growth, not follow-up.",
+      title: "Clear Scope. Fewer Headaches.",
+      description: "Everyone knows what's included, how work moves forward, and how changes are handled. No gray areas. No quiet scope drift.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Work You Can Confidently Present",
-      description: "Every deliverable is built to be client-ready. No scrambling to reformat, re-explain, or apologize for quality gaps.",
+      title: "Work You Can Confidently Explain to Clients",
+      description: "Execution is delivered in a way you can stand behind without hedging, over-explaining, or scrambling when questions come up.",
+      isQualifier: false
+    },
+    {
+      icon: Target,
+      title: "Scoped to Each Client's Market",
+      description: "No two markets are the same. We build campaigns around actual competition and opportunity, so clients see real progress and stay longer.",
       isQualifier: false
     },
     {
       icon: BellOff,
       title: "Problems Surface Early",
-      description: "Structured communication catches issues before they become client-facing problems. No silent failures or surprise escalations.",
+      description: "Structured communication and defined check-ins catch issues before they become client-facing problems.",
+      isQualifier: false
+    },
+    {
+      icon: GraduationCap,
+      title: "Marketers, Not Rented Headcount",
+      description: "Fulfillment is handled by experienced marketers who understand SEO, local markets, and execution standards.",
       isQualifier: false
     },
     {
       icon: Filter,
       title: "Not a Fit for Everyone",
-      description: "If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit. This works best for agencies who value trust, clarity, and consistent execution.",
+      description: "If you're chasing shortcuts, aggressive timelines, or volume at all costs, this won't be a fit. This works best for agencies who value clarity and consistency.",
       isQualifier: true
     }
   ];
