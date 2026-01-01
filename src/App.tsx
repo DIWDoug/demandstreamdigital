@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import AgencyCalculator from "./pages/AgencyCalculator";
 import About from "./pages/About";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
 // Service Hub Pages
@@ -40,6 +42,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
           <Route path="/agency-calculator" element={<AgencyCalculator />} />
           

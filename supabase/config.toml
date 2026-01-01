@@ -1,1 +1,7 @@
 project_id = "bomcaceohbkavyjsdpls"
+
+[functions.scrape-blog]
+verify_jwt = false
+
+[functions.scrape-blogs-batch]
+verify_jwt = false
