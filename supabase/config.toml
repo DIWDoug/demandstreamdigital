@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.submit-to-ghl]
 verify_jwt = false
+
+[functions.submit-ebook-lead]
+verify_jwt = false
