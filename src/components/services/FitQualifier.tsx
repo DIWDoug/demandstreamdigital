@@ -54,7 +54,7 @@ const FitQualifier = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+    <section id="fit-qualifier" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}

@@ -25,7 +25,7 @@ const InboundPainPoints = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section id="pain-points" className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

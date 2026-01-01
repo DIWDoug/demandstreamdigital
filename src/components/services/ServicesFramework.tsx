@@ -25,7 +25,7 @@ const pillars = [
 
 const ServicesFramework = () => {
   return (
-    <section className="py-20 lg:py-28 section-light relative overflow-hidden">
+    <section id="framework" className="py-20 lg:py-28 section-light relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">

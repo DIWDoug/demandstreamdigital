@@ -41,7 +41,7 @@ const OnboardingRoadmap = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section id="onboarding" className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
