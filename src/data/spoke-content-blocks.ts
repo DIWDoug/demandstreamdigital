@@ -66,6 +66,8 @@ import reportsCustomizationImg from "@/assets/spoke/reports-customization.png";
 import clientConversationsImg from "@/assets/spoke/client-conversations.png";
 import brandedDashboardsClientsImg from "@/assets/spoke/branded-dashboards-clients.png";
 import callTrackingImplementationImg from "@/assets/spoke/call-tracking-implementation.jpg";
+import callAnalyticsDashboardImg from "@/assets/spoke/call-analytics-dashboard.png";
+import callAttributionRoiImg from "@/assets/spoke/call-attribution-roi.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2218,6 +2220,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Call Timing", description: "Peak call times identified for staffing." },
         { title: "Quality Scoring", description: "Calls categorized by lead quality." }
       ],
+      imageSrc: callAnalyticsDashboardImg,
+      imageAlt: "Call analytics dashboard showing call quality metrics, duration charts, first-time vs repeat caller data, and quality scoring",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
@@ -2233,6 +2237,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Multi-Touch", description: "Call credit distributed across touchpoints." },
         { title: "ROI Reporting", description: "Clear ROI visibility in client reports." }
       ],
+      imageSrc: callAttributionRoiImg,
+      imageAlt: "ROI attribution dashboard showing call source attribution, cost per call, revenue attribution, and channel comparison metrics",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
