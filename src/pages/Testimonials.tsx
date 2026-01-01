@@ -45,6 +45,7 @@ const Testimonials = () => {
       title: "National Car Wash Company",
       location: "Multiple Locations",
       highlight: "300% increase in organic searches",
+      services: ["Paid Media", "SEO"],
       rating: 5
     },
     {
@@ -53,6 +54,7 @@ const Testimonials = () => {
       title: "Small Business Owner",
       location: "NY/NJ & Chicago",
       highlight: "Competitive divorce mediation space",
+      services: ["SEO"],
       rating: 5
     },
     {
@@ -61,6 +63,7 @@ const Testimonials = () => {
       title: "E-Commerce Store",
       location: "",
       highlight: "10x return on investment",
+      services: ["Paid Media"],
       rating: 5
     },
     {
@@ -69,6 +72,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Streamlined campaigns",
+      services: ["Paid Media"],
       rating: 5
     },
     {
@@ -77,6 +81,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Phone rings with new clients regularly",
+      services: ["SEO", "Content", "Web Design", "GBP"],
       rating: 5
     },
     {
@@ -85,6 +90,7 @@ const Testimonials = () => {
       title: "Apartment Locator Service",
       location: "",
       highlight: "Tremendous ranking growth",
+      services: ["Paid Media", "Local SEO", "GBP"],
       rating: 5
     },
     {
@@ -93,6 +99,7 @@ const Testimonials = () => {
       title: "Veterans Auto Services",
       location: "Nashville, TN",
       highlight: "Review monitoring & visibility",
+      services: ["GBP", "SEO", "Local SEO"],
       rating: 5
     },
     {
@@ -325,7 +332,7 @@ const Testimonials = () => {
                     <Star key={i} className="w-4 h-4 text-cta fill-cta" />
                   ))}
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-full bg-cta/20 flex items-center justify-center">
                     <span className="text-cta font-semibold">{testimonial.name[0]}</span>
                   </div>
@@ -337,6 +344,15 @@ const Testimonials = () => {
                     )}
                   </div>
                 </div>
+                {testimonial.services && testimonial.services.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border">
+                    {testimonial.services.map((service, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-cta/10 text-cta text-xs rounded-full">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -379,6 +395,15 @@ const Testimonials = () => {
                     <p className="text-xs text-text-secondary">{testimonial.title}</p>
                   </div>
                 </div>
+                {testimonial.services && testimonial.services.length > 0 && (
+                  <div className="flex flex-wrap gap-1 mt-3">
+                    {testimonial.services.map((service, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-cta/10 text-cta text-xs rounded-full">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
