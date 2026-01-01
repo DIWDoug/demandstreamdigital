@@ -130,7 +130,7 @@ const Contact = () => {
                       </span>
                       <div>
                         <p className="text-sm text-text-muted">Visit us</p>
-                        <p className="text-foreground font-medium">2919 Commerce St, Ste 589, Dallas, TX 75226</p>
+                        <p className="text-foreground font-medium">4849 Greenville Ave, Suite 100 #176, Dallas, TX 75206</p>
                       </div>
                     </div>
                   </div>
