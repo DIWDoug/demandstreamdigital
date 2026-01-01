@@ -60,6 +60,7 @@ import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
 import realTimeDashboardMeetingImg from "@/assets/spoke/real-time-dashboard-meeting.png";
 import rankingsInContextImg from "@/assets/spoke/rankings-in-context.png";
+import reportHistoryTabletImg from "@/assets/spoke/report-history-tablet.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2087,6 +2088,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Recommendations", description: "Actionable next steps based on data." },
         { title: "Appendix Data", description: "Supporting details for clients who want depth." }
       ],
+      imageSrc: reportHistoryTabletImg,
+      imageAlt: "Tablet displaying report history dashboard with monthly rankings and work delivery reports",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
