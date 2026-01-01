@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 const testimonials = [
   {
     quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none: incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
@@ -97,6 +98,17 @@ const Testimonials = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* View All Link */}
+        <div className="text-center mt-12">
+          <Link 
+            to="/testimonials" 
+            className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
+          >
+            View All Testimonials
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>
