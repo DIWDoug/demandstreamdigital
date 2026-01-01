@@ -9,9 +9,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const [isPricingOpen, setIsPricingOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
-  const pricingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +23,6 @@ const Header = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
         setIsMegaMenuOpen(false);
-      }
-      if (pricingRef.current && !pricingRef.current.contains(event.target as Node)) {
-        setIsPricingOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -189,35 +184,6 @@ const Header = () => {
                 )
               ))}
               
-              {/* Pricing Dropdown */}
-              <div className="relative" ref={pricingRef}>
-                <button
-                  onClick={() => setIsPricingOpen(!isPricingOpen)}
-                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
-                >
-                  Pricing
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isPricingOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isPricingOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-[#0a0f14] border border-border rounded-xl shadow-2xl shadow-black/50 p-6 z-50 animate-fade-in">
-                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
-                    <p className="text-sm text-foreground font-medium mb-2">
-                      No cookie-cutter packages here! 🎯
-                    </p>
-                    <p className="text-xs text-text-secondary leading-relaxed">
-                      Every local market is different. We build custom scopes based on city size, competition, industry vertical, and your client's actual goals. Let's chat about what you need.
-                    </p>
-                    <a 
-                      href={getAnchorHref("#contact")} 
-                      className="inline-block mt-4 text-xs font-medium text-cta hover:text-cta-glow transition-colors"
-                      onClick={() => setIsPricingOpen(false)}
-                    >
-                      Get a Custom Quote →
-                    </a>
-                  </div>
-                )}
-              </div>
             </nav>
           </div>
 
