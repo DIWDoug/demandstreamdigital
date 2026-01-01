@@ -18,7 +18,7 @@ const services: Service[] = [
     title: "Local SEO",
     description: "Show up when local customers search. We handle technical fixes, content, and on-page work that builds organic visibility over time.",
     href: "/services/local-seo",
-    pixabayKeyword: "local business storefront"
+    pixabayKeyword: "search engine optimization website ranking"
   },
   {
     icon: Map,
@@ -32,14 +32,14 @@ const services: Service[] = [
     title: "Paid Advertising",
     description: "Turn ad spend into leads. Google and Meta campaigns built to generate calls, forms, and measurable ROI.",
     href: "/services/paid-media",
-    pixabayKeyword: "digital advertising marketing"
+    pixabayKeyword: "online advertising campaign clicks"
   },
   {
     icon: Share2,
     title: "Authority Building",
     description: "Earn the trust that rankings require. Digital PR, quality backlinks, and citation management that compounds over time.",
     href: "/white-label-inbound-marketing-services/local-authority-building",
-    pixabayKeyword: "business authority trust"
+    pixabayKeyword: "handshake partnership agreement trust"
   },
   {
     icon: Mail,
