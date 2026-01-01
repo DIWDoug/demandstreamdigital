@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const GHL_FORM_ID = "nhDPKj4E2XSEVGDkoU7U";
+const GHL_FORM_ID = "ulVZvsipRkTobQjdrpBy";
 
 interface EbookLeadData {
   email: string;
