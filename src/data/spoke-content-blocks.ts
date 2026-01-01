@@ -58,6 +58,7 @@ import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
 import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
+import realTimeDashboardMeetingImg from "@/assets/spoke/real-time-dashboard-meeting.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2065,6 +2066,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Comparison Views", description: "Period-over-period comparisons built in." },
         { title: "Data Quality", description: "Connection health monitored. Issues flagged immediately." }
       ],
+      imageSrc: realTimeDashboardMeetingImg,
+      imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
