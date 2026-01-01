@@ -120,7 +120,7 @@ const Header = () => {
     { label: "Blog", href: "/blog", isRoute: true },
     { label: "Results", href: "#testimonials" },
     { label: "Calculator", href: "/agency-calculator", isRoute: true },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "/contact", isRoute: true }
   ];
 
   return (
