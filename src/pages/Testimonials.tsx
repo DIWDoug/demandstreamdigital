@@ -22,7 +22,7 @@ const Testimonials = () => {
       name: "Trevor Anderson",
       title: "Founder & CEO, Anderson Collaborative",
       location: "Denver, CO",
-      tenure: "2 Years Partner",
+      tenure: "5 Years Partner",
       services: ["Reporting", "Local SEO", "Authority Building"],
       rating: 5
     },
@@ -31,7 +31,7 @@ const Testimonials = () => {
       name: "Jeremy",
       title: "Digital Marketing Agency Owner",
       location: "Florida",
-      tenure: "3+ Years Partner",
+      tenure: "5 Years Partner",
       services: ["GBP SEO", "Paid Media", "Reputation"],
       rating: 5
     }
