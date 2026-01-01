@@ -593,61 +593,130 @@ const About = () => {
               </p>
             </div>
 
-            {/* 2x2 Grid of Featured Reviews */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {[
-                {
-                  quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
-                  name: "Cole",
-                  date: "December 2025",
-                  services: "PPC, Local SEO, National SEO, AEO",
-                  rating: 5
-                },
-                {
-                  quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
-                  name: "Jeremy",
-                  date: "December 2025",
-                  services: "Local SEO, PPC, Web Design",
-                  rating: 5
-                },
-                {
-                  quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
-                  name: "Trevor Anderson",
-                  date: "December 2025",
-                  services: "PPC, Local SEO, Franchise Marketing",
-                  rating: 5
-                },
-                {
-                  quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
-                  name: "Florida Agency Owner",
-                  date: "2024",
-                  services: "Local SEO, PPC",
-                  rating: 5
-                }
-              ].map((review, index) => (
-                <div key={index} className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 hover:border-cta/30 transition-all duration-300">
-                  <p className="font-serif text-text-secondary leading-relaxed mb-6">
-                    "{review.quote}"
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-cta mb-1">{review.name}</p>
-                      <div className="flex gap-1">
-                        {[...Array(review.rating)].map((_, i) => (
-                          <svg key={i} className="w-4 h-4 fill-current text-yellow-400" viewBox="0 0 20 20">
-                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                          </svg>
-                        ))}
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {[
+                  {
+                    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
+                    name: "Cole",
+                    date: "December 2025",
+                    services: "PPC, Local SEO, National SEO, AEO",
+                    rating: 5
+                  },
+                  {
+                    quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
+                    name: "Jeremy",
+                    date: "December 2025",
+                    services: "Local SEO, PPC, Web Design",
+                    rating: 5
+                  },
+                  {
+                    quote: "What stood out was the consistency. Every month, we knew what to expect. Communication was clear, deliverables arrived on time, and we could actually explain the work to our clients without scrambling. That reliability changed how we operate.",
+                    name: "Trevor Anderson",
+                    date: "December 2025",
+                    services: "PPC, Local SEO, Franchise Marketing",
+                    rating: 5
+                  },
+                  {
+                    quote: "The biggest win was knowing we could count on them. Our team could confidently discuss campaigns with clients because we understood what was happening and why. That clarity is hard to find.",
+                    name: "Florida Agency Owner",
+                    date: "2024",
+                    services: "Local SEO, PPC",
+                    rating: 5
+                  },
+                  {
+                    quote: "I don't write many reviews but after having a great experience with Dialed-In, I had to let everyone know! Doug helped us create our website and was with us every step of the way. This was the first time I had built a website and didn't know what to expect or even where to begin, but Doug answered all of our questions and made the process so easy. Doug has proven he has great business ethics and is always professional. I highly recommend this business for anyone looking to enhance their online presence, website, or increase business.",
+                    name: "David Dorn",
+                    date: "2018",
+                    services: "Web Design",
+                    rating: 5
+                  },
+                  {
+                    quote: "Doug is incredible to work with. I was blown away at how quickly he caught onto what I was hoping to build. Without much direction he had setup campaigns pulling artwork and copy without even having to tell him what to do. Streamlined my process and generated successful campaigns. Would hire again in a heartbeat.",
+                    name: "Brian Sperry",
+                    date: "2020",
+                    services: "PPC",
+                    rating: 5
+                  },
+                  {
+                    quote: "Dialedin Local has done an exceptional job with our SEO management. We have seen consistent improvements and sales growth since working with Doug. I highly recommend them!",
+                    name: "Curtis Feather",
+                    date: "2016",
+                    services: "Local SEO",
+                    rating: 5
+                  },
+                  {
+                    quote: "The Dialed-In Web team have always been professional and knowledgable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
+                    name: "Cynthia Cavoto",
+                    date: "2019",
+                    services: "Local SEO, Web Design",
+                    rating: 5
+                  },
+                  {
+                    quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team at Dialed-In did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price.",
+                    name: "Joseph Dillon",
+                    date: "2017",
+                    services: "Local SEO",
+                    rating: 5
+                  },
+                  {
+                    quote: "We at Veterans Auto Services have really appreciated Dialed-In. Doug Bryson was great to work with. He closely monitored our companies reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view the public. Thank you Doug and Dialed-In for all that you do.",
+                    name: "Wendy Burns",
+                    date: "2015",
+                    services: "Local SEO, Reputation Management",
+                    rating: 5
+                  },
+                  {
+                    quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Dialed-In Local. From the first time we met with Doug we felt confident in his ability to help us. He has proven that he has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed.",
+                    name: "Car Spa",
+                    date: "2014",
+                    services: "National SEO, Multi-Location SEO",
+                    rating: 5
+                  },
+                  {
+                    quote: "I would highly recommend Doug at Dialed in Local to any business looking to grow with SEO. Doug is a great business partner and an excellent communicator. My rankings have shown tremendous growth in a very short period of time. Highly recommended!",
+                    name: "ASAP Apartment Finders",
+                    date: "2016",
+                    services: "Local SEO",
+                    rating: 5
+                  }
+                ].map((review, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2">
+                    <div className="bg-surface-dark border border-border rounded-2xl p-6 lg:p-8 h-full">
+                      <p className="font-serif text-text-secondary leading-relaxed mb-6">
+                        "{review.quote}"
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="font-semibold text-cta mb-1">{review.name}</p>
+                          <div className="flex gap-1">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <svg key={i} className="w-4 h-4 fill-current text-yellow-400" viewBox="0 0 20 20">
+                                <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                              </svg>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-xs block text-text-secondary">{review.date}</span>
+                          <span className="text-xs text-accent-blue">{review.services}</span>
+                        </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-xs block text-text-secondary">{review.date}</span>
-                      <span className="text-xs text-accent-blue">{review.services}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-4 mt-6">
+                <CarouselPrevious className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
+                <CarouselNext className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
