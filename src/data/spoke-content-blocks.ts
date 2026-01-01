@@ -69,6 +69,7 @@ import callTrackingImplementationImg from "@/assets/spoke/call-tracking-implemen
 import callAnalyticsDashboardImg from "@/assets/spoke/call-analytics-dashboard.png";
 import callAnalyticsQualityValueImg from "@/assets/spoke/call-analytics-quality-value.jpg";
 import callAttributionRoiImg from "@/assets/spoke/call-attribution-roi.png";
+import callTrackingAttributionLoopImg from "@/assets/spoke/call-tracking-attribution-loop.jpg";
 import attributionFrameworkDashboardImg from "@/assets/spoke/attribution-framework-dashboard.png";
 import roiCalculationDashboardImg from "@/assets/spoke/roi-calculation-dashboard.png";
 import budgetOptimizationDashboardImg from "@/assets/spoke/budget-optimization-dashboard.png";
@@ -2241,8 +2242,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Multi-Touch", description: "Call credit distributed across touchpoints." },
         { title: "ROI Reporting", description: "Clear ROI visibility in client reports." }
       ],
-      imageSrc: callAttributionRoiImg,
-      imageAlt: "ROI attribution dashboard showing call source attribution, cost per call, revenue attribution, and channel comparison metrics",
+      imageSrc: callTrackingAttributionLoopImg,
+      imageAlt: "Call tracking attribution loop infographic showing source attribution, cost per call, revenue attribution, channel comparison, multi-touch, and ROI reporting",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
