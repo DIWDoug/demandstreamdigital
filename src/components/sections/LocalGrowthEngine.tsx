@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import bookCover from "@/assets/local-growth-engine-cover.png";
 
 const LocalGrowthEngine = () => {
@@ -49,15 +50,38 @@ const LocalGrowthEngine = () => {
     
     setIsSubmitting(true);
     
-    // Simulate submission - replace with actual form handler
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    toast({
-      title: "You're on the list!",
-      description: "We'll notify you when The Local Growth Engine is available.",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-ebook-lead', {
+        body: { email }
+      });
+
+      if (error) {
+        console.error("Error submitting ebook lead:", error);
+        toast({
+          title: "Something went wrong",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      console.log("Ebook lead submitted:", data);
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+      toast({
+        title: "You're on the list!",
+        description: "We'll notify you when The Local Growth Engine is available.",
+      });
+    } catch (error) {
+      console.error("Error submitting ebook lead:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+    }
   };
 
   return (
