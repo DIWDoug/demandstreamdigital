@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
@@ -62,6 +62,16 @@ const App = () => (
           {/* Service Spoke Pages (sub-services) */}
           <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
           
+          {/* Legacy /services redirects for SEO preservation */}
+          <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+          <Route path="/services/local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+          <Route path="/services/google-maps" element={<Navigate to="/white-label-inbound-marketing-services/google-maps" replace />} />
+          <Route path="/services/paid-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+          <Route path="/services/email-marketing" element={<Navigate to="/white-label-inbound-marketing-services/email-marketing" replace />} />
+          <Route path="/services/local-authority-building" element={<Navigate to="/white-label-inbound-marketing-services/local-authority-building" replace />} />
+          <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
+          <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -69,5 +79,14 @@ const App = () => (
     </QueryClientProvider>
   </HelmetProvider>
 );
+
+// Helper component for dynamic spoke redirects
+const LegacySpokeRedirect = () => {
+  const params = window.location.pathname.match(/\/services\/([^/]+)\/([^/]+)/);
+  if (params) {
+    return <Navigate to={`/white-label-inbound-marketing-services/${params[1]}/${params[2]}`} replace />;
+  }
+  return <Navigate to="/white-label-inbound-marketing-services" replace />;
+};
 
 export default App;
