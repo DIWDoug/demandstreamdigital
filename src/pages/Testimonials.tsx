@@ -14,7 +14,7 @@ const Testimonials = () => {
       title: "Digital Marketing Agency Owner",
       location: "Dallas, TX",
       tenure: "10 Years in Business, 7 Years Partner",
-      services: ["Local SEO", "PPC", "AEO", "National SEO"],
+      services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"],
       rating: 5
     },
     {
