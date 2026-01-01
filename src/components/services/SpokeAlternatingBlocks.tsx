@@ -76,16 +76,27 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                   )}
                 </div>
 
-                {/* Image Side - Always use PixabayBlockImage for dynamic images */}
+                {/* Image Side - Use imageSrc if provided, otherwise fetch from Pixabay */}
                 <div className={`${isReversed ? "lg:order-1" : ""}`}>
-                  <PixabayBlockImage 
-                    spokeSlug={spokeSlug}
-                    category={block.category}
-                    headline={block.headline}
-                    blockIndex={index}
-                    isLight={isLight}
-                    alt={descriptiveAlt}
-                  />
+                  {block.imageSrc ? (
+                    <div className="relative overflow-hidden rounded-xl shadow-2xl">
+                      <img 
+                        src={block.imageSrc}
+                        alt={descriptiveAlt}
+                        className="w-full h-auto object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <PixabayBlockImage 
+                      spokeSlug={spokeSlug}
+                      category={block.category}
+                      headline={block.headline}
+                      blockIndex={index}
+                      isLight={isLight}
+                      alt={descriptiveAlt}
+                    />
+                  )}
                 </div>
               </div>
             </div>

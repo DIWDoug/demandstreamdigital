@@ -54,6 +54,7 @@ import linkBuildingImg from "@/assets/stock/link-building.jpg";
 import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
 import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
 import reportingImg from "@/assets/stock/reporting.jpg";
+import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2027,7 +2028,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
         { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
       ],
-      imageSrc: reportingImg,
+      imageSrc: whiteLabelDashboardsImg,
       imageAlt: "White-label dashboard and reporting",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
