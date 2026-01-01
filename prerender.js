@@ -2,6 +2,16 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
+// Polyfill localStorage for SSR (Supabase client uses it at module level)
+globalThis.localStorage = {
+  getItem: () => null,
+  setItem: () => {},
+  removeItem: () => {},
+  clear: () => {},
+  key: () => null,
+  length: 0,
+};
+
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 const toAbsolute = (p) => path.resolve(__dirname, p)
 

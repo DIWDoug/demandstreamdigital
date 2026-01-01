@@ -17,9 +17,12 @@ export default defineConfig(({ mode }) => ({
   },
   ssr: {
     noExternal: ['react-helmet-async'],
-    external: ['@supabase/supabase-js'],
   },
   optimizeDeps: {
     include: ['react-helmet-async'],
+  },
+  define: {
+    // Provide a mock for localStorage during SSR
+    ...(mode === 'production' ? {} : {}),
   },
 }));

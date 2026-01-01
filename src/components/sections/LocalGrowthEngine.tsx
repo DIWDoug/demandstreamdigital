@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import bookCover from "@/assets/local-growth-engine-cover.png";
@@ -7,11 +7,45 @@ const LocalGrowthEngine = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState(""); // Bot trap field
+  const formLoadTime = useRef<number>(Date.now());
   const { toast } = useToast();
+
+  // Reset form load time when component mounts
+  useEffect(() => {
+    formLoadTime.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    
+    // CAPTCHA Check 1: Honeypot field should be empty (bots often fill hidden fields)
+    if (honeypot) {
+      console.log("Bot detected: honeypot filled");
+      // Silently reject but show success to avoid tipping off bots
+      setIsSubmitted(true);
+      return;
+    }
+    
+    // CAPTCHA Check 2: Form submitted too quickly (under 2 seconds = likely bot)
+    const timeSinceLoad = Date.now() - formLoadTime.current;
+    if (timeSinceLoad < 2000) {
+      console.log("Bot detected: submitted too fast", timeSinceLoad);
+      setIsSubmitted(true);
+      return;
+    }
+    
+    // CAPTCHA Check 3: Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive"
+      });
+      return;
+    }
     
     setIsSubmitting(true);
     
@@ -138,6 +172,24 @@ const LocalGrowthEngine = () => {
                   <div className="flex flex-col sm:flex-row gap-4 items-start">
                     <div className="flex-1 w-full sm:w-auto">
                       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                        {/* Honeypot field - hidden from users, bots will fill it */}
+                        <input
+                          type="text"
+                          name="website_url"
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                          tabIndex={-1}
+                          autoComplete="off"
+                          style={{ 
+                            position: 'absolute', 
+                            left: '-9999px', 
+                            opacity: 0, 
+                            height: 0, 
+                            width: 0,
+                            pointerEvents: 'none'
+                          }}
+                          aria-hidden="true"
+                        />
                         <input
                           type="email"
                           value={email}
