@@ -228,6 +228,28 @@ const Testimonials = () => {
               <p className="text-text-secondary text-sm">White-label fulfillment partnerships</p>
             </div>
           </div>
+
+          {/* Video Testimonials */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {[
+              { id: "DlOyjDWaCZo", title: "Cole - Dallas Agency Owner" },
+              { id: "dR2Yxbldi1Q", title: "Trevor - Agency Partner" },
+              { id: "i66XV1on6pM", title: "Jeremy - Florida Agency Owner" }
+            ].map((video, index) => (
+              <div 
+                key={index} 
+                className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface-elevated shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            ))}
+          </div>
           
           <div className="grid md:grid-cols-3 gap-6">
             {agencyTestimonials.map((testimonial, index) => (
