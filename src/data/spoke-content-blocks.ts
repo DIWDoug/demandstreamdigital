@@ -61,6 +61,7 @@ import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg
 import realTimeDashboardMeetingImg from "@/assets/spoke/real-time-dashboard-meeting.png";
 import rankingsInContextImg from "@/assets/spoke/rankings-in-context.png";
 import reportHistoryTabletImg from "@/assets/spoke/report-history-tablet.png";
+import reportingPresentationImg from "@/assets/spoke/reporting-presentation.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2120,6 +2121,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Follow-Up Support", description: "Questions about data answered quickly." },
         { title: "Client Feedback", description: "Report format refined based on client preferences." }
       ],
+      imageSrc: reportingPresentationImg,
+      imageAlt: "Video call screen share showing monthly performance report with presenter and viewer",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
