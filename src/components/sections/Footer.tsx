@@ -70,11 +70,11 @@ const Footer = () => {
       hubSlug: "reporting",
       items: [
         { label: "White-Label Dashboards", slug: "white-label-dashboards" },
-        { label: "Monthly Reports", slug: "monthly-reports" },
-        { label: "Rank Tracking", slug: "rank-tracking" },
-        { label: "Call Tracking", slug: "call-tracking" },
-        { label: "ROI Analysis", slug: "roi-analysis" },
-        { label: "Client Presentations", slug: "client-presentations" }
+        { label: "Monthly Performance Reports", slug: "monthly-performance-reports" },
+        { label: "Rank Tracking & Visibility", slug: "rank-tracking-visibility" },
+        { label: "Call Tracking & Attribution", slug: "call-tracking-lead-attribution" },
+        { label: "ROI & Revenue Analysis", slug: "roi-revenue-analysis" },
+        { label: "Client Presentation Decks", slug: "client-presentation-decks" }
       ]
     }
   ];
