@@ -117,6 +117,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "About", href: "/about", isRoute: true },
+    { label: "Blog", href: "/blog", isRoute: true },
     { label: "Results", href: "#testimonials" },
     { label: "Calculator", href: "/agency-calculator", isRoute: true },
     { label: "Contact", href: "#contact" }
