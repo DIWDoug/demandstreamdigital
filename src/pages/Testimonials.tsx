@@ -126,7 +126,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Customized, right-sized solutions",
-      services: ["National SEO"],
+      services: ["National SEO", "Consulting", "Partnership"],
       rating: 5
     },
     {
