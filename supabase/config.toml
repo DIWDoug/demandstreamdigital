@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.scrape-blogs-batch]
 verify_jwt = false
+
+[functions.submit-to-ghl]
+verify_jwt = false

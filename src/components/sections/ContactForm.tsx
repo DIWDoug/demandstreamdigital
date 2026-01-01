@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +11,8 @@ import {
 import SubtleOrbs from "@/components/SubtleOrbs";
 
 const ContactForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,9 +47,33 @@ const ContactForm = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Thank you!",
+        description: "We'll be in touch within 24 hours.",
+      });
+
+      setFormData({ name: "", email: "", phone: "", revenue: "" });
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -156,9 +184,18 @@ const ContactForm = () => {
                       </select>
                     </div>
 
-                    <button type="submit" className="btn-cta w-full group">
-                      Explore a Partnership
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <button type="submit" disabled={isSubmitting} className="btn-cta w-full group disabled:opacity-50">
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          Explore a Partnership
+                          <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                        </>
+                      )}
                     </button>
 
                     {/* Partner Quote */}
