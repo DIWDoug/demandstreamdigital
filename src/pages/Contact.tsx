@@ -1,11 +1,30 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Loader2, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Loader2, Phone, Mail, MapPin, Quote } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import { Card, CardContent } from "@/components/ui/card";
+
+const testimonials = [
+  {
+    quote: "They're trustworthy, they communicate clearly and really consistently, which is sometimes rare in today's world.",
+    author: "Trevor Anderson",
+    role: "Founder & CEO, Anderson Collaborative"
+  },
+  {
+    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — extremely competitive pricing for the level of wisdom and responsiveness you receive.",
+    author: "Cole",
+    role: "Digital Marketing Agency Owner, Dallas"
+  },
+  {
+    quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention.",
+    author: "Jeremy",
+    role: "Digital Marketing Agency Owner, Florida"
+  }
+];
 
 const Contact = () => {
   const { toast } = useToast();
@@ -219,6 +238,42 @@ const Contact = () => {
                     </button>
                   </form>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 lg:py-24 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                  What Agency Partners <span className="text-accent-blue">Say</span>
+                </h2>
+                <p className="text-text-secondary">
+                  Real feedback from agencies who value trust, clarity, and execution.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {testimonials.map((testimonial, index) => (
+                  <Card 
+                    key={index} 
+                    className="bg-surface-card border-border hover:border-accent-blue/30 transition-all duration-300"
+                  >
+                    <CardContent className="p-6">
+                      <Quote className="h-6 w-6 text-accent-blue/40 mb-4" />
+                      <p className="text-text-secondary text-sm mb-6 leading-relaxed">
+                        "{testimonial.quote}"
+                      </p>
+                      <div className="border-t border-border pt-4">
+                        <p className="text-foreground font-medium text-sm">{testimonial.author}</p>
+                        <p className="text-text-muted text-xs">{testimonial.role}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
