@@ -68,6 +68,9 @@ import brandedDashboardsClientsImg from "@/assets/spoke/branded-dashboards-clien
 import callTrackingImplementationImg from "@/assets/spoke/call-tracking-implementation.jpg";
 import callAnalyticsDashboardImg from "@/assets/spoke/call-analytics-dashboard.png";
 import callAttributionRoiImg from "@/assets/spoke/call-attribution-roi.png";
+import attributionFrameworkDashboardImg from "@/assets/spoke/attribution-framework-dashboard.png";
+import roiCalculationDashboardImg from "@/assets/spoke/roi-calculation-dashboard.png";
+import budgetOptimizationDashboardImg from "@/assets/spoke/budget-optimization-dashboard.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2257,6 +2260,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Offline Connection", description: "CRM and sales data connected where possible." },
         { title: "Model Customization", description: "Attribution model matched to business reality." }
       ],
+      imageSrc: attributionFrameworkDashboardImg,
+      imageAlt: "Marketing attribution framework dashboard showing conversion tracking funnel, lead values, customer lifetime value, and multi-touch attribution",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -2272,6 +2277,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Benchmark Comparison", description: "Performance compared to industry standards." },
         { title: "Projection", description: "Expected returns from continued investment." }
       ],
+      imageSrc: roiCalculationDashboardImg,
+      imageAlt: "ROI calculation dashboard showing channel ROI, campaign performance comparison, blended ROI gauges, and industry benchmarks",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
@@ -2287,6 +2294,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Stakeholder Communication", description: "ROI presented for executive understanding." },
         { title: "Quarterly Reviews", description: "Regular ROI analysis informs strategy evolution." }
       ],
+      imageSrc: budgetOptimizationDashboardImg,
+      imageAlt: "Strategic budget optimization dashboard showing channel efficiency, growth modeling, spend optimization suggestions, and executive summary",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
