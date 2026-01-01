@@ -55,6 +55,7 @@ import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
 import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
 import reportingImg from "@/assets/stock/reporting.jpg";
 import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
+import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2045,6 +2046,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "CRM Data", description: "Lead and sales data for ROI visibility." },
         { title: "Custom Sources", description: "Additional data sources connected via API when needed." }
       ],
+      imageSrc: dataIntegrationTabletImg,
+      imageAlt: "Tablet showing unified reporting dashboard with data integration",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
