@@ -2,26 +2,32 @@ import { Quote, ArrowRight, Phone } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none — incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
+    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none: incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
     author: "Cole",
-    role: "Digital Marketing Agency Owner, Dallas"
+    role: "Digital Marketing Agency Owner, Dallas",
+    tenure: "10 Years in Business, 7 Years Partner",
+    services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"]
   },
   {
     quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
     author: "Trevor Anderson",
-    role: "Founder & CEO, Anderson Collaborative"
+    role: "Founder & CEO, Anderson Collaborative",
+    tenure: "5 Years Partner",
+    services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"]
   },
   {
     quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
     author: "Jeremy", 
-    role: "Digital Marketing Agency Owner, Florida"
+    role: "Digital Marketing Agency Owner, Florida",
+    tenure: "5 Years Partner",
+    services: ["GBP SEO", "Local SEO", "Paid Media", "AEO", "Authority Building"]
   }
 ];
 
 const videoTestimonials = [
-  { id: "DlOyjDWaCZo", title: "Agency Partner Testimonial" },
-  { id: "dR2Yxbldi1Q", title: "Agency Partner Testimonial" },
-  { id: "i66XV1on6pM", title: "Florida Agency Owner Testimonial" }
+  { id: "DlOyjDWaCZo", title: "Cole - Dallas Agency Owner" },
+  { id: "dR2Yxbldi1Q", title: "Trevor - Agency Partner" },
+  { id: "i66XV1on6pM", title: "Jeremy - Florida Agency Owner" }
 ];
 
 const ServicesTestimonials = () => {
@@ -71,9 +77,22 @@ const ServicesTestimonials = () => {
                 <p className="text-text-secondary text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed line-clamp-6 sm:line-clamp-none">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-border/30 pt-4">
+                <div className="border-t border-border/30 pt-4 mb-3">
                   <p className="text-foreground font-medium text-sm">{testimonial.author}</p>
                   <p className="text-text-muted text-xs">{testimonial.role}</p>
+                  <p className="text-accent-blue text-xs mt-1">{testimonial.tenure}</p>
+                </div>
+                <div className="flex flex-wrap gap-1">
+                  {testimonial.services.slice(0, 3).map((service, i) => (
+                    <span key={i} className="px-2 py-0.5 bg-accent-blue/10 text-accent-blue text-xs rounded-full">
+                      {service}
+                    </span>
+                  ))}
+                  {testimonial.services.length > 3 && (
+                    <span className="px-2 py-0.5 bg-surface-dark text-text-muted text-xs rounded-full">
+                      +{testimonial.services.length - 3}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
