@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
@@ -35,30 +35,28 @@ const App = () => (
         <KonamiCodeListener />
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <BackToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/white-label-inbound-marketing-services" element={<Services />} />
-            <Route path="/agency-calculator" element={<AgencyCalculator />} />
-            
-            {/* Service Hub Pages */}
-            <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
-            <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
-            <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
-            <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
-            <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
-            <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
-            
-            {/* Service Spoke Pages (sub-services) */}
-            <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
-            
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <ScrollToTop />
+        <BackToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/white-label-inbound-marketing-services" element={<Services />} />
+          <Route path="/agency-calculator" element={<AgencyCalculator />} />
+          
+          {/* Service Hub Pages */}
+          <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
+          <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
+          <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
+          <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
+          <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
+          <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
+          
+          {/* Service Spoke Pages (sub-services) */}
+          <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
+          
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
