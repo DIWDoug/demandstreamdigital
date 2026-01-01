@@ -1,6 +1,7 @@
-import dashboardScreenshot from "@/assets/dashboard-screenshot.png";
-
 const LaptopMockup = () => {
+  // Placeholder until user adds their dashboard screenshot
+  const dashboardScreenshot = "/placeholder.svg";
+  
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-6 lg:px-8">
@@ -22,11 +23,11 @@ const LaptopMockup = () => {
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-zinc-700 rounded-full" />
               
               {/* Screen bezel */}
-              <div className="bg-zinc-900 rounded-lg overflow-hidden shadow-2xl">
+              <div className="bg-zinc-900 rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex items-center justify-center">
                 <img 
                   src={dashboardScreenshot} 
                   alt="White-label reporting dashboard showing organic visibility metrics, ranking positions, and value trends"
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
