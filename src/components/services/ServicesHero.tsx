@@ -20,7 +20,7 @@ const ServicesHero = () => {
         }}
       />
       
-      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-24 pb-20 lg:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left: Text content */}
           <div>
