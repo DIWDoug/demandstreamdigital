@@ -9,29 +9,29 @@ const Testimonials = () => {
   // Agency partner testimonials (Cole, Trevor, Jeremy)
   const agencyTestimonials = [
     {
-      quote: "We've worked with Doug and his team for over 5 years now. They handle all of our local SEO fulfillment and the results speak for themselves. Our client retention has never been higher.",
+      quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none: incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
       name: "Cole",
       title: "Digital Marketing Agency Owner",
       location: "Dallas, TX",
-      tenure: "5+ Years Partner",
+      tenure: "10 Years in Business, 7 Years Partner",
       services: ["Local SEO", "PPC", "AEO", "National SEO"],
       rating: 5
     },
     {
-      quote: "What I appreciate most is how they adapt to each client's market. They're not just running a playbook—they're actually analyzing the competition and adjusting strategy accordingly.",
-      name: "Trevor",
-      title: "Digital Agency Founder",
+      quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
+      name: "Trevor Anderson",
+      title: "Founder & CEO, Anderson Collaborative",
       location: "Denver, CO",
       tenure: "2 Years Partner",
       services: ["Reporting", "Local SEO", "Authority Building"],
       rating: 5
     },
     {
-      quote: "Finally found a fulfillment partner who understands the agency model. The communication and transparency is what sets them apart. No surprises, just results.",
+      quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
       name: "Jeremy",
-      title: "Agency Owner",
-      location: "Austin, TX",
-      tenure: "3 Years Partner",
+      title: "Digital Marketing Agency Owner",
+      location: "Florida",
+      tenure: "3+ Years Partner",
       services: ["GBP SEO", "Paid Media", "Reputation"],
       rating: 5
     }
