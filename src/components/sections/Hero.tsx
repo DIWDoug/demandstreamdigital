@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const Hero = () => {
@@ -204,7 +205,7 @@ const Hero = () => {
                     />
                     <span className="text-xs text-text-muted leading-relaxed">
                       I consent to automated marketing messages from DialedIn Web via email and/or SMS by entering my information. View our{" "}
-                      <a href="/privacy" className="text-accent-blue hover:underline">Privacy Policy</a>.
+                      <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link>.
                     </span>
                   </label>
 
