@@ -5,7 +5,10 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const GHL_FORM_ID = "ulVZvsipRkTobQjdrpBy";
+// Segmentation for ebook leads in GHL
+const GHL_TAG = "ebook_local_growth_engine";
+const GHL_SOURCE = "Ebook Download - Local Growth Engine";
+const GHL_API_VERSION = "2021-07-28";
 
 interface EbookLeadData {
   email: string;
@@ -22,39 +25,59 @@ serve(async (req) => {
 
     // Validate email
     if (!email) {
-      return new Response(
-        JSON.stringify({ error: "Email is required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      return new Response(JSON.stringify({ error: "Email is required" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      return new Response(JSON.stringify({ error: "Invalid email format" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    const apiKey = Deno.env.get("GHL_API_KEY");
+    const locationId = Deno.env.get("GHL_LOCATION_ID");
+
+    if (!apiKey || !locationId) {
+      console.error("Missing required GHL env vars", {
+        hasApiKey: Boolean(apiKey),
+        hasLocationId: Boolean(locationId),
+      });
+
       return new Response(
-        JSON.stringify({ error: "Invalid email format" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ error: "Lead capture is temporarily unavailable" }),
+        {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
       );
     }
 
-    console.log("Submitting ebook lead to GHL:", { email });
+    // NOTE: GHL's /forms/submit endpoints can require captchaV3.
+    // Using the authenticated Contacts API avoids that.
+    console.log("Upserting ebook lead contact in GHL:", { email, tag: GHL_TAG });
 
-    // Build form data object with required fields
-    const formDataPayload = {
-      formId: GHL_FORM_ID,
-      email: email,
-      source: "Ebook Download - Local Growth Engine"
+    const ghlPayload = {
+      locationId,
+      email,
+      tags: [GHL_TAG],
+      source: GHL_SOURCE,
     };
 
-    // GHL requires FormData with stringified JSON in "formData" key
-    const formData = new FormData();
-    formData.set("formData", JSON.stringify(formDataPayload));
-
-    // Submit to GHL backend form endpoint
     const ghlResponse = await fetch(
-      `https://backend.leadconnectorhq.com/forms/submit`,
+      "https://services.leadconnectorhq.com/contacts/upsert",
       {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify(ghlPayload),
       }
     );
 
@@ -63,29 +86,31 @@ serve(async (req) => {
     console.log("GHL response:", responseText);
 
     if (!ghlResponse.ok) {
-      console.error("GHL form submission error:", responseText);
+      console.error("GHL contact upsert error:", responseText);
       throw new Error("Failed to submit lead to GHL");
     }
 
-    let ghlData;
+    let ghlData: unknown;
     try {
       ghlData = JSON.parse(responseText);
     } catch {
       ghlData = { raw: responseText };
     }
 
-    console.log("Ebook lead submitted successfully:", ghlData);
+    console.log("Ebook lead upserted successfully:", ghlData);
 
-    return new Response(
-      JSON.stringify({ success: true, data: ghlData }),
-      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
-
+    return new Response(JSON.stringify({ success: true, data: ghlData }), {
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   } catch (error: any) {
     console.error("Error in submit-ebook-lead function:", error);
     return new Response(
       JSON.stringify({ error: error.message || "Failed to submit lead" }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      }
     );
   }
 });
