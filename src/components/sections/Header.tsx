@@ -110,11 +110,16 @@ const Header = () => {
     }
   ];
 
-  const navLinks = [
-    { label: "About", href: "/about", isRoute: true },
-    { label: "Blog", href: "/blog", isRoute: true },
+  // Links that appear BEFORE Services mega menu
+  const preServiceLinks = [
+    { label: "About", href: "/about", isRoute: true }
+  ];
+
+  // Links that appear AFTER Services mega menu
+  const postServiceLinks = [
     { label: "Results", href: "#testimonials" },
-    { label: "Calculator", href: "/agency-calculator", isRoute: true },
+    { label: "Testimonials", href: "/testimonials", isRoute: true },
+    { label: "Partner Tools", href: "/agency-calculator", isRoute: true },
     { label: "Contact", href: "/contact", isRoute: true }
   ];
 
@@ -146,6 +151,27 @@ const Header = () => {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-0">
+              {/* Pre-Service Links (About) */}
+              {preServiceLinks.map((link, index) => (
+                link.isRoute ? (
+                  <Link
+                    key={`pre-${index}`}
+                    to={link.href}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={`pre-${index}`}
+                    href={getAnchorHref(link.href)}
+                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </a>
+                )
+              ))}
+
               {/* Services Mega Menu Trigger */}
               <Link
                 to="/white-label-inbound-marketing-services"
@@ -164,10 +190,11 @@ const Header = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
               </Link>
               
-              {navLinks.map((link, index) => (
+              {/* Post-Service Links */}
+              {postServiceLinks.map((link, index) => (
                 link.isRoute ? (
                   <Link
-                    key={index}
+                    key={`post-${index}`}
                     to={link.href}
                     className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
                   >
@@ -175,7 +202,7 @@ const Header = () => {
                   </Link>
                 ) : (
                   <a
-                    key={index}
+                    key={`post-${index}`}
                     href={getAnchorHref(link.href)}
                     className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
                   >
@@ -306,7 +333,7 @@ const Header = () => {
                 </div>
               )}
               
-              {navLinks.map((link, index) => (
+              {[...preServiceLinks, ...postServiceLinks].map((link, index) => (
                 link.isRoute ? (
                   <Link
                     key={index}
