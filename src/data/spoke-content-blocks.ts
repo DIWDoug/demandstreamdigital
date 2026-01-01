@@ -63,6 +63,7 @@ import rankingsInContextImg from "@/assets/spoke/rankings-in-context.png";
 import reportHistoryTabletImg from "@/assets/spoke/report-history-tablet.png";
 import reportingPresentationImg from "@/assets/spoke/reporting-presentation.png";
 import reportsCustomizationImg from "@/assets/spoke/reports-customization.png";
+import clientConversationsImg from "@/assets/spoke/client-conversations.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2324,6 +2325,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Follow-Up Templates", description: "Post-meeting communication prepared." },
         { title: "Debrief Support", description: "Help processing meeting feedback." }
       ],
+      imageSrc: clientConversationsImg,
+      imageAlt: "Agency presenting performance reports to client via video call with dashboard screen share",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
