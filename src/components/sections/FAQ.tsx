@@ -18,6 +18,10 @@ const FAQ = () => {
       answer: "Agencies that value trust, clarity, and consistent execution. Most of our partners manage between 5 and 20 active clients and prioritize client retention over rapid volume growth."
     },
     {
+      question: "Do I have to buy all the services together or can I buy them individually?",
+      answer: "You can engage services individually based on what your clients need. Local SEO, GBP optimization, paid media, authority building, email marketing, and reporting can all be scoped separately. That said, they work best together and we often recommend combining services for stronger, more durable results."
+    },
+    {
       question: "Are you a staffing company or an outsourced team?",
       answer: "Neither. We deliver marketing execution with standards, systems, and accountability. You get a dedicated team that understands your clients, not rotating contractors."
     },
