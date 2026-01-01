@@ -2032,8 +2032,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
         { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
       ],
-      imageSrc: whiteLabelDashboardsImg,
-      imageAlt: "White-label dashboard and reporting",
+      imageSrc: realTimeDashboardMeetingImg,
+      imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -2066,8 +2066,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Comparison Views", description: "Period-over-period comparisons built in." },
         { title: "Data Quality", description: "Connection health monitored. Issues flagged immediately." }
       ],
-      imageSrc: realTimeDashboardMeetingImg,
-      imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
+      imageSrc: whiteLabelDashboardsImg,
+      imageAlt: "White-label dashboard and reporting interface",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
