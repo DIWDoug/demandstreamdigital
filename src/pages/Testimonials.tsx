@@ -108,6 +108,7 @@ const Testimonials = () => {
       title: "Copywriter & Marketing Professional",
       location: "",
       highlight: "Years of partnership",
+      services: ["Consulting", "Partnership"],
       rating: 5
     },
     {
@@ -116,6 +117,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Realistic expectations & follow-through",
+      services: ["Consulting", "Partnership"],
       rating: 5
     },
     {
@@ -124,6 +126,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Customized, right-sized solutions",
+      services: ["National SEO"],
       rating: 5
     },
     {
@@ -132,6 +135,7 @@ const Testimonials = () => {
       title: "IT Company Owner",
       location: "Nashville, TN",
       highlight: "Focus on what you do best",
+      services: ["Consulting", "Partnership"],
       rating: 5
     },
     {
@@ -140,6 +144,7 @@ const Testimonials = () => {
       title: "Window Film Company",
       location: "",
       highlight: "Transparent monthly reporting",
+      services: ["GBP SEO", "Local SEO"],
       rating: 5
     },
     {
@@ -148,6 +153,7 @@ const Testimonials = () => {
       title: "Apartment Locator Service",
       location: "",
       highlight: "Above and beyond service",
+      services: ["Paid Media"],
       rating: 5
     },
     {
@@ -156,6 +162,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Made the process easy",
+      services: ["Web Design", "SEO"],
       rating: 5
     },
     {
@@ -164,6 +171,7 @@ const Testimonials = () => {
       title: "Business Owner",
       location: "",
       highlight: "Professional & knowledgeable",
+      services: ["SEO"],
       rating: 5
     }
   ];
