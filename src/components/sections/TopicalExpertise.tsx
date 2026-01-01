@@ -267,10 +267,23 @@ const TopicalExpertise = () => {
 
         {/* Hub cards grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {hubs.map((hub, index) => (
+          {hubs.map((hub, index) => {
+            // Map slugs to anchor IDs for the sticky nav
+            const anchorMap: Record<string, string> = {
+              'local-seo': 'local-seo',
+              'google-maps': 'gbp-seo',
+              'paid-media': 'paid-media',
+              'email-marketing': 'email',
+              'local-authority-building': 'authority',
+              'reporting': 'reporting'
+            };
+            const anchorId = anchorMap[hub.slug] || hub.slug;
+            
+            return (
             <div 
+              id={anchorId}
               key={index}
-              className={`premium-card cursor-pointer transition-all duration-300 ${
+              className={`premium-card cursor-pointer transition-all duration-300 scroll-mt-32 ${
                 isExpanded(index) 
                   ? "ring-1 ring-accent-blue/50 bg-surface-elevated" 
                   : "hover:translate-y-[-2px]"
@@ -353,7 +366,8 @@ const TopicalExpertise = () => {
                 </p>
               )}
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>
