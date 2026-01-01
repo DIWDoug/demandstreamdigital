@@ -96,14 +96,25 @@ const SpokeEcosystemOrbit = ({
                   const isCurrentSpoke = spoke.slug === currentSpoke.slug;
                   const spokeUrl = `/white-label-inbound-marketing-services/${hubSlug}/${spoke.slug}`;
                   
+                  // Current page: not a link
+                  if (isCurrentSpoke) {
+                    return (
+                      <div key={spoke.slug} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0 text-cta" />
+                        <span className="font-medium text-cta">{spoke.title}</span>
+                      </div>
+                    );
+                  }
+                  
+                  // Sibling spokes: clickable links
                   return (
                     <Link 
                       key={spoke.slug}
                       to={spokeUrl}
-                      className={`flex items-center gap-2 transition-colors hover:text-cta ${isCurrentSpoke ? '' : 'group'}`}
+                      className="flex items-center gap-2 group transition-colors hover:text-cta"
                     >
-                      <CheckCircle className={`w-5 h-5 flex-shrink-0 transition-colors ${isCurrentSpoke ? 'text-cta' : 'text-slate-400 group-hover:text-cta'}`} />
-                      <span className={`font-medium transition-colors ${isCurrentSpoke ? 'text-cta' : 'text-slate-700 group-hover:text-cta'}`}>
+                      <CheckCircle className="w-5 h-5 flex-shrink-0 text-slate-400 group-hover:text-cta transition-colors" />
+                      <span className="font-medium text-slate-700 group-hover:text-cta transition-colors">
                         {spoke.title}
                       </span>
                     </Link>
