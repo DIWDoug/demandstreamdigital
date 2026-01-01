@@ -67,6 +67,7 @@ import clientConversationsImg from "@/assets/spoke/client-conversations.png";
 import brandedDashboardsClientsImg from "@/assets/spoke/branded-dashboards-clients.png";
 import callTrackingImplementationImg from "@/assets/spoke/call-tracking-implementation.jpg";
 import callAnalyticsDashboardImg from "@/assets/spoke/call-analytics-dashboard.png";
+import callAnalyticsQualityValueImg from "@/assets/spoke/call-analytics-quality-value.jpg";
 import callAttributionRoiImg from "@/assets/spoke/call-attribution-roi.png";
 import attributionFrameworkDashboardImg from "@/assets/spoke/attribution-framework-dashboard.png";
 import roiCalculationDashboardImg from "@/assets/spoke/roi-calculation-dashboard.png";
@@ -2223,8 +2224,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Call Timing", description: "Peak call times identified for staffing." },
         { title: "Quality Scoring", description: "Calls categorized by lead quality." }
       ],
-      imageSrc: callAnalyticsDashboardImg,
-      imageAlt: "Call analytics dashboard showing call quality metrics, duration charts, first-time vs repeat caller data, and quality scoring",
+      imageSrc: callAnalyticsQualityValueImg,
+      imageAlt: "Call analytics infographic showing call duration, first-time callers, call outcomes, missed calls, call timing, and quality scoring",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
