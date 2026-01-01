@@ -59,6 +59,7 @@ import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
 import realTimeDashboardMeetingImg from "@/assets/spoke/real-time-dashboard-meeting.png";
+import rankingsInContextImg from "@/assets/spoke/rankings-in-context.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2168,6 +2169,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Client Reports", description: "Ranking data presented clearly for non-technical clients." },
         { title: "Historical Context", description: "Where rankings were, are, and are trending." }
       ],
+      imageSrc: rankingsInContextImg,
+      imageAlt: "Team meeting reviewing ranking analytics dashboard on large display",
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
     }
