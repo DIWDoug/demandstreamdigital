@@ -73,6 +73,8 @@ import callTrackingAttributionLoopImg from "@/assets/spoke/call-tracking-attribu
 import attributionFrameworkDashboardImg from "@/assets/spoke/attribution-framework-dashboard.png";
 import roiCalculationDashboardImg from "@/assets/spoke/roi-calculation-dashboard.png";
 import budgetOptimizationDashboardImg from "@/assets/spoke/budget-optimization-dashboard.png";
+import presentationSlidesDesignImg from "@/assets/spoke/presentation-slides-design.png";
+import presentationRoiStoriesImg from "@/assets/spoke/presentation-roi-stories.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2316,6 +2318,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Key Takeaways", description: "Most important points highlighted clearly." },
         { title: "Template Library", description: "Reusable templates for consistent presentation." }
       ],
+      imageSrc: presentationSlidesDesignImg,
+      imageAlt: "Marketing agency presentation slides on conference room screen showing data visualizations, charts, and branded design",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -2331,6 +2335,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Industry Context", description: "Performance relative to market conditions." },
         { title: "Recommendation Support", description: "Data that supports strategic recommendations." }
       ],
+      imageSrc: presentationRoiStoriesImg,
+      imageAlt: "Executive summary presentation on laptop showing ROI results, win highlights, strategy roadmap, and investment justification",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
