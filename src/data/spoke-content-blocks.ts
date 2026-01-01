@@ -64,6 +64,7 @@ import reportHistoryTabletImg from "@/assets/spoke/report-history-tablet.png";
 import reportingPresentationImg from "@/assets/spoke/reporting-presentation.png";
 import reportsCustomizationImg from "@/assets/spoke/reports-customization.png";
 import clientConversationsImg from "@/assets/spoke/client-conversations.png";
+import brandedDashboardsClientsImg from "@/assets/spoke/branded-dashboards-clients.png";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2037,8 +2038,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
         { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
       ],
-      imageSrc: realTimeDashboardMeetingImg,
-      imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
+      imageSrc: brandedDashboardsClientsImg,
+      imageAlt: "Call tracking implementation dashboard showing call volume by source, recent calls list, and tracking setup status",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
