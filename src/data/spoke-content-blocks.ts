@@ -2038,8 +2038,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
         { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
       ],
-      imageSrc: brandedDashboardsClientsImg,
-      imageAlt: "Call tracking implementation dashboard showing call volume by source, recent calls list, and tracking setup status",
+      imageSrc: realTimeDashboardMeetingImg,
+      imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
@@ -2200,6 +2200,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Integration", description: "Call data connected to analytics and CRM." },
         { title: "Local Numbers", description: "Local area codes maintained for caller trust." }
       ],
+      imageSrc: brandedDashboardsClientsImg,
+      imageAlt: "Call tracking implementation dashboard showing call volume by source, recent calls list, and tracking setup status",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
     },
