@@ -13,6 +13,7 @@ import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
+import LaptopMockup from "@/components/services/LaptopMockup";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -63,6 +64,9 @@ const Services = () => {
       
       {/* What is Inbound Marketing? */}
       <WhiteLabelExplainer />
+      
+      {/* Laptop Dashboard Mockup */}
+      <LaptopMockup />
       
       <SectionDivider />
       
