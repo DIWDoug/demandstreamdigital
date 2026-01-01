@@ -3,7 +3,6 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
-import TrustReel from "@/components/sections/TrustReel";
 
 import ServicesHero from "@/components/services/ServicesHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
@@ -35,21 +34,20 @@ const Services = () => {
       
       {/* Hero */}
       <ServicesHero />
-      
-      {/* Trust Reel - credibility whisper */}
-      <TrustReel />
 
       {/* Anchor Navigation */}
       <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
-              { label: 'Local SEO', href: '#local-seo' },
-              { label: 'GBP SEO', href: '#gbp-seo' },
-              { label: 'Paid Media', href: '#paid-media' },
-              { label: 'Authority', href: '#authority' },
-              { label: 'Email', href: '#email' },
-              { label: 'Reporting', href: '#reporting' },
+              { label: 'What is Inbound?', href: '#white-label-explainer' },
+              { label: 'Pain Points', href: '#pain-points' },
+              { label: 'Is This For You?', href: '#fit-qualifier' },
+              { label: 'Our Framework', href: '#framework' },
+              { label: 'Onboarding', href: '#onboarding' },
+              { label: 'Expertise', href: '#expertise' },
+              { label: 'Calculator', href: '#calculator' },
+              { label: 'FAQ', href: '#faq' },
             ].map((item) => (
               <a
                 key={item.href}

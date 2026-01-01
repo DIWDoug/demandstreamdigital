@@ -11,7 +11,7 @@ const components = [
 
 const WhiteLabelExplainer = () => {
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+    <section id="white-label-explainer" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cta/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
       

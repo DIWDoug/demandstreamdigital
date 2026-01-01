@@ -66,7 +66,7 @@ const faqSchema = {
 
 const ServicesFAQ = () => {
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section id="faq" className="py-20 lg:py-28 section-light relative">
       
       <Helmet>
         <script type="application/ld+json">

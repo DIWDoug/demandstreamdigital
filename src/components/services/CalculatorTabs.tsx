@@ -838,7 +838,7 @@ const CalculatorTabs = () => {
   const [activeTab, setActiveTab] = useState<CalculatorTab>("roi");
 
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative">
+    <section id="calculator" className="py-20 lg:py-28 bg-surface-dark relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
