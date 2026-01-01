@@ -17,21 +17,21 @@ const services: Service[] = [
     icon: MapPin,
     title: "Local SEO",
     description: "Show up when local customers search. We handle technical fixes, content, and on-page work that builds organic visibility over time.",
-    href: "/services/local-seo",
+    href: "/white-label-inbound-marketing-services/local-seo",
     pixabayKeyword: "search engine optimization website ranking"
   },
   {
     icon: Map,
     title: "GBP SEO",
     description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
-    href: "/services/google-maps",
+    href: "/white-label-inbound-marketing-services/google-maps",
     pixabayKeyword: "google maps location"
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
     description: "Turn ad spend into leads. Google and Meta campaigns built to generate calls, forms, and measurable ROI.",
-    href: "/services/paid-media",
+    href: "/white-label-inbound-marketing-services/paid-media",
     pixabayKeyword: "online advertising campaign clicks"
   },
   {
@@ -45,14 +45,14 @@ const services: Service[] = [
     icon: Mail,
     title: "Email Marketing",
     description: "Stay top of mind and close more deals. Automated sequences that nurture leads into loyal, repeat customers.",
-    href: "/services/email-marketing",
+    href: "/white-label-inbound-marketing-services/email-marketing",
     pixabayKeyword: "email marketing newsletter"
   },
   {
     icon: BarChart3,
     title: "Reporting",
     description: "Keep clients confident with clear results. Branded dashboards and summaries that make your agency look sharp.",
-    href: "/services/reporting",
+    href: "/white-label-inbound-marketing-services/reporting",
     pixabayKeyword: "analytics dashboard reporting"
   }
 ];
