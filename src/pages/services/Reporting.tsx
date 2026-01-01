@@ -63,7 +63,7 @@ const Reporting = () => {
       
       <SectionDivider />
       
-      <ServiceBuildingBlocksSection config={reportingConfig.buildingBlocks} />
+      <ServiceBuildingBlocksSection config={reportingConfig.buildingBlocks} hubSlug="reporting" />
       
       <SectionDivider />
       
