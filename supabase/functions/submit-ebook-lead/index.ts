@@ -38,19 +38,23 @@ serve(async (req) => {
 
     console.log("Submitting ebook lead to GHL:", { email });
 
-    // Submit to GHL form endpoint
+    // Build form data object with required fields
+    const formDataPayload = {
+      formId: GHL_FORM_ID,
+      email: email,
+      source: "Ebook Download - Local Growth Engine"
+    };
+
+    // GHL requires FormData with stringified JSON in "formData" key
+    const formData = new FormData();
+    formData.set("formData", JSON.stringify(formDataPayload));
+
+    // Submit to GHL backend form endpoint
     const ghlResponse = await fetch(
-      `https://services.leadconnectorhq.com/forms/submit`,
+      `https://backend.leadconnectorhq.com/forms/submit`,
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          formId: GHL_FORM_ID,
-          email: email,
-          source: "Ebook Download - Local Growth Engine"
-        }),
+        body: formData,
       }
     );
 
