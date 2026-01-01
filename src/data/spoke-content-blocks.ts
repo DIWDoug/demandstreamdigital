@@ -57,6 +57,7 @@ import reportingImg from "@/assets/stock/reporting.jpg";
 import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
 import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
+import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2147,6 +2148,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Movement", description: "When competitors move, you know why." },
         { title: "Strategic Recommendations", description: "Ranking data translated into action items." }
       ],
+      imageSrc: rankAnalysisDashboardImg,
+      imageAlt: "iMac displaying Google Business Profile dashboard with keyword rankings in modern office",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "#contact"
     },
