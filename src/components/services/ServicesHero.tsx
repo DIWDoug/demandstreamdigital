@@ -3,12 +3,24 @@ import GrowthEngineDiagram from "./GrowthEngineDiagram";
 
 const ServicesHero = () => {
   return (
-    <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-background to-background" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cta/5 rounded-full blur-3xl opacity-50" />
+    <section className="relative min-h-[50vh] gradient-hero noise-overlay flex items-center overflow-hidden">
+      {/* Background effects - matching internal service pages */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+      </div>
+
+      {/* Grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
       
-      <div className="container mx-auto px-6 lg:px-8 relative">
+      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left: Text content */}
           <div>
