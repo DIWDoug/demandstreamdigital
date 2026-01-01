@@ -65,6 +65,7 @@ import reportingPresentationImg from "@/assets/spoke/reporting-presentation.png"
 import reportsCustomizationImg from "@/assets/spoke/reports-customization.png";
 import clientConversationsImg from "@/assets/spoke/client-conversations.png";
 import brandedDashboardsClientsImg from "@/assets/spoke/branded-dashboards-clients.png";
+import callTrackingImplementationImg from "@/assets/spoke/call-tracking-implementation.jpg";
 import localServiceAdsImg from "@/assets/stock/local-service-ads.jpg";
 import retargetingImg from "@/assets/stock/retargeting.jpg";
 
@@ -2200,7 +2201,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Integration", description: "Call data connected to analytics and CRM." },
         { title: "Local Numbers", description: "Local area codes maintained for caller trust." }
       ],
-      imageSrc: brandedDashboardsClientsImg,
+      imageSrc: callTrackingImplementationImg,
       imageAlt: "Call tracking implementation dashboard showing call volume by source, recent calls list, and tracking setup status",
       ctaText: "Start the Conversation",
       ctaHref: "#contact"
