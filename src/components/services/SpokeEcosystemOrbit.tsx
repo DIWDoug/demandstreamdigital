@@ -92,17 +92,23 @@ const SpokeEcosystemOrbit = ({
 
               {/* Checklist - all spokes */}
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-8">
-                {allSpokes.map((spoke) => (
-                  <div 
-                    key={spoke.slug} 
-                    className="flex items-center gap-2"
-                  >
-                    <CheckCircle className={`w-5 h-5 flex-shrink-0 ${spoke.slug === currentSpoke.slug ? 'text-cta' : 'text-slate-400'}`} />
-                    <span className={`font-medium ${spoke.slug === currentSpoke.slug ? 'text-cta' : 'text-slate-700'}`}>
-                      {spoke.title}
-                    </span>
-                  </div>
-                ))}
+                {allSpokes.map((spoke) => {
+                  const isCurrentSpoke = spoke.slug === currentSpoke.slug;
+                  const spokeUrl = `/white-label-inbound-marketing-services/${hubSlug}/${spoke.slug}`;
+                  
+                  return (
+                    <Link 
+                      key={spoke.slug}
+                      to={spokeUrl}
+                      className={`flex items-center gap-2 transition-colors hover:text-cta ${isCurrentSpoke ? '' : 'group'}`}
+                    >
+                      <CheckCircle className={`w-5 h-5 flex-shrink-0 transition-colors ${isCurrentSpoke ? 'text-cta' : 'text-slate-400 group-hover:text-cta'}`} />
+                      <span className={`font-medium transition-colors ${isCurrentSpoke ? 'text-cta' : 'text-slate-700 group-hover:text-cta'}`}>
+                        {spoke.title}
+                      </span>
+                    </Link>
+                  );
+                })}
               </div>
 
               <Link 
