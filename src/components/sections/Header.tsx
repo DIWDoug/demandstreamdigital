@@ -128,6 +128,7 @@ const Header = () => {
 
   // Partner Tools dropdown items
   const partnerToolsLinks = [
+    { label: "SEO Cost Calculator", href: "/seo-calculator", description: "Estimate monthly SEO investment" },
     { label: "ROI Calculator", href: "/roi-calculator", description: "Show clients their marketing ROI" },
     { label: "Investment Calculator", href: "/investment-calculator", description: "Scope monthly service costs" },
     { label: "Ad Budget Calculator", href: "/ad-budget-calculator", description: "Project ad campaign results" }
