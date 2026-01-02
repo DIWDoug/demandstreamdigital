@@ -45,7 +45,7 @@ const MissionVisionValues = () => {
                 <h3 className="text-2xl font-semibold text-foreground">Our Mission</h3>
               </div>
               <p className="text-text-secondary leading-relaxed text-lg">
-                To help established small businesses increase their leads, traffic, and sales by delivering quality, sustainable digital inbound marketing strategies that are tailor-made to suit the client's industry and local presence, while also helping them maintain a positive online reputation.
+                To give agency partners a fulfillment relationship they can rely on. We deliver ethical, results-driven digital marketing that helps local businesses across America grow. Every engagement is scoped to the market reality, executed with precision, and communicated with complete transparency.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ const MissionVisionValues = () => {
                 <h3 className="text-2xl font-semibold text-foreground">Our Vision</h3>
               </div>
               <p className="text-text-secondary leading-relaxed text-lg">
-                To help established small businesses grow in order to support the dreams of their owners and founders while also contributing to the growth of local economies. By joining small business owners on the journey through a mutually invested partnership, we take online marketing off their shoulders—allowing them to focus on what they do best: running their businesses and delighting their customers.
+                To be the fulfillment partner agencies never have to second-guess. We believe when agencies can count on their backend operations, they can focus on growth, client relationships, and building something meaningful. Together, we help American small businesses thrive through marketing that actually works.
               </p>
             </div>
           </div>
