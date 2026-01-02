@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import SEOEducationalContent from "@/components/calculators/SEOEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
+import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
 import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -495,6 +496,15 @@ const SEOCalculator = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <SEOEducationalContent />
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="py-16 lg:py-24 bg-surface-elevated">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <PricingComparisonTable />
             </div>
           </div>
         </section>
