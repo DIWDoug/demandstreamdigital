@@ -19,7 +19,7 @@ const HonestWordOnFulfillment = () => {
       />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
@@ -30,64 +30,71 @@ const HonestWordOnFulfillment = () => {
             </h2>
           </div>
 
-          {/* Author Card */}
-          <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
-            {/* Author Header */}
-            <div className="flex items-center gap-4 mb-8 pb-6 border-b border-border/50">
-              <img 
-                src={dougHeadshot} 
-                alt="Doug Bryson"
-                className="w-16 h-16 rounded-full object-cover border-2 border-cta/30"
-              />
-              <div>
-                <p className="text-lg font-semibold text-foreground">Doug Bryson</p>
-                <p className="text-sm text-text-secondary">Founder, Dialed-In Web</p>
+          {/* Two-column layout */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left - Photo */}
+            <div className="relative">
+              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border">
+                <img 
+                  src={dougHeadshot} 
+                  alt="Doug Bryson"
+                  className="w-full h-auto object-cover aspect-[4/5]"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
+                  <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
+                  <p className="text-text-secondary">Founder, Dialed-In Web</p>
+                </div>
               </div>
             </div>
 
-            {/* Letter Content */}
-            <div className="space-y-5 text-text-secondary leading-relaxed font-serif">
-              <p>I've been running agencies since 2011.</p>
+            {/* Right - Letter Content */}
+            <div className="relative">
+              {/* Quotation mark */}
+              <div className="absolute -top-2 -left-2 text-6xl text-cta/20 font-serif leading-none">"</div>
               
-              <p>
-                I've outsourced work to vendors I'd never met, hoping what came back was something I could send to a client. Sometimes it was fine. Sometimes it was a disaster. I never knew what I'd get until it landed in my inbox.
-              </p>
-              
-              <p>
-                I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, move on. Repeat.
-              </p>
-              
-              <p className="text-foreground font-medium">
-                Then I realized the obvious thing:
-              </p>
-              
-              <p className="text-lg text-foreground border-l-4 border-cta pl-6 py-2 bg-cta/5 rounded-r-lg">
-                Every market is different. Every client is different. Cookie-cutter deliverables forced onto unique situations is a race to the bottom.
-              </p>
-              
-              <p>
-                So I built something different.
-              </p>
-              
-              <p>
-                Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches—building campaigns, fixing what broke, understanding why things actually rank.
-              </p>
-              
-              <p>
-                This experience now shapes how we scope, execute, and communicate every engagement.
-              </p>
-              
-              <p className="text-foreground font-medium text-lg pt-4">
-                Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
-              </p>
-              
-              <p>
-                If that sounds like what you've been looking for, let's talk.
-              </p>
-              
-              <p className="text-cta font-medium pt-2">
-                — Doug
-              </p>
+              <div className="space-y-5 text-text-secondary leading-relaxed pt-8">
+                <p className="text-foreground font-medium text-lg">I've been running agencies since 2011.</p>
+                
+                <p>
+                  I've outsourced work to vendors I'd never met, hoping what came back was something I could send to a client. Sometimes it was fine. Sometimes it was a disaster. I never knew what I'd get until it landed in my inbox.
+                </p>
+                
+                <p>
+                  I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, move on. Repeat.
+                </p>
+                
+                <p className="text-foreground font-medium">
+                  Then I realized the obvious thing:
+                </p>
+                
+                <p>
+                  Every market is different. Every client is different. Cookie-cutter deliverables forced onto unique situations is a race to the bottom.
+                </p>
+                
+                <p className="text-foreground font-medium">
+                  So I built something different.
+                </p>
+                
+                <p>
+                  Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches—building campaigns, fixing what broke, understanding why things actually rank.
+                </p>
+                
+                <p>
+                  This experience now shapes how we scope, execute, and communicate every engagement.
+                </p>
+                
+                <p className="text-foreground font-medium text-lg pt-4">
+                  Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
+                </p>
+                
+                <p>
+                  If that sounds like what you've been looking for, let's talk.
+                </p>
+                
+                <p className="text-cta font-medium pt-2">
+                  — Doug
+                </p>
+              </div>
             </div>
           </div>
         </div>

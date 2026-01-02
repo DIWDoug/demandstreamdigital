@@ -4,7 +4,6 @@ import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
 import ProblemSolution from "@/components/sections/ProblemSolution";
 import HonestWordOnFulfillment from "@/components/sections/HonestWordOnFulfillment";
-import WhoWeAre from "@/components/sections/WhoWeAre";
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import FitQualifier from "@/components/services/FitQualifier";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -37,7 +36,6 @@ const Index = () => {
         <ProblemSolution />
       </div>
       <HonestWordOnFulfillment />
-      <WhoWeAre />
       <WhyPartnerWithUs />
       <FitQualifier />
       
