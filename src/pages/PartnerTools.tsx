@@ -14,8 +14,7 @@ import {
   BarChart3,
   Users,
   Zap,
-  FileText,
-  Brain
+  FileText
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -108,21 +107,6 @@ const calculators = [
       "Traffic compounding",
       "Lead generation funnel",
       "12-month projections"
-    ]
-  },
-  {
-    title: "AI Readiness Assessment",
-    description: "Evaluate organizational readiness for AI adoption across strategy, data, technology, team, governance, and integration domains.",
-    href: "/ai-readiness-calculator",
-    icon: Brain,
-    color: "from-indigo-500/20 to-indigo-600/10",
-    borderColor: "border-indigo-500/30",
-    iconColor: "text-indigo-500",
-    features: [
-      "6 readiness domains",
-      "20-question assessment",
-      "Category breakdown",
-      "Priority recommendations"
     ]
   },
   {
