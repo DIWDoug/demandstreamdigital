@@ -124,6 +124,21 @@ const calculators = [
       "Category breakdown",
       "Priority recommendations"
     ]
+  },
+  {
+    title: "AI Ready Check",
+    description: "Scan any webpage to analyze its AI/LLM compatibility. Get high-signal metrics for content density, structure, and metadata quality.",
+    href: "/ai-ready-check",
+    icon: Search,
+    color: "from-cyan-500/20 to-cyan-600/10",
+    borderColor: "border-cyan-500/30",
+    iconColor: "text-cyan-500",
+    features: [
+      "Single-page analysis",
+      "LLM compatibility score",
+      "Content structure check",
+      "JSON output preview"
+    ]
   }
 ];
 
@@ -163,7 +178,7 @@ const PartnerTools = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-12">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">7</p>
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">8</p>
                   <p className="text-sm text-text-muted">Tools</p>
                 </div>
                 <div className="text-center">
