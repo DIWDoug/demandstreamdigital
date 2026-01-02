@@ -9,7 +9,8 @@ import BackToTop from "./components/BackToTop";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
-import AgencyCalculator from "./pages/AgencyCalculator";
+import ROICalculator from "./pages/ROICalculator";
+import InvestmentCalculator from "./pages/InvestmentCalculator";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -47,7 +48,10 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
-          <Route path="/agency-calculator" element={<AgencyCalculator />} />
+          <Route path="/roi-calculator" element={<ROICalculator />} />
+          <Route path="/investment-calculator" element={<InvestmentCalculator />} />
+          {/* Legacy redirect */}
+          <Route path="/agency-calculator" element={<Navigate to="/roi-calculator" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           
