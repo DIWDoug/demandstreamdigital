@@ -245,8 +245,8 @@ const Header = () => {
                           onClick={() => setIsToolsMenuOpen(false)}
                           className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors"
                         >
-                          <p className="text-sm font-medium text-foreground">{tool.label}</p>
-                          <p className="text-xs text-text-muted mt-0.5">{tool.description}</p>
+                          <p className="text-sm font-medium text-foreground uppercase tracking-wide">{tool.label}</p>
+                          <p className="text-xs text-text-muted mt-0.5 normal-case tracking-normal">{tool.description}</p>
                         </Link>
                       ))}
                     </div>
