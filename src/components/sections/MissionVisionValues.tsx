@@ -68,7 +68,7 @@ const MissionVisionValues = () => {
             <div className="text-center mb-10">
               <h3 className="text-2xl font-semibold text-foreground mb-3">Our Core Values</h3>
               <p className="text-text-secondary max-w-2xl mx-auto">
-                We believe in sustainable, honest, and trustworthy marketing practices. We engage only in "white hat" practices to ensure transparent, honest, and sustainable building on clients' online reputations and search engine rankings.
+                We believe agency partnerships thrive on reliability and ethical execution. Every engagement is built on sustainable, white-hat practices that protect your reputation and deliver results you can stand behind.
               </p>
             </div>
             
@@ -82,7 +82,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Integrity</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  We will be honest and do what we say we are going to do. We practice what we preach and ensure that our own website and online reputation is high.
+                  We do what we say. Your agency can count on deliverables that match the scope, timelines that hold, and work you never have to apologize for.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Transparency</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Clients will be given full reports of the activities that were delivered, and strategies will be agreed upon in advance.
+                  Full visibility into every campaign. You get complete reports, agreed-upon strategies, and no surprises. Ever.
                 </p>
               </div>
 
@@ -108,20 +108,20 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Partnership</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Online marketing activities are best delivered as a partnership between the service provider and the client. There is a mutual investment required to deliver return on investment.
+                  We succeed when you succeed. This is a mutual investment: we bring the execution, you bring the client relationship, and together we deliver results.
                 </p>
               </div>
 
-              {/* Consistency */}
+              {/* Reliability */}
               <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
                     <Users className="w-5 h-5 text-cta" />
                   </div>
-                  <h4 className="text-lg font-semibold text-foreground">Consistency</h4>
+                  <h4 className="text-lg font-semibold text-foreground">Reliability</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Clients will know who they are working with by name, and a low rate of turnover will be part of the Dialed-In Web culture.
+                  Same team. Same process. Low turnover means your agency works with people who know your clients and deliver consistent quality month after month.
                 </p>
               </div>
 
@@ -131,10 +131,10 @@ const MissionVisionValues = () => {
                   <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
                     <CheckCircle className="w-5 h-5 text-cta" />
                   </div>
-                  <h4 className="text-lg font-semibold text-foreground">Ethical Practices</h4>
+                  <h4 className="text-lg font-semibold text-foreground">Ethical Execution</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  We provide search engine marketing services that are in line with the major search engines' quality guidelines.
+                  Only white-hat tactics that align with search engine guidelines. Your clients get sustainable rankings. Your agency keeps its reputation intact.
                 </p>
               </div>
 
@@ -144,10 +144,10 @@ const MissionVisionValues = () => {
                   <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-cta" />
                   </div>
-                  <h4 className="text-lg font-semibold text-foreground">Competency</h4>
+                  <h4 className="text-lg font-semibold text-foreground">Expertise</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Services will be delivered by the most experienced, expert staff available. Our team invests in their own personal development to stay on top of trends and algorithms.
+                  Experienced specialists, not junior contractors. Our team stays current on algorithms and trends so you can confidently sell what we deliver.
                 </p>
               </div>
             </div>
