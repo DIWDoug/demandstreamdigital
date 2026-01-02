@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import CalculatorContactForm from "@/components/CalculatorContactForm";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -369,31 +370,8 @@ const AdBudgetCalculator = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-surface-elevated relative overflow-hidden">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-cta/30 rounded-full blur-3xl" />
-          </div>
-          
-          <div className="container mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Ready to Deliver These Results?
-              </h2>
-              <p className="text-text-secondary text-lg font-body mb-8">
-                Partner with us for white-label paid media management. We handle the campaigns, you grow your agency.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/white-label-inbound-marketing-services/paid-media" className="btn-cta inline-flex items-center gap-2">
-                  Explore Paid Media Services
-                </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle transition-colors font-medium">
-                  Start the Conversation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Contact Form Section */}
+        <CalculatorContactForm />
       </main>
       
       <Footer />
