@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import CalculatorContactForm from "@/components/CalculatorContactForm";
+import ContactForm from "@/components/sections/ContactForm";
 import InvestmentEducationalContent from "@/components/calculators/InvestmentEducationalContent";
+import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -573,8 +574,11 @@ const InvestmentCalculator = () => {
           </div>
         </section>
 
+        {/* Agency Partner Videos */}
+        <AgencyPartnerVideos />
+
         {/* Contact Form Section */}
-        <CalculatorContactForm />
+        <ContactForm />
       </main>
       
       <Footer />
