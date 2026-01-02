@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube, Calculator } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import logo from "@/assets/dialedinweb-logo.png";
 
@@ -201,12 +201,21 @@ const Footer = () => {
               <p className="text-xs text-text-muted">
                 © {new Date().getFullYear()} Dialed-In Web. All Rights Reserved.
               </p>
-              <Link 
-                to="/privacy"
-                className="text-xs text-text-muted hover:text-text-secondary transition-colors"
-              >
-                Privacy Policy
-              </Link>
+              <div className="flex items-center gap-6">
+                <Link 
+                  to="/partner-tools"
+                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-cta transition-colors"
+                >
+                  <Calculator className="h-3.5 w-3.5" />
+                  Partner Tools
+                </Link>
+                <Link 
+                  to="/privacy"
+                  className="text-xs text-text-muted hover:text-text-secondary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
             </div>
           </div>
         </div>
