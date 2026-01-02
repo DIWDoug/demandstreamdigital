@@ -122,7 +122,8 @@ const Header = () => {
 
   // Links that appear AFTER Services mega menu
   const postServiceLinks = [
-    { label: "Testimonials", href: "/testimonials", isRoute: true }
+    { label: "Testimonials", href: "/testimonials", isRoute: true },
+    { label: "Blog", href: "/blog", isRoute: true }
   ];
 
   // Partner Tools dropdown items
