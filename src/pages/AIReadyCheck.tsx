@@ -704,6 +704,248 @@ const AIReadyCheck = () => {
             </div>
           </section>
         )}
+
+        {/* Educational Content Section */}
+        <section className="py-16 lg:py-24 bg-gray-50 dark:bg-surface-dark border-t border-border/20">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What is AI Optimization (AIO)?
+                </h2>
+                <p className="text-text-muted max-w-2xl mx-auto">
+                  AI Optimization ensures your website content can be accurately parsed, understood, and cited by Large Language Models like ChatGPT, Google's AI Overviews, and Perplexity.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-6 border border-border/30">
+                  <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-4">
+                    <Globe className="h-6 w-6 text-accent-blue" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">AI Overviews Are Here</h3>
+                  <p className="text-sm text-text-muted">
+                    Google now displays AI-generated summaries at the top of many search results. If your content isn't structured for AI parsing, you're invisible in these prime positions.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-6 border border-border/30">
+                  <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-4">
+                    <Sparkles className="h-6 w-6 text-purple-500" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">LLMs Drive Discovery</h3>
+                  <p className="text-sm text-text-muted">
+                    More users are asking ChatGPT and similar tools for local business recommendations. If your site can't be "read" by these models, you won't be recommended.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-6 border border-border/30">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                    <FileText className="h-6 w-6 text-emerald-500" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Structured Content Wins</h3>
+                  <p className="text-sm text-text-muted">
+                    Clean heading hierarchies, semantic HTML, and proper metadata help AI systems extract accurate information about your business, services, and expertise.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-6 border border-border/30">
+                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-4">
+                    <Code className="h-6 w-6 text-orange-500" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Technical Foundation</h3>
+                  <p className="text-sm text-text-muted">
+                    Robots.txt, sitemaps, and the emerging llms.txt standard tell AI crawlers exactly what content to index and how to interpret your site structure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why It Matters for Local Businesses */}
+        <section className="py-16 lg:py-24 bg-white dark:bg-background border-t border-border/20">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Why AI Readiness Matters for Local Businesses
+                </h2>
+                <p className="text-text-muted max-w-2xl mx-auto">
+                  Local search is evolving. Businesses that optimize for AI discovery today will dominate tomorrow's recommendation-driven landscape.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-surface-dark rounded-2xl p-8 border border-border/30 mb-12">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <p className="text-4xl font-bold text-accent-blue mb-2">65%</p>
+                    <p className="text-sm text-text-muted">of users now start searches with AI assistants</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-purple-500 mb-2">40%</p>
+                    <p className="text-sm text-text-muted">of Google results include AI Overviews</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-emerald-500 mb-2">3x</p>
+                    <p className="text-sm text-text-muted">higher engagement from AI-cited content</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-sm font-bold text-cta">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">"Near Me" Queries Are AI-Powered</h3>
+                    <p className="text-sm text-text-muted">
+                      When someone asks "best plumber near me" to ChatGPT or Google Assistant, AI pulls from websites with clear, structured content. Messy sites get ignored.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-sm font-bold text-cta">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Citations Build Trust</h3>
+                    <p className="text-sm text-text-muted">
+                      AI systems cite sources. When your business appears as a citation in an AI response, it carries implicit endorsement. Being cited beats being listed.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-sm font-bold text-cta">3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Voice Search Is Conversational</h3>
+                    <p className="text-sm text-text-muted">
+                      Voice assistants powered by LLMs answer questions conversationally. Sites with FAQ-structured content and clear service descriptions get featured.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-cta/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-sm font-bold text-cta">4</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Third-Party Signals Matter</h3>
+                    <p className="text-sm text-text-muted">
+                      AI systems cross-reference your website with Yelp, Google Business Profile, and industry directories. Consistent, structured data across all platforms amplifies your visibility.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Improve Section */}
+        <section className="py-16 lg:py-24 bg-gray-50 dark:bg-surface-dark border-t border-border/20">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How to Improve Your AI Readiness Score
+                </h2>
+                <p className="text-text-muted max-w-2xl mx-auto">
+                  Each metric in our analysis maps to specific, actionable improvements you can make today.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Fix Heading Hierarchy</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    Use exactly one H1 per page. Follow a logical sequence: H1 → H2 → H3. Never skip levels. This helps AI understand your content structure.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Add Complete Metadata</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    Every page needs a unique title tag (under 60 characters) and meta description (under 160 characters) that accurately describes the content.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Implement Semantic HTML</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    Use {'<header>'}, {'<nav>'}, {'<main>'}, {'<article>'}, {'<section>'}, and {'<footer>'} tags. These help AI understand page structure beyond just content.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Create an llms.txt File</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    This emerging standard tells AI crawlers about your site structure, key pages, and preferred content. Place it in your root directory alongside robots.txt.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Improve Accessibility</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    Add descriptive alt text to all images. Use ARIA labels for interactive elements. Accessibility improvements also improve AI comprehension.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-surface-elevated rounded-xl p-5 border border-border/30">
+                  <div className="flex items-center gap-3 mb-2">
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <h3 className="font-semibold text-foreground">Write for Clarity</h3>
+                  </div>
+                  <p className="text-sm text-text-muted ml-8">
+                    Use shorter sentences (15-20 words average). Break up long paragraphs. Use bullet points and numbered lists. Clear writing is AI-friendly writing.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="mt-12 bg-gradient-to-br from-cta/10 to-accent-blue/10 rounded-2xl p-8 border border-cta/30 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-2">Need Help Optimizing for AI?</h3>
+                <p className="text-text-muted mb-6 max-w-lg mx-auto">
+                  Our white-label SEO and content services include AI Optimization as a core component. We help agencies deliver AI-ready websites to their clients.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link
+                    to="/white-label-inbound-marketing-services/local-seo"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-cta-foreground rounded-lg font-semibold transition-colors"
+                  >
+                    Explore Local SEO Services
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground hover:bg-surface-dark rounded-lg font-medium transition-colors"
+                  >
+                    Start the Conversation
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       
       <Footer />
