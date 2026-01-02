@@ -270,7 +270,7 @@ const Header = () => {
           </div>
 
           {/* Right side - Phone, Search & CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-6">
             <a 
               href="tel:2143072995"
               className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group"

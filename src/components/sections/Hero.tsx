@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
+  const { toast } = useToast();
   const [step, setStep] = useState(1);
   const [website, setWebsite] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,10 +25,49 @@ const Hero = () => {
     }
   };
 
-  const handleStep2Submit = (e: React.FormEvent) => {
+  const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", { website, ...formData });
-    // TODO: Handle form submission
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
+        body: {
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          revenue: formData.revenue,
+          website: website,
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Thank you!",
+        description: "We'll be in touch within 24 hours.",
+      });
+
+      // Reset form
+      setStep(1);
+      setWebsite("");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        revenue: "",
+        consent: false,
+        notRobot: false,
+      });
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -223,10 +266,20 @@ const Hero = () => {
 
                   <button
                     type="submit"
-                    className="w-full btn-cta group justify-center"
+                    disabled={isSubmitting}
+                    className="w-full btn-cta group justify-center disabled:opacity-50"
                   >
-                    Submit and Pick a Time
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        Submit and Pick a Time
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                      </>
+                    )}
                   </button>
                   <p className="text-xs text-text-muted text-center pt-2">
                     This starts a conversation, not a sales call.
