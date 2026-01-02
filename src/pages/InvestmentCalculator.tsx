@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import CalculatorContactForm from "@/components/CalculatorContactForm";
+import InvestmentEducationalContent from "@/components/calculators/InvestmentEducationalContent";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -559,6 +560,15 @@ const InvestmentCalculator = () => {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Content */}
+        <section className="py-16 lg:py-24 bg-surface-elevated">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <InvestmentEducationalContent />
             </div>
           </div>
         </section>

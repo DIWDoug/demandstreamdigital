@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import CalculatorContactForm from "@/components/CalculatorContactForm";
+import AdBudgetEducationalContent from "@/components/calculators/AdBudgetEducationalContent";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -366,6 +367,15 @@ const AdBudgetCalculator = () => {
                   <strong className="text-foreground">Note:</strong> These are estimates based on industry averages. Actual results vary based on targeting, creative quality, landing page optimization, and market conditions. Use this calculator to set realistic expectations and demonstrate potential value to clients.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Content */}
+        <section className="py-16 lg:py-24 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <AdBudgetEducationalContent />
             </div>
           </div>
         </section>
