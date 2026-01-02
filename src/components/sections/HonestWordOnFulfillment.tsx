@@ -32,23 +32,8 @@ const HonestWordOnFulfillment = () => {
 
           {/* Two-column layout */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left - Photo */}
-            <div className="relative flex justify-center lg:justify-start">
-              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
-                <img 
-                  src={dougHeadshot} 
-                  alt="Doug Bryson"
-                  className="w-full h-auto object-cover aspect-[3/4]"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
-                  <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
-                  <p className="text-text-secondary">Founder, Dialed-In Web</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Letter Content */}
-            <div className="relative">
+            {/* Left - Letter Content */}
+            <div className="relative order-2 lg:order-1">
               {/* Quotation mark */}
               <div className="absolute -top-2 -left-2 text-6xl text-cta/20 font-serif leading-none">"</div>
               
@@ -94,6 +79,21 @@ const HonestWordOnFulfillment = () => {
                 <p className="text-cta font-medium pt-2">
                   — Doug
                 </p>
+              </div>
+            </div>
+
+            {/* Right - Photo */}
+            <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
+              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
+                <img 
+                  src={dougHeadshot} 
+                  alt="Doug Bryson"
+                  className="w-full h-auto object-cover aspect-[3/4]"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
+                  <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
+                  <p className="text-text-secondary">Founder, Dialed-In Web</p>
+                </div>
               </div>
             </div>
           </div>
