@@ -3,9 +3,9 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
+import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import { Target, Eye, Heart, Shield, Users, Handshake, CheckCircle, Sparkles } from "lucide-react";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
@@ -257,8 +257,10 @@ const About = () => {
         </div>
       </nav>
 
-      {/* Mission & Vision are already above, add ID for anchor */}
-      <div id="mission-values" className="scroll-mt-32" />
+      {/* Mission & Vision Section */}
+      <div id="mission-values" className="scroll-mt-32">
+        <MissionVisionValues />
+      </div>
 
       {/* Who We Are */}
       <div id="who-we-are" className="scroll-mt-32">
