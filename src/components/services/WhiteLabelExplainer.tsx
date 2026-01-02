@@ -66,7 +66,7 @@ const WhiteLabelExplainer = () => {
     icon: null
   };
 
-  const orbitRadius = isMobile ? 120 : 150;
+  const orbitRadius = isMobile ? 140 : 180;
 
   return (
     <section id="white-label-explainer" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -123,31 +123,31 @@ const WhiteLabelExplainer = () => {
             </div>
 
             {/* Right: Circular Orbit Diagram */}
-            <div className="relative flex items-center justify-center min-h-[320px] sm:min-h-[400px] lg:min-h-[480px]">
+            <div className="relative flex items-center justify-center min-h-[380px] sm:min-h-[480px] lg:min-h-[520px]">
               {/* Outer glow */}
-              <div className="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full bg-accent-blue/5 blur-xl" />
+              <div className="absolute w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-accent-blue/5 blur-xl" />
               
-              {/* Orbit circle */}
+              {/* Orbit circle - more visible */}
               <div 
-                className="absolute rounded-full border border-border/50 w-[240px] h-[240px] sm:w-[300px] sm:h-[300px]"
+                className="absolute rounded-full border-2 border-accent-blue/30 w-[280px] h-[280px] sm:w-[360px] sm:h-[360px]"
               />
               
               {/* Center content - dynamic based on hover */}
-              <div className="relative z-10 flex flex-col items-center justify-center w-[120px] sm:w-[140px] text-center transition-all duration-300">
+              <div className="relative z-10 flex flex-col items-center justify-center w-[140px] sm:w-[160px] text-center transition-all duration-300">
                 {hoveredService ? (
                   <>
-                    <div className="w-12 h-12 rounded-full bg-accent-blue/20 flex items-center justify-center mb-3">
-                      <hoveredService.icon className="w-6 h-6 text-accent-blue" />
+                    <div className="w-14 h-14 rounded-full bg-accent-blue/20 flex items-center justify-center mb-3">
+                      <hoveredService.icon className="w-7 h-7 text-accent-blue" />
                     </div>
                     <p className="text-foreground font-bold text-lg sm:text-xl mb-1">{displayService.title}</p>
                     <p className="text-text-muted text-xs leading-relaxed">
-                      {displayService.description.slice(0, 60)}...
+                      {displayService.description.slice(0, 70)}...
                     </p>
                   </>
                 ) : (
                   <>
-                    <div className="w-16 h-16 rounded-full bg-cta/20 flex items-center justify-center mb-3 border-2 border-cta/40">
-                      <span className="text-cta font-bold text-xl">6</span>
+                    <div className="w-20 h-20 rounded-full bg-cta/20 flex items-center justify-center mb-3 border-2 border-cta/40">
+                      <span className="text-cta font-bold text-2xl">6</span>
                     </div>
                     <p className="text-foreground font-bold text-lg sm:text-xl mb-1">Services</p>
                     <p className="text-text-muted text-xs leading-relaxed">
@@ -159,10 +159,10 @@ const WhiteLabelExplainer = () => {
 
               {/* Rotating orbit container */}
               <div 
-                className="absolute w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] animate-[spin_60s_linear_infinite]"
+                className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] animate-[spin_60s_linear_infinite]"
                 style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}
               >
-                {/* Orbit icons */}
+                {/* Orbit icons - not clickable */}
                 {services.map((service, index) => {
                   const angle = (index * 360) / services.length - 90;
                   const Icon = service.icon;
@@ -173,16 +173,13 @@ const WhiteLabelExplainer = () => {
                   const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
                   
                   return (
-                    <Link
+                    <div
                       key={service.slug}
-                      to={`/white-label-inbound-marketing-services/${service.slug}`}
-                      className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-110 left-1/2 top-1/2 -ml-[22px] -mt-[22px] sm:-ml-[28px] sm:-mt-[28px]"
+                      className="absolute w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 left-1/2 top-1/2 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7"
                       style={{
                         transform: `translate(${x}px, ${y}px)`,
                         backgroundColor: isHovered ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
                       }}
-                      onMouseEnter={() => setHoveredService(service)}
-                      onMouseLeave={() => setHoveredService(null)}
                     >
                       {/* Counter-rotate the icon so it stays upright */}
                       <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}>
@@ -190,7 +187,7 @@ const WhiteLabelExplainer = () => {
                           className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isHovered ? 'text-white' : 'text-white/90'}`}
                         />
                       </div>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
