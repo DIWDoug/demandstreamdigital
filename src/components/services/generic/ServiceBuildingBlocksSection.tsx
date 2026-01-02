@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import type { BuildingBlock } from "@/types/servicePage";
 
 interface BuildingBlocksConfig {
@@ -46,9 +47,13 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
           </div>
         </div>
         {hubSlug && (
-          <div className="mt-4 pt-3 border-t border-slate-200">
+          <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between">
             <span className="text-xs text-slate-400 font-medium">
               Included based on scope
+            </span>
+            <span className="text-xs text-cta font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              Learn more
+              <ArrowRight className="w-3 h-3" />
             </span>
           </div>
         )}
@@ -112,21 +117,10 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
               ))}
             </div>
           ) : (
-            /* Flat Blocks Grid - handles 7 items with centered last row */
-            <>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {config.blocks.slice(0, 6).map(renderBlock)}
-              </div>
-              
-              {/* Center any remaining blocks (7th, etc.) */}
-              {config.blocks.length > 6 && (
-                <div className="flex justify-center mt-6">
-                  <div className="w-full max-w-md">
-                    {config.blocks.slice(6).map(renderBlock)}
-                  </div>
-                </div>
-              )}
-            </>
+            /* Flat Blocks Grid - all items in same grid for consistent layout */
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {config.blocks.map(renderBlock)}
+            </div>
           )}
         </div>
       </div>
