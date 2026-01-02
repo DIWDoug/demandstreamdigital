@@ -10,6 +10,7 @@ import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import clientLogosBanner from "@/assets/client-logos-banner.png";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -605,6 +606,12 @@ const About = () => {
                 align: "start",
                 loop: true,
               }}
+              plugins={[
+                Autoplay({
+                  delay: 10000,
+                  stopOnInteraction: true,
+                }),
+              ]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">

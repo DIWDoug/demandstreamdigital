@@ -11,7 +11,7 @@ const WhoWeAre = () => {
     const fetchTeamImage = async () => {
       try {
         const response = await searchPixabayImages({
-          query: "business team meeting office professionals",
+          query: "relaxed modern office creative team coworking",
           imageType: "photo",
           orientation: "horizontal",
           perPage: 5,
@@ -48,7 +48,7 @@ const WhoWeAre = () => {
                 Who We Are
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-                Your Dedicated Fulfillment Partner
+                A Small Team That Gets It Done
               </h2>
               <p className="text-lg text-text-secondary leading-relaxed mb-6">
                 We're a team of digital marketing specialists who work exclusively behind the scenes for agencies. No client-facing roles. No brand confusion. Just reliable execution that makes your agency look great.
