@@ -15,7 +15,6 @@ import AdBudgetCalculator from "./pages/AdBudgetCalculator";
 import SEOCalculator from "./pages/SEOCalculator";
 import EmailCalculator from "./pages/EmailCalculator";
 import ContentMarketingCalculator from "./pages/ContentMarketingCalculator";
-import AIReadinessCalculator from "./pages/AIReadinessCalculator";
 import AIReadyCheck from "./pages/AIReadyCheck";
 import PartnerTools from "./pages/PartnerTools";
 import About from "./pages/About";
@@ -61,7 +60,6 @@ const App = () => (
           <Route path="/seo-calculator" element={<SEOCalculator />} />
           <Route path="/email-calculator" element={<EmailCalculator />} />
           <Route path="/content-marketing-calculator" element={<ContentMarketingCalculator />} />
-          <Route path="/ai-readiness-calculator" element={<AIReadinessCalculator />} />
           <Route path="/ai-ready-check" element={<AIReadyCheck />} />
           <Route path="/partner-tools" element={<PartnerTools />} />
           {/* Legacy redirect */}
