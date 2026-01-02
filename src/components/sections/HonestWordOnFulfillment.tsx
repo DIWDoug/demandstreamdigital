@@ -7,11 +7,11 @@ const HonestWordOnFulfillment = () => {
   return (
     <section 
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="py-20 lg:py-28 bg-background relative overflow-hidden reveal-section"
+      className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section"
     >
       {/* Subtle dot grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
