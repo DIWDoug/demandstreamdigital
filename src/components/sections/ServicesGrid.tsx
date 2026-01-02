@@ -186,9 +186,9 @@ const ServicesGrid = () => {
                 <ServiceCard key={index} service={service} index={index} />
               ))}
               
-              {/* Calculator CTA Card */}
+              {/* Partner Tools CTA Card */}
               <Link 
-                to="/agency-calculator"
+                to="/partner-tools"
                 className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
               >
                 <div className="flex items-center gap-4">
@@ -197,10 +197,10 @@ const ServicesGrid = () => {
                   </span>
                   <div className="flex-1">
                     <h3 className="text-foreground font-semibold mb-1 group-hover:text-cta transition-colors">
-                      Agency Partner Calculator
+                      Explore Our Partner Tools
                     </h3>
                     <p className="text-text-secondary text-sm">
-                      Estimate ROI and investment for your next client conversation.
+                      ROI calculators, investment tools, and resources for agency partners.
                     </p>
                   </div>
                   <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
