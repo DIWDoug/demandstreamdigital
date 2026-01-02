@@ -32,7 +32,7 @@ const Testimonials = () => {
       title: "Digital Marketing Agency Owner",
       location: "Florida",
       tenure: "5 Years Partner",
-      services: ["GBP SEO", "Local SEO", "Paid Media", "AEO", "Authority Building"],
+      services: ["Local SEO", "PPC", "Authority Building", "GBP SEO"],
       rating: 5
     }
   ];
