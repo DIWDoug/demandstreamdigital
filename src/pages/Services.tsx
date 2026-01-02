@@ -4,7 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
-import ServicesHero from "@/components/services/ServicesHero";
+import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import InboundPainPoints from "@/components/services/InboundPainPoints";
 import FitQualifier from "@/components/services/FitQualifier";
@@ -13,7 +13,6 @@ import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
-import LaptopMockup from "@/components/services/LaptopMockup";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -33,8 +32,24 @@ const Services = () => {
       
       <Header />
       
-      {/* Hero */}
-      <ServicesHero />
+      {/* Hero with Form */}
+      <ServiceHubHero 
+        title="Inbound Marketing"
+        heroHeadline="White Label Inbound Marketing"
+        heroSubtitle="Executed as a System"
+        description={{
+          intro: "Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow.",
+          bullets: [
+            "You retain the client relationship",
+            "We execute behind the scenes",
+            "Consistent, scalable results"
+          ],
+          closing: "No added overhead. No crossed fingers. Just reliable fulfillment that makes your agency look great."
+        }}
+        breadcrumbs={[
+          { label: "Services" }
+        ]}
+      />
 
       {/* Anchor Navigation */}
       <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
@@ -64,9 +79,6 @@ const Services = () => {
       
       {/* What is Inbound Marketing? */}
       <WhiteLabelExplainer />
-      
-      {/* Laptop Dashboard Mockup */}
-      <LaptopMockup />
       
       <SectionDivider />
       

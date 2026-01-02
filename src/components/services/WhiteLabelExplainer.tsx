@@ -1,12 +1,43 @@
-import { Search, MousePointerClick, Mail, Award, FileText, TrendingUp } from "lucide-react";
+import { MapPin, Map, MousePointerClick, Mail, Share2, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const components = [
-  { icon: Search, label: "SEO", description: "Organic visibility in search results" },
-  { icon: MousePointerClick, label: "Paid Media", description: "Google & Meta ad campaigns" },
-  { icon: Mail, label: "Email", description: "Nurture sequences & automation" },
-  { icon: Award, label: "Authority", description: "PR, backlinks & trust signals" },
-  { icon: FileText, label: "Content", description: "Blogs, landing pages & assets" },
-  { icon: TrendingUp, label: "Analytics", description: "Tracking, reporting & optimization" },
+const services = [
+  { 
+    icon: MapPin, 
+    label: "Local SEO", 
+    description: "Organic visibility in local search results",
+    href: "/white-label-inbound-marketing-services/local-seo"
+  },
+  { 
+    icon: Map, 
+    label: "GBP SEO", 
+    description: "Google Business Profile optimization",
+    href: "/white-label-inbound-marketing-services/google-maps"
+  },
+  { 
+    icon: MousePointerClick, 
+    label: "Paid Media", 
+    description: "Google & Meta ad campaigns",
+    href: "/white-label-inbound-marketing-services/paid-media"
+  },
+  { 
+    icon: Mail, 
+    label: "Email Marketing", 
+    description: "Nurture sequences & automation",
+    href: "/white-label-inbound-marketing-services/email-marketing"
+  },
+  { 
+    icon: Share2, 
+    label: "Authority Building", 
+    description: "PR, backlinks & trust signals",
+    href: "/white-label-inbound-marketing-services/local-authority-building"
+  },
+  { 
+    icon: BarChart3, 
+    label: "Reporting", 
+    description: "Tracking, dashboards & optimization",
+    href: "/white-label-inbound-marketing-services/reporting"
+  },
 ];
 
 const WhiteLabelExplainer = () => {
@@ -31,27 +62,28 @@ const WhiteLabelExplainer = () => {
                 Inbound marketing is a system for attracting customers through relevant content and experiences while strategically using paid media to accelerate visibility as you build long-term assets.
               </p>
               <p className="text-text-secondary mb-6 leading-relaxed">
-                Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Content ties it all together.
+                Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Reporting ties it all together.
               </p>
               <p className="text-text-secondary leading-relaxed">
                 When these channels work as a coordinated system instead of siloed tactics, the compounding effect drives consistent, measurable growth over time.
               </p>
             </div>
 
-            {/* Right: Component Grid */}
+            {/* Right: Service Hub Grid */}
             <div>
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
-                {components.map((item, index) => (
-                  <div 
+                {services.map((item, index) => (
+                  <Link 
                     key={index}
-                    className="bg-surface-elevated border border-border/50 rounded-xl p-4 sm:p-5 hover:border-accent-blue/30 transition-colors"
+                    to={item.href}
+                    className="bg-surface-elevated border border-border/50 rounded-xl p-4 sm:p-5 hover:border-accent-blue/30 hover:bg-surface-elevated/80 transition-all group"
                   >
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center mb-2 sm:mb-3">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center mb-2 sm:mb-3 group-hover:bg-accent-blue/20 transition-colors">
                       <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent-blue" />
                     </div>
-                    <p className="text-foreground font-semibold text-sm sm:text-base mb-1">{item.label}</p>
+                    <p className="text-foreground font-semibold text-sm sm:text-base mb-1 group-hover:text-accent-blue transition-colors">{item.label}</p>
                     <p className="text-text-muted text-xs sm:text-sm">{item.description}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
