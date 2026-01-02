@@ -199,7 +199,7 @@ const ROICalculator = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
-                      <p className="text-sm text-text-muted">Select your client's industry to auto-fill typical rates</p>
+                      <p className="text-sm text-text-muted">Select an industry for starting estimates, then adjust to your client's actual data</p>
                     </div>
                   </div>
                   <button
@@ -209,6 +209,13 @@ const ROICalculator = () => {
                     {selectedBenchmark ? selectedBenchmark.name : "Select Industry"}
                     <ChevronDown className={cn("h-4 w-4 transition-transform", showBenchmarks && "rotate-180")} />
                   </button>
+                </div>
+
+                {/* Disclaimer */}
+                <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-3 mb-4">
+                  <p className="text-xs text-yellow-600 dark:text-yellow-500">
+                    <strong>Note:</strong> These are industry averages based on general marketing research. For accurate projections, replace these with your client's actual conversion rates, close rates, and customer values from their CRM or analytics.
+                  </p>
                 </div>
 
                 {showBenchmarks && (
