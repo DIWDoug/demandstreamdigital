@@ -627,7 +627,7 @@ const About = () => {
                     quote: "We needed a partner we could trust to deliver quality work across different client situations. The ability to have real conversations about scope and strategy made a measurable difference in client retention. Most clients stayed at least a year.",
                     name: "Jeremy",
                     date: "December 2025",
-                    services: "Local SEO, PPC, Web Design",
+                    services: "Local SEO, PPC, Authority Building, GBP SEO",
                     rating: 5
                   },
                   {
