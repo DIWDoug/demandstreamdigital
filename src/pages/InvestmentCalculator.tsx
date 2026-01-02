@@ -576,9 +576,9 @@ const InvestmentCalculator = () => {
               <p className="text-text-secondary text-lg font-body mb-8">
                 Let's discuss how we can help you deliver exceptional results for your clients while you focus on growing your agency.
               </p>
-              <a href="#contact" className="btn-cta inline-flex items-center gap-2">
+              <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
                 Start the Conversation
-              </a>
+              </Link>
             </div>
           </div>
         </section>
