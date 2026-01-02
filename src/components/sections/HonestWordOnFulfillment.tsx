@@ -33,12 +33,12 @@ const HonestWordOnFulfillment = () => {
           {/* Two-column layout */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left - Photo */}
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border">
+            <div className="relative flex justify-center lg:justify-start">
+              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
                 <img 
                   src={dougHeadshot} 
                   alt="Doug Bryson"
-                  className="w-full h-auto object-cover aspect-[4/5]"
+                  className="w-full h-auto object-cover aspect-[3/4]"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
                   <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
