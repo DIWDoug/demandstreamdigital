@@ -123,8 +123,7 @@ const Header = () => {
   // Links that appear AFTER Services mega menu
   const postServiceLinks = [
     { label: "Results", href: "#testimonials" },
-    { label: "Testimonials", href: "/testimonials", isRoute: true },
-    { label: "Contact", href: "/contact", isRoute: true }
+    { label: "Testimonials", href: "/testimonials", isRoute: true }
   ];
 
   // Partner Tools dropdown items
@@ -254,6 +253,14 @@ const Header = () => {
                   </div>
                 )}
               </div>
+
+              {/* Contact Link */}
+              <Link
+                to="/contact"
+                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+              >
+                Contact
+              </Link>
               
             </nav>
           </div>
@@ -424,6 +431,16 @@ const Header = () => {
                   ))}
                 </div>
               )}
+
+              {/* Mobile Contact Link */}
+              <Link
+                to="/contact"
+                className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+
               <div className="pt-4 mt-2 border-t border-border">
                 <a 
                   href="tel:2143072995"
