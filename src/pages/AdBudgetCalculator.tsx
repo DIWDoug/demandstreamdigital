@@ -373,6 +373,11 @@ const AdBudgetCalculator = () => {
           </div>
         </section>
 
+        {/* Soft Divider */}
+        <div className="container mx-auto px-6 lg:px-8 py-4">
+          <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+        </div>
+
         {/* Educational Content */}
         <section className="py-16 lg:py-24 bg-surface-dark">
           <div className="container mx-auto px-6 lg:px-8">
@@ -382,6 +387,11 @@ const AdBudgetCalculator = () => {
           </div>
         </section>
 
+        {/* Soft Divider */}
+        <div className="container mx-auto px-6 lg:px-8 py-4">
+          <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+        </div>
+
         {/* Pricing Comparison */}
         <section className="py-16 lg:py-24 bg-surface-elevated">
           <div className="container mx-auto px-6 lg:px-8">
@@ -390,6 +400,11 @@ const AdBudgetCalculator = () => {
             </div>
           </div>
         </section>
+
+        {/* Soft Divider */}
+        <div className="container mx-auto px-6 lg:px-8 py-4">
+          <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+        </div>
 
         {/* Agency Partner Videos */}
         <AgencyPartnerVideos />
