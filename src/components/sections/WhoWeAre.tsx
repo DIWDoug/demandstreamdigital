@@ -1,9 +1,37 @@
-import dougBrysonCutout from "@/assets/doug-bryson-cutout.png";
+import { useState, useEffect } from "react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { searchPixabayImages } from "@/lib/pixabay";
 
 const WhoWeAre = () => {
   const ref = useScrollReveal();
+  const [teamImageUrl, setTeamImageUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchTeamImage = async () => {
+      try {
+        const response = await searchPixabayImages({
+          query: "business team meeting office professionals",
+          imageType: "photo",
+          orientation: "horizontal",
+          perPage: 5,
+          minWidth: 800,
+          safeSearch: true,
+          order: "popular"
+        });
+
+        if (response.hits.length > 0) {
+          // Pick a random image from top results for variety
+          const randomIndex = Math.floor(Math.random() * Math.min(3, response.hits.length));
+          setTeamImageUrl(response.hits[randomIndex].webformatURL);
+        }
+      } catch (error) {
+        console.error("Error fetching team image:", error);
+      }
+    };
+
+    fetchTeamImage();
+  }, []);
 
   return (
     <section 
@@ -30,18 +58,20 @@ const WhoWeAre = () => {
               </p>
             </div>
 
-            {/* Right column - Image */}
+            {/* Right column - Team Image */}
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border">
-                <img 
-                  src={dougBrysonCutout} 
-                  alt="Doug Bryson - Founder of Dialed-In Web"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6">
-                  <p className="text-foreground font-semibold">Doug Bryson</p>
-                  <p className="text-text-secondary text-sm">Founder & CEO</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border aspect-[4/3]">
+                {teamImageUrl ? (
+                  <img 
+                    src={teamImageUrl} 
+                    alt="Our dedicated fulfillment team"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-surface-dark animate-pulse" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
           </div>
