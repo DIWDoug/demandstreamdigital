@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import AdBudgetEducationalContent from "@/components/calculators/AdBudgetEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
+import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -377,6 +378,15 @@ const AdBudgetCalculator = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <AdBudgetEducationalContent />
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="py-16 lg:py-24 bg-surface-elevated">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <PricingComparisonTable />
             </div>
           </div>
         </section>

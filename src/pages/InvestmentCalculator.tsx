@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import InvestmentEducationalContent from "@/components/calculators/InvestmentEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
+import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -570,6 +571,15 @@ const InvestmentCalculator = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <InvestmentEducationalContent />
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="py-16 lg:py-24 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <PricingComparisonTable />
             </div>
           </div>
         </section>
