@@ -119,7 +119,8 @@ const Header = () => {
   const postServiceLinks = [
     { label: "Results", href: "#testimonials" },
     { label: "Testimonials", href: "/testimonials", isRoute: true },
-    { label: "Partner Tools", href: "/agency-calculator", isRoute: true },
+    { label: "ROI Calculator", href: "/roi-calculator", isRoute: true },
+    { label: "Investment Calculator", href: "/investment-calculator", isRoute: true },
     { label: "Contact", href: "/contact", isRoute: true }
   ];
 
