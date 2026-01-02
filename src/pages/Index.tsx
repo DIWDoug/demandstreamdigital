@@ -35,6 +35,10 @@ const Index = () => {
         <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="wave" />
         <ProblemSolution />
       </div>
+      {/* Soft divider between sections */}
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="border-t border-border/40" />
+      </div>
       <HonestWordOnFulfillment />
       <WhyPartnerWithUs />
       <FitQualifier />

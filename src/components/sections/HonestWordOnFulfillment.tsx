@@ -33,7 +33,7 @@ const HonestWordOnFulfillment = () => {
           {/* Two-column layout */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left - Photo */}
-            <div className="relative flex justify-center lg:justify-start">
+            <div className="relative flex justify-center lg:justify-end">
               <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
                 <img 
                   src={dougHeadshot} 
