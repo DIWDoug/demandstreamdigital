@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import CalculatorContactForm from "@/components/CalculatorContactForm";
+import ROIEducationalContent from "@/components/calculators/ROIEducationalContent";
 import { useState, useMemo } from "react";
 import { Calculator, TrendingUp, Users, UserCheck, DollarSign, BarChart3, ChevronDown, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -354,6 +355,15 @@ const ROICalculator = () => {
                   Use these projections to demonstrate the value of your services. Show clients how improved conversion rates and increased traffic translate to real revenue.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Content */}
+        <section className="py-16 lg:py-24 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <ROIEducationalContent />
             </div>
           </div>
         </section>

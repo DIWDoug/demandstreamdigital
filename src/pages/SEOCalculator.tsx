@@ -2,8 +2,9 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import CalculatorContactForm from "@/components/CalculatorContactForm";
+import SEOEducationalContent from "@/components/calculators/SEOEducationalContent";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -399,6 +400,15 @@ const SEOCalculator = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Content */}
+        <section className="py-16 lg:py-24 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <SEOEducationalContent />
             </div>
           </div>
         </section>
