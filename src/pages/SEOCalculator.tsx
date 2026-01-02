@@ -1,15 +1,42 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import CalculatorContactForm from "@/components/CalculatorContactForm";
+import ContactForm from "@/components/sections/ContactForm";
 import SEOEducationalContent from "@/components/calculators/SEOEducationalContent";
+import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
+// Industry presets with default competition levels
+const industryPresets = [
+  { id: "legal", name: "Legal / Law Firms", competition: "high", audience: "local" },
+  { id: "medical", name: "Medical / Healthcare", competition: "high", audience: "local" },
+  { id: "dental", name: "Dental Practices", competition: "high", audience: "local" },
+  { id: "hvac", name: "HVAC / Home Services", competition: "medium", audience: "local" },
+  { id: "plumbing", name: "Plumbing", competition: "medium", audience: "local" },
+  { id: "roofing", name: "Roofing", competition: "medium", audience: "local" },
+  { id: "realestate", name: "Real Estate", competition: "high", audience: "regional" },
+  { id: "finance", name: "Financial Services", competition: "high", audience: "regional" },
+  { id: "insurance", name: "Insurance", competition: "high", audience: "regional" },
+  { id: "restaurant", name: "Restaurant / Food Service", competition: "medium", audience: "local" },
+  { id: "retail", name: "Retail / E-commerce", competition: "medium", audience: "national" },
+  { id: "automotive", name: "Automotive", competition: "medium", audience: "local" },
+  { id: "fitness", name: "Fitness / Gym", competition: "medium", audience: "local" },
+  { id: "spa", name: "Spa / Beauty", competition: "low", audience: "local" },
+  { id: "construction", name: "Construction", competition: "medium", audience: "regional" },
+  { id: "landscaping", name: "Landscaping", competition: "low", audience: "local" },
+  { id: "cleaning", name: "Cleaning Services", competition: "low", audience: "local" },
+  { id: "pest", name: "Pest Control", competition: "medium", audience: "local" },
+  { id: "moving", name: "Moving / Storage", competition: "medium", audience: "regional" },
+  { id: "other", name: "Other Industry", competition: "", audience: "" }
+];
+
 const SEOCalculator = () => {
+  const [selectedIndustry, setSelectedIndustry] = useState<string>("");
+  const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
   const [locations, setLocations] = useState<string>("");
   const [audience, setAudience] = useState<string>("");
   const [aggressiveness, setAggressiveness] = useState<string>("");
@@ -17,6 +44,18 @@ const SEOCalculator = () => {
   const [competition, setCompetition] = useState<string>("");
   const [websiteAge, setWebsiteAge] = useState<string>("");
   const [currentRankings, setCurrentRankings] = useState<string>("");
+
+  const applyIndustryPreset = (industryId: string) => {
+    const preset = industryPresets.find(i => i.id === industryId);
+    if (preset) {
+      setSelectedIndustry(industryId);
+      if (preset.competition) setCompetition(preset.competition);
+      if (preset.audience) setAudience(preset.audience);
+    }
+    setShowIndustryDropdown(false);
+  };
+
+  const selectedIndustryName = industryPresets.find(i => i.id === selectedIndustry)?.name || "";
 
   const isComplete = locations && audience && aggressiveness && pages && competition && websiteAge && currentRankings;
 
@@ -234,6 +273,53 @@ const SEOCalculator = () => {
                       <p className="text-sm text-text-muted">Answer each question to calculate an estimated monthly investment.</p>
                     </div>
 
+                    {/* Industry Preset Selector */}
+                    <QuestionSection 
+                      icon={Building} 
+                      title="Select industry (optional)"
+                      tooltip="Selecting an industry will auto-fill typical competition levels and audience reach."
+                    >
+                      <div className="relative">
+                        <button 
+                          type="button" 
+                          onClick={() => setShowIndustryDropdown(!showIndustryDropdown)}
+                          className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border/50 text-left flex items-center justify-between"
+                        >
+                          <span className={selectedIndustryName ? "text-foreground" : "text-text-muted"}>
+                            {selectedIndustryName || "Choose an industry to auto-fill..."}
+                          </span>
+                          <ChevronDown className={cn("h-4 w-4 text-text-muted transition-transform", showIndustryDropdown && "rotate-180")} />
+                        </button>
+                        {showIndustryDropdown && (
+                          <div className="absolute z-50 w-full mt-1 bg-surface-dark border border-border rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                            {industryPresets.map((industry) => (
+                              <button
+                                key={industry.id}
+                                type="button"
+                                onClick={() => applyIndustryPreset(industry.id)}
+                                className={cn(
+                                  "w-full px-4 py-2.5 text-left hover:bg-surface-elevated transition-colors flex items-center justify-between",
+                                  selectedIndustry === industry.id && "bg-cta/10 text-cta"
+                                )}
+                              >
+                                <span className="text-sm">{industry.name}</span>
+                                {industry.competition && (
+                                  <span className={cn(
+                                    "text-xs px-2 py-0.5 rounded",
+                                    industry.competition === "high" ? "bg-destructive/10 text-destructive" :
+                                    industry.competition === "medium" ? "bg-yellow-500/10 text-yellow-500" :
+                                    "bg-green-500/10 text-green-500"
+                                  )}>
+                                    {industry.competition} competition
+                                  </span>
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </QuestionSection>
+
                     <QuestionSection 
                       icon={MapPin} 
                       title="How many physical locations?"
@@ -413,8 +499,11 @@ const SEOCalculator = () => {
           </div>
         </section>
 
+        {/* Agency Partner Videos */}
+        <AgencyPartnerVideos />
+
         {/* Contact Form Section */}
-        <CalculatorContactForm />
+        <ContactForm />
       </main>
       
       <Footer />

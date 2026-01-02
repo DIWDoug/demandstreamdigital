@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import CalculatorContactForm from "@/components/CalculatorContactForm";
+import ContactForm from "@/components/sections/ContactForm";
 import ROIEducationalContent from "@/components/calculators/ROIEducationalContent";
+import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import { useState, useMemo } from "react";
 import { Calculator, TrendingUp, Users, UserCheck, DollarSign, BarChart3, ChevronDown, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -368,8 +369,11 @@ const ROICalculator = () => {
           </div>
         </section>
 
+        {/* Agency Partner Videos */}
+        <AgencyPartnerVideos />
+
         {/* Contact Form Section */}
-        <CalculatorContactForm />
+        <ContactForm />
       </main>
       
       <Footer />

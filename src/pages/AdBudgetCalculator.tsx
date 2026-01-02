@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import CalculatorContactForm from "@/components/CalculatorContactForm";
+import ContactForm from "@/components/sections/ContactForm";
 import AdBudgetEducationalContent from "@/components/calculators/AdBudgetEducationalContent";
+import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import { useState, useMemo } from "react";
 import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent, Info } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -380,8 +381,11 @@ const AdBudgetCalculator = () => {
           </div>
         </section>
 
+        {/* Agency Partner Videos */}
+        <AgencyPartnerVideos />
+
         {/* Contact Form Section */}
-        <CalculatorContactForm />
+        <ContactForm />
       </main>
       
       <Footer />
