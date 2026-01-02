@@ -22,7 +22,7 @@ const testimonials = [
     author: "Jeremy", 
     role: "Digital Marketing Agency Owner, Florida",
     tenure: "5 Years Partner",
-    services: ["GBP SEO", "Local SEO", "Paid Media", "AEO", "Authority Building"]
+    services: ["Local SEO", "PPC", "Authority Building", "GBP SEO"]
   }
 ];
 
