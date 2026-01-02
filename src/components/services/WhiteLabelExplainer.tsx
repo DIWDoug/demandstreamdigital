@@ -116,14 +116,6 @@ const WhiteLabelExplainer = () => {
                   );
                 })}
               </div>
-
-              <Link 
-                to="#contact"
-                className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
-              >
-                Start a Partner Conversation
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
 
             {/* Right: Circular Orbit Diagram */}
