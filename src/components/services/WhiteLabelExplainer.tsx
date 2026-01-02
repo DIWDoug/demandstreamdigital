@@ -1,46 +1,73 @@
-import { MapPin, Map, MousePointerClick, Mail, Share2, BarChart3 } from "lucide-react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { MapPin, Map, MousePointerClick, Mail, Share2, BarChart3, ArrowRight, type LucideIcon } from "lucide-react";
 
-const services = [
+interface ServiceHub {
+  title: string;
+  slug: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+const services: ServiceHub[] = [
   { 
     icon: MapPin, 
-    label: "Local SEO", 
-    description: "Organic visibility in local search results",
-    href: "/white-label-inbound-marketing-services/local-seo"
+    title: "Local SEO", 
+    description: "Organic visibility in local search results through technical fixes, content, and on-page optimization.",
+    slug: "local-seo"
   },
   { 
     icon: Map, 
-    label: "GBP SEO", 
-    description: "Google Business Profile optimization",
-    href: "/white-label-inbound-marketing-services/google-maps"
+    title: "GBP SEO", 
+    description: "Google Business Profile optimization for local pack dominance and map visibility.",
+    slug: "google-maps"
   },
   { 
     icon: MousePointerClick, 
-    label: "Paid Media", 
-    description: "Google & Meta ad campaigns",
-    href: "/white-label-inbound-marketing-services/paid-media"
+    title: "Paid Media", 
+    description: "Google and Meta ad campaigns built to generate calls, forms, and measurable ROI.",
+    slug: "paid-media"
   },
   { 
     icon: Mail, 
-    label: "Email Marketing", 
-    description: "Nurture sequences & automation",
-    href: "/white-label-inbound-marketing-services/email-marketing"
+    title: "Email Marketing", 
+    description: "Automated sequences that nurture leads into loyal, repeat customers.",
+    slug: "email-marketing"
   },
   { 
     icon: Share2, 
-    label: "Authority Building", 
-    description: "PR, backlinks & trust signals",
-    href: "/white-label-inbound-marketing-services/local-authority-building"
+    title: "Authority Building", 
+    description: "Digital PR, quality backlinks, and citation management that compounds over time.",
+    slug: "local-authority-building"
   },
   { 
     icon: BarChart3, 
-    label: "Reporting", 
-    description: "Tracking, dashboards & optimization",
-    href: "/white-label-inbound-marketing-services/reporting"
+    title: "Reporting", 
+    description: "Branded dashboards and summaries that keep clients confident with clear results.",
+    slug: "reporting"
   },
 ];
 
 const WhiteLabelExplainer = () => {
+  const [hoveredService, setHoveredService] = useState<ServiceHub | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const displayService = hoveredService || {
+    title: "Inbound Marketing",
+    description: "A coordinated system that attracts, converts, and retains customers.",
+    slug: "",
+    icon: null
+  };
+
+  const orbitRadius = isMobile ? 120 : 150;
+
   return (
     <section id="white-label-explainer" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       {/* Background accent */}
@@ -64,28 +91,100 @@ const WhiteLabelExplainer = () => {
               <p className="text-text-secondary mb-6 leading-relaxed">
                 Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Reporting ties it all together.
               </p>
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-text-secondary leading-relaxed mb-8">
                 When these channels work as a coordinated system instead of siloed tactics, the compounding effect drives consistent, measurable growth over time.
               </p>
-            </div>
 
-            {/* Right: Service Hub Grid */}
-            <div>
-              <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
-                {services.map((item, index) => (
+              {/* Service Links Grid */}
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
+                {services.map((service) => (
                   <Link 
-                    key={index}
-                    to={item.href}
-                    className="bg-surface-elevated border border-border/50 rounded-xl p-4 sm:p-5 hover:border-accent-blue/30 hover:bg-surface-elevated/80 transition-all group"
+                    key={service.slug}
+                    to={`/white-label-inbound-marketing-services/${service.slug}`}
+                    className="flex items-center gap-2 group transition-colors"
+                    onMouseEnter={() => setHoveredService(service)}
+                    onMouseLeave={() => setHoveredService(null)}
                   >
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center mb-2 sm:mb-3 group-hover:bg-accent-blue/20 transition-colors">
-                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent-blue" />
-                    </div>
-                    <p className="text-foreground font-semibold text-sm sm:text-base mb-1 group-hover:text-accent-blue transition-colors">{item.label}</p>
-                    <p className="text-text-muted text-xs sm:text-sm">{item.description}</p>
+                    <service.icon className="w-4 h-4 flex-shrink-0 text-accent-blue" />
+                    <span className="font-medium text-text-secondary group-hover:text-accent-blue transition-colors text-sm">
+                      {service.title}
+                    </span>
                   </Link>
                 ))}
               </div>
+
+              <Link 
+                to="#contact"
+                className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
+              >
+                Start a Partner Conversation
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Right: Circular Orbit Diagram */}
+            <div className="relative flex items-center justify-center min-h-[320px] sm:min-h-[400px] lg:min-h-[480px]">
+              {/* Outer glow */}
+              <div className="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full bg-accent-blue/5 blur-xl" />
+              
+              {/* Orbit circle */}
+              <div 
+                className="absolute rounded-full border border-border/50 w-[240px] h-[240px] sm:w-[300px] sm:h-[300px]"
+              />
+              
+              {/* Center content - dynamic based on hover */}
+              <div className="relative z-10 flex flex-col items-center justify-center w-[120px] sm:w-[140px] text-center transition-all duration-300">
+                {hoveredService ? (
+                  <>
+                    <div className="w-12 h-12 rounded-full bg-accent-blue/20 flex items-center justify-center mb-3">
+                      <hoveredService.icon className="w-6 h-6 text-accent-blue" />
+                    </div>
+                    <p className="text-foreground font-bold text-lg sm:text-xl mb-1">{displayService.title}</p>
+                    <p className="text-text-muted text-xs leading-relaxed">
+                      {displayService.description.slice(0, 60)}...
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-16 h-16 rounded-full bg-cta/20 flex items-center justify-center mb-3 border-2 border-cta/40">
+                      <span className="text-cta font-bold text-xl">6</span>
+                    </div>
+                    <p className="text-foreground font-bold text-lg sm:text-xl mb-1">Services</p>
+                    <p className="text-text-muted text-xs leading-relaxed">
+                      Working as one system
+                    </p>
+                  </>
+                )}
+              </div>
+
+              {/* Orbit icons */}
+              {services.map((service, index) => {
+                const angle = (index * 360) / services.length - 90;
+                const Icon = service.icon;
+                
+                const isHovered = hoveredService?.slug === service.slug;
+                
+                const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
+                const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
+                
+                return (
+                  <Link
+                    key={service.slug}
+                    to={`/white-label-inbound-marketing-services/${service.slug}`}
+                    className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-110"
+                    style={{
+                      transform: `translate(${x}px, ${y}px)`,
+                      backgroundColor: isHovered ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
+                    }}
+                    onMouseEnter={() => setHoveredService(service)}
+                    onMouseLeave={() => setHoveredService(null)}
+                  >
+                    <Icon 
+                      className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isHovered ? 'text-white' : 'text-white/90'}`}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
