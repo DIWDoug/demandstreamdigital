@@ -131,7 +131,8 @@ const Header = () => {
     { label: "SEO Cost Calculator", href: "/seo-calculator", description: "Estimate monthly SEO investment" },
     { label: "ROI Calculator", href: "/roi-calculator", description: "Show clients their marketing ROI" },
     { label: "Investment Calculator", href: "/investment-calculator", description: "Scope monthly service costs" },
-    { label: "Ad Budget Calculator", href: "/ad-budget-calculator", description: "Project ad campaign results" }
+    { label: "Ad Budget Calculator", href: "/ad-budget-calculator", description: "Project ad campaign results" },
+    { label: "Email Marketing Calculator", href: "/email-calculator", description: "Calculate email ROI potential" }
   ];
 
   return (
