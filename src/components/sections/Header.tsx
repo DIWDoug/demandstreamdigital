@@ -9,7 +9,9 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const [isToolsMenuOpen, setIsToolsMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
+  const toolsMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,9 @@ const Header = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
         setIsMegaMenuOpen(false);
+      }
+      if (toolsMenuRef.current && !toolsMenuRef.current.contains(event.target as Node)) {
+        setIsToolsMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -119,8 +124,14 @@ const Header = () => {
   const postServiceLinks = [
     { label: "Results", href: "#testimonials" },
     { label: "Testimonials", href: "/testimonials", isRoute: true },
-    { label: "Calculators", href: "/roi-calculator", isRoute: true },
     { label: "Contact", href: "/contact", isRoute: true }
+  ];
+
+  // Partner Tools dropdown items
+  const partnerToolsLinks = [
+    { label: "ROI Calculator", href: "/roi-calculator", description: "Show clients their marketing ROI" },
+    { label: "Investment Calculator", href: "/investment-calculator", description: "Scope monthly service costs" },
+    { label: "Ad Budget Calculator", href: "/ad-budget-calculator", description: "Project ad campaign results" }
   ];
 
   return (
@@ -210,6 +221,39 @@ const Header = () => {
                   </a>
                 )
               ))}
+
+              {/* Partner Tools Dropdown */}
+              <div className="relative" ref={toolsMenuRef}>
+                <button
+                  onMouseEnter={() => setIsToolsMenuOpen(true)}
+                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
+                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                >
+                  Partner Tools
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isToolsMenuOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-72 bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in"
+                    onMouseLeave={() => setIsToolsMenuOpen(false)}
+                  >
+                    <div className="p-2">
+                      {partnerToolsLinks.map((tool, index) => (
+                        <Link
+                          key={index}
+                          to={tool.href}
+                          onClick={() => setIsToolsMenuOpen(false)}
+                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors"
+                        >
+                          <p className="text-sm font-medium text-foreground">{tool.label}</p>
+                          <p className="text-xs text-text-muted mt-0.5">{tool.description}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
               
             </nav>
           </div>
@@ -354,6 +398,32 @@ const Header = () => {
                   </a>
                 )
               ))}
+
+              {/* Mobile Partner Tools */}
+              <button
+                onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
+                className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+              >
+                Partner Tools
+                <ChevronDown className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isToolsMenuOpen && (
+                <div className="pl-4 pb-2 space-y-1">
+                  {partnerToolsLinks.map((tool, index) => (
+                    <Link
+                      key={index}
+                      to={tool.href}
+                      className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
+                      onClick={() => {
+                        setIsToolsMenuOpen(false);
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      {tool.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
               <div className="pt-4 mt-2 border-t border-border">
                 <a 
                   href="tel:2143072995"
