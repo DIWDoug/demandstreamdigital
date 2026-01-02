@@ -3,7 +3,9 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
+import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import { Target, Eye, Heart, Shield, Users, Handshake, CheckCircle, Sparkles } from "lucide-react";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
@@ -236,10 +238,10 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
+              { label: 'Mission & Values', href: '#mission-values' },
               { label: 'Who We Are', href: '#who-we-are' },
               { label: 'Timeline', href: '#timeline' },
               { label: 'Reviews', href: '#reviews' },
-              { label: 'Clients', href: '#clients' },
               { label: 'Team', href: '#team' },
               { label: 'Contact', href: '#contact' },
             ].map((item) => (
@@ -254,6 +256,9 @@ const About = () => {
           </div>
         </div>
       </nav>
+
+      {/* Mission & Vision are already above, add ID for anchor */}
+      <div id="mission-values" className="scroll-mt-32" />
 
       {/* Who We Are */}
       <div id="who-we-are" className="scroll-mt-32">
@@ -786,6 +791,11 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Continuing Education */}
+      <div id="continuing-education" className="scroll-mt-32">
+        <ContinuingEducation />
+      </div>
 
       {/* Contact CTA */}
       <div id="contact" className="scroll-mt-32">
