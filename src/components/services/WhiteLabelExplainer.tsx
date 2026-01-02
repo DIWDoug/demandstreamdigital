@@ -49,7 +49,7 @@ const services: ServiceHub[] = [
 ];
 
 const WhiteLabelExplainer = () => {
-  const [hoveredService, setHoveredService] = useState<ServiceHub | null>(null);
+  const [selectedService, setSelectedService] = useState<ServiceHub | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const WhiteLabelExplainer = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const displayService = hoveredService || {
+  const displayService = selectedService || {
     title: "Inbound Marketing",
     description: "A coordinated system that attracts, converts, and retains customers.",
     slug: "",
@@ -67,6 +67,7 @@ const WhiteLabelExplainer = () => {
   };
 
   const orbitRadius = isMobile ? 140 : 180;
+  const labelRadius = isMobile ? 190 : 240;
 
   return (
     <section id="white-label-explainer" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -97,20 +98,23 @@ const WhiteLabelExplainer = () => {
 
               {/* Service Links Grid */}
               <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                {services.map((service) => (
-                  <Link 
-                    key={service.slug}
-                    to={`/white-label-inbound-marketing-services/${service.slug}`}
-                    className="flex items-center gap-2 group transition-colors"
-                    onMouseEnter={() => setHoveredService(service)}
-                    onMouseLeave={() => setHoveredService(null)}
-                  >
-                    <service.icon className="w-4 h-4 flex-shrink-0 text-accent-blue" />
-                    <span className="font-medium text-text-secondary group-hover:text-accent-blue transition-colors text-sm">
-                      {service.title}
-                    </span>
-                  </Link>
-                ))}
+                {services.map((service) => {
+                  const ServiceIcon = service.icon;
+                  return (
+                    <Link 
+                      key={service.slug}
+                      to={`/white-label-inbound-marketing-services/${service.slug}`}
+                      className={`flex items-center gap-2 group transition-colors ${selectedService?.slug === service.slug ? 'text-accent-blue' : ''}`}
+                      onMouseEnter={() => setSelectedService(service)}
+                      onMouseLeave={() => setSelectedService(null)}
+                    >
+                      <ServiceIcon className="w-4 h-4 flex-shrink-0 text-accent-blue" />
+                      <span className={`font-medium transition-colors text-sm ${selectedService?.slug === service.slug ? 'text-accent-blue' : 'text-text-secondary group-hover:text-accent-blue'}`}>
+                        {service.title}
+                      </span>
+                    </Link>
+                  );
+                })}
               </div>
 
               <Link 
@@ -123,21 +127,21 @@ const WhiteLabelExplainer = () => {
             </div>
 
             {/* Right: Circular Orbit Diagram */}
-            <div className="relative flex items-center justify-center min-h-[380px] sm:min-h-[480px] lg:min-h-[520px]">
+            <div className="relative flex items-center justify-center min-h-[420px] sm:min-h-[520px] lg:min-h-[560px]">
               {/* Outer glow */}
-              <div className="absolute w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] rounded-full bg-accent-blue/5 blur-xl" />
+              <div className="absolute w-[380px] h-[380px] sm:w-[480px] sm:h-[480px] rounded-full bg-accent-blue/5 blur-xl" />
               
               {/* Orbit circle - more visible */}
               <div 
                 className="absolute rounded-full border-2 border-accent-blue/30 w-[280px] h-[280px] sm:w-[360px] sm:h-[360px]"
               />
               
-              {/* Center content - dynamic based on hover */}
+              {/* Center content - dynamic based on selection */}
               <div className="relative z-10 flex flex-col items-center justify-center w-[140px] sm:w-[160px] text-center transition-all duration-300">
-                {hoveredService ? (
+                {selectedService ? (
                   <>
                     <div className="w-14 h-14 rounded-full bg-accent-blue/20 flex items-center justify-center mb-3">
-                      <hoveredService.icon className="w-7 h-7 text-accent-blue" />
+                      <selectedService.icon className="w-7 h-7 text-accent-blue" />
                     </div>
                     <p className="text-foreground font-bold text-lg sm:text-xl mb-1">{displayService.title}</p>
                     <p className="text-text-muted text-xs leading-relaxed">
@@ -160,34 +164,66 @@ const WhiteLabelExplainer = () => {
               {/* Rotating orbit container */}
               <div 
                 className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] animate-[spin_60s_linear_infinite]"
-                style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}
+                style={{ animationPlayState: selectedService ? 'paused' : 'running' }}
               >
-                {/* Orbit icons - not clickable */}
+                {/* Orbit icons - clickable to change center */}
                 {services.map((service, index) => {
                   const angle = (index * 360) / services.length - 90;
                   const Icon = service.icon;
                   
-                  const isHovered = hoveredService?.slug === service.slug;
+                  const isSelected = selectedService?.slug === service.slug;
                   
                   const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
                   const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
                   
                   return (
-                    <div
+                    <button
                       key={service.slug}
-                      className="absolute w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 left-1/2 top-1/2 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7"
+                      onClick={() => setSelectedService(isSelected ? null : service)}
+                      className="absolute w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 left-1/2 top-1/2 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7 cursor-pointer hover:scale-110"
                       style={{
                         transform: `translate(${x}px, ${y}px)`,
-                        backgroundColor: isHovered ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
+                        backgroundColor: isSelected ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
                       }}
                     >
                       {/* Counter-rotate the icon so it stays upright */}
-                      <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}>
+                      <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: selectedService ? 'paused' : 'running' }}>
                         <Icon 
-                          className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isHovered ? 'text-white' : 'text-white/90'}`}
+                          className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isSelected ? 'text-white' : 'text-white/90'}`}
                         />
                       </div>
-                    </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Static labels - positioned outside the orbit */}
+              <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px]">
+                {services.map((service, index) => {
+                  const angle = (index * 360) / services.length - 90;
+                  const isSelected = selectedService?.slug === service.slug;
+                  
+                  const x = Math.cos((angle * Math.PI) / 180) * labelRadius;
+                  const y = Math.sin((angle * Math.PI) / 180) * labelRadius;
+                  
+                  // Determine text alignment based on position
+                  const isLeft = x < -20;
+                  const isRight = x > 20;
+                  
+                  return (
+                    <span
+                      key={`label-${service.slug}`}
+                      className={`absolute text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
+                        isSelected ? 'text-accent-blue' : 'text-text-muted'
+                      } ${isLeft ? 'text-right' : isRight ? 'text-left' : 'text-center'}`}
+                      style={{
+                        left: '50%',
+                        top: '50%',
+                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                      }}
+                    >
+                      {service.title}
+                    </span>
                   );
                 })}
               </div>
