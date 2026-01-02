@@ -387,9 +387,9 @@ const AdBudgetCalculator = () => {
                 <Link to="/white-label-inbound-marketing-services/paid-media" className="btn-cta inline-flex items-center gap-2">
                   Explore Paid Media Services
                 </Link>
-                <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle transition-colors font-medium">
+                <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle transition-colors font-medium">
                   Start the Conversation
-                </a>
+                </Link>
               </div>
             </div>
           </div>
