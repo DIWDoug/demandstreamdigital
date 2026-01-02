@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
 import ROICalculator from "./pages/ROICalculator";
 import InvestmentCalculator from "./pages/InvestmentCalculator";
+import AdBudgetCalculator from "./pages/AdBudgetCalculator";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
           <Route path="/roi-calculator" element={<ROICalculator />} />
           <Route path="/investment-calculator" element={<InvestmentCalculator />} />
+          <Route path="/ad-budget-calculator" element={<AdBudgetCalculator />} />
           {/* Legacy redirect */}
           <Route path="/agency-calculator" element={<Navigate to="/roi-calculator" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
