@@ -157,34 +157,43 @@ const WhiteLabelExplainer = () => {
                 )}
               </div>
 
-              {/* Orbit icons */}
-              {services.map((service, index) => {
-                const angle = (index * 360) / services.length - 90;
-                const Icon = service.icon;
-                
-                const isHovered = hoveredService?.slug === service.slug;
-                
-                const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
-                const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
-                
-                return (
-                  <Link
-                    key={service.slug}
-                    to={`/white-label-inbound-marketing-services/${service.slug}`}
-                    className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-110"
-                    style={{
-                      transform: `translate(${x}px, ${y}px)`,
-                      backgroundColor: isHovered ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
-                    }}
-                    onMouseEnter={() => setHoveredService(service)}
-                    onMouseLeave={() => setHoveredService(null)}
-                  >
-                    <Icon 
-                      className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isHovered ? 'text-white' : 'text-white/90'}`}
-                    />
-                  </Link>
-                );
-              })}
+              {/* Rotating orbit container */}
+              <div 
+                className="absolute w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] animate-[spin_60s_linear_infinite]"
+                style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}
+              >
+                {/* Orbit icons */}
+                {services.map((service, index) => {
+                  const angle = (index * 360) / services.length - 90;
+                  const Icon = service.icon;
+                  
+                  const isHovered = hoveredService?.slug === service.slug;
+                  
+                  const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
+                  const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
+                  
+                  return (
+                    <Link
+                      key={service.slug}
+                      to={`/white-label-inbound-marketing-services/${service.slug}`}
+                      className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:scale-110 left-1/2 top-1/2 -ml-[22px] -mt-[22px] sm:-ml-[28px] sm:-mt-[28px]"
+                      style={{
+                        transform: `translate(${x}px, ${y}px)`,
+                        backgroundColor: isHovered ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
+                      }}
+                      onMouseEnter={() => setHoveredService(service)}
+                      onMouseLeave={() => setHoveredService(null)}
+                    >
+                      {/* Counter-rotate the icon so it stays upright */}
+                      <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: hoveredService ? 'paused' : 'running' }}>
+                        <Icon 
+                          className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isHovered ? 'text-white' : 'text-white/90'}`}
+                        />
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
