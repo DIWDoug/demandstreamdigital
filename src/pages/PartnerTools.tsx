@@ -13,7 +13,8 @@ import {
   ArrowRight,
   BarChart3,
   Users,
-  Zap
+  Zap,
+  FileText
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -92,6 +93,21 @@ const calculators = [
       "Revenue per email",
       "Industry benchmarks"
     ]
+  },
+  {
+    title: "Content Marketing Calculator",
+    description: "Calculate content marketing ROI based on production costs, traffic projections, and conversion rates. Show the compounding value of content assets.",
+    href: "/content-marketing-calculator",
+    icon: FileText,
+    color: "from-teal-500/20 to-teal-600/10",
+    borderColor: "border-teal-500/30",
+    iconColor: "text-teal-500",
+    features: [
+      "Content production costs",
+      "Traffic compounding",
+      "Lead generation funnel",
+      "12-month projections"
+    ]
   }
 ];
 
@@ -131,7 +147,7 @@ const PartnerTools = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-12">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">5</p>
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">6</p>
                   <p className="text-sm text-text-muted">Calculators</p>
                 </div>
                 <div className="text-center">
