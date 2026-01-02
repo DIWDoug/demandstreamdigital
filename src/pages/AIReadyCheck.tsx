@@ -8,18 +8,17 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
-interface ScanResult {
+interface AnalysisResult {
   url: string;
-  markdown: string;
-  html?: string;
-  metadata: {
-    title?: string;
-    description?: string;
-    language?: string;
-    sourceURL?: string;
-    statusCode?: number;
-  };
-  links?: string[];
+  metrics: {
+    id: string;
+    label: string;
+    score: number;
+    status: 'pass' | 'warning' | 'fail';
+    details: string;
+  }[];
+  overallScore: number;
+  metadata?: Record<string, string>;
 }
 
 interface MetricScore {
@@ -33,7 +32,7 @@ interface MetricScore {
 const AIReadyCheck = () => {
   const [url, setUrl] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState<ScanResult | null>(null);
+  const [result, setResult] = useState<AnalysisResult | null>(null);
   const [metrics, setMetrics] = useState<MetricScore[]>([]);
   const [overallScore, setOverallScore] = useState<number>(0);
   const [viewMode, setViewMode] = useState<"grid" | "radar" | "bar">("grid");
@@ -72,146 +71,7 @@ const AIReadyCheck = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const analyzeContent = (data: ScanResult) => {
-    const newMetrics: MetricScore[] = [];
-    const markdown = data.markdown || "";
-    const html = data.html || "";
-    
-    // 1. LLMs.txt - Check if mentioned/referenced
-    const hasLlmsTxt = markdown.toLowerCase().includes("llms.txt") || markdown.toLowerCase().includes("llms");
-    newMetrics.push({
-      id: "llms",
-      label: "LLMs.txt",
-      score: hasLlmsTxt ? 100 : 0,
-      status: hasLlmsTxt ? "passing" : "failing",
-      details: hasLlmsTxt ? ["LLMs.txt reference found"] : ["No llms.txt file found"]
-    });
-
-    // 2. Robots.txt - Inferred from structure
-    const hasRobotsMeta = markdown.includes("robots") || data.metadata?.statusCode === 200;
-    newMetrics.push({
-      id: "robots",
-      label: "Robots.txt",
-      score: 100,
-      status: "passing",
-      details: ["Robots.txt assumed accessible (page loaded successfully)"]
-    });
-
-    // 3. Sitemap
-    const hasSitemapRef = markdown.toLowerCase().includes("sitemap");
-    newMetrics.push({
-      id: "sitemap",
-      label: "Sitemap",
-      score: 100,
-      status: "passing",
-      details: ["Valid XML sitemap assumed (page is indexable)"]
-    });
-
-    // 4. Heading Hierarchy
-    const h1Count = (markdown.match(/^# [^#]/gm) || []).length;
-    const hasH2 = /^## /m.test(markdown);
-    const hasH3 = /^### /m.test(markdown);
-    const hasH4 = /^#### /m.test(markdown);
-    
-    let headingScore = 100;
-    const headingDetails: string[] = [];
-    
-    if (h1Count > 1) {
-      headingScore = 0;
-      headingDetails.push(`Multiple H1s (${h1Count}) create topic ambiguity`);
-    } else if (h1Count === 0) {
-      headingScore = 50;
-      headingDetails.push("No H1 heading found");
-    }
-    
-    if (hasH4 && !hasH3) {
-      headingScore = Math.min(headingScore, 50);
-      headingDetails.push("Skipped heading level (H2 → H4)");
-    }
-    
-    if (headingDetails.length === 0) {
-      headingDetails.push("Proper heading hierarchy maintained");
-    }
-    
-    newMetrics.push({
-      id: "headings",
-      label: "Heading Hierarchy",
-      score: headingScore,
-      status: headingScore >= 80 ? "passing" : headingScore >= 50 ? "warning" : "failing",
-      details: headingDetails
-    });
-
-    // 5. Content Readability (simplified Flesch approximation)
-    const sentences = markdown.split(/[.!?]+/).length;
-    const words = markdown.split(/\s+/).length;
-    const avgWordsPerSentence = words / Math.max(sentences, 1);
-    
-    let readabilityScore = 80;
-    if (avgWordsPerSentence > 25) readabilityScore = 50;
-    if (avgWordsPerSentence > 35) readabilityScore = 30;
-    if (avgWordsPerSentence < 15) readabilityScore = 90;
-    
-    newMetrics.push({
-      id: "readability",
-      label: "Content Readability",
-      score: readabilityScore,
-      status: readabilityScore >= 70 ? "passing" : readabilityScore >= 50 ? "warning" : "failing",
-      details: [`Average ${Math.round(avgWordsPerSentence)} words per sentence`]
-    });
-
-    // 6. Metadata Quality
-    const hasTitle = !!data.metadata?.title;
-    const hasDescription = !!data.metadata?.description;
-    let metaScore = 0;
-    const metaDetails: string[] = [];
-    
-    if (hasTitle) { metaScore += 50; metaDetails.push("Title"); }
-    if (hasDescription) { metaScore += 35; metaDetails.push("Description"); }
-    
-    if (metaScore === 0) {
-      metaDetails.push("No metadata found");
-    }
-    
-    newMetrics.push({
-      id: "metadata",
-      label: "Metadata Quality",
-      score: Math.min(metaScore, 85),
-      status: metaScore >= 70 ? "passing" : metaScore >= 40 ? "warning" : "failing",
-      details: metaDetails.length ? metaDetails : ["Metadata incomplete"]
-    });
-
-    // 7. Semantic HTML
-    const semanticElements = ["<header", "<nav", "<main", "<article", "<section", "<aside", "<footer"];
-    const foundSemantic = semanticElements.filter(el => html.toLowerCase().includes(el) || markdown.includes(el.replace("<", "")));
-    const semanticScore = Math.min((foundSemantic.length / 4) * 100, 100);
-    
-    newMetrics.push({
-      id: "semantic",
-      label: "Semantic HTML",
-      score: Math.round(semanticScore) || 56,
-      status: semanticScore >= 70 ? "passing" : semanticScore >= 40 ? "warning" : "failing",
-      details: [`Found ${foundSemantic.length || 3} semantic HTML5 elements`]
-    });
-
-    // 8. Accessibility
-    const hasAltText = markdown.includes("![") && markdown.includes("](");
-    const imageCount = (markdown.match(/!\[/g) || []).length;
-    const altCount = (markdown.match(/!\[[^\]]+\]/g) || []).filter(m => m.length > 3).length;
-    const altPercentage = imageCount > 0 ? Math.round((altCount / imageCount) * 100) : 64;
-    
-    newMetrics.push({
-      id: "accessibility",
-      label: "Accessibility",
-      score: Math.min(altPercentage + 12, 100),
-      status: altPercentage >= 60 ? "passing" : altPercentage >= 40 ? "warning" : "failing",
-      details: [`${altPercentage}% images have alt text`, "ARIA labels: Yes"]
-    });
-
-    setMetrics(newMetrics);
-    
-    const total = Math.round(newMetrics.reduce((sum, m) => sum + m.score, 0) / newMetrics.length);
-    setOverallScore(total);
-  };
+  // Analysis is now done server-side in the edge function
 
   const counts = useMemo(() => {
     const passing = metrics.filter(m => m.status === "passing").length;
@@ -237,31 +97,27 @@ const AIReadyCheck = () => {
     setMetrics([]);
 
     try {
-      const { data, error } = await supabase.functions.invoke('firecrawl-scrape', {
-        body: { 
-          url: url.trim(),
-          options: {
-            formats: ['markdown', 'html', 'links'],
-            onlyMainContent: false
-          }
-        }
+      const { data, error } = await supabase.functions.invoke('analyze-ai-readiness', {
+        body: { url: url.trim() }
       });
 
       if (error) throw new Error(error.message);
       if (!data?.success) throw new Error(data?.error || "Failed to analyze page");
 
-      const scrapedData = data.data || data;
+      const analysisResult: AnalysisResult = data.data;
       
-      const scanResult: ScanResult = {
-        url: url.trim(),
-        markdown: scrapedData.markdown || "",
-        html: scrapedData.html || "",
-        metadata: scrapedData.metadata || {},
-        links: scrapedData.links || [],
-      };
+      // Convert to display format
+      const displayMetrics: MetricScore[] = analysisResult.metrics.map(m => ({
+        id: m.id,
+        label: m.label,
+        score: m.score,
+        status: m.status === 'pass' ? 'passing' : m.status === 'warning' ? 'warning' : 'failing',
+        details: [m.details]
+      }));
 
-      setResult(scanResult);
-      analyzeContent(scanResult);
+      setResult(analysisResult);
+      setMetrics(displayMetrics);
+      setOverallScore(analysisResult.overallScore);
 
       toast({
         title: "Analysis Complete",
@@ -271,7 +127,7 @@ const AIReadyCheck = () => {
       console.error('Scan error:', error);
       toast({
         title: "Analysis Failed",
-        description: error instanceof Error ? error.message : "Failed to analyze website. Make sure Firecrawl is connected.",
+        description: error instanceof Error ? error.message : "Failed to analyze website",
         variant: "destructive"
       });
     } finally {

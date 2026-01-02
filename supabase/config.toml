@@ -11,3 +11,6 @@ verify_jwt = false
 
 [functions.submit-ebook-lead]
 verify_jwt = false
+
+[functions.analyze-ai-readiness]
+verify_jwt = false
