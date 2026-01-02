@@ -14,7 +14,8 @@ import {
   BarChart3,
   Users,
   Zap,
-  FileText
+  FileText,
+  Brain
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -108,6 +109,21 @@ const calculators = [
       "Lead generation funnel",
       "12-month projections"
     ]
+  },
+  {
+    title: "AI Readiness Assessment",
+    description: "Evaluate organizational readiness for AI adoption across strategy, data, technology, team, governance, and integration domains.",
+    href: "/ai-readiness-calculator",
+    icon: Brain,
+    color: "from-indigo-500/20 to-indigo-600/10",
+    borderColor: "border-indigo-500/30",
+    iconColor: "text-indigo-500",
+    features: [
+      "6 readiness domains",
+      "20-question assessment",
+      "Category breakdown",
+      "Priority recommendations"
+    ]
   }
 ];
 
@@ -147,8 +163,8 @@ const PartnerTools = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-12">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">6</p>
-                  <p className="text-sm text-text-muted">Calculators</p>
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">7</p>
+                  <p className="text-sm text-text-muted">Tools</p>
                 </div>
                 <div className="text-center">
                   <p className="text-3xl md:text-4xl font-bold text-foreground">100%</p>
