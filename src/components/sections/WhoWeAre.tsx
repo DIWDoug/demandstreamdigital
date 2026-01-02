@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import wylerPhoto from "@/assets/wyler.jpg";
+import { Target, Eye, Shield, Handshake, Users, CheckCircle, Sparkles } from "lucide-react";
 
 const WhoWeAre = () => {
   // Author schema for E-E-A-T and AI/LLM visibility - following Backlinko best practices
@@ -65,101 +64,131 @@ const WhoWeAre = () => {
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Header - Full Width */}
+          {/* Header */}
           <div className="text-center mb-12 lg:mb-16">
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-              An Honest Word on Fulfillment
+              Our Foundation
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
-              Most Agencies Don't Lose Clients Because of Results
+              Mission, Vision & Values
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-            {/* Left: Image - Smaller column */}
-            <div className="relative lg:col-span-2 order-2 lg:order-1">
-              <div className="lg:sticky lg:top-32">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl group cursor-pointer max-w-sm mx-auto lg:max-w-none">
-                  {/* Doug's headshot - visible by default */}
-                  <img 
-                    src={dougHeadshot} 
-                    alt="Doug Bryson, Founder of Dialed-In Web"
-                    className="w-full h-auto object-cover rounded-2xl group-hover:opacity-0 transition-opacity duration-300"
-                  />
-                  {/* Wyler's photo - visible on hover */}
-                  <img 
-                    src={wylerPhoto} 
-                    alt="Wyler, a good boy"
-                    className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-foreground font-bold text-xl group-hover:hidden">Doug Bryson</p>
-                    <p className="text-text-secondary group-hover:hidden">Founder, Dialed-In Web</p>
-                    <p className="text-foreground font-bold text-xl hidden group-hover:block">Wyler</p>
-                    <p className="text-text-secondary hidden group-hover:block">A good boy. 🐕</p>
-                  </div>
+          {/* Mission & Vision - Two column layout */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+            {/* Mission */}
+            <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
+                  <Target className="w-6 h-6 text-cta" />
                 </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -top-6 -right-6 w-32 h-32 bg-cta/20 rounded-full blur-3xl" />
-                <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-accent-blue/20 rounded-full blur-3xl" />
+                <h3 className="text-2xl font-semibold text-foreground">Our Mission</h3>
               </div>
+              <p className="text-text-secondary leading-relaxed text-lg">
+                To help established small businesses increase their leads, traffic, and sales by delivering quality, sustainable digital inbound marketing strategies that are tailor-made to suit the client's industry and local presence, while also helping them maintain a positive online reputation.
+              </p>
             </div>
 
-            {/* Right: Content - Larger column */}
-            <div className="lg:col-span-3 order-1 lg:order-2">
-              {/* Letter Content */}
-              <div className="relative">
-                {/* Opening quote mark */}
-                <span className="absolute -left-3 -top-8 text-6xl text-cta/25 font-handwriting leading-none select-none">"</span>
-                
-                <div className="font-handwriting space-y-6 text-lg lg:text-xl leading-relaxed pl-4 border-l-2 border-cta/20">
-                  <p className="text-foreground font-medium">
-                    I've been running agencies since 2011.
-                  </p>
-
-                  <p className="text-text-secondary">
-                    I've outsourced work to vendors I'd never met, hoping what came back was something I could send to a client. Sometimes it was fine. Sometimes it was a disaster. I never knew what I'd get until it landed in my inbox.
-                  </p>
-                  
-                  <p className="text-text-secondary">
-                    I watched other agency owners do the same thing. Buy a "package." Hope it works. When it doesn't, move on. Repeat.
-                  </p>
-
-                  <p className="text-foreground font-medium">
-                    Then I realized the obvious thing:
-                  </p>
-
-                  <p className="text-text-secondary">
-                    Every market is different. Every client is different. Cookie-cutter deliverables forced onto unique situations is a race to the bottom.
-                  </p>
-
-                  <p className="text-foreground font-medium">
-                    So I built something different.
-                  </p>
-
-                  <p className="text-text-secondary">
-                    Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches—building campaigns, fixing what broke, understanding why things actually rank.
-                  </p>
-
-                  <p className="text-foreground font-medium">
-                    This experience now shapes how we scope, execute, and communicate every engagement.
-                  </p>
-                  
-                  <p className="text-text-secondary">
-                    Work you can explain without flinching. Execution scoped to the actual market. No crossed fingers required.
-                  </p>
-                  
-                  <p className="text-text-secondary">
-                    If that sounds like what you've been looking for, let's talk.
-                  </p>
+            {/* Vision */}
+            <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
+                  <Eye className="w-6 h-6 text-accent-blue" />
                 </div>
+                <h3 className="text-2xl font-semibold text-foreground">Our Vision</h3>
+              </div>
+              <p className="text-text-secondary leading-relaxed text-lg">
+                To help established small businesses grow in order to support the dreams of their owners and founders while also contributing to the growth of local economies. By joining small business owners on the journey through a mutually invested partnership, we take online marketing off their shoulders—allowing them to focus on what they do best: running their businesses and delighting their customers.
+              </p>
+            </div>
+          </div>
 
-                {/* Signature */}
-                <div className="mt-8 pt-6 border-t border-border/30">
-                  <span className="font-handwriting text-4xl text-cta block">— Doug</span>
+          {/* Values Grid */}
+          <div className="mb-8">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-semibold text-foreground mb-3">Our Core Values</h3>
+              <p className="text-text-secondary max-w-2xl mx-auto">
+                We believe in sustainable, honest, and trustworthy marketing practices. We engage only in "white hat" practices to ensure transparent, honest, and sustainable building on clients' online reputations and search engine rankings.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Integrity */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Integrity</h4>
                 </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  We will be honest and do what we say we are going to do. We practice what we preach and ensure that our own website and online reputation is high.
+                </p>
+              </div>
+
+              {/* Transparency */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <Eye className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Transparency</h4>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Clients will be given full reports of the activities that were delivered, and strategies will be agreed upon in advance.
+                </p>
+              </div>
+
+              {/* Partnership */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <Handshake className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Partnership</h4>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Online marketing activities are best delivered as a partnership between the service provider and the client. There is a mutual investment required to deliver return on investment.
+                </p>
+              </div>
+
+              {/* Consistency */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Consistency</h4>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Clients will know who they are working with by name, and a low rate of turnover will be part of the Dialed-In Web culture.
+                </p>
+              </div>
+
+              {/* Ethical Practices */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Ethical Practices</h4>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  We provide search engine marketing services that are in line with the major search engines' quality guidelines.
+                </p>
+              </div>
+
+              {/* Competency */}
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-cta" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-foreground">Competency</h4>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Services will be delivered by the most experienced, expert staff available. Our team invests in their own personal development to stay on top of trends and algorithms.
+                </p>
               </div>
             </div>
           </div>
