@@ -51,9 +51,9 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
             <span className="text-xs text-slate-400 font-medium">
               Included based on scope
             </span>
-            <span className="text-xs text-cta font-medium flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="text-xs text-cta font-medium flex items-center gap-1">
               Learn more
-              <ArrowRight className="w-3 h-3" />
+              <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
             </span>
           </div>
         )}
