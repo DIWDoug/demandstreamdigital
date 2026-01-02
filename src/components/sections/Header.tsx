@@ -251,6 +251,16 @@ const Header = () => {
                           <p className="text-xs text-text-muted mt-0.5 normal-case tracking-normal">{tool.description}</p>
                         </Link>
                       ))}
+                      {/* View All Link */}
+                      <div className="border-t border-border/30 mt-2 pt-2">
+                        <Link
+                          to="/partner-tools"
+                          onClick={() => setIsToolsMenuOpen(false)}
+                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors text-center"
+                        >
+                          <p className="text-sm font-medium text-accent-blue">View All Partner Tools →</p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 )}
