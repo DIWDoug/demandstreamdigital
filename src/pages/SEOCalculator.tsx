@@ -6,11 +6,12 @@ import SEOEducationalContent from "@/components/calculators/SEOEducationalConten
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { metros, Metro, tierMultipliers, searchMetros, formatPopulation } from "@/data/metros";
 
 // Industry presets with default competition levels - focused on local small businesses
 const industryPresets = [
@@ -121,9 +122,17 @@ const QuestionSection = ({
   </div>
 );
 
+// Popular metros for quick selection
+const popularMetros = metros.filter(m => 
+  ["Dallas-Fort Worth", "Houston", "Phoenix", "Atlanta", "Miami", "Denver", "Austin", "Nashville", "Tampa Bay", "Charlotte"].includes(m.name)
+);
+
 const SEOCalculator = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("");
   const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
+  const [selectedMetro, setSelectedMetro] = useState<Metro | null>(null);
+  const [metroSearch, setMetroSearch] = useState("");
+  const [showMetroDropdown, setShowMetroDropdown] = useState(false);
   const [locations, setLocations] = useState<string>("");
   const [audience, setAudience] = useState<string>("");
   const [aggressiveness, setAggressiveness] = useState<string>("");
@@ -133,6 +142,8 @@ const SEOCalculator = () => {
   const [currentRankings, setCurrentRankings] = useState<string>("");
   const [clientHourlyRate, setClientHourlyRate] = useState<number>(120);
 
+  const metroSearchResults = useMemo(() => searchMetros(metroSearch), [metroSearch]);
+
   const applyIndustryPreset = (industryId: string) => {
     const preset = industryPresets.find(i => i.id === industryId);
     if (preset) {
@@ -141,6 +152,17 @@ const SEOCalculator = () => {
       if (preset.audience) setAudience(preset.audience);
     }
     setShowIndustryDropdown(false);
+  };
+
+  const selectMetro = (metro: Metro) => {
+    setSelectedMetro(metro);
+    setMetroSearch("");
+    setShowMetroDropdown(false);
+  };
+
+  const clearMetro = () => {
+    setSelectedMetro(null);
+    setMetroSearch("");
   };
 
   const selectedIndustryName = industryPresets.find(i => i.id === selectedIndustry)?.name || "";
@@ -208,6 +230,9 @@ const SEOCalculator = () => {
       "100+": { low: 1.5, high: 1.6 }
     };
 
+    // Metro tier multiplier (market competition based on city size)
+    const metroMult = selectedMetro ? tierMultipliers[selectedMetro.tier] : 1;
+
     const locMult = locationMultipliers[locations] || { low: 1, high: 1 };
     const audMult = audienceMultipliers[audience] || { low: 1, high: 1 };
     const aggMult = aggressivenessMultipliers[aggressiveness] || { low: 1, high: 1 };
@@ -216,8 +241,8 @@ const SEOCalculator = () => {
     const ageMult = ageMultipliers[websiteAge] || { low: 1, high: 1 };
     const rankMult = rankingsMultipliers[currentRankings] || { low: 1, high: 1 };
 
-    const totalMultLow = locMult.low * audMult.low * aggMult.low * pageMult.low * compMult.low * ageMult.low * rankMult.low;
-    const totalMultHigh = locMult.high * audMult.high * aggMult.high * pageMult.high * compMult.high * ageMult.high * rankMult.high;
+    const totalMultLow = locMult.low * audMult.low * aggMult.low * pageMult.low * compMult.low * ageMult.low * rankMult.low * metroMult;
+    const totalMultHigh = locMult.high * audMult.high * aggMult.high * pageMult.high * compMult.high * ageMult.high * rankMult.high * metroMult;
 
     const monthlyLow = Math.round(baseLow * totalMultLow / 50) * 50;
     const monthlyHigh = Math.round(baseHigh * totalMultHigh / 50) * 50;
@@ -236,7 +261,7 @@ const SEOCalculator = () => {
       annualHigh: monthlyHigh * 12,
       timelineMonths
     };
-  }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, isComplete]);
+  }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete]);
 
   return (
     <>
@@ -343,8 +368,94 @@ const SEOCalculator = () => {
                       </div>
                     </QuestionSection>
 
+                    {/* Metro/City Selector */}
                     <QuestionSection 
                       icon={MapPin} 
+                      title="Target metro area (optional)"
+                      tooltip="Larger metros have more competition, affecting the scope of work needed to rank."
+                    >
+                      <div className="space-y-3">
+                        {/* Selected Metro Display */}
+                        {selectedMetro ? (
+                          <div className="flex items-center justify-between px-4 py-3 rounded-lg bg-cta/10 border border-cta/30">
+                            <div>
+                              <span className="text-foreground font-medium">{selectedMetro.name}, {selectedMetro.state}</span>
+                              <span className="ml-2 text-sm text-text-muted">({formatPopulation(selectedMetro.population)} pop)</span>
+                              <span className={cn(
+                                "ml-2 text-xs px-2 py-0.5 rounded capitalize",
+                                selectedMetro.tier === "mega" ? "bg-destructive/10 text-destructive" :
+                                selectedMetro.tier === "major" ? "bg-orange-500/10 text-orange-500" :
+                                selectedMetro.tier === "large" ? "bg-yellow-500/10 text-yellow-500" :
+                                selectedMetro.tier === "medium" ? "bg-blue-500/10 text-blue-500" :
+                                "bg-green-500/10 text-green-500"
+                              )}>
+                                {selectedMetro.tier} market
+                              </span>
+                            </div>
+                            <button 
+                              type="button" 
+                              onClick={clearMetro}
+                              className="p-1 hover:bg-surface-dark rounded transition-colors"
+                            >
+                              <X className="h-4 w-4 text-text-muted" />
+                            </button>
+                          </div>
+                        ) : (
+                          <>
+                            {/* Search Input */}
+                            <div className="relative">
+                              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-muted" />
+                              <input
+                                type="text"
+                                value={metroSearch}
+                                onChange={(e) => {
+                                  setMetroSearch(e.target.value);
+                                  setShowMetroDropdown(true);
+                                }}
+                                onFocus={() => setShowMetroDropdown(true)}
+                                placeholder="Search city or metro area..."
+                                className="w-full pl-10 pr-4 py-3 rounded-lg bg-surface-dark border border-border/50 text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta/50"
+                              />
+                              {showMetroDropdown && metroSearchResults.length > 0 && (
+                                <div className="absolute z-50 w-full mt-1 bg-surface-dark border border-border rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                  {metroSearchResults.map((metro) => (
+                                    <button
+                                      key={`${metro.name}-${metro.state}`}
+                                      type="button"
+                                      onClick={() => selectMetro(metro)}
+                                      className="w-full px-4 py-2.5 text-left hover:bg-surface-elevated transition-colors flex items-center justify-between"
+                                    >
+                                      <span className="text-sm">{metro.name}, {metro.state}</span>
+                                      <span className="text-xs text-text-muted">{formatPopulation(metro.population)}</span>
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+
+                            {/* Popular Markets Quick Select */}
+                            <div>
+                              <p className="text-xs text-text-muted mb-2">Popular Markets</p>
+                              <div className="flex flex-wrap gap-2">
+                                {popularMetros.slice(0, 6).map((metro) => (
+                                  <button
+                                    key={`${metro.name}-${metro.state}`}
+                                    type="button"
+                                    onClick={() => selectMetro(metro)}
+                                    className="px-3 py-1.5 text-xs rounded-full bg-surface-dark border border-border/50 text-text-secondary hover:border-cta/50 hover:text-foreground transition-colors"
+                                  >
+                                    {metro.name}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </QuestionSection>
+
+                    <QuestionSection 
+                      icon={Building}
                       title="How many physical locations?"
                       tooltip="Multi-location businesses require local SEO for each location, significantly increasing scope."
                     >
