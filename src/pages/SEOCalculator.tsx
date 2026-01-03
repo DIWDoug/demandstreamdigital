@@ -519,19 +519,23 @@ const SEOCalculator = () => {
                           <ul className="space-y-2 text-sm text-text-muted">
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
-                              Google Business Profile optimization
+                              On-page visual & technical SEO
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
-                              Local on-page SEO & technical fixes
+                              GBP optimization & maintenance
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
-                              NAP citation building & cleanup
+                              Citation building (structured & unstructured)
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
                               Local link building & authority
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              Hub & spoke AI-supported content
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
