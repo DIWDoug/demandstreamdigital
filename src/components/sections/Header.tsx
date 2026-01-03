@@ -228,14 +228,22 @@ const Header = () => {
 
               {/* Partner Tools Dropdown */}
               <div className="relative" ref={toolsMenuRef}>
-                <button
+                <Link
+                  to="/partner-tools"
                   onMouseEnter={() => setIsToolsMenuOpen(true)}
-                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
+                  onClick={(e) => {
+                    if (isToolsMenuOpen) {
+                      // If menu is open, navigate
+                    } else {
+                      e.preventDefault();
+                      setIsToolsMenuOpen(true);
+                    }
+                  }}
                   className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
                 >
                   Partner Tools
                   <ChevronDown className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
-                </button>
+                </Link>
                 
                 {isToolsMenuOpen && (
                   <div 
