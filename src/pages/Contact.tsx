@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { Card, CardContent } from "@/components/ui/card";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const testimonials = [
   {
@@ -118,7 +119,7 @@ const Contact = () => {
                   {/* Contact Info */}
                   <div className="space-y-4 mb-8">
                     <a 
-                      href="tel:2143072995"
+                      href={PHONE_HREF}
                       className="flex items-center gap-4 text-text-secondary hover:text-foreground transition-colors group"
                     >
                       <span className="w-12 h-12 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
@@ -126,7 +127,7 @@ const Contact = () => {
                       </span>
                       <div>
                         <p className="text-sm text-text-muted">Call us</p>
-                        <p className="text-foreground font-medium">(214) 307-2995</p>
+                        <p className="text-foreground font-medium">{PHONE_NUMBER}</p>
                       </div>
                     </a>
 

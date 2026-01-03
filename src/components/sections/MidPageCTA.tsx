@@ -1,4 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 interface MidPageCTAProps {
   variant?: "light" | "dark";
@@ -27,7 +28,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
           
           {/* Secondary CTA - Phone */}
           <a 
-            href="tel:2143072995"
+            href={PHONE_HREF}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all font-medium text-sm ${
               isLight 
                 ? "border-gray-300 text-gray-700 hover:bg-accent-blue hover:border-accent-blue hover:text-white" 
@@ -35,7 +36,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
             }`}
           >
             <Phone className="h-4 w-4" />
-            (214) 307-2995
+            {PHONE_NUMBER}
           </a>
         </div>
       </div>

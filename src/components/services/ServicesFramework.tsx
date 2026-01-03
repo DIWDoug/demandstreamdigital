@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Target, Shield, Layers, RefreshCcw, ArrowRight, Phone } from "lucide-react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const pillars = [
   {
@@ -87,11 +88,11 @@ const ServicesFramework = () => {
               <span className="text-sm font-medium text-slate-400">or</span>
               
               <a 
-                href="tel:2143072995"
+                href={PHONE_HREF}
                 className="flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 hover:bg-white transition-colors font-medium text-sm"
               >
                 <Phone className="h-4 w-4" />
-                (214) 307-2995
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
@@ -275,12 +276,12 @@ const Header = () => {
           {/* Right side - Phone, Search & CTA */}
           <div className="hidden md:flex items-center gap-6">
             <a 
-              href="tel:2143072995"
+              href={PHONE_HREF}
               className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group"
             >
               <Phone className="h-4 w-4 text-cta" />
               <span className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-cta after:transition-all after:duration-300 group-hover:after:w-full">
-                (214) 307-2995
+                {PHONE_NUMBER}
               </span>
             </a>
             <a href={getAnchorHref("#contact")} className="btn-cta text-sm py-2.5 px-6">
@@ -442,11 +443,11 @@ const Header = () => {
 
               <div className="pt-4 mt-2 border-t border-border">
                 <a 
-                  href="tel:2143072995"
+                  href={PHONE_HREF}
                   className="flex items-center gap-2 py-3 text-foreground font-medium"
                 >
                   <Phone className="h-4 w-4 text-cta" />
-                  (214) 307-2995
+                  {PHONE_NUMBER}
                 </a>
                 <a 
                   href={getAnchorHref("#contact")} 
