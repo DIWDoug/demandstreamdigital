@@ -882,15 +882,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
-      category: "Ongoing Optimization",
-      headline: "Profiles That Stay Optimized",
-      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates, competitive pressure, and AI search changes with weekly activity.",
+      category: "Ongoing Optimization & Profile Protection",
+      headline: "Profiles That Stay Optimized and Locked",
+      description: "GBP optimization is not a one-time task. We maintain profiles against Google updates and competitive pressure—and lock them using LeadSnap or Yext to prevent Google's auto-updates from overwriting your work.",
       subPoints: [
+        { title: "Profile Locking", description: "LeadSnap or Yext used to lock the profile so Google can't auto-update business info without approval. Your optimizations stay intact." },
         { title: "Weekly Posts", description: "Fresh content signals activity. Offers, updates, and events scheduled weekly—treating GBP as purchase intent, not social media." },
         { title: "Photo Updates", description: "New photos monthly. Original images only—no stock photos. Geotagged, descriptively named, and strategically captioned." },
         { title: "Q&A Management", description: "Questions seeded proactively. Community questions answered within 24 hours before incorrect info spreads." },
         { title: "Review Monitoring", description: "New reviews flagged immediately. Response drafts provided same day. 60% of reviewers expect response within 2 days." },
-        { title: "Insights Analysis", description: "Monthly performance review. Search queries, interactions, directions, website clicks, and calls tracked." },
         { title: "AI Visibility Check", description: "AI Overview citations monitored. Profile data verified for accuracy in AI-generated local results." }
       ],
       ctaText: "Explore Partnership",
