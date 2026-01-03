@@ -994,6 +994,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Photo Enhancement", description: "Profiles with at least one photo see up to 16% more leads. We add visuals to differentiate from text-only listings." },
         { title: "E-E-A-T Foundation", description: "Consistent citations from reputable directories build the trust signals Google's algorithms prioritize." }
       ],
+      imageAlt: "Business directory listing and citation management",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
@@ -1009,8 +1010,9 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Local Organizations", description: "State associations, downtown business groups, and community organizations. Featured member programs create citation opportunities." },
         { title: "Competitor Gap Analysis", description: "Directories where competitors appear but client does not. Citation parity closes ranking gaps systematically." }
       ],
+      imageAlt: "Industry-specific directory listings for local businesses",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Citation Audit",
@@ -1024,6 +1026,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Public Edit Monitoring", description: "Some platforms allow user-suggested changes. We check for unauthorized edits that could harm accuracy." },
         { title: "Competitor Comparison", description: "Citation counts and sources compared against local pack leaders to identify opportunities." }
       ],
+      imageAlt: "Citation audit and NAP consistency check",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
@@ -1039,6 +1042,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Standardized Format", description: "Uniform spelling, abbreviations, and layout applied. 'Street' vs 'St.' standardized across all platforms." },
         { title: "Quarterly Maintenance", description: "Audits every 3-6 months catch new inconsistencies before they compound into ranking problems." }
       ],
+      imageAlt: "Citation cleanup and correction workflow",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     }
@@ -1113,7 +1117,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Q&A Seeding",
       headline: "Control the Questions Asked",
-      description: "Don't wait for random questions. We proactively seed the Q&A section with questions that help you convert.",
+      description: "Don't wait for random questions. We proactively seed the Q&A section with questions that help you convert. Note: Google has reduced Q&A functionality, but existing content still appears and influences decisions.",
       subPoints: [
         { title: "Question Research", description: "Common customer questions identified from sales teams and competitors." },
         { title: "Keyword Questions", description: "Questions that contain target keywords seeded naturally." },
@@ -1122,8 +1126,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Differentiators", description: "Questions that let you highlight competitive advantages." },
         { title: "Local Context", description: "Questions about service areas, parking, and local details." }
       ],
-      imageSrc: qaManagementImg,
-      imageAlt: "Q&A management and customer engagement",
+      imageAlt: "Q&A seeding strategy for Google Business Profile",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
@@ -1139,6 +1142,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Link Opportunities", description: "Where appropriate, links to relevant website pages included." },
         { title: "Upvote Strategy", description: "Best answers upvoted to appear first. Authority answers promoted." }
       ],
+      imageAlt: "Optimized Q&A answers for local search",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
@@ -1154,6 +1158,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Response Templates", description: "Pre-approved templates for common questions enable fast responses." },
         { title: "Monthly Reporting", description: "Q&A metrics included in performance reports. Questions as insights." }
       ],
+      imageAlt: "Q&A monitoring and response management dashboard",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     }
@@ -1161,34 +1166,35 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "post-scheduling": [
     {
-      category: "Content Strategy",
+      category: "GBP Post Strategy",
       headline: "Posts That Drive Conversions, Not Just Engagement",
-      description: "As GBP expert Darren Shaw notes: 'GBP is the one platform people visit with intent to BUY.' We treat posts as conversion opportunities, not social media content.",
+      description: "As GBP expert Darren Shaw notes: 'GBP is the one platform people visit with intent to BUY.' We treat posts as conversion opportunities, not social media content. We use LeadSnap to drip feed posts consistently.",
       subPoints: [
+        { title: "LeadSnap Drip Feed", description: "Posts scheduled through LeadSnap for consistent, automated publishing. Weekly cadence maintained without manual effort." },
         { title: "Post Types", description: "Updates, offers, events, and products. Offers with clear CTAs typically drive the most engagement and conversions." },
-        { title: "Content Calendar", description: "Monthly calendar planned in advance. Weekly posting is our standard—more frequent shows diminishing returns." },
+        { title: "Branded Social Integration", description: "Posts can be branded social content or GBP-specific. Either approach works—consistency is what matters." },
         { title: "Seasonal Alignment", description: "Content aligned with holidays, seasons, and business cycles. Timely and relevant beats evergreen for engagement." },
         { title: "Promotion Strategy", description: "Offers and specials with urgency and clear calls to action. Posts remain visible for 6 months but are most effective in the first 7 days." },
-        { title: "Event Promotion", description: "Upcoming events and sales highlighted with dedicated posts. Event posts get special treatment in GBP display." },
         { title: "Purchase Intent Focus", description: "Every post answers: what can the customer buy, book, or do right now? Social-style posts get ignored." }
       ],
       imageSrc: postSchedulingImg,
-      imageAlt: "Social media and GBP post scheduling",
+      imageAlt: "GBP post scheduling and drip feed automation",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
     {
       category: "Post Optimization",
       headline: "Maximum Impact Per Post",
-      description: "Every post is an opportunity to appear in search results and drive action. We optimize every element for clicks and conversions.",
+      description: "Every post is an opportunity to appear in search results and drive action. We optimize every element for clicks and conversions with full UTM tracking.",
       subPoints: [
+        { title: "UTM Tracking", description: "Every post link includes UTM parameters for attribution. Know exactly which posts drive traffic and conversions." },
         { title: "Keyword Integration", description: "Target keywords included naturally in post content. First 100 characters most visible in previews." },
         { title: "Compelling CTAs", description: "Clear calls to action with appropriate buttons: Book, Order online, Buy, Learn more, Sign up, or Call now." },
         { title: "Image Selection", description: "Eye-catching original images—never stock photos. Images that stop scrollers and reinforce the message." },
         { title: "Character Optimization", description: "Content optimized for display. Front-load value proposition in first 100 characters." },
-        { title: "Link Strategy", description: "Destination URLs tracked for attribution. Landing pages matched to offers for conversion optimization." },
         { title: "Button Matching", description: "CTA button type matched to post purpose. 'Order online' for restaurants, 'Book' for appointments, 'Call now' for services." }
       ],
+      imageAlt: "GBP post optimization with UTM tracking",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
@@ -1198,12 +1204,13 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       description: "Post performance reveals what your audience cares about. We track interactions, search queries, directions, website clicks, and calls—the metrics that matter.",
       subPoints: [
         { title: "Interaction Tracking", description: "Calls, bookings, direction requests, and website clicks tracked. Total interactions measured over time." },
+        { title: "UTM Attribution", description: "UTM-tagged links reveal which posts drive conversions. Data flows into Analytics for complete attribution." },
         { title: "Search Query Analysis", description: "Which search terms trigger your profile? We identify keywords driving visibility and optimize accordingly." },
-        { title: "Click Analysis", description: "CTA clicks measured by post type. Which content drives action? Data drives strategy evolution." },
         { title: "Direction Requests", description: "Users requesting directions signal high purchase intent. We track this as a key conversion indicator." },
         { title: "Year-Over-Year Comparison", description: "Performance compared across time periods to eliminate seasonality and identify real trends." },
         { title: "Monthly Reporting", description: "Complete GBP performance dashboard. Search queries, interactions, and post engagement in client reports." }
       ],
+      imageAlt: "GBP post performance tracking and analytics",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     }
