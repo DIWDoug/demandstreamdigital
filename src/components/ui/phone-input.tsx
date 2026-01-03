@@ -234,16 +234,25 @@ const PhoneInput = ({
     return matches[0] || countries[0];
   }, [countryCode]);
 
-  // Filter countries based on search
-  const filteredCountries = useMemo(() => {
-    if (!searchQuery) return countries;
+  // Popular countries to show at top
+  const popularIds = ["US", "GB", "CA", "AU"];
+
+  // Filter and organize countries
+  const { popularCountries, otherCountries } = useMemo(() => {
     const query = searchQuery.toLowerCase();
-    return countries.filter(
-      (country) =>
-        country.name.toLowerCase().includes(query) ||
-        country.code.includes(query) ||
-        country.id.toLowerCase().includes(query)
-    );
+    const filtered = searchQuery
+      ? countries.filter(
+          (country) =>
+            country.name.toLowerCase().includes(query) ||
+            country.code.includes(query) ||
+            country.id.toLowerCase().includes(query)
+        )
+      : countries;
+
+    return {
+      popularCountries: filtered.filter((c) => popularIds.includes(c.id)),
+      otherCountries: filtered.filter((c) => !popularIds.includes(c.id)),
+    };
   }, [searchQuery]);
 
   return (
@@ -273,32 +282,62 @@ const PhoneInput = ({
             />
             <CommandList className="max-h-[300px]">
               <CommandEmpty>No country found.</CommandEmpty>
-              <CommandGroup>
-                {filteredCountries.map((country) => (
-                  <CommandItem
-                    key={country.id}
-                    value={country.id}
-                    onSelect={() => {
-                      onCountryCodeChange(country.code);
-                      setOpen(false);
-                      setSearchQuery("");
-                    }}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <Check
-                      className={cn(
-                        "h-4 w-4",
-                        countryCode === country.code && selectedCountry.id === country.id
-                          ? "opacity-100"
-                          : "opacity-0"
-                      )}
-                    />
-                    <span>{country.flag}</span>
-                    <span className="flex-1 truncate">{country.name}</span>
-                    <span className="text-text-muted text-sm">{country.code}</span>
-                  </CommandItem>
-                ))}
-              </CommandGroup>
+              {popularCountries.length > 0 && (
+                <CommandGroup heading="Popular">
+                  {popularCountries.map((country) => (
+                    <CommandItem
+                      key={country.id}
+                      value={country.id}
+                      onSelect={() => {
+                        onCountryCodeChange(country.code);
+                        setOpen(false);
+                        setSearchQuery("");
+                      }}
+                      className="flex items-center gap-2 cursor-pointer"
+                    >
+                      <Check
+                        className={cn(
+                          "h-4 w-4",
+                          countryCode === country.code && selectedCountry.id === country.id
+                            ? "opacity-100"
+                            : "opacity-0"
+                        )}
+                      />
+                      <span>{country.flag}</span>
+                      <span className="flex-1 truncate">{country.name}</span>
+                      <span className="text-text-muted text-sm">{country.code}</span>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              )}
+              {otherCountries.length > 0 && (
+                <CommandGroup heading={searchQuery ? "Results" : "All Countries"}>
+                  {otherCountries.map((country) => (
+                    <CommandItem
+                      key={country.id}
+                      value={country.id}
+                      onSelect={() => {
+                        onCountryCodeChange(country.code);
+                        setOpen(false);
+                        setSearchQuery("");
+                      }}
+                      className="flex items-center gap-2 cursor-pointer"
+                    >
+                      <Check
+                        className={cn(
+                          "h-4 w-4",
+                          countryCode === country.code && selectedCountry.id === country.id
+                            ? "opacity-100"
+                            : "opacity-0"
+                        )}
+                      />
+                      <span>{country.flag}</span>
+                      <span className="flex-1 truncate">{country.name}</span>
+                      <span className="text-text-muted text-sm">{country.code}</span>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              )}
             </CommandList>
           </Command>
         </PopoverContent>
