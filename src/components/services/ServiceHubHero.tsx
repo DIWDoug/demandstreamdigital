@@ -1,8 +1,10 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 interface BreadcrumbItem {
   label: string;
@@ -25,16 +27,48 @@ interface ServiceHubHeroProps {
 }
 
 const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle }: ServiceHubHeroProps) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     website: "",
     email: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Handle form submission
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("submit-to-ghl", {
+        body: {
+          name: formData.fullName,
+          email: formData.email,
+          website: formData.website,
+          phone: "",
+          revenue: "",
+          formType: "service_hub_hero",
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Thank you!",
+        description: "We'll be in touch within 24 hours.",
+      });
+
+      setFormData({ fullName: "", website: "", email: "" });
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -170,9 +204,18 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, hero
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full btn-cta group">
-                  Start the Conversation
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button type="submit" disabled={isSubmitting} className="w-full btn-cta group">
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Start the Conversation
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
                 </Button>
               </form>
               

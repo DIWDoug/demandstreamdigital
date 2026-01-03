@@ -13,6 +13,7 @@ interface ContactFormData {
   phoneCountryCode?: string;
   revenue: string;
   website?: string;
+  formType?: string; // Identifies which form submitted: hero_homepage, service_hub_hero, fulfillment_steps, contact_page, calculator
 }
 
 serve(async (req) => {
@@ -22,7 +23,17 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, phoneCountryCode, revenue, website }: ContactFormData = await req.json();
+    const { name, email, phone, phoneCountryCode, revenue, website, formType }: ContactFormData = await req.json();
+
+    // Map formType to human-readable lead_type for Zapier
+    const leadTypeMap: Record<string, string> = {
+      hero_homepage: "Homepage Hero Form",
+      service_hub_hero: "Service Page Hero Form",
+      fulfillment_steps: "Fulfillment Steps Form",
+      contact_page: "Contact Page Form",
+      calculator: "Calculator Form",
+    };
+    const lead_type = leadTypeMap[formType || ""] || "Contact Form";
 
     // Validate required fields
     if (!name || !email || !revenue) {
@@ -79,7 +90,8 @@ serve(async (req) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             id: data.id,
-            lead_type: "Contact Form",
+            lead_type,
+            form_type: formType || "unknown",
             name,
             email,
             phone,
