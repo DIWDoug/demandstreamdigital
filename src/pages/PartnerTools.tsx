@@ -162,7 +162,7 @@ const PartnerTools = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-12">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">8</p>
+                  <p className="text-3xl md:text-4xl font-bold text-foreground">7</p>
                   <p className="text-sm text-text-muted">Tools</p>
                 </div>
                 <div className="text-center">
