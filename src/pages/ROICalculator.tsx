@@ -368,6 +368,29 @@ const ROICalculator = () => {
           </div>
         </section>
 
+        {/* Partnership CTA */}
+        <section className="py-12 lg:py-16 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors shadow-lg shadow-cta/20"
+              >
+                Let's Talk Partnership
+                <span>→</span>
+              </Link>
+              <span className="text-text-muted">or</span>
+              <a
+                href="tel:+12143072995"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border/50 rounded-xl text-foreground hover:border-accent-blue/50 transition-colors"
+              >
+                <span className="text-accent-blue">📞</span>
+                (214) 307-2995
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Soft Divider */}
         <div className="container mx-auto px-6 lg:px-8 py-4">
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
