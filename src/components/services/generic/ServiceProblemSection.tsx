@@ -85,7 +85,7 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
           )}
 
           {/* Transition Line + CTA */}
-          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-8`}>
+          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-10`}>
             <p className="text-slate-600 text-lg">
               {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>
