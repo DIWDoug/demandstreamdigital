@@ -14,18 +14,37 @@ import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const ROICalculator = () => {
-  const [visitors, setVisitors] = useState(500);
-  const [leadConversionRate, setLeadConversionRate] = useState(2.5);
-  const [leadToCustomerRate, setLeadToCustomerRate] = useState(10);
-  const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
-  const [marketingCost, setMarketingCost] = useState(2500);
+  // Keep raw strings for a smooth typing experience (multi-digit + decimals)
+  const [visitorsInput, setVisitorsInput] = useState("500");
+  const [leadConversionRateInput, setLeadConversionRateInput] = useState("2.5");
+  const [leadToCustomerRateInput, setLeadToCustomerRateInput] = useState("10");
+  const [revenuePerCustomerInput, setRevenuePerCustomerInput] = useState("1000");
+  const [marketingCostInput, setMarketingCostInput] = useState("2500");
+
   const [selectedBenchmark, setSelectedBenchmark] = useState<IndustryBenchmark | null>(null);
   const [showBenchmarks, setShowBenchmarks] = useState(false);
 
+  const parseFloatSafe = (value: string) => {
+    const n = Number.parseFloat(value);
+    return Number.isFinite(n) ? n : 0;
+  };
+
+  const parseIntSafe = (value: string) => {
+    const n = Number.parseInt(value, 10);
+    return Number.isFinite(n) ? n : 0;
+  };
+
+  // Derived numeric values used for calculations
+  const visitors = Math.max(0, parseIntSafe(visitorsInput));
+  const leadConversionRate = Math.max(0, parseFloatSafe(leadConversionRateInput));
+  const leadToCustomerRate = Math.max(0, parseFloatSafe(leadToCustomerRateInput));
+  const revenuePerCustomer = Math.max(0, parseIntSafe(revenuePerCustomerInput));
+  const marketingCost = Math.max(0, parseIntSafe(marketingCostInput));
+
   const applyBenchmark = (benchmark: IndustryBenchmark) => {
-    setLeadConversionRate(benchmark.conversionRate);
-    setLeadToCustomerRate(benchmark.closeRate);
-    setRevenuePerCustomer(benchmark.avgCustomerValue);
+    setLeadConversionRateInput(String(benchmark.conversionRate));
+    setLeadToCustomerRateInput(String(benchmark.closeRate));
+    setRevenuePerCustomerInput(String(benchmark.avgCustomerValue));
     setSelectedBenchmark(benchmark);
     setShowBenchmarks(false);
   };
@@ -67,20 +86,37 @@ const ROICalculator = () => {
     return { conversionGrowth, trafficGrowth, combinedRevenue };
   }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, results.inboundRevenue]);
 
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
+  const sanitizeNumericInput = (raw: string, allowDecimal: boolean) => {
+    const cleaned = allowDecimal
+      ? raw.replace(/[^0-9.]/g, "")
+      : raw.replace(/[^0-9]/g, "");
+
+    if (!allowDecimal) return cleaned;
+
+    // Keep only the first decimal point
+    const [head, ...rest] = cleaned.split(".");
+    if (rest.length === 0) return cleaned;
+    return `${head}.${rest.join("")}`;
+  };
+
+  const InputField = ({
+    label,
+    value,
+    onChange,
     suffix,
     prefix,
-    tooltip
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
+    tooltip,
+    inputMode = "decimal",
+    allowDecimal = true,
+  }: {
+    label: string;
+    value: string;
+    onChange: (val: string) => void;
     suffix?: string;
     prefix?: string;
     tooltip?: string;
+    inputMode?: "decimal" | "numeric";
+    allowDecimal?: boolean;
   }) => (
     <div>
       <div className="flex items-center gap-2 mb-2">
@@ -89,11 +125,17 @@ const ROICalculator = () => {
           <TooltipProvider delayDuration={0}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
+                <button
+                  type="button"
+                  className="text-text-muted hover:text-accent-blue transition-colors"
+                >
                   <Info className="h-3.5 w-3.5" />
                 </button>
               </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
+              <TooltipContent
+                side="top"
+                className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50"
+              >
                 <p className="text-sm font-body">{tooltip}</p>
               </TooltipContent>
             </Tooltip>
@@ -108,15 +150,12 @@ const ROICalculator = () => {
         )}
         <input
           type="text"
-          inputMode="decimal"
+          inputMode={inputMode}
           value={value}
-          onChange={(e) => {
-            const val = e.target.value.replace(/[^0-9.]/g, '');
-            onChange(Number(val) || 0);
-          }}
+          onChange={(e) => onChange(sanitizeNumericInput(e.target.value, allowDecimal))}
           className={cn(
             "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
-            prefix ? "pl-8 pr-4" : "px-4"
+            prefix ? "pl-8 pr-4" : "px-4",
           )}
         />
         {suffix && (
@@ -276,35 +315,43 @@ const ROICalculator = () => {
                 <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                   <InputField 
                     label="Client's Website Visitors (Monthly)" 
-                    value={visitors} 
-                    onChange={(val) => setVisitors(Math.max(500, val))}
-                    tooltip="Your client's average monthly unique visitors (minimum 500). Check Google Analytics or estimate based on market size."
+                    value={visitorsInput}
+                    onChange={setVisitorsInput}
+                    inputMode="numeric"
+                    allowDecimal={false}
+                    tooltip="We default to 500 as a baseline benchmark, but you can enter your client's actual monthly visitors (including below 500)."
                   />
                   <InputField 
                     label="Lead Conversion Rate" 
-                    value={leadConversionRate} 
-                    onChange={setLeadConversionRate} 
+                    value={leadConversionRateInput}
+                    onChange={setLeadConversionRateInput}
+                    inputMode="decimal"
                     suffix="%"
                     tooltip="Percentage of website visitors who become leads. Local services average 2-5%."
                   />
                   <InputField 
                     label="Lead-to-Customer Rate" 
-                    value={leadToCustomerRate} 
-                    onChange={setLeadToCustomerRate} 
+                    value={leadToCustomerRateInput}
+                    onChange={setLeadToCustomerRateInput}
+                    inputMode="decimal"
                     suffix="%"
                     tooltip="Close rate: percentage of leads that become paying customers. Local services typically 25-40%."
                   />
                   <InputField 
                     label="Avg. Customer Value" 
-                    value={revenuePerCustomer} 
-                    onChange={setRevenuePerCustomer}
+                    value={revenuePerCustomerInput}
+                    onChange={setRevenuePerCustomerInput}
+                    inputMode="numeric"
+                    allowDecimal={false}
                     prefix="$"
                     tooltip="Average revenue per customer. For recurring services like HVAC maintenance, use annual value."
                   />
                   <InputField 
                     label="Monthly Retainer" 
-                    value={marketingCost} 
-                    onChange={setMarketingCost}
+                    value={marketingCostInput}
+                    onChange={setMarketingCostInput}
+                    inputMode="numeric"
+                    allowDecimal={false}
                     prefix="$"
                     tooltip="Your monthly retainer plus any ad spend. This shows ROI of your services."
                   />
