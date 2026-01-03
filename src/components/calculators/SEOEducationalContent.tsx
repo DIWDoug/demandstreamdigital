@@ -15,17 +15,17 @@ const SEOEducationalContent = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">White-Label Cost</p>
-            <p className="text-2xl font-bold text-foreground">$500 - $2,500</p>
+            <p className="text-2xl font-bold text-foreground">$650 - $2,600</p>
             <p className="text-sm text-text-muted mt-2">Agency partner pricing per location</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">Typical MSRP</p>
-            <p className="text-2xl font-bold text-foreground">$750 - $4,000</p>
+            <p className="text-2xl font-bold text-foreground">$910 - $6,500</p>
             <p className="text-sm text-text-muted mt-2">What agencies charge end clients</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">Your Margin</p>
-            <p className="text-2xl font-bold text-cta">40-60%</p>
+            <p className="text-2xl font-bold text-cta">40-150%</p>
             <p className="text-sm text-text-muted mt-2">Healthy markup on fulfillment</p>
           </div>
         </div>
@@ -88,38 +88,39 @@ const SEOEducationalContent = () => {
         </div>
       </section>
 
-      {/* The Timeline Reality */}
+      {/* How We Calculate SEO Value */}
       <section>
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 rounded-lg bg-accent-blue/10">
-            <Clock className="h-5 w-5 text-accent-blue" />
+            <BarChart3 className="h-5 w-5 text-accent-blue" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">The Timeline Reality</h2>
+          <h2 className="text-2xl font-bold text-foreground">How We Calculate SEO Value</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-8">
           <div>
             <p className="text-text-secondary mb-6">
-              Local SEO typically shows early wins within 3-4 months (citation cleanup, GBP improvements), with significant ranking gains at 6-9 months. High-competition markets like legal or medical may take 12+ months for top Local Pack positions.
+              The value of local SEO is measured by comparing <strong className="text-foreground">current monthly revenue equivalent</strong> to <strong className="text-foreground">expected monthly revenue equivalent</strong>. We calculate this by analyzing your client's current visibility, lead volume, and conversion metrics against projected improvements.
             </p>
             <p className="text-text-secondary">
-              Unlike paid ads that stop the moment you stop paying, local SEO builds a compounding asset. Each review, citation, and link strengthens the foundation for long-term visibility.
+              For example, if a business currently generates $15,000/month from organic local search and our projections show potential for $25,000/month after 6-9 months of SEO work, the $10,000/month lift justifies a $1,500-$2,500 monthly retainer with strong ROI.
             </p>
           </div>
           <div className="bg-surface-elevated rounded-xl p-6 border border-border/30">
-            <h3 className="text-foreground font-semibold mb-4">Typical Timeline</h3>
-            <ul className="space-y-3">
-              {[
-                { phase: "Month 1-2", work: "Audit, GBP optimization, citation cleanup" },
-                { phase: "Month 3-4", work: "On-page SEO, content creation, review strategy" },
-                { phase: "Month 5-6", work: "Link building, authority signals, ranking improvements" },
-                { phase: "Month 7+", work: "Scaling, maintenance, competitive positioning" }
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-text-muted">
-                  <span className="text-accent-blue font-medium text-sm min-w-[80px]">{item.phase}</span>
-                  <span className="text-sm">{item.work}</span>
-                </li>
-              ))}
-            </ul>
+            <h3 className="text-foreground font-semibold mb-4">Revenue Equivalent Calculation</h3>
+            <div className="space-y-4">
+              <div className="p-4 bg-surface-dark rounded-lg border border-border/30">
+                <p className="text-xs text-text-muted mb-1">Current Monthly Revenue Equivalent</p>
+                <p className="text-lg font-semibold text-foreground">Visibility × Lead Volume × Close Rate × Avg. Ticket</p>
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-accent-blue text-xl">↓</span>
+              </div>
+              <div className="p-4 bg-cta/10 rounded-lg border border-cta/30">
+                <p className="text-xs text-text-muted mb-1">Expected Monthly Revenue Equivalent</p>
+                <p className="text-lg font-semibold text-cta">Projected Visibility × Improved Leads × Close Rate × Avg. Ticket</p>
+              </div>
+              <p className="text-xs text-text-muted text-center">The delta between current and expected is the SEO opportunity value.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -224,19 +225,19 @@ const SEOEducationalContent = () => {
         </div>
         <div className="bg-gradient-to-br from-cta/5 to-accent-blue/5 rounded-2xl p-8 border border-cta/20">
           <p className="text-text-secondary text-lg mb-6">
-            Local SEO is the perfect white-label service. Small businesses need it, but most agencies lack the bandwidth to execute it in-house. With white-label fulfillment, you capture 40-60% margins while we handle the heavy lifting.
+            Local SEO is the perfect white-label service. Small businesses need it, but most agencies lack the bandwidth to execute it in-house. With white-label fulfillment, you capture 40-150% margins while we handle the heavy lifting.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-cta">$500-$2,500</p>
+              <p className="text-3xl font-bold text-cta">$650-$2,600</p>
               <p className="text-sm text-text-muted">Your cost per location</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">$750-$4,000</p>
+              <p className="text-3xl font-bold text-foreground">$910-$6,500</p>
               <p className="text-sm text-text-muted">Typical client MSRP</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-accent-blue">$250-$1,500</p>
+              <p className="text-3xl font-bold text-accent-blue">$260-$3,900</p>
               <p className="text-sm text-text-muted">Your profit per client</p>
             </div>
           </div>
