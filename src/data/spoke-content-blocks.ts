@@ -333,6 +333,77 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Can you present directly to our clients?", answer: "We operate white-label, so you present. But we can join calls for technical questions if introduced appropriately." },
     { question: "What format are presentations?", answer: "PowerPoint/Google Slides standard. PDF exports available. Screen-share optimized." },
     { question: "How far in advance do you need for presentation prep?", answer: "3-5 business days ideal. Rush turnaround possible for existing clients with established templates." }
+  ],
+  // Content Marketing Spokes FAQs
+  "geographical-content": [
+    { question: "How do you avoid doorway page penalties?", answer: "Each location page includes unique local content: landmarks, area-specific services, regulations, and genuine value. Never just city names swapped in templates." },
+    { question: "How many service area pages can you create?", answer: "As many as needed. We prioritize by opportunity and competition, then build systematically." },
+    { question: "Do geographic pages help with Google Business Profile rankings?", answer: "Yes. Service area pages reinforce GBP signals and support local 3-pack visibility for each market." },
+    { question: "What's included in each service area page?", answer: "Unique content, local schema markup, internal linking, keyword targeting specific to that market, and clear conversion paths." },
+    { question: "How long until geographic content ranks?", answer: "New pages typically show ranking movement within 2-4 months. Less competitive markets often rank faster." }
+  ],
+  "topical-content": [
+    { question: "How does topical content differ from regular blog posts?", answer: "Topical content is strategically planned to build authority on core topics. It's organized in clusters, not random posts." },
+    { question: "Do you write for both search engines and readers?", answer: "Always. Content must be useful to humans first. Search optimization enhances discoverability without sacrificing quality." },
+    { question: "How do you measure topical authority?", answer: "Rankings across topic clusters, featured snippets earned, and organic traffic growth for related keywords." },
+    { question: "Can topical content generate leads?", answer: "Yes, with proper conversion architecture. CTAs, internal links to service pages, and content upgrades turn readers into leads." },
+    { question: "How often should topical content be published?", answer: "Consistency matters more than volume. We recommend a sustainable cadence that builds clusters over time." }
+  ],
+  "power-posts": [
+    { question: "How long is a typical power post?", answer: "2,000 to 5,000+ words depending on the topic. The goal is comprehensive coverage, not word count targets." },
+    { question: "How do power posts support other content?", answer: "They anchor hub-and-spoke clusters. Supporting content links to power posts, concentrating topical authority." },
+    { question: "Do power posts earn backlinks?", answer: "Definitive resources attract natural links from writers citing sources. This is a primary purpose of power posts." },
+    { question: "How long until a power post ranks?", answer: "Competitive keywords may take 6-12 months. Less competitive topics often rank within 2-4 months." },
+    { question: "What's included in power post production?", answer: "Research, outline, writing, visuals, FAQ sections, schema markup, internal linking, and conversion touchpoints." }
+  ],
+  "ebooks-guides": [
+    { question: "Do you handle e-book design?", answer: "Yes. We deliver professionally designed, branded PDFs ready for lead generation." },
+    { question: "What topics make good e-books?", answer: "Topics that attract qualified leads—problems your client's services solve. Downloads should indicate purchase intent." },
+    { question: "Can e-books be repurposed?", answer: "Absolutely. E-book chapters become blog posts, social content, email sequences, and more." },
+    { question: "Do you write landing page copy?", answer: "Yes. Conversion-focused landing page copy is included in e-book production." },
+    { question: "How do you integrate e-books with email marketing?", answer: "We can set up thank you pages, email delivery, and follow-up sequence integration with most platforms." }
+  ],
+  "lead-magnets": [
+    { question: "What types of lead magnets work best?", answer: "It depends on the audience. Checklists and templates work for action-oriented prospects. Calculators engage analytical buyers." },
+    { question: "How quickly can you create a lead magnet?", answer: "Simple checklists in 1-2 weeks. More complex tools or calculators take 3-4 weeks." },
+    { question: "Do you build landing pages for lead magnets?", answer: "We provide landing page copy. Implementation depends on the client's platform." },
+    { question: "Can you A/B test lead magnet offers?", answer: "Yes. We recommend testing headlines, offers, and formats to optimize conversion rates." },
+    { question: "How do you measure lead magnet success?", answer: "Conversion rate, email quality (open/click rates), and downstream engagement toward sales." }
+  ],
+  "press-releases": [
+    { question: "How often should press releases be issued?", answer: "Only when there's genuine news. Quality over quantity. 4-8 per year is typical for most businesses." },
+    { question: "What distribution networks do you use?", answer: "We select networks based on goals: local coverage, industry verticals, or broad syndication." },
+    { question: "Do press releases help with SEO?", answer: "They create citations and brand mentions. Links from news syndication support authority signals." },
+    { question: "Can press releases appear in Google News?", answer: "Yes, when distributed through recognized wire services. Timing and news value affect visibility." },
+    { question: "What makes a press release newsworthy?", answer: "Milestones, expansions, awards, community involvement, original research, or significant partnerships." }
+  ],
+  "aio-content": [
+    { question: "What is AIO content?", answer: "AI-Optimized content structured so AI systems like ChatGPT, Perplexity, and Google AI Overviews can parse, understand, and cite it." },
+    { question: "How is AIO content different from regular SEO content?", answer: "It emphasizes semantic structure, quotable statements, FAQ formatting, and schema markup for machine extractability." },
+    { question: "Can existing content be optimized for AI?", answer: "Yes. We audit and restructure existing content for AI visibility without losing traditional SEO value." },
+    { question: "How do you track AI visibility?", answer: "We monitor AI Overview appearances, citation accuracy, and mentions in AI-powered search results." },
+    { question: "Is AIO content future-proof?", answer: "The principles are durable: clear structure, authoritative answers, and machine-readable formatting will remain valuable." }
+  ],
+  "case-studies": [
+    { question: "How do you get clients to participate in case studies?", answer: "We help identify willing clients and make the process easy. A 30-minute interview is usually all that's needed." },
+    { question: "What results make a good case study?", answer: "Quantifiable outcomes, compelling challenges overcome, and clients willing to be named publicly." },
+    { question: "Can case studies be anonymous?", answer: "Yes, but named case studies are more credible. We work with clients to find the right balance." },
+    { question: "What formats do you deliver?", answer: "Web page, PDF, and presentation slide formats. Optimized for each use case." },
+    { question: "How long does case study production take?", answer: "2-3 weeks from interview to final approval. Complex stories may take longer." }
+  ],
+  "faq-content": [
+    { question: "How do you find the right questions to answer?", answer: "Search data, customer service logs, sales objections, competitor analysis, and industry forums." },
+    { question: "Does FAQ content help with voice search?", answer: "Yes. Question-answer format matches voice query patterns and earns featured snippets." },
+    { question: "Where should FAQ content live on a site?", answer: "Service pages, dedicated FAQ pages, and embedded within relevant blog content." },
+    { question: "How do you implement FAQ schema?", answer: "JSON-LD markup that enables rich FAQ results in search. Validated against Google's requirements." },
+    { question: "How often should FAQs be updated?", answer: "Review quarterly. Add new questions as customer inquiries evolve and search behavior changes." }
+  ],
+  "hub-spoke-buildouts": [
+    { question: "What's the difference between a hub and a spoke?", answer: "Hubs are comprehensive pillar pages. Spokes are supporting articles that link to the hub and cover subtopics." },
+    { question: "How many spokes should each hub have?", answer: "5-15 is typical. Enough to cover the topic thoroughly without thin content." },
+    { question: "Do you create both hubs and spokes?", answer: "Yes. We plan the cluster structure and create all content to ensure cohesive architecture." },
+    { question: "How long does a full cluster buildout take?", answer: "2-4 months for a complete cluster with hub and 8-12 spokes. Phased delivery available." },
+    { question: "Can you build clusters around existing content?", answer: "Yes. We audit existing content, identify gaps, and build out missing pieces to complete clusters." }
   ]
 };
 
@@ -2446,6 +2517,468 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Anchor Diversity", description: "Press releases allow strategic anchor text placement within natural editorial context." },
         { title: "Entity Validation", description: "News mentions signal to search engines that a business is newsworthy and relevant." },
         { title: "AI Overview Sourcing", description: "Google and AI systems treat news mentions as trust signals for entity information." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  // Content Marketing Spokes
+  "geographical-content": [
+    {
+      category: "Why Geographic Content Matters",
+      headline: "Local Search Demands Local Content",
+      description: "Service area pages and city-specific content capture the searches that matter most to local businesses. Without geographic content, you're invisible in the markets you serve—regardless of how good your homepage is.",
+      subPoints: [
+        { title: "Near Me Intent", description: "'Near me' searches have grown 500% in recent years. Geographic content captures this intent." },
+        { title: "Local Pack Eligibility", description: "Location-specific pages support GBP rankings and increase local 3-pack visibility." },
+        { title: "Market Expansion", description: "Each service area page opens a new geographic market to organic traffic." },
+        { title: "Competitor Displacement", description: "Many competitors lack geographic depth. Service area pages create immediate advantages." },
+        { title: "Conversion Relevance", description: "Local content converts better. Visitors see you serve their specific area." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Avoiding Doorway Page Penalties",
+      headline: "Unique Value Per Location—Not City Name Swaps",
+      description: "Google penalizes 'doorway pages' that offer no unique value per location. We create genuinely useful content for each market with local landmarks, regulations, service specifics, and community context.",
+      subPoints: [
+        { title: "Local Landmarks", description: "Reference neighborhoods, landmarks, and local context that prove market familiarity." },
+        { title: "Area-Specific Services", description: "Highlight service variations, regulations, or considerations unique to each area." },
+        { title: "Unique Value Proposition", description: "Each page explains why you're the right choice for that specific market." },
+        { title: "Local Schema", description: "LocalBusiness schema with accurate NAP data for each service area." },
+        { title: "Internal Linking", description: "Strategic linking between geographic pages builds topical authority." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Geographic Content Strategy",
+      headline: "Systematic Market Coverage",
+      description: "We map your service areas, prioritize by opportunity and competition, and build content systematically. The result is comprehensive geographic coverage that compounds over time.",
+      subPoints: [
+        { title: "Service Area Mapping", description: "Define primary, secondary, and expansion markets based on business priorities." },
+        { title: "Keyword Research Per Location", description: "Each market gets unique keyword research—search behavior varies by city." },
+        { title: "Competitive Gap Analysis", description: "Identify which markets lack competitor content for quick wins." },
+        { title: "Prioritized Rollout", description: "High-opportunity markets first, then systematic expansion." },
+        { title: "Performance Tracking", description: "Monitor rankings and traffic per location to inform ongoing strategy." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "topical-content": [
+    {
+      category: "Building Topical Authority",
+      headline: "Expertise That Search Engines Trust",
+      description: "Topical content demonstrates deep expertise in your client's industry. Google rewards sites that comprehensively cover a topic—not sites with scattered, surface-level content.",
+      subPoints: [
+        { title: "E-E-A-T Signals", description: "Experience, Expertise, Authority, Trust—topical depth demonstrates all four." },
+        { title: "Topic Clusters", description: "Interlinked content on related topics creates semantic authority." },
+        { title: "Long-Tail Capture", description: "Deep coverage captures hundreds of long-tail queries automatically." },
+        { title: "AI Visibility", description: "Comprehensive coverage makes content more likely to be cited by AI systems." },
+        { title: "Competitive Moat", description: "Topical authority compounds over time and is difficult for competitors to replicate." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Content Types",
+      headline: "The Building Blocks of Topical Authority",
+      description: "Different content types serve different purposes within a topical cluster. We create the mix that builds authority while serving user needs at every stage of the customer journey.",
+      subPoints: [
+        { title: "How-To Guides", description: "Step-by-step content that demonstrates expertise and captures informational queries." },
+        { title: "Educational Articles", description: "In-depth explanations of concepts, processes, and industry knowledge." },
+        { title: "Comparison Content", description: "Side-by-side evaluations that capture high-intent research queries." },
+        { title: "Problem/Solution Content", description: "Address customer pain points with actionable solutions." },
+        { title: "Industry Updates", description: "Timely content on trends, regulations, and news builds ongoing relevance." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "From Traffic to Leads",
+      headline: "Topical Content With Conversion Architecture",
+      description: "Informational content attracts visitors, but without conversion architecture, it's just traffic. We build topical content with strategic CTAs, internal links, and paths to lead capture.",
+      subPoints: [
+        { title: "Strategic CTAs", description: "Contextual calls-to-action that match user intent at each content type." },
+        { title: "Internal Linking", description: "Guide visitors from informational content toward service pages." },
+        { title: "Content Upgrades", description: "Offer related downloadables to capture email addresses." },
+        { title: "Service Integration", description: "Naturally connect expertise content to service offerings." },
+        { title: "Conversion Tracking", description: "Measure which topics drive leads, not just traffic." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "power-posts": [
+    {
+      category: "What Is a Power Post",
+      headline: "Definitive Resources That Dominate Search",
+      description: "Power posts are comprehensive pillar content—2,000 to 5,000+ words that definitively cover a topic. They become the hub of topic clusters, earn natural backlinks, and rank for competitive keywords.",
+      subPoints: [
+        { title: "Comprehensive Coverage", description: "Cover every angle of a topic so users never need to look elsewhere." },
+        { title: "Hub-and-Spoke Center", description: "Power posts anchor topic clusters with supporting content linking in." },
+        { title: "Link Magnet", description: "Definitive resources earn natural backlinks from writers citing sources." },
+        { title: "Evergreen Value", description: "Well-maintained power posts drive traffic for years." },
+        { title: "Competitive Keywords", description: "The depth required to rank for competitive terms." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Power Post Anatomy",
+      headline: "Structure That Ranks and Converts",
+      description: "Great power posts aren't just long—they're strategically structured for both search engines and readers. Clear sections, visual elements, and conversion touchpoints throughout.",
+      subPoints: [
+        { title: "Strategic Headings", description: "H2/H3 structure that captures featured snippets and aids navigation." },
+        { title: "Visual Elements", description: "Charts, diagrams, and images that break up text and add value." },
+        { title: "Table of Contents", description: "Jump links that improve UX and generate sitelinks in search." },
+        { title: "FAQ Sections", description: "Structured Q&A that captures question-based queries." },
+        { title: "Conversion Points", description: "CTAs placed throughout—not just at the end." },
+        { title: "Schema Markup", description: "FAQ, HowTo, and Article schema for rich result eligibility." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "The Conversion Problem",
+      headline: "Power Posts Without CTAs Are Just Content",
+      description: "A power post that ranks but doesn't convert is a missed opportunity. We build conversion architecture into every power post—phone numbers, forms, and clear next steps.",
+      subPoints: [
+        { title: "Above-the-Fold CTA", description: "Contact options visible before scrolling begins." },
+        { title: "In-Content CTAs", description: "Contextual conversion opportunities at natural decision points." },
+        { title: "Sticky Elements", description: "Phone numbers or forms that stay visible while scrolling." },
+        { title: "Related Services", description: "Clear connections to service pages and offerings." },
+        { title: "Lead Magnets", description: "Downloadable content offers to capture email addresses." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "ebooks-guides": [
+    {
+      category: "Lead Generation Assets",
+      headline: "E-books That Build Lists and Demonstrate Expertise",
+      description: "E-books and guides are premium content assets that capture email addresses while demonstrating deep expertise. They're the cornerstone of content-driven lead generation.",
+      subPoints: [
+        { title: "Email Capture", description: "Gated content that converts visitors into subscribers." },
+        { title: "Expertise Demonstration", description: "Long-form content that proves authority and builds trust." },
+        { title: "Sales Enablement", description: "Resources that support sales conversations and objection handling." },
+        { title: "Nurture Fuel", description: "Content that feeds email sequences and automation." },
+        { title: "Repurposable Assets", description: "E-books can be broken into blog posts, social content, and more." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "E-book Production",
+      headline: "From Concept to Designed Asset",
+      description: "We handle the complete e-book production process: topic selection, outline, writing, design, and delivery. You get a polished asset ready for lead generation.",
+      subPoints: [
+        { title: "Topic Strategy", description: "Identify topics that attract qualified leads, not just downloads." },
+        { title: "Outline Development", description: "Structure that delivers value and guides readers through the content." },
+        { title: "Professional Writing", description: "Expert content that reflects your client's authority." },
+        { title: "Design & Formatting", description: "Branded, professional layout that elevates perceived value." },
+        { title: "Landing Page Copy", description: "Conversion-focused page copy that sells the download." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Lead Magnet Funnel",
+      headline: "From Download to Customer",
+      description: "An e-book without a funnel is a missed opportunity. We help integrate e-books into lead nurture sequences that move subscribers toward becoming customers.",
+      subPoints: [
+        { title: "Thank You Page Optimization", description: "Immediate next steps after download—don't waste the momentum." },
+        { title: "Email Sequence Integration", description: "Follow-up emails that continue the conversation." },
+        { title: "Segmentation", description: "Tag subscribers by topic interest for targeted follow-up." },
+        { title: "Sales Handoff", description: "Clear triggers for when to move leads to sales conversations." },
+        { title: "Performance Tracking", description: "Measure downloads, email engagement, and downstream conversions." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "lead-magnets": [
+    {
+      category: "Quick-Value Lead Capture",
+      headline: "Checklists, Templates, and Tools That Convert",
+      description: "Lead magnets are quick-value assets that capture email addresses with minimal friction. Checklists, templates, calculators, and tools that solve immediate problems while building your client's list.",
+      subPoints: [
+        { title: "High Conversion", description: "Quick-value offers convert better than lengthy e-books for cold traffic." },
+        { title: "Low Production Cost", description: "Faster to create than comprehensive guides." },
+        { title: "Immediate Value", description: "Subscribers get instant gratification, building positive association." },
+        { title: "Segmentation Signal", description: "The magnet they choose reveals their priorities and pain points." },
+        { title: "Entry Point", description: "Start relationships with valuable exchanges, not cold outreach." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Lead Magnet Types",
+      headline: "Match the Offer to the Audience",
+      description: "Different audiences respond to different offers. We help identify and create the lead magnets that will resonate with your client's ideal customers.",
+      subPoints: [
+        { title: "Checklists", description: "Step-by-step lists that simplify complex processes." },
+        { title: "Templates", description: "Pre-built frameworks that save time and reduce friction." },
+        { title: "Calculators", description: "Interactive tools that provide personalized insights." },
+        { title: "Cheat Sheets", description: "Quick-reference guides that provide ongoing value." },
+        { title: "Swipe Files", description: "Examples and templates that can be adapted immediately." },
+        { title: "Mini-Courses", description: "Email-delivered lessons that build engagement over time." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Optimization & Testing",
+      headline: "Improving Lead Magnet Performance",
+      description: "Lead magnets should be tested and optimized like any conversion asset. We help improve performance through landing page optimization and offer refinement.",
+      subPoints: [
+        { title: "Landing Page Testing", description: "Headline, copy, and design variations to improve conversion." },
+        { title: "Offer Positioning", description: "How you describe the value matters as much as the content." },
+        { title: "Form Optimization", description: "Balancing information capture with conversion friction." },
+        { title: "Delivery Experience", description: "Immediate access and clear next steps." },
+        { title: "Performance Metrics", description: "Track conversion rates, email quality, and downstream engagement." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "press-releases": [
+    {
+      category: "Strategic News Distribution",
+      headline: "Press Releases That Build Authority",
+      description: "Press releases distribute newsworthy announcements to media outlets, news aggregators, and industry publications. Done strategically, they build brand visibility and create citation opportunities.",
+      subPoints: [
+        { title: "News Wire Distribution", description: "Syndication across hundreds of news sites and aggregators." },
+        { title: "Citation Building", description: "Each pickup creates a new brand mention and potential backlink." },
+        { title: "Brand Visibility", description: "Appear in Google News and industry publications." },
+        { title: "Authority Signals", description: "News mentions signal legitimacy to search engines and AI systems." },
+        { title: "Controlled Narrative", description: "Shape how your news is presented across the web." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Newsworthy Angles",
+      headline: "What Makes a Press Release Work",
+      description: "Not every announcement deserves a press release. We help identify genuinely newsworthy angles that will get picked up and create real authority signals.",
+      subPoints: [
+        { title: "Business Milestones", description: "Expansions, anniversaries, awards, and achievements." },
+        { title: "New Services/Products", description: "Launches that provide genuine value to the market." },
+        { title: "Community Involvement", description: "Sponsorships, charitable work, and local engagement." },
+        { title: "Industry Insights", description: "Original research, surveys, or expert commentary." },
+        { title: "Executive Changes", description: "Key hires and leadership announcements." },
+        { title: "Partnerships", description: "Strategic alliances and collaborations." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Distribution Strategy",
+      headline: "Maximizing Reach and Impact",
+      description: "Where and how a press release is distributed determines its impact. We use strategic distribution to maximize pickup, citations, and authority signals.",
+      subPoints: [
+        { title: "Wire Selection", description: "Choose distribution networks based on goals and industry." },
+        { title: "Timing Strategy", description: "Publish timing affects pickup rates and visibility." },
+        { title: "Media List", description: "Targeted outreach to relevant journalists and publications." },
+        { title: "Follow-Up Outreach", description: "Personal follow-up to increase pickup chances." },
+        { title: "Coverage Tracking", description: "Monitor pickup, citations, and backlinks generated." },
+        { title: "Repurposing", description: "Leverage release content for blog posts and social." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "aio-content": [
+    {
+      category: "AI Overview Optimization",
+      headline: "Content Structured for AI Citation",
+      description: "AI Overviews and LLM-powered search are changing how content gets discovered. AIO content is structured so AI systems can parse, understand, and cite it accurately.",
+      subPoints: [
+        { title: "Semantic Structure", description: "Clear headings and logical organization that AI can parse." },
+        { title: "Quotable Statements", description: "Concise, authoritative answers that LLMs extract and cite." },
+        { title: "FAQ Integration", description: "Question-answer format that matches AI query patterns." },
+        { title: "Entity Clarity", description: "Explicit identification of who, what, where for disambiguation." },
+        { title: "Source Credibility", description: "E-E-A-T signals that make content citation-worthy." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Technical Requirements",
+      headline: "The Mechanics of AI Visibility",
+      description: "AI visibility requires specific technical implementations. We ensure content meets the structural requirements that AI systems need to cite it accurately.",
+      subPoints: [
+        { title: "Schema Markup", description: "FAQ, HowTo, and LocalBusiness schema for explicit machine understanding." },
+        { title: "Heading Hierarchy", description: "H1-H6 structure that creates semantic sections." },
+        { title: "Answer Formatting", description: "Direct answers within the first 100 words of sections." },
+        { title: "List Structures", description: "Bulleted and numbered lists that AI can easily extract." },
+        { title: "Table Data", description: "Comparison tables that provide structured information." },
+        { title: "Citation Trails", description: "Clear attribution and source references." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Future-Proofing Content",
+      headline: "Content Strategy for AI-First Search",
+      description: "As AI-powered search grows, content strategy must evolve. We help transition existing content and create new content optimized for both traditional and AI search.",
+      subPoints: [
+        { title: "Content Auditing", description: "Identify existing content that can be optimized for AI." },
+        { title: "Restructuring", description: "Update content organization for AI extractability." },
+        { title: "Answer Optimization", description: "Refine content to provide clear, citable answers." },
+        { title: "Topic Expansion", description: "Cover questions AI systems are likely to field." },
+        { title: "Monitoring", description: "Track AI Overview appearances and citation accuracy." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "case-studies": [
+    {
+      category: "Proof That Builds Trust",
+      headline: "Case Studies That Close Deals",
+      description: "Case studies document real results and build prospect trust. They're proof assets that support sales conversations and demonstrate the outcomes your client's services deliver.",
+      subPoints: [
+        { title: "Social Proof", description: "Third-party validation that reduces purchase risk." },
+        { title: "Sales Enablement", description: "Concrete examples for sales conversations." },
+        { title: "Objection Handling", description: "Proof points that address common concerns." },
+        { title: "SEO Value", description: "Industry and service-specific content that ranks." },
+        { title: "Testimonial Extraction", description: "Quotes and endorsements for multi-channel use." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Case Study Structure",
+      headline: "The Story Arc That Persuades",
+      description: "Effective case studies follow a proven structure: challenge, solution, results. We develop case studies that tell compelling stories while hitting the key proof points.",
+      subPoints: [
+        { title: "The Challenge", description: "What problem was the client facing? What was at stake?" },
+        { title: "The Solution", description: "What approach did you take? Why this strategy?" },
+        { title: "The Results", description: "Quantified outcomes with specific metrics and timeframes." },
+        { title: "Client Voice", description: "Direct quotes that add authenticity and emotion." },
+        { title: "Visual Proof", description: "Screenshots, charts, and before/after comparisons." },
+        { title: "The Takeaway", description: "What can prospects learn and apply?" }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Production Process",
+      headline: "From Client Selection to Published Asset",
+      description: "We handle the complete case study production process: identifying the right clients, conducting interviews, writing the story, and designing the final asset.",
+      subPoints: [
+        { title: "Client Selection", description: "Identify clients with compelling stories and willingness to participate." },
+        { title: "Interview Process", description: "Structured conversations that extract the best stories." },
+        { title: "Data Gathering", description: "Collect metrics, screenshots, and proof points." },
+        { title: "Story Development", description: "Craft narratives that resonate with target prospects." },
+        { title: "Design & Format", description: "Professional layout for web, PDF, and presentation use." },
+        { title: "Approval Process", description: "Client review and sign-off before publication." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "faq-content": [
+    {
+      category: "Capturing Question-Based Search",
+      headline: "FAQ Content That Wins Featured Snippets",
+      description: "FAQ content captures the questions your customers are asking. Structured Q&A earns featured snippets, supports voice search, and feeds AI systems that answer user queries.",
+      subPoints: [
+        { title: "Featured Snippet Eligibility", description: "Well-structured FAQs earn position zero in search results." },
+        { title: "Voice Search Optimization", description: "Question-answer format matches voice query patterns." },
+        { title: "AI Visibility", description: "FAQ format is ideal for AI extraction and citation." },
+        { title: "Long-Tail Capture", description: "Each question targets specific query variations." },
+        { title: "User Experience", description: "Visitors find quick answers to common questions." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "FAQ Research",
+      headline: "Finding the Questions That Matter",
+      description: "Effective FAQ content starts with research. We identify the questions real customers ask—from search data, sales conversations, and competitor analysis.",
+      subPoints: [
+        { title: "Search Query Analysis", description: "Mining 'People Also Ask' and related queries." },
+        { title: "Customer Service Mining", description: "Questions from support tickets and sales calls." },
+        { title: "Competitor FAQs", description: "What questions are competitors answering?" },
+        { title: "Industry Forums", description: "Questions asked in Reddit, Quora, and community groups." },
+        { title: "Keyword Research", description: "Question-based keywords with search volume." },
+        { title: "Sales Team Input", description: "Objections and questions from sales conversations." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Technical Implementation",
+      headline: "Schema and Structure for Maximum Impact",
+      description: "FAQ content requires proper technical implementation to earn rich results and AI visibility. We ensure FAQs are structured for both users and machines.",
+      subPoints: [
+        { title: "FAQ Schema Markup", description: "Structured data that enables rich FAQ results in search." },
+        { title: "Page Integration", description: "Strategic placement within service and content pages." },
+        { title: "Accordion Design", description: "Expandable format that improves user experience." },
+        { title: "Answer Optimization", description: "Concise, complete answers that satisfy user intent." },
+        { title: "Internal Linking", description: "Connect FAQ answers to relevant service pages." },
+        { title: "Ongoing Expansion", description: "Add new questions as search behavior evolves." }
+      ],
+      ctaText: "Explore Partnership",
+      ctaHref: "#contact"
+    }
+  ],
+
+  "hub-spoke-buildouts": [
+    {
+      category: "Content Architecture",
+      headline: "Hub-and-Spoke Strategy for Topical Authority",
+      description: "Hub-and-spoke content architecture organizes content into topic clusters with pillar pages at the center. This structure maximizes topical authority and creates clear paths for users and search engines.",
+      subPoints: [
+        { title: "Topic Clusters", description: "Related content organized around central themes." },
+        { title: "Pillar Pages", description: "Comprehensive hub content that anchors each cluster." },
+        { title: "Spoke Content", description: "Supporting articles that link back to the hub." },
+        { title: "Internal Linking", description: "Strategic connections that distribute authority." },
+        { title: "Semantic Relevance", description: "Topical depth that search engines reward." }
+      ],
+      ctaText: "Start the Conversation",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Planning and Mapping",
+      headline: "Strategic Cluster Development",
+      description: "Effective hub-and-spoke architecture requires upfront planning. We map topic clusters, identify content gaps, and create a buildout roadmap.",
+      subPoints: [
+        { title: "Topic Identification", description: "Define the core topics that matter to your audience." },
+        { title: "Cluster Mapping", description: "Organize subtopics around each hub theme." },
+        { title: "Gap Analysis", description: "Identify missing content within existing clusters." },
+        { title: "Competition Research", description: "How are competitors structuring their content?" },
+        { title: "Prioritization", description: "Build high-value clusters first." },
+        { title: "Content Calendar", description: "Phased approach to cluster completion." }
+      ],
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "#contact"
+    },
+    {
+      category: "Implementation",
+      headline: "Building Connected Content Ecosystems",
+      description: "Hub-and-spoke implementation requires coordinated content creation and technical setup. We build complete clusters that work as integrated systems.",
+      subPoints: [
+        { title: "Pillar Page Creation", description: "Comprehensive hub content that defines the topic." },
+        { title: "Spoke Development", description: "Supporting content that covers subtopics in depth." },
+        { title: "Linking Architecture", description: "Strategic internal links that connect content." },
+        { title: "Navigation Integration", description: "Menu and category structures that support clusters." },
+        { title: "Performance Tracking", description: "Monitor cluster performance and adjust." },
+        { title: "Expansion Planning", description: "Roadmap for adding new clusters over time." }
       ],
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
