@@ -441,32 +441,51 @@ const SEOCalculator = () => {
                         ? "bg-gradient-to-br from-cta/10 to-accent-blue/10 border-cta/30" 
                         : "bg-surface-elevated border-border/30"
                     )}>
-                      <div className="flex items-center justify-between gap-2 mb-2">
+                      <div className="flex items-center justify-between gap-2 mb-4">
                         <div className="flex items-center gap-2">
                           <DollarSign className={cn("h-5 w-5", estimate ? "text-cta" : "text-text-muted")} />
-                          <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">White-Label Pricing</span>
+                          <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Recommended Client Pricing</span>
                         </div>
-                        {estimate && (
-                          <span className="text-xs px-2 py-1 rounded-full bg-accent-blue/10 text-accent-blue font-medium">
-                            Agency Partner Rate
-                          </span>
-                        )}
                       </div>
-                      <p className="text-xs text-text-muted mb-4">Your cost for fulfillment. Mark up 40-60% to clients.</p>
 
                       {estimate ? (
                         <>
-                          <div className="mb-6">
-                            <p className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                              ${estimate.monthlyLow.toLocaleString()} - ${estimate.monthlyHigh.toLocaleString()}
-                            </p>
-                            <p className="text-text-muted text-sm">per month (white-label)</p>
+                          {/* Tiered Pricing */}
+                          <div className="space-y-3 mb-6">
+                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
+                              <div>
+                                <p className="text-foreground font-medium">Starter</p>
+                                <p className="text-xs text-text-muted">~10-15 hrs/mo</p>
+                              </div>
+                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyLow * 1.4 / 50) * 50}</p>
+                            </div>
+                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-cta/30">
+                              <div>
+                                <p className="text-cta font-medium">Professional</p>
+                                <p className="text-xs text-text-muted">~15-20 hrs/mo</p>
+                              </div>
+                              <p className="text-lg font-bold text-cta">${Math.round(((estimate.monthlyLow + estimate.monthlyHigh) / 2) * 1.5 / 50) * 50}</p>
+                            </div>
+                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
+                              <div>
+                                <p className="text-foreground font-medium">Premium</p>
+                                <p className="text-xs text-text-muted">~20-30 hrs/mo</p>
+                              </div>
+                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyHigh * 1.5 / 50) * 50}</p>
+                            </div>
+                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
+                              <div>
+                                <p className="text-foreground font-medium">Elite</p>
+                                <p className="text-xs text-text-muted">~30-40+ hrs/mo</p>
+                              </div>
+                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyHigh * 1.8 / 50) * 50}</p>
+                            </div>
                           </div>
 
-                          <div className="space-y-4 pt-6 border-t border-border/30">
+                          <div className="space-y-3 pt-4 border-t border-border/30">
                             <div className="flex justify-between items-center">
-                              <span className="text-sm text-text-muted">Annual Investment</span>
-                              <span className="text-foreground font-medium">${estimate.annualLow.toLocaleString()} - ${estimate.annualHigh.toLocaleString()}</span>
+                              <span className="text-sm text-text-muted">Your White-Label Cost</span>
+                              <span className="text-foreground font-medium">${estimate.monthlyLow.toLocaleString()} - ${estimate.monthlyHigh.toLocaleString()}/mo</span>
                             </div>
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-text-muted">Expected Timeline</span>
@@ -474,21 +493,22 @@ const SEOCalculator = () => {
                             </div>
                           </div>
 
-                          <p className="text-xs text-text-muted mt-6">
-                            This is an estimate based on typical project scope. Actual pricing may vary based on specific requirements. Contact us for a precise quote.
+                          <p className="text-xs text-text-muted mt-4">
+                            Tier pricing based on scope and aggressiveness. Adjust to your market and client expectations.
                           </p>
                         </>
                       ) : (
                         <div className="text-center py-8">
-                          <p className="text-text-muted">Answer all questions above to see your estimated investment.</p>
+                          <p className="text-text-muted">Answer all questions above to see recommended pricing.</p>
                         </div>
                       )}
                     </div>
 
                     {estimate && (
                       <>
+                        {/* What's Included */}
                         <div className="bg-surface-elevated rounded-xl p-5 border border-border/30">
-                          <p className="text-sm font-semibold text-foreground mb-3">What's included:</p>
+                          <p className="text-sm font-semibold text-foreground mb-3">What's Included:</p>
                           <ul className="space-y-2 text-sm text-text-muted">
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
@@ -511,11 +531,33 @@ const SEOCalculator = () => {
                               White-label monthly reporting
                             </li>
                           </ul>
-                          <div className="mt-4 pt-4 border-t border-border/30">
-                            <p className="text-xs text-text-muted">
-                              <span className="text-accent-blue font-medium">White-Label Pricing:</span> These are agency partner rates. Typical MSRP to end clients is 40-60% higher.
-                            </p>
-                          </div>
+                        </div>
+
+                        {/* Expected Outcomes */}
+                        <div className="bg-surface-elevated rounded-xl p-5 border border-border/30">
+                          <p className="text-sm font-semibold text-foreground mb-3">Expected Outcomes:</p>
+                          <ul className="space-y-2 text-sm text-text-muted">
+                            <li className="flex items-start gap-2">
+                              <span className="text-accent-blue mt-0.5">→</span>
+                              Improved Local 3-Pack visibility
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-accent-blue mt-0.5">→</span>
+                              Increased phone calls & direction requests
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-accent-blue mt-0.5">→</span>
+                              Higher review volume & rating
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-accent-blue mt-0.5">→</span>
+                              Better organic rankings for local keywords
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-accent-blue mt-0.5">→</span>
+                              AI Overview citation eligibility
+                            </li>
+                          </ul>
                         </div>
 
                         {/* CTA */}
