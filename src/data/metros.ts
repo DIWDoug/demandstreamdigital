@@ -1,4 +1,5 @@
-// US Metropolitan areas with populations (2023 estimates)
+// US Metropolitan areas with populations (2024 estimates)
+// Includes all metros with 200,000+ population
 // Organized by population tier for pricing calculations
 
 export interface Metro {
@@ -67,6 +68,7 @@ export const metros: Metro[] = [
   { name: "Tucson", state: "AZ", population: 1000000, tier: "large" },
   { name: "Honolulu", state: "HI", population: 1000000, tier: "large" },
   { name: "Tulsa", state: "OK", population: 1000000, tier: "large" },
+  { name: "Urban Honolulu", state: "HI", population: 980000, tier: "large" },
   
   // Medium metros (500K-1M)
   { name: "Fresno", state: "CA", population: 990000, tier: "medium" },
@@ -74,6 +76,7 @@ export const metros: Metro[] = [
   { name: "Worcester", state: "MA", population: 950000, tier: "medium" },
   { name: "Albuquerque", state: "NM", population: 920000, tier: "medium" },
   { name: "Omaha", state: "NE", population: 900000, tier: "medium" },
+  { name: "New Haven", state: "CT", population: 870000, tier: "medium" },
   { name: "New Orleans", state: "LA", population: 850000, tier: "medium" },
   { name: "Greenville", state: "SC", population: 850000, tier: "medium" },
   { name: "Bakersfield", state: "CA", population: 830000, tier: "medium" },
@@ -88,9 +91,11 @@ export const metros: Metro[] = [
   { name: "North Port-Bradenton", state: "FL", population: 740000, tier: "medium" },
   { name: "Charleston", state: "SC", population: 730000, tier: "medium" },
   { name: "Colorado Springs", state: "CO", population: 720000, tier: "medium" },
+  { name: "Greensboro", state: "NC", population: 720000, tier: "medium" },
   { name: "Little Rock", state: "AR", population: 700000, tier: "medium" },
   { name: "Stockton", state: "CA", population: 690000, tier: "medium" },
   { name: "Boise", state: "ID", population: 680000, tier: "medium" },
+  { name: "Akron", state: "OH", population: 680000, tier: "medium" },
   { name: "Syracuse", state: "NY", population: 650000, tier: "medium" },
   { name: "Winston-Salem", state: "NC", population: 640000, tier: "medium" },
   { name: "Wichita", state: "KS", population: 630000, tier: "medium" },
@@ -105,8 +110,10 @@ export const metros: Metro[] = [
   { name: "Harrisburg", state: "PA", population: 530000, tier: "medium" },
   { name: "Chattanooga", state: "TN", population: 520000, tier: "medium" },
   { name: "Spokane", state: "WA", population: 510000, tier: "medium" },
+  { name: "Deltona-Daytona Beach", state: "FL", population: 510000, tier: "medium" },
+  { name: "Palm Bay-Melbourne", state: "FL", population: 505000, tier: "medium" },
   
-  // Small metros (under 500K)
+  // Small metros (200K-500K) - Expanded list
   { name: "Scranton", state: "PA", population: 490000, tier: "small" },
   { name: "Modesto", state: "CA", population: 480000, tier: "small" },
   { name: "Fayetteville", state: "AR", population: 470000, tier: "small" },
@@ -137,6 +144,54 @@ export const metros: Metro[] = [
   { name: "Gainesville", state: "FL", population: 220000, tier: "small" },
   { name: "Evansville", state: "IN", population: 210000, tier: "small" },
   { name: "Green Bay", state: "WI", population: 200000, tier: "small" },
+  // Additional cities 200K+ - expanded coverage
+  { name: "Provo-Orem", state: "UT", population: 480000, tier: "small" },
+  { name: "Oxnard-Thousand Oaks", state: "CA", population: 460000, tier: "small" },
+  { name: "Killeen-Temple", state: "TX", population: 450000, tier: "small" },
+  { name: "Durham-Chapel Hill", state: "NC", population: 440000, tier: "small" },
+  { name: "Palm Coast", state: "FL", population: 320000, tier: "small" },
+  { name: "Visalia", state: "CA", population: 320000, tier: "small" },
+  { name: "Brownsville", state: "TX", population: 315000, tier: "small" },
+  { name: "Fayetteville", state: "NC", population: 310000, tier: "small" },
+  { name: "Anchorage", state: "AK", population: 300000, tier: "small" },
+  { name: "Hickory", state: "NC", population: 290000, tier: "small" },
+  { name: "Beaumont-Port Arthur", state: "TX", population: 285000, tier: "small" },
+  { name: "South Bend", state: "IN", population: 280000, tier: "small" },
+  { name: "Spartanburg", state: "SC", population: 275000, tier: "small" },
+  { name: "Reading", state: "PA", population: 270000, tier: "small" },
+  { name: "Canton", state: "OH", population: 265000, tier: "small" },
+  { name: "Rockford", state: "IL", population: 260000, tier: "small" },
+  { name: "Shreveport-Bossier City", state: "LA", population: 360000, tier: "small" },
+  { name: "Flint", state: "MI", population: 255000, tier: "small" },
+  { name: "Youngstown", state: "OH", population: 250000, tier: "small" },
+  { name: "Atlantic City", state: "NJ", population: 245000, tier: "small" },
+  { name: "Waco", state: "TX", population: 240000, tier: "small" },
+  { name: "Clarksville", state: "TN", population: 235000, tier: "small" },
+  { name: "Kalamazoo", state: "MI", population: 230000, tier: "small" },
+  { name: "Lafayette", state: "LA", population: 225000, tier: "small" },
+  { name: "Ann Arbor", state: "MI", population: 220000, tier: "small" },
+  { name: "Springfield", state: "MO", population: 215000, tier: "small" },
+  { name: "Tyler", state: "TX", population: 210000, tier: "small" },
+  { name: "Wilmington", state: "NC", population: 210000, tier: "small" },
+  { name: "Davenport", state: "IA", population: 205000, tier: "small" },
+  { name: "Huntington", state: "WV", population: 205000, tier: "small" },
+  { name: "Fort Smith", state: "AR", population: 200000, tier: "small" },
+  { name: "Montgomery", state: "AL", population: 200000, tier: "small" },
+  { name: "Trenton", state: "NJ", population: 200000, tier: "small" },
+  // Popular vacation/resort metros
+  { name: "Destin-Fort Walton Beach", state: "FL", population: 210000, tier: "small" },
+  { name: "Naples", state: "FL", population: 380000, tier: "small" },
+  { name: "Panama City", state: "FL", population: 205000, tier: "small" },
+  { name: "Port St. Lucie", state: "FL", population: 320000, tier: "small" },
+  { name: "Ocala", state: "FL", population: 285000, tier: "small" },
+  { name: "Hilton Head-Bluffton", state: "SC", population: 205000, tier: "small" },
+  { name: "Bend", state: "OR", population: 210000, tier: "small" },
+  { name: "Santa Fe", state: "NM", population: 200000, tier: "small" },
+  { name: "Boulder", state: "CO", population: 330000, tier: "small" },
+  { name: "Lake Havasu City-Kingman", state: "AZ", population: 215000, tier: "small" },
+  { name: "Prescott", state: "AZ", population: 240000, tier: "small" },
+  { name: "St. George", state: "UT", population: 200000, tier: "small" },
+  { name: "Coeur d'Alene", state: "ID", population: 200000, tier: "small" },
 ];
 
 // Population tier multipliers for pricing
@@ -158,7 +213,8 @@ export const searchMetros = (query: string): Metro[] => {
       m.state.toLowerCase().includes(lower) ||
       `${m.name}, ${m.state}`.toLowerCase().includes(lower)
     )
-    .slice(0, 10);
+    .sort((a, b) => b.population - a.population) // Sort by population descending
+    .slice(0, 15); // Show more results
 };
 
 // Format population for display

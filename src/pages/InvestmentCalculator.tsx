@@ -50,10 +50,11 @@ const MIN_MONTHLY = 650;
 const MAX_MONTHLY = 2600;
 
 const baseServiceHours: Record<string, { hours: number; label: string; description?: string }> = {
-  localSeo: { hours: 23, label: "Local SEO", description: "Includes GBP optimization & authority building" },
-  googleAds: { hours: 8, label: "Google Ads" },
-  metaAds: { hours: 7, label: "Meta Ads" },
-  email: { hours: 6, label: "Email Marketing" }
+  localSeo: { hours: 18, label: "Local SEO", description: "On-page optimization, keyword strategy, technical SEO" },
+  gbpSeo: { hours: 8, label: "GBP SEO", description: "Google Business Profile optimization & management" },
+  paidMedia: { hours: 10, label: "Paid Media", description: "Google Ads + Meta Ads management" },
+  email: { hours: 6, label: "Email Marketing", description: "Campaign strategy, automation, list management" },
+  content: { hours: 12, label: "Content Marketing", description: "Blog content, location pages, service pages" }
 };
 
 const InvestmentCalculator = () => {
@@ -436,10 +437,11 @@ const InvestmentCalculator = () => {
                       <label className="block text-foreground font-medium mb-3">Which services does this client need?</label>
                       <p className="text-text-muted text-sm mb-4">Select all that apply</p>
                       <div className="grid sm:grid-cols-2 gap-3">
-                        <ServiceCheckbox service="localSeo" icon={Search} label="Local SEO" description="Includes GBP & authority building" />
-                        <ServiceCheckbox service="googleAds" icon={MousePointerClick} label="Google Ads" />
-                        <ServiceCheckbox service="metaAds" icon={Globe} label="Meta Ads" />
-                        <ServiceCheckbox service="email" icon={Mail} label="Email Marketing" />
+                        <ServiceCheckbox service="localSeo" icon={Search} label="Local SEO" description="On-page, keywords, technical" />
+                        <ServiceCheckbox service="gbpSeo" icon={MapPin} label="GBP SEO" description="Google Business Profile optimization" />
+                        <ServiceCheckbox service="paidMedia" icon={MousePointerClick} label="Paid Media" description="Google Ads + Meta Ads" />
+                        <ServiceCheckbox service="email" icon={Mail} label="Email Marketing" description="Campaigns & automation" />
+                        <ServiceCheckbox service="content" icon={Globe} label="Content Marketing" description="Blog & location pages" />
                       </div>
                     </div>
                   </div>
