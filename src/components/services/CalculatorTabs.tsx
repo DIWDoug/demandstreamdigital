@@ -6,23 +6,33 @@ import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } f
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, industryBenchmarks, type Industry, type IndustryBenchmark } from "@/data/industries";
 import { useMemo } from "react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 
 type CalculatorTab = "roi" | "investment";
 
 // ============ ROI CALCULATOR ============
 const ROICalculatorContent = () => {
-  const [visitors, setVisitors] = useState(10000);
-  const [leadConversionRate, setLeadConversionRate] = useState(2.5);
-  const [leadToCustomerRate, setLeadToCustomerRate] = useState(10);
-  const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
-  const [marketingCost, setMarketingCost] = useState(5000);
+  // String-based inputs for smooth typing
+  const [visitorsInput, setVisitorsInput] = useState("10000");
+  const [leadConversionRateInput, setLeadConversionRateInput] = useState("2.5");
+  const [leadToCustomerRateInput, setLeadToCustomerRateInput] = useState("10");
+  const [revenuePerCustomerInput, setRevenuePerCustomerInput] = useState("1000");
+  const [marketingCostInput, setMarketingCostInput] = useState("5000");
   const [selectedBenchmark, setSelectedBenchmark] = useState<IndustryBenchmark | null>(null);
   const [showBenchmarks, setShowBenchmarks] = useState(false);
 
+  // Derived numeric values
+  const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const visitors = Math.max(0, parseNum(visitorsInput));
+  const leadConversionRate = Math.max(0, parseNum(leadConversionRateInput));
+  const leadToCustomerRate = Math.max(0, parseNum(leadToCustomerRateInput));
+  const revenuePerCustomer = Math.max(0, parseNum(revenuePerCustomerInput));
+  const marketingCost = Math.max(0, parseNum(marketingCostInput));
+
   const applyBenchmark = (benchmark: IndustryBenchmark) => {
-    setLeadConversionRate(benchmark.conversionRate);
-    setLeadToCustomerRate(benchmark.closeRate);
-    setRevenuePerCustomer(benchmark.avgCustomerValue);
+    setLeadConversionRateInput(String(benchmark.conversionRate));
+    setLeadToCustomerRateInput(String(benchmark.closeRate));
+    setRevenuePerCustomerInput(String(benchmark.avgCustomerValue));
     setSelectedBenchmark(benchmark);
     setShowBenchmarks(false);
   };
@@ -69,52 +79,6 @@ const ROICalculatorContent = () => {
     return { conversionGrowth, trafficGrowth, combinedRevenue };
   }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, results.inboundRevenue]);
 
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
-    suffix,
-    tooltip
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
-    suffix?: string;
-    tooltip?: string;
-  }) => (
-    <div>
-      <div className="flex items-center gap-2 mb-2">
-        <label className="block text-sm text-text-muted font-body">{label}</label>
-        {tooltip && (
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                  <Info className="h-3.5 w-3.5" />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                <p className="text-sm font-body">{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )}
-      </div>
-      <div className="relative">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
-          className="w-full px-4 py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors"
-        />
-        {suffix && (
-          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-            {suffix}
-          </span>
-        )}
-      </div>
-    </div>
-  );
 
   const ResultCard = ({ 
     label, 
@@ -210,36 +174,44 @@ const ROICalculatorContent = () => {
       {/* Main Calculator Grid */}
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
-          <InputField 
+          <CalculatorInputField 
             label="Client's Website Visitors (Monthly)" 
-            value={visitors} 
-            onChange={setVisitors}
+            value={visitorsInput}
+            onChange={setVisitorsInput}
+            inputMode="numeric"
+            allowDecimal={false}
             tooltip="Your client's average monthly unique visitors. Ask them to check Google Analytics, or estimate based on their market size and current marketing efforts."
           />
-          <InputField 
+          <CalculatorInputField 
             label="Lead Conversion Rate (%)" 
-            value={leadConversionRate} 
-            onChange={setLeadConversionRate} 
+            value={leadConversionRateInput}
+            onChange={setLeadConversionRateInput}
             suffix="%"
             tooltip="Percentage of website visitors who become leads. Industry average is 2-5%. Use this to show clients the impact of conversion optimization work."
           />
-          <InputField 
+          <CalculatorInputField 
             label="Lead-to-Customer Rate (%)" 
-            value={leadToCustomerRate} 
-            onChange={setLeadToCustomerRate} 
+            value={leadToCustomerRateInput}
+            onChange={setLeadToCustomerRateInput}
             suffix="%"
             tooltip="Your client's close rate—percentage of leads that become paying customers. This depends on their sales process. Typical B2B is 15-30%, local services 25-40%."
           />
-          <InputField 
+          <CalculatorInputField 
             label="Avg. Customer Value ($)" 
-            value={revenuePerCustomer} 
-            onChange={setRevenuePerCustomer}
+            value={revenuePerCustomerInput}
+            onChange={setRevenuePerCustomerInput}
+            prefix="$"
+            inputMode="numeric"
+            allowDecimal={false}
             tooltip="Average revenue per customer for your client. For recurring services, use lifetime value (LTV). This is key to demonstrating marketing ROI."
           />
-          <InputField 
+          <CalculatorInputField 
             label="Monthly Retainer ($)" 
-            value={marketingCost} 
-            onChange={setMarketingCost}
+            value={marketingCostInput}
+            onChange={setMarketingCostInput}
+            prefix="$"
+            inputMode="numeric"
+            allowDecimal={false}
             tooltip="The monthly retainer you charge this client, plus any ad spend. Use this to demonstrate the ROI of your services."
           />
         </div>
