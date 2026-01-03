@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube, Calculator } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Footer = () => {
@@ -124,11 +125,11 @@ const Footer = () => {
                 <span>4849 Greenville Ave, Suite 100 #176, Dallas, TX 75206</span>
               </div>
               <a 
-                href="tel:2143072995"
+                href={PHONE_HREF}
                 className="flex items-center justify-center md:justify-start gap-3 text-sm text-text-secondary hover:text-foreground transition-colors"
               >
                 <Phone className="h-4 w-4 shrink-0" />
-                (214) 307-2995
+                {PHONE_NUMBER}
               </a>
             </div>
 

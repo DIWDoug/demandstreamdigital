@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, industryBenchmarks, type Industry, type IndustryBenchmark } from "@/data/industries";
 import { useMemo } from "react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 type CalculatorTab = "roi" | "investment";
 
@@ -796,9 +797,9 @@ const InvestmentCalculatorContent = () => {
                 Get a Precise Quote
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="tel:2143072995" className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle transition-colors font-medium text-sm">
+              <a href={PHONE_HREF} className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-text-secondary hover:text-foreground hover:border-border-subtle transition-colors font-medium text-sm">
                 <Phone className="h-4 w-4" />
-                (214) 307-2995
+                {PHONE_NUMBER}
               </a>
             </div>
 

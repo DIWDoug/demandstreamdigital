@@ -1,5 +1,6 @@
 import { ArrowRight, Phone } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const FinalCTA = () => {
   return (
@@ -25,11 +26,11 @@ const FinalCTA = () => {
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             <a 
-              href="tel:2143072995"
+              href={PHONE_HREF}
               className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
             >
               <Phone className="h-5 w-5" />
-              (214) 307-2995
+              {PHONE_NUMBER}
             </a>
           </div>
           <p className="text-sm text-text-muted italic mt-6">

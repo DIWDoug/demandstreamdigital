@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { CheckCircle, ArrowRight, Phone, Mail, Clock, Download, BookOpen } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const ThankYou = () => {
   const [searchParams] = useSearchParams();
@@ -129,11 +130,11 @@ const ThankYou = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 <a 
-                  href="tel:2143072995"
+                  href={PHONE_HREF}
                   className="flex items-center gap-2 text-foreground hover:text-accent-blue transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(214) 307-2995</span>
+                  <span>{PHONE_NUMBER}</span>
                 </a>
                 <a 
                   href="mailto:hello@dialedinweb.com"
