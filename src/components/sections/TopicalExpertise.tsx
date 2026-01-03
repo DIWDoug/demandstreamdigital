@@ -357,7 +357,9 @@ const TopicalExpertise = () => {
                     </a>
                     <span className="hidden sm:inline text-text-muted">|</span>
                     <a 
-                      href="#contact" 
+                      href="/contact" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >

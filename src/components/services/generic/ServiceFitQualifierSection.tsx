@@ -116,7 +116,9 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
           {/* CTA */}
           <div className="text-center mt-12">
             <a 
-              href="#contact" 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-cta group inline-flex items-center gap-2"
             >
               {config.ctaText}

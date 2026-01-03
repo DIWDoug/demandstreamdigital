@@ -68,13 +68,15 @@ const LocalSEOPainPoints = () => {
             <p className="text-slate-600 text-lg">
               We scope every engagement to the actual competitive landscape. <span className="font-semibold text-slate-900">Clients get what they need, expectations stay grounded, and you keep the margin you earned.</span>
             </p>
-            <Link 
-              to="#contact" 
+            <a 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
             >
               Schedule a Discovery Call
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

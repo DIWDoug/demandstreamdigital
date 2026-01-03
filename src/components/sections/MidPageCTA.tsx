@@ -12,12 +12,14 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
     <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-background"}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          {/* Primary CTA Button */}
+          {/* Primary CTA Button - Opens Contact page in new window */}
           <a 
-            href="#contact" 
+            href="/contact" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-cta group flex items-center gap-2"
           >
-            Let's Talk Partnership
+            Explore a Partnership
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           

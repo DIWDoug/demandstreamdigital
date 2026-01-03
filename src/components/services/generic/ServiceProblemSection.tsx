@@ -89,13 +89,15 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             <p className="text-slate-600 text-lg">
               {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>
-            <Link 
-              to="#contact" 
+            <a 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
             >
               {config.ctaText}
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

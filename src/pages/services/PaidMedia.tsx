@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import { paidMediaConfig } from "@/data/service-pages/paid-media";
 import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
@@ -72,6 +73,9 @@ const PaidMedia = () => {
       
       {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={paidMediaConfig.roadmap} />
+      
+      {/* Mid-Page CTA */}
+      <MidPageCTA />
       
       <SectionDivider />
       
