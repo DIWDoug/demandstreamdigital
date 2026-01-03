@@ -29,57 +29,70 @@ serve(async (req) => {
     const leadTypeMap: Record<string, string> = {
       hero_homepage: "Homepage Hero Form",
       service_hub_hero: "Service Page Hero Form",
+      service_hub_hero_step1: "Service Page Hero (Step 1 - Website Only)",
       fulfillment_steps: "Fulfillment Steps Form",
       contact_page: "Contact Page Form",
       calculator: "Calculator Form",
     };
     const lead_type = leadTypeMap[formType || ""] || "Contact Form";
 
-    // Validate required fields
-    if (!name || !email || !revenue) {
+    // Step 1 partial leads only require website - skip validation and allow partial data
+    const isPartialLead = formType === "service_hub_hero_step1";
+    
+    // Validate required fields (skip for partial leads)
+    if (!isPartialLead && (!name || !email || !revenue)) {
       return new Response(
         JSON.stringify({ error: "Name, email, and revenue are required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return new Response(
-        JSON.stringify({ error: "Invalid email format" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+    // Validate email format (skip for partial leads with no email)
+    if (!isPartialLead && email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return new Response(
+          JSON.stringify({ error: "Invalid email format" }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
     }
 
-    console.log("Saving lead to database:", { name, email, phone, revenue, website });
+    console.log("Saving lead to database:", { name, email, phone, revenue, website, formType });
 
     // Create Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Insert lead into database
-    const { data, error } = await supabase
-      .from("leads")
-      .insert({
-        name,
-        email,
-        phone,
-        phone_country_code: phoneCountryCode || "+1",
-        revenue,
-        website,
-        source: "contact_form",
-      })
-      .select()
-      .single();
+    let data: any = { id: null, created_at: new Date().toISOString() };
 
-    if (error) {
-      console.error("Database insert error:", error);
-      throw new Error("Failed to save lead");
+    // Only insert to database for full leads (partial leads skip DB, just go to Zapier)
+    if (!isPartialLead) {
+      const { data: insertData, error } = await supabase
+        .from("leads")
+        .insert({
+          name,
+          email,
+          phone,
+          phone_country_code: phoneCountryCode || "+1",
+          revenue,
+          website,
+          source: "contact_form",
+        })
+        .select()
+        .single();
+
+      if (error) {
+        console.error("Database insert error:", error);
+        throw new Error("Failed to save lead");
+      }
+
+      data = insertData;
+      console.log("Lead saved successfully:", data);
+    } else {
+      console.log("Partial lead (step 1) - skipping DB insert, forwarding to Zapier only");
     }
-
-    console.log("Lead saved successfully:", data);
 
     // Forward to Zapier webhook
     const zapierWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL");
