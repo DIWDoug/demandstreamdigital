@@ -55,16 +55,24 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
-          <Route path="/roi-calculator" element={<ROICalculator />} />
-          <Route path="/investment-calculator" element={<InvestmentCalculator />} />
-          <Route path="/ad-budget-calculator" element={<AdBudgetCalculator />} />
-          <Route path="/seo-calculator" element={<SEOCalculator />} />
-          <Route path="/email-calculator" element={<EmailCalculator />} />
-          <Route path="/content-marketing-calculator" element={<ContentMarketingCalculator />} />
-          <Route path="/ai-ready-check" element={<AIReadyCheck />} />
           <Route path="/partner-tools" element={<PartnerTools />} />
-          {/* Legacy redirect */}
-          <Route path="/agency-calculator" element={<Navigate to="/roi-calculator" replace />} />
+          <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
+          <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
+          <Route path="/partner-tools/ad-budget-calculator" element={<AdBudgetCalculator />} />
+          <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
+          <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
+          <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
+          <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
+          
+          {/* Legacy calculator redirects for SEO preservation */}
+          <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
+          <Route path="/investment-calculator" element={<Navigate to="/partner-tools/investment-calculator" replace />} />
+          <Route path="/ad-budget-calculator" element={<Navigate to="/partner-tools/ad-budget-calculator" replace />} />
+          <Route path="/seo-calculator" element={<Navigate to="/partner-tools/seo-calculator" replace />} />
+          <Route path="/email-calculator" element={<Navigate to="/partner-tools/email-calculator" replace />} />
+          <Route path="/content-marketing-calculator" element={<Navigate to="/partner-tools/content-marketing-calculator" replace />} />
+          <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
+          <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />

@@ -129,13 +129,13 @@ const Header = () => {
 
   // Partner Tools dropdown items
   const partnerToolsLinks = [
-    { label: "SEO Cost Calculator", href: "/seo-calculator", description: "Estimate monthly SEO investment" },
-    { label: "Inbound Marketing ROI Calculator", href: "/roi-calculator", description: "Show clients their marketing ROI" },
-    { label: "Investment Calculator", href: "/investment-calculator", description: "Scope monthly service costs" },
-    { label: "Ad Budget Calculator", href: "/ad-budget-calculator", description: "Project ad campaign results" },
-    { label: "Email Marketing Calculator", href: "/email-calculator", description: "Calculate email ROI potential" },
-    { label: "Content Marketing Calculator", href: "/content-marketing-calculator", description: "Calculate content ROI" },
-    { label: "AI Ready Check", href: "/ai-ready-check", description: "Scan website AI compatibility" }
+    { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", description: "Estimate monthly SEO investment" },
+    { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", description: "Show clients their marketing ROI" },
+    { label: "Investment Calculator", href: "/partner-tools/investment-calculator", description: "Scope monthly service costs" },
+    { label: "Ad Budget Calculator", href: "/partner-tools/ad-budget-calculator", description: "Project ad campaign results" },
+    { label: "Email Marketing Calculator", href: "/partner-tools/email-calculator", description: "Calculate email ROI potential" },
+    { label: "Content Marketing Calculator", href: "/partner-tools/content-marketing-calculator", description: "Calculate content ROI" },
+    { label: "AI Ready Check", href: "/partner-tools/ai-ready-check", description: "Scan website AI compatibility" }
   ];
 
   return (
