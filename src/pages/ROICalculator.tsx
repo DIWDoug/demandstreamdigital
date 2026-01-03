@@ -6,18 +6,19 @@ import ROIEducationalContent from "@/components/calculators/ROIEducationalConten
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
-import { Calculator, TrendingUp, Users, UserCheck, DollarSign, BarChart3, ChevronDown, Info } from "lucide-react";
+import { Calculator, TrendingUp, Users, UserCheck, DollarSign, BarChart3, ChevronDown, Info, Phone, ArrowRight } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { industryBenchmarks, type IndustryBenchmark } from "@/data/industries";
 import { Link } from "react-router-dom";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const ROICalculator = () => {
-  const [visitors, setVisitors] = useState(10000);
+  const [visitors, setVisitors] = useState(500);
   const [leadConversionRate, setLeadConversionRate] = useState(2.5);
   const [leadToCustomerRate, setLeadToCustomerRate] = useState(10);
   const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
-  const [marketingCost, setMarketingCost] = useState(5000);
+  const [marketingCost, setMarketingCost] = useState(2500);
   const [selectedBenchmark, setSelectedBenchmark] = useState<IndustryBenchmark | null>(null);
   const [showBenchmarks, setShowBenchmarks] = useState(false);
 
@@ -71,12 +72,14 @@ const ROICalculator = () => {
     value, 
     onChange, 
     suffix,
+    prefix,
     tooltip
   }: { 
     label: string; 
     value: number; 
     onChange: (val: number) => void;
     suffix?: string;
+    prefix?: string;
     tooltip?: string;
   }) => (
     <div>
@@ -98,11 +101,23 @@ const ROICalculator = () => {
         )}
       </div>
       <div className="relative">
+        {prefix && (
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
+            {prefix}
+          </span>
+        )}
         <input
-          type="number"
+          type="text"
+          inputMode="numeric"
           value={value}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
-          className="w-full px-4 py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors"
+          onChange={(e) => {
+            const val = e.target.value.replace(/[^0-9.]/g, '');
+            onChange(Number(val) || 0);
+          }}
+          className={cn(
+            "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
+            prefix ? "pl-8 pr-4" : "px-4"
+          )}
         />
         {suffix && (
           <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
@@ -263,33 +278,35 @@ const ROICalculator = () => {
                     label="Client's Website Visitors (Monthly)" 
                     value={visitors} 
                     onChange={setVisitors}
-                    tooltip="Your client's average monthly unique visitors. Ask them to check Google Analytics, or estimate based on their market size and current marketing efforts."
+                    tooltip="Your client's average monthly unique visitors. Check Google Analytics or estimate based on market size."
                   />
                   <InputField 
-                    label="Lead Conversion Rate (%)" 
+                    label="Lead Conversion Rate" 
                     value={leadConversionRate} 
                     onChange={setLeadConversionRate} 
                     suffix="%"
-                    tooltip="Percentage of website visitors who become leads. Industry average is 2-5%. Use this to show clients the impact of conversion optimization work."
+                    tooltip="Percentage of website visitors who become leads. Local services average 2-5%."
                   />
                   <InputField 
-                    label="Lead-to-Customer Rate (%)" 
+                    label="Lead-to-Customer Rate" 
                     value={leadToCustomerRate} 
                     onChange={setLeadToCustomerRate} 
                     suffix="%"
-                    tooltip="Your client's close rate—percentage of leads that become paying customers. This depends on their sales process. Typical B2B is 15-30%, local services 25-40%."
+                    tooltip="Close rate: percentage of leads that become paying customers. Local services typically 25-40%."
                   />
                   <InputField 
-                    label="Avg. Customer Value ($)" 
+                    label="Avg. Customer Value" 
                     value={revenuePerCustomer} 
                     onChange={setRevenuePerCustomer}
-                    tooltip="Average revenue per customer for your client. For recurring services, use lifetime value (LTV). This is key to demonstrating marketing ROI."
+                    prefix="$"
+                    tooltip="Average revenue per customer. For recurring services like HVAC maintenance, use annual value."
                   />
                   <InputField 
-                    label="Monthly Retainer ($)" 
+                    label="Monthly Retainer" 
                     value={marketingCost} 
                     onChange={setMarketingCost}
-                    tooltip="The monthly retainer you charge this client, plus any ad spend. Use this to demonstrate the ROI of your services."
+                    prefix="$"
+                    tooltip="Your monthly retainer plus any ad spend. This shows ROI of your services."
                   />
                 </div>
 
@@ -374,18 +391,18 @@ const ROICalculator = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors shadow-lg shadow-cta/20"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta-hover text-white font-semibold rounded-lg transition-colors"
               >
                 Let's Talk Partnership
-                <span>→</span>
+                <ArrowRight className="h-4 w-4" />
               </Link>
               <span className="text-text-muted">or</span>
               <a
-                href="tel:+12143072995"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border/50 rounded-xl text-foreground hover:border-accent-blue/50 transition-colors"
+                href={PHONE_HREF}
+                className="inline-flex items-center gap-2 text-foreground hover:text-cta transition-colors font-medium"
               >
-                <span className="text-accent-blue">📞</span>
-                (214) 307-2995
+                <Phone className="h-4 w-4" />
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>

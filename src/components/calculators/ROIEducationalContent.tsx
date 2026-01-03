@@ -3,27 +3,27 @@ import { TrendingUp, Target, BarChart3, Calculator, Lightbulb, CheckCircle, Doll
 const ROIEducationalContent = () => {
   return (
     <div className="space-y-16">
-      {/* Understanding Marketing ROI */}
+      {/* Understanding Local Business Marketing ROI */}
       <section className="bg-surface-elevated rounded-2xl p-8 md:p-12 border border-border/30">
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 rounded-lg bg-accent-blue/10">
             <TrendingUp className="h-5 w-5 text-accent-blue" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">Understanding Marketing ROI</h2>
+          <h2 className="text-2xl font-bold text-foreground">Understanding Local Business Marketing ROI</h2>
         </div>
         <p className="text-text-secondary text-lg mb-8">
-          Return on Investment (ROI) measures the profitability of your marketing efforts. It answers the fundamental question: for every dollar spent on marketing, how much revenue does it generate?
+          For local businesses, ROI measures how effectively marketing drives foot traffic, phone calls, and booked appointments. Every dollar spent should translate to real customers walking through the door.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
-            <p className="text-sm text-text-muted mb-2">Average B2B Marketing ROI</p>
+            <p className="text-sm text-text-muted mb-2">Local Service Business ROI</p>
             <p className="text-2xl font-bold text-foreground">5:1 Ratio</p>
             <p className="text-sm text-text-muted mt-2">$5 revenue for every $1 spent</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
-            <p className="text-sm text-text-muted mb-2">Excellent ROI Benchmark</p>
+            <p className="text-sm text-text-muted mb-2">High-Ticket Services ROI</p>
             <p className="text-2xl font-bold text-foreground">10:1 Ratio</p>
-            <p className="text-sm text-text-muted mt-2">Indicates highly efficient campaigns</p>
+            <p className="text-sm text-text-muted mt-2">HVAC, roofing, legal services</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">Break-Even Point</p>
@@ -120,12 +120,12 @@ const ROIEducationalContent = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
-            { title: "Conversion Rate", desc: "Small improvements in conversion rate compound into significant revenue gains over time." },
-            { title: "Customer Lifetime Value", desc: "Repeat customers and referrals multiply the value of each initial acquisition." },
-            { title: "Lead Quality", desc: "Higher-quality leads convert at better rates and become more valuable customers." },
-            { title: "Sales Process", desc: "How quickly and effectively leads are followed up directly impacts close rates." },
-            { title: "Market Conditions", desc: "Competition, seasonality, and economic factors influence campaign performance." },
-            { title: "Attribution Accuracy", desc: "Proper tracking ensures you measure the true impact of marketing efforts." }
+            { title: "Local Visibility", desc: "Google Business Profile rankings and local pack placement drive foot traffic and calls." },
+            { title: "Review Reputation", desc: "Star ratings and review volume directly impact click-through rates and conversions." },
+            { title: "Website Conversion", desc: "Clear calls-to-action and mobile-friendly design turn visitors into leads." },
+            { title: "Response Speed", desc: "Answering calls and responding to inquiries within minutes dramatically improves close rates." },
+            { title: "Seasonal Demand", desc: "HVAC in summer, tax prep in spring—timing campaigns to demand cycles maximizes ROI." },
+            { title: "Call Tracking", desc: "Proper attribution ensures you know which marketing channels drive real phone calls." }
           ].map((item, i) => (
             <div key={i} className="bg-surface-elevated rounded-xl p-5 border border-border/30">
               <h3 className="text-foreground font-semibold mb-2">{item.title}</h3>
@@ -145,10 +145,10 @@ const ROIEducationalContent = () => {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { title: "Optimize Conversion Points", items: ["A/B test landing pages", "Improve form completion rates", "Streamline checkout processes", "Add trust signals and social proof"] },
-            { title: "Increase Average Order Value", items: ["Upselling and cross-selling", "Bundle pricing strategies", "Premium tier offerings", "Loyalty programs"] },
-            { title: "Reduce Customer Acquisition Cost", items: ["Improve targeting precision", "Refine keyword strategies", "Eliminate wasted ad spend", "Leverage organic channels"] },
-            { title: "Extend Customer Lifetime Value", items: ["Email nurture sequences", "Retention campaigns", "Referral programs", "Customer success initiatives"] }
+            { title: "Improve Local Visibility", items: ["Optimize Google Business Profile", "Build local citations", "Generate authentic reviews", "Target neighborhood keywords"] },
+            { title: "Increase Average Ticket", items: ["Upsell maintenance plans", "Bundle related services", "Offer premium service tiers", "Seasonal promotions"] },
+            { title: "Reduce Cost Per Lead", items: ["Improve GBP rankings (free clicks)", "Refine local ad targeting", "Eliminate wasted ad spend", "Leverage referral networks"] },
+            { title: "Extend Customer Lifetime Value", items: ["Email appointment reminders", "Seasonal service campaigns", "Referral incentive programs", "Loyalty discounts for repeat customers"] }
           ].map((category, i) => (
             <div key={i} className="p-5 bg-surface-dark rounded-xl border border-border/30">
               <h3 className="text-foreground font-semibold mb-3">{category.title}</h3>
