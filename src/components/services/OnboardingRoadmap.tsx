@@ -4,37 +4,37 @@ const OnboardingRoadmap = () => {
   const steps = [
     {
       icon: MessageSquare,
-      week: "Week 1",
+      phase: "Phase 1",
       title: "Discovery Call",
       description: "We learn about your agency, clients, current challenges, and what success looks like. No pitch. Just conversation."
     },
     {
       icon: FileSearch,
-      week: "Week 1-2",
+      phase: "Phase 2",
       title: "Scope Definition",
       description: "Based on your client mix, we map out exactly what's needed: channels, hours, deliverables, and communication rhythm."
     },
     {
       icon: Handshake,
-      week: "Week 2",
+      phase: "Phase 3",
       title: "Agreement & Access",
       description: "Once aligned, we finalize terms and you grant access to client accounts, assets, and any existing documentation."
     },
     {
       icon: Rocket,
-      week: "Week 3",
+      phase: "Phase 4",
       title: "Kickoff & Execution",
       description: "Work begins. First deliverables roll out. You get a dedicated Slack channel and weekly async updates."
     },
     {
       icon: BarChart3,
-      week: "Month 1+",
+      phase: "Phase 5",
       title: "Reporting Cadence",
       description: "Monthly reports you can white-label. Quarterly strategy reviews. Ongoing optimization based on data."
     },
     {
       icon: RefreshCcw,
-      week: "Ongoing",
+      phase: "Ongoing",
       title: "Adapt & Scale",
       description: "As your agency grows, we scale with you. Add clients, channels, or services without rebuilding the relationship."
     }
@@ -81,7 +81,7 @@ const OnboardingRoadmap = () => {
                         <step.icon className="h-5 w-5 text-cta" />
                       </div>
                       <div>
-                        <span className="text-cta text-xs font-medium uppercase tracking-wider">{step.week}</span>
+                        <span className="text-cta text-xs font-medium uppercase tracking-wider">{step.phase}</span>
                         <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
                       </div>
                     </div>

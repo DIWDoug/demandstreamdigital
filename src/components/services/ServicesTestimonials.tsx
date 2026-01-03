@@ -1,5 +1,7 @@
-import { Quote, ArrowRight, Phone } from "lucide-react";
+import { useState } from "react";
+import { Quote, ArrowRight, Phone, Play } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import YouTubeModal from "@/components/ui/youtube-modal";
 
 const testimonials = [
   {
@@ -15,13 +17,6 @@ const testimonials = [
     role: "Founder & CEO, Anderson Collaborative",
     tenure: "5 Years Partner",
     services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"]
-  },
-  {
-    quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
-    author: "Jeremy", 
-    role: "Digital Marketing Agency Owner, Florida",
-    tenure: "5 Years Partner",
-    services: ["Local SEO", "PPC", "Authority Building", "GBP SEO"]
   }
 ];
 
@@ -32,6 +27,8 @@ const videoTestimonials = [
 ];
 
 const ServicesTestimonials = () => {
+  const [selectedVideo, setSelectedVideo] = useState<{ id: string; title: string } | null>(null);
+
   return (
     <section className="py-20 lg:py-28 bg-surface-dark">
       <div className="container mx-auto px-6 lg:px-8">
@@ -49,49 +46,56 @@ const ServicesTestimonials = () => {
             </p>
           </div>
 
-          {/* Video Testimonials */}
+          {/* Video Testimonials - Clickable Thumbnails */}
           <div className="grid md:grid-cols-3 gap-5 mb-12">
             {videoTestimonials.map((video, index) => (
-              <div 
-                key={index} 
-                className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface-elevated shadow-lg"
+              <button 
+                key={index}
+                onClick={() => setSelectedVideo(video)}
+                className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface-elevated shadow-lg group cursor-pointer"
               >
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
+                <img
+                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                  alt={video.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
-              </div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-white/90 group-hover:bg-white flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+                    <Play className="h-7 w-7 text-cta ml-1" fill="currentColor" />
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <p className="text-white text-sm font-medium">{video.title}</p>
+                </div>
+              </button>
             ))}
           </div>
 
-          {/* Quote Cards */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+          {/* Quote Cards - 2 columns, bigger */}
+          <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="bg-surface-elevated border border-border/50 rounded-xl p-5 sm:p-6"
+                className="bg-surface-elevated border border-border/50 rounded-xl p-6 lg:p-8"
               >
-                <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-accent-blue/30 mb-3 sm:mb-4" />
-                <p className="text-text-secondary text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed line-clamp-6 sm:line-clamp-none">
+                <Quote className="h-8 w-8 lg:h-10 lg:w-10 text-accent-blue/30 mb-4" />
+                <p className="text-text-secondary text-sm lg:text-base mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-border/30 pt-4 mb-3">
-                  <p className="text-foreground font-medium text-sm">{testimonial.author}</p>
-                  <p className="text-text-muted text-xs">{testimonial.role}</p>
-                  <p className="text-accent-blue text-xs mt-1">{testimonial.tenure}</p>
+                <div className="border-t border-border/30 pt-5 mb-4">
+                  <p className="text-foreground font-medium text-base">{testimonial.author}</p>
+                  <p className="text-text-muted text-sm">{testimonial.role}</p>
+                  <p className="text-accent-blue text-sm mt-1">{testimonial.tenure}</p>
                 </div>
-                <div className="flex flex-wrap gap-1">
-                  {testimonial.services.slice(0, 3).map((service, i) => (
-                    <span key={i} className="px-2 py-0.5 bg-accent-blue/10 text-accent-blue text-xs rounded-full">
+                <div className="flex flex-wrap gap-1.5">
+                  {testimonial.services.slice(0, 4).map((service, i) => (
+                    <span key={i} className="px-2.5 py-1 bg-accent-blue/10 text-accent-blue text-xs rounded-full">
                       {service}
                     </span>
                   ))}
-                  {testimonial.services.length > 3 && (
-                    <span className="px-2 py-0.5 bg-surface-dark text-text-muted text-xs rounded-full">
-                      +{testimonial.services.length - 3}
+                  {testimonial.services.length > 4 && (
+                    <span className="px-2.5 py-1 bg-surface-dark text-text-muted text-xs rounded-full">
+                      +{testimonial.services.length - 4}
                     </span>
                   )}
                 </div>
@@ -103,7 +107,9 @@ const ServicesTestimonials = () => {
           <div className="mt-14 pt-10 border-t border-border/20">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a 
-                href="#contact" 
+                href="/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-cta group flex items-center gap-2"
               >
                 Start a Conversation
@@ -123,6 +129,16 @@ const ServicesTestimonials = () => {
           </div>
         </div>
       </div>
+
+      {/* YouTube Modal */}
+      {selectedVideo && (
+        <YouTubeModal
+          isOpen={!!selectedVideo}
+          onClose={() => setSelectedVideo(null)}
+          videoId={selectedVideo.id}
+          title={selectedVideo.title}
+        />
+      )}
     </section>
   );
 };

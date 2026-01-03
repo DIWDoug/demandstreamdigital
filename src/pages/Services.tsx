@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
@@ -47,7 +46,7 @@ const Services = () => {
           closing: "No added overhead. No crossed fingers. Just reliable fulfillment that makes your agency look great."
         }}
         breadcrumbs={[
-          { label: "Services" }
+          { label: "Inbound Marketing Services" }
         ]}
       />
 
@@ -57,10 +56,10 @@ const Services = () => {
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
               { label: 'What is Inbound?', href: '#white-label-explainer' },
-              { label: 'Pain Points', href: '#pain-points' },
-              { label: 'Is This For You?', href: '#fit-qualifier' },
+              { label: 'The Reality', href: '#pain-points' },
+              { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
               { label: 'Our Framework', href: '#framework' },
-              { label: 'Onboarding', href: '#onboarding' },
+              { label: 'Phases', href: '#onboarding' },
               { label: 'Expertise', href: '#expertise' },
               { label: 'Calculator', href: '#calculator' },
               { label: 'FAQ', href: '#faq' },
@@ -102,9 +101,6 @@ const Services = () => {
       <OnboardingRoadmap />
       
       <SectionDivider />
-      
-      {/* Deep Expertise - hub/spoke with internal links */}
-      <TopicalExpertise />
       
       {/* Combined Calculator with Tabs */}
       <CalculatorTabs />
