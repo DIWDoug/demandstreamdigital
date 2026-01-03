@@ -52,7 +52,7 @@ const HonestWordOnFulfillment = () => {
               {/* Quotation mark */}
               <div className="absolute -top-2 -left-2 text-6xl text-cta/20 font-serif leading-none">"</div>
               
-              <div className="space-y-5 text-text-secondary leading-relaxed pt-8">
+              <div className="space-y-5 text-text-secondary leading-relaxed pt-8 font-handwriting text-lg">
                 <p className="text-foreground font-medium text-lg">I've been running agencies since 2011.</p>
                 
                 <p>
