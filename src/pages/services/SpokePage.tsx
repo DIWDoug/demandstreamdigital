@@ -6,6 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -249,6 +250,9 @@ const SpokePage = () => {
 
       {/* Process Timeline Section */}
       <SpokeProcessTimeline steps={spoke.process} spokeTitle={spoke.title} />
+
+      {/* Mid-page CTA */}
+      <MidPageCTA />
 
       <SectionDivider />
 
