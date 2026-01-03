@@ -108,7 +108,7 @@ const ROICalculator = () => {
         )}
         <input
           type="text"
-          inputMode="numeric"
+          inputMode="decimal"
           value={value}
           onChange={(e) => {
             const val = e.target.value.replace(/[^0-9.]/g, '');
@@ -277,8 +277,8 @@ const ROICalculator = () => {
                   <InputField 
                     label="Client's Website Visitors (Monthly)" 
                     value={visitors} 
-                    onChange={setVisitors}
-                    tooltip="Your client's average monthly unique visitors. Check Google Analytics or estimate based on market size."
+                    onChange={(val) => setVisitors(Math.max(500, val))}
+                    tooltip="Your client's average monthly unique visitors (minimum 500). Check Google Analytics or estimate based on market size."
                   />
                   <InputField 
                     label="Lead Conversion Rate" 
@@ -318,15 +318,15 @@ const ROICalculator = () => {
                 </div>
               </div>
 
-              {/* Growth Forecast Section */}
+              {/* Conversion Rate Growth Forecast Section */}
               <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 rounded-lg bg-cta/10">
                     <TrendingUp className="h-5 w-5 text-cta" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">Growth Forecast</h3>
-                    <p className="text-sm text-text-muted">Show clients how incremental improvements impact their revenue</p>
+                    <h3 className="text-lg font-semibold text-foreground">Conversion Rate Growth Forecast</h3>
+                    <p className="text-sm text-text-muted">Based on current inputs: {visitors.toLocaleString()} visitors, {leadConversionRate}% conversion, {leadToCustomerRate}% close rate, ${revenuePerCustomer.toLocaleString()} avg. value</p>
                   </div>
                 </div>
 
@@ -336,12 +336,12 @@ const ROICalculator = () => {
                     <div className="space-y-2">
                       {growthForecast.conversionGrowth.map(({ increase, revenue }) => (
                         <div key={increase} className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border/30">
-                          <span className="text-sm text-foreground">+{increase}%</span>
+                          <span className="text-sm text-foreground">{leadConversionRate}% → {(leadConversionRate + increase).toFixed(1)}%</span>
                           <span className={cn(
                             "text-sm font-semibold",
                             revenue > 0 ? "text-cta" : "text-text-muted"
                           )}>
-                            {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}
+                            {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}/mo
                           </span>
                         </div>
                       ))}
@@ -353,12 +353,12 @@ const ROICalculator = () => {
                     <div className="space-y-2">
                       {growthForecast.trafficGrowth.map(({ increase, revenue }) => (
                         <div key={increase} className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-border/30">
-                          <span className="text-sm text-foreground">+{increase}%</span>
+                          <span className="text-sm text-foreground">{visitors.toLocaleString()} → {Math.round(visitors * (1 + increase / 100)).toLocaleString()}</span>
                           <span className={cn(
                             "text-sm font-semibold",
                             revenue > 0 ? "text-cta" : "text-text-muted"
                           )}>
-                            {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}
+                            {revenue > 0 ? "+" : ""}${revenue.toLocaleString()}/mo
                           </span>
                         </div>
                       ))}
@@ -368,17 +368,19 @@ const ROICalculator = () => {
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-text-muted uppercase tracking-wider">Combined Impact</h4>
                     <div className="p-4 rounded-xl bg-cta/5 border border-cta/30 h-[calc(100%-2rem)] flex flex-col justify-center">
-                      <p className="text-xs text-text-muted mb-1">+1% Conversion & +30% Traffic</p>
-                      <p className="text-2xl font-bold text-cta">
-                        +${growthForecast.combinedRevenue.toLocaleString()}
+                      <p className="text-xs text-text-muted mb-1">
+                        {leadConversionRate}% → {(leadConversionRate + 1).toFixed(1)}% + {Math.round(visitors * 1.3).toLocaleString()} visitors
                       </p>
-                      <p className="text-xs text-text-muted mt-2">Additional client revenue/month</p>
+                      <p className="text-2xl font-bold text-cta">
+                        +${growthForecast.combinedRevenue.toLocaleString()}/mo
+                      </p>
+                      <p className="text-xs text-text-muted mt-2">Additional client revenue with both improvements</p>
                     </div>
                   </div>
                 </div>
 
                 <p className="text-xs text-text-muted mt-6 text-center">
-                  Use these projections to demonstrate the value of your services. Show clients how improved conversion rates and increased traffic translate to real revenue.
+                  Projections based on current client inputs. Use these to show how incremental SEO improvements translate to measurable revenue growth.
                 </p>
               </div>
             </div>
