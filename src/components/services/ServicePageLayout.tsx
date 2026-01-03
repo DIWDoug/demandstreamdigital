@@ -81,7 +81,7 @@ const ServicePageLayout = ({
   customSections = {}
 }: ServicePageLayoutProps) => {
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
     { label: config.title }
   ];
 

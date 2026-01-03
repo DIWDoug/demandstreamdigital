@@ -35,7 +35,7 @@ const GoogleMaps = () => {
   if (!hub) return null;
 
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
     { label: googleMapsConfig.title }
   ];
 
