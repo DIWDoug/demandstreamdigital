@@ -6,7 +6,7 @@ import InvestmentEducationalContent from "@/components/calculators/InvestmentEdu
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, Award, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
@@ -47,13 +47,11 @@ const initialFormData: FormData = {
 const OEM_HOURLY_RATE = 60;
 const MIN_MONTHLY = 500;
 
-const baseServiceHours: Record<string, { hours: number; label: string }> = {
-  localSeo: { hours: 10, label: "Local SEO" },
-  gbp: { hours: 5, label: "Google Business Profile" },
+const baseServiceHours: Record<string, { hours: number; label: string; description?: string }> = {
+  localSeo: { hours: 23, label: "Local SEO", description: "Includes GBP optimization & authority building" },
   googleAds: { hours: 8, label: "Google Ads" },
   metaAds: { hours: 7, label: "Meta Ads" },
-  email: { hours: 6, label: "Email Marketing" },
-  authority: { hours: 8, label: "Authority Building" }
+  email: { hours: 6, label: "Email Marketing" }
 };
 
 const InvestmentCalculator = () => {
@@ -110,18 +108,18 @@ const InvestmentCalculator = () => {
 
     const seoMultiplier = (tierMult + seoMult + compMult + webAgeMult + webAuthMult + citMult + contentMult) / 7;
     const gbpMultiplier = (tierMult + compMult + gbpMult + citMult) / 4;
+    const authorityMultiplier = (tierMult + compMult + webAuthMult + contentMult) / 4;
+    // Combined Local SEO multiplier (includes GBP + Authority factors)
+    const localSeoMultiplier = (seoMultiplier + gbpMultiplier + authorityMultiplier) / 3;
     const adsMultiplier = (tierMult + cpcMult + compMult + adsMult) / 4;
     const socialMultiplier = (tierMult + socialMult + contentMult) / 3;
     const emailMultiplier = (emailMult + contentMult) / 2;
-    const authorityMultiplier = (tierMult + compMult + webAuthMult + contentMult) / 4;
 
     const serviceMultipliers: Record<string, number> = {
-      localSeo: seoMultiplier,
-      gbp: gbpMultiplier,
+      localSeo: localSeoMultiplier,
       googleAds: adsMultiplier,
       metaAds: socialMultiplier,
-      email: emailMultiplier,
-      authority: authorityMultiplier
+      email: emailMultiplier
     };
 
     let totalHoursLow = 0;
@@ -193,7 +191,7 @@ const InvestmentCalculator = () => {
     </button>
   );
 
-  const ServiceCheckbox = ({ service, icon: Icon, label }: { service: string; icon: React.ElementType; label: string }) => (
+  const ServiceCheckbox = ({ service, icon: Icon, label, description }: { service: string; icon: React.ElementType; label: string; description?: string }) => (
     <button
       type="button"
       onClick={() => toggleService(service)}
@@ -202,10 +200,13 @@ const InvestmentCalculator = () => {
         formData.services.includes(service) ? "bg-cta/10 border-cta" : "bg-surface-elevated border-border/50 hover:border-accent-blue/50"
       )}
     >
-      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center", formData.services.includes(service) ? "bg-cta/20" : "bg-accent-blue/10")}>
+      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0", formData.services.includes(service) ? "bg-cta/20" : "bg-accent-blue/10")}>
         <Icon className={cn("h-5 w-5", formData.services.includes(service) ? "text-cta" : "text-accent-blue")} />
       </div>
-      <span className={cn("font-medium", formData.services.includes(service) ? "text-cta" : "text-foreground")}>{label}</span>
+      <div className="flex flex-col">
+        <span className={cn("font-medium", formData.services.includes(service) ? "text-cta" : "text-foreground")}>{label}</span>
+        {description && <span className="text-xs text-text-muted">{description}</span>}
+      </div>
     </button>
   );
 
@@ -432,12 +433,10 @@ const InvestmentCalculator = () => {
                       <label className="block text-foreground font-medium mb-3">Which services does this client need?</label>
                       <p className="text-text-muted text-sm mb-4">Select all that apply</p>
                       <div className="grid sm:grid-cols-2 gap-3">
-                        <ServiceCheckbox service="localSeo" icon={Search} label="Local SEO" />
-                        <ServiceCheckbox service="gbp" icon={MapPin} label="Google Business Profile" />
+                        <ServiceCheckbox service="localSeo" icon={Search} label="Local SEO" description="Includes GBP & authority building" />
                         <ServiceCheckbox service="googleAds" icon={MousePointerClick} label="Google Ads" />
                         <ServiceCheckbox service="metaAds" icon={Globe} label="Meta Ads" />
                         <ServiceCheckbox service="email" icon={Mail} label="Email Marketing" />
-                        <ServiceCheckbox service="authority" icon={Award} label="Authority Building" />
                       </div>
                     </div>
                   </div>
