@@ -13,8 +13,12 @@ interface ContactFormData {
   phoneCountryCode?: string;
   revenue: string;
   website?: string;
-  formType?: string; // Identifies which form submitted: hero_homepage, service_hub_hero, fulfillment_steps, contact_page, calculator
+  formType?: string;
 }
+
+// Rate limiting configuration
+const RATE_LIMIT_WINDOW_MINUTES = 15;
+const MAX_SUBMISSIONS_PER_WINDOW = 5;
 
 serve(async (req) => {
   // Handle CORS preflight
@@ -24,6 +28,11 @@ serve(async (req) => {
 
   try {
     const { name, email, phone, phoneCountryCode, revenue, website, formType }: ContactFormData = await req.json();
+
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                     req.headers.get("cf-connecting-ip") || 
+                     "unknown";
 
     // Map formType to human-readable lead_type for Zapier
     const leadTypeMap: Record<string, string> = {
@@ -58,12 +67,37 @@ serve(async (req) => {
       }
     }
 
-    console.log("Saving lead to database:", { name, email, phone, revenue, website, formType });
-
     // Create Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Rate limiting check - count recent submissions from same IP or email
+    const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MINUTES * 60 * 1000).toISOString();
+    
+    // Check submissions by email (if provided) to prevent email-based spam
+    let recentSubmissions = 0;
+    if (email) {
+      const { count: emailCount } = await supabase
+        .from("leads")
+        .select("*", { count: "exact", head: true })
+        .eq("email", email)
+        .gte("created_at", windowStart);
+      
+      recentSubmissions = emailCount || 0;
+    }
+
+    console.log(`Rate limit check: ${recentSubmissions} submissions from ${email || clientIP} in last ${RATE_LIMIT_WINDOW_MINUTES} minutes`);
+
+    if (recentSubmissions >= MAX_SUBMISSIONS_PER_WINDOW) {
+      console.log(`Rate limit exceeded for ${email || clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many submissions. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log("Saving lead to database:", { name, email, phone, revenue, website, formType });
 
     let data: any = { id: null, created_at: new Date().toISOString() };
 
