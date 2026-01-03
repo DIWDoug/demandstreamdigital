@@ -447,7 +447,6 @@ const SEOCalculator = () => {
                           <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Pricing Structure</span>
                         </div>
                         <p className="text-xs text-text-muted">Your cost vs. suggested client pricing</p>
-                        <p className="text-xs text-text-muted/70 mt-1">Based on $65/hr white-label · $110-130/hr client rate</p>
                       </div>
 
                       {estimate ? (
@@ -460,7 +459,7 @@ const SEOCalculator = () => {
                           </div>
 
                           {/* Tiered Pricing - Based on $65/hr white-label, $110-130/hr client rate */}
-                          <div className="space-y-2 mb-6">
+                          <div className="space-y-2 mb-4">
                             {[
                               { name: "Starter", hours: "10-15 hrs", avgHours: 12.5 },
                               { name: "Professional", hours: "15-20 hrs", avgHours: 17.5, highlight: true },
@@ -491,6 +490,8 @@ const SEOCalculator = () => {
                               );
                             })}
                           </div>
+
+                          <p className="text-xs text-text-muted/70 mb-4">Based on $65/hr white-label · $110-130/hr client rate</p>
 
                           <div className="space-y-3 pt-4 border-t border-border/30">
                             <div className="flex justify-between items-center">
