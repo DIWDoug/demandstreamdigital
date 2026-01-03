@@ -27,37 +27,37 @@ export const googleMapsConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most GBP Management Fails Your Clients",
-    intro: "You have seen this before. The profile was claimed and optimized once, but months later visibility is flat, reviews have stalled, and competitors are outranking your client in their own backyard. Google's own data shows users are 70% more likely to visit businesses with completed profiles and 50% more likely to purchase—yet most profiles remain incomplete.",
+    intro: "The profile was claimed and optimized once, but months later visibility is flat and competitors are outranking your client in their own backyard.",
     painPoints: [
       {
         icon: Users,
         title: "Set It and Forget It Kills Rankings",
-        body: "Google Business Profiles require ongoing optimization. Posting, photo updates, Q&A monitoring, and attribute management are not optional. Neglected profiles lose ground to competitors who stay active."
+        body: "Profiles require ongoing optimization. Posts, photos, Q&A, and attributes are not optional. Neglected profiles lose ground to active competitors."
       },
       {
         icon: Star,
         title: "Reviews Are Inconsistent or Ignored",
-        body: "Review velocity matters. So does response quality. 60% of reviewers expect a response within 2 days. Sporadic review generation and template responses signal neglect to both Google and potential customers."
+        body: "Review velocity matters. 60% of reviewers expect response within 2 days. Sporadic generation and template responses signal neglect."
       },
       {
         icon: Globe,
         title: "Citations Are Incomplete or Inconsistent",
-        body: "NAP inconsistencies across directories confuse search engines and erode trust signals. Incomplete citation profiles leave authority on the table and hurt E-E-A-T signals."
+        body: "NAP inconsistencies confuse search engines and erode trust signals. Incomplete citation profiles hurt E-E-A-T."
       },
       {
         icon: Target,
         title: "No Strategy for Proximity Dynamics",
-        body: "The Vicinity Update made location the dominant factor. Without a proximity-aware strategy, visibility collapses outside the immediate area."
+        body: "The Vicinity Update made location dominant. Without a proximity-aware strategy, visibility collapses outside the immediate area."
       },
       {
         icon: Layers,
         title: "GBP and Website Are Disconnected",
-        body: "Services listed in GBP do not match website pages. Categories misalign, signals fragment, and rich snippets fail to populate. E-E-A-T suffers when Google cannot verify expertise across properties."
+        body: "Services in GBP don't match website pages. Categories misalign, signals fragment, and rich snippets fail to populate."
       }
     ],
     systemClosing: "",
     closingLine: "All five failures share one root problem: no operating system for ongoing GBP management. We provide that system",
-    closingHighlight: "so visibility compounds instead of decaying, and margins stay protected.",
+    closingHighlight: "so visibility compounds instead of decaying.",
     ctaText: "Schedule a Discovery Call"
   },
 
