@@ -9,6 +9,8 @@ import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import AuthorByline from "@/components/AuthorByline";
+import { getAuthorById, Author } from "@/data/authors";
 
 interface BlogPost {
   id: string;
@@ -20,6 +22,13 @@ interface BlogPost {
   source_url: string;
   published_at: string;
 }
+
+// Default author for blog posts - Doug Bryson as founder/primary author
+const getPostAuthor = (slug: string): Author => {
+  // Can be extended to map specific posts to specific authors
+  // For now, all posts are attributed to Doug Bryson
+  return getAuthorById("doug-bryson")!;
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -82,6 +91,61 @@ const BlogPost = () => {
     );
   }
 
+  const author = getPostAuthor(blog.slug);
+
+  // Article schema with linked Person entity
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://dialedinweb.com/blog/${blog.slug}#article`,
+        "headline": blog.title,
+        "description": blog.excerpt || `Read ${blog.title} on Dialed-In Web`,
+        "image": blog.featured_image || undefined,
+        "datePublished": blog.published_at,
+        "dateModified": blog.published_at,
+        "author": {
+          "@id": `https://dialedinweb.com/authors/${author.slug}#person`
+        },
+        "publisher": {
+          "@id": "https://dialedinweb.com/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": `https://dialedinweb.com/blog/${blog.slug}`
+        },
+        "isPartOf": {
+          "@id": "https://dialedinweb.com/#website"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": `https://dialedinweb.com/authors/${author.slug}#person`,
+        "name": author.name,
+        "jobTitle": author.role,
+        "description": author.shortBio,
+        "url": `https://dialedinweb.com/authors/${author.slug}`,
+        "worksFor": {
+          "@id": "https://dialedinweb.com/#organization"
+        },
+        "sameAs": author.schemaData.sameAs,
+        "knowsAbout": author.schemaData.knowsAbout.map(topic => ({
+          "@type": "Thing",
+          "name": topic.name,
+          "sameAs": topic.sameAs
+        }))
+      },
+      {
+        "@type": "WebPage",
+        "@id": `https://dialedinweb.com/blog/${blog.slug}`,
+        "name": blog.title,
+        "description": blog.excerpt || `Read ${blog.title} on Dialed-In Web`,
+        "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+        "primaryImageOfPage": blog.featured_image ? { "@type": "ImageObject", "url": blog.featured_image } : undefined
+      }
+    ]
+  };
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -89,6 +153,10 @@ const BlogPost = () => {
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
         <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
         {blog.featured_image && <meta property="og:image" content={blog.featured_image} />}
+        <meta property="article:author" content={author.name} />
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
       </Helmet>
       
       <Header />
@@ -106,8 +174,12 @@ const BlogPost = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               {blog.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
-              <div className="flex items-center gap-2">
+            
+            {/* Author Byline */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
+              <AuthorByline author={author} size="md" />
+              <span className="hidden sm:block text-muted-foreground/50">•</span>
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="w-4 h-4" />
                 {new Date(blog.published_at).toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -115,16 +187,17 @@ const BlogPost = () => {
                   day: 'numeric'
                 })}
               </div>
-              <a 
-                href={blog.source_url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:text-primary transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                View Original
-              </a>
             </div>
+
+            <a 
+              href={blog.source_url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View Original Source
+            </a>
           </header>
 
           {/* Featured Image */}
