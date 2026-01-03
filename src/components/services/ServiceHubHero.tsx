@@ -1,5 +1,5 @@
 import { ArrowRight, Loader2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -27,6 +27,7 @@ interface ServiceHubHeroProps {
 
 const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle }: ServiceHubHeroProps) => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -54,18 +55,8 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, hero
 
       if (error) throw error;
 
-      toast({
-        title: "Thank you!",
-        description: "We'll be in touch within 24 hours.",
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        phoneCountryCode: "+1",
-        revenue: "",
-      });
+      // Redirect to thank you page
+      navigate("/thank-you");
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({

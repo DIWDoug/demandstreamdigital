@@ -22,6 +22,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
+import ThankYou from "./pages/ThankYou";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 
 // Service Hub Pages
@@ -66,6 +67,7 @@ const App = () => (
           <Route path="/agency-calculator" element={<Navigate to="/roi-calculator" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           
           {/* Service Hub Pages */}
           <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
