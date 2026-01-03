@@ -1,6 +1,7 @@
-import { useState, useMemo } from "react";
-import { Check, ChevronsUpDown, Search } from "lucide-react";
+import { useState, useMemo, useCallback } from "react";
+import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AsYouType, isValidPhoneNumber, CountryCode } from "libphonenumber-js";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -209,9 +210,12 @@ interface PhoneInputProps {
   onChange: (value: string) => void;
   countryCode: string;
   onCountryCodeChange: (code: string) => void;
+  countryId?: string;
+  onCountryIdChange?: (id: string) => void;
   placeholder?: string;
   required?: boolean;
   className?: string;
+  showValidation?: boolean;
 }
 
 const PhoneInput = ({
@@ -219,20 +223,52 @@ const PhoneInput = ({
   onChange,
   countryCode,
   onCountryCodeChange,
+  countryId,
+  onCountryIdChange,
   placeholder = "Phone number",
   required = false,
   className = "",
+  showValidation = true,
 }: PhoneInputProps) => {
   const [open, setOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isTouched, setIsTouched] = useState(false);
 
-  // Find selected country by matching code - prefer US if +1
+  // Find selected country by matching code and id
   const selectedCountry = useMemo(() => {
+    // If countryId is provided, use it directly
+    if (countryId) {
+      const match = countries.find(c => c.id === countryId);
+      if (match) return match;
+    }
+    // Fall back to matching by code
     const matches = countries.filter(c => c.code === countryCode);
     if (matches.length === 1) return matches[0];
     // For shared codes like +1, default to first match (US)
     return matches[0] || countries[0];
-  }, [countryCode]);
+  }, [countryCode, countryId]);
+
+  // Format phone number as user types
+  const handlePhoneChange = useCallback((inputValue: string) => {
+    try {
+      const formatter = new AsYouType(selectedCountry.id as CountryCode);
+      const formatted = formatter.input(inputValue);
+      onChange(formatted);
+    } catch {
+      // If formatting fails, just use the raw input
+      onChange(inputValue);
+    }
+  }, [selectedCountry.id, onChange]);
+
+  // Validate phone number
+  const isValid = useMemo(() => {
+    if (!value || value.length < 3) return null; // Not enough input to validate
+    try {
+      return isValidPhoneNumber(value, selectedCountry.id as CountryCode);
+    } catch {
+      return null;
+    }
+  }, [value, selectedCountry.id]);
 
   // Popular countries to show at top
   const popularIds = ["US", "GB", "CA", "AU"];
@@ -254,6 +290,14 @@ const PhoneInput = ({
       otherCountries: filtered.filter((c) => !popularIds.includes(c.id)),
     };
   }, [searchQuery]);
+
+  // Handle country selection
+  const handleCountrySelect = useCallback((country: typeof countries[0]) => {
+    onCountryCodeChange(country.code);
+    onCountryIdChange?.(country.id);
+    setOpen(false);
+    setSearchQuery("");
+  }, [onCountryCodeChange, onCountryIdChange]);
 
   return (
     <div className={`flex gap-2 ${className}`}>
@@ -288,17 +332,13 @@ const PhoneInput = ({
                     <CommandItem
                       key={country.id}
                       value={country.id}
-                      onSelect={() => {
-                        onCountryCodeChange(country.code);
-                        setOpen(false);
-                        setSearchQuery("");
-                      }}
+                      onSelect={() => handleCountrySelect(country)}
                       className="flex items-center gap-2 cursor-pointer"
                     >
                       <Check
                         className={cn(
                           "h-4 w-4",
-                          countryCode === country.code && selectedCountry.id === country.id
+                          selectedCountry.id === country.id
                             ? "opacity-100"
                             : "opacity-0"
                         )}
@@ -316,17 +356,13 @@ const PhoneInput = ({
                     <CommandItem
                       key={country.id}
                       value={country.id}
-                      onSelect={() => {
-                        onCountryCodeChange(country.code);
-                        setOpen(false);
-                        setSearchQuery("");
-                      }}
+                      onSelect={() => handleCountrySelect(country)}
                       className="flex items-center gap-2 cursor-pointer"
                     >
                       <Check
                         className={cn(
                           "h-4 w-4",
-                          countryCode === country.code && selectedCountry.id === country.id
+                          selectedCountry.id === country.id
                             ? "opacity-100"
                             : "opacity-0"
                         )}
@@ -342,14 +378,33 @@ const PhoneInput = ({
           </Command>
         </PopoverContent>
       </Popover>
-      <input
-        type="tel"
-        placeholder={placeholder}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        required={required}
-        className="flex-1 px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
-      />
+      <div className="relative flex-1">
+        <input
+          type="tel"
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => handlePhoneChange(e.target.value)}
+          onBlur={() => setIsTouched(true)}
+          required={required}
+          className={cn(
+            "w-full px-4 py-3 rounded-lg bg-background border text-foreground placeholder:text-text-muted focus:outline-none focus:ring-1 transition-all text-base",
+            showValidation && isTouched && value.length > 3
+              ? isValid
+                ? "border-green-500 focus:border-green-500 focus:ring-green-500"
+                : "border-red-400 focus:border-red-400 focus:ring-red-400"
+              : "border-border focus:border-cta focus:ring-cta"
+          )}
+        />
+        {showValidation && isTouched && value.length > 3 && (
+          <div className="absolute right-3 top-1/2 -translate-y-1/2">
+            {isValid ? (
+              <Check className="h-4 w-4 text-green-500" />
+            ) : (
+              <span className="text-red-400 text-xs">Invalid</span>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
