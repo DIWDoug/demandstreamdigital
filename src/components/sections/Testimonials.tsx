@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, ArrowRight } from "lucide-react";
+import { Quote, ArrowRight, Play } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
+import YouTubeModal from "@/components/ui/youtube-modal";
+
 const testimonials = [
   {
     quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none: incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
@@ -34,6 +37,7 @@ const videoTestimonials = [
 
 const Testimonials = () => {
   const sectionRef = useScrollReveal();
+  const [selectedVideo, setSelectedVideo] = useState<{ id: string; title: string } | null>(null);
   
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
@@ -53,15 +57,25 @@ const Testimonials = () => {
           {videoTestimonials.map((video, index) => (
             <div 
               key={index} 
-              className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 bg-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group"
+              onClick={() => setSelectedVideo(video)}
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
+              {/* YouTube thumbnail */}
+              <img 
+                src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                alt={video.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
+              {/* Play overlay */}
+              <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
+                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Play className="h-7 w-7 text-slate-900 ml-1" fill="currentColor" />
+                </div>
+              </div>
+              {/* Title overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p className="text-white text-sm font-medium">{video.title}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -104,6 +118,8 @@ const Testimonials = () => {
         <div className="text-center mt-12">
           <Link 
             to="/testimonials" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
           >
             View All Testimonials
@@ -111,6 +127,16 @@ const Testimonials = () => {
           </Link>
         </div>
       </div>
+
+      {/* YouTube Modal */}
+      {selectedVideo && (
+        <YouTubeModal
+          isOpen={!!selectedVideo}
+          onClose={() => setSelectedVideo(null)}
+          videoId={selectedVideo.id}
+          title={selectedVideo.title}
+        />
+      )}
     </section>
   );
 };

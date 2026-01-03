@@ -1,14 +1,10 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
-
-// Segmentation for ebook leads in GHL
-const GHL_TAG = "ebook_local_growth_engine";
-const GHL_SOURCE = "Ebook Download - Local Growth Engine";
-const GHL_API_VERSION = "2021-07-28";
 
 interface EbookLeadData {
   email: string;
@@ -39,67 +35,31 @@ serve(async (req) => {
       });
     }
 
-    const apiKey = Deno.env.get("GHL_API_KEY");
-    const locationId = Deno.env.get("GHL_LOCATION_ID");
+    console.log("Saving ebook lead to database:", { email });
 
-    if (!apiKey || !locationId) {
-      console.error("Missing required GHL env vars", {
-        hasApiKey: Boolean(apiKey),
-        hasLocationId: Boolean(locationId),
-      });
+    // Create Supabase client
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
-      return new Response(
-        JSON.stringify({ error: "Lead capture is temporarily unavailable" }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
-      );
+    // Insert lead into database
+    const { data, error } = await supabase
+      .from("leads")
+      .insert({
+        email,
+        source: "ebook_local_growth_engine",
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Database insert error:", error);
+      throw new Error("Failed to save lead");
     }
 
-    // NOTE: GHL's /forms/submit endpoints can require captchaV3.
-    // Using the authenticated Contacts API avoids that.
-    console.log("Upserting ebook lead contact in GHL:", { email, tag: GHL_TAG });
+    console.log("Ebook lead saved successfully:", data);
 
-    const ghlPayload = {
-      locationId,
-      email,
-      tags: [GHL_TAG],
-      source: GHL_SOURCE,
-    };
-
-    const ghlResponse = await fetch(
-      "https://services.leadconnectorhq.com/contacts/upsert",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-          Version: GHL_API_VERSION,
-        },
-        body: JSON.stringify(ghlPayload),
-      }
-    );
-
-    const responseText = await ghlResponse.text();
-    console.log("GHL response status:", ghlResponse.status);
-    console.log("GHL response:", responseText);
-
-    if (!ghlResponse.ok) {
-      console.error("GHL contact upsert error:", responseText);
-      throw new Error("Failed to submit lead to GHL");
-    }
-
-    let ghlData: unknown;
-    try {
-      ghlData = JSON.parse(responseText);
-    } catch {
-      ghlData = { raw: responseText };
-    }
-
-    console.log("Ebook lead upserted successfully:", ghlData);
-
-    return new Response(JSON.stringify({ success: true, data: ghlData }), {
+    return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

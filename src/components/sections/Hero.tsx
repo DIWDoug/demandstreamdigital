@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import PhoneInput from "@/components/ui/phone-input";
 
 const Hero = () => {
   const { toast } = useToast();
@@ -13,6 +14,7 @@ const Hero = () => {
     fullName: "",
     email: "",
     phone: "",
+    phoneCountryCode: "+1",
     revenue: "",
     consent: false,
     notRobot: false,
@@ -35,6 +37,7 @@ const Hero = () => {
           name: formData.fullName,
           email: formData.email,
           phone: formData.phone,
+          phoneCountryCode: formData.phoneCountryCode,
           revenue: formData.revenue,
           website: website,
         }
@@ -54,6 +57,7 @@ const Hero = () => {
         fullName: "",
         email: "",
         phone: "",
+        phoneCountryCode: "+1",
         revenue: "",
         consent: false,
         notRobot: false,
@@ -215,12 +219,12 @@ const Hero = () => {
                     />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input
-                      type="tel"
-                      placeholder="Phone (SMS-enabled)"
+                    <PhoneInput
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+                      onChange={(phone) => setFormData({ ...formData, phone })}
+                      countryCode={formData.phoneCountryCode}
+                      onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
+                      placeholder="Phone (SMS-enabled)"
                     />
                     <select
                       value={formData.revenue}
