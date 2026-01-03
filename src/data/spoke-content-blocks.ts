@@ -713,15 +713,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "schema-markup": [
     {
       category: "Connected Entity Schema",
-      headline: "Page-Level Knowledge Graphs",
-      description: "We build connected schema using @graph structures with unique @id properties—creating explicit relationships between your business, founders, services, and locations that machines understand without interpretation.",
+      headline: "Page-Level Knowledge Graphs for AI",
+      description: "Schema markup has been around for years, but AI Overviews made it essential. We build connected schema using @graph structures with unique @id properties—creating explicit relationships that machines understand without interpretation.",
       subPoints: [
-        { title: "LocalBusiness + Organization", description: "Core identity schema with legalName, taxID, founder, and contactPoint properties." },
-        { title: "Person Schema", description: "Founder and team markup with worksFor, knowsAbout, and sameAs for E-E-A-T authority." },
-        { title: "@id Connections", description: "Unique identifiers linking entities. Person → Organization → Service all connected." },
+        { title: "LocalBusiness + Organization", description: "Core identity schema with legalName, taxID, founder, and contactPoint properties. The foundation for local visibility." },
+        { title: "Person Schema for Authors", description: "Author bios connected to content via Person schema. worksFor, knowsAbout, and sameAs properties build E-E-A-T authority." },
+        { title: "@id Connections", description: "Unique identifiers linking entities. Person → Organization → Service all connected in a knowledge graph." },
         { title: "sameAs Validation", description: "LinkedIn, Crunchbase, social profiles linked to validate entity with external sources." },
-        { title: "knowsAbout Topics", description: "Wikipedia/Wikidata links for topic disambiguation. Expertise connected to entities." },
-        { title: "Geo Coordinates", description: "hasMap linking to GBP. Precise location and service area polygons." }
+        { title: "knowsAbout Topics", description: "Wikipedia/Wikidata links for topic disambiguation. Expertise connected to recognized concepts." },
+        { title: "AI-Assisted Generation", description: "Claude and ChatGPT prompts accelerate schema creation. Every property validated against Schema.org standards." }
       ],
       imageSrc: schemaBusinessImg,
       imageAlt: "Connected entity schema graph structure",
@@ -729,19 +729,19 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
-      category: "Service & Product Schema",
-      headline: "Structured Data for Offerings",
-      description: "Service schema connects offerings to your LocalBusiness entity. Enables rich results with pricing, availability, and ratings that AI systems can cite accurately.",
+      category: "Complete Local Coverage",
+      headline: "Every Schema Type for Local Businesses",
+      description: "We cover every aspect of schema markup applicable to local businesses. No properties left undefined. AIO systems cite businesses with complete, connected structured data.",
       subPoints: [
-        { title: "Service Definitions", description: "Individual services with areaServed, offers, and aggregateRating properties." },
+        { title: "Service Definitions", description: "Individual services with areaServed, offers, and aggregateRating. Each service linked to main entity." },
         { title: "hasOfferCatalog", description: "Full service catalogs structured. Offerings discoverable via schema and AI parsing." },
-        { title: "Pricing & Offers", description: "priceRange, priceCurrency, and availability structured for rich results." },
-        { title: "Aggregate Ratings", description: "reviewCount, ratingValue, bestRating for star displays in SERPs." },
-        { title: "makesOffer Property", description: "Service-based businesses linking what they offer directly to entity." },
-        { title: "mainEntity Connections", description: "Service pages declaring primary topic. Strengthens page-entity relationship." }
+        { title: "Geo Coordinates", description: "hasMap linking to GBP. Precise location and service area polygons defined." },
+        { title: "Opening Hours", description: "openingHoursSpecification with dayOfWeek, opens, closes properties. Holiday hours included." },
+        { title: "Contact Points", description: "contactPoint with telephone, email, contactType, areaServed for each department or location." },
+        { title: "Aggregate Ratings", description: "reviewCount, ratingValue, bestRating for star displays in SERPs." }
       ],
       imageSrc: schemaServiceImg,
-      imageAlt: "Service and offer schema markup",
+      imageAlt: "Complete local business schema coverage",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
@@ -750,11 +750,11 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       headline: "Enhanced Search Appearances",
       description: "Beyond identity, schema unlocks rich results for FAQ, reviews, articles, and more—expanding SERP real estate and feeding AI systems quotable structured answers.",
       subPoints: [
-        { title: "FAQPage Schema", description: "Q&A pairs for FAQ rich results. Expands SERP footprint and feeds AI Overviews." },
-        { title: "Review Schema", description: "Customer reviews with author, datePublished, reviewRating for star displays." },
-        { title: "Article Schema", description: "Blog content with author Person schema linked. News and Discover eligibility." },
+        { title: "FAQPage Schema", description: "Q&A pairs for FAQ rich results. Expands SERP footprint and feeds AI Overviews directly." },
+        { title: "Article Schema", description: "Blog content with author Person schema linked. News and Discover eligibility enabled." },
         { title: "BreadcrumbList", description: "Navigation hierarchy for breadcrumb displays. Improves CTR and site understanding." },
         { title: "HowTo Schema", description: "Step-by-step content with images, tools, totalTime for rich results." },
+        { title: "Review Schema", description: "Customer reviews with author, datePublished, reviewRating for star displays." },
         { title: "WebPage + WebSite", description: "Homepage and key pages structured with isPartOf relationships to website entity." }
       ],
       imageSrc: schemaRichImg,
@@ -763,15 +763,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
-      category: "Validation & Monitoring",
+      category: "Validation & AI Testing",
       headline: "Three-Step Schema Verification",
-      description: "Schema markup is only valuable if it's error-free and connected properly. We use a rigorous validation workflow before deployment and ongoing monitoring after.",
+      description: "Schema markup is only valuable if it's error-free and connected properly. We use a rigorous validation workflow before deployment and test against AI systems to verify parsing.",
       subPoints: [
         { title: "Schema.org Validator", description: "Syntax error detection. Missing commas and braces silently break markup." },
         { title: "Rich Results Test", description: "Google's tool confirms eligibility for specific rich result types." },
         { title: "Classy Schema Visualization", description: "Entity relationship mapping. Verifies connections render as knowledge graph." },
+        { title: "AI Parsing Test", description: "ChatGPT and Claude verification. If AI can't parse your schema correctly, neither can AIO." },
         { title: "Search Console Monitoring", description: "Enhancement reports track valid items, errors, and warnings over time." },
-        { title: "ChatGPT Verification", description: "LLM summarization test. If AI can't parse your schema, neither can others." },
         { title: "Quarterly Audits", description: "Schema reviewed when business info changes. Syntax errors caught before impact." }
       ],
       ctaText: "Schedule a Discovery Call",
@@ -781,63 +781,63 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "nap-citations": [
     {
-      category: "Citation Audit",
-      headline: "Find Every Inconsistency First",
-      description: "Nearly half of all businesses have missing or incorrect online information. 73% of users lose trust when listings contain errors. We audit before building to ensure the foundation is solid.",
+      category: "Citation Audit & Discovery",
+      headline: "Find Every Mention With Whitespark & BrightLocal",
+      description: "Nearly half of all businesses have missing or incorrect online information. We use Whitespark, BrightLocal, and Moz to find every mention—inconsistencies, duplicates, and unclaimed profiles that hurt rankings.",
       subPoints: [
-        { title: "Full Citation Scan", description: "BrightLocal, Moz Local, and manual research to find every mention of the business online." },
-        { title: "NAP Inconsistencies", description: "Name variations, old addresses, wrong phone numbers identified. Even 'St.' vs 'Street' differences matter for consistency." },
-        { title: "Duplicate Listings", description: "Multiple listings on the same platform dilute SEO authority. Duplicates identified for suppression or merge." },
-        { title: "Unclaimed Profiles", description: "Unclaimed listings can be edited by competitors or random users. We identify and claim control of all profiles." },
-        { title: "Competitor Comparison", description: "Citation counts and sources compared against local pack leaders to identify opportunities." },
-        { title: "AI Source Audit", description: "Yelp, TripAdvisor, Healthgrades, and vertical directories checked for AI Overview eligibility." }
+        { title: "Full Citation Scan", description: "BrightLocal, Moz Local, and Whitespark to find every mention of the business online. Nothing missed." },
+        { title: "NAP Inconsistencies", description: "Name variations, old addresses, wrong phone numbers identified. Even 'St.' vs 'Street' differences matter." },
+        { title: "Duplicate Listings", description: "Multiple listings on the same platform dilute authority. Duplicates identified for suppression or merge." },
+        { title: "Unclaimed Profiles", description: "Unclaimed listings can be edited by anyone. We identify and claim control of all profiles." },
+        { title: "Competitor Comparison", description: "Whitespark analysis compares citation counts and sources against local pack leaders." },
+        { title: "AI Source Audit", description: "Yelp, TripAdvisor, Healthgrades checked for AI Overview eligibility. These directories get cited." }
       ],
       imageSrc: citationBuildingImg,
-      imageAlt: "Citation audit and management process",
+      imageAlt: "Citation audit using Whitespark and BrightLocal",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
     {
-      category: "Citation Correction",
-      headline: "Fix What's Broken Before Building",
-      description: "Inconsistent NAP details can lead to a 41% drop in search rankings. 80% of mobile users lose confidence when contact details don't match. We fix every incorrect listing before building new ones.",
+      category: "Data Aggregator Priority",
+      headline: "Start Here Because Propagation Takes Time",
+      description: "Data aggregators feed hundreds of downstream directories automatically. But propagation takes 4-6 months. We prioritize aggregator submissions first so corrections cascade while we build.",
       subPoints: [
-        { title: "Priority Platforms", description: "Google Business Profile, Apple Maps, Bing Places, Yelp, and Facebook corrected first. These directly impact rankings." },
-        { title: "Data Aggregator Updates", description: "Foursquare, Data Axle, Neustar updated to propagate corrections to hundreds of downstream sites." },
-        { title: "Suppression Requests", description: "Duplicate listings suppressed or merged. One authoritative listing per platform. No confusion." },
-        { title: "Standardized Format", description: "Uniform spelling, abbreviations, and layout applied. 'Street' vs 'St.' standardized across all platforms." },
-        { title: "Phone Number Fixes", description: "Old numbers, tracking numbers, and variations corrected to primary. Consistency is non-negotiable." },
-        { title: "Verification", description: "Corrections verified after propagation. Nothing assumed complete until confirmed in index." }
+        { title: "Foursquare Submission", description: "Foursquare data feeds Apple Maps, Uber, Bing, and hundreds of apps and directories." },
+        { title: "Data Axle (InfoUSA)", description: "Major aggregator feeding business directories, GPS systems, and marketing databases." },
+        { title: "Neustar Localeze", description: "Powers directories, search engines, and navigation systems with business data." },
+        { title: "Factual (Now Foursquare)", description: "Location data platform feeding mobile apps and mapping services worldwide." },
+        { title: "Propagation Timeline", description: "Expect 4-6 months for full downstream propagation. We submit early so corrections spread." },
+        { title: "Monthly Monitoring", description: "Aggregator submissions verified monthly until propagation complete. Nothing assumed done." }
       ],
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
     {
-      category: "Core Citation Building",
-      headline: "Foundation Citations That Establish Trust",
-      description: "NAP data accounts for 7% of all local ranking factors. Businesses with complete, consistent listings see up to 25% more local search visibility. We prioritize the directories that matter most.",
+      category: "Citation Correction",
+      headline: "Fix What's Broken Before Building New",
+      description: "Inconsistent NAP details can lead to a 41% drop in search rankings. We fix every incorrect listing before building new ones. Corrections compound as aggregators propagate clean data.",
       subPoints: [
-        { title: "Core 50+ Directories", description: "Google, Apple Maps, Bing, Yelp, Facebook, and the directories that directly impact local rankings." },
-        { title: "Data Aggregators", description: "Submissions to Foursquare, Data Axle, and Neustar that feed hundreds of downstream sites automatically." },
-        { title: "Photo Enhancement", description: "Profiles with at least one photo see up to 16% more leads. We add visuals to differentiate from text-only listings." },
-        { title: "Category Matching", description: "Business categories aligned with GBP primary and secondary categories for signal consistency." },
-        { title: "Description Optimization", description: "Unique descriptions with local keywords for major directories. No duplicate content across platforms." },
-        { title: "E-E-A-T Foundation", description: "Consistent citations from reputable directories build the trust signals Google's algorithms prioritize." }
+        { title: "Priority Platforms", description: "Google Business Profile, Apple Maps, Bing Places, Yelp, and Facebook corrected first." },
+        { title: "Suppression Requests", description: "Duplicate listings suppressed or merged. One authoritative listing per platform." },
+        { title: "Standardized Format", description: "Uniform spelling, abbreviations, and layout. 'Street' vs 'St.' standardized everywhere." },
+        { title: "Phone Number Fixes", description: "Old numbers, tracking numbers, and variations corrected to primary. Consistency required." },
+        { title: "Address Verification", description: "Suite numbers, building names, and postal codes verified against USPS database." },
+        { title: "Post-Fix Verification", description: "Corrections verified after propagation. Nothing assumed complete until confirmed." }
       ],
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
     {
-      category: "Industry Citations",
-      headline: "Vertical-Specific Authority",
-      description: "Industry directories signal expertise and attract customers already searching for your services. HomeAdvisor, Angi, Healthgrades, and Zocdoc generate higher-quality leads than general directories.",
+      category: "Industry-Specific Directories",
+      headline: "Vertical Citations That Signal Expertise",
+      description: "Industry directories signal expertise and attract customers already searching for your services. We research and build citations on directories that matter for each vertical.",
       subPoints: [
         { title: "Industry Research", description: "Comprehensive mapping of directories relevant to each client's vertical. Plumbers get Angi, doctors get Healthgrades." },
-        { title: "Association Spotlights", description: "Chamber of commerce, trade associations, and industry bodies. Member spotlights create valuable citations." },
         { title: "Niche Platforms", description: "Vertical-specific review sites: Healthgrades for medical, Avvo for legal, Houzz for home services." },
-        { title: "Credential Verification", description: "Licenses, certifications, and credentials added where platforms support them for authority signals." },
+        { title: "Association Directories", description: "Chamber of commerce, trade associations, and industry bodies. Member spotlights create valuable citations." },
+        { title: "Credential Verification", description: "Licenses, certifications, and credentials added where platforms support them." },
         { title: "Competitor Gap Analysis", description: "Directories where competitors appear but client does not. Citation parity closes ranking gaps." },
-        { title: "Quarterly Maintenance", description: "Audits every 3-6 months catch new inconsistencies. Some platforms allow public edits without notification." }
+        { title: "Quarterly Maintenance", description: "Audits every 3-6 months catch new inconsistencies. Some platforms allow public edits without notice." }
       ],
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
