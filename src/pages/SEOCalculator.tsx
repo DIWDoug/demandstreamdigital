@@ -463,16 +463,15 @@ const SEOCalculator = () => {
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {[
-                              { name: "Starter", hours: "10-15 hrs", hoursLow: 10, hoursHigh: 15 },
-                              { name: "Professional", hours: "15-20 hrs", hoursLow: 15, hoursHigh: 20, highlight: true },
-                              { name: "Premium", hours: "20-30 hrs", hoursLow: 20, hoursHigh: 30 },
-                              { name: "Elite", hours: "30-40+ hrs", hoursLow: 30, hoursHigh: 40 }
+                              { name: "Starter", costLow: 650, costHigh: 975 },
+                              { name: "Professional", costLow: 975, costHigh: 1300, highlight: true },
+                              { name: "Premium", costLow: 1300, costHigh: 1950 },
+                              { name: "Elite", costLow: 1950, costHigh: 2600 }
                             ].map((tier, i) => {
-                              const whitelabelRate = 65;
-                              const yourCostLow = tier.hoursLow * whitelabelRate;
-                              const yourCostHigh = tier.hoursHigh * whitelabelRate;
-                              const clientMsrpLow = tier.hoursLow * clientHourlyRate;
-                              const clientMsrpHigh = tier.hoursHigh * clientHourlyRate;
+                              // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
+                              const marginMultiplier = 1.4 + ((clientHourlyRate - 90) / (180 - 90)) * (2.5 - 1.4);
+                              const clientMsrpLow = Math.round(tier.costLow * marginMultiplier / 50) * 50;
+                              const clientMsrpHigh = Math.round(tier.costHigh * marginMultiplier / 50) * 50;
                               return (
                                 <div 
                                   key={i}
@@ -483,24 +482,23 @@ const SEOCalculator = () => {
                                 >
                                   <div>
                                     <p className={cn("font-medium text-sm", tier.highlight ? "text-cta" : "text-foreground")}>{tier.name}</p>
-                                    <p className="text-xs text-text-muted">{tier.hours}</p>
                                   </div>
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">
-                                    ${yourCostLow.toLocaleString()}-{yourCostHigh.toLocaleString()}
+                                    ${tier.costLow.toLocaleString()}-${tier.costHigh.toLocaleString()}
                                   </p>
                                   <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>
-                                    ${clientMsrpLow.toLocaleString()}-{clientMsrpHigh.toLocaleString()}
+                                    ${clientMsrpLow.toLocaleString()}-${clientMsrpHigh.toLocaleString()}
                                   </p>
                                 </div>
                               );
                             })}
                           </div>
 
-                          {/* Client Hourly Rate Slider */}
+                          {/* Client MSRP Margin Slider */}
                           <div className="bg-surface-dark rounded-lg p-4 border border-border/30 mb-4">
                             <div className="flex justify-between items-center mb-3">
-                              <span className="text-xs text-text-muted">Client Hourly Rate</span>
-                              <span className="text-sm font-semibold text-cta">${clientHourlyRate}/hr</span>
+                              <span className="text-xs text-text-muted">Client MSRP Margin</span>
+                              <span className="text-sm font-semibold text-cta">{Math.round(40 + ((clientHourlyRate - 90) / (180 - 90)) * (150 - 40))}%</span>
                             </div>
                             <Slider
                               value={[clientHourlyRate]}
@@ -511,18 +509,12 @@ const SEOCalculator = () => {
                               className="w-full"
                             />
                             <div className="flex justify-between mt-2">
-                              <span className="text-xs text-text-muted/60">$90/hr</span>
-                              <span className="text-xs text-text-muted/60">$180/hr</span>
+                              <span className="text-xs text-text-muted/60">40% margin</span>
+                              <span className="text-xs text-text-muted/60">150% margin</span>
                             </div>
                           </div>
 
-                          <p className="text-xs text-text-muted/70 mb-4">Your cost based on $65/hr white-label rate</p>
-
                           <div className="space-y-3 pt-4 border-t border-border/30">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-text-muted">Your Margin</span>
-                              <span className="text-cta font-semibold">{Math.round((clientHourlyRate - 65) / clientHourlyRate * 100)}%</span>
-                            </div>
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-text-muted">Expected Timeline</span>
                               <span className="text-foreground font-medium">{estimate.timelineMonths}+ months</span>
@@ -530,7 +522,7 @@ const SEOCalculator = () => {
                           </div>
 
                           <p className="text-xs text-text-muted mt-4">
-                            Adjust slider to your market. "Professional" tier is most common.
+                            Adjust slider to set your margin. "Professional" tier is most common.
                           </p>
                         </>
                       ) : (
