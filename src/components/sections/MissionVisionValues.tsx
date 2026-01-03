@@ -35,7 +35,7 @@ const MissionVisionValues = () => {
           </div>
 
           {/* Mission & Vision - Two column layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-20">
             {/* Mission */}
             <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-6">
@@ -153,12 +153,12 @@ const MissionVisionValues = () => {
             </div>
 
             {/* Divider */}
-            <div className="max-w-md mx-auto pt-10">
+            <div className="max-w-md mx-auto pt-12 pb-4">
               <div className="border-t border-border/40" />
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 py-8">
               <a href="#contact" className="btn-cta group">
                 Explore a Partnership
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
