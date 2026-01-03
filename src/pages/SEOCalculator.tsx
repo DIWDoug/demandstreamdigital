@@ -441,51 +441,57 @@ const SEOCalculator = () => {
                         ? "bg-gradient-to-br from-cta/10 to-accent-blue/10 border-cta/30" 
                         : "bg-surface-elevated border-border/30"
                     )}>
-                      <div className="flex items-center justify-between gap-2 mb-4">
-                        <div className="flex items-center gap-2">
+                      <div className="mb-4">
+                        <div className="flex items-center gap-2 mb-1">
                           <DollarSign className={cn("h-5 w-5", estimate ? "text-cta" : "text-text-muted")} />
-                          <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Recommended Client Pricing</span>
+                          <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Pricing Structure</span>
                         </div>
+                        <p className="text-xs text-text-muted">Your cost vs. suggested client pricing</p>
                       </div>
 
                       {estimate ? (
                         <>
+                          {/* Header Row */}
+                          <div className="grid grid-cols-3 gap-2 mb-2 px-3">
+                            <div className="text-xs text-text-muted font-medium">Tier</div>
+                            <div className="text-xs text-text-muted font-medium text-right">Your Cost</div>
+                            <div className="text-xs text-text-muted font-medium text-right">Client MSRP</div>
+                          </div>
+
                           {/* Tiered Pricing */}
-                          <div className="space-y-3 mb-6">
-                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
-                              <div>
-                                <p className="text-foreground font-medium">Starter</p>
-                                <p className="text-xs text-text-muted">~10-15 hrs/mo</p>
-                              </div>
-                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyLow * 1.4 / 50) * 50}</p>
-                            </div>
-                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-cta/30">
-                              <div>
-                                <p className="text-cta font-medium">Professional</p>
-                                <p className="text-xs text-text-muted">~15-20 hrs/mo</p>
-                              </div>
-                              <p className="text-lg font-bold text-cta">${Math.round(((estimate.monthlyLow + estimate.monthlyHigh) / 2) * 1.5 / 50) * 50}</p>
-                            </div>
-                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
-                              <div>
-                                <p className="text-foreground font-medium">Premium</p>
-                                <p className="text-xs text-text-muted">~20-30 hrs/mo</p>
-                              </div>
-                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyHigh * 1.5 / 50) * 50}</p>
-                            </div>
-                            <div className="flex justify-between items-center p-3 rounded-lg bg-surface-dark border border-border/30">
-                              <div>
-                                <p className="text-foreground font-medium">Elite</p>
-                                <p className="text-xs text-text-muted">~30-40+ hrs/mo</p>
-                              </div>
-                              <p className="text-lg font-bold text-foreground">${Math.round(estimate.monthlyHigh * 1.8 / 50) * 50}</p>
-                            </div>
+                          <div className="space-y-2 mb-6">
+                            {[
+                              { name: "Starter", hours: "10-15 hrs", costMult: 0.7, msrpMult: 1.4 },
+                              { name: "Professional", hours: "15-20 hrs", costMult: 0.85, msrpMult: 1.5, highlight: true },
+                              { name: "Premium", hours: "20-30 hrs", costMult: 1.0, msrpMult: 1.6 },
+                              { name: "Elite", hours: "30-40+ hrs", costMult: 1.3, msrpMult: 1.9 }
+                            ].map((tier, i) => {
+                              const baseCost = (estimate.monthlyLow + estimate.monthlyHigh) / 2;
+                              const yourCost = Math.round(baseCost * tier.costMult / 50) * 50;
+                              const clientMsrp = Math.round(baseCost * tier.msrpMult / 50) * 50;
+                              return (
+                                <div 
+                                  key={i}
+                                  className={cn(
+                                    "grid grid-cols-3 gap-2 p-3 rounded-lg bg-surface-dark border",
+                                    tier.highlight ? "border-cta/40" : "border-border/30"
+                                  )}
+                                >
+                                  <div>
+                                    <p className={cn("font-medium text-sm", tier.highlight ? "text-cta" : "text-foreground")}>{tier.name}</p>
+                                    <p className="text-xs text-text-muted">{tier.hours}</p>
+                                  </div>
+                                  <p className="text-sm font-semibold text-accent-blue text-right self-center">${yourCost.toLocaleString()}</p>
+                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>${clientMsrp.toLocaleString()}</p>
+                                </div>
+                              );
+                            })}
                           </div>
 
                           <div className="space-y-3 pt-4 border-t border-border/30">
                             <div className="flex justify-between items-center">
-                              <span className="text-sm text-text-muted">Your White-Label Cost</span>
-                              <span className="text-foreground font-medium">${estimate.monthlyLow.toLocaleString()} - ${estimate.monthlyHigh.toLocaleString()}/mo</span>
+                              <span className="text-sm text-text-muted">Your Margin</span>
+                              <span className="text-cta font-semibold">40-60%</span>
                             </div>
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-text-muted">Expected Timeline</span>
@@ -494,7 +500,7 @@ const SEOCalculator = () => {
                           </div>
 
                           <p className="text-xs text-text-muted mt-4">
-                            Tier pricing based on scope and aggressiveness. Adjust to your market and client expectations.
+                            Adjust pricing to your market. "Professional" tier is most common.
                           </p>
                         </>
                       ) : (
