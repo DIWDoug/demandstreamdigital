@@ -82,7 +82,8 @@ const About = () => {
     {
       name: "Martini Mabifa",
       role: "SEO Web Developer",
-      image: martiniMabifa
+      image: martiniMabifa,
+      linkedin: "https://www.linkedin.com/in/martini-mabifa-a00657174/"
     },
     {
       name: "Richard Baylon",
@@ -105,7 +106,8 @@ const About = () => {
     {
       name: "James Belmes",
       role: "Link Building Specialist",
-      image: jamesBelmes
+      image: jamesBelmes,
+      linkedin: "https://www.linkedin.com/in/james-belmes-702343201/"
     },
     {
       name: "Bel Aniano",
