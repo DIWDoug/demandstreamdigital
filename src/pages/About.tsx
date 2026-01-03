@@ -731,29 +731,25 @@ const About = () => {
                 <CarouselPrevious className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
                 <CarouselNext className="static translate-y-0 bg-surface-dark border-border hover:bg-cta/10 hover:border-cta/30" />
               </div>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <a href="#contact" className="btn-cta group">
+                  Explore a Partnership
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </a>
+                <a 
+                  href="tel:2143072995"
+                  className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
+                >
+                  <Phone className="h-5 w-5" />
+                  (214) 307-2995
+                </a>
+              </div>
             </Carousel>
           </div>
         </div>
       </section>
-
-      {/* CTA after Reviews */}
-      <div className="pb-16 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <a href="#contact" className="btn-cta group">
-              Explore a Partnership
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a 
-              href="tel:2143072995"
-              className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
-            >
-              <Phone className="h-5 w-5" />
-              (214) 307-2995
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Client Logos */}
       <section id="clients" className="py-16 lg:py-20 bg-surface-dark scroll-mt-32">
