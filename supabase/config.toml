@@ -1,10 +1,10 @@
 project_id = "bomcaceohbkavyjsdpls"
 
 [functions.scrape-blog]
-verify_jwt = false
+verify_jwt = true
 
 [functions.scrape-blogs-batch]
-verify_jwt = false
+verify_jwt = true
 
 [functions.submit-to-ghl]
 verify_jwt = false
@@ -13,4 +13,7 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.analyze-ai-readiness]
+verify_jwt = false
+
+[functions.fetch-pixabay-image]
 verify_jwt = false
