@@ -166,11 +166,6 @@ const WhiteLabelExplainer = () => {
                   
                   const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
                   const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
-
-                  // Label position relative to the orb
-                  const labelOffset = isMobile ? 50 : 60;
-                  const labelX = Math.cos((angle * Math.PI) / 180) * labelOffset;
-                  const labelY = Math.sin((angle * Math.PI) / 180) * labelOffset;
                   
                   return (
                     <div
@@ -196,18 +191,16 @@ const WhiteLabelExplainer = () => {
                         </div>
                       </button>
                       
-                      {/* Label attached to the orb - counter-rotated to stay upright */}
+                      {/* Label attached below the orb - counter-rotated to stay upright */}
                       <div 
-                        className="absolute animate-[spin_60s_linear_infinite_reverse]" 
+                        className="absolute left-1/2 top-full mt-2 animate-[spin_60s_linear_infinite_reverse]" 
                         style={{ 
                           animationPlayState: selectedService ? 'paused' : 'running',
-                          left: '50%',
-                          top: '50%',
-                          transform: `translate(calc(-50% + ${labelX}px), calc(-50% + ${labelY}px))`,
+                          transformOrigin: 'center center',
                         }}
                       >
                         <span
-                          className={`text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
+                          className={`block -translate-x-1/2 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
                             isSelected ? 'text-accent-blue' : 'text-text-muted'
                           }`}
                         >
