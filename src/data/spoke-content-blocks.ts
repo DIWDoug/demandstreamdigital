@@ -377,13 +377,6 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Can press releases appear in Google News?", answer: "Yes, when distributed through recognized wire services. Timing and news value affect visibility." },
     { question: "What makes a press release newsworthy?", answer: "Milestones, expansions, awards, community involvement, original research, or significant partnerships." }
   ],
-  "aio-content": [
-    { question: "What is AIO content?", answer: "AI-Optimized content structured so AI systems like ChatGPT, Perplexity, and Google AI Overviews can parse, understand, and cite it." },
-    { question: "How is AIO content different from regular SEO content?", answer: "It emphasizes semantic structure, quotable statements, FAQ formatting, and schema markup for machine extractability." },
-    { question: "Can existing content be optimized for AI?", answer: "Yes. We audit and restructure existing content for AI visibility without losing traditional SEO value." },
-    { question: "How do you track AI visibility?", answer: "We monitor AI Overview appearances, citation accuracy, and mentions in AI-powered search results." },
-    { question: "Is AIO content future-proof?", answer: "The principles are durable: clear structure, authoritative answers, and machine-readable formatting will remain valuable." }
-  ],
   "case-studies": [
     { question: "How do you get clients to participate in case studies?", answer: "We help identify willing clients and make the process easy. A 30-minute interview is usually all that's needed." },
     { question: "What results make a good case study?", answer: "Quantifiable outcomes, compelling challenges overcome, and clients willing to be named publicly." },
@@ -2528,11 +2521,11 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Why Geographic Content Matters",
       headline: "Local Search Demands Local Content",
-      description: "Service area pages and city-specific content capture the searches that matter most to local businesses. Without geographic content, you're invisible in the markets you serve—regardless of how good your homepage is.",
+      description: "Service area pages capture the searches that matter most to local businesses. Beyond organic rankings, geographic content directly supports Google Business Profile visibility in the local 3-pack.",
       subPoints: [
         { title: "Near Me Intent", description: "'Near me' searches have grown 500% in recent years. Geographic content captures this intent." },
-        { title: "Local Pack Eligibility", description: "Location-specific pages support GBP rankings and increase local 3-pack visibility." },
-        { title: "Market Expansion", description: "Each service area page opens a new geographic market to organic traffic." },
+        { title: "GBP Ranking Support", description: "Location-specific pages send relevance signals that strengthen GBP rankings in the local 3-pack." },
+        { title: "Market Expansion", description: "Each service area page opens a new geographic market to organic traffic and map results." },
         { title: "Competitor Displacement", description: "Many competitors lack geographic depth. Service area pages create immediate advantages." },
         { title: "Conversion Relevance", description: "Local content converts better. Visitors see you serve their specific area." }
       ],
@@ -2573,10 +2566,10 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     {
       category: "Building Topical Authority",
       headline: "Expertise That Search Engines Trust",
-      description: "Topical content demonstrates deep expertise in your client's industry. Google rewards sites that comprehensively cover a topic—not sites with scattered, surface-level content.",
+      description: "Topical content builds authority that Google rewards. Deep expertise on industry topics strengthens both organic rankings and Google Business Profile visibility through relevance signals.",
       subPoints: [
         { title: "E-E-A-T Signals", description: "Experience, Expertise, Authority, Trust—topical depth demonstrates all four." },
-        { title: "Topic Clusters", description: "Interlinked content on related topics creates semantic authority." },
+        { title: "GBP Relevance", description: "Topical authority on your website reinforces what your GBP signals to Google about your expertise." },
         { title: "Long-Tail Capture", description: "Deep coverage captures hundreds of long-tail queries automatically." },
         { title: "AI Visibility", description: "Comprehensive coverage makes content more likely to be cited by AI systems." },
         { title: "Competitive Moat", description: "Topical authority compounds over time and is difficult for competitors to replicate." }
@@ -2792,52 +2785,6 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Follow-Up Outreach", description: "Personal follow-up to increase pickup chances." },
         { title: "Coverage Tracking", description: "Monitor pickup, citations, and backlinks generated." },
         { title: "Repurposing", description: "Leverage release content for blog posts and social." }
-      ],
-      ctaText: "Explore Partnership",
-      ctaHref: "#contact"
-    }
-  ],
-
-  "aio-content": [
-    {
-      category: "AI Overview Optimization",
-      headline: "Content Structured for AI Citation",
-      description: "AI Overviews and LLM-powered search are changing how content gets discovered. AIO content is structured so AI systems can parse, understand, and cite it accurately.",
-      subPoints: [
-        { title: "Semantic Structure", description: "Clear headings and logical organization that AI can parse." },
-        { title: "Quotable Statements", description: "Concise, authoritative answers that LLMs extract and cite." },
-        { title: "FAQ Integration", description: "Question-answer format that matches AI query patterns." },
-        { title: "Entity Clarity", description: "Explicit identification of who, what, where for disambiguation." },
-        { title: "Source Credibility", description: "E-E-A-T signals that make content citation-worthy." }
-      ],
-      ctaText: "Start the Conversation",
-      ctaHref: "#contact"
-    },
-    {
-      category: "Technical Requirements",
-      headline: "The Mechanics of AI Visibility",
-      description: "AI visibility requires specific technical implementations. We ensure content meets the structural requirements that AI systems need to cite it accurately.",
-      subPoints: [
-        { title: "Schema Markup", description: "FAQ, HowTo, and LocalBusiness schema for explicit machine understanding." },
-        { title: "Heading Hierarchy", description: "H1-H6 structure that creates semantic sections." },
-        { title: "Answer Formatting", description: "Direct answers within the first 100 words of sections." },
-        { title: "List Structures", description: "Bulleted and numbered lists that AI can easily extract." },
-        { title: "Table Data", description: "Comparison tables that provide structured information." },
-        { title: "Citation Trails", description: "Clear attribution and source references." }
-      ],
-      ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
-    },
-    {
-      category: "Future-Proofing Content",
-      headline: "Content Strategy for AI-First Search",
-      description: "As AI-powered search grows, content strategy must evolve. We help transition existing content and create new content optimized for both traditional and AI search.",
-      subPoints: [
-        { title: "Content Auditing", description: "Identify existing content that can be optimized for AI." },
-        { title: "Restructuring", description: "Update content organization for AI extractability." },
-        { title: "Answer Optimization", description: "Refine content to provide clear, citable answers." },
-        { title: "Topic Expansion", description: "Cover questions AI systems are likely to field." },
-        { title: "Monitoring", description: "Track AI Overview appearances and citation accuracy." }
       ],
       ctaText: "Explore Partnership",
       ctaHref: "#contact"
