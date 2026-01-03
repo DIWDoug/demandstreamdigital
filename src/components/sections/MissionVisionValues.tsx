@@ -152,6 +152,11 @@ const MissionVisionValues = () => {
               </div>
             </div>
 
+            {/* Divider */}
+            <div className="max-w-md mx-auto pt-10">
+              <div className="border-t border-border/40" />
+            </div>
+
             {/* CTA */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
               <a href="#contact" className="btn-cta group">
