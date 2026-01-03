@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
+import { ArrowRight, Phone } from "lucide-react";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
@@ -734,6 +735,28 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* CTA after Reviews */}
+      <div className="py-12 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-md mx-auto pb-4">
+            <div className="border-t border-border/40" />
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+            <a href="#contact" className="btn-cta group">
+              Explore a Partnership
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
+            <a 
+              href="tel:2143072995"
+              className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+              (214) 307-2995
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Client Logos */}
       <section id="clients" className="py-16 lg:py-20 bg-surface-dark scroll-mt-32">
