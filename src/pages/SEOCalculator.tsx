@@ -613,25 +613,24 @@ const SEOCalculator = () => {
         </section>
 
         {/* Partnership CTA */}
-        <section className="py-12 lg:py-16 bg-surface-elevated">
+        <section className="py-12 lg:py-16 bg-surface-dark">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground">Ready to discuss your client's needs?</h3>
-              <p className="text-text-muted">Let's build a local SEO strategy tailored to their market reality.</p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors"
-                >
-                  Explore Partnership
-                </Link>
-                <a
-                  href="tel:+12143072995"
-                  className="inline-flex items-center gap-2 text-accent-blue hover:text-cta transition-colors font-medium"
-                >
-                  (214) 307-2995
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors shadow-lg shadow-cta/20"
+              >
+                Let's Talk Partnership
+                <span>→</span>
+              </Link>
+              <span className="text-text-muted">or</span>
+              <a
+                href="tel:+12143072995"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border/50 rounded-xl text-foreground hover:border-accent-blue/50 transition-colors"
+              >
+                <span className="text-accent-blue">📞</span>
+                (214) 307-2995
+              </a>
             </div>
           </div>
         </section>
