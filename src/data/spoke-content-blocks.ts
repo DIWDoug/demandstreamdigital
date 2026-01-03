@@ -127,17 +127,21 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
   ],
   "content-development": [
     { question: "Who writes the content?", answer: "Our in-house content team with local SEO expertise. We never use AI-generated content without substantial human editing and subject matter expertise." },
-    { question: "How do you ensure content is unique per location?", answer: "Each location page includes market-specific details: local landmarks, regulations, service area specifics, hours, contact info, and unique value propositions. Boilerplate 'doorway pages' with only city names swapped violate Google's guidelines and we never create them." },
+    { question: "How does content relate to GBP rankings?", answer: "Geographic and topical content reinforces the signals in your Google Business Profile. When website content aligns with GBP categories and services, local pack rankings improve." },
+    { question: "What is hub-and-spoke content architecture?", answer: "Pillar pages anchor each topic cluster. Supporting articles link back to the hub, concentrating topical authority on your money pages. This structure signals expertise to both Google and AI systems." },
+    { question: "How do you find low-hanging fruit content opportunities?", answer: "Google Search Console reveals pages with high impressions but low clicks, keywords ranking on page 2 that need a push, and queries triggering your site with no dedicated page." },
     { question: "What is your content approval process?", answer: "Draft delivered for review, single revision round included, then final approval before publishing. Additional revisions available at added cost." },
-    { question: "Do you provide ongoing content or one-time pieces?", answer: "Both. We offer one-time content projects and monthly retainer packages for ongoing blog content, location pages, and content refreshes." },
-    { question: "How do you optimize content for AI visibility?", answer: "Clear section headings, quotable statements, complete answers to questions, and semantic chunking that LLMs can parse and cite accurately. FAQ blocks are particularly effective for AI extraction." }
+    { question: "How do you optimize content for AI Overviews?", answer: "Clear section headings, quotable statements, complete answers to questions, and semantic chunking that LLMs can parse and cite accurately. FAQ blocks are particularly effective for AI extraction." },
+    { question: "Do you refresh existing content or only create new?", answer: "Both. We audit existing content for opportunities: pages with backlinks that need expansion, outdated content that needs freshness updates, and thin pages that need depth." }
   ],
   "link-building": [
-    { question: "What types of links do you build?", answer: "Editorial links from local news, industry publications, chamber of commerce directories, local sponsorships, and guest contributions. No PBNs or paid link schemes." },
+    { question: "What types of links do you build?", answer: "Local publications, chambers, associations, sponsorships with links, business partnerships, testimonial exchanges, and vetted guest posts. No PBNs or link schemes." },
+    { question: "Do you pay for guest posts?", answer: "Yes, when they pass our vetting. We require one year of consistent traffic, DA/DR alignment, contextual relevance, and no public 'Write For Us' pages. We ensure links will last." },
+    { question: "What is your vetting process for paid placements?", answer: "Traffic consistency over 12+ months, Domain Authority and Domain Rating within close range, topical relevance to your industry, and no signs the site sells links publicly." },
+    { question: "How do testimonial link exchanges work?", answer: "Your client offers a testimonial to a vendor, accountant, attorney, or business partner. In exchange, the partner publishes the testimonial with a link back. High trust, easy acquisition." },
     { question: "How many links per month should we expect?", answer: "Quality over quantity. Typically 5-15 relevant links monthly depending on campaign scope. One link from a trusted local source beats 50 low-quality submissions." },
-    { question: "Do you build links to specific pages or just homepage?", answer: "Strategic distribution. Homepage and service pages for authority, location pages for geographic signals, and blog content for topical relevance." },
-    { question: "How do you measure link building success?", answer: "Referring domain growth, Domain Authority changes, ranking improvements for targeted pages, and referral traffic from acquired links." },
-    { question: "What is your approach to anchor text?", answer: "Natural distribution: branded anchors, naked URLs, generic terms, and occasional keyword-rich anchors. Over-optimization triggers penalties." }
+    { question: "What is your approach to anchor text?", answer: "Natural distribution: branded anchors, naked URLs, generic terms, and occasional keyword-rich anchors. Over-optimization triggers penalties." },
+    { question: "How do you ensure links stay live?", answer: "We avoid sites that purge content, disappear quickly, or have unstable traffic patterns. Longevity is a core vetting criterion. We monitor for dropped links." }
   ],
   "schema-markup": [
     { question: "What schema types do you implement?", answer: "LocalBusiness, Organization, Person, Service, FAQ, Review, Breadcrumb, Article, and Product schema. We use an @graph structure to connect entities—your business, its founder, services, and locations—into a page-level knowledge graph that machines understand explicitly." },
@@ -600,50 +604,50 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "content-development": [
     {
-      category: "Location Pages",
-      headline: "Unique Content That Signals Local Relevance",
-      description: "Generic service pages do not rank locally. Google needs proof you serve specific markets. Boilerplate 'doorway pages' with only location names swapped violate guidelines and get penalized.",
+      category: "Geographic & Topical Content",
+      headline: "Content That Ranks Locally and Feeds GBP",
+      description: "Geographic content builds local relevance. Topical content builds authority. Both feed your Google Business Profile signals and create the foundation for hub-and-spoke architecture.",
       subPoints: [
-        { title: "City-Specific Pages", description: "100% unique content per service area. Local landmarks, regulations, service notes. Not templates with city names swapped." },
-        { title: "Local Context", description: "Neighborhoods, landmarks, parking details, and regional specifics. Signals that you actually operate there." },
-        { title: "Area Hierarchy", description: "Primary locations get comprehensive pages. Secondary areas get appropriate depth based on opportunity." },
-        { title: "Conversion Focus", description: "Local phone numbers, embedded Google Maps, hours, and location-specific trust signals." },
-        { title: "Schema Integration", description: "LocalBusiness and Service schema on every location page for rich results and AI visibility." },
-        { title: "Link Architecture", description: "Location pages connected to hub structure. Internal links from homepage and service pages distribute authority." }
+        { title: "Geographic Pages", description: "Service area pages with unique local context. Landmarks, regulations, and area-specific details that prove you serve that market." },
+        { title: "Topical Clusters", description: "Hub pages cover core topics. Supporting articles link back, concentrating authority on money pages." },
+        { title: "GBP Signal Reinforcement", description: "Website content aligned with GBP categories and services. Consistent signals strengthen local pack rankings." },
+        { title: "Service Page Buildouts", description: "Detailed pages for each service offered. Internal links from GBP description and posts drive authority." },
+        { title: "AIO/AEO Optimization", description: "Content structured for AI Overviews. Clear headings, quotable statements, and semantic chunking for LLM extraction." },
+        { title: "Hub-and-Spoke Architecture", description: "Pillar pages anchor topic clusters. Every supporting article links to its hub, creating topical depth." }
       ],
       imageSrc: contentLocationImg,
-      imageAlt: "Location page content structure",
+      imageAlt: "Geographic and topical content strategy",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
     {
-      category: "Blog & Authority",
-      headline: "Clusters That Make Service Pages Rank",
-      description: "Service pages alone rarely rank competitively. Supporting content builds topical authority.",
+      category: "Google Search Console Strategy",
+      headline: "Find Low-Hanging Fruit in Your Data",
+      description: "The best content opportunities often hide in existing data. Google Search Console reveals pages with untapped potential and quick wins waiting to be captured.",
       subPoints: [
-        { title: "Hub-Spoke Architecture", description: "Pillar pages cover core topics. Supporting articles link back with depth." },
-        { title: "FAQ Expansion", description: "Questions transformed into articles. Targets PAA and provides LLM fodder." },
-        { title: "Local Industry", description: "Content relevant to your market. Attracts local links and authority." },
-        { title: "AI-Ready Structure", description: "Clear headings, quotable statements, complete answers. LLM-optimized." },
-        { title: "Seasonal Calendar", description: "Publishing aligned with demand. Content live before spikes." },
-        { title: "Information Gain", description: "Original insights and data. Value beyond rewrites of existing content." }
+        { title: "High Impressions, Low CTR", description: "Pages ranking but not clicked. Title and meta rewrites unlock traffic that's already there." },
+        { title: "Position 5-15 Keywords", description: "Terms ranking on page 1-2 edges. Small improvements push these into click-earning positions." },
+        { title: "Content Gap Discovery", description: "Queries triggering your site that have no dedicated page. New content opportunities identified." },
+        { title: "Declining Page Recovery", description: "Pages losing traffic flagged early. Refresh before competitors overtake." },
+        { title: "Query Intent Mismatch", description: "Pages ranking for queries they don't fully answer. Content expanded to match intent." },
+        { title: "Cannibalization Detection", description: "Multiple pages competing for same query. Consolidate or differentiate to reclaim lost rankings." }
       ],
       imageSrc: contentBlogImg,
-      imageAlt: "Content cluster strategy diagram",
+      imageAlt: "Search Console optimization workflow",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
     {
-      category: "Content Refresh",
+      category: "Content Expansion & Refresh",
       headline: "Make Existing Content Work Harder",
-      description: "Sometimes the best opportunity is improving what exists. Pages with backlinks can transform.",
+      description: "Sometimes the best opportunity is improving what exists. Pages with backlinks and history can transform into ranking assets with strategic updates.",
       subPoints: [
-        { title: "Performance Audit", description: "Pages ranked by traffic, rankings, and potential. Underperformers prioritized." },
-        { title: "Intent Realignment", description: "Pages targeting wrong intent restructured. Content matched to SERP." },
-        { title: "Thin Content Fix", description: "Pages below threshold expanded with valuable detail." },
-        { title: "Freshness Updates", description: "Outdated stats and examples replaced. Current year added where appropriate." },
-        { title: "Consolidation", description: "Multiple pages for same keyword merged. Authority concentrated." },
-        { title: "Link Injection", description: "Optimized pages connected to site architecture from authority pages." }
+        { title: "Performance Audit", description: "Pages ranked by traffic, rankings, and potential. Underperformers prioritized for expansion." },
+        { title: "Thin Content Fix", description: "Pages below quality threshold expanded with valuable detail, examples, and depth." },
+        { title: "Intent Realignment", description: "Pages targeting wrong intent restructured. Content matched to what SERP analysis reveals." },
+        { title: "Freshness Updates", description: "Outdated stats and examples replaced. Current year and recent data added where appropriate." },
+        { title: "Consolidation Strategy", description: "Multiple weak pages for same keyword merged. Authority concentrated on single strong page." },
+        { title: "Internal Link Injection", description: "Refreshed pages connected to site architecture. Links from authority pages distribute ranking power." }
       ],
       imageSrc: contentRefreshImg,
       imageAlt: "Content optimization workflow",
@@ -654,16 +658,16 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
 
   "link-building": [
     {
-      category: "Local Acquisition",
-      headline: "Geographic Authority Through Links",
-      description: "Local links signal geographic authority that national competitors cannot replicate.",
+      category: "Local & Community Links",
+      headline: "Geographic Authority Competitors Cannot Copy",
+      description: "Local links signal geographic authority that national competitors cannot replicate. These connections prove your client is embedded in the community.",
       subPoints: [
-        { title: "Local Publications", description: "Coverage in local news, community blogs, and regional publications." },
-        { title: "Chambers & Associations", description: "Membership directories from established local organizations." },
-        { title: "Sponsorships", description: "Local sports, charity events, schools. Real involvement, real links." },
-        { title: "Business Partnerships", description: "Complementary businesses. Vendor pages and partner directories." },
+        { title: "Local Publications", description: "Coverage in local news, community blogs, and regional publications. Real editorial mentions." },
+        { title: "Chambers & Associations", description: "Membership directories from established local organizations. Trusted civic signals." },
+        { title: "Sponsorships With Links", description: "Local sports, charity events, schools. Real involvement with hyperlinked sponsorship pages." },
+        { title: "Business Partnerships", description: "Vendors, accountants, attorneys—any business relationship. Testimonial exchanges with reciprocal links." },
         { title: "Resource Pages", description: "City websites, tourism boards, community lists. Government and .edu links." },
-        { title: "Hyperlocal Promotion", description: "Local content promoted to local audiences. Shares from people who care." }
+        { title: "Testimonial Link Building", description: "Offer testimonials to partners and vendors in exchange for linked attribution. High-trust, easy acquisition." }
       ],
       imageSrc: linkLocalImg,
       imageAlt: "Local link acquisition sources",
@@ -671,33 +675,33 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
-      category: "Authority Links",
-      headline: "Earning Links That Move Rankings",
-      description: "One link from a trusted source outweighs dozens of low-quality submissions.",
+      category: "Vetted Guest Posting",
+      headline: "Paid Placements That Actually Last",
+      description: "We pay for guest posts when they pass our vetting. Not every placement is worth buying. Our standards ensure links stay live and deliver long-term value.",
       subPoints: [
-        { title: "Guest Posting", description: "Expert content on industry publications. Bylines that build authority." },
-        { title: "Linkable Assets", description: "Original research, tools, templates. Content worth linking to." },
-        { title: "Broken Link Reclamation", description: "Find broken links on relevant sites. Offer your content as replacement." },
-        { title: "Unlinked Mentions", description: "Brand mentions without links identified. Converted to actual links." },
-        { title: "HARO Outreach", description: "Expert commentary for journalists. Links from news and major publications." },
-        { title: "Digital PR", description: "Newsworthy angles and data studies. Coverage from authoritative sources." }
+        { title: "Traffic Consistency", description: "Minimum one year of consistent traffic. No spikes, no drops. Stable sites only." },
+        { title: "DA/DR Alignment", description: "Domain Authority and Domain Rating within close range. Discrepancies signal manipulation." },
+        { title: "Contextual Relevance", description: "Links placed in contextually relevant content. Topical alignment with your client's industry." },
+        { title: "Local + Authoritative", description: "Following Ahrefs methodology: contextual, local, and authoritative sources prioritized." },
+        { title: "No 'Write For Us'", description: "Avoid sites advertising guest posts publicly. Hidden contributor relationships preferred." },
+        { title: "Longevity Focus", description: "Links expected to stay live. No sites that purge content or disappear in six months." }
       ],
       imageSrc: linkAuthorityImg,
-      imageAlt: "Authority link building tactics",
+      imageAlt: "Guest posting vetting process",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
     {
-      category: "Profile Health",
+      category: "Profile Health & Safety",
       headline: "Natural Profiles That Avoid Penalties",
-      description: "Over-optimized anchors trigger penalties. Unnatural velocity raises flags. We build naturally.",
+      description: "Over-optimized anchors trigger penalties. Unnatural velocity raises flags. We build naturally and monitor continuously.",
       subPoints: [
-        { title: "Anchor Diversity", description: "Branded, naked URL, generic, and keyword anchors mixed naturally." },
-        { title: "Velocity Management", description: "Steady acquisition mimicking natural growth. No sudden spikes." },
-        { title: "Domain Diversity", description: "Links from variety of sources. Not concentrated on few domains." },
-        { title: "Toxic Monitoring", description: "Regular audits for harmful links. Disavow file maintained." },
-        { title: "Competitor Gaps", description: "Link sources competitors have identified. Prioritized for outreach." },
-        { title: "Attribution Tracking", description: "New links monitored and attributed to campaigns. ROI measured." }
+        { title: "Anchor Diversity", description: "Branded, naked URL, generic, and keyword anchors mixed naturally. No over-optimization." },
+        { title: "Velocity Management", description: "Steady acquisition mimicking natural growth. No sudden spikes that trigger algorithmic review." },
+        { title: "Domain Diversity", description: "Links from variety of sources. Not concentrated on few domains or link networks." },
+        { title: "Toxic Monitoring", description: "Regular audits for harmful links. Disavow file maintained and submitted." },
+        { title: "Competitor Gap Analysis", description: "Link sources competitors have that you don't. Prioritized for outreach." },
+        { title: "Attribution Tracking", description: "New links monitored and attributed to campaigns. ROI measured and reported." }
       ],
       imageSrc: linkHealthImg,
       imageAlt: "Link profile health analysis",
