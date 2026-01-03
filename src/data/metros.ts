@@ -217,12 +217,13 @@ export const searchMetros = (query: string): Metro[] => {
   if (!query || query.length < 2) return [];
   const lower = query.toLowerCase();
   
-  // Normalize search variations: "saint" <-> "st." and "st " <-> "saint "
+  // Normalize search variations: "saint" <-> "st." <-> "st" all become "st"
   const normalizeForSearch = (text: string): string => {
     return text
-      .replace(/\bsaint\b/gi, 'st.')
-      .replace(/\bst\b/gi, 'st.')
-      .toLowerCase();
+      .toLowerCase()
+      .replace(/\bsaint\b/g, 'st')
+      .replace(/\bst\./g, 'st')
+      .replace(/\bst\b/g, 'st');
   };
   
   const normalizedQuery = normalizeForSearch(lower);
