@@ -1,4 +1,4 @@
-import { Target, Eye, Shield, Handshake, Users, CheckCircle, Sparkles } from "lucide-react";
+import { Target, Eye, Shield, Handshake, Users, CheckCircle, Sparkles, ArrowRight, Phone } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const MissionVisionValues = () => {
@@ -150,6 +150,21 @@ const MissionVisionValues = () => {
                   Experienced specialists, not junior contractors. Our team stays current on algorithms and trends so you can confidently sell what we deliver.
                 </p>
               </div>
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <a href="#contact" className="btn-cta group">
+                Explore a Partnership
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a 
+                href="tel:2143072995"
+                className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                (214) 307-2995
+              </a>
             </div>
           </div>
         </div>
