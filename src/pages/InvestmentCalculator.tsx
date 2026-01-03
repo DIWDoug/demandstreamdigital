@@ -280,6 +280,26 @@ const InvestmentCalculator = () => {
                   <div className="space-y-6">
                     <div>
                       <label className="block text-foreground font-medium mb-3">What metro area is this client in?</label>
+                      
+                      {/* Popular Metros Quick Select */}
+                      {!formData.metro && (
+                        <div className="mb-4">
+                          <span className="text-xs text-text-muted uppercase tracking-wider mb-2 block">Popular Markets</span>
+                          <div className="flex flex-wrap gap-2">
+                            {metros.slice(0, 10).map((metro) => (
+                              <button
+                                key={`quick-${metro.name}-${metro.state}`}
+                                type="button"
+                                onClick={() => { updateField("metro", metro); setMetroSearch(""); setShowMetroDropdown(false); }}
+                                className="px-3 py-1.5 text-xs rounded-full bg-surface-dark border border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-foreground transition-colors"
+                              >
+                                {metro.name}, {metro.state}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      
                       <div className="relative">
                         <input
                           type="text"
