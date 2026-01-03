@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
+import FulfillmentSteps from "@/components/sections/FulfillmentSteps";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, BookOpen, TrendingUp, Users } from "lucide-react";
 
 interface Blog {
   id: string;
@@ -31,96 +33,205 @@ const Blog = () => {
     },
   });
 
+  const featuredPost = blogs?.[0];
+  const remainingPosts = blogs?.slice(1);
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Blog | White-Label Digital Marketing Insights | Dialed-In Web</title>
+        <title>Agency Growth Insights | White-Label Digital Marketing Blog | Dialed-In Web</title>
         <meta name="description" content="Expert insights on white-label SEO, local search, paid media, and agency growth strategies. Learn how to scale your agency with our fulfillment expertise." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
       </Helmet>
       
       <Header />
       
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Agency Growth <span className="text-primary">Insights</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Expert perspectives on white-label fulfillment, local SEO strategies, and scaling your digital marketing agency.
-            </p>
+      <main className="pt-32 pb-16">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden pb-16">
+          <div className="absolute inset-0 bg-gradient-to-br from-cta/5 via-transparent to-accent-blue/5 pointer-events-none" />
+          <div className="container mx-auto px-6 lg:px-8 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="inline-block px-4 py-1.5 bg-cta/10 border border-cta/20 rounded-full text-cta text-sm font-medium mb-6">
+                Agency Growth Insights
+              </span>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+                Strategies for <span className="text-cta">Scaling</span> Your Agency
+              </h1>
+              <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
+                Expert perspectives on white-label fulfillment, local SEO, paid media, and building an agency that thrives.
+              </p>
+              
+              {/* Quick Stats */}
+              <div className="flex flex-wrap justify-center gap-8">
+                <div className="flex items-center gap-2 text-text-secondary">
+                  <BookOpen className="w-5 h-5 text-cta" />
+                  <span className="text-sm">In-Depth Guides</span>
+                </div>
+                <div className="flex items-center gap-2 text-text-secondary">
+                  <TrendingUp className="w-5 h-5 text-accent-blue" />
+                  <span className="text-sm">Proven Strategies</span>
+                </div>
+                <div className="flex items-center gap-2 text-text-secondary">
+                  <Users className="w-5 h-5 text-cta" />
+                  <span className="text-sm">Agency-Focused</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
 
-          {/* Blog Grid */}
-          {isLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <Card key={i} className="bg-surface-dark border-white/10">
-                  <Skeleton className="h-48 w-full rounded-t-lg" />
-                  <CardHeader>
-                    <Skeleton className="h-6 w-3/4" />
-                  </CardHeader>
-                  <CardContent>
-                    <Skeleton className="h-4 w-full mb-2" />
-                    <Skeleton className="h-4 w-2/3" />
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : error ? (
-            <div className="text-center py-16">
-              <p className="text-muted-foreground">Failed to load blog posts. Please try again later.</p>
-            </div>
-          ) : blogs && blogs.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogs.map((blog) => (
-                <Link key={blog.id} to={`/blog/${blog.slug}`}>
-                  <Card className="bg-surface-dark border-white/10 hover:border-primary/50 transition-all duration-300 h-full group">
-                    {blog.featured_image && (
-                      <div className="relative h-48 overflow-hidden rounded-t-lg">
-                        <img 
-                          src={blog.featured_image} 
-                          alt={blog.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    )}
-                    <CardHeader>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(blog.published_at).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
-                      </div>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors line-clamp-2">
-                        {blog.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      {blog.excerpt && (
-                        <p className="text-muted-foreground text-sm line-clamp-3 mb-4">
-                          {blog.excerpt}
-                        </p>
+        {/* Blog Content */}
+        <section className="py-16 bg-surface-dark">
+          <div className="container mx-auto px-6 lg:px-8">
+            {isLoading ? (
+              <div className="space-y-12">
+                {/* Featured Skeleton */}
+                <div className="grid lg:grid-cols-2 gap-8">
+                  <Skeleton className="h-80 rounded-2xl" />
+                  <div className="space-y-4">
+                    <Skeleton className="h-6 w-32" />
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-24 w-full" />
+                    <Skeleton className="h-10 w-40" />
+                  </div>
+                </div>
+                {/* Grid Skeleton */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[1, 2, 3].map((i) => (
+                    <Card key={i} className="bg-background border-border">
+                      <Skeleton className="h-48 w-full rounded-t-lg" />
+                      <CardHeader>
+                        <Skeleton className="h-6 w-3/4" />
+                      </CardHeader>
+                      <CardContent>
+                        <Skeleton className="h-4 w-full mb-2" />
+                        <Skeleton className="h-4 w-2/3" />
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ) : error ? (
+              <div className="text-center py-16">
+                <p className="text-text-secondary">Failed to load blog posts. Please try again later.</p>
+              </div>
+            ) : blogs && blogs.length > 0 ? (
+              <div className="space-y-16">
+                {/* Featured Post */}
+                {featuredPost && (
+                  <Link to={`/blog/${featuredPost.slug}`} className="block group">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center bg-background rounded-2xl border border-border overflow-hidden hover:border-cta/30 transition-all duration-300">
+                      {featuredPost.featured_image ? (
+                        <div className="relative h-64 lg:h-80 overflow-hidden">
+                          <img 
+                            src={featuredPost.featured_image} 
+                            alt={featuredPost.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <span className="px-3 py-1 bg-cta text-cta-foreground text-xs font-semibold rounded-full">
+                              Featured
+                            </span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="h-64 lg:h-80 bg-surface-elevated flex items-center justify-center">
+                          <BookOpen className="w-16 h-16 text-border" />
+                        </div>
                       )}
-                      <span className="text-primary text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                        Read More <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <p className="text-muted-foreground">No blog posts yet. Check back soon!</p>
-            </div>
-          )}
-        </div>
+                      <div className="p-6 lg:p-8">
+                        <div className="flex items-center gap-2 text-sm text-text-muted mb-3">
+                          <Calendar className="w-4 h-4" />
+                          {new Date(featuredPost.published_at).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </div>
+                        <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4 group-hover:text-cta transition-colors">
+                          {featuredPost.title}
+                        </h2>
+                        {featuredPost.excerpt && (
+                          <p className="text-text-secondary mb-6 line-clamp-3">
+                            {featuredPost.excerpt}
+                          </p>
+                        )}
+                        <span className="inline-flex items-center gap-2 text-cta font-medium group-hover:gap-3 transition-all">
+                          Read Article <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                )}
+
+                {/* Remaining Posts Grid */}
+                {remainingPosts && remainingPosts.length > 0 && (
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-6">More Articles</h3>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {remainingPosts.map((blog) => (
+                        <Link key={blog.id} to={`/blog/${blog.slug}`}>
+                          <Card className="bg-background border-border hover:border-cta/30 transition-all duration-300 h-full group">
+                            {blog.featured_image ? (
+                              <div className="relative h-48 overflow-hidden rounded-t-lg">
+                                <img 
+                                  src={blog.featured_image} 
+                                  alt={blog.title}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                            ) : (
+                              <div className="h-48 bg-surface-elevated flex items-center justify-center rounded-t-lg">
+                                <BookOpen className="w-12 h-12 text-border" />
+                              </div>
+                            )}
+                            <CardHeader>
+                              <div className="flex items-center gap-2 text-sm text-text-muted mb-2">
+                                <Calendar className="w-4 h-4" />
+                                {new Date(blog.published_at).toLocaleDateString('en-US', {
+                                  year: 'numeric',
+                                  month: 'long',
+                                  day: 'numeric'
+                                })}
+                              </div>
+                              <CardTitle className="text-lg group-hover:text-cta transition-colors line-clamp-2">
+                                {blog.title}
+                              </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                              {blog.excerpt && (
+                                <p className="text-text-secondary text-sm line-clamp-3 mb-4">
+                                  {blog.excerpt}
+                                </p>
+                              )}
+                              <span className="text-cta text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                                Read More <ArrowRight className="w-4 h-4" />
+                              </span>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <BookOpen className="w-16 h-16 text-border mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-2">Coming Soon</h3>
+                <p className="text-text-secondary">We're working on expert content for agency growth. Check back soon!</p>
+              </div>
+            )}
+          </div>
+        </section>
       </main>
+
+      {/* Agency Partner Testimonials */}
+      <AgencyPartnerVideos />
+
+      {/* Fulfillment Steps */}
+      <FulfillmentSteps />
       
       <Footer />
     </div>
