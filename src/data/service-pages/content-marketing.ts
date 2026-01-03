@@ -21,36 +21,36 @@ export const contentMarketingConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Most Content Marketing Fails",
-    intro: "You've seen this before. Content gets published, but nothing happens. No rankings, no leads, no ROI. The problem isn't volume. It's strategy.",
+    intro: "You've seen this before. Traffic looks great in the report, but the phone doesn't ring. The problem isn't content volume—it's misunderstood metrics and missing strategy.",
     painPoints: [
       {
-        icon: FileText,
-        title: "Content Without Purpose",
-        body: "Generic blog posts that check a box but serve no strategic function. No keyword targeting, no conversion path, no connection to the customer journey."
+        icon: BarChart3,
+        title: "Misunderstood Metrics",
+        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas plumber ranking for 'laser vs Zoom teeth whitening' gets California traffic that will never convert."
       },
       {
         icon: MapPin,
-        title: "Missing Geographic Relevance",
-        body: "National content competing against local specialists. Without service area pages and location-specific content, local rankings remain out of reach."
+        title: "Geographic Mismatch",
+        body: "Informational content that ranks nationally but attracts visitors from cities you don't serve. Impressive traffic reports that mean nothing to a local business's bottom line."
       },
       {
         icon: Target,
         title: "No Conversion Architecture",
-        body: "Content that attracts visitors but never converts them. Missing CTAs, no lead magnets, no email capture. Traffic without revenue."
+        body: "The 'Ultimate Guide to Water Heater Repair in Dallas' ranks beautifully—but has no phone number, no contact form, no CTA. It's content, not a lead generation asset."
       },
       {
-        icon: Lightbulb,
-        title: "Shallow Topical Coverage",
-        body: "Surface-level articles that fail to demonstrate expertise. Google rewards depth. Thin content signals thin authority."
+        icon: FileText,
+        title: "Content Without Intent Alignment",
+        body: "Blog posts targeting informational queries when the business needs transactional visibility. Traffic from people researching, not people ready to buy."
       },
       {
         icon: Sparkles,
         title: "AI-Invisible Content",
-        body: "Content that search engines index but AI systems ignore. Without semantic structure and authoritative depth, LLMs will never cite your client's business."
+        body: "Content that search engines index but AI systems ignore. Without semantic structure and authoritative depth, LLMs will never cite your client's business in local recommendations."
       }
     ],
-    closingLine: "We build content systems that compound.",
-    closingHighlight: "Strategy before volume.",
+    closingLine: "We build content that ranks where it matters and converts when it counts.",
+    closingHighlight: "Local relevance. Conversion architecture. Measurable ROI.",
     ctaText: "Start the Conversation"
   },
 
