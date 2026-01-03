@@ -63,49 +63,57 @@ const EmailCalculator = () => {
     suffix?: string;
     tooltip?: string;
     step?: number;
-  }) => (
-    <div>
-      <div className="flex items-center gap-2 mb-2">
-        <label className="block text-sm text-text-muted font-body">{label}</label>
-        {tooltip && (
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                  <Info className="h-3.5 w-3.5" />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                <p className="text-sm font-body">{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )}
-      </div>
-      <div className="relative">
-        {prefix && (
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-lg">
-            {prefix}
-          </span>
-        )}
-        <input
-          type="number"
-          value={value}
-          step={step}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
-          className={cn(
-            "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
-            prefix ? "pl-8 pr-4" : "px-4"
+  }) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const rawValue = e.target.value.replace(/[^0-9.]/g, '');
+      const numericValue = parseFloat(rawValue) || 0;
+      onChange(numericValue);
+    };
+
+    return (
+      <div>
+        <div className="flex items-center gap-2 mb-2">
+          <label className="block text-sm text-text-muted font-body">{label}</label>
+          {tooltip && (
+            <TooltipProvider delayDuration={0}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
+                    <Info className="h-3.5 w-3.5" />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
+                  <p className="text-sm font-body">{tooltip}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           )}
-        />
-        {suffix && (
-          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-            {suffix}
-          </span>
-        )}
+        </div>
+        <div className="relative">
+          {prefix && (
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-lg">
+              {prefix}
+            </span>
+          )}
+          <input
+            type="text"
+            inputMode="decimal"
+            value={value}
+            onChange={handleChange}
+            className={cn(
+              "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
+              prefix ? "pl-8 pr-4" : "px-4"
+            )}
+          />
+          {suffix && (
+            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
+              {suffix}
+            </span>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const ResultCard = ({ 
     label, 
