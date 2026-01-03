@@ -66,7 +66,7 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                   {block.ctaText && (
                     <div className="pt-4">
                       <a 
-                        href={block.ctaHref || "/contact"}
+                        href="/contact"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 btn-cta group"
