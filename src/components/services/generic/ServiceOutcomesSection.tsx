@@ -12,10 +12,10 @@ interface ServiceOutcomesSectionProps {
 
 const ServiceOutcomesSection = ({ config }: ServiceOutcomesSectionProps) => {
   return (
-    <section className="py-24 lg:py-32 bg-surface-dark relative">
+    <section className="py-20 lg:py-28 bg-surface-dark relative">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
             {config.headline}
           </h2>
