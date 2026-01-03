@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Target, Shield, Layers, RefreshCcw, ArrowRight, Phone } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -77,13 +76,15 @@ const ServicesFramework = () => {
           {/* CTA */}
           <div className="mt-16 pt-12 border-t border-slate-200">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8 py-4">
-              <Link 
-                to="/#hero" 
+              <a 
+                href="/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-cta group flex items-center gap-2"
               >
                 Let's Talk Partnership
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </a>
               
               <span className="text-sm font-medium text-slate-400">or</span>
               
