@@ -153,7 +153,7 @@ const FitQualifier = () => {
               rel="noopener noreferrer"
               className="btn-cta group inline-flex items-center gap-2"
             >
-              Let's See If We're a Match
+              Let's Talk Partnership
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
