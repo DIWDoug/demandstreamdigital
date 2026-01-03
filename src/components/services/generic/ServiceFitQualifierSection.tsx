@@ -114,7 +114,7 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
           </div>
 
           {/* CTA */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <a 
               href="/contact" 
               target="_blank"
