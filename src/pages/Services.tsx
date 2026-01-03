@@ -60,6 +60,7 @@ const Services = () => {
               { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
               { label: 'Our Framework', href: '#framework' },
               { label: 'Phases', href: '#onboarding' },
+              { label: 'Expertise', href: '#expertise' },
               { label: 'FAQ', href: '#faq' },
             ].map((item) => (
               <a
