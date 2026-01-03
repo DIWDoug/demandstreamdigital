@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
+import FinalCTA from "@/components/sections/FinalCTA";
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
@@ -262,6 +263,9 @@ const About = () => {
       <div id="mission-values" className="scroll-mt-32">
         <MissionVisionValues />
       </div>
+
+      {/* CTA after Core Values */}
+      <FinalCTA />
 
       {/* Who We Are */}
       <div id="who-we-are" className="scroll-mt-32">
