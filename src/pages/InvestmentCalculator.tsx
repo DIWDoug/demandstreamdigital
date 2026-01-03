@@ -6,7 +6,7 @@ import InvestmentEducationalContent from "@/components/calculators/InvestmentEdu
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, MapPin, Building, Globe, Search, MousePointerClick, Mail, ArrowRight, ArrowLeft, Phone, ChevronDown, Check, Clock, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } from "@/data/metros";
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
@@ -313,6 +313,14 @@ const InvestmentCalculator = () => {
                           <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
                             <span className="text-xs text-text-muted bg-accent-blue/10 px-2 py-1 rounded">{formData.metro.tier} · {formatPopulation(formData.metro.population)}</span>
                             <Check className="h-4 w-4 text-cta" />
+                            <button
+                              type="button"
+                              onClick={() => { updateField("metro", null); setMetroSearch(""); }}
+                              className="p-1 rounded-full hover:bg-surface-dark transition-colors"
+                              aria-label="Clear metro selection"
+                            >
+                              <X className="h-4 w-4 text-text-muted hover:text-foreground" />
+                            </button>
                           </div>
                         )}
                         {showMetroDropdown && filteredMetros.length > 0 && !formData.metro && (
@@ -340,6 +348,16 @@ const InvestmentCalculator = () => {
                           <span className={formData.industry ? "text-foreground" : "text-text-muted"}>{formData.industry ? formData.industry.name : "Select an industry..."}</span>
                           <div className="flex items-center gap-2">
                             {formData.industry && <span className="text-xs text-text-muted bg-accent-blue/10 px-2 py-1 rounded">~${formData.industry.avgCpc} CPC</span>}
+                            {formData.industry && (
+                              <button
+                                type="button"
+                                onClick={(e) => { e.stopPropagation(); updateField("industry", null); }}
+                                className="p-1 rounded-full hover:bg-surface-elevated transition-colors"
+                                aria-label="Clear industry selection"
+                              >
+                                <X className="h-4 w-4 text-text-muted hover:text-foreground" />
+                              </button>
+                            )}
                             <ChevronDown className={cn("h-4 w-4 text-text-muted transition-transform", showIndustryDropdown && "rotate-180")} />
                           </div>
                         </button>
