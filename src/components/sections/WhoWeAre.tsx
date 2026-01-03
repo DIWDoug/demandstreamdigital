@@ -1,37 +1,9 @@
-import { useState, useEffect } from "react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import { searchPixabayImages } from "@/lib/pixabay";
+import teamMeetingImage from "@/assets/team/team-meeting.jpg";
 
 const WhoWeAre = () => {
   const ref = useScrollReveal();
-  const [teamImageUrl, setTeamImageUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchTeamImage = async () => {
-      try {
-        const response = await searchPixabayImages({
-          query: "relaxed modern office creative team coworking",
-          imageType: "photo",
-          orientation: "horizontal",
-          perPage: 5,
-          minWidth: 800,
-          safeSearch: true,
-          order: "popular"
-        });
-
-        if (response.hits.length > 0) {
-          // Pick a random image from top results for variety
-          const randomIndex = Math.floor(Math.random() * Math.min(3, response.hits.length));
-          setTeamImageUrl(response.hits[randomIndex].webformatURL);
-        }
-      } catch (error) {
-        console.error("Error fetching team image:", error);
-      }
-    };
-
-    fetchTeamImage();
-  }, []);
 
   return (
     <section 
@@ -61,16 +33,12 @@ const WhoWeAre = () => {
             {/* Right column - Team Image */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border aspect-[4/3]">
-                {teamImageUrl ? (
-                  <img 
-                    src={teamImageUrl} 
-                    alt="Our dedicated fulfillment team"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-surface-dark animate-pulse" />
-                )}
+                <img 
+                  src={teamMeetingImage} 
+                  alt="Our dedicated fulfillment team in a strategy meeting"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
