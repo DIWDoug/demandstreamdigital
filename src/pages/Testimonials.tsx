@@ -207,7 +207,7 @@ const Testimonials = () => {
         </div>
       </section>
 
-      <TrustReel />
+      
 
       {/* Featured Results */}
       <section className="py-16 bg-surface-dark border-y border-border">
