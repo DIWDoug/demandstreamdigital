@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube, Calculator } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
@@ -81,7 +82,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background relative pt-28 lg:pt-32" role="contentinfo">
+    <footer ref={ref} className="bg-background relative pt-28 lg:pt-32" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
 
       {/* Service Categories Grid */}
@@ -223,6 +224,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;
