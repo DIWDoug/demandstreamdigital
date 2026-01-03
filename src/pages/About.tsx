@@ -733,7 +733,7 @@ const About = () => {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
                 <a href="#contact" className="btn-cta group">
                   Explore a Partnership
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
