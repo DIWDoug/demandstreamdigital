@@ -32,7 +32,7 @@ const LocalSEO = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
     { label: hub.title }
   ];
 
