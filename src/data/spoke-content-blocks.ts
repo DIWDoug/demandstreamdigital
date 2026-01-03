@@ -109,19 +109,20 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Do you optimize for voice search and AI?", answer: "Yes. FAQ sections, semantic chunking, and quotable statements are structured for LLM extraction and voice search snippets." }
   ],
   "technical-seo": [
-    { question: "Why does technical SEO matter for local businesses?", answer: "Multi-location sites create technical complexity. If Google can't crawl and index your location pages, those markets don't exist in search. Technical issues silently kill local visibility." },
-    { question: "How long does technical SEO take to show results?", answer: "Indexation fixes show impact within 1-2 weeks. Page speed improvements affect local rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
+    { question: "Why does technical SEO matter for local businesses?", answer: "If Google can't crawl and index your pages, they don't exist in search. Technical issues like broken links, slow load times, and poor site structure silently kill local visibility." },
+    { question: "How long does technical SEO take to show results?", answer: "Indexation fixes show impact within 1-2 weeks. Page speed improvements affect rankings over 4-8 weeks as Google re-evaluates Core Web Vitals." },
     { question: "Do you implement fixes or just provide recommendations?", answer: "Both. We provide specifications for developer teams and can implement directly via CMS access. Most technical fixes we handle ourselves." },
-    { question: "What tools do you use for local technical SEO?", answer: "Screaming Frog, site audit tools, Google Search Console, PageSpeed Insights, and Lighthouse. We validate location page issues across multiple tools." },
-    { question: "How do you prioritize technical fixes?", answer: "Location page indexation first, then site architecture, then duplicate location content, then mobile speed. We fix what blocks local rankings before marginal optimizations." },
-    { question: "Does technical SEO help with AI visibility?", answer: "Yes. Clean site structure and schema markup help AI systems understand your content. Structured data improves the accuracy of AI citations and increases chances of appearing in AI-generated local results." }
+    { question: "What tools do you use for technical SEO?", answer: "Screaming Frog, site audit tools, Google Search Console, PageSpeed Insights, and Lighthouse. We validate issues across multiple tools." },
+    { question: "How do you prioritize technical fixes?", answer: "Indexation blockers first, then site architecture and internal linking, then duplicate content, then mobile speed. We fix what blocks rankings before marginal optimizations." },
+    { question: "Does technical SEO help with AI visibility?", answer: "Yes. Clean site structure, proper internal linking, and schema markup help AI systems understand your content. Structured data improves AI citation accuracy and increases chances of appearing in AI-generated results." }
   ],
   "local-keyword-strategy": [
     { question: "How do you identify seed keywords?", answer: "We start with your services, products, and customer pain points. These become seed keywords that we expand with location modifiers like city names, neighborhoods, landmarks, and ZIP codes." },
     { question: "What's the difference between implicit and explicit local keywords?", answer: "Explicit keywords specify a location ('plumber Dallas'). Implicit keywords don't mention location but still trigger local results ('emergency plumber'). We target both to capture full search demand." },
+    { question: "What are compact keywords and why do they matter?", answer: "Compact keywords are hyper-specific, low-volume terms like 'Kohler generators for hospitals' that competitors ignore. They rank faster, convert better, and are favored by AI Overviews." },
+    { question: "How does long-tail strategy work for local SEO?", answer: "Long-tail keywords have lower search volume but higher intent. A page targeting 'commercial HVAC repair for restaurants' may get 20 searches monthly but converts far better than 'HVAC repair.'" },
     { question: "How do you find competitor keyword gaps?", answer: "We analyze which keywords competitors rank for that you don't. These 'untapped' opportunities often represent quick wins where you're missing visibility." },
-    { question: "Do you account for 'near me' searches?", answer: "Absolutely. 'Near me' and implicit local queries are core to local keyword strategy. We map these to appropriate page types and GBP optimization." },
-    { question: "How do you handle multi-location keyword research?", answer: "Each location gets distinct keyword research and mapping. Different markets have different search behaviors. We prevent cannibalization across locations." },
+    { question: "How do keywords impact AI Overview visibility?", answer: "AI Overviews favor specific, granular queries. Content targeting compact keywords with clear answers gets cited more often than generic pages trying to rank for broad terms." },
     { question: "How do keywords inform GBP optimization?", answer: "Keyword research informs GBP category selection and description optimization. Alignment between website keywords and GBP signals strengthens local rankings." }
   ],
   "content-development": [
@@ -458,15 +459,15 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   "technical-seo": [
     {
       category: "Site Structure & Architecture",
-      headline: "Local Sites Need Flat, Crawlable Structure",
-      description: "Multi-location sites create technical complexity fast. Service pages, location pages, and blog content need clear hierarchy so Google indexes every market correctly.",
+      headline: "Flat, Crawlable Structure That Ranks",
+      description: "Local businesses need clean site architecture. Service pages, blog content, and location pages must be organized in a logical hierarchy that Google can crawl and understand.",
       subPoints: [
-        { title: "Flat Architecture", description: "Every location and service page within 3 clicks of homepage. Deep pages get crawled and indexed." },
-        { title: "Location Hub Structure", description: "City pages grouped under state or region. No orphan location pages without internal links." },
-        { title: "Service Area URLs", description: "URLs follow logical patterns: /locations/dallas/ or /plumber-dallas/. Google understands geographic targeting." },
-        { title: "Breadcrumbs Navigation", description: "Breadcrumbs show location hierarchy and appear in local search results." },
-        { title: "Cross-Linking Strategy", description: "Service pages link to relevant location pages. Location pages link to service details. Authority flows intentionally." },
-        { title: "Siloed Categories", description: "Services, locations, and blog content organized in clear silos. Google understands site purpose at a glance." }
+        { title: "Flat Architecture", description: "Every important page within 3 clicks of homepage. Deep pages get crawled and indexed consistently." },
+        { title: "Hub-and-Spoke Structure", description: "Pillar pages anchor topic clusters. Supporting content links back to hubs, concentrating authority." },
+        { title: "Parent-Child Relationships", description: "Clear URL hierarchy signals page relationships. /services/plumbing/ → /services/plumbing/water-heaters/." },
+        { title: "Breadcrumbs Navigation", description: "Breadcrumbs show hierarchy in search results and help users navigate. Google rewards clear paths." },
+        { title: "Cross-Linking Strategy", description: "Service pages link to related services and blog content. Authority flows intentionally, not randomly." },
+        { title: "Siloed Categories", description: "Services, blog content, and resources organized in clear silos. Google understands site purpose at a glance." }
       ],
       imageSrc: technicalStructureImg,
       imageAlt: "Local site architecture diagram",
@@ -475,47 +476,47 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     },
     {
       category: "Crawling & Indexation",
-      headline: "Every Location Page Must Be Indexed",
-      description: "If Google can't find your client's location pages, those markets don't exist in search. Multi-location businesses often have dozens of unindexed pages.",
+      headline: "Every Page Must Be Discoverable",
+      description: "If Google can't find and index your pages, they don't exist in search. Technical issues silently kill local visibility without warning.",
       subPoints: [
-        { title: "Page Indexing Report", description: "Search Console coverage reviewed per location. Excluded city pages investigated immediately." },
-        { title: "Location Page Crawl", description: "Screaming Frog validates all location URLs are discoverable and returning 200 status." },
-        { title: "XML Sitemap by Location", description: "Location pages included in sitemap. No 404s, redirects, or noindexed market pages." },
-        { title: "GSC Inspect Tool", description: "Problem location pages inspected individually. Rendering issues blocking local content fixed." },
-        { title: "Service Area Linking", description: "Internal links from homepage and service pages point to each location. No orphaned markets." },
-        { title: "Robots.txt Review", description: "Directives audited so location directories and city pages are not accidentally blocked." }
+        { title: "Page Indexing Report", description: "Search Console coverage reviewed regularly. Excluded pages investigated immediately." },
+        { title: "Crawl Validation", description: "Screaming Frog validates all URLs are discoverable and returning 200 status codes." },
+        { title: "XML Sitemap Optimization", description: "All important pages included in sitemap. No 404s, redirects, or noindexed pages that should rank." },
+        { title: "GSC Inspect Tool", description: "Problem pages inspected individually. Rendering issues blocking content from indexation fixed." },
+        { title: "Internal Link Coverage", description: "Every page receives internal links. No orphaned pages without pathways for crawlers." },
+        { title: "Robots.txt Review", description: "Directives audited so important directories and pages are not accidentally blocked." }
       ],
       imageSrc: technicalCrawlingImg,
-      imageAlt: "Location page indexation workflow",
+      imageAlt: "Page indexation workflow",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
     {
-      category: "Duplicate & Thin Content",
-      headline: "Location Pages Must Be Unique",
-      description: "Find-and-replace location pages hurt rankings. Google treats thin location content as doorway pages. Each market needs genuine differentiation.",
+      category: "Content Quality & Canonicalization",
+      headline: "Clean Code, Unique Content",
+      description: "Duplicate content confuses search engines. Thin pages dilute authority. Technical SEO ensures every page earns its place in the index.",
       subPoints: [
-        { title: "Location Page Audit", description: "Every city page reviewed for unique content. Template-only pages flagged for expansion." },
-        { title: "Canonical Strategy", description: "Service pages canonicalize correctly. Location variations don't compete with each other." },
-        { title: "Thin Content Expansion", description: "Location pages below 500 words expanded with market-specific details, landmarks, and service notes." },
-        { title: "Service Area Differentiation", description: "Neighboring city pages include unique value propositions. No duplicate service descriptions." },
-        { title: "Parameter Handling", description: "URL parameters from filters or tracking don't create duplicate location page variations." },
-        { title: "Noindex Utility Pages", description: "Thank you pages, internal tools, and tag archives noindexed. Only valuable pages compete." }
+        { title: "Duplicate Content Audit", description: "Similar pages reviewed and consolidated. Cannibalization eliminated through canonicals or redirects." },
+        { title: "Canonical Strategy", description: "Canonical tags implemented correctly. Similar pages don't compete with each other." },
+        { title: "Thin Content Identification", description: "Pages below quality thresholds flagged for expansion or consolidation." },
+        { title: "Parameter Handling", description: "URL parameters from filters or tracking don't create duplicate page variations." },
+        { title: "Noindex Utility Pages", description: "Thank you pages, internal tools, and tag archives noindexed. Only valuable pages compete." },
+        { title: "Minification & Cleanup", description: "HTML, CSS, and JavaScript minified. Clean code loads faster and crawls easier." }
       ],
       imageSrc: technicalDuplicateImg,
-      imageAlt: "Location content quality diagram",
+      imageAlt: "Content quality and canonicalization diagram",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
     {
       category: "PageSpeed & Core Web Vitals",
       headline: "Mobile Speed Wins Local Search",
-      description: "Local searches are overwhelmingly mobile. Slow location pages lose clicks to faster competitors. Core Web Vitals directly affect local rankings.",
+      description: "Local searches are overwhelmingly mobile. Slow pages lose clicks to faster competitors. Core Web Vitals directly affect rankings.",
       subPoints: [
-        { title: "Location Page Size", description: "Each city page optimized for mobile. Images compressed, scripts deferred." },
-        { title: "LCP Under 2.5s", description: "Hero images and maps load fast. Largest Contentful Paint passes on mobile devices." },
+        { title: "Image Optimization", description: "Images compressed, lazy-loaded, and served in next-gen formats. Biggest speed win for most sites." },
+        { title: "LCP Under 2.5s", description: "Largest Contentful Paint passes on mobile devices. Hero images and above-fold content load fast." },
         { title: "INP Under 200ms", description: "Click-to-call buttons and forms respond instantly. No JavaScript delays on interaction." },
-        { title: "CLS Near Zero", description: "Maps and images don't shift layout. No unexpected movement when location content loads." },
+        { title: "CLS Near Zero", description: "Images and embeds don't shift layout. No unexpected movement when content loads." },
         { title: "Third-Party Script Audit", description: "Review widgets, chat tools, and tracking pixels. Each adds mobile load time." },
         { title: "Mobile Usability", description: "Touch targets sized for thumbs. Phone numbers tappable. Forms work on small screens." }
       ],
@@ -545,6 +546,23 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
+      category: "Compact & Long-Tail Strategy",
+      headline: "Low-Volume Keywords That Convert",
+      description: "High-volume keywords get the attention, but compact, long-tail keywords win the business. Hyper-specific queries with low search volume rank easily and convert at higher rates.",
+      subPoints: [
+        { title: "Compact Keywords", description: "Specific, granular terms like 'Kohler generators for hospitals' or 'commercial HVAC repair for restaurants.' Low competition, high intent." },
+        { title: "Long-Tail Focus", description: "Three to five word phrases that indicate purchase readiness. Less traffic, better conversions." },
+        { title: "Low-Volume Goldmines", description: "Keywords with 10-50 monthly searches that competitors ignore. Easier to rank, easier to own." },
+        { title: "Service + Vertical", description: "Combine services with specific verticals: 'fire sprinkler inspection for warehouses' or 'roofing for HOA communities.'" },
+        { title: "AIO Specificity", description: "AI Overviews favor precise, specific queries. Granular content gets cited more often than generic pages." },
+        { title: "Quick Win Identification", description: "Identify low-competition terms where a focused page can rank within weeks, not months." }
+      ],
+      imageSrc: keywordIntentImg,
+      imageAlt: "Compact and long-tail keyword strategy",
+      ctaText: "Schedule a Discovery Call",
+      ctaHref: "/contact"
+    },
+    {
       category: "Intent Classification",
       headline: "Implicit vs Explicit Local Intent",
       description: "Local queries have local intent, but that intent can be explicit or implicit. We identify both types to capture full search demand.",
@@ -558,7 +576,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ],
       imageSrc: keywordIntentImg,
       imageAlt: "Local intent classification framework",
-      ctaText: "Schedule a Discovery Call",
+      ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
     {
@@ -569,13 +587,13 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Gap", description: "Keywords competitors rank for but you don't. Untapped opportunities prioritized." },
         { title: "Personal Difficulty", description: "Difficulty scored based on your site's authority vs top rankers. Feasibility assessed." },
         { title: "One-to-One Mapping", description: "Each keyword assigned to one URL. No internal competition or diluted authority." },
-        { title: "New Page Identification", description: "Keywords needing new pages flagged. Location pages, service pages, or blog content." },
-        { title: "Multi-Location Sets", description: "Each location gets distinct keyword mapping. No cannibalization across markets." },
-        { title: "GBP Alignment", description: "Keywords inform GBP categories and description. Website and profile signal consistency." }
+        { title: "New Page Identification", description: "Keywords needing new pages flagged. Service pages, blog content, or granular vertical pages." },
+        { title: "GBP Alignment", description: "Keywords inform GBP categories and description. Website and profile signal consistency." },
+        { title: "AIO Opportunity Mapping", description: "Identify queries where AI Overviews appear and map content to capture those citations." }
       ],
       imageSrc: keywordMappingImg,
       imageAlt: "Keyword-to-page mapping strategy",
-      ctaText: "Explore Partnership",
+      ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     }
   ],
