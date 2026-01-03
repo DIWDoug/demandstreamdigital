@@ -67,6 +67,20 @@ const Header = () => {
       ]
     },
     {
+      title: "CONTENT MARKETING",
+      href: "/white-label-inbound-marketing-services/content-marketing",
+      items: [
+        { label: "Geographical Content", slug: "geographical-content" },
+        { label: "Topical Content", slug: "topical-content" },
+        { label: "Power Posts", slug: "power-posts" },
+        { label: "E-books & Guides", slug: "ebooks-guides" },
+        { label: "Lead Magnets", slug: "lead-magnets" },
+        { label: "Press Releases", slug: "press-releases" },
+        { label: "AIO Content", slug: "aio-content" },
+        { label: "Case Studies", slug: "case-studies" }
+      ]
+    },
+    {
       title: "PAID MEDIA",
       href: "/white-label-inbound-marketing-services/paid-media",
       items: [
@@ -99,7 +113,7 @@ const Header = () => {
         { label: "Brand Mentions", slug: "brand-mentions" },
         { label: "Anchor Text", slug: "anchor-text" },
         { label: "Sponsorships", slug: "sponsorships" },
-        { label: "Reputation Signals", slug: "reputation-signals" }
+        { label: "Press Releases", href: "/white-label-inbound-marketing-services/content-marketing/press-releases" }
       ]
     },
     {
@@ -319,7 +333,7 @@ const Header = () => {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
             <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
             <div className="container mx-auto px-6 lg:px-8 py-8 relative font-sans">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
                 {serviceCategories.map((category, index) => (
                   <div 
                     key={index}
@@ -337,7 +351,7 @@ const Header = () => {
                       {category.items.map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <Link 
-                            to={`${category.href}/${item.slug}`}
+                            to={'href' in item && item.href ? item.href : `${category.href}/${item.slug}`}
                             className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >

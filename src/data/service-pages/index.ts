@@ -7,3 +7,4 @@ export { paidMediaConfig } from './paid-media';
 export { authorityConfig } from './authority';
 export { emailMarketingConfig } from './email-marketing';
 export { reportingConfig } from './reporting';
+export { contentMarketingConfig } from './content-marketing';

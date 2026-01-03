@@ -32,6 +32,18 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       ]
     },
     {
+      title: "CONTENT MARKETING",
+      hubSlug: "content-marketing",
+      items: [
+        { label: "Geographical Content", slug: "geographical-content" },
+        { label: "Topical Content", slug: "topical-content" },
+        { label: "Power Posts", slug: "power-posts" },
+        { label: "E-books & Guides", slug: "ebooks-guides" },
+        { label: "Lead Magnets", slug: "lead-magnets" },
+        { label: "AIO Content", slug: "aio-content" }
+      ]
+    },
+    {
       title: "PAID MEDIA",
       hubSlug: "paid-media",
       items: [
@@ -62,7 +74,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Local Links", slug: "local-links" },
         { label: "Unstructured Citations", slug: "unstructured-citations" },
         { label: "Brand Mentions", slug: "brand-mentions" },
-        { label: "Guest Posts & Niche Edits", slug: "guest-posts-niche-edits" },
+        { label: "Press Releases", href: "/white-label-inbound-marketing-services/content-marketing/press-releases" },
         { label: "Sponsorships", slug: "sponsorships" },
         { label: "Reputation Signals", slug: "reputation-signals" }
       ]
@@ -88,7 +100,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       {/* Service Categories Grid */}
       <div className="py-12 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
             {serviceCategories.map((category, index) => (
               <div key={index}>
                 <Link 
@@ -101,7 +113,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
                       <Link 
-                        to={`/white-label-inbound-marketing-services/${category.hubSlug}/${item.slug}`}
+                        to={'href' in item && item.href ? item.href : `/white-label-inbound-marketing-services/${category.hubSlug}/${item.slug}`}
                         className="text-xs text-text-secondary hover:text-cta transition-colors"
                       >
                         {item.label}

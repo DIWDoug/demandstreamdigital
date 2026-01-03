@@ -32,6 +32,7 @@ import PaidMedia from "./pages/services/PaidMedia";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import Authority from "./pages/services/Authority";
 import Reporting from "./pages/services/Reporting";
+import ContentMarketing from "./pages/services/ContentMarketing";
 import SpokePage from "./pages/services/SpokePage";
 const queryClient = new QueryClient();
 
@@ -84,6 +85,7 @@ const App = () => (
           <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
           <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
           <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
+          <Route path="/white-label-inbound-marketing-services/content-marketing" element={<ContentMarketing />} />
           
           {/* Service Spoke Pages (sub-services) */}
           <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
