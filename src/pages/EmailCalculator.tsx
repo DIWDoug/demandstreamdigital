@@ -6,20 +6,44 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Repeat, Target, Send, UserPlus, Info } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Repeat, Target, Send, UserPlus, Info, ChevronDown, X, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { emailBenchmarks, getEmailBenchmarksByCategory, allIndustriesAverage, emailBenchmarkSources, type EmailBenchmark } from "@/data/emailBenchmarks";
 
 const EmailCalculator = () => {
-  // String-based inputs for smooth typing
+  // Industry selection
+  const [selectedIndustry, setSelectedIndustry] = useState<EmailBenchmark | null>(null);
+  const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
+  const benchmarksByCategory = useMemo(() => getEmailBenchmarksByCategory(), []);
+
+  // String-based inputs for smooth typing (defaults updated to 2024-2025 benchmarks)
   const [listSizeInput, setListSizeInput] = useState("5000");
   const [sendsPerMonthInput, setSendsPerMonthInput] = useState("4");
-  const [openRateInput, setOpenRateInput] = useState("21.33");
-  const [clickRateInput, setClickRateInput] = useState("2.62");
-  const [conversionRateInput, setConversionRateInput] = useState("1.22");
-  const [averageOrderValueInput, setAverageOrderValueInput] = useState("150");
+  const [openRateInput, setOpenRateInput] = useState(allIndustriesAverage.openRate.toString());
+  const [clickRateInput, setClickRateInput] = useState(allIndustriesAverage.clickRate.toString());
+  const [conversionRateInput, setConversionRateInput] = useState(allIndustriesAverage.conversionRate.toString());
+  const [averageOrderValueInput, setAverageOrderValueInput] = useState(allIndustriesAverage.avgOrderValue.toString());
   const [customerLifetimeMultiplierInput, setCustomerLifetimeMultiplierInput] = useState("2.5");
   const [monthlyInvestmentInput, setMonthlyInvestmentInput] = useState("500");
+
+  // Apply industry benchmarks when selected
+  const handleIndustrySelect = (industry: EmailBenchmark) => {
+    setSelectedIndustry(industry);
+    setOpenRateInput(industry.openRate.toString());
+    setClickRateInput(industry.clickRate.toString());
+    setConversionRateInput(industry.conversionRate.toString());
+    setAverageOrderValueInput(industry.avgOrderValue.toString());
+    setShowIndustryDropdown(false);
+  };
+
+  const clearIndustry = () => {
+    setSelectedIndustry(null);
+    setOpenRateInput(allIndustriesAverage.openRate.toString());
+    setClickRateInput(allIndustriesAverage.clickRate.toString());
+    setConversionRateInput(allIndustriesAverage.conversionRate.toString());
+    setAverageOrderValueInput(allIndustriesAverage.avgOrderValue.toString());
+  };
 
   // Derived numeric values
   const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
@@ -190,10 +214,70 @@ const EmailCalculator = () => {
                     <p className="text-text-muted">Adjust these values based on your client's list size and email frequency.</p>
                   </div>
 
+                  {/* Industry Selector */}
+                  <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-4">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Industry Benchmarks</p>
+                    <div className="relative">
+                      <button 
+                        type="button" 
+                        onClick={() => setShowIndustryDropdown(!showIndustryDropdown)} 
+                        className="w-full px-4 py-3 rounded-lg bg-surface-dark border border-border/50 text-left flex items-center justify-between"
+                      >
+                        <span className={selectedIndustry ? "text-foreground" : "text-text-muted"}>
+                          {selectedIndustry ? selectedIndustry.name : "Select an industry for benchmarks..."}
+                        </span>
+                        <div className="flex items-center gap-2">
+                          {selectedIndustry && (
+                            <>
+                              <span className="text-xs text-text-muted bg-accent-blue/10 px-2 py-1 rounded">{selectedIndustry.source}</span>
+                              <button
+                                type="button"
+                                onClick={(e) => { e.stopPropagation(); clearIndustry(); }}
+                                className="p-1 rounded-full hover:bg-surface-elevated transition-colors"
+                                aria-label="Clear industry selection"
+                              >
+                                <X className="h-4 w-4 text-text-muted hover:text-foreground" />
+                              </button>
+                            </>
+                          )}
+                          <ChevronDown className={cn("h-4 w-4 text-text-muted transition-transform", showIndustryDropdown && "rotate-180")} />
+                        </div>
+                      </button>
+                      {showIndustryDropdown && (
+                        <div className="absolute z-50 w-full mt-1 bg-surface-dark border border-border rounded-lg shadow-lg max-h-72 overflow-y-auto">
+                          {Object.entries(benchmarksByCategory).map(([category, items]) => (
+                            <div key={category}>
+                              <div className="px-4 py-2 text-xs font-medium text-text-muted uppercase tracking-wider bg-surface-elevated sticky top-0">{category}</div>
+                              {items.map((industry) => (
+                                <button
+                                  key={industry.id}
+                                  type="button"
+                                  onClick={() => handleIndustrySelect(industry)}
+                                  className="w-full px-4 py-2.5 text-left hover:bg-surface-elevated transition-colors flex items-center justify-between"
+                                >
+                                  <span className="text-foreground text-sm">{industry.name}</span>
+                                  <span className="text-xs text-text-muted">{industry.openRate}% open</span>
+                                </button>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    {selectedIndustry && (
+                      <div className="bg-accent-blue/5 border border-accent-blue/20 rounded-lg p-3 mt-3">
+                        <p className="text-xs text-text-muted">
+                          <strong className="text-foreground">{selectedIndustry.name}</strong> benchmarks applied: {selectedIndustry.openRate}% open rate, {selectedIndustry.clickRate}% CTR, {selectedIndustry.conversionRate}% conversion.
+                          <span className="text-accent-blue ml-1">Source: {selectedIndustry.source}</span>
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Disclaimer */}
                   <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-lg p-4">
                     <p className="text-xs text-yellow-600 dark:text-yellow-500">
-                      <strong>Note:</strong> Default rates are industry averages from Mailchimp and Campaign Monitor research. For accurate projections, replace these with your client's actual email performance metrics.
+                      <strong>Note:</strong> Default rates are 2024-2025 industry averages from HubSpot, Klaviyo, MailerLite, and Campaign Monitor. For accurate projections, replace with your client's actual metrics.
                     </p>
                   </div>
 
@@ -225,14 +309,14 @@ const EmailCalculator = () => {
                       value={openRateInput}
                       onChange={setOpenRateInput}
                       suffix="%"
-                      tooltip="Average open rate across industries is 21.33%. Well-optimized lists can achieve 25-35%."
+                      tooltip="2024-2025 average: 42.35% across all industries (MailerLite). Well-optimized lists can achieve 45-50%."
                     />
                     <CalculatorInputField 
                       label="Click Rate" 
                       value={clickRateInput}
                       onChange={setClickRateInput}
                       suffix="%"
-                      tooltip="Average click-through rate is 2.62%. Strong offers and segmentation can push this to 4-6%."
+                      tooltip="2024-2025 average: 2.3% CTR (Campaign Monitor). Strong segmentation and offers can push this to 3-5%."
                     />
                     <CalculatorInputField 
                       label="Conversion Rate" 
@@ -355,11 +439,25 @@ const EmailCalculator = () => {
                 </div>
               </div>
 
-              {/* Disclaimer */}
+              {/* Benchmark Sources */}
               <div className="mt-12 p-6 rounded-xl bg-surface-elevated border border-border/30">
-                <p className="text-sm text-text-muted text-center">
-                  <strong className="text-foreground">Note:</strong> These projections are based on industry averages. Email marketing typically returns $36-$42 for every $1 spent (Litmus, 2023). Actual results depend on list quality, content relevance, and send frequency.
+                <p className="text-sm text-text-muted text-center mb-4">
+                  <strong className="text-foreground">Note:</strong> These projections are based on 2024-2025 industry research. Email marketing typically returns $36-$42 for every $1 spent (Litmus, 2023). Actual results depend on list quality, content relevance, and send frequency.
                 </p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {emailBenchmarkSources.map((source) => (
+                    <a
+                      key={source.name}
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 text-xs bg-surface-dark border border-border/30 rounded-full text-text-muted hover:text-foreground hover:border-accent-blue/50 transition-colors"
+                    >
+                      {source.name} ({source.year})
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
