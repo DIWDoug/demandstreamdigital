@@ -172,52 +172,74 @@ const SEOCalculator = () => {
   const estimate = useMemo(() => {
     if (!isComplete) return null;
 
-    // Base cost calculation
-    let baseLow = 500;
-    let baseHigh = 800;
+    // Base cost by competition level - high competition starts much higher
+    const baseByCompetition: Record<string, { low: number; high: number }> = {
+      "low": { low: 500, high: 750 },
+      "medium": { low: 750, high: 1100 },
+      "high": { low: 1200, high: 1800 }
+    };
+
+    // Minimum floors by competition and metro tier
+    // High competition in larger markets needs realistic minimums
+    const getMinimumFloor = (comp: string, metroTier: string | null): number => {
+      if (comp === "high") {
+        if (metroTier === "mega") return 2500;
+        if (metroTier === "major") return 2000;
+        if (metroTier === "large") return 1800;
+        if (metroTier === "medium") return 1500;
+        return 1200; // small or no metro selected
+      }
+      if (comp === "medium") {
+        if (metroTier === "mega") return 1500;
+        if (metroTier === "major") return 1200;
+        if (metroTier === "large") return 1000;
+        return 800;
+      }
+      // Low competition
+      if (metroTier === "mega") return 900;
+      if (metroTier === "major") return 750;
+      return 500;
+    };
+
+    const base = baseByCompetition[competition] || { low: 500, high: 750 };
+    let baseLow = base.low;
+    let baseHigh = base.high;
 
     // Location multiplier
     const locationMultipliers: Record<string, { low: number; high: number }> = {
-      "none": { low: 0.8, high: 0.8 },
-      "1-5": { low: 1, high: 1 },
-      "6-20": { low: 1.6, high: 1.8 },
-      "21-50": { low: 2.5, high: 3 },
-      "50+": { low: 4, high: 5 }
+      "none": { low: 0.85, high: 0.85 },
+      "1-5": { low: 1, high: 1.1 },
+      "6-20": { low: 1.5, high: 1.7 },
+      "21-50": { low: 2.2, high: 2.6 },
+      "50+": { low: 3.5, high: 4.5 }
     };
 
     // Audience multiplier
     const audienceMultipliers: Record<string, { low: number; high: number }> = {
       "local": { low: 1, high: 1 },
-      "regional": { low: 1.3, high: 1.5 },
-      "national": { low: 1.8, high: 2.2 },
-      "global": { low: 2.5, high: 3 }
+      "regional": { low: 1.25, high: 1.4 },
+      "national": { low: 1.7, high: 2 },
+      "global": { low: 2.2, high: 2.6 }
     };
 
     // Aggressiveness multiplier
     const aggressivenessMultipliers: Record<string, { low: number; high: number }> = {
       "steady": { low: 1, high: 1 },
-      "moderate": { low: 1.3, high: 1.4 },
-      "aggressive": { low: 1.6, high: 1.8 }
+      "moderate": { low: 1.25, high: 1.35 },
+      "aggressive": { low: 1.5, high: 1.7 }
     };
 
     // Pages multiplier
     const pagesMultipliers: Record<string, { low: number; high: number }> = {
       "1-10": { low: 1, high: 1 },
-      "11-25": { low: 1.2, high: 1.3 },
-      "26-50": { low: 1.4, high: 1.6 },
-      "50+": { low: 1.7, high: 2 }
-    };
-
-    // Competition multiplier
-    const competitionMultipliers: Record<string, { low: number; high: number }> = {
-      "low": { low: 1, high: 1 },
-      "medium": { low: 1.25, high: 1.35 },
-      "high": { low: 1.5, high: 1.7 }
+      "11-25": { low: 1.15, high: 1.25 },
+      "26-50": { low: 1.3, high: 1.45 },
+      "50+": { low: 1.5, high: 1.75 }
     };
 
     // Website age multiplier (newer = more work needed)
     const ageMultipliers: Record<string, { low: number; high: number }> = {
-      "new": { low: 1.3, high: 1.4 },
+      "new": { low: 1.25, high: 1.35 },
       "1-3": { low: 1.1, high: 1.15 },
       "3+": { low: 1, high: 1 }
     };
@@ -225,34 +247,61 @@ const SEOCalculator = () => {
     // Rankings multiplier (worse rankings = more work)
     const rankingsMultipliers: Record<string, { low: number; high: number }> = {
       "top10": { low: 1, high: 1 },
-      "11-30": { low: 1.15, high: 1.2 },
-      "31-100": { low: 1.3, high: 1.4 },
-      "100+": { low: 1.5, high: 1.6 }
+      "11-30": { low: 1.1, high: 1.15 },
+      "31-100": { low: 1.2, high: 1.3 },
+      "100+": { low: 1.35, high: 1.5 }
     };
 
-    // Metro tier multiplier (market competition based on city size)
-    const metroMult = selectedMetro ? tierMultipliers[selectedMetro.tier] : 1;
+    // Metro tier multiplier - more aggressive for high competition
+    const getMetroMultiplier = (comp: string, tier: string | null): number => {
+      if (!tier) return 1;
+      
+      // High competition industries are more affected by metro size
+      if (comp === "high") {
+        const highCompTiers: Record<string, number> = {
+          small: 0.9,
+          medium: 1.05,
+          large: 1.2,
+          major: 1.4,
+          mega: 1.65
+        };
+        return highCompTiers[tier] || 1;
+      }
+      
+      // Medium/low competition use standard tier multipliers
+      return tierMultipliers[tier as keyof typeof tierMultipliers] || 1;
+    };
+
+    const metroTier = selectedMetro?.tier || null;
+    const metroMult = getMetroMultiplier(competition, metroTier);
+    const minimumFloor = getMinimumFloor(competition, metroTier);
 
     const locMult = locationMultipliers[locations] || { low: 1, high: 1 };
     const audMult = audienceMultipliers[audience] || { low: 1, high: 1 };
     const aggMult = aggressivenessMultipliers[aggressiveness] || { low: 1, high: 1 };
     const pageMult = pagesMultipliers[pages] || { low: 1, high: 1 };
-    const compMult = competitionMultipliers[competition] || { low: 1, high: 1 };
     const ageMult = ageMultipliers[websiteAge] || { low: 1, high: 1 };
     const rankMult = rankingsMultipliers[currentRankings] || { low: 1, high: 1 };
 
-    const totalMultLow = locMult.low * audMult.low * aggMult.low * pageMult.low * compMult.low * ageMult.low * rankMult.low * metroMult;
-    const totalMultHigh = locMult.high * audMult.high * aggMult.high * pageMult.high * compMult.high * ageMult.high * rankMult.high * metroMult;
+    const totalMultLow = locMult.low * audMult.low * aggMult.low * pageMult.low * ageMult.low * rankMult.low * metroMult;
+    const totalMultHigh = locMult.high * audMult.high * aggMult.high * pageMult.high * ageMult.high * rankMult.high * metroMult;
 
-    const monthlyLow = Math.round(baseLow * totalMultLow / 50) * 50;
-    const monthlyHigh = Math.round(baseHigh * totalMultHigh / 50) * 50;
+    // Calculate and apply minimum floor
+    let monthlyLow = Math.round(baseLow * totalMultLow / 50) * 50;
+    let monthlyHigh = Math.round(baseHigh * totalMultHigh / 50) * 50;
+
+    // Enforce minimum floors based on competition and metro
+    monthlyLow = Math.max(monthlyLow, minimumFloor);
+    monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.4 / 50) * 50);
 
     // Estimate timeline based on competition and rankings
     let timelineMonths = 6;
-    if (competition === "high") timelineMonths += 3;
+    if (competition === "high") timelineMonths += 4;
+    if (competition === "medium") timelineMonths += 2;
     if (currentRankings === "100+") timelineMonths += 3;
     if (currentRankings === "31-100") timelineMonths += 2;
     if (aggressiveness === "steady") timelineMonths += 2;
+    if (metroTier === "mega" || metroTier === "major") timelineMonths += 2;
 
     return {
       monthlyLow,
