@@ -7,6 +7,7 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
 import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -130,6 +131,7 @@ const SEOCalculator = () => {
   const [competition, setCompetition] = useState<string>("");
   const [websiteAge, setWebsiteAge] = useState<string>("");
   const [currentRankings, setCurrentRankings] = useState<string>("");
+  const [clientHourlyRate, setClientHourlyRate] = useState<number>(120);
 
   const applyIndustryPreset = (industryId: string) => {
     const preset = industryPresets.find(i => i.id === industryId);
@@ -458,20 +460,19 @@ const SEOCalculator = () => {
                             <div className="text-xs text-text-muted font-medium text-right">Client MSRP</div>
                           </div>
 
-                          {/* Tiered Pricing - Based on $65/hr white-label, $110-130/hr client rate */}
+                          {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {[
-                              { name: "Starter", hours: "10-15 hrs", avgHours: 12.5 },
-                              { name: "Professional", hours: "15-20 hrs", avgHours: 17.5, highlight: true },
-                              { name: "Premium", hours: "20-30 hrs", avgHours: 25 },
-                              { name: "Elite", hours: "30-40+ hrs", avgHours: 35 }
+                              { name: "Starter", hours: "10-15 hrs", hoursLow: 10, hoursHigh: 15 },
+                              { name: "Professional", hours: "15-20 hrs", hoursLow: 15, hoursHigh: 20, highlight: true },
+                              { name: "Premium", hours: "20-30 hrs", hoursLow: 20, hoursHigh: 30 },
+                              { name: "Elite", hours: "30-40+ hrs", hoursLow: 30, hoursHigh: 40 }
                             ].map((tier, i) => {
                               const whitelabelRate = 65;
-                              const clientRateLow = 110;
-                              const clientRateHigh = 130;
-                              const yourCost = Math.round(tier.avgHours * whitelabelRate / 50) * 50;
-                              const clientMsrpLow = Math.round(tier.avgHours * clientRateLow / 50) * 50;
-                              const clientMsrpHigh = Math.round(tier.avgHours * clientRateHigh / 50) * 50;
+                              const yourCostLow = Math.round(tier.hoursLow * whitelabelRate / 50) * 50;
+                              const yourCostHigh = Math.round(tier.hoursHigh * whitelabelRate / 50) * 50;
+                              const clientMsrpLow = Math.round(tier.hoursLow * clientHourlyRate / 50) * 50;
+                              const clientMsrpHigh = Math.round(tier.hoursHigh * clientHourlyRate / 50) * 50;
                               return (
                                 <div 
                                   key={i}
@@ -484,19 +485,43 @@ const SEOCalculator = () => {
                                     <p className={cn("font-medium text-sm", tier.highlight ? "text-cta" : "text-foreground")}>{tier.name}</p>
                                     <p className="text-xs text-text-muted">{tier.hours}</p>
                                   </div>
-                                  <p className="text-sm font-semibold text-accent-blue text-right self-center">${yourCost.toLocaleString()}</p>
-                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>${clientMsrpLow.toLocaleString()}-{clientMsrpHigh.toLocaleString()}</p>
+                                  <p className="text-sm font-semibold text-accent-blue text-right self-center">
+                                    ${yourCostLow.toLocaleString()}-{yourCostHigh.toLocaleString()}
+                                  </p>
+                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>
+                                    ${clientMsrpLow.toLocaleString()}-{clientMsrpHigh.toLocaleString()}
+                                  </p>
                                 </div>
                               );
                             })}
                           </div>
 
-                          <p className="text-xs text-text-muted/70 mb-4">Based on $65/hr white-label · $110-130/hr client rate</p>
+                          {/* Client Hourly Rate Slider */}
+                          <div className="bg-surface-dark rounded-lg p-4 border border-border/30 mb-4">
+                            <div className="flex justify-between items-center mb-3">
+                              <span className="text-xs text-text-muted">Client Hourly Rate</span>
+                              <span className="text-sm font-semibold text-cta">${clientHourlyRate}/hr</span>
+                            </div>
+                            <Slider
+                              value={[clientHourlyRate]}
+                              onValueChange={(value) => setClientHourlyRate(value[0])}
+                              min={90}
+                              max={180}
+                              step={5}
+                              className="w-full"
+                            />
+                            <div className="flex justify-between mt-2">
+                              <span className="text-xs text-text-muted/60">$90/hr</span>
+                              <span className="text-xs text-text-muted/60">$180/hr</span>
+                            </div>
+                          </div>
+
+                          <p className="text-xs text-text-muted/70 mb-4">Your cost based on $65/hr white-label rate</p>
 
                           <div className="space-y-3 pt-4 border-t border-border/30">
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-text-muted">Your Margin</span>
-                              <span className="text-cta font-semibold">40-60%</span>
+                              <span className="text-cta font-semibold">{Math.round((clientHourlyRate - 65) / clientHourlyRate * 100)}%</span>
                             </div>
                             <div className="flex justify-between items-center">
                               <span className="text-sm text-text-muted">Expected Timeline</span>
@@ -505,7 +530,7 @@ const SEOCalculator = () => {
                           </div>
 
                           <p className="text-xs text-text-muted mt-4">
-                            Adjust pricing to your market. "Professional" tier is most common.
+                            Adjust slider to your market. "Professional" tier is most common.
                           </p>
                         </>
                       ) : (
