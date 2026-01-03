@@ -40,6 +40,7 @@ const Hero = () => {
           phoneCountryCode: formData.phoneCountryCode,
           revenue: formData.revenue,
           website: website,
+          formType: "hero_homepage",
         }
       });
 

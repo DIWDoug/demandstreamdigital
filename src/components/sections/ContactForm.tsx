@@ -60,7 +60,8 @@ const ContactForm = () => {
           email: formData.email,
           phone: formData.phone,
           phoneCountryCode: formData.phoneCountryCode,
-          revenue: formData.revenue
+          revenue: formData.revenue,
+          formType: "fulfillment_steps",
         }
       });
 

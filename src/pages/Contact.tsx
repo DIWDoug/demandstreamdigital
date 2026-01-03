@@ -43,7 +43,10 @@ const Contact = () => {
 
     try {
       const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
-        body: formData
+        body: {
+          ...formData,
+          formType: "contact_page",
+        }
       });
 
       if (error) throw error;

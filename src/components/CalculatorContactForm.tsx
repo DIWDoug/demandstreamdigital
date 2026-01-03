@@ -19,7 +19,10 @@ const CalculatorContactForm = () => {
 
     try {
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
-        body: formData
+        body: {
+          ...formData,
+          formType: "calculator",
+        }
       });
 
       if (error) throw error;
