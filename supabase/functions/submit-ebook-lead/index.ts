@@ -59,6 +59,27 @@ serve(async (req) => {
 
     console.log("Ebook lead saved successfully:", data);
 
+    // Forward to Zapier webhook
+    const zapierWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL");
+    if (zapierWebhookUrl) {
+      try {
+        const zapierResponse = await fetch(zapierWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: data.id,
+            email,
+            source: "ebook_local_growth_engine",
+            created_at: data.created_at,
+          }),
+        });
+        console.log("Zapier webhook response:", zapierResponse.status);
+      } catch (zapierError) {
+        console.error("Zapier webhook error:", zapierError);
+        // Don't fail the request if Zapier fails
+      }
+    }
+
     return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
