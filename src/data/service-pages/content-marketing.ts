@@ -124,7 +124,7 @@ export const contentMarketingConfig: ServicePageConfig = {
           "Lead magnet development",
           "Case study production",
           "Press release distribution",
-          "AIO content optimization",
+          "AI visibility optimization",
           "Topical cluster expansion"
         ],
         icon: Target,
@@ -158,13 +158,13 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         title: "Geographical Content",
         slug: "geographical-content",
-        description: "Service area pages and city-specific content that captures local search intent.",
+        description: "Service area pages that capture local search intent and support Google Business Profile rankings.",
         icon: MapPin
       },
       {
         title: "Topical Content",
         slug: "topical-content",
-        description: "Industry expertise articles that build authority and answer customer questions.",
+        description: "Industry expertise articles that build topical authority and support GBP rankings through relevance signals.",
         icon: BookOpen
       },
       {
@@ -190,12 +190,6 @@ export const contentMarketingConfig: ServicePageConfig = {
         slug: "press-releases",
         description: "Newsworthy announcements distributed to media outlets and news aggregators.",
         icon: Megaphone
-      },
-      {
-        title: "AIO Content",
-        slug: "aio-content",
-        description: "AI-optimized content structured for LLM citations and AI Overview inclusion.",
-        icon: Sparkles
       },
       {
         title: "Case Studies",
