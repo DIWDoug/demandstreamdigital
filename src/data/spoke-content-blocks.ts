@@ -911,8 +911,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Detailed Experience Prompts", description: "Ask customers to describe their experience in detail rather than scripting keywords. Google bolds terms that match search queries naturally." },
         { title: "Email Automation Integration", description: "Pairs with Email Marketing automation flows for hands-off review generation at scale via post-service sequences." }
       ],
-      imageSrc: reviewGenerationImg,
-      imageAlt: "Review generation strategy mind map",
+      imageAlt: "Customer review generation strategy for local businesses",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
@@ -928,8 +927,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Staff Training", description: "Verbal requests work when rapport exists. Train staff to ask when customers seem satisfied with service." },
         { title: "Natural Keyword Inclusion", description: "Customers who mention specific services help rankings. Google surfaces terms mentioned often as clickable filters." }
       ],
-      imageSrc: reviewPsychologyImg,
-      imageAlt: "Customer review psychology and motivations",
+      imageAlt: "Customer psychology and motivation behind online reviews",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
@@ -945,8 +943,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Brand Voice Consistency", description: "Responses match client personality and are consistent with all online content. Professional, warm, or casual as appropriate." },
         { title: "Learn From Feedback", description: "Genuine negative reviews highlight areas for improvement. We help businesses extract actionable insights from criticism." }
       ],
-      imageSrc: reviewResponseImg,
-      imageAlt: "Review response management workflow",
+      imageAlt: "Professional review response management workflow",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
@@ -962,8 +959,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "First-Party Reviews", description: "Feature honest reviews on your own website. Diversification protects against platform filtering algorithms." },
         { title: "NextDoor Presence", description: "16% of reviewers focus here. Hyperlocal platform ideal for neighborhood service businesses." }
       ],
-      imageSrc: reviewPlatformsImg,
-      imageAlt: "Multi-platform review diversification strategy",
+      imageAlt: "Multi-platform review strategy across Google, Yelp, and Facebook",
       ctaText: "Start the Conversation",
       ctaHref: "/contact"
     },
@@ -979,8 +975,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Recency Tracking", description: "39% of customers filter for recent reviews. We track velocity to ensure fresh review flow matches or exceeds competitors." },
         { title: "Monthly Reporting", description: "Review metrics, sentiment trends, platform performance, competitor comparison, and AI visibility in client reports." }
       ],
-      imageSrc: reviewMonitoringImg,
-      imageAlt: "Review monitoring and alerts dashboard",
+      imageAlt: "Review monitoring dashboard and reputation alerts",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     }
