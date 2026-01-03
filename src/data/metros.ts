@@ -192,6 +192,14 @@ export const metros: Metro[] = [
   { name: "Prescott", state: "AZ", population: 240000, tier: "small" },
   { name: "St. George", state: "UT", population: 200000, tier: "small" },
   { name: "Coeur d'Alene", state: "ID", population: 200000, tier: "small" },
+  // Florida Gulf Coast cities (part of Tampa Bay metro but searchable individually)
+  { name: "St. Petersburg", state: "FL", population: 265000, tier: "small" },
+  { name: "Clearwater", state: "FL", population: 117000, tier: "small" },
+  { name: "Bradenton", state: "FL", population: 115000, tier: "small" },
+  // Additional Saint-named cities
+  { name: "St. Augustine", state: "FL", population: 200000, tier: "small" },
+  { name: "St. Cloud", state: "MN", population: 220000, tier: "small" },
+  { name: "St. Joseph", state: "MO", population: 200000, tier: "small" },
 ];
 
 // Population tier multipliers for pricing
@@ -204,15 +212,30 @@ export const tierMultipliers: Record<Metro['tier'], number> = {
 };
 
 // Get metros filtered and sorted for search
+// Handles "Saint" vs "St." variations for better matching
 export const searchMetros = (query: string): Metro[] => {
   if (!query || query.length < 2) return [];
   const lower = query.toLowerCase();
+  
+  // Normalize search variations: "saint" <-> "st." and "st " <-> "saint "
+  const normalizeForSearch = (text: string): string => {
+    return text
+      .replace(/\bsaint\b/gi, 'st.')
+      .replace(/\bst\b/gi, 'st.')
+      .toLowerCase();
+  };
+  
+  const normalizedQuery = normalizeForSearch(lower);
+  
   return metros
-    .filter(m => 
-      m.name.toLowerCase().includes(lower) || 
-      m.state.toLowerCase().includes(lower) ||
-      `${m.name}, ${m.state}`.toLowerCase().includes(lower)
-    )
+    .filter(m => {
+      const normalizedName = normalizeForSearch(m.name);
+      const normalizedFull = normalizeForSearch(`${m.name}, ${m.state}`);
+      return normalizedName.includes(normalizedQuery) || 
+        m.state.toLowerCase().includes(lower) ||
+        normalizedFull.includes(normalizedQuery) ||
+        m.name.toLowerCase().includes(lower);
+    })
     .sort((a, b) => b.population - a.population) // Sort by population descending
     .slice(0, 15); // Show more results
 };
