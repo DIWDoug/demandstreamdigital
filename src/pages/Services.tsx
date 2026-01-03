@@ -7,7 +7,6 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
 import InboundPainPoints from "@/components/services/InboundPainPoints";
 import FitQualifier from "@/components/services/FitQualifier";
-import CalculatorTabs from "@/components/services/CalculatorTabs";
 import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
@@ -60,8 +59,6 @@ const Services = () => {
               { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
               { label: 'Our Framework', href: '#framework' },
               { label: 'Phases', href: '#onboarding' },
-              { label: 'Expertise', href: '#expertise' },
-              { label: 'Calculator', href: '#calculator' },
               { label: 'FAQ', href: '#faq' },
             ].map((item) => (
               <a
@@ -101,9 +98,6 @@ const Services = () => {
       <OnboardingRoadmap />
       
       <SectionDivider />
-      
-      {/* Combined Calculator with Tabs */}
-      <CalculatorTabs />
       
       {/* FAQ - Answer objections before conversion (light section) */}
       <ServicesFAQ />
