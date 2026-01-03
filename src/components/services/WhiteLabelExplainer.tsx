@@ -168,46 +168,22 @@ const WhiteLabelExplainer = () => {
                   const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
                   
                   return (
-                    <div
+                    <button
                       key={service.slug}
-                      className="absolute left-1/2 top-1/2"
+                      onClick={() => setSelectedService(isSelected ? null : service)}
+                      className="absolute left-1/2 top-1/2 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110"
                       style={{
-                        transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                        transform: `translate(${x}px, ${y}px)`,
+                        backgroundColor: isSelected ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
                       }}
                     >
-                      {/* The orb button */}
-                      <button
-                        onClick={() => setSelectedService(isSelected ? null : service)}
-                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110"
-                        style={{
-                          backgroundColor: isSelected ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
-                        }}
-                      >
-                        {/* Counter-rotate the icon so it stays upright */}
-                        <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: selectedService ? 'paused' : 'running' }}>
-                          <Icon 
-                            className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isSelected ? 'text-white' : 'text-white/90'}`}
-                          />
-                        </div>
-                      </button>
-                      
-                      {/* Label attached below the orb - counter-rotated to stay upright */}
-                      <div 
-                        className="absolute left-1/2 top-full mt-2 animate-[spin_60s_linear_infinite_reverse]" 
-                        style={{ 
-                          animationPlayState: selectedService ? 'paused' : 'running',
-                          transformOrigin: 'center center',
-                        }}
-                      >
-                        <span
-                          className={`block -translate-x-1/2 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
-                            isSelected ? 'text-accent-blue' : 'text-text-muted'
-                          }`}
-                        >
-                          {service.title}
-                        </span>
+                      {/* Counter-rotate the icon so it stays upright */}
+                      <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: selectedService ? 'paused' : 'running' }}>
+                        <Icon 
+                          className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isSelected ? 'text-white' : 'text-white/90'}`}
+                        />
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
