@@ -417,7 +417,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: onPageTitlesImg,
       imageAlt: "Title and meta optimization diagram",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content Structure & Keywords",
@@ -434,7 +434,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: onPageStructureImg,
       imageAlt: "Content structure and keyword hierarchy diagram",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Internal Links & Images",
@@ -451,7 +451,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: onPageLinksImg,
       imageAlt: "Internal linking architecture diagram",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -471,7 +471,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: technicalStructureImg,
       imageAlt: "Local site architecture diagram",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Crawling & Indexation",
@@ -488,7 +488,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: technicalCrawlingImg,
       imageAlt: "Location page indexation workflow",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Duplicate & Thin Content",
@@ -505,7 +505,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: technicalDuplicateImg,
       imageAlt: "Location content quality diagram",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "PageSpeed & Core Web Vitals",
@@ -522,7 +522,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: technicalSpeedImg,
       imageAlt: "Mobile speed optimization for local",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -542,7 +542,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: keywordResearchImg,
       imageAlt: "Seed keyword development methodology",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Intent Classification",
@@ -559,7 +559,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: keywordIntentImg,
       imageAlt: "Local intent classification framework",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Gap Analysis & Mapping",
@@ -576,7 +576,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: keywordMappingImg,
       imageAlt: "Keyword-to-page mapping strategy",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -596,7 +596,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: contentLocationImg,
       imageAlt: "Location page content structure",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Blog & Authority",
@@ -613,7 +613,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: contentBlogImg,
       imageAlt: "Content cluster strategy diagram",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content Refresh",
@@ -630,7 +630,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: contentRefreshImg,
       imageAlt: "Content optimization workflow",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -650,7 +650,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: linkLocalImg,
       imageAlt: "Local link acquisition sources",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Authority Links",
@@ -667,7 +667,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: linkAuthorityImg,
       imageAlt: "Authority link building tactics",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Profile Health",
@@ -684,7 +684,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: linkHealthImg,
       imageAlt: "Link profile health analysis",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -704,7 +704,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: schemaBusinessImg,
       imageAlt: "Connected entity schema graph structure",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Service & Product Schema",
@@ -721,7 +721,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: schemaServiceImg,
       imageAlt: "Service and offer schema markup",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Rich Result Schema",
@@ -738,7 +738,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: schemaRichImg,
       imageAlt: "Content rich result schema types",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Validation & Monitoring",
@@ -753,7 +753,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quarterly Audits", description: "Schema reviewed when business info changes. Syntax errors caught before impact." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -773,7 +773,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: citationBuildingImg,
       imageAlt: "Citation audit and management process",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Citation Correction",
@@ -788,7 +788,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Verification", description: "Corrections verified after propagation. Nothing assumed complete until confirmed in index." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Core Citation Building",
@@ -803,7 +803,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "E-E-A-T Foundation", description: "Consistent citations from reputable directories build the trust signals Google's algorithms prioritize." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Industry Citations",
@@ -818,7 +818,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quarterly Maintenance", description: "Audits every 3-6 months catch new inconsistencies. Some platforms allow public edits without notification." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -842,7 +842,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: gbpOptimizationImg,
       imageAlt: "Google Business Profile optimization dashboard",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Competitive Positioning",
@@ -857,7 +857,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "E-E-A-T Alignment", description: "Profile optimization reinforcing expertise and trust signals Google's algorithms prioritize." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Ongoing Optimization",
@@ -872,7 +872,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "AI Visibility Check", description: "AI Overview citations monitored. Profile data verified for accuracy in AI-generated local results." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -892,7 +892,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reviewGenerationImg,
       imageAlt: "Review generation strategy mind map",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Request Psychology",
@@ -909,7 +909,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reviewPsychologyImg,
       imageAlt: "Customer review psychology and motivations",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Response Management",
@@ -926,7 +926,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reviewResponseImg,
       imageAlt: "Review response management workflow",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Platform Diversification",
@@ -943,7 +943,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reviewPlatformsImg,
       imageAlt: "Multi-platform review diversification strategy",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Reputation Monitoring",
@@ -960,7 +960,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reviewMonitoringImg,
       imageAlt: "Review monitoring and alerts dashboard",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -978,7 +978,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "E-E-A-T Foundation", description: "Consistent citations from reputable directories build the trust signals Google's algorithms prioritize." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Industry Citations",
@@ -1008,7 +1008,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Comparison", description: "Citation counts and sources compared against local pack leaders to identify opportunities." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Citation Cleanup",
@@ -1023,7 +1023,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quarterly Maintenance", description: "Audits every 3-6 months catch new inconsistencies before they compound into ranking problems." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1043,7 +1043,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: photoOptimizationImg,
       imageAlt: "Photo optimization and visual content strategy",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Technical Optimization",
@@ -1058,7 +1058,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Aspect Ratios", description: "Photos cropped to display correctly in GBP interface without awkward cuts or distortion." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Service-Area Photo Strategy",
@@ -1073,7 +1073,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitor Advantage", description: "Most service businesses don't leverage customer photo geotagging. This is an underutilized ranking signal." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "User Photo Management",
@@ -1088,7 +1088,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Trend Analysis", description: "What customers photograph reveals what they value. Insights extracted for marketing and service improvement." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1108,7 +1108,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: qaManagementImg,
       imageAlt: "Q&A management and customer engagement",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Answer Optimization",
@@ -1123,7 +1123,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Upvote Strategy", description: "Best answers upvoted to appear first. Authority answers promoted." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Monitoring & Response",
@@ -1138,7 +1138,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Monthly Reporting", description: "Q&A metrics included in performance reports. Questions as insights." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1158,7 +1158,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: postSchedulingImg,
       imageAlt: "Social media and GBP post scheduling",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Post Optimization",
@@ -1173,7 +1173,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Button Matching", description: "CTA button type matched to post purpose. 'Order online' for restaurants, 'Book' for appointments, 'Call now' for services." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Performance Tracking",
@@ -1188,7 +1188,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Monthly Reporting", description: "Complete GBP performance dashboard. Search queries, interactions, and post engagement in client reports." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1212,7 +1212,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: googleAdsImg,
       imageAlt: "Google Ads campaign management dashboard",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Ad Creative",
@@ -1227,7 +1227,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Responsive Search Ads", description: "RSAs tested systematically. Google's machine learning leveraged." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Optimization & Bidding",
@@ -1242,7 +1242,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Max", description: "Automated campaigns tested where appropriate. Manual control where needed." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1262,7 +1262,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: metaAdsImg,
       imageAlt: "Meta ads audience targeting strategy",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Creative Development",
@@ -1277,7 +1277,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Creative Refresh", description: "Ads rotated before fatigue sets in. Fresh creative queued." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Lead Generation",
@@ -1292,7 +1292,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Lead Quality Analysis", description: "Lead quality tracked and fed back into targeting optimization." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1312,7 +1312,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: localServiceAdsImg,
       imageAlt: "Local Service Ads profile setup",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Lead Management",
@@ -1327,7 +1327,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Feedback", description: "Lead quality data fed back into optimization decisions." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Ranking Optimization",
@@ -1342,7 +1342,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Tracking", description: "Cost per lead, booking rate, and ROI tracked and reported." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1362,7 +1362,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: retargetingImg,
       imageAlt: "Retargeting campaign audience segmentation",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Multi-Platform Reach",
@@ -1377,7 +1377,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Sequential Messaging", description: "Ad sequence builds from awareness to consideration to action." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Conversion Optimization",
@@ -1392,7 +1392,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Attribution Tracking", description: "Retargeting contribution to conversions measured and reported." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1410,7 +1410,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Local Elements", description: "Service area, local address, and market-specific content included." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content Strategy",
@@ -1425,7 +1425,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Strong CTAs", description: "Action-oriented language. Clear next steps for visitors." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Performance Optimization",
@@ -1440,7 +1440,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Score Impact", description: "Landing page experience improves ad costs and positions." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1458,7 +1458,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Testing & QA", description: "All tracking verified before launch. No data gaps." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Attribution Setup",
@@ -1473,7 +1473,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Custom Models", description: "Attribution models customized to business reality." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Reporting & Analysis",
@@ -1488,7 +1488,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Client Reporting", description: "White-labeled reports that prove value to end clients." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1512,7 +1512,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: emailMarketingImg,
       imageAlt: "Email marketing campaign strategy",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Campaign Types",
@@ -1527,7 +1527,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Seasonal", description: "Holiday and seasonal campaigns timed for maximum impact." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Execution Excellence",
@@ -1542,7 +1542,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Tracking", description: "Opens, clicks, and conversions tracked and analyzed." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1560,7 +1560,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Compliance", description: "GDPR, CAN-SPAM, and privacy regulations followed." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "List Hygiene",
@@ -1575,7 +1575,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Validation", description: "Email addresses validated for format and deliverability." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Segmentation",
@@ -1590,7 +1590,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Custom Segments", description: "Business-specific segments created for unique needs." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1608,7 +1608,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Conversion Path", description: "Welcome sequence designed to drive first conversion." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Review Generation Automation",
@@ -1623,7 +1623,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "GBP Integration", description: "Works with GBP Review Management for response workflows, sentiment tracking, and monthly reporting." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Behavioral Triggers",
@@ -1638,7 +1638,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Lead Nurture", description: "Prospects nurtured through consideration phase to decision." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Integration & Workflow",
@@ -1653,7 +1653,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Monitoring", description: "Review generation rates tracked. Sequences optimized based on results." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1671,7 +1671,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Imagery Standards", description: "Photo and graphic standards maintained for consistency." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Mobile Optimization",
@@ -1686,7 +1686,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Client Testing", description: "Rendering tested across email clients. Outlook, Gmail, Apple Mail." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Conversion Elements",
@@ -1701,7 +1701,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Footer Optimization", description: "Footer includes secondary CTAs and contact options." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1719,7 +1719,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Learning Application", description: "Winning variations implemented. Insights applied broadly." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Subject Line Testing",
@@ -1734,7 +1734,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Preview Text", description: "Pre-header text optimized alongside subjects." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content & CTA Testing",
@@ -1749,7 +1749,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Send Time", description: "Day of week and time of day optimized for audience." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1767,7 +1767,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Deliverability", description: "Bounce rates, spam complaints, and inbox placement tracked." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Reporting & Insights",
@@ -1782,7 +1782,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Executive Summaries", description: "High-level overviews for stakeholder communication." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Continuous Optimization",
@@ -1797,7 +1797,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Technical Improvements", description: "Deliverability and rendering issues addressed proactively." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1821,7 +1821,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: linkBuildingImg,
       imageAlt: "Local link building and outreach",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Community Connections",
@@ -1836,7 +1836,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Community Events", description: "Sponsorship and participation in local events." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Link Quality & Tracking",
@@ -1851,7 +1851,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Disavow Monitoring", description: "Toxic links identified and addressed if needed." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1869,7 +1869,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Enhanced Listings", description: "Photos, hours, and services added where supported." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Industry Citations",
@@ -1884,7 +1884,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Authority Prioritization", description: "Higher-authority directories prioritized." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Citation Maintenance",
@@ -1899,7 +1899,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Tracking", description: "Citation growth and accuracy monitored and reported." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1917,7 +1917,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Authentic Voice", description: "Genuine helpfulness, not promotional spam." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "AI Discovery Signals",
@@ -1932,7 +1932,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Standards", description: "Every mention adds genuine value. No filler content." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Monitoring & Reporting",
@@ -1947,7 +1947,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Monthly Reporting", description: "Brand visibility metrics included in reports." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -1965,7 +1965,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Strategy Development", description: "Target distribution defined for future links." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Diversification Strategy",
@@ -1980,7 +1980,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Co-Citation", description: "Mentions alongside competitor brands for context." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Ongoing Management",
@@ -1995,7 +1995,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quarterly Reviews", description: "Strategic reviews of profile health and direction." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2013,7 +2013,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Link Verification", description: "Sponsorship link value verified before commitment." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Coordination & Execution",
@@ -2028,7 +2028,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Relationship Building", description: "Ongoing relationships for annual opportunities." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Value Maximization",
@@ -2043,7 +2043,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "ROI Tracking", description: "Total value of sponsorship tracked and reported." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2061,7 +2061,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Monitoring", description: "Review content monitored for testimonial opportunities." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Testimonial Strategy",
@@ -2076,7 +2076,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Website Integration", description: "Testimonials strategically placed for conversion impact." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Trust Signal Building",
@@ -2091,7 +2091,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Third-Party Validation", description: "BBB, industry ratings, and external reviews integrated." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2115,7 +2115,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: realTimeDashboardMeetingImg,
       imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Data Integration",
@@ -2132,7 +2132,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: dataIntegrationTabletImg,
       imageAlt: "Tablet showing unified reporting dashboard with data integration",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Real-Time Updates",
@@ -2149,7 +2149,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: whiteLabelDashboardsImg,
       imageAlt: "White-label dashboard and reporting interface",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2169,7 +2169,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reportHistoryTabletImg,
       imageAlt: "Tablet displaying report history dashboard with monthly rankings and work delivery reports",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Customization",
@@ -2186,7 +2186,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reportsCustomizationImg,
       imageAlt: "Laptop showing report customization dashboard with branding and configuration options",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Delivery & Support",
@@ -2203,7 +2203,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: reportingPresentationImg,
       imageAlt: "Video call screen share showing monthly performance report with presenter and viewer",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2223,7 +2223,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: rankTrackingLaptopImg,
       imageAlt: "Laptop showing keyword ranking report with position tracking data",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Analysis & Insights",
@@ -2240,7 +2240,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: rankAnalysisDashboardImg,
       imageAlt: "iMac displaying Google Business Profile dashboard with keyword rankings in modern office",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Reporting Integration",
@@ -2257,7 +2257,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: rankingsInContextImg,
       imageAlt: "Team meeting reviewing ranking analytics dashboard on large display",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2277,7 +2277,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: callTrackingImplementationImg,
       imageAlt: "Call tracking implementation dashboard showing call volume by source, recent calls list, and tracking setup status",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Call Analytics",
@@ -2294,7 +2294,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: callAnalyticsQualityValueImg,
       imageAlt: "Call analytics infographic showing call duration, first-time callers, call outcomes, missed calls, call timing, and quality scoring",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Attribution & ROI",
@@ -2311,7 +2311,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: callTrackingAttributionLoopImg,
       imageAlt: "Call tracking attribution loop infographic showing source attribution, cost per call, revenue attribution, channel comparison, multi-touch, and ROI reporting",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2331,7 +2331,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: attributionFrameworkDashboardImg,
       imageAlt: "Marketing attribution framework dashboard showing conversion tracking funnel, lead values, customer lifetime value, and multi-touch attribution",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "ROI Calculation",
@@ -2348,7 +2348,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: roiCalculationDashboardImg,
       imageAlt: "ROI calculation dashboard showing channel ROI, campaign performance comparison, blended ROI gauges, and industry benchmarks",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Strategic Application",
@@ -2365,7 +2365,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: budgetOptimizationDashboardImg,
       imageAlt: "Strategic budget optimization dashboard showing channel efficiency, growth modeling, spend optimization suggestions, and executive summary",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2385,7 +2385,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: presentationSlidesDesignImg,
       imageAlt: "Marketing agency presentation slides on conference room screen showing data visualizations, charts, and branded design",
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content Development",
@@ -2402,7 +2402,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: presentationRoiStoriesImg,
       imageAlt: "Executive summary presentation on laptop showing ROI results, win highlights, strategy roadmap, and investment justification",
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Meeting Support",
@@ -2419,7 +2419,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       imageSrc: clientConversationsImg,
       imageAlt: "Agency presenting performance reports to client via video call with dashboard screen share",
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2437,7 +2437,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Compound Effect", description: "Each unstructured citation creates a new pathway for discovery—both by users and by AI crawlers indexing diverse content." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Video Citations",
@@ -2452,7 +2452,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Multi-Platform", description: "Citations distributed across YouTube, Vimeo, TikTok, and embedded video create diverse signal sources." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Audio Citations",
@@ -2467,7 +2467,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Long-Form Context", description: "Extended audio content provides rich context around brand mentions, strengthening relevance signals." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Image Citations",
@@ -2482,7 +2482,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Schema Attribution", description: "ImageObject schema with creator and contributor markup strengthens citation signals." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Web 2.0 Citations",
@@ -2497,7 +2497,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "AI Training Data", description: "Web 2.0 content feeds LLM training sets. Mentions on these platforms influence AI recommendation systems." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Press Release Citations",
@@ -2512,7 +2512,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "AI Overview Sourcing", description: "Google and AI systems treat news mentions as trust signals for entity information." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2530,7 +2530,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Conversion Relevance", description: "Local content converts better. Visitors see you serve their specific area." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Avoiding Doorway Page Penalties",
@@ -2544,7 +2544,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Internal Linking", description: "Strategic linking between geographic pages builds topical authority." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Geographic Content Strategy",
@@ -2558,7 +2558,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Tracking", description: "Monitor rankings and traffic per location to inform ongoing strategy." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2575,7 +2575,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitive Moat", description: "Topical authority compounds over time and is difficult for competitors to replicate." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Content Types",
@@ -2589,7 +2589,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Industry Updates", description: "Timely content on trends, regulations, and news builds ongoing relevance." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "From Traffic to Leads",
@@ -2603,7 +2603,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Conversion Tracking", description: "Measure which topics drive leads, not just traffic." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2620,7 +2620,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Competitive Keywords", description: "The depth required to rank for competitive terms." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Power Post Anatomy",
@@ -2635,7 +2635,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Schema Markup", description: "FAQ, HowTo, and Article schema for rich result eligibility." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "The Conversion Problem",
@@ -2649,7 +2649,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Lead Magnets", description: "Downloadable content offers to capture email addresses." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2666,7 +2666,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Repurposable Assets", description: "E-books can be broken into blog posts, social content, and more." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "E-book Production",
@@ -2680,7 +2680,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Landing Page Copy", description: "Conversion-focused page copy that sells the download." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Lead Magnet Funnel",
@@ -2694,7 +2694,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Tracking", description: "Measure downloads, email engagement, and downstream conversions." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2711,7 +2711,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Entry Point", description: "Start relationships with valuable exchanges, not cold outreach." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Lead Magnet Types",
@@ -2726,7 +2726,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Mini-Courses", description: "Email-delivered lessons that build engagement over time." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Optimization & Testing",
@@ -2740,7 +2740,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Performance Metrics", description: "Track conversion rates, email quality, and downstream engagement." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2757,7 +2757,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Controlled Narrative", description: "Shape how your news is presented across the web." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Newsworthy Angles",
@@ -2772,7 +2772,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Partnerships", description: "Strategic alliances and collaborations." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Distribution Strategy",
@@ -2787,7 +2787,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Repurposing", description: "Leverage release content for blog posts and social." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2804,7 +2804,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Testimonial Extraction", description: "Quotes and endorsements for multi-channel use." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Case Study Structure",
@@ -2819,7 +2819,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "The Takeaway", description: "What can prospects learn and apply?" }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Production Process",
@@ -2834,7 +2834,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Approval Process", description: "Client review and sign-off before publication." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2851,7 +2851,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "User Experience", description: "Visitors find quick answers to common questions." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "FAQ Research",
@@ -2866,7 +2866,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Sales Team Input", description: "Objections and questions from sales conversations." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Technical Implementation",
@@ -2881,7 +2881,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Ongoing Expansion", description: "Add new questions as search behavior evolves." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ],
 
@@ -2898,7 +2898,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Semantic Relevance", description: "Topical depth that search engines reward." }
       ],
       ctaText: "Start the Conversation",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Planning and Mapping",
@@ -2913,7 +2913,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Content Calendar", description: "Phased approach to cluster completion." }
       ],
       ctaText: "Schedule a Discovery Call",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     },
     {
       category: "Implementation",
@@ -2928,7 +2928,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Expansion Planning", description: "Roadmap for adding new clusters over time." }
       ],
       ctaText: "Explore Partnership",
-      ctaHref: "#contact"
+      ctaHref: "/contact"
     }
   ]
 };
