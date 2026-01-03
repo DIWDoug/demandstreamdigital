@@ -67,7 +67,6 @@ const WhiteLabelExplainer = () => {
   };
 
   const orbitRadius = isMobile ? 140 : 180;
-  const labelRadius = isMobile ? 190 : 240;
 
   return (
     <section id="white-label-explainer" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
@@ -153,12 +152,12 @@ const WhiteLabelExplainer = () => {
                 )}
               </div>
 
-              {/* Rotating orbit container */}
+              {/* Rotating orbit container - includes both icons and labels */}
               <div 
                 className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] animate-[spin_60s_linear_infinite]"
                 style={{ animationPlayState: selectedService ? 'paused' : 'running' }}
               >
-                {/* Orbit icons - clickable to change center */}
+                {/* Orbit icons with attached labels */}
                 {services.map((service, index) => {
                   const angle = (index * 360) / services.length - 90;
                   const Icon = service.icon;
@@ -167,55 +166,55 @@ const WhiteLabelExplainer = () => {
                   
                   const x = Math.cos((angle * Math.PI) / 180) * orbitRadius;
                   const y = Math.sin((angle * Math.PI) / 180) * orbitRadius;
-                  
-                  return (
-                    <button
-                      key={service.slug}
-                      onClick={() => setSelectedService(isSelected ? null : service)}
-                      className="absolute w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 left-1/2 top-1/2 -ml-6 -mt-6 sm:-ml-7 sm:-mt-7 cursor-pointer hover:scale-110"
-                      style={{
-                        transform: `translate(${x}px, ${y}px)`,
-                        backgroundColor: isSelected ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
-                      }}
-                    >
-                      {/* Counter-rotate the icon so it stays upright */}
-                      <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: selectedService ? 'paused' : 'running' }}>
-                        <Icon 
-                          className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isSelected ? 'text-white' : 'text-white/90'}`}
-                        />
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
 
-              {/* Static labels - positioned outside the orbit */}
-              <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px]">
-                {services.map((service, index) => {
-                  const angle = (index * 360) / services.length - 90;
-                  const isSelected = selectedService?.slug === service.slug;
-                  
-                  const x = Math.cos((angle * Math.PI) / 180) * labelRadius;
-                  const y = Math.sin((angle * Math.PI) / 180) * labelRadius;
-                  
-                  // Determine text alignment based on position
-                  const isLeft = x < -20;
-                  const isRight = x > 20;
+                  // Label position relative to the orb
+                  const labelOffset = isMobile ? 50 : 60;
+                  const labelX = Math.cos((angle * Math.PI) / 180) * labelOffset;
+                  const labelY = Math.sin((angle * Math.PI) / 180) * labelOffset;
                   
                   return (
-                    <span
-                      key={`label-${service.slug}`}
-                      className={`absolute text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
-                        isSelected ? 'text-accent-blue' : 'text-text-muted'
-                      } ${isLeft ? 'text-right' : isRight ? 'text-left' : 'text-center'}`}
+                    <div
+                      key={service.slug}
+                      className="absolute left-1/2 top-1/2"
                       style={{
-                        left: '50%',
-                        top: '50%',
                         transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
                       }}
                     >
-                      {service.title}
-                    </span>
+                      {/* The orb button */}
+                      <button
+                        onClick={() => setSelectedService(isSelected ? null : service)}
+                        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110"
+                        style={{
+                          backgroundColor: isSelected ? 'hsl(var(--cta))' : 'hsl(var(--accent-blue))',
+                        }}
+                      >
+                        {/* Counter-rotate the icon so it stays upright */}
+                        <div className="animate-[spin_60s_linear_infinite_reverse]" style={{ animationPlayState: selectedService ? 'paused' : 'running' }}>
+                          <Icon 
+                            className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors ${isSelected ? 'text-white' : 'text-white/90'}`}
+                          />
+                        </div>
+                      </button>
+                      
+                      {/* Label attached to the orb - counter-rotated to stay upright */}
+                      <div 
+                        className="absolute animate-[spin_60s_linear_infinite_reverse]" 
+                        style={{ 
+                          animationPlayState: selectedService ? 'paused' : 'running',
+                          left: '50%',
+                          top: '50%',
+                          transform: `translate(calc(-50% + ${labelX}px), calc(-50% + ${labelY}px))`,
+                        }}
+                      >
+                        <span
+                          className={`text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
+                            isSelected ? 'text-accent-blue' : 'text-text-muted'
+                          }`}
+                        >
+                          {service.title}
+                        </span>
+                      </div>
+                    </div>
                   );
                 })}
               </div>
