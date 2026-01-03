@@ -7,29 +7,22 @@ const PricingComparisonTable = () => {
       service: "Local SEO (per location)",
       inHouse: "$4,000 - $8,000",
       typicalAgency: "$1,500 - $3,000",
-      whiteLabel: "$500 - $1,200",
+      whiteLabel: "$650 - $1,500",
       notes: "Includes technical SEO, content, citations, link building"
     },
     {
       service: "Google Business Profile Management",
       inHouse: "$1,500 - $3,000",
       typicalAgency: "$500 - $1,000",
-      whiteLabel: "$200 - $500",
+      whiteLabel: "$300 - $600",
       notes: "Posts, Q&A, review response, photo optimization"
     },
     {
       service: "Paid Media Management",
       inHouse: "$3,000 - $6,000",
       typicalAgency: "$1,000 - $2,500",
-      whiteLabel: "$299 - $999",
+      whiteLabel: "$400 - $1,200",
       notes: "Plus % of ad spend for larger budgets"
-    },
-    {
-      service: "Authority Building / Link Building",
-      inHouse: "$5,000 - $10,000",
-      typicalAgency: "$2,000 - $4,000",
-      whiteLabel: "$800 - $2,000",
-      notes: "Digital PR, guest posting, citation building"
     },
     {
       service: "Email Marketing",
@@ -39,11 +32,18 @@ const PricingComparisonTable = () => {
       notes: "Strategy, copywriting, automation, reporting"
     },
     {
-      service: "Monthly Reporting",
-      inHouse: "$1,000 - $2,000",
-      typicalAgency: "$300 - $600",
-      whiteLabel: "$100 - $300",
-      notes: "White-labeled dashboards and presentations"
+      service: "Content Marketing",
+      inHouse: "$3,000 - $6,000",
+      typicalAgency: "$1,200 - $2,500",
+      whiteLabel: "$500 - $1,200",
+      notes: "Blog content, location pages, service pages"
+    },
+    {
+      service: "Inbound Marketing (Full Suite)",
+      inHouse: "$8,000 - $15,000",
+      typicalAgency: "$3,500 - $6,000",
+      whiteLabel: "$1,500 - $2,600",
+      notes: "SEO, GBP, content, email, reporting combined"
     }
   ];
 
@@ -186,15 +186,15 @@ const PricingComparisonTable = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
                 <p className="text-xs text-text-muted mb-1">Example: Local SEO</p>
-                <p className="text-lg font-bold text-foreground">Your Cost: $800</p>
-                <p className="text-sm text-cta">Sell at: $2,000</p>
+                <p className="text-lg font-bold text-foreground">Your Cost: $650</p>
+                <p className="text-sm text-cta">Sell at: $1,625</p>
                 <p className="text-xs text-green-500 mt-1">150% margin</p>
               </div>
               <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
                 <p className="text-xs text-text-muted mb-1">Example: GBP + Local</p>
-                <p className="text-lg font-bold text-foreground">Your Cost: $1,100</p>
-                <p className="text-sm text-cta">Sell at: $2,500</p>
-                <p className="text-xs text-green-500 mt-1">127% margin</p>
+                <p className="text-lg font-bold text-foreground">Your Cost: $950</p>
+                <p className="text-sm text-cta">Sell at: $2,185</p>
+                <p className="text-xs text-green-500 mt-1">130% margin</p>
               </div>
             </div>
           </div>

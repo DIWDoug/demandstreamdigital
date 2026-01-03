@@ -22,13 +22,21 @@ export interface IndustryBenchmark {
 
 export const industryBenchmarks: IndustryBenchmark[] = [
   // Legal - Local
-  { id: "legal", name: "Legal Services", category: "Legal", conversionRate: 3.5, closeRate: 25, avgCustomerValue: 4500 },
+  { id: "legal-personal-injury", name: "Personal Injury Law", category: "Legal", conversionRate: 3.2, closeRate: 22, avgCustomerValue: 8500 },
+  { id: "legal-family-law", name: "Family Law / Divorce", category: "Legal", conversionRate: 3.5, closeRate: 28, avgCustomerValue: 3500 },
+  { id: "legal-criminal-defense", name: "Criminal Defense", category: "Legal", conversionRate: 3.0, closeRate: 20, avgCustomerValue: 5000 },
+  { id: "legal-estate-planning", name: "Estate Planning", category: "Legal", conversionRate: 3.8, closeRate: 30, avgCustomerValue: 2500 },
+  { id: "legal-immigration", name: "Immigration Law", category: "Legal", conversionRate: 3.3, closeRate: 25, avgCustomerValue: 3000 },
   
   // Medical & Healthcare - Local
   { id: "dental", name: "Dental Practice", category: "Medical", conversionRate: 4.2, closeRate: 35, avgCustomerValue: 800 },
   { id: "medical-spa", name: "Med Spa / Cosmetic", category: "Medical", conversionRate: 3.8, closeRate: 28, avgCustomerValue: 1500 },
   { id: "chiropractic", name: "Chiropractic", category: "Medical", conversionRate: 4.5, closeRate: 32, avgCustomerValue: 600 },
   { id: "veterinary", name: "Veterinary", category: "Medical", conversionRate: 4.0, closeRate: 38, avgCustomerValue: 350 },
+  { id: "optometry", name: "Optometry / Eye Care", category: "Medical", conversionRate: 4.3, closeRate: 40, avgCustomerValue: 500 },
+  { id: "physical-therapy", name: "Physical Therapy", category: "Medical", conversionRate: 4.0, closeRate: 35, avgCustomerValue: 400 },
+  { id: "mental-health", name: "Mental Health / Therapy", category: "Medical", conversionRate: 3.5, closeRate: 30, avgCustomerValue: 1200 },
+  { id: "dermatology", name: "Dermatology", category: "Medical", conversionRate: 4.0, closeRate: 35, avgCustomerValue: 700 },
   
   // Home Services - Local
   { id: "hvac", name: "HVAC", category: "Home Services", conversionRate: 3.2, closeRate: 30, avgCustomerValue: 1200 },
@@ -39,36 +47,66 @@ export const industryBenchmarks: IndustryBenchmark[] = [
   { id: "landscaping", name: "Landscaping", category: "Home Services", conversionRate: 4.0, closeRate: 40, avgCustomerValue: 400 },
   { id: "pest-control", name: "Pest Control", category: "Home Services", conversionRate: 4.5, closeRate: 45, avgCustomerValue: 250 },
   { id: "cleaning", name: "House Cleaning", category: "Home Services", conversionRate: 5.0, closeRate: 50, avgCustomerValue: 200 },
+  { id: "painting", name: "Painting", category: "Home Services", conversionRate: 3.5, closeRate: 35, avgCustomerValue: 2500 },
+  { id: "garage-door", name: "Garage Door", category: "Home Services", conversionRate: 4.0, closeRate: 40, avgCustomerValue: 600 },
+  { id: "flooring", name: "Flooring", category: "Home Services", conversionRate: 3.2, closeRate: 28, avgCustomerValue: 4500 },
+  { id: "windows", name: "Windows & Doors", category: "Home Services", conversionRate: 2.8, closeRate: 22, avgCustomerValue: 6000 },
+  { id: "moving", name: "Moving Services", category: "Home Services", conversionRate: 5.5, closeRate: 50, avgCustomerValue: 800 },
+  { id: "appliance-repair", name: "Appliance Repair", category: "Home Services", conversionRate: 5.0, closeRate: 55, avgCustomerValue: 250 },
+  { id: "locksmith", name: "Locksmith", category: "Home Services", conversionRate: 6.0, closeRate: 60, avgCustomerValue: 200 },
+  { id: "pool-service", name: "Pool Service", category: "Home Services", conversionRate: 4.2, closeRate: 45, avgCustomerValue: 350 },
+  { id: "tree-service", name: "Tree Service", category: "Home Services", conversionRate: 3.8, closeRate: 40, avgCustomerValue: 800 },
+  { id: "fence", name: "Fencing", category: "Home Services", conversionRate: 3.5, closeRate: 35, avgCustomerValue: 3500 },
   
   // Automotive - Local
   { id: "auto-repair", name: "Auto Repair", category: "Automotive", conversionRate: 3.8, closeRate: 42, avgCustomerValue: 450 },
   { id: "auto-body", name: "Auto Body Shop", category: "Automotive", conversionRate: 3.2, closeRate: 35, avgCustomerValue: 1800 },
+  { id: "towing", name: "Towing Service", category: "Automotive", conversionRate: 6.5, closeRate: 65, avgCustomerValue: 150 },
+  { id: "tire-shop", name: "Tire Shop", category: "Automotive", conversionRate: 4.5, closeRate: 50, avgCustomerValue: 400 },
   
   // Real Estate - Local
   { id: "real-estate", name: "Real Estate Agent", category: "Real Estate", conversionRate: 2.2, closeRate: 12, avgCustomerValue: 8500 },
   { id: "property-mgmt", name: "Property Management", category: "Real Estate", conversionRate: 2.8, closeRate: 22, avgCustomerValue: 1200 },
+  { id: "mortgage", name: "Mortgage Lender", category: "Real Estate", conversionRate: 2.5, closeRate: 18, avgCustomerValue: 4500 },
   
   // Financial Services - Local
   { id: "accounting", name: "Accounting / CPA", category: "Financial", conversionRate: 3.0, closeRate: 28, avgCustomerValue: 2500 },
   { id: "insurance", name: "Insurance Agency", category: "Financial", conversionRate: 2.8, closeRate: 20, avgCustomerValue: 1800 },
   { id: "tax-prep", name: "Tax Preparation", category: "Financial", conversionRate: 3.5, closeRate: 35, avgCustomerValue: 400 },
+  { id: "financial-advisor", name: "Financial Advisor", category: "Financial", conversionRate: 2.5, closeRate: 18, avgCustomerValue: 5000 },
   
   // Fitness & Wellness - Local
   { id: "fitness", name: "Gym / Fitness", category: "Fitness", conversionRate: 5.5, closeRate: 40, avgCustomerValue: 500 },
   { id: "spa", name: "Spa / Wellness", category: "Fitness", conversionRate: 4.8, closeRate: 38, avgCustomerValue: 350 },
   { id: "yoga", name: "Yoga Studio", category: "Fitness", conversionRate: 5.0, closeRate: 42, avgCustomerValue: 300 },
   { id: "massage", name: "Massage Therapy", category: "Fitness", conversionRate: 5.2, closeRate: 45, avgCustomerValue: 120 },
+  { id: "personal-training", name: "Personal Training", category: "Fitness", conversionRate: 4.8, closeRate: 40, avgCustomerValue: 600 },
   
   // Food & Hospitality - Local
   { id: "restaurant", name: "Restaurant", category: "Food & Hospitality", conversionRate: 4.0, closeRate: 55, avgCustomerValue: 45 },
   { id: "catering", name: "Catering", category: "Food & Hospitality", conversionRate: 3.2, closeRate: 30, avgCustomerValue: 2500 },
+  { id: "bakery", name: "Bakery", category: "Food & Hospitality", conversionRate: 5.0, closeRate: 60, avgCustomerValue: 35 },
   
   // Education & Childcare - Local
   { id: "daycare", name: "Daycare / Childcare", category: "Education", conversionRate: 3.5, closeRate: 25, avgCustomerValue: 1200 },
   { id: "tutoring", name: "Tutoring", category: "Education", conversionRate: 4.0, closeRate: 35, avgCustomerValue: 600 },
+  { id: "driving-school", name: "Driving School", category: "Education", conversionRate: 4.5, closeRate: 40, avgCustomerValue: 400 },
+  { id: "preschool", name: "Preschool", category: "Education", conversionRate: 3.2, closeRate: 22, avgCustomerValue: 1500 },
+  
+  // Pet Services - Local
+  { id: "pet-grooming", name: "Pet Grooming", category: "Pet Services", conversionRate: 5.5, closeRate: 55, avgCustomerValue: 80 },
+  { id: "pet-boarding", name: "Pet Boarding / Daycare", category: "Pet Services", conversionRate: 4.8, closeRate: 50, avgCustomerValue: 150 },
+  { id: "dog-training", name: "Dog Training", category: "Pet Services", conversionRate: 4.0, closeRate: 35, avgCustomerValue: 500 },
   
   // Senior Care - Local
   { id: "senior-care", name: "Senior Care / Assisted Living", category: "Senior Care", conversionRate: 2.5, closeRate: 15, avgCustomerValue: 4500 },
+  { id: "home-health", name: "Home Health Care", category: "Senior Care", conversionRate: 2.8, closeRate: 18, avgCustomerValue: 3000 },
+  
+  // Other Local Services
+  { id: "funeral", name: "Funeral Home", category: "Other", conversionRate: 2.2, closeRate: 80, avgCustomerValue: 8000 },
+  { id: "self-storage", name: "Self Storage", category: "Other", conversionRate: 5.0, closeRate: 45, avgCustomerValue: 150 },
+  { id: "photography", name: "Photography", category: "Other", conversionRate: 4.5, closeRate: 35, avgCustomerValue: 800 },
+  { id: "event-planning", name: "Event Planning", category: "Other", conversionRate: 3.8, closeRate: 30, avgCustomerValue: 3500 },
 ];
 
 export const industries: Industry[] = [
