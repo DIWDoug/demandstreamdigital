@@ -1,6 +1,7 @@
 // Pixabay API utility for fetching high-quality images
-const PIXABAY_API_KEY = '53992995-2c7f089b380258092f52d2c81';
-const PIXABAY_API_URL = 'https://pixabay.com/api/';
+// API key is now stored securely in Supabase Edge Functions
+
+import { supabase } from "@/integrations/supabase/client";
 
 export interface PixabayImage {
   id: number;
@@ -45,35 +46,24 @@ export interface SearchOptions {
 }
 
 /**
- * Search for images on Pixabay
+ * Search for images on Pixabay via secure Edge Function
  * @param options Search options
  * @returns Promise with Pixabay response containing image hits
  */
 export async function searchPixabayImages(options: SearchOptions): Promise<PixabayResponse> {
-  const params = new URLSearchParams({
-    key: PIXABAY_API_KEY,
-    q: options.query,
-    image_type: options.imageType || 'photo',
-    orientation: options.orientation || 'horizontal',
-    safesearch: String(options.safeSearch !== false),
-    order: options.order || 'popular',
-    per_page: String(options.perPage || 20),
-    page: String(options.page || 1),
+  const { data, error } = await supabase.functions.invoke('fetch-pixabay-image', {
+    body: options,
   });
 
-  if (options.category) params.append('category', options.category);
-  if (options.minWidth) params.append('min_width', String(options.minWidth));
-  if (options.minHeight) params.append('min_height', String(options.minHeight));
-  if (options.colors) params.append('colors', options.colors);
-  if (options.editorsChoice) params.append('editors_choice', 'true');
-
-  const response = await fetch(`${PIXABAY_API_URL}?${params.toString()}`);
-  
-  if (!response.ok) {
-    throw new Error(`Pixabay API error: ${response.status} ${response.statusText}`);
+  if (error) {
+    throw new Error(`Pixabay API error: ${error.message}`);
   }
 
-  return response.json();
+  if (data.success === false) {
+    throw new Error(data.error || 'Failed to fetch images');
+  }
+
+  return data as PixabayResponse;
 }
 
 /**

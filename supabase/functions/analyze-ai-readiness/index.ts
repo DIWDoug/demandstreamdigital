@@ -17,7 +17,48 @@ interface AnalysisResult {
   metadata?: Record<string, string>;
 }
 
+// SSRF protection: validate URL is public and not internal
+function isValidPublicUrl(urlString: string): boolean {
+  try {
+    const url = new URL(urlString);
+    
+    // Only allow HTTP/HTTPS
+    if (!['http:', 'https:'].includes(url.protocol)) {
+      return false;
+    }
+    
+    // Block private IP ranges and localhost
+    const hostname = url.hostname.toLowerCase();
+    const privatePatterns = [
+      /^localhost$/i,
+      /^127\.\d+\.\d+\.\d+$/,
+      /^10\.\d+\.\d+\.\d+$/,
+      /^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/,
+      /^192\.168\.\d+\.\d+$/,
+      /^169\.254\.\d+\.\d+$/,
+      /^0\.0\.0\.0$/,
+      /^::1$/,
+      /^fe80:/i,
+      /^fc00:/i,
+      /^fd00:/i,
+    ];
+    
+    if (privatePatterns.some(pattern => pattern.test(hostname))) {
+      return false;
+    }
+    
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function checkUrlExists(url: string): Promise<{ exists: boolean; content?: string }> {
+  // Validate URL before making request
+  if (!isValidPublicUrl(url)) {
+    return { exists: false };
+  }
+  
   try {
     const response = await fetch(url, { 
       method: 'GET',
@@ -251,6 +292,14 @@ Deno.serve(async (req) => {
     let formattedUrl = url.trim();
     if (!formattedUrl.startsWith('http://') && !formattedUrl.startsWith('https://')) {
       formattedUrl = `https://${formattedUrl}`;
+    }
+
+    // SSRF validation
+    if (!isValidPublicUrl(formattedUrl)) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Invalid or private URL' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     const baseUrl = new URL(formattedUrl).origin;
