@@ -1,4 +1,4 @@
-import { MapPin, Map, MousePointerClick, Mail, Award, BarChart3, Target, TrendingUp, Users, Shield, Zap, CheckCircle } from "lucide-react";
+import { MapPin, Map, MousePointerClick, Mail, Award, BarChart3, Target, TrendingUp, Users, Shield, Zap, CheckCircle, PenTool, FileText, BookOpen, Megaphone, Sparkles, HelpCircle, Layers, Lightbulb } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface SpokeDetail {
@@ -768,6 +768,155 @@ export const hubs: Hub[] = [
         benefits: ["Professional presentation materials", "Client-ready slides", "Strategic narrative support", "QBR preparation", "Win communication"],
         deliverables: ["Presentation template development", "Monthly or quarterly slide updates", "Executive summary slides", "Strategy recommendation slides", "Visual design", "Speaker notes"],
         process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"]
+      }
+    ]
+  },
+  // CONTENT MARKETING HUB
+  {
+    icon: PenTool,
+    title: "Content Marketing",
+    slug: "content-marketing",
+    summary: "Strategic content that ranks, converts, and positions your clients as local market leaders.",
+    heroDescription: {
+      intro: "We help agencies deliver white-label content marketing built around strategy, not word counts.",
+      bullets: [
+        "No generic blog posts",
+        "No AI-generated filler content",
+        "No content without conversion purpose"
+      ],
+      closing: "Every piece is scoped to drive rankings, capture leads, or build authority—not just check a box."
+    },
+    integrationNote: "Content marketing powers every other channel. Strategic content supports SEO, feeds email campaigns, and builds the authority that makes paid media more effective.",
+    whyItMatters: {
+      headline: "Why Content Marketing Matters for Your Clients",
+      description: "Content is the foundation of digital visibility. Without strategic content, local businesses cannot rank, cannot capture leads, and cannot demonstrate the expertise that earns customer trust.",
+      points: [
+        { icon: Target, title: "Capture Search Demand", description: "Strategic content captures the queries your client's customers are searching. Every piece is an opportunity to rank and convert." },
+        { icon: TrendingUp, title: "Compound Authority Over Time", description: "Content builds on itself. Each piece strengthens topical authority and creates opportunities for internal linking and lead capture." },
+        { icon: Shield, title: "Own the Conversation", description: "When competitors have thin content, strategic depth becomes a moat. Content leadership is defensible competitive advantage." }
+      ]
+    },
+    ourApproach: {
+      headline: "Our Content Marketing Approach",
+      description: "We've refined our process across hundreds of content campaigns. Here's how we deliver results for your clients:",
+      steps: [
+        { number: "01", title: "Content Audit & Strategy", description: "We analyze existing content, identify gaps, map competitor coverage, and develop a strategy aligned with business goals." },
+        { number: "02", title: "Keyword & Topic Mapping", description: "Hub-and-spoke topic architecture, keyword targeting with intent classification, and content calendar development." },
+        { number: "03", title: "Core Content Build", description: "Service pages, geographical content, power posts, and FAQ content that captures search demand across the customer journey." },
+        { number: "04", title: "Lead Magnet Development", description: "E-books, guides, checklists, and tools that convert visitors into email subscribers and qualified leads." },
+        { number: "05", title: "Performance & Iteration", description: "Monthly analysis, content refresh programs, and continuous optimization based on ranking and conversion data." }
+      ]
+    },
+    benefits: {
+      headline: "What Your Agency Gets",
+      items: [
+        "Trust: Content that ranks and converts, not just fills a calendar",
+        "Clarity: Detailed briefs and strategy documentation you can present to clients",
+        "Execution: Work moves forward without you managing writers",
+        "Direct access to your dedicated content strategist",
+        "Scalable processes that grow with your agency",
+        "No contracts. Results keep you coming back, not lock-in agreements."
+      ]
+    },
+    faqs: [
+      { question: "How long does it take to see results from content marketing?", answer: "Initial ranking movement typically appears within 2-3 months. Lead generation can begin immediately with lead magnets. Compound effects become significant at 6-12 months as content authority builds." },
+      { question: "How many pieces of content do you produce per month?", answer: "We scope based on strategy, not arbitrary quotas. Some clients need 2 power posts. Others need 20 service area pages. We recommend based on gaps and goals, not volume targets." },
+      { question: "Do you write the content or do clients provide it?", answer: "We handle all writing. We conduct intake interviews to capture client expertise, then create content that reflects their voice and knowledge. Client review is part of the process." },
+      { question: "How do you handle content for multiple locations?", answer: "We create unique, locally relevant content for each service area. No duplicate content with city names swapped. Each page provides genuine local value and targets location-specific keywords." },
+      { question: "What makes your content AI-optimized?", answer: "Semantic structure, clear headings, FAQ schema, and authoritative depth. We structure content so AI systems can parse, understand, and cite it in AI Overviews and LLM responses." },
+      { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Content compounds over time, so we recommend 6+ month commitments, but results keep you coming back—not contracts." },
+      { question: "How does white-label content delivery work?", answer: "All content is delivered under your brand. We can publish directly to client sites or deliver via shared drives. You maintain the client relationship and present the work as your own." }
+    ],
+    spokes: [
+      {
+        title: "Geographical Content",
+        slug: "geographical-content",
+        description: "Service area pages and city-specific content that captures local search intent.",
+        fullDescription: "Local businesses need local content. We create unique, valuable pages for every service area that capture 'near me' and city-specific searches while avoiding doorway page penalties.",
+        benefits: ["Rank in every target city", "Capture 'near me' searches", "Build geographic authority", "Avoid duplicate content penalties", "Support local pack rankings"],
+        deliverables: ["Service area page content", "City-specific landing pages", "Neighborhood content where relevant", "Local schema markup", "Internal linking architecture", "Geographic keyword targeting"],
+        process: ["Service area mapping", "Keyword research per location", "Unique content development", "Local schema implementation", "Internal linking setup", "Performance tracking"]
+      },
+      {
+        title: "Topical Content",
+        slug: "topical-content",
+        description: "Industry expertise articles that build authority and answer customer questions.",
+        fullDescription: "Topical content demonstrates expertise and captures informational queries. We create articles that position your client as the authority Google trusts for their industry.",
+        benefits: ["Build topical authority", "Capture long-tail queries", "Support E-E-A-T signals", "Create internal linking opportunities", "Feed social and email channels"],
+        deliverables: ["Industry expertise articles", "How-to guides", "Educational content", "Comparison content", "Seasonal/timely content", "Content refresh updates"],
+        process: ["Topic cluster mapping", "Keyword research", "Content brief development", "Writing and optimization", "Internal linking", "Performance tracking"]
+      },
+      {
+        title: "Power Posts",
+        slug: "power-posts",
+        description: "Comprehensive pillar content that dominates competitive keywords.",
+        fullDescription: "Power posts are definitive resources on high-value topics. These 2,000-5,000+ word pieces become the hub of topic clusters and earn links, rankings, and authority.",
+        benefits: ["Dominate competitive keywords", "Earn natural backlinks", "Establish definitive authority", "Support hub-and-spoke architecture", "Create evergreen assets"],
+        deliverables: ["Comprehensive pillar content", "Visual elements and graphics", "Internal linking structure", "FAQ sections", "Schema markup", "Content promotion plan"],
+        process: ["Competitive analysis", "Outline development", "Comprehensive writing", "Visual creation", "Optimization", "Promotion and link building"]
+      },
+      {
+        title: "E-books & Guides",
+        slug: "ebooks-guides",
+        description: "Long-form downloadable content that captures leads and demonstrates expertise.",
+        fullDescription: "E-books and guides are premium content assets that capture email addresses while demonstrating deep expertise. They're the cornerstone of content-driven lead generation.",
+        benefits: ["Capture qualified leads", "Demonstrate expertise", "Build email lists", "Support nurture campaigns", "Create repurposable content"],
+        deliverables: ["E-book content writing", "Professional design", "Landing page copy", "Email sequence integration", "Lead magnet funnel", "Promotion strategy"],
+        process: ["Topic selection", "Outline and structure", "Content development", "Design and formatting", "Landing page creation", "Funnel integration"]
+      },
+      {
+        title: "Lead Generation Magnets",
+        slug: "lead-magnets",
+        description: "Checklists, templates, and tools that convert visitors into email subscribers.",
+        fullDescription: "Lead magnets are quick-value assets that capture email addresses. Checklists, templates, calculators, and tools that solve immediate problems while building your client's list.",
+        benefits: ["High conversion rates", "Low production cost", "Quick implementation", "Segment subscribers", "Support automation"],
+        deliverables: ["Checklist development", "Template creation", "Tool design", "Landing page copy", "Thank you page optimization", "Email integration"],
+        process: ["Magnet concept development", "Content creation", "Design and formatting", "Landing page setup", "Automation integration", "A/B testing"]
+      },
+      {
+        title: "Press Releases",
+        slug: "press-releases",
+        description: "Newsworthy announcements distributed to media outlets and news aggregators.",
+        fullDescription: "Press releases distribute newsworthy announcements to media outlets, news aggregators, and industry publications. They build brand visibility and create citation opportunities.",
+        benefits: ["Media visibility", "Citation building", "Brand awareness", "Authority signals", "News aggregator inclusion"],
+        deliverables: ["Press release writing", "Distribution strategy", "Media list development", "Follow-up outreach", "Coverage tracking", "Citation documentation"],
+        process: ["News angle development", "Press release writing", "Distribution execution", "Media follow-up", "Coverage monitoring", "Citation tracking"]
+      },
+      {
+        title: "AIO Content",
+        slug: "aio-content",
+        description: "AI-optimized content structured for LLM citations and AI Overview inclusion.",
+        fullDescription: "AIO (AI Optimization) content is structured for AI systems to parse, understand, and cite. As AI Overviews and LLM-powered search grow, content must be optimized for these new visibility channels.",
+        benefits: ["AI Overview inclusion", "LLM citation eligibility", "Future-proof content", "Semantic structure", "Voice search optimization"],
+        deliverables: ["Semantic content structure", "FAQ schema implementation", "Clear heading hierarchies", "Authoritative depth", "Entity optimization", "Citation-friendly formatting"],
+        process: ["AI visibility audit", "Content restructuring", "Schema implementation", "Authority building", "Performance monitoring", "Ongoing optimization"]
+      },
+      {
+        title: "Case Studies",
+        slug: "case-studies",
+        description: "Success stories that build trust and demonstrate real-world results.",
+        fullDescription: "Case studies are proof assets that document real results. They build trust, support sales conversations, and demonstrate the outcomes your client's services deliver.",
+        benefits: ["Build prospect trust", "Support sales process", "Document results", "Create social proof", "Enable client testimonials"],
+        deliverables: ["Client interview", "Case study writing", "Visual design", "Testimonial extraction", "Distribution strategy", "Sales enablement"],
+        process: ["Client selection", "Interview and research", "Story development", "Design and formatting", "Client approval", "Distribution"]
+      },
+      {
+        title: "FAQ Content",
+        slug: "faq-content",
+        description: "Structured Q&A content that captures featured snippets and voice search.",
+        fullDescription: "FAQ content captures question-based queries and earns featured snippets. Structured Q&A content is also essential for voice search and AI systems that answer user questions.",
+        benefits: ["Featured snippet eligibility", "Voice search optimization", "AI visibility", "User experience improvement", "Long-tail keyword capture"],
+        deliverables: ["FAQ research and development", "Structured Q&A content", "FAQ schema markup", "Page integration", "Internal linking", "Performance tracking"],
+        process: ["Question research", "Answer development", "Schema implementation", "Page integration", "Snippet optimization", "Ongoing expansion"]
+      },
+      {
+        title: "Hub & Spoke Build-outs",
+        slug: "hub-spoke-buildouts",
+        description: "Strategic content architecture that maximizes topical authority.",
+        fullDescription: "Hub-and-spoke content architecture organizes content into topic clusters with pillar pages at the center. This structure maximizes topical authority and creates clear paths for users and search engines.",
+        benefits: ["Maximize topical authority", "Clear content organization", "Strategic internal linking", "User experience improvement", "Scalable content framework"],
+        deliverables: ["Topic cluster mapping", "Pillar page development", "Supporting content creation", "Internal linking architecture", "Content gap analysis", "Expansion roadmap"],
+        process: ["Topic cluster identification", "Pillar page creation", "Spoke content development", "Internal linking implementation", "Performance analysis", "Ongoing expansion"]
       }
     ]
   }

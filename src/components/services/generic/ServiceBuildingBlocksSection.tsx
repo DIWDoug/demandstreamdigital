@@ -62,10 +62,15 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
 
     // If hubSlug is provided, render as link to spoke page
     if (hubSlug) {
+      // Special case: press-releases on Authority hub should link to Content Marketing hub
+      const linkPath = block.slug === "press-releases" && hubSlug === "local-authority-building"
+        ? "/white-label-inbound-marketing-services/content-marketing/press-releases"
+        : `/white-label-inbound-marketing-services/${hubSlug}/${block.slug}`;
+      
       return (
         <Link
           key={block.slug}
-          to={`/white-label-inbound-marketing-services/${hubSlug}/${block.slug}`}
+          to={linkPath}
           className="group bg-white border border-slate-200 rounded-xl p-6 hover:border-cta/30 hover:shadow-lg transition-all"
         >
           {blockContent}

@@ -1,4 +1,4 @@
-import { Award, Shield, TrendingUp, Users, Globe, FileText, Handshake, Star, Search, Map, Sparkles, Mail, BarChart3, Share2 } from "lucide-react";
+import { Award, Shield, TrendingUp, Users, Globe, FileText, Handshake, Star, Search, Map, Sparkles, Mail, BarChart3, Share2, Megaphone, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const authorityConfig: ServicePageConfig = {
@@ -186,10 +186,11 @@ export const authorityConfig: ServicePageConfig = {
         icon: Handshake
       },
       {
-        title: "Review & Reputation Signals",
-        slug: "reputation-signals",
-        description: "Review generation and response management that builds trust.",
-        icon: Users
+        title: "Press Releases",
+        slug: "press-releases",
+        description: "Newsworthy announcements distributed for visibility and citation building.",
+        icon: Megaphone,
+        // Links to Content Marketing hub's press releases spoke
       }
     ]
   },
@@ -285,6 +286,7 @@ export const authorityConfig: ServicePageConfig = {
       { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/white-label-inbound-marketing-services/local-authority-building", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
+      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-inbound-marketing-services/content-marketing" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" }
