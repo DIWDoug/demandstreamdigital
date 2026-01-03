@@ -440,6 +440,28 @@ const Testimonials = () => {
         </div>
       </section>
 
+      {/* Client Stories CTA */}
+      <section className="py-16 bg-surface-dark">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-text-secondary mb-6 max-w-md">
+              Let's discuss how we can help grow your business.
+            </p>
+            <a
+              href="/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-cta text-cta-foreground font-medium rounded-lg hover:bg-cta/90 transition-colors"
+            >
+              Let's Talk Partnership
+            </a>
+          </div>
+        </div>
+      </section>
+
       <ContactForm />
       <Footer />
     </div>
