@@ -458,17 +458,18 @@ const SEOCalculator = () => {
                             <div className="text-xs text-text-muted font-medium text-right">Client MSRP</div>
                           </div>
 
-                          {/* Tiered Pricing */}
+                          {/* Tiered Pricing - Based on $65/hr white-label rate */}
                           <div className="space-y-2 mb-6">
                             {[
-                              { name: "Starter", hours: "10-15 hrs", costMult: 0.7, msrpMult: 1.4 },
-                              { name: "Professional", hours: "15-20 hrs", costMult: 0.85, msrpMult: 1.5, highlight: true },
-                              { name: "Premium", hours: "20-30 hrs", costMult: 1.0, msrpMult: 1.6 },
-                              { name: "Elite", hours: "30-40+ hrs", costMult: 1.3, msrpMult: 1.9 }
+                              { name: "Starter", hours: "10-15 hrs", avgHours: 12.5 },
+                              { name: "Professional", hours: "15-20 hrs", avgHours: 17.5, highlight: true },
+                              { name: "Premium", hours: "20-30 hrs", avgHours: 25 },
+                              { name: "Elite", hours: "30-40+ hrs", avgHours: 35 }
                             ].map((tier, i) => {
-                              const baseCost = (estimate.monthlyLow + estimate.monthlyHigh) / 2;
-                              const yourCost = Math.round(baseCost * tier.costMult / 50) * 50;
-                              const clientMsrp = Math.round(baseCost * tier.msrpMult / 50) * 50;
+                              const hourlyRate = 65;
+                              const yourCost = Math.round(tier.avgHours * hourlyRate / 50) * 50;
+                              const clientMsrpLow = Math.round(yourCost * 1.4 / 50) * 50; // 40% markup
+                              const clientMsrpHigh = Math.round(yourCost * 1.6 / 50) * 50; // 60% markup
                               return (
                                 <div 
                                   key={i}
@@ -482,7 +483,7 @@ const SEOCalculator = () => {
                                     <p className="text-xs text-text-muted">{tier.hours}</p>
                                   </div>
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">${yourCost.toLocaleString()}</p>
-                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>${clientMsrp.toLocaleString()}</p>
+                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>${clientMsrpLow.toLocaleString()}-{clientMsrpHigh.toLocaleString()}</p>
                                 </div>
                               );
                             })}
