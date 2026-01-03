@@ -48,7 +48,7 @@ const Hero = () => {
       if (error) throw error;
 
       // Redirect to thank you page
-      navigate("/thank-you");
+      navigate("/thank-you?type=contact");
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({

@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import bookCover from "@/assets/local-growth-engine-cover.png";
 
 const LocalGrowthEngine = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -67,12 +69,9 @@ const LocalGrowthEngine = () => {
       }
 
       console.log("Ebook lead submitted:", data);
-      setIsSubmitted(true);
-      setIsSubmitting(false);
-      toast({
-        title: "You're on the list!",
-        description: "We'll notify you when The Local Growth Engine is available.",
-      });
+      
+      // Redirect to thank you page
+      navigate("/thank-you?type=ebook");
     } catch (error) {
       console.error("Error submitting ebook lead:", error);
       toast({
