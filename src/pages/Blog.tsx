@@ -228,9 +228,7 @@ const Blog = () => {
       </main>
 
       {/* Soft Divider */}
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="border-t border-border/40" />
-      </div>
+      <div className="w-full border-t border-border/30" />
 
       {/* Agency Partner Testimonials */}
       <AgencyPartnerVideos />
