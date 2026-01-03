@@ -675,19 +675,19 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
       ctaHref: "/contact"
     },
     {
-      category: "Vetted Guest Posting",
-      headline: "Paid Placements That Actually Last",
-      description: "We pay for guest posts when they pass our vetting. Not every placement is worth buying. Our standards ensure links stay live and deliver long-term value.",
+      category: "Paid & Earned Placements",
+      headline: "Paid and Earned Placements That Actually Last",
+      description: "We secure placements through both paid opportunities and manual outreach. Spray-and-pray doesn't work for quality links. We use proven methods like Roundup and Skyscraper outreach—they take longer but deliver lasting results.",
       subPoints: [
-        { title: "Traffic Consistency", description: "Minimum one year of consistent traffic. No spikes, no drops. Stable sites only." },
-        { title: "DA/DR Alignment", description: "Domain Authority and Domain Rating within close range. Discrepancies signal manipulation." },
+        { title: "Manual Outreach", description: "Personalized pitches to relevant sites. Roundup, Skyscraper, and expert commentary methods that earn real placements." },
+        { title: "Vetting Standards", description: "Minimum one year of consistent traffic. DA/DR alignment. No spikes, no drops. Stable sites only." },
         { title: "Contextual Relevance", description: "Links placed in contextually relevant content. Topical alignment with your client's industry." },
         { title: "Local + Authoritative", description: "Following Ahrefs methodology: contextual, local, and authoritative sources prioritized." },
         { title: "No 'Write For Us'", description: "Avoid sites advertising guest posts publicly. Hidden contributor relationships preferred." },
         { title: "Longevity Focus", description: "Links expected to stay live. No sites that purge content or disappear in six months." }
       ],
       imageSrc: linkAuthorityImg,
-      imageAlt: "Guest posting vetting process",
+      imageAlt: "Manual outreach and placement vetting",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
