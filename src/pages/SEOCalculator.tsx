@@ -441,10 +441,18 @@ const SEOCalculator = () => {
                         ? "bg-gradient-to-br from-cta/10 to-accent-blue/10 border-cta/30" 
                         : "bg-surface-elevated border-border/30"
                     )}>
-                      <div className="flex items-center gap-2 mb-6">
-                        <DollarSign className={cn("h-5 w-5", estimate ? "text-cta" : "text-text-muted")} />
-                        <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Estimated Monthly Investment</span>
+                      <div className="flex items-center justify-between gap-2 mb-2">
+                        <div className="flex items-center gap-2">
+                          <DollarSign className={cn("h-5 w-5", estimate ? "text-cta" : "text-text-muted")} />
+                          <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">White-Label Pricing</span>
+                        </div>
+                        {estimate && (
+                          <span className="text-xs px-2 py-1 rounded-full bg-accent-blue/10 text-accent-blue font-medium">
+                            Agency Partner Rate
+                          </span>
+                        )}
                       </div>
+                      <p className="text-xs text-text-muted mb-4">Your cost for fulfillment. Mark up 40-60% to clients.</p>
 
                       {estimate ? (
                         <>
@@ -452,7 +460,7 @@ const SEOCalculator = () => {
                             <p className="text-4xl md:text-5xl font-bold text-foreground mb-2">
                               ${estimate.monthlyLow.toLocaleString()} - ${estimate.monthlyHigh.toLocaleString()}
                             </p>
-                            <p className="text-text-muted text-sm">per month</p>
+                            <p className="text-text-muted text-sm">per month (white-label)</p>
                           </div>
 
                           <div className="space-y-4 pt-6 border-t border-border/30">
