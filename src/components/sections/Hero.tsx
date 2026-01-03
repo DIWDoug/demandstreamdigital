@@ -205,28 +205,26 @@ const Hero = () => {
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
                     />
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <PhoneInput
-                      value={formData.phone}
-                      onChange={(phone) => setFormData({ ...formData, phone })}
-                      countryCode={formData.phoneCountryCode}
-                      onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
-                      placeholder="Phone (SMS-enabled)"
-                    />
-                    <select
-                      value={formData.revenue}
-                      onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
-                      required
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base appearance-none"
-                    >
-                      <option value="" className="text-text-muted">Monthly Revenue *</option>
-                      <option value="under-25k">Under $25k</option>
-                      <option value="25k-50k">$25k - $50k</option>
-                      <option value="50k-100k">$50k - $100k</option>
-                      <option value="100k-250k">$100k - $250k</option>
-                      <option value="250k+">$250k+</option>
-                    </select>
-                  </div>
+                  <PhoneInput
+                    value={formData.phone}
+                    onChange={(phone) => setFormData({ ...formData, phone })}
+                    countryCode={formData.phoneCountryCode}
+                    onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
+                    placeholder="Phone (SMS-enabled)"
+                  />
+                  <select
+                    value={formData.revenue}
+                    onChange={(e) => setFormData({ ...formData, revenue: e.target.value })}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base appearance-none"
+                  >
+                    <option value="" className="text-text-muted">Monthly Revenue *</option>
+                    <option value="under-25k">Under $25k</option>
+                    <option value="25k-50k">$25k - $50k</option>
+                    <option value="50k-100k">$50k - $100k</option>
+                    <option value="100k-250k">$100k - $250k</option>
+                    <option value="250k+">$250k+</option>
+                  </select>
 
                   {/* Consent checkbox */}
                   <label className="flex items-start gap-3 text-left cursor-pointer">
