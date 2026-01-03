@@ -48,7 +48,8 @@ const About = () => {
     {
       name: "John Joseph Santos",
       role: "OnPage SEO & Paid Ads Specialist",
-      image: johnSantos
+      image: johnSantos,
+      linkedin: "https://www.linkedin.com/in/jj-santosads/"
     },
     {
       name: "Wyler",
