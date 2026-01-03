@@ -46,8 +46,31 @@ const initialFormData: FormData = {
 };
 
 const OEM_HOURLY_RATE = 65;
-const MIN_MONTHLY = 650;
-const MAX_MONTHLY = 2600;
+
+// Dynamic min/max based on competition and metro tier
+const getMinMaxBounds = (competition: string, metroTier: string): { min: number; max: number } => {
+  // High competition industries need realistic minimums
+  if (competition === "high") {
+    if (metroTier === "mega") return { min: 2000, max: 6500 };
+    if (metroTier === "major") return { min: 1600, max: 5500 };
+    if (metroTier === "large") return { min: 1400, max: 4500 };
+    if (metroTier === "medium") return { min: 1200, max: 4000 };
+    return { min: 1000, max: 3500 }; // small or no tier
+  }
+  
+  // Medium competition
+  if (competition === "medium") {
+    if (metroTier === "mega") return { min: 1200, max: 5000 };
+    if (metroTier === "major") return { min: 1000, max: 4000 };
+    if (metroTier === "large") return { min: 850, max: 3500 };
+    return { min: 700, max: 3000 };
+  }
+  
+  // Low competition
+  if (metroTier === "mega") return { min: 750, max: 3500 };
+  if (metroTier === "major") return { min: 650, max: 3000 };
+  return { min: 500, max: 2600 };
+};
 
 const baseServiceHours: Record<string, { hours: number; label: string; description?: string }> = {
   localSeo: { hours: 18, label: "Local SEO", description: "On-page optimization, keyword strategy, technical SEO" },
@@ -145,11 +168,14 @@ const InvestmentCalculator = () => {
       }
     });
 
+    // Get dynamic min/max bounds based on competition and metro tier
+    const bounds = getMinMaxBounds(formData.industry.competition, formData.metro.tier);
+
     let oemTotalLow = Math.round(totalHoursLow * OEM_HOURLY_RATE);
     let oemTotalHigh = Math.round(totalHoursHigh * OEM_HOURLY_RATE);
-    // Enforce min/max bounds
-    oemTotalLow = Math.max(MIN_MONTHLY, Math.min(MAX_MONTHLY, oemTotalLow));
-    oemTotalHigh = Math.max(MIN_MONTHLY, Math.min(MAX_MONTHLY, oemTotalHigh));
+    // Enforce dynamic min/max bounds based on competition and metro
+    oemTotalLow = Math.max(bounds.min, Math.min(bounds.max, oemTotalLow));
+    oemTotalHigh = Math.max(bounds.min, Math.min(bounds.max, oemTotalHigh));
     
     const msrpTotalLow = Math.round(oemTotalLow * (1 + marginPercent / 100));
     const msrpTotalHigh = Math.round(oemTotalHigh * (1 + marginPercent / 100));
