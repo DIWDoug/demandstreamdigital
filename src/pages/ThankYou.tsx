@@ -1,15 +1,20 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { CheckCircle, ArrowRight, Phone, Mail, Clock } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { CheckCircle, ArrowRight, Phone, Mail, Clock, Download, BookOpen } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
 const ThankYou = () => {
+  const [searchParams] = useSearchParams();
+  const formType = searchParams.get("type") || "contact";
+
+  const isEbook = formType === "ebook";
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Thank You | DialedIn Web</title>
-        <meta name="description" content="Thank you for reaching out. We'll be in touch within 24 hours." />
+        <title>{isEbook ? "Download Your Ebook | DialedIn Web" : "Thank You | DialedIn Web"}</title>
+        <meta name="description" content={isEbook ? "Your ebook is ready for download." : "Thank you for reaching out. We'll be in touch within 24 hours."} />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
@@ -19,60 +24,109 @@ const ThankYou = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             {/* Success Icon */}
-            <div className="mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full bg-cta/20 text-cta">
-              <CheckCircle className="w-10 h-10" />
+            <div className={`mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full ${isEbook ? "bg-accent-blue/20 text-accent-blue" : "bg-cta/20 text-cta"}`}>
+              {isEbook ? <BookOpen className="w-10 h-10" /> : <CheckCircle className="w-10 h-10" />}
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Thank You for <span className="text-accent-blue">Reaching Out</span>
-            </h1>
-
-            {/* Message */}
-            <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-              We've received your information and a member of our team will be in touch shortly. We're excited to learn more about your agency and explore how we can work together.
-            </p>
+            {isEbook ? (
+              <>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                  Your Ebook is <span className="text-accent-blue">Ready</span>
+                </h1>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                  Thank you for your interest! Check your inbox for a download link to "The Local Growth Engine" ebook. If you don't see it within a few minutes, check your spam folder.
+                </p>
+              </>
+            ) : (
+              <>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                  Thank You for <span className="text-accent-blue">Reaching Out</span>
+                </h1>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                  We've received your information and a member of our team will be in touch shortly. We're excited to learn more about your agency and explore how we can work together.
+                </p>
+              </>
+            )}
 
             {/* What to Expect */}
             <div className="bg-surface-card border border-border rounded-2xl p-8 mb-10 text-left">
-              <h2 className="text-xl font-semibold text-foreground mb-6 text-center">What Happens Next</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-6 text-center">
+                {isEbook ? "What's Inside" : "What Happens Next"}
+              </h2>
               
-              <div className="space-y-5">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-accent-blue" />
+              {isEbook ? (
+                <div className="space-y-5">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <Download className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Check Your Email</h3>
+                      <p className="text-sm text-text-secondary">We've sent a download link to your inbox. The ebook is a comprehensive guide to local visibility.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Response Within 24 Hours</h3>
-                    <p className="text-sm text-text-secondary">A team member will reach out via email or phone to schedule a discovery call.</p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-accent-blue" />
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Actionable Frameworks</h3>
+                      <p className="text-sm text-text-secondary">Learn the exact strategies we use to drive local visibility for agency clients across industries.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Discovery Conversation</h3>
-                    <p className="text-sm text-text-secondary">We'll learn about your agency, your clients, and your fulfillment needs—no pressure, no pitch.</p>
-                  </div>
-                </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-accent-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Custom Scope & Pricing</h3>
-                    <p className="text-sm text-text-secondary">If there's a fit, we'll provide transparent pricing and clear deliverables tailored to your situation.</p>
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Questions? Let's Talk</h3>
+                      <p className="text-sm text-text-secondary">If you'd like to discuss how we can help your agency, we're always happy to chat.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="space-y-5">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Response Within 24 Hours</h3>
+                      <p className="text-sm text-text-secondary">A team member will reach out via email or phone to schedule a discovery call.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <Phone className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Discovery Conversation</h3>
+                      <p className="text-sm text-text-secondary">We'll learn about your agency, your clients, and your fulfillment needs—no pressure, no pitch.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-accent-blue" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Custom Scope & Pricing</h3>
+                      <p className="text-sm text-text-secondary">If there's a fit, we'll provide transparent pricing and clear deliverables tailored to your situation.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Contact Info */}
             <div className="mb-10">
-              <p className="text-sm text-text-muted mb-4">Need to reach us sooner?</p>
+              <p className="text-sm text-text-muted mb-4">
+                {isEbook ? "Want to explore a partnership?" : "Need to reach us sooner?"}
+              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                 <a 
                   href="tel:2143072995"
@@ -91,14 +145,29 @@ const ThankYou = () => {
               </div>
             </div>
 
-            {/* CTA */}
-            <Link 
-              to="/"
-              className="btn-cta inline-flex group"
-            >
-              Back to Homepage
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {isEbook && (
+                <Link 
+                  to="/contact"
+                  className="btn-cta inline-flex group"
+                >
+                  Start a Conversation
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
+              <Link 
+                to="/"
+                className={isEbook ? "text-text-muted hover:text-foreground transition-colors underline" : "btn-cta inline-flex group"}
+              >
+                {isEbook ? "Back to Homepage" : (
+                  <>
+                    Back to Homepage
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </>
+                )}
+              </Link>
+            </div>
           </div>
         </div>
       </main>
