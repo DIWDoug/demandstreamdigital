@@ -59,6 +59,67 @@ const industryPresets = [
   { id: "other", name: "Other Local Business", competition: "", audience: "local" }
 ];
 
+// Move these outside the component to prevent recreation on every render
+const SelectButton = ({ 
+  selected, 
+  onClick, 
+  children,
+  className 
+}: { 
+  selected: boolean; 
+  onClick: () => void; 
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={cn(
+      "px-4 py-3 rounded-lg border text-sm font-medium transition-all text-center",
+      selected 
+        ? "bg-cta/10 border-cta text-cta" 
+        : "bg-surface-dark border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-foreground",
+      className
+    )}
+  >
+    {children}
+  </button>
+);
+
+const QuestionSection = ({
+  icon: Icon,
+  title,
+  tooltip,
+  children
+}: {
+  icon: React.ElementType;
+  title: string;
+  tooltip?: string;
+  children: React.ReactNode;
+}) => (
+  <div className="space-y-3">
+    <div className="flex items-center gap-2">
+      <Icon className="h-4 w-4 text-accent-blue" />
+      <span className="text-foreground font-medium">{title}</span>
+      {tooltip && (
+        <TooltipProvider delayDuration={0}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
+                <Info className="h-3.5 w-3.5" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
+              <p className="text-sm font-body">{tooltip}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
+    </div>
+    {children}
+  </div>
+);
+
 const SEOCalculator = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("");
   const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
@@ -174,66 +235,6 @@ const SEOCalculator = () => {
       timelineMonths
     };
   }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, isComplete]);
-
-  const SelectButton = ({ 
-    selected, 
-    onClick, 
-    children,
-    className 
-  }: { 
-    selected: boolean; 
-    onClick: () => void; 
-    children: React.ReactNode;
-    className?: string;
-  }) => (
-    <button
-      type="button"
-      onClick={onClick}
-      className={cn(
-        "px-4 py-3 rounded-lg border text-sm font-medium transition-all text-center",
-        selected 
-          ? "bg-cta/10 border-cta text-cta" 
-          : "bg-surface-dark border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-foreground",
-        className
-      )}
-    >
-      {children}
-    </button>
-  );
-
-  const QuestionSection = ({
-    icon: Icon,
-    title,
-    tooltip,
-    children
-  }: {
-    icon: React.ElementType;
-    title: string;
-    tooltip?: string;
-    children: React.ReactNode;
-  }) => (
-    <div className="space-y-3">
-      <div className="flex items-center gap-2">
-        <Icon className="h-4 w-4 text-accent-blue" />
-        <span className="text-foreground font-medium">{title}</span>
-        {tooltip && (
-          <TooltipProvider delayDuration={0}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                  <Info className="h-3.5 w-3.5" />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                <p className="text-sm font-body">{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )}
-      </div>
-      {children}
-    </div>
-  );
 
   return (
     <>
