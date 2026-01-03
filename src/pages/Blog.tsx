@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
-import FulfillmentSteps from "@/components/sections/FulfillmentSteps";
+import ContactForm from "@/components/sections/ContactForm";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -227,11 +227,16 @@ const Blog = () => {
         </section>
       </main>
 
+      {/* Soft Divider */}
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="border-t border-border/40" />
+      </div>
+
       {/* Agency Partner Testimonials */}
       <AgencyPartnerVideos />
 
-      {/* Fulfillment Steps */}
-      <FulfillmentSteps />
+      {/* Fulfillment Steps with Contact Form */}
+      <ContactForm />
       
       <Footer />
     </div>
