@@ -85,19 +85,22 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
           )}
 
           {/* Transition Line + CTA */}
-          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-10`}>
+          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-8`}>
             <p className="text-slate-600 text-lg">
-              {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
+              {config.closingLine}
             </p>
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
-            >
-              {config.ctaText}
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <p className="flex flex-wrap items-center justify-center gap-4 text-lg">
+              <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
+              <a 
+                href="/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
+              >
+                {config.ctaText}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </p>
           </div>
         </div>
       </div>
