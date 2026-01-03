@@ -737,11 +737,8 @@ const About = () => {
       </section>
 
       {/* CTA after Reviews */}
-      <div className="py-12 bg-background">
+      <div className="pb-16 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-md mx-auto pb-4">
-            <div className="border-t border-border/40" />
-          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <a href="#contact" className="btn-cta group">
               Explore a Partnership
