@@ -447,6 +447,7 @@ const SEOCalculator = () => {
                           <span className="text-sm font-semibold uppercase tracking-wider text-text-muted">Pricing Structure</span>
                         </div>
                         <p className="text-xs text-text-muted">Your cost vs. suggested client pricing</p>
+                        <p className="text-xs text-text-muted/70 mt-1">Based on $65/hr white-label · $110-130/hr client rate</p>
                       </div>
 
                       {estimate ? (
