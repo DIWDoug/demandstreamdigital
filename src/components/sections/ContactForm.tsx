@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import PhoneInput from "@/components/ui/phone-input";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -17,6 +18,7 @@ const ContactForm = () => {
     name: "",
     email: "",
     phone: "",
+    phoneCountryCode: "+1",
     revenue: ""
   });
 
@@ -53,7 +55,13 @@ const ContactForm = () => {
 
     try {
       const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
-        body: formData
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          phoneCountryCode: formData.phoneCountryCode,
+          revenue: formData.revenue
+        }
       });
 
       if (error) throw error;
@@ -63,7 +71,7 @@ const ContactForm = () => {
         description: "We'll be in touch within 24 hours.",
       });
 
-      setFormData({ name: "", email: "", phone: "", revenue: "" });
+      setFormData({ name: "", email: "", phone: "", phoneCountryCode: "+1", revenue: "" });
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
@@ -155,12 +163,12 @@ const ContactForm = () => {
                       <label className="block text-sm text-foreground mb-2">
                         SMS Enabled Phone # <span className="text-red-500">*</span>
                       </label>
-                      <input
-                        type="tel"
-                        required
+                      <PhoneInput
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue transition-colors"
+                        onChange={(phone) => setFormData({ ...formData, phone })}
+                        countryCode={formData.phoneCountryCode}
+                        onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
+                        required
                       />
                     </div>
                     

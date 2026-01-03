@@ -1,17 +1,18 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const GHL_FORM_ID = "nhDPKj4E2XSEVGDkoU7U";
-
 interface ContactFormData {
   name: string;
   email: string;
   phone: string;
+  phoneCountryCode?: string;
   revenue: string;
+  website?: string;
 }
 
 serve(async (req) => {
@@ -21,12 +22,12 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, revenue }: ContactFormData = await req.json();
+    const { name, email, phone, phoneCountryCode, revenue, website }: ContactFormData = await req.json();
 
     // Validate required fields
-    if (!name || !email || !phone || !revenue) {
+    if (!name || !email || !revenue) {
       return new Response(
-        JSON.stringify({ error: "All fields are required" }),
+        JSON.stringify({ error: "Name, email, and revenue are required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -40,47 +41,37 @@ serve(async (req) => {
       );
     }
 
-    console.log("Submitting to GHL form:", { name, email, phone, revenue });
+    console.log("Saving lead to database:", { name, email, phone, revenue, website });
 
-    // Submit to GHL form endpoint
-    const ghlResponse = await fetch(
-      `https://services.leadconnectorhq.com/forms/submit`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          formId: GHL_FORM_ID,
-          name: name,
-          email: email,
-          phone: phone,
-          agency_monthly_revenue: revenue,
-          source: "Website Contact Form"
-        }),
-      }
-    );
+    // Create Supabase client
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
-    const responseText = await ghlResponse.text();
-    console.log("GHL response status:", ghlResponse.status);
-    console.log("GHL response:", responseText);
+    // Insert lead into database
+    const { data, error } = await supabase
+      .from("leads")
+      .insert({
+        name,
+        email,
+        phone,
+        phone_country_code: phoneCountryCode || "+1",
+        revenue,
+        website,
+        source: "contact_form",
+      })
+      .select()
+      .single();
 
-    if (!ghlResponse.ok) {
-      console.error("GHL form submission error:", responseText);
-      throw new Error("Failed to submit form to GHL");
+    if (error) {
+      console.error("Database insert error:", error);
+      throw new Error("Failed to save lead");
     }
 
-    let ghlData;
-    try {
-      ghlData = JSON.parse(responseText);
-    } catch {
-      ghlData = { raw: responseText };
-    }
-
-    console.log("Form submitted successfully:", ghlData);
+    console.log("Lead saved successfully:", data);
 
     return new Response(
-      JSON.stringify({ success: true, data: ghlData }),
+      JSON.stringify({ success: true, data }),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
