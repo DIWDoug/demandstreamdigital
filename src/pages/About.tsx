@@ -64,7 +64,8 @@ const About = () => {
     {
       name: "Ira Salvador",
       role: "Project Manager",
-      image: iraSalvador
+      image: iraSalvador,
+      linkedin: "https://www.linkedin.com/in/indira-salvador-926b7a212/"
     },
     {
       name: "Samanta Sanchezborja Leal",
@@ -75,7 +76,8 @@ const About = () => {
     {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
-      image: lanilynErauda
+      image: lanilynErauda,
+      linkedin: "https://www.linkedin.com/in/lanilyn-erauda-87b077265/"
     },
     {
       name: "Martini Mabifa",
