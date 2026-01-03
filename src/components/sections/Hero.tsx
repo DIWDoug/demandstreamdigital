@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -7,6 +7,7 @@ import PhoneInput from "@/components/ui/phone-input";
 
 const Hero = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [website, setWebsite] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,23 +47,8 @@ const Hero = () => {
 
       if (error) throw error;
 
-      toast({
-        title: "Thank you!",
-        description: "We'll be in touch within 24 hours.",
-      });
-
-      // Reset form
-      setStep(1);
-      setWebsite("");
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        phoneCountryCode: "+1",
-        revenue: "",
-        consent: false,
-        notRobot: false,
-      });
+      // Redirect to thank you page
+      navigate("/thank-you");
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({

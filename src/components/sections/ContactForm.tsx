@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -13,6 +14,7 @@ import PhoneInput from "@/components/ui/phone-input";
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -67,12 +69,8 @@ const ContactForm = () => {
 
       if (error) throw error;
 
-      toast({
-        title: "Thank you!",
-        description: "We'll be in touch within 24 hours.",
-      });
-
-      setFormData({ name: "", email: "", phone: "", phoneCountryCode: "+1", revenue: "" });
+      // Redirect to thank you page
+      navigate("/thank-you");
     } catch (error: any) {
       console.error("Form submission error:", error);
       toast({
