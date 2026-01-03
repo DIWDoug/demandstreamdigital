@@ -6,11 +6,7 @@ import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import { ArrowRight, Phone } from "lucide-react";
-import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import wyler from "@/assets/wyler.jpg";
-import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
-import muhammadBilal from "@/assets/team/muhammad-bilal.png";
-import clientLogosBanner from "@/assets/client-logos-banner.png";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -19,6 +15,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+// Team images - local imports
+import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import wyler from "@/assets/wyler.jpg";
+import johnSantos from "@/assets/team/john-santos.jpg";
+import sheraFabian from "@/assets/team/shera-fabian.jpg";
+import iraSalvador from "@/assets/team/ira-salvador.jpg";
+import samantaLeal from "@/assets/team/samanta-leal.jpg";
+import lanilynErauda from "@/assets/team/lanilyn-erauda.jpg";
+import martiniMabifa from "@/assets/team/martini-mabifa.jpg";
+import richardBaylon from "@/assets/team/richard-baylon.jpg";
+import desireeAbbariao from "@/assets/team/desiree-abbariao.jpg";
+import leilaniMaravillas from "@/assets/team/leilani-maravillas.jpg";
+import jamesBelmes from "@/assets/team/james-belmes.jpg";
+import belAniano from "@/assets/team/bel-aniano.jpg";
+import biancaLapuz from "@/assets/team/bianca-lapuz.jpg";
+import muhammadBilal from "@/assets/team/muhammad-bilal.png";
+import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
+
+// Other assets
+import clientLogosBanner from "@/assets/client-logos-banner.png";
 
 const About = () => {
   const teamMembers = [
@@ -30,7 +47,7 @@ const About = () => {
     {
       name: "John Joseph Santos",
       role: "OnPage SEO & Paid Ads Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-4.webp"
+      image: johnSantos
     },
     {
       name: "Wyler",
@@ -40,57 +57,57 @@ const About = () => {
     {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-1.webp"
+      image: sheraFabian
     },
     {
       name: "Ira Salvador",
       role: "Project Manager",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Ira-Salvador-min.png"
+      image: iraSalvador
     },
     {
       name: "Samanta Sanchezborja Leal",
       role: "Client Success Manager",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-6.webp"
+      image: samantaLeal
     },
     {
       name: "Lanilyn Erauda",
       role: "SOP Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-7.webp"
+      image: lanilynErauda
     },
     {
       name: "Martini Mabifa",
       role: "SEO Web Developer",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Martini.jpg"
+      image: martiniMabifa
     },
     {
       name: "Richard Baylon",
       role: "Content Strategist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-10.webp"
+      image: richardBaylon
     },
     {
       name: "Desiree Abbariao",
       role: "Content Strategist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-3.webp"
+      image: desireeAbbariao
     },
     {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Leilani-Maravillas-min.png"
+      image: leilaniMaravillas
     },
     {
       name: "James Belmes",
       role: "Link Building Specialist",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-2.webp"
+      image: jamesBelmes
     },
     {
       name: "Bel Aniano",
       role: "Marketing Coordinator",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Bel.webp"
+      image: belAniano
     },
     {
       name: "Bianca Lapuz",
       role: "Marketing Coordinator",
-      image: "https://dialedinweb.com/wp-content/uploads/2025/11/Dental-Team-8.webp"
+      image: biancaLapuz
     },
     {
       name: "Muhammad Bilal",
@@ -245,6 +262,7 @@ const About = () => {
               { label: 'Timeline', href: '#timeline' },
               { label: 'Reviews', href: '#reviews' },
               { label: 'Team', href: '#team' },
+              { label: 'Education', href: '#continuing-education' },
               { label: 'Contact', href: '#contact' },
             ].map((item) => (
               <a
@@ -739,11 +757,11 @@ const About = () => {
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a 
-                  href="tel:2143072995"
+                  href={PHONE_HREF}
                   className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                  (214) 307-2995
+                  {PHONE_NUMBER}
                 </a>
               </div>
             </Carousel>
