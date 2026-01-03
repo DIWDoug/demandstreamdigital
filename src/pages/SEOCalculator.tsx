@@ -469,10 +469,10 @@ const SEOCalculator = () => {
                               { name: "Elite", hours: "30-40+ hrs", hoursLow: 30, hoursHigh: 40 }
                             ].map((tier, i) => {
                               const whitelabelRate = 65;
-                              const yourCostLow = Math.round(tier.hoursLow * whitelabelRate / 50) * 50;
-                              const yourCostHigh = Math.round(tier.hoursHigh * whitelabelRate / 50) * 50;
-                              const clientMsrpLow = Math.round(tier.hoursLow * clientHourlyRate / 50) * 50;
-                              const clientMsrpHigh = Math.round(tier.hoursHigh * clientHourlyRate / 50) * 50;
+                              const yourCostLow = tier.hoursLow * whitelabelRate;
+                              const yourCostHigh = tier.hoursHigh * whitelabelRate;
+                              const clientMsrpLow = tier.hoursLow * clientHourlyRate;
+                              const clientMsrpHigh = tier.hoursHigh * clientHourlyRate;
                               return (
                                 <div 
                                   key={i}
