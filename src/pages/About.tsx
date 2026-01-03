@@ -43,7 +43,7 @@ const About = () => {
       name: "Doug Bryson",
       role: "CEO & Founder",
       image: dougHeadshot,
-      linkedin: "https://www.linkedin.com/in/dougbryson/"
+      linkedin: "https://www.linkedin.com/in/douglasebryson/"
     },
     {
       name: "John Joseph Santos",
