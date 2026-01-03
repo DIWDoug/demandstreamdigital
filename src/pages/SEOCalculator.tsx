@@ -603,16 +603,6 @@ const SEOCalculator = () => {
                             </li>
                           </ul>
                         </div>
-
-                        {/* CTA */}
-                        <Link
-                          to="/contact"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block w-full text-center px-6 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors"
-                        >
-                          Explore Partnership
-                        </Link>
                       </>
                     )}
                   </div>
