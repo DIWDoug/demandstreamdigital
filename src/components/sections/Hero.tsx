@@ -19,6 +19,7 @@ const Hero = () => {
     revenue: "",
     consent: false,
     notRobot: false,
+    honeypot: "", // Hidden field for bot detection
   });
 
   const handleStep1Submit = (e: React.FormEvent) => {
@@ -30,6 +31,13 @@ const Hero = () => {
 
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Bot detection: if honeypot is filled, silently reject
+    if (formData.honeypot) {
+      navigate("/thank-you?type=contact");
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -187,6 +195,16 @@ const Hero = () => {
                 </div>
 
                 <form onSubmit={handleStep2Submit} className="space-y-4">
+                  {/* Honeypot field - hidden from users, catches bots */}
+                  <input
+                    type="text"
+                    name="website_url"
+                    value={formData.honeypot}
+                    onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+                    className="absolute -left-[9999px] opacity-0 pointer-events-none"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
                       type="text"

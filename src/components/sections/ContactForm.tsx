@@ -21,7 +21,9 @@ const ContactForm = () => {
     email: "",
     phone: "",
     phoneCountryCode: "+1",
-    revenue: ""
+    revenue: "",
+    notRobot: false,
+    honeypot: "", // Hidden field for bot detection
   });
 
   const steps = [
@@ -53,6 +55,22 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Bot detection: if honeypot is filled, silently reject
+    if (formData.honeypot) {
+      navigate("/thank-you?type=contact");
+      return;
+    }
+    
+    // Verify robot checkbox
+    if (!formData.notRobot) {
+      toast({
+        title: "Please verify you're not a robot",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
@@ -190,6 +208,28 @@ const ContactForm = () => {
                         <option value="500k+">$500,000+</option>
                       </select>
                     </div>
+
+                    {/* Honeypot field - hidden from users, catches bots */}
+                    <input
+                      type="text"
+                      name="company_website"
+                      value={formData.honeypot}
+                      onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+                      className="absolute -left-[9999px] opacity-0 pointer-events-none"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+
+                    {/* Robot checkbox */}
+                    <label className="flex items-center gap-3 text-left cursor-pointer p-3 rounded-lg border border-border bg-background/50">
+                      <input
+                        type="checkbox"
+                        checked={formData.notRobot}
+                        onChange={(e) => setFormData({ ...formData, notRobot: e.target.checked })}
+                        className="w-5 h-5 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
+                      />
+                      <span className="text-sm text-foreground">I'm not a robot</span>
+                    </label>
 
                     <button type="submit" disabled={isSubmitting} className="btn-cta w-full group disabled:opacity-50">
                       {isSubmitting ? (
