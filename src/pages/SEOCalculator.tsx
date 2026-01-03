@@ -539,6 +539,10 @@ const SEOCalculator = () => {
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
+                              GA4, GSC & GTM setup + conversion tracking
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
                               White-label monthly reporting
                             </li>
                           </ul>
