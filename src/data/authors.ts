@@ -94,8 +94,13 @@ His approach to content development emphasizes E-E-A-T signals, semantic structu
       "Content Strategist at Dialed-In Web",
       "Local SEO Content Specialist"
     ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/richard-baylon-93632a383/"
+    },
     schemaData: {
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/in/richard-baylon-93632a383/"
+      ],
       knowsAbout: [
         { name: "Content Marketing", sameAs: "https://en.wikipedia.org/wiki/Content_marketing" },
         { name: "Search Engine Optimization", sameAs: "https://en.wikipedia.org/wiki/Search_engine_optimization" },
@@ -127,8 +132,13 @@ Her expertise includes developing hub-and-spoke content architectures, FAQ conte
       "Content Strategist at Dialed-In Web",
       "Topical Content Specialist"
     ],
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/desireeabbariao/"
+    },
     schemaData: {
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/in/desireeabbariao/"
+      ],
       knowsAbout: [
         { name: "Content Marketing", sameAs: "https://en.wikipedia.org/wiki/Content_marketing" },
         { name: "Blogging", sameAs: "https://en.wikipedia.org/wiki/Blog" },

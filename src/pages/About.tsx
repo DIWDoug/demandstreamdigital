@@ -5,7 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Linkedin } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -42,7 +42,8 @@ const About = () => {
     {
       name: "Doug Bryson",
       role: "CEO & Founder",
-      image: dougHeadshot
+      image: dougHeadshot,
+      linkedin: "https://www.linkedin.com/in/dougbryson/"
     },
     {
       name: "John Joseph Santos",
@@ -57,7 +58,8 @@ const About = () => {
     {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
-      image: sheraFabian
+      image: sheraFabian,
+      linkedin: "https://www.linkedin.com/in/sheraleefabian/"
     },
     {
       name: "Ira Salvador",
@@ -67,7 +69,8 @@ const About = () => {
     {
       name: "Samanta Sanchezborja Leal",
       role: "Client Success Manager",
-      image: samantaLeal
+      image: samantaLeal,
+      linkedin: "https://www.linkedin.com/in/esamanthasbl87/"
     },
     {
       name: "Lanilyn Erauda",
@@ -82,17 +85,20 @@ const About = () => {
     {
       name: "Richard Baylon",
       role: "Content Strategist",
-      image: richardBaylon
+      image: richardBaylon,
+      linkedin: "https://www.linkedin.com/in/richard-baylon-93632a383/"
     },
     {
       name: "Desiree Abbariao",
       role: "Content Strategist",
-      image: desireeAbbariao
+      image: desireeAbbariao,
+      linkedin: "https://www.linkedin.com/in/desireeabbariao/"
     },
     {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
-      image: leilaniMaravillas
+      image: leilaniMaravillas,
+      linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
     },
     {
       name: "James Belmes",
@@ -102,12 +108,14 @@ const About = () => {
     {
       name: "Bel Aniano",
       role: "Marketing Coordinator",
-      image: belAniano
+      image: belAniano,
+      linkedin: "https://www.linkedin.com/in/belindaaniano/"
     },
     {
       name: "Bianca Lapuz",
       role: "Marketing Coordinator",
-      image: biancaLapuz
+      image: biancaLapuz,
+      linkedin: "https://www.linkedin.com/in/biancalapuz/"
     },
     {
       name: "Muhammad Bilal",
@@ -117,7 +125,8 @@ const About = () => {
     {
       name: "Monique Baetiong",
       role: "CPA",
-      image: moniqueBaetiong
+      image: moniqueBaetiong,
+      linkedin: "https://www.linkedin.com/in/moniquebaetiong/"
     }
   ];
 
@@ -825,9 +834,20 @@ const About = () => {
                   <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
                     {member.name}
                   </h4>
-                  <p className="text-sm text-text-secondary">
+                  <p className="text-sm text-text-secondary mb-2">
                     {member.role}
                   </p>
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#0077B5]/10 text-[#0077B5] hover:bg-[#0077B5] hover:text-white transition-colors"
+                      aria-label={`${member.name} on LinkedIn`}
+                    >
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
