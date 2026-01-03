@@ -19,10 +19,10 @@ import {
 // Team images - local imports
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
-import johnSantos from "@/assets/team/john-santos.jpg";
-import sheraFabian from "@/assets/team/shera-fabian.jpg";
-import iraSalvador from "@/assets/team/ira-salvador.jpg";
-import samantaLeal from "@/assets/team/samanta-leal.jpg";
+import johnSantos from "@/assets/team/john-santos.webp";
+import sheraFabian from "@/assets/team/shera-fabian.webp";
+import iraSalvador from "@/assets/team/ira-salvador.png";
+import samantaLeal from "@/assets/team/samanta-leal.webp";
 import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
 import martiniMabifa from "@/assets/team/martini-mabifa.jpg";
 import richardBaylon from "@/assets/team/richard-baylon.webp";
