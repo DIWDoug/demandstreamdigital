@@ -458,7 +458,7 @@ const SEOCalculator = () => {
                             <div className="text-xs text-text-muted font-medium text-right">Client MSRP</div>
                           </div>
 
-                          {/* Tiered Pricing - Based on $65/hr white-label rate */}
+                          {/* Tiered Pricing - Based on $65/hr white-label, $110-130/hr client rate */}
                           <div className="space-y-2 mb-6">
                             {[
                               { name: "Starter", hours: "10-15 hrs", avgHours: 12.5 },
@@ -466,10 +466,12 @@ const SEOCalculator = () => {
                               { name: "Premium", hours: "20-30 hrs", avgHours: 25 },
                               { name: "Elite", hours: "30-40+ hrs", avgHours: 35 }
                             ].map((tier, i) => {
-                              const hourlyRate = 65;
-                              const yourCost = Math.round(tier.avgHours * hourlyRate / 50) * 50;
-                              const clientMsrpLow = Math.round(yourCost * 1.4 / 50) * 50; // 40% markup
-                              const clientMsrpHigh = Math.round(yourCost * 1.6 / 50) * 50; // 60% markup
+                              const whitelabelRate = 65;
+                              const clientRateLow = 110;
+                              const clientRateHigh = 130;
+                              const yourCost = Math.round(tier.avgHours * whitelabelRate / 50) * 50;
+                              const clientMsrpLow = Math.round(tier.avgHours * clientRateLow / 50) * 50;
+                              const clientMsrpHigh = Math.round(tier.avgHours * clientRateHigh / 50) * 50;
                               return (
                                 <div 
                                   key={i}
