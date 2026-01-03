@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
@@ -96,6 +97,9 @@ const Services = () => {
       
       {/* Onboarding Roadmap - how it works */}
       <OnboardingRoadmap />
+      
+      {/* Deep Expertise - hub/spoke with internal links */}
+      <TopicalExpertise />
       
       <SectionDivider />
       
