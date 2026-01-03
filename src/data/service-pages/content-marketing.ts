@@ -26,7 +26,7 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         icon: BarChart3,
         title: "Misunderstood Metrics",
-        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas plumber ranking for 'laser vs Zoom teeth whitening' gets California traffic that will never convert."
+        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas dentist ranking for 'laser vs Zoom teeth whitening' gets California traffic that will never convert."
       },
       {
         icon: MapPin,
