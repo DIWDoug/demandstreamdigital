@@ -34,6 +34,10 @@ import Authority from "./pages/services/Authority";
 import Reporting from "./pages/services/Reporting";
 import ContentMarketing from "./pages/services/ContentMarketing";
 import SpokePage from "./pages/services/SpokePage";
+
+// Author Pages
+import Author from "./pages/Author";
+
 const queryClient = new QueryClient();
 
 const KonamiCodeListener = () => {
@@ -53,6 +57,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/authors/:slug" element={<Author />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
