@@ -306,7 +306,12 @@ const Header = () => {
                 {PHONE_NUMBER}
               </span>
             </a>
-            <a href={getAnchorHref("#contact")} className="btn-cta text-sm py-2.5 px-6">
+            <a 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta text-sm py-2.5 px-6"
+            >
               Schedule a Discovery Call
             </a>
             <button 
@@ -472,7 +477,9 @@ const Header = () => {
                   {PHONE_NUMBER}
                 </a>
                 <a 
-                  href={getAnchorHref("#contact")} 
+                  href="/contact" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-cta text-center mt-3 w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

@@ -36,8 +36,13 @@ const SpokePage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // TODO: Handle form submission
+    // Open contact page in new window with pre-filled data
+    const params = new URLSearchParams({
+      name: formData.fullName,
+      website: formData.website,
+      email: formData.email,
+    });
+    window.open(`/contact?${params.toString()}`, '_blank', 'noopener,noreferrer');
   };
   
   // Find the hub and spoke

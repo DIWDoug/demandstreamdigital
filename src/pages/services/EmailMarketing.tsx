@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
   ServiceOutcomesSection,
@@ -68,6 +69,9 @@ const EmailMarketing = () => {
       
       {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={emailMarketingConfig.roadmap} />
+      
+      {/* Mid-Page CTA */}
+      <MidPageCTA />
       
       <SectionDivider />
       

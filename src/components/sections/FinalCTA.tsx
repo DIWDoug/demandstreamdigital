@@ -21,7 +21,12 @@ const FinalCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact" className="btn-cta group">
+            <a 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta group"
+            >
               Explore a Partnership
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>

@@ -10,6 +10,7 @@ import type { BreadcrumbItem } from "@/types/servicePage";
 
 // Generic section components
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
   ServiceOutcomesSection,
@@ -81,6 +82,9 @@ const GoogleMaps = () => {
       
       {/* 5. ROADMAP */}
       <ServiceRoadmapSection config={googleMapsConfig.roadmap} />
+      
+      {/* Mid-Page CTA */}
+      <MidPageCTA />
       
       <SectionDivider />
       
