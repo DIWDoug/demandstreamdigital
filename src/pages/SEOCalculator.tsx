@@ -11,28 +11,52 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
-// Industry presets with default competition levels
+// Industry presets with default competition levels - focused on local small businesses
 const industryPresets = [
+  // High Competition
   { id: "legal", name: "Legal / Law Firms", competition: "high", audience: "local" },
   { id: "medical", name: "Medical / Healthcare", competition: "high", audience: "local" },
   { id: "dental", name: "Dental Practices", competition: "high", audience: "local" },
-  { id: "hvac", name: "HVAC / Home Services", competition: "medium", audience: "local" },
+  { id: "medspa", name: "Med Spa / Aesthetics", competition: "high", audience: "local" },
+  { id: "plastic-surgery", name: "Plastic Surgery", competition: "high", audience: "local" },
+  { id: "chiropractic", name: "Chiropractic", competition: "high", audience: "local" },
+  { id: "realestate", name: "Real Estate Agents", competition: "high", audience: "local" },
+  { id: "mortgage", name: "Mortgage Brokers", competition: "high", audience: "local" },
+  // Medium Competition
+  { id: "hvac", name: "HVAC / Heating & Cooling", competition: "medium", audience: "local" },
   { id: "plumbing", name: "Plumbing", competition: "medium", audience: "local" },
+  { id: "electrical", name: "Electricians", competition: "medium", audience: "local" },
   { id: "roofing", name: "Roofing", competition: "medium", audience: "local" },
-  { id: "realestate", name: "Real Estate", competition: "high", audience: "regional" },
-  { id: "finance", name: "Financial Services", competition: "high", audience: "regional" },
-  { id: "insurance", name: "Insurance", competition: "high", audience: "regional" },
-  { id: "restaurant", name: "Restaurant / Food Service", competition: "medium", audience: "local" },
-  { id: "retail", name: "Retail / E-commerce", competition: "medium", audience: "national" },
-  { id: "automotive", name: "Automotive", competition: "medium", audience: "local" },
-  { id: "fitness", name: "Fitness / Gym", competition: "medium", audience: "local" },
-  { id: "spa", name: "Spa / Beauty", competition: "low", audience: "local" },
-  { id: "construction", name: "Construction", competition: "medium", audience: "regional" },
-  { id: "landscaping", name: "Landscaping", competition: "low", audience: "local" },
-  { id: "cleaning", name: "Cleaning Services", competition: "low", audience: "local" },
+  { id: "garage-door", name: "Garage Door Services", competition: "medium", audience: "local" },
+  { id: "automotive", name: "Auto Repair / Mechanics", competition: "medium", audience: "local" },
+  { id: "towing", name: "Towing Services", competition: "medium", audience: "local" },
   { id: "pest", name: "Pest Control", competition: "medium", audience: "local" },
-  { id: "moving", name: "Moving / Storage", competition: "medium", audience: "regional" },
-  { id: "other", name: "Other Industry", competition: "", audience: "" }
+  { id: "restaurant", name: "Restaurants / Cafes", competition: "medium", audience: "local" },
+  { id: "fitness", name: "Fitness / Gym", competition: "medium", audience: "local" },
+  { id: "veterinary", name: "Veterinary / Pet Services", competition: "medium", audience: "local" },
+  { id: "optometry", name: "Optometry / Eye Care", competition: "medium", audience: "local" },
+  { id: "accounting", name: "Accounting / Bookkeeping", competition: "medium", audience: "local" },
+  { id: "insurance", name: "Insurance Agents", competition: "medium", audience: "local" },
+  { id: "construction", name: "General Contractors", competition: "medium", audience: "local" },
+  { id: "home-remodel", name: "Home Remodeling", competition: "medium", audience: "local" },
+  // Lower Competition
+  { id: "spa", name: "Spa / Massage / Beauty", competition: "low", audience: "local" },
+  { id: "landscaping", name: "Landscaping / Lawn Care", competition: "low", audience: "local" },
+  { id: "cleaning", name: "Cleaning Services", competition: "low", audience: "local" },
+  { id: "moving", name: "Moving / Storage", competition: "low", audience: "local" },
+  { id: "photography", name: "Photography / Videography", competition: "low", audience: "local" },
+  { id: "florist", name: "Florist / Event Florals", competition: "low", audience: "local" },
+  { id: "tutoring", name: "Tutoring / Education", competition: "low", audience: "local" },
+  { id: "daycare", name: "Daycare / Childcare", competition: "low", audience: "local" },
+  { id: "senior-care", name: "Senior Care / Home Health", competition: "low", audience: "local" },
+  { id: "locksmith", name: "Locksmith", competition: "low", audience: "local" },
+  { id: "appliance-repair", name: "Appliance Repair", competition: "low", audience: "local" },
+  { id: "pool-service", name: "Pool Service / Cleaning", competition: "low", audience: "local" },
+  { id: "junk-removal", name: "Junk Removal", competition: "low", audience: "local" },
+  { id: "pressure-washing", name: "Pressure Washing", competition: "low", audience: "local" },
+  { id: "window-cleaning", name: "Window Cleaning", competition: "low", audience: "local" },
+  { id: "tree-service", name: "Tree Service / Arborist", competition: "low", audience: "local" },
+  { id: "other", name: "Other Local Business", competition: "", audience: "local" }
 ];
 
 const SEOCalculator = () => {
@@ -214,16 +238,27 @@ const SEOCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>SEO Cost Calculator | Estimate Your Monthly Investment | Dialed-In Web</title>
-        <meta name="description" content="Calculate the estimated monthly investment for a white-label SEO campaign. Get transparent pricing based on locations, competition, and goals." />
-        <link rel="canonical" href="https://www.dialedinweb.com/seo-calculator" />
+        <title>Local SEO Cost Calculator | Estimate Monthly Investment | Dialed-In Web</title>
+        <meta name="description" content="Calculate the estimated monthly investment for white-label local SEO. Get transparent pricing based on locations, competition, and goals for small businesses." />
+        <link rel="canonical" href="https://www.dialedinweb.com/partner-tools/seo-calculator" />
       </Helmet>
       
       <Header />
       
       <main className="pt-16">
+        {/* Breadcrumbs */}
+        <div className="bg-surface-dark pt-20 pb-4">
+          <div className="container mx-auto px-6 lg:px-8">
+            <nav className="flex items-center gap-2 text-sm text-text-muted">
+              <Link to="/partner-tools" className="hover:text-foreground transition-colors">Partner Tools</Link>
+              <span>/</span>
+              <span className="text-foreground">Local SEO Cost Calculator</span>
+            </nav>
+          </div>
+        </div>
+
         {/* Hero Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-surface-dark via-surface-elevated to-surface-dark relative overflow-hidden">
+        <section className="py-12 lg:py-16 bg-gradient-to-br from-surface-dark via-surface-elevated to-surface-dark relative overflow-hidden">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cta/20 rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-blue/20 rounded-full blur-3xl" />
@@ -236,27 +271,11 @@ const SEOCalculator = () => {
                 Agency Partner Tools
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                SEO Cost Calculator
+                Local SEO Cost Calculator
               </h1>
-              <p className="text-text-secondary text-lg font-body mb-8">
-                Estimate your client's monthly SEO investment based on their specific needs. Answer a few questions to get transparent pricing for white-label fulfillment.
+              <p className="text-text-secondary text-lg font-body">
+                Estimate your client's monthly local SEO investment. Answer a few questions to get transparent white-label pricing for small business clients.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link 
-                  to="/roi-calculator" 
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border/50 text-text-secondary hover:text-foreground hover:border-accent-blue/50 transition-colors font-medium"
-                >
-                  <TrendingUp className="h-4 w-4" />
-                  ROI Calculator
-                </Link>
-                <Link 
-                  to="/investment-calculator" 
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border/50 text-text-secondary hover:text-foreground hover:border-accent-blue/50 transition-colors font-medium"
-                >
-                  <DollarSign className="h-4 w-4" />
-                  Investment Calculator
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -399,14 +418,14 @@ const SEOCalculator = () => {
 
                     <QuestionSection 
                       icon={TrendingUp} 
-                      title="Current keyword rankings?"
+                      title="Current target keyword rankings?"
                       tooltip="Where do target keywords currently rank? Further from page 1 = more work to climb."
                     >
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                         <SelectButton selected={currentRankings === "top10"} onClick={() => setCurrentRankings("top10")}>Top 10</SelectButton>
                         <SelectButton selected={currentRankings === "11-30"} onClick={() => setCurrentRankings("11-30")}>11-30</SelectButton>
                         <SelectButton selected={currentRankings === "31-100"} onClick={() => setCurrentRankings("31-100")}>31-100</SelectButton>
-                        <SelectButton selected={currentRankings === "100+"} onClick={() => setCurrentRankings("100+")}>100+</SelectButton>
+                        <SelectButton selected={currentRankings === "100+"} onClick={() => setCurrentRankings("100+")}>Not Ranking</SelectButton>
                       </div>
                     </QuestionSection>
                   </div>
@@ -458,31 +477,48 @@ const SEOCalculator = () => {
                     </div>
 
                     {estimate && (
-                      <div className="bg-surface-elevated rounded-xl p-5 border border-border/30">
-                        <p className="text-sm font-semibold text-foreground mb-3">What's included:</p>
-                        <ul className="space-y-2 text-sm text-text-muted">
-                          <li className="flex items-start gap-2">
-                            <span className="text-cta mt-0.5">✓</span>
-                            Technical SEO audit & fixes
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-cta mt-0.5">✓</span>
-                            On-page optimization
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-cta mt-0.5">✓</span>
-                            Content strategy & development
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-cta mt-0.5">✓</span>
-                            Link building & authority
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <span className="text-cta mt-0.5">✓</span>
-                            Monthly reporting & insights
-                          </li>
-                        </ul>
-                      </div>
+                      <>
+                        <div className="bg-surface-elevated rounded-xl p-5 border border-border/30">
+                          <p className="text-sm font-semibold text-foreground mb-3">What's included:</p>
+                          <ul className="space-y-2 text-sm text-text-muted">
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              Google Business Profile optimization
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              Local on-page SEO & technical fixes
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              NAP citation building & cleanup
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              Local link building & authority
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-cta mt-0.5">✓</span>
+                              White-label monthly reporting
+                            </li>
+                          </ul>
+                          <div className="mt-4 pt-4 border-t border-border/30">
+                            <p className="text-xs text-text-muted">
+                              <span className="text-accent-blue font-medium">White-Label Pricing:</span> These are agency partner rates. Typical MSRP to end clients is 40-60% higher.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* CTA */}
+                        <Link
+                          to="/contact"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block w-full text-center px-6 py-4 bg-cta text-cta-foreground font-semibold rounded-xl hover:bg-cta/90 transition-colors"
+                        >
+                          Explore Partnership
+                        </Link>
+                      </>
                     )}
                   </div>
                 </div>
