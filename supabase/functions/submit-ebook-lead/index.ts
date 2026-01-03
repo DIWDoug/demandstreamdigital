@@ -68,6 +68,7 @@ serve(async (req) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             id: data.id,
+            lead_type: "Ebook Download",
             email,
             source: "ebook_local_growth_engine",
             created_at: data.created_at,

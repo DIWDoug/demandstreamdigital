@@ -79,6 +79,7 @@ serve(async (req) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             id: data.id,
+            lead_type: "Contact Form",
             name,
             email,
             phone,
