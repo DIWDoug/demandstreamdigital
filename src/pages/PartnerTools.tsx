@@ -22,7 +22,7 @@ const calculators = [
   {
     title: "SEO Cost Calculator",
     description: "Estimate monthly SEO investment based on market competition, service area, and campaign aggressiveness. Help clients understand what realistic SEO budgets look like.",
-    href: "/seo-calculator",
+    href: "/partner-tools/seo-calculator",
     icon: Search,
     color: "from-emerald-500/20 to-emerald-600/10",
     borderColor: "border-emerald-500/30",
@@ -37,7 +37,7 @@ const calculators = [
   {
     title: "Inbound Marketing ROI Calculator",
     description: "Demonstrate the revenue impact of inbound marketing. Show clients how improved traffic, conversion rates, and close rates translate to real business growth.",
-    href: "/roi-calculator",
+    href: "/partner-tools/roi-calculator",
     icon: TrendingUp,
     color: "from-cta/20 to-cta/10",
     borderColor: "border-cta/30",
@@ -52,7 +52,7 @@ const calculators = [
   {
     title: "Investment Calculator",
     description: "Scope comprehensive monthly service costs across Local SEO, GBP, Paid Media, and more. Build accurate proposals with market-adjusted pricing.",
-    href: "/investment-calculator",
+    href: "/partner-tools/investment-calculator",
     icon: DollarSign,
     color: "from-accent-blue/20 to-accent-blue/10",
     borderColor: "border-accent-blue/30",
@@ -67,7 +67,7 @@ const calculators = [
   {
     title: "Ad Budget Calculator",
     description: "Project advertising campaign outcomes based on budget, impressions, CTR, and conversion rates. Help clients visualize the full marketing funnel.",
-    href: "/ad-budget-calculator",
+    href: "/partner-tools/ad-budget-calculator",
     icon: Target,
     color: "from-orange-500/20 to-orange-600/10",
     borderColor: "border-orange-500/30",
@@ -82,7 +82,7 @@ const calculators = [
   {
     title: "Email Marketing Calculator",
     description: "Calculate email marketing ROI based on list size, engagement rates, and customer lifetime value. Demonstrate the long-term value of email programs.",
-    href: "/email-calculator",
+    href: "/partner-tools/email-calculator",
     icon: Mail,
     color: "from-purple-500/20 to-purple-600/10",
     borderColor: "border-purple-500/30",
@@ -97,7 +97,7 @@ const calculators = [
   {
     title: "Content Marketing Calculator",
     description: "Calculate content marketing ROI based on production costs, traffic projections, and conversion rates. Show the compounding value of content assets.",
-    href: "/content-marketing-calculator",
+    href: "/partner-tools/content-marketing-calculator",
     icon: FileText,
     color: "from-teal-500/20 to-teal-600/10",
     borderColor: "border-teal-500/30",
@@ -112,7 +112,7 @@ const calculators = [
   {
     title: "AI Ready Check",
     description: "Scan any webpage to analyze its AI/LLM compatibility. Get high-signal metrics for content density, structure, and metadata quality.",
-    href: "/ai-ready-check",
+    href: "/partner-tools/ai-ready-check",
     icon: Search,
     color: "from-cyan-500/20 to-cyan-600/10",
     borderColor: "border-cyan-500/30",
