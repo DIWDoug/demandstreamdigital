@@ -1,13 +1,23 @@
 import { useState, useMemo } from "react";
 import { Calculator, Users, UserCheck, DollarSign, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 
 const ROICalculator = () => {
-  const [visitors, setVisitors] = useState(10000);
-  const [leadConversionRate, setLeadConversionRate] = useState(2.5);
-  const [leadToCustomerRate, setLeadToCustomerRate] = useState(10);
-  const [revenuePerCustomer, setRevenuePerCustomer] = useState(1000);
-  const [marketingCost, setMarketingCost] = useState(5000);
+  // String-based inputs for smooth typing
+  const [visitorsInput, setVisitorsInput] = useState("10000");
+  const [leadConversionRateInput, setLeadConversionRateInput] = useState("2.5");
+  const [leadToCustomerRateInput, setLeadToCustomerRateInput] = useState("10");
+  const [revenuePerCustomerInput, setRevenuePerCustomerInput] = useState("1000");
+  const [marketingCostInput, setMarketingCostInput] = useState("5000");
+
+  // Derived numeric values
+  const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const visitors = Math.max(0, parseNum(visitorsInput));
+  const leadConversionRate = Math.max(0, parseNum(leadConversionRateInput));
+  const leadToCustomerRate = Math.max(0, parseNum(leadToCustomerRateInput));
+  const revenuePerCustomer = Math.max(0, parseNum(revenuePerCustomerInput));
+  const marketingCost = Math.max(0, parseNum(marketingCostInput));
 
   const results = useMemo(() => {
     const totalLeads = Math.round(visitors * (leadConversionRate / 100));
@@ -19,35 +29,6 @@ const ROICalculator = () => {
 
     return { totalLeads, newCustomers, inboundRevenue, roi };
   }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, marketingCost]);
-
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
-    suffix 
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
-    suffix?: string;
-  }) => (
-    <div>
-      <label className="block text-sm text-text-muted mb-2 font-body">{label}</label>
-      <div className="relative">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => onChange(Number(e.target.value) || 0)}
-          className="w-full px-4 py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors"
-        />
-        {suffix && (
-          <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-            {suffix}
-          </span>
-        )}
-      </div>
-    </div>
-  );
 
   const ResultCard = ({ 
     label, 
@@ -104,32 +85,40 @@ const ROICalculator = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Inputs */}
             <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
-              <InputField 
+              <CalculatorInputField 
                 label="Website Visitors (Monthly)" 
-                value={visitors} 
-                onChange={setVisitors} 
+                value={visitorsInput}
+                onChange={setVisitorsInput}
+                inputMode="numeric"
+                allowDecimal={false}
               />
-              <InputField 
+              <CalculatorInputField 
                 label="Lead Conversion Rate (%)" 
-                value={leadConversionRate} 
-                onChange={setLeadConversionRate}
+                value={leadConversionRateInput}
+                onChange={setLeadConversionRateInput}
                 suffix="%"
               />
-              <InputField 
+              <CalculatorInputField 
                 label="Lead-to-Customer Rate (%)" 
-                value={leadToCustomerRate} 
-                onChange={setLeadToCustomerRate}
+                value={leadToCustomerRateInput}
+                onChange={setLeadToCustomerRateInput}
                 suffix="%"
               />
-              <InputField 
+              <CalculatorInputField 
                 label="Average Revenue Per Customer ($)" 
-                value={revenuePerCustomer} 
-                onChange={setRevenuePerCustomer}
+                value={revenuePerCustomerInput}
+                onChange={setRevenuePerCustomerInput}
+                prefix="$"
+                inputMode="numeric"
+                allowDecimal={false}
               />
-              <InputField 
+              <CalculatorInputField 
                 label="Marketing Cost ($)" 
-                value={marketingCost} 
-                onChange={setMarketingCost}
+                value={marketingCostInput}
+                onChange={setMarketingCostInput}
+                prefix="$"
+                inputMode="numeric"
+                allowDecimal={false}
               />
             </div>
 

@@ -4,24 +4,33 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
+import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Info, Repeat, Target, Send, UserPlus } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Repeat, Target, Send, UserPlus, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const EmailCalculator = () => {
-  // List & Send Inputs
-  const [listSize, setListSize] = useState(5000);
-  const [sendsPerMonth, setSendsPerMonth] = useState(4);
-  const [openRate, setOpenRate] = useState(21.33);
-  const [clickRate, setClickRate] = useState(2.62);
-  const [conversionRate, setConversionRate] = useState(1.22);
-  
-  // Revenue Inputs
-  const [averageOrderValue, setAverageOrderValue] = useState(150);
-  const [customerLifetimeMultiplier, setCustomerLifetimeMultiplier] = useState(2.5);
-  const [monthlyInvestment, setMonthlyInvestment] = useState(500);
+  // String-based inputs for smooth typing
+  const [listSizeInput, setListSizeInput] = useState("5000");
+  const [sendsPerMonthInput, setSendsPerMonthInput] = useState("4");
+  const [openRateInput, setOpenRateInput] = useState("21.33");
+  const [clickRateInput, setClickRateInput] = useState("2.62");
+  const [conversionRateInput, setConversionRateInput] = useState("1.22");
+  const [averageOrderValueInput, setAverageOrderValueInput] = useState("150");
+  const [customerLifetimeMultiplierInput, setCustomerLifetimeMultiplierInput] = useState("2.5");
+  const [monthlyInvestmentInput, setMonthlyInvestmentInput] = useState("500");
+
+  // Derived numeric values
+  const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const listSize = Math.max(0, parseNum(listSizeInput));
+  const sendsPerMonth = Math.max(0, parseNum(sendsPerMonthInput));
+  const openRate = Math.max(0, parseNum(openRateInput));
+  const clickRate = Math.max(0, parseNum(clickRateInput));
+  const conversionRate = Math.max(0, parseNum(conversionRateInput));
+  const averageOrderValue = Math.max(0, parseNum(averageOrderValueInput));
+  const customerLifetimeMultiplier = Math.max(0, parseNum(customerLifetimeMultiplierInput));
+  const monthlyInvestment = Math.max(0, parseNum(monthlyInvestmentInput));
 
   const results = useMemo(() => {
     const totalEmailsSent = listSize * sendsPerMonth;
@@ -46,74 +55,6 @@ const EmailCalculator = () => {
       revenuePerEmail
     };
   }, [listSize, sendsPerMonth, openRate, clickRate, conversionRate, averageOrderValue, customerLifetimeMultiplier, monthlyInvestment]);
-
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
-    prefix,
-    suffix,
-    tooltip,
-    step = 1
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
-    prefix?: string;
-    suffix?: string;
-    tooltip?: string;
-    step?: number;
-  }) => {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const rawValue = e.target.value.replace(/[^0-9.]/g, '');
-      const numericValue = parseFloat(rawValue) || 0;
-      onChange(numericValue);
-    };
-
-    return (
-      <div>
-        <div className="flex items-center gap-2 mb-2">
-          <label className="block text-sm text-text-muted font-body">{label}</label>
-          {tooltip && (
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                    <Info className="h-3.5 w-3.5" />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                  <p className="text-sm font-body">{tooltip}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          )}
-        </div>
-        <div className="relative">
-          {prefix && (
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-lg">
-              {prefix}
-            </span>
-          )}
-          <input
-            type="text"
-            inputMode="decimal"
-            value={value}
-            onChange={handleChange}
-            className={cn(
-              "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
-              prefix ? "pl-8 pr-4" : "px-4"
-            )}
-          />
-          {suffix && (
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-              {suffix}
-            </span>
-          )}
-        </div>
-      </div>
-    );
-  };
 
   const ResultCard = ({ 
     label, 
@@ -258,71 +199,75 @@ const EmailCalculator = () => {
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">List & Sending</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Email List Size" 
-                      value={listSize} 
-                      onChange={setListSize}
+                      value={listSizeInput}
+                      onChange={setListSizeInput}
                       suffix="subscribers"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="The number of active subscribers on the client's email list."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Sends per Month" 
-                      value={sendsPerMonth} 
-                      onChange={setSendsPerMonth}
+                      value={sendsPerMonthInput}
+                      onChange={setSendsPerMonthInput}
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="How many email campaigns are sent each month. Most businesses send 2-4 campaigns monthly."
                     />
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Engagement Rates</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Open Rate" 
-                      value={openRate} 
-                      onChange={setOpenRate}
+                      value={openRateInput}
+                      onChange={setOpenRateInput}
                       suffix="%"
-                      step={0.01}
                       tooltip="Average open rate across industries is 21.33%. Well-optimized lists can achieve 25-35%."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Click Rate" 
-                      value={clickRate} 
-                      onChange={setClickRate}
+                      value={clickRateInput}
+                      onChange={setClickRateInput}
                       suffix="%"
-                      step={0.01}
                       tooltip="Average click-through rate is 2.62%. Strong offers and segmentation can push this to 4-6%."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Conversion Rate" 
-                      value={conversionRate} 
-                      onChange={setConversionRate}
+                      value={conversionRateInput}
+                      onChange={setConversionRateInput}
                       suffix="%"
-                      step={0.01}
                       tooltip="Percentage of clickers who complete a purchase or desired action. Typically 1-3% for email."
                     />
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Revenue Factors</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Average Order Value" 
-                      value={averageOrderValue} 
-                      onChange={setAverageOrderValue}
+                      value={averageOrderValueInput}
+                      onChange={setAverageOrderValueInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="The average value of each purchase or service from email-driven customers."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Customer Lifetime Multiplier" 
-                      value={customerLifetimeMultiplier} 
-                      onChange={setCustomerLifetimeMultiplier}
+                      value={customerLifetimeMultiplierInput}
+                      onChange={setCustomerLifetimeMultiplierInput}
                       suffix="x"
-                      step={0.1}
                       tooltip="Email customers often make repeat purchases. A 2.5x multiplier means each customer is worth 2.5 initial orders over their lifetime."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Monthly Email Investment" 
-                      value={monthlyInvestment} 
-                      onChange={setMonthlyInvestment}
+                      value={monthlyInvestmentInput}
+                      onChange={setMonthlyInvestmentInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Total monthly cost for email marketing including platform fees and management."
                     />
                   </div>

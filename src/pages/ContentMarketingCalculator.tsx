@@ -4,28 +4,37 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
+import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, FileText, Eye, Percent, Info, Target, BarChart3, Clock, Share2, Repeat } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Calculator, DollarSign, TrendingUp, Users, FileText, Eye, Percent, Target, BarChart3, Clock, Share2, Repeat } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const ContentMarketingCalculator = () => {
-  // Content Production Inputs
-  const [articlesPerMonth, setArticlesPerMonth] = useState(8);
-  const [costPerArticle, setCostPerArticle] = useState(350);
-  const [avgTrafficPerArticle, setAvgTrafficPerArticle] = useState(500);
-  const [trafficGrowthMonths, setTrafficGrowthMonths] = useState(6);
-  
-  // Conversion Inputs
-  const [conversionRate, setConversionRate] = useState(2.5);
-  const [leadToCustomerRate, setLeadToCustomerRate] = useState(15);
-  const [averageCustomerValue, setAverageCustomerValue] = useState(2500);
-  const [customerLifetimeMultiplier, setCustomerLifetimeMultiplier] = useState(2);
+  // String-based inputs for smooth typing
+  const [articlesPerMonthInput, setArticlesPerMonthInput] = useState("8");
+  const [costPerArticleInput, setCostPerArticleInput] = useState("350");
+  const [avgTrafficPerArticleInput, setAvgTrafficPerArticleInput] = useState("500");
+  const [trafficGrowthMonthsInput, setTrafficGrowthMonthsInput] = useState("6");
+  const [conversionRateInput, setConversionRateInput] = useState("2.5");
+  const [leadToCustomerRateInput, setLeadToCustomerRateInput] = useState("15");
+  const [averageCustomerValueInput, setAverageCustomerValueInput] = useState("2500");
+  const [customerLifetimeMultiplierInput, setCustomerLifetimeMultiplierInput] = useState("2");
+  const [distributionCostInput, setDistributionCostInput] = useState("200");
+  const [toolsCostInput, setToolsCostInput] = useState("150");
 
-  // Additional Costs
-  const [distributionCost, setDistributionCost] = useState(200);
-  const [toolsCost, setToolsCost] = useState(150);
+  // Derived numeric values
+  const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const articlesPerMonth = Math.max(0, parseNum(articlesPerMonthInput));
+  const costPerArticle = Math.max(0, parseNum(costPerArticleInput));
+  const avgTrafficPerArticle = Math.max(0, parseNum(avgTrafficPerArticleInput));
+  const trafficGrowthMonths = Math.max(0, parseNum(trafficGrowthMonthsInput));
+  const conversionRate = Math.max(0, parseNum(conversionRateInput));
+  const leadToCustomerRate = Math.max(0, parseNum(leadToCustomerRateInput));
+  const averageCustomerValue = Math.max(0, parseNum(averageCustomerValueInput));
+  const customerLifetimeMultiplier = Math.max(0, parseNum(customerLifetimeMultiplierInput));
+  const distributionCost = Math.max(0, parseNum(distributionCostInput));
+  const toolsCost = Math.max(0, parseNum(toolsCostInput));
 
   const results = useMemo(() => {
     // Monthly costs
@@ -77,74 +86,6 @@ const ContentMarketingCalculator = () => {
       yearlyRoi
     };
   }, [articlesPerMonth, costPerArticle, avgTrafficPerArticle, trafficGrowthMonths, conversionRate, leadToCustomerRate, averageCustomerValue, customerLifetimeMultiplier, distributionCost, toolsCost]);
-
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
-    prefix,
-    suffix,
-    tooltip,
-    step = 1
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
-    prefix?: string;
-    suffix?: string;
-    tooltip?: string;
-    step?: number;
-  }) => {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const rawValue = e.target.value.replace(/[^0-9.]/g, '');
-      const numericValue = parseFloat(rawValue) || 0;
-      onChange(numericValue);
-    };
-
-    return (
-      <div>
-        <div className="flex items-center gap-2 mb-2">
-          <label className="block text-sm text-text-muted font-body">{label}</label>
-          {tooltip && (
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                    <Info className="h-3.5 w-3.5" />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                  <p className="text-sm font-body">{tooltip}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          )}
-        </div>
-        <div className="relative">
-          {prefix && (
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-lg">
-              {prefix}
-            </span>
-          )}
-          <input
-            type="text"
-            inputMode="decimal"
-            value={value}
-            onChange={handleChange}
-            className={cn(
-              "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
-              prefix ? "pl-8 pr-4" : "px-4"
-            )}
-          />
-          {suffix && (
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-              {suffix}
-            </span>
-          )}
-        </div>
-      </div>
-    );
-  };
 
   const ResultCard = ({ 
     label, 
@@ -289,86 +230,98 @@ const ContentMarketingCalculator = () => {
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Content Production</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Articles per Month" 
-                      value={articlesPerMonth} 
-                      onChange={setArticlesPerMonth}
+                      value={articlesPerMonthInput}
+                      onChange={setArticlesPerMonthInput}
                       suffix="articles"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="The number of blog posts or articles published each month. Most successful programs publish 4-12 pieces monthly."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Cost per Article" 
-                      value={costPerArticle} 
-                      onChange={setCostPerArticle}
+                      value={costPerArticleInput}
+                      onChange={setCostPerArticleInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Average cost to produce one piece of content including research, writing, editing, and graphics. Ranges from $150-$1,000+ depending on depth."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Avg Monthly Traffic per Article" 
-                      value={avgTrafficPerArticle} 
-                      onChange={setAvgTrafficPerArticle}
+                      value={avgTrafficPerArticleInput}
+                      onChange={setAvgTrafficPerArticleInput}
                       suffix="visits"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Expected monthly organic traffic each article generates after it matures. Well-optimized content can drive 200-2,000+ visits monthly."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Time to Mature" 
-                      value={trafficGrowthMonths} 
-                      onChange={setTrafficGrowthMonths}
+                      value={trafficGrowthMonthsInput}
+                      onChange={setTrafficGrowthMonthsInput}
                       suffix="months"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="How long it takes for content to reach full traffic potential. SEO content typically matures in 3-9 months."
                     />
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Conversion Metrics</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Visitor to Lead Rate" 
-                      value={conversionRate} 
-                      onChange={setConversionRate}
+                      value={conversionRateInput}
+                      onChange={setConversionRateInput}
                       suffix="%"
-                      step={0.1}
                       tooltip="Percentage of content visitors who become leads. Average is 2-3% for blog traffic with good CTAs."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Lead to Customer Rate" 
-                      value={leadToCustomerRate} 
-                      onChange={setLeadToCustomerRate}
+                      value={leadToCustomerRateInput}
+                      onChange={setLeadToCustomerRateInput}
                       suffix="%"
                       tooltip="Percentage of leads that convert to paying customers. Varies widely by industry, typically 10-25%."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Average Customer Value" 
-                      value={averageCustomerValue} 
-                      onChange={setAverageCustomerValue}
+                      value={averageCustomerValueInput}
+                      onChange={setAverageCustomerValueInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Average initial purchase or contract value per customer."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Lifetime Value Multiplier" 
-                      value={customerLifetimeMultiplier} 
-                      onChange={setCustomerLifetimeMultiplier}
+                      value={customerLifetimeMultiplierInput}
+                      onChange={setCustomerLifetimeMultiplierInput}
                       suffix="x"
-                      step={0.1}
                       tooltip="How many times customers purchase over their lifetime. A 2x multiplier means each customer eventually spends double their initial purchase."
                     />
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-2">Additional Costs</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Distribution & Promotion" 
-                      value={distributionCost} 
-                      onChange={setDistributionCost}
+                      value={distributionCostInput}
+                      onChange={setDistributionCostInput}
                       prefix="$"
                       suffix="/mo"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Monthly budget for content distribution including social media promotion, email newsletters, and paid amplification."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Tools & Software" 
-                      value={toolsCost} 
-                      onChange={setToolsCost}
+                      value={toolsCostInput}
+                      onChange={setToolsCostInput}
                       prefix="$"
                       suffix="/mo"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="Monthly cost for content tools like SEO software, grammar checkers, project management, and analytics platforms."
                     />
                   </div>

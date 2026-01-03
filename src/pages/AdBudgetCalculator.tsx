@@ -5,21 +5,31 @@ import ContactForm from "@/components/sections/ContactForm";
 import AdBudgetEducationalContent from "@/components/calculators/AdBudgetEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
+import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent, Info } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, ShoppingCart, Percent } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 
 const AdBudgetCalculator = () => {
-  // Inputs
-  const [adBudget, setAdBudget] = useState(5000);
-  const [impressionsPerDollar, setImpressionsPerDollar] = useState(89.29);
-  const [ctr, setCtr] = useState(1.91);
-  const [conversionRate, setConversionRate] = useState(2.35);
-  const [transactionsPerCustomer, setTransactionsPerCustomer] = useState(1);
-  const [averageSalePrice, setAverageSalePrice] = useState(500);
-  const [profitMargin, setProfitMargin] = useState(30);
+  // String-based inputs for smooth typing
+  const [adBudgetInput, setAdBudgetInput] = useState("5000");
+  const [impressionsPerDollarInput, setImpressionsPerDollarInput] = useState("89.29");
+  const [ctrInput, setCtrInput] = useState("1.91");
+  const [conversionRateInput, setConversionRateInput] = useState("2.35");
+  const [transactionsPerCustomerInput, setTransactionsPerCustomerInput] = useState("1");
+  const [averageSalePriceInput, setAverageSalePriceInput] = useState("500");
+  const [profitMarginInput, setProfitMarginInput] = useState("30");
+
+  // Derived numeric values
+  const parseNum = (v: string) => { const n = parseFloat(v); return Number.isFinite(n) ? n : 0; };
+  const adBudget = Math.max(0, parseNum(adBudgetInput));
+  const impressionsPerDollar = Math.max(0, parseNum(impressionsPerDollarInput));
+  const ctr = Math.max(0, parseNum(ctrInput));
+  const conversionRate = Math.max(0, parseNum(conversionRateInput));
+  const transactionsPerCustomer = Math.max(0, parseNum(transactionsPerCustomerInput));
+  const averageSalePrice = Math.max(0, parseNum(averageSalePriceInput));
+  const profitMargin = Math.max(0, parseNum(profitMarginInput));
 
   const results = useMemo(() => {
     const estimatedImpressions = Math.round(adBudget * impressionsPerDollar);
@@ -40,74 +50,6 @@ const AdBudgetCalculator = () => {
       roiPercent
     };
   }, [adBudget, impressionsPerDollar, ctr, conversionRate, transactionsPerCustomer, averageSalePrice, profitMargin]);
-
-  const InputField = ({ 
-    label, 
-    value, 
-    onChange, 
-    prefix,
-    suffix,
-    tooltip,
-    step = 1
-  }: { 
-    label: string; 
-    value: number; 
-    onChange: (val: number) => void;
-    prefix?: string;
-    suffix?: string;
-    tooltip?: string;
-    step?: number;
-  }) => {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const rawValue = e.target.value.replace(/[^0-9.]/g, '');
-      const numericValue = parseFloat(rawValue) || 0;
-      onChange(numericValue);
-    };
-
-    return (
-      <div>
-        <div className="flex items-center gap-2 mb-2">
-          <label className="block text-sm text-text-muted font-body">{label}</label>
-          {tooltip && (
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
-                    <Info className="h-3.5 w-3.5" />
-                  </button>
-                </TooltipTrigger>
-                <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
-                  <p className="text-sm font-body">{tooltip}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          )}
-        </div>
-        <div className="relative">
-          {prefix && (
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-text-muted text-lg">
-              {prefix}
-            </span>
-          )}
-          <input
-            type="text"
-            inputMode="decimal"
-            value={value}
-            onChange={handleChange}
-            className={cn(
-              "w-full py-3.5 rounded-lg bg-surface-dark border border-border/50 text-foreground text-lg font-medium focus:outline-none focus:border-accent-blue transition-colors",
-              prefix ? "pl-8 pr-4" : "px-4"
-            )}
-          />
-          {suffix && (
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted text-sm">
-              {suffix}
-            </span>
-          )}
-        </div>
-      </div>
-    );
-  };
 
   const ResultCard = ({ 
     label, 
@@ -234,57 +176,60 @@ const AdBudgetCalculator = () => {
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
-                    <InputField 
+                    <CalculatorInputField 
                       label="Monthly Advertising Budget" 
-                      value={adBudget} 
-                      onChange={setAdBudget}
+                      value={adBudgetInput}
+                      onChange={setAdBudgetInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="For aggressive growth, businesses typically allocate 15-20% of their revenue (or desired revenue) back into advertising."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Impressions per $1" 
-                      value={impressionsPerDollar} 
-                      onChange={setImpressionsPerDollar}
-                      step={0.01}
+                      value={impressionsPerDollarInput}
+                      onChange={setImpressionsPerDollarInput}
                       tooltip="The average Cost Per Thousand (CPM) on digital ads is roughly $11.20, which equals about 89.29 impressions per dollar spent."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Click-Through Rate (CTR)" 
-                      value={ctr} 
-                      onChange={setCtr}
+                      value={ctrInput}
+                      onChange={setCtrInput}
                       suffix="%"
-                      step={0.01}
                       tooltip="The average CTR on digital ads is roughly 1.91%. Well-optimized campaigns can beat this by 2-3x."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Conversion Rate" 
-                      value={conversionRate} 
-                      onChange={setConversionRate}
+                      value={conversionRateInput}
+                      onChange={setConversionRateInput}
                       suffix="%"
-                      step={0.01}
                       tooltip="The median conversion rate for digital advertising is 2.35%. This varies significantly by industry and offer."
                     />
                   </div>
 
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-5">
                     <p className="text-sm font-semibold uppercase tracking-wider text-text-muted mb-4">Revenue Factors</p>
-                    <InputField 
+                    <CalculatorInputField 
                       label="Transactions per Customer" 
-                      value={transactionsPerCustomer} 
-                      onChange={setTransactionsPerCustomer}
+                      value={transactionsPerCustomerInput}
+                      onChange={setTransactionsPerCustomerInput}
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="How many times does the average customer purchase? For services, this is typically 1. For retail, it may be higher."
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Average Sale Price" 
-                      value={averageSalePrice} 
-                      onChange={setAverageSalePrice}
+                      value={averageSalePriceInput}
+                      onChange={setAverageSalePriceInput}
                       prefix="$"
+                      inputMode="numeric"
+                      allowDecimal={false}
                       tooltip="What does your client charge for their product or service?"
                     />
-                    <InputField 
+                    <CalculatorInputField 
                       label="Profit Margin" 
-                      value={profitMargin} 
-                      onChange={setProfitMargin}
+                      value={profitMarginInput}
+                      onChange={setProfitMarginInput}
                       suffix="%"
                       tooltip="The percentage of revenue kept as profit after costs. Service businesses often have 30-50% margins."
                     />
