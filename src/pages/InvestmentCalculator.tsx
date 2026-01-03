@@ -45,8 +45,9 @@ const initialFormData: FormData = {
   services: []
 };
 
-const OEM_HOURLY_RATE = 60;
-const MIN_MONTHLY = 500;
+const OEM_HOURLY_RATE = 65;
+const MIN_MONTHLY = 650;
+const MAX_MONTHLY = 2600;
 
 const baseServiceHours: Record<string, { hours: number; label: string; description?: string }> = {
   localSeo: { hours: 23, label: "Local SEO", description: "Includes GBP optimization & authority building" },
@@ -62,7 +63,7 @@ const InvestmentCalculator = () => {
   const [metroSearch, setMetroSearch] = useState("");
   const [showMetroDropdown, setShowMetroDropdown] = useState(false);
   const [showIndustryDropdown, setShowIndustryDropdown] = useState(false);
-  const [customMsrpRate, setCustomMsrpRate] = useState(135);
+  const [marginPercent, setMarginPercent] = useState(85); // Default to 85% margin (middle of 40-150%)
 
   const filteredMetros = useMemo(() => searchMetros(metroSearch), [metroSearch]);
   const industriesByCategory = useMemo(() => getIndustriesByCategory(), []);
@@ -133,30 +134,31 @@ const InvestmentCalculator = () => {
       if (serviceData) {
         const hoursLow = Math.round(serviceData.hours * locMult * mult * 0.85 * 10) / 10;
         const hoursHigh = Math.round(serviceData.hours * locMult * mult * 1.25 * 10) / 10;
-        const oemLow = Math.round(hoursLow * OEM_HOURLY_RATE / 25) * 25;
-        const oemHigh = Math.round(hoursHigh * OEM_HOURLY_RATE / 25) * 25;
-        const msrpLow = Math.round(hoursLow * customMsrpRate / 25) * 25;
-        const msrpHigh = Math.round(hoursHigh * customMsrpRate / 25) * 25;
+        const oemLow = Math.round(hoursLow * OEM_HOURLY_RATE);
+        const oemHigh = Math.round(hoursHigh * OEM_HOURLY_RATE);
+        const msrpLow = Math.round(oemLow * (1 + marginPercent / 100));
+        const msrpHigh = Math.round(oemHigh * (1 + marginPercent / 100));
         totalHoursLow += hoursLow;
         totalHoursHigh += hoursHigh;
         breakdown.push({ service: serviceData.label, hoursLow, hoursHigh, oemLow, oemHigh, msrpLow, msrpHigh });
       }
     });
 
-    let oemTotalLow = Math.round(totalHoursLow * OEM_HOURLY_RATE / 25) * 25;
-    let oemTotalHigh = Math.round(totalHoursHigh * OEM_HOURLY_RATE / 25) * 25;
-    if (formData.metro?.tier === 'small') {
-      oemTotalLow = Math.max(oemTotalLow, MIN_MONTHLY);
-    }
-    const msrpTotalLow = Math.round(totalHoursLow * customMsrpRate / 25) * 25;
-    const msrpTotalHigh = Math.round(totalHoursHigh * customMsrpRate / 25) * 25;
-    const marginPercent = Math.round(((customMsrpRate - OEM_HOURLY_RATE) / OEM_HOURLY_RATE) * 100);
+    let oemTotalLow = Math.round(totalHoursLow * OEM_HOURLY_RATE);
+    let oemTotalHigh = Math.round(totalHoursHigh * OEM_HOURLY_RATE);
+    // Enforce min/max bounds
+    oemTotalLow = Math.max(MIN_MONTHLY, Math.min(MAX_MONTHLY, oemTotalLow));
+    oemTotalHigh = Math.max(MIN_MONTHLY, Math.min(MAX_MONTHLY, oemTotalHigh));
+    
+    const msrpTotalLow = Math.round(oemTotalLow * (1 + marginPercent / 100));
+    const msrpTotalHigh = Math.round(oemTotalHigh * (1 + marginPercent / 100));
+    const msrpHourlyRate = Math.round(OEM_HOURLY_RATE * (1 + marginPercent / 100));
 
     return { 
       oemLow: oemTotalLow, oemHigh: oemTotalHigh,
       msrpLow: msrpTotalLow, msrpHigh: msrpTotalHigh,
       totalHoursLow, totalHoursHigh, breakdown,
-      oemHourlyRate: OEM_HOURLY_RATE, msrpHourlyRate: customMsrpRate, marginPercent,
+      oemHourlyRate: OEM_HOURLY_RATE, msrpHourlyRate, marginPercent,
       marketInfo: { metro: formData.metro, industry: formData.industry, avgCpc: formData.industry.avgCpc }
     };
   };
@@ -486,22 +488,22 @@ const InvestmentCalculator = () => {
                         <div className="flex items-center justify-between mb-3">
                           <label className="text-sm text-text-secondary flex items-center gap-2">
                             <DollarSign className="h-4 w-4" />
-                            Your hourly rate
+                            Your margin
                           </label>
-                          <span className="text-lg font-bold text-foreground">${customMsrpRate}/hr</span>
+                          <span className="text-lg font-bold text-foreground">{marginPercent}%</span>
                         </div>
                         <input
                           type="range"
-                          min="80"
-                          max="200"
+                          min="40"
+                          max="150"
                           step="5"
-                          value={customMsrpRate}
-                          onChange={(e) => setCustomMsrpRate(Number(e.target.value))}
+                          value={marginPercent}
+                          onChange={(e) => setMarginPercent(Number(e.target.value))}
                           className="w-full h-2 bg-border rounded-lg appearance-none cursor-pointer accent-accent-blue"
                         />
                         <div className="flex justify-between text-xs text-text-muted mt-1">
-                          <span>$80/hr</span>
-                          <span>$200/hr</span>
+                          <span>40%</span>
+                          <span>150%</span>
                         </div>
                       </div>
                     </div>
