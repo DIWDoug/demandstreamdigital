@@ -1,5 +1,4 @@
 import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3, Calculator } from "lucide-react";
-import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { searchPixabayImages } from "@/lib/pixabay";
@@ -105,9 +104,11 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
   }, [isInView, service.pixabayKeyword]);
 
   return (
-    <Link 
+    <a 
       ref={cardRef}
-      to={service.href}
+      href={service.href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group relative rounded-xl bg-surface-card border border-border/50 hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/5 overflow-hidden"
     >
       {/* Pixabay image background */}
@@ -141,7 +142,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
           <ArrowRight className="ml-1 h-3 w-3" />
         </span>
       </div>
-    </Link>
+    </a>
   );
 };
 
@@ -171,13 +172,15 @@ const ServicesGrid = () => {
                 Each service reinforces the others. Together, they create predictable growth your clients can count on.
               </p>
               
-              <Link 
-                to="/white-label-inbound-marketing-services"
+              <a 
+                href="/white-label-inbound-marketing-services"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-cta group inline-flex items-center gap-2"
               >
                 See the Full Breakdown
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </a>
             </div>
 
             {/* Right Column - Services Grid (3 cols) */}
@@ -187,8 +190,10 @@ const ServicesGrid = () => {
               ))}
               
               {/* Partner Tools CTA Card */}
-              <Link 
-                to="/partner-tools"
+              <a 
+                href="/partner-tools"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
               >
                 <div className="flex items-center gap-4">
@@ -205,7 +210,7 @@ const ServicesGrid = () => {
                   </div>
                   <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

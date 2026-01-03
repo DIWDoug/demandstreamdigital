@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { ChevronDown, MapPin, Map, MousePointerClick, Mail, Award, BarChart3 } from "lucide-react";
 
 const TopicalExpertise = () => {
@@ -329,13 +328,15 @@ const TopicalExpertise = () => {
                   <div className="pt-4 border-t border-border space-y-5">
                     {hub.spokes.map((spoke, spokeIndex) => (
                       <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                        <Link 
-                          to={`/white-label-inbound-marketing-services/${hub.slug}/${spoke.slug}`}
+                        <a 
+                          href={`/white-label-inbound-marketing-services/${hub.slug}/${spoke.slug}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           {spoke.title} →
-                        </Link>
+                        </a>
                         <p className="text-text-secondary text-sm leading-relaxed mt-1">
                           {spoke.description}
                         </p>
@@ -345,13 +346,15 @@ const TopicalExpertise = () => {
 
                   {/* CTA within expanded card */}
                   <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
-                    <Link 
-                      to={`/white-label-inbound-marketing-services/${hub.slug}`}
+                    <a 
+                      href={`/white-label-inbound-marketing-services/${hub.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Learn more about {hub.title} →
-                    </Link>
+                    </a>
                     <span className="hidden sm:inline text-text-muted">|</span>
                     <a 
                       href="#contact" 
