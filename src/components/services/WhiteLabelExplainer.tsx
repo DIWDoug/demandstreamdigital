@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Map, MousePointerClick, Mail, Share2, BarChart3, ArrowRight, type LucideIcon } from "lucide-react";
+import { MapPin, Map, MousePointerClick, Mail, PenTool, BarChart3, ArrowRight, type LucideIcon } from "lucide-react";
 
 interface ServiceHub {
   title: string;
@@ -35,10 +35,10 @@ const services: ServiceHub[] = [
     slug: "email-marketing"
   },
   { 
-    icon: Share2, 
-    title: "Authority Building", 
-    description: "Digital PR, quality backlinks, and citation management that compounds over time.",
-    slug: "local-authority-building"
+    icon: PenTool, 
+    title: "Content Development", 
+    description: "Strategic content that ranks locally and converts visitors into leads.",
+    slug: "content-marketing"
   },
   { 
     icon: BarChart3, 
@@ -89,7 +89,7 @@ const WhiteLabelExplainer = () => {
                 Inbound marketing is a system for attracting customers through relevant content and experiences while strategically using paid media to accelerate visibility as you build long-term assets.
               </p>
               <p className="text-text-secondary mb-6 leading-relaxed">
-                Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Authority building earns trust. Reporting ties it all together.
+                Instead of chasing leads, you build visibility where buyers are already searching. SEO captures intent. Paid media accelerates reach. Email nurtures relationships. Content builds authority. Reporting ties it all together.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
                 When these channels work as a coordinated system instead of siloed tactics, the compounding effect drives consistent, measurable growth over time.
