@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
+import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, ArrowLeft } from "lucide-react";
@@ -23,11 +24,21 @@ interface BlogPost {
   featured_image: string | null;
   source_url: string;
   published_at: string;
+  category: string | null;
 }
 
 // Default author for blog posts - Doug Bryson as founder/primary author
 const getPostAuthor = (slug: string): Author => {
   return getAuthorById("doug-bryson")!;
+};
+
+const categoryLabels: Record<string, string> = {
+  'white-label-seo': 'White-Label SEO',
+  'local-seo': 'Local SEO',
+  'agency-growth': 'Agency Growth',
+  'paid-media': 'Paid Media',
+  'content-marketing': 'Content Marketing',
+  'email-marketing': 'Email Marketing',
 };
 
 const BlogPostPage = () => {
@@ -54,7 +65,7 @@ const BlogPostPage = () => {
         <Header />
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
               <div className="lg:col-span-2">
                 <Skeleton className="h-8 w-32 mb-8" />
                 <Skeleton className="h-12 w-3/4 mb-4" />
@@ -125,7 +136,8 @@ const BlogPostPage = () => {
         },
         "isPartOf": {
           "@id": "https://dialedinweb.com/#website"
-        }
+        },
+        "keywords": blog.category ? categoryLabels[blog.category] : undefined
       },
       {
         "@type": "Person",
@@ -163,6 +175,7 @@ const BlogPostPage = () => {
         <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
         {blog.featured_image && <meta property="og:image" content={blog.featured_image} />}
         <meta property="article:author" content={author.name} />
+        {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
         </script>
@@ -180,6 +193,16 @@ const BlogPostPage = () => {
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
               </Link>
+
+              {/* Category Tag */}
+              {blog.category && (
+                <Link 
+                  to={`/blog?category=${blog.category}`}
+                  className="inline-block text-xs font-medium text-cta uppercase tracking-wide mb-4 hover:text-cta/80 transition-colors"
+                >
+                  {categoryLabels[blog.category] || blog.category}
+                </Link>
+              )}
 
               {/* Header */}
               <header className="mb-8">
@@ -225,11 +248,17 @@ const BlogPostPage = () => {
                     ul: ({ children }) => <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>,
                     ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>,
                     li: ({ children }) => <li className="text-muted-foreground">{children}</li>,
-                    a: ({ href, children }) => (
-                      <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                        {children}
-                      </a>
-                    ),
+                    a: ({ href, children }) => {
+                      // Filter out links to the old site
+                      if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
+                        return <span className="text-primary">{children}</span>;
+                      }
+                      return (
+                        <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                          {children}
+                        </a>
+                      );
+                    },
                     blockquote: ({ children }) => (
                       <blockquote className="border-l-4 border-primary pl-4 italic my-4">{children}</blockquote>
                     ),
@@ -242,6 +271,10 @@ const BlogPostPage = () => {
                     img: ({ src, alt }) => {
                       // Skip placeholder SVG images
                       if (src?.includes('data:image/svg+xml')) {
+                        return null;
+                      }
+                      // Skip base64 removed images
+                      if (src?.includes('Base64-Image-Removed')) {
                         return null;
                       }
                       return (
@@ -271,10 +304,13 @@ const BlogPostPage = () => {
                   </Button>
                 </Link>
               </div>
+
+              {/* You May Also Like */}
+              <YouMayAlsoLike currentSlug={blog.slug} currentCategory={blog.category} />
             </article>
 
             {/* Sidebar */}
-            <div className="lg:sticky lg:top-24 lg:self-start">
+            <div className="hidden lg:block">
               <BlogSidebar />
             </div>
           </div>

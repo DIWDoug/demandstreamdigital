@@ -49,6 +49,19 @@ export function cleanBlogContent(content: string): string {
     // Delta symbols (form markers)
     /\nΔ\s*\n/g,
     
+    // Remove any remaining SVG placeholder images
+    /!\[[^\]]*\]\(data:image\/svg\+xml[^)]*\)/gi,
+    
+    // Remove Base64-Image-Removed placeholders
+    /!\[[^\]]*\]\(<Base64-Image-Removed>\)/gi,
+    /\*\*!\[[^\]]*\]\(<Base64-Image-Removed>\)\*\*/gi,
+    
+    // Remove links to old site internal pages (keep external links)
+    /\[([^\]]+)\]\(https:\/\/dialedinweb\.com\/(?!blog)[^)]+\)/gi,
+    
+    // Remove December date patterns at the end (leftover from old posts)
+    /\n+December \d+, \d{4}\s*\n+Blog\s*$/gi,
+    
     // Empty lines cleanup (more than 2 consecutive)
     /\n{4,}/g,
   ];
@@ -56,7 +69,13 @@ export function cleanBlogContent(content: string): string {
   let cleaned = content;
   
   for (const pattern of patternsToRemove) {
-    cleaned = cleaned.replace(pattern, '\n\n');
+    cleaned = cleaned.replace(pattern, (match, group1) => {
+      // For link patterns, keep the link text but remove the URL
+      if (group1 && pattern.toString().includes('dialedinweb.com')) {
+        return group1;
+      }
+      return '\n\n';
+    });
   }
   
   // Final cleanup: trim and normalize whitespace
@@ -69,6 +88,7 @@ export function cleanBlogContent(content: string): string {
     'reCAPTCHA',
     'Privacy - Terms',
     'Δ',
+    'December 23, 2025\n\nBlog',
   ];
   
   for (const indicator of junkIndicators) {
