@@ -30,7 +30,20 @@ interface BlogPost {
 }
 
 const getPostAuthor = (slug: string): Author => {
-  return getAuthorById("doug-bryson")!;
+  // Map articles to their authors
+  const authorMap: Record<string, string> = {
+    // Desiree Abbariao's articles
+    'benefits-of-white-label-seo-services': 'desiree-abbariao',
+    'white-label-local-ppc': 'desiree-abbariao',
+    'on-page-optimization-local-seo': 'desiree-abbariao',
+    // Richard Baylon's articles
+    'what-is-white-label-digital-marketing': 'richard-baylon',
+    'white-label-social-media': 'richard-baylon',
+    'white-label-seo-for-agencies-checklist': 'richard-baylon',
+  };
+  
+  const authorId = authorMap[slug] || 'doug-bryson';
+  return getAuthorById(authorId)!;
 };
 
 const categoryLabels: Record<string, string> = {
