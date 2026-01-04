@@ -16,6 +16,7 @@ interface ContactFormData {
   servicesInterested?: string[];
   message?: string;
   formType?: string;
+  leadId?: string; // Step 2 should update the Step 1 record when provided
 }
 
 // Rate limiting configuration
@@ -42,6 +43,8 @@ serve(async (req) => {
   }
 
   try {
+    const body: ContactFormData = await req.json();
+
     const {
       name,
       email,
@@ -52,7 +55,8 @@ serve(async (req) => {
       servicesInterested,
       message,
       formType,
-    }: ContactFormData = await req.json();
+      leadId,
+    } = body;
 
     // Get client IP for rate limiting
     const clientIP =
@@ -178,34 +182,82 @@ serve(async (req) => {
       );
     }
 
-    // Save lead to database when email is present (supports step 1 + step 2)
+    // Save lead to database when email is present (step 1 inserts, step 2 updates)
     let data: any = { id: null, created_at: new Date().toISOString() };
 
     if (email) {
-      const { data: insertData, error } = await supabase
-        .from("leads")
-        .insert({
-          name: name ?? null,
-          email,
-          phone: phone ?? null,
-          phone_country_code: phoneCountryCode || "+1",
-          revenue: revenue ?? null,
-          website: website ?? null,
-          source: isStep1 ? "contact_form_step1" : "contact_form",
-        })
-        .select()
-        .single();
+      if (!isStep1 && leadId) {
+        const { data: updatedData, error: updateError } = await supabase
+          .from("leads")
+          .update({
+            name: name ?? null,
+            phone: phone ?? null,
+            phone_country_code: phoneCountryCode || "+1",
+            revenue: revenue ?? null,
+            website: website ?? null,
+            source: "contact_form",
+          })
+          .eq("id", leadId)
+          .select()
+          .maybeSingle();
 
-      if (error) {
-        console.error("Database insert error:", error);
-        throw new Error("Failed to save lead");
+        if (updateError) {
+          console.error("Database update error:", updateError);
+        }
+
+        if (updatedData) {
+          data = updatedData;
+          console.log("Lead updated successfully:", data);
+        } else {
+          // Fallback: if leadId not found, insert a new record
+          const { data: insertData, error: insertError } = await supabase
+            .from("leads")
+            .insert({
+              name: name ?? null,
+              email,
+              phone: phone ?? null,
+              phone_country_code: phoneCountryCode || "+1",
+              revenue: revenue ?? null,
+              website: website ?? null,
+              source: "contact_form",
+            })
+            .select()
+            .single();
+
+          if (insertError) {
+            console.error("Database insert error:", insertError);
+            throw new Error("Failed to save lead");
+          }
+
+          data = insertData;
+          console.log("Lead saved successfully (fallback insert):", data);
+        }
+      } else {
+        // Step 1: insert
+        const { data: insertData, error: insertError } = await supabase
+          .from("leads")
+          .insert({
+            name: name ?? null,
+            email,
+            phone: phone ?? null,
+            phone_country_code: phoneCountryCode || "+1",
+            revenue: revenue ?? null,
+            website: website ?? null,
+            source: "contact_form_step1",
+          })
+          .select()
+          .single();
+
+        if (insertError) {
+          console.error("Database insert error:", insertError);
+          throw new Error("Failed to save lead");
+        }
+
+        data = insertData;
+        console.log("Lead saved successfully:", data);
       }
-
-      data = insertData;
-      console.log("Lead saved successfully:", data);
     } else {
-      // Website-only step 1 (legacy)
-      console.log("Website-only partial lead - skipping DB insert");
+      console.log("Missing email; skipping DB insert/update");
     }
 
     // Forward to Zapier webhook (used to reach CRM)
@@ -221,6 +273,8 @@ serve(async (req) => {
 
       const payload = {
         id: data.id,
+        lead_id: data.id,
+        lead_stage: isStep1 ? "step1" : "step2",
         lead_type,
         form_type: formType || "unknown",
         name,
