@@ -136,7 +136,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 pt-48 pb-32 lg:pt-56 lg:pb-40 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 pt-28 pb-24 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Contextual eyebrow - subtle */}
           <p className="text-sm text-text-muted uppercase tracking-widest mb-8 animate-fade-in-up">
