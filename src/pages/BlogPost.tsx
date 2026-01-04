@@ -252,11 +252,11 @@ const BlogPostPage = () => {
         </header>
 
         {/* CONTENT GRID - Article + Sidebar */}
-        <div className="container mx-auto px-4 pb-16">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
+        <div className="container mx-auto px-4 pb-16 max-w-7xl">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Main Article Content */}
-            <article className="lg:col-span-8 xl:col-span-9">
-              <div className="max-w-3xl">
+            <article className="lg:col-span-7 xl:col-span-8">
+              <div className="max-w-none">
                 {/* Article prose with proper editorial typography */}
                 <div className="article-content">
                   <ReactMarkdown 
@@ -421,7 +421,7 @@ const BlogPostPage = () => {
             </article>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-4 xl:col-span-3">
+            <aside className="lg:col-span-5 xl:col-span-4">
               <div className="lg:sticky lg:top-24">
                 <BlogSidebar />
               </div>
