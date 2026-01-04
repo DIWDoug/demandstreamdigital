@@ -7,15 +7,19 @@ import onPageStructureImg from "@/assets/spoke/on-page-structure.png";
 import onPageLinksImg from "@/assets/spoke/on-page-links.png";
 
 // Technical SEO illustrations
-import technicalStructureImg from "@/assets/spoke/technical-structure.png";
-import technicalCrawlingImg from "@/assets/spoke/technical-crawling.png";
-import technicalDuplicateImg from "@/assets/spoke/technical-duplicate.png";
-import technicalSpeedImg from "@/assets/spoke/technical-speed.png";
+import technicalStructureImg from "@/assets/spoke/technical-structure-new.jpg";
+import technicalCrawlingImg from "@/assets/spoke/technical-crawling-new.jpg";
+import technicalDuplicateImg from "@/assets/spoke/technical-duplicate-new.jpg";
+import technicalSpeedImg from "@/assets/spoke/technical-speed-new.jpg";
 
 // Keyword Strategy illustrations
-import keywordResearchImg from "@/assets/spoke/keyword-research.png";
-import keywordIntentImg from "@/assets/spoke/keyword-intent.png";
-import keywordMappingImg from "@/assets/spoke/keyword-mapping.png";
+import keywordResearchImg from "@/assets/spoke/keyword-research-new.jpg";
+import keywordIntentImg from "@/assets/spoke/keyword-intent-new.jpg";
+import keywordMappingImg from "@/assets/spoke/keyword-mapping-new.jpg";
+
+// Citation illustrations
+import dataAggregatorsImg from "@/assets/spoke/data-aggregators.jpg";
+import citationCorrectionImg from "@/assets/spoke/citation-correction.jpg";
 
 // Content Development illustrations
 import contentLocationImg from "@/assets/spoke/content-location.png";
@@ -809,6 +813,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Propagation Timeline", description: "Expect 4-6 months for full downstream propagation. We submit early so corrections spread." },
         { title: "Monthly Monitoring", description: "Aggregator submissions verified monthly until propagation complete. Nothing assumed done." }
       ],
+      imageSrc: dataAggregatorsImg,
+      imageAlt: "Data aggregator network distributing business information",
       ctaText: "Schedule a Discovery Call",
       ctaHref: "/contact"
     },
@@ -824,6 +830,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Address Verification", description: "Suite numbers, building names, and postal codes verified against USPS database." },
         { title: "Post-Fix Verification", description: "Corrections verified after propagation. Nothing assumed complete until confirmed." }
       ],
+      imageSrc: citationCorrectionImg,
+      imageAlt: "Citation correction dashboard with NAP verification",
       ctaText: "Explore Partnership",
       ctaHref: "/contact"
     },
