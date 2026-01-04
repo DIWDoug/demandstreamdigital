@@ -8,14 +8,14 @@ interface ServiceHubAnchorNavProps {
 }
 
 const defaultItems: AnchorItem[] = [
-  { label: 'Problem', href: '#problem' },
-  { label: 'Outcomes', href: '#outcomes' },
+  { label: 'Pattern', href: '#problem' },
+  { label: 'Solution', href: '#outcomes' },
   { label: 'Roadmap', href: '#roadmap' },
   { label: 'Levers', href: '#building-blocks' },
   { label: 'Fit', href: '#qualification' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Testimonial', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Next Steps', href: '#contact' },
 ];
 
 const ServiceHubAnchorNav = ({ items = defaultItems }: ServiceHubAnchorNavProps) => {
