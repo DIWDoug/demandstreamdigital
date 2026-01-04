@@ -19,10 +19,21 @@ const blogCategories = [
   { name: "Email Marketing", slug: "email-marketing" },
 ];
 
+const categoryLabels: Record<string, string> = {
+  'white-label-seo': 'White-Label SEO',
+  'local-seo': 'Local SEO',
+  'agency-growth': 'Agency Growth',
+  'paid-media': 'Paid Media',
+  'content-marketing': 'Content Marketing',
+  'email-marketing': 'Email Marketing',
+};
+
 interface RecentPost {
   id: string;
   title: string;
   slug: string;
+  featured_image: string | null;
+  category: string | null;
 }
 
 const BlogSidebar = () => {
@@ -34,15 +45,14 @@ const BlogSidebar = () => {
     message: "",
   });
 
-  // Fetch recent posts for "Most Popular" section (AD-style)
   const { data: recentPosts } = useQuery({
     queryKey: ['recent-posts-sidebar'],
     queryFn: async () => {
       const { data, error } = await supabase
         .from('blogs')
-        .select('id, title, slug')
+        .select('id, title, slug, featured_image, category')
         .order('published_at', { ascending: false })
-        .limit(5);
+        .limit(4);
       
       if (error) throw error;
       return data as RecentPost[];
@@ -63,7 +73,7 @@ const BlogSidebar = () => {
 
       if (error) throw error;
 
-      toast.success("Thanks! We'll be in touch soon.");
+      toast.success("Thanks! We will be in touch soon.");
       setFormData({ name: "", email: "", website: "", message: "" });
     } catch (error) {
       console.error("Form submission error:", error);
@@ -74,14 +84,14 @@ const BlogSidebar = () => {
   };
 
   return (
-    <div className="space-y-8">
-      {/* Schedule a Strategy Call - Top Priority */}
-      <div className="pb-6 border-b border-border">
+    <div className="space-y-10">
+      {/* Schedule a Strategy Call */}
+      <div className="pb-8 border-b border-border">
         <p className="text-sm text-muted-foreground mb-3">Schedule a Strategy Call</p>
         <a href={PHONE_HREF}>
           <Button 
             variant="outline" 
-            className="w-full justify-center gap-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-medium"
+            className="w-full justify-center gap-2 border-foreground text-foreground hover:bg-foreground hover:text-background font-medium h-12"
           >
             <Phone className="w-4 h-4" />
             Call Us {PHONE_NUMBER}
@@ -89,26 +99,42 @@ const BlogSidebar = () => {
         </a>
       </div>
 
-      {/* Most Popular - AD Style */}
+      {/* MOST POPULAR - AD Style with Thumbnails */}
       {recentPosts && recentPosts.length > 0 && (
-        <div className="pb-6 border-b border-border">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-foreground mb-4">
+        <div className="pb-8 border-b border-border">
+          <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-foreground mb-6">
             Most Popular
           </h3>
-          <ul className="space-y-4">
-            {recentPosts.map((post, index) => (
+          <ul className="space-y-6">
+            {recentPosts.map((post) => (
               <li key={post.id} className="group">
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="block"
-                >
-                  <span className="text-[15px] font-medium text-foreground group-hover:text-cta transition-colors leading-snug line-clamp-3">
-                    {post.title}
-                  </span>
+                <Link to={`/blog/${post.slug}`} className="flex gap-4">
+                  {/* Thumbnail */}
+                  {post.featured_image && (
+                    <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden bg-surface-dark">
+                      <img 
+                        src={post.featured_image} 
+                        alt={`Thumbnail for ${post.title}`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    {/* Category */}
+                    {post.category && (
+                      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cta mb-1 block">
+                        {categoryLabels[post.category] || post.category}
+                      </span>
+                    )}
+                    
+                    {/* Title */}
+                    <h4 className="text-sm font-medium text-foreground group-hover:text-cta transition-colors leading-snug line-clamp-3">
+                      {post.title}
+                    </h4>
+                  </div>
                 </Link>
-                {index < recentPosts.length - 1 && (
-                  <div className="mt-4 border-b border-border/50" />
-                )}
               </li>
             ))}
           </ul>
@@ -116,11 +142,11 @@ const BlogSidebar = () => {
       )}
 
       {/* Request Information Form */}
-      <div className="bg-cta/10 rounded-lg p-5 border border-cta/20">
-        <h3 className="text-sm font-bold uppercase tracking-widest text-foreground mb-4">
+      <div className="bg-surface-dark rounded-lg p-6 border border-border">
+        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-foreground mb-5">
           Request Information
         </h3>
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <Label htmlFor="sidebar-name" className="text-xs text-muted-foreground">
               Your Name
@@ -131,7 +157,7 @@ const BlogSidebar = () => {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               required
-              className="mt-1 bg-background border-border h-9 text-sm"
+              className="mt-1.5 bg-background border-border h-10"
               placeholder="Your Name"
             />
           </div>
@@ -145,7 +171,7 @@ const BlogSidebar = () => {
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
-              className="mt-1 bg-background border-border h-9 text-sm"
+              className="mt-1.5 bg-background border-border h-10"
               placeholder="Your Email"
             />
           </div>
@@ -158,7 +184,7 @@ const BlogSidebar = () => {
               type="url"
               value={formData.website}
               onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-              className="mt-1 bg-background border-border h-9 text-sm"
+              className="mt-1.5 bg-background border-border h-10"
               placeholder="Your Website"
             />
           </div>
@@ -170,15 +196,15 @@ const BlogSidebar = () => {
               id="sidebar-message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="mt-1 bg-background border-border resize-none text-sm"
-              rows={2}
+              className="mt-1.5 bg-background border-border resize-none"
+              rows={3}
               placeholder="Tell us about your agency"
             />
           </div>
           <Button 
             type="submit" 
             disabled={isSubmitting}
-            className="w-full bg-cta hover:bg-cta/90 text-cta-foreground h-9 text-sm font-medium"
+            className="w-full bg-cta hover:bg-cta/90 text-cta-foreground h-10 font-medium"
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
@@ -190,10 +216,10 @@ const BlogSidebar = () => {
 
       {/* Categories */}
       <div>
-        <h3 className="text-xs font-bold uppercase tracking-widest text-foreground mb-4">
+        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-foreground mb-5">
           Categories
         </h3>
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           {blogCategories.map((category) => (
             <li key={category.slug}>
               <Link

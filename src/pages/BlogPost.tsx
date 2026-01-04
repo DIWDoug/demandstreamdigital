@@ -7,11 +7,10 @@ import BlogSidebar from "@/components/BlogSidebar";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar, ArrowLeft } from "lucide-react";
+import { ArrowLeft, Play, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import AuthorByline from "@/components/AuthorByline";
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
 
@@ -40,6 +39,13 @@ const categoryLabels: Record<string, string> = {
   'email-marketing': 'Email Marketing',
 };
 
+// Calculate reading time based on word count
+const calculateReadingTime = (content: string): number => {
+  const wordsPerMinute = 200;
+  const wordCount = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+};
+
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
@@ -62,13 +68,14 @@ const BlogPostPage = () => {
     return (
       <div className="dark min-h-screen bg-background text-foreground">
         <Header />
-        <main className="pt-24 pb-16">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <Skeleton className="h-6 w-24 mb-4" />
-            <Skeleton className="h-14 w-full mb-2" />
-            <Skeleton className="h-14 w-3/4 mb-6" />
-            <Skeleton className="h-6 w-64 mb-8" />
-            <Skeleton className="h-[450px] w-full mb-12" />
+        <main className="pt-16">
+          <Skeleton className="w-full h-[60vh]" />
+          <div className="container mx-auto px-4 max-w-3xl py-12 text-center">
+            <Skeleton className="h-6 w-32 mx-auto mb-4" />
+            <Skeleton className="h-14 w-full mb-4" />
+            <Skeleton className="h-6 w-2/3 mx-auto mb-8" />
+            <Skeleton className="h-16 w-16 rounded-full mx-auto mb-4" />
+            <Skeleton className="h-4 w-32 mx-auto" />
           </div>
         </main>
         <Footer />
@@ -99,6 +106,7 @@ const BlogPostPage = () => {
 
   const author = getPostAuthor(blog.slug);
   const cleanedContent = cleanBlogContent(blog.content);
+  const readingTime = calculateReadingTime(cleanedContent);
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -115,7 +123,8 @@ const BlogPostPage = () => {
         "publisher": { "@id": "https://dialedinweb.com/#organization" },
         "mainEntityOfPage": { "@id": `https://dialedinweb.com/blog/${blog.slug}` },
         "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-        "keywords": blog.category ? categoryLabels[blog.category] : undefined
+        "keywords": blog.category ? categoryLabels[blog.category] : undefined,
+        "timeRequired": `PT${readingTime}M`
       },
       {
         "@type": "Person",
@@ -149,35 +158,74 @@ const BlogPostPage = () => {
       
       <Header />
       
-      <main className="pt-24 pb-16">
-        {/* AD-Style Header: Category, Title, Byline, Hero - All Full Width */}
-        <header className="container mx-auto px-4 max-w-5xl">
-          {/* Back Link - Subtle */}
-          <Link to="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors mb-6">
+      <main className="pt-16">
+        {/* Back Link - Fixed Position */}
+        <div className="container mx-auto px-4 py-4">
+          <Link to="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-3 h-3 mr-1.5" />
             Back to Blog
           </Link>
+        </div>
 
-          {/* Category Tag - Small, uppercase like AD */}
+        {/* HERO IMAGE - Full Width */}
+        {blog.featured_image && (
+          <figure className="w-full">
+            <img 
+              src={blog.featured_image} 
+              alt={`Featured image for ${blog.title} - agency marketing strategy illustration`}
+              className="w-full h-[50vh] md:h-[60vh] object-cover"
+            />
+          </figure>
+        )}
+
+        {/* HEADER SECTION - Centered */}
+        <header className="container mx-auto px-4 max-w-4xl py-12 text-center">
+          {/* Category Tag */}
           {blog.category && (
             <Link 
               to={`/blog?category=${blog.category}`}
-              className="block text-xs font-bold text-cta uppercase tracking-widest mb-4 hover:text-cta/80 transition-colors"
+              className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cta mb-6 hover:text-cta/80 transition-colors"
             >
               {categoryLabels[blog.category] || blog.category}
             </Link>
           )}
 
-          {/* Large Headline - AD Style */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] text-foreground">
+          {/* Title */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
             {blog.title}
           </h1>
           
-          {/* Byline Row - Author + Date */}
-          <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
-            <span className="font-medium text-foreground">By {author.name}</span>
-            <span className="text-muted-foreground/50">|</span>
-            <time dateTime={blog.published_at}>
+          {/* Subtitle/Excerpt */}
+          {blog.excerpt && (
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              {blog.excerpt}
+            </p>
+          )}
+
+          {/* Author Section */}
+          <div className="flex flex-col items-center mb-8">
+            {/* Author Photo */}
+            <Link to={`/authors/${author.slug}`} className="mb-4">
+              <img 
+                src={author.image} 
+                alt={`${author.name} - ${author.role} at Dialed-In Web`}
+                className="w-16 h-16 rounded-full object-cover border-2 border-border hover:border-cta transition-colors"
+              />
+            </Link>
+            
+            {/* Author Name */}
+            <Link 
+              to={`/authors/${author.slug}`}
+              className="text-sm font-medium text-foreground hover:text-cta transition-colors"
+            >
+              By {author.name}
+            </Link>
+            
+            {/* Date */}
+            <time 
+              dateTime={blog.published_at}
+              className="text-sm text-muted-foreground mt-1"
+            >
               {new Date(blog.published_at).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -186,43 +234,48 @@ const BlogPostPage = () => {
             </time>
           </div>
 
-          {/* Hero Image - Full Width, Edge to Edge in Container */}
-          {blog.featured_image && (
-            <figure className="mb-12">
-              <img 
-                src={blog.featured_image} 
-                alt={blog.title}
-                className="w-full h-auto aspect-[16/9] object-cover"
-              />
-            </figure>
-          )}
+          {/* Listen + Reading Time */}
+          <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground border-t border-b border-border py-4">
+            <button className="flex items-center gap-2 hover:text-foreground transition-colors">
+              <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
+                <Play className="w-3 h-3 text-background fill-background ml-0.5" />
+              </div>
+              <span className="font-medium text-foreground">Listen</span>
+              <span>• {readingTime} minutes</span>
+            </button>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>{readingTime} min read</span>
+            </div>
+          </div>
         </header>
 
-        {/* AD-Style Content Grid: Article Left, Sidebar Right */}
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid lg:grid-cols-12 gap-12">
-            {/* Main Article Content - Left/Main Column */}
+        {/* CONTENT GRID - Article + Sidebar */}
+        <div className="container mx-auto px-4 max-w-7xl pb-16">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+            {/* Main Article Content */}
             <article className="lg:col-span-8">
-              {/* Lead paragraph styling like AD */}
-              <div className="prose prose-invert prose-lg max-w-none
-                prose-p:text-[17px] prose-p:leading-[1.75] prose-p:text-muted-foreground
-                prose-headings:font-serif prose-headings:text-foreground
-                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+              <div className="prose prose-lg max-w-none
+                prose-headings:text-foreground prose-headings:font-bold
+                prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
+                prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
+                prose-p:text-muted-foreground prose-p:text-[17px] prose-p:leading-[1.8] prose-p:mb-6
                 prose-a:text-cta prose-a:no-underline hover:prose-a:underline
                 prose-strong:text-foreground prose-strong:font-semibold
-                prose-blockquote:border-l-cta prose-blockquote:text-muted-foreground prose-blockquote:not-italic
-                prose-li:text-muted-foreground
+                prose-blockquote:border-l-4 prose-blockquote:border-cta prose-blockquote:pl-6 prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:my-8
+                prose-ul:text-muted-foreground prose-ul:my-6
+                prose-ol:text-muted-foreground prose-ol:my-6
+                prose-li:text-muted-foreground prose-li:mb-2
               ">
                 <ReactMarkdown 
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h1: ({ children }) => <h2 className="font-serif">{children}</h2>,
-                    h2: ({ children }) => <h2 className="font-serif">{children}</h2>,
-                    h3: ({ children }) => <h3 className="font-serif">{children}</h3>,
+                    h1: ({ children }) => <h2>{children}</h2>,
+                    h2: ({ children }) => <h2>{children}</h2>,
+                    h3: ({ children }) => <h3>{children}</h3>,
                     p: ({ children }) => <p>{children}</p>,
-                    ul: ({ children }) => <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>,
-                    ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>,
+                    ul: ({ children }) => <ul className="list-disc pl-6">{children}</ul>,
+                    ol: ({ children }) => <ol className="list-decimal pl-6">{children}</ol>,
                     li: ({ children }) => <li>{children}</li>,
                     a: ({ href, children }) => {
                       if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
@@ -231,9 +284,9 @@ const BlogPostPage = () => {
                       return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
                     },
                     blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-                    code: ({ children }) => <code className="bg-surface-dark px-2 py-1 rounded text-sm">{children}</code>,
-                    pre: ({ children }) => <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-4">{children}</pre>,
-                    img: () => null, // Skip all inline images
+                    code: ({ children }) => <code className="bg-surface-dark px-2 py-1 rounded text-sm font-mono">{children}</code>,
+                    pre: ({ children }) => <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-6">{children}</pre>,
+                    img: () => null,
                   }}
                 >
                   {cleanedContent}
@@ -241,13 +294,13 @@ const BlogPostPage = () => {
               </div>
 
               {/* CTA Box */}
-              <div className="mt-16 p-8 bg-surface-dark rounded-lg border border-border text-center">
-                <h3 className="text-2xl font-bold mb-2">Ready to Scale Your Agency?</h3>
-                <p className="text-muted-foreground mb-6">
+              <div className="mt-16 p-8 bg-cta/10 rounded-xl border border-cta/20 text-center">
+                <h3 className="text-2xl font-bold mb-3 text-foreground">Ready to Scale Your Agency?</h3>
+                <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
                   Let us handle your white-label fulfillment while you focus on growing your business.
                 </p>
                 <Link to="/#contact">
-                  <Button size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground">
+                  <Button size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground font-medium">
                     Get Started Today
                   </Button>
                 </Link>
@@ -257,7 +310,7 @@ const BlogPostPage = () => {
               <YouMayAlsoLike currentSlug={blog.slug} currentCategory={blog.category} />
             </article>
 
-            {/* Sidebar - Right Column, Sticky like AD */}
+            {/* Sidebar */}
             <aside className="lg:col-span-4">
               <div className="lg:sticky lg:top-24">
                 <BlogSidebar />
