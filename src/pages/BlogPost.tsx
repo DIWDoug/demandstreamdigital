@@ -15,6 +15,7 @@ import remarkGfm from 'remark-gfm';
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
 import { useToast } from "@/hooks/use-toast";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
 
 interface BlogPost {
   id: string;
@@ -202,6 +203,8 @@ const BlogPostPage = () => {
   const cleanedContent = cleanBlogContent(blog.content);
   const readingTime = calculateReadingTime(cleanedContent);
 
+  const resolvedFeaturedImage = getBlogFeaturedImage(blog.featured_image);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -210,7 +213,7 @@ const BlogPostPage = () => {
         "@id": `https://dialedinweb.com/blog/${blog.slug}#article`,
         "headline": blog.title,
         "description": blog.excerpt || `Read ${blog.title} on Dialed-In Web`,
-        "image": blog.featured_image || undefined,
+        "image": resolvedFeaturedImage || undefined,
         "datePublished": blog.published_at,
         "dateModified": blog.published_at,
         "author": { "@id": `https://dialedinweb.com/authors/${author.slug}#person` },
@@ -244,7 +247,7 @@ const BlogPostPage = () => {
         <title>{blog.title} | Dialed-In Web</title>
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
         <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
-        {blog.featured_image && <meta property="og:image" content={blog.featured_image} />}
+        {resolvedFeaturedImage && <meta property="og:image" content={resolvedFeaturedImage} />}
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
@@ -262,10 +265,10 @@ const BlogPostPage = () => {
         </div>
 
         {/* HERO IMAGE - Full Width */}
-        {blog.featured_image && (
+        {getBlogFeaturedImage(blog.featured_image) && (
           <figure className="w-full">
             <img 
-              src={blog.featured_image} 
+              src={getBlogFeaturedImage(blog.featured_image)!} 
               alt={`Featured image for ${blog.title} - agency marketing strategy illustration`}
               className="w-full h-[50vh] md:h-[60vh] object-cover"
             />
