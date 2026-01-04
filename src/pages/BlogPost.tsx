@@ -251,67 +251,97 @@ const BlogPostPage = () => {
         </header>
 
         {/* CONTENT GRID - Article + Sidebar */}
-        <div className="container mx-auto px-4 max-w-7xl pb-16">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="container mx-auto px-4 pb-16">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
             {/* Main Article Content */}
-            <article className="lg:col-span-8">
-              <div className="prose prose-lg max-w-none
-                prose-headings:text-foreground prose-headings:font-bold
-                prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
-                prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4
-                prose-p:text-muted-foreground prose-p:text-[17px] prose-p:leading-[1.8] prose-p:mb-6
-                prose-a:text-cta prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-foreground prose-strong:font-semibold
-                prose-blockquote:border-l-4 prose-blockquote:border-cta prose-blockquote:pl-6 prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:my-8
-                prose-ul:text-muted-foreground prose-ul:my-6
-                prose-ol:text-muted-foreground prose-ol:my-6
-                prose-li:text-muted-foreground prose-li:mb-2
-              ">
-                <ReactMarkdown 
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    h1: ({ children }) => <h2>{children}</h2>,
-                    h2: ({ children }) => <h2>{children}</h2>,
-                    h3: ({ children }) => <h3>{children}</h3>,
-                    p: ({ children }) => <p>{children}</p>,
-                    ul: ({ children }) => <ul className="list-disc pl-6">{children}</ul>,
-                    ol: ({ children }) => <ol className="list-decimal pl-6">{children}</ol>,
-                    li: ({ children }) => <li>{children}</li>,
-                    a: ({ href, children }) => {
-                      if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
-                        return <span className="font-semibold">{children}</span>;
-                      }
-                      return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
-                    },
-                    blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-                    code: ({ children }) => <code className="bg-surface-dark px-2 py-1 rounded text-sm font-mono">{children}</code>,
-                    pre: ({ children }) => <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-6">{children}</pre>,
-                    img: () => null,
-                  }}
-                >
-                  {cleanedContent}
-                </ReactMarkdown>
-              </div>
+            <article className="lg:col-span-8 xl:col-span-9">
+              <div className="max-w-3xl">
+                <div className="
+                  prose prose-lg max-w-none
+                  prose-headings:text-foreground prose-headings:font-bold
+                  prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-12 prose-h2:mb-6
+                  prose-h3:text-xl prose-h3:md:text-2xl prose-h3:mt-10 prose-h3:mb-4
+                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:md:leading-[1.9] prose-p:mb-6
+                  prose-a:text-cta prose-a:no-underline hover:prose-a:underline
+                  prose-strong:text-foreground prose-strong:font-semibold
+                  prose-blockquote:border-l-4 prose-blockquote:border-cta prose-blockquote:pl-6 prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:my-8
+                  prose-ul:text-muted-foreground prose-ul:my-6 prose-ul:text-base prose-ul:md:text-lg
+                  prose-ol:text-muted-foreground prose-ol:my-6 prose-ol:text-base prose-ol:md:text-lg
+                  prose-li:text-muted-foreground prose-li:mb-3 prose-li:leading-relaxed
+                ">
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      h1: ({ children }) => <h2>{children}</h2>,
+                      h2: ({ children }) => <h2>{children}</h2>,
+                      h3: ({ children }) => <h3>{children}</h3>,
+                      p: ({ children }) => <p>{children}</p>,
+                      ul: ({ children }) => <ul className="list-disc pl-6 space-y-2">{children}</ul>,
+                      ol: ({ children }) => <ol className="list-decimal pl-6 space-y-2">{children}</ol>,
+                      li: ({ children }) => <li>{children}</li>,
+                      a: ({ href, children }) => {
+                        if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
+                          return <span className="font-semibold">{children}</span>;
+                        }
+                        return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+                      },
+                      blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+                      code: ({ children }) => <code className="bg-surface-dark px-2 py-1 rounded text-sm font-mono">{children}</code>,
+                      pre: ({ children }) => <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-6">{children}</pre>,
+                      img: () => null,
+                    }}
+                  >
+                    {cleanedContent}
+                  </ReactMarkdown>
+                </div>
 
-              {/* CTA Box */}
-              <div className="mt-16 p-8 bg-cta/10 rounded-xl border border-cta/20 text-center">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Ready to Scale Your Agency?</h3>
-                <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-                  Let us handle your white-label fulfillment while you focus on growing your business.
-                </p>
-                <Link to="/#contact">
-                  <Button size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground font-medium">
-                    Get Started Today
-                  </Button>
-                </Link>
-              </div>
+                {/* Tags Section */}
+                <div className="mt-12 pt-8 border-t border-border">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="text-sm font-medium text-muted-foreground">Tags:</span>
+                    {blog.category && (
+                      <Link 
+                        to={`/blog?category=${blog.category}`}
+                        className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
+                      >
+                        {categoryLabels[blog.category] || blog.category}
+                      </Link>
+                    )}
+                    <Link 
+                      to="/blog?category=agency-growth"
+                      className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
+                    >
+                      Agency Growth
+                    </Link>
+                    <Link 
+                      to="/blog"
+                      className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
+                    >
+                      Marketing
+                    </Link>
+                  </div>
+                </div>
 
-              {/* You May Also Like */}
-              <YouMayAlsoLike currentSlug={blog.slug} currentCategory={blog.category} />
+                {/* CTA Box */}
+                <div className="mt-12 p-8 md:p-10 bg-cta/10 rounded-xl border border-cta/20 text-center">
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">Ready to Scale Your Agency?</h3>
+                  <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+                    Let us handle your white-label fulfillment while you focus on growing your business.
+                  </p>
+                  <Link to="/#contact">
+                    <Button size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground font-medium">
+                      Get Started Today
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* You May Also Like */}
+                <YouMayAlsoLike currentSlug={blog.slug} currentCategory={blog.category} />
+              </div>
             </article>
 
             {/* Sidebar */}
-            <aside className="lg:col-span-4">
+            <aside className="lg:col-span-4 xl:col-span-3">
               <div className="lg:sticky lg:top-24">
                 <BlogSidebar />
               </div>
