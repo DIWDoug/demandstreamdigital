@@ -10,10 +10,10 @@ interface ServiceHubAnchorNavProps {
 const defaultItems: AnchorItem[] = [
   { label: 'Pattern', href: '#problem' },
   { label: 'Solution', href: '#outcomes' },
-  { label: 'Roadmap', href: '#roadmap' },
+  { label: 'Our Process', href: '#roadmap' },
   { label: 'Levers', href: '#building-blocks' },
   { label: 'Fit', href: '#qualification' },
-  { label: 'Testimonial', href: '#testimonials' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Next Steps', href: '#contact' },
 ];
