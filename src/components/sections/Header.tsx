@@ -479,9 +479,9 @@ const Header = () => {
               {isToolsMenuOpen && (
                 <div className="pl-4 pb-2 space-y-1">
                   {partnerToolsLinks.map((tool, index) => (
-                    <Link
+                    <a
                       key={index}
-                      to={tool.href}
+                      href={tool.href}
                       className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
                       onClick={() => {
                         setIsToolsMenuOpen(false);
@@ -489,7 +489,7 @@ const Header = () => {
                       }}
                     >
                       {tool.label}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}
