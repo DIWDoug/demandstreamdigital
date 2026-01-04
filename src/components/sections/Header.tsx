@@ -260,8 +260,17 @@ const Header = () => {
                 )
               ))}
 
+              {/* Partner Tools Backdrop */}
+              {isToolsMenuOpen && (
+                <div 
+                  className="fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-40 animate-fade-in"
+                  onClick={() => setIsToolsMenuOpen(false)}
+                  aria-hidden="true"
+                />
+              )}
+
               {/* Partner Tools Dropdown */}
-              <div className="relative" ref={toolsMenuRef}>
+              <div className="relative z-50" ref={toolsMenuRef}>
                 <Link
                   to="/partner-tools"
                   onMouseEnter={() => setIsToolsMenuOpen(true)}
