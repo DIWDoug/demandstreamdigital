@@ -43,7 +43,19 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Helper to handle anchor links - either scroll on home page or navigate to home + anchor
+  // Escape key to close menus
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMegaMenuOpen(false);
+        setIsMobileMenuOpen(false);
+        setIsToolsMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
   const getAnchorHref = (anchor: string) => {
     return isHomePage ? anchor : `/${anchor}`;
   };
