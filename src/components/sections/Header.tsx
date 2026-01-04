@@ -417,8 +417,16 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border bg-surface-dark">
-            <nav className="flex flex-col gap-1">
+          <div className="md:hidden py-6 border-t border-border bg-surface-dark relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
+            </button>
+            <nav className="flex flex-col gap-1 pt-8">
               {/* Services Accordion */}
               <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
                 <a
