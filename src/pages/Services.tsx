@@ -59,9 +59,11 @@ const Services = () => {
               { label: 'The Reality', href: '#pain-points' },
               { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
               { label: 'Our Framework', href: '#framework' },
-              { label: 'Phases', href: '#onboarding' },
+              { label: 'Testimonials', href: '#testimonials' },
+              { label: 'Our Process', href: '#onboarding' },
               { label: 'Expertise', href: '#expertise' },
               { label: 'FAQ', href: '#faq' },
+              { label: 'Next Steps', href: '#contact' },
             ].map((item) => (
               <a
                 key={item.href}
