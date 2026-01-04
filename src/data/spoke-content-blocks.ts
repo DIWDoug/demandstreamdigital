@@ -2,9 +2,9 @@
 // Each spoke has customized content organized by category
 
 // On-Page Optimization illustrations
-import onPageTitlesImg from "@/assets/spoke/on-page-titles.png";
-import onPageStructureImg from "@/assets/spoke/on-page-structure.png";
-import onPageLinksImg from "@/assets/spoke/on-page-links.png";
+import onPageTitlesImg from "@/assets/spoke/on-page-titles-new.jpg";
+import onPageStructureImg from "@/assets/spoke/on-page-structure-new.jpg";
+import onPageLinksImg from "@/assets/spoke/on-page-links-new.jpg";
 
 // Technical SEO illustrations
 import technicalStructureImg from "@/assets/spoke/technical-structure-new.jpg";
@@ -22,19 +22,19 @@ import dataAggregatorsImg from "@/assets/spoke/data-aggregators.jpg";
 import citationCorrectionImg from "@/assets/spoke/citation-correction.jpg";
 
 // Content Development illustrations
-import contentLocationImg from "@/assets/spoke/content-location.png";
-import contentBlogImg from "@/assets/spoke/content-blog.png";
-import contentRefreshImg from "@/assets/spoke/content-refresh.png";
+import contentLocationImg from "@/assets/spoke/content-location-new.jpg";
+import contentBlogImg from "@/assets/spoke/content-blog-new.jpg";
+import contentRefreshImg from "@/assets/spoke/content-refresh-new.jpg";
 
 // Link Building illustrations
-import linkLocalImg from "@/assets/spoke/link-local.png";
-import linkAuthorityImg from "@/assets/spoke/link-authority.png";
-import linkHealthImg from "@/assets/spoke/link-health.png";
+import linkLocalImg from "@/assets/spoke/link-local-new.jpg";
+import linkAuthorityImg from "@/assets/spoke/link-authority-new.jpg";
+import linkHealthImg from "@/assets/spoke/link-health-new.jpg";
 
 // Schema Markup illustrations
-import schemaBusinessImg from "@/assets/spoke/schema-business.png";
-import schemaServiceImg from "@/assets/spoke/schema-service.png";
-import schemaRichImg from "@/assets/spoke/schema-rich.png";
+import schemaBusinessImg from "@/assets/spoke/schema-business-new.jpg";
+import schemaServiceImg from "@/assets/spoke/schema-service-new.jpg";
+import schemaRichImg from "@/assets/spoke/schema-rich-new.jpg";
 
 // Review Management illustrations
 import reviewGenerationImg from "@/assets/spoke/review-generation.png";
