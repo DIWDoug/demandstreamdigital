@@ -64,22 +64,23 @@ const BlogPostPage = () => {
       <div className="dark min-h-screen bg-background text-foreground">
         <Header />
         <main className="pt-24 pb-16">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-              <div className="lg:col-span-2">
-                <Skeleton className="h-8 w-32 mb-8" />
-                <Skeleton className="h-12 w-3/4 mb-4" />
-                <Skeleton className="h-6 w-1/4 mb-8" />
-                <Skeleton className="h-64 w-full mb-8" />
-                <div className="space-y-4">
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-3/4" />
-                </div>
-              </div>
-              <div className="space-y-6">
-                <Skeleton className="h-40 w-full" />
+          <div className="container mx-auto px-4 max-w-6xl">
+            {/* Hero skeleton */}
+            <Skeleton className="h-8 w-32 mb-4" />
+            <Skeleton className="h-14 w-3/4 mb-4" />
+            <Skeleton className="h-6 w-1/3 mb-8" />
+            <Skeleton className="h-[400px] w-full mb-12 rounded-xl" />
+            
+            {/* Content with sidebar skeleton */}
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+              <div className="lg:col-span-3 space-y-6">
+                <Skeleton className="h-32 w-full" />
                 <Skeleton className="h-64 w-full" />
+              </div>
+              <div className="lg:col-span-9 space-y-4">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-3/4" />
               </div>
             </div>
           </div>
@@ -96,7 +97,7 @@ const BlogPostPage = () => {
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
-            <p className="text-muted-foreground mb-8">The blog post you're looking for doesn't exist.</p>
+            <p className="text-muted-foreground mb-8">The blog post you are looking for does not exist.</p>
             <Link to="/blog">
               <Button variant="outline">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -184,64 +185,68 @@ const BlogPostPage = () => {
       <Header />
       
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Main Content */}
-            <article className="lg:col-span-2">
-              {/* Back Link */}
-              <Link to="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Blog
-              </Link>
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Back Link */}
+          <Link to="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-6">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Blog
+          </Link>
 
-              {/* Category Tag */}
-              {blog.category && (
-                <Link 
-                  to={`/blog?category=${blog.category}`}
-                  className="inline-block text-xs font-medium text-cta uppercase tracking-wide mb-4 hover:text-cta/80 transition-colors"
-                >
-                  {categoryLabels[blog.category] || blog.category}
-                </Link>
-              )}
+          {/* Category Tag */}
+          {blog.category && (
+            <Link 
+              to={`/blog?category=${blog.category}`}
+              className="block text-xs font-semibold text-cta uppercase tracking-wider mb-3 hover:text-cta/80 transition-colors"
+            >
+              {categoryLabels[blog.category] || blog.category}
+            </Link>
+          )}
 
-              {/* Header */}
-              <header className="mb-8">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                  {blog.title}
-                </h1>
-                
-                {/* Author Byline */}
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                  <AuthorByline author={author} size="md" />
-                  <span className="hidden sm:block text-muted-foreground/50">•</span>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(blog.published_at).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
-                  </div>
-                </div>
-              </header>
+          {/* Title - Full Width Above Hero */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight max-w-4xl">
+            {blog.title}
+          </h1>
+          
+          {/* Author Byline - Full Width */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+            <AuthorByline author={author} size="md" />
+            <span className="hidden sm:block text-muted-foreground/50">•</span>
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Calendar className="w-4 h-4" />
+              {new Date(blog.published_at).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </div>
+          </div>
 
-              {/* Featured Image */}
-              {blog.featured_image && (
-                <div className="relative mb-8 rounded-lg overflow-hidden">
-                  <img 
-                    src={blog.featured_image} 
-                    alt={blog.title}
-                    className="w-full h-auto max-h-[500px] object-cover"
-                  />
-                </div>
-              )}
+          {/* Hero Image - Full Width */}
+          {blog.featured_image && (
+            <div className="relative mb-12 rounded-xl overflow-hidden">
+              <img 
+                src={blog.featured_image} 
+                alt={blog.title}
+                className="w-full h-auto max-h-[500px] object-cover"
+              />
+            </div>
+          )}
 
+          {/* Content Grid: Sidebar LEFT, Article RIGHT */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+            {/* Sidebar - Left */}
+            <aside className="lg:col-span-3 order-2 lg:order-1">
+              <BlogSidebar />
+            </aside>
+
+            {/* Main Article Content - Right */}
+            <article className="lg:col-span-9 order-1 lg:order-2">
               {/* Content */}
               <div className="prose prose-invert prose-lg max-w-none">
                 <ReactMarkdown 
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h1: ({ children }) => <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>,
+                    h1: ({ children }) => <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>,
                     h2: ({ children }) => <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>,
                     h3: ({ children }) => <h3 className="text-xl font-semibold mt-6 mb-3">{children}</h3>,
                     p: ({ children }) => <p className="text-muted-foreground leading-relaxed mb-4">{children}</p>,
@@ -268,23 +273,9 @@ const BlogPostPage = () => {
                     pre: ({ children }) => (
                       <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-4">{children}</pre>
                     ),
-                    img: ({ src, alt }) => {
-                      // Skip placeholder SVG images
-                      if (src?.includes('data:image/svg+xml')) {
-                        return null;
-                      }
-                      // Skip base64 removed images
-                      if (src?.includes('Base64-Image-Removed')) {
-                        return null;
-                      }
-                      return (
-                        <img 
-                          src={src} 
-                          alt={alt || ''} 
-                          className="rounded-lg my-6 w-full"
-                          loading="lazy"
-                        />
-                      );
+                    img: () => {
+                      // Skip ALL images in markdown content - hero is the only image
+                      return null;
                     },
                   }}
                 >
@@ -308,11 +299,6 @@ const BlogPostPage = () => {
               {/* You May Also Like */}
               <YouMayAlsoLike currentSlug={blog.slug} currentCategory={blog.category} />
             </article>
-
-            {/* Sidebar */}
-            <div className="hidden lg:block">
-              <BlogSidebar />
-            </div>
           </div>
         </div>
       </main>
