@@ -7,18 +7,33 @@ const corsHeaders = {
 };
 
 interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
+  name?: string;
+  email?: string;
+  phone?: string;
   phoneCountryCode?: string;
-  revenue: string;
+  revenue?: string;
   website?: string;
+  servicesInterested?: string[];
+  message?: string;
   formType?: string;
 }
 
 // Rate limiting configuration
 const RATE_LIMIT_WINDOW_MINUTES = 15;
 const MAX_SUBMISSIONS_PER_WINDOW = 5;
+
+const isValidEmail = (email: string) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+const isValidWebsite = (website: string) => {
+  // Allow domains without protocol (e.g. agency.com)
+  if (!website) return false;
+  if (website.length > 2048) return false;
+  if (/\s/.test(website)) return false;
+  return true;
+};
 
 serve(async (req) => {
   // Handle CORS preflight
@@ -27,55 +42,127 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, phone, phoneCountryCode, revenue, website, formType }: ContactFormData = await req.json();
+    const {
+      name,
+      email,
+      phone,
+      phoneCountryCode,
+      revenue,
+      website,
+      servicesInterested,
+      message,
+      formType,
+    }: ContactFormData = await req.json();
 
     // Get client IP for rate limiting
-    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
-                     req.headers.get("cf-connecting-ip") || 
-                     "unknown";
+    const clientIP =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("cf-connecting-ip") ||
+      "unknown";
 
-    // Map formType to human-readable lead_type for Zapier
+    const isStep1 = !!formType && formType.endsWith("_step1");
+    const isWebsiteOnlyStep1 = formType === "service_hub_hero_step1";
+
+    // Map formType to human-readable lead_type for automations
     const leadTypeMap: Record<string, string> = {
       hero_homepage: "Homepage Hero Form",
+      hero_homepage_step1: "Homepage Hero (Step 1 - Contact + Website)",
+
       service_hub_hero: "Service Page Hero Form",
       service_hub_hero_step1: "Service Page Hero (Step 1 - Website Only)",
+
       fulfillment_steps: "Fulfillment Steps Form",
+      fulfillment_steps_step1: "Fulfillment Steps (Step 1 - Contact + Website)",
+
+      blog_contact_form: "Blog Sidebar Form",
+      blog_contact_form_step1: "Blog Sidebar (Step 1 - Contact + Website)",
+
       contact_page: "Contact Page Form",
+      contact_page_step1: "Contact Page (Step 1 - Contact + Website)",
+
       calculator: "Calculator Form",
+      calculator_step1: "Calculator (Step 1 - Contact + Website)",
     };
+
     const lead_type = leadTypeMap[formType || ""] || "Contact Form";
 
-    // Step 1 partial leads only require website - skip validation and allow partial data
-    const isPartialLead = formType === "service_hub_hero_step1";
-    
-    // Validate required fields (skip for partial leads)
-    if (!isPartialLead && (!name || !email || !revenue)) {
-      return new Response(
-        JSON.stringify({ error: "Name, email, and revenue are required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    // Validate email format (skip for partial leads with no email)
-    if (!isPartialLead && email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
+    // Validate required fields
+    if (isWebsiteOnlyStep1) {
+      if (!website || !isValidWebsite(website)) {
+        return new Response(JSON.stringify({ error: "Website is required" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+    } else if (isStep1) {
+      if (!name?.trim() || !email?.trim() || !website?.trim()) {
         return new Response(
-          JSON.stringify({ error: "Invalid email format" }),
-          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          JSON.stringify({ error: "Name, email, and website are required" }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          }
         );
+      }
+
+      if (!isValidEmail(email)) {
+        return new Response(JSON.stringify({ error: "Invalid email format" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      if (!isValidWebsite(website)) {
+        return new Response(JSON.stringify({ error: "Invalid website" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+    } else {
+      if (!name?.trim() || !email?.trim() || !phone?.trim() || !revenue?.trim()) {
+        return new Response(
+          JSON.stringify({ error: "Name, email, phone, and revenue are required" }),
+          {
+            status: 400,
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          }
+        );
+      }
+
+      if (!isValidEmail(email)) {
+        return new Response(JSON.stringify({ error: "Invalid email format" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      if (website && !isValidWebsite(website)) {
+        return new Response(JSON.stringify({ error: "Invalid website" }), {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
       }
     }
 
-    // Create Supabase client
+    // Validate servicesInterested payload shape (optional)
+    const sanitizedServicesInterested = Array.isArray(servicesInterested)
+      ? servicesInterested
+          .filter((s) => typeof s === "string")
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0)
+          .slice(0, 20)
+      : undefined;
+
+    // Create database client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Rate limiting check - count recent submissions from same IP or email
-    const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MINUTES * 60 * 1000).toISOString();
-    
-    // Check submissions by email (if provided) to prevent email-based spam
+    // Rate limiting check - count recent submissions from same email (preferred)
+    const windowStart = new Date(
+      Date.now() - RATE_LIMIT_WINDOW_MINUTES * 60 * 1000
+    ).toISOString();
+
     let recentSubmissions = 0;
     if (email) {
       const { count: emailCount } = await supabase
@@ -83,11 +170,13 @@ serve(async (req) => {
         .select("*", { count: "exact", head: true })
         .eq("email", email)
         .gte("created_at", windowStart);
-      
+
       recentSubmissions = emailCount || 0;
     }
 
-    console.log(`Rate limit check: ${recentSubmissions} submissions from ${email || clientIP} in last ${RATE_LIMIT_WINDOW_MINUTES} minutes`);
+    console.log(
+      `Rate limit check: ${recentSubmissions} submissions from ${email || clientIP} in last ${RATE_LIMIT_WINDOW_MINUTES} minutes`
+    );
 
     if (recentSubmissions >= MAX_SUBMISSIONS_PER_WINDOW) {
       console.log(`Rate limit exceeded for ${email || clientIP}`);
@@ -97,22 +186,20 @@ serve(async (req) => {
       );
     }
 
-    console.log("Saving lead to database:", { name, email, phone, revenue, website, formType });
-
+    // Save lead to database when email is present (supports step 1 + step 2)
     let data: any = { id: null, created_at: new Date().toISOString() };
 
-    // Only insert to database for full leads (partial leads skip DB, just go to Zapier)
-    if (!isPartialLead) {
+    if (email) {
       const { data: insertData, error } = await supabase
         .from("leads")
         .insert({
-          name,
+          name: name ?? null,
           email,
-          phone,
+          phone: phone ?? null,
           phone_country_code: phoneCountryCode || "+1",
-          revenue,
-          website,
-          source: "contact_form",
+          revenue: revenue ?? null,
+          website: website ?? null,
+          source: isStep1 ? "contact_form_step1" : "contact_form",
         })
         .select()
         .single();
@@ -125,10 +212,11 @@ serve(async (req) => {
       data = insertData;
       console.log("Lead saved successfully:", data);
     } else {
-      console.log("Partial lead (step 1) - skipping DB insert, forwarding to Zapier only");
+      // Website-only step 1 (legacy)
+      console.log("Website-only partial lead - skipping DB insert");
     }
 
-    // Forward to Zapier webhook
+    // Forward to Zapier webhook (used to reach CRM)
     const zapierWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL");
     if (zapierWebhookUrl) {
       try {
@@ -145,10 +233,13 @@ serve(async (req) => {
             phoneCountryCode: phoneCountryCode || "+1",
             revenue,
             website,
-            source: "contact_form",
+            servicesInterested: sanitizedServicesInterested,
+            message: typeof message === "string" ? message.slice(0, 5000) : undefined,
+            source: isStep1 ? "contact_form_step1" : "contact_form",
             created_at: data.created_at,
           }),
         });
+
         console.log("Zapier webhook response:", zapierResponse.status);
       } catch (zapierError) {
         console.error("Zapier webhook error:", zapierError);
@@ -156,11 +247,10 @@ serve(async (req) => {
       }
     }
 
-    return new Response(
-      JSON.stringify({ success: true, data }),
-      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
-
+    return new Response(JSON.stringify({ success: true, data }), {
+      status: 200,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   } catch (error: any) {
     console.error("Error in submit-to-ghl function:", error);
     return new Response(
