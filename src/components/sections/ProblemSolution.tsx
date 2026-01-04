@@ -48,7 +48,7 @@ const ProblemSolution = () => {
           
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Trust. Clarity. Execution.
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
