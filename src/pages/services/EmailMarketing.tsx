@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { emailMarketingConfig } from "@/data/service-pages/email-marketing";
 import { getHubBySlug } from "@/data/services";
+import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -34,12 +35,21 @@ const EmailMarketing = () => {
     { label: hub.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label Email Marketing Services",
+    description: emailMarketingConfig.metaDescription,
+    url: emailMarketingConfig.canonicalUrl,
+    serviceType: "Email Marketing Service",
+    faqGroups: emailMarketingConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{emailMarketingConfig.metaTitle}</title>
         <meta name="description" content={emailMarketingConfig.metaDescription} />
         <link rel="canonical" href={emailMarketingConfig.canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />

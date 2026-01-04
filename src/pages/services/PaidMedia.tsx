@@ -10,6 +10,7 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import { paidMediaConfig } from "@/data/service-pages/paid-media";
 import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
+import { getServiceHubSchema } from "@/lib/schema";
 
 // Generic section components
 import { 
@@ -37,6 +38,14 @@ const PaidMedia = () => {
     { label: paidMediaConfig.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label Paid Media & PPC Management",
+    description: paidMediaConfig.metaDescription,
+    url: paidMediaConfig.canonicalUrl,
+    serviceType: "PPC Advertising Service",
+    faqGroups: paidMediaConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -44,6 +53,7 @@ const PaidMedia = () => {
         <meta name="description" content={paidMediaConfig.metaDescription} />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
         {paidMediaConfig.keywords && <meta name="keywords" content={paidMediaConfig.keywords} />}
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />

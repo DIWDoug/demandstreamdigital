@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { reportingConfig } from "@/data/service-pages/reporting";
 import { getHubBySlug } from "@/data/services";
+import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -34,12 +35,21 @@ const Reporting = () => {
     { label: hub.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label Reporting & Analytics Dashboards",
+    description: reportingConfig.metaDescription,
+    url: reportingConfig.canonicalUrl,
+    serviceType: "Marketing Analytics Service",
+    faqGroups: reportingConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{reportingConfig.metaTitle}</title>
         <meta name="description" content={reportingConfig.metaDescription} />
         <link rel="canonical" href={reportingConfig.canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />

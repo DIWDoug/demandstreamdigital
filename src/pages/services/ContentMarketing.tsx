@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { contentMarketingConfig } from "@/data/service-pages/content-marketing";
 import { getHubBySlug } from "@/data/services";
+import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -34,12 +35,21 @@ const ContentMarketing = () => {
     { label: hub.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label Content Marketing Services",
+    description: contentMarketingConfig.metaDescription,
+    url: contentMarketingConfig.canonicalUrl,
+    serviceType: "Content Marketing Service",
+    faqGroups: contentMarketingConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{contentMarketingConfig.metaTitle}</title>
         <meta name="description" content={contentMarketingConfig.metaDescription} />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />

@@ -311,3 +311,42 @@ export const getAboutSchema = () => ({
     getAboutPageSchema()
   ]
 });
+
+// Service hub page schema generator (includes FAQ)
+export const getServiceHubSchema = (config: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType?: string;
+  faqGroups?: { category: string; items: { question: string; answer: string }[] }[];
+}) => {
+  const schema: any = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getOrganizationSchema(),
+      getServiceSchema(config),
+      {
+        "@type": "WebPage",
+        "@id": `${config.url}#webpage`,
+        "url": config.url,
+        "name": config.name,
+        "description": config.description,
+        "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+        "about": { "@id": "https://dialedinweb.com/#organization" }
+      }
+    ]
+  };
+
+  // Add FAQ schema if FAQ groups exist
+  if (config.faqGroups && config.faqGroups.length > 0) {
+    const allFaqs = config.faqGroups.flatMap(group => 
+      group.items.map(item => ({
+        question: item.question,
+        answer: item.answer
+      }))
+    );
+    schema["@graph"].push(getFAQPageSchema(allFaqs));
+  }
+
+  return schema;
+};
