@@ -483,9 +483,12 @@ const Header = () => {
                       key={index}
                       href={tool.href}
                       className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
-                      onClick={() => {
+                      onClick={(e) => {
+                        // Allow the default navigation to proceed
                         setIsToolsMenuOpen(false);
                         setIsMobileMenuOpen(false);
+                        // Force navigation for mobile browsers
+                        window.location.href = tool.href;
                       }}
                     >
                       {tool.label}
