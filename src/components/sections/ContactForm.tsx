@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import PhoneInput from "@/components/ui/phone-input";
+import { serviceInterestOptions } from "@/data/servicesInterested";
 
 const ContactForm = () => {
   const { toast } = useToast();

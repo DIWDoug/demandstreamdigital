@@ -33,10 +33,10 @@ export function cleanBlogContent(content: string): string {
     
     // WPForms remnants
     /\[wpforms id="[^"]+"\]/gi,
-    
-    // Remove ALL images from content (we only want hero image)
-    /!\[[^\]]*\]\([^)]+\)/gi,
-    /\*\*!\[[^\]]*\]\([^)]+\)\*\*/gi,
+
+    // Remove scraped/remote images (keep our inline key-based images like (infographic-...))
+    /!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)/gi,
+    /\*\*!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)\*\*/gi,
     
     // Old site navigation remnants
     /"\*" indicates required fields[\s\S]*?How can we help you\?/gi,
