@@ -351,9 +351,18 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mega Menu Backdrop */}
+        {isMegaMenuOpen && (
+          <div 
+            className="hidden md:block fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-40 animate-fade-in"
+            onClick={() => setIsMegaMenuOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+
         {/* Mega Menu Dropdown */}
         {isMegaMenuOpen && (
-          <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50 animate-fade-in origin-top">
+          <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50 animate-fade-in origin-top z-50">
             {/* Close Button */}
             <button
               onClick={() => setIsMegaMenuOpen(false)}
