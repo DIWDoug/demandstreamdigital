@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
@@ -52,23 +53,32 @@ const EmailMarketing = () => {
         />
       </div>
       
+      {/* STICKY ANCHOR NAV */}
+      <ServiceHubAnchorNav />
+      
       {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
       {/* 3. PROBLEM */}
-      <ServiceProblemSection config={emailMarketingConfig.problem} />
+      <div id="problem" className="scroll-mt-32">
+        <ServiceProblemSection config={emailMarketingConfig.problem} />
+      </div>
       
       <SectionDivider />
       
       {/* 4. OUTCOMES */}
-      <ServiceOutcomesSection config={emailMarketingConfig.outcomes} />
+      <div id="outcomes" className="scroll-mt-32">
+        <ServiceOutcomesSection config={emailMarketingConfig.outcomes} />
+      </div>
       
       <SectionDivider />
       
       {/* 5. ROADMAP */}
-      <ServiceRoadmapSection config={emailMarketingConfig.roadmap} />
+      <div id="roadmap" className="scroll-mt-32">
+        <ServiceRoadmapSection config={emailMarketingConfig.roadmap} />
+      </div>
       
       {/* Mid-Page CTA */}
       <MidPageCTA />
@@ -76,20 +86,28 @@ const EmailMarketing = () => {
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={emailMarketingConfig.buildingBlocks} hubSlug="email-marketing" />
+      <div id="building-blocks" className="scroll-mt-32">
+        <ServiceBuildingBlocksSection config={emailMarketingConfig.buildingBlocks} hubSlug="email-marketing" />
+      </div>
       
       <SectionDivider />
       
       {/* 7. QUALIFICATION */}
-      <ServiceFitQualifierSection config={emailMarketingConfig.qualification} />
+      <div id="qualification" className="scroll-mt-32">
+        <ServiceFitQualifierSection config={emailMarketingConfig.qualification} />
+      </div>
       
       {/* 8. TESTIMONIALS */}
-      <Testimonials />
+      <div id="testimonials" className="scroll-mt-32">
+        <Testimonials />
+      </div>
       
       <SectionDivider />
       
       {/* 9. FAQ */}
-      <ServiceGroupedFAQ config={emailMarketingConfig.faq} />
+      <div id="faq" className="scroll-mt-32">
+        <ServiceGroupedFAQ config={emailMarketingConfig.faq} />
+      </div>
       
       <SectionDivider />
       
@@ -97,7 +115,9 @@ const EmailMarketing = () => {
       <ServiceEcosystemSection config={emailMarketingConfig.ecosystem} />
       
       {/* 11. CONTACT */}
-      <ContactForm />
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
       
       <Footer />
     </div>
