@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
 
 interface Blog {
   id: string;
@@ -102,10 +103,10 @@ const YouMayAlsoLike = ({ currentSlug, currentCategory }: YouMayAlsoLikeProps) =
             className="group block"
           >
             {/* Image */}
-            {post.featured_image ? (
+            {getBlogFeaturedImage(post.featured_image) ? (
               <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-surface-dark">
                 <img 
-                  src={post.featured_image} 
+                  src={getBlogFeaturedImage(post.featured_image)!} 
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
