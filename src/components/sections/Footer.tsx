@@ -23,12 +23,12 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       title: "GBP SEO",
       hubSlug: "google-maps",
       items: [
-        { label: "GBP Optimization", slug: "gbp-optimization" },
-        { label: "Review Management", slug: "review-management" },
-        { label: "Citation Building", slug: "citation-building" },
-        { label: "Photo Optimization", slug: "photo-optimization" },
-        { label: "Q&A Management", slug: "qa-management" },
-        { label: "Post Scheduling", slug: "post-scheduling" }
+        { label: "GBP Profile Optimization", slug: "gbp-optimization" },
+        { label: "Review Generation & Response", slug: "review-management" },
+        { label: "Citation Building & Cleanup", slug: "citation-building" },
+        { label: "Photo & Media Management", slug: "photo-optimization" },
+        { label: "Local Pack Strategy", slug: "qa-management" },
+        { label: "GBP Posting & Content", slug: "post-scheduling" }
       ]
     },
     {
