@@ -44,7 +44,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
             What Agency Partners <span className="text-accent-blue">Say</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">

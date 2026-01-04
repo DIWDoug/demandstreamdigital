@@ -1,4 +1,4 @@
-import { Map, MapPin, Zap, Users, Target, Star, MessageSquare, Globe, Layers, TrendingUp, Search, Sparkles, Mail, BarChart3, Share2 } from "lucide-react";
+import { Map, MapPin, Zap, Users, Target, Star, MessageSquare, Globe, Layers, TrendingUp, Search, Sparkles, Mail, BarChart3, Share2, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const googleMapsConfig: ServicePageConfig = {
@@ -331,7 +331,7 @@ export const googleMapsConfig: ServicePageConfig = {
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations that build trust.", href: "/white-label-inbound-marketing-services/local-authority-building" },
+      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-inbound-marketing-services/content-marketing" },
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards your clients love.", href: "/white-label-inbound-marketing-services/reporting" }
     ],
     ctaText: "Explore All Services",

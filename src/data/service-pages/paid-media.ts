@@ -1,4 +1,4 @@
-import { MousePointerClick, Zap, Target, TrendingUp, DollarSign, BarChart3, FileText, Settings, Search, Map, Sparkles, Star, Mail, Globe, Share2, Layers } from "lucide-react";
+import { MousePointerClick, Zap, Target, TrendingUp, DollarSign, BarChart3, FileText, Settings, Search, Map, Sparkles, Star, Mail, Globe, Share2, Layers, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const paidMediaConfig: ServicePageConfig = {
@@ -297,7 +297,7 @@ export const paidMediaConfig: ServicePageConfig = {
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations that build trust.", href: "/white-label-inbound-marketing-services/local-authority-building" },
+      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-inbound-marketing-services/content-marketing" },
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" }
     ],
     ctaText: "Explore All Services",

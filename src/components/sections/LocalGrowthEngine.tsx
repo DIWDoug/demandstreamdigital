@@ -171,7 +171,7 @@ const LocalGrowthEngine = () => {
               {/* Right: Content */}
               <div>
                 <p className="text-gray-500 text-base mb-1">Discover How To</p>
-                <h2 className="text-gray-900 mb-3" style={{ fontSize: "clamp(1.75rem, 4vw, 2.75rem)" }}>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
                   Scale Your Agency<br />
                   Without the Chaos
                 </h2>

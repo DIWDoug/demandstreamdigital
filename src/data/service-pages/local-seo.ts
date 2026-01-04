@@ -1,4 +1,4 @@
-import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award } from "lucide-react";
+import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const localSEOConfig: ServicePageConfig = {
@@ -307,11 +307,11 @@ export const localSEOConfig: ServicePageConfig = {
         href: "/white-label-inbound-marketing-services/email-marketing"
       },
       {
-        icon: Award,
-        id: "authority",
-        title: "Authority Building",
-        description: "Build the off-page signals that make rankings stick.",
-        href: "/white-label-inbound-marketing-services/local-authority-building"
+        icon: PenTool,
+        id: "content",
+        title: "Content Development",
+        description: "Strategic content that ranks and converts.",
+        href: "/white-label-inbound-marketing-services/content-marketing"
       },
       {
         icon: BarChart3,
