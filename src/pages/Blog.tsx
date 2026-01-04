@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, ArrowRight, BookOpen, TrendingUp, Users } from "lucide-react";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
 
 interface Blog {
   id: string;
@@ -122,10 +123,10 @@ const Blog = () => {
                 {featuredPost && (
                   <Link to={`/blog/${featuredPost.slug}`} className="block group">
                     <div className="grid lg:grid-cols-2 gap-8 items-center bg-background rounded-2xl border border-border overflow-hidden hover:border-cta/30 transition-all duration-300">
-                      {featuredPost.featured_image ? (
+                      {getBlogFeaturedImage(featuredPost.featured_image) ? (
                         <div className="relative h-64 lg:h-80 overflow-hidden">
                           <img 
-                            src={featuredPost.featured_image} 
+                            src={getBlogFeaturedImage(featuredPost.featured_image)!} 
                             alt={featuredPost.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
@@ -173,10 +174,10 @@ const Blog = () => {
                       {remainingPosts.map((blog) => (
                         <Link key={blog.id} to={`/blog/${blog.slug}`}>
                           <Card className="bg-background border-border hover:border-cta/30 transition-all duration-300 h-full group">
-                            {blog.featured_image ? (
+                            {getBlogFeaturedImage(blog.featured_image) ? (
                               <div className="relative h-48 overflow-hidden rounded-t-lg">
                                 <img 
-                                  src={blog.featured_image} 
+                                  src={getBlogFeaturedImage(blog.featured_image)!} 
                                   alt={blog.title}
                                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
