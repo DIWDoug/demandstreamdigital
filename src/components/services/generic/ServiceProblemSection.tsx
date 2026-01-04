@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, Phone } from "lucide-react";
 import type { PainPoint } from "@/types/servicePage";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 interface ProblemConfig {
   eyebrow: string;
@@ -27,7 +27,7 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance">
               {config.headline}
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -84,20 +84,32 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             </p>
           )}
 
-          {/* Transition Line + CTA */}
-          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-14`}>
+          {/* Transition Line + CTAs */}
+          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-8`}>
             <p className="text-slate-600 text-lg">
               {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
-            >
-              {config.ctaText}
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="/contact" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
+              >
+                Schedule a Discovery Call
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <span className="text-slate-400 text-sm font-medium">or</span>
+              <a 
+                href={PHONE_HREF}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all"
+              >
+                <Phone className="h-4 w-4" />
+                {PHONE_NUMBER}
+              </a>
+            </div>
           </div>
         </div>
       </div>
