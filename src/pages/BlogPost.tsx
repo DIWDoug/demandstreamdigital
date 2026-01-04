@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -8,12 +8,13 @@ import BlogSidebar from "@/components/BlogSidebar";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ArrowLeft, Play, Clock } from "lucide-react";
+import { ArrowLeft, Play, Pause, Clock, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
+import { useToast } from "@/hooks/use-toast";
 
 interface BlogPost {
   id: string;
@@ -49,6 +50,13 @@ const calculateReadingTime = (content: string): number => {
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { toast } = useToast();
+  
+  // Audio state
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioUrlRef = useRef<string | null>(null);
 
   const { data: blog, isLoading, error } = useQuery({
     queryKey: ['blog', slug],
@@ -64,6 +72,91 @@ const BlogPostPage = () => {
     },
     enabled: !!slug,
   });
+
+  // Strip markdown for clean text
+  const stripMarkdown = (text: string): string => {
+    return text
+      .replace(/#{1,6}\s?/g, '') // Remove headers
+      .replace(/\*\*([^*]+)\*\*/g, '$1') // Remove bold
+      .replace(/\*([^*]+)\*/g, '$1') // Remove italic
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Remove links, keep text
+      .replace(/^[-*+]\s+/gm, '') // Remove list markers
+      .replace(/^\d+\.\s+/gm, '') // Remove numbered list markers
+      .replace(/`([^`]+)`/g, '$1') // Remove code
+      .replace(/>\s?/g, '') // Remove blockquotes
+      .replace(/\n{3,}/g, '\n\n') // Normalize whitespace
+      .trim();
+  };
+
+  const handlePlayPause = useCallback(async () => {
+    if (!blog) return;
+
+    // If already playing, pause
+    if (isPlaying && audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+      return;
+    }
+
+    // If we have audio loaded, resume
+    if (audioRef.current && audioUrlRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+      return;
+    }
+
+    // Generate new audio
+    setIsLoadingAudio(true);
+    try {
+      const cleanText = stripMarkdown(cleanBlogContent(blog.content));
+      
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
+          body: JSON.stringify({ text: cleanText }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to generate audio");
+      }
+
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      audioUrlRef.current = audioUrl;
+
+      const audio = new Audio(audioUrl);
+      audioRef.current = audio;
+
+      audio.onended = () => setIsPlaying(false);
+      audio.onerror = () => {
+        setIsPlaying(false);
+        toast({
+          title: "Playback Error",
+          description: "Failed to play audio. Please try again.",
+          variant: "destructive",
+        });
+      };
+
+      await audio.play();
+      setIsPlaying(true);
+    } catch (err) {
+      console.error("TTS error:", err);
+      toast({
+        title: "Audio Generation Failed",
+        description: "Unable to generate audio. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoadingAudio(false);
+    }
+  }, [blog, isPlaying, toast]);
 
   if (isLoading) {
     return (
@@ -237,11 +330,23 @@ const BlogPostPage = () => {
 
           {/* Listen + Reading Time */}
           <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground border-t border-b border-border py-4">
-            <button className="flex items-center gap-2 hover:text-foreground transition-colors">
+            <button 
+              onClick={handlePlayPause}
+              disabled={isLoadingAudio}
+              className="flex items-center gap-2 hover:text-foreground transition-colors disabled:opacity-50"
+            >
               <div className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center">
-                <Play className="w-3 h-3 text-background fill-background ml-0.5" />
+                {isLoadingAudio ? (
+                  <Loader2 className="w-3 h-3 text-background animate-spin" />
+                ) : isPlaying ? (
+                  <Pause className="w-3 h-3 text-background fill-background" />
+                ) : (
+                  <Play className="w-3 h-3 text-background fill-background ml-0.5" />
+                )}
               </div>
-              <span className="font-medium text-foreground">Listen</span>
+              <span className="font-medium text-foreground">
+                {isLoadingAudio ? "Loading..." : isPlaying ? "Pause" : "Listen"}
+              </span>
               <span>• {readingTime} minutes</span>
             </button>
             <div className="flex items-center gap-2">
