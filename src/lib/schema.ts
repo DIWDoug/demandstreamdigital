@@ -1,23 +1,23 @@
 // Centralized Schema.org markup utilities
 // Implements best practices for Organization, LocalBusiness, Service, and page-specific schemas
 
-import { PHONE_NUMBER_RAW } from "./constants";
+import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, BUSINESS_NAME } from "./constants";
 
 // Core business information
 export const BUSINESS_INFO = {
-  name: "Dialed-In Web LLC",
-  legalName: "Dialed-In Web LLC",
+  name: BUSINESS_NAME,
+  legalName: BUSINESS_NAME,
   alternateName: "Dialed-In Web",
   foundingDate: "2011",
   url: "https://dialedinweb.com",
   logo: "https://dialedinweb.com/dialedinweb-logo.png",
-  email: "hello@dialedinweb.com",
+  email: EMAIL,
   telephone: PHONE_NUMBER_RAW,
   address: {
-    streetAddress: "4849 Greenville Ave, Suite 100 #176",
-    addressLocality: "Dallas",
-    addressRegion: "TX",
-    postalCode: "75206",
+    streetAddress: ADDRESS.street,
+    addressLocality: ADDRESS.city,
+    addressRegion: ADDRESS.state,
+    postalCode: ADDRESS.zip,
     addressCountry: "US"
   },
   geo: {

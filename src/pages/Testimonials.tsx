@@ -191,8 +191,8 @@ const Testimonials = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Client & Agency Partner Testimonials | Dialed-In Web</title>
-        <meta name="description" content="See what agency owners and business clients say about partnering with Dialed-In Web for white-label SEO, local search, paid media, and digital marketing fulfillment." />
+        <title>White Label SEO Reviews & Testimonials | Dialed-In Web | Agency Partner Results</title>
+        <meta name="description" content="Read reviews from agency partners using our white label SEO and marketing services. 4.9 stars, 21 reviews. See real results from real agencies." />
         <link rel="canonical" href="https://dialedinweb.com/testimonials" />
         <script type="application/ld+json">{JSON.stringify(testimonialsSchema)}</script>
       </Helmet>

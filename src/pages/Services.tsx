@@ -26,10 +26,9 @@ const Services = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White Label Inbound Marketing Services for Agencies | Dialed-In Web</title>
-        <meta name="description" content="White label inbound marketing fulfillment for agencies. SEO, Google Ads, Meta ads, email marketing, and authority building—executed as a coordinated system, not siloed services." />
+        <title>White Label Inbound Marketing Services for Agencies | Dialed-In Web | SEO, PPC, Email</title>
+        <meta name="description" content="White label SEO, Google Ads, Meta ads, and email marketing for agencies. Scalable fulfillment executed as a system. Start the conversation today." />
         <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
-        <meta name="keywords" content="white label inbound marketing, white label SEO, white label digital marketing, agency fulfillment, white label PPC, white label email marketing" />
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
       </Helmet>
       
