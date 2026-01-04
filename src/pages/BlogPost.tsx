@@ -3,14 +3,16 @@ import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import BlogSidebar from "@/components/BlogSidebar";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
+import { Calendar, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import AuthorByline from "@/components/AuthorByline";
 import { getAuthorById, Author } from "@/data/authors";
+import { cleanBlogContent } from "@/lib/cleanBlogContent";
 
 interface BlogPost {
   id: string;
@@ -25,12 +27,10 @@ interface BlogPost {
 
 // Default author for blog posts - Doug Bryson as founder/primary author
 const getPostAuthor = (slug: string): Author => {
-  // Can be extended to map specific posts to specific authors
-  // For now, all posts are attributed to Doug Bryson
   return getAuthorById("doug-bryson")!;
 };
 
-const BlogPost = () => {
+const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const { data: blog, isLoading, error } = useQuery({
@@ -53,15 +53,23 @@ const BlogPost = () => {
       <div className="dark min-h-screen bg-background text-foreground">
         <Header />
         <main className="pt-24 pb-16">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <Skeleton className="h-8 w-32 mb-8" />
-            <Skeleton className="h-12 w-3/4 mb-4" />
-            <Skeleton className="h-6 w-1/4 mb-8" />
-            <Skeleton className="h-64 w-full mb-8" />
-            <div className="space-y-4">
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-full" />
-              <Skeleton className="h-4 w-3/4" />
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2">
+                <Skeleton className="h-8 w-32 mb-8" />
+                <Skeleton className="h-12 w-3/4 mb-4" />
+                <Skeleton className="h-6 w-1/4 mb-8" />
+                <Skeleton className="h-64 w-full mb-8" />
+                <div className="space-y-4">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-3/4" />
+                </div>
+              </div>
+              <div className="space-y-6">
+                <Skeleton className="h-40 w-full" />
+                <Skeleton className="h-64 w-full" />
+              </div>
             </div>
           </div>
         </main>
@@ -92,6 +100,7 @@ const BlogPost = () => {
   }
 
   const author = getPostAuthor(blog.slug);
+  const cleanedContent = cleanBlogContent(blog.content);
 
   // Article schema with linked Person entity
   const articleSchema = {
@@ -162,100 +171,114 @@ const BlogPost = () => {
       <Header />
       
       <main className="pt-24 pb-16">
-        <article className="container mx-auto px-4 max-w-4xl">
-          {/* Back Link */}
-          <Link to="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Link>
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Main Content */}
+            <article className="lg:col-span-2">
+              {/* Back Link */}
+              <Link to="/blog" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Blog
+              </Link>
 
-          {/* Header */}
-          <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              {blog.title}
-            </h1>
-            
-            {/* Author Byline */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-              <AuthorByline author={author} size="md" />
-              <span className="hidden sm:block text-muted-foreground/50">•</span>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="w-4 h-4" />
-                {new Date(blog.published_at).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
+              {/* Header */}
+              <header className="mb-8">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                  {blog.title}
+                </h1>
+                
+                {/* Author Byline */}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <AuthorByline author={author} size="md" />
+                  <span className="hidden sm:block text-muted-foreground/50">•</span>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Calendar className="w-4 h-4" />
+                    {new Date(blog.published_at).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </div>
+                </div>
+              </header>
+
+              {/* Featured Image */}
+              {blog.featured_image && (
+                <div className="relative mb-8 rounded-lg overflow-hidden">
+                  <img 
+                    src={blog.featured_image} 
+                    alt={blog.title}
+                    className="w-full h-auto max-h-[500px] object-cover"
+                  />
+                </div>
+              )}
+
+              {/* Content */}
+              <div className="prose prose-invert prose-lg max-w-none">
+                <ReactMarkdown 
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    h1: ({ children }) => <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>,
+                    h2: ({ children }) => <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>,
+                    h3: ({ children }) => <h3 className="text-xl font-semibold mt-6 mb-3">{children}</h3>,
+                    p: ({ children }) => <p className="text-muted-foreground leading-relaxed mb-4">{children}</p>,
+                    ul: ({ children }) => <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>,
+                    ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>,
+                    li: ({ children }) => <li className="text-muted-foreground">{children}</li>,
+                    a: ({ href, children }) => (
+                      <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                        {children}
+                      </a>
+                    ),
+                    blockquote: ({ children }) => (
+                      <blockquote className="border-l-4 border-primary pl-4 italic my-4">{children}</blockquote>
+                    ),
+                    code: ({ children }) => (
+                      <code className="bg-surface-dark px-2 py-1 rounded text-sm">{children}</code>
+                    ),
+                    pre: ({ children }) => (
+                      <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-4">{children}</pre>
+                    ),
+                    img: ({ src, alt }) => {
+                      // Skip placeholder SVG images
+                      if (src?.includes('data:image/svg+xml')) {
+                        return null;
+                      }
+                      return (
+                        <img 
+                          src={src} 
+                          alt={alt || ''} 
+                          className="rounded-lg my-6 w-full"
+                          loading="lazy"
+                        />
+                      );
+                    },
+                  }}
+                >
+                  {cleanedContent}
+                </ReactMarkdown>
               </div>
+
+              {/* CTA */}
+              <div className="mt-12 p-8 bg-surface-dark rounded-lg border border-white/10 text-center">
+                <h3 className="text-2xl font-bold mb-2">Ready to Scale Your Agency?</h3>
+                <p className="text-muted-foreground mb-6">
+                  Let us handle your white-label fulfillment while you focus on growing your business.
+                </p>
+                <Link to="/#contact">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    Get Started Today
+                  </Button>
+                </Link>
+              </div>
+            </article>
+
+            {/* Sidebar */}
+            <div className="lg:sticky lg:top-24 lg:self-start">
+              <BlogSidebar />
             </div>
-
-            <a 
-              href={blog.source_url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors text-sm"
-            >
-              <ExternalLink className="w-4 h-4" />
-              View Original Source
-            </a>
-          </header>
-
-          {/* Featured Image */}
-          {blog.featured_image && (
-            <div className="relative mb-8 rounded-lg overflow-hidden">
-              <img 
-                src={blog.featured_image} 
-                alt={blog.title}
-                className="w-full h-auto max-h-[500px] object-cover"
-              />
-            </div>
-          )}
-
-          {/* Content */}
-          <div className="prose prose-invert prose-lg max-w-none">
-            <ReactMarkdown 
-              remarkPlugins={[remarkGfm]}
-              components={{
-                h1: ({ children }) => <h1 className="text-3xl font-bold mt-8 mb-4">{children}</h1>,
-                h2: ({ children }) => <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>,
-                h3: ({ children }) => <h3 className="text-xl font-semibold mt-6 mb-3">{children}</h3>,
-                p: ({ children }) => <p className="text-muted-foreground leading-relaxed mb-4">{children}</p>,
-                ul: ({ children }) => <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>,
-                ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 space-y-2">{children}</ol>,
-                li: ({ children }) => <li className="text-muted-foreground">{children}</li>,
-                a: ({ href, children }) => (
-                  <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                    {children}
-                  </a>
-                ),
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-primary pl-4 italic my-4">{children}</blockquote>
-                ),
-                code: ({ children }) => (
-                  <code className="bg-surface-dark px-2 py-1 rounded text-sm">{children}</code>
-                ),
-                pre: ({ children }) => (
-                  <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-4">{children}</pre>
-                ),
-              }}
-            >
-              {blog.content}
-            </ReactMarkdown>
           </div>
-
-          {/* CTA */}
-          <div className="mt-12 p-8 bg-surface-dark rounded-lg border border-white/10 text-center">
-            <h3 className="text-2xl font-bold mb-2">Ready to Scale Your Agency?</h3>
-            <p className="text-muted-foreground mb-6">
-              Let us handle your white-label fulfillment while you focus on growing your business.
-            </p>
-            <Link to="/#contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Get Started Today
-              </Button>
-            </Link>
-          </div>
-        </article>
+        </div>
       </main>
       
       <Footer />
@@ -263,4 +286,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostPage;
