@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import PhoneInput from "@/components/ui/phone-input";
+import { Checkbox } from "@/components/ui/checkbox";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { useToast } from "@/hooks/use-toast";
 
 const blogCategories = [
   { name: "White-Label SEO", slug: "white-label-seo" },
@@ -37,12 +39,17 @@ interface RecentPost {
 }
 
 const BlogSidebar = () => {
+  const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    website: "",
-    message: "",
+    phone: "",
+    phoneCountryCode: "+1",
+    revenue: "",
+    notRobot: false,
+    honeypot: "",
   });
 
   const { data: recentPosts } = useQuery({
@@ -61,23 +68,47 @@ const BlogSidebar = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Bot detection: if honeypot is filled, silently reject
+    if (formData.honeypot) {
+      navigate("/thank-you?type=contact");
+      return;
+    }
+    
+    // Verify robot checkbox
+    if (!formData.notRobot) {
+      toast({
+        title: "Please verify you're not a robot",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.from("leads").insert({
-        name: formData.name,
-        email: formData.email,
-        website: formData.website || null,
-        source: "Blog Sidebar Form",
+      const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          phoneCountryCode: formData.phoneCountryCode,
+          revenue: formData.revenue,
+          formType: "blog_contact_form",
+        }
       });
 
       if (error) throw error;
 
-      toast.success("Thanks! We will be in touch soon.");
-      setFormData({ name: "", email: "", website: "", message: "" });
-    } catch (error) {
+      // Redirect to thank you page
+      navigate("/thank-you?type=contact");
+    } catch (error: any) {
       console.error("Form submission error:", error);
-      toast.error("Something went wrong. Please try again.");
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -141,15 +172,26 @@ const BlogSidebar = () => {
         </div>
       )}
 
-      {/* Request Information Form */}
+      {/* Request Information Form - Same as main contact form */}
       <div className="bg-surface-dark rounded-lg p-6 border border-border">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-foreground mb-5">
           Request Information
         </h3>
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Honeypot field for bot detection */}
+          <input
+            type="text"
+            name="website_url"
+            value={formData.honeypot}
+            onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+          
           <div>
             <Label htmlFor="sidebar-name" className="text-xs text-muted-foreground">
-              Your Name
+              Full Name
             </Label>
             <Input
               id="sidebar-name"
@@ -161,9 +203,10 @@ const BlogSidebar = () => {
               placeholder="Your Name"
             />
           </div>
+          
           <div>
             <Label htmlFor="sidebar-email" className="text-xs text-muted-foreground">
-              Your Email
+              Email
             </Label>
             <Input
               id="sidebar-email"
@@ -175,32 +218,57 @@ const BlogSidebar = () => {
               placeholder="Your Email"
             />
           </div>
+          
           <div>
-            <Label htmlFor="sidebar-website" className="text-xs text-muted-foreground">
-              Your Website
+            <Label className="text-xs text-muted-foreground">
+              SMS Enabled Phone #
             </Label>
-            <Input
-              id="sidebar-website"
-              type="url"
-              value={formData.website}
-              onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-              className="mt-1.5 bg-background border-border h-10"
-              placeholder="Your Website"
+            <PhoneInput
+              value={formData.phone}
+              onChange={(value) => setFormData({ ...formData, phone: value })}
+              countryCode={formData.phoneCountryCode}
+              onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
+              placeholder="Phone Number"
+              className="mt-1.5"
             />
           </div>
+          
           <div>
-            <Label htmlFor="sidebar-message" className="text-xs text-muted-foreground">
-              Tell us about your agency
+            <Label className="text-xs text-muted-foreground">
+              Agency Monthly Revenue
             </Label>
-            <Textarea
-              id="sidebar-message"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="mt-1.5 bg-background border-border resize-none"
-              rows={3}
-              placeholder="Tell us about your agency"
-            />
+            <Select 
+              value={formData.revenue} 
+              onValueChange={(value) => setFormData({ ...formData, revenue: value })}
+            >
+              <SelectTrigger className="mt-1.5 bg-background border-border h-10">
+                <SelectValue placeholder="Select Revenue Range" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="under-10k">Under $10k/mo</SelectItem>
+                <SelectItem value="10k-25k">$10k - $25k/mo</SelectItem>
+                <SelectItem value="25k-50k">$25k - $50k/mo</SelectItem>
+                <SelectItem value="50k-100k">$50k - $100k/mo</SelectItem>
+                <SelectItem value="100k-250k">$100k - $250k/mo</SelectItem>
+                <SelectItem value="250k-plus">$250k+/mo</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
+          
+          <div className="flex items-center space-x-2 pt-2">
+            <Checkbox
+              id="sidebar-notRobot"
+              checked={formData.notRobot}
+              onCheckedChange={(checked) => setFormData({ ...formData, notRobot: checked as boolean })}
+            />
+            <label
+              htmlFor="sidebar-notRobot"
+              className="text-xs text-muted-foreground cursor-pointer"
+            >
+              I am not a robot
+            </label>
+          </div>
+          
           <Button 
             type="submit" 
             disabled={isSubmitting}
@@ -208,6 +276,7 @@ const BlogSidebar = () => {
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
+          
           <p className="text-[10px] text-muted-foreground text-center leading-tight">
             By pressing Submit, you agree that Dialed-In Web may contact you.
           </p>
