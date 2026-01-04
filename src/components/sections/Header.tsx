@@ -338,6 +338,7 @@ const Header = () => {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
             <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
             <div className="container mx-auto px-6 lg:px-8 py-8 relative font-sans">
+              {/* Service Categories Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
                 {serviceCategories.map((category, index) => (
                   <div 
@@ -367,6 +368,32 @@ const Header = () => {
                     </ul>
                   </div>
                 ))}
+              </div>
+              
+              {/* Featured Inbound Marketing Hub Callout */}
+              <div className="mt-8 pt-6 border-t border-border/30">
+                <Link
+                  to="/white-label-inbound-marketing-services"
+                  onClick={() => setIsMegaMenuOpen(false)}
+                  className="group flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-cta/10 via-cta/5 to-transparent border border-cta/20 hover:border-cta/40 transition-all"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-cta/20 flex items-center justify-center">
+                      <svg className="w-5 h-5 text-cta" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground group-hover:text-cta transition-colors">
+                        White-Label Inbound Marketing
+                      </p>
+                      <p className="text-xs text-text-muted">
+                        See how all services work together as one integrated system
+                      </p>
+                    </div>
+                  </div>
+                  <ChevronDown className="h-5 w-5 text-cta -rotate-90 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
