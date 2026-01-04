@@ -265,29 +265,9 @@ const TopicalExpertise = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Deep Expertise Across<br />Local Marketing
           </h2>
-          <p className="text-lg text-text-secondary mb-8">
+          <p className="text-lg text-text-secondary">
             Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
           </p>
-          
-          {/* Section-level CTAs */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-cta inline-flex items-center gap-2"
-            >
-              Explore a Partnership
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a 
-              href={PHONE_HREF}
-              className="inline-flex items-center gap-2 text-foreground hover:text-accent-blue font-medium transition-colors"
-            >
-              <Phone className="h-4 w-4" />
-              {PHONE_NUMBER}
-            </a>
-          </div>
         </div>
 
         {/* Hub cards grid */}
@@ -399,6 +379,26 @@ const TopicalExpertise = () => {
             </div>
           );
           })}
+        </div>
+        
+        {/* Section-level CTAs - below cards */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
+          <a 
+            href="/contact" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta inline-flex items-center gap-2"
+          >
+            Explore a Partnership
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a 
+            href={PHONE_HREF}
+            className="inline-flex items-center gap-2 text-foreground hover:text-accent-blue font-medium transition-colors"
+          >
+            <Phone className="h-4 w-4" />
+            {PHONE_NUMBER}
+          </a>
         </div>
       </div>
     </section>

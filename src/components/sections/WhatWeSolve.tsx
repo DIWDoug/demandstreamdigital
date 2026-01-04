@@ -137,7 +137,7 @@ const WhatWeSolve = () => {
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
-              <h2 className="mb-6 text-foreground">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
                 How We Keep Your Clients<br />Coming Back
               </h2>
             </div>
