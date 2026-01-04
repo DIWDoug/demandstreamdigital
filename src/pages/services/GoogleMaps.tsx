@@ -7,6 +7,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
 import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
+import { getServiceHubSchema } from "@/lib/schema";
 
 // Generic section components
 import ServiceHubHero from "@/components/services/ServiceHubHero";
@@ -40,6 +41,14 @@ const GoogleMaps = () => {
     { label: googleMapsConfig.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label GBP SEO & Google Maps Optimization",
+    description: googleMapsConfig.metaDescription,
+    url: googleMapsConfig.canonicalUrl,
+    serviceType: "GBP SEO Service",
+    faqGroups: googleMapsConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -47,6 +56,7 @@ const GoogleMaps = () => {
         <meta name="description" content={googleMapsConfig.metaDescription} />
         <link rel="canonical" href={googleMapsConfig.canonicalUrl} />
         {googleMapsConfig.keywords && <meta name="keywords" content={googleMapsConfig.keywords} />}
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />

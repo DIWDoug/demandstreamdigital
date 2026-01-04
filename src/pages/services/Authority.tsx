@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { authorityConfig } from "@/data/service-pages/authority";
 import { getHubBySlug } from "@/data/services";
+import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -34,12 +35,21 @@ const Authority = () => {
     { label: hub.title }
   ];
 
+  const pageSchema = getServiceHubSchema({
+    name: "White-Label Local Authority & Link Building",
+    description: authorityConfig.metaDescription,
+    url: authorityConfig.canonicalUrl,
+    serviceType: "Link Building Service",
+    faqGroups: authorityConfig.faq.groups
+  });
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{authorityConfig.metaTitle}</title>
         <meta name="description" content={authorityConfig.metaDescription} />
         <link rel="canonical" href={authorityConfig.canonicalUrl} />
+        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
       
       <Header />
