@@ -24,6 +24,8 @@ import infographicPpcFunnel from '@/assets/blog/infographic-ppc-funnel.jpg';
 import infographicAgencyModel from '@/assets/blog/infographic-agency-model.jpg';
 import infographicRankingFactors from '@/assets/blog/infographic-ranking-factors.jpg';
 import infographicBudgetSplit from '@/assets/blog/infographic-budget-split.jpg';
+import infographicWhiteLabelFlow from '@/assets/blog/infographic-white-label-flow.png';
+import infographicSeoHourlyRates from '@/assets/blog/infographic-seo-hourly-rates.png';
 
 const blogImageMap: Record<string, string> = {
   'white-label-seo-benefits': whiteLabelSeoBenefits,
@@ -47,6 +49,8 @@ const blogImageMap: Record<string, string> = {
   'infographic-agency-model': infographicAgencyModel,
   'infographic-ranking-factors': infographicRankingFactors,
   'infographic-budget-split': infographicBudgetSplit,
+  'infographic-white-label-flow': infographicWhiteLabelFlow,
+  'infographic-seo-hourly-rates': infographicSeoHourlyRates,
 };
 
 /**
