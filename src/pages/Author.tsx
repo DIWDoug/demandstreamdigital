@@ -1,15 +1,66 @@
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { getAuthorBySlug } from "@/data/authors";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Linkedin, ExternalLink } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ArrowLeft, Linkedin, ExternalLink, Calendar, ArrowRight, BookOpen } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
+
+// Map author slugs to their blog post slugs
+const authorArticleMap: Record<string, string[]> = {
+  'desiree-abbariao': [
+    'benefits-of-white-label-seo-services',
+    'white-label-local-ppc',
+    'on-page-optimization-local-seo',
+  ],
+  'richard-baylon': [
+    'what-is-white-label-digital-marketing',
+    'white-label-social-media',
+    'white-label-seo-for-agencies-checklist',
+  ],
+  'doug-bryson': [], // Default author - gets any articles not assigned to others
+};
 
 const Author = () => {
   const { slug } = useParams<{ slug: string }>();
   const author = slug ? getAuthorBySlug(slug) : undefined;
+
+  // Fetch articles by this author
+  const { data: articles, isLoading: articlesLoading } = useQuery({
+    queryKey: ['author-articles', slug],
+    queryFn: async () => {
+      const articleSlugs = authorArticleMap[slug || ''] || [];
+      
+      if (articleSlugs.length === 0) {
+        // For Doug or unknown authors, get articles not assigned to others
+        const assignedSlugs = Object.values(authorArticleMap).flat();
+        const { data, error } = await supabase
+          .from('blogs')
+          .select('id, title, slug, excerpt, featured_image, published_at')
+          .not('slug', 'in', `(${assignedSlugs.join(',')})`)
+          .order('published_at', { ascending: false });
+        
+        if (error) throw error;
+        return data || [];
+      }
+      
+      const { data, error } = await supabase
+        .from('blogs')
+        .select('id, title, slug, excerpt, featured_image, published_at')
+        .in('slug', articleSlugs)
+        .order('published_at', { ascending: false });
+      
+      if (error) throw error;
+      return data || [];
+    },
+    enabled: !!slug,
+  });
 
   if (!author) {
     return <Navigate to="/about" replace />;
@@ -160,6 +211,80 @@ const Author = () => {
                 </Badge>
               ))}
             </div>
+          </section>
+
+          {/* Articles by Author */}
+          <section className="mb-12">
+            <h2 className="text-xl font-semibold text-foreground mb-6">
+              Articles by {author.name.split(' ')[0]}
+            </h2>
+            
+            {articlesLoading ? (
+              <div className="grid md:grid-cols-2 gap-6">
+                {[1, 2].map((i) => (
+                  <Card key={i} className="bg-surface-dark border-border">
+                    <Skeleton className="h-40 w-full rounded-t-lg" />
+                    <CardHeader>
+                      <Skeleton className="h-5 w-3/4" />
+                    </CardHeader>
+                    <CardContent>
+                      <Skeleton className="h-4 w-full mb-2" />
+                      <Skeleton className="h-4 w-2/3" />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : articles && articles.length > 0 ? (
+              <div className="grid md:grid-cols-2 gap-6">
+                {articles.map((article) => (
+                  <Link key={article.id} to={`/blog/${article.slug}`}>
+                    <Card className="bg-surface-dark border-border hover:border-cta/30 transition-all duration-300 h-full group">
+                      {getBlogFeaturedImage(article.featured_image) ? (
+                        <div className="relative h-40 overflow-hidden rounded-t-lg">
+                          <img 
+                            src={getBlogFeaturedImage(article.featured_image)!} 
+                            alt={article.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      ) : (
+                        <div className="h-40 bg-surface-elevated flex items-center justify-center rounded-t-lg">
+                          <BookOpen className="w-10 h-10 text-border" />
+                        </div>
+                      )}
+                      <CardHeader className="pb-2">
+                        <div className="flex items-center gap-2 text-sm text-text-muted mb-2">
+                          <Calendar className="w-4 h-4" />
+                          {new Date(article.published_at).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </div>
+                        <CardTitle className="text-lg group-hover:text-cta transition-colors line-clamp-2">
+                          {article.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        {article.excerpt && (
+                          <p className="text-text-secondary text-sm line-clamp-2 mb-3">
+                            {article.excerpt}
+                          </p>
+                        )}
+                        <span className="text-cta text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                          Read Article <ArrowRight className="w-4 h-4" />
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 bg-surface-dark rounded-xl">
+                <BookOpen className="w-12 h-12 text-border mx-auto mb-3" />
+                <p className="text-text-secondary">No articles published yet.</p>
+              </div>
+            )}
           </section>
 
           {/* CTA */}
