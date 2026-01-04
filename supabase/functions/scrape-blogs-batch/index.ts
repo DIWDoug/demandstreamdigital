@@ -154,8 +154,9 @@ Deno.serve(async (req) => {
 
     const apiKey = Deno.env.get('FIRECRAWL_API_KEY');
     if (!apiKey) {
+      console.error('FIRECRAWL_API_KEY not configured');
       return new Response(
-        JSON.stringify({ success: false, error: 'Firecrawl connector not configured' }),
+        JSON.stringify({ success: false, error: 'Service configuration error' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -180,13 +181,14 @@ Deno.serve(async (req) => {
           }, { onConflict: 'slug' });
 
         if (dbError) {
-          results.push({ url, success: false, error: dbError.message });
+          console.error('Database error for URL:', url, dbError);
+          results.push({ url, success: false, error: 'Failed to save content' });
         } else {
           results.push({ url, success: true, slug: blogData.slug });
         }
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        results.push({ url, success: false, error: errorMessage });
+        console.error('Scrape error for URL:', url, error);
+        results.push({ url, success: false, error: 'Failed to process URL' });
       }
 
       // Small delay between requests to avoid rate limiting
@@ -202,9 +204,8 @@ Deno.serve(async (req) => {
     );
   } catch (error) {
     console.error('Batch scrape error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Failed to scrape blogs';
     return new Response(
-      JSON.stringify({ success: false, error: errorMessage }),
+      JSON.stringify({ success: false, error: 'An error occurred processing your request' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }

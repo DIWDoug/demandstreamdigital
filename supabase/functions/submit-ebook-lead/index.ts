@@ -75,7 +75,7 @@ serve(async (req) => {
     if (error) {
       console.error("Database insert error:", error);
       return new Response(
-        JSON.stringify({ error: "Unable to process your request" }),
+        JSON.stringify({ error: "An error occurred processing your request" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -111,7 +111,7 @@ serve(async (req) => {
   } catch (error: any) {
     console.error("Error in submit-ebook-lead function:", error);
     return new Response(
-      JSON.stringify({ error: error.message || "Failed to submit lead" }),
+      JSON.stringify({ error: "An error occurred processing your request" }),
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },

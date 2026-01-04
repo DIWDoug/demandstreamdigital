@@ -226,7 +226,7 @@ serve(async (req) => {
 
           if (insertError) {
             console.error("Database insert error:", insertError);
-            throw new Error("Failed to save lead");
+            throw new Error("submission_failed");
           }
 
           data = insertData;
@@ -250,7 +250,7 @@ serve(async (req) => {
 
         if (insertError) {
           console.error("Database insert error:", insertError);
-          throw new Error("Failed to save lead");
+          throw new Error("submission_failed");
         }
 
         data = insertData;
@@ -325,7 +325,7 @@ serve(async (req) => {
   } catch (error: any) {
     console.error("Error in submit-to-ghl function:", error);
     return new Response(
-      JSON.stringify({ error: error.message || "Failed to submit form" }),
+      JSON.stringify({ error: "An error occurred processing your request" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
