@@ -6,12 +6,13 @@ import SEOEducationalContent from "@/components/calculators/SEOEducationalConten
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search, Phone } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { metros, Metro, tierMultipliers, searchMetros, formatPopulation } from "@/data/metros";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 // Industry presets with default competition levels - focused on local small businesses
 const industryPresets = [
@@ -777,11 +778,11 @@ const SEOCalculator = () => {
               </Link>
               <span className="text-text-muted">or</span>
               <a
-                href="tel:+12143072995"
+                href={PHONE_HREF}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-border/50 rounded-xl text-foreground hover:border-accent-blue/50 transition-colors"
               >
-                <span className="text-accent-blue">📞</span>
-                (214) 307-2995
+                <Phone className="h-4 w-4 text-accent-blue" />
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>
