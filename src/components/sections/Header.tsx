@@ -342,6 +342,14 @@ const Header = () => {
         {/* Mega Menu Dropdown */}
         {isMegaMenuOpen && (
           <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50 animate-fade-in origin-top">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMegaMenuOpen(false)}
+              className="absolute top-4 right-6 lg:right-8 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
+            </button>
             {/* Top gradient glow */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
             <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
