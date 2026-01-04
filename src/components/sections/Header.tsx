@@ -402,34 +402,35 @@ const Header = () => {
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-6 border-t border-border bg-surface-dark">
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-1">
               {/* Services Accordion */}
-              <div className="flex items-center justify-between w-full py-3">
+              <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
                 <a
                   href="/white-label-inbound-marketing-services"
-                  className="text-base font-medium text-foreground/80 uppercase tracking-wide"
+                  className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
                   onClick={(e) => {
                     setIsMobileMenuOpen(false);
                     window.location.href = "/white-label-inbound-marketing-services";
                   }}
                 >
+                  <span className="w-1 h-4 bg-cta rounded-full" />
                   Services
                 </a>
                 <button
                   onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                  className="p-2 -mr-2"
+                  className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
                   aria-label="Toggle services menu"
                 >
-                  <ChevronDown className={`h-4 w-4 text-foreground/80 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
               {isMegaMenuOpen && (
-                <div className="pl-4 pb-4 grid grid-cols-2 gap-4">
+                <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4 grid grid-cols-2 gap-4">
                   {serviceCategories.map((category, index) => (
                     <div key={index}>
                       <a 
                         href={category.href}
-                        className="text-xs font-semibold text-foreground uppercase tracking-widest mb-2 block hover:text-cta transition-colors"
+                        className="text-xs font-semibold text-cta uppercase tracking-widest mb-2 block active:text-cta-glow transition-colors underline underline-offset-2 decoration-cta/30"
                         onClick={(e) => {
                           setIsMegaMenuOpen(false);
                           setIsMobileMenuOpen(false);
@@ -438,14 +439,14 @@ const Header = () => {
                       >
                         {category.title}
                       </a>
-                      <ul className="space-y-1">
+                      <ul className="space-y-2">
                         {category.items.map((item, itemIndex) => {
                           const itemHref = 'href' in item && item.href ? item.href : `${category.href}/${item.slug}`;
                           return (
                             <li key={itemIndex}>
                               <a 
                                 href={itemHref}
-                                className="text-xs text-text-secondary hover:text-foreground transition-colors"
+                                className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
                                 onClick={(e) => {
                                   setIsMegaMenuOpen(false);
                                   setIsMobileMenuOpen(false);
@@ -468,43 +469,56 @@ const Header = () => {
                   <Link
                     key={index}
                     to={link.href}
-                    className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                    className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
+                    <span className="w-1 h-4 bg-cta rounded-full" />
                     {link.label}
                   </Link>
                 ) : (
                   <a
                     key={index}
                     href={getAnchorHref(link.href)}
-                    className="block py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
+                    className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
+                    <span className="w-1 h-4 bg-cta rounded-full" />
                     {link.label}
                   </a>
                 )
               ))}
 
               {/* Mobile Partner Tools */}
-              <button
-                onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
-                className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
-              >
-                Partner Tools
-                <ChevronDown className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
+              <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
+                <a
+                  href="/partner-tools"
+                  className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    window.location.href = "/partner-tools";
+                  }}
+                >
+                  <span className="w-1 h-4 bg-cta rounded-full" />
+                  Partner Tools
+                </a>
+                <button
+                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
+                  className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
+                  aria-label="Toggle partner tools menu"
+                >
+                  <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
               {isToolsMenuOpen && (
-                <div className="pl-4 pb-2 space-y-1">
+                <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-2 space-y-1">
                   {partnerToolsLinks.map((tool, index) => (
                     <a
                       key={index}
                       href={tool.href}
-                      className="block py-2 text-sm text-text-secondary hover:text-foreground transition-colors"
+                      className="block py-2.5 px-2 rounded-md text-sm text-text-secondary hover:text-foreground active:text-cta active:bg-cta/10 transition-colors"
                       onClick={(e) => {
-                        // Allow the default navigation to proceed
                         setIsToolsMenuOpen(false);
                         setIsMobileMenuOpen(false);
-                        // Force navigation for mobile browsers
                         window.location.href = tool.href;
                       }}
                     >
