@@ -35,12 +35,32 @@ serve(async (req) => {
       });
     }
 
-    console.log("Saving ebook lead to database:", { email });
-
     // Create Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
+
+    // Rate limiting - 15 minute window, 5 max submissions per email
+    const windowStart = new Date(Date.now() - 15 * 60 * 1000).toISOString();
+    const { count, error: countError } = await supabase
+      .from("leads")
+      .select("*", { count: "exact", head: true })
+      .eq("email", email)
+      .gte("created_at", windowStart);
+
+    if (countError) {
+      console.error("Rate limit check error:", countError);
+    }
+
+    if ((count || 0) >= 5) {
+      console.log("Rate limit exceeded for email:", email);
+      return new Response(
+        JSON.stringify({ error: "Too many submissions. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log("Saving ebook lead to database:", { email });
 
     // Insert lead into database
     const { data, error } = await supabase
@@ -54,7 +74,10 @@ serve(async (req) => {
 
     if (error) {
       console.error("Database insert error:", error);
-      throw new Error("Failed to save lead");
+      return new Response(
+        JSON.stringify({ error: "Unable to process your request" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
 
     console.log("Ebook lead saved successfully:", data);
