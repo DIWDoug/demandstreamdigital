@@ -426,10 +426,10 @@ const Header = () => {
                         {category.title}
                       </Link>
                       <ul className="space-y-1">
-                        {category.items.slice(0, 3).map((item, itemIndex) => (
+                        {category.items.map((item, itemIndex) => (
                           <li key={itemIndex}>
                             <Link 
-                              to={`${category.href}/${item.slug}`}
+                              to={'href' in item && item.href ? item.href : `${category.href}/${item.slug}`}
                               className="text-xs text-text-secondary hover:text-foreground transition-colors"
                               onClick={() => {
                                 setIsMegaMenuOpen(false);
