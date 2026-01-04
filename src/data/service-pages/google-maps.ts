@@ -4,10 +4,9 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
   title: "GBP SEO",
-  metaTitle: "White-Label GBP SEO & Google Maps Optimization for Agencies | Dialed-In Web",
-  metaDescription: "White-label GBP SEO and Google Maps optimization for agencies. Review management, citation building, and local pack ranking strategies that dominate map results.",
+  metaTitle: "White Label GBP SEO & Google Maps Optimization | Dialed-In Web | Agency Partner",
+  metaDescription: "White label GBP SEO for agencies. Review management, citations & local pack rankings. Dominate Google Maps. Start a conversation today.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/google-maps",
-  keywords: "white label GBP SEO, google business profile optimization, local pack ranking, review management, citation building",
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",

@@ -4,10 +4,9 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const reportingConfig: ServicePageConfig = {
   slug: "reporting",
   title: "Reporting & Analytics",
-  metaTitle: "White-Label Reporting & Analytics for Agencies | Dialed-In Web",
-  metaDescription: "White-label reporting and analytics dashboards for agencies. Rank tracking, ROI analysis, and client-ready reports that prove value and retain clients.",
+  metaTitle: "White Label SEO Reporting & Dashboards for Agencies | Dialed-In Web | Analytics",
+  metaDescription: "White label reporting for agencies. Rank tracking, ROI dashboards & client-ready reports that prove value. Retain more clients. Free demo.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/reporting",
-  keywords: "white label reporting, agency dashboards, rank tracking, marketing analytics, client reporting",
 
   hero: {
     headline: "White Label Reporting for",

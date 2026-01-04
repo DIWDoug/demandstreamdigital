@@ -4,10 +4,9 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const authorityConfig: ServicePageConfig = {
   slug: "authority",
   title: "Authority Building",
-  metaTitle: "White-Label Authority Building for Agencies | Dialed-In Web",
-  metaDescription: "White-label authority building services for agencies. Local link acquisition, citation building, and off-page SEO that creates lasting ranking power.",
+  metaTitle: "White Label Link Building & Authority Building | Dialed-In Web | Off-Page SEO",
+  metaDescription: "White label link building for agencies. Local citations, quality backlinks & off-page SEO that makes rankings stick. Get started today.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/local-authority-building",
-  keywords: "white label link building, local authority building, citation building, off-page SEO, local link acquisition",
 
   hero: {
     headline: "White Label Local Authority Building for",

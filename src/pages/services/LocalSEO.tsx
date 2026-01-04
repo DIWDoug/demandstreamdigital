@@ -18,9 +18,18 @@ import {
 } from "@/components/services/generic";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
 import { getHubBySlug } from "@/data/services";
+import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
 // Local SEO specific component
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
+
+// Flatten FAQ groups for schema
+const getFlatFAQs = () => {
+  if (!localSEOConfig.faq?.groups) return [];
+  return localSEOConfig.faq.groups.flatMap(group => 
+    group.items.map(item => ({ question: item.question, answer: item.answer }))
+  );
+};
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -37,13 +46,31 @@ const LocalSEO = () => {
     { label: hub.title }
   ];
 
+  // Build combined schema
+  const faqSchema = getFAQPageSchema(getFlatFAQs());
+  const serviceSchema = getServiceSchema({
+    name: "White Label Local SEO Services",
+    description: localSEOConfig.metaDescription,
+    url: localSEOConfig.canonicalUrl,
+    serviceType: "Local SEO Service"
+  });
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getOrganizationSchema(),
+      serviceSchema,
+      faqSchema
+    ]
+  };
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{localSEOConfig.metaTitle}</title>
         <meta name="description" content={localSEOConfig.metaDescription} />
         <link rel="canonical" href={localSEOConfig.canonicalUrl} />
-        {localSEOConfig.keywords && <meta name="keywords" content={localSEOConfig.keywords} />}
+        <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
       </Helmet>
       
       <Header />

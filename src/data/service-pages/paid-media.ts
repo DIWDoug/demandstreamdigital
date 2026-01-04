@@ -4,10 +4,9 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const paidMediaConfig: ServicePageConfig = {
   slug: "paid-media",
   title: "Paid Media",
-  metaTitle: "White-Label Paid Media Management for Agencies | Dialed-In Web",
-  metaDescription: "White-label Google Ads and Meta Ads management for agencies. Local search campaigns, landing page optimization, and ROI-focused paid media that generates leads.",
+  metaTitle: "White Label Google Ads & Meta Ads Management | Dialed-In Web | PPC for Agencies",
+  metaDescription: "White label PPC management for agencies. Google Ads, Meta Ads & local campaigns. ROI-focused paid media that generates leads. Free strategy call.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/paid-media",
-  keywords: "white label paid media, google ads management, meta ads, local PPC, lead generation campaigns",
 
   hero: {
     headline: "White Label Paid Media for",
