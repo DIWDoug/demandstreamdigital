@@ -6,15 +6,55 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// Request logging middleware
+function logRequest(req: Request, context: { functionName: string; userId?: string }) {
+  const timestamp = new Date().toISOString();
+  const method = req.method;
+  const url = req.url;
+  const userAgent = req.headers.get("user-agent") || "unknown";
+  const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                   req.headers.get("cf-connecting-ip") || "unknown";
+  
+  console.log(JSON.stringify({
+    type: "request",
+    timestamp,
+    function: context.functionName,
+    method,
+    url,
+    userId: context.userId || "anonymous",
+    clientIP,
+    userAgent: userAgent.substring(0, 100),
+  }));
+}
+
+function logResponse(context: { functionName: string; userId?: string; statusCode: number; durationMs: number }) {
+  const timestamp = new Date().toISOString();
+  
+  console.log(JSON.stringify({
+    type: "response",
+    timestamp,
+    function: context.functionName,
+    userId: context.userId || "anonymous",
+    statusCode: context.statusCode,
+    durationMs: context.durationMs,
+  }));
+}
+
 interface EbookLeadData {
   email: string;
 }
 
 serve(async (req) => {
+  const startTime = Date.now();
+  const functionName = "submit-ebook-lead";
+  let statusCode = 200;
+  
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
+  
+  logRequest(req, { functionName });
 
   try {
     const { email }: EbookLeadData = await req.json();
@@ -104,12 +144,15 @@ serve(async (req) => {
       }
     }
 
+    logResponse({ functionName, statusCode: 200, durationMs: Date.now() - startTime });
     return new Response(JSON.stringify({ success: true, data }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error: any) {
+    statusCode = 500;
     console.error("Error in submit-ebook-lead function:", error);
+    logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
     return new Response(
       JSON.stringify({ error: "An error occurred processing your request" }),
       {
