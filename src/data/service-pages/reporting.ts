@@ -1,4 +1,4 @@
-import { BarChart3, CheckCircle, Users, TrendingUp, FileText, Target, Settings, Phone, Search, Map, Sparkles, Star, Mail, Globe, Share2 } from "lucide-react";
+import { BarChart3, CheckCircle, Users, TrendingUp, FileText, Target, Settings, Phone, Search, Map, Sparkles, Star, Mail, Globe, Share2, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 
 export const reportingConfig: ServicePageConfig = {
@@ -293,7 +293,7 @@ export const reportingConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Globe, id: "authority", title: "Authority Building", description: "Links and citations.", href: "/white-label-inbound-marketing-services/local-authority-building" }
+      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-inbound-marketing-services/content-marketing" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing-services"

@@ -66,10 +66,10 @@ const FAQ = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg">
+            <p className="text-lg text-slate-600">
               Common questions from agency partners.
             </p>
           </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Map, MousePointerClick, Mail, Award, BarChart3 } from "lucide-react";
+import { ChevronDown, MapPin, Map, MousePointerClick, Mail, PenTool, BarChart3, Phone, ArrowRight } from "lucide-react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
@@ -163,40 +164,40 @@ const TopicalExpertise = () => {
       ]
     },
     {
-      icon: Award,
-      title: "Authority Building",
-      slug: "local-authority-building",
-      summary: "Establish trust signals and credibility markers that support long-term ranking stability.",
+      icon: PenTool,
+      title: "Content Development",
+      slug: "content-marketing",
+      summary: "Strategic content that ranks locally, converts visitors, and feeds AI discovery systems.",
       spokes: [
         {
-          title: "Local Links",
-          slug: "local-links",
-          description: "Outreach to local publications, community organizations, and relevant sites to build geographic authority."
+          title: "Geographical Content",
+          slug: "geographical-content",
+          description: "Service area pages that capture local search intent and support Google Business Profile rankings."
         },
         {
-          title: "Unstructured Citations",
-          slug: "unstructured-citations",
-          description: "Brand mentions across video, audio, images, Web 2.0, and press releases that feed AI discovery engines."
+          title: "Topical Content",
+          slug: "topical-content",
+          description: "Industry expertise articles that build topical authority and support GBP rankings through relevance signals."
         },
         {
-          title: "Brand Mentions",
-          slug: "brand-mentions",
-          description: "Reddit, Quora, and Facebook mentions that feed AI discovery signals and build brand awareness."
+          title: "Power Posts",
+          slug: "power-posts",
+          description: "Comprehensive pillar content that dominates competitive keywords and establishes thought leadership."
         },
         {
-          title: "Anchor Text",
-          slug: "anchor-text",
-          description: "Strategic anchor text diversification across link profiles to maintain natural authority signals."
+          title: "E-books & Guides",
+          slug: "ebooks-guides",
+          description: "Long-form downloadable content that captures leads and demonstrates expertise."
         },
         {
-          title: "Sponsorships",
-          slug: "sponsorships",
-          description: "Community event sponsorships, local charity partnerships, and chamber of commerce involvement."
+          title: "Lead Generation Magnets",
+          slug: "lead-magnets",
+          description: "Checklists, templates, and tools that convert visitors into email subscribers."
         },
         {
-          title: "Reputation Signals",
-          slug: "reputation-signals",
-          description: "Review monitoring, sentiment analysis, and brand mention tracking that protects online reputation."
+          title: "Case Studies",
+          slug: "case-studies",
+          description: "Success stories that build trust and demonstrate real-world results."
         }
       ]
     },
@@ -261,12 +262,32 @@ const TopicalExpertise = () => {
       <div className="container mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="mb-6 text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
             Deep Expertise Across<br />Local Marketing
           </h2>
-          <p className="text-lg text-text-secondary">
+          <p className="text-lg text-text-secondary mb-8">
             Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
           </p>
+          
+          {/* Section-level CTAs */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a 
+              href="/contact" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta inline-flex items-center gap-2"
+            >
+              Explore a Partnership
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <a 
+              href={PHONE_HREF}
+              className="inline-flex items-center gap-2 text-foreground hover:text-accent-blue font-medium transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              {PHONE_NUMBER}
+            </a>
+          </div>
         </div>
 
         {/* Hub cards grid */}
@@ -278,7 +299,7 @@ const TopicalExpertise = () => {
               'google-maps': 'gbp-seo',
               'paid-media': 'paid-media',
               'email-marketing': 'email',
-              'local-authority-building': 'authority',
+              'content-marketing': 'content',
               'reporting': 'reporting'
             };
             const anchorId = anchorMap[hub.slug] || hub.slug;
