@@ -61,7 +61,6 @@ serve(async (req) => {
       "unknown";
 
     const isStep1 = !!formType && formType.endsWith("_step1");
-    const isWebsiteOnlyStep1 = formType === "service_hub_hero_step1";
 
     // Map formType to human-readable lead_type for automations
     const leadTypeMap: Record<string, string> = {
@@ -69,7 +68,7 @@ serve(async (req) => {
       hero_homepage_step1: "Homepage Hero (Step 1 - Contact + Website)",
 
       service_hub_hero: "Service Page Hero Form",
-      service_hub_hero_step1: "Service Page Hero (Step 1 - Website Only)",
+      service_hub_hero_step1: "Service Page Hero (Step 1 - Contact + Website)",
 
       fulfillment_steps: "Fulfillment Steps Form",
       fulfillment_steps_step1: "Fulfillment Steps (Step 1 - Contact + Website)",
@@ -87,14 +86,7 @@ serve(async (req) => {
     const lead_type = leadTypeMap[formType || ""] || "Contact Form";
 
     // Validate required fields
-    if (isWebsiteOnlyStep1) {
-      if (!website || !isValidWebsite(website)) {
-        return new Response(JSON.stringify({ error: "Website is required" }), {
-          status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        });
-      }
-    } else if (isStep1) {
+    if (isStep1) {
       if (!name?.trim() || !email?.trim() || !website?.trim()) {
         return new Response(
           JSON.stringify({ error: "Name, email, and website are required" }),
@@ -218,36 +210,61 @@ serve(async (req) => {
 
     // Forward to Zapier webhook (used to reach CRM)
     const zapierWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL");
-    if (zapierWebhookUrl) {
+    const zapier: { attempted: boolean; status?: number; ok?: boolean } = {
+      attempted: false,
+    };
+
+    if (!zapierWebhookUrl) {
+      console.log("Zapier webhook URL not configured (ZAPIER_WEBHOOK_URL missing)");
+    } else {
+      zapier.attempted = true;
+
+      const payload = {
+        id: data.id,
+        lead_type,
+        form_type: formType || "unknown",
+        name,
+        email,
+        phone,
+        phoneCountryCode: phoneCountryCode || "+1",
+        revenue,
+        website,
+        servicesInterested: sanitizedServicesInterested,
+        message: typeof message === "string" ? message.slice(0, 5000) : undefined,
+        source: isStep1 ? "contact_form_step1" : "contact_form",
+        created_at: data.created_at,
+      };
+
+      console.log("Sending webhook to Zapier:", {
+        lead_type,
+        form_type: payload.form_type,
+        source: payload.source,
+        has_id: !!payload.id,
+      });
+
       try {
         const zapierResponse = await fetch(zapierWebhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            id: data.id,
-            lead_type,
-            form_type: formType || "unknown",
-            name,
-            email,
-            phone,
-            phoneCountryCode: phoneCountryCode || "+1",
-            revenue,
-            website,
-            servicesInterested: sanitizedServicesInterested,
-            message: typeof message === "string" ? message.slice(0, 5000) : undefined,
-            source: isStep1 ? "contact_form_step1" : "contact_form",
-            created_at: data.created_at,
-          }),
+          body: JSON.stringify(payload),
         });
 
-        console.log("Zapier webhook response:", zapierResponse.status);
+        zapier.status = zapierResponse.status;
+        zapier.ok = zapierResponse.ok;
+
+        const responseText = await zapierResponse.text().catch(() => "");
+        console.log(
+          "Zapier webhook response:",
+          zapierResponse.status,
+          responseText.slice(0, 300)
+        );
       } catch (zapierError) {
         console.error("Zapier webhook error:", zapierError);
         // Don't fail the request if Zapier fails
       }
     }
 
-    return new Response(JSON.stringify({ success: true, data }), {
+    return new Response(JSON.stringify({ success: true, data, zapier }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
