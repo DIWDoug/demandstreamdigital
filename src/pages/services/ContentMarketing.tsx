@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-import TrustReel from "@/components/sections/TrustReel";
+
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
@@ -56,11 +56,6 @@ const ContentMarketing = () => {
       
       {/* STICKY ANCHOR NAV */}
       <ServiceHubAnchorNav />
-      
-      {/* 2. TRUST REEL */}
-      <TrustReel />
-      
-      <SectionDivider />
       
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
