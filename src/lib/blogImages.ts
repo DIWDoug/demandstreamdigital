@@ -18,6 +18,12 @@ import infographicContentWorkflow from '@/assets/blog/infographic-content-workfl
 import infographicBrandConsistency from '@/assets/blog/infographic-brand-consistency.jpg';
 import infographicWhiteLabelStructure from '@/assets/blog/infographic-white-label-structure.jpg';
 import infographicReportingMetrics from '@/assets/blog/infographic-reporting-metrics.jpg';
+import infographicSeoBenefits from '@/assets/blog/infographic-seo-benefits.jpg';
+import infographicOnpageChecklist from '@/assets/blog/infographic-onpage-checklist.jpg';
+import infographicPpcFunnel from '@/assets/blog/infographic-ppc-funnel.jpg';
+import infographicAgencyModel from '@/assets/blog/infographic-agency-model.jpg';
+import infographicRankingFactors from '@/assets/blog/infographic-ranking-factors.jpg';
+import infographicBudgetSplit from '@/assets/blog/infographic-budget-split.jpg';
 
 const blogImageMap: Record<string, string> = {
   'white-label-seo-benefits': whiteLabelSeoBenefits,
@@ -35,6 +41,12 @@ const blogImageMap: Record<string, string> = {
   'infographic-brand-consistency': infographicBrandConsistency,
   'infographic-white-label-structure': infographicWhiteLabelStructure,
   'infographic-reporting-metrics': infographicReportingMetrics,
+  'infographic-seo-benefits': infographicSeoBenefits,
+  'infographic-onpage-checklist': infographicOnpageChecklist,
+  'infographic-ppc-funnel': infographicPpcFunnel,
+  'infographic-agency-model': infographicAgencyModel,
+  'infographic-ranking-factors': infographicRankingFactors,
+  'infographic-budget-split': infographicBudgetSplit,
 };
 
 /**
