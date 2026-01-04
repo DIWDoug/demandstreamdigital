@@ -8,6 +8,11 @@ import whiteLabelSocialMedia from '@/assets/blog/white-label-social-media.jpg';
 import whiteLabelSeoChecklist from '@/assets/blog/white-label-seo-checklist.jpg';
 import whatIsWhiteLabelMarketing from '@/assets/blog/what-is-white-label-marketing.jpg';
 
+// Inline blog images
+import ppcDashboardTeam from '@/assets/blog/ppc-dashboard-team.jpg';
+import ppcAgencyPartnership from '@/assets/blog/ppc-agency-partnership.jpg';
+import ppcLocalTargeting from '@/assets/blog/ppc-local-targeting.jpg';
+
 const blogImageMap: Record<string, string> = {
   'white-label-seo-benefits': whiteLabelSeoBenefits,
   'white-label-local-ppc': whiteLabelLocalPpc,
@@ -15,6 +20,10 @@ const blogImageMap: Record<string, string> = {
   'white-label-social-media': whiteLabelSocialMedia,
   'white-label-seo-checklist': whiteLabelSeoChecklist,
   'what-is-white-label-marketing': whatIsWhiteLabelMarketing,
+  // Inline content images
+  'ppc-dashboard-team': ppcDashboardTeam,
+  'ppc-agency-partnership': ppcAgencyPartnership,
+  'ppc-local-targeting': ppcLocalTargeting,
 };
 
 /**
