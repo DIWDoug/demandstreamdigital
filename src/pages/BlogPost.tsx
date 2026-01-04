@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -191,7 +192,7 @@ const BlogPostPage = () => {
           )}
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
             {blog.title}
           </h1>
           
@@ -256,38 +257,117 @@ const BlogPostPage = () => {
             {/* Main Article Content */}
             <article className="lg:col-span-8 xl:col-span-9">
               <div className="max-w-3xl">
-                <div className="
-                  prose prose-lg max-w-none
-                  prose-headings:text-foreground prose-headings:font-bold
-                  prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-12 prose-h2:mb-6
-                  prose-h3:text-xl prose-h3:md:text-2xl prose-h3:mt-10 prose-h3:mb-4
-                  prose-p:text-muted-foreground prose-p:text-base prose-p:md:text-lg prose-p:leading-relaxed prose-p:md:leading-[1.9] prose-p:mb-6
-                  prose-a:text-cta prose-a:no-underline hover:prose-a:underline
-                  prose-strong:text-foreground prose-strong:font-semibold
-                  prose-blockquote:border-l-4 prose-blockquote:border-cta prose-blockquote:pl-6 prose-blockquote:text-muted-foreground prose-blockquote:not-italic prose-blockquote:my-8
-                  prose-ul:text-muted-foreground prose-ul:my-6 prose-ul:text-base prose-ul:md:text-lg
-                  prose-ol:text-muted-foreground prose-ol:my-6 prose-ol:text-base prose-ol:md:text-lg
-                  prose-li:text-muted-foreground prose-li:mb-3 prose-li:leading-relaxed
-                ">
+                {/* Article prose with proper editorial typography */}
+                <div className="article-content">
                   <ReactMarkdown 
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      h1: ({ children }) => <h2>{children}</h2>,
-                      h2: ({ children }) => <h2>{children}</h2>,
-                      h3: ({ children }) => <h3>{children}</h3>,
-                      p: ({ children }) => <p>{children}</p>,
-                      ul: ({ children }) => <ul className="list-disc pl-6 space-y-2">{children}</ul>,
-                      ol: ({ children }) => <ol className="list-decimal pl-6 space-y-2">{children}</ol>,
-                      li: ({ children }) => <li>{children}</li>,
+                      h1: ({ children }) => (
+                        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mt-14 mb-6 leading-tight">
+                          {children}
+                        </h2>
+                      ),
+                      h2: ({ children }) => (
+                        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mt-14 mb-6 leading-tight">
+                          {children}
+                        </h2>
+                      ),
+                      h3: ({ children }) => (
+                        <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mt-10 mb-4 leading-snug">
+                          {children}
+                        </h3>
+                      ),
+                      h4: ({ children }) => (
+                        <h4 className="font-sans text-lg md:text-xl font-semibold text-foreground mt-8 mb-3">
+                          {children}
+                        </h4>
+                      ),
+                      p: ({ children }) => (
+                        <p className="text-muted-foreground text-base md:text-lg leading-relaxed md:leading-[1.85] mb-6">
+                          {children}
+                        </p>
+                      ),
+                      ul: ({ children }) => (
+                        <ul className="my-6 ml-1 space-y-3">
+                          {React.Children.map(children, (child) => {
+                            if (React.isValidElement(child) && child.type === 'li') {
+                              return React.cloneElement(child as React.ReactElement<any>, { 'data-list-type': 'ul' });
+                            }
+                            return child;
+                          })}
+                        </ul>
+                      ),
+                      ol: ({ children }) => (
+                        <ol className="my-6 ml-1 space-y-4">
+                          {React.Children.map(children, (child, index) => {
+                            if (React.isValidElement(child) && child.type === 'li') {
+                              return React.cloneElement(child as React.ReactElement<any>, { 'data-list-type': 'ol', 'data-index': index + 1 });
+                            }
+                            return child;
+                          })}
+                        </ol>
+                      ),
+                      li: ({ children, ...props }) => {
+                        const listType = (props as any)['data-list-type'];
+                        const index = (props as any)['data-index'];
+                        
+                        if (listType === 'ol') {
+                          return (
+                            <li className="flex items-start gap-3 text-muted-foreground text-base md:text-lg leading-relaxed">
+                              <span className="flex-shrink-0 font-bold text-cta min-w-[1.5rem]">{index}.</span>
+                              <span className="flex-1">{children}</span>
+                            </li>
+                          );
+                        }
+                        
+                        return (
+                          <li className="flex items-start gap-3 text-muted-foreground text-base md:text-lg leading-relaxed">
+                            <span className="flex-shrink-0 w-2 h-2 bg-cta rounded-full mt-2.5" aria-hidden="true" />
+                            <span className="flex-1">{children}</span>
+                          </li>
+                        );
+                      },
                       a: ({ href, children }) => {
                         if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
-                          return <span className="font-semibold">{children}</span>;
+                          return <span className="font-semibold text-foreground">{children}</span>;
                         }
-                        return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+                        return (
+                          <a 
+                            href={href} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-cta hover:underline font-medium"
+                          >
+                            {children}
+                          </a>
+                        );
                       },
-                      blockquote: ({ children }) => <blockquote>{children}</blockquote>,
-                      code: ({ children }) => <code className="bg-surface-dark px-2 py-1 rounded text-sm font-mono">{children}</code>,
-                      pre: ({ children }) => <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-6">{children}</pre>,
+                      strong: ({ children }) => (
+                        <strong className="font-semibold text-foreground">{children}</strong>
+                      ),
+                      em: ({ children }) => (
+                        <em className="italic text-muted-foreground">{children}</em>
+                      ),
+                      blockquote: ({ children }) => (
+                        <blockquote className="my-8 pl-6 border-l-4 border-cta bg-surface-dark/30 py-4 pr-6 rounded-r-lg">
+                          <div className="text-muted-foreground text-lg italic leading-relaxed">
+                            {children}
+                          </div>
+                        </blockquote>
+                      ),
+                      code: ({ children }) => (
+                        <code className="bg-surface-dark px-2 py-1 rounded text-sm font-mono text-foreground">
+                          {children}
+                        </code>
+                      ),
+                      pre: ({ children }) => (
+                        <pre className="bg-surface-dark p-4 rounded-lg overflow-x-auto my-6 border border-border">
+                          {children}
+                        </pre>
+                      ),
+                      hr: () => (
+                        <hr className="my-10 border-t border-border/50" />
+                      ),
                       img: () => null,
                     }}
                   >
