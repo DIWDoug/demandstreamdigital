@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import TrustReel from "@/components/sections/TrustReel";
 import ContactForm from "@/components/sections/ContactForm";
 import { Star, Quote, Building2, Users } from "lucide-react";
+import { getTestimonialsPageSchema, getOrganizationSchema, BUSINESS_INFO } from "@/lib/schema";
 
 const Testimonials = () => {
   // Agency partner testimonials (Cole, Trevor, Jeremy)
@@ -176,6 +177,14 @@ const Testimonials = () => {
     }
   ];
 
+  // Create schema reviews from testimonials
+  const schemaReviews = [...agencyTestimonials, ...clientTestimonials].map(t => ({
+    author: t.name,
+    reviewBody: t.quote,
+    ratingValue: t.rating
+  }));
+  const testimonialsSchema = getTestimonialsPageSchema(schemaReviews);
+
   // Featured testimonials (top 3 client testimonials with best metrics)
   const featuredTestimonials = clientTestimonials.slice(0, 3);
 
@@ -185,6 +194,7 @@ const Testimonials = () => {
         <title>Client & Agency Partner Testimonials | Dialed-In Web</title>
         <meta name="description" content="See what agency owners and business clients say about partnering with Dialed-In Web for white-label SEO, local search, paid media, and digital marketing fulfillment." />
         <link rel="canonical" href="https://dialedinweb.com/testimonials" />
+        <script type="application/ld+json">{JSON.stringify(testimonialsSchema)}</script>
       </Helmet>
       
       <Header />

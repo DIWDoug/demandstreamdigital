@@ -16,6 +16,7 @@ import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
 import { useToast } from "@/hooks/use-toast";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
+import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schema";
 
 interface BlogPost {
   id: string;
@@ -218,9 +219,27 @@ const BlogPostPage = () => {
 
   const resolvedFeaturedImage = getBlogFeaturedImage(blog.featured_image);
 
+  // Build breadcrumb items for schema
+  const breadcrumbItems = [
+    { name: "Home", url: "https://dialedinweb.com" },
+    { name: "Blog", url: "https://dialedinweb.com/blog" },
+  ];
+  if (blog.category) {
+    breadcrumbItems.push({
+      name: categoryLabels[blog.category] || blog.category,
+      url: `https://dialedinweb.com/blog?category=${blog.category}`
+    });
+  }
+  breadcrumbItems.push({
+    name: blog.title,
+    url: `https://dialedinweb.com/blog/${blog.slug}`
+  });
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@graph": [
+      getOrganizationSchema(),
+      getBreadcrumbSchema(breadcrumbItems),
       {
         "@type": "Article",
         "@id": `https://dialedinweb.com/blog/${blog.slug}#article`,
