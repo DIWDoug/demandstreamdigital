@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,6 +14,13 @@ const Header = () => {
   const [isToolsMenuOpen, setIsToolsMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const toolsMenuRef = useRef<HTMLDivElement>(null);
+
+  const navigateMobile = (to: string) => {
+    setIsMobileMenuOpen(false);
+    setIsMegaMenuOpen(false);
+    setIsToolsMenuOpen(false);
+    requestAnimationFrame(() => navigate(to));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -409,8 +417,8 @@ const Header = () => {
                   href="/white-label-inbound-marketing-services"
                   className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
                   onClick={(e) => {
-                    setIsMobileMenuOpen(false);
-                    window.location.href = "/white-label-inbound-marketing-services";
+                    e.preventDefault();
+                    navigateMobile("/white-label-inbound-marketing-services");
                   }}
                 >
                   <span className="w-1 h-4 bg-cta rounded-full" />
@@ -432,9 +440,8 @@ const Header = () => {
                         href={category.href}
                         className="text-xs font-semibold text-cta uppercase tracking-widest mb-2 block active:text-cta-glow transition-colors underline underline-offset-2 decoration-cta/30"
                         onClick={(e) => {
-                          setIsMegaMenuOpen(false);
-                          setIsMobileMenuOpen(false);
-                          window.location.href = category.href;
+                          e.preventDefault();
+                          navigateMobile(category.href);
                         }}
                       >
                         {category.title}
@@ -448,9 +455,8 @@ const Header = () => {
                                 href={itemHref}
                                 className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
                                 onClick={(e) => {
-                                  setIsMegaMenuOpen(false);
-                                  setIsMobileMenuOpen(false);
-                                  window.location.href = itemHref;
+                                  e.preventDefault();
+                                  navigateMobile(itemHref);
                                 }}
                               >
                                 {item.label}
@@ -494,8 +500,8 @@ const Header = () => {
                   href="/partner-tools"
                   className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
                   onClick={(e) => {
-                    setIsMobileMenuOpen(false);
-                    window.location.href = "/partner-tools";
+                    e.preventDefault();
+                    navigateMobile("/partner-tools");
                   }}
                 >
                   <span className="w-1 h-4 bg-cta rounded-full" />
@@ -517,9 +523,8 @@ const Header = () => {
                       href={tool.href}
                       className="block py-2.5 px-2 rounded-md text-sm text-text-secondary hover:text-foreground active:text-cta active:bg-cta/10 transition-colors"
                       onClick={(e) => {
-                        setIsToolsMenuOpen(false);
-                        setIsMobileMenuOpen(false);
-                        window.location.href = tool.href;
+                        e.preventDefault();
+                        navigateMobile(tool.href);
                       }}
                     >
                       {tool.label}
