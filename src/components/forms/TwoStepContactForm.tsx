@@ -29,6 +29,7 @@ const TwoStepContactForm = ({
   const [step, setStep] = useState(1);
   const [isSubmittingStep1, setIsSubmittingStep1] = useState(false);
   const [isSubmittingStep2, setIsSubmittingStep2] = useState(false);
+  const [leadId, setLeadId] = useState<string | null>(null);
 
   const [step1Data, setStep1Data] = useState({
     name: "",
@@ -58,7 +59,7 @@ const TwoStepContactForm = ({
 
     try {
       // Submit partial lead (step 1)
-      const { error } = await supabase.functions.invoke("submit-to-ghl", {
+      const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
           name: step1Data.name,
           email: step1Data.email,
@@ -68,6 +69,9 @@ const TwoStepContactForm = ({
       });
 
       if (error) throw error;
+
+      const returnedId = (data as any)?.data?.id ?? (data as any)?.id ?? null;
+      if (returnedId) setLeadId(String(returnedId));
 
       // Move to step 2
       setStep(2);
@@ -99,6 +103,7 @@ const TwoStepContactForm = ({
     try {
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
+          leadId,
           name: step1Data.name,
           email: step1Data.email,
           website: step1Data.website,
