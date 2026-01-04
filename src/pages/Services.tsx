@@ -94,7 +94,9 @@ const Services = () => {
       <SectionDivider />
       
       {/* Testimonials - Social proof after framework */}
-      <ServicesTestimonials />
+      <div id="testimonials" className="scroll-mt-32">
+        <ServicesTestimonials />
+      </div>
       
       <SectionDivider />
       
