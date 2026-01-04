@@ -171,9 +171,17 @@ const About = () => {
                   { "@type": "Thing", "name": "Pay-Per-Click Advertising", "sameAs": "https://en.wikipedia.org/wiki/Pay-per-click" }
                 ],
                 "sameAs": [
-                  "https://www.linkedin.com/company/dialedinweb",
-                  "https://twitter.com/DialedInWeb"
-                ]
+                  "https://www.linkedin.com/company/dialed-in-web/",
+                  "https://x.com/dialedinweb",
+                  "https://www.facebook.com/dialedinweb"
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": 4.9,
+                  "reviewCount": 21,
+                  "bestRating": 5,
+                  "worstRating": 1
+                }
               },
               {
                 "@type": "Person",
@@ -250,8 +258,8 @@ const About = () => {
                   <p className="text-sm text-text-secondary">Ad Spend</p>
                 </div>
                 <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">4.8★</p>
-                  <p className="text-sm text-text-secondary">Google</p>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">4.9★</p>
+                  <p className="text-sm text-text-secondary">Rating</p>
                 </div>
               </div>
             </div>
