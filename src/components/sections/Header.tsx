@@ -404,42 +404,59 @@ const Header = () => {
           <div className="md:hidden py-6 border-t border-border bg-surface-dark">
             <nav className="flex flex-col gap-2">
               {/* Services Accordion */}
-              <button
-                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                className="flex items-center justify-between w-full py-3 text-base font-medium text-foreground/80 uppercase tracking-wide"
-              >
-                Services
-                <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
+              <div className="flex items-center justify-between w-full py-3">
+                <a
+                  href="/white-label-inbound-marketing-services"
+                  className="text-base font-medium text-foreground/80 uppercase tracking-wide"
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    window.location.href = "/white-label-inbound-marketing-services";
+                  }}
+                >
+                  Services
+                </a>
+                <button
+                  onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                  className="p-2 -mr-2"
+                  aria-label="Toggle services menu"
+                >
+                  <ChevronDown className={`h-4 w-4 text-foreground/80 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
               {isMegaMenuOpen && (
                 <div className="pl-4 pb-4 grid grid-cols-2 gap-4">
                   {serviceCategories.map((category, index) => (
                     <div key={index}>
-                      <Link 
-                        to={category.href}
+                      <a 
+                        href={category.href}
                         className="text-xs font-semibold text-foreground uppercase tracking-widest mb-2 block hover:text-cta transition-colors"
-                        onClick={() => {
+                        onClick={(e) => {
                           setIsMegaMenuOpen(false);
                           setIsMobileMenuOpen(false);
+                          window.location.href = category.href;
                         }}
                       >
                         {category.title}
-                      </Link>
+                      </a>
                       <ul className="space-y-1">
-                        {category.items.map((item, itemIndex) => (
-                          <li key={itemIndex}>
-                            <Link 
-                              to={'href' in item && item.href ? item.href : `${category.href}/${item.slug}`}
-                              className="text-xs text-text-secondary hover:text-foreground transition-colors"
-                              onClick={() => {
-                                setIsMegaMenuOpen(false);
-                                setIsMobileMenuOpen(false);
-                              }}
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        ))}
+                        {category.items.map((item, itemIndex) => {
+                          const itemHref = 'href' in item && item.href ? item.href : `${category.href}/${item.slug}`;
+                          return (
+                            <li key={itemIndex}>
+                              <a 
+                                href={itemHref}
+                                className="text-xs text-text-secondary hover:text-foreground transition-colors"
+                                onClick={(e) => {
+                                  setIsMegaMenuOpen(false);
+                                  setIsMobileMenuOpen(false);
+                                  window.location.href = itemHref;
+                                }}
+                              >
+                                {item.label}
+                              </a>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}
