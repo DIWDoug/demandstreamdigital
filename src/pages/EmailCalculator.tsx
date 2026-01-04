@@ -6,10 +6,11 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
 import { useState, useMemo } from "react";
-import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Repeat, Target, Send, UserPlus, Info, ChevronDown, X, ExternalLink } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Users, Mail, MousePointerClick, Eye, Percent, Repeat, Target, Send, UserPlus, Info, ChevronDown, X, ExternalLink, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { emailBenchmarks, getEmailBenchmarksByCategory, allIndustriesAverage, emailBenchmarkSources, type EmailBenchmark } from "@/data/emailBenchmarks";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const EmailCalculator = () => {
   // Industry selection
@@ -476,11 +477,11 @@ const EmailCalculator = () => {
               </Link>
               <span className="text-text-muted">or</span>
               <a
-                href="tel:+12143072995"
+                href={PHONE_HREF}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-border/50 rounded-xl text-foreground hover:border-accent-blue/50 transition-colors"
               >
-                <span className="text-accent-blue">📞</span>
-                (214) 307-2995
+                <Phone className="h-4 w-4 text-accent-blue" />
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>
