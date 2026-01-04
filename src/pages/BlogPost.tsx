@@ -558,7 +558,25 @@ const BlogPostPage = () => {
                       hr: () => (
                         <hr className="my-10 border-t border-border/50" />
                       ),
-                      img: () => null,
+                      img: ({ src, alt }) => {
+                        // Resolve image source - check if it's a key in our blogImages map
+                        const resolvedSrc = src ? (getBlogFeaturedImage(src) || src) : '';
+                        return (
+                          <figure className="my-10">
+                            <img 
+                              src={resolvedSrc} 
+                              alt={alt || 'Blog content illustration'} 
+                              className="w-full rounded-xl shadow-lg"
+                              loading="lazy"
+                            />
+                            {alt && (
+                              <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                                {alt}
+                              </figcaption>
+                            )}
+                          </figure>
+                        );
+                      },
                     }}
                   >
                     {cleanedContent}
