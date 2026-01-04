@@ -494,44 +494,19 @@ const Header = () => {
                 )
               ))}
 
-              {/* Mobile Partner Tools */}
-              <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
-                <a
-                  href="/partner-tools"
-                  className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateMobile("/partner-tools");
-                  }}
-                >
-                  <span className="w-1 h-4 bg-cta rounded-full" />
-                  Partner Tools
-                </a>
-                <button
-                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
-                  className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
-                  aria-label="Toggle partner tools menu"
-                >
-                  <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-              {isToolsMenuOpen && (
-                <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-2 space-y-1">
-                  {partnerToolsLinks.map((tool, index) => (
-                    <a
-                      key={index}
-                      href={tool.href}
-                      className="block py-2.5 px-2 rounded-md text-sm text-text-secondary hover:text-foreground active:text-cta active:bg-cta/10 transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        navigateMobile(tool.href);
-                      }}
-                    >
-                      {tool.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              {/* Mobile Partner Tools (no dropdown) */}
+              <a
+                href="/partner-tools"
+                className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateMobile("/partner-tools");
+                }}
+              >
+                <span className="w-1 h-4 bg-cta rounded-full" />
+                Partner Tools
+              </a>
+
 
 
               <div className="pt-4 mt-2 border-t border-border">
