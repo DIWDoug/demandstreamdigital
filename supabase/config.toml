@@ -13,10 +13,10 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.analyze-ai-readiness]
-verify_jwt = false
+verify_jwt = true
 
 [functions.fetch-pixabay-image]
-verify_jwt = false
+verify_jwt = true
 
 [functions.elevenlabs-tts]
-verify_jwt = false
+verify_jwt = true
