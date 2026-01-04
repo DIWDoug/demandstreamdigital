@@ -147,7 +147,7 @@ const PartnerTools = () => {
           </div>
           
           <div className="container mx-auto px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-6">
                 <Calculator className="h-4 w-4" />
                 Agency Partner Resources
@@ -155,23 +155,51 @@ const PartnerTools = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 Partner Tools
               </h1>
-              <p className="text-text-secondary text-lg md:text-xl font-body mb-8 max-w-2xl mx-auto">
-                Free calculators and resources to help you scope projects, build proposals, and demonstrate ROI to clients. Built by an agency, for agencies.
+              <p className="text-text-secondary text-lg md:text-xl font-body max-w-2xl mx-auto">
+                Free calculators and resources to help you scope projects, build proposals, and demonstrate ROI to clients.
               </p>
+            </div>
+            
+            {/* Quick Access Grid */}
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                {calculators.map((calc) => (
+                  <Link
+                    key={calc.href}
+                    to={calc.href}
+                    className={cn(
+                      "group flex flex-col items-center gap-2 p-4 md:p-5 rounded-xl border transition-all duration-200",
+                      "bg-surface-elevated/50 hover:bg-surface-elevated",
+                      "hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20",
+                      calc.borderColor
+                    )}
+                  >
+                    <div className={cn(
+                      "w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center",
+                      "bg-surface-dark/80 group-hover:scale-110 transition-transform"
+                    )}>
+                      <calc.icon className={cn("h-5 w-5 md:h-6 md:w-6", calc.iconColor)} />
+                    </div>
+                    <span className="text-xs md:text-sm font-medium text-foreground text-center leading-tight group-hover:text-accent-blue transition-colors">
+                      {calc.title.replace(' Calculator', '').replace('Inbound Marketing ', '')}
+                    </span>
+                  </Link>
+                ))}
+              </div>
               
               {/* Quick Stats */}
-              <div className="flex flex-wrap justify-center gap-8 mt-12">
+              <div className="flex flex-wrap justify-center gap-8 mt-10 pt-8 border-t border-border/20">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">7</p>
-                  <p className="text-sm text-text-muted">Tools</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">7</p>
+                  <p className="text-xs text-text-muted">Tools</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">100%</p>
-                  <p className="text-sm text-text-muted">Free to Use</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">100%</p>
+                  <p className="text-xs text-text-muted">Free</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-foreground">No</p>
-                  <p className="text-sm text-text-muted">Login Required</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">No</p>
+                  <p className="text-xs text-text-muted">Login</p>
                 </div>
               </div>
             </div>
