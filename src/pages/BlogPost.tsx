@@ -8,7 +8,7 @@ import BlogSidebar from "@/components/BlogSidebar";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ArrowLeft, Play, Pause, Clock, Loader2 } from "lucide-react";
+import { ArrowLeft, Play, Pause, Clock, Loader2, ChevronRight, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -371,6 +371,56 @@ const BlogPostPage = () => {
             </div>
           </div>
         </header>
+
+        {/* Breadcrumbs */}
+        <nav 
+          aria-label="Breadcrumb" 
+          className="container mx-auto px-4 max-w-7xl mb-8"
+        >
+          <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+            <li>
+              <Link 
+                to="/" 
+                className="hover:text-foreground transition-colors flex items-center gap-1"
+              >
+                <Home className="w-3.5 h-3.5" />
+                <span className="sr-only">Home</span>
+              </Link>
+            </li>
+            <li>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </li>
+            <li>
+              <Link 
+                to="/blog" 
+                className="hover:text-foreground transition-colors"
+              >
+                Blog
+              </Link>
+            </li>
+            {blog.category && (
+              <>
+                <li>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </li>
+                <li>
+                  <Link 
+                    to={`/blog?category=${blog.category}`}
+                    className="hover:text-foreground transition-colors"
+                  >
+                    {categoryLabels[blog.category] || blog.category}
+                  </Link>
+                </li>
+              </>
+            )}
+            <li>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </li>
+            <li className="text-foreground font-medium truncate max-w-[200px] md:max-w-[300px]">
+              {blog.title}
+            </li>
+          </ol>
+        </nav>
 
         {/* CONTENT GRID - Article + Sidebar */}
         <div className="container mx-auto px-4 pb-16 max-w-7xl">
