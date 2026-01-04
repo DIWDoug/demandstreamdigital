@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Map, MousePointerClick, Share2, Mail, BarChart3, Calculator } from "lucide-react";
+import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, BarChart3, Calculator } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { searchPixabayImages } from "@/lib/pixabay";
@@ -34,11 +34,11 @@ const services: Service[] = [
     pixabayKeyword: "online advertising campaign clicks"
   },
   {
-    icon: Share2,
-    title: "Authority Building",
-    description: "Earn the trust that rankings require. Digital PR, quality backlinks, and citation management that compounds over time.",
-    href: "/white-label-inbound-marketing-services/local-authority-building",
-    pixabayKeyword: "handshake partnership agreement trust"
+    icon: PenTool,
+    title: "Content Development",
+    description: "Strategic content that ranks locally and converts. Service area pages, power posts, and lead magnets that drive visibility.",
+    href: "/white-label-inbound-marketing-services/content-marketing",
+    pixabayKeyword: "content writing strategy marketing"
   },
   {
     icon: Mail,
