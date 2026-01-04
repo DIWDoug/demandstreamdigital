@@ -37,7 +37,7 @@ Deno.serve(async (req) => {
     if (!apiKey) {
       console.error('PIXABAY_API_KEY not configured');
       return new Response(
-        JSON.stringify({ success: false, error: 'Pixabay API key not configured' }),
+        JSON.stringify({ success: false, error: 'Service configuration error' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -66,8 +66,8 @@ Deno.serve(async (req) => {
     if (!response.ok) {
       console.error('Pixabay API error:', response.status, response.statusText);
       return new Response(
-        JSON.stringify({ success: false, error: `Pixabay API error: ${response.status}` }),
-        { status: response.status, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ success: false, error: 'Failed to fetch images' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
@@ -81,9 +81,8 @@ Deno.serve(async (req) => {
     );
   } catch (error) {
     console.error('Error fetching Pixabay images:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Failed to fetch images';
     return new Response(
-      JSON.stringify({ success: false, error: errorMessage }),
+      JSON.stringify({ success: false, error: 'An error occurred processing your request' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }

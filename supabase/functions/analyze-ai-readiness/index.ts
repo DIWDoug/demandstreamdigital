@@ -431,9 +431,8 @@ Deno.serve(async (req) => {
 
   } catch (error) {
     console.error('Error analyzing URL:', error);
-    const errorMessage = error instanceof Error ? error.message : 'Failed to analyze URL';
     return new Response(
-      JSON.stringify({ success: false, error: errorMessage }),
+      JSON.stringify({ success: false, error: 'An error occurred processing your request' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
