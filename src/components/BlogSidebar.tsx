@@ -177,6 +177,78 @@ const BlogSidebar = () => {
         </div>
       )}
 
+      {/* Free Tools */}
+      <div className="pb-8 border-b border-border">
+        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-cta mb-5">
+          Free Tools
+        </h3>
+        <ul className="space-y-3">
+          <li>
+            <Link
+              to="/partner-tools/roi-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              ROI Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/investment-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              Investment Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/seo-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              SEO Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/ad-budget-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              Ad Budget Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/email-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              Email Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/content-marketing-calculator"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              Content Marketing Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/partner-tools/ai-ready-check"
+              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+            >
+              <ArrowRight className="w-3 h-3" />
+              AI Ready Check
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       {/* Request Information Form - Same as main contact form */}
       <div className="bg-surface-dark rounded-lg p-6 border border-border">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-foreground mb-5">
