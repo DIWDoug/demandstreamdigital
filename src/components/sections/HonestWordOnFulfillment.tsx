@@ -25,7 +25,7 @@ const HonestWordOnFulfillment = () => {
             <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
               An Honest Word on Fulfillment
             </p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Most Agencies Don't Lose Clients Because of Results
             </h2>
           </div>

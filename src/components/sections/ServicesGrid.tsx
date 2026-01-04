@@ -161,7 +161,7 @@ const ServicesGrid = () => {
               <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
                 The System
               </span>
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 White Label Inbound Marketing,<br />
                 <span className="text-accent-blue">Fully Executed</span>
               </h2>
