@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,6 +11,7 @@ import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
 
 const blogCategories = [
   { name: "White-Label SEO", slug: "white-label-seo" },
@@ -141,13 +142,17 @@ const BlogSidebar = () => {
               <li key={post.id} className="group">
                 <Link to={`/blog/${post.slug}`} className="flex gap-4">
                   {/* Thumbnail */}
-                  {post.featured_image && (
+                  {getBlogFeaturedImage(post.featured_image) ? (
                     <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden bg-surface-dark">
                       <img 
-                        src={post.featured_image} 
+                        src={getBlogFeaturedImage(post.featured_image)!} 
                         alt={`Thumbnail for ${post.title}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
+                    </div>
+                  ) : (
+                    <div className="flex-shrink-0 w-20 h-20 rounded bg-surface-dark flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-muted-foreground" />
                     </div>
                   )}
                   
