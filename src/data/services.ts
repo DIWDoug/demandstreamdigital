@@ -269,7 +269,7 @@ export const hubs: Hub[] = [
     ],
     spokes: [
       {
-        title: "GBP Optimization",
+        title: "GBP Profile Optimization",
         slug: "gbp-optimization",
         description: "Complete profile optimization including categories, attributes, services, products, and description for maximum visibility and AI citations.",
         fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps and increasingly the source AI Overviews pull for local recommendations. We optimize every element from primary and secondary categories to business attributes, services, products, and description to maximize visibility in the local pack and AI-generated results.",
@@ -278,7 +278,7 @@ export const hubs: Hub[] = [
         process: ["Profile audit against best practices", "Competitive GBP analysis", "Category expansion research", "Optimization implementation", "AI visibility verification", "Performance monitoring", "Ongoing refinement"]
       },
       {
-        title: "Review Management",
+        title: "Review Generation & Response",
         slug: "review-management",
         description: "Systematic review generation, professional responses, and reputation monitoring across all platforms that matter for rankings and AI visibility.",
         fullDescription: "Reviews account for 20% of local ranking factors and 93% of consumers read local reviews before choosing a business. We implement systematic review generation using proven tactics: 51% of customers leave reviews when asked, but 30% skip reviews because the process is confusing. We eliminate friction with direct links, clear instructions, and multi-channel requests timed to peak satisfaction moments.",
@@ -301,7 +301,7 @@ export const hubs: Hub[] = [
         process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"]
       },
       {
-        title: "Citation Building",
+        title: "Citation Building & Cleanup",
         slug: "citation-building",
         description: "NAP consistency across 50+ directories, data aggregators, and industry-specific platforms.",
         fullDescription: "Citations are mentions of your client's business name, address, and phone number across the web. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
@@ -310,7 +310,7 @@ export const hubs: Hub[] = [
         process: ["Current citation audit", "Inconsistency cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "Ongoing monitoring"]
       },
       {
-        title: "Photo Optimization",
+        title: "Photo & Media Management",
         slug: "photo-optimization",
         description: "Professional photo management, geotagging, and visual content strategies that increase engagement.",
         fullDescription: "Visual content significantly impacts GBP engagement and conversion. We develop photo strategies that showcase the business professionally and manage ongoing photo content to keep profiles fresh and engaging.",
@@ -319,18 +319,18 @@ export const hubs: Hub[] = [
         process: ["Current photo audit", "Competitive visual analysis", "Photo strategy development", "Optimization implementation", "Ongoing content management"]
       },
       {
-        title: "Q&A Management",
+        title: "Local Pack Strategy",
         slug: "qa-management",
-        description: "Proactive question seeding, answer management, and monitoring that builds trust and captures search queries.",
+        description: "Service and product gap analysis with topical map matching between GBP and website pages.",
         fullDescription: "The Q&A section of Google Business Profile is often overlooked but influences both rankings and conversions. We proactively seed common questions with helpful answers and monitor for new questions to respond promptly.",
         benefits: ["Capture additional search queries", "Build trust with potential customers", "Control the narrative", "Reduce repetitive customer inquiries", "Competitive differentiation"],
         deliverables: ["Q&A audit and strategy", "Question seeding with answers", "Ongoing Q&A monitoring", "Response drafting for new questions", "Competitor Q&A analysis", "Monthly Q&A reporting"],
         process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"]
       },
       {
-        title: "Post Scheduling",
+        title: "GBP Posting & Content",
         slug: "post-scheduling",
-        description: "Weekly GBP posts with offers, updates, and events that keep profiles active and engaging.",
+        description: "Posts, offers, and updates to signal activity to Google and engage searchers.",
         fullDescription: "Regular GBP posts signal to Google that the business is active and engaged. We create and schedule weekly posts featuring offers, updates, events, and content that keeps profiles fresh and drives engagement.",
         benefits: ["Active profile signals to Google", "Increased customer engagement", "Promotion of offers and events", "Fresh content for searchers", "Competitive advantage"],
         deliverables: ["Post content calendar", "Weekly post creation", "Offer and event posts", "Image selection and optimization", "Post performance tracking", "Monthly engagement reporting"],

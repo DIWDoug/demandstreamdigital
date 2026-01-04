@@ -56,32 +56,32 @@ const TopicalExpertise = () => {
       summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
       spokes: [
         {
-          title: "GBP Optimization",
+          title: "GBP Profile Optimization",
           slug: "gbp-optimization",
           description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results and AI Overviews."
         },
         {
-          title: "Review Management",
+          title: "Review Generation & Response",
           slug: "review-management",
           description: "Systematic review acquisition strategies and professional response management that builds trust, improves rankings, and feeds AI recommendation systems."
         },
         {
-          title: "Citation Building",
+          title: "Citation Building & Cleanup",
           slug: "citation-building",
           description: "NAP consistency across 50+ directories, data aggregators, and AI-cited platforms like Yelp and TripAdvisor that validate business legitimacy."
         },
         {
-          title: "Photo Optimization",
+          title: "Photo & Media Management",
           slug: "photo-optimization",
           description: "Professional photo management, geotagging, and visual content strategies that increase engagement and click-through rates."
         },
         {
-          title: "Q&A Management",
+          title: "Local Pack Strategy",
           slug: "qa-management",
-          description: "Proactive Q&A monitoring and response to control the narrative and improve profile completeness."
+          description: "Service and product gap analysis with topical map matching between GBP and website pages."
         },
         {
-          title: "Post Scheduling",
+          title: "GBP Posting & Content",
           slug: "post-scheduling",
           description: "Strategic GBP posts, offers, and updates that signal activity and engage searchers."
         }

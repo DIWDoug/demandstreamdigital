@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle, ArrowRight, FileText, Settings, Target, PenTool, Link2, Code, type LucideIcon } from "lucide-react";
+import { CheckCircle, ArrowRight, FileText, Settings, Target, PenTool, Link2, Code, MapPin, Star, Globe, MessageSquare, Map, Camera, HelpCircle, Mail, ListChecks, Workflow, Palette, FlaskConical, BarChart3, MousePointerClick, Share2, Layers, Layout, Phone, type LucideIcon } from "lucide-react";
 
 interface SpokeService {
   title: string;
@@ -24,14 +24,60 @@ interface SpokeEcosystemOrbitProps {
   }>;
 }
 
-// Map spoke slugs to icons
+// Map spoke slugs to icons - covers all hubs
 const spokeIcons: Record<string, LucideIcon> = {
+  // Local SEO spokes
   "on-page-optimization": FileText,
   "technical-seo": Settings,
   "local-keyword-strategy": Target,
   "content-development": PenTool,
   "link-building": Link2,
   "schema-markup": Code,
+  "nap-citations": Globe,
+  // GBP SEO spokes
+  "gbp-optimization": MapPin,
+  "review-management": Star,
+  "citation-building": Globe,
+  "photo-optimization": Camera,
+  "qa-management": Target,
+  "post-scheduling": MessageSquare,
+  // Paid Media spokes
+  "google-ads": MousePointerClick,
+  "meta-ads": Share2,
+  "local-service-ads": Phone,
+  "retargeting-campaigns": Layers,
+  "landing-page-design": Layout,
+  "conversion-tracking": BarChart3,
+  // Email Marketing spokes
+  "campaign-strategy": Target,
+  "list-management": ListChecks,
+  "automation-flows": Workflow,
+  "newsletter-design": Palette,
+  "ab-testing": FlaskConical,
+  "performance-analytics": BarChart3,
+  // Content Marketing spokes
+  "geographical-content": Map,
+  "topical-content": FileText,
+  "power-posts": PenTool,
+  "ebooks-guides": FileText,
+  "lead-magnets": Target,
+  "press-releases": MessageSquare,
+  "case-studies": FileText,
+  "aio-content": Settings,
+  // Authority spokes
+  "local-links": Link2,
+  "unstructured-citations": Globe,
+  "brand-mentions": MessageSquare,
+  "anchor-text": Link2,
+  "sponsorships": Star,
+  "reputation-signals": Star,
+  // Reporting spokes
+  "white-label-dashboards": BarChart3,
+  "monthly-performance-reports": FileText,
+  "rank-tracking-visibility": Target,
+  "call-tracking-lead-attribution": Phone,
+  "roi-revenue-analysis": BarChart3,
+  "client-presentation-decks": Layout,
 };
 
 const SpokeEcosystemOrbit = ({ 
