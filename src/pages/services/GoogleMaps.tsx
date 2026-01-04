@@ -10,6 +10,7 @@ import type { BreadcrumbItem } from "@/types/servicePage";
 
 // Generic section components
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
@@ -62,18 +63,25 @@ const GoogleMaps = () => {
         />
       </div>
       
+      {/* STICKY ANCHOR NAV */}
+      <ServiceHubAnchorNav />
+      
       {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
       {/* 3. PROBLEM */}
-      <ServiceProblemSection config={googleMapsConfig.problem} />
+      <div id="problem" className="scroll-mt-32">
+        <ServiceProblemSection config={googleMapsConfig.problem} />
+      </div>
       
       <SectionDivider />
       
       {/* 4. OUTCOMES */}
-      <ServiceOutcomesSection config={googleMapsConfig.outcomes} />
+      <div id="outcomes" className="scroll-mt-32">
+        <ServiceOutcomesSection config={googleMapsConfig.outcomes} />
+      </div>
       
       {/* Ranking Factors - GBP specific */}
       <GBPRankingFactors />
@@ -81,7 +89,9 @@ const GoogleMaps = () => {
       <SectionDivider />
       
       {/* 5. ROADMAP */}
-      <ServiceRoadmapSection config={googleMapsConfig.roadmap} />
+      <div id="roadmap" className="scroll-mt-32">
+        <ServiceRoadmapSection config={googleMapsConfig.roadmap} />
+      </div>
       
       {/* Mid-Page CTA */}
       <MidPageCTA />
@@ -89,20 +99,28 @@ const GoogleMaps = () => {
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={googleMapsConfig.buildingBlocks} hubSlug="google-maps" />
+      <div id="building-blocks" className="scroll-mt-32">
+        <ServiceBuildingBlocksSection config={googleMapsConfig.buildingBlocks} hubSlug="google-maps" />
+      </div>
       
       <SectionDivider />
       
       {/* 7. QUALIFICATION */}
-      <ServiceFitQualifierSection config={googleMapsConfig.qualification} />
+      <div id="qualification" className="scroll-mt-32">
+        <ServiceFitQualifierSection config={googleMapsConfig.qualification} />
+      </div>
       
       {/* 8. TESTIMONIALS */}
-      <Testimonials />
+      <div id="testimonials" className="scroll-mt-32">
+        <Testimonials />
+      </div>
       
       <SectionDivider />
       
       {/* 9. FAQ */}
-      <ServiceGroupedFAQ config={googleMapsConfig.faq} />
+      <div id="faq" className="scroll-mt-32">
+        <ServiceGroupedFAQ config={googleMapsConfig.faq} />
+      </div>
       
       <SectionDivider />
       
@@ -110,7 +128,9 @@ const GoogleMaps = () => {
       <ServiceEcosystemSection config={googleMapsConfig.ecosystem} />
       
       {/* 11. CONTACT */}
-      <ContactForm />
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
       
       <Footer />
     </div>

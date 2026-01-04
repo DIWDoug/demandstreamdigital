@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
@@ -19,8 +20,8 @@ import { reportingConfig } from "@/data/service-pages/reporting";
 import { getHubBySlug } from "@/data/services";
 
 const SectionDivider = () => (
-  <div className="w-full">
-    <hr className="border-t border-border/30" />
+  <div className="container mx-auto px-6 lg:px-8">
+    <hr className="border-t border-border/40" />
   </div>
 );
 
@@ -42,6 +43,8 @@ const Reporting = () => {
       </Helmet>
       
       <Header />
+      
+      {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title} 
@@ -50,40 +53,70 @@ const Reporting = () => {
         />
       </div>
       
+      {/* STICKY ANCHOR NAV */}
+      <ServiceHubAnchorNav />
+      
+      {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
-      <ServiceProblemSection config={reportingConfig.problem} />
+      {/* 3. PROBLEM */}
+      <div id="problem" className="scroll-mt-32">
+        <ServiceProblemSection config={reportingConfig.problem} />
+      </div>
       
-      <ServiceOutcomesSection config={reportingConfig.outcomes} />
+      {/* 4. OUTCOMES */}
+      <div id="outcomes" className="scroll-mt-32">
+        <ServiceOutcomesSection config={reportingConfig.outcomes} />
+      </div>
       
       <SectionDivider />
       
-      <ServiceRoadmapSection config={reportingConfig.roadmap} />
+      {/* 5. ROADMAP */}
+      <div id="roadmap" className="scroll-mt-32">
+        <ServiceRoadmapSection config={reportingConfig.roadmap} />
+      </div>
       
       {/* Mid-Page CTA */}
       <MidPageCTA />
       
       <SectionDivider />
       
-      <ServiceBuildingBlocksSection config={reportingConfig.buildingBlocks} hubSlug="reporting" />
+      {/* 6. BUILDING BLOCKS */}
+      <div id="building-blocks" className="scroll-mt-32">
+        <ServiceBuildingBlocksSection config={reportingConfig.buildingBlocks} hubSlug="reporting" />
+      </div>
       
       <SectionDivider />
       
-      <ServiceFitQualifierSection config={reportingConfig.qualification} />
+      {/* 7. QUALIFICATION */}
+      <div id="qualification" className="scroll-mt-32">
+        <ServiceFitQualifierSection config={reportingConfig.qualification} />
+      </div>
       
-      <Testimonials />
+      {/* 8. TESTIMONIALS */}
+      <div id="testimonials" className="scroll-mt-32">
+        <Testimonials />
+      </div>
       
       <SectionDivider />
       
-      <ServiceGroupedFAQ config={reportingConfig.faq} />
+      {/* 9. FAQ */}
+      <div id="faq" className="scroll-mt-32">
+        <ServiceGroupedFAQ config={reportingConfig.faq} />
+      </div>
       
       <SectionDivider />
       
+      {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={reportingConfig.ecosystem} />
       
-      <ContactForm />
+      {/* 11. CONTACT */}
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
+      
       <Footer />
     </div>
   );

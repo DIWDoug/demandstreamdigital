@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
   ServiceProblemSection,
@@ -53,23 +54,32 @@ const Authority = () => {
         />
       </div>
       
+      {/* STICKY ANCHOR NAV */}
+      <ServiceHubAnchorNav />
+      
       {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
       {/* 3. PROBLEM */}
-      <ServiceProblemSection config={authorityConfig.problem} />
+      <div id="problem" className="scroll-mt-32">
+        <ServiceProblemSection config={authorityConfig.problem} />
+      </div>
       
       <SectionDivider />
       
       {/* 4. OUTCOMES */}
-      <ServiceOutcomesSection config={authorityConfig.outcomes} />
+      <div id="outcomes" className="scroll-mt-32">
+        <ServiceOutcomesSection config={authorityConfig.outcomes} />
+      </div>
       
       <SectionDivider />
       
       {/* 5. ROADMAP */}
-      <ServiceRoadmapSection config={authorityConfig.roadmap} />
+      <div id="roadmap" className="scroll-mt-32">
+        <ServiceRoadmapSection config={authorityConfig.roadmap} />
+      </div>
       
       {/* Mid-Page CTA */}
       <MidPageCTA />
@@ -77,20 +87,28 @@ const Authority = () => {
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={authorityConfig.buildingBlocks} hubSlug="local-authority-building" />
+      <div id="building-blocks" className="scroll-mt-32">
+        <ServiceBuildingBlocksSection config={authorityConfig.buildingBlocks} hubSlug="local-authority-building" />
+      </div>
       
       <SectionDivider />
       
       {/* 7. QUALIFICATION */}
-      <ServiceFitQualifierSection config={authorityConfig.qualification} />
+      <div id="qualification" className="scroll-mt-32">
+        <ServiceFitQualifierSection config={authorityConfig.qualification} />
+      </div>
       
       {/* 8. TESTIMONIALS */}
-      <Testimonials />
+      <div id="testimonials" className="scroll-mt-32">
+        <Testimonials />
+      </div>
       
       <SectionDivider />
       
       {/* 9. FAQ */}
-      <ServiceGroupedFAQ config={authorityConfig.faq} />
+      <div id="faq" className="scroll-mt-32">
+        <ServiceGroupedFAQ config={authorityConfig.faq} />
+      </div>
       
       <SectionDivider />
       
@@ -98,7 +116,9 @@ const Authority = () => {
       <ServiceEcosystemSection config={authorityConfig.ecosystem} />
       
       {/* 11. CONTACT */}
-      <ContactForm />
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
       
       <Footer />
     </div>

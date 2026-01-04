@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
+import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { paidMediaConfig } from "@/data/service-pages/paid-media";
 import { getHubBySlug } from "@/data/services";
@@ -56,23 +57,32 @@ const PaidMedia = () => {
         />
       </div>
       
+      {/* STICKY ANCHOR NAV */}
+      <ServiceHubAnchorNav />
+      
       {/* 2. TRUST REEL */}
       <TrustReel />
       
       <SectionDivider />
       
       {/* 3. PROBLEM */}
-      <ServiceProblemSection config={paidMediaConfig.problem} />
+      <div id="problem" className="scroll-mt-32">
+        <ServiceProblemSection config={paidMediaConfig.problem} />
+      </div>
       
       <SectionDivider />
       
       {/* 4. OUTCOMES */}
-      <ServiceOutcomesSection config={paidMediaConfig.outcomes} />
+      <div id="outcomes" className="scroll-mt-32">
+        <ServiceOutcomesSection config={paidMediaConfig.outcomes} />
+      </div>
       
       <SectionDivider />
       
       {/* 5. ROADMAP */}
-      <ServiceRoadmapSection config={paidMediaConfig.roadmap} />
+      <div id="roadmap" className="scroll-mt-32">
+        <ServiceRoadmapSection config={paidMediaConfig.roadmap} />
+      </div>
       
       {/* Mid-Page CTA */}
       <MidPageCTA />
@@ -80,20 +90,28 @@ const PaidMedia = () => {
       <SectionDivider />
       
       {/* 6. BUILDING BLOCKS */}
-      <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} hubSlug="paid-media" />
+      <div id="building-blocks" className="scroll-mt-32">
+        <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} hubSlug="paid-media" />
+      </div>
       
       <SectionDivider />
       
       {/* 7. QUALIFICATION */}
-      <ServiceFitQualifierSection config={paidMediaConfig.qualification} />
+      <div id="qualification" className="scroll-mt-32">
+        <ServiceFitQualifierSection config={paidMediaConfig.qualification} />
+      </div>
       
       {/* 8. TESTIMONIALS */}
-      <Testimonials />
+      <div id="testimonials" className="scroll-mt-32">
+        <Testimonials />
+      </div>
       
       <SectionDivider />
       
       {/* 9. FAQ */}
-      <ServiceGroupedFAQ config={paidMediaConfig.faq} />
+      <div id="faq" className="scroll-mt-32">
+        <ServiceGroupedFAQ config={paidMediaConfig.faq} />
+      </div>
       
       <SectionDivider />
       
@@ -101,7 +119,9 @@ const PaidMedia = () => {
       <ServiceEcosystemSection config={paidMediaConfig.ecosystem} />
       
       {/* 11. CONTACT */}
-      <ContactForm />
+      <div id="contact" className="scroll-mt-32">
+        <ContactForm />
+      </div>
       
       <Footer />
     </div>
