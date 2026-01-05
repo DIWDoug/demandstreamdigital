@@ -2,6 +2,11 @@ import { useEffect } from "react";
 
 const ElfsightReviews = () => {
   useEffect(() => {
+    // Check if script already exists
+    if (document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
+      return;
+    }
+    
     // Load Elfsight platform script
     const script = document.createElement("script");
     script.src = "https://elfsightcdn.com/platform.js";
@@ -10,7 +15,7 @@ const ElfsightReviews = () => {
 
     return () => {
       // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]');
+      const existingScript = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
       if (existingScript) {
         existingScript.remove();
       }
@@ -18,7 +23,7 @@ const ElfsightReviews = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed bottom-6 left-6 z-[60]">
       <div 
         className="elfsight-app-1c4b2157-22d1-4da5-92c1-80d5a792dd69" 
         data-elfsight-app-lazy
