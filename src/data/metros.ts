@@ -203,12 +203,13 @@ export const metros: Metro[] = [
 ];
 
 // Population tier multipliers for pricing
+// These create meaningful cost differences between market sizes
 export const tierMultipliers: Record<Metro['tier'], number> = {
-  small: 0.85,
-  medium: 1.0,
-  large: 1.15,
-  major: 1.35,
-  mega: 1.55
+  small: 0.75,    // ~25% below baseline
+  medium: 1.0,    // baseline
+  large: 1.35,    // 35% above baseline  
+  major: 1.75,    // 75% above baseline
+  mega: 2.25      // 125% above baseline (3x small market)
 };
 
 // Get metros filtered and sorted for search
