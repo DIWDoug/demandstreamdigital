@@ -245,9 +245,9 @@ const InvestmentCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Investment Calculator | White-Label Agency Partner Tools | Dialed-In Web</title>
-        <meta name="description" content="Scope your monthly investment with our white-label services. Calculate pricing based on market, industry, and service selection." />
-        <link rel="canonical" href="https://www.dialedinweb.com/investment-calculator" />
+        <title>Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web</title>
+        <meta name="description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/investment-calculator" />
       </Helmet>
       
       <Header />

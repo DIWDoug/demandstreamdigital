@@ -159,7 +159,9 @@ export const hubs: Hub[] = [
           "Technical markup implementation (schema, structured data)",
           "Internal linking architecture execution",
           "Post-implementation verification and ongoing monitoring"
-        ]
+        ],
+        metaTitle: "Local On-Page SEO Services for Agencies | White Label Optimization for Titles, Headers & Content | Dialed-in Web",
+        metaDescription: "Dialed-in Web improves site structure, metadata, and content for local SEO—white labeled to help your agency scale efficiently."
       },
       {
         title: "Technical SEO",
@@ -168,7 +170,9 @@ export const hubs: Hub[] = [
         fullDescription: "Technical SEO issues silently kill rankings. If Google can't crawl, render, and index your content, nothing else matters. We optimize site architecture, fix crawlability issues, eliminate duplicate content, improve page speed, and ensure mobile usability so search engines can fully access and understand every page.",
         benefits: ["Flat, organized site architecture that Google can fully crawl", "Faster page load times through size reduction and optimization", "Zero duplicate content issues through canonical and noindex implementation", "Mobile-first usability that passes Core Web Vitals", "Clean URL structure with logical hierarchy"],
         deliverables: ["Complete technical SEO audit with prioritized fixes", "Site architecture analysis and recommendations", "XML sitemap optimization and validation", "Robots.txt and meta robots configuration", "Core Web Vitals and page speed improvements", "Duplicate content resolution via canonicals and noindex", "Internal linking structure optimization", "Mobile usability issue remediation"],
-        process: ["Crawl analysis with Screaming Frog and Search Console", "Site structure and architecture review", "Indexation issue identification and resolution", "Duplicate and thin content remediation", "Page speed optimization", "Mobile usability verification", "Ongoing monitoring and quarterly re-audits"]
+        process: ["Crawl analysis with Screaming Frog and Search Console", "Site structure and architecture review", "Indexation issue identification and resolution", "Duplicate and thin content remediation", "Page speed optimization", "Mobile usability verification", "Ongoing monitoring and quarterly re-audits"],
+        metaTitle: "Technical SEO for Local Agencies | Site Speed, Crawlability & Indexing Fixes | White Label by Dialed-in Web",
+        metaDescription: "Fix SEO blockers fast. Dialed-in Web delivers audits and tech SEO fixes for agencies—fully managed and white labeled."
       },
       {
         title: "Local Keyword Strategy",
@@ -188,7 +192,9 @@ export const hubs: Hub[] = [
         fullDescription: "Content is what separates local SEO winners from also-rans. We develop content strategies that capture search demand across the entire customer journey, from awareness queries to high-intent searches.",
         benefits: ["Capture long-tail queries competitors miss", "Build topical authority", "Support link building efforts", "Improve engagement metrics", "Create reusable content frameworks"],
         deliverables: ["Content audit and gap analysis", "Service area page content", "Blog content calendar and execution", "FAQ content development", "Content briefs", "Internal linking recommendations"],
-        process: ["Keyword research and gap analysis", "Content strategy development", "Service area page creation", "Ongoing content production", "Performance tracking"]
+        process: ["Keyword research and gap analysis", "Content strategy development", "Service area page creation", "Ongoing content production", "Performance tracking"],
+        metaTitle: "Local SEO Content Development for Agencies | City Pages, Blog Posts & Service Copy | Dialed-in Web",
+        metaDescription: "Dialed-in Web writes geo-targeted content that ranks and converts—white labeled for agencies serving local businesses."
       },
       {
         title: "Link Building",
@@ -208,7 +214,9 @@ export const hubs: Hub[] = [
         fullDescription: "Schema markup helps search engines and AI systems understand your client's business without NLP interpretation. We implement connected @graph structures using @id properties to link LocalBusiness, Organization, Person, and Service entities into page-level knowledge graphs. This includes sameAs links to social profiles, knowsAbout properties for topical authority, and rigorous three-step validation before deployment.",
         benefits: ["Page-level knowledge graphs with connected entities", "Rich result eligibility for stars, FAQs, and breadcrumbs", "AI Overview citation accuracy through explicit structured data", "E-E-A-T signals via Person schema with knowsAbout properties", "sameAs validation linking to authoritative external sources", "Reduced NLP guesswork for search engines and LLMs"],
         deliverables: ["Connected schema audit with relationship mapping", "@graph structure with @id entity connections", "LocalBusiness + Organization + Person schema", "Service schema with offers and ratings", "FAQ and Article schema for content pages", "Three-step validation (Schema.org, Rich Results, Classy Schema)", "AI citation verification via LLM testing"],
-        process: ["Current schema audit and visualization", "Entity relationship planning", "@graph structure development", "sameAs and knowsAbout implementation", "Three-step validation workflow", "Deployment and Search Console monitoring", "Quarterly audits and AI visibility checks"]
+        process: ["Current schema audit and visualization", "Entity relationship planning", "@graph structure development", "sameAs and knowsAbout implementation", "Three-step validation workflow", "Deployment and Search Console monitoring", "Quarterly audits and AI visibility checks"],
+        metaTitle: "Schema Markup for Local SEO | White Label Structured Data for Reviews, Business Info & FAQs | Dialed-in Web",
+        metaDescription: "Dialed-in Web adds schema for local business, reviews, FAQ, and events—white labeled for your agency's SEO delivery."
       },
       {
         title: "NAP Citations",
@@ -217,7 +225,9 @@ export const hubs: Hub[] = [
         fullDescription: "Citations are mentions of your client's business name, address, and phone number across the web. Consistent NAP data validates business identity with Google and feeds the trusted third-party sources that AI Overviews cite. We audit, clean, and build citations across directories that matter for both traditional local rankings and AI visibility.",
         benefits: ["Improved local pack rankings through NAP consistency", "AI Overview source eligibility via trusted directories", "Enhanced trust signals for Google's local algorithm", "Referral traffic from high-authority directories", "Foundation for local authority building", "Reduced ranking suppression from conflicting data"],
         deliverables: ["Complete NAP audit using citation tools", "Incorrect citation correction and cleanup", "Core citation building across 50+ directories", "Data aggregator submissions (Foursquare, Data Axle, Neustar)", "Industry-specific directory submissions", "AI source audit for Yelp, TripAdvisor, and vertical platforms", "Ongoing NAP monitoring and maintenance"],
-        process: ["Current NAP audit with Semrush/BrightLocal", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "AI visibility verification", "Ongoing monitoring and quarterly re-audits"]
+        process: ["Current NAP audit with Semrush/BrightLocal", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "AI visibility verification", "Ongoing monitoring and quarterly re-audits"],
+        metaTitle: "Local NAP Citation Management for Agencies | Build & Clean Directories at Scale | White Label | Dialed-in Web",
+        metaDescription: "Dialed-in Web builds, audits, and cleans local citations across directories—white labeled to help agencies rank local clients."
       }
     ]
   },

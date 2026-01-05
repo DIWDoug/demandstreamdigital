@@ -316,9 +316,9 @@ const SEOCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Local SEO Cost Calculator | Estimate Monthly Investment | Dialed-In Web</title>
-        <meta name="description" content="Calculate the estimated monthly investment for white-label local SEO. Get transparent pricing based on locations, competition, and goals for small businesses." />
-        <link rel="canonical" href="https://www.dialedinweb.com/partner-tools/seo-calculator" />
+        <title>SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web</title>
+        <meta name="description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/seo-calculator" />
       </Helmet>
       
       <Header />
