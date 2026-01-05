@@ -63,6 +63,17 @@ const SocialMediaROICalculator = () => {
   const [contentCosts, setContentCosts] = useState(500);
   const [laborCosts, setLaborCosts] = useState(1500);
 
+  // Default values
+  const defaults = {
+    totalVisits: 10000,
+    conversionRate: 2.5,
+    closeRate: 20,
+    lifetimeValue: 1000,
+    adSpend: 2000,
+    contentCosts: 500,
+    laborCosts: 1500
+  };
+
   // Apply industry benchmark
   const applyBenchmark = (industry: keyof typeof industryBenchmarks) => {
     const benchmark = industryBenchmarks[industry];
@@ -73,6 +84,17 @@ const SocialMediaROICalculator = () => {
     setAdSpend(benchmark.adSpend);
     setContentCosts(benchmark.contentCosts);
     setLaborCosts(benchmark.laborCosts);
+  };
+
+  // Reset to defaults
+  const resetToDefaults = () => {
+    setTotalVisits(defaults.totalVisits);
+    setConversionRate(defaults.conversionRate);
+    setCloseRate(defaults.closeRate);
+    setLifetimeValue(defaults.lifetimeValue);
+    setAdSpend(defaults.adSpend);
+    setContentCosts(defaults.contentCosts);
+    setLaborCosts(defaults.laborCosts);
   };
 
   const [copied, setCopied] = useState(false);
@@ -305,6 +327,12 @@ const SocialMediaROICalculator = () => {
                         {benchmark.label}
                       </button>
                     ))}
+                    <button
+                      onClick={resetToDefaults}
+                      className="px-4 py-2 rounded-lg bg-surface-dark border border-border/50 text-sm font-medium text-text-muted hover:text-foreground hover:border-border transition-all"
+                    >
+                      Reset
+                    </button>
                   </div>
                 </div>
               </div>
