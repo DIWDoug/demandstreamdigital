@@ -108,6 +108,20 @@ const Author = () => {
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${author.name} - ${author.role} | Dialed-In Web`} />
+        <meta property="og:description" content={author.shortBio} />
+        <meta property="og:url" content={`https://dialedinweb.com/authors/${author.slug}`} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${author.name} - ${author.role} | Dialed-In Web`} />
+        <meta name="twitter:description" content={author.shortBio} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, Home } from "lucide-react";
 
 const NotFound = () => {
@@ -10,7 +11,13 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="dark min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Page Not Found | Dialed-In Web</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Dialed-In Web's homepage for white label digital marketing services." />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <div className="dark min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30" />
@@ -45,6 +52,7 @@ const NotFound = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
