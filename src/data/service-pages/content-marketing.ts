@@ -4,8 +4,8 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const contentMarketingConfig: ServicePageConfig = {
   slug: "content-marketing",
   title: "Content Marketing",
-  metaTitle: "White Label Content Marketing for Agencies | Dialed-In Web | Blog & Location Pages",
-  metaDescription: "White label content marketing for agencies. Location pages, blog posts & lead magnets that rank and convert. Scale your content services today.",
+  metaTitle: "White Label Content Marketing Services for Agencies | Blog Posts, Lead Magnets, SEO Copy | Dialed-in Web",
+  metaDescription: "Dialed-in Web delivers SEO-driven content: blog posts, ebooks, case studies, and more—white labeled for digital agencies.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/content-marketing",
 
   hero: {

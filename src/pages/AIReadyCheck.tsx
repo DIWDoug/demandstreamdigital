@@ -200,9 +200,9 @@ const AIReadyCheck = () => {
   return (
     <>
       <Helmet>
-        <title>AI Ready Check | Website AI Compatibility Scanner | Dialed-In Web</title>
-        <meta name="description" content="Analyze how AI-ready your webpage is from a single page snapshot. Get high-signal metrics for LLM compatibility." />
-        <link rel="canonical" href="https://www.dialedinweb.com/ai-ready-check" />
+        <title>AI Readiness Check for Agencies | Evaluate Your Digital Marketing AI Strategy | Dialed-in Web</title>
+        <meta name="description" content="Use Dialed-in Web's AI Readiness Check to assess your agency's ability to integrate AI in content, SEO, and marketing ops." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
       </Helmet>
       
       <Header />

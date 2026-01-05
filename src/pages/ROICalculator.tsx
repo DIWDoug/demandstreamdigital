@@ -120,9 +120,9 @@ const ROICalculator = () => {
   return (
     <>
       <Helmet>
-        <title>ROI Calculator | White-Label Agency Partner Tools | Dialed-In Web</title>
-        <meta name="description" content="Calculate the return on investment for your clients' inbound marketing efforts. Show the value of SEO, content, and lead generation." />
-        <link rel="canonical" href="https://www.dialedinweb.com/roi-calculator" />
+        <title>Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web</title>
+        <meta name="description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/roi-calculator" />
       </Helmet>
       
       <Header />

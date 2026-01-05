@@ -117,9 +117,9 @@ const AdBudgetCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Ad Budget Calculator | White-Label Agency Partner Tools | Dialed-In Web</title>
-        <meta name="description" content="Calculate expected ROI from your advertising budget. Estimate impressions, clicks, conversions, and revenue from digital ad campaigns." />
-        <link rel="canonical" href="https://www.dialedinweb.com/ad-budget-calculator" />
+        <title>PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web</title>
+        <meta name="description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
       </Helmet>
       
       <Header />

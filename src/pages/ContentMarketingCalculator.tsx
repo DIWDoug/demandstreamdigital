@@ -161,9 +161,9 @@ const ContentMarketingCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Content Marketing ROI Calculator | White-Label Agency Partner Tools | Dialed-In Web</title>
-        <meta name="description" content="Calculate the ROI of content marketing investments. Estimate traffic, leads, customers, and lifetime revenue from blog content and articles." />
-        <link rel="canonical" href="https://www.dialedinweb.com/content-marketing-calculator" />
+        <title>Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web</title>
+        <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
       </Helmet>
       
       <Header />

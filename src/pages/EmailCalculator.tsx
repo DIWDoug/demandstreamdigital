@@ -154,9 +154,9 @@ const EmailCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Email Marketing ROI Calculator | White-Label Agency Partner Tools | Dialed-In Web</title>
-        <meta name="description" content="Calculate expected ROI from email marketing campaigns. Estimate opens, clicks, conversions, and lifetime revenue from email programs." />
-        <link rel="canonical" href="https://www.dialedinweb.com/email-calculator" />
+        <title>Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web</title>
+        <meta name="description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools/email-calculator" />
       </Helmet>
       
       <Header />
