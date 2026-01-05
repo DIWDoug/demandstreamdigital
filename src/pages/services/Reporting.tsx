@@ -48,7 +48,14 @@ const Reporting = () => {
       <Helmet>
         <title>{reportingConfig.metaTitle}</title>
         <meta name="description" content={reportingConfig.metaDescription} />
+        <meta name="keywords" content="white label reporting, agency dashboards, SEO reporting, marketing analytics, client reporting services" />
         <link rel="canonical" href={reportingConfig.canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={reportingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={reportingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={reportingConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}

@@ -69,7 +69,14 @@ const LocalSEO = () => {
       <Helmet>
         <title>{localSEOConfig.metaTitle}</title>
         <meta name="description" content={localSEOConfig.metaDescription} />
+        <meta name="keywords" content="white label local SEO, local SEO fulfillment, local search optimization, agency SEO partner, citation building services" />
         <link rel="canonical" href={localSEOConfig.canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={localSEOConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={localSEOConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={localSEOConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
         
         {/* Open Graph */}

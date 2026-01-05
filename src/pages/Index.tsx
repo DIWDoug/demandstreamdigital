@@ -37,7 +37,14 @@ const Index = () => {
       <Helmet>
         <title>White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web</title>
         <meta name="description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
+        <meta name="keywords" content="white label digital marketing, white label SEO services, white label PPC management, agency fulfillment partner, wholesale marketing services" />
         <link rel="canonical" href="https://dialedinweb.com/" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/" />
+        
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
         
         {/* Open Graph */}

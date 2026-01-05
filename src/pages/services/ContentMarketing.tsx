@@ -48,7 +48,14 @@ const ContentMarketing = () => {
       <Helmet>
         <title>{contentMarketingConfig.metaTitle}</title>
         <meta name="description" content={contentMarketingConfig.metaDescription} />
+        <meta name="keywords" content="white label content marketing, blog writing services, content strategy, SEO content creation, agency content partner" />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={contentMarketingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={contentMarketingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={contentMarketingConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}

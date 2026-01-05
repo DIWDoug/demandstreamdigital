@@ -132,7 +132,13 @@ const PartnerTools = () => {
       <Helmet>
         <title>White Label Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Dialed-in Web</title>
         <meta name="description" content="Use Dialed-in Web's calculators and tools to support white label SEO, PPC, and content strategy planning for your agency." />
+        <meta name="keywords" content="marketing agency tools, SEO calculators, PPC budget tools, agency proposal resources, white label marketing calculators" />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools" />
         
         {/* Open Graph */}
         <meta property="og:title" content="White Label Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Dialed-in Web" />

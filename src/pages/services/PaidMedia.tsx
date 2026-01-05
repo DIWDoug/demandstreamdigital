@@ -51,8 +51,14 @@ const PaidMedia = () => {
       <Helmet>
         <title>{paidMediaConfig.metaTitle}</title>
         <meta name="description" content={paidMediaConfig.metaDescription} />
+        <meta name="keywords" content="white label PPC management, paid media fulfillment, Google Ads management, Meta Ads services, agency PPC partner" />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
-        {paidMediaConfig.keywords && <meta name="keywords" content={paidMediaConfig.keywords} />}
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={paidMediaConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={paidMediaConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={paidMediaConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}
