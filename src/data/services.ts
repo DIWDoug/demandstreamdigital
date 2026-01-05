@@ -537,7 +537,9 @@ export const hubs: Hub[] = [
         fullDescription: "Effective email programs start with strategy. We develop editorial calendars aligned with local business cycles, seasonal opportunities, and customer behavior patterns. Every campaign serves a purpose and fits the bigger picture.",
         benefits: ["Strategic alignment with business goals", "Seasonal opportunity capture", "Consistent send cadence", "Higher engagement through relevance", "Reduced campaign fatigue"],
         deliverables: ["Annual campaign calendar", "Seasonal campaign planning", "Send cadence strategy", "Campaign theme development", "Content angle identification", "Performance goal setting"],
-        process: ["Business cycle analysis", "Seasonal opportunity mapping", "Calendar development", "Campaign theme creation", "Ongoing calendar refinement"]
+        process: ["Business cycle analysis", "Seasonal opportunity mapping", "Calendar development", "Campaign theme creation", "Ongoing calendar refinement"],
+        metaTitle: "White Label Email Campaign Strategy for Agencies | Wholesale List Segmentation by Dialed-in Web",
+        metaDescription: "We craft high-converting email campaign strategies that improve performance. Offer expert planning. Talk to Dialed-in Web today."
       },
       {
         title: "List Management",
@@ -547,8 +549,8 @@ export const hubs: Hub[] = [
         benefits: ["Protected sender reputation", "Higher deliverability rates", "Reduced spam complaints", "More relevant messaging", "Lower sending costs"],
         deliverables: ["Permission audit and cleanup", "Opt-in form optimization", "Segmentation strategy", "Inactive subscriber protocols", "List growth tactics", "Ongoing hygiene maintenance"],
         process: ["Current list assessment", "Permission verification", "Segmentation implementation", "Cleanup protocols", "Ongoing monitoring"],
-        metaTitle: "Email List Management | White Label Email Marketing Services",
-        metaDescription: "Keep client lists clean, segmented, and conversion-ready. Our white label email marketing includes full list management under your brand."
+        metaTitle: "White Label Email List Management for Agencies | Wholesale Segmentation & Cleanup by Dialed-in Web",
+        metaDescription: "Dialed-in Web manages email lists to maximize deliverability and open rates. Add list hygiene to your stack. Contact us now."
       },
       {
         title: "Automation Flows",
@@ -557,7 +559,9 @@ export const hubs: Hub[] = [
         fullDescription: "Automation keeps relationships running around the clock. Welcome sequences orient new subscribers. Post-service sequences request reviews at peak satisfaction moments (51% of customers leave reviews when asked directly). Win-back campaigns recover lapsed customers. All working automatically with personalization that converts.",
         benefits: ["24/7 customer nurturing and review generation", "Review requests timed to peak satisfaction moments", "Personalized messaging using customer name and service details", "Multi-channel support: email primary, SMS fallback (29% prefer text)", "Consistent follow-up execution that customers forget without", "Lapsed customer recovery before they go cold"],
         deliverables: ["Welcome sequence development", "Post-service review request automation with optimal timing", "Direct review links to Google, Facebook, Yelp, or industry sites", "Follow-up reminder sequences (3-7 day cadence)", "Win-back campaigns", "Performance tracking and conversion optimization"],
-        process: ["Customer journey mapping with review touchpoints", "Sequence strategy development", "Personalized email content creation", "Review link generation and platform options", "Technical implementation and CRM integration", "Testing, launch, and ongoing optimization"]
+        process: ["Customer journey mapping with review touchpoints", "Sequence strategy development", "Personalized email content creation", "Review link generation and platform options", "Technical implementation and CRM integration", "Testing, launch, and ongoing optimization"],
+        metaTitle: "White Label Email Automation Flows for Agencies | Wholesale Lifecycle Sequences by Dialed-in Web",
+        metaDescription: "We build email automations that nurture leads and drive sales. Resell proven flows under your brand. Book a strategy call today."
       },
       {
         title: "Newsletter Design",
@@ -567,8 +571,8 @@ export const hubs: Hub[] = [
         benefits: ["Professional brand presentation", "Mobile-first responsiveness", "Consistent visual identity", "Higher engagement rates", "Improved click-through rates"],
         deliverables: ["Custom template design", "Mobile optimization", "Header and footer templates", "Promotional email templates", "Newsletter templates", "Template documentation"],
         process: ["Brand guidelines review", "Template architecture planning", "Design development", "Cross-device testing", "Template library creation"],
-        metaTitle: "Newsletter Design Services | White Label Email Marketing for Agencies",
-        metaDescription: "Get beautifully branded newsletters delivered under your agency. White label email marketing designed to engage, convert, and retain."
+        metaTitle: "White Label Newsletter Design for Agencies | Wholesale Email Templates & Branding by Dialed-in Web",
+        metaDescription: "Dialed-in Web designs branded newsletters that build engagement and trust. Offer stunning emails today. Contact us to get started."
       },
       {
         title: "A/B Testing",
@@ -577,7 +581,9 @@ export const hubs: Hub[] = [
         fullDescription: "Data-driven optimization beats guesswork. We test subject lines, send times, content formats, and calls to action systematically. Each test builds knowledge that compounds into better performance over time.",
         benefits: ["Continuous performance improvement", "Data-driven decisions", "Higher open rates", "Improved click-through rates", "Optimized send timing"],
         deliverables: ["Testing strategy development", "Subject line testing", "Send time optimization", "Content format testing", "CTA testing", "Test result analysis and reporting"],
-        process: ["Baseline establishment", "Test hypothesis development", "Test execution", "Results analysis", "Winning variant implementation", "Next test planning"]
+        process: ["Baseline establishment", "Test hypothesis development", "Test execution", "Results analysis", "Winning variant implementation", "Next test planning"],
+        metaTitle: "White Label Email A/B Testing for Agencies | Wholesale Optimization Services by Dialed-in Web",
+        metaDescription: "Dialed-in Web tests subject lines, CTAs, and timing to improve email ROI. Optimize client campaigns. Partner with us today."
       },
       {
         title: "Performance Analytics",
@@ -586,7 +592,9 @@ export const hubs: Hub[] = [
         fullDescription: "You can't improve what you don't measure. We track every meaningful metric from opens and clicks to conversions and revenue. Reports tell the story of what's working and what needs attention.",
         benefits: ["Clear performance visibility", "Revenue attribution", "Actionable insights", "Trend identification", "ROI demonstration"],
         deliverables: ["Analytics dashboard setup", "Monthly performance reports", "Conversion tracking integration", "Revenue attribution setup", "Trend analysis", "Optimization recommendations"],
-        process: ["Tracking implementation", "Baseline establishment", "Ongoing monitoring", "Monthly reporting", "Insight development", "Recommendation delivery"]
+        process: ["Tracking implementation", "Baseline establishment", "Ongoing monitoring", "Monthly reporting", "Insight development", "Recommendation delivery"],
+        metaTitle: "White Label Email Performance Analytics for Agencies | Wholesale Reporting by Dialed-in Web",
+        metaDescription: "Get white label email analytics with open, click, and conversion insights. Show real results. Book a reporting walkthrough today."
       }
     ]
   },
