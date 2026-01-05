@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2, CheckCircle, ChevronLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
 import PhoneInput from "@/components/ui/phone-input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { serviceInterestOptions } from "@/data/servicesInterested";
@@ -26,6 +27,7 @@ const TwoStepContactForm = ({
 }: TwoStepContactFormProps) => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const { executeRecaptcha, isReady: isRecaptchaReady } = useRecaptcha();
   const [step, setStep] = useState(1);
   const [isSubmittingStep1, setIsSubmittingStep1] = useState(false);
   const [isSubmittingStep2, setIsSubmittingStep2] = useState(false);
@@ -43,7 +45,6 @@ const TwoStepContactForm = ({
     phoneCountryCode: "+1",
     revenue: "",
     servicesInterested: [] as string[],
-    notRobot: false,
   });
 
   const handleStep1Submit = async (e: React.FormEvent) => {
@@ -90,17 +91,12 @@ const TwoStepContactForm = ({
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!step2Data.notRobot) {
-      toast({
-        title: "Please verify you're not a robot",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsSubmittingStep2(true);
 
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha("contact_form_submit");
+      
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
           leadId,
@@ -112,6 +108,7 @@ const TwoStepContactForm = ({
           revenue: step2Data.revenue,
           servicesInterested: step2Data.servicesInterested,
           formType,
+          recaptchaToken,
         },
       });
 
@@ -297,20 +294,14 @@ const TwoStepContactForm = ({
               </div>
             )}
 
-            {/* Robot checkbox */}
-            <label className="flex items-center gap-3 text-left cursor-pointer p-3 rounded-lg border border-border bg-background/50">
-              <input
-                type="checkbox"
-                checked={step2Data.notRobot}
-                onChange={(e) => setStep2Data({ ...step2Data, notRobot: e.target.checked })}
-                className="w-5 h-5 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
-              />
-              <span className="text-sm text-foreground">I'm not a robot</span>
-            </label>
+            {/* reCAPTCHA notice */}
+            <p className="text-xs text-text-muted text-center">
+              Protected by reCAPTCHA
+            </p>
 
             <button
               type="submit"
-              disabled={isSubmittingStep2}
+              disabled={isSubmittingStep2 || !isRecaptchaReady}
               className="btn-cta w-full group disabled:opacity-50"
             >
               {isSubmittingStep2 ? (

@@ -50,12 +50,17 @@ interface ContactFormData {
   servicesInterested?: string[];
   message?: string;
   formType?: string;
-  leadId?: string; // Step 2 should update the Step 1 record when provided
+  leadId?: string;
+  recaptchaToken?: string;
 }
 
 // Rate limiting configuration
 const RATE_LIMIT_WINDOW_MINUTES = 15;
 const MAX_SUBMISSIONS_PER_WINDOW = 5;
+
+// reCAPTCHA configuration
+const RECAPTCHA_SECRET_KEY = Deno.env.get("RECAPTCHA_SECRET_KEY");
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
 
 const isValidEmail = (email: string) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -63,12 +68,39 @@ const isValidEmail = (email: string) => {
 };
 
 const isValidWebsite = (website: string) => {
-  // Allow domains without protocol (e.g. agency.com)
   if (!website) return false;
   if (website.length > 2048) return false;
   if (/\s/.test(website)) return false;
   return true;
 };
+
+// Verify reCAPTCHA token with Google
+async function verifyRecaptcha(token: string, clientIP: string): Promise<{ success: boolean; score?: number; action?: string }> {
+  if (!RECAPTCHA_SECRET_KEY) {
+    console.log("reCAPTCHA secret key not configured, skipping verification");
+    return { success: true };
+  }
+
+  try {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}&remoteip=${clientIP}`,
+    });
+
+    const data = await response.json();
+    console.log("reCAPTCHA verification result:", { success: data.success, score: data.score, action: data.action });
+    
+    return {
+      success: data.success && (data.score === undefined || data.score >= RECAPTCHA_SCORE_THRESHOLD),
+      score: data.score,
+      action: data.action,
+    };
+  } catch (error) {
+    console.error("reCAPTCHA verification error:", error);
+    return { success: false };
+  }
+}
 
 serve(async (req) => {
   const startTime = Date.now();
@@ -96,15 +128,35 @@ serve(async (req) => {
       message,
       formType,
       leadId,
+      recaptchaToken,
     } = body;
 
-    // Get client IP for rate limiting
+    // Get client IP for rate limiting and reCAPTCHA
     const clientIP =
       req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       req.headers.get("cf-connecting-ip") ||
       "unknown";
 
     const isStep1 = !!formType && formType.endsWith("_step1");
+
+    // Verify reCAPTCHA token (required for step 2 submissions, optional for step 1)
+    if (!isStep1 && recaptchaToken) {
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken, clientIP);
+      if (!recaptchaResult.success) {
+        console.log("reCAPTCHA verification failed:", recaptchaResult);
+        return new Response(
+          JSON.stringify({ error: "Security verification failed. Please try again." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    } else if (!isStep1 && RECAPTCHA_SECRET_KEY && !recaptchaToken) {
+      // If reCAPTCHA is configured but no token provided for step 2
+      console.log("reCAPTCHA token missing for step 2 submission");
+      return new Response(
+        JSON.stringify({ error: "Security verification required. Please try again." }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
     // Map formType to human-readable lead_type for automations
     const leadTypeMap: Record<string, string> = {

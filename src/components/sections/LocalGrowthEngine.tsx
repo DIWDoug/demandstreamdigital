@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
 import { supabase } from "@/integrations/supabase/client";
 import bookCover from "@/assets/local-growth-engine-cover.png";
 
@@ -13,6 +14,7 @@ const LocalGrowthEngine = () => {
   const [honeypot, setHoneypot] = useState(""); // Bot trap field
   const formLoadTime = useRef<number>(Date.now());
   const { toast } = useToast();
+  const { executeRecaptcha, isReady: isRecaptchaReady } = useRecaptcha();
 
   // Reset form load time when component mounts
   useEffect(() => {
@@ -53,8 +55,11 @@ const LocalGrowthEngine = () => {
     setIsSubmitting(true);
     
     try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await executeRecaptcha("ebook_download");
+      
       const { data, error } = await supabase.functions.invoke('submit-ebook-lead', {
-        body: { email }
+        body: { email, recaptchaToken }
       });
 
       if (error) {
@@ -223,8 +228,8 @@ const LocalGrowthEngine = () => {
                         />
                         <button
                           type="submit"
-                          disabled={isSubmitting}
-                          className="btn-cta flex items-center justify-center gap-2 whitespace-nowrap"
+                          disabled={isSubmitting || !isRecaptchaReady}
+                          className="btn-cta flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
                         >
                           {isSubmitting ? (
                             "Joining..."
@@ -236,6 +241,7 @@ const LocalGrowthEngine = () => {
                           )}
                         </button>
                       </form>
+                      <p className="text-gray-400 text-xs mt-2">Protected by reCAPTCHA</p>
                     </div>
                   </div>
                 ) : (
