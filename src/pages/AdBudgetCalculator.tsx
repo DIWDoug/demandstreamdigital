@@ -49,6 +49,18 @@ const AdBudgetCalculator = () => {
     const roi = adBudget > 0 ? grossRevenue / adBudget : 0;
     const roiPercent = adBudget > 0 ? Math.round(((grossRevenue - adBudget) / adBudget) * 100) : 0;
 
+    // Baselines for factor comparison
+    const baselines = { budget: 5000, impressions: 89.29, ctr: 1.91, conversion: 2.35, transactions: 1, price: 500, margin: 30 };
+    
+    const factors = [
+      { label: "Ad Budget", current: adBudget, baseline: baselines.budget, impact: adBudget / baselines.budget, unit: "$" as const },
+      { label: "Impressions/Dollar", current: impressionsPerDollar, baseline: baselines.impressions, impact: impressionsPerDollar / baselines.impressions, unit: "" as const },
+      { label: "Click-Through Rate", current: ctr, baseline: baselines.ctr, impact: ctr / baselines.ctr, unit: "%" as const },
+      { label: "Conversion Rate", current: conversionRate, baseline: baselines.conversion, impact: conversionRate / baselines.conversion, unit: "%" as const },
+      { label: "Avg Sale Price", current: averageSalePrice, baseline: baselines.price, impact: averageSalePrice / baselines.price, unit: "$" as const },
+      { label: "Profit Margin", current: profitMargin, baseline: baselines.margin, impact: profitMargin / baselines.margin, unit: "%" as const }
+    ];
+
     return {
       estimatedImpressions,
       clickThroughTraffic,
@@ -56,7 +68,8 @@ const AdBudgetCalculator = () => {
       preMarginRevenue,
       grossRevenue,
       roi,
-      roiPercent
+      roiPercent,
+      factors
     };
   }, [adBudget, impressionsPerDollar, ctr, conversionRate, transactionsPerCustomer, averageSalePrice, profitMargin]);
 
@@ -343,6 +356,55 @@ const AdBudgetCalculator = () => {
                       icon={DollarSign}
                       highlight={results.grossRevenue > adBudget}
                     />
+                  </div>
+
+                  {/* Factor Breakdown */}
+                  <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                    <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Performance Factors</p>
+                    <div className="space-y-3">
+                      {results.factors.map((factor, i) => {
+                        const impactPercent = Math.min(100, Math.max(10, factor.impact * 40));
+                        const isInverse = factor.label.toLowerCase().includes("cost");
+                        const getColor = () => {
+                          if (isInverse) {
+                            return factor.impact > 1.2 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                          }
+                          return factor.impact > 1.3 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                        };
+                        const displayValue = factor.unit === "$" 
+                          ? `$${factor.current.toLocaleString()}`
+                          : factor.unit === "%"
+                            ? `${factor.current}%`
+                            : factor.current.toLocaleString();
+                        
+                        return (
+                          <div key={i} className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-text-muted">{factor.label}</span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-text-secondary">{displayValue}</span>
+                                <span className={cn(
+                                  "font-medium",
+                                  factor.impact >= 1.3 ? "text-emerald-400" : 
+                                  factor.impact >= 0.9 ? "text-yellow-400" : "text-red-400"
+                                )}>
+                                  {factor.impact >= 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                              <div 
+                                className={cn("h-full rounded-full transition-all", getColor())}
+                                style={{ width: `${impactPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-text-muted/60 mt-3">
+                      Compared to defaults: $5K budget, 1.91% CTR, 2.35% conversion
+                    </p>
                   </div>
                 </div>
               </div>

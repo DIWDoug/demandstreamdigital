@@ -74,6 +74,19 @@ const ContentMarketingCalculator = () => {
     const yearlyLifetimeRevenue = yearlyCustomers * averageCustomerValue * customerLifetimeMultiplier;
     const yearlyRoi = yearlyContentInvestment > 0 ? yearlyLifetimeRevenue / yearlyContentInvestment : 0;
 
+    // Baselines for factor comparison
+    const baselines = { articles: 8, cost: 350, traffic: 500, months: 6, conv: 2.5, close: 15, value: 2500, ltv: 2, dist: 200, tools: 150 };
+    
+    const factors = [
+      { label: "Articles/Month", current: articlesPerMonth, baseline: baselines.articles, impact: articlesPerMonth / baselines.articles, unit: "" as const },
+      { label: "Cost/Article", current: costPerArticle, baseline: baselines.cost, impact: baselines.cost / (costPerArticle || 1), unit: "$" as const },
+      { label: "Traffic/Article", current: avgTrafficPerArticle, baseline: baselines.traffic, impact: avgTrafficPerArticle / baselines.traffic, unit: "" as const },
+      { label: "Conversion Rate", current: conversionRate, baseline: baselines.conv, impact: conversionRate / baselines.conv, unit: "%" as const },
+      { label: "Close Rate", current: leadToCustomerRate, baseline: baselines.close, impact: leadToCustomerRate / baselines.close, unit: "%" as const },
+      { label: "Customer Value", current: averageCustomerValue, baseline: baselines.value, impact: averageCustomerValue / baselines.value, unit: "$" as const },
+      { label: "LTV Multiplier", current: customerLifetimeMultiplier, baseline: baselines.ltv, impact: customerLifetimeMultiplier / baselines.ltv, unit: "x" as const }
+    ];
+
     return {
       contentProductionCost,
       totalMonthlyCost,
@@ -92,7 +105,8 @@ const ContentMarketingCalculator = () => {
       yearlyLeads,
       yearlyCustomers,
       yearlyLifetimeRevenue,
-      yearlyRoi
+      yearlyRoi,
+      factors
     };
   }, [articlesPerMonth, costPerArticle, avgTrafficPerArticle, trafficGrowthMonths, conversionRate, leadToCustomerRate, averageCustomerValue, customerLifetimeMultiplier, distributionCost, toolsCost]);
 
@@ -474,6 +488,57 @@ const ContentMarketingCalculator = () => {
                         <span className="text-foreground font-medium">{results.yearlyRoi.toFixed(1)}:1</span> annual ROI
                       </p>
                     </div>
+                  </div>
+
+                  {/* Factor Breakdown */}
+                  <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                    <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Performance Factors</p>
+                    <div className="space-y-3">
+                      {results.factors.map((factor, i) => {
+                        const impactPercent = Math.min(100, Math.max(10, factor.impact * 40));
+                        const isInverse = factor.label.toLowerCase().includes("cost");
+                        const getColor = () => {
+                          if (isInverse) {
+                            return factor.impact > 1.2 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                          }
+                          return factor.impact > 1.3 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                        };
+                        const displayValue = factor.unit === "$" 
+                          ? `$${factor.current.toLocaleString()}`
+                          : factor.unit === "%"
+                            ? `${factor.current}%`
+                            : factor.unit === "x"
+                              ? `${factor.current}x`
+                              : factor.current.toLocaleString();
+                        
+                        return (
+                          <div key={i} className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-text-muted">{factor.label}</span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-text-secondary">{displayValue}</span>
+                                <span className={cn(
+                                  "font-medium",
+                                  factor.impact >= 1.3 ? "text-emerald-400" : 
+                                  factor.impact >= 0.9 ? "text-yellow-400" : "text-red-400"
+                                )}>
+                                  {factor.impact >= 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                              <div 
+                                className={cn("h-full rounded-full transition-all", getColor())}
+                                style={{ width: `${impactPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-text-muted/60 mt-3">
+                      Compared to defaults: 8 articles, $350/article, 500 visits each
+                    </p>
                   </div>
                 </div>
               </div>
