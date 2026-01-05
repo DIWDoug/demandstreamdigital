@@ -24,6 +24,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
+import Privacy from "./pages/Privacy";
 import RegionBlocked from "./pages/RegionBlocked";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 import { useGeoBlock } from "./hooks/useGeoBlock";
@@ -91,6 +92,7 @@ const App = () => (
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/region-blocked" element={<RegionBlocked />} />
 
         {/* Service Hub Pages */}
