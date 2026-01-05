@@ -78,6 +78,20 @@ const SpokePage = () => {
         <title>{spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`}</title>
         <meta name="description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
         <link rel="canonical" href={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
+        <meta property="og:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
+        <meta property="og:url" content={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
+        <meta name="twitter:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

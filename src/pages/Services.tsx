@@ -30,6 +30,20 @@ const Services = () => {
         <meta name="description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
         <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web" />
+        <meta property="og:description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
+        <meta property="og:url" content="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web" />
+        <meta name="twitter:description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
