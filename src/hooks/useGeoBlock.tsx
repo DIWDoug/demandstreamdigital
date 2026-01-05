@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-// Countries to block (ISO 3166-1 alpha-2 codes)
-const BLOCKED_COUNTRIES = ["JP", "CN"];
+// Countries explicitly blocked (overrides continent allowlist)
+const BLOCKED_COUNTRIES = ["JP", "CN", "RU"];
 
-// Paths that should NOT trigger geo-blocking (e.g., the blocked page itself)
+// Allowed continents
+// NA = North America (US, Canada, Mexico)
+// EU = Europe
+// AF = Africa
+// SA = South America
+// OC = Oceania (Australia, New Zealand, etc.)
+const ALLOWED_CONTINENTS = ["NA", "EU", "AF", "SA", "OC"];
+
+// Paths that should NOT trigger geo-blocking
 const EXCLUDED_PATHS = ["/region-blocked"];
 
 export function useGeoBlock() {
@@ -47,18 +55,32 @@ export function useGeoBlock() {
         
         const data = await response.json();
         const countryCode = data.country_code;
+        const continentCode = data.continent_code;
         
-        console.log("Geo check result:", countryCode);
+        console.log("Geo check result:", { country: countryCode, continent: continentCode });
         
         sessionStorage.setItem("geo_checked", "true");
         
+        // Check if explicitly blocked first (overrides continent)
         if (BLOCKED_COUNTRIES.includes(countryCode)) {
+          console.log("Country explicitly blocked:", countryCode);
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
           navigate("/region-blocked", { replace: true });
-        } else {
-          sessionStorage.setItem("geo_blocked", "false");
+          return;
         }
+        
+        // Check if continent is allowed
+        if (!ALLOWED_CONTINENTS.includes(continentCode)) {
+          console.log("Continent not in allowlist:", continentCode);
+          sessionStorage.setItem("geo_blocked", "true");
+          setIsBlocked(true);
+          navigate("/region-blocked", { replace: true });
+          return;
+        }
+        
+        // Access allowed
+        sessionStorage.setItem("geo_blocked", "false");
       } catch (error) {
         console.error("Geo check error:", error);
         // On error, allow access (fail open)
