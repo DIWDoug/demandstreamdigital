@@ -73,8 +73,18 @@ const routes = [
   { path: '/white-label-inbound-marketing-services/email-marketing/ab-testing', priority: 0.7, changefreq: 'monthly' },
   { path: '/white-label-inbound-marketing-services/email-marketing/performance-analytics', priority: 0.7, changefreq: 'monthly' },
   
-  // Content Marketing Hub
+  // Content Marketing Hub + Spokes
   { path: '/white-label-inbound-marketing-services/content-marketing', priority: 0.9, changefreq: 'weekly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/geographical-content', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/topical-content', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/power-posts', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/ebooks-guides', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/lead-magnets', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/press-releases', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/case-studies', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/aio-content', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/faq-content', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-inbound-marketing-services/content-marketing/hub-spoke-buildouts', priority: 0.7, changefreq: 'monthly' },
   
   // Authority Building Hub
   { path: '/white-label-inbound-marketing-services/local-authority-building', priority: 0.9, changefreq: 'weekly' },
