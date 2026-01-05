@@ -4,7 +4,8 @@ const RegionBlocked = () => {
   return (
     <>
       <Helmet>
-        <title>Not Available in Your Region | Dialed-In Web</title>
+        <title>Region Access Restricted | This Page Is Not Available in Your Location | Dialed-in Web White Label Services</title>
+        <meta name="description" content="This page is restricted in your region. Contact Dialed-in Web for white label digital marketing service availability." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="min-h-screen bg-background flex items-center justify-center px-6">
