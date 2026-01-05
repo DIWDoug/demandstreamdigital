@@ -193,7 +193,14 @@ const Testimonials = () => {
       <Helmet>
         <title>White Label SEO & Marketing Testimonials | Why Agencies Trust Dialed-in Web to Deliver Behind the Scenes</title>
         <meta name="description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
+        <meta name="keywords" content="white label SEO reviews, agency partner testimonials, marketing fulfillment feedback, client success stories, SEO agency reviews" />
         <link rel="canonical" href="https://dialedinweb.com/testimonials" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/testimonials" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/testimonials" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/testimonials" />
+        
         <script type="application/ld+json">{JSON.stringify(testimonialsSchema)}</script>
         
         {/* Open Graph */}

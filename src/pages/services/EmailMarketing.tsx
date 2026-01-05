@@ -48,7 +48,14 @@ const EmailMarketing = () => {
       <Helmet>
         <title>{emailMarketingConfig.metaTitle}</title>
         <meta name="description" content={emailMarketingConfig.metaDescription} />
+        <meta name="keywords" content="white label email marketing, email campaign management, newsletter services, email automation, agency email partner" />
         <link rel="canonical" href={emailMarketingConfig.canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={emailMarketingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={emailMarketingConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={emailMarketingConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}

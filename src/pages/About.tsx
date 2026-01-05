@@ -143,7 +143,13 @@ const About = () => {
           name="description" 
           content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." 
         />
+        <meta name="keywords" content="white label marketing agency, agency fulfillment team, Doug Bryson SEO, Dialed-In Web team, marketing partnership Dallas" />
         <link rel="canonical" href="https://dialedinweb.com/about" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/about" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/about" />
         
         {/* Open Graph */}
         <meta property="og:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />

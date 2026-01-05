@@ -48,7 +48,14 @@ const Authority = () => {
       <Helmet>
         <title>{authorityConfig.metaTitle}</title>
         <meta name="description" content={authorityConfig.metaDescription} />
+        <meta name="keywords" content="white label link building, local authority building, digital PR, backlink services, agency link building partner" />
         <link rel="canonical" href={authorityConfig.canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={authorityConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={authorityConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={authorityConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}

@@ -103,6 +103,8 @@ const PixabayHeroImage = ({
         title={descriptiveTitle}
         loading="eager"
         decoding="async"
+        // @ts-ignore - fetchpriority is valid HTML but not in React types yet
+        fetchpriority="high"
         className="w-full h-full object-cover"
       />
       {overlay && (

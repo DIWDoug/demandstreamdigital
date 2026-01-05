@@ -28,7 +28,14 @@ const Services = () => {
       <Helmet>
         <title>White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web</title>
         <meta name="description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
+        <meta name="keywords" content="white label inbound marketing, wholesale SEO services, agency fulfillment, white label PPC, content marketing fulfillment" />
         <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         
         {/* Open Graph */}

@@ -54,8 +54,14 @@ const GoogleMaps = () => {
       <Helmet>
         <title>{googleMapsConfig.metaTitle}</title>
         <meta name="description" content={googleMapsConfig.metaDescription} />
+        <meta name="keywords" content="white label GBP optimization, Google Business Profile management, local pack ranking, Google Maps SEO, review management services" />
         <link rel="canonical" href={googleMapsConfig.canonicalUrl} />
-        {googleMapsConfig.keywords && <meta name="keywords" content={googleMapsConfig.keywords} />}
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={googleMapsConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={googleMapsConfig.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={googleMapsConfig.canonicalUrl} />
+        
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         
         {/* Open Graph */}

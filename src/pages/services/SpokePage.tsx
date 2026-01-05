@@ -14,6 +14,7 @@ import SpokeAlternatingBlocks from "@/components/services/SpokeAlternatingBlocks
 import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
 import SpokeProcessTimeline from "@/components/services/SpokeProcessTimeline";
 import { spokeContentBlocks, spokeFAQs } from "@/data/spoke-content-blocks";
+import { getSpokeKeywords } from "@/data/pageKeywords";
 import {
   Accordion,
   AccordionContent,
@@ -72,17 +73,26 @@ const SpokePage = () => {
   // Find sibling spokes for ecosystem
   const siblingSpokes = hub.spokes.filter((s) => s.slug !== spokeSlug);
 
+  const canonicalUrl = `https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`;
+  const spokeKeywords = getSpokeKeywords(hubSlug || '', spokeSlug || '');
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>{spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`}</title>
         <meta name="description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
-        <link rel="canonical" href={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
+        {spokeKeywords && <meta name="keywords" content={spokeKeywords} />}
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
         <meta property="og:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
-        <meta property="og:url" content={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
         <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
