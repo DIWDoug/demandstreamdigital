@@ -317,8 +317,8 @@ export const hubs: Hub[] = [
           "AI platform monitoring for Yelp, TripAdvisor, OpenTable, and industry directories"
         ],
         process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"],
-        metaTitle: "Review Management for Google | White Label Local Reputation Services",
-        metaDescription: "Respond to reviews, build trust, and manage reputation—under your brand. White label review management for local clients."
+        metaTitle: "White Label Review Generation & Response for Agencies | Wholesale GBP Reputation SEO by Dialed-in Web",
+        metaDescription: "Dialed-in Web manages review generation and responses to boost local trust and rankings. Resell this service today. Schedule a call with our team."
       },
       {
         title: "Citation Building & Cleanup",
@@ -327,7 +327,9 @@ export const hubs: Hub[] = [
         fullDescription: "Citations are mentions of your client's business name, address, and phone number across the web. We build and maintain citations across the directories that matter, ensuring NAP consistency that validates business information with Google.",
         benefits: ["Improved local pack rankings", "Consistent business information", "Enhanced trust signals for Google", "Referral traffic from directories", "Foundation for local authority"],
         deliverables: ["Citation audit and cleanup", "Core citation building (50+ sites)", "Data aggregator submissions", "Industry-specific directories", "Ongoing citation monitoring", "NAP consistency maintenance"],
-        process: ["Current citation audit", "Inconsistency cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "Ongoing monitoring"]
+        process: ["Current citation audit", "Inconsistency cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "Ongoing monitoring"],
+        metaTitle: "White Label Citation Building & Cleanup for Agencies | Wholesale GBP SEO Listings by Dialed-in Web",
+        metaDescription: "We build and clean GBP citations to improve NAP accuracy and local SEO performance. Resell citation work. Book a discovery call with Dialed-in Web."
       },
       {
         title: "Photo & Media Management",
@@ -336,7 +338,9 @@ export const hubs: Hub[] = [
         fullDescription: "Visual content significantly impacts GBP engagement and conversion. We develop photo strategies that showcase the business professionally and manage ongoing photo content to keep profiles fresh and engaging.",
         benefits: ["Higher engagement rates on GBP", "Improved trust and credibility", "Better conversion from views", "Competitive differentiation", "Fresh profile appearance"],
         deliverables: ["Photo audit and recommendations", "Photo optimization and geotagging", "Cover and logo optimization", "Ongoing photo updates", "User photo management", "Visual content calendar"],
-        process: ["Current photo audit", "Competitive visual analysis", "Photo strategy development", "Optimization implementation", "Ongoing content management"]
+        process: ["Current photo audit", "Competitive visual analysis", "Photo strategy development", "Optimization implementation", "Ongoing content management"],
+        metaTitle: "White Label Photo & Media Management for Agencies | Wholesale GBP Visual SEO by Dialed-in Web",
+        metaDescription: "Dialed-in Web optimizes images for engagement and local search impact. Enhance client GBP presence. Add media management to your stack today."
       },
       {
         title: "Local Pack Strategy",
@@ -346,8 +350,8 @@ export const hubs: Hub[] = [
         benefits: ["Capture additional search queries", "Build trust with potential customers", "Control the narrative", "Reduce repetitive customer inquiries", "Competitive differentiation"],
         deliverables: ["Q&A audit and strategy", "Question seeding with answers", "Ongoing Q&A monitoring", "Response drafting for new questions", "Competitor Q&A analysis", "Monthly Q&A reporting"],
         process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"],
-        metaTitle: "Google Maps Q&A Management | White Label Local SEO Services",
-        metaDescription: "We manage your clients' Google Q&A to improve local visibility and trust. 100% white label, hands-free for your agency."
+        metaTitle: "White Label Local Pack Strategy for Agencies | Wholesale GBP Q&A Management by Dialed-in Web",
+        metaDescription: "We manage GBP Q&A to influence local pack visibility and conversions. Strengthen SEO with strategy. Talk to Dialed-in Web to offer this service."
       },
       {
         title: "GBP Posting & Content",
@@ -356,7 +360,9 @@ export const hubs: Hub[] = [
         fullDescription: "Regular GBP posts signal to Google that the business is active and engaged. We create and schedule weekly posts featuring offers, updates, events, and content that keeps profiles fresh and drives engagement.",
         benefits: ["Active profile signals to Google", "Increased customer engagement", "Promotion of offers and events", "Fresh content for searchers", "Competitive advantage"],
         deliverables: ["Post content calendar", "Weekly post creation", "Offer and event posts", "Image selection and optimization", "Post performance tracking", "Monthly engagement reporting"],
-        process: ["Content calendar development", "Post creation and scheduling", "Image optimization", "Performance monitoring", "Calendar refinement"]
+        process: ["Content calendar development", "Post creation and scheduling", "Image optimization", "Performance monitoring", "Calendar refinement"],
+        metaTitle: "White Label Google Post Scheduling for Agencies | Wholesale GBP Content Strategy by Dialed-in Web",
+        metaDescription: "Dialed-in Web creates and schedules Google Posts to boost local engagement and CTR. Resell content publishing. Get started with us today."
       }
     ]
   },
