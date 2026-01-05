@@ -29,8 +29,10 @@ const RegionBlocked = () => {
               Not Available in Your Region
             </h1>
             <p className="text-text-muted text-lg leading-relaxed">
-              We're sorry, but our services are not currently available in your region. 
-              We focus exclusively on serving marketing agencies in North America.
+              We're sorry, but our services are not currently available in your region or 
+              we've detected you may be using a VPN or proxy service. We focus exclusively 
+              on serving marketing agencies in North America, Europe, Australia, Africa, 
+              and South America.
             </p>
           </div>
           
