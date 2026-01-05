@@ -658,7 +658,9 @@ export const hubs: Hub[] = [
         fullDescription: "Local authority requires links with geographic relevance. We target local news sites, community blogs, chamber of commerce sites, and regional publications that signal to search engines your client is a trusted local business.",
         benefits: ["Geographic relevance signals", "Local publication visibility", "Community trust building", "Regional authority establishment", "Competitive differentiation"],
         deliverables: ["Local publication outreach", "Community blog placements", "Local news coverage", "Regional directory submissions", "Geographic link tracking", "Monthly acquisition reporting"],
-        process: ["Local opportunity research", "Outreach strategy development", "Relationship building", "Placement execution", "Link documentation", "Performance analysis"]
+        process: ["Local opportunity research", "Outreach strategy development", "Relationship building", "Placement execution", "Link documentation", "Performance analysis"],
+        metaTitle: "White Label Local Link Building for Agencies | Wholesale SEO Authority Services by Dialed-in Web",
+        metaDescription: "Get location-relevant backlinks that improve local rankings. Resell powerful SEO link building. Schedule your demo today."
       },
       {
         title: "Unstructured Citations",
@@ -667,7 +669,9 @@ export const hubs: Hub[] = [
         fullDescription: "Unstructured citations are brand mentions embedded in media-rich content rather than structured business listings. Unlike NAP citations in directories, these mentions appear in videos, podcasts, infographics, press releases, and Web 2.0 platforms—signals that search engines and AI systems increasingly value for entity authority.",
         benefits: ["Media-rich authority signals beyond directories", "AI discovery through diverse content formats", "Entity validation across multiple mediums", "Press release syndication visibility", "Web 2.0 platform presence", "Podcast and video mention leverage"],
         deliverables: ["Video citation placement strategy", "Image citation and infographic distribution", "Podcast and audio mention coordination", "Web 2.0 platform profile creation", "Press release syndication", "Unstructured citation tracking and reporting"],
-        process: ["Content asset audit", "Platform and channel identification", "Media creation or coordination", "Distribution execution", "Mention documentation", "Performance analysis"]
+        process: ["Content asset audit", "Platform and channel identification", "Media creation or coordination", "Distribution execution", "Mention documentation", "Performance analysis"],
+        metaTitle: "White Label Unstructured Citation Building for Agencies | Wholesale Local Mentions by Dialed-in Web",
+        metaDescription: "Dialed-in Web builds unstructured citations to boost local authority and SEO. Add this to your stack. Book a discovery call today."
       },
       {
         title: "Brand Mentions",
@@ -676,7 +680,9 @@ export const hubs: Hub[] = [
         fullDescription: "Brand mentions across discussion platforms create organic signals that search engines and AI systems increasingly value. We build strategic presence on Reddit, Quora, and relevant social platforms through genuine engagement that positions your clients as helpful resources.",
         benefits: ["Organic brand visibility", "AI discovery signals", "Community trust building", "Topical relevance signals", "Unstructured citation value"],
         deliverables: ["Reddit community engagement", "Quora topic responses", "Social platform monitoring", "Mention opportunity identification", "Strategic response development", "Brand mention tracking"],
-        process: ["Platform research", "Engagement strategy", "Monitoring setup", "Response execution", "Documentation", "Performance analysis"]
+        process: ["Platform research", "Engagement strategy", "Monitoring setup", "Response execution", "Documentation", "Performance analysis"],
+        metaTitle: "White Label Brand Mentions for Agencies | Wholesale Online Authority Signals by Dialed-in Web",
+        metaDescription: "We secure high-quality brand mentions to elevate trust and visibility. Offer this under your brand. Partner with us now."
       },
       {
         title: "Anchor Text",
@@ -685,7 +691,9 @@ export const hubs: Hub[] = [
         fullDescription: "Anchor text strategy determines whether links help or hurt. We manage anchor text distribution across all link building efforts to maintain natural profiles that maximize ranking power while avoiding over-optimization penalties.",
         benefits: ["Natural link profile appearance", "Maximized ranking power", "Penalty risk avoidance", "Strategic keyword targeting", "Long-term profile health"],
         deliverables: ["Anchor text audit", "Distribution strategy", "Target anchor planning", "Ongoing profile monitoring", "Competitor anchor analysis", "Monthly profile reporting"],
-        process: ["Current profile analysis", "Competitor benchmarking", "Strategy development", "Implementation guidelines", "Ongoing monitoring", "Quarterly review"]
+        process: ["Current profile analysis", "Competitor benchmarking", "Strategy development", "Implementation guidelines", "Ongoing monitoring", "Quarterly review"],
+        metaTitle: "White Label Anchor Text Strategy for Agencies | Wholesale SEO Link Optimization by Dialed-in Web",
+        metaDescription: "Dialed-in Web optimizes anchor text to support rankings and relevance. Improve link impact. Talk to us about wholesale SEO today."
       },
       {
         title: "Sponsorships",
@@ -694,7 +702,9 @@ export const hubs: Hub[] = [
         fullDescription: "Sponsorships create authentic community connections that generate high-quality backlinks and brand visibility. We identify and coordinate local event sponsorships, charity partnerships, and community involvement opportunities that build genuine local authority.",
         benefits: ["Authentic community connection", "High-quality sponsorship links", "Local brand visibility", "Community goodwill", "PR opportunities"],
         deliverables: ["Sponsorship opportunity research", "Outreach and coordination", "Link placement verification", "Event participation support", "Coverage documentation", "ROI tracking"],
-        process: ["Opportunity identification", "Value assessment", "Outreach execution", "Sponsorship coordination", "Link verification", "Performance reporting"]
+        process: ["Opportunity identification", "Value assessment", "Outreach execution", "Sponsorship coordination", "Link verification", "Performance reporting"],
+        metaTitle: "White Label Local Sponsorship Links for Agencies | Wholesale Community SEO by Dialed-in Web",
+        metaDescription: "We source local sponsorships to boost SEO authority and visibility. Resell locally trusted links. Contact Dialed-in Web today."
       },
       {
         title: "Reputation Signals",
@@ -704,8 +714,8 @@ export const hubs: Hub[] = [
         benefits: ["Enhanced trust signals", "Review volume growth", "Third-party credibility", "Prominence factor improvement", "Conversion rate support"],
         deliverables: ["Review generation strategy", "Testimonial outreach", "Trust badge implementation", "Review platform optimization", "Reputation monitoring", "Monthly reputation reporting"],
         process: ["Current reputation audit", "Strategy development", "Campaign implementation", "Ongoing monitoring", "Response management", "Performance tracking"],
-        metaTitle: "Reputation Signals & Trust Building | White Label Local SEO",
-        metaDescription: "We strengthen online trust through review signals, mentions, and local citations—all white labeled for your agency."
+        metaTitle: "White Label Reputation Signal Building for Agencies | Wholesale Trust SEO Services by Dialed-in Web",
+        metaDescription: "Dialed-in Web builds trust signals to boost rankings and credibility. Add reputation SEO to your offer. Let's connect today."
       }
     ]
   },
@@ -768,7 +778,9 @@ export const hubs: Hub[] = [
         fullDescription: "Live dashboards give clients immediate access to the metrics that matter, reducing questions and building transparency. Our dashboards are fully branded with your agency identity and designed for clarity.",
         benefits: ["Real-time metric visibility", "Reduced client questions", "Professional presentation", "Your branding throughout", "Client self-service access"],
         deliverables: ["Custom dashboard design", "Data source integration", "Branded interface", "Client access setup", "Training documentation", "Ongoing maintenance"],
-        process: ["Requirements gathering", "Data integration", "Dashboard design", "Branding implementation", "Testing and refinement", "Launch and training"]
+        process: ["Requirements gathering", "Data integration", "Dashboard design", "Branding implementation", "Testing and refinement", "Launch and training"],
+        metaTitle: "White Label Marketing Dashboards for Agencies | Wholesale SEO & PPC Reporting by Dialed-in Web",
+        metaDescription: "Give clients live dashboards branded as your own. Dialed-in Web automates reporting. Offer real-time visibility today."
       },
       {
         title: "Monthly Performance Reports",
@@ -778,8 +790,8 @@ export const hubs: Hub[] = [
         benefits: ["Clear progress documentation", "Client confidence building", "Retention tool", "Strategy alignment", "Professional presentation"],
         deliverables: ["Executive summary", "Detailed metric analysis", "Trend visualization", "Recommendations section", "Competitive context", "Next month preview"],
         process: ["Data collection", "Analysis and insights", "Report creation", "Quality review", "Delivery scheduling", "Follow-up support"],
-        metaTitle: "Monthly Performance Reports | White Label SEO & Marketing Insights",
-        metaDescription: "Recurring white label reports that highlight wins, trends, and KPIs. Fully branded and ready to share with your clients."
+        metaTitle: "White Label Monthly Performance Reports for Agencies | Wholesale Client Reporting by Dialed-in Web",
+        metaDescription: "Dialed-in Web creates detailed monthly reports with SEO, PPC, and traffic insights. Offer this under your brand. Book a call today."
       },
       {
         title: "Rank Tracking & Visibility",
@@ -789,8 +801,8 @@ export const hubs: Hub[] = [
         benefits: ["Daily ranking data", "Trend visualization", "Competitive comparison", "Alert on significant changes", "Progress demonstration"],
         deliverables: ["Keyword list setup", "Daily tracking configuration", "Ranking reports", "Visibility trend analysis", "Competitor tracking", "Alert configuration"],
         process: ["Keyword research and selection", "Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular reporting"],
-        metaTitle: "Rank Tracking & Visibility Reporting | White Label SEO Metrics",
-        metaDescription: "Show your clients real results. We deliver white label SEO reports with rankings, visibility trends, and performance insights."
+        metaTitle: "White Label Rank Tracking & Visibility Reports for Agencies | Wholesale SEO Metrics by Dialed-in Web",
+        metaDescription: "Track SEO performance with branded rank reports from Dialed-in Web. Keep clients engaged with results. Start offering this today."
       },
       {
         title: "Call Tracking & Lead Attribution",
@@ -799,7 +811,9 @@ export const hubs: Hub[] = [
         fullDescription: "For local businesses, calls are often the most valuable conversion. Our call tracking connects every call to its marketing source, enabling true ROI measurement.",
         benefits: ["Call source attribution", "Marketing ROI clarity", "Lead quality insights", "Call recording access", "Multi-touch understanding"],
         deliverables: ["Call tracking setup", "Dynamic number implementation", "Recording configuration", "Attribution modeling", "Integration with reporting", "Call analytics dashboard"],
-        process: ["Technical assessment", "Platform selection", "Implementation", "Testing and verification", "Integration with reporting", "Ongoing monitoring"]
+        process: ["Technical assessment", "Platform selection", "Implementation", "Testing and verification", "Integration with reporting", "Ongoing monitoring"],
+        metaTitle: "White Label Call Tracking & Lead Attribution for Agencies | Wholesale Conversions by Dialed-in Web",
+        metaDescription: "Track calls and leads from SEO and PPC efforts. Dialed-in Web makes attribution easy. Add it to your reporting suite today."
       },
       {
         title: "ROI & Revenue Analysis",
@@ -808,7 +822,9 @@ export const hubs: Hub[] = [
         fullDescription: "ROI reporting connects marketing spend to business outcomes. When clients can see the revenue their investment generates, retention becomes much easier.",
         benefits: ["Clear ROI demonstration", "Investment justification", "Budget optimization data", "Client confidence", "Renewal support"],
         deliverables: ["ROI framework development", "Revenue tracking setup", "Conversion value assignment", "ROI dashboards", "Monthly ROI reports", "Year-over-year analysis"],
-        process: ["Conversion definition", "Value assignment", "Tracking implementation", "Reporting configuration", "Ongoing analysis"]
+        process: ["Conversion definition", "Value assignment", "Tracking implementation", "Reporting configuration", "Ongoing analysis"],
+        metaTitle: "White Label ROI & Revenue Analysis Reports for Agencies | Wholesale Performance Data by Dialed-in Web",
+        metaDescription: "Show ROI clearly with revenue-based reports from Dialed-in Web. Resell performance insights. Let's build your dashboard now."
       },
       {
         title: "Client Presentation Decks",
@@ -818,8 +834,8 @@ export const hubs: Hub[] = [
         benefits: ["Professional presentation materials", "Client-ready slides", "Strategic narrative support", "QBR preparation", "Win communication"],
         deliverables: ["Presentation template development", "Monthly or quarterly slide updates", "Executive summary slides", "Strategy recommendation slides", "Visual design", "Speaker notes"],
         process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"],
-        metaTitle: "Client Presentation Decks | White Label Marketing Reports",
-        metaDescription: "Branded slide decks ready for client delivery. We craft white label presentations for SEO, PPC, and performance reviews."
+        metaTitle: "White Label Client Presentation Decks for Agencies | Wholesale Reporting Slides by Dialed-in Web",
+        metaDescription: "We build white label decks your team can present with confidence. Dialed-in Web handles the slides. Request samples today."
       }
     ]
   },
@@ -888,8 +904,8 @@ export const hubs: Hub[] = [
         benefits: ["Rank in every target city", "Capture 'near me' searches", "Build geographic authority", "Avoid duplicate content penalties", "Support local pack rankings"],
         deliverables: ["Service area page content", "City-specific landing pages", "Neighborhood content where relevant", "Local schema markup", "Internal linking architecture", "Geographic keyword targeting"],
         process: ["Service area mapping", "Keyword research per location", "Unique content development", "Local schema implementation", "Internal linking setup", "Performance tracking"],
-        metaTitle: "Geographical Content Creation | White Label Local SEO Content",
-        metaDescription: "We write geo-targeted content that ranks locally—under your brand. White label digital marketing made for location-based growth."
+        metaTitle: "White Label Geographical Content for Agencies | Wholesale Local SEO Page Creation by Dialed-in Web",
+        metaDescription: "We create location-specific pages to help clients rank locally. Sell geo content as your own. Schedule a strategy session today."
       },
       {
         title: "Topical Content",
@@ -899,8 +915,8 @@ export const hubs: Hub[] = [
         benefits: ["Build topical authority", "Capture long-tail queries", "Support E-E-A-T signals", "Create internal linking opportunities", "Feed social and email channels"],
         deliverables: ["Industry expertise articles", "How-to guides", "Educational content", "Comparison content", "Seasonal/timely content", "Content refresh updates"],
         process: ["Topic cluster mapping", "Keyword research", "Content brief development", "Writing and optimization", "Internal linking", "Performance tracking"],
-        metaTitle: "Topical Content Creation | White Label Content Marketing for SEO",
-        metaDescription: "Timely, relevant content crafted under your brand. Our white label topical content boosts traffic and positions your clients as experts."
+        metaTitle: "White Label Topical Content for Agencies | Wholesale Timely SEO Blog Posts by Dialed-in Web",
+        metaDescription: "Stay ahead with relevant content that drives organic traffic. Dialed-in Web writes what's trending. Partner with us today."
       },
       {
         title: "Power Posts",
@@ -909,7 +925,9 @@ export const hubs: Hub[] = [
         fullDescription: "Power posts are definitive resources on high-value topics. These 2,000-5,000+ word pieces become the hub of topic clusters and earn links, rankings, and authority.",
         benefits: ["Dominate competitive keywords", "Earn natural backlinks", "Establish definitive authority", "Support hub-and-spoke architecture", "Create evergreen assets"],
         deliverables: ["Comprehensive pillar content", "Visual elements and graphics", "Internal linking structure", "FAQ sections", "Schema markup", "Content promotion plan"],
-        process: ["Competitive analysis", "Outline development", "Comprehensive writing", "Visual creation", "Optimization", "Promotion and link building"]
+        process: ["Competitive analysis", "Outline development", "Comprehensive writing", "Visual creation", "Optimization", "Promotion and link building"],
+        metaTitle: "White Label Power Posts for Agencies | Wholesale Long-Form SEO Blog Content by Dialed-in Web",
+        metaDescription: "Dialed-in Web creates long-form blog content that ranks and converts. Offer premium SEO writing. Let's plan your content today."
       },
       {
         title: "E-books & Guides",
@@ -918,8 +936,8 @@ export const hubs: Hub[] = [
         fullDescription: "E-books and guides are premium content assets that capture email addresses while demonstrating deep expertise. They're the cornerstone of content-driven lead generation.",
         benefits: ["Capture qualified leads", "Demonstrate expertise", "Build email lists", "Support nurture campaigns", "Create repurposable content"],
         deliverables: ["E-book content writing", "Professional design", "Landing page copy", "Email sequence integration", "Lead magnet funnel", "Promotion strategy"],
-        metaTitle: "eBook & Guide Creation | White Label Content Marketing Services",
-        metaDescription: "Offer your clients lead-generating eBooks and guides. Fully white-labeled content marketing with custom design and copywriting.",
+        metaTitle: "White Label Ebooks & Guides for Agencies | Wholesale Lead Magnet Content by Dialed-in Web",
+        metaDescription: "Generate leads with custom ebooks and guides. Dialed-in Web writes them under your brand. Start creating high-value assets today.",
         process: ["Topic selection", "Outline and structure", "Content development", "Design and formatting", "Landing page creation", "Funnel integration"]
       },
       {
@@ -930,8 +948,8 @@ export const hubs: Hub[] = [
         benefits: ["High conversion rates", "Low production cost", "Quick implementation", "Segment subscribers", "Support automation"],
         deliverables: ["Checklist development", "Template creation", "Tool design", "Landing page copy", "Thank you page optimization", "Email integration"],
         process: ["Magnet concept development", "Content creation", "Design and formatting", "Landing page setup", "Automation integration", "A/B testing"],
-        metaTitle: "Lead Magnet Creation | White Label Content Marketing Assets",
-        metaDescription: "Capture leads with high-converting white label content. We design and write custom lead magnets under your agency's brand."
+        metaTitle: "White Label Lead Magnets for Agencies | Wholesale Conversion Content Creation by Dialed-in Web",
+        metaDescription: "Dialed-in Web designs lead magnets that turn traffic into leads. Resell content with real impact. Get your assets started today."
       },
       {
         title: "Press Releases",
@@ -940,7 +958,9 @@ export const hubs: Hub[] = [
         fullDescription: "Press releases distribute newsworthy announcements to media outlets, news aggregators, and industry publications. They build brand visibility and create citation opportunities.",
         benefits: ["Media visibility", "Citation building", "Brand awareness", "Authority signals", "News aggregator inclusion"],
         deliverables: ["Press release writing", "Distribution strategy", "Media list development", "Follow-up outreach", "Coverage tracking", "Citation documentation"],
-        process: ["News angle development", "Press release writing", "Distribution execution", "Media follow-up", "Coverage monitoring", "Citation tracking"]
+        process: ["News angle development", "Press release writing", "Distribution execution", "Media follow-up", "Coverage monitoring", "Citation tracking"],
+        metaTitle: "White Label Press Release Writing for Agencies | Wholesale Content Distribution by Dialed-in Web",
+        metaDescription: "Dialed-in Web writes press releases that build brand awareness and SEO. Add PR content to your services. Request a call today."
       },
       {
         title: "AIO Content",
@@ -950,8 +970,8 @@ export const hubs: Hub[] = [
         benefits: ["AI Overview inclusion", "LLM citation eligibility", "Future-proof content", "Semantic structure", "Voice search optimization"],
         deliverables: ["Semantic content structure", "FAQ schema implementation", "Clear heading hierarchies", "Authoritative depth", "Entity optimization", "Citation-friendly formatting"],
         process: ["AI visibility audit", "Content restructuring", "Schema implementation", "Authority building", "Performance monitoring", "Ongoing optimization"],
-        metaTitle: "AIO Content Creation | White Label AI-Optimized SEO Copywriting",
-        metaDescription: "We blend AI efficiency with human creativity to deliver high-ranking SEO content. White labeled and ready for your agency."
+        metaTitle: "White Label AIO Content for Agencies | Wholesale AI-Assisted SEO Copywriting by Dialed-in Web",
+        metaDescription: "We combine AI and expert editors to create optimized content at scale. Resell smarter SEO writing. Book your AIO plan today."
       },
       {
         title: "Case Studies",
@@ -960,7 +980,9 @@ export const hubs: Hub[] = [
         fullDescription: "Case studies are proof assets that document real results. They build trust, support sales conversations, and demonstrate the outcomes your client's services deliver.",
         benefits: ["Build prospect trust", "Support sales process", "Document results", "Create social proof", "Enable client testimonials"],
         deliverables: ["Client interview", "Case study writing", "Visual design", "Testimonial extraction", "Distribution strategy", "Sales enablement"],
-        process: ["Client selection", "Interview and research", "Story development", "Design and formatting", "Client approval", "Distribution"]
+        process: ["Client selection", "Interview and research", "Story development", "Design and formatting", "Client approval", "Distribution"],
+        metaTitle: "White Label Case Study Writing for Agencies | Wholesale Client Success Content by Dialed-in Web",
+        metaDescription: "Dialed-in Web crafts case studies that build trust and conversions. Offer proof-driven content. Talk to our writing team today."
       },
       {
         title: "FAQ Content",
@@ -969,7 +991,9 @@ export const hubs: Hub[] = [
         fullDescription: "FAQ content captures question-based queries and earns featured snippets. Structured Q&A content is also essential for voice search and AI systems that answer user questions.",
         benefits: ["Featured snippet eligibility", "Voice search optimization", "AI visibility", "User experience improvement", "Long-tail keyword capture"],
         deliverables: ["FAQ research and development", "Structured Q&A content", "FAQ schema markup", "Page integration", "Internal linking", "Performance tracking"],
-        process: ["Question research", "Answer development", "Schema implementation", "Page integration", "Snippet optimization", "Ongoing expansion"]
+        process: ["Question research", "Answer development", "Schema implementation", "Page integration", "Snippet optimization", "Ongoing expansion"],
+        metaTitle: "White Label FAQ Content for Agencies | Wholesale SEO Answer Pages by Dialed-in Web",
+        metaDescription: "Improve rankings and user experience with expert FAQ content. Resell optimized answer pages. Get started with us today."
       },
       {
         title: "Hub & Spoke Build-outs",
@@ -978,7 +1002,9 @@ export const hubs: Hub[] = [
         fullDescription: "Hub-and-spoke content architecture organizes content into topic clusters with pillar pages at the center. This structure maximizes topical authority and creates clear paths for users and search engines.",
         benefits: ["Maximize topical authority", "Clear content organization", "Strategic internal linking", "User experience improvement", "Scalable content framework"],
         deliverables: ["Topic cluster mapping", "Pillar page development", "Supporting content creation", "Internal linking architecture", "Content gap analysis", "Expansion roadmap"],
-        process: ["Topic cluster identification", "Pillar page creation", "Spoke content development", "Internal linking implementation", "Performance analysis", "Ongoing expansion"]
+        process: ["Topic cluster identification", "Pillar page creation", "Spoke content development", "Internal linking implementation", "Performance analysis", "Ongoing expansion"],
+        metaTitle: "White Label Hub and Spoke Content for Agencies | Wholesale SEO Content Architecture by Dialed-in Web",
+        metaDescription: "Dialed-in Web builds hub-and-spoke frameworks for topical authority. Offer strategic content. Schedule your content roadmap today."
       }
     ]
   }
