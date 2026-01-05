@@ -125,8 +125,8 @@ const App = () => (
         {/* Legacy site URL redirects (301) - Service Pages */}
         <Route path="/search-engine-optimization" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/search-engine-optimization/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/dallas-digital-marketing" element={<Navigate to="/contact" replace />} />
-        <Route path="/dallas-digital-marketing/" element={<Navigate to="/contact" replace />} />
+        <Route path="/dallas-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/dallas-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/moving-and-storage-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/contact/" element={<Navigate to="/contact" replace />} />
