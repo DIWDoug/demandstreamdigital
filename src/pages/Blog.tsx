@@ -43,6 +43,20 @@ const Blog = () => {
         <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
         <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Digital Marketing Insights | White Label SEO & PPC Blog" />
+        <meta property="og:description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
+        <meta property="og:url" content="https://dialedinweb.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Marketing Insights | White Label SEO & PPC Blog" />
+        <meta name="twitter:description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

@@ -143,6 +143,21 @@ const About = () => {
           name="description" 
           content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." 
         />
+        <link rel="canonical" href="https://dialedinweb.com/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />
+        <meta property="og:description" content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." />
+        <meta property="og:url" content="https://dialedinweb.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />
+        <meta name="twitter:description" content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
         {/* Connected Organization + Person Schema for AI/LLM visibility */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -172,8 +187,9 @@ const About = () => {
                 ],
                 "sameAs": [
                   "https://www.linkedin.com/company/dialed-in-web/",
-                  "https://x.com/dialedinweb",
-                  "https://www.facebook.com/dialedinweb"
+                  "https://www.facebook.com/dialedinweb",
+                  "https://www.instagram.com/dialedinweb/",
+                  "https://share.google/IXw0qAzlgpjR1SIKP"
                 ],
                 "aggregateRating": {
                   "@type": "AggregateRating",

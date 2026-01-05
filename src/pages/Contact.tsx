@@ -32,6 +32,20 @@ const Contact = () => {
         <title>Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency</title>
         <meta name="description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
         <link rel="canonical" href="https://dialedinweb.com/contact" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />
+        <meta property="og:description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
+        <meta property="og:url" content="https://dialedinweb.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />
+        <meta name="twitter:description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
 
       <Header />

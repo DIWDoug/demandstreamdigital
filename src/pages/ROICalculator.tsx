@@ -123,6 +123,20 @@ const ROICalculator = () => {
         <title>Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web</title>
         <meta name="description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web" />
+        <meta property="og:description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
+        <meta property="og:url" content="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web" />
+        <meta name="twitter:description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

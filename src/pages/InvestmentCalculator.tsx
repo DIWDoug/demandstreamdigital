@@ -248,6 +248,20 @@ const InvestmentCalculator = () => {
         <title>Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web</title>
         <meta name="description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web" />
+        <meta property="og:description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
+        <meta property="og:url" content="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web" />
+        <meta name="twitter:description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

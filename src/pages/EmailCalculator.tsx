@@ -157,6 +157,20 @@ const EmailCalculator = () => {
         <title>Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web</title>
         <meta name="description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web" />
+        <meta property="og:description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
+        <meta property="og:url" content="https://dialedinweb.com/partner-tools/email-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web" />
+        <meta name="twitter:description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

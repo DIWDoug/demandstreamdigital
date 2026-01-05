@@ -195,6 +195,20 @@ const Testimonials = () => {
         <meta name="description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
         <link rel="canonical" href="https://dialedinweb.com/testimonials" />
         <script type="application/ld+json">{JSON.stringify(testimonialsSchema)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="White Label SEO & Marketing Testimonials | Why Agencies Trust Dialed-in Web to Deliver Behind the Scenes" />
+        <meta property="og:description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
+        <meta property="og:url" content="https://dialedinweb.com/testimonials" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="White Label SEO & Marketing Testimonials | Why Agencies Trust Dialed-in Web to Deliver Behind the Scenes" />
+        <meta name="twitter:description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
