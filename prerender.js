@@ -27,6 +27,7 @@ const routesToPrerender = [
   '/testimonials',
   '/contact',
   '/privacy',
+  '/terms',
   
   // Authors
   '/authors/doug-bryson',
