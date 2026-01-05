@@ -114,7 +114,7 @@ const App = () => (
         <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
         <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
 
-        {/* Legacy site URL redirects (301) */}
+        {/* Legacy site URL redirects (301) - Service Pages */}
         <Route path="/dallas-digital-marketing" element={<Navigate to="/contact" replace />} />
         <Route path="/dallas-digital-marketing/" element={<Navigate to="/contact" replace />} />
         <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
@@ -153,6 +153,138 @@ const App = () => (
         <Route path="/blog/" element={<Navigate to="/blog" replace />} />
         <Route path="/local-search-marketing" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/local-search-marketing/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/white-label-local-ppc" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/white-label-local-ppc/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/white-label-social-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
+        <Route path="/white-label-social-media/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
+        <Route path="/white-label-local-seo-on-page-optimization-local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo/on-page-optimization" replace />} />
+        <Route path="/white-label-local-seo-on-page-optimization-local-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo/on-page-optimization" replace />} />
+
+        {/* Legacy blog post redirects → /blog */}
+        <Route path="/white-label-seo-for-agencies-checklist" element={<Navigate to="/blog" replace />} />
+        <Route path="/white-label-seo-for-agencies-checklist/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-kinds-of-businesses-should-use-ppc-advertising" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-kinds-of-businesses-should-use-ppc-advertising/" element={<Navigate to="/blog" replace />} />
+        <Route path="/five-ways-an-seo-consultant-can-help-your-business-grow" element={<Navigate to="/blog" replace />} />
+        <Route path="/five-ways-an-seo-consultant-can-help-your-business-grow/" element={<Navigate to="/blog" replace />} />
+        <Route path="/emd-local-business-sites" element={<Navigate to="/blog" replace />} />
+        <Route path="/emd-local-business-sites/" element={<Navigate to="/blog" replace />} />
+        <Route path="/ten-ppc-tools-to-take-your-advertising-game-to-the-next-level" element={<Navigate to="/blog" replace />} />
+        <Route path="/ten-ppc-tools-to-take-your-advertising-game-to-the-next-level/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-to-build-a-strong-social-media-presence-as-an-sme" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-to-build-a-strong-social-media-presence-as-an-sme/" element={<Navigate to="/blog" replace />} />
+        <Route path="/5-ways-to-effectively-engage-with-your-target-audience-using-emojis" element={<Navigate to="/blog" replace />} />
+        <Route path="/5-ways-to-effectively-engage-with-your-target-audience-using-emojis/" element={<Navigate to="/blog" replace />} />
+        <Route path="/visibility-for-small-online-business" element={<Navigate to="/blog" replace />} />
+        <Route path="/visibility-for-small-online-business/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-schema-can-make-your-search-engine-results-more-visually-appealing" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-schema-can-make-your-search-engine-results-more-visually-appealing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/amazon-ppc-101-what-you-need-to-know" element={<Navigate to="/blog" replace />} />
+        <Route path="/amazon-ppc-101-what-you-need-to-know/" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-complete-guide-to-choosing-a-digital-marketing-agency-for-your-small-business" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-complete-guide-to-choosing-a-digital-marketing-agency-for-your-small-business/" element={<Navigate to="/blog" replace />} />
+        <Route path="/why-local-seo-is-important-dallas" element={<Navigate to="/blog" replace />} />
+        <Route path="/why-local-seo-is-important-dallas/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-smes-can-compete-with-big-brands-using-local-seo" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-smes-can-compete-with-big-brands-using-local-seo/" element={<Navigate to="/blog" replace />} />
+        <Route path="/10-hacks-to-solidify-your-business-positive-reputation-online" element={<Navigate to="/blog" replace />} />
+        <Route path="/10-hacks-to-solidify-your-business-positive-reputation-online/" element={<Navigate to="/blog" replace />} />
+        <Route path="/local-content-marketing-kpis-which-metrics-should-your-business-track" element={<Navigate to="/blog" replace />} />
+        <Route path="/local-content-marketing-kpis-which-metrics-should-your-business-track/" element={<Navigate to="/blog" replace />} />
+        <Route path="/5-ways-to-define-and-leverage-your-target-audience-on-social-media" element={<Navigate to="/blog" replace />} />
+        <Route path="/5-ways-to-define-and-leverage-your-target-audience-on-social-media/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-local-seo-services-help-moving-companies-on-google-maps" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-local-seo-services-help-moving-companies-on-google-maps/" element={<Navigate to="/blog" replace />} />
+        <Route path="/domain-level-competitors-vs-page-level-competitors-where-should-you-focus-your-marketing-strategies" element={<Navigate to="/blog" replace />} />
+        <Route path="/domain-level-competitors-vs-page-level-competitors-where-should-you-focus-your-marketing-strategies/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-does-a-digital-marketer-do-dallas-movers" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-does-a-digital-marketer-do-dallas-movers/" element={<Navigate to="/blog" replace />} />
+        <Route path="/benefits-of-white-label-seo-services" element={<Navigate to="/blog" replace />} />
+        <Route path="/benefits-of-white-label-seo-services/" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-top-20-seo-companies-in-dallas-tx-2025-edition" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-top-20-seo-companies-in-dallas-tx-2025-edition/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-white-label-digital-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-white-label-digital-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/yelp-google-facebook-reviews-does-one-matter-more-than-the-other" element={<Navigate to="/blog" replace />} />
+        <Route path="/yelp-google-facebook-reviews-does-one-matter-more-than-the-other/" element={<Navigate to="/blog" replace />} />
+        <Route path="/eight-outstanding-ways-to-leverage-reddit-for-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/eight-outstanding-ways-to-leverage-reddit-for-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/digital-marketing-challenges-dsos-face" element={<Navigate to="/blog" replace />} />
+        <Route path="/digital-marketing-challenges-dsos-face/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-online-presence" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-online-presence/" element={<Navigate to="/blog" replace />} />
+        <Route path="/why-your-small-business-website-isnt-ranking-and-how-seo-services-can-help" element={<Navigate to="/blog" replace />} />
+        <Route path="/why-your-small-business-website-isnt-ranking-and-how-seo-services-can-help/" element={<Navigate to="/blog" replace />} />
+        <Route path="/social-media-agencies-white-label-support" element={<Navigate to="/blog" replace />} />
+        <Route path="/social-media-agencies-white-label-support/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-white-labeling-and-how-to-choose-a-partner" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-is-white-labeling-and-how-to-choose-a-partner/" element={<Navigate to="/blog" replace />} />
+        <Route path="/seo-agencies-outsourcing-white-label-work" element={<Navigate to="/blog" replace />} />
+        <Route path="/seo-agencies-outsourcing-white-label-work/" element={<Navigate to="/blog" replace />} />
+        <Route path="/seo-and-content-strategy-for-retail-growth" element={<Navigate to="/blog" replace />} />
+        <Route path="/seo-and-content-strategy-for-retail-growth/" element={<Navigate to="/blog" replace />} />
+        <Route path="/google-ads-vs-facebook-ads-which-is-best-for-your-small-business" element={<Navigate to="/blog" replace />} />
+        <Route path="/google-ads-vs-facebook-ads-which-is-best-for-your-small-business/" element={<Navigate to="/blog" replace />} />
+        <Route path="/ten-powerful-benefits-of-social-media-marketing-every-local-business-should-know" element={<Navigate to="/blog" replace />} />
+        <Route path="/ten-powerful-benefits-of-social-media-marketing-every-local-business-should-know/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-a-local-seo-agency-helps-dentists-win-locally" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-a-local-seo-agency-helps-dentists-win-locally/" element={<Navigate to="/blog" replace />} />
+        <Route path="/conversion-rate-optimization-what-you-need-to-know" element={<Navigate to="/blog" replace />} />
+        <Route path="/conversion-rate-optimization-what-you-need-to-know/" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-essential-instagram-hashtags-for-small-businesses" element={<Navigate to="/blog" replace />} />
+        <Route path="/the-essential-instagram-hashtags-for-small-businesses/" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-are-the-4-types-of-digital-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/what-are-the-4-types-of-digital-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/top-25-local-business-directories-to-get-listed-on-today" element={<Navigate to="/blog" replace />} />
+        <Route path="/top-25-local-business-directories-to-get-listed-on-today/" element={<Navigate to="/blog" replace />} />
+        <Route path="/local-seo-for-franchises-moving-firms" element={<Navigate to="/blog" replace />} />
+        <Route path="/local-seo-for-franchises-moving-firms/" element={<Navigate to="/blog" replace />} />
+        <Route path="/10-questions-clinics-must-ask-ad-agencies-in-dallas-tx" element={<Navigate to="/blog" replace />} />
+        <Route path="/10-questions-clinics-must-ask-ad-agencies-in-dallas-tx/" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-local-service-ads-have-impacted-google-ads" element={<Navigate to="/blog" replace />} />
+        <Route path="/how-local-service-ads-have-impacted-google-ads/" element={<Navigate to="/blog" replace />} />
+        <Route path="/understanding-lazy-loading-for-seo" element={<Navigate to="/blog" replace />} />
+        <Route path="/understanding-lazy-loading-for-seo/" element={<Navigate to="/blog" replace />} />
+
+        {/* Legacy category/tag redirects → /blog */}
+        <Route path="/category/business" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/business/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/adwords" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/adwords/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/facebook-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/facebook-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/category/services/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/category/blog" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/blog/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/digital-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/digital-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/local-seo" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/local-seo/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/linkedin-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/linkedin-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/content-marketing" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/content-marketing/" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/white-label-services" element={<Navigate to="/blog" replace />} />
+        <Route path="/category/white-label-services/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/internet-marketing-dallas" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/internet-marketing-dallas/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/advertising-agencies-in-dallas" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/advertising-agencies-in-dallas/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/custom-digital-marketing-company-in-dallas" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/custom-digital-marketing-company-in-dallas/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/small-business-seo-company" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/small-business-seo-company/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/dallas-seo-company" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/dallas-seo-company/" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/local-seo-dallas" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/local-seo-dallas/" element={<Navigate to="/blog" replace />} />
+
+        {/* Legacy portfolio/misc redirects */}
+        <Route path="/portfolio/villa-in-dallas" element={<Navigate to="/testimonials" replace />} />
+        <Route path="/portfolio/villa-in-dallas/" element={<Navigate to="/testimonials" replace />} />
+        <Route path="/category/*" element={<Navigate to="/blog" replace />} />
+        <Route path="/tag/*" element={<Navigate to="/blog" replace />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
