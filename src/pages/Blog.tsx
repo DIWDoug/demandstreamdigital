@@ -45,6 +45,12 @@ const Blog = () => {
         <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
         <meta name="keywords" content="white label SEO blog, agency marketing tips, PPC insights, digital marketing articles, local SEO strategy" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/blog" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/blog" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/blog" />
+        
         <script type="application/ld+json">{JSON.stringify(getBlogSchema())}</script>
         
         {/* Open Graph */}

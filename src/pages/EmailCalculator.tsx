@@ -166,6 +166,12 @@ const EmailCalculator = () => {
         <meta name="description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/email-calculator" />
         <meta name="keywords" content="email marketing calculator, email ROI calculator, open rate estimator, email campaign planner, agency email tool" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        
         <script type="application/ld+json">{JSON.stringify(emailCalculatorSchema)}</script>
         
         {/* Open Graph */}

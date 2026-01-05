@@ -203,8 +203,12 @@ const AIReadyCheck = () => {
         <title>White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web</title>
         <meta name="description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
+        <meta name="keywords" content="AI readiness check, LLM compatibility, AI visibility audit, AEO tool, answer engine optimization" />
         
-        {/* Open Graph */}
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
         <meta property="og:title" content="White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web" />
         <meta property="og:description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
         <meta property="og:url" content="https://dialedinweb.com/partner-tools/ai-ready-check" />
