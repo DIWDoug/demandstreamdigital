@@ -4,14 +4,14 @@ import Footer from "@/components/sections/Footer";
 import { PHONE_NUMBER, EMAIL, ADDRESS } from "@/lib/constants";
 
 const Privacy = () => {
-  const lastUpdated = "January 5, 2025";
+  const lastUpdated = "January 1, 2026";
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Privacy Policy | Dialed-In Web</title>
-        <meta name="description" content="Learn how Dialed-In Web collects, uses, and protects your personal information. Our privacy policy covers GDPR, CCPA, and data protection practices." />
-        <meta name="keywords" content="privacy policy, GDPR, CCPA, data protection, Dialed-In Web privacy" />
+        <meta name="description" content="Learn how Dialed-In Web collects, uses, and protects your personal information. Our privacy policy covers GDPR, data protection, and cookie practices." />
+        <meta name="keywords" content="privacy policy, GDPR, data protection, Dialed-In Web privacy, cookies" />
         <link rel="canonical" href="https://dialedinweb.com/privacy" />
         
         {/* Hreflang Tags */}
@@ -39,230 +39,252 @@ const Privacy = () => {
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Privacy Policy</h1>
           <p className="text-text-muted mb-12">Last Updated: {lastUpdated}</p>
 
-          <div className="prose prose-invert prose-lg max-w-none space-y-8">
-            {/* Introduction */}
+          <div className="prose prose-invert prose-lg max-w-none space-y-10">
+            {/* 1. Introduction */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Introduction</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">1. Introduction</h2>
               <p className="text-text-secondary leading-relaxed">
-                Dialed-In Web ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at dialedinweb.com or engage with our white-label digital marketing services.
+                Dialed-In Web, LLC ("Dialed-In Web," "we," "us," or "our") respects your privacy and is committed to protecting it through this Privacy Policy.
               </p>
               <p className="text-text-secondary leading-relaxed mt-4">
-                By using our website or services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website or services.
+                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit https://www.dialedinweb.com (the "Website"), including any related services, forms, or communications.
+              </p>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                By accessing or using the Website, you agree to this Privacy Policy. If you do not agree, you must not use the Website.
               </p>
             </section>
 
-            {/* Information We Collect */}
+            {/* 2. Information We Collect */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Information We Collect</h2>
-              
-              <h3 className="text-xl font-medium text-foreground mt-6 mb-3">Personal Information You Provide</h3>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">2. Information We Collect</h2>
               <p className="text-text-secondary leading-relaxed">
-                We collect information you voluntarily provide when you:
+                We collect information in the following ways:
+              </p>
+              
+              <h3 className="text-xl font-medium text-foreground mt-6 mb-3">A. Personal Information You Provide</h3>
+              <p className="text-text-secondary leading-relaxed">
+                You may voluntarily provide personal information, including:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Fill out contact forms or request information</li>
-                <li>Subscribe to our newsletter or marketing communications</li>
-                <li>Request a consultation or partnership inquiry</li>
-                <li>Use our calculators or interactive tools</li>
-                <li>Communicate with us via email, phone, or other channels</li>
+                <li>Full name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Company name</li>
+                <li>Billing and payment information</li>
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
-                This information may include: name, email address, phone number, company name, website URL, and any other information you choose to provide.
+                Payments are processed securely through Stripe and PayPal. Dialed-In Web does not store or directly process payment card information.
               </p>
 
-              <h3 className="text-xl font-medium text-foreground mt-6 mb-3">Information Collected Automatically</h3>
+              <h3 className="text-xl font-medium text-foreground mt-6 mb-3">B. Automatically Collected Information</h3>
               <p className="text-text-secondary leading-relaxed">
-                When you visit our website, we automatically collect certain information, including:
+                When you visit the Website, we may automatically collect:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>IP address and approximate geographic location</li>
+                <li>IP address</li>
                 <li>Browser type and version</li>
                 <li>Device type and operating system</li>
-                <li>Pages visited and time spent on each page</li>
-                <li>Referring website or source</li>
-                <li>Date and time of access</li>
+                <li>Pages visited, time spent, and referring URLs</li>
+                <li>Approximate geographic location</li>
+              </ul>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                This data is collected using cookies, pixels, and similar tracking technologies.
+              </p>
+            </section>
+
+            {/* 3. Advertising, Analytics, and Retargeting */}
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">3. Advertising, Analytics, and Retargeting</h2>
+              <p className="text-text-secondary leading-relaxed">
+                We use third-party advertising and analytics platforms, including:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>Google Analytics</li>
+                <li>Google Ads</li>
+                <li>Meta (Facebook and Instagram)</li>
+                <li>Microsoft Bing Ads</li>
+                <li>Reddit Ads</li>
+                <li>Quora Ads</li>
+              </ul>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                These platforms may use cookies, pixels, or similar technologies to:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>Analyze website usage and performance</li>
+                <li>Measure marketing effectiveness</li>
+                <li>Deliver targeted and retargeted advertisements</li>
+              </ul>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                We do not sell personal information. Information is used solely for advertising, analytics, and business operations.
+              </p>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                Users may manage or opt out of targeted advertising through:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>
+                  <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">
+                    Google Ad Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">
+                    Meta Ad Preferences
+                  </a>
+                </li>
+                <li>
+                  <a href="https://optout.networkadvertising.org" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">
+                    Network Advertising Initiative (NAI) opt-out tools
+                  </a>
+                </li>
+                <li>
+                  <a href="https://optout.aboutads.info" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">
+                    Digital Advertising Alliance (DAA) opt-out tools
+                  </a>
+                </li>
               </ul>
             </section>
 
-            {/* How We Use Your Information */}
+            {/* 4. Cookies and Tracking Technologies */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">How We Use Your Information</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">4. Cookies and Tracking Technologies</h2>
+              <p className="text-text-secondary leading-relaxed">
+                We use cookies and similar technologies to:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>Enable core website functionality</li>
+                <li>Improve performance and user experience</li>
+                <li>Support analytics and advertising efforts</li>
+              </ul>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                You can manage cookies through your browser settings. Disabling cookies may affect Website functionality.
+              </p>
+            </section>
+
+            {/* 5. How We Use Your Information */}
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">5. How We Use Your Information</h2>
               <p className="text-text-secondary leading-relaxed">
                 We use the information we collect to:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Respond to your inquiries and fulfill your requests</li>
-                <li>Provide, maintain, and improve our services</li>
-                <li>Send marketing communications (with your consent)</li>
-                <li>Analyze website usage and optimize user experience</li>
-                <li>Protect against fraud and unauthorized access</li>
-                <li>Comply with legal obligations</li>
+                <li>Operate and maintain the Website</li>
+                <li>Respond to inquiries and provide services</li>
+                <li>Process transactions and payments</li>
+                <li>Send service-related or marketing communications</li>
+                <li>Improve advertising performance and Website experience</li>
+                <li>Comply with legal and regulatory obligations</li>
               </ul>
             </section>
 
-            {/* Cookies and Tracking */}
+            {/* 6. Legal Bases for Processing (GDPR) */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Cookies and Tracking Technologies</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">6. Legal Bases for Processing (GDPR)</h2>
               <p className="text-text-secondary leading-relaxed">
-                We use cookies and similar tracking technologies to collect and store information about your interactions with our website. These include:
+                For users located in the European Economic Area (EEA), we process personal data under one or more of the following lawful bases:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>
-                <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
-                <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements and track campaign effectiveness</li>
+                <li>Your consent</li>
+                <li>Performance of a contract</li>
+                <li>Legitimate business interests that do not override your rights</li>
+                <li>Compliance with legal obligations</li>
+              </ul>
+            </section>
+
+            {/* 7. Your GDPR Rights (EEA Residents) */}
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">7. Your GDPR Rights (EEA Residents)</h2>
+              <p className="text-text-secondary leading-relaxed">
+                If you are located in the EEA, you have the right to:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>Access your personal data</li>
+                <li>Request correction or deletion</li>
+                <li>Restrict or object to processing</li>
+                <li>Request data portability</li>
+                <li>Withdraw consent at any time</li>
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
-                You can control cookie preferences through your browser settings. Note that disabling certain cookies may affect website functionality.
+                Requests may be submitted using the contact information below.
               </p>
             </section>
 
-            {/* Third-Party Services */}
+            {/* 8. Disclosure of Information */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Third-Party Services</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">8. Disclosure of Information</h2>
               <p className="text-text-secondary leading-relaxed">
-                We may use third-party services that collect, monitor, and analyze information. These include:
+                We may disclose personal information:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li><strong>Google Analytics:</strong> Website traffic analysis</li>
-                <li><strong>Google reCAPTCHA:</strong> Spam and bot protection</li>
-                <li><strong>Elfsight:</strong> Review display widgets</li>
-                <li><strong>CRM Systems:</strong> Lead management and communications</li>
+                <li>To service providers assisting with payments, analytics, or operations</li>
+                <li>To comply with legal obligations or lawful requests</li>
+                <li>To protect our rights, property, or safety</li>
+                <li>In connection with a merger, sale, or business transfer</li>
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
-                Each third-party service has its own privacy policy governing the use of your information.
+                We do not disclose personal information for unauthorized purposes.
               </p>
             </section>
 
-            {/* GDPR Rights */}
+            {/* 9. Data Retention */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Your Rights Under GDPR (European Users)</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">9. Data Retention</h2>
               <p className="text-text-secondary leading-relaxed">
-                If you are located in the European Economic Area (EEA) or United Kingdom, you have the following rights under the General Data Protection Regulation (GDPR):
-              </p>
-              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li><strong>Right to Access:</strong> Request copies of your personal data</li>
-                <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data</li>
-                <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("right to be forgotten")</li>
-                <li><strong>Right to Restrict Processing:</strong> Request limitation of how we use your data</li>
-                <li><strong>Right to Data Portability:</strong> Request transfer of your data to another organization</li>
-                <li><strong>Right to Object:</strong> Object to processing of your personal data for marketing purposes</li>
-                <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where processing is based on consent</li>
-              </ul>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                To exercise any of these rights, please contact us at {EMAIL}. We will respond to your request within 30 days.
+                We retain personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy or as required by law.
               </p>
             </section>
 
-            {/* CCPA Rights */}
+            {/* 10. Data Security */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Your Rights Under CCPA (California Residents)</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">10. Data Security</h2>
               <p className="text-text-secondary leading-relaxed">
-                If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with specific rights:
-              </p>
-              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li><strong>Right to Know:</strong> Request disclosure of personal information collected, used, or disclosed</li>
-                <li><strong>Right to Delete:</strong> Request deletion of personal information we hold about you</li>
-                <li><strong>Right to Opt-Out:</strong> Opt out of the sale of your personal information (we do not sell personal information)</li>
-                <li><strong>Right to Non-Discrimination:</strong> Not be discriminated against for exercising your privacy rights</li>
-              </ul>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                To exercise these rights, contact us at {EMAIL} or call {PHONE_NUMBER}.
+                We implement reasonable administrative, technical, and physical safeguards designed to protect your information. However, no system is completely secure, and we cannot guarantee absolute security.
               </p>
             </section>
 
-            {/* Canadian Privacy */}
+            {/* 11. Children's Privacy */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Canadian Privacy Rights (PIPEDA)</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">11. Children's Privacy</h2>
               <p className="text-text-secondary leading-relaxed">
-                If you are a Canadian resident, you have rights under the Personal Information Protection and Electronic Documents Act (PIPEDA):
-              </p>
-              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Access your personal information held by us</li>
-                <li>Challenge the accuracy and completeness of your information</li>
-                <li>Withdraw consent for the collection, use, or disclosure of your information</li>
-              </ul>
-            </section>
-
-            {/* Data Retention */}
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Data Retention</h2>
-              <p className="text-text-secondary leading-relaxed">
-                We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. When data is no longer needed, it will be securely deleted or anonymized.
+                The Website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children.
               </p>
             </section>
 
-            {/* Data Security */}
+            {/* 12. Third-Party Websites */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Data Security</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">12. Third-Party Websites</h2>
               <p className="text-text-secondary leading-relaxed">
-                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-              </p>
-              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>SSL/TLS encryption for data transmission</li>
-                <li>Secure data storage with access controls</li>
-                <li>Regular security assessments and updates</li>
-                <li>Employee training on data protection</li>
-              </ul>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                However, no method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security.
+                The Website may contain links to third-party websites. We are not responsible for the privacy practices or content of those websites.
               </p>
             </section>
 
-            {/* International Transfers */}
+            {/* 13. Changes to This Privacy Policy */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">International Data Transfers</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">13. Changes to This Privacy Policy</h2>
               <p className="text-text-secondary leading-relaxed">
-                Your information may be transferred to and processed in countries other than your country of residence, including the United States. These countries may have different data protection laws. When we transfer data internationally, we implement appropriate safeguards to protect your information.
+                We may update this Privacy Policy at any time. Updates will be reflected by the "Last Updated" date. Continued use of the Website constitutes acceptance of the revised policy.
               </p>
             </section>
 
-            {/* Marketing Communications */}
+            {/* 14. Contact Information */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Marketing Communications</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">14. Contact Information</h2>
               <p className="text-text-secondary leading-relaxed">
-                With your consent, we may send you marketing communications about our services. You can opt out of marketing emails at any time by:
-              </p>
-              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Clicking the "unsubscribe" link in any marketing email</li>
-                <li>Contacting us at {EMAIL}</li>
-                <li>Replying "STOP" to any SMS marketing message</li>
-              </ul>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                Please note that even after opting out of marketing, you may still receive transactional or administrative communications.
-              </p>
-            </section>
-
-            {/* Children's Privacy */}
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Children's Privacy</h2>
-              <p className="text-text-secondary leading-relaxed">
-                Our website and services are not intended for individuals under the age of 16. We do not knowingly collect personal information from children. If you become aware that a child has provided us with personal information, please contact us immediately.
-              </p>
-            </section>
-
-            {/* Changes to Policy */}
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Changes to This Privacy Policy</h2>
-              <p className="text-text-secondary leading-relaxed">
-                We may update this Privacy Policy from time to time. The updated version will be indicated by the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically. Continued use of our website after changes constitutes acceptance of the updated policy.
-              </p>
-            </section>
-
-            {/* Contact Information */}
-            <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Contact Us</h2>
-              <p className="text-text-secondary leading-relaxed">
-                If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
+                For questions, requests, or privacy concerns, contact:
               </p>
               <div className="mt-4 p-6 bg-surface-dark rounded-xl border border-border">
-                <p className="text-foreground font-medium mb-3">Dialed-In Web</p>
-                <p className="text-text-secondary">{ADDRESS.full}</p>
-                <p className="text-text-secondary">Email: {EMAIL}</p>
-                <p className="text-text-secondary">Phone: {PHONE_NUMBER}</p>
+                <p className="text-foreground font-medium mb-3">Dialed-In Web, LLC</p>
+                <p className="text-text-secondary">4849 Greenville Ave, Suite 100-176</p>
+                <p className="text-text-secondary">Dallas, TX 75206</p>
+                <p className="text-text-secondary">United States</p>
+                <p className="text-text-secondary mt-3">Phone: +1 214-307-2995</p>
+                <p className="text-text-secondary">Email: doug@dialedinweb.com</p>
+                <p className="text-text-secondary">
+                  Website:{" "}
+                  <a href="https://www.dialedinweb.com" className="text-accent-blue hover:underline">
+                    https://www.dialedinweb.com
+                  </a>
+                </p>
               </div>
-              <p className="text-text-secondary leading-relaxed mt-4">
-                For GDPR-related inquiries, you also have the right to lodge a complaint with a supervisory authority in your country of residence.
-              </p>
             </section>
           </div>
         </div>
