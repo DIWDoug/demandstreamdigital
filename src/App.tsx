@@ -105,6 +105,7 @@ const App = () => (
 
         {/* Legacy /services redirects for SEO preservation */}
         <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/services/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/services/local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/services/google-maps" element={<Navigate to="/white-label-inbound-marketing-services/google-maps" replace />} />
         <Route path="/services/paid-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
@@ -112,6 +113,46 @@ const App = () => (
         <Route path="/services/local-authority-building" element={<Navigate to="/white-label-inbound-marketing-services/local-authority-building" replace />} />
         <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
         <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
+
+        {/* Legacy site URL redirects (301) */}
+        <Route path="/dallas-digital-marketing" element={<Navigate to="/contact" replace />} />
+        <Route path="/dallas-digital-marketing/" element={<Navigate to="/contact" replace />} />
+        <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/moving-and-storage-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/contact/" element={<Navigate to="/contact" replace />} />
+        <Route path="/small-business-social-advertising" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
+        <Route path="/small-business-social-advertising/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
+        <Route path="/white-label-seo-campaigns" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/white-label-seo-campaigns/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/shopify-seo-services" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/shopify-seo-services/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/about-us" element={<Navigate to="/about" replace />} />
+        <Route path="/about-us/" element={<Navigate to="/about" replace />} />
+        <Route path="/advanced-local-seo-services" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/advanced-local-seo-services/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/orthodontist-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/orthodontist-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/white-label-inbound-marketing-services/google-maps/review-management" replace />} />
+        <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/white-label-inbound-marketing-services/google-maps/review-management" replace />} />
+        <Route path="/dentist-seo-company" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/dentist-seo-company/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/local-seo-company" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/local-seo-company/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/dentist-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/dentist-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/e-commerce-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/e-commerce-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/orthodontist-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/orthodontist-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/affordable-web-design-small-business" element={<Navigate to="/contact" replace />} />
+        <Route path="/affordable-web-design-small-business/" element={<Navigate to="/contact" replace />} />
+        <Route path="/nashville-digital-marketing" element={<Navigate to="/contact" replace />} />
+        <Route path="/nashville-digital-marketing/" element={<Navigate to="/contact" replace />} />
+        <Route path="/search-engine-advertising" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/search-engine-advertising/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/blog/" element={<Navigate to="/blog" replace />} />
+        <Route path="/local-search-marketing" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/local-search-marketing/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
