@@ -5,6 +5,53 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Rate limiting configuration
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const MAX_REQUESTS_PER_WINDOW = 10;
+
+// In-memory rate limit cache (per user ID)
+const rateLimitCache = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(userId: string): { allowed: boolean; remaining: number; resetInSeconds: number } {
+  const now = Date.now();
+  const entry = rateLimitCache.get(userId);
+  
+  // Clean up expired entries periodically
+  if (rateLimitCache.size > 1000) {
+    for (const [key, value] of rateLimitCache.entries()) {
+      if (value.resetAt < now) {
+        rateLimitCache.delete(key);
+      }
+    }
+  }
+  
+  if (!entry || entry.resetAt < now) {
+    // New window
+    rateLimitCache.set(userId, { 
+      count: 1, 
+      resetAt: now + RATE_LIMIT_WINDOW_MS 
+    });
+    return { allowed: true, remaining: MAX_REQUESTS_PER_WINDOW - 1, resetInSeconds: Math.ceil(RATE_LIMIT_WINDOW_MS / 1000) };
+  }
+  
+  if (entry.count >= MAX_REQUESTS_PER_WINDOW) {
+    const resetInSeconds = Math.ceil((entry.resetAt - now) / 1000);
+    return { allowed: false, remaining: 0, resetInSeconds };
+  }
+  
+  entry.count++;
+  const resetInSeconds = Math.ceil((entry.resetAt - now) / 1000);
+  return { allowed: true, remaining: MAX_REQUESTS_PER_WINDOW - entry.count, resetInSeconds };
+}
+
+function getRateLimitHeaders(remaining: number, resetSeconds: number): Record<string, string> {
+  return {
+    'X-RateLimit-Limit': MAX_REQUESTS_PER_WINDOW.toString(),
+    'X-RateLimit-Remaining': remaining.toString(),
+    'X-RateLimit-Reset': resetSeconds.toString(),
+  };
+}
+
 // Request logging middleware
 function logRequest(req: Request, context: { functionName: string; userId?: string }) {
   const timestamp = new Date().toISOString();
@@ -344,6 +391,30 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Rate limiting check
+    const rateLimit = checkRateLimit(user.id);
+    const rateLimitHeaders = getRateLimitHeaders(rateLimit.remaining, rateLimit.resetInSeconds);
+    
+    if (!rateLimit.allowed) {
+      console.log(`Rate limit exceeded for user ${user.id}`);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: 'Rate limit exceeded. Please try again later.',
+          retryAfterSeconds: rateLimit.resetInSeconds
+        }),
+        { 
+          status: 429, 
+          headers: { 
+            ...corsHeaders, 
+            ...rateLimitHeaders,
+            'Content-Type': 'application/json',
+            'Retry-After': rateLimit.resetInSeconds.toString()
+          } 
+        }
+      );
+    }
+
     const { url } = await req.json();
 
     if (!url) {
@@ -492,7 +563,7 @@ Deno.serve(async (req) => {
     logResponse({ functionName, statusCode: 200, durationMs: Date.now() - startTime });
     return new Response(
       JSON.stringify({ success: true, data: result }),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { headers: { ...corsHeaders, ...rateLimitHeaders, 'Content-Type': 'application/json' } }
     );
 
   } catch (error) {
