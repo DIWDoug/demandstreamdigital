@@ -30,6 +30,5 @@ Allow: /
 Disallow: /region-blocked
 Disallow: /thank-you
 
-# Sitemaps (Yoast-style sitemap index)
+# Sitemap Index
 Sitemap: https://dialedinweb.com/sitemap_index.xml
-Sitemap: https://bomcaceohbkavyjsdpls.supabase.co/functions/v1/post-sitemap
