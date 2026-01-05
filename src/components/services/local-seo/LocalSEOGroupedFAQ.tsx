@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -49,28 +48,10 @@ const faqGroups: FAQGroup[] = [
 ];
 
 const LocalSEOGroupedFAQ = () => {
-  // Generate FAQ Schema for all FAQs
-  const allFaqs = faqGroups.flatMap(group => group.faqs);
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": allFaqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
+  // FAQ schema is handled at page level to prevent duplicates
 
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative">
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
       
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
