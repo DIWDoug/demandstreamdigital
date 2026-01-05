@@ -254,8 +254,9 @@ const Hero = () => {
                       className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
                     />
                     <span className="text-xs text-text-muted leading-relaxed">
-                      I consent to automated marketing messages from DialedIn Web via email and/or SMS by entering my information. View our{" "}
-                      <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link>.
+                      I consent to automated marketing messages from Dialed-In Web via email and/or SMS. View our{" "}
+                      <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link> and{" "}
+                      <Link to="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>.
                     </span>
                   </label>
 

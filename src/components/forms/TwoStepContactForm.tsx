@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ArrowRight, Loader2, CheckCircle, ChevronLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -294,9 +294,11 @@ const TwoStepContactForm = ({
               </div>
             )}
 
-            {/* reCAPTCHA notice */}
-            <p className="text-xs text-text-muted text-center">
-              Protected by reCAPTCHA
+            {/* Consent & reCAPTCHA notice */}
+            <p className="text-xs text-text-muted text-center leading-relaxed">
+              By submitting, you consent to marketing messages via email/SMS. View our{" "}
+              <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link> and{" "}
+              <Link to="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>. Protected by reCAPTCHA.
             </p>
 
             <button
