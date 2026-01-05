@@ -19,9 +19,10 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
         const isReversed = index % 2 === 1;
         const isLight = index % 2 === 0;
         
-        // Generate descriptive alt text based on category and headline
+        // Generate descriptive alt and title text based on category and headline
         const descriptiveAlt = block.imageAlt || 
-          `${block.category} - ${block.headline} | Professional ${spokeSlug?.replace(/-/g, ' ') || 'digital marketing'} services`;
+          `${block.category} - ${block.headline} | White label ${spokeSlug?.replace(/-/g, ' ') || 'digital marketing'} services`;
+        const descriptiveTitle = `${block.headline} | ${block.category} | Dialed-In Web`;
         
         return (
           <div
@@ -85,6 +86,7 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                       <img 
                         src={block.imageSrc}
                         alt={descriptiveAlt}
+                        title={descriptiveTitle}
                         className="w-full h-auto object-cover"
                         loading="lazy"
                       />
@@ -97,6 +99,7 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                       blockIndex={index}
                       isLight={isLight}
                       alt={descriptiveAlt}
+                      title={descriptiveTitle}
                     />
                   )}
                 </div>
@@ -123,9 +126,10 @@ interface PixabayBlockImageProps {
   blockIndex: number;
   isLight: boolean;
   alt: string;
+  title: string;
 }
 
-const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight, alt }: PixabayBlockImageProps) => {
+const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight, alt, title }: PixabayBlockImageProps) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -303,6 +307,7 @@ const PixabayBlockImage = ({ spokeSlug, category, headline, blockIndex, isLight,
         <img
           src={imageUrl}
           alt={alt}
+          title={title}
           loading="lazy"
           decoding="async"
           className={`w-full h-full object-cover rounded-2xl shadow-2xl border border-border/20 transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}

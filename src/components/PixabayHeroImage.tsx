@@ -5,6 +5,7 @@ interface PixabayHeroImageProps {
   keyword: string;
   fallbackKeyword?: string;
   alt?: string;
+  title?: string;
   className?: string;
   overlay?: boolean;
   overlayOpacity?: number;
@@ -21,6 +22,7 @@ const PixabayHeroImage = ({
   keyword, 
   fallbackKeyword = 'business technology office',
   alt,
+  title,
   className = '',
   overlay = true,
   overlayOpacity = 0.7
@@ -28,7 +30,8 @@ const PixabayHeroImage = ({
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const descriptiveAlt = alt || `${keyword} - professional business imagery`;
+  const descriptiveAlt = alt || `${keyword} - white label agency fulfillment services`;
+  const descriptiveTitle = title || `${keyword} | Dialed-In Web`;
 
   useEffect(() => {
     const fetchImage = async () => {
@@ -97,6 +100,7 @@ const PixabayHeroImage = ({
       <img
         src={imageUrl}
         alt={descriptiveAlt}
+        title={descriptiveTitle}
         loading="eager"
         decoding="async"
         className="w-full h-full object-cover"

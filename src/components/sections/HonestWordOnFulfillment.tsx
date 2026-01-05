@@ -37,7 +37,8 @@ const HonestWordOnFulfillment = () => {
               <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
                 <img 
                   src={dougHeadshot} 
-                  alt="Doug Bryson"
+                  alt="Doug Bryson - Founder and CEO of Dialed-In Web, white label digital marketing agency"
+                  title="Doug Bryson | Founder, Dialed-In Web"
                   className="w-full h-auto object-cover aspect-[3/4]"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">

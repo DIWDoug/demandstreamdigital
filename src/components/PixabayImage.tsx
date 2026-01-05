@@ -5,6 +5,7 @@ interface PixabayImageProps {
   keyword: string;
   fallbackKeyword?: string;
   alt?: string;
+  title?: string;
   className?: string;
   placeholderClassName?: string;
 }
@@ -22,6 +23,7 @@ const PixabayImage = ({
   keyword, 
   fallbackKeyword = 'digital marketing business',
   alt,
+  title,
   className = '',
   placeholderClassName = ''
 }: PixabayImageProps) => {
@@ -32,7 +34,8 @@ const PixabayImage = ({
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Generate descriptive alt text based on keyword
-  const descriptiveAlt = alt || `Professional ${keyword.toLowerCase()} concept - high quality business imagery`;
+  const descriptiveAlt = alt || `${keyword} - white label digital marketing services for agencies`;
+  const descriptiveTitle = title || `${keyword} | Dialed-In Web`;
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -142,6 +145,7 @@ const PixabayImage = ({
         <img
           src={imageUrl}
           alt={descriptiveAlt}
+          title={descriptiveTitle}
           loading="lazy"
           decoding="async"
           className={`w-full h-auto transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}

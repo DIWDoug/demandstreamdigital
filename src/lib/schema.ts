@@ -88,12 +88,14 @@ export const getLocalBusinessSchema = () => ({
     "latitude": BUSINESS_INFO.geo.latitude,
     "longitude": BUSINESS_INFO.geo.longitude
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "17:00"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
   "sameAs": BUSINESS_INFO.sameAs,
   "aggregateRating": {
     "@type": "AggregateRating",

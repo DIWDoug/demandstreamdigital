@@ -49,8 +49,7 @@ const routesToPrerender = [
 
 ;(async () => {
   for (const route of routesToPrerender) {
-    const { html: appHtml, helmetContext } = render(route);
-    const helmet = helmetContext?.helmet;
+    const { html: appHtml, helmet } = render(route);
 
     const head = helmet
       ? [

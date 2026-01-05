@@ -35,7 +35,8 @@ const WhoWeAre = () => {
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border aspect-[4/3]">
                 <img 
                   src={teamMeetingImage} 
-                  alt="Our dedicated fulfillment team in a strategy meeting"
+                  alt="Dialed-In Web fulfillment team collaborating on white label SEO and PPC strategy"
+                  title="White Label Marketing Team | Dialed-In Web"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

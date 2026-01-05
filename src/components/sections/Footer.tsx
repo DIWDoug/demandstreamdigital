@@ -151,7 +151,8 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="Dialed-In Web" 
+                  alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
+                  title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
                   className="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
                 />
               </Link>
