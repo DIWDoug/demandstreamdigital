@@ -319,13 +319,28 @@ const SocialMediaROICalculator = () => {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {Object.entries(industryBenchmarks).map(([key, benchmark]) => (
-                      <button
-                        key={key}
-                        onClick={() => applyBenchmark(key as keyof typeof industryBenchmarks)}
-                        className="px-4 py-2 rounded-lg bg-surface-dark border border-border/50 text-sm font-medium text-text-secondary hover:text-foreground hover:border-accent-blue/50 hover:bg-accent-blue/5 transition-all"
-                      >
-                        {benchmark.label}
-                      </button>
+                      <Tooltip key={key}>
+                        <TooltipTrigger asChild>
+                          <button
+                            onClick={() => applyBenchmark(key as keyof typeof industryBenchmarks)}
+                            className="px-4 py-2 rounded-lg bg-surface-dark border border-border/50 text-sm font-medium text-text-secondary hover:text-foreground hover:border-accent-blue/50 hover:bg-accent-blue/5 transition-all"
+                          >
+                            {benchmark.label}
+                          </button>
+                        </TooltipTrigger>
+                        <TooltipContent side="bottom" className="max-w-xs">
+                          <div className="text-xs space-y-1">
+                            <p className="font-semibold mb-2">{benchmark.label} Benchmarks</p>
+                            <p>Visits: {benchmark.totalVisits.toLocaleString()}/mo</p>
+                            <p>Conversion: {benchmark.conversionRate}%</p>
+                            <p>Close Rate: {benchmark.closeRate}%</p>
+                            <p>LTV: ${benchmark.lifetimeValue.toLocaleString()}</p>
+                            <p>Ad Spend: ${benchmark.adSpend.toLocaleString()}/mo</p>
+                            <p>Content: ${benchmark.contentCosts.toLocaleString()}/mo</p>
+                            <p>Labor: ${benchmark.laborCosts.toLocaleString()}/mo</p>
+                          </div>
+                        </TooltipContent>
+                      </Tooltip>
                     ))}
                     <button
                       onClick={resetToDefaults}
