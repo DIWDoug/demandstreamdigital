@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Linkedin, Facebook, Instagram, Youtube, Calculator } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
@@ -160,7 +160,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
             {/* Right - Social Icons */}
             <div className="flex items-center justify-center md:justify-end gap-5">
               <a 
-                href="https://facebook.com" 
+                href="https://facebook.com/dialedinweb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -169,7 +169,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/dialedinweb" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -178,33 +178,13 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
-                aria-label="X (Twitter)"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/dialed-in-web/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://youtube.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
