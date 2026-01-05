@@ -27,7 +27,8 @@ export const BUSINESS_INFO = {
   sameAs: [
     "https://www.linkedin.com/company/dialed-in-web/",
     "https://www.facebook.com/dialedinweb",
-    "https://www.instagram.com/dialedinweb/"
+    "https://www.instagram.com/dialedinweb/",
+    "https://share.google/IXw0qAzlgpjR1SIKP"
   ],
   aggregateRating: {
     ratingValue: 4.9,
