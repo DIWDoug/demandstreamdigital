@@ -23,7 +23,9 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
+import RegionBlocked from "./pages/RegionBlocked";
 import { useKonamiCode } from "./hooks/useKonamiCode";
+import { useGeoBlock } from "./hooks/useGeoBlock";
 
 // Service Hub Pages
 import LocalSEO from "./pages/services/LocalSEO";
@@ -45,11 +47,17 @@ const KonamiCodeListener = () => {
   return null;
 };
 
+const GeoBlockListener = () => {
+  useGeoBlock();
+  return null;
+};
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <KonamiCodeListener />
+        <GeoBlockListener />
         <Toaster />
         <Sonner />
         <ScrollToTop />
@@ -82,6 +90,7 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/region-blocked" element={<RegionBlocked />} />
           
           {/* Service Hub Pages */}
           <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
