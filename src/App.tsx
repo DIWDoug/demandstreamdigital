@@ -7,6 +7,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import ElfsightReviews from "./components/ElfsightReviews";
+import CookieConsent from "./components/CookieConsent";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
@@ -64,6 +65,7 @@ const App = () => (
       <ScrollToTop />
       <BackToTop />
       <ElfsightReviews />
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
