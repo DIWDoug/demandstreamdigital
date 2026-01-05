@@ -291,7 +291,9 @@ export const hubs: Hub[] = [
         fullDescription: "Your client's Google Business Profile is their digital storefront on Google Maps and increasingly the source AI Overviews pull for local recommendations. We optimize every element from primary and secondary categories to business attributes, services, products, and description to maximize visibility in the local pack and AI-generated results.",
         benefits: ["Improved visibility in local pack and AI Overviews", "Higher engagement from searchers through complete profiles", "Better conversion from views to actions", "AI Overview citation eligibility through structured attributes", "Expanded keyword coverage through secondary categories", "Foundation for Maps optimization and AI visibility"],
         deliverables: ["Complete GBP audit and optimization", "Primary and secondary category optimization", "Business attribute maximization for AI extraction", "Service and product catalog with keyword alignment", "Business description optimization for AI parsing", "Profile completeness maximization", "Ongoing profile maintenance"],
-        process: ["Profile audit against best practices", "Competitive GBP analysis", "Category expansion research", "Optimization implementation", "AI visibility verification", "Performance monitoring", "Ongoing refinement"]
+        process: ["Profile audit against best practices", "Competitive GBP analysis", "Category expansion research", "Optimization implementation", "AI visibility verification", "Performance monitoring", "Ongoing refinement"],
+        metaTitle: "White Label GBP Optimization for Agencies | Wholesale Google Business Profile Services by Dialed-in Web",
+        metaDescription: "Dialed-in Web optimizes GBP listings to improve local search results and visibility. Offer this service wholesale. Schedule a discovery call today."
       },
       {
         title: "Review Generation & Response",
