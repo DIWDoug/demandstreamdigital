@@ -4,7 +4,7 @@ const ElfsightReviews = () => {
   useEffect(() => {
     // Load Elfsight platform script
     const script = document.createElement("script");
-    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
     document.body.appendChild(script);
 
