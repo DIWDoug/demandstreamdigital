@@ -156,8 +156,8 @@ const App = () => (
         <Route path="/orthodontist-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/affordable-web-design-small-business" element={<Navigate to="/contact" replace />} />
         <Route path="/affordable-web-design-small-business/" element={<Navigate to="/contact" replace />} />
-        <Route path="/nashville-digital-marketing" element={<Navigate to="/contact" replace />} />
-        <Route path="/nashville-digital-marketing/" element={<Navigate to="/contact" replace />} />
+        <Route path="/nashville-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/nashville-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/search-engine-advertising" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
         <Route path="/search-engine-advertising/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
         <Route path="/blog/" element={<Navigate to="/blog" replace />} />
