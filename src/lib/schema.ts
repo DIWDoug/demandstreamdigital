@@ -1,7 +1,7 @@
 // Centralized Schema.org markup utilities
 // Implements best practices for Organization, LocalBusiness, Service, and page-specific schemas
 
-import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, BUSINESS_NAME } from "./constants";
+import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, BUSINESS_NAME, SITE_URL } from "./constants";
 
 // Core business information
 export const BUSINESS_INFO = {
@@ -9,8 +9,8 @@ export const BUSINESS_INFO = {
   legalName: BUSINESS_NAME,
   alternateName: "Dialed-In Web",
   foundingDate: "2011",
-  url: "https://dialedinweb.com",
-  logo: "https://dialedinweb.com/dialedinweb-logo.png",
+  url: SITE_URL,
+  logo: `${SITE_URL}/dialedinweb-logo.png`,
   email: EMAIL,
   telephone: PHONE_NUMBER_RAW,
   address: {
