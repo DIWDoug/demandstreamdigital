@@ -224,6 +224,12 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 >
                   Privacy Policy
                 </Link>
+                <Link 
+                  to="/terms"
+                  className="text-xs text-text-muted hover:text-text-secondary transition-colors"
+                >
+                  Terms of Service
+                </Link>
               </div>
             </div>
           </div>
