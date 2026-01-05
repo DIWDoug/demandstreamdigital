@@ -4,8 +4,8 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const emailMarketingConfig: ServicePageConfig = {
   slug: "email-marketing",
   title: "Email Marketing",
-  metaTitle: "Email Marketing Services | White Label Campaigns for Agencies",
-  metaDescription: "Launch high-performing email campaigns under your brand. We handle white label strategy, design, and automation for your clients.",
+  metaTitle: "White Label Email Marketing Services for Agencies | Wholesale Campaign Solutions by Dialed-in Web",
+  metaDescription: "Email marketing from Dialed-in Web drives client engagement and retention. Resell full-service campaigns. Book your strategy call today.",
   canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/email-marketing",
 
   hero: {
