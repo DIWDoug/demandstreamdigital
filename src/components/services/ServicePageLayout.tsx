@@ -92,6 +92,25 @@ const ServicePageLayout = ({
         <meta name="description" content={config.metaDescription} />
         <link rel="canonical" href={config.canonicalUrl} />
         {config.keywords && <meta name="keywords" content={config.keywords} />}
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={config.canonicalUrl} />
+        <link rel="alternate" hrefLang="en-CA" href={config.canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={config.canonicalUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={config.metaTitle} />
+        <meta property="og:description" content={config.metaDescription} />
+        <meta property="og:url" content={config.canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={config.metaTitle} />
+        <meta name="twitter:description" content={config.metaDescription} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
