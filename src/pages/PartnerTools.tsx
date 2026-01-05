@@ -50,6 +50,21 @@ const calculators = [
     ]
   },
   {
+    title: "Social Media ROI Calculator",
+    description: "Calculate social media campaign ROI based on visits, conversion rates, close rates, and lifetime value. Measure ad spend, content, and labor costs.",
+    href: "/partner-tools/social-media-roi-calculator",
+    icon: Users,
+    color: "from-pink-500/20 to-pink-600/10",
+    borderColor: "border-pink-500/30",
+    iconColor: "text-pink-500",
+    features: [
+      "Campaign performance tracking",
+      "Cost breakdown (ads, content, labor)",
+      "Leads & sales projections",
+      "Shareable calculation links"
+    ]
+  },
+  {
     title: "Investment Calculator",
     description: "Scope comprehensive monthly service costs across Local SEO, GBP, Paid Media, and more. Build accurate proposals with market-adjusted pricing.",
     href: "/partner-tools/investment-calculator",
@@ -210,7 +225,7 @@ const PartnerTools = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mt-10 pt-8 border-t border-border/20">
                 <div className="text-center">
-                  <p className="text-2xl md:text-3xl font-bold text-foreground">7</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">8</p>
                   <p className="text-xs text-text-muted">Tools</p>
                 </div>
                 <div className="text-center">

@@ -17,6 +17,7 @@ import AdBudgetCalculator from "./pages/AdBudgetCalculator";
 import SEOCalculator from "./pages/SEOCalculator";
 import EmailCalculator from "./pages/EmailCalculator";
 import ContentMarketingCalculator from "./pages/ContentMarketingCalculator";
+import SocialMediaROICalculator from "./pages/SocialMediaROICalculator";
 import AIReadyCheck from "./pages/AIReadyCheck";
 import PartnerTools from "./pages/PartnerTools";
 import About from "./pages/About";
@@ -81,6 +82,7 @@ const App = () => (
         <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
         <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
         <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
+        <Route path="/partner-tools/social-media-roi-calculator" element={<SocialMediaROICalculator />} />
         <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
 
         {/* Legacy calculator redirects for SEO preservation */}
