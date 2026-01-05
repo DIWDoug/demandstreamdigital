@@ -9,12 +9,12 @@ export const EMAIL = "hello@dialedinweb.com";
 // NAP (Name, Address, Phone) - Critical for Local SEO
 export const BUSINESS_NAME = "Dialed-In Web LLC";
 export const ADDRESS = {
-  street: "4849 Greenville Ave Suite 100 #176",
+  street: "4849 Greenville Ave Suite 100 176",
   city: "Dallas",
   state: "TX",
   zip: "75206",
   country: "United States",
-  full: "4849 Greenville Ave Suite 100 #176, Dallas, TX 75206, United States"
+  full: "4849 Greenville Ave Suite 100 176, Dallas, TX 75206, United States"
 };
 
 // Business Hours
