@@ -71,7 +71,58 @@ const ROICalculator = () => {
       ? Math.round(((inboundRevenue - marketingCost) / marketingCost) * 100) 
       : 0;
 
-    return { totalLeads, newCustomers, inboundRevenue, roi };
+    // Calculate factor impacts for visualization
+    // Using baseline comparisons to show relative impact
+    const baselineVisitors = 500;
+    const baselineConversion = 2.5;
+    const baselineClose = 10;
+    const baselineValue = 1000;
+    const baselineCost = 2500;
+
+    const factors = [
+      { 
+        label: "Traffic Volume", 
+        current: visitors,
+        baseline: baselineVisitors,
+        impact: visitors / baselineVisitors,
+        unit: "visitors",
+        color: visitors > baselineVisitors * 1.5 ? "bg-emerald-500" : visitors > baselineVisitors ? "bg-yellow-500" : visitors < baselineVisitors * 0.5 ? "bg-red-500" : "bg-yellow-500"
+      },
+      { 
+        label: "Conversion Rate", 
+        current: leadConversionRate,
+        baseline: baselineConversion,
+        impact: leadConversionRate / baselineConversion,
+        unit: "%",
+        color: leadConversionRate > baselineConversion * 1.5 ? "bg-emerald-500" : leadConversionRate > baselineConversion ? "bg-yellow-500" : leadConversionRate < baselineConversion * 0.5 ? "bg-red-500" : "bg-yellow-500"
+      },
+      { 
+        label: "Close Rate", 
+        current: leadToCustomerRate,
+        baseline: baselineClose,
+        impact: leadToCustomerRate / baselineClose,
+        unit: "%",
+        color: leadToCustomerRate > baselineClose * 1.5 ? "bg-emerald-500" : leadToCustomerRate > baselineClose ? "bg-yellow-500" : leadToCustomerRate < baselineClose * 0.5 ? "bg-red-500" : "bg-yellow-500"
+      },
+      { 
+        label: "Customer Value", 
+        current: revenuePerCustomer,
+        baseline: baselineValue,
+        impact: revenuePerCustomer / baselineValue,
+        unit: "$",
+        color: revenuePerCustomer > baselineValue * 1.5 ? "bg-emerald-500" : revenuePerCustomer > baselineValue ? "bg-yellow-500" : revenuePerCustomer < baselineValue * 0.5 ? "bg-red-500" : "bg-yellow-500"
+      },
+      { 
+        label: "Marketing Cost", 
+        current: marketingCost,
+        baseline: baselineCost,
+        impact: marketingCost > 0 ? baselineCost / marketingCost : 1, // Inverse - lower cost = higher impact
+        unit: "$",
+        color: marketingCost < baselineCost * 0.7 ? "bg-emerald-500" : marketingCost < baselineCost ? "bg-yellow-500" : marketingCost > baselineCost * 1.5 ? "bg-red-500" : "bg-yellow-500"
+      }
+    ];
+
+    return { totalLeads, newCustomers, inboundRevenue, roi, factors };
   }, [visitors, leadConversionRate, leadToCustomerRate, revenuePerCustomer, marketingCost]);
 
   const growthForecast = useMemo(() => {
@@ -307,11 +358,57 @@ const ROICalculator = () => {
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 content-start">
-                  <ResultCard label="Leads for Client" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
-                  <ResultCard label="New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
-                  <ResultCard label="Client Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
-                  <ResultCard label="Client's Marketing ROI" value={`${results.roi}%`} sublabel="Return on their investment with you" icon={TrendingUp} highlight={results.roi > 100} />
+                <div className="space-y-4 content-start">
+                  <div className="grid grid-cols-2 gap-4">
+                    <ResultCard label="Leads for Client" value={results.totalLeads.toLocaleString()} sublabel="Monthly lead generation" icon={Users} />
+                    <ResultCard label="New Customers" value={results.newCustomers.toLocaleString()} sublabel="Monthly customer acquisition" icon={UserCheck} />
+                    <ResultCard label="Client Revenue" value={`$${results.inboundRevenue.toLocaleString()}`} sublabel="Monthly revenue generated" icon={DollarSign} />
+                    <ResultCard label="Client's Marketing ROI" value={`${results.roi}%`} sublabel="Return on their investment with you" icon={TrendingUp} highlight={results.roi > 100} />
+                  </div>
+
+                  {/* Revenue Factor Breakdown */}
+                  <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                    <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Revenue Factors</p>
+                    <div className="space-y-3">
+                      {results.factors.map((factor, i) => {
+                        const impactPercent = Math.min(100, Math.max(10, factor.impact * 40));
+                        const isPositive = factor.label === "Marketing Cost" ? factor.impact > 1 : factor.impact > 1;
+                        const isNegative = factor.label === "Marketing Cost" ? factor.impact < 0.8 : factor.impact < 0.8;
+                        const displayValue = factor.unit === "$" 
+                          ? `$${factor.current.toLocaleString()}`
+                          : factor.unit === "%"
+                            ? `${factor.current}%`
+                            : factor.current.toLocaleString();
+                        
+                        return (
+                          <div key={i} className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-text-muted">{factor.label}</span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-text-secondary">{displayValue}</span>
+                                <span className={cn(
+                                  "font-medium",
+                                  isPositive ? "text-emerald-400" : 
+                                  isNegative ? "text-red-400" : "text-yellow-400"
+                                )}>
+                                  {factor.impact >= 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                              <div 
+                                className={cn("h-full rounded-full transition-all", factor.color)}
+                                style={{ width: `${impactPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-text-muted/60 mt-3">
+                      Compared to baseline: 500 visitors, 2.5% conversion, 10% close, $1,000 value
+                    </p>
+                  </div>
                 </div>
               </div>
 
