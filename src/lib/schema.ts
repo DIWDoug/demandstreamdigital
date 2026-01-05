@@ -353,3 +353,106 @@ export const getServiceHubSchema = (config: {
 
   return schema;
 };
+
+// ContactPage Schema
+export const getContactPageSchema = () => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    getOrganizationSchema(),
+    {
+      "@type": "ContactPage",
+      "@id": "https://dialedinweb.com/contact#webpage",
+      "url": "https://dialedinweb.com/contact",
+      "name": "Contact Dialed-In Web - Start a White Label Partnership",
+      "description": "Reach out to Dialed-In Web to explore a white label partnership for SEO, paid ads, and content marketing services.",
+      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+      "about": { "@id": "https://dialedinweb.com/#organization" },
+      "mainEntity": {
+        "@type": "Organization",
+        "@id": "https://dialedinweb.com/#organization"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://dialedinweb.com/#localbusiness",
+      "name": BUSINESS_INFO.name,
+      "telephone": BUSINESS_INFO.telephone,
+      "email": BUSINESS_INFO.email,
+      "address": {
+        "@type": "PostalAddress",
+        ...BUSINESS_INFO.address
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+  ]
+});
+
+// Blog Schema
+export const getBlogSchema = () => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    getOrganizationSchema(),
+    {
+      "@type": "Blog",
+      "@id": "https://dialedinweb.com/blog#blog",
+      "url": "https://dialedinweb.com/blog",
+      "name": "Digital Marketing Insights - White Label SEO & PPC Blog",
+      "description": "Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-In Web digital marketing blog.",
+      "publisher": { "@id": "https://dialedinweb.com/#organization" },
+      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dialedinweb.com/blog#webpage",
+      "url": "https://dialedinweb.com/blog",
+      "name": "Digital Marketing Insights | White Label SEO & PPC Blog",
+      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+      "about": { "@id": "https://dialedinweb.com/blog#blog" }
+    }
+  ]
+});
+
+// SoftwareApplication Schema for Calculators
+export const getCalculatorSchema = (config: {
+  name: string;
+  description: string;
+  url: string;
+  category?: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    getOrganizationSchema(),
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${config.url}#application`,
+      "name": config.name,
+      "description": config.description,
+      "url": config.url,
+      "applicationCategory": config.category || "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": { "@id": "https://dialedinweb.com/#organization" },
+      "provider": { "@id": "https://dialedinweb.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${config.url}#webpage`,
+      "url": config.url,
+      "name": config.name,
+      "description": config.description,
+      "isPartOf": { "@id": "https://dialedinweb.com/#website" }
+    }
+  ]
+});

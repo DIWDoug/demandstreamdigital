@@ -13,6 +13,14 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { metros, Metro, tierMultipliers, searchMetros, formatPopulation } from "@/data/metros";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const seoCalculatorSchema = getCalculatorSchema({
+  name: "SEO Growth Forecast Calculator for Agencies",
+  description: "Forecast organic traffic growth and SEO outcomes. Free calculator for agencies to plan and pitch local SEO campaigns.",
+  url: "https://dialedinweb.com/partner-tools/seo-calculator",
+  category: "BusinessApplication"
+});
 
 // Industry presets with default competition levels - focused on local small businesses
 const industryPresets = [
@@ -319,6 +327,8 @@ const SEOCalculator = () => {
         <title>SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web</title>
         <meta name="description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/seo-calculator" />
+        <meta name="keywords" content="SEO calculator, local SEO cost estimator, organic traffic forecast, SEO pricing tool, agency SEO planner" />
+        <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web" />

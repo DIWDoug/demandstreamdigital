@@ -11,6 +11,14 @@ import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { emailBenchmarks, getEmailBenchmarksByCategory, allIndustriesAverage, emailBenchmarkSources, type EmailBenchmark } from "@/data/emailBenchmarks";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const emailCalculatorSchema = getCalculatorSchema({
+  name: "Email Marketing ROI Calculator for Agencies",
+  description: "Calculate email marketing revenue potential and ROI. Free calculator with 2024-2025 industry benchmarks for agencies.",
+  url: "https://dialedinweb.com/partner-tools/email-calculator",
+  category: "BusinessApplication"
+});
 
 const EmailCalculator = () => {
   // Industry selection
@@ -157,6 +165,8 @@ const EmailCalculator = () => {
         <title>Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web</title>
         <meta name="description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        <meta name="keywords" content="email marketing calculator, email ROI calculator, open rate estimator, email campaign planner, agency email tool" />
+        <script type="application/ld+json">{JSON.stringify(emailCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web" />

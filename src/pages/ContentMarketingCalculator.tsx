@@ -10,6 +10,14 @@ import { Calculator, DollarSign, TrendingUp, Users, FileText, Eye, Percent, Targ
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const contentMarketingCalculatorSchema = getCalculatorSchema({
+  name: "Content Marketing ROI Calculator for Agencies",
+  description: "Calculate blog content value, traffic projections, and lead generation ROI. Free tool for content strategy planning.",
+  url: "https://dialedinweb.com/partner-tools/content-marketing-calculator",
+  category: "BusinessApplication"
+});
 
 const ContentMarketingCalculator = () => {
   // String-based inputs for smooth typing
@@ -164,6 +172,8 @@ const ContentMarketingCalculator = () => {
         <title>Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web</title>
         <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />
+        <script type="application/ld+json">{JSON.stringify(contentMarketingCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web" />
