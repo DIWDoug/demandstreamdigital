@@ -76,6 +76,19 @@ const EmailCalculator = () => {
     const roiPercent = monthlyInvestment > 0 ? Math.round(((lifetimeRevenue - monthlyInvestment) / monthlyInvestment) * 100) : 0;
     const revenuePerEmail = totalEmailsSent > 0 ? (lifetimeRevenue / totalEmailsSent) : 0;
 
+    // Baselines for factor comparison
+    const baselines = { list: 5000, sends: 4, open: allIndustriesAverage.openRate, click: allIndustriesAverage.clickRate, conv: allIndustriesAverage.conversionRate, aov: allIndustriesAverage.avgOrderValue, ltv: 2.5, investment: 500 };
+    
+    const factors = [
+      { label: "List Size", current: listSize, baseline: baselines.list, impact: listSize / baselines.list, unit: "" as const },
+      { label: "Sends/Month", current: sendsPerMonth, baseline: baselines.sends, impact: sendsPerMonth / baselines.sends, unit: "" as const },
+      { label: "Open Rate", current: openRate, baseline: baselines.open, impact: openRate / baselines.open, unit: "%" as const },
+      { label: "Click Rate", current: clickRate, baseline: baselines.click, impact: clickRate / baselines.click, unit: "%" as const },
+      { label: "Conversion Rate", current: conversionRate, baseline: baselines.conv, impact: conversionRate / baselines.conv, unit: "%" as const },
+      { label: "Avg Order Value", current: averageOrderValue, baseline: baselines.aov, impact: averageOrderValue / baselines.aov, unit: "$" as const },
+      { label: "Monthly Investment", current: monthlyInvestment, baseline: baselines.investment, impact: baselines.investment / (monthlyInvestment || 1), unit: "$" as const }
+    ];
+
     return {
       totalEmailsSent,
       totalOpens,
@@ -85,7 +98,8 @@ const EmailCalculator = () => {
       lifetimeRevenue,
       roi,
       roiPercent,
-      revenuePerEmail
+      revenuePerEmail,
+      factors
     };
   }, [listSize, sendsPerMonth, openRate, clickRate, conversionRate, averageOrderValue, customerLifetimeMultiplier, monthlyInvestment]);
 
@@ -466,6 +480,55 @@ const EmailCalculator = () => {
                       icon={Repeat}
                       highlight={results.lifetimeRevenue > monthlyInvestment}
                     />
+                  </div>
+
+                  {/* Factor Breakdown */}
+                  <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                    <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Performance Factors</p>
+                    <div className="space-y-3">
+                      {results.factors.map((factor, i) => {
+                        const impactPercent = Math.min(100, Math.max(10, factor.impact * 40));
+                        const isInverse = factor.label.toLowerCase().includes("investment");
+                        const getColor = () => {
+                          if (isInverse) {
+                            return factor.impact > 1.2 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                          }
+                          return factor.impact > 1.3 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                        };
+                        const displayValue = factor.unit === "$" 
+                          ? `$${factor.current.toLocaleString()}`
+                          : factor.unit === "%"
+                            ? `${factor.current}%`
+                            : factor.current.toLocaleString();
+                        
+                        return (
+                          <div key={i} className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-text-muted">{factor.label}</span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-text-secondary">{displayValue}</span>
+                                <span className={cn(
+                                  "font-medium",
+                                  factor.impact >= 1.3 ? "text-emerald-400" : 
+                                  factor.impact >= 0.9 ? "text-yellow-400" : "text-red-400"
+                                )}>
+                                  {factor.impact >= 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                              <div 
+                                className={cn("h-full rounded-full transition-all", getColor())}
+                                style={{ width: `${impactPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-text-muted/60 mt-3">
+                      Compared to industry averages for open rate, click rate, and conversions
+                    </p>
                   </div>
                 </div>
               </div>

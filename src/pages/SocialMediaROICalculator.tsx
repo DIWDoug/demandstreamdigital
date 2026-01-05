@@ -110,8 +110,61 @@ const SocialMediaROICalculator = () => {
       : 0;
     const profit = totalRevenue - totalInvestment;
 
-    return { leads, sales, totalRevenue, totalInvestment, roi, profit };
-  }, [totalVisits, conversionRate, closeRate, lifetimeValue, adSpend, contentCosts, laborCosts]);
+    // Factor calculations for breakdown
+    const factors = [
+      { 
+        label: "Traffic Volume", 
+        current: totalVisits,
+        baseline: defaults.totalVisits,
+        impact: totalVisits / defaults.totalVisits,
+        unit: "" as const
+      },
+      { 
+        label: "Conversion Rate", 
+        current: conversionRate,
+        baseline: defaults.conversionRate,
+        impact: conversionRate / defaults.conversionRate,
+        unit: "%" as const
+      },
+      { 
+        label: "Close Rate", 
+        current: closeRate,
+        baseline: defaults.closeRate,
+        impact: closeRate / defaults.closeRate,
+        unit: "%" as const
+      },
+      { 
+        label: "Lifetime Value", 
+        current: lifetimeValue,
+        baseline: defaults.lifetimeValue,
+        impact: lifetimeValue / defaults.lifetimeValue,
+        unit: "$" as const
+      },
+      { 
+        label: "Ad Spend", 
+        current: adSpend,
+        baseline: defaults.adSpend,
+        impact: defaults.adSpend / (adSpend || 1),
+        unit: "$" as const
+      },
+      { 
+        label: "Content Costs", 
+        current: contentCosts,
+        baseline: defaults.contentCosts,
+        impact: defaults.contentCosts / (contentCosts || 1),
+        unit: "$" as const
+      },
+      { 
+        label: "Labor Costs", 
+        current: laborCosts,
+        baseline: defaults.laborCosts,
+        impact: defaults.laborCosts / (laborCosts || 1),
+        unit: "$" as const
+      }
+    ];
+
+    return { leads, sales, totalRevenue, totalInvestment, roi, profit, factors };
+  }, [totalVisits, conversionRate, closeRate, lifetimeValue, adSpend, contentCosts, laborCosts, defaults]);
 
   // Generate shareable link
   const generateShareableLink = () => {
@@ -527,6 +580,55 @@ const SocialMediaROICalculator = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
+
+                  {/* Factor Breakdown */}
+                  <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                    <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Performance Factors</p>
+                    <div className="space-y-3">
+                      {results.factors.map((factor, i) => {
+                        const impactPercent = Math.min(100, Math.max(10, factor.impact * 40));
+                        const isInverse = factor.label.toLowerCase().includes("cost") || factor.label.toLowerCase().includes("spend");
+                        const getColor = () => {
+                          if (isInverse) {
+                            return factor.impact > 1.2 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                          }
+                          return factor.impact > 1.3 ? "bg-emerald-500" : factor.impact > 0.9 ? "bg-yellow-500" : "bg-red-500";
+                        };
+                        const displayValue = factor.unit === "$" 
+                          ? `$${factor.current.toLocaleString()}`
+                          : factor.unit === "%"
+                            ? `${factor.current}%`
+                            : factor.current.toLocaleString();
+                        
+                        return (
+                          <div key={i} className="space-y-1.5">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-text-muted">{factor.label}</span>
+                              <div className="flex items-center gap-2">
+                                <span className="text-text-secondary">{displayValue}</span>
+                                <span className={cn(
+                                  "font-medium",
+                                  factor.impact >= 1.3 ? "text-emerald-400" : 
+                                  factor.impact >= 0.9 ? "text-yellow-400" : "text-red-400"
+                                )}>
+                                  {factor.impact >= 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                              <div 
+                                className={cn("h-full rounded-full transition-all", getColor())}
+                                style={{ width: `${impactPercent}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-text-muted/60 mt-3">
+                      Compared to defaults: 10K visits, 2.5% conv, 20% close, $1K LTV
+                    </p>
                   </div>
 
                   {/* Share Link */}
