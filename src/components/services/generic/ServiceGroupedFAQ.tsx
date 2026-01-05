@@ -16,21 +16,7 @@ interface ServiceGroupedFAQProps {
 }
 
 const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
-  // Generate FAQ schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": config.groups.flatMap(group => 
-      group.items.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    )
-  };
+  // FAQ schema is handled at page level via getServiceHubSchema to prevent duplicates
 
   // Split groups into two columns for better layout
   const midpoint = Math.ceil(config.groups.length / 2);
@@ -39,11 +25,6 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
 
   return (
     <section id="faq" className="py-20 lg:py-28 bg-surface-dark relative">
-      {/* FAQ Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </script>
-
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

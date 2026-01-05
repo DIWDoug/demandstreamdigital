@@ -348,7 +348,12 @@ export const getServiceHubSchema = (config: {
         answer: item.answer
       }))
     );
-    schema["@graph"].push(getFAQPageSchema(allFaqs));
+    // Add unique @id based on the page URL to prevent duplicate schema issues
+    const faqSchemaWithId = {
+      ...getFAQPageSchema(allFaqs),
+      "@id": `${config.url}#faq`
+    };
+    schema["@graph"].push(faqSchemaWithId);
   }
 
   return schema;
