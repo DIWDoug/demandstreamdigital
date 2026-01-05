@@ -116,7 +116,8 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <img 
             src={imageUrl} 
-            alt="" 
+            alt={`${service.title} - White label ${service.description.toLowerCase()}`}
+            title={`${service.title} | Dialed-In Web`}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover"

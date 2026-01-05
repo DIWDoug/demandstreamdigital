@@ -16,3 +16,14 @@ export const ADDRESS = {
   country: "United States",
   full: "4849 Greenville Ave Suite 100 #176, Dallas, TX 75206, United States"
 };
+
+// Business Hours
+export const BUSINESS_HOURS = {
+  monday: { open: "08:00", close: "18:00" },
+  tuesday: { open: "08:00", close: "18:00" },
+  wednesday: { open: "08:00", close: "18:00" },
+  thursday: { open: "08:00", close: "18:00" },
+  friday: { open: "08:00", close: "18:00" },
+  saturday: null, // Closed
+  sunday: null, // Closed
+};

@@ -63,7 +63,8 @@ const Testimonials = () => {
               {/* YouTube thumbnail */}
               <img 
                 src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                alt={video.title}
+                alt={`${video.title} - White Label Agency Partner Testimonial`}
+                title={`${video.title} | Dialed-In Web Partner Review`}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               {/* Play overlay */}

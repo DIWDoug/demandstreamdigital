@@ -56,7 +56,8 @@ const ServicesTestimonials = () => {
               >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                  alt={video.title}
+                  alt={`${video.title} - White Label Agency Partner Video Testimonial`}
+                  title={`${video.title} | Dialed-In Web Partner Review`}
                   className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">

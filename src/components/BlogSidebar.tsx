@@ -79,7 +79,8 @@ const BlogSidebar = () => {
                     <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden bg-surface-dark">
                       <img 
                         src={getBlogFeaturedImage(post.featured_image)!} 
-                        alt={`Thumbnail for ${post.title}`}
+                        alt={`${post.title} - Digital Marketing Blog`}
+                        title={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
