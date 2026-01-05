@@ -30,5 +30,5 @@ Allow: /
 Disallow: /region-blocked
 Disallow: /thank-you
 
-# Sitemap location
-Sitemap: https://dialedinweb.com/sitemap.xml
+# Sitemaps (Yoast-style sitemap index)
+Sitemap: https://dialedinweb.com/sitemap_index.xml

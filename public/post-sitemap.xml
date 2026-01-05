@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Blog posts are dynamically generated from the database -->
+  <!-- This sitemap should be regenerated when new posts are published -->
+  <!-- For now, including the main blog archive page -->
+  <!-- Individual post URLs follow the pattern: https://dialedinweb.com/blog/{slug} -->
+</urlset>
