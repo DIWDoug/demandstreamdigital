@@ -17,6 +17,40 @@ const socialMediaROISchema = getCalculatorSchema({
   category: "BusinessApplication"
 });
 
+// Industry benchmark presets
+const industryBenchmarks = {
+  b2b: {
+    label: "B2B / SaaS",
+    totalVisits: 5000,
+    conversionRate: 2.0,
+    closeRate: 15,
+    lifetimeValue: 5000,
+    adSpend: 3000,
+    contentCosts: 1500,
+    laborCosts: 2500
+  },
+  ecommerce: {
+    label: "E-commerce",
+    totalVisits: 25000,
+    conversionRate: 3.5,
+    closeRate: 8,
+    lifetimeValue: 250,
+    adSpend: 5000,
+    contentCosts: 1000,
+    laborCosts: 1500
+  },
+  local: {
+    label: "Local Business",
+    totalVisits: 2000,
+    conversionRate: 4.0,
+    closeRate: 25,
+    lifetimeValue: 1500,
+    adSpend: 1000,
+    contentCosts: 300,
+    laborCosts: 800
+  }
+};
+
 const SocialMediaROICalculator = () => {
   // Return inputs (campaign performance)
   const [totalVisits, setTotalVisits] = useState(10000);
@@ -28,6 +62,18 @@ const SocialMediaROICalculator = () => {
   const [adSpend, setAdSpend] = useState(2000);
   const [contentCosts, setContentCosts] = useState(500);
   const [laborCosts, setLaborCosts] = useState(1500);
+
+  // Apply industry benchmark
+  const applyBenchmark = (industry: keyof typeof industryBenchmarks) => {
+    const benchmark = industryBenchmarks[industry];
+    setTotalVisits(benchmark.totalVisits);
+    setConversionRate(benchmark.conversionRate);
+    setCloseRate(benchmark.closeRate);
+    setLifetimeValue(benchmark.lifetimeValue);
+    setAdSpend(benchmark.adSpend);
+    setContentCosts(benchmark.contentCosts);
+    setLaborCosts(benchmark.laborCosts);
+  };
 
   const [copied, setCopied] = useState(false);
 
@@ -242,6 +288,27 @@ const SocialMediaROICalculator = () => {
         <section className="py-16 lg:py-24 bg-surface-dark">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
+              {/* Industry Benchmarks */}
+              <div className="mb-8 bg-surface-elevated rounded-2xl p-6 border border-border/30">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
+                    <p className="text-sm text-text-muted">Auto-fill with typical values for your industry</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {Object.entries(industryBenchmarks).map(([key, benchmark]) => (
+                      <button
+                        key={key}
+                        onClick={() => applyBenchmark(key as keyof typeof industryBenchmarks)}
+                        className="px-4 py-2 rounded-lg bg-surface-dark border border-border/50 text-sm font-medium text-text-secondary hover:text-foreground hover:border-accent-blue/50 hover:bg-accent-blue/5 transition-all"
+                      >
+                        {benchmark.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Input Panel */}
                 <div className="space-y-6">
