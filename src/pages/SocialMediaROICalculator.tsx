@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Calculator, TrendingUp, DollarSign, Users, Target, Share2, ArrowRight, Info, Copy, Check } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Slider } from "@/components/ui/slider";
@@ -66,7 +66,7 @@ const SocialMediaROICalculator = () => {
   };
 
   // Load from URL params on mount
-  useState(() => {
+  useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('v')) setTotalVisits(Number(params.get('v')) || 10000);
     if (params.get('cr')) setConversionRate(Number(params.get('cr')) || 2.5);
@@ -75,7 +75,7 @@ const SocialMediaROICalculator = () => {
     if (params.get('as')) setAdSpend(Number(params.get('as')) || 2000);
     if (params.get('cc')) setContentCosts(Number(params.get('cc')) || 500);
     if (params.get('lc')) setLaborCosts(Number(params.get('lc')) || 1500);
-  });
+  }, []);
 
   const SliderInput = ({ 
     label, 
