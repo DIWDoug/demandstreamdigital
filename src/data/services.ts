@@ -9,6 +9,8 @@ export interface SpokeDetail {
   benefits: string[];
   deliverables: string[];
   process: string[];
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 export interface HubFAQ {
@@ -415,7 +417,9 @@ export const hubs: Hub[] = [
         fullDescription: "Local Service Ads put verified businesses at the top of search results with a Google Guarantee badge. We manage LSA campaigns including profile optimization, review management, and bid strategies to maximize call volume for service-area businesses.",
         benefits: ["Top-of-page visibility", "Google Guaranteed trust signal", "Pay-per-lead model", "Direct phone calls from search", "High-intent local prospects"],
         deliverables: ["LSA profile setup and optimization", "Service category configuration", "Review strategy integration", "Budget and bid management", "Lead dispute management", "Performance tracking and reporting"],
-        process: ["Eligibility verification", "Profile optimization", "Service area configuration", "Launch and monitoring", "Ongoing bid management", "Lead quality review"]
+        process: ["Eligibility verification", "Profile optimization", "Service area configuration", "Launch and monitoring", "Ongoing bid management", "Lead quality review"],
+        metaTitle: "Local Service Ads Management | White Label PPC for Agencies",
+        metaDescription: "We manage Google Local Service Ads under your brand. White label PPC campaigns that bring high-intent leads to your clients."
       },
       {
         title: "Retargeting Campaigns",
@@ -532,7 +536,9 @@ export const hubs: Hub[] = [
         fullDescription: "Professional design builds credibility. We create brand-consistent templates that look great on every device, load quickly, and drive action. From layout to imagery to typography, every element reinforces the brand and guides the reader.",
         benefits: ["Professional brand presentation", "Mobile-first responsiveness", "Consistent visual identity", "Higher engagement rates", "Improved click-through rates"],
         deliverables: ["Custom template design", "Mobile optimization", "Header and footer templates", "Promotional email templates", "Newsletter templates", "Template documentation"],
-        process: ["Brand guidelines review", "Template architecture planning", "Design development", "Cross-device testing", "Template library creation"]
+        process: ["Brand guidelines review", "Template architecture planning", "Design development", "Cross-device testing", "Template library creation"],
+        metaTitle: "Newsletter Design Services | White Label Email Marketing for Agencies",
+        metaDescription: "Get beautifully branded newsletters delivered under your agency. White label email marketing designed to engage, convert, and retain."
       },
       {
         title: "A/B Testing",
@@ -835,7 +841,9 @@ export const hubs: Hub[] = [
         fullDescription: "Local businesses need local content. We create unique, valuable pages for every service area that capture 'near me' and city-specific searches while avoiding doorway page penalties.",
         benefits: ["Rank in every target city", "Capture 'near me' searches", "Build geographic authority", "Avoid duplicate content penalties", "Support local pack rankings"],
         deliverables: ["Service area page content", "City-specific landing pages", "Neighborhood content where relevant", "Local schema markup", "Internal linking architecture", "Geographic keyword targeting"],
-        process: ["Service area mapping", "Keyword research per location", "Unique content development", "Local schema implementation", "Internal linking setup", "Performance tracking"]
+        process: ["Service area mapping", "Keyword research per location", "Unique content development", "Local schema implementation", "Internal linking setup", "Performance tracking"],
+        metaTitle: "Geographical Content Creation | White Label Local SEO Content",
+        metaDescription: "We write geo-targeted content that ranks locally—under your brand. White label digital marketing made for location-based growth."
       },
       {
         title: "Topical Content",
@@ -862,6 +870,8 @@ export const hubs: Hub[] = [
         fullDescription: "E-books and guides are premium content assets that capture email addresses while demonstrating deep expertise. They're the cornerstone of content-driven lead generation.",
         benefits: ["Capture qualified leads", "Demonstrate expertise", "Build email lists", "Support nurture campaigns", "Create repurposable content"],
         deliverables: ["E-book content writing", "Professional design", "Landing page copy", "Email sequence integration", "Lead magnet funnel", "Promotion strategy"],
+        metaTitle: "eBook & Guide Creation | White Label Content Marketing Services",
+        metaDescription: "Offer your clients lead-generating eBooks and guides. Fully white-labeled content marketing with custom design and copywriting.",
         process: ["Topic selection", "Outline and structure", "Content development", "Design and formatting", "Landing page creation", "Funnel integration"]
       },
       {
