@@ -4,8 +4,8 @@ import type { ServicePageConfig } from "@/types/servicePage";
 export const localSEOConfig: ServicePageConfig = {
   slug: "local-seo",
   title: "Local SEO",
-  metaTitle: "White Label Local SEO Services for Agencies | On-Page, Citations, Links, Schema & More | Dialed-in Web",
-  metaDescription: "Dialed-in Web offers complete local SEO solutions—on-page, links, citations—white labeled for agencies managing local clients.",
+  metaTitle: "White Label Local SEO for Agencies | Wholesale On-Page, Links & Citation Services by Dialed-in Web",
+  metaDescription: "From citations to content, Dialed-in Web helps agencies deliver local SEO at scale. Resell location SEO now. Talk to our team today.",
   canonicalUrl: "https://dialedinweb.com/white-label-local-seo",
 
   hero: {
