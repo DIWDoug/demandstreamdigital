@@ -57,6 +57,61 @@ interface ContactFormData {
 // Rate limiting configuration
 const RATE_LIMIT_WINDOW_MINUTES = 15;
 const MAX_SUBMISSIONS_PER_WINDOW = 5;
+const MAX_IP_SUBMISSIONS_PER_WINDOW = 10; // Higher limit for IP (shared networks)
+
+// Blocked IP ranges (known bad actors, data centers, etc.)
+const BLOCKED_IP_PREFIXES: string[] = [
+  // Add known malicious IP ranges here
+  // Example: "185.220.", "23.129."
+];
+
+// In-memory IP rate limit cache (resets on cold start, but provides burst protection)
+const ipRateLimitCache = new Map<string, { count: number; resetAt: number }>();
+
+function isIPBlocked(ip: string): boolean {
+  if (!ip || ip === "unknown") return false;
+  return BLOCKED_IP_PREFIXES.some(prefix => ip.startsWith(prefix));
+}
+
+function checkIPRateLimit(ip: string): { allowed: boolean; remaining: number } {
+  if (!ip || ip === "unknown") return { allowed: true, remaining: MAX_IP_SUBMISSIONS_PER_WINDOW };
+  
+  const now = Date.now();
+  const windowMs = RATE_LIMIT_WINDOW_MINUTES * 60 * 1000;
+  const entry = ipRateLimitCache.get(ip);
+  
+  // Clean up expired entries periodically
+  if (ipRateLimitCache.size > 1000) {
+    for (const [key, val] of ipRateLimitCache.entries()) {
+      if (val.resetAt < now) ipRateLimitCache.delete(key);
+    }
+  }
+  
+  if (!entry || entry.resetAt < now) {
+    // New window
+    ipRateLimitCache.set(ip, { count: 1, resetAt: now + windowMs });
+    return { allowed: true, remaining: MAX_IP_SUBMISSIONS_PER_WINDOW - 1 };
+  }
+  
+  if (entry.count >= MAX_IP_SUBMISSIONS_PER_WINDOW) {
+    return { allowed: false, remaining: 0 };
+  }
+  
+  entry.count++;
+  return { allowed: true, remaining: MAX_IP_SUBMISSIONS_PER_WINDOW - entry.count };
+}
+
+// Security headers for rate limiting responses
+function getRateLimitHeaders(remaining: number, resetSeconds: number): Record<string, string> {
+  return {
+    ...corsHeaders,
+    "Content-Type": "application/json",
+    "X-RateLimit-Limit": String(MAX_IP_SUBMISSIONS_PER_WINDOW),
+    "X-RateLimit-Remaining": String(Math.max(0, remaining)),
+    "X-RateLimit-Reset": String(Math.floor(Date.now() / 1000) + resetSeconds),
+    "Retry-After": String(resetSeconds),
+  };
+}
 
 // reCAPTCHA configuration
 const RECAPTCHA_SECRET_KEY = Deno.env.get("RECAPTCHA_SECRET_KEY");
@@ -136,6 +191,29 @@ serve(async (req) => {
       req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       req.headers.get("cf-connecting-ip") ||
       "unknown";
+
+    // Check if IP is blocked
+    if (isIPBlocked(clientIP)) {
+      console.log(`Blocked IP attempted submission: ${clientIP}`);
+      statusCode = 403;
+      logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
+      return new Response(
+        JSON.stringify({ error: "Access denied" }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Check IP-based rate limit (in-memory, burst protection)
+    const ipRateLimit = checkIPRateLimit(clientIP);
+    if (!ipRateLimit.allowed) {
+      console.log(`IP rate limit exceeded for ${clientIP}`);
+      statusCode = 429;
+      logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: getRateLimitHeaders(0, RATE_LIMIT_WINDOW_MINUTES * 60) }
+      );
+    }
 
     const isStep1 = !!formType && formType.endsWith("_step1");
 
@@ -268,9 +346,11 @@ serve(async (req) => {
 
     if (recentSubmissions >= MAX_SUBMISSIONS_PER_WINDOW) {
       console.log(`Rate limit exceeded for ${email || clientIP}`);
+      statusCode = 429;
+      logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
       return new Response(
         JSON.stringify({ error: "Too many submissions. Please try again later." }),
-        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        { status: 429, headers: getRateLimitHeaders(0, RATE_LIMIT_WINDOW_MINUTES * 60) }
       );
     }
 
