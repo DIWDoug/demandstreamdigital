@@ -123,6 +123,8 @@ const App = () => (
         <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
 
         {/* Legacy site URL redirects (301) - Service Pages */}
+        <Route path="/search-engine-optimization" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/search-engine-optimization/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
         <Route path="/dallas-digital-marketing" element={<Navigate to="/contact" replace />} />
         <Route path="/dallas-digital-marketing/" element={<Navigate to="/contact" replace />} />
         <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
