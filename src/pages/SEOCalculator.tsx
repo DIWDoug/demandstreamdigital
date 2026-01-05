@@ -328,6 +328,12 @@ const SEOCalculator = () => {
         <meta name="description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/seo-calculator" />
         <meta name="keywords" content="SEO calculator, local SEO cost estimator, organic traffic forecast, SEO pricing tool, agency SEO planner" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/seo-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/seo-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/seo-calculator" />
+        
         <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>
         
         {/* Open Graph */}

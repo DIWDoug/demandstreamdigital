@@ -257,6 +257,12 @@ const InvestmentCalculator = () => {
         <meta name="description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/investment-calculator" />
         <meta name="keywords" content="marketing budget calculator, agency investment planner, client budget estimator, digital marketing scoping tool" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        
         <script type="application/ld+json">{JSON.stringify(investmentCalculatorSchema)}</script>
         
         {/* Open Graph */}

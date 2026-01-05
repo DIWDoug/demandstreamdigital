@@ -8,6 +8,8 @@ interface PixabayImageProps {
   title?: string;
   className?: string;
   placeholderClassName?: string;
+  /** Set to true for LCP (Largest Contentful Paint) images - disables lazy loading and sets high priority */
+  priority?: boolean;
 }
 
 // Cache for storing fetched image URLs to avoid redundant API calls
@@ -25,12 +27,13 @@ const PixabayImage = ({
   alt,
   title,
   className = '',
-  placeholderClassName = ''
+  placeholderClassName = '',
+  priority = false
 }: PixabayImageProps) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(priority); // Priority images load immediately
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Generate descriptive alt text based on keyword
@@ -140,14 +143,16 @@ const PixabayImage = ({
         </div>
       )}
 
-      {/* Actual image with lazy loading */}
+      {/* Actual image - priority images load eagerly with high fetchpriority */}
       {imageUrl && !hasError && (
         <img
           src={imageUrl}
           alt={descriptiveAlt}
           title={descriptiveTitle}
-          loading="lazy"
+          loading={priority ? "eager" : "lazy"}
           decoding="async"
+          // @ts-ignore - fetchpriority is valid HTML but not in React types yet
+          fetchpriority={priority ? "high" : undefined}
           className={`w-full h-auto transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'} ${className}`}
           onLoad={() => setIsLoading(false)}
           onError={() => {

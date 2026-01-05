@@ -105,6 +105,13 @@ const Author = () => {
         <title>{author.name} - {author.role} | Dialed-In Web</title>
         <meta name="description" content={author.shortBio} />
         <link rel="canonical" href={`https://dialedinweb.com/authors/${author.slug}`} />
+        <meta name="keywords" content={`${author.name}, ${author.role}, white label marketing expert, agency SEO specialist`} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={`https://dialedinweb.com/authors/${author.slug}`} />
+        <link rel="alternate" hrefLang="en-CA" href={`https://dialedinweb.com/authors/${author.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://dialedinweb.com/authors/${author.slug}`} />
+        
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>

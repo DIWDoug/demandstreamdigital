@@ -36,6 +36,12 @@ const Contact = () => {
         <meta name="description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
         <link rel="canonical" href="https://dialedinweb.com/contact" />
         <meta name="keywords" content="contact white label SEO, agency partnership inquiry, white label PPC contact, digital marketing fulfillment partner" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/contact" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/contact" />
+        
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
         
         {/* Open Graph */}

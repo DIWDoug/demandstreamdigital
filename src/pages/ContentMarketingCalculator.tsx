@@ -173,6 +173,12 @@ const ContentMarketingCalculator = () => {
         <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
         <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        
         <script type="application/ld+json">{JSON.stringify(contentMarketingCalculatorSchema)}</script>
         
         {/* Open Graph */}

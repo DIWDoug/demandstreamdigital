@@ -132,6 +132,12 @@ const ROICalculator = () => {
         <meta name="description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/roi-calculator" />
         <meta name="keywords" content="marketing ROI calculator, agency ROI tool, SEO return on investment, PPC ROI calculator, digital marketing calculator" />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        
         <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>
         
         {/* Open Graph */}

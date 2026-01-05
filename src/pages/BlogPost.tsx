@@ -279,6 +279,12 @@ const BlogPostPage = () => {
         <title>{blog.title} | Dialed-In Web</title>
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
         <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        
+        {/* Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <link rel="alternate" hrefLang="en-CA" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
