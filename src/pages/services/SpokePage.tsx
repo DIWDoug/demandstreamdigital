@@ -75,8 +75,8 @@ const SpokePage = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{spoke.title} | {hub.title} | Dialed-In Web</title>
-        <meta name="description" content={spoke.fullDescription.slice(0, 160)} />
+        <title>{spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`}</title>
+        <meta name="description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
         <link rel="canonical" href={`https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`} />
       </Helmet>
       
