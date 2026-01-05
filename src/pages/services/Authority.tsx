@@ -50,6 +50,20 @@ const Authority = () => {
         <meta name="description" content={authorityConfig.metaDescription} />
         <link rel="canonical" href={authorityConfig.canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={authorityConfig.metaTitle} />
+        <meta property="og:description" content={authorityConfig.metaDescription} />
+        <meta property="og:url" content={authorityConfig.canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={authorityConfig.metaTitle} />
+        <meta name="twitter:description" content={authorityConfig.metaDescription} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />

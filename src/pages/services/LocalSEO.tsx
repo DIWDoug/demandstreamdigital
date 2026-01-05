@@ -71,6 +71,20 @@ const LocalSEO = () => {
         <meta name="description" content={localSEOConfig.metaDescription} />
         <link rel="canonical" href={localSEOConfig.canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={localSEOConfig.metaTitle} />
+        <meta property="og:description" content={localSEOConfig.metaDescription} />
+        <meta property="og:url" content={localSEOConfig.canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={localSEOConfig.metaTitle} />
+        <meta name="twitter:description" content={localSEOConfig.metaDescription} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
