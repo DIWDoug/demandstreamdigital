@@ -18,20 +18,60 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
-const routesToPrerender = fs
-  .readdirSync(toAbsolute('src/pages'))
-  .map((file) => {
-    const name = file.replace(/\.tsx$/, '').toLowerCase()
-    return name === 'index' ? `/` : `/${name}`
-  })
+// IMPORTANT: Use the actual router paths (NOT filenames)
+const routesToPrerender = [
+  '/',
+  '/about',
+  '/authors/doug-bryson',
+  '/blog',
+  '/white-label-inbound-marketing-services',
+  '/white-label-inbound-marketing-services/local-seo',
+  '/white-label-inbound-marketing-services/google-maps',
+  '/white-label-inbound-marketing-services/paid-media',
+  '/white-label-inbound-marketing-services/email-marketing',
+  '/white-label-inbound-marketing-services/local-authority-building',
+  '/white-label-inbound-marketing-services/reporting',
+  '/white-label-inbound-marketing-services/content-marketing',
+  '/partner-tools',
+  '/partner-tools/roi-calculator',
+  '/partner-tools/investment-calculator',
+  '/partner-tools/ad-budget-calculator',
+  '/partner-tools/seo-calculator',
+  '/partner-tools/email-calculator',
+  '/partner-tools/content-marketing-calculator',
+  '/partner-tools/ai-ready-check',
+  '/testimonials',
+  '/contact',
+  // noindex pages (optional but harmless)
+  '/thank-you',
+  '/region-blocked',
+]
 
 ;(async () => {
-  for (const url of routesToPrerender) {
-    const { html: appHtml } = render(url);
-    const html = template.replace(`<!--app-html-->`, appHtml)
+  for (const route of routesToPrerender) {
+    const { html: appHtml, helmetContext } = render(route);
+    const helmet = helmetContext?.helmet;
 
-    const filePath = `dist${url === '/' ? '/index' : url}.html`
-    fs.writeFileSync(toAbsolute(filePath), html)
+    const head = helmet
+      ? [
+          helmet.title?.toString?.() ?? '',
+          helmet.meta?.toString?.() ?? '',
+          helmet.link?.toString?.() ?? '',
+          helmet.script?.toString?.() ?? '',
+          helmet.noscript?.toString?.() ?? '',
+          helmet.style?.toString?.() ?? '',
+        ].join('\n')
+      : '';
+
+    const html = template
+      .replace('<!--app-head-->', head)
+      .replace('<!--app-html-->', appHtml)
+
+    const filePath = `dist${route === '/' ? '/index' : route}.html`
+    const absFilePath = toAbsolute(filePath)
+
+    fs.mkdirSync(path.dirname(absFilePath), { recursive: true })
+    fs.writeFileSync(absFilePath, html)
     console.log('pre-rendered:', filePath)
   }
 })()

@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import Index from "./pages/Index";
@@ -53,73 +53,71 @@ const GeoBlockListener = () => {
 };
 
 const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <KonamiCodeListener />
-        <GeoBlockListener />
-        <Toaster />
-        <Sonner />
-        <ScrollToTop />
-        <BackToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/authors/:slug" element={<Author />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/white-label-inbound-marketing-services" element={<Services />} />
-          <Route path="/partner-tools" element={<PartnerTools />} />
-          <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
-          <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
-          <Route path="/partner-tools/ad-budget-calculator" element={<AdBudgetCalculator />} />
-          <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
-          <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
-          <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
-          <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
-          
-          {/* Legacy calculator redirects for SEO preservation */}
-          <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
-          <Route path="/investment-calculator" element={<Navigate to="/partner-tools/investment-calculator" replace />} />
-          <Route path="/ad-budget-calculator" element={<Navigate to="/partner-tools/ad-budget-calculator" replace />} />
-          <Route path="/seo-calculator" element={<Navigate to="/partner-tools/seo-calculator" replace />} />
-          <Route path="/email-calculator" element={<Navigate to="/partner-tools/email-calculator" replace />} />
-          <Route path="/content-marketing-calculator" element={<Navigate to="/partner-tools/content-marketing-calculator" replace />} />
-          <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
-          <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="/region-blocked" element={<RegionBlocked />} />
-          
-          {/* Service Hub Pages */}
-          <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
-          <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
-          <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
-          <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
-          <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
-          <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
-          <Route path="/white-label-inbound-marketing-services/content-marketing" element={<ContentMarketing />} />
-          
-          {/* Service Spoke Pages (sub-services) */}
-          <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
-          
-          {/* Legacy /services redirects for SEO preservation */}
-          <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
-          <Route path="/services/local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-          <Route path="/services/google-maps" element={<Navigate to="/white-label-inbound-marketing-services/google-maps" replace />} />
-          <Route path="/services/paid-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
-          <Route path="/services/email-marketing" element={<Navigate to="/white-label-inbound-marketing-services/email-marketing" replace />} />
-          <Route path="/services/local-authority-building" element={<Navigate to="/white-label-inbound-marketing-services/local-authority-building" replace />} />
-          <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
-          <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
-          
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <KonamiCodeListener />
+      <GeoBlockListener />
+      <Toaster />
+      <Sonner />
+      <ScrollToTop />
+      <BackToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/authors/:slug" element={<Author />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/white-label-inbound-marketing-services" element={<Services />} />
+        <Route path="/partner-tools" element={<PartnerTools />} />
+        <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
+        <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
+        <Route path="/partner-tools/ad-budget-calculator" element={<AdBudgetCalculator />} />
+        <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
+        <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
+        <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
+        <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
+
+        {/* Legacy calculator redirects for SEO preservation */}
+        <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
+        <Route path="/investment-calculator" element={<Navigate to="/partner-tools/investment-calculator" replace />} />
+        <Route path="/ad-budget-calculator" element={<Navigate to="/partner-tools/ad-budget-calculator" replace />} />
+        <Route path="/seo-calculator" element={<Navigate to="/partner-tools/seo-calculator" replace />} />
+        <Route path="/email-calculator" element={<Navigate to="/partner-tools/email-calculator" replace />} />
+        <Route path="/content-marketing-calculator" element={<Navigate to="/partner-tools/content-marketing-calculator" replace />} />
+        <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
+        <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/region-blocked" element={<RegionBlocked />} />
+
+        {/* Service Hub Pages */}
+        <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
+        <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing" element={<ContentMarketing />} />
+
+        {/* Service Spoke Pages (sub-services) */}
+        <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
+
+        {/* Legacy /services redirects for SEO preservation */}
+        <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
+        <Route path="/services/local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/services/google-maps" element={<Navigate to="/white-label-inbound-marketing-services/google-maps" replace />} />
+        <Route path="/services/paid-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/services/email-marketing" element={<Navigate to="/white-label-inbound-marketing-services/email-marketing" replace />} />
+        <Route path="/services/local-authority-building" element={<Navigate to="/white-label-inbound-marketing-services/local-authority-building" replace />} />
+        <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
+        <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
+
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </TooltipProvider>
+  </QueryClientProvider>
 );
 
 // Helper component for dynamic spoke redirects
