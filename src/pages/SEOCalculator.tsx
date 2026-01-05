@@ -181,32 +181,34 @@ const SEOCalculator = () => {
   const estimate = useMemo(() => {
     if (!isComplete) return null;
 
-    // Base cost by competition level - high competition starts much higher
+    // Base cost by competition level - wider spread for meaningful differences
     const baseByCompetition: Record<string, { low: number; high: number }> = {
-      "low": { low: 500, high: 750 },
-      "medium": { low: 750, high: 1100 },
-      "high": { low: 1200, high: 1800 }
+      "low": { low: 400, high: 650 },
+      "medium": { low: 650, high: 1000 },
+      "high": { low: 1100, high: 1700 }
     };
 
     // Minimum floors by competition and metro tier
     // High competition in larger markets needs realistic minimums
     const getMinimumFloor = (comp: string, metroTier: string | null): number => {
       if (comp === "high") {
-        if (metroTier === "mega") return 2500;
-        if (metroTier === "major") return 2000;
-        if (metroTier === "large") return 1800;
-        if (metroTier === "medium") return 1500;
-        return 1200; // small or no metro selected
+        if (metroTier === "mega") return 3500;
+        if (metroTier === "major") return 2800;
+        if (metroTier === "large") return 2200;
+        if (metroTier === "medium") return 1700;
+        return 1300; // small or no metro selected
       }
       if (comp === "medium") {
-        if (metroTier === "mega") return 1500;
-        if (metroTier === "major") return 1200;
-        if (metroTier === "large") return 1000;
-        return 800;
+        if (metroTier === "mega") return 2200;
+        if (metroTier === "major") return 1700;
+        if (metroTier === "large") return 1300;
+        if (metroTier === "medium") return 1000;
+        return 750;
       }
       // Low competition
-      if (metroTier === "mega") return 900;
-      if (metroTier === "major") return 750;
+      if (metroTier === "mega") return 1200;
+      if (metroTier === "major") return 900;
+      if (metroTier === "large") return 700;
       return 500;
     };
 
@@ -214,70 +216,82 @@ const SEOCalculator = () => {
     let baseLow = base.low;
     let baseHigh = base.high;
 
-    // Location multiplier
+    // Location multiplier - more aggressive scaling for multi-location
     const locationMultipliers: Record<string, { low: number; high: number }> = {
-      "none": { low: 0.85, high: 0.85 },
-      "1-5": { low: 1, high: 1.1 },
-      "6-20": { low: 1.5, high: 1.7 },
-      "21-50": { low: 2.2, high: 2.6 },
-      "50+": { low: 3.5, high: 4.5 }
+      "none": { low: 0.8, high: 0.85 },
+      "1-5": { low: 1, high: 1.15 },
+      "6-20": { low: 1.6, high: 1.9 },
+      "21-50": { low: 2.5, high: 3.0 },
+      "50+": { low: 4.0, high: 5.5 }
     };
 
-    // Audience multiplier
+    // Audience multiplier - larger spread
     const audienceMultipliers: Record<string, { low: number; high: number }> = {
       "local": { low: 1, high: 1 },
-      "regional": { low: 1.25, high: 1.4 },
-      "national": { low: 1.7, high: 2 },
-      "global": { low: 2.2, high: 2.6 }
+      "regional": { low: 1.4, high: 1.6 },
+      "national": { low: 2.0, high: 2.5 },
+      "global": { low: 2.8, high: 3.5 }
     };
 
-    // Aggressiveness multiplier
+    // Aggressiveness multiplier - more impactful spread
     const aggressivenessMultipliers: Record<string, { low: number; high: number }> = {
-      "steady": { low: 1, high: 1 },
-      "moderate": { low: 1.25, high: 1.35 },
-      "aggressive": { low: 1.5, high: 1.7 }
+      "steady": { low: 0.85, high: 0.9 },
+      "moderate": { low: 1.15, high: 1.3 },
+      "aggressive": { low: 1.6, high: 1.9 }
     };
 
-    // Pages multiplier
+    // Pages multiplier - site complexity matters more
     const pagesMultipliers: Record<string, { low: number; high: number }> = {
-      "1-10": { low: 1, high: 1 },
-      "11-25": { low: 1.15, high: 1.25 },
-      "26-50": { low: 1.3, high: 1.45 },
-      "50+": { low: 1.5, high: 1.75 }
+      "1-10": { low: 0.9, high: 0.95 },
+      "11-25": { low: 1.1, high: 1.2 },
+      "26-50": { low: 1.35, high: 1.5 },
+      "50+": { low: 1.6, high: 1.85 }
     };
 
     // Website age multiplier (newer = more work needed)
     const ageMultipliers: Record<string, { low: number; high: number }> = {
-      "new": { low: 1.25, high: 1.35 },
-      "1-3": { low: 1.1, high: 1.15 },
-      "3+": { low: 1, high: 1 }
+      "new": { low: 1.3, high: 1.45 },
+      "1-3": { low: 1.1, high: 1.2 },
+      "3+": { low: 0.95, high: 1.0 }
     };
 
     // Rankings multiplier (worse rankings = more work)
     const rankingsMultipliers: Record<string, { low: number; high: number }> = {
-      "top10": { low: 1, high: 1 },
-      "11-30": { low: 1.1, high: 1.15 },
-      "31-100": { low: 1.2, high: 1.3 },
-      "100+": { low: 1.35, high: 1.5 }
+      "top10": { low: 0.9, high: 0.95 },
+      "11-30": { low: 1.1, high: 1.2 },
+      "31-100": { low: 1.3, high: 1.45 },
+      "100+": { low: 1.5, high: 1.7 }
     };
 
-    // Metro tier multiplier - more aggressive for high competition
+    // Metro tier multiplier - much more aggressive for high competition
     const getMetroMultiplier = (comp: string, tier: string | null): number => {
       if (!tier) return 1;
       
-      // High competition industries are more affected by metro size
+      // High competition industries are significantly more affected by metro size
       if (comp === "high") {
         const highCompTiers: Record<string, number> = {
-          small: 0.9,
-          medium: 1.05,
-          large: 1.2,
-          major: 1.4,
-          mega: 1.65
+          small: 0.8,
+          medium: 1.1,
+          large: 1.45,
+          major: 1.9,
+          mega: 2.5
         };
         return highCompTiers[tier] || 1;
       }
       
-      // Medium/low competition use standard tier multipliers
+      // Medium competition has moderate metro impact
+      if (comp === "medium") {
+        const medCompTiers: Record<string, number> = {
+          small: 0.85,
+          medium: 1.05,
+          large: 1.3,
+          major: 1.6,
+          mega: 2.0
+        };
+        return medCompTiers[tier] || 1;
+      }
+      
+      // Low competition uses standard tier multipliers (still meaningful)
       return tierMultipliers[tier as keyof typeof tierMultipliers] || 1;
     };
 
