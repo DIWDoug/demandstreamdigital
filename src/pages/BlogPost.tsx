@@ -279,10 +279,23 @@ const BlogPostPage = () => {
         <title>{blog.title} | Dialed-In Web</title>
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
         <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
-        {resolvedFeaturedImage && <meta property="og:image" content={resolvedFeaturedImage} />}
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${blog.title} | Dialed-In Web`} />
+        <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
+        <meta property="og:url" content={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content={resolvedFeaturedImage || "https://dialedinweb.com/dialedinweb-logo.png"} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${blog.title} | Dialed-In Web`} />
+        <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
+        <meta name="twitter:image" content={resolvedFeaturedImage || "https://dialedinweb.com/dialedinweb-logo.png"} />
       </Helmet>
       
       <Header />
