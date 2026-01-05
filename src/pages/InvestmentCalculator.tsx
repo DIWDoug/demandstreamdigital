@@ -189,12 +189,25 @@ const InvestmentCalculator = () => {
     const msrpTotalHigh = Math.round(oemTotalHigh * (1 + marginPercent / 100));
     const msrpHourlyRate = Math.round(OEM_HOURLY_RATE * (1 + marginPercent / 100));
 
+    // Factor breakdown for visualization
+    const factors = [
+      { label: "Metro Size", current: formData.metro.tier.charAt(0).toUpperCase() + formData.metro.tier.slice(1), baseline: 1, impact: tierMult, unit: "" as const },
+      { label: "Competition", current: formData.industry.competition.charAt(0).toUpperCase() + formData.industry.competition.slice(1), baseline: 1, impact: compMult, unit: "" as const },
+      { label: "Locations", current: formData.locations, baseline: 1, impact: locMult / 1.8, unit: "" as const },
+      { label: "Website Age", current: formData.websiteAge === "new" ? "< 1 yr" : formData.websiteAge === "1-3" ? "1-3 yrs" : "3+ yrs", baseline: 1, impact: webAgeMult, unit: "" as const },
+      { label: "Website Authority", current: formData.websiteAuthority.charAt(0).toUpperCase() + formData.websiteAuthority.slice(1), baseline: 1, impact: webAuthMult, unit: "" as const },
+      { label: "GBP Status", current: formData.gbpStatus.charAt(0).toUpperCase() + formData.gbpStatus.slice(1), baseline: 1, impact: gbpMult, unit: "" as const },
+      { label: "Citation Health", current: formData.citationHealth.charAt(0).toUpperCase() + formData.citationHealth.slice(1), baseline: 1, impact: citMult, unit: "" as const },
+      { label: "Content Status", current: formData.contentStatus.charAt(0).toUpperCase() + formData.contentStatus.slice(1), baseline: 1, impact: contentMult, unit: "" as const }
+    ];
+
     return { 
       oemLow: oemTotalLow, oemHigh: oemTotalHigh,
       msrpLow: msrpTotalLow, msrpHigh: msrpTotalHigh,
       totalHoursLow, totalHoursHigh, breakdown,
       oemHourlyRate: OEM_HOURLY_RATE, msrpHourlyRate, marginPercent,
-      marketInfo: { metro: formData.metro, industry: formData.industry, avgCpc: formData.industry.avgCpc }
+      marketInfo: { metro: formData.metro, industry: formData.industry, avgCpc: formData.industry.avgCpc },
+      factors
     };
   };
 
@@ -620,6 +633,50 @@ const InvestmentCalculator = () => {
                           </div>
                         ))}
                       </div>
+                    </div>
+
+                    {/* Factor Breakdown */}
+                    <div className="bg-surface-dark rounded-xl p-5 border border-border/30">
+                      <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-4">Pricing Factors</p>
+                      <div className="space-y-3">
+                        {estimate.factors.map((factor, i) => {
+                          // For this calculator, higher multipliers = higher cost (inverse visual)
+                          const impactPercent = Math.min(100, Math.max(10, factor.impact * 35));
+                          const getColor = () => {
+                            // Green = less work needed, Red = more work needed
+                            if (factor.impact <= 1) return "bg-emerald-500";
+                            if (factor.impact <= 1.15) return "bg-yellow-500";
+                            return "bg-red-500";
+                          };
+                          
+                          return (
+                            <div key={i} className="space-y-1.5">
+                              <div className="flex justify-between items-center text-xs">
+                                <span className="text-text-muted">{factor.label}</span>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-text-secondary">{factor.current}</span>
+                                  <span className={cn(
+                                    "font-medium",
+                                    factor.impact <= 1 ? "text-emerald-400" : 
+                                    factor.impact <= 1.15 ? "text-yellow-400" : "text-red-400"
+                                  )}>
+                                    {factor.impact > 1 ? "+" : ""}{Math.round((factor.impact - 1) * 100)}%
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
+                                <div 
+                                  className={cn("h-full rounded-full transition-all", getColor())}
+                                  style={{ width: `${impactPercent}%` }}
+                                />
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <p className="text-[10px] text-text-muted/60 mt-3">
+                        Green = less work · Yellow = moderate · Red = more work needed
+                      </p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
