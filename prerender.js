@@ -44,7 +44,7 @@ const routesToPrerender = [
   // Services Hub
   '/white-label-inbound-marketing-services',
   
-  // Local SEO Hub + Spokes
+  // ============ LOCAL SEO HUB + SPOKES ============
   '/white-label-inbound-marketing-services/local-seo',
   '/white-label-inbound-marketing-services/local-seo/on-page-optimization',
   '/white-label-inbound-marketing-services/local-seo/technical-seo',
@@ -54,7 +54,7 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services/local-seo/schema-markup',
   '/white-label-inbound-marketing-services/local-seo/nap-citations',
   
-  // Google Maps (GBP) Hub + Spokes
+  // ============ GBP SEO (GOOGLE MAPS) HUB + SPOKES ============
   '/white-label-inbound-marketing-services/google-maps',
   '/white-label-inbound-marketing-services/google-maps/gbp-optimization',
   '/white-label-inbound-marketing-services/google-maps/review-management',
@@ -63,7 +63,7 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services/google-maps/qa-management',
   '/white-label-inbound-marketing-services/google-maps/post-scheduling',
   
-  // Paid Media Hub + Spokes
+  // ============ PAID MEDIA HUB + SPOKES ============
   '/white-label-inbound-marketing-services/paid-media',
   '/white-label-inbound-marketing-services/paid-media/google-ads',
   '/white-label-inbound-marketing-services/paid-media/meta-ads',
@@ -72,32 +72,26 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services/paid-media/landing-page-design',
   '/white-label-inbound-marketing-services/paid-media/conversion-tracking',
   
-  // Email Marketing Hub + Spokes
+  // ============ EMAIL MARKETING HUB + SPOKES ============
   '/white-label-inbound-marketing-services/email-marketing',
+  '/white-label-inbound-marketing-services/email-marketing/campaign-strategy',
   '/white-label-inbound-marketing-services/email-marketing/list-management',
   '/white-label-inbound-marketing-services/email-marketing/automation-flows',
   '/white-label-inbound-marketing-services/email-marketing/newsletter-design',
   '/white-label-inbound-marketing-services/email-marketing/ab-testing',
   '/white-label-inbound-marketing-services/email-marketing/performance-analytics',
   
-  // Content Marketing Hub + Spokes
-  '/white-label-inbound-marketing-services/content-marketing',
-  '/white-label-inbound-marketing-services/content-marketing/geographical-content',
-  '/white-label-inbound-marketing-services/content-marketing/topical-content',
-  '/white-label-inbound-marketing-services/content-marketing/power-posts',
-  '/white-label-inbound-marketing-services/content-marketing/ebooks-guides',
-  '/white-label-inbound-marketing-services/content-marketing/press-releases',
-  '/white-label-inbound-marketing-services/content-marketing/case-studies',
-  '/white-label-inbound-marketing-services/content-marketing/aio-content',
-  
-  // Authority Building Hub + Spokes
+  // ============ LOCAL AUTHORITY BUILDING HUB + SPOKES ============
   '/white-label-inbound-marketing-services/local-authority-building',
   '/white-label-inbound-marketing-services/local-authority-building/local-links',
   '/white-label-inbound-marketing-services/local-authority-building/unstructured-citations',
+  '/white-label-inbound-marketing-services/local-authority-building/brand-mentions',
+  '/white-label-inbound-marketing-services/local-authority-building/anchor-text',
   '/white-label-inbound-marketing-services/local-authority-building/sponsorships',
   '/white-label-inbound-marketing-services/local-authority-building/reputation-signals',
+  '/white-label-inbound-marketing-services/local-authority-building/guest-posts-niche-edits',
   
-  // Reporting Hub + Spokes
+  // ============ REPORTING HUB + SPOKES ============
   '/white-label-inbound-marketing-services/reporting',
   '/white-label-inbound-marketing-services/reporting/white-label-dashboards',
   '/white-label-inbound-marketing-services/reporting/monthly-performance-reports',
@@ -105,6 +99,19 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services/reporting/call-tracking-lead-attribution',
   '/white-label-inbound-marketing-services/reporting/roi-revenue-analysis',
   '/white-label-inbound-marketing-services/reporting/client-presentation-decks',
+  
+  // ============ CONTENT MARKETING HUB + SPOKES ============
+  '/white-label-inbound-marketing-services/content-marketing',
+  '/white-label-inbound-marketing-services/content-marketing/geographical-content',
+  '/white-label-inbound-marketing-services/content-marketing/topical-content',
+  '/white-label-inbound-marketing-services/content-marketing/power-posts',
+  '/white-label-inbound-marketing-services/content-marketing/ebooks-guides',
+  '/white-label-inbound-marketing-services/content-marketing/lead-magnets',
+  '/white-label-inbound-marketing-services/content-marketing/press-releases',
+  '/white-label-inbound-marketing-services/content-marketing/case-studies',
+  '/white-label-inbound-marketing-services/content-marketing/aio-content',
+  '/white-label-inbound-marketing-services/content-marketing/faq-content',
+  '/white-label-inbound-marketing-services/content-marketing/hub-spoke-buildouts',
   
   // Utility pages (noindex but prerendered for user experience)
   '/thank-you',
