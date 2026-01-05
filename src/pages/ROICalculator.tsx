@@ -12,6 +12,14 @@ import { cn } from "@/lib/utils";
 import { industryBenchmarks, type IndustryBenchmark } from "@/data/industries";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const roiCalculatorSchema = getCalculatorSchema({
+  name: "Marketing ROI Calculator for Agencies",
+  description: "Calculate marketing return on investment across SEO, PPC, and content marketing campaigns. Free tool for digital agencies.",
+  url: "https://dialedinweb.com/partner-tools/roi-calculator",
+  category: "BusinessApplication"
+});
 
 const ROICalculator = () => {
   // Keep raw strings for a smooth typing experience (multi-digit + decimals)
@@ -123,6 +131,8 @@ const ROICalculator = () => {
         <title>Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web</title>
         <meta name="description" content="Dialed-in Web helps agencies prove ROI across SEO, PPC, and more with a white label-friendly marketing ROI calculator." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <meta name="keywords" content="marketing ROI calculator, agency ROI tool, SEO return on investment, PPC ROI calculator, digital marketing calculator" />
+        <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web" />

@@ -11,6 +11,14 @@ import { Calculator, DollarSign, TrendingUp, Users, MousePointerClick, Eye, Shop
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const adBudgetCalculatorSchema = getCalculatorSchema({
+  name: "Ad Budget ROI Calculator for Agencies",
+  description: "Calculate expected returns from Google Ads and Meta Ads budgets. Free PPC ROI calculator for digital agencies.",
+  url: "https://dialedinweb.com/partner-tools/ad-budget-calculator",
+  category: "BusinessApplication"
+});
 
 const AdBudgetCalculator = () => {
   // String-based inputs for smooth typing
@@ -120,6 +128,8 @@ const AdBudgetCalculator = () => {
         <title>PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web</title>
         <meta name="description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
+        <meta name="keywords" content="PPC calculator, ad budget estimator, Google Ads ROI, Meta Ads calculator, paid media planning tool" />
+        <script type="application/ld+json">{JSON.stringify(adBudgetCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web" />

@@ -6,6 +6,7 @@ import SubtleOrbs from "@/components/SubtleOrbs";
 import { Card, CardContent } from "@/components/ui/card";
 import { PHONE_NUMBER, PHONE_HREF, ADDRESS, EMAIL } from "@/lib/constants";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import { getContactPageSchema } from "@/lib/schema";
 
 const testimonials = [
   {
@@ -26,12 +27,16 @@ const testimonials = [
 ];
 
 const Contact = () => {
+  const contactSchema = getContactPageSchema();
+  
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency</title>
         <meta name="description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
         <link rel="canonical" href="https://dialedinweb.com/contact" />
+        <meta name="keywords" content="contact white label SEO, agency partnership inquiry, white label PPC contact, digital marketing fulfillment partner" />
+        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />

@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, ArrowRight, BookOpen, TrendingUp, Users } from "lucide-react";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
+import { getBlogSchema } from "@/lib/schema";
 
 interface Blog {
   id: string;
@@ -43,12 +44,14 @@ const Blog = () => {
         <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
         <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
+        <meta name="keywords" content="white label SEO blog, agency marketing tips, PPC insights, digital marketing articles, local SEO strategy" />
+        <script type="application/ld+json">{JSON.stringify(getBlogSchema())}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Digital Marketing Insights | White Label SEO & PPC Blog" />
         <meta property="og:description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <meta property="og:url" content="https://dialedinweb.com/blog" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="blog" />
         <meta property="og:site_name" content="Dialed-In Web" />
         <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
         

@@ -12,6 +12,14 @@ import { metros, searchMetros, formatPopulation, tierMultipliers, type Metro } f
 import { industries, getIndustriesByCategory, getCpcMultiplier, getSeoComplexityMultiplier, competitionMultipliers, type Industry } from "@/data/industries";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { getCalculatorSchema } from "@/lib/schema";
+
+const investmentCalculatorSchema = getCalculatorSchema({
+  name: "Marketing Investment Planning Calculator for Agencies",
+  description: "Estimate client marketing investments by service and channel. Free scoping tool for digital agencies.",
+  url: "https://dialedinweb.com/partner-tools/investment-calculator",
+  category: "BusinessApplication"
+});
 
 type Step = 1 | 2 | 3 | 4;
 
@@ -248,6 +256,8 @@ const InvestmentCalculator = () => {
         <title>Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web</title>
         <meta name="description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <meta name="keywords" content="marketing budget calculator, agency investment planner, client budget estimator, digital marketing scoping tool" />
+        <script type="application/ld+json">{JSON.stringify(investmentCalculatorSchema)}</script>
         
         {/* Open Graph */}
         <meta property="og:title" content="Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web" />
