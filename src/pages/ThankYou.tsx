@@ -14,8 +14,8 @@ const ThankYou = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{isEbook ? "Download Your Ebook | DialedIn Web" : "Thank You | DialedIn Web"}</title>
-        <meta name="description" content={isEbook ? "Your ebook is ready for download." : "Thank you for reaching out. We'll be in touch within 24 hours."} />
+        <title>{isEbook ? "Download Your Ebook | Dialed-in Web" : "Thank You for Contacting Dialed-in Web | Your White Label Digital Marketing Partner Will Be in Touch"}</title>
+        <meta name="description" content={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. A Dialed-in Web strategist will connect with you soon to discuss white label services."} />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 

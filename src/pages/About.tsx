@@ -138,10 +138,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Dialed-In Web | White Label Marketing Agency | 14 Years Experience, 100+ Clients</title>
+        <title>White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process</title>
         <meta 
           name="description" 
-          content="White label marketing agency founded in 2011. 14 years experience, 100+ clients, 4.9 star rating. Built by marketers, for marketers." 
+          content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." 
         />
         {/* Connected Organization + Person Schema for AI/LLM visibility */}
         <script type="application/ld+json">

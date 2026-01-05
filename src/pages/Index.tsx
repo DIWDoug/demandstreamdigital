@@ -35,8 +35,8 @@ const Index = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Dialed-in Web | White-Label Digital Marketing Partner for Agencies That Want Scalable SEO, PPC & Web Solutions</title>
-        <meta name="description" content="Need a digital marketing partner who delivers under your brand? Dialed-in Web is your white-labeled team for SEO, paid ads & web design. Fast. Scalable. Invisible." />
+        <title>White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web</title>
+        <meta name="description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
         <link rel="canonical" href="https://dialedinweb.com/" />
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
       </Helmet>

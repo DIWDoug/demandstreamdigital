@@ -29,8 +29,8 @@ const Contact = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Contact Us | Start a Partnership | Dialed-In Web</title>
-        <meta name="description" content="Ready to scale your agency with white-label fulfillment? Get in touch with our team. We typically respond within 24 hours." />
+        <title>Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency</title>
+        <meta name="description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
         <link rel="canonical" href="https://dialedinweb.com/contact" />
       </Helmet>
 
