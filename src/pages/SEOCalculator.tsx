@@ -326,12 +326,25 @@ const SEOCalculator = () => {
     if (aggressiveness === "steady") timelineMonths += 2;
     if (metroTier === "mega" || metroTier === "major") timelineMonths += 2;
 
+    // Factor breakdown for visualization
+    const factors = [
+      { label: "Competition", value: competition, impact: competition === "high" ? 2.6 : competition === "medium" ? 1.5 : 1, color: competition === "high" ? "bg-red-500" : competition === "medium" ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Metro Size", value: selectedMetro?.tier || "none", impact: metroMult, color: metroMult > 1.5 ? "bg-red-500" : metroMult > 1.2 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Locations", value: locations, impact: (locMult.low + locMult.high) / 2, color: locMult.low > 2 ? "bg-red-500" : locMult.low > 1.3 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Target Audience", value: audience, impact: (audMult.low + audMult.high) / 2, color: audMult.low > 1.5 ? "bg-red-500" : audMult.low > 1.2 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Aggressiveness", value: aggressiveness, impact: (aggMult.low + aggMult.high) / 2, color: aggMult.low > 1.4 ? "bg-red-500" : aggMult.low > 1.1 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Site Size", value: pages, impact: (pageMult.low + pageMult.high) / 2, color: pageMult.low > 1.3 ? "bg-red-500" : pageMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Website Age", value: websiteAge, impact: (ageMult.low + ageMult.high) / 2, color: ageMult.low > 1.2 ? "bg-red-500" : ageMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" },
+      { label: "Current Rankings", value: currentRankings, impact: (rankMult.low + rankMult.high) / 2, color: rankMult.low > 1.3 ? "bg-red-500" : rankMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" }
+    ];
+
     return {
       monthlyLow,
       monthlyHigh,
       annualLow: monthlyLow * 12,
       annualHigh: monthlyHigh * 12,
-      timelineMonths
+      timelineMonths,
+      factors
     };
   }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete]);
 
@@ -724,6 +737,41 @@ const SEOCalculator = () => {
                               <span className="text-sm text-text-muted">Expected Timeline</span>
                               <span className="text-foreground font-medium">{estimate.timelineMonths}+ months</span>
                             </div>
+                          </div>
+
+                          {/* Factor Breakdown */}
+                          <div className="mt-6 pt-4 border-t border-border/30">
+                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3">Pricing Factors</p>
+                            <div className="space-y-2">
+                              {estimate.factors.map((factor, i) => {
+                                const impactPercent = Math.min(100, Math.max(10, ((factor.impact - 0.75) / 2) * 100));
+                                const impactLabel = factor.impact >= 1.5 ? "High" : factor.impact >= 1.1 ? "Mod" : factor.impact < 1 ? "Low" : "Base";
+                                return (
+                                  <div key={i} className="space-y-1">
+                                    <div className="flex justify-between items-center text-xs">
+                                      <span className="text-text-muted">{factor.label}</span>
+                                      <span className={cn(
+                                        "font-medium",
+                                        factor.impact >= 1.5 ? "text-red-400" : 
+                                        factor.impact >= 1.1 ? "text-yellow-400" : 
+                                        factor.impact < 1 ? "text-emerald-400" : "text-text-secondary"
+                                      )}>
+                                        {factor.impact < 1 ? "−" : factor.impact > 1 ? "+" : ""}{Math.abs(Math.round((factor.impact - 1) * 100))}%
+                                      </span>
+                                    </div>
+                                    <div className="h-1.5 bg-surface-dark rounded-full overflow-hidden">
+                                      <div 
+                                        className={cn("h-full rounded-full transition-all", factor.color)}
+                                        style={{ width: `${impactPercent}%` }}
+                                      />
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                            <p className="text-[10px] text-text-muted/60 mt-3">
+                              Green = cost reduction · Yellow = moderate increase · Red = significant increase
+                            </p>
                           </div>
 
                           <p className="text-xs text-text-muted mt-4">
