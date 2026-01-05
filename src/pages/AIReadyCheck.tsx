@@ -200,8 +200,8 @@ const AIReadyCheck = () => {
   return (
     <>
       <Helmet>
-        <title>AI Readiness Check for Agencies | Evaluate Your Digital Marketing AI Strategy | Dialed-in Web</title>
-        <meta name="description" content="Use Dialed-in Web's AI Readiness Check to assess your agency's ability to integrate AI in content, SEO, and marketing ops." />
+        <title>White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web</title>
+        <meta name="description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
       </Helmet>
       
