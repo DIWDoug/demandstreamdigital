@@ -418,8 +418,8 @@ export const hubs: Hub[] = [
         benefits: ["Highest-intent traffic capture", "Immediate visibility for money keywords", "Scalable lead generation", "Precise geographic targeting", "Measurable cost per lead"],
         deliverables: ["Campaign structure and buildout", "Keyword research and mapping", "Ad copy development", "Extension optimization", "Bid strategy configuration", "Ongoing optimization and reporting"],
         process: ["Market and competitor analysis", "Campaign architecture design", "Build and launch", "Initial optimization period", "Weekly refinement", "Monthly strategy review"],
-        metaTitle: "Google Ads Management | White Label PPC for Agencies",
-        metaDescription: "Run high-performing Google Ads campaigns without lifting a finger. White label PPC services fully managed under your brand."
+        metaTitle: "White Label Google Ads Management for Agencies | Wholesale PPC Campaign Services by Dialed-in Web",
+        metaDescription: "Dialed-in Web runs Google Ads that drive qualified leads and ROI for your clients. Offer high-performance PPC. Book a strategy call today."
       },
       {
         title: "Meta Ads",
@@ -428,7 +428,9 @@ export const hubs: Hub[] = [
         fullDescription: "Meta's targeting capabilities make it ideal for local businesses looking to build awareness and generate leads. We manage campaigns across Facebook and Instagram with creative, audience, and placement strategies optimized for local conversions.",
         benefits: ["Broad local awareness building", "Precise demographic targeting", "Visual storytelling capability", "Lower cost per impression", "Strong retargeting performance"],
         deliverables: ["Campaign structure and setup", "Audience research and building", "Creative development", "Placement optimization", "Lead form or landing page strategy", "Performance reporting"],
-        process: ["Audience research", "Campaign architecture", "Creative development", "Launch and testing", "Ongoing optimization", "Scale winning combinations"]
+        process: ["Audience research", "Campaign architecture", "Creative development", "Launch and testing", "Ongoing optimization", "Scale winning combinations"],
+        metaTitle: "White Label Meta Ads Management for Agencies | Wholesale Facebook & Instagram Ads by Dialed-in Web",
+        metaDescription: "Dialed-in Web delivers Meta Ads that grow client visibility and engagement. Resell paid social with results. Partner with us today."
       },
       {
         title: "Local Service Ads",
@@ -438,8 +440,8 @@ export const hubs: Hub[] = [
         benefits: ["Top-of-page visibility", "Google Guaranteed trust signal", "Pay-per-lead model", "Direct phone calls from search", "High-intent local prospects"],
         deliverables: ["LSA profile setup and optimization", "Service category configuration", "Review strategy integration", "Budget and bid management", "Lead dispute management", "Performance tracking and reporting"],
         process: ["Eligibility verification", "Profile optimization", "Service area configuration", "Launch and monitoring", "Ongoing bid management", "Lead quality review"],
-        metaTitle: "Local Service Ads Management | White Label PPC for Agencies",
-        metaDescription: "We manage Google Local Service Ads under your brand. White label PPC campaigns that bring high-intent leads to your clients."
+        metaTitle: "White Label Local Service Ads for Agencies | Wholesale Google LSA Lead Generation by Dialed-in Web",
+        metaDescription: "Local Service Ads from Dialed-in Web generate high-intent leads for local clients. Resell Google LSA campaigns. Contact us to get started."
       },
       {
         title: "Retargeting Campaigns",
@@ -448,7 +450,9 @@ export const hubs: Hub[] = [
         fullDescription: "Most visitors don't convert on the first visit. Retargeting keeps your client's business in front of interested prospects across Google Display, YouTube, Meta, and search until they're ready to take action.",
         benefits: ["Higher conversion rates from warm traffic", "Lower cost per acquisition", "Extended brand visibility", "Multi-platform reach", "Nurture prospects to conversion"],
         deliverables: ["Audience segmentation strategy", "Retargeting pixel implementation", "Creative development by funnel stage", "Cross-platform campaign setup", "Frequency management", "Attribution reporting"],
-        process: ["Audience analysis and segmentation", "Pixel and tracking setup", "Creative strategy development", "Campaign launch", "Performance optimization", "Cross-platform coordination"]
+        process: ["Audience analysis and segmentation", "Pixel and tracking setup", "Creative strategy development", "Campaign launch", "Performance optimization", "Cross-platform coordination"],
+        metaTitle: "White Label Retargeting Campaigns for Agencies | Wholesale Remarketing Services by Dialed-in Web",
+        metaDescription: "Retargeting campaigns from Dialed-in Web increase ROI and recover lost traffic. Add remarketing to your stack. Schedule a call today."
       },
       {
         title: "Landing Page Design",
@@ -458,8 +462,8 @@ export const hubs: Hub[] = [
         benefits: ["Higher conversion rates", "Lower cost per lead", "Better Quality Scores", "Improved mobile experience", "Clear performance attribution"],
         deliverables: ["Landing page design and development", "A/B testing framework", "Form optimization", "Click-to-call implementation", "Trust signal integration", "Page speed optimization"],
         process: ["Current page audit", "Competitive analysis", "Design and development", "A/B testing implementation", "Ongoing conversion optimization"],
-        metaTitle: "Landing Page Design | White Label Paid Media & CRO Services",
-        metaDescription: "Conversion-optimized landing pages designed to perform. Delivered under your brand, for your PPC and SEO clients."
+        metaTitle: "White Label Landing Page Design for Agencies | Wholesale CRO-Focused Pages by Dialed-in Web",
+        metaDescription: "Dialed-in Web builds landing pages that convert ad traffic into leads. Enhance your PPC offering. Request high-converting pages today."
       },
       {
         title: "Conversion Tracking",
@@ -469,8 +473,8 @@ export const hubs: Hub[] = [
         benefits: ["True ROI measurement", "Call and form attribution", "Lead quality insights", "Optimization data", "Client-ready reporting"],
         deliverables: ["Call tracking setup", "Form tracking implementation", "Dynamic number insertion", "Google Tag Manager configuration", "Attribution modeling", "Conversion reporting dashboard"],
         process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration", "Ongoing maintenance"],
-        metaTitle: "Conversion Tracking Setup | White Label Paid Media & Analytics",
-        metaDescription: "Track what matters. We set up white label conversion tracking so your agency can prove ROI across Google Ads, Meta, and more."
+        metaTitle: "White Label Conversion Tracking Setup for Agencies | Wholesale Funnel Analytics by Dialed-in Web",
+        metaDescription: "Dialed-in Web installs conversion tracking that proves ROI and drives optimization. Offer accurate data. Get started today."
       }
     ]
   },
