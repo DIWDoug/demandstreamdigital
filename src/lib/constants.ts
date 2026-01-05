@@ -1,5 +1,8 @@
 // Shared constants across the site
 
+// Site URL (canonical, non-www)
+export const SITE_URL = "https://dialedinweb.com";
+
 // Contact Information
 export const PHONE_NUMBER = "+1 (214) 307-2995";
 export const PHONE_NUMBER_RAW = "+12143072995";
