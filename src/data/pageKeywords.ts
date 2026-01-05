@@ -61,8 +61,18 @@ export const pageKeywords: Record<string, string> = {
   '/white-label-inbound-marketing-services/email-marketing/ab-testing': 'email A/B testing, subject line testing, email optimization, conversion testing',
   '/white-label-inbound-marketing-services/email-marketing/performance-analytics': 'email analytics, campaign reporting, email performance metrics, delivery analytics',
   
-  // Content Marketing Hub
+  // Content Marketing Hub + Spokes
   '/white-label-inbound-marketing-services/content-marketing': 'white label content marketing, blog writing services, content strategy, SEO content creation',
+  '/white-label-inbound-marketing-services/content-marketing/geographical-content': 'geographical content, city pages, service area content, location-specific SEO',
+  '/white-label-inbound-marketing-services/content-marketing/topical-content': 'topical content, industry blog posts, thought leadership content, expertise articles',
+  '/white-label-inbound-marketing-services/content-marketing/power-posts': 'power posts, pillar content, comprehensive guides, long-form SEO content',
+  '/white-label-inbound-marketing-services/content-marketing/ebooks-guides': 'ebooks, lead magnets, downloadable guides, gated content, content marketing assets',
+  '/white-label-inbound-marketing-services/content-marketing/lead-magnets': 'lead magnets, checklists, templates, conversion content, email list building',
+  '/white-label-inbound-marketing-services/content-marketing/press-releases': 'press releases, PR distribution, news announcements, media coverage',
+  '/white-label-inbound-marketing-services/content-marketing/case-studies': 'case studies, client success stories, testimonial content, proof assets',
+  '/white-label-inbound-marketing-services/content-marketing/aio-content': 'AI optimized content, AIO content, LLM visibility, answer engine optimization',
+  '/white-label-inbound-marketing-services/content-marketing/faq-content': 'FAQ content, question answer pages, featured snippets, voice search optimization',
+  '/white-label-inbound-marketing-services/content-marketing/hub-spoke-buildouts': 'hub and spoke content, topic clusters, content architecture, topical authority',
   
   // Authority Building Hub + Spokes
   '/white-label-inbound-marketing-services/local-authority-building': 'white label link building, local authority building, digital PR, backlink services',
