@@ -177,7 +177,9 @@ export const hubs: Hub[] = [
         fullDescription: "Effective local SEO starts with understanding what people actually search for in each market. We identify seed keywords from your services, products, and customer pain points, then expand with location modifiers including cities, neighborhoods, landmarks, and ZIP codes. We distinguish between explicit local keywords ('plumber Dallas') and implicit keywords that trigger the local pack without location terms. Competitor gap analysis reveals terms rivals rank for that you're missing.",
         benefits: ["Complete picture of local search demand per market", "Implicit and explicit local keyword coverage", "Strategic targeting without cannibalization", "Competitor keyword gaps identified and prioritized", "Quick-win opportunities from existing impressions", "Foundation for content and GBP strategy"],
         deliverables: ["Seed keyword development from services, products, and pain points", "Location modifier research including landmarks and ZIP codes", "Implicit vs explicit intent classification", "Local pack trigger analysis", "Competitor keyword gap analysis", "Keyword-to-page mapping with target URLs", "Personal difficulty scoring based on current authority", "Multi-location keyword sets where applicable"],
-        process: ["Seed keyword identification from business offerings", "Location modifier research per market", "Keyword expansion and local intent classification", "Competitor gap analysis", "Personal difficulty evaluation", "Strategic mapping to existing and future pages", "Priority ranking by volume, difficulty, and value"]
+        process: ["Seed keyword identification from business offerings", "Location modifier research per market", "Keyword expansion and local intent classification", "Competitor gap analysis", "Personal difficulty evaluation", "Strategic mapping to existing and future pages", "Priority ranking by volume, difficulty, and value"],
+        metaTitle: "Local Keyword Strategy | White Label SEO for Location-Based Businesses",
+        metaDescription: "We craft location-specific keyword plans that rank. Scalable, white label SEO strategies built for local client success."
       },
       {
         title: "Content Development",
@@ -195,7 +197,9 @@ export const hubs: Hub[] = [
         fullDescription: "Links remain a critical ranking factor for local SEO. We focus on acquiring links from locally-relevant sources: local news sites, community organizations, industry associations, and directories that signal geographic relevance.",
         benefits: ["Improved domain authority", "Geographic relevance signals", "Referral traffic from local sources", "Brand visibility in publications", "Competitive advantage"],
         deliverables: ["Link opportunity research", "Outreach campaign execution", "Guest post content creation", "Local sponsorship identification", "Monthly acquisition reporting", "Competitor backlink analysis"],
-        process: ["Competitor backlink analysis", "Opportunity identification", "Outreach strategy", "Personalized outreach", "Content creation", "Tracking and reporting"]
+        process: ["Competitor backlink analysis", "Opportunity identification", "Outreach strategy", "Personalized outreach", "Content creation", "Tracking and reporting"],
+        metaTitle: "Local SEO Link Building | White Label Authority Growth Services",
+        metaDescription: "Boost local rankings with high-quality backlinks. Our white label link building drives local SEO results—completely hands-off for you."
       },
       {
         title: "Schema Markup",
@@ -300,7 +304,9 @@ export const hubs: Hub[] = [
           "Monthly review performance reports with sentiment analysis",
           "AI platform monitoring for Yelp, TripAdvisor, OpenTable, and industry directories"
         ],
-        process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"]
+        process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"],
+        metaTitle: "Review Management for Google | White Label Local Reputation Services",
+        metaDescription: "Respond to reviews, build trust, and manage reputation—under your brand. White label review management for local clients."
       },
       {
         title: "Citation Building & Cleanup",
@@ -327,7 +333,9 @@ export const hubs: Hub[] = [
         fullDescription: "The Q&A section of Google Business Profile is often overlooked but influences both rankings and conversions. We proactively seed common questions with helpful answers and monitor for new questions to respond promptly.",
         benefits: ["Capture additional search queries", "Build trust with potential customers", "Control the narrative", "Reduce repetitive customer inquiries", "Competitive differentiation"],
         deliverables: ["Q&A audit and strategy", "Question seeding with answers", "Ongoing Q&A monitoring", "Response drafting for new questions", "Competitor Q&A analysis", "Monthly Q&A reporting"],
-        process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"]
+        process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"],
+        metaTitle: "Google Maps Q&A Management | White Label Local SEO Services",
+        metaDescription: "We manage your clients' Google Q&A to improve local visibility and trust. 100% white label, hands-free for your agency."
       },
       {
         title: "GBP Posting & Content",
@@ -399,7 +407,9 @@ export const hubs: Hub[] = [
         fullDescription: "Google Ads remains the highest-intent advertising platform for local businesses. We build and manage search campaigns, display remarketing, and Performance Max strategies specifically designed for local lead generation economics.",
         benefits: ["Highest-intent traffic capture", "Immediate visibility for money keywords", "Scalable lead generation", "Precise geographic targeting", "Measurable cost per lead"],
         deliverables: ["Campaign structure and buildout", "Keyword research and mapping", "Ad copy development", "Extension optimization", "Bid strategy configuration", "Ongoing optimization and reporting"],
-        process: ["Market and competitor analysis", "Campaign architecture design", "Build and launch", "Initial optimization period", "Weekly refinement", "Monthly strategy review"]
+        process: ["Market and competitor analysis", "Campaign architecture design", "Build and launch", "Initial optimization period", "Weekly refinement", "Monthly strategy review"],
+        metaTitle: "Google Ads Management | White Label PPC for Agencies",
+        metaDescription: "Run high-performing Google Ads campaigns without lifting a finger. White label PPC services fully managed under your brand."
       },
       {
         title: "Meta Ads",
@@ -437,7 +447,9 @@ export const hubs: Hub[] = [
         fullDescription: "Traffic without conversion is wasted spend. We design and build landing pages specifically for local lead generation with trust signals, clear calls-to-action, mobile optimization, and forms that convert visitors into leads.",
         benefits: ["Higher conversion rates", "Lower cost per lead", "Better Quality Scores", "Improved mobile experience", "Clear performance attribution"],
         deliverables: ["Landing page design and development", "A/B testing framework", "Form optimization", "Click-to-call implementation", "Trust signal integration", "Page speed optimization"],
-        process: ["Current page audit", "Competitive analysis", "Design and development", "A/B testing implementation", "Ongoing conversion optimization"]
+        process: ["Current page audit", "Competitive analysis", "Design and development", "A/B testing implementation", "Ongoing conversion optimization"],
+        metaTitle: "Landing Page Design | White Label Paid Media & CRO Services",
+        metaDescription: "Conversion-optimized landing pages designed to perform. Delivered under your brand, for your PPC and SEO clients."
       },
       {
         title: "Conversion Tracking",
@@ -446,7 +458,9 @@ export const hubs: Hub[] = [
         fullDescription: "For local businesses, every lead needs to be tracked back to its source. We implement comprehensive conversion tracking including call recording, form submissions, and multi-touch attribution so you can prove ROI and make data-driven decisions.",
         benefits: ["True ROI measurement", "Call and form attribution", "Lead quality insights", "Optimization data", "Client-ready reporting"],
         deliverables: ["Call tracking setup", "Form tracking implementation", "Dynamic number insertion", "Google Tag Manager configuration", "Attribution modeling", "Conversion reporting dashboard"],
-        process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration", "Ongoing maintenance"]
+        process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration", "Ongoing maintenance"],
+        metaTitle: "Conversion Tracking Setup | White Label Paid Media & Analytics",
+        metaDescription: "Track what matters. We set up white label conversion tracking so your agency can prove ROI across Google Ads, Meta, and more."
       }
     ]
   },
@@ -518,7 +532,9 @@ export const hubs: Hub[] = [
         fullDescription: "Healthy lists drive healthy results. We establish proper opt-in practices, maintain list hygiene, segment for relevance, and manage inactive subscribers. This protects sender reputation and ensures messages reach engaged audiences.",
         benefits: ["Protected sender reputation", "Higher deliverability rates", "Reduced spam complaints", "More relevant messaging", "Lower sending costs"],
         deliverables: ["Permission audit and cleanup", "Opt-in form optimization", "Segmentation strategy", "Inactive subscriber protocols", "List growth tactics", "Ongoing hygiene maintenance"],
-        process: ["Current list assessment", "Permission verification", "Segmentation implementation", "Cleanup protocols", "Ongoing monitoring"]
+        process: ["Current list assessment", "Permission verification", "Segmentation implementation", "Cleanup protocols", "Ongoing monitoring"],
+        metaTitle: "Email List Management | White Label Email Marketing Services",
+        metaDescription: "Keep client lists clean, segmented, and conversion-ready. Our white label email marketing includes full list management under your brand."
       },
       {
         title: "Automation Flows",
@@ -665,7 +681,9 @@ export const hubs: Hub[] = [
         fullDescription: "Reputation signals reinforce authority through social proof. We implement review generation strategies, secure testimonial placements, and build trust signals across platforms that search engines use to assess business credibility and prominence.",
         benefits: ["Enhanced trust signals", "Review volume growth", "Third-party credibility", "Prominence factor improvement", "Conversion rate support"],
         deliverables: ["Review generation strategy", "Testimonial outreach", "Trust badge implementation", "Review platform optimization", "Reputation monitoring", "Monthly reputation reporting"],
-        process: ["Current reputation audit", "Strategy development", "Campaign implementation", "Ongoing monitoring", "Response management", "Performance tracking"]
+        process: ["Current reputation audit", "Strategy development", "Campaign implementation", "Ongoing monitoring", "Response management", "Performance tracking"],
+        metaTitle: "Reputation Signals & Trust Building | White Label Local SEO",
+        metaDescription: "We strengthen online trust through review signals, mentions, and local citations—all white labeled for your agency."
       }
     ]
   },
@@ -737,7 +755,9 @@ export const hubs: Hub[] = [
         fullDescription: "Monthly reports tell the story of progress. We combine data with narrative to help clients understand not just what happened, but why it matters and what's planned next.",
         benefits: ["Clear progress documentation", "Client confidence building", "Retention tool", "Strategy alignment", "Professional presentation"],
         deliverables: ["Executive summary", "Detailed metric analysis", "Trend visualization", "Recommendations section", "Competitive context", "Next month preview"],
-        process: ["Data collection", "Analysis and insights", "Report creation", "Quality review", "Delivery scheduling", "Follow-up support"]
+        process: ["Data collection", "Analysis and insights", "Report creation", "Quality review", "Delivery scheduling", "Follow-up support"],
+        metaTitle: "Monthly Performance Reports | White Label SEO & Marketing Insights",
+        metaDescription: "Recurring white label reports that highlight wins, trends, and KPIs. Fully branded and ready to share with your clients."
       },
       {
         title: "Rank Tracking & Visibility",
@@ -746,7 +766,9 @@ export const hubs: Hub[] = [
         fullDescription: "Rank tracking provides the visibility metrics that clients care about most. We monitor positions daily and report trends that demonstrate SEO progress over time.",
         benefits: ["Daily ranking data", "Trend visualization", "Competitive comparison", "Alert on significant changes", "Progress demonstration"],
         deliverables: ["Keyword list setup", "Daily tracking configuration", "Ranking reports", "Visibility trend analysis", "Competitor tracking", "Alert configuration"],
-        process: ["Keyword research and selection", "Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular reporting"]
+        process: ["Keyword research and selection", "Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular reporting"],
+        metaTitle: "Rank Tracking & Visibility Reporting | White Label SEO Metrics",
+        metaDescription: "Show your clients real results. We deliver white label SEO reports with rankings, visibility trends, and performance insights."
       },
       {
         title: "Call Tracking & Lead Attribution",
@@ -773,7 +795,9 @@ export const hubs: Hub[] = [
         fullDescription: "Sometimes clients need more than a report. They need a presentation. We create professional slide decks for quarterly business reviews and strategic discussions.",
         benefits: ["Professional presentation materials", "Client-ready slides", "Strategic narrative support", "QBR preparation", "Win communication"],
         deliverables: ["Presentation template development", "Monthly or quarterly slide updates", "Executive summary slides", "Strategy recommendation slides", "Visual design", "Speaker notes"],
-        process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"]
+        process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"],
+        metaTitle: "Client Presentation Decks | White Label Marketing Reports",
+        metaDescription: "Branded slide decks ready for client delivery. We craft white label presentations for SEO, PPC, and performance reviews."
       }
     ]
   },
@@ -852,7 +876,9 @@ export const hubs: Hub[] = [
         fullDescription: "Topical content demonstrates expertise and captures informational queries. We create articles that position your client as the authority Google trusts for their industry.",
         benefits: ["Build topical authority", "Capture long-tail queries", "Support E-E-A-T signals", "Create internal linking opportunities", "Feed social and email channels"],
         deliverables: ["Industry expertise articles", "How-to guides", "Educational content", "Comparison content", "Seasonal/timely content", "Content refresh updates"],
-        process: ["Topic cluster mapping", "Keyword research", "Content brief development", "Writing and optimization", "Internal linking", "Performance tracking"]
+        process: ["Topic cluster mapping", "Keyword research", "Content brief development", "Writing and optimization", "Internal linking", "Performance tracking"],
+        metaTitle: "Topical Content Creation | White Label Content Marketing for SEO",
+        metaDescription: "Timely, relevant content crafted under your brand. Our white label topical content boosts traffic and positions your clients as experts."
       },
       {
         title: "Power Posts",
@@ -881,7 +907,9 @@ export const hubs: Hub[] = [
         fullDescription: "Lead magnets are quick-value assets that capture email addresses. Checklists, templates, calculators, and tools that solve immediate problems while building your client's list.",
         benefits: ["High conversion rates", "Low production cost", "Quick implementation", "Segment subscribers", "Support automation"],
         deliverables: ["Checklist development", "Template creation", "Tool design", "Landing page copy", "Thank you page optimization", "Email integration"],
-        process: ["Magnet concept development", "Content creation", "Design and formatting", "Landing page setup", "Automation integration", "A/B testing"]
+        process: ["Magnet concept development", "Content creation", "Design and formatting", "Landing page setup", "Automation integration", "A/B testing"],
+        metaTitle: "Lead Magnet Creation | White Label Content Marketing Assets",
+        metaDescription: "Capture leads with high-converting white label content. We design and write custom lead magnets under your agency's brand."
       },
       {
         title: "Press Releases",
@@ -899,7 +927,9 @@ export const hubs: Hub[] = [
         fullDescription: "AIO (AI Optimization) content is structured for AI systems to parse, understand, and cite. As AI Overviews and LLM-powered search grow, content must be optimized for these new visibility channels.",
         benefits: ["AI Overview inclusion", "LLM citation eligibility", "Future-proof content", "Semantic structure", "Voice search optimization"],
         deliverables: ["Semantic content structure", "FAQ schema implementation", "Clear heading hierarchies", "Authoritative depth", "Entity optimization", "Citation-friendly formatting"],
-        process: ["AI visibility audit", "Content restructuring", "Schema implementation", "Authority building", "Performance monitoring", "Ongoing optimization"]
+        process: ["AI visibility audit", "Content restructuring", "Schema implementation", "Authority building", "Performance monitoring", "Ongoing optimization"],
+        metaTitle: "AIO Content Creation | White Label AI-Optimized SEO Copywriting",
+        metaDescription: "We blend AI efficiency with human creativity to deliver high-ranking SEO content. White labeled and ready for your agency."
       },
       {
         title: "Case Studies",

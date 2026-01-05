@@ -40,8 +40,8 @@ const Blog = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White Label SEO Blog & Agency Growth Insights | Dialed-In Web | Marketing Tips</title>
-        <meta name="description" content="Expert white label SEO tips, agency growth strategies, and local marketing insights. Learn how to scale your agency with fulfillment expertise." />
+        <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
+        <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
       </Helmet>
       

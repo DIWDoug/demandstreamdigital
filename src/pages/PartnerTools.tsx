@@ -130,9 +130,9 @@ const PartnerTools = () => {
   return (
     <>
       <Helmet>
-        <title>Partner Tools | Agency Calculators & Resources | Dialed-In Web</title>
-        <meta name="description" content="Free agency partner tools including ROI calculators, SEO pricing estimators, and investment scopers. Build better proposals and demonstrate value to clients." />
-        <link rel="canonical" href="https://www.dialedinweb.com/partner-tools" />
+        <title>Partner Tools & Resources | For White Label Digital Marketing Agencies</title>
+        <meta name="description" content="Access templates, tools, and resources to scale your agency. Built to support white label partners with growth-ready systems." />
+        <link rel="canonical" href="https://dialedinweb.com/partner-tools" />
       </Helmet>
       
       <Header />
