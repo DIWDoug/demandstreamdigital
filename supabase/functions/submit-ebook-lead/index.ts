@@ -42,6 +42,39 @@ function logResponse(context: { functionName: string; userId?: string; statusCod
 
 interface EbookLeadData {
   email: string;
+  recaptchaToken?: string;
+}
+
+// reCAPTCHA configuration
+const RECAPTCHA_SECRET_KEY = Deno.env.get("RECAPTCHA_SECRET_KEY");
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
+
+// Verify reCAPTCHA token with Google
+async function verifyRecaptcha(token: string, clientIP: string): Promise<{ success: boolean; score?: number; action?: string }> {
+  if (!RECAPTCHA_SECRET_KEY) {
+    console.log("reCAPTCHA secret key not configured, skipping verification");
+    return { success: true };
+  }
+
+  try {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}&remoteip=${clientIP}`,
+    });
+
+    const data = await response.json();
+    console.log("reCAPTCHA verification result:", { success: data.success, score: data.score, action: data.action });
+    
+    return {
+      success: data.success && (data.score === undefined || data.score >= RECAPTCHA_SCORE_THRESHOLD),
+      score: data.score,
+      action: data.action,
+    };
+  } catch (error) {
+    console.error("reCAPTCHA verification error:", error);
+    return { success: false };
+  }
 }
 
 serve(async (req) => {
@@ -57,7 +90,32 @@ serve(async (req) => {
   logRequest(req, { functionName });
 
   try {
-    const { email }: EbookLeadData = await req.json();
+    const { email, recaptchaToken }: EbookLeadData = await req.json();
+
+    // Get client IP for rate limiting and reCAPTCHA
+    const clientIP =
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      req.headers.get("cf-connecting-ip") ||
+      "unknown";
+
+    // Verify reCAPTCHA token if provided
+    if (recaptchaToken) {
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken, clientIP);
+      if (!recaptchaResult.success) {
+        console.log("reCAPTCHA verification failed:", recaptchaResult);
+        return new Response(
+          JSON.stringify({ error: "Security verification failed. Please try again." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    } else if (RECAPTCHA_SECRET_KEY) {
+      // If reCAPTCHA is configured but no token provided
+      console.log("reCAPTCHA token missing for ebook submission");
+      return new Response(
+        JSON.stringify({ error: "Security verification required. Please try again." }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
 
     // Validate email
     if (!email) {
