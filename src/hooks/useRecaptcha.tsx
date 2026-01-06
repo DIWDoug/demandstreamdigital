@@ -4,9 +4,10 @@ import { supabase } from "@/integrations/supabase/client";
 declare global {
   interface Window {
     grecaptcha: {
-      ready: (callback: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
-      render: (container: string | HTMLElement, options: { sitekey: string; size: string }) => number;
+      enterprise: {
+        ready: (callback: () => void) => void;
+        execute: (siteKey: string, options: { action: string }) => Promise<string>;
+      };
     };
   }
 }
@@ -91,9 +92,9 @@ function loadRecaptchaScript(siteKey: string): Promise<void> {
       return;
     }
 
-    console.log("useRecaptcha: Injecting reCAPTCHA script...");
+    console.log("useRecaptcha: Injecting reCAPTCHA Enterprise script...");
     const script = document.createElement("script");
-    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.src = `https://www.google.com/recaptcha/enterprise.js?render=${siteKey}`;
     script.async = true;
     script.defer = true;
 
@@ -140,10 +141,10 @@ export function useRecaptcha() {
 
         // Wait for grecaptcha to be ready
         const checkReady = () => {
-          if (window.grecaptcha) {
-            window.grecaptcha.ready(() => {
+          if (window.grecaptcha?.enterprise) {
+            window.grecaptcha.enterprise.ready(() => {
               if (mounted) {
-                console.log("useRecaptcha: grecaptcha is ready");
+                console.log("useRecaptcha: grecaptcha.enterprise is ready");
                 setIsReady(true);
               }
             });
@@ -177,14 +178,14 @@ export function useRecaptcha() {
         return null;
       }
 
-      if (!isReady || !window.grecaptcha) {
+      if (!isReady || !window.grecaptcha?.enterprise) {
         console.warn("useRecaptcha: Not ready, skipping verification");
         return null;
       }
 
       try {
-        console.log("useRecaptcha: Executing for action:", action);
-        const token = await window.grecaptcha.execute(siteKey, { action });
+        console.log("useRecaptcha: Executing enterprise for action:", action);
+        const token = await window.grecaptcha.enterprise.execute(siteKey, { action });
         console.log("useRecaptcha: Token generated successfully");
         return token;
       } catch (error) {
