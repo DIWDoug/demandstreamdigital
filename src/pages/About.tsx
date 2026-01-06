@@ -29,7 +29,7 @@ import richardBaylon from "@/assets/team/richard-baylon.webp";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
 import jamesBelmes from "@/assets/team/james-belmes.webp";
-import belAniano from "@/assets/team/bel-aniano.webp";
+import belAniano from "@/assets/team/bel-aniano.jpeg";
 import biancaLapuz from "@/assets/team/bianca-lapuz.webp";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
