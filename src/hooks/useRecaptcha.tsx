@@ -30,21 +30,49 @@ async function fetchSiteKey(): Promise<string | null> {
   fetchPromise = (async () => {
     try {
       console.log("useRecaptcha: Fetching site key from backend...");
-      const { data, error } = await supabase.functions.invoke("get-public-config");
       
-      if (error) {
-        console.error("useRecaptcha: Error fetching config:", error);
-        return null;
+      // Try Supabase client first
+      try {
+        const { data, error } = await supabase.functions.invoke("get-public-config");
+        
+        if (!error && data?.recaptchaSiteKey) {
+          cachedSiteKey = data.recaptchaSiteKey;
+          console.log("useRecaptcha: Site key retrieved via Supabase client");
+          return cachedSiteKey;
+        }
+        
+        if (error) {
+          console.warn("useRecaptcha: Supabase client error, trying direct fetch:", error.message);
+        }
+      } catch (clientErr) {
+        console.warn("useRecaptcha: Supabase client failed, trying direct fetch:", clientErr);
       }
 
-      const siteKey = data?.recaptchaSiteKey || null;
-      if (siteKey) {
-        cachedSiteKey = siteKey;
-        console.log("useRecaptcha: Site key retrieved successfully");
-      } else {
-        console.warn("useRecaptcha: No site key returned from backend");
+      // Fallback to direct fetch
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      if (supabaseUrl) {
+        const response = await fetch(`${supabaseUrl}/functions/v1/get-public-config`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "",
+          },
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data?.recaptchaSiteKey) {
+            cachedSiteKey = data.recaptchaSiteKey;
+            console.log("useRecaptcha: Site key retrieved via direct fetch");
+            return cachedSiteKey;
+          }
+        } else {
+          console.error("useRecaptcha: Direct fetch failed:", response.status, await response.text());
+        }
       }
-      return siteKey;
+
+      console.warn("useRecaptcha: Could not retrieve site key");
+      return null;
     } catch (err) {
       console.error("useRecaptcha: Failed to fetch site key:", err);
       return null;
