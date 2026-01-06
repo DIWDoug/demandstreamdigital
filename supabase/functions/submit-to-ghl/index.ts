@@ -113,8 +113,10 @@ function getRateLimitHeaders(remaining: number, resetSeconds: number): Record<st
   };
 }
 
-// reCAPTCHA configuration
-const RECAPTCHA_SECRET_KEY = Deno.env.get("RECAPTCHA_SECRET_KEY");
+// reCAPTCHA Enterprise configuration
+const RECAPTCHA_API_KEY = Deno.env.get("RECAPTCHA_API_KEY");
+const RECAPTCHA_PROJECT_ID = Deno.env.get("RECAPTCHA_PROJECT_ID") || "recaptcha-migrated-6e32a5ecc85";
+const RECAPTCHA_SITE_KEY = "6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g";
 const RECAPTCHA_SCORE_THRESHOLD = 0.5;
 
 const isValidEmail = (email: string) => {
@@ -129,30 +131,46 @@ const isValidWebsite = (website: string) => {
   return true;
 };
 
-// Verify reCAPTCHA token with Google
-async function verifyRecaptcha(token: string, clientIP: string): Promise<{ success: boolean; score?: number; action?: string }> {
-  if (!RECAPTCHA_SECRET_KEY) {
-    console.log("reCAPTCHA secret key not configured, skipping verification");
+// Verify reCAPTCHA Enterprise token with Google
+async function verifyRecaptcha(token: string, expectedAction: string): Promise<{ success: boolean; score?: number; action?: string }> {
+  if (!RECAPTCHA_API_KEY) {
+    console.log("reCAPTCHA API key not configured, skipping verification");
     return { success: true };
   }
 
   try {
-    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    const url = `https://recaptchaenterprise.googleapis.com/v1/projects/${RECAPTCHA_PROJECT_ID}/assessments?key=${RECAPTCHA_API_KEY}`;
+    
+    const response = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}&remoteip=${clientIP}`,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event: {
+          token,
+          expectedAction,
+          siteKey: RECAPTCHA_SITE_KEY,
+        },
+      }),
     });
 
     const data = await response.json();
-    console.log("reCAPTCHA verification result:", { success: data.success, score: data.score, action: data.action });
+    console.log("reCAPTCHA Enterprise verification result:", JSON.stringify(data));
+    
+    if (!data.tokenProperties?.valid) {
+      console.log("reCAPTCHA token invalid:", data.tokenProperties?.invalidReason);
+      return { success: false };
+    }
+
+    const score = data.riskAnalysis?.score ?? 1.0;
+    const action = data.tokenProperties?.action;
     
     return {
-      success: data.success && (data.score === undefined || data.score >= RECAPTCHA_SCORE_THRESHOLD),
-      score: data.score,
-      action: data.action,
+      success: score >= RECAPTCHA_SCORE_THRESHOLD,
+      score,
+      action,
     };
   } catch (error) {
-    console.error("reCAPTCHA verification error:", error);
+    console.error("reCAPTCHA Enterprise verification error:", error);
     return { success: false };
   }
 }
@@ -219,7 +237,7 @@ serve(async (req) => {
 
     // Verify reCAPTCHA token (required for step 2 submissions, optional for step 1)
     if (!isStep1 && recaptchaToken) {
-      const recaptchaResult = await verifyRecaptcha(recaptchaToken, clientIP);
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken, "contact_form");
       if (!recaptchaResult.success) {
         console.log("reCAPTCHA verification failed:", recaptchaResult);
         return new Response(
@@ -227,7 +245,7 @@ serve(async (req) => {
           { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-    } else if (!isStep1 && RECAPTCHA_SECRET_KEY && !recaptchaToken) {
+    } else if (!isStep1 && RECAPTCHA_API_KEY && !recaptchaToken) {
       // If reCAPTCHA is configured but no token provided for step 2
       console.log("reCAPTCHA token missing for step 2 submission");
       return new Response(
