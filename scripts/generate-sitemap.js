@@ -112,7 +112,6 @@ const routes = [
 function generateSitemap() {
   const urlEntries = routes.map(route => `  <url>
     <loc>${SITE_URL}${route.path}</loc>
-    <lastmod>${TODAY}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`).join('\n');
