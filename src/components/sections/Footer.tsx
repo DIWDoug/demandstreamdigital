@@ -36,11 +36,11 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       href: "/white-label-content-marketing",
       items: [
         { label: "Geographical Content", href: "/white-label-geographical-content" },
-        { label: "Topical Content", href: "/white-label-topical-content" },
+        { label: "Topical Authority", href: "/white-label-topical-authority" },
         { label: "Power Posts", href: "/white-label-power-posts" },
         { label: "E-books & Guides", href: "/white-label-ebooks-guides" },
         { label: "Lead Magnets", href: "/white-label-lead-magnets" },
-        { label: "AIO Content", href: "/white-label-aio-content" }
+        { label: "FAQ Content", href: "/white-label-faq-content" }
       ]
     },
     {
@@ -64,19 +64,19 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Automation Flows", href: "/white-label-automation-flows" },
         { label: "Newsletter Design", href: "/white-label-newsletter-design" },
         { label: "A/B Testing", href: "/white-label-ab-testing" },
-        { label: "Performance Analytics", href: "/white-label-email-performance-analytics" }
+        { label: "Performance Analytics", href: "/white-label-performance-analytics" }
       ]
     },
     {
       title: "AUTHORITY",
       href: "/white-label-local-authority-building",
       items: [
-        { label: "Local Links", href: "/white-label-local-links" },
+        { label: "Structured Citations", href: "/white-label-structured-citations" },
         { label: "Unstructured Citations", href: "/white-label-unstructured-citations" },
         { label: "Brand Mentions", href: "/white-label-brand-mentions" },
         { label: "Press Releases", href: "/white-label-press-releases" },
         { label: "Sponsorships", href: "/white-label-sponsorships" },
-        { label: "Reputation Signals", href: "/white-label-reputation-signals" }
+        { label: "Anchor Text", href: "/white-label-anchor-text" }
       ]
     },
     {
