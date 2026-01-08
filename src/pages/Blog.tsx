@@ -104,8 +104,16 @@ const Blog = () => {
                 {featuredPost && (
                   <Link to={`/blog/${featuredPost.slug}`} className="block group">
                     <div className="grid lg:grid-cols-2 gap-8 items-center bg-background rounded-2xl border border-border overflow-hidden hover:border-cta/30 transition-all duration-300">
-                      <div className="h-64 lg:h-80 bg-surface-elevated flex items-center justify-center">
-                        <BookOpen className="w-16 h-16 text-border" />
+                      <div className="h-64 lg:h-80 bg-surface-elevated flex items-center justify-center overflow-hidden">
+                        {featuredPost.featured_image ? (
+                          <img 
+                            src={featuredPost.featured_image} 
+                            alt={featuredPost.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        ) : (
+                          <BookOpen className="w-16 h-16 text-border" />
+                        )}
                       </div>
                       <div className="p-6 lg:p-8">
                         <div className="flex items-center gap-2 text-sm text-text-muted mb-3">
@@ -139,9 +147,17 @@ const Blog = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {remainingPosts.map((blog) => (
                         <Link key={blog.id} to={`/blog/${blog.slug}`}>
-                          <Card className="bg-background border-border hover:border-cta/30 transition-all duration-300 h-full group">
-                            <div className="h-48 bg-surface-elevated flex items-center justify-center rounded-t-lg">
-                              <BookOpen className="w-12 h-12 text-border" />
+                          <Card className="bg-background border-border hover:border-cta/30 transition-all duration-300 h-full group overflow-hidden">
+                            <div className="h-48 bg-surface-elevated flex items-center justify-center overflow-hidden">
+                              {blog.featured_image ? (
+                                <img 
+                                  src={blog.featured_image} 
+                                  alt={blog.title}
+                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                              ) : (
+                                <BookOpen className="w-12 h-12 text-border" />
+                              )}
                             </div>
                             <CardHeader>
                               <div className="flex items-center gap-2 text-sm text-text-muted mb-2">
