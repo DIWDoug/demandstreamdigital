@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, Navigate } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
@@ -60,16 +61,17 @@ const GeoBlockListener = () => {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <KonamiCodeListener />
-      <GeoBlockListener />
-      <Toaster />
-      <Sonner />
-      <ScrollToTop />
-      <BackToTop />
-      <ElfsightReviews />
-      <CookieConsent />
-      <Routes>
-        <Route path="/" element={<Index />} />
+      <ErrorBoundary>
+        <KonamiCodeListener />
+        <GeoBlockListener />
+        <Toaster />
+        <Sonner />
+        <ScrollToTop />
+        <BackToTop />
+        <ElfsightReviews />
+        <CookieConsent />
+        <Routes>
+          <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/authors/:slug" element={<Author />} />
         <Route path="/blog" element={<Blog />} />
@@ -301,6 +303,7 @@ const App = () => (
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </ErrorBoundary>
     </TooltipProvider>
   </QueryClientProvider>
 );
