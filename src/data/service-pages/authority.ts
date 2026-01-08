@@ -155,9 +155,9 @@ export const authorityConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on industry, market, and competitive landscape.",
     blocks: [
       {
-        title: "Local Link Acquisition",
-        slug: "local-links",
-        description: "Strategic links from local publications, blogs, and community sites.",
+        title: "Structured Citations",
+        slug: "structured-citations",
+        description: "Directory listings and local business aggregator submissions that validate business identity.",
         icon: Globe
       },
       {
