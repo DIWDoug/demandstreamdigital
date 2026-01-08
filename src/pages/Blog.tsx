@@ -3,16 +3,12 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
-import ContactForm from "@/components/sections/ContactForm";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, ArrowRight, BookOpen, TrendingUp, Users } from "lucide-react";
-import { getBlogFeaturedImage } from "@/lib/blogImages";
-import { getBlogSchema } from "@/lib/schema";
 
-interface Blog {
+interface BlogItem {
   id: string;
   title: string;
   slug: string;
@@ -25,18 +21,13 @@ const Blog = () => {
   const { data: blogs, isLoading, error } = useQuery({
     queryKey: ['blogs'],
     queryFn: async () => {
-      console.log('Fetching blogs...');
       const { data, error } = await supabase
         .from('blogs')
         .select('id, title, slug, excerpt, featured_image, published_at')
         .order('published_at', { ascending: false });
       
-      if (error) {
-        console.error('Blog fetch error:', error);
-        throw error;
-      }
-      console.log('Blogs fetched:', data);
-      return data as Blog[];
+      if (error) throw error;
+      return data as BlogItem[];
     },
   });
 
@@ -49,28 +40,6 @@ const Blog = () => {
         <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
         <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
-        <meta name="keywords" content="white label SEO blog, agency marketing tips, PPC insights, digital marketing articles, local SEO strategy" />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/blog" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/blog" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/blog" />
-        
-        <script type="application/ld+json">{JSON.stringify(getBlogSchema())}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Digital Marketing Insights | White Label SEO & PPC Blog" />
-        <meta property="og:description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
-        <meta property="og:url" content="https://dialedinweb.com/blog" />
-        <meta property="og:type" content="blog" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Digital Marketing Insights | White Label SEO & PPC Blog" />
-        <meta name="twitter:description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
@@ -115,7 +84,6 @@ const Blog = () => {
           <div className="container mx-auto px-6 lg:px-8">
             {isLoading ? (
               <div className="space-y-12">
-                {/* Featured Skeleton */}
                 <div className="grid lg:grid-cols-2 gap-8">
                   <Skeleton className="h-80 rounded-2xl" />
                   <div className="space-y-4">
@@ -124,21 +92,6 @@ const Blog = () => {
                     <Skeleton className="h-24 w-full" />
                     <Skeleton className="h-10 w-40" />
                   </div>
-                </div>
-                {/* Grid Skeleton */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[1, 2, 3].map((i) => (
-                    <Card key={i} className="bg-background border-border">
-                      <Skeleton className="h-48 w-full rounded-t-lg" />
-                      <CardHeader>
-                        <Skeleton className="h-6 w-3/4" />
-                      </CardHeader>
-                      <CardContent>
-                        <Skeleton className="h-4 w-full mb-2" />
-                        <Skeleton className="h-4 w-2/3" />
-                      </CardContent>
-                    </Card>
-                  ))}
                 </div>
               </div>
             ) : error ? (
@@ -151,24 +104,9 @@ const Blog = () => {
                 {featuredPost && (
                   <Link to={`/blog/${featuredPost.slug}`} className="block group">
                     <div className="grid lg:grid-cols-2 gap-8 items-center bg-background rounded-2xl border border-border overflow-hidden hover:border-cta/30 transition-all duration-300">
-                      {getBlogFeaturedImage(featuredPost.featured_image) ? (
-                        <div className="relative h-64 lg:h-80 overflow-hidden">
-                          <img 
-                            src={getBlogFeaturedImage(featuredPost.featured_image)!} 
-                            alt={featuredPost.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute top-4 left-4">
-                            <span className="px-3 py-1 bg-cta text-cta-foreground text-xs font-semibold rounded-full">
-                              Featured
-                            </span>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="h-64 lg:h-80 bg-surface-elevated flex items-center justify-center">
-                          <BookOpen className="w-16 h-16 text-border" />
-                        </div>
-                      )}
+                      <div className="h-64 lg:h-80 bg-surface-elevated flex items-center justify-center">
+                        <BookOpen className="w-16 h-16 text-border" />
+                      </div>
                       <div className="p-6 lg:p-8">
                         <div className="flex items-center gap-2 text-sm text-text-muted mb-3">
                           <Calendar className="w-4 h-4" />
@@ -202,19 +140,9 @@ const Blog = () => {
                       {remainingPosts.map((blog) => (
                         <Link key={blog.id} to={`/blog/${blog.slug}`}>
                           <Card className="bg-background border-border hover:border-cta/30 transition-all duration-300 h-full group">
-                            {getBlogFeaturedImage(blog.featured_image) ? (
-                              <div className="relative h-48 overflow-hidden rounded-t-lg">
-                                <img 
-                                  src={getBlogFeaturedImage(blog.featured_image)!} 
-                                  alt={blog.title}
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                              </div>
-                            ) : (
-                              <div className="h-48 bg-surface-elevated flex items-center justify-center rounded-t-lg">
-                                <BookOpen className="w-12 h-12 text-border" />
-                              </div>
-                            )}
+                            <div className="h-48 bg-surface-elevated flex items-center justify-center rounded-t-lg">
+                              <BookOpen className="w-12 h-12 text-border" />
+                            </div>
                             <CardHeader>
                               <div className="flex items-center gap-2 text-sm text-text-muted mb-2">
                                 <Calendar className="w-4 h-4" />
@@ -255,13 +183,6 @@ const Blog = () => {
           </div>
         </section>
       </main>
-
-
-      {/* Agency Partner Testimonials */}
-      <AgencyPartnerVideos />
-
-      {/* Fulfillment Steps with Contact Form */}
-      <ContactForm />
       
       <Footer />
     </div>
