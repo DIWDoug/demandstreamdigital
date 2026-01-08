@@ -34,14 +34,14 @@ export const pageKeywords: Record<string, string> = {
   '/white-label-inbound-marketing-services/local-seo/schema-markup': 'local business schema, structured data markup, rich snippets, schema implementation',
   '/white-label-inbound-marketing-services/local-seo/nap-citations': 'NAP citation building, citation cleanup, local directory listings, citation management',
   
-  // Google Maps Hub + Spokes
-  '/white-label-inbound-marketing-services/google-maps': 'white label GBP optimization, Google Business Profile management, local pack ranking, Google Maps SEO',
-  '/white-label-inbound-marketing-services/google-maps/gbp-optimization': 'GBP optimization services, Google Business Profile setup, GMB management, local listing optimization',
-  '/white-label-inbound-marketing-services/google-maps/review-management': 'white label review management, Google review generation, review response services, reputation management',
-  '/white-label-inbound-marketing-services/google-maps/citation-building': 'citation building services, local citation management, directory submissions, NAP consistency',
-  '/white-label-inbound-marketing-services/google-maps/photo-optimization': 'GBP photo optimization, business photo management, Google Maps images, visual optimization',
-  '/white-label-inbound-marketing-services/google-maps/qa-management': 'Google Q&A management, GBP questions answers, local business FAQs, customer Q&A optimization',
-  '/white-label-inbound-marketing-services/google-maps/post-scheduling': 'GBP post scheduling, Google Business posts, local social posting, GMB content calendar',
+  // GBP SEO Hub + Spokes
+  '/white-label-gbp-seo': 'white label GBP optimization, Google Business Profile management, local pack ranking, Google Maps SEO',
+  '/white-label-gbp-optimization': 'GBP optimization services, Google Business Profile setup, GMB management, local listing optimization',
+  '/white-label-review-management': 'white label review management, Google review generation, review response services, reputation management',
+  '/white-label-citation-building': 'citation building services, local citation management, directory submissions, NAP consistency',
+  '/white-label-photo-optimization': 'GBP photo optimization, business photo management, Google Maps images, visual optimization',
+  '/white-label-qa-management': 'Google Q&A management, GBP questions answers, local business FAQs, customer Q&A optimization',
+  '/white-label-post-scheduling': 'GBP post scheduling, Google Business posts, local social posting, GMB content calendar',
   
   // Paid Media Hub + Spokes
   '/white-label-inbound-marketing-services/paid-media': 'white label PPC management, paid media fulfillment, Google Ads management, Meta Ads services',

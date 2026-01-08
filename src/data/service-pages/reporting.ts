@@ -289,7 +289,7 @@ export const reportingConfig: ServicePageConfig = {
     services: [
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards and reports that prove value.", href: "/white-label-reporting", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/white-label-local-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-google-maps-local-seo" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-gbp-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" }

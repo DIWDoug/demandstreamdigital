@@ -326,7 +326,7 @@ export const googleMapsConfig: ServicePageConfig = {
     intro: "GBP SEO acts as the demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
     body: "Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/white-label-google-maps-local-seo", isCenter: true },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/white-label-gbp-seo", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-local-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/white-label-email-marketing" },

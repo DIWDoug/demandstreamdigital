@@ -109,7 +109,7 @@ const App = () => (
         
         {/* Service Hub Pages - Flat URLs */}
         <Route path="/white-label-local-seo" element={<LocalSEO />} />
-        <Route path="/white-label-google-maps-local-seo" element={<GoogleMaps />} />
+        <Route path="/white-label-gbp-seo" element={<GoogleMaps />} />
         <Route path="/white-label-paid-media" element={<PaidMedia />} />
         <Route path="/white-label-email-marketing" element={<EmailMarketing />} />
         <Route path="/white-label-local-authority-building" element={<Authority />} />
@@ -179,7 +179,7 @@ const App = () => (
 
         {/* Hub Redirects: Old nested → New flat */}
         <Route path="/white-label-inbound-marketing-services/local-seo" element={<Navigate to="/white-label-local-seo" replace />} />
-        <Route path="/white-label-inbound-marketing-services/google-maps" element={<Navigate to="/white-label-google-maps-local-seo" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps" element={<Navigate to="/white-label-gbp-seo" replace />} />
         <Route path="/white-label-inbound-marketing-services/paid-media" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/white-label-inbound-marketing-services/email-marketing" element={<Navigate to="/white-label-email-marketing" replace />} />
         <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Navigate to="/white-label-local-authority-building" replace />} />
@@ -249,7 +249,8 @@ const App = () => (
         <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/services/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/services/local-seo" element={<Navigate to="/white-label-local-seo" replace />} />
-        <Route path="/services/google-maps" element={<Navigate to="/white-label-google-maps-local-seo" replace />} />
+        <Route path="/services/google-maps" element={<Navigate to="/white-label-gbp-seo" replace />} />
+        <Route path="/white-label-google-maps-local-seo" element={<Navigate to="/white-label-gbp-seo" replace />} />
         <Route path="/services/paid-media" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/services/email-marketing" element={<Navigate to="/white-label-email-marketing" replace />} />
         <Route path="/services/local-authority-building" element={<Navigate to="/white-label-local-authority-building" replace />} />

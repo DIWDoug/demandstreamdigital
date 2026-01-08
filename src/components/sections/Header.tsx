@@ -76,7 +76,7 @@ const Header = () => {
     },
     {
       title: "GBP SEO",
-      href: "/white-label-google-maps-local-seo",
+      href: "/white-label-gbp-seo",
       items: [
         { label: "GBP Profile Optimization", href: "/white-label-gbp-optimization" },
         { label: "Review Generation & Response", href: "/white-label-review-management" },
