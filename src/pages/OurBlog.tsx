@@ -9,6 +9,30 @@ import { Input } from "@/components/ui/input";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
 import PixabayImage from "@/components/PixabayImage";
 
+// Import blog images statically for proper resolution
+import whiteLabelSeoBenefitsHero from "@/assets/blog/white-label-seo-benefits-hero.jpg";
+import whiteLabelSeoChecklist from "@/assets/blog/white-label-seo-checklist.jpg";
+import whatIsWhiteLabelMarketing from "@/assets/blog/what-is-white-label-marketing.jpg";
+import whiteLabelSocialMedia from "@/assets/blog/white-label-social-media.jpg";
+import onPageLocalSeo from "@/assets/blog/on-page-local-seo.jpg";
+import whiteLabelLocalPpc from "@/assets/blog/white-label-local-ppc.jpg";
+
+// Map database featured_image values to imported images
+const featuredImageMap: Record<string, string> = {
+  "white-label-seo-benefits-hero": whiteLabelSeoBenefitsHero,
+  "white-label-seo-checklist": whiteLabelSeoChecklist,
+  "what-is-white-label-marketing": whatIsWhiteLabelMarketing,
+  "white-label-social-media": whiteLabelSocialMedia,
+  "on-page-local-seo": onPageLocalSeo,
+  "white-label-local-ppc": whiteLabelLocalPpc,
+};
+
+// Resolve featured image from database value to actual image path
+const resolveFeaturedImage = (featuredImage: string | null): string | null => {
+  if (!featuredImage) return null;
+  return featuredImageMap[featuredImage] || null;
+};
+
 // Generate a relevant Pixabay search keyword from post title/category
 const getImageKeyword = (title: string, category?: string | null): string => {
   const lowerTitle = title.toLowerCase();
@@ -22,6 +46,7 @@ const getImageKeyword = (title: string, category?: string | null): string => {
   if (category) return `${category} marketing`;
   return 'digital marketing business';
 };
+
 interface BlogPost {
   id: string;
   title: string;
@@ -32,8 +57,18 @@ interface BlogPost {
   category: string | null;
 }
 
+// Category display names
+const categoryLabels: Record<string, string> = {
+  "white-label-seo": "White Label SEO",
+  "local-seo": "Local SEO",
+  "paid-media": "Paid Media",
+  "content-marketing": "Content Marketing",
+  "email-marketing": "Email Marketing",
+};
+
 const OurBlog = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const { data: posts = [], isLoading, error } = useQuery({
     queryKey: ["our-blog-posts"],
@@ -49,16 +84,36 @@ const OurBlog = () => {
     staleTime: 1000 * 60 * 5, // 5 minutes
   });
 
+  // Get unique categories from posts
+  const categories = useMemo(() => {
+    const cats = new Set<string>();
+    posts.forEach((post) => {
+      if (post.category) cats.add(post.category);
+    });
+    return Array.from(cats).sort();
+  }, [posts]);
+
   const filteredPosts = useMemo(() => {
-    if (!searchQuery.trim()) return posts;
-    const query = searchQuery.toLowerCase();
-    return posts.filter(
-      (post) =>
-        post.title.toLowerCase().includes(query) ||
-        post.excerpt?.toLowerCase().includes(query) ||
-        post.category?.toLowerCase().includes(query)
-    );
-  }, [posts, searchQuery]);
+    let filtered = posts;
+    
+    // Filter by category first
+    if (selectedCategory) {
+      filtered = filtered.filter((post) => post.category === selectedCategory);
+    }
+    
+    // Then filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(
+        (post) =>
+          post.title.toLowerCase().includes(query) ||
+          post.excerpt?.toLowerCase().includes(query) ||
+          post.category?.toLowerCase().includes(query)
+      );
+    }
+    
+    return filtered;
+  }, [posts, searchQuery, selectedCategory]);
 
   const featuredPost = filteredPosts[0];
   const remainingPosts = filteredPosts.slice(1);
@@ -130,6 +185,35 @@ const OurBlog = () => {
                 </button>
               )}
             </div>
+
+            {/* Category Filters */}
+            {categories.length > 0 && (
+              <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors ${
+                    selectedCategory === null
+                      ? "bg-cta text-cta-foreground border-cta"
+                      : "bg-transparent text-text-secondary border-border/50 hover:border-cta/50 hover:text-foreground"
+                  }`}
+                >
+                  All Articles
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-4 py-2 text-sm font-medium rounded-full border transition-colors ${
+                      selectedCategory === cat
+                        ? "bg-cta text-cta-foreground border-cta"
+                        : "bg-transparent text-text-secondary border-border/50 hover:border-cta/50 hover:text-foreground"
+                    }`}
+                  >
+                    {categoryLabels[cat] || cat}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
@@ -187,13 +271,13 @@ const OurBlog = () => {
                 )}
 
                 {/* Featured Post */}
-                {featuredPost && !searchQuery && (
+                {featuredPost && !searchQuery && !selectedCategory && (
                   <Link to={`/blog/${featuredPost.slug}`} className="group block mb-12">
                     <article className="grid lg:grid-cols-2 gap-8 bg-surface-dark border border-border/50 rounded-2xl overflow-hidden hover:border-cta/30 transition-all duration-300">
                       <div className="h-64 lg:h-auto bg-surface-elevated overflow-hidden">
-                      {featuredPost.featured_image ? (
+                        {resolveFeaturedImage(featuredPost.featured_image) ? (
                           <img
-                            src={featuredPost.featured_image}
+                            src={resolveFeaturedImage(featuredPost.featured_image)!}
                             alt={featuredPost.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           />
@@ -237,13 +321,13 @@ const OurBlog = () => {
 
                 {/* Post Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {(searchQuery ? filteredPosts : remainingPosts).map((post) => (
+                  {(searchQuery || selectedCategory ? filteredPosts : remainingPosts).map((post) => (
                     <Link key={post.id} to={`/blog/${post.slug}`} className="group">
                       <article className="h-full bg-surface-dark border border-border/50 rounded-xl overflow-hidden hover:border-cta/30 hover:shadow-xl hover:shadow-cta/5 transition-all duration-300">
                         <div className="h-48 bg-surface-elevated overflow-hidden">
-                          {post.featured_image ? (
+                          {resolveFeaturedImage(post.featured_image) ? (
                             <img
-                              src={post.featured_image}
+                              src={resolveFeaturedImage(post.featured_image)!}
                               alt={post.title}
                               loading="lazy"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
