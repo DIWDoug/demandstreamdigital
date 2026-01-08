@@ -18,6 +18,16 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
+// Ensure removed routes don't leave stale HTML behind (fixes blank /blog when old dist/blog.html exists)
+try {
+  fs.rmSync(toAbsolute('dist/blog.html'), { force: true })
+  fs.rmSync(toAbsolute('dist/blog/index.html'), { force: true })
+  fs.rmSync(toAbsolute('dist/blog'), { recursive: true, force: true })
+} catch {
+  // ignore
+}
+
+
 // Comprehensive route list with ALL pages that need prerendering
 const routesToPrerender = [
   // Main pages
