@@ -13,13 +13,21 @@ const app = (
   </HelmetProvider>
 );
 
-// Only hydrate if there's pre-rendered content, otherwise use createRoot
-const hasPrerenderedContent = root.innerHTML.trim().length > 0 && 
-  !root.innerHTML.includes('<!--app-html-->');
+// Only hydrate if there's pre-rendered content AND the route is safe to hydrate.
+// Some routes (like /blog) render dynamic content and can cause hydration mismatches.
+const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+const forceClientRender = pathname.startsWith("/blog");
 
-if (import.meta.env.PROD && hasPrerenderedContent) {
+const hasPrerenderedContent =
+  root.innerHTML.trim().length > 0 && !root.innerHTML.includes("<!--app-html-->");
+
+const shouldHydrate =
+  import.meta.env.PROD && hasPrerenderedContent && !forceClientRender;
+
+if (shouldHydrate) {
   hydrateRoot(root, app);
 } else {
   createRoot(root).render(app);
 }
+
 

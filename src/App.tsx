@@ -72,11 +72,12 @@ const App = () => (
         <CookieConsent />
         <Routes>
           <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/authors/:slug" element={<Author />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/white-label-inbound-marketing-services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/authors/:slug" element={<Author />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/white-label-inbound-marketing-services" element={<Services />} />
         <Route path="/partner-tools" element={<PartnerTools />} />
         <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
         <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
