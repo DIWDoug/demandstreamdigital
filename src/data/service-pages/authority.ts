@@ -291,6 +291,6 @@ export const authorityConfig: ServicePageConfig = {
       { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing"
+    ctaHref: "/white-label-inbound-marketing-services"
   }
 };
