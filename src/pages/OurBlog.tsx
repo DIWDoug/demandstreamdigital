@@ -6,7 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
-import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
+import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import PixabayImage from "@/components/PixabayImage";
 
 // Import blog images statically for proper resolution
@@ -66,9 +66,12 @@ const categoryLabels: Record<string, string> = {
   "email-marketing": "Email Marketing",
 };
 
+const POSTS_PER_PAGE = 9;
+
 const OurBlog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const { data: posts = [], isLoading, error } = useQuery({
     queryKey: ["our-blog-posts"],
@@ -115,8 +118,28 @@ const OurBlog = () => {
     return filtered;
   }, [posts, searchQuery, selectedCategory]);
 
+  // Reset to page 1 when filters change
+  useMemo(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory]);
+
   const featuredPost = filteredPosts[0];
   const remainingPosts = filteredPosts.slice(1);
+
+  // Pagination logic
+  const totalPages = Math.ceil(remainingPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = useMemo(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    return remainingPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  }, [remainingPosts, currentPage]);
+
+  // For search/category view (no featured post), paginate all filtered posts
+  const allFilteredPaginated = useMemo(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  const totalPagesFiltered = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
 
   const formatDate = (date: string | null) => {
     if (!date) return null;
@@ -321,7 +344,7 @@ const OurBlog = () => {
 
                 {/* Post Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {(searchQuery || selectedCategory ? filteredPosts : remainingPosts).map((post) => (
+                  {(searchQuery || selectedCategory ? allFilteredPaginated : paginatedPosts).map((post) => (
                     <Link key={post.id} to={`/blog/${post.slug}`} className="group">
                       <article className="h-full bg-surface-dark border border-border/50 rounded-xl overflow-hidden hover:border-cta/30 hover:shadow-xl hover:shadow-cta/5 transition-all duration-300">
                         <div className="h-48 bg-surface-elevated overflow-hidden">
@@ -369,6 +392,45 @@ const OurBlog = () => {
                     </Link>
                   ))}
                 </div>
+
+                {/* Pagination */}
+                {((searchQuery || selectedCategory ? totalPagesFiltered : totalPages) > 1) && (
+                  <div className="flex items-center justify-center gap-2 mt-12">
+                    <button
+                      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                      disabled={currentPage === 1}
+                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-border/50 text-text-secondary hover:text-foreground hover:border-cta/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                      Previous
+                    </button>
+                    
+                    <div className="flex items-center gap-1">
+                      {Array.from({ length: searchQuery || selectedCategory ? totalPagesFiltered : totalPages }, (_, i) => i + 1).map((page) => (
+                        <button
+                          key={page}
+                          onClick={() => setCurrentPage(page)}
+                          className={`w-10 h-10 text-sm font-medium rounded-lg transition-colors ${
+                            currentPage === page
+                              ? "bg-cta text-cta-foreground"
+                              : "text-text-secondary hover:text-foreground hover:bg-surface-elevated"
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                    </div>
+                    
+                    <button
+                      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, searchQuery || selectedCategory ? totalPagesFiltered : totalPages))}
+                      disabled={currentPage === (searchQuery || selectedCategory ? totalPagesFiltered : totalPages)}
+                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-border/50 text-text-secondary hover:text-foreground hover:border-cta/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      Next
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
               </>
             )}
           </div>
