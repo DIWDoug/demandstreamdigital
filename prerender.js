@@ -67,13 +67,13 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services/local-seo/nap-citations',
   
   // ============ GBP SEO (GOOGLE MAPS) HUB + SPOKES ============
-  '/white-label-inbound-marketing-services/google-maps',
-  '/white-label-inbound-marketing-services/google-maps/gbp-optimization',
-  '/white-label-inbound-marketing-services/google-maps/review-management',
-  '/white-label-inbound-marketing-services/google-maps/citation-building',
-  '/white-label-inbound-marketing-services/google-maps/photo-optimization',
-  '/white-label-inbound-marketing-services/google-maps/qa-management',
-  '/white-label-inbound-marketing-services/google-maps/post-scheduling',
+  '/white-label-gbp-seo',
+  '/white-label-gbp-optimization',
+  '/white-label-review-management',
+  '/white-label-citation-building',
+  '/white-label-photo-optimization',
+  '/white-label-qa-management',
+  '/white-label-post-scheduling',
   
   // ============ PAID MEDIA HUB + SPOKES ============
   '/white-label-inbound-marketing-services/paid-media',

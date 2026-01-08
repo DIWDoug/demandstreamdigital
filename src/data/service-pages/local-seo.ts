@@ -289,7 +289,7 @@ export const localSEOConfig: ServicePageConfig = {
         id: "google-maps",
         title: "GBP SEO",
         description: "Dominate the local 3-pack with optimized Google Business Profiles.",
-        href: "/white-label-inbound-marketing-services/google-maps"
+        href: "/white-label-gbp-seo"
       },
       {
         icon: Sparkles,

@@ -6,7 +6,7 @@
 // Hub slug to flat URL mapping
 export const HUB_URL_MAP: Record<string, string> = {
   'local-seo': '/white-label-local-seo',
-  'google-maps': '/white-label-google-maps-local-seo',
+  'google-maps': '/white-label-gbp-seo',
   'paid-media': '/white-label-paid-media',
   'email-marketing': '/white-label-email-marketing',
   'local-authority-building': '/white-label-local-authority-building',
@@ -17,7 +17,7 @@ export const HUB_URL_MAP: Record<string, string> = {
 // Flat URL prefix to hub slug mapping (reverse)
 export const URL_TO_HUB_MAP: Record<string, string> = {
   'white-label-local-seo': 'local-seo',
-  'white-label-google-maps-local-seo': 'google-maps',
+  'white-label-gbp-seo': 'google-maps',
   'white-label-paid-media': 'paid-media',
   'white-label-email-marketing': 'email-marketing',
   'white-label-local-authority-building': 'local-authority-building',

@@ -46,14 +46,14 @@ const routes = [
   { path: '/white-label-inbound-marketing-services/local-seo/schema-markup', priority: 0.7, changefreq: 'monthly' },
   { path: '/white-label-inbound-marketing-services/local-seo/nap-citations', priority: 0.7, changefreq: 'monthly' },
   
-  // Google Maps Hub
-  { path: '/white-label-inbound-marketing-services/google-maps', priority: 0.9, changefreq: 'weekly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/gbp-optimization', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/review-management', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/citation-building', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/photo-optimization', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/qa-management', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/google-maps/post-scheduling', priority: 0.7, changefreq: 'monthly' },
+  // GBP SEO Hub
+  { path: '/white-label-gbp-seo', priority: 0.9, changefreq: 'weekly' },
+  { path: '/white-label-gbp-optimization', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-review-management', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-citation-building', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-photo-optimization', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-qa-management', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-post-scheduling', priority: 0.7, changefreq: 'monthly' },
   
   // Paid Media Hub
   { path: '/white-label-inbound-marketing-services/paid-media', priority: 0.9, changefreq: 'weekly' },

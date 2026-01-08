@@ -238,7 +238,7 @@ export const getServicesPageSchema = () => {
     {
       name: "White-Label Google Business Profile SEO",
       description: "Google Business Profile optimization, review management, and local map pack visibility services.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/google-maps",
+      url: "https://dialedinweb.com/white-label-gbp-seo",
       serviceType: "GBP SEO Service"
     },
     {

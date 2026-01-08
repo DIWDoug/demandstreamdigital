@@ -23,7 +23,7 @@ const services: Service[] = [
     icon: Map,
     title: "GBP SEO",
     description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
-    href: "/white-label-inbound-marketing-services/google-maps",
+    href: "/white-label-gbp-seo",
     pixabayKeyword: "google maps location"
   },
   {
