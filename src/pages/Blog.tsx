@@ -1,3 +1,4 @@
+import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -6,7 +7,8 @@ import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar, ArrowRight, BookOpen, TrendingUp, Users } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Calendar, ArrowRight, BookOpen, TrendingUp, Users, Search, X } from "lucide-react";
 
 interface BlogItem {
   id: string;
@@ -18,6 +20,8 @@ interface BlogItem {
 }
 
 const Blog = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  
   const { data: blogs, isLoading, error } = useQuery({
     queryKey: ['blogs'],
     queryFn: async () => {
@@ -31,8 +35,17 @@ const Blog = () => {
     },
   });
 
-  const featuredPost = blogs?.[0];
-  const remainingPosts = blogs?.slice(1);
+  const filteredBlogs = useMemo(() => {
+    if (!blogs || !searchQuery.trim()) return blogs;
+    const query = searchQuery.toLowerCase();
+    return blogs.filter(blog => 
+      blog.title.toLowerCase().includes(query) || 
+      (blog.excerpt && blog.excerpt.toLowerCase().includes(query))
+    );
+  }, [blogs, searchQuery]);
+
+  const featuredPost = searchQuery ? null : blogs?.[0];
+  const remainingPosts = searchQuery ? filteredBlogs : blogs?.slice(1);
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -61,7 +74,7 @@ const Blog = () => {
               </p>
               
               {/* Quick Stats */}
-              <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex flex-wrap justify-center gap-8 mb-10">
                 <div className="flex items-center gap-2 text-text-secondary">
                   <BookOpen className="w-5 h-5 text-cta" />
                   <span className="text-sm">In-Depth Guides</span>
@@ -74,6 +87,26 @@ const Blog = () => {
                   <Users className="w-5 h-5 text-cta" />
                   <span className="text-sm">Agency-Focused</span>
                 </div>
+              </div>
+
+              {/* Search Bar */}
+              <div className="max-w-xl mx-auto relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
+                <Input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-12 pr-10 py-6 bg-surface-elevated border-border text-foreground placeholder:text-text-muted rounded-full text-base"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted hover:text-foreground transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -143,7 +176,9 @@ const Blog = () => {
                 {/* Remaining Posts Grid */}
                 {remainingPosts && remainingPosts.length > 0 && (
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-6">More Articles</h3>
+                    <h3 className="text-xl font-semibold text-foreground mb-6">
+                      {searchQuery ? `${remainingPosts.length} result${remainingPosts.length !== 1 ? 's' : ''} for "${searchQuery}"` : 'More Articles'}
+                    </h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {remainingPosts.map((blog) => (
                         <Link key={blog.id} to={`/blog/${blog.slug}`}>
@@ -188,6 +223,18 @@ const Blog = () => {
                     </div>
                   </div>
                 )}
+              </div>
+            ) : searchQuery && filteredBlogs?.length === 0 ? (
+              <div className="text-center py-16">
+                <Search className="w-16 h-16 text-border mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-2">No Results Found</h3>
+                <p className="text-text-secondary mb-4">No articles match "{searchQuery}"</p>
+                <button 
+                  onClick={() => setSearchQuery("")}
+                  className="text-cta hover:underline"
+                >
+                  Clear search
+                </button>
               </div>
             ) : (
               <div className="text-center py-16">
