@@ -7,7 +7,21 @@ import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
+import PixabayImage from "@/components/PixabayImage";
 
+// Generate a relevant Pixabay search keyword from post title/category
+const getImageKeyword = (title: string, category?: string | null): string => {
+  const lowerTitle = title.toLowerCase();
+  if (lowerTitle.includes('seo') || lowerTitle.includes('search')) return 'digital marketing SEO';
+  if (lowerTitle.includes('ppc') || lowerTitle.includes('paid') || lowerTitle.includes('ads')) return 'advertising marketing';
+  if (lowerTitle.includes('content') || lowerTitle.includes('blog')) return 'content marketing writing';
+  if (lowerTitle.includes('social') || lowerTitle.includes('media')) return 'social media marketing';
+  if (lowerTitle.includes('email')) return 'email marketing business';
+  if (lowerTitle.includes('local')) return 'local business storefront';
+  if (lowerTitle.includes('agency') || lowerTitle.includes('white label')) return 'business team collaboration';
+  if (category) return `${category} marketing`;
+  return 'digital marketing business';
+};
 interface BlogPost {
   id: string;
   title: string;
@@ -177,16 +191,20 @@ const OurBlog = () => {
                   <Link to={`/blog/${featuredPost.slug}`} className="group block mb-12">
                     <article className="grid lg:grid-cols-2 gap-8 bg-surface-dark border border-border/50 rounded-2xl overflow-hidden hover:border-cta/30 transition-all duration-300">
                       <div className="h-64 lg:h-auto bg-surface-elevated overflow-hidden">
-                        {featuredPost.featured_image ? (
+                      {featuredPost.featured_image ? (
                           <img
                             src={featuredPost.featured_image}
                             alt={featuredPost.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <BookOpen className="w-16 h-16 text-border" />
-                          </div>
+                          <PixabayImage
+                            keyword={getImageKeyword(featuredPost.title, featuredPost.category)}
+                            alt={featuredPost.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            placeholderClassName="w-full h-full"
+                            priority
+                          />
                         )}
                       </div>
                       <div className="p-8 lg:py-12 flex flex-col justify-center">
@@ -231,9 +249,12 @@ const OurBlog = () => {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           ) : (
-                            <div className="w-full h-full flex items-center justify-center">
-                              <BookOpen className="w-10 h-10 text-border" />
-                            </div>
+                            <PixabayImage
+                              keyword={getImageKeyword(post.title, post.category)}
+                              alt={post.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              placeholderClassName="w-full h-48"
+                            />
                           )}
                         </div>
                         <div className="p-6">
