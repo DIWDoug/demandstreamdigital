@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight, FileText, Settings, Target, PenTool, Link2, Code, MapPin, Star, Globe, MessageSquare, Map, Camera, HelpCircle, Mail, ListChecks, Workflow, Palette, FlaskConical, BarChart3, MousePointerClick, Share2, Layers, Layout, Phone, type LucideIcon } from "lucide-react";
+import { getSpokeUrl, getHubUrl } from "@/lib/urlMappings";
 
 interface SpokeService {
   title: string;
@@ -138,9 +139,9 @@ const SpokeEcosystemOrbit = ({
 
               {/* Checklist - all spokes */}
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-8">
-                {allSpokes.map((spoke) => {
+              {allSpokes.map((spoke) => {
                   const isCurrentSpoke = spoke.slug === currentSpoke.slug;
-                  const spokeUrl = `/white-label-inbound-marketing-services/${hubSlug}/${spoke.slug}`;
+                  const spokeUrl = getSpokeUrl(spoke.slug);
                   
                   // Current page: not a link
                   if (isCurrentSpoke) {
@@ -169,7 +170,7 @@ const SpokeEcosystemOrbit = ({
               </div>
 
               <Link 
-                to={`/white-label-inbound-marketing-services/${hubSlug}`}
+                to={getHubUrl(hubSlug)}
                 className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
               >
                 View Full {hubTitle} Service

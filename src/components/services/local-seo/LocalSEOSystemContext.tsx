@@ -18,57 +18,57 @@ const services: Service[] = [
     id: "local-seo",
     title: "Local SEO",
     description: "Organic visibility in local search results and Google Maps. The foundation that makes every other channel more effective.",
-    href: "/white-label-inbound-marketing-services/local-seo",
+    href: "/white-label-local-seo",
     isCenter: true
   },
   {
     icon: MapPin,
     id: "google-maps",
-    title: "Google Maps",
+    title: "GBP SEO",
     description: "Dominate the map pack with optimized profiles and reviews.",
-    href: "/white-label-inbound-marketing-services/google-maps"
+    href: "/white-label-gbp-seo"
   },
   {
     icon: Sparkles,
     id: "paid-media",
     title: "Paid Media",
     description: "Accelerate results with Google Ads and Meta campaigns.",
-    href: "/white-label-inbound-marketing-services/paid-media"
+    href: "/white-label-paid-media"
   },
   {
     icon: Star,
     id: "reputation",
     title: "Reputation",
     description: "Build trust with review generation and management.",
-    href: "/white-label-inbound-marketing-services/google-maps"
+    href: "/white-label-gbp-seo"
   },
   {
     icon: Mail,
     id: "email-marketing",
     title: "Email Marketing",
     description: "Turn one-time customers into repeat buyers.",
-    href: "/white-label-inbound-marketing-services/email-marketing"
+    href: "/white-label-email-marketing"
   },
   {
     icon: Globe,
     id: "authority",
     title: "Authority Building",
     description: "Links and citations that build trust.",
-    href: "/white-label-inbound-marketing-services/local-authority-building"
+    href: "/white-label-local-authority-building"
   },
   {
     icon: BarChart3,
     id: "reporting",
     title: "Reporting",
     description: "White-labeled dashboards your clients love.",
-    href: "/white-label-inbound-marketing-services/reporting"
+    href: "/white-label-reporting"
   },
   {
     icon: Share2,
     id: "retargeting",
     title: "Retargeting",
     description: "Stay top of mind with display and social retargeting.",
-    href: "/white-label-inbound-marketing-services/paid-media"
+    href: "/white-label-paid-media"
   }
 ];
 

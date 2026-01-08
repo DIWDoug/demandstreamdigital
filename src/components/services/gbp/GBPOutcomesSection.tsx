@@ -27,7 +27,7 @@ const GBPOutcomesSection = () => {
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               Calls, directions, and website clicks begin flowing as profiles enter the map pack, supported by{" "}
-              <Link to="/white-label-inbound-marketing-services/reporting" className="text-cta hover:underline">
+              <Link to="/white-label-reporting" className="text-cta hover:underline">
                 call and conversion tracking
               </Link>{" "}
               that proves ROI.
@@ -44,15 +44,15 @@ const GBPOutcomesSection = () => {
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               GBP services and website content are aligned through{" "}
-              <Link to="/white-label-inbound-marketing-services/local-seo" className="text-cta hover:underline">
+              <Link to="/white-label-local-seo" className="text-cta hover:underline">
                 Local SEO
               </Link>
               ,{" "}
-              <Link to="/white-label-inbound-marketing-services/local-seo/on-page-seo" className="text-cta hover:underline">
+              <Link to="/white-label-onpage-optimization" className="text-cta hover:underline">
                 on-page optimization
               </Link>
               , and{" "}
-              <Link to="/white-label-inbound-marketing-services/local-seo/local-keyword-strategy" className="text-cta hover:underline">
+              <Link to="/white-label-local-keyword-strategy" className="text-cta hover:underline">
                 keyword strategy
               </Link>{" "}
               Google trusts.
@@ -69,7 +69,7 @@ const GBPOutcomesSection = () => {
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
               Profiles optimized beyond baseline populate rich snippets automatically. Combined with{" "}
-              <Link to="/white-label-inbound-marketing-services/local-seo/technical-seo" className="text-cta hover:underline">
+              <Link to="/white-label-technical-seo" className="text-cta hover:underline">
                 schema and technical SEO
               </Link>{" "}
               for maximum SERP visibility.
@@ -85,11 +85,11 @@ const GBPOutcomesSection = () => {
               Hub-Spoke Content Strategy Execution
             </h3>
             <p className="text-sm leading-relaxed text-text-secondary">
-              <Link to="/white-label-inbound-marketing-services/local-seo/content-development" className="text-cta hover:underline">
+              <Link to="/white-label-content-development" className="text-cta hover:underline">
                 Service pages
               </Link>
               , FAQs, and{" "}
-              <Link to="/white-label-inbound-marketing-services/local-seo" className="text-cta hover:underline">
+              <Link to="/white-label-local-seo" className="text-cta hover:underline">
                 location content
               </Link>{" "}
               are internally linked to create the topical authority required for map pack visibility.
