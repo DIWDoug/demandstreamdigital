@@ -174,7 +174,7 @@ const ServicesGrid = () => {
               </p>
               
               <a 
-                href="/white-label-inbound-marketing-services"
+                href="/white-label-inbound-marketing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta group inline-flex items-center gap-2"

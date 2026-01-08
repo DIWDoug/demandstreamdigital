@@ -299,15 +299,15 @@ export const contentMarketingConfig: ServicePageConfig = {
     intro: "Content powers every other channel when it is done right.",
     body: "Content supports local rankings. Lead magnets grow email lists. Case studies close deals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-inbound-marketing-services/content-marketing", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
-      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
-      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: Award, id: "authority", title: "Authority Building", description: "Links and citations that compound.", href: "/white-label-inbound-marketing-services/local-authority-building" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" }
+      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-content-marketing", isCenter: true },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-local-seo" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-google-maps-local-seo" },
+      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
+      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
+      { icon: Award, id: "authority", title: "Authority Building", description: "Links and citations that compound.", href: "/white-label-local-authority-building" },
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing-services"
+    ctaHref: "/white-label-inbound-marketing"
   }
 };

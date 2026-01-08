@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { hubs } from "@/data/services";
+import { getHubUrl } from "@/lib/urlMappings";
 
 interface OtherServicesProps {
   currentHubSlug: string;
@@ -27,7 +28,7 @@ const OtherServices = ({ currentHubSlug }: OtherServicesProps) => {
             return (
               <Link
                 key={hub.slug}
-                to={`/white-label-inbound-marketing-services/${hub.slug}`}
+                to={getHubUrl(hub.slug)}
                 className="group p-6 rounded-xl bg-white border border-gray-200 hover:border-cta/30 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start gap-4">

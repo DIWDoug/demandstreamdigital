@@ -9,86 +9,86 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
-      hubSlug: "local-seo",
+      href: "/white-label-local-seo",
       items: [
-        { label: "On-Page Optimization", slug: "on-page-optimization" },
-        { label: "Technical SEO", slug: "technical-seo" },
-        { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
-        { label: "Content Development", slug: "content-development" },
-        { label: "Link Building", slug: "link-building" },
-        { label: "Schema Markup", slug: "schema-markup" }
+        { label: "On-Page Optimization", href: "/white-label-onpage-optimization" },
+        { label: "Technical SEO", href: "/white-label-technical-seo" },
+        { label: "Local Keyword Strategy", href: "/white-label-local-keyword-strategy" },
+        { label: "Content Development", href: "/white-label-content-development" },
+        { label: "Link Building", href: "/white-label-link-building" },
+        { label: "Schema Markup", href: "/white-label-schema-markup" }
       ]
     },
     {
       title: "GBP SEO",
-      hubSlug: "google-maps",
+      href: "/white-label-google-maps-local-seo",
       items: [
-        { label: "GBP Profile Optimization", slug: "gbp-optimization" },
-        { label: "Review Generation & Response", slug: "review-management" },
-        { label: "Citation Building & Cleanup", slug: "citation-building" },
-        { label: "Photo & Media Management", slug: "photo-optimization" },
-        { label: "Local Pack Strategy", slug: "qa-management" },
-        { label: "GBP Posting & Content", slug: "post-scheduling" }
+        { label: "GBP Profile Optimization", href: "/white-label-gbp-optimization" },
+        { label: "Review Generation & Response", href: "/white-label-review-management" },
+        { label: "Citation Building & Cleanup", href: "/white-label-citation-building" },
+        { label: "Photo & Media Management", href: "/white-label-photo-optimization" },
+        { label: "Local Pack Strategy", href: "/white-label-qa-management" },
+        { label: "GBP Posting & Content", href: "/white-label-post-scheduling" }
       ]
     },
     {
       title: "CONTENT MARKETING",
-      hubSlug: "content-marketing",
+      href: "/white-label-content-marketing",
       items: [
-        { label: "Geographical Content", slug: "geographical-content" },
-        { label: "Topical Content", slug: "topical-content" },
-        { label: "Power Posts", slug: "power-posts" },
-        { label: "E-books & Guides", slug: "ebooks-guides" },
-        { label: "Lead Magnets", slug: "lead-magnets" },
-        { label: "AIO Content", slug: "aio-content" }
+        { label: "Geographical Content", href: "/white-label-geographical-content" },
+        { label: "Topical Content", href: "/white-label-topical-content" },
+        { label: "Power Posts", href: "/white-label-power-posts" },
+        { label: "E-books & Guides", href: "/white-label-ebooks-guides" },
+        { label: "Lead Magnets", href: "/white-label-lead-magnets" },
+        { label: "AIO Content", href: "/white-label-aio-content" }
       ]
     },
     {
       title: "PAID MEDIA",
-      hubSlug: "paid-media",
+      href: "/white-label-paid-media",
       items: [
-        { label: "Google Ads", slug: "google-ads" },
-        { label: "Meta Ads", slug: "meta-ads" },
-        { label: "Local Service Ads", slug: "local-service-ads" },
-        { label: "Retargeting Campaigns", slug: "retargeting-campaigns" },
-        { label: "Landing Page Design", slug: "landing-page-design" },
-        { label: "Conversion Tracking", slug: "conversion-tracking" }
+        { label: "Google Ads", href: "/white-label-google-ads" },
+        { label: "Meta Ads", href: "/white-label-meta-ads" },
+        { label: "Local Service Ads", href: "/white-label-local-service-ads" },
+        { label: "Retargeting Campaigns", href: "/white-label-retargeting-campaigns" },
+        { label: "Landing Page Design", href: "/white-label-landing-page-design" },
+        { label: "Conversion Tracking", href: "/white-label-conversion-tracking" }
       ]
     },
     {
       title: "EMAIL MARKETING",
-      hubSlug: "email-marketing",
+      href: "/white-label-email-marketing",
       items: [
-        { label: "Campaign Strategy", slug: "campaign-strategy" },
-        { label: "List Management", slug: "list-management" },
-        { label: "Automation Flows", slug: "automation-flows" },
-        { label: "Newsletter Design", slug: "newsletter-design" },
-        { label: "A/B Testing", slug: "ab-testing" },
-        { label: "Performance Analytics", slug: "performance-analytics" }
+        { label: "Campaign Strategy", href: "/white-label-campaign-strategy" },
+        { label: "List Management", href: "/white-label-list-management" },
+        { label: "Automation Flows", href: "/white-label-automation-flows" },
+        { label: "Newsletter Design", href: "/white-label-newsletter-design" },
+        { label: "A/B Testing", href: "/white-label-ab-testing" },
+        { label: "Performance Analytics", href: "/white-label-email-performance-analytics" }
       ]
     },
     {
       title: "AUTHORITY",
-      hubSlug: "local-authority-building",
+      href: "/white-label-local-authority-building",
       items: [
-        { label: "Local Links", slug: "local-links" },
-        { label: "Unstructured Citations", slug: "unstructured-citations" },
-        { label: "Brand Mentions", slug: "brand-mentions" },
-        { label: "Press Releases", href: "/white-label-inbound-marketing-services/content-marketing/press-releases" },
-        { label: "Sponsorships", slug: "sponsorships" },
-        { label: "Reputation Signals", slug: "reputation-signals" }
+        { label: "Local Links", href: "/white-label-local-links" },
+        { label: "Unstructured Citations", href: "/white-label-unstructured-citations" },
+        { label: "Brand Mentions", href: "/white-label-brand-mentions" },
+        { label: "Press Releases", href: "/white-label-press-releases" },
+        { label: "Sponsorships", href: "/white-label-sponsorships" },
+        { label: "Reputation Signals", href: "/white-label-reputation-signals" }
       ]
     },
     {
       title: "REPORTING",
-      hubSlug: "reporting",
+      href: "/white-label-reporting",
       items: [
-        { label: "White-Label Dashboards", slug: "white-label-dashboards" },
-        { label: "Monthly Performance Reports", slug: "monthly-performance-reports" },
-        { label: "Rank Tracking & Visibility", slug: "rank-tracking-visibility" },
-        { label: "Call Tracking & Attribution", slug: "call-tracking-lead-attribution" },
-        { label: "ROI & Revenue Analysis", slug: "roi-revenue-analysis" },
-        { label: "Client Presentation Decks", slug: "client-presentation-decks" }
+        { label: "White-Label Dashboards", href: "/white-label-dashboards" },
+        { label: "Monthly Performance Reports", href: "/white-label-monthly-performance-reports" },
+        { label: "Rank Tracking & Visibility", href: "/white-label-rank-tracking-visibility" },
+        { label: "Call Tracking & Attribution", href: "/white-label-call-tracking-lead-attribution" },
+        { label: "ROI & Revenue Analysis", href: "/white-label-roi-revenue-analysis" },
+        { label: "Client Presentation Decks", href: "/white-label-client-presentation-decks" }
       ]
     }
   ];
@@ -104,7 +104,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
             {serviceCategories.map((category, index) => (
               <div key={index}>
                 <Link 
-                  to={`/white-label-inbound-marketing-services/${category.hubSlug}`}
+                  to={category.href}
                   className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-cta transition-colors"
                 >
                   {category.title}
@@ -113,7 +113,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   {category.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
                       <Link 
-                        to={'href' in item && item.href ? item.href : `/white-label-inbound-marketing-services/${category.hubSlug}/${item.slug}`}
+                        to={item.href}
                         className="text-xs text-text-secondary hover:text-cta transition-colors"
                       >
                         {item.label}

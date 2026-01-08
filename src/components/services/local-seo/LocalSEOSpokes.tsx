@@ -91,7 +91,7 @@ const LocalSEOSpokes = () => {
               return (
                 <Link
                   key={spoke.slug}
-                  to={`/white-label-inbound-marketing-services/local-seo/${spoke.slug}`}
+                  to={`/white-label-${spoke.slug}`}
                   className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-cta/30 hover:bg-surface-elevated/80 transition-all duration-200 group"
                 >
                   <div className="flex items-start gap-4">
@@ -120,7 +120,7 @@ const LocalSEOSpokes = () => {
               return (
                 <Link
                   key={spoke.slug}
-                  to={`/white-label-inbound-marketing-services/local-seo/${spoke.slug}`}
+                  to={`/white-label-${spoke.slug}`}
                   className="bg-surface-elevated border border-border/50 rounded-xl p-6 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] hover:border-cta/30 hover:bg-surface-elevated/80 transition-all duration-200 group"
                 >
                   <div className="flex items-start gap-4">

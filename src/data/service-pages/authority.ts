@@ -282,15 +282,15 @@ export const authorityConfig: ServicePageConfig = {
     intro: "Links and citations accelerate every other channel when they're done right.",
     body: "Off-page authority supports local rankings. Quality backlinks build domain strength. Citations reinforce geographic relevance. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/white-label-inbound-marketing-services/local-authority-building", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-inbound-marketing-services/local-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
-      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-inbound-marketing-services/content-marketing" },
-      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
-      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-inbound-marketing-services/reporting" }
+      { icon: Award, id: "authority", title: "Authority Building", description: "Links, citations, and off-page signals that compound.", href: "/white-label-local-authority-building", isCenter: true },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-local-seo" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-google-maps-local-seo" },
+      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-content-marketing" },
+      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
+      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing-services"
+    ctaHref: "/white-label-inbound-marketing"
   }
 };

@@ -63,89 +63,89 @@ const Header = () => {
   const serviceCategories = [
     {
       title: "LOCAL SEO",
-      href: "/white-label-inbound-marketing-services/local-seo",
+      href: "/white-label-local-seo",
       items: [
-        { label: "On-Page Optimization", slug: "on-page-optimization" },
-        { label: "Technical SEO", slug: "technical-seo" },
-        { label: "Local Keyword Strategy", slug: "local-keyword-strategy" },
-        { label: "Content Development", slug: "content-development" },
-        { label: "Link Building", slug: "link-building" },
-        { label: "Schema Markup", slug: "schema-markup" },
-        { label: "NAP Citations", slug: "nap-citations" }
+        { label: "On-Page Optimization", href: "/white-label-onpage-optimization" },
+        { label: "Technical SEO", href: "/white-label-technical-seo" },
+        { label: "Local Keyword Strategy", href: "/white-label-local-keyword-strategy" },
+        { label: "Content Development", href: "/white-label-content-development" },
+        { label: "Link Building", href: "/white-label-link-building" },
+        { label: "Schema Markup", href: "/white-label-schema-markup" },
+        { label: "NAP Citations", href: "/white-label-nap-citations" }
       ]
     },
     {
       title: "GBP SEO",
-      href: "/white-label-inbound-marketing-services/google-maps",
+      href: "/white-label-google-maps-local-seo",
       items: [
-        { label: "GBP Profile Optimization", slug: "gbp-optimization" },
-        { label: "Review Generation & Response", slug: "review-management" },
-        { label: "Citation Building & Cleanup", slug: "citation-building" },
-        { label: "Photo & Media Management", slug: "photo-optimization" },
-        { label: "Local Pack Strategy", slug: "qa-management" },
-        { label: "GBP Posting & Content", slug: "post-scheduling" }
+        { label: "GBP Profile Optimization", href: "/white-label-gbp-optimization" },
+        { label: "Review Generation & Response", href: "/white-label-review-management" },
+        { label: "Citation Building & Cleanup", href: "/white-label-citation-building" },
+        { label: "Photo & Media Management", href: "/white-label-photo-optimization" },
+        { label: "Local Pack Strategy", href: "/white-label-qa-management" },
+        { label: "GBP Posting & Content", href: "/white-label-post-scheduling" }
       ]
     },
     {
       title: "CONTENT MARKETING",
-      href: "/white-label-inbound-marketing-services/content-marketing",
+      href: "/white-label-content-marketing",
       items: [
-        { label: "Geographical Content", slug: "geographical-content" },
-        { label: "Topical Content", slug: "topical-content" },
-        { label: "Power Posts", slug: "power-posts" },
-        { label: "E-books & Guides", slug: "ebooks-guides" },
-        { label: "Lead Magnets", slug: "lead-magnets" },
-        { label: "Press Releases", slug: "press-releases" },
-        { label: "AIO Content", slug: "aio-content" },
-        { label: "Case Studies", slug: "case-studies" }
+        { label: "Geographical Content", href: "/white-label-geographical-content" },
+        { label: "Topical Content", href: "/white-label-topical-content" },
+        { label: "Power Posts", href: "/white-label-power-posts" },
+        { label: "E-books & Guides", href: "/white-label-ebooks-guides" },
+        { label: "Lead Magnets", href: "/white-label-lead-magnets" },
+        { label: "Press Releases", href: "/white-label-press-releases" },
+        { label: "AIO Content", href: "/white-label-aio-content" },
+        { label: "Case Studies", href: "/white-label-case-studies" }
       ]
     },
     {
       title: "PAID MEDIA",
-      href: "/white-label-inbound-marketing-services/paid-media",
+      href: "/white-label-paid-media",
       items: [
-        { label: "Google Ads", slug: "google-ads" },
-        { label: "Meta Ads", slug: "meta-ads" },
-        { label: "Local Service Ads", slug: "local-service-ads" },
-        { label: "Retargeting Campaigns", slug: "retargeting-campaigns" },
-        { label: "Landing Page Design", slug: "landing-page-design" },
-        { label: "Conversion Tracking", slug: "conversion-tracking" }
+        { label: "Google Ads", href: "/white-label-google-ads" },
+        { label: "Meta Ads", href: "/white-label-meta-ads" },
+        { label: "Local Service Ads", href: "/white-label-local-service-ads" },
+        { label: "Retargeting Campaigns", href: "/white-label-retargeting-campaigns" },
+        { label: "Landing Page Design", href: "/white-label-landing-page-design" },
+        { label: "Conversion Tracking", href: "/white-label-conversion-tracking" }
       ]
     },
     {
       title: "EMAIL MARKETING",
-      href: "/white-label-inbound-marketing-services/email-marketing",
+      href: "/white-label-email-marketing",
       items: [
-        { label: "Campaign Strategy", slug: "campaign-strategy" },
-        { label: "List Management", slug: "list-management" },
-        { label: "Automation Flows", slug: "automation-flows" },
-        { label: "Newsletter Design", slug: "newsletter-design" },
-        { label: "A/B Testing", slug: "ab-testing" },
-        { label: "Performance Analytics", slug: "performance-analytics" }
+        { label: "Campaign Strategy", href: "/white-label-campaign-strategy" },
+        { label: "List Management", href: "/white-label-list-management" },
+        { label: "Automation Flows", href: "/white-label-automation-flows" },
+        { label: "Newsletter Design", href: "/white-label-newsletter-design" },
+        { label: "A/B Testing", href: "/white-label-ab-testing" },
+        { label: "Performance Analytics", href: "/white-label-email-performance-analytics" }
       ]
     },
     {
       title: "AUTHORITY",
-      href: "/white-label-inbound-marketing-services/local-authority-building",
+      href: "/white-label-local-authority-building",
       items: [
-        { label: "Local Links", slug: "local-links" },
-        { label: "Unstructured Citations", slug: "unstructured-citations" },
-        { label: "Brand Mentions", slug: "brand-mentions" },
-        { label: "Anchor Text", slug: "anchor-text" },
-        { label: "Sponsorships", slug: "sponsorships" },
-        { label: "Press Releases", href: "/white-label-inbound-marketing-services/content-marketing/press-releases" }
+        { label: "Local Links", href: "/white-label-local-links" },
+        { label: "Unstructured Citations", href: "/white-label-unstructured-citations" },
+        { label: "Brand Mentions", href: "/white-label-brand-mentions" },
+        { label: "Anchor Text", href: "/white-label-anchor-text" },
+        { label: "Sponsorships", href: "/white-label-sponsorships" },
+        { label: "Press Releases", href: "/white-label-press-releases" }
       ]
     },
     {
       title: "REPORTING",
-      href: "/white-label-inbound-marketing-services/reporting",
+      href: "/white-label-reporting",
       items: [
-        { label: "White-Label Dashboards", slug: "white-label-dashboards" },
-        { label: "Monthly Performance Reports", slug: "monthly-performance-reports" },
-        { label: "Rank Tracking & Visibility", slug: "rank-tracking-visibility" },
-        { label: "Call Tracking & Attribution", slug: "call-tracking-lead-attribution" },
-        { label: "ROI & Revenue Analysis", slug: "roi-revenue-analysis" },
-        { label: "Client Presentation Decks", slug: "client-presentation-decks" }
+        { label: "White-Label Dashboards", href: "/white-label-dashboards" },
+        { label: "Monthly Performance Reports", href: "/white-label-monthly-performance-reports" },
+        { label: "Rank Tracking & Visibility", href: "/white-label-rank-tracking-visibility" },
+        { label: "Call Tracking & Attribution", href: "/white-label-call-tracking-lead-attribution" },
+        { label: "ROI & Revenue Analysis", href: "/white-label-roi-revenue-analysis" },
+        { label: "Client Presentation Decks", href: "/white-label-client-presentation-decks" }
       ]
     }
   ];
@@ -405,7 +405,7 @@ const Header = () => {
                       {category.items.map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <Link 
-                            to={'href' in item && item.href ? item.href : `${category.href}/${item.slug}`}
+                            to={item.href}
                             className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
                             onClick={() => setIsMegaMenuOpen(false)}
                           >
@@ -495,23 +495,20 @@ const Header = () => {
                         {category.title}
                       </a>
                       <ul className="space-y-2">
-                        {category.items.map((item, itemIndex) => {
-                          const itemHref = 'href' in item && item.href ? item.href : `${category.href}/${item.slug}`;
-                          return (
+                        {category.items.map((item, itemIndex) => (
                             <li key={itemIndex}>
                               <a 
-                                href={itemHref}
+                                href={item.href}
                                 className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
                                 onClick={(e) => {
                                   e.preventDefault();
-                                  navigateMobile(itemHref);
+                                  navigateMobile(item.href);
                                 }}
                               >
                                 {item.label}
                               </a>
                             </li>
-                          );
-                        })}
+                          ))}
                       </ul>
                     </div>
                   ))}
