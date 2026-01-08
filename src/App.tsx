@@ -1,4 +1,4 @@
-// Cache bust: 2026-01-08T14:50
+// Cache bust: 2026-01-08T15:10
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -105,70 +105,204 @@ const App = () => (
         <Route path="/terms" element={<Terms />} />
         <Route path="/region-blocked" element={<RegionBlocked />} />
 
-        {/* Service Hub Pages */}
-        <Route path="/white-label-inbound-marketing-services/local-seo" element={<LocalSEO />} />
-        <Route path="/white-label-inbound-marketing-services/google-maps" element={<GoogleMaps />} />
-        <Route path="/white-label-inbound-marketing-services/paid-media" element={<PaidMedia />} />
-        <Route path="/white-label-inbound-marketing-services/email-marketing" element={<EmailMarketing />} />
-        <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Authority />} />
-        <Route path="/white-label-inbound-marketing-services/reporting" element={<Reporting />} />
-        <Route path="/white-label-inbound-marketing-services/content-marketing" element={<ContentMarketing />} />
+        {/* ============ NEW FLAT URL STRUCTURE ============ */}
+        
+        {/* Service Hub Pages - Flat URLs */}
+        <Route path="/white-label-local-seo" element={<LocalSEO />} />
+        <Route path="/white-label-google-maps-local-seo" element={<GoogleMaps />} />
+        <Route path="/white-label-paid-media" element={<PaidMedia />} />
+        <Route path="/white-label-email-marketing" element={<EmailMarketing />} />
+        <Route path="/white-label-local-authority-building" element={<Authority />} />
+        <Route path="/white-label-reporting" element={<Reporting />} />
+        <Route path="/white-label-content-marketing" element={<ContentMarketing />} />
 
-        {/* Service Spoke Pages (sub-services) */}
-        <Route path="/white-label-inbound-marketing-services/:hubSlug/:spokeSlug" element={<SpokePage />} />
+        {/* Local SEO Spoke Pages - Flat URLs */}
+        <Route path="/white-label-local-seo-on-page-optimization" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-technical-seo" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-local-keyword-strategy" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-content-development" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-link-building" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-schema-markup" element={<SpokePage />} />
+        <Route path="/white-label-local-seo-nap-citations" element={<SpokePage />} />
+
+        {/* Google Maps Spoke Pages - Flat URLs */}
+        <Route path="/white-label-google-maps-local-seo-gbp-optimization" element={<SpokePage />} />
+        <Route path="/white-label-google-maps-local-seo-review-management" element={<SpokePage />} />
+        <Route path="/white-label-google-maps-local-seo-citation-building" element={<SpokePage />} />
+        <Route path="/white-label-google-maps-local-seo-photo-optimization" element={<SpokePage />} />
+        <Route path="/white-label-google-maps-local-seo-qa-management" element={<SpokePage />} />
+        <Route path="/white-label-google-maps-local-seo-post-scheduling" element={<SpokePage />} />
+
+        {/* Paid Media Spoke Pages - Flat URLs */}
+        <Route path="/white-label-paid-media-google-ads" element={<SpokePage />} />
+        <Route path="/white-label-paid-media-meta-ads" element={<SpokePage />} />
+        <Route path="/white-label-paid-media-local-service-ads" element={<SpokePage />} />
+        <Route path="/white-label-paid-media-retargeting-campaigns" element={<SpokePage />} />
+        <Route path="/white-label-paid-media-landing-page-design" element={<SpokePage />} />
+        <Route path="/white-label-paid-media-conversion-tracking" element={<SpokePage />} />
+
+        {/* Email Marketing Spoke Pages - Flat URLs */}
+        <Route path="/white-label-email-marketing-campaign-strategy" element={<SpokePage />} />
+        <Route path="/white-label-email-marketing-list-management" element={<SpokePage />} />
+        <Route path="/white-label-email-marketing-automation-flows" element={<SpokePage />} />
+        <Route path="/white-label-email-marketing-newsletter-design" element={<SpokePage />} />
+        <Route path="/white-label-email-marketing-ab-testing" element={<SpokePage />} />
+        <Route path="/white-label-email-marketing-performance-analytics" element={<SpokePage />} />
+
+        {/* Authority Building Spoke Pages - Flat URLs */}
+        <Route path="/white-label-local-authority-building-local-links" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-unstructured-citations" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-brand-mentions" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-anchor-text" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-sponsorships" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-reputation-signals" element={<SpokePage />} />
+        <Route path="/white-label-local-authority-building-guest-posts-niche-edits" element={<SpokePage />} />
+
+        {/* Reporting Spoke Pages - Flat URLs */}
+        <Route path="/white-label-reporting-white-label-dashboards" element={<SpokePage />} />
+        <Route path="/white-label-reporting-monthly-performance-reports" element={<SpokePage />} />
+        <Route path="/white-label-reporting-rank-tracking-visibility" element={<SpokePage />} />
+        <Route path="/white-label-reporting-call-tracking-lead-attribution" element={<SpokePage />} />
+        <Route path="/white-label-reporting-roi-revenue-analysis" element={<SpokePage />} />
+        <Route path="/white-label-reporting-client-presentation-decks" element={<SpokePage />} />
+
+        {/* Content Marketing Spoke Pages - Flat URLs */}
+        <Route path="/white-label-content-marketing-geographical-content" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-topical-content" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-power-posts" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-ebooks-guides" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-lead-magnets" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-press-releases" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-case-studies" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-aio-content" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-faq-content" element={<SpokePage />} />
+        <Route path="/white-label-content-marketing-hub-spoke-buildouts" element={<SpokePage />} />
+
+        {/* ============ 301 REDIRECTS FROM OLD NESTED STRUCTURE ============ */}
+
+        {/* Hub Redirects: Old nested → New flat */}
+        <Route path="/white-label-inbound-marketing-services/local-seo" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps" element={<Navigate to="/white-label-google-maps-local-seo" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media" element={<Navigate to="/white-label-paid-media" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing" element={<Navigate to="/white-label-email-marketing" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Navigate to="/white-label-local-authority-building" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting" element={<Navigate to="/white-label-reporting" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing" element={<Navigate to="/white-label-content-marketing" replace />} />
+
+        {/* Local SEO Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/local-seo/on-page-optimization" element={<Navigate to="/white-label-local-seo-on-page-optimization" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/technical-seo" element={<Navigate to="/white-label-local-seo-technical-seo" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/local-keyword-strategy" element={<Navigate to="/white-label-local-seo-local-keyword-strategy" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/content-development" element={<Navigate to="/white-label-local-seo-content-development" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/link-building" element={<Navigate to="/white-label-local-seo-link-building" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/schema-markup" element={<Navigate to="/white-label-local-seo-schema-markup" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-seo/nap-citations" element={<Navigate to="/white-label-local-seo-nap-citations" replace />} />
+
+        {/* Google Maps Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/google-maps/gbp-optimization" element={<Navigate to="/white-label-google-maps-local-seo-gbp-optimization" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps/review-management" element={<Navigate to="/white-label-google-maps-local-seo-review-management" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps/citation-building" element={<Navigate to="/white-label-google-maps-local-seo-citation-building" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps/photo-optimization" element={<Navigate to="/white-label-google-maps-local-seo-photo-optimization" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps/qa-management" element={<Navigate to="/white-label-google-maps-local-seo-qa-management" replace />} />
+        <Route path="/white-label-inbound-marketing-services/google-maps/post-scheduling" element={<Navigate to="/white-label-google-maps-local-seo-post-scheduling" replace />} />
+
+        {/* Paid Media Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/paid-media/google-ads" element={<Navigate to="/white-label-paid-media-google-ads" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media/meta-ads" element={<Navigate to="/white-label-paid-media-meta-ads" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media/local-service-ads" element={<Navigate to="/white-label-paid-media-local-service-ads" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media/retargeting-campaigns" element={<Navigate to="/white-label-paid-media-retargeting-campaigns" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media/landing-page-design" element={<Navigate to="/white-label-paid-media-landing-page-design" replace />} />
+        <Route path="/white-label-inbound-marketing-services/paid-media/conversion-tracking" element={<Navigate to="/white-label-paid-media-conversion-tracking" replace />} />
+
+        {/* Email Marketing Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/email-marketing/campaign-strategy" element={<Navigate to="/white-label-email-marketing-campaign-strategy" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing/list-management" element={<Navigate to="/white-label-email-marketing-list-management" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing/automation-flows" element={<Navigate to="/white-label-email-marketing-automation-flows" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing/newsletter-design" element={<Navigate to="/white-label-email-marketing-newsletter-design" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing/ab-testing" element={<Navigate to="/white-label-email-marketing-ab-testing" replace />} />
+        <Route path="/white-label-inbound-marketing-services/email-marketing/performance-analytics" element={<Navigate to="/white-label-email-marketing-performance-analytics" replace />} />
+
+        {/* Authority Building Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/local-links" element={<Navigate to="/white-label-local-authority-building-local-links" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/unstructured-citations" element={<Navigate to="/white-label-local-authority-building-unstructured-citations" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/brand-mentions" element={<Navigate to="/white-label-local-authority-building-brand-mentions" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/anchor-text" element={<Navigate to="/white-label-local-authority-building-anchor-text" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/sponsorships" element={<Navigate to="/white-label-local-authority-building-sponsorships" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/reputation-signals" element={<Navigate to="/white-label-local-authority-building-reputation-signals" replace />} />
+        <Route path="/white-label-inbound-marketing-services/local-authority-building/guest-posts-niche-edits" element={<Navigate to="/white-label-local-authority-building-guest-posts-niche-edits" replace />} />
+
+        {/* Reporting Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/reporting/white-label-dashboards" element={<Navigate to="/white-label-reporting-white-label-dashboards" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting/monthly-performance-reports" element={<Navigate to="/white-label-reporting-monthly-performance-reports" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting/rank-tracking-visibility" element={<Navigate to="/white-label-reporting-rank-tracking-visibility" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting/call-tracking-lead-attribution" element={<Navigate to="/white-label-reporting-call-tracking-lead-attribution" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting/roi-revenue-analysis" element={<Navigate to="/white-label-reporting-roi-revenue-analysis" replace />} />
+        <Route path="/white-label-inbound-marketing-services/reporting/client-presentation-decks" element={<Navigate to="/white-label-reporting-client-presentation-decks" replace />} />
+
+        {/* Content Marketing Spoke Redirects */}
+        <Route path="/white-label-inbound-marketing-services/content-marketing/geographical-content" element={<Navigate to="/white-label-content-marketing-geographical-content" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/topical-content" element={<Navigate to="/white-label-content-marketing-topical-content" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/power-posts" element={<Navigate to="/white-label-content-marketing-power-posts" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/ebooks-guides" element={<Navigate to="/white-label-content-marketing-ebooks-guides" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/lead-magnets" element={<Navigate to="/white-label-content-marketing-lead-magnets" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/press-releases" element={<Navigate to="/white-label-content-marketing-press-releases" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/case-studies" element={<Navigate to="/white-label-content-marketing-case-studies" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/aio-content" element={<Navigate to="/white-label-content-marketing-aio-content" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/faq-content" element={<Navigate to="/white-label-content-marketing-faq-content" replace />} />
+        <Route path="/white-label-inbound-marketing-services/content-marketing/hub-spoke-buildouts" element={<Navigate to="/white-label-content-marketing-hub-spoke-buildouts" replace />} />
 
         {/* Legacy /services redirects for SEO preservation */}
         <Route path="/services" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/services/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
-        <Route path="/services/local-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/services/google-maps" element={<Navigate to="/white-label-inbound-marketing-services/google-maps" replace />} />
-        <Route path="/services/paid-media" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
-        <Route path="/services/email-marketing" element={<Navigate to="/white-label-inbound-marketing-services/email-marketing" replace />} />
-        <Route path="/services/local-authority-building" element={<Navigate to="/white-label-inbound-marketing-services/local-authority-building" replace />} />
-        <Route path="/services/reporting" element={<Navigate to="/white-label-inbound-marketing-services/reporting" replace />} />
+        <Route path="/services/local-seo" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/services/google-maps" element={<Navigate to="/white-label-google-maps-local-seo" replace />} />
+        <Route path="/services/paid-media" element={<Navigate to="/white-label-paid-media" replace />} />
+        <Route path="/services/email-marketing" element={<Navigate to="/white-label-email-marketing" replace />} />
+        <Route path="/services/local-authority-building" element={<Navigate to="/white-label-local-authority-building" replace />} />
+        <Route path="/services/reporting" element={<Navigate to="/white-label-reporting" replace />} />
         <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
 
         {/* Legacy site URL redirects (301) - Service Pages */}
-        <Route path="/search-engine-optimization" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/search-engine-optimization/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/search-engine-optimization" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/search-engine-optimization/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/dallas-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/dallas-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
-        <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/moving-and-storage-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/moving-and-storage-seo/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/contact/" element={<Navigate to="/contact" replace />} />
-        <Route path="/small-business-social-advertising" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
-        <Route path="/small-business-social-advertising/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media/meta-ads" replace />} />
-        <Route path="/white-label-seo-campaigns" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/white-label-seo-campaigns/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/shopify-seo-services" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/shopify-seo-services/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/small-business-social-advertising" element={<Navigate to="/white-label-paid-media-meta-ads" replace />} />
+        <Route path="/small-business-social-advertising/" element={<Navigate to="/white-label-paid-media-meta-ads" replace />} />
+        <Route path="/white-label-seo-campaigns" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/white-label-seo-campaigns/" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/shopify-seo-services" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/shopify-seo-services/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/about-us" element={<Navigate to="/about" replace />} />
         <Route path="/about-us/" element={<Navigate to="/about" replace />} />
-        <Route path="/advanced-local-seo-services" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/advanced-local-seo-services/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/orthodontist-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/orthodontist-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/white-label-inbound-marketing-services/google-maps/review-management" replace />} />
-        <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/white-label-inbound-marketing-services/google-maps/review-management" replace />} />
-        <Route path="/dentist-seo-company" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/dentist-seo-company/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/local-seo-company" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/local-seo-company/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/advanced-local-seo-services" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/advanced-local-seo-services/" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/orthodontist-seo" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/orthodontist-seo/" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/white-label-google-maps-local-seo-review-management" replace />} />
+        <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/white-label-google-maps-local-seo-review-management" replace />} />
+        <Route path="/dentist-seo-company" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/dentist-seo-company/" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/local-seo-company" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/local-seo-company/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/dentist-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/dentist-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
-        <Route path="/e-commerce-seo" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/e-commerce-seo/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/e-commerce-seo" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/e-commerce-seo/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/orthodontist-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/orthodontist-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/affordable-web-design-small-business" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/affordable-web-design-small-business/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/nashville-digital-marketing" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/nashville-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
-        <Route path="/search-engine-advertising" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
-        <Route path="/search-engine-advertising/" element={<Navigate to="/white-label-inbound-marketing-services/paid-media" replace />} />
+        <Route path="/search-engine-advertising" element={<Navigate to="/white-label-paid-media" replace />} />
+        <Route path="/search-engine-advertising/" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/blog/" element={<Navigate to="/blog" replace />} />
-        <Route path="/local-search-marketing" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
-        <Route path="/local-search-marketing/" element={<Navigate to="/white-label-inbound-marketing-services/local-seo" replace />} />
+        <Route path="/local-search-marketing" element={<Navigate to="/white-label-local-seo" replace />} />
+        <Route path="/local-search-marketing/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/white-label-local-ppc" element={<Navigate to="/blog/white-label-local-ppc" replace />} />
         <Route path="/white-label-local-ppc/" element={<Navigate to="/blog/white-label-local-ppc" replace />} />
         <Route path="/white-label-social-media" element={<Navigate to="/blog/white-label-social-media" replace />} />
@@ -310,11 +444,24 @@ const App = () => (
   </QueryClientProvider>
 );
 
-// Helper component for dynamic spoke redirects
+// Helper component for dynamic spoke redirects from /services/{hub}/{spoke}
 const LegacySpokeRedirect = () => {
   const params = window.location.pathname.match(/\/services\/([^/]+)\/([^/]+)/);
   if (params) {
-    return <Navigate to={`/white-label-inbound-marketing-services/${params[1]}/${params[2]}`} replace />;
+    const hubSlug = params[1];
+    const spokeSlug = params[2];
+    // Map to new flat URL structure
+    const hubMapping: Record<string, string> = {
+      'local-seo': 'white-label-local-seo',
+      'google-maps': 'white-label-google-maps-local-seo',
+      'paid-media': 'white-label-paid-media',
+      'email-marketing': 'white-label-email-marketing',
+      'local-authority-building': 'white-label-local-authority-building',
+      'reporting': 'white-label-reporting',
+      'content-marketing': 'white-label-content-marketing'
+    };
+    const newHubPath = hubMapping[hubSlug] || 'white-label-local-seo';
+    return <Navigate to={`/${newHubPath}-${spokeSlug}`} replace />;
   }
   return <Navigate to="/white-label-inbound-marketing-services" replace />;
 };

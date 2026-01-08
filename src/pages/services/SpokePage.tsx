@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
@@ -14,7 +14,7 @@ import SpokeAlternatingBlocks from "@/components/services/SpokeAlternatingBlocks
 import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
 import SpokeProcessTimeline from "@/components/services/SpokeProcessTimeline";
 import { spokeContentBlocks, spokeFAQs } from "@/data/spoke-content-blocks";
-import { getSpokeKeywords } from "@/data/pageKeywords";
+import { parseServiceUrl, getHubUrl, getSpokeUrl } from "@/lib/urlMappings";
 import {
   Accordion,
   AccordionContent,
@@ -28,8 +28,69 @@ const SectionDivider = () => (
   </div>
 );
 
+// Keywords mapping for new flat URL structure
+const spokeKeywordsMap: Record<string, string> = {
+  // Local SEO spokes
+  'on-page-optimization': 'white label on-page SEO, local on-page optimization, meta tag optimization, content optimization services',
+  'technical-seo': 'white label technical SEO, site speed optimization, crawl optimization, structured data implementation',
+  'local-keyword-strategy': 'local keyword research, local search intent, geo-targeted keywords, local keyword mapping',
+  'content-development': 'local SEO content, location page content, service area content, local blog writing',
+  'link-building': 'white label link building, local link acquisition, authority building, local backlinks',
+  'schema-markup': 'local business schema, structured data markup, rich snippets, schema implementation',
+  'nap-citations': 'NAP citation building, citation cleanup, local directory listings, citation management',
+  // Google Maps spokes
+  'gbp-optimization': 'GBP optimization services, Google Business Profile setup, GMB management, local listing optimization',
+  'review-management': 'white label review management, Google review generation, review response services, reputation management',
+  'citation-building': 'citation building services, local citation management, directory submissions, NAP consistency',
+  'photo-optimization': 'GBP photo optimization, business photo management, Google Maps images, visual optimization',
+  'qa-management': 'Google Q&A management, GBP questions answers, local business FAQs, customer Q&A optimization',
+  'post-scheduling': 'GBP post scheduling, Google Business posts, local social posting, GMB content calendar',
+  // Paid Media spokes
+  'google-ads': 'white label Google Ads, Google Ads management, search advertising, PPC campaign management',
+  'meta-ads': 'white label Meta Ads, Facebook Ads management, Instagram advertising, social media ads',
+  'local-service-ads': 'Local Service Ads management, LSA setup, Google Guaranteed, home service ads',
+  'retargeting-campaigns': 'white label retargeting, display remarketing, audience retargeting, conversion optimization',
+  'landing-page-design': 'PPC landing pages, conversion landing page design, campaign landing pages, high-converting pages',
+  'conversion-tracking': 'conversion tracking setup, PPC analytics, Google Ads tracking, conversion attribution',
+  // Email Marketing spokes
+  'campaign-strategy': 'email campaign strategy, email marketing planning, campaign calendar, email content strategy',
+  'list-management': 'email list management, list hygiene, subscriber management, email segmentation',
+  'automation-flows': 'email automation flows, drip campaigns, automated sequences, marketing automation',
+  'newsletter-design': 'newsletter design services, email template design, HTML email design, branded newsletters',
+  'ab-testing': 'email A/B testing, subject line testing, email optimization, conversion testing',
+  'performance-analytics': 'email analytics, campaign reporting, email performance metrics, delivery analytics',
+  // Content Marketing spokes
+  'geographical-content': 'geographical content, city pages, service area content, location-specific SEO',
+  'topical-content': 'topical content, industry blog posts, thought leadership content, expertise articles',
+  'power-posts': 'power posts, pillar content, comprehensive guides, long-form SEO content',
+  'ebooks-guides': 'ebooks, lead magnets, downloadable guides, gated content, content marketing assets',
+  'lead-magnets': 'lead magnets, checklists, templates, conversion content, email list building',
+  'press-releases': 'press releases, PR distribution, news announcements, media coverage',
+  'case-studies': 'case studies, client success stories, testimonial content, proof assets',
+  'aio-content': 'AI optimized content, AIO content, LLM visibility, answer engine optimization',
+  'faq-content': 'FAQ content, question answer pages, featured snippets, voice search optimization',
+  'hub-spoke-buildouts': 'hub and spoke content, topic clusters, content architecture, topical authority',
+  // Authority Building spokes
+  'local-links': 'local link building, community backlinks, local news links, regional authority',
+  'unstructured-citations': 'unstructured citations, press mentions, podcast features, media citations',
+  'brand-mentions': 'brand mention building, online mentions, brand awareness, entity building',
+  'anchor-text': 'anchor text optimization, link anchor strategy, branded anchors, natural anchor distribution',
+  'sponsorships': 'local sponsorship links, community sponsorships, event sponsorship SEO, nonprofit links',
+  'reputation-signals': 'reputation signals, trust signals, E-E-A-T building, authority signals',
+  'guest-posts-niche-edits': 'guest posting services, niche edits, blogger outreach, editorial links',
+  // Reporting spokes
+  'white-label-dashboards': 'white label dashboards, branded analytics, client dashboards, custom reporting',
+  'monthly-performance-reports': 'monthly SEO reports, performance reporting, client reports, marketing reports',
+  'rank-tracking-visibility': 'rank tracking services, keyword monitoring, SERP tracking, visibility reporting',
+  'call-tracking-lead-attribution': 'call tracking services, lead attribution, phone tracking, conversion attribution',
+  'roi-revenue-analysis': 'ROI analysis, revenue reporting, marketing ROI tracking, performance analytics',
+  'client-presentation-decks': 'client presentation decks, marketing presentations, QBR slides, client reporting decks',
+};
+
 const SpokePage = () => {
-  const { hubSlug, spokeSlug } = useParams();
+  const location = useLocation();
+  const parsed = parseServiceUrl(location.pathname);
+  
   const [formData, setFormData] = useState({
     fullName: "",
     website: "",
@@ -47,7 +108,10 @@ const SpokePage = () => {
     window.open(`/contact?${params.toString()}`, '_blank', 'noopener,noreferrer');
   };
   
-  // Find the hub and spoke
+  // Find the hub and spoke from the parsed URL
+  const hubSlug = parsed?.hubSlug;
+  const spokeSlug = parsed?.spokeSlug;
+  
   const hub = hubs.find((h) => h.slug === hubSlug);
   const spoke = hub?.spokes.find((s) => s.slug === spokeSlug);
 
@@ -66,15 +130,15 @@ const SpokePage = () => {
 
   const breadcrumbItems = [
     { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
-    { label: hub.title, href: `/white-label-inbound-marketing-services/${hub.slug}` },
+    { label: hub.title, href: getHubUrl(hub.slug) },
     { label: spoke.title }
   ];
 
   // Find sibling spokes for ecosystem
   const siblingSpokes = hub.spokes.filter((s) => s.slug !== spokeSlug);
 
-  const canonicalUrl = `https://dialedinweb.com/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`;
-  const spokeKeywords = getSpokeKeywords(hubSlug || '', spokeSlug || '');
+  const canonicalUrl = `https://dialedinweb.com${getSpokeUrl(hubSlug || '', spokeSlug || '')}`;
+  const spokeKeywords = spokeKeywordsMap[spokeSlug || ''];
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -336,7 +400,7 @@ const SpokePage = () => {
                 {/* Link to Hub FAQ */}
                 <div className="text-center mt-8">
                   <Link
-                    to={`/white-label-inbound-marketing-services/${hub.slug}#faq`}
+                    to={`${getHubUrl(hub.slug)}#faq`}
                     className="inline-flex items-center gap-2 text-sm text-cta font-medium hover:text-cta/80 transition-colors"
                   >
                     View all {hub.title} FAQs
