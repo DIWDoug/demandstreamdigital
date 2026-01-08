@@ -163,6 +163,7 @@ const App = () => (
 
         {/* Authority Building Spoke Pages - Fully Flat URLs */}
         <Route path="/white-label-structured-citations" element={<SpokePage />} />
+        <Route path="/white-label-local-links" element={<Navigate to="/white-label-structured-citations" replace />} />
         <Route path="/white-label-unstructured-citations" element={<SpokePage />} />
         <Route path="/white-label-brand-mentions" element={<SpokePage />} />
         <Route path="/white-label-anchor-text" element={<SpokePage />} />
