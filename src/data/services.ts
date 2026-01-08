@@ -781,7 +781,7 @@ export const hubs: Hub[] = [
     spokes: [
       {
         title: "White-Label Dashboards",
-        slug: "white-label-dashboards",
+        slug: "branded-dashboards",
         description: "Custom-branded live dashboards that give clients real-time visibility into campaign performance and key metrics.",
         fullDescription: "Live dashboards give clients immediate access to the metrics that matter, reducing questions and building transparency. Our dashboards are fully branded with your agency identity and designed for clarity.",
         benefits: ["Real-time metric visibility", "Reduced client questions", "Professional presentation", "Your branding throughout", "Client self-service access"],

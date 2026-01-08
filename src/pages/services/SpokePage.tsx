@@ -79,7 +79,7 @@ const spokeKeywordsMap: Record<string, string> = {
   'reputation-signals': 'reputation signals, trust signals, E-E-A-T building, authority signals',
   'guest-posts-niche-edits': 'guest posting services, niche edits, blogger outreach, editorial links',
   // Reporting spokes
-  'white-label-dashboards': 'white label dashboards, branded analytics, client dashboards, custom reporting',
+  'branded-dashboards': 'white label dashboards, branded analytics, client dashboards, custom reporting',
   'monthly-performance-reports': 'monthly SEO reports, performance reporting, client reports, marketing reports',
   'rank-tracking-visibility': 'rank tracking services, keyword monitoring, SERP tracking, visibility reporting',
   'call-tracking-lead-attribution': 'call tracking services, lead attribution, phone tracking, conversion attribution',

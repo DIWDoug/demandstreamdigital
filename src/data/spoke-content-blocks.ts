@@ -313,7 +313,7 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What platforms matter most for reviews?", answer: "Google is primary for most local businesses. Industry-specific platforms matter for certain verticals (Yelp for restaurants, Avvo for lawyers, etc.)." }
   ],
   // Reporting FAQs
-  "white-label-dashboards": [
+  "branded-dashboards": [
     { question: "Can clients access dashboards directly?", answer: "Yes. We set up secure client logins with appropriate access levels. They see your branding throughout." },
     { question: "What data sources can you connect?", answer: "Most major platforms with APIs: Google Analytics, Search Console, Ads, Meta, call tracking, CRMs, and more." },
     { question: "How often does dashboard data update?", answer: "Most data refreshes daily. Some sources update hourly. Real-time for certain metrics." }
@@ -2131,7 +2131,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
   // REPORTING SPOKES
   // =============================================
 
-  "white-label-dashboards": [
+  "branded-dashboards": [
     {
       category: "Dashboard Design",
       headline: "Branded Dashboards Clients Love",

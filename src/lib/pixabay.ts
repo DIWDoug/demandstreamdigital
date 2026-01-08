@@ -115,7 +115,7 @@ export const spokeKeywordMap: Record<string, string> = {
   'guest-posts-niche-edits': 'guest blogging writing author laptop',
   
   // Reporting spokes
-  'white-label-dashboards': 'business dashboard analytics screen report',
+  'branded-dashboards': 'business dashboard analytics screen report',
   'monthly-performance-reports': 'report document analytics charts professional',
   'rank-tracking-visibility': 'ranking growth chart analytics upward',
   'call-tracking-lead-attribution': 'phone call business communication mobile',

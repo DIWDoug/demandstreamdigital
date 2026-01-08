@@ -209,7 +209,7 @@ const TopicalExpertise = () => {
       spokes: [
         {
           title: "White-Label Dashboards",
-          slug: "white-label-dashboards",
+          slug: "branded-dashboards",
           description: "Custom-branded dashboards that aggregate performance data across all marketing channels."
         },
         {

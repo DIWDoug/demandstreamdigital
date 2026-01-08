@@ -73,7 +73,7 @@ const spokeIcons: Record<string, LucideIcon> = {
   "sponsorships": Star,
   "reputation-signals": Star,
   // Reporting spokes
-  "white-label-dashboards": BarChart3,
+  "branded-dashboards": BarChart3,
   "monthly-performance-reports": FileText,
   "rank-tracking-visibility": Target,
   "call-tracking-lead-attribution": Phone,
