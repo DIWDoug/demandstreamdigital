@@ -14,8 +14,8 @@ declare global {
   }
 }
 
-// Standard reCAPTCHA v3 site key (not Enterprise)
-const SITE_KEY = "6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g";
+// Use environment variable with fallback for development
+const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g";
 
 export function useRecaptcha() {
   const [isReady, setIsReady] = useState(false);
