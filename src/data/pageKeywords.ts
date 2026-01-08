@@ -99,9 +99,9 @@ export function getPageKeywords(path: string): string | undefined {
 }
 
 /**
- * Get keywords for spoke pages dynamically
+ * Get keywords for spoke pages dynamically using flat URL structure
  */
-export function getSpokeKeywords(hubSlug: string, spokeSlug: string): string | undefined {
-  const path = `/white-label-inbound-marketing-services/${hubSlug}/${spokeSlug}`;
+export function getSpokeKeywords(spokeSlug: string): string | undefined {
+  const path = `/white-label-${spokeSlug}`;
   return pageKeywords[path];
 }
