@@ -311,7 +311,6 @@ const BlogPostPage = () => {
       <SocialShareBar 
         url={`https://dialedinweb.com/blog/${blog.slug}`} 
         title={blog.title}
-        className="hidden lg:block"
       />
       
       <main className="pt-16">
