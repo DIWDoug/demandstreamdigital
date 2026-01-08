@@ -15,7 +15,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
-import { getRelatedFAQs } from "@/lib/blogInternalLinks";
+import { getRelatedFAQs, getExternalLink } from "@/lib/blogInternalLinks";
 import { useToast } from "@/hooks/use-toast";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
 import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schema";
@@ -546,17 +546,43 @@ const BlogPostPage = () => {
                         );
                       },
                       a: ({ href, children }) => {
+                        // Check if this is an old dialedinweb.com link (not blog)
                         if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
                           return <span className="font-semibold text-foreground">{children}</span>;
                         }
+                        
+                        // Check if this is an internal link (starts with /)
+                        const isInternalLink = href?.startsWith('/') && !href?.startsWith('//');
+                        
+                        // Check if this is our external authority link
+                        const externalLink = slug ? getExternalLink(slug) : null;
+                        const isExternalAuthority = externalLink && href === externalLink.url;
+                        
+                        if (isInternalLink) {
+                          return (
+                            <Link 
+                              to={href || '#'}
+                              className="text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors font-medium"
+                            >
+                              {children}
+                            </Link>
+                          );
+                        }
+                        
+                        // External link with source badge for authority links
                         return (
                           <a 
                             href={href} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-cta hover:underline font-medium"
+                            className="text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors font-medium"
                           >
                             {children}
+                            {isExternalAuthority && (
+                              <span className="inline-flex items-center ml-1.5 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-accent-blue/10 text-accent-blue rounded border border-accent-blue/20 align-middle">
+                                {externalLink.source}
+                              </span>
+                            )}
                           </a>
                         );
                       },
