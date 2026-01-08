@@ -15,6 +15,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
+import { getRelatedFAQs } from "@/lib/blogInternalLinks";
 import { useToast } from "@/hooks/use-toast";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
 import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schema";
@@ -215,8 +216,9 @@ const BlogPostPage = () => {
   }
 
   const author = getPostAuthor(blog.slug);
-  const cleanedContent = cleanBlogContent(blog.content);
+  const cleanedContent = cleanBlogContent(blog.content, blog.slug);
   const readingTime = calculateReadingTime(cleanedContent);
+  const relatedFAQs = getRelatedFAQs(blog.slug);
 
   const resolvedFeaturedImage = getBlogFeaturedImage(blog.featured_image);
 
@@ -635,6 +637,35 @@ const BlogPostPage = () => {
                     </Link>
                   </div>
                 </div>
+
+                {/* Related FAQs Section */}
+                {relatedFAQs.length > 0 && (
+                  <div className="mt-12 p-6 md:p-8 bg-surface-dark rounded-xl border border-border/50">
+                    <h3 className="text-xl font-bold mb-4 text-foreground">Related Questions</h3>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      Looking for more answers? Check out these frequently asked questions from our service pages:
+                    </p>
+                    <div className="space-y-4">
+                      {relatedFAQs.map((faqGroup, index) => (
+                        <div key={index}>
+                          <Link 
+                            to={faqGroup.hubUrl}
+                            className="text-sm font-semibold text-cta hover:text-cta/80 transition-colors"
+                          >
+                            {faqGroup.hubPage} FAQs →
+                          </Link>
+                          <ul className="mt-2 space-y-1.5">
+                            {faqGroup.questions.map((question, qIndex) => (
+                              <li key={qIndex} className="text-sm text-muted-foreground pl-4 border-l-2 border-border">
+                                {question}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* CTA Box */}
                 <div className="mt-12 p-8 md:p-10 bg-cta/10 rounded-xl border border-cta/20 text-center">
