@@ -152,6 +152,7 @@ const App = () => (
         {/* Content Marketing Spoke Pages - Fully Flat URLs */}
         <Route path="/white-label-geographical-content" element={<SpokePage />} />
         <Route path="/white-label-topical-authority" element={<SpokePage />} />
+        <Route path="/white-label-topical-content" element={<Navigate to="/white-label-topical-authority" replace />} />
         <Route path="/white-label-power-posts" element={<SpokePage />} />
         <Route path="/white-label-ebooks-guides" element={<SpokePage />} />
         <Route path="/white-label-lead-magnets" element={<SpokePage />} />
