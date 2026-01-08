@@ -74,7 +74,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors/:slug" element={<Author />} />
-          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog" element={(() => { console.log("[App] /blog route matched!"); return <BlogIndex />; })()} />
           <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
