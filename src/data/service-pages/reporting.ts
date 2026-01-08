@@ -6,7 +6,7 @@ export const reportingConfig: ServicePageConfig = {
   title: "Reporting & Analytics",
   metaTitle: "White Label Reporting for Agencies | Wholesale SEO & PPC Client Reports | Scalable Delivery by Dialed-in Web",
   metaDescription: "Dialed-in Web delivers clean, branded reports your clients will trust. Save time and scale your agency. Request a walkthrough today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/reporting",
+  canonicalUrl: "https://dialedinweb.com/white-label-reporting",
 
   hero: {
     headline: "White Label Reporting for",

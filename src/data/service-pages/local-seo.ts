@@ -6,7 +6,7 @@ export const localSEOConfig: ServicePageConfig = {
   title: "Local SEO",
   metaTitle: "White Label Local SEO for Agencies | Wholesale On-Page, Links & Citation Services by Dialed-in Web",
   metaDescription: "From citations to content, Dialed-in Web helps agencies deliver local SEO at scale. Resell location SEO now. Talk to our team today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/local-seo",
+  canonicalUrl: "https://dialedinweb.com/white-label-local-seo",
 
   hero: {
     headline: "White Label Local SEO for",

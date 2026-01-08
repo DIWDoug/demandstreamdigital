@@ -6,7 +6,7 @@ export const contentMarketingConfig: ServicePageConfig = {
   title: "Content Marketing",
   metaTitle: "White Label Content Marketing Services for Agencies | Blog Posts, Lead Magnets, SEO Copy | Dialed-in Web",
   metaDescription: "Dialed-in Web delivers SEO-driven content: blog posts, ebooks, case studies, and more—white labeled for digital agencies.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/content-marketing",
+  canonicalUrl: "https://dialedinweb.com/white-label-content-marketing",
 
   hero: {
     headline: "White Label Content Marketing for",

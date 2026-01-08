@@ -6,7 +6,7 @@ export const paidMediaConfig: ServicePageConfig = {
   title: "Paid Media",
   metaTitle: "White Label Paid Media Management for Agencies | Google Ads, Meta Ads, LSAs & CRO | Dialed-in Web",
   metaDescription: "Dialed-in Web runs data-driven PPC campaigns across Google, Meta & more. Fully managed and white labeled for your agency.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/paid-media",
+  canonicalUrl: "https://dialedinweb.com/white-label-paid-media",
 
   hero: {
     headline: "White Label Paid Media for",

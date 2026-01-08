@@ -6,7 +6,7 @@ export const authorityConfig: ServicePageConfig = {
   title: "Authority Building",
   metaTitle: "White Label Authority Building for Agencies | Wholesale SEO Trust Signals & Backlinks by Dialed-in Web",
   metaDescription: "Dialed-in Web builds online authority through links and signals that boost rankings. Strengthen client SEO. Partner with us today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/local-authority-building",
+  canonicalUrl: "https://dialedinweb.com/white-label-authority-building",
 
   hero: {
     headline: "White Label Local Authority Building for",
