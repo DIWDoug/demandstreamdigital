@@ -1,7 +1,10 @@
+import { injectInternalLinks } from './blogInternalLinks';
+
 /**
  * Clean blog content by removing scraped junk from the old WordPress site
+ * and injecting relevant internal links
  */
-export function cleanBlogContent(content: string): string {
+export function cleanBlogContent(content: string, slug?: string): string {
   // Patterns to remove (in order)
   const patternsToRemove = [
     // Skip links at the beginning
@@ -79,6 +82,11 @@ export function cleanBlogContent(content: string): string {
       // Only remove if it is in the last 30% of content
       cleaned = cleaned.substring(0, idx).trim();
     }
+  }
+
+  // Inject internal links if slug is provided
+  if (slug) {
+    cleaned = injectInternalLinks(cleaned, slug);
   }
   
   return cleaned;
