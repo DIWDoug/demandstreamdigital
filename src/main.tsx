@@ -13,8 +13,11 @@ const app = (
   </HelmetProvider>
 );
 
-// Use hydration for SSR in production
-if (import.meta.env.PROD) {
+// Only hydrate if there's pre-rendered content, otherwise use createRoot
+const hasPrerenderedContent = root.innerHTML.trim().length > 0 && 
+  !root.innerHTML.includes('<!--app-html-->');
+
+if (import.meta.env.PROD && hasPrerenderedContent) {
   hydrateRoot(root, app);
 } else {
   createRoot(root).render(app);
