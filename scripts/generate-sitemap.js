@@ -37,14 +37,14 @@ const routes = [
   { path: '/white-label-inbound-marketing-services', priority: 0.9, changefreq: 'weekly' },
   
   // Local SEO Hub
-  { path: '/white-label-inbound-marketing-services/local-seo', priority: 0.9, changefreq: 'weekly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/on-page-optimization', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/technical-seo', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/local-keyword-strategy', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/content-development', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/link-building', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/schema-markup', priority: 0.7, changefreq: 'monthly' },
-  { path: '/white-label-inbound-marketing-services/local-seo/nap-citations', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-local-seo', priority: 0.9, changefreq: 'weekly' },
+  { path: '/white-label-onpage-optimization', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-technical-seo', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-local-keyword-strategy', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-content-development', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-link-building', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-schema-markup', priority: 0.7, changefreq: 'monthly' },
+  { path: '/white-label-nap-citations', priority: 0.7, changefreq: 'monthly' },
   
   // GBP SEO Hub
   { path: '/white-label-gbp-seo', priority: 0.9, changefreq: 'weekly' },

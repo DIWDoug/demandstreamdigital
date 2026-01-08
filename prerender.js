@@ -57,14 +57,14 @@ const routesToPrerender = [
   '/white-label-inbound-marketing-services',
   
   // ============ LOCAL SEO HUB + SPOKES ============
-  '/white-label-inbound-marketing-services/local-seo',
-  '/white-label-inbound-marketing-services/local-seo/on-page-optimization',
-  '/white-label-inbound-marketing-services/local-seo/technical-seo',
-  '/white-label-inbound-marketing-services/local-seo/local-keyword-strategy',
-  '/white-label-inbound-marketing-services/local-seo/content-development',
-  '/white-label-inbound-marketing-services/local-seo/link-building',
-  '/white-label-inbound-marketing-services/local-seo/schema-markup',
-  '/white-label-inbound-marketing-services/local-seo/nap-citations',
+  '/white-label-local-seo',
+  '/white-label-onpage-optimization',
+  '/white-label-technical-seo',
+  '/white-label-local-keyword-strategy',
+  '/white-label-content-development',
+  '/white-label-link-building',
+  '/white-label-schema-markup',
+  '/white-label-nap-citations',
   
   // ============ GBP SEO (GOOGLE MAPS) HUB + SPOKES ============
   '/white-label-gbp-seo',

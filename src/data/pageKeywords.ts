@@ -25,14 +25,14 @@ export const pageKeywords: Record<string, string> = {
   '/white-label-inbound-marketing-services': 'white label inbound marketing, wholesale SEO services, agency fulfillment, white label PPC, content marketing fulfillment',
   
   // Local SEO Hub + Spokes
-  '/white-label-inbound-marketing-services/local-seo': 'white label local SEO, local SEO fulfillment, local search optimization, agency SEO partner, citation building services',
-  '/white-label-inbound-marketing-services/local-seo/on-page-optimization': 'white label on-page SEO, local on-page optimization, meta tag optimization, content optimization services',
-  '/white-label-inbound-marketing-services/local-seo/technical-seo': 'white label technical SEO, site speed optimization, crawl optimization, structured data implementation',
-  '/white-label-inbound-marketing-services/local-seo/local-keyword-strategy': 'local keyword research, local search intent, geo-targeted keywords, local keyword mapping',
-  '/white-label-inbound-marketing-services/local-seo/content-development': 'local SEO content, location page content, service area content, local blog writing',
-  '/white-label-inbound-marketing-services/local-seo/link-building': 'white label link building, local link acquisition, authority building, local backlinks',
-  '/white-label-inbound-marketing-services/local-seo/schema-markup': 'local business schema, structured data markup, rich snippets, schema implementation',
-  '/white-label-inbound-marketing-services/local-seo/nap-citations': 'NAP citation building, citation cleanup, local directory listings, citation management',
+  '/white-label-local-seo': 'white label local SEO, local SEO fulfillment, local search optimization, agency SEO partner, citation building services',
+  '/white-label-onpage-optimization': 'white label on-page SEO, local on-page optimization, meta tag optimization, content optimization services',
+  '/white-label-technical-seo': 'white label technical SEO, site speed optimization, crawl optimization, structured data implementation',
+  '/white-label-local-keyword-strategy': 'local keyword research, local search intent, geo-targeted keywords, local keyword mapping',
+  '/white-label-content-development': 'local SEO content, location page content, service area content, local blog writing',
+  '/white-label-link-building': 'white label link building, local link acquisition, authority building, local backlinks',
+  '/white-label-schema-markup': 'local business schema, structured data markup, rich snippets, schema implementation',
+  '/white-label-nap-citations': 'NAP citation building, citation cleanup, local directory listings, citation management',
   
   // GBP SEO Hub + Spokes
   '/white-label-gbp-seo': 'white label GBP optimization, Google Business Profile management, local pack ranking, Google Maps SEO',
