@@ -10,9 +10,16 @@ export interface InternalLink {
   context: string; // When to use this link
 }
 
+export interface ExternalAuthorityLink {
+  text: string;
+  url: string;
+  source: string; // e.g., "Moz", "SEMrush", "HubSpot"
+}
+
 export interface BlogLinkMapping {
   slug: string;
   relevantLinks: InternalLink[];
+  externalLink?: ExternalAuthorityLink; // One high-authority external link per post
   relatedFAQs: {
     hubPage: string;
     hubUrl: string;
@@ -83,6 +90,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'schema markup', url: '/white-label-schema-markup', context: 'schema' },
       { text: 'white-label reporting', url: '/white-label-reporting', context: 'reporting dashboards' },
     ],
+    externalLink: {
+      text: 'local SEO ranking factors',
+      url: 'https://moz.com/local-search-ranking-factors',
+      source: 'Moz'
+    },
     relatedFAQs: [
       {
         hubPage: 'Local SEO',
@@ -107,6 +119,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'landing page design', url: '/white-label-landing-page-design', context: 'landing pages' },
       { text: 'call tracking', url: '/white-label-call-tracking-lead-attribution', context: 'call tracking' },
     ],
+    externalLink: {
+      text: 'Quality Score',
+      url: 'https://support.google.com/google-ads/answer/6167118',
+      source: 'Google Ads Help'
+    },
     relatedFAQs: [
       {
         hubPage: 'Paid Media',
@@ -130,6 +147,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'content development', url: '/white-label-content-development', context: 'content' },
       { text: 'GBP optimization', url: '/white-label-gbp-optimization', context: 'google business profile' },
     ],
+    externalLink: {
+      text: 'on-page SEO',
+      url: 'https://ahrefs.com/blog/on-page-seo/',
+      source: 'Ahrefs'
+    },
     relatedFAQs: [
       {
         hubPage: 'Local SEO',
@@ -150,6 +172,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'white-label reporting', url: '/white-label-reporting', context: 'reporting' },
       { text: 'branded dashboards', url: '/white-label-branded-dashboards', context: 'dashboards' },
     ],
+    externalLink: {
+      text: 'social media marketing',
+      url: 'https://blog.hubspot.com/marketing/social-media-marketing',
+      source: 'HubSpot'
+    },
     relatedFAQs: []
   },
   'white-label-seo-for-agencies-checklist': {
@@ -163,6 +190,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'monthly performance reports', url: '/white-label-monthly-performance-reports', context: 'reports' },
       { text: 'authority building', url: '/white-label-local-authority-building', context: 'authority backlinks' },
     ],
+    externalLink: {
+      text: 'SEO audit',
+      url: 'https://www.semrush.com/blog/seo-audit/',
+      source: 'SEMrush'
+    },
     relatedFAQs: [
       {
         hubPage: 'Local SEO',
@@ -186,6 +218,11 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'GBP SEO', url: '/white-label-gbp-seo', context: 'google business profile' },
       { text: 'authority building', url: '/white-label-local-authority-building', context: 'authority' },
     ],
+    externalLink: {
+      text: 'agency growth',
+      url: 'https://www.searchenginejournal.com/marketing-agency-growth-strategies/475231/',
+      source: 'Search Engine Journal'
+    },
     relatedFAQs: [
       {
         hubPage: 'Local SEO',
@@ -208,6 +245,14 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
 };
 
 /**
+ * Get external authority link for a blog article
+ */
+export function getExternalLink(slug: string): ExternalAuthorityLink | null {
+  const mapping = blogLinkMappings[slug];
+  return mapping?.externalLink || null;
+}
+
+/**
  * Inject internal links into blog content
  * Replaces first occurrence of contextual phrases with links
  */
@@ -218,6 +263,20 @@ export function injectInternalLinks(content: string, slug: string): string {
   let updatedContent = content;
   const usedLinks = new Set<string>();
 
+  // First, inject the external authority link if available
+  if (mapping.externalLink) {
+    const extLink = mapping.externalLink;
+    const extPattern = new RegExp(`(?<!\\[)\\b(${escapeRegex(extLink.text)})\\b(?!\\])(?![^\\[]*\\])`, 'i');
+    const extMatch = updatedContent.match(extPattern);
+    if (extMatch) {
+      updatedContent = updatedContent.replace(
+        extPattern,
+        `[${extMatch[1]}](${extLink.url})`
+      );
+    }
+  }
+
+  // Then inject internal links
   for (const link of mapping.relevantLinks) {
     // Skip if we've already used this link
     if (usedLinks.has(link.url)) continue;
