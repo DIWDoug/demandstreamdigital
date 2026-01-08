@@ -1,6 +1,7 @@
 /**
  * Internal Linking Strategy for Blog Articles
  * Maps blog content topics to relevant hub and spoke pages
+ * AND maps FAQ questions to relevant blog posts (bidirectional linking)
  */
 
 export interface InternalLink {
@@ -17,6 +18,55 @@ export interface BlogLinkMapping {
     hubUrl: string;
     questions: string[];
   }[];
+}
+
+/**
+ * Bidirectional FAQ → Blog mapping
+ * Maps FAQ question patterns to relevant blog posts
+ */
+export interface FAQBlogLink {
+  questionPattern: string; // Substring to match in FAQ question
+  blogUrl: string;
+  blogTitle: string;
+}
+
+export const faqToBlogMappings: FAQBlogLink[] = [
+  // Local SEO FAQs
+  { questionPattern: 'how long does it take', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'local seo results', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'guarantee', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'ai overviews', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'rankings drop', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'measure local seo', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'content creation process', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'build links', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'long-term contracts', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'industries do you work', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'service-area businesses', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'take over from another', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'multiple locations', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  
+  // Paid Media FAQs  
+  { questionPattern: 'quickly will we see results', blogUrl: '/blog/white-label-local-ppc', blogTitle: 'White Label Local PPC Guide' },
+  { questionPattern: 'minimum ad spend', blogUrl: '/blog/white-label-local-ppc', blogTitle: 'White Label Local PPC Guide' },
+  { questionPattern: 'google ads and meta ads', blogUrl: '/blog/white-label-local-ppc', blogTitle: 'White Label Local PPC Guide' },
+  { questionPattern: 'white-label communication', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'white-labeled reports', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  
+  // Generic patterns
+  { questionPattern: 'white label', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'client communication', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'report on progress', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+];
+
+/**
+ * Get a blog link for an FAQ question if one exists
+ */
+export function getBlogLinkForFAQ(question: string): FAQBlogLink | null {
+  const lowerQuestion = question.toLowerCase();
+  return faqToBlogMappings.find(mapping => 
+    lowerQuestion.includes(mapping.questionPattern.toLowerCase())
+  ) || null;
 }
 
 // Define internal linking mappings for each blog article

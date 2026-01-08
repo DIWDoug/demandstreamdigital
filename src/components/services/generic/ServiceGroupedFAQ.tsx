@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -5,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { FAQGroup } from "@/types/servicePage";
+import { getBlogLinkForFAQ } from "@/lib/blogInternalLinks";
 
 interface FAQConfig {
   headline: string;
@@ -14,6 +16,24 @@ interface FAQConfig {
 interface ServiceGroupedFAQProps {
   config: FAQConfig;
 }
+
+const FAQAnswerWithBlogLink = ({ question, answer }: { question: string; answer: string }) => {
+  const blogLink = getBlogLinkForFAQ(question);
+  
+  return (
+    <div className="text-text-secondary text-sm leading-relaxed pb-4">
+      {answer}
+      {blogLink && (
+        <Link 
+          to={blogLink.blogUrl}
+          className="block mt-3 text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors"
+        >
+          Learn more: {blogLink.blogTitle} →
+        </Link>
+      )}
+    </div>
+  );
+};
 
 const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
   // FAQ schema is handled at page level via getServiceHubSchema to prevent duplicates
@@ -56,8 +76,8 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
                         <AccordionTrigger className="text-left text-foreground hover:text-cta py-4 text-sm font-medium">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-text-secondary text-sm leading-relaxed pb-4">
-                          {faq.answer}
+                        <AccordionContent>
+                          <FAQAnswerWithBlogLink question={faq.question} answer={faq.answer} />
                         </AccordionContent>
                       </AccordionItem>
                     ))}
@@ -83,8 +103,8 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
                         <AccordionTrigger className="text-left text-foreground hover:text-cta py-4 text-sm font-medium">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-text-secondary text-sm leading-relaxed pb-4">
-                          {faq.answer}
+                        <AccordionContent>
+                          <FAQAnswerWithBlogLink question={faq.question} answer={faq.answer} />
                         </AccordionContent>
                       </AccordionItem>
                     ))}
