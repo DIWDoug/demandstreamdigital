@@ -170,6 +170,7 @@ const App = () => (
 
         {/* Reporting Spoke Pages - Fully Flat URLs */}
         <Route path="/white-label-branded-dashboards" element={<SpokePage />} />
+        <Route path="/white-label-dashboards" element={<Navigate to="/white-label-branded-dashboards" replace />} />
         <Route path="/white-label-monthly-performance-reports" element={<SpokePage />} />
         <Route path="/white-label-rank-tracking-visibility" element={<SpokePage />} />
         <Route path="/white-label-call-tracking-lead-attribution" element={<SpokePage />} />
