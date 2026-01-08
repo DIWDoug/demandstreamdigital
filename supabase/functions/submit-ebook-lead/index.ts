@@ -45,52 +45,41 @@ interface EbookLeadData {
   recaptchaToken?: string;
 }
 
-// reCAPTCHA Enterprise configuration
-const RECAPTCHA_API_KEY = Deno.env.get("RECAPTCHA_API_KEY");
-const RECAPTCHA_PROJECT_ID = Deno.env.get("RECAPTCHA_PROJECT_ID") || "recaptcha-migrated-6e32a5ecc85";
-const RECAPTCHA_SITE_KEY = "6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g";
+// reCAPTCHA v3 configuration
+const RECAPTCHA_SECRET_KEY = Deno.env.get("RECAPTCHA_SECRET_KEY");
 const RECAPTCHA_SCORE_THRESHOLD = 0.5;
 
-// Verify reCAPTCHA Enterprise token with Google
-async function verifyRecaptcha(token: string, expectedAction: string): Promise<{ success: boolean; score?: number; action?: string }> {
-  if (!RECAPTCHA_API_KEY) {
-    console.log("reCAPTCHA API key not configured, skipping verification");
+// Verify reCAPTCHA v3 token with Google
+async function verifyRecaptcha(token: string): Promise<{ success: boolean; score?: number; action?: string }> {
+  if (!RECAPTCHA_SECRET_KEY) {
+    console.log("reCAPTCHA secret key not configured, skipping verification");
     return { success: true };
   }
 
   try {
-    const url = `https://recaptchaenterprise.googleapis.com/v1/projects/${RECAPTCHA_PROJECT_ID}/assessments?key=${RECAPTCHA_API_KEY}`;
-    
-    const response = await fetch(url, {
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        event: {
-          token,
-          expectedAction,
-          siteKey: RECAPTCHA_SITE_KEY,
-        },
-      }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
     });
 
     const data = await response.json();
-    console.log("reCAPTCHA Enterprise verification result:", JSON.stringify(data));
+    console.log("reCAPTCHA verification result:", JSON.stringify(data));
     
-    if (!data.tokenProperties?.valid) {
-      console.log("reCAPTCHA token invalid:", data.tokenProperties?.invalidReason);
+    if (!data.success) {
+      console.log("reCAPTCHA token invalid:", data["error-codes"]);
       return { success: false };
     }
 
-    const score = data.riskAnalysis?.score ?? 1.0;
-    const action = data.tokenProperties?.action;
+    const score = data.score ?? 1.0;
     
     return {
       success: score >= RECAPTCHA_SCORE_THRESHOLD,
       score,
-      action,
+      action: data.action,
     };
   } catch (error) {
-    console.error("reCAPTCHA Enterprise verification error:", error);
+    console.error("reCAPTCHA verification error:", error);
     return { success: false };
   }
 }
@@ -118,7 +107,7 @@ serve(async (req) => {
 
     // Verify reCAPTCHA token if provided
     if (recaptchaToken) {
-      const recaptchaResult = await verifyRecaptcha(recaptchaToken, "ebook_download");
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken);
       if (!recaptchaResult.success) {
         console.log("reCAPTCHA verification failed:", recaptchaResult);
         return new Response(
@@ -126,7 +115,7 @@ serve(async (req) => {
           { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-    } else if (RECAPTCHA_API_KEY) {
+    } else if (RECAPTCHA_SECRET_KEY) {
       // If reCAPTCHA is configured but no token provided
       console.log("reCAPTCHA token missing for ebook submission");
       return new Response(
