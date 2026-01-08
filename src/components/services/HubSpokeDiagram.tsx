@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { SpokeDetail } from "@/data/services";
+import { getSpokeUrl, getHubUrl } from "@/lib/urlMappings";
 
 interface HubSpokeDiagramProps {
   hubSlug: string;
@@ -88,7 +89,7 @@ const HubSpokeDiagram = ({ hubSlug, hubTitle, spokes }: HubSpokeDiagramProps) =>
             return (
               <Link
                 key={spoke.slug}
-                to={`/white-label-inbound-marketing-services/${hubSlug}/${spoke.slug}`}
+                to={getSpokeUrl(spoke.slug)}
                 className="absolute -translate-x-1/2 -translate-y-1/2 group"
                 style={{
                   left: `${pos.x}%`,
@@ -113,7 +114,7 @@ const HubSpokeDiagram = ({ hubSlug, hubTitle, spokes }: HubSpokeDiagramProps) =>
           {spokes.map((spoke) => (
             <Link
               key={spoke.slug}
-              to={`/white-label-inbound-marketing-services/${hubSlug}/${spoke.slug}`}
+              to={getSpokeUrl(spoke.slug)}
               className="group p-4 rounded-xl bg-surface-card/50 border border-border hover:border-cta/30 transition-all"
             >
               <h3 className="text-sm font-semibold text-foreground group-hover:text-cta transition-colors mb-1">

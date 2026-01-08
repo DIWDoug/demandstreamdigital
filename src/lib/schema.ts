@@ -232,7 +232,7 @@ export const getServicesPageSchema = () => {
     {
       name: "White-Label Local SEO",
       description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/local-seo",
+      url: "https://dialedinweb.com/white-label-local-seo",
       serviceType: "Local SEO Service"
     },
     {
@@ -244,31 +244,31 @@ export const getServicesPageSchema = () => {
     {
       name: "White-Label Paid Media",
       description: "Google Ads, Meta Ads, and local service ads management for agencies.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/paid-media",
+      url: "https://dialedinweb.com/white-label-paid-media",
       serviceType: "PPC Advertising Service"
     },
     {
       name: "White-Label Email Marketing",
       description: "Email campaign strategy, automation, and list management services.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/email-marketing",
+      url: "https://dialedinweb.com/white-label-email-marketing",
       serviceType: "Email Marketing Service"
     },
     {
       name: "White-Label Authority Building",
       description: "Link building, digital PR, and content marketing for local authority.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/local-authority-building",
+      url: "https://dialedinweb.com/white-label-local-authority-building",
       serviceType: "Link Building Service"
     },
     {
       name: "White-Label Reporting",
       description: "Custom dashboards, rank tracking, and ROI reporting for agency clients.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/reporting",
+      url: "https://dialedinweb.com/white-label-reporting",
       serviceType: "Marketing Analytics Service"
     },
     {
       name: "White-Label Content Marketing",
       description: "Blog content, location pages, and topical authority content development.",
-      url: "https://dialedinweb.com/white-label-inbound-marketing-services/content-marketing",
+      url: "https://dialedinweb.com/white-label-content-marketing",
       serviceType: "Content Marketing Service"
     }
   ];

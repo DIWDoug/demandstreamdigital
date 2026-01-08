@@ -103,14 +103,18 @@ export function getHubUrl(hubSlug: string): string {
 
 /**
  * Get the flat spoke URL from spoke slug (fully flat, no hub in URL)
+ * Can be called with just spokeSlug or with both hubSlug and spokeSlug for backwards compatibility
  */
-export function getSpokeUrl(hubSlug: string, spokeSlug: string): string {
-  const spokeMapping = SPOKE_URL_MAP[spokeSlug];
+export function getSpokeUrl(spokeSlugOrHubSlug: string, spokeSlug?: string): string {
+  // If second argument provided, use it as the spoke slug (backwards compatible)
+  const actualSpokeSlug = spokeSlug || spokeSlugOrHubSlug;
+  
+  const spokeMapping = SPOKE_URL_MAP[actualSpokeSlug];
   if (spokeMapping) {
     return spokeMapping.url;
   }
   // Fallback: just use spoke slug
-  return `/white-label-${spokeSlug}`;
+  return `/white-label-${actualSpokeSlug}`;
 }
 
 /**

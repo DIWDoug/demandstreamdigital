@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import type { BuildingBlock } from "@/types/servicePage";
+import { getSpokeUrl } from "@/lib/urlMappings";
 
 interface BuildingBlocksConfig {
   eyebrow: string;
@@ -62,10 +63,8 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
 
     // If hubSlug is provided, render as link to spoke page
     if (hubSlug) {
-      // Special case: press-releases on Authority hub should link to Content Marketing hub
-      const linkPath = block.slug === "press-releases" && hubSlug === "local-authority-building"
-        ? "/white-label-inbound-marketing-services/content-marketing/press-releases"
-        : `/white-label-inbound-marketing-services/${hubSlug}/${block.slug}`;
+      // Use flat URL mapping for all spokes
+      const linkPath = getSpokeUrl(block.slug);
       
       return (
         <Link
