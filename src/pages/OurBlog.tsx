@@ -6,6 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import PixabayImage from "@/components/PixabayImage";
 
@@ -74,12 +75,15 @@ const categoryLabels: Record<string, string> = {
   "email-marketing": "Email Marketing",
 };
 
+type SortOption = "date-desc" | "date-asc" | "reading-time-asc" | "reading-time-desc";
+
 const POSTS_PER_PAGE = 9;
 
 const OurBlog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortBy, setSortBy] = useState<SortOption>("date-desc");
 
   const { data: posts = [], isLoading, error } = useQuery({
     queryKey: ["our-blog-posts"],
@@ -105,7 +109,7 @@ const OurBlog = () => {
   }, [posts]);
 
   const filteredPosts = useMemo(() => {
-    let filtered = posts;
+    let filtered = [...posts];
     
     // Filter by category first
     if (selectedCategory) {
@@ -122,9 +126,25 @@ const OurBlog = () => {
           post.category?.toLowerCase().includes(query)
       );
     }
+
+    // Sort posts
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case "date-desc":
+          return new Date(b.published_at || 0).getTime() - new Date(a.published_at || 0).getTime();
+        case "date-asc":
+          return new Date(a.published_at || 0).getTime() - new Date(b.published_at || 0).getTime();
+        case "reading-time-asc":
+          return calculateReadingTime(a.content) - calculateReadingTime(b.content);
+        case "reading-time-desc":
+          return calculateReadingTime(b.content) - calculateReadingTime(a.content);
+        default:
+          return 0;
+      }
+    });
     
     return filtered;
-  }, [posts, searchQuery, selectedCategory]);
+  }, [posts, searchQuery, selectedCategory, sortBy]);
 
   // Reset to page 1 when filters change
   useMemo(() => {
@@ -196,25 +216,38 @@ const OurBlog = () => {
               </p>
             </div>
 
-            {/* Search Bar */}
-            <div className="max-w-lg mx-auto mt-10 relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
-              <Input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-10 py-5 bg-surface-elevated/50 backdrop-blur border-border/50 text-foreground placeholder:text-text-muted rounded-xl"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-1 text-text-muted hover:text-foreground transition-colors"
-                  aria-label="Clear search"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
+            {/* Search Bar and Sort */}
+            <div className="max-w-2xl mx-auto mt-10 flex flex-col sm:flex-row gap-4">
+              <div className="relative flex-1">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
+                <Input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-10 py-5 bg-surface-elevated/50 backdrop-blur border-border/50 text-foreground placeholder:text-text-muted rounded-xl"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1 text-text-muted hover:text-foreground transition-colors"
+                    aria-label="Clear search"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+              <Select value={sortBy} onValueChange={(value: SortOption) => setSortBy(value)}>
+                <SelectTrigger className="w-full sm:w-48 py-5 bg-surface-elevated/50 backdrop-blur border-border/50 text-foreground rounded-xl">
+                  <SelectValue placeholder="Sort by" />
+                </SelectTrigger>
+                <SelectContent className="bg-surface-elevated border-border/50">
+                  <SelectItem value="date-desc">Newest First</SelectItem>
+                  <SelectItem value="date-asc">Oldest First</SelectItem>
+                  <SelectItem value="reading-time-asc">Quickest Read</SelectItem>
+                  <SelectItem value="reading-time-desc">Longest Read</SelectItem>
+                </SelectContent>
+              </Select>
             </div>
 
             {/* Category Filters */}
