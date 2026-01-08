@@ -6,7 +6,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   title: "Email Marketing",
   metaTitle: "White Label Email Marketing Services for Agencies | Wholesale Campaign Solutions by Dialed-in Web",
   metaDescription: "Email marketing from Dialed-in Web drives client engagement and retention. Resell full-service campaigns. Book your strategy call today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/email-marketing",
+  canonicalUrl: "https://dialedinweb.com/white-label-email-marketing",
 
   hero: {
     headline: "White Label Email Marketing for",

@@ -6,7 +6,7 @@ export const googleMapsConfig: ServicePageConfig = {
   title: "GBP SEO",
   metaTitle: "Google Maps SEO Services for Agencies | White Label GBP Optimization & Local Visibility | Dialed-in Web",
   metaDescription: "Dialed-in Web manages Google Business Profiles, reviews, citations, and posts to improve local SEO—white labeled for agencies.",
-  canonicalUrl: "https://dialedinweb.com/white-label-inbound-marketing-services/google-maps",
+  canonicalUrl: "https://dialedinweb.com/white-label-gbp-seo",
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
