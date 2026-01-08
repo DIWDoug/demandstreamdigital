@@ -295,6 +295,6 @@ export const reportingConfig: ServicePageConfig = {
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing"
+    ctaHref: "/white-label-inbound-marketing-services"
   }
 };
