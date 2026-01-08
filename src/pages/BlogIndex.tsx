@@ -1,4 +1,3 @@
-console.log("[BlogIndex MODULE] File is being loaded!");
 import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
