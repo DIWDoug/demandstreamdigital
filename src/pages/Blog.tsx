@@ -18,22 +18,15 @@ interface BlogItem {
 }
 
 const Blog = () => {
-  console.log('[Blog] Component mounting');
-  
   const { data: blogs, isLoading, error } = useQuery({
     queryKey: ['blogs'],
     queryFn: async () => {
-      console.log('[Blog] Fetching blogs from Supabase');
       const { data, error } = await supabase
         .from('blogs')
         .select('id, title, slug, excerpt, featured_image, published_at')
         .order('published_at', { ascending: false });
       
-      if (error) {
-        console.error('[Blog] Supabase error:', error);
-        throw error;
-      }
-      console.log('[Blog] Fetched blogs:', data?.length);
+      if (error) throw error;
       return data as BlogItem[];
     },
   });
