@@ -6,6 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
 import YouMayAlsoLike from "@/components/YouMayAlsoLike";
+import SocialShareBar from "@/components/SocialShareBar";
 import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, Play, Pause, Clock, Loader2, ChevronRight, Home } from "lucide-react";
@@ -305,6 +306,13 @@ const BlogPostPage = () => {
       </Helmet>
       
       <Header />
+
+      {/* Social Share Bar */}
+      <SocialShareBar 
+        url={`https://dialedinweb.com/blog/${blog.slug}`} 
+        title={blog.title}
+        className="hidden lg:block"
+      />
       
       <main className="pt-16">
         {/* Back Link - Fixed Position */}
