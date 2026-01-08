@@ -37,6 +37,12 @@ export function useGeoBlock() {
   const [isBlocked, setIsBlocked] = useState(false);
 
   useEffect(() => {
+    // SSR safety - skip if no window
+    if (typeof window === 'undefined') {
+      setIsChecking(false);
+      return;
+    }
+
     // Skip if we're already on an excluded path
     if (EXCLUDED_PATHS.some(path => location.pathname.startsWith(path))) {
       setIsChecking(false);
