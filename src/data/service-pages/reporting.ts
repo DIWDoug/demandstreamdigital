@@ -158,7 +158,7 @@ export const reportingConfig: ServicePageConfig = {
     blocks: [
       {
         title: "White-Label Dashboards",
-        slug: "white-label-dashboards",
+        slug: "branded-dashboards",
         description: "Custom-branded live dashboards that give clients real-time visibility into campaign performance.",
         icon: BarChart3
       },

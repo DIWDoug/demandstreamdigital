@@ -140,7 +140,7 @@ const Header = () => {
       title: "REPORTING",
       href: "/white-label-reporting",
       items: [
-        { label: "White-Label Dashboards", href: "/white-label-dashboards" },
+        { label: "White-Label Dashboards", href: "/white-label-branded-dashboards" },
         { label: "Monthly Performance Reports", href: "/white-label-monthly-performance-reports" },
         { label: "Rank Tracking & Visibility", href: "/white-label-rank-tracking-visibility" },
         { label: "Call Tracking & Attribution", href: "/white-label-call-tracking-lead-attribution" },
