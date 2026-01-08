@@ -161,8 +161,8 @@ export const contentMarketingConfig: ServicePageConfig = {
         icon: MapPin
       },
       {
-        title: "Topical Content",
-        slug: "topical-content",
+        title: "Topical Authority",
+        slug: "topical-authority",
         description: "Industry expertise articles that build topical authority and support GBP rankings through relevance signals.",
         icon: BookOpen
       },
