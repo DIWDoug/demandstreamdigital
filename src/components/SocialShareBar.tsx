@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Share2 } from "lucide-react";
 
 interface SocialShareBarProps {
   url: string;
@@ -8,9 +9,15 @@ interface SocialShareBarProps {
 
 const SocialShareBar = ({ url, title, className = "" }: SocialShareBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [canNativeShare, setCanNativeShare] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
+
+  // Check for native share support
+  useEffect(() => {
+    setCanNativeShare(!!navigator.share);
+  }, []);
 
   // Show after scrolling past hero
   useEffect(() => {
@@ -20,6 +27,17 @@ const SocialShareBar = ({ url, title, className = "" }: SocialShareBarProps) => 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNativeShare = async () => {
+    try {
+      await navigator.share({
+        title,
+        url,
+      });
+    } catch (err) {
+      // User cancelled or error - silently ignore
+    }
+  };
 
   const shareLinks = [
     {
@@ -65,29 +83,64 @@ const SocialShareBar = ({ url, title, className = "" }: SocialShareBarProps) => 
   ];
 
   return (
-    <div
-      className={`fixed right-4 top-1/2 -translate-y-1/2 z-50 transition-all duration-300 ${
-        isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
-      } ${className}`}
-    >
-      <div className="bg-surface-elevated/95 backdrop-blur-sm border border-border/50 rounded-xl p-3 shadow-lg">
-        <div className="flex flex-col items-center gap-4">
-          <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">Share</span>
-          {shareLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Share on ${link.name}`}
-              className={`text-text-muted transition-colors ${link.color}`}
-            >
-              {link.icon}
-            </a>
-          ))}
+    <>
+      {/* Desktop: Sticky sidebar */}
+      <div
+        className={`fixed right-4 top-1/2 -translate-y-1/2 z-50 transition-all duration-300 hidden lg:block ${
+          isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
+        } ${className}`}
+      >
+        <div className="bg-surface-elevated/95 backdrop-blur-sm border border-border/50 rounded-xl p-3 shadow-lg">
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-xs font-semibold text-text-muted uppercase tracking-wider">Share</span>
+            {shareLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Share on ${link.name}`}
+                className={`text-text-muted transition-colors ${link.color}`}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Mobile: Floating share button */}
+      <div
+        className={`fixed bottom-6 right-6 z-50 lg:hidden transition-all duration-300 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+      >
+        {canNativeShare ? (
+          <button
+            onClick={handleNativeShare}
+            className="w-14 h-14 bg-cta text-cta-foreground rounded-full shadow-lg flex items-center justify-center hover:bg-cta/90 active:scale-95 transition-all"
+            aria-label="Share this article"
+          >
+            <Share2 className="w-6 h-6" />
+          </button>
+        ) : (
+          <div className="bg-surface-elevated/95 backdrop-blur-sm border border-border/50 rounded-full p-2 shadow-lg flex items-center gap-2">
+            {shareLinks.slice(0, 3).map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Share on ${link.name}`}
+                className={`w-10 h-10 flex items-center justify-center text-text-muted transition-colors ${link.color}`}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
