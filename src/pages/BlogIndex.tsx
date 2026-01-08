@@ -26,20 +26,25 @@ const formatDate = (value: string | null) => {
 };
 
 export default function BlogIndex() {
+  console.log("[BlogIndex] Component mounting...");
   const [searchQuery, setSearchQuery] = useState("");
 
   const { data: blogs, isLoading, error } = useQuery({
     queryKey: ["blogs"],
     queryFn: async () => {
+      console.log("[BlogIndex] Fetching blogs from Supabase...");
       const { data, error } = await supabase
         .from("blogs")
         .select("id, title, slug, excerpt, featured_image, published_at")
         .order("published_at", { ascending: false });
 
+      console.log("[BlogIndex] Query result:", { data: data?.length, error });
       if (error) throw error;
       return (data ?? []) as BlogItem[];
     },
   });
+  
+  console.log("[BlogIndex] Render state:", { isLoading, error: error?.message, blogCount: blogs?.length });
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
