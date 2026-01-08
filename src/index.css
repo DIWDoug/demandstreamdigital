@@ -616,4 +616,19 @@
   .article-content ol > li > span:first-child[aria-hidden] {
     display: none;
   }
+
+  /* Internal links in blog articles - make them visually distinct */
+  .article-content a {
+    color: hsl(var(--accent-blue));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--accent-blue) / 0.5);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    transition: all 0.2s ease;
+  }
+
+  .article-content a:hover {
+    color: hsl(var(--cta));
+    text-decoration-color: hsl(var(--cta));
+  }
 }
