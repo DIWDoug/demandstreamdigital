@@ -22,7 +22,7 @@ import SocialMediaROICalculator from "./pages/SocialMediaROICalculator";
 import AIReadyCheck from "./pages/AIReadyCheck";
 import PartnerTools from "./pages/PartnerTools";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
+import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
@@ -74,7 +74,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors/:slug" element={<Author />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
