@@ -25,6 +25,7 @@ import PartnerTools from "./pages/PartnerTools";
 import About from "./pages/About";
 import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
+import OurBlog from "./pages/OurBlog";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
@@ -77,6 +78,7 @@ const App = () => (
           <Route path="/authors/:slug" element={<Author />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
+          <Route path="/our-blog" element={<OurBlog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
         <Route path="/partner-tools" element={<PartnerTools />} />
