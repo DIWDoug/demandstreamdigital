@@ -281,7 +281,7 @@ export const localSEOConfig: ServicePageConfig = {
         id: "local-seo",
         title: "Local SEO",
         description: "Organic visibility in local search results.",
-        href: "/white-label-inbound-marketing-services/local-seo",
+        href: "/white-label-local-seo",
         isCenter: true
       },
       {
@@ -296,7 +296,7 @@ export const localSEOConfig: ServicePageConfig = {
         id: "paid-media",
         title: "Paid Media",
         description: "Capture demand immediately while organic visibility builds.",
-        href: "/white-label-inbound-marketing-services/paid-media"
+        href: "/white-label-paid-media"
       },
       {
         icon: Mail,
@@ -321,6 +321,6 @@ export const localSEOConfig: ServicePageConfig = {
       }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing"
+    ctaHref: "/white-label-inbound-marketing-services"
   }
 };
