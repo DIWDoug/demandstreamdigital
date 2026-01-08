@@ -23,7 +23,8 @@ const routesToPrerender = [
   // Main pages
   '/',
   '/about',
-  '/blog',
+  // Note: /blog is excluded from prerendering because it fetches dynamic content from Supabase
+  // which causes hydration mismatches. It renders client-side only.
   '/testimonials',
   '/contact',
   '/privacy',
