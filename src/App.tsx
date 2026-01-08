@@ -251,6 +251,7 @@ const App = () => (
         <Route path="/services/local-seo" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/services/google-maps" element={<Navigate to="/white-label-gbp-seo" replace />} />
         <Route path="/white-label-google-maps-local-seo" element={<Navigate to="/white-label-gbp-seo" replace />} />
+        <Route path="/white-label-google-maps" element={<Navigate to="/white-label-gbp-seo" replace />} />
         <Route path="/services/paid-media" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/services/email-marketing" element={<Navigate to="/white-label-email-marketing" replace />} />
         <Route path="/services/local-authority-building" element={<Navigate to="/white-label-local-authority-building" replace />} />
