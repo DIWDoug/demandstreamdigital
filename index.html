@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en" class="dark">
   <head>
-    <!-- reCAPTCHA v3 - TEMPORARILY DISABLED FOR DEBUGGING -->
-    <!--
+    <!-- reCAPTCHA v3 - loaded dynamically with env var -->
     <script>
       (function() {
         var siteKey = '%VITE_RECAPTCHA_SITE_KEY%' !== '' && '%VITE_RECAPTCHA_SITE_KEY%'.indexOf('VITE_') === -1 
@@ -14,7 +13,6 @@
         document.head.appendChild(script);
       })();
     </script>
-    -->
     <!-- jQuery stub for GTM tags that expect jQuery -->
     <script>window.jQuery=window.jQuery||function(){return{ready:function(){},on:function(){},off:function(){},find:function(){return[]},each:function(){},ajax:function(){},get:function(){},post:function(){}}};window.$=window.jQuery;</script>
     <!-- Google Tag Manager -->
