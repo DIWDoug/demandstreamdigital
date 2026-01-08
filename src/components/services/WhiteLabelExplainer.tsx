@@ -102,7 +102,7 @@ const WhiteLabelExplainer = () => {
                   return (
                     <Link 
                       key={service.slug}
-                      to={`/white-label-inbound-marketing-services/${service.slug}`}
+                      to={`/white-label-${service.slug}`}
                       className={`flex items-center gap-2 group transition-colors ${selectedService?.slug === service.slug ? 'text-accent-blue' : ''}`}
                       onMouseEnter={() => setSelectedService(service)}
                       onMouseLeave={() => setSelectedService(null)}

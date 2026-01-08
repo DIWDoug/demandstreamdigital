@@ -330,7 +330,7 @@ const TopicalExpertise = () => {
                     {hub.spokes.map((spoke, spokeIndex) => (
                       <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
                         <a 
-                          href={`/white-label-inbound-marketing-services/${hub.slug}/${spoke.slug}`}
+                          href={`/white-label-${spoke.slug}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
@@ -348,7 +348,7 @@ const TopicalExpertise = () => {
                   {/* CTA within expanded card */}
                   <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
                     <a 
-                      href={`/white-label-inbound-marketing-services/${hub.slug}`}
+                      href={`/white-label-${hub.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"

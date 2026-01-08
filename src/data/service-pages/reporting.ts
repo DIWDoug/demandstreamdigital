@@ -287,14 +287,14 @@ export const reportingConfig: ServicePageConfig = {
     intro: "Effective local marketing is interconnected.",
     body: "Reporting proves the value of SEO, paid media, and email. It connects activities to outcomes. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards and reports that prove value.", href: "/white-label-inbound-marketing-services/reporting", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/white-label-inbound-marketing-services/local-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-inbound-marketing-services/google-maps" },
-      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-inbound-marketing-services/paid-media" },
-      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-inbound-marketing-services/email-marketing" },
-      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-inbound-marketing-services/content-marketing" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards and reports that prove value.", href: "/white-label-reporting", isCenter: true },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/white-label-local-seo" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-google-maps-local-seo" },
+      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
+      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
+      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing-services"
+    ctaHref: "/white-label-inbound-marketing"
   }
 };

@@ -303,24 +303,24 @@ export const localSEOConfig: ServicePageConfig = {
         id: "email",
         title: "Email Marketing",
         description: "Nurture leads and drive repeat business.",
-        href: "/white-label-inbound-marketing-services/email-marketing"
+        href: "/white-label-email-marketing"
       },
       {
         icon: PenTool,
         id: "content",
         title: "Content Development",
         description: "Strategic content that ranks and converts.",
-        href: "/white-label-inbound-marketing-services/content-marketing"
+        href: "/white-label-content-marketing"
       },
       {
         icon: BarChart3,
         id: "reporting",
         title: "Reporting",
         description: "White-label dashboards that prove value.",
-        href: "/white-label-inbound-marketing-services/reporting"
+        href: "/white-label-reporting"
       }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing-services"
+    ctaHref: "/white-label-inbound-marketing"
   }
 };
