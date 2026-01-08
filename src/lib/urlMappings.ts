@@ -25,6 +25,75 @@ export const URL_TO_HUB_MAP: Record<string, string> = {
   'white-label-content-marketing': 'content-marketing'
 };
 
+// Spoke slug to flat URL mapping (fully flat structure)
+export const SPOKE_URL_MAP: Record<string, { url: string; hubSlug: string }> = {
+  // Local SEO spokes
+  'on-page-optimization': { url: '/white-label-onpage-optimization', hubSlug: 'local-seo' },
+  'technical-seo': { url: '/white-label-technical-seo', hubSlug: 'local-seo' },
+  'local-keyword-strategy': { url: '/white-label-local-keyword-strategy', hubSlug: 'local-seo' },
+  'content-development': { url: '/white-label-content-development', hubSlug: 'local-seo' },
+  'link-building': { url: '/white-label-link-building', hubSlug: 'local-seo' },
+  'schema-markup': { url: '/white-label-schema-markup', hubSlug: 'local-seo' },
+  'nap-citations': { url: '/white-label-nap-citations', hubSlug: 'local-seo' },
+  
+  // GBP SEO spokes
+  'gbp-optimization': { url: '/white-label-gbp-optimization', hubSlug: 'google-maps' },
+  'review-management': { url: '/white-label-review-management', hubSlug: 'google-maps' },
+  'citation-building': { url: '/white-label-citation-building', hubSlug: 'google-maps' },
+  'post-scheduling': { url: '/white-label-post-scheduling', hubSlug: 'google-maps' },
+  'photo-optimization': { url: '/white-label-photo-optimization', hubSlug: 'google-maps' },
+  'qa-management': { url: '/white-label-qa-management', hubSlug: 'google-maps' },
+  
+  // Paid Media spokes
+  'google-ads': { url: '/white-label-google-ads', hubSlug: 'paid-media' },
+  'meta-ads': { url: '/white-label-meta-ads', hubSlug: 'paid-media' },
+  'local-service-ads': { url: '/white-label-local-service-ads', hubSlug: 'paid-media' },
+  'retargeting-campaigns': { url: '/white-label-retargeting-campaigns', hubSlug: 'paid-media' },
+  'landing-page-design': { url: '/white-label-landing-page-design', hubSlug: 'paid-media' },
+  'conversion-tracking': { url: '/white-label-conversion-tracking', hubSlug: 'paid-media' },
+  
+  // Email Marketing spokes
+  'campaign-strategy': { url: '/white-label-campaign-strategy', hubSlug: 'email-marketing' },
+  'list-management': { url: '/white-label-list-management', hubSlug: 'email-marketing' },
+  'automation-flows': { url: '/white-label-automation-flows', hubSlug: 'email-marketing' },
+  'newsletter-design': { url: '/white-label-newsletter-design', hubSlug: 'email-marketing' },
+  'ab-testing': { url: '/white-label-ab-testing', hubSlug: 'email-marketing' },
+  'performance-analytics': { url: '/white-label-performance-analytics', hubSlug: 'email-marketing' },
+  
+  // Content Marketing spokes
+  'geographical-content': { url: '/white-label-geographical-content', hubSlug: 'content-marketing' },
+  'topical-authority': { url: '/white-label-topical-authority', hubSlug: 'content-marketing' },
+  'power-posts': { url: '/white-label-power-posts', hubSlug: 'content-marketing' },
+  'ebooks-guides': { url: '/white-label-ebooks-guides', hubSlug: 'content-marketing' },
+  'lead-magnets': { url: '/white-label-lead-magnets', hubSlug: 'content-marketing' },
+  'press-releases': { url: '/white-label-press-releases', hubSlug: 'content-marketing' },
+  'case-studies': { url: '/white-label-case-studies', hubSlug: 'content-marketing' },
+  'faq-content': { url: '/white-label-faq-content', hubSlug: 'content-marketing' },
+  'hub-spoke-buildouts': { url: '/white-label-hub-spoke-buildouts', hubSlug: 'content-marketing' },
+  
+  // Authority Building spokes
+  'structured-citations': { url: '/white-label-structured-citations', hubSlug: 'local-authority-building' },
+  'unstructured-citations': { url: '/white-label-unstructured-citations', hubSlug: 'local-authority-building' },
+  'brand-mentions': { url: '/white-label-brand-mentions', hubSlug: 'local-authority-building' },
+  'anchor-text': { url: '/white-label-anchor-text', hubSlug: 'local-authority-building' },
+  'sponsorships': { url: '/white-label-sponsorships', hubSlug: 'local-authority-building' },
+  
+  // Reporting spokes
+  'branded-dashboards': { url: '/white-label-branded-dashboards', hubSlug: 'reporting' },
+  'monthly-performance-reports': { url: '/white-label-monthly-performance-reports', hubSlug: 'reporting' },
+  'rank-tracking-visibility': { url: '/white-label-rank-tracking-visibility', hubSlug: 'reporting' },
+  'call-tracking-lead-attribution': { url: '/white-label-call-tracking-lead-attribution', hubSlug: 'reporting' },
+  'roi-revenue-analysis': { url: '/white-label-roi-revenue-analysis', hubSlug: 'reporting' },
+  'client-presentation-decks': { url: '/white-label-client-presentation-decks', hubSlug: 'reporting' },
+};
+
+// Reverse mapping: flat URL path to spoke slug and hub
+export const URL_TO_SPOKE_MAP: Record<string, { spokeSlug: string; hubSlug: string }> = {};
+for (const [spokeSlug, { url, hubSlug }] of Object.entries(SPOKE_URL_MAP)) {
+  const path = url.startsWith('/') ? url.slice(1) : url;
+  URL_TO_SPOKE_MAP[path] = { spokeSlug, hubSlug };
+}
+
 /**
  * Get the flat hub URL from a hub slug
  */
@@ -33,14 +102,15 @@ export function getHubUrl(hubSlug: string): string {
 }
 
 /**
- * Get the flat spoke URL from hub and spoke slugs
+ * Get the flat spoke URL from spoke slug (fully flat, no hub in URL)
  */
 export function getSpokeUrl(hubSlug: string, spokeSlug: string): string {
-  const hubUrl = HUB_URL_MAP[hubSlug];
-  if (hubUrl) {
-    return `${hubUrl}-${spokeSlug}`;
+  const spokeMapping = SPOKE_URL_MAP[spokeSlug];
+  if (spokeMapping) {
+    return spokeMapping.url;
   }
-  return `/white-label-${hubSlug}-${spokeSlug}`;
+  // Fallback: just use spoke slug
+  return `/white-label-${spokeSlug}`;
 }
 
 /**
@@ -51,16 +121,17 @@ export function parseServiceUrl(pathname: string): { hubSlug: string; spokeSlug:
   // Remove leading slash
   const path = pathname.startsWith('/') ? pathname.slice(1) : pathname;
   
+  // First check if it's a spoke URL
+  const spokeMapping = URL_TO_SPOKE_MAP[path];
+  if (spokeMapping) {
+    return { hubSlug: spokeMapping.hubSlug, spokeSlug: spokeMapping.spokeSlug };
+  }
+  
   // Check each hub pattern
   for (const [urlPrefix, hubSlug] of Object.entries(URL_TO_HUB_MAP)) {
     if (path === urlPrefix) {
       // This is a hub page
       return { hubSlug, spokeSlug: null };
-    }
-    if (path.startsWith(`${urlPrefix}-`)) {
-      // This is a spoke page
-      const spokeSlug = path.slice(urlPrefix.length + 1);
-      return { hubSlug, spokeSlug };
     }
   }
   
