@@ -6,7 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
-import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import PixabayImage from "@/components/PixabayImage";
 
 // Import blog images statically for proper resolution
@@ -55,7 +55,15 @@ interface BlogPost {
   featured_image: string | null;
   published_at: string | null;
   category: string | null;
+  content: string;
 }
+
+// Calculate reading time based on content length (avg 200 words per minute)
+const calculateReadingTime = (content: string): number => {
+  const wordsPerMinute = 200;
+  const wordCount = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
+};
 
 // Category display names
 const categoryLabels: Record<string, string> = {
@@ -78,7 +86,7 @@ const OurBlog = () => {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("blogs")
-        .select("id, title, slug, excerpt, featured_image, published_at, category")
+        .select("id, title, slug, excerpt, featured_image, published_at, category, content")
         .order("published_at", { ascending: false });
 
       if (error) throw error;
@@ -327,6 +335,10 @@ const OurBlog = () => {
                               {formatDate(featuredPost.published_at)}
                             </span>
                           )}
+                          <span className="text-sm text-text-muted flex items-center gap-1.5">
+                            <Clock className="w-4 h-4" />
+                            {calculateReadingTime(featuredPost.content)} min read
+                          </span>
                         </div>
                         <h2 className="font-serif text-2xl lg:text-3xl text-foreground group-hover:text-cta transition-colors mb-4">
                           {featuredPost.title}
@@ -365,18 +377,25 @@ const OurBlog = () => {
                           )}
                         </div>
                         <div className="p-6">
-                          <div className="flex items-center gap-2 mb-3">
+                          <div className="flex items-center gap-2 mb-3 flex-wrap">
                             {post.category && (
                               <span className="text-xs font-medium uppercase tracking-wider text-cta">
                                 {post.category}
                               </span>
                             )}
-                            {post.category && formatDate(post.published_at) && (
+                            {post.category && (formatDate(post.published_at) || post.content) && (
                               <span className="text-text-muted">•</span>
                             )}
                             {formatDate(post.published_at) && (
                               <span className="text-xs text-text-muted">{formatDate(post.published_at)}</span>
                             )}
+                            {formatDate(post.published_at) && post.content && (
+                              <span className="text-text-muted">•</span>
+                            )}
+                            <span className="text-xs text-text-muted flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              {calculateReadingTime(post.content)} min
+                            </span>
                           </div>
                           <h3 className="font-semibold text-lg text-foreground group-hover:text-cta transition-colors line-clamp-2 mb-3">
                             {post.title}
