@@ -272,14 +272,28 @@ export function injectInternalLinks(content: string, slug: string): string {
     for (const phrase of extLink.matchPhrases) {
       if (externalInjected) break;
       
-      const extPattern = new RegExp(`(?<!\\[)\\b(${escapeRegex(phrase)})\\b(?!\\])(?![^\\[]*\\])`, 'i');
-      const extMatch = updatedContent.match(extPattern);
-      if (extMatch) {
-        updatedContent = updatedContent.replace(
-          extPattern,
-          `[${extMatch[1]}](${extLink.url})`
-        );
-        externalInjected = true;
+      // Use simpler word boundary matching without lookbehinds for better compatibility
+      const extPattern = new RegExp(`\\b(${escapeRegex(phrase)})\\b`, 'gi');
+      const matches = updatedContent.match(extPattern);
+      
+      if (matches && matches.length > 0) {
+        // Find the first occurrence that's not already within a markdown link
+        const phraseIndex = updatedContent.search(extPattern);
+        if (phraseIndex !== -1) {
+          // Check if this position is inside a markdown link by looking for unmatched [ before it
+          const textBefore = updatedContent.substring(0, phraseIndex);
+          const openBrackets = (textBefore.match(/\[/g) || []).length;
+          const closeBrackets = (textBefore.match(/\]/g) || []).length;
+          
+          // If brackets are balanced, we're not inside a link
+          if (openBrackets === closeBrackets) {
+            updatedContent = updatedContent.replace(
+              new RegExp(`\\b(${escapeRegex(phrase)})\\b`, 'i'),
+              `[$1](${extLink.url})`
+            );
+            externalInjected = true;
+          }
+        }
       }
     }
   }
