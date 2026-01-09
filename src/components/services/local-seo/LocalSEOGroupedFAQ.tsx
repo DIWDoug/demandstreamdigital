@@ -1,14 +1,35 @@
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { getBlogLinkForFAQ } from "@/lib/blogInternalLinks";
 
 interface FAQ {
   question: string;
   answer: string;
 }
+
+// Component to render FAQ answer with optional blog link
+const FAQAnswerWithBlogLink = ({ question, answer }: { question: string; answer: string }) => {
+  const blogLink = getBlogLinkForFAQ(question);
+  
+  return (
+    <div className="text-text-secondary text-sm pb-5 leading-relaxed">
+      {answer}
+      {blogLink && (
+        <Link 
+          to={blogLink.blogUrl}
+          className="block mt-3 text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors"
+        >
+          Learn more: {blogLink.blogTitle} →
+        </Link>
+      )}
+    </div>
+  );
+};
 
 interface FAQGroup {
   title: string;
@@ -82,8 +103,8 @@ const LocalSEOGroupedFAQ = () => {
                         <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-base font-medium">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-text-secondary text-sm pb-5 leading-relaxed">
-                          {faq.answer}
+                        <AccordionContent>
+                          <FAQAnswerWithBlogLink question={faq.question} answer={faq.answer} />
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
