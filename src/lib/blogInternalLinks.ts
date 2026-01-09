@@ -314,8 +314,14 @@ export function injectInternalLinks(content: string, slug: string): string {
     }
   }
 
-  // Then inject internal links (skip headings)
+  // Then inject internal links (skip headings, max 4 links per page)
+  const MAX_INTERNAL_LINKS = 4;
+  let linkCount = 0;
+  
   for (const link of mapping.relevantLinks) {
+    // Stop if we've reached the max
+    if (linkCount >= MAX_INTERNAL_LINKS) break;
+    
     // Skip if we've already used this link
     if (usedLinks.has(link.url)) continue;
 
@@ -353,6 +359,7 @@ export function injectInternalLinks(content: string, slug: string): string {
             `[${match[1]}](${link.url})` + 
             updatedContent.substring(matchIndex + match[0].length);
           usedLinks.add(link.url);
+          linkCount++;
           foundValidMatch = true;
           break;
         }
