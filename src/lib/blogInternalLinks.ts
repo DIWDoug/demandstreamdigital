@@ -253,8 +253,21 @@ export function getExternalLink(slug: string): ExternalAuthorityLink | null {
 }
 
 /**
+ * Check if a position in text is inside a markdown heading
+ */
+function isInsideHeading(content: string, position: number): boolean {
+  // Find the start of the current line
+  const lineStart = content.lastIndexOf('\n', position - 1) + 1;
+  const lineContent = content.substring(lineStart, position);
+  
+  // Check if line starts with markdown heading (# through ######)
+  return /^#{1,6}\s/.test(lineContent);
+}
+
+/**
  * Inject internal links into blog content
  * Replaces first occurrence of contextual phrases with links
+ * Skips headings to preserve headline readability
  */
 export function injectInternalLinks(content: string, slug: string): string {
   const mapping = blogLinkMappings[slug];
@@ -277,9 +290,12 @@ export function injectInternalLinks(content: string, slug: string): string {
       const matches = updatedContent.match(extPattern);
       
       if (matches && matches.length > 0) {
-        // Find the first occurrence that's not already within a markdown link
+        // Find the first occurrence that's not already within a markdown link or heading
         const phraseIndex = updatedContent.search(extPattern);
         if (phraseIndex !== -1) {
+          // Skip if inside a heading
+          if (isInsideHeading(updatedContent, phraseIndex)) continue;
+          
           // Check if this position is inside a markdown link by looking for unmatched [ before it
           const textBefore = updatedContent.substring(0, phraseIndex);
           const openBrackets = (textBefore.match(/\[/g) || []).length;
@@ -298,7 +314,7 @@ export function injectInternalLinks(content: string, slug: string): string {
     }
   }
 
-  // Then inject internal links
+  // Then inject internal links (skip headings)
   for (const link of mapping.relevantLinks) {
     // Skip if we've already used this link
     if (usedLinks.has(link.url)) continue;
@@ -308,23 +324,41 @@ export function injectInternalLinks(content: string, slug: string): string {
     
     // Try to find the link text or similar phrases
     const patterns = [
-      new RegExp(`(?<!\\[)\\b(${escapeRegex(link.text)})\\b(?!\\])(?![^\\[]*\\])`, 'i'),
+      new RegExp(`\\b(${escapeRegex(link.text)})\\b`, 'gi'),
       ...contextWords.map(word => 
-        new RegExp(`(?<!\\[)\\b(${escapeRegex(word)}(?:\\s+(?:seo|services?|optimization|management|strategy|marketing))?)\\b(?!\\])(?![^\\[]*\\])`, 'i')
+        new RegExp(`\\b(${escapeRegex(word)}(?:\\s+(?:seo|services?|optimization|management|strategy|marketing))?)\\b`, 'gi')
       )
     ];
 
     for (const pattern of patterns) {
-      const match = updatedContent.match(pattern);
-      if (match && !usedLinks.has(link.url)) {
-        // Only replace the first occurrence
-        updatedContent = updatedContent.replace(
-          pattern,
-          `[${match[1]}](${link.url})`
-        );
-        usedLinks.add(link.url);
-        break;
+      // Find all matches and pick the first one not in a heading or existing link
+      let match;
+      let foundValidMatch = false;
+      
+      while ((match = pattern.exec(updatedContent)) !== null) {
+        const matchIndex = match.index;
+        
+        // Skip if inside a heading
+        if (isInsideHeading(updatedContent, matchIndex)) continue;
+        
+        // Check if inside a markdown link
+        const textBefore = updatedContent.substring(0, matchIndex);
+        const openBrackets = (textBefore.match(/\[/g) || []).length;
+        const closeBrackets = (textBefore.match(/\]/g) || []).length;
+        
+        if (openBrackets === closeBrackets) {
+          // Replace this specific occurrence
+          updatedContent = 
+            updatedContent.substring(0, matchIndex) + 
+            `[${match[1]}](${link.url})` + 
+            updatedContent.substring(matchIndex + match[0].length);
+          usedLinks.add(link.url);
+          foundValidMatch = true;
+          break;
+        }
       }
+      
+      if (foundValidMatch) break;
     }
   }
 
