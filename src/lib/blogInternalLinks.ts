@@ -38,20 +38,35 @@ export interface FAQBlogLink {
 }
 
 export const faqToBlogMappings: FAQBlogLink[] = [
-  // Local SEO FAQs
+  // Local SEO FAQs - Results & Timing
   { questionPattern: 'how long does it take', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
   { questionPattern: 'local seo results', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'ranking factors', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'local pack', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'vicinity update', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'reviews for local', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
   { questionPattern: 'guarantee', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
   { questionPattern: 'ai overviews', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
   { questionPattern: 'rankings drop', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
   { questionPattern: 'measure local seo', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  
+  // Local SEO FAQs - Eligibility & Fit
+  { questionPattern: 'service-area businesses', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'multi-location', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'multiple locations', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'package-based', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'approach different', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
+  { questionPattern: 'long-term contracts', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  { questionPattern: 'local seo cost', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'industries do you work', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
+  
+  // Local SEO FAQs - Process & Reporting
   { questionPattern: 'content creation process', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
   { questionPattern: 'build links', blogUrl: '/blog/benefits-of-white-label-seo-services', blogTitle: 'Seven Proven Benefits of White Label SEO' },
-  { questionPattern: 'long-term contracts', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
-  { questionPattern: 'industries do you work', blogUrl: '/blog/what-is-white-label-digital-marketing', blogTitle: 'What Is White Label Digital Marketing?' },
-  { questionPattern: 'service-area businesses', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
+  { questionPattern: 'included in your local seo', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'handle reporting', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
+  { questionPattern: 'gbp suspensions', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
   { questionPattern: 'take over from another', blogUrl: '/blog/white-label-seo-for-agencies-checklist', blogTitle: 'White Label SEO Checklist for Agencies' },
-  { questionPattern: 'multiple locations', blogUrl: '/blog/on-page-optimization-local-seo', blogTitle: 'On-Page Optimization for Local SEO' },
   
   // Paid Media FAQs  
   { questionPattern: 'quickly will we see results', blogUrl: '/blog/white-label-local-ppc', blogTitle: 'White Label Local PPC Guide' },
