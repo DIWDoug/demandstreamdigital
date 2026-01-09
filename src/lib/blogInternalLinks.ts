@@ -11,7 +11,7 @@ export interface InternalLink {
 }
 
 export interface ExternalAuthorityLink {
-  text: string;
+  matchPhrases: string[]; // Multiple phrases to try matching
   url: string;
   source: string; // e.g., "Moz", "SEMrush", "HubSpot"
 }
@@ -91,7 +91,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'white-label reporting', url: '/white-label-reporting', context: 'reporting dashboards' },
     ],
     externalLink: {
-      text: 'local SEO ranking factors',
+      matchPhrases: ['map pack', 'local visibility', 'local rankings', 'algorithm'],
       url: 'https://moz.com/local-search-ranking-factors',
       source: 'Moz'
     },
@@ -120,7 +120,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'call tracking', url: '/white-label-call-tracking-lead-attribution', context: 'call tracking' },
     ],
     externalLink: {
-      text: 'Quality Score',
+      matchPhrases: ['pay-per-click', 'PPC specialists', 'paid advertising', 'location extensions'],
       url: 'https://support.google.com/google-ads/answer/6167118',
       source: 'Google Ads Help'
     },
@@ -148,7 +148,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'GBP optimization', url: '/white-label-gbp-optimization', context: 'google business profile' },
     ],
     externalLink: {
-      text: 'on-page SEO',
+      matchPhrases: ['backlinks', 'title tags', 'meta descriptions', 'header tags'],
       url: 'https://ahrefs.com/blog/on-page-seo/',
       source: 'Ahrefs'
     },
@@ -173,7 +173,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'branded dashboards', url: '/white-label-branded-dashboards', context: 'dashboards' },
     ],
     externalLink: {
-      text: 'social media marketing',
+      matchPhrases: ['social media agency', 'content calendar', 'engagement', 'platforms'],
       url: 'https://blog.hubspot.com/marketing/social-media-marketing',
       source: 'HubSpot'
     },
@@ -191,7 +191,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'authority building', url: '/white-label-local-authority-building', context: 'authority backlinks' },
     ],
     externalLink: {
-      text: 'SEO audit',
+      matchPhrases: ['SEO agency', 'outsource', 'fulfillment', 'white labeling'],
       url: 'https://www.semrush.com/blog/seo-audit/',
       source: 'SEMrush'
     },
@@ -219,7 +219,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'authority building', url: '/white-label-local-authority-building', context: 'authority' },
     ],
     externalLink: {
-      text: 'agency growth',
+      matchPhrases: ['mid-sized agency', 'offer everything', 'adding full-time staff', 'Hiring takes time'],
       url: 'https://www.searchenginejournal.com/marketing-agency-growth-strategies/475231/',
       source: 'Search Engine Journal'
     },
@@ -266,13 +266,21 @@ export function injectInternalLinks(content: string, slug: string): string {
   // First, inject the external authority link if available
   if (mapping.externalLink) {
     const extLink = mapping.externalLink;
-    const extPattern = new RegExp(`(?<!\\[)\\b(${escapeRegex(extLink.text)})\\b(?!\\])(?![^\\[]*\\])`, 'i');
-    const extMatch = updatedContent.match(extPattern);
-    if (extMatch) {
-      updatedContent = updatedContent.replace(
-        extPattern,
-        `[${extMatch[1]}](${extLink.url})`
-      );
+    let externalInjected = false;
+    
+    // Try each match phrase until one works
+    for (const phrase of extLink.matchPhrases) {
+      if (externalInjected) break;
+      
+      const extPattern = new RegExp(`(?<!\\[)\\b(${escapeRegex(phrase)})\\b(?!\\])(?![^\\[]*\\])`, 'i');
+      const extMatch = updatedContent.match(extPattern);
+      if (extMatch) {
+        updatedContent = updatedContent.replace(
+          extPattern,
+          `[${extMatch[1]}](${extLink.url})`
+        );
+        externalInjected = true;
+      }
     }
   }
 
