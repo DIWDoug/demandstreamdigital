@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator } from "lucide-react";
+import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator, FileText } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
@@ -211,6 +211,13 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 © {new Date().getFullYear()} Dialed-In Web. All Rights Reserved.
               </p>
               <div className="flex items-center gap-6">
+                <Link 
+                  to="/case-studies"
+                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-cta transition-colors"
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  Case Studies
+                </Link>
                 <Link 
                   to="/partner-tools"
                   className="flex items-center gap-1.5 text-xs text-text-muted hover:text-cta transition-colors"
