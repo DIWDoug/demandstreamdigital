@@ -4,6 +4,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
+import { caseStudyFullContent } from "@/data/caseStudyData";
 
 // Extended case study content structure
 export interface CaseStudyContent {
@@ -36,8 +37,8 @@ export interface CaseStudyContent {
   pdfDownload?: string;
 }
 
-// This will store full case study content
-export const caseStudyContent: Record<string, CaseStudyContent> = {};
+// Use imported content
+export const caseStudyContent = caseStudyFullContent;
 
 const CaseStudyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -160,6 +161,21 @@ const CaseStudyDetail = () => {
             </div>
           </div>
         </section>
+        
+        {/* Hero Image */}
+        {content.heroImage && (
+          <section className="pb-16">
+            <div className="container mx-auto px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <img 
+                  src={content.heroImage} 
+                  alt={`${content.headline} - Results Chart`}
+                  className="w-full rounded-xl border border-border shadow-lg"
+                />
+              </div>
+            </div>
+          </section>
+        )}
         
         {/* Content Sections */}
         <section className="py-16 md:py-24">
