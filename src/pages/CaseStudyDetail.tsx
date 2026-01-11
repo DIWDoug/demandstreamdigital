@@ -360,6 +360,12 @@ const CaseStudyDetail = () => {
                         <p className="text-xs text-muted-foreground">Monthly Actions</p>
                       </div>
                     )}
+                    {content.roiImpact.metrics.monthlyTraffic && (
+                      <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                        <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.monthlyTraffic}</p>
+                        <p className="text-xs text-muted-foreground">Monthly Organic Traffic</p>
+                      </div>
+                    )}
                     {content.roiImpact.metrics.qualifiedLeads && (
                       <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
                         <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.qualifiedLeads}</p>
