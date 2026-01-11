@@ -29,6 +29,8 @@ import OurBlog from "./pages/OurBlog";
 import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import ThankYou from "./pages/ThankYou";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import RegionBlocked from "./pages/RegionBlocked";
@@ -101,6 +103,8 @@ const App = () => (
         <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
         <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy" element={<Privacy />} />
