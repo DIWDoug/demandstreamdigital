@@ -167,7 +167,7 @@ With an average SEO investment of $1,538 per month, the client is now positioned
 const touristVehicleRentalsNarration = `
 Local SEO Turnaround for a Tourist Vehicle Rental Company.
 
-A tourist vehicle rental company partnered with our agency partner in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network with exact-match anchor text backlinks and a visible footprint. When the client dismantled this legacy PBN in May 2025, traffic dropped sharply. We stepped in to detoxify these harmful backlinks and stabilize rankings through clean link-building and improved on-page execution.
+A tourist vehicle rental company partnered with our agency in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network with exact-match anchor text backlinks and a visible footprint. When the client dismantled this legacy PBN in May 2025, traffic dropped sharply. We stepped in to detoxify these harmful backlinks and stabilize rankings through clean link-building and improved on-page execution.
 
 The Challenge.
 
@@ -418,7 +418,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "9", label: "SEO Cycles" },
       { value: "6x+", label: "ROI Range" },
     ],
-    challenge: "A tourist vehicle rental company partnered with our agency partner in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network (PBN) with exact-match anchor text backlinks.",
+    challenge: "A tourist vehicle rental company partnered with our agency in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network (PBN) with exact-match anchor text backlinks.",
     challengeDetails: [
       "Previous SEO provider used risky private blog network (PBN) tactics",
       "Exact-match anchor text backlinks created a visible footprint",

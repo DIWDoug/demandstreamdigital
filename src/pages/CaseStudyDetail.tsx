@@ -352,16 +352,20 @@ const CaseStudyDetail = () => {
                     {content.roiImpact.headline}
                   </h2>
                   
-                  {/* ROI Metrics Grid */}
+                  {/* ROI Metrics Grid - Only show metrics that exist */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
-                      <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.monthlyActions}</p>
-                      <p className="text-xs text-muted-foreground">Monthly Actions</p>
-                    </div>
-                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
-                      <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.qualifiedLeads}</p>
-                      <p className="text-xs text-muted-foreground">Qualified Leads</p>
-                    </div>
+                    {content.roiImpact.metrics.monthlyActions && (
+                      <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                        <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.monthlyActions}</p>
+                        <p className="text-xs text-muted-foreground">Monthly Actions</p>
+                      </div>
+                    )}
+                    {content.roiImpact.metrics.qualifiedLeads && (
+                      <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                        <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.qualifiedLeads}</p>
+                        <p className="text-xs text-muted-foreground">Qualified Leads</p>
+                      </div>
+                    )}
                     <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
                       <p className="text-2xl font-bold text-green-500">{content.roiImpact.metrics.monthlyRevenue}</p>
                       <p className="text-xs text-muted-foreground">Est. Monthly Revenue</p>
