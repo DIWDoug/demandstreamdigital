@@ -157,6 +157,7 @@ const Header = () => {
 
   // Links that appear AFTER Services mega menu
   const postServiceLinks = [
+    { label: "Case Studies", href: "/case-studies", isRoute: true },
     { label: "Testimonials", href: "/testimonials", isRoute: true },
     { label: "Blog", href: "/our-blog", isRoute: true }
   ];
