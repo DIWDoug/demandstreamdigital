@@ -32,15 +32,7 @@ export interface CaseStudyContent {
   roiImpact?: {
     headline: string;
     details: string[];
-    metrics: {
-      monthlyActions: string;
-      qualifiedLeads: string;
-      newMembersPerMonth: string;
-      lifetimeValue: string;
-      monthlyRevenue: string;
-      seoSpend: string;
-      roiRange: string;
-    };
+    metrics: Record<string, string>;
   };
   timeline?: string;
   testimonial?: {
