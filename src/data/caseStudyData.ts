@@ -4,6 +4,7 @@ import { CaseStudyContent } from "@/pages/CaseStudyDetail";
 // Thumbnail images
 import recreationalBoatingHero from "@/assets/case-studies/recreational-boating-hero.jpg";
 import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg";
+import floridaPhotographyHero from "@/assets/case-studies/florida-photography-hero.jpg";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -51,6 +52,28 @@ export const caseStudyCards: CaseStudy[] = [
     challenge: "Barn restoration company in the Northeast market with limited organic visibility, competing for local search terms against general contractors.",
     thumbnail: barnRestorationHero,
   },
+  {
+    slug: "florida-photography-seo",
+    client: "South Florida Photography Partner",
+    industry: "Photography",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    headline: "Local SEO Turnaround for a South Florida Photography Business",
+    heroMetric: {
+      value: "+32%",
+      label: "YoY Session Growth",
+    },
+    secondaryMetrics: [
+      { value: "60pt", label: "Performance Swing" },
+      { value: "9", label: "SEO Cycles" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$4.5K-$10K",
+      roiRange: "3-6.5x",
+      seoSpend: "$1,538/mo",
+    },
+    challenge: "Wedding and family photography business experiencing -28% organic decline due to legacy PBN tactics, requiring complete SEO turnaround.",
+    thumbnail: floridaPhotographyHero,
+  },
 ];
 
 // ============ NARRATION TEXT FOR TTS ============
@@ -94,6 +117,28 @@ Our campaign focused on keyword research and mapping across barn-related service
 The Results.
 
 As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel [state]' and 'Old barn repair [state]' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
+`;
+
+const floridaPhotographyNarration = `
+Local SEO Turnaround for a South Florida Photography Business.
+
+A Florida-based wedding and family photography business serving South Central Florida partnered with our agency partner in April 2025 after experiencing severe organic visibility decline. At engagement start, organic sessions had plummeted as much as 28% year-over-year. Within nine strategic SEO cycles, we completely reversed this downward trajectory, delivering exceptional results: +32% YoY session growth, +31% engaged session growth, and a 10% lift in engagement rate by December 2025.
+
+The Challenge.
+
+Before partnering with our agency partner, the client worked with another SEO provider whose approach relied heavily on a weak private blog network (PBN). This risky strategy involved exact-match anchor text backlinks pointed from unrelated homepages—a tactic that left a visible footprint and posed significant long-term penalties. In May 2025, the client dismantled the legacy PBN, causing an immediate and sharp drop in organic traffic due to sudden loss of link equity.
+
+Our Approach.
+
+Our team quickly pivoted to stabilize authority through white-hat link building, relevant citations, and high-DR guest post placements. We built a comprehensive citation profile with 150+ citations across major directories and niche-specific platforms. We focused on technical foundation improvements including site speed, mobile optimization, and schema markup to enable all other tactics to perform optimally.
+
+The Results.
+
+From January through August 2025, the client experienced persistent year-over-year organic declines across all key metrics. By September, we achieved our first positive YoY growth at +19%. Momentum compounded with +82% in October, +26% in November, and +32% in December. We secured multiple #1 and #2 rankings for high-intent local photography keywords and established strong rankings across multiple service areas throughout South Central Florida. The complete performance reversal represents a 60 percentage point swing from –28% to +32%.
+
+ROI Impact.
+
+With an average SEO investment of $1,538 per month, the client is now positioned to generate 25–50 organic leads monthly. Assuming a modest conversion rate of 5–10%, this results in 1–5 new bookings monthly. At an average booking value of $1,200–$2,000, this translates to $4,500–$10,000 in monthly revenue, for a projected 3x–6.5x return on investment.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -239,6 +284,78 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     heroImage: barnRestorationHero,
     pdfDownload: "/case-studies/barn-restoration-seo.pdf",
     narrationText: barnRestorationNarration,
+  },
+  "florida-photography-seo": {
+    slug: "florida-photography-seo",
+    client: "South Florida Photography Partner",
+    industry: "Photography",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO", "Citation Building"],
+    headline: "Local SEO Turnaround for a South Florida Photography Business",
+    heroMetric: {
+      value: "+32%",
+      label: "Year-over-Year Session Growth",
+    },
+    secondaryMetrics: [
+      { value: "+31%", label: "Engaged Sessions" },
+      { value: "9", label: "SEO Cycles" },
+      { value: "60pt", label: "Performance Swing" },
+      { value: "3-6.5x", label: "ROI Range" },
+    ],
+    challenge: "A Florida-based wedding and family photography business partnered with our agency partner in April 2025 after experiencing severe organic visibility decline of -28% year-over-year due to legacy PBN tactics from a previous SEO provider.",
+    challengeDetails: [
+      "Severe organic decline of -28% year-over-year at engagement start",
+      "Previous SEO provider used risky private blog network (PBN) tactics",
+      "Exact-match anchor text backlinks from unrelated homepages left visible footprints",
+      "May 2025 PBN dismantling caused immediate sharp traffic drop",
+      "Needed to transition from risky tactics to sustainable white-hat SEO",
+      "Struggled to maintain visibility across key service areas in South Central Florida",
+    ],
+    solution: "Our team quickly pivoted to stabilize authority through white-hat link building, relevant citations, and high-DR guest post placements. We built a sustainable foundation with 150+ citations and DR60-79 backlinks, ultimately recovering and exceeding previous performance baselines.",
+    solutionDetails: [
+      "White-hat link building with high-DR (60-79) guest post placements",
+      "Comprehensive citation building with 150+ citations across major and niche directories",
+      "Technical foundation improvements including site speed and mobile optimization",
+      "Schema markup implementation for enhanced local visibility",
+      "NAP (Name, Address, Phone) consistency across all platforms",
+      "Location-specific content development for geographic markets",
+      "Google Business Profile optimization with regular posts and engagement",
+      "Integrated approach combining SEO with paid search for immediate leads",
+    ],
+    results: "Within nine strategic SEO cycles, we completely reversed the downward trajectory, delivering a 60 percentage point swing from -28% to +32% year-over-year session growth. We secured multiple #1 and #2 rankings for high-intent local photography keywords.",
+    resultDetails: [
+      "+32% year-over-year session growth by December 2025",
+      "+31% engaged session growth",
+      "+10% lift in engagement rate",
+      "60 percentage point performance swing (from -28% to +32%)",
+      "Multiple #1 and #2 rankings for high-intent local keywords",
+      "Strong rankings across multiple service areas in South Central Florida",
+      "September marked first positive YoY growth at +19%",
+      "+82% growth in October, +26% in November, +32% in December",
+    ],
+    roiImpact: {
+      headline: "Lead Quality & ROI Impact",
+      details: [
+        "Client positioned to generate 25–50 organic leads per month",
+        "Assuming 5–10% conversion rate, results in 1–5 new bookings monthly",
+        "Average booking value of $1,200–$2,000 per photography session",
+        "Translates to $4,500–$10,000 in monthly revenue",
+        "For just $1,538/month in SEO spend — a 3x to 6.5x return on investment",
+        "Gains driven by consistent visibility improvements and GMB engagement",
+      ],
+      metrics: {
+        monthlyLeads: "25-50",
+        conversionRate: "5-10%",
+        newBookings: "1-5",
+        avgBookingValue: "$1,200-$2,000",
+        monthlyRevenue: "$4.5K-$10K",
+        seoSpend: "$1,538/mo",
+        roiRange: "3-6.5x",
+      },
+    },
+    timeline: "April 2025 to December 2025 (9 SEO Cycles)",
+    heroImage: floridaPhotographyHero,
+    pdfDownload: "/case-studies/florida-photography-seo.pdf",
+    narrationText: floridaPhotographyNarration,
   },
 };
 
