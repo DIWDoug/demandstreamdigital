@@ -3,6 +3,7 @@ import { CaseStudyContent } from "@/pages/CaseStudyDetail";
 
 // Thumbnail images
 import recreationalBoatingChart from "@/assets/case-studies/recreational-boating-growth-chart.jpg";
+import barnRestorationChart from "@/assets/case-studies/barn-restoration-growth-chart.png";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -30,24 +31,25 @@ export const caseStudyCards: CaseStudy[] = [
   },
   {
     slug: "barn-restoration-seo",
-    client: "Heritage Barn Restoration Partner",
+    client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "GBP Optimization", "Content Development", "Link Building"],
-    headline: "Building Organic Authority for a Specialty Barn Restoration Company",
+    services: ["Local SEO", "Technical SEO", "Citation Building", "Link Building"],
+    headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
-      value: "278%",
-      label: "Organic Lead Growth",
+      value: "478%",
+      label: "YoY Organic Growth",
     },
     secondaryMetrics: [
-      { value: "32", label: "Page 1 Keywords" },
-      { value: "5", label: "State Coverage" },
+      { value: "491%", label: "Google Organic Growth" },
+      { value: "22", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$85K-$140K",
-      roiRange: "45-75x",
-      seoSpend: "$1,900/mo",
+      monthlyRevenue: "$25K-$50K",
+      roiRange: "33-66x",
+      seoSpend: "$750/mo",
     },
-    challenge: "Niche restoration company with exceptional craftsmanship but minimal online presence, competing against general contractors for high-value barn and historic structure projects.",
+    challenge: "Barn restoration company in New York market with limited organic visibility, competing for local search terms against general contractors.",
+    thumbnail: barnRestorationChart,
   },
 ];
 
@@ -77,25 +79,21 @@ Organic traffic now drives over 130 inbound actions per month, including more th
 `;
 
 const barnRestorationNarration = `
-Building Organic Authority for a Specialty Barn Restoration Company.
+Local SEO Growth for a Barn Restoration Company.
 
-In March 2025, we began working with an agency partner serving a specialty barn restoration company in the Midwest. This family-owned business had built an exceptional reputation through word-of-mouth over 25 years, but their online presence didn't reflect their craftsmanship or expertise. Over 9 SEO cycles, we delivered 278% organic lead growth and positioned them as the go-to authority in their niche.
+In collaboration with our agency partner, we launched an SEO campaign for a barn restoration company serving the New York market. Our engagement began prior to the busy fall season and focused on local keyword visibility, technical optimization, and citation/link building. Within five months, we drove a 478% increase in organic sessions, over 491% growth in Google traffic, and secured numerous #1 rankings for high-value local search terms.
 
 The Challenge.
 
-The client faced unique obstacles in a highly specialized market: virtually no online presence despite 25 years in business, competing against general contractors with larger marketing budgets, a niche service category with limited search volume requiring strategic keyword targeting, no existing content showcasing their portfolio of over 200 completed barn restorations, and serving a five-state region requiring broad geographic targeting.
+The agency partner engaged us as part of a larger marketing strategy that included paid social, website redesign, and local SEO. Our role was strictly SEO-focused, with our client success manager and team lead handling monthly reporting and strategy delivery via GPT-powered reports and video walkthroughs. The client needed local visibility in Google Search and Maps, topical authority around barn restoration services, and non-branded lead generation via organic channels.
 
 Our Approach.
 
-We developed a content-first strategy that showcased their expertise and portfolio. Our team created in-depth service pages for each restoration type, including timber frame repair, foundation work, and historic preservation. We built location pages targeting rural communities across five states, implemented before-and-after gallery schema for rich snippets, and launched a strategic link building campaign targeting agricultural and historic preservation publications.
+Our campaign launched mid-year and focused on keyword research and mapping across barn-related services, on-page optimization across core service pages including titles, headers, and internal links, technical audit and implementation covering sitemaps, schema, and speed improvements, setup of foundational structured and unstructured citations, GSC cleanup and indexing verification, and competitive SERP gap analysis with a roadmap for content support.
 
 The Results.
 
-The transformation established them as the dominant online authority in barn restoration. They achieved first-page rankings for nearly every relevant keyword in their service area, with organic traffic growing 245% year-over-year. Their content now ranks for informational queries that capture prospects early in the research phase.
-
-Lead Quality and ROI Impact.
-
-Organic traffic now generates 25 to 35 highly qualified leads per month, with average project values ranging from $45,000 for repairs to $180,000 for full restorations. With a 40% close rate on qualified leads, monthly revenue attribution from organic channels reaches $85,000 to $140,000. For an SEO investment of $1,900 per month, that delivers a 45 to 75 times return on investment.
+As of September 2025, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel New York', 'Old barn repair New York', 'Barn restoration companies New York', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance from March to December 2025 versus 2024 showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -170,70 +168,72 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
   },
   "barn-restoration-seo": {
     slug: "barn-restoration-seo",
-    client: "Heritage Barn Restoration Partner",
+    client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "GBP Optimization", "Content Development", "Link Building", "Technical SEO"],
-    headline: "Building Organic Authority for a Specialty Barn Restoration Company",
+    services: ["Local SEO", "Technical SEO", "Citation Building", "Link Building", "On-Page SEO"],
+    headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
-      value: "278%",
-      label: "Organic Lead Growth",
+      value: "478%",
+      label: "Year-over-Year Organic Growth",
     },
     secondaryMetrics: [
-      { value: "32", label: "Page 1 Keywords" },
-      { value: "5", label: "State Coverage" },
-      { value: "245%", label: "Traffic Growth YoY" },
-      { value: "45-75x", label: "ROI Range" },
+      { value: "491%", label: "Google Organic Traffic" },
+      { value: "22", label: "SEO Cycles" },
+      { value: "522%", label: "Google Sessions Growth" },
+      { value: "33-66x", label: "ROI Range" },
     ],
-    challenge: "Our agency partner brought us a family-owned barn restoration company with 25 years of exceptional craftsmanship but virtually no online presence. Despite completing over 200 restorations, they were losing projects to general contractors with stronger digital marketing.",
+    challenge: "Our agency partner engaged us as part of a larger marketing strategy that included paid social, website redesign, and local SEO. The client needed to establish local visibility in the competitive New York barn restoration market, build topical authority, and generate non-branded leads via organic channels.",
     challengeDetails: [
-      "Virtually no online presence despite 25 years in business and 200+ completed projects",
-      "Competing against general contractors with larger marketing budgets",
-      "Niche service category with limited but high-intent search volume",
-      "No existing content showcasing their extensive portfolio of restorations",
-      "Five-state service region requiring broad geographic targeting",
-      "High-value projects ($45K-$180K) with long sales cycles requiring trust-building content",
+      "Limited organic visibility in a niche local market",
+      "Competing against general contractors with broader marketing reach",
+      "Need for local visibility in both Google Search and Maps",
+      "Required topical authority around specialized barn restoration services",
+      "Non-branded lead generation via organic channels as primary goal",
+      "Coordination with paid advertising running alongside SEO efforts",
     ],
-    solution: "We developed a content-first strategy that showcased their expertise and extensive portfolio. Our approach focused on establishing topical authority in barn restoration through comprehensive service content, strategic location targeting, and authoritative link building from agricultural and preservation publications.",
+    solution: "We launched a focused local SEO campaign targeting the New York market, beginning prior to the busy fall season. Our approach combined local keyword optimization, technical SEO improvements, and strategic citation/link building to establish dominance in barn restoration search results.",
     solutionDetails: [
-      "Created in-depth service pages for each restoration type: timber frame repair, foundation work, roof restoration, and historic preservation",
-      "Built location pages targeting rural communities and counties across five states",
-      "Implemented before-and-after gallery with proper image schema for rich snippets",
-      "Developed a content hub with educational articles on barn preservation, timber frame construction, and historic tax credits",
-      "Launched link building campaign targeting agricultural publications, historic preservation societies, and rural lifestyle blogs",
-      "Optimized Google Business Profile with project photos, service categories, and review generation",
-      "Created video content showcasing restoration processes for YouTube and website embedding",
+      "Keyword research and mapping across barn-related services",
+      "On-page optimization across core service pages (titles, headers, internal links)",
+      "Technical audit and implementation (sitemaps, schema, speed improvements)",
+      "Setup of foundational structured and unstructured citations",
+      "GSC cleanup and indexing verification",
+      "Competitive SERP gap analysis and roadmap for content support",
+      "Monthly reporting via GPT-powered reports and video walkthroughs",
     ],
-    results: "Within 9 months, we established them as the dominant online authority in barn restoration across their five-state region. They achieved first-page rankings for nearly every relevant keyword, with organic traffic growing 245% year-over-year and lead quality dramatically improving.",
+    results: "Within 22 SEO cycles, we achieved extraordinary growth across all organic channels. The site now dominates local search results for barn restoration keywords in New York, with multiple #1 rankings secured for high-value local search terms.",
     resultDetails: [
-      "278% increase in organic leads (form submissions + phone calls)",
-      "32 keywords now ranking on page 1 (up from 3)",
-      "245% organic traffic growth year-over-year",
-      "Featured snippets captured for 8 informational queries",
-      "Average lead value increased 40% as content attracted higher-budget projects",
-      "Portfolio pages driving 35% of all organic conversions",
-      "Reduced dependency on paid advertising by 60%",
+      "478% year-over-year increase in organic sessions (October 2024 to October 2025)",
+      "491% year-over-year traffic growth from Google search specifically",
+      "522% growth in Google Organic sessions (655 to 4,074)",
+      "#1 rankings for 'Barn remodel New York', 'Old barn repair New York', 'Barn restoration companies New York'",
+      "#1 rankings for 'Pole barn repair contractors near me', 'Barn roof repair near me'",
+      "Top 3 visibility across 12+ terms on organic desktop",
+      "Top 2 local pack positions for most service queries",
+      "278% growth in Bing traffic, 300% growth in DuckDuckGo traffic",
     ],
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
       details: [
-        "Organic traffic now generates 25–35 highly qualified leads per month",
-        "Average project value ranges from $45,000 for repairs to $180,000 for full restorations",
-        "Close rate of 40% on qualified organic leads (vs. 15% on paid leads)",
-        "Monthly revenue attribution of $85,000–$140,000 from organic channels",
-        "SEO investment of $1,900/month delivers 45–75x return",
-        "Educational content now captures prospects 6-12 months before project start",
+        "Organic traffic now drives consistent inbound leads for barn restoration projects",
+        "Average project value for barn restorations ranges from $15,000–$75,000",
+        "With modest conversion rates, client gains 2–4 new projects/month from organic",
+        "Translates to an estimated $25,000–$50,000/month in revenue",
+        "For just $750/month in SEO spend — a 33x to 66x return on investment",
+        "Paid advertising running alongside helps fund and accelerate organic results",
       ],
       metrics: {
-        monthlyLeads: "25-35",
-        qualifiedLeads: "20-28",
-        avgProjectValue: "$45K-$180K",
-        closeRate: "40%",
-        monthlyRevenue: "$85K-$140K",
-        seoSpend: "$1,900/mo",
-        roiRange: "45-75x",
+        totalSessions: "4,512",
+        googleSessions: "4,074",
+        engagedSessions: "2,628",
+        sessionGrowth: "+496.8%",
+        monthlyRevenue: "$25K-$50K",
+        seoSpend: "$750/mo",
+        roiRange: "33-66x",
       },
     },
-    timeline: "March 2025 to Present (9 SEO Cycles)",
+    timeline: "May 2024 to Present (22 SEO Cycles)",
+    heroImage: barnRestorationChart,
     narrationText: barnRestorationNarration,
   },
 };
