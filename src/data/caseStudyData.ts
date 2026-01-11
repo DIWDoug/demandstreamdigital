@@ -33,7 +33,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "Technical SEO", "Citation Building", "Link Building"],
+    services: ["Local SEO", "Paid Search", "Website Redesign"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -48,7 +48,7 @@ export const caseStudyCards: CaseStudy[] = [
       roiRange: "33-66x",
       seoSpend: "$750/mo",
     },
-    challenge: "Barn restoration company in New York market with limited organic visibility, competing for local search terms against general contractors.",
+    challenge: "Barn restoration company in the Northeast market with limited organic visibility, competing for local search terms against general contractors.",
     thumbnail: barnRestorationChart,
   },
 ];
@@ -81,19 +81,19 @@ Organic traffic now drives over 130 inbound actions per month, including more th
 const barnRestorationNarration = `
 Local SEO Growth for a Barn Restoration Company.
 
-In collaboration with our agency partner, we launched an SEO campaign for a barn restoration company serving the New York market. Our engagement began prior to the busy fall season and focused on local keyword visibility, technical optimization, and citation/link building. Within five months, we drove a 478% increase in organic sessions, over 491% growth in Google traffic, and secured numerous #1 rankings for high-value local search terms.
+In collaboration with our agency partner, we launched an SEO campaign for a barn restoration company serving the Northeast market. Our engagement began prior to the busy fall season and focused on local keyword visibility, technical optimization, and citation/link building. We drove a 478% increase in organic sessions, over 491% growth in Google traffic, and secured numerous #1 rankings for high-value local search terms.
 
 The Challenge.
 
-The agency partner engaged us as part of a larger marketing strategy that included paid social, website redesign, and local SEO. Our role was strictly SEO-focused, with our client success manager and team lead handling monthly reporting and strategy delivery via GPT-powered reports and video walkthroughs. The client needed local visibility in Google Search and Maps, topical authority around barn restoration services, and non-branded lead generation via organic channels.
+The agency partner engaged us as part of a larger marketing strategy that included paid search, website redesign, and local SEO. Our role was strictly SEO-focused, with our client success manager and team lead handling monthly reporting and strategy delivery via GPT-powered reports and video walkthroughs. The client needed local visibility in Google Search and Maps, topical authority around barn restoration services, and non-branded lead generation via organic channels.
 
 Our Approach.
 
-Our campaign launched mid-year and focused on keyword research and mapping across barn-related services, on-page optimization across core service pages including titles, headers, and internal links, technical audit and implementation covering sitemaps, schema, and speed improvements, setup of foundational structured and unstructured citations, GSC cleanup and indexing verification, and competitive SERP gap analysis with a roadmap for content support.
+Our campaign focused on hub and spoke methodology with service page expansion, keyword research and mapping across barn-related services, on-page optimization across core service pages including titles, headers, and internal links, technical audit and implementation covering sitemaps, schema, and speed improvements, setup of foundational structured and unstructured citations, GSC cleanup and indexing verification, and competitive SERP gap analysis with a roadmap for content support.
 
 The Results.
 
-As of September 2025, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel New York', 'Old barn repair New York', 'Barn restoration companies New York', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance from March to December 2025 versus 2024 showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
+As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel' and 'Old barn repair' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -170,7 +170,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "Technical SEO", "Citation Building", "Link Building", "On-Page SEO"],
+    services: ["Local SEO", "Paid Search", "Website Redesign", "Hub & Spoke Methodology"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -182,7 +182,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "522%", label: "Google Sessions Growth" },
       { value: "33-66x", label: "ROI Range" },
     ],
-    challenge: "Our agency partner engaged us as part of a larger marketing strategy that included paid social, website redesign, and local SEO. The client needed to establish local visibility in the competitive New York barn restoration market, build topical authority, and generate non-branded leads via organic channels.",
+    challenge: "Our agency partner engaged us as part of a larger marketing strategy that included paid search, website redesign, and local SEO. The client needed to establish local visibility in the competitive Northeast barn restoration market, build topical authority, and generate non-branded leads via organic channels.",
     challengeDetails: [
       "Limited organic visibility in a niche local market",
       "Competing against general contractors with broader marketing reach",
@@ -191,8 +191,9 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Non-branded lead generation via organic channels as primary goal",
       "Coordination with paid advertising running alongside SEO efforts",
     ],
-    solution: "We launched a focused local SEO campaign targeting the New York market, beginning prior to the busy fall season. Our approach combined local keyword optimization, technical SEO improvements, and strategic citation/link building to establish dominance in barn restoration search results.",
+    solution: "We launched a focused local SEO campaign targeting the Northeast market, beginning prior to the busy fall season. Our approach combined hub and spoke methodology with service page expansion, local keyword optimization, technical SEO improvements, and strategic citation/link building to establish dominance in barn restoration search results.",
     solutionDetails: [
+      "Hub and spoke methodology with strategic service page expansion",
       "Keyword research and mapping across barn-related services",
       "On-page optimization across core service pages (titles, headers, internal links)",
       "Technical audit and implementation (sitemaps, schema, speed improvements)",
@@ -201,12 +202,12 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Competitive SERP gap analysis and roadmap for content support",
       "Monthly reporting via GPT-powered reports and video walkthroughs",
     ],
-    results: "Within 22 SEO cycles, we achieved extraordinary growth across all organic channels. The site now dominates local search results for barn restoration keywords in New York, with multiple #1 rankings secured for high-value local search terms.",
+    results: "Over 22 SEO cycles, we achieved extraordinary growth across all organic channels. The site now dominates local search results for barn restoration keywords in the Northeast, with multiple #1 rankings secured for high-value local search terms.",
     resultDetails: [
       "478% year-over-year increase in organic sessions (October 2024 to October 2025)",
       "491% year-over-year traffic growth from Google search specifically",
       "522% growth in Google Organic sessions (655 to 4,074)",
-      "#1 rankings for 'Barn remodel New York', 'Old barn repair New York', 'Barn restoration companies New York'",
+      "#1 rankings for barn remodel, old barn repair, and barn restoration company terms across the Northeast",
       "#1 rankings for 'Pole barn repair contractors near me', 'Barn roof repair near me'",
       "Top 3 visibility across 12+ terms on organic desktop",
       "Top 2 local pack positions for most service queries",
