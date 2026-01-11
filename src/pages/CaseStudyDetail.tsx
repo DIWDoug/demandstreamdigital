@@ -6,7 +6,7 @@ import Footer from "@/components/sections/Footer";
 import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2 } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
 import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
 
 // Extended case study content structure
 export interface CaseStudyContent {
@@ -57,8 +57,7 @@ const CaseStudyDetail = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
   
-  // PDF viewer state
-  const [pdfViewerOpen, setPdfViewerOpen] = useState(false);
+  
   
   const study = slug ? caseStudyContent[slug] : null;
   const basicStudy = caseStudies.find(s => s.slug === slug);
@@ -210,13 +209,15 @@ const CaseStudyDetail = () => {
                         <Download className="w-4 h-4" />
                         Download PDF
                       </a>
-                      <button
-                        onClick={() => setPdfViewerOpen(true)}
+                      <a
+                        href={content.pdfDownload}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
                       >
                         <BookOpen className="w-4 h-4" />
                         View PDF
-                      </button>
+                      </a>
                     </>
                   )}
                   
@@ -455,44 +456,6 @@ const CaseStudyDetail = () => {
         </section>
       </main>
       
-      {/* PDF Viewer Modal */}
-      <Dialog open={pdfViewerOpen} onOpenChange={setPdfViewerOpen}>
-        <DialogContent className="max-w-md p-6">
-          <DialogHeader>
-            <DialogTitle className="text-lg font-semibold">
-              View Case Study PDF
-            </DialogTitle>
-          </DialogHeader>
-          <div className="flex flex-col gap-4 mt-4">
-            <p className="text-muted-foreground text-sm">
-              Choose how you'd like to view the case study:
-            </p>
-            {content.pdfDownload && (
-              <>
-                <a
-                  href={content.pdfDownload}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                  onClick={() => setPdfViewerOpen(false)}
-                >
-                  <BookOpen className="w-5 h-5" />
-                  Open in New Tab
-                </a>
-                <a
-                  href={content.pdfDownload}
-                  download
-                  className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-lg hover:bg-secondary/80 transition-colors font-medium"
-                  onClick={() => setPdfViewerOpen(false)}
-                >
-                  <Download className="w-5 h-5" />
-                  Download PDF
-                </a>
-              </>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
       
       <Footer />
     </div>
