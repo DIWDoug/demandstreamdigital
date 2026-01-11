@@ -213,6 +213,16 @@ const CaseStudyDetail = () => {
                         href={content.pdfDownload}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => {
+                          // Some browsers/extensions treat target=_blank as a popup and block it.
+                          // Try opening explicitly; if blocked, let the default navigation happen.
+                          const url = content.pdfDownload!;
+                          const opened = window.open(url, "_blank", "noopener,noreferrer");
+                          if (opened) {
+                            e.preventDefault();
+                            opened.focus?.();
+                          }
+                        }}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
                       >
                         <BookOpen className="w-4 h-4" />
