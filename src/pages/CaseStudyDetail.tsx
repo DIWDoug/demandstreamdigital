@@ -278,20 +278,6 @@ const CaseStudyDetail = () => {
           </div>
         </section>
         
-        {/* Hero Image */}
-        {content.heroImage && (
-          <section className="pb-16">
-            <div className="container mx-auto px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <img 
-                  src={content.heroImage} 
-                  alt={`${content.headline} - Results Chart`}
-                  className="w-full rounded-xl border border-border shadow-lg"
-                />
-              </div>
-            </div>
-          </section>
-        )}
         
         {/* Content Sections */}
         <section className="py-16 md:py-24">
