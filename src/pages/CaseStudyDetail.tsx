@@ -471,19 +471,38 @@ const CaseStudyDetail = () => {
       
       {/* PDF Viewer Modal */}
       <Dialog open={pdfViewerOpen} onOpenChange={setPdfViewerOpen}>
-        <DialogContent className="max-w-4xl h-[90vh] p-0">
-          <DialogHeader className="p-4 border-b border-border">
-            <DialogTitle className="flex items-center justify-between">
-              <span>{content.headline}</span>
+        <DialogContent className="max-w-md p-6">
+          <DialogHeader>
+            <DialogTitle className="text-lg font-semibold">
+              View Case Study PDF
             </DialogTitle>
           </DialogHeader>
-          <div className="flex-1 h-full overflow-hidden">
+          <div className="flex flex-col gap-4 mt-4">
+            <p className="text-muted-foreground text-sm">
+              Choose how you'd like to view the case study:
+            </p>
             {content.pdfDownload && (
-              <iframe
-                src={content.pdfDownload}
-                className="w-full h-[calc(90vh-80px)]"
-                title="Case Study PDF"
-              />
+              <>
+                <a
+                  href={content.pdfDownload}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                  onClick={() => setPdfViewerOpen(false)}
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Open in New Tab
+                </a>
+                <a
+                  href={content.pdfDownload}
+                  download
+                  className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-lg hover:bg-secondary/80 transition-colors font-medium"
+                  onClick={() => setPdfViewerOpen(false)}
+                >
+                  <Download className="w-5 h-5" />
+                  Download PDF
+                </a>
+              </>
             )}
           </div>
         </DialogContent>
