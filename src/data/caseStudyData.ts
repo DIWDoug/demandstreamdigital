@@ -33,7 +33,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "Paid Search", "Website Redesign"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -81,19 +81,19 @@ Organic traffic now drives over 130 inbound actions per month, including more th
 const barnRestorationNarration = `
 Local SEO Growth for a Barn Restoration Company.
 
-In collaboration with our agency partner, we launched an SEO campaign for a barn restoration company serving the Northeast market. Our engagement began prior to the busy fall season and focused on local keyword visibility, technical optimization, and citation/link building. We drove a 478% increase in organic sessions, over 491% growth in Google traffic, and secured numerous #1 rankings for high-value local search terms.
+In collaboration with our agency partner, we launched an SEO campaign for a barn restoration company serving the Northeast market. Our engagement began prior to the busy fall season and focused on local keyword visibility, GBP optimization, link building, and content development. We drove a 478% increase in organic sessions, over 491% growth in Google traffic, and secured numerous #1 rankings for high-value local search terms.
 
 The Challenge.
 
-The agency partner engaged us as part of a larger marketing strategy that included paid search, website redesign, and local SEO. Our role was strictly SEO-focused, with our client success manager and team lead handling monthly reporting and strategy delivery via GPT-powered reports and video walkthroughs. The client needed local visibility in Google Search and Maps, topical authority around barn restoration services, and non-branded lead generation via organic channels.
+The agency partner engaged us for local SEO, GBP optimization, link building, and content development. Our client success manager and team lead handled monthly reporting and strategy delivery via GPT-powered reports and video walkthroughs. The client needed local visibility in Google Search and Maps, topical authority around barn restoration services, and non-branded lead generation via organic channels.
 
 Our Approach.
 
-Our campaign focused on hub and spoke methodology with service page expansion, keyword research and mapping across barn-related services, on-page optimization across core service pages including titles, headers, and internal links, technical audit and implementation covering sitemaps, schema, and speed improvements, setup of foundational structured and unstructured citations, GSC cleanup and indexing verification, and competitive SERP gap analysis with a roadmap for content support.
+Our campaign focused on keyword research and mapping across barn-related services, Google Business Profile optimization, on-page optimization across core service pages including titles, headers, and internal links, content development for service pages and blog, technical audit and implementation covering sitemaps, schema, and speed improvements, setup of foundational structured and unstructured citations, and strategic link building for authority.
 
 The Results.
 
-As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel' and 'Old barn repair' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
+As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel [state]' and 'Old barn repair [state]' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -170,7 +170,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "Paid Search", "Website Redesign", "Hub & Spoke Methodology"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -182,7 +182,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "522%", label: "Google Sessions Growth" },
       { value: "33-66x", label: "ROI Range" },
     ],
-    challenge: "Our agency partner engaged us as part of a larger marketing strategy that included paid search, website redesign, and local SEO. The client needed to establish local visibility in the competitive Northeast barn restoration market, build topical authority, and generate non-branded leads via organic channels.",
+    challenge: "Our agency partner engaged us for local SEO, GBP optimization, link building, and content development. The client needed to establish local visibility in the competitive Northeast barn restoration market, build topical authority, and generate non-branded leads via organic channels.",
     challengeDetails: [
       "Limited organic visibility in a niche local market",
       "Competing against general contractors with broader marketing reach",
@@ -191,15 +191,15 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Non-branded lead generation via organic channels as primary goal",
       "Coordination with paid advertising running alongside SEO efforts",
     ],
-    solution: "We launched a focused local SEO campaign targeting the Northeast market, beginning prior to the busy fall season. Our approach combined hub and spoke methodology with service page expansion, local keyword optimization, technical SEO improvements, and strategic citation/link building to establish dominance in barn restoration search results.",
+    solution: "We launched a focused local SEO campaign targeting the Northeast market, beginning prior to the busy fall season. Our approach combined GBP optimization, strategic link building, content development, and technical SEO improvements to establish dominance in barn restoration search results.",
     solutionDetails: [
-      "Hub and spoke methodology with strategic service page expansion",
+      "Google Business Profile optimization with our proprietary methodology",
       "Keyword research and mapping across barn-related services",
+      "Content development for service pages and blog articles",
       "On-page optimization across core service pages (titles, headers, internal links)",
       "Technical audit and implementation (sitemaps, schema, speed improvements)",
+      "Strategic link building for authority and local relevance",
       "Setup of foundational structured and unstructured citations",
-      "GSC cleanup and indexing verification",
-      "Competitive SERP gap analysis and roadmap for content support",
       "Monthly reporting via GPT-powered reports and video walkthroughs",
     ],
     results: "Over 22 SEO cycles, we achieved extraordinary growth across all organic channels. The site now dominates local search results for barn restoration keywords in the Northeast, with multiple #1 rankings secured for high-value local search terms.",
