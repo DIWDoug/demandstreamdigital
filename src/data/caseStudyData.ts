@@ -20,6 +20,11 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "426%", label: "Google Organic Growth" },
       { value: "8", label: "SEO Cycles" },
     ],
+    roiHighlight: {
+      monthlyRevenue: "$32K-$96K",
+      roiRange: "33-100x",
+      seoSpend: "$950/mo",
+    },
     challenge: "New website launch with zero organic foundation, needing to establish visibility across four geographic locations in a competitive marine industry.",
     thumbnail: recreationalBoatingChart,
   },

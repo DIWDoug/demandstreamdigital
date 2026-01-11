@@ -21,6 +21,11 @@ export interface CaseStudy {
     value: string;
     label: string;
   }[];
+  roiHighlight?: {
+    monthlyRevenue: string;
+    roiRange: string;
+    seoSpend: string;
+  };
   challenge: string;
   thumbnail?: string;
 }
@@ -164,6 +169,26 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
             </div>
             <p className="text-sm text-muted-foreground">{study.heroMetric.label}</p>
           </div>
+          
+          {/* ROI Highlight */}
+          {study.roiHighlight && (
+            <div className="bg-gradient-to-r from-green-500/10 to-primary/10 border border-green-500/20 rounded-lg p-3 mb-4">
+              <div className="flex items-center justify-between gap-2">
+                <div className="text-center flex-1">
+                  <p className="text-lg font-bold text-green-500">{study.roiHighlight.roiRange}</p>
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-wide">ROI</p>
+                </div>
+                <div className="w-px h-8 bg-border" />
+                <div className="text-center flex-1">
+                  <p className="text-lg font-bold text-primary">{study.roiHighlight.monthlyRevenue}</p>
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-wide">Est. Revenue</p>
+                </div>
+              </div>
+              <p className="text-[10px] text-center text-muted-foreground mt-2 border-t border-border/50 pt-2">
+                From {study.roiHighlight.seoSpend} SEO investment
+              </p>
+            </div>
+          )}
           
           {/* Headline */}
           <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
