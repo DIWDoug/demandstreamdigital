@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, TrendingUp, Users, Target, BarChart3 } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3 } from "lucide-react";
+import { caseStudyCards } from "@/data/caseStudyData";
 
 // Case study data structure
 export interface CaseStudy {
@@ -24,8 +25,8 @@ export interface CaseStudy {
   thumbnail?: string;
 }
 
-// This will be populated as case studies are added
-export const caseStudies: CaseStudy[] = [];
+// Export for use in detail page
+export const caseStudies: CaseStudy[] = caseStudyCards;
 
 const CaseStudies = () => {
   return (
