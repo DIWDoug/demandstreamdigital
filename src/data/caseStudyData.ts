@@ -237,6 +237,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "May 2024 to Present (22 SEO Cycles)",
     heroImage: barnRestorationHero,
+    pdfDownload: "/case-studies/barn-restoration-seo.pdf",
     narrationText: barnRestorationNarration,
   },
 };
