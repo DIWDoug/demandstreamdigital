@@ -25,6 +25,27 @@ export const caseStudyCards: CaseStudy[] = [
   },
 ];
 
+// ============ NARRATION TEXT FOR TTS ============
+const recreationalBoatingNarration = `
+Transforming Organic Visibility in the Recreational Boating Industry.
+
+In May 2025, we began a strategic SEO partnership with a client in the recreational boating industry, shortly after their agency partner launched a new website. Over the course of eight SEO cycles, we delivered transformative results that culminated in a 444% year-over-year increase in organic sessions by December 2025.
+
+The Challenge.
+
+Our agency partner brought us in as part of a larger marketing strategy that included a full website launch, organic SEO, search ads, and social advertising. The client faced several challenges: a brand new website with no existing organic authority, a competitive marine industry with established local players, four distinct geographic locations requiring localized strategies, and starting from negative 80% year-over-year performance baseline.
+
+Our Approach.
+
+We immediately conducted a historical audit using the Wayback Machine to identify legacy URLs, then implemented a full 301 redirect strategy to prevent traffic loss. We established a 40-keyword strategy across four geographic locations, performed full schema markup implementation, completed data aggregator submissions, and set up Google Business Profile listings with our proprietary 120% optimization methodology.
+
+The Results.
+
+The transformation was nothing short of extraordinary. From a challenging start in January with negative 80% performance, we achieved positive 584% growth by October across all organic channels. We secured multiple top 3 rankings for core terms and achieved high local visibility across Google Maps for all four target locations.
+
+Key metrics include: 444% year-over-year increase in organic sessions, 426% Google organic traffic growth, and consistent month-over-month growth maintained across 8 SEO cycles.
+`;
+
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
 export const caseStudyFullContent: Record<string, CaseStudyContent> = {
   "recreational-boating-seo": {
@@ -71,5 +92,12 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     ],
     timeline: "April 2025 to Present (8 SEO Cycles)",
     heroImage: recreationalBoatingChart,
+    pdfDownload: "/case-studies/recreational-boating-seo.pdf",
+    narrationText: recreationalBoatingNarration,
   },
+};
+
+// Helper to get narration text
+export const getCaseStudyNarration = (slug: string): string | undefined => {
+  return caseStudyFullContent[slug]?.narrationText;
 };

@@ -1,10 +1,12 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useState, useRef } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download } from "lucide-react";
+import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2 } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
-import { caseStudyFullContent } from "@/data/caseStudyData";
+import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 // Extended case study content structure
 export interface CaseStudyContent {
@@ -35,6 +37,7 @@ export interface CaseStudyContent {
   };
   heroImage?: string;
   pdfDownload?: string;
+  narrationText?: string;
 }
 
 // Use imported content
@@ -42,6 +45,15 @@ export const caseStudyContent = caseStudyFullContent;
 
 const CaseStudyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+  
+  // Audio state
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioUrlRef = useRef<string | null>(null);
+  
+  // PDF viewer state
+  const [pdfViewerOpen, setPdfViewerOpen] = useState(false);
   
   const study = slug ? caseStudyContent[slug] : null;
   const basicStudy = caseStudies.find(s => s.slug === slug);
@@ -63,6 +75,68 @@ const CaseStudyDetail = () => {
   const currentIndex = caseStudies.findIndex(s => s.slug === slug);
   const prevStudy = currentIndex > 0 ? caseStudies[currentIndex - 1] : null;
   const nextStudy = currentIndex < caseStudies.length - 1 ? caseStudies[currentIndex + 1] : null;
+
+  // Audio playback handler
+  const handlePlayAudio = async () => {
+    // If already playing, pause
+    if (audioRef.current && isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+      return;
+    }
+    
+    // If we already have the audio loaded, just play it
+    if (audioRef.current && audioUrlRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
+      return;
+    }
+    
+    // Fetch and play new audio
+    const narrationText = getCaseStudyNarration(slug || '');
+    if (!narrationText) return;
+    
+    setIsLoadingAudio(true);
+    
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-case-study-tts`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+          },
+          body: JSON.stringify({ text: narrationText }),
+        }
+      );
+      
+      if (!response.ok) {
+        throw new Error("Failed to generate audio");
+      }
+      
+      const audioBlob = await response.blob();
+      const audioUrl = URL.createObjectURL(audioBlob);
+      audioUrlRef.current = audioUrl;
+      
+      const audio = new Audio(audioUrl);
+      audioRef.current = audio;
+      
+      audio.onended = () => setIsPlaying(false);
+      audio.onerror = () => {
+        setIsPlaying(false);
+        console.error("Audio playback error");
+      };
+      
+      await audio.play();
+      setIsPlaying(true);
+    } catch (error) {
+      console.error("TTS error:", error);
+    } finally {
+      setIsLoadingAudio(false);
+    }
+  };
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -119,16 +193,53 @@ const CaseStudyDetail = () => {
                   ))}
                 </div>
                 
-                {content.pdfDownload && (
-                  <a 
-                    href={content.pdfDownload}
-                    download
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </a>
-                )}
+                {/* Action Buttons */}
+                <div className="flex flex-wrap items-center gap-4">
+                  {content.pdfDownload && (
+                    <>
+                      <a 
+                        href={content.pdfDownload}
+                        download
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
+                      >
+                        <Download className="w-4 h-4" />
+                        Download PDF
+                      </a>
+                      <button
+                        onClick={() => setPdfViewerOpen(true)}
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
+                      >
+                        <BookOpen className="w-4 h-4" />
+                        View PDF
+                      </button>
+                    </>
+                  )}
+                  
+                  {content.narrationText && (
+                    <button
+                      onClick={handlePlayAudio}
+                      disabled={isLoadingAudio}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
+                    >
+                      {isLoadingAudio ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Loading...
+                        </>
+                      ) : isPlaying ? (
+                        <>
+                          <Pause className="w-4 h-4" />
+                          Pause Audio
+                        </>
+                      ) : (
+                        <>
+                          <Volume2 className="w-4 h-4" />
+                          Listen to Case Study
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
               </div>
               
               {/* Metrics Card */}
@@ -301,6 +412,26 @@ const CaseStudyDetail = () => {
           </div>
         </section>
       </main>
+      
+      {/* PDF Viewer Modal */}
+      <Dialog open={pdfViewerOpen} onOpenChange={setPdfViewerOpen}>
+        <DialogContent className="max-w-4xl h-[90vh] p-0">
+          <DialogHeader className="p-4 border-b border-border">
+            <DialogTitle className="flex items-center justify-between">
+              <span>{content.headline}</span>
+            </DialogTitle>
+          </DialogHeader>
+          <div className="flex-1 h-full overflow-hidden">
+            {content.pdfDownload && (
+              <iframe
+                src={content.pdfDownload}
+                className="w-full h-[calc(90vh-80px)]"
+                title="Case Study PDF"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
       
       <Footer />
     </div>
