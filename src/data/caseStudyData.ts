@@ -28,6 +28,27 @@ export const caseStudyCards: CaseStudy[] = [
     challenge: "New website launch with zero organic foundation, needing to establish visibility across four geographic locations in a competitive marine industry.",
     thumbnail: recreationalBoatingChart,
   },
+  {
+    slug: "hvac-plumbing-seo",
+    client: "Midwest HVAC & Plumbing Partner",
+    industry: "Home Services",
+    services: ["Local SEO", "GBP Optimization", "Review Management", "Content Development"],
+    headline: "Dominating Local Search for a Multi-Location Home Services Provider",
+    heroMetric: {
+      value: "312%",
+      label: "Organic Lead Growth",
+    },
+    secondaryMetrics: [
+      { value: "47", label: "Page 1 Keywords" },
+      { value: "6", label: "Service Areas" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$45K-$72K",
+      roiRange: "25-40x",
+      seoSpend: "$1,800/mo",
+    },
+    challenge: "Established business struggling with inconsistent online presence across six service areas, losing market share to aggressive local competitors with stronger digital footprints.",
+  },
 ];
 
 // ============ NARRATION TEXT FOR TTS ============
@@ -53,6 +74,28 @@ Key metrics include: 444% year-over-year increase in organic sessions, 426% Goog
 Lead Quality and ROI Impact.
 
 Organic traffic now drives over 130 inbound actions per month, including more than 30 phone clicks. After adjusting for lead quality, we estimate the client receives 40 to 70 qualified organic leads monthly. With even modest conversion of 5 to 10 percent, the client gains 2 to 6 new members per month, each worth approximately $16,000 in lifetime value. That translates to an estimated $32,000 to $96,000 per month in revenue, for just $950 per month in SEO spend — a 33x to 100x return on investment.
+`;
+
+const hvacPlumbingNarration = `
+Dominating Local Search for a Multi-Location Home Services Provider.
+
+In February 2025, we partnered with an agency serving a well-established HVAC and plumbing company in the Midwest. Despite 15 years in business and excellent service quality, they were losing ground to competitors with stronger digital presences. Over 10 SEO cycles, we delivered a complete transformation that resulted in 312% organic lead growth.
+
+The Challenge.
+
+The client faced multiple obstacles: inconsistent business information across more than 40 citations, six service areas with competing Google Business Profiles, low review volume averaging just 12 reviews per location compared to competitors with 50 or more, an outdated website with poor mobile experience, and no structured data implementation causing missed rich snippet opportunities.
+
+Our Approach.
+
+We executed a comprehensive local SEO overhaul beginning with NAP consistency remediation across all business directories. Our team created six location-specific landing pages with unique content and local schema markup, launched automated review generation campaigns, and optimized all Google Business Profiles using our proprietary 120% methodology. We also rebuilt service pages to eliminate keyword cannibalization and improved Core Web Vitals scores from 45 to 92 on mobile.
+
+The Results.
+
+Within 10 months, the transformation was remarkable. The client moved from page 2 and 3 rankings to dominant page 1 positions for high-intent service keywords. Review count increased from 72 total to over 340 across all locations, with average star rating improving from 4.2 to 4.8 stars. Organic traffic grew 267% year-over-year.
+
+Lead Quality and ROI Impact.
+
+Organic and local pack traffic now generates over 85 qualified leads per month. With an average job value ranging from $1,200 for repairs to $8,500 for installations, and a 35% conversion rate from lead to booked appointment, monthly revenue attribution from organic channels reaches $45,000 to $72,000. For an SEO investment of $1,800 per month, that delivers a 25 to 40 times return on investment. Emergency service calls, which carry the highest margins, increased 156% from improved local pack visibility.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -124,6 +167,75 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     heroImage: recreationalBoatingChart,
     pdfDownload: "/case-studies/recreational-boating-seo.pdf",
     narrationText: recreationalBoatingNarration,
+  },
+  "hvac-plumbing-seo": {
+    slug: "hvac-plumbing-seo",
+    client: "Midwest HVAC & Plumbing Partner",
+    industry: "Home Services",
+    services: ["Local SEO", "GBP Optimization", "Review Management", "Content Development", "Technical SEO"],
+    headline: "Dominating Local Search for a Multi-Location Home Services Provider",
+    heroMetric: {
+      value: "312%",
+      label: "Organic Lead Growth",
+    },
+    secondaryMetrics: [
+      { value: "47", label: "Page 1 Keywords" },
+      { value: "6", label: "Service Areas" },
+      { value: "4.8★", label: "Avg. Review Rating" },
+      { value: "25-40x", label: "ROI Range" },
+    ],
+    challenge: "Our agency partner brought us a well-established HVAC and plumbing company that had been in business for 15 years but was losing ground to competitors with stronger digital presences. Despite excellent service quality and customer satisfaction, their online visibility was fragmented and inconsistent.",
+    challengeDetails: [
+      "Inconsistent NAP (Name, Address, Phone) data across 40+ citations",
+      "Six service area locations with competing Google Business Profiles",
+      "Low review volume (avg. 12 reviews per location) compared to competitors (50+)",
+      "Outdated website with poor mobile experience and slow load times",
+      "No structured data or schema markup implementation",
+      "Keyword cannibalization between service pages",
+    ],
+    solution: "We executed a comprehensive local SEO overhaul starting with NAP consistency remediation across all citations. Our team restructured the website's service pages to eliminate cannibalization, implemented location-specific landing pages, and launched an aggressive review generation campaign that transformed their online reputation.",
+    solutionDetails: [
+      "Audited and corrected NAP data across 40+ business directories and citations",
+      "Created 6 location-specific landing pages with unique content and local schema markup",
+      "Implemented LocalBusiness and Service schema across all relevant pages",
+      "Launched automated review request campaigns via SMS and email post-service",
+      "Optimized all 6 Google Business Profiles with our 120% methodology",
+      "Rebuilt service pages with proper keyword targeting and internal linking",
+      "Improved Core Web Vitals scores from 45 to 92 (mobile)",
+      "Established monthly content calendar focusing on seasonal HVAC topics",
+    ],
+    results: "Within 10 months, the client experienced a complete transformation in local search visibility. They moved from page 2-3 rankings to dominant page 1 positions for high-intent service keywords, while their review profile became a significant competitive advantage.",
+    resultDetails: [
+      "312% increase in organic leads (form submissions + phone calls)",
+      "47 keywords now ranking on page 1 (up from 8)",
+      "Review count increased from 72 total to 340+ across all locations",
+      "Average star rating improved from 4.2 to 4.8 stars",
+      "Organic traffic increased 267% year-over-year",
+      "Local pack visibility for 'emergency' keywords in all 6 service areas",
+      "Bounce rate decreased 34% with improved site speed",
+    ],
+    roiImpact: {
+      headline: "Lead Quality & ROI Impact",
+      details: [
+        "Organic and local pack traffic now generates 85+ qualified leads per month",
+        "Average job value of $1,200 for repairs, $8,500 for installations",
+        "Conversion rate of 35% from lead to booked appointment",
+        "Monthly revenue attribution of $45,000–$72,000 from organic channels",
+        "SEO investment of $1,800/month delivers 25–40x return",
+        "Emergency service calls (highest margin) up 156% from local pack visibility",
+      ],
+      metrics: {
+        monthlyActions: "85+",
+        qualifiedLeads: "60-75",
+        avgJobValue: "$1,200-$8,500",
+        conversionRate: "35%",
+        monthlyRevenue: "$45K-$72K",
+        seoSpend: "$1,800/mo",
+        roiRange: "25-40x",
+      },
+    },
+    timeline: "February 2025 to Present (10 SEO Cycles)",
+    narrationText: hvacPlumbingNarration,
   },
 };
 
