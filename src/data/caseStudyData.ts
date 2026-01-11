@@ -24,7 +24,7 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "8", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$32K-$96K",
+      monthlyRevenue: "$32K-$96K/mo",
       roiRange: "33-100x",
       seoSpend: "$950/mo",
     },
@@ -46,7 +46,7 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "22", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$25K-$50K",
+      monthlyRevenue: "$25K-$50K/mo",
       roiRange: "33-66x",
       seoSpend: "$750/mo",
     },
@@ -68,7 +68,7 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "9", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$4.5K-$10K",
+      monthlyRevenue: "$4.5K-$10K/mo",
       roiRange: "3-6.5x",
       seoSpend: "$1,538/mo",
     },
@@ -90,7 +90,7 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "9", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$6.4K+",
+      monthlyRevenue: "$6.4K+/mo",
       roiRange: "6x+",
       seoSpend: "$1,045/mo",
     },
