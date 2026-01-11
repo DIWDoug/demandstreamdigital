@@ -59,11 +59,11 @@ export const caseStudyCards: CaseStudy[] = [
     services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
     headline: "Local SEO Turnaround for a South Florida Photography Business",
     heroMetric: {
-      value: "+32%",
-      label: "YoY Session Growth",
+      value: "60pt",
+      label: "Performance Turnaround",
     },
     secondaryMetrics: [
-      { value: "60pt", label: "Performance Swing" },
+      { value: "-28% → +32%", label: "YoY Swing" },
       { value: "9", label: "SEO Cycles" },
     ],
     roiHighlight: {
@@ -71,7 +71,7 @@ export const caseStudyCards: CaseStudy[] = [
       roiRange: "3-6.5x",
       seoSpend: "$1,538/mo",
     },
-    challenge: "Wedding and family photography business experiencing -28% organic decline due to legacy PBN tactics, requiring complete SEO turnaround.",
+    challenge: "Reversed severe organic decline from risky PBN tactics — a complete SEO turnaround from -28% to +32% YoY in just 9 months.",
     thumbnail: floridaPhotographyHero,
   },
 ];
