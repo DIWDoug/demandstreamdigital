@@ -29,6 +29,19 @@ export interface CaseStudyContent {
   solutionDetails: string[];
   results: string;
   resultDetails: string[];
+  roiImpact?: {
+    headline: string;
+    details: string[];
+    metrics: {
+      monthlyActions: string;
+      qualifiedLeads: string;
+      newMembersPerMonth: string;
+      lifetimeValue: string;
+      monthlyRevenue: string;
+      seoSpend: string;
+      roiRange: string;
+    };
+  };
   timeline?: string;
   testimonial?: {
     quote: string;
@@ -349,6 +362,57 @@ const CaseStudyDetail = () => {
                   </ul>
                 )}
               </div>
+              
+              {/* ROI Impact Section */}
+              {content.roiImpact && (
+                <div className="bg-gradient-to-br from-primary/5 to-green-500/5 border border-primary/20 rounded-2xl p-8">
+                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm font-bold">$</span>
+                    {content.roiImpact.headline}
+                  </h2>
+                  
+                  {/* ROI Metrics Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.monthlyActions}</p>
+                      <p className="text-xs text-muted-foreground">Monthly Actions</p>
+                    </div>
+                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-primary">{content.roiImpact.metrics.qualifiedLeads}</p>
+                      <p className="text-xs text-muted-foreground">Qualified Leads</p>
+                    </div>
+                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-green-500">{content.roiImpact.metrics.monthlyRevenue}</p>
+                      <p className="text-xs text-muted-foreground">Est. Monthly Revenue</p>
+                    </div>
+                    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-4 text-center">
+                      <p className="text-2xl font-bold text-green-500">{content.roiImpact.metrics.roiRange}</p>
+                      <p className="text-xs text-muted-foreground">ROI</p>
+                    </div>
+                  </div>
+                  
+                  {/* ROI Details */}
+                  <ul className="space-y-3">
+                    {content.roiImpact.details.map((detail, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {/* Bottom line callout */}
+                  <div className="mt-6 pt-6 border-t border-border/50 text-center">
+                    <p className="text-lg font-semibold">
+                      <span className="text-muted-foreground">SEO Investment:</span>{" "}
+                      <span className="text-primary">{content.roiImpact.metrics.seoSpend}</span>
+                      <span className="text-muted-foreground mx-2">→</span>
+                      <span className="text-muted-foreground">Revenue:</span>{" "}
+                      <span className="text-green-500">{content.roiImpact.metrics.monthlyRevenue}</span>
+                    </p>
+                  </div>
+                </div>
+              )}
               
               {/* Testimonial */}
               {content.testimonial && (

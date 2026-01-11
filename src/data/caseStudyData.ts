@@ -44,6 +44,10 @@ The Results.
 The transformation was nothing short of extraordinary. From a challenging start in January with negative 80% performance, we achieved positive 584% growth by October across all organic channels. We secured multiple top 3 rankings for core terms and achieved high local visibility across Google Maps for all four target locations.
 
 Key metrics include: 444% year-over-year increase in organic sessions, 426% Google organic traffic growth, and consistent month-over-month growth maintained across 8 SEO cycles.
+
+Lead Quality and ROI Impact.
+
+Organic traffic now drives over 130 inbound actions per month, including more than 30 phone clicks. After adjusting for lead quality, we estimate the client receives 40 to 70 qualified organic leads monthly. With even modest conversion of 5 to 10 percent, the client gains 2 to 6 new members per month, each worth approximately $16,000 in lifetime value. That translates to an estimated $32,000 to $96,000 per month in revenue, for just $950 per month in SEO spend — a 33x to 100x return on investment.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -62,6 +66,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "426%", label: "Google Organic Traffic" },
       { value: "8", label: "SEO Cycles" },
       { value: "4", label: "Geographic Locations" },
+      { value: "33-100x", label: "ROI Range" },
     ],
     challenge: "Our agency partner brought us in as part of a larger marketing strategy that included a full website launch, organic SEO, search ads, and social advertising. The client needed to establish organic visibility from scratch after a complete website rebuild in the competitive recreational boating industry.",
     challengeDetails: [
@@ -90,6 +95,26 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "High local visibility across Google Maps for all four target locations",
       "Consistent month-over-month growth maintained across 8 SEO cycles",
     ],
+    roiImpact: {
+      headline: "Lead Quality & ROI Impact",
+      details: [
+        "Organic traffic now drives over 130 inbound actions/month, including ~30+ phone clicks",
+        "After adjusting for lead quality, we estimate the client receives 40–70 qualified organic leads monthly",
+        "With even modest conversion (5–10%), the client gains 2–6 new members/month",
+        "Each member is worth approximately $16,000 in lifetime value",
+        "Translates to an estimated $32,000–$96,000/month in revenue",
+        "For just $950/month in SEO spend — a 33x to 100x return on investment",
+      ],
+      metrics: {
+        monthlyActions: "130+",
+        qualifiedLeads: "40-70",
+        newMembersPerMonth: "2-6",
+        lifetimeValue: "$16,000",
+        monthlyRevenue: "$32K-$96K",
+        seoSpend: "$950/mo",
+        roiRange: "33-100x",
+      },
+    },
     timeline: "April 2025 to Present (8 SEO Cycles)",
     heroImage: recreationalBoatingChart,
     pdfDownload: "/case-studies/recreational-boating-seo.pdf",
