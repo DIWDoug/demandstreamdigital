@@ -161,7 +161,7 @@ From January through August 2025, the client experienced persistent year-over-ye
 
 ROI Impact.
 
-With an average SEO investment of $1,538 per month, the client now drives 400 to 700 monthly organic visitors. At a 5% lead conversion rate, this yields 20 to 35 qualified leads monthly. With a 30% close rate, that results in 6 to 11 new bookings per month. At an average booking value of $1,200 to $2,000, this translates to $7,200 to $22,000 in monthly revenue potential — a 5x to 14x return on investment.
+With an average SEO investment of $1,538 per month and a 5% lead conversion rate, the client now generates 20 to 35 qualified leads monthly. With a 30% close rate, that results in 6 to 11 new bookings per month. At an average booking value of $1,200 to $2,000, this translates to $7,200 to $22,000 in monthly revenue potential — a 5x to 14x return on investment.
 `;
 
 const touristVehicleRentalsNarration = `
@@ -380,15 +380,13 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
       details: [
-        "Organic search now drives 400–700 monthly visitors to the website",
-        "At a 5% lead conversion rate, this yields 20–35 qualified leads monthly",
+        "At a 5% lead conversion rate, organic traffic yields 20–35 qualified leads monthly",
         "With a 30% close rate, results in 6–11 new bookings monthly",
         "Average booking value of $1,200–$2,000 per photography session",
         "Translates to $7,200–$22,000 in monthly revenue potential",
         "For just $1,538/month in SEO spend — a 5x to 14x return on investment",
       ],
       metrics: {
-        monthlyTraffic: "400-700 (est.)",
         qualifiedLeads: "20-35 (est.)",
         newBookings: "6-11",
         avgBookingValue: "$1,200-$2,000",
