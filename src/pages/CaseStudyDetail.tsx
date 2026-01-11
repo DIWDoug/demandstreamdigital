@@ -6,6 +6,7 @@ import Footer from "@/components/sections/Footer";
 import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2 } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
 import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
+import PDFViewerModal from "@/components/case-studies/PDFViewerModal";
 
 
 // Extended case study content structure
@@ -56,6 +57,9 @@ const CaseStudyDetail = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
+  
+  // PDF viewer modal state
+  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
   
   
   
@@ -209,25 +213,13 @@ const CaseStudyDetail = () => {
                         <Download className="w-4 h-4" />
                         Download PDF
                       </a>
-                      <a
-                        href={content.pdfDownload}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => {
-                          // Some browsers/extensions treat target=_blank as a popup and block it.
-                          // Try opening explicitly; if blocked, let the default navigation happen.
-                          const url = content.pdfDownload!;
-                          const opened = window.open(url, "_blank", "noopener,noreferrer");
-                          if (opened) {
-                            e.preventDefault();
-                            opened.focus?.();
-                          }
-                        }}
+                      <button
+                        onClick={() => setIsPDFModalOpen(true)}
                         className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
                       >
                         <BookOpen className="w-4 h-4" />
                         View PDF
-                      </a>
+                      </button>
                     </>
                   )}
                   
@@ -466,6 +458,15 @@ const CaseStudyDetail = () => {
         </section>
       </main>
       
+      {/* PDF Viewer Modal */}
+      {content.pdfDownload && (
+        <PDFViewerModal
+          isOpen={isPDFModalOpen}
+          onClose={() => setIsPDFModalOpen(false)}
+          pdfUrl={content.pdfDownload}
+          title={content.headline}
+        />
+      )}
       
       <Footer />
     </div>
