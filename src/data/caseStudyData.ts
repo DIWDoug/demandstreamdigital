@@ -2,8 +2,8 @@ import { CaseStudy } from "@/pages/CaseStudies";
 import { CaseStudyContent } from "@/pages/CaseStudyDetail";
 
 // Thumbnail images
-import recreationalBoatingChart from "@/assets/case-studies/recreational-boating-growth-chart.jpg";
-import barnRestorationChart from "@/assets/case-studies/barn-restoration-growth-chart.png";
+import recreationalBoatingHero from "@/assets/case-studies/recreational-boating-hero.jpg";
+import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -27,7 +27,7 @@ export const caseStudyCards: CaseStudy[] = [
       seoSpend: "$950/mo",
     },
     challenge: "New website launch with zero organic foundation, needing to establish visibility across four geographic locations in a competitive marine industry.",
-    thumbnail: recreationalBoatingChart,
+    thumbnail: recreationalBoatingHero,
   },
   {
     slug: "barn-restoration-seo",
@@ -49,7 +49,7 @@ export const caseStudyCards: CaseStudy[] = [
       seoSpend: "$750/mo",
     },
     challenge: "Barn restoration company in the Northeast market with limited organic visibility, competing for local search terms against general contractors.",
-    thumbnail: barnRestorationChart,
+    thumbnail: barnRestorationHero,
   },
 ];
 
@@ -162,7 +162,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       },
     },
     timeline: "April 2025 to Present (8 SEO Cycles)",
-    heroImage: recreationalBoatingChart,
+    heroImage: recreationalBoatingHero,
     pdfDownload: "/case-studies/recreational-boating-seo.pdf",
     narrationText: recreationalBoatingNarration,
   },
@@ -236,7 +236,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       },
     },
     timeline: "May 2024 to Present (22 SEO Cycles)",
-    heroImage: barnRestorationChart,
+    heroImage: barnRestorationHero,
     narrationText: barnRestorationNarration,
   },
 };
