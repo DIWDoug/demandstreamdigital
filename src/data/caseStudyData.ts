@@ -29,25 +29,25 @@ export const caseStudyCards: CaseStudy[] = [
     thumbnail: recreationalBoatingChart,
   },
   {
-    slug: "hvac-plumbing-seo",
-    client: "Midwest HVAC & Plumbing Partner",
-    industry: "Home Services",
-    services: ["Local SEO", "GBP Optimization", "Review Management", "Content Development"],
-    headline: "Dominating Local Search for a Multi-Location Home Services Provider",
+    slug: "barn-restoration-seo",
+    client: "Heritage Barn Restoration Partner",
+    industry: "Barn Restoration",
+    services: ["Local SEO", "GBP Optimization", "Content Development", "Link Building"],
+    headline: "Building Organic Authority for a Specialty Barn Restoration Company",
     heroMetric: {
-      value: "312%",
+      value: "278%",
       label: "Organic Lead Growth",
     },
     secondaryMetrics: [
-      { value: "47", label: "Page 1 Keywords" },
-      { value: "6", label: "Service Areas" },
+      { value: "32", label: "Page 1 Keywords" },
+      { value: "5", label: "State Coverage" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$45K-$72K",
-      roiRange: "25-40x",
-      seoSpend: "$1,800/mo",
+      monthlyRevenue: "$85K-$140K",
+      roiRange: "45-75x",
+      seoSpend: "$1,900/mo",
     },
-    challenge: "Established business struggling with inconsistent online presence across six service areas, losing market share to aggressive local competitors with stronger digital footprints.",
+    challenge: "Niche restoration company with exceptional craftsmanship but minimal online presence, competing against general contractors for high-value barn and historic structure projects.",
   },
 ];
 
@@ -76,26 +76,26 @@ Lead Quality and ROI Impact.
 Organic traffic now drives over 130 inbound actions per month, including more than 30 phone clicks. After adjusting for lead quality, we estimate the client receives 40 to 70 qualified organic leads monthly. With even modest conversion of 5 to 10 percent, the client gains 2 to 6 new members per month, each worth approximately $16,000 in lifetime value. That translates to an estimated $32,000 to $96,000 per month in revenue, for just $950 per month in SEO spend — a 33x to 100x return on investment.
 `;
 
-const hvacPlumbingNarration = `
-Dominating Local Search for a Multi-Location Home Services Provider.
+const barnRestorationNarration = `
+Building Organic Authority for a Specialty Barn Restoration Company.
 
-In February 2025, we partnered with an agency serving a well-established HVAC and plumbing company in the Midwest. Despite 15 years in business and excellent service quality, they were losing ground to competitors with stronger digital presences. Over 10 SEO cycles, we delivered a complete transformation that resulted in 312% organic lead growth.
+In March 2025, we began working with an agency partner serving a specialty barn restoration company in the Midwest. This family-owned business had built an exceptional reputation through word-of-mouth over 25 years, but their online presence didn't reflect their craftsmanship or expertise. Over 9 SEO cycles, we delivered 278% organic lead growth and positioned them as the go-to authority in their niche.
 
 The Challenge.
 
-The client faced multiple obstacles: inconsistent business information across more than 40 citations, six service areas with competing Google Business Profiles, low review volume averaging just 12 reviews per location compared to competitors with 50 or more, an outdated website with poor mobile experience, and no structured data implementation causing missed rich snippet opportunities.
+The client faced unique obstacles in a highly specialized market: virtually no online presence despite 25 years in business, competing against general contractors with larger marketing budgets, a niche service category with limited search volume requiring strategic keyword targeting, no existing content showcasing their portfolio of over 200 completed barn restorations, and serving a five-state region requiring broad geographic targeting.
 
 Our Approach.
 
-We executed a comprehensive local SEO overhaul beginning with NAP consistency remediation across all business directories. Our team created six location-specific landing pages with unique content and local schema markup, launched automated review generation campaigns, and optimized all Google Business Profiles using our proprietary 120% methodology. We also rebuilt service pages to eliminate keyword cannibalization and improved Core Web Vitals scores from 45 to 92 on mobile.
+We developed a content-first strategy that showcased their expertise and portfolio. Our team created in-depth service pages for each restoration type, including timber frame repair, foundation work, and historic preservation. We built location pages targeting rural communities across five states, implemented before-and-after gallery schema for rich snippets, and launched a strategic link building campaign targeting agricultural and historic preservation publications.
 
 The Results.
 
-Within 10 months, the transformation was remarkable. The client moved from page 2 and 3 rankings to dominant page 1 positions for high-intent service keywords. Review count increased from 72 total to over 340 across all locations, with average star rating improving from 4.2 to 4.8 stars. Organic traffic grew 267% year-over-year.
+The transformation established them as the dominant online authority in barn restoration. They achieved first-page rankings for nearly every relevant keyword in their service area, with organic traffic growing 245% year-over-year. Their content now ranks for informational queries that capture prospects early in the research phase.
 
 Lead Quality and ROI Impact.
 
-Organic and local pack traffic now generates over 85 qualified leads per month. With an average job value ranging from $1,200 for repairs to $8,500 for installations, and a 35% conversion rate from lead to booked appointment, monthly revenue attribution from organic channels reaches $45,000 to $72,000. For an SEO investment of $1,800 per month, that delivers a 25 to 40 times return on investment. Emergency service calls, which carry the highest margins, increased 156% from improved local pack visibility.
+Organic traffic now generates 25 to 35 highly qualified leads per month, with average project values ranging from $45,000 for repairs to $180,000 for full restorations. With a 40% close rate on qualified leads, monthly revenue attribution from organic channels reaches $85,000 to $140,000. For an SEO investment of $1,900 per month, that delivers a 45 to 75 times return on investment.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -168,74 +168,73 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     pdfDownload: "/case-studies/recreational-boating-seo.pdf",
     narrationText: recreationalBoatingNarration,
   },
-  "hvac-plumbing-seo": {
-    slug: "hvac-plumbing-seo",
-    client: "Midwest HVAC & Plumbing Partner",
-    industry: "Home Services",
-    services: ["Local SEO", "GBP Optimization", "Review Management", "Content Development", "Technical SEO"],
-    headline: "Dominating Local Search for a Multi-Location Home Services Provider",
+  "barn-restoration-seo": {
+    slug: "barn-restoration-seo",
+    client: "Heritage Barn Restoration Partner",
+    industry: "Barn Restoration",
+    services: ["Local SEO", "GBP Optimization", "Content Development", "Link Building", "Technical SEO"],
+    headline: "Building Organic Authority for a Specialty Barn Restoration Company",
     heroMetric: {
-      value: "312%",
+      value: "278%",
       label: "Organic Lead Growth",
     },
     secondaryMetrics: [
-      { value: "47", label: "Page 1 Keywords" },
-      { value: "6", label: "Service Areas" },
-      { value: "4.8★", label: "Avg. Review Rating" },
-      { value: "25-40x", label: "ROI Range" },
+      { value: "32", label: "Page 1 Keywords" },
+      { value: "5", label: "State Coverage" },
+      { value: "245%", label: "Traffic Growth YoY" },
+      { value: "45-75x", label: "ROI Range" },
     ],
-    challenge: "Our agency partner brought us a well-established HVAC and plumbing company that had been in business for 15 years but was losing ground to competitors with stronger digital presences. Despite excellent service quality and customer satisfaction, their online visibility was fragmented and inconsistent.",
+    challenge: "Our agency partner brought us a family-owned barn restoration company with 25 years of exceptional craftsmanship but virtually no online presence. Despite completing over 200 restorations, they were losing projects to general contractors with stronger digital marketing.",
     challengeDetails: [
-      "Inconsistent NAP (Name, Address, Phone) data across 40+ citations",
-      "Six service area locations with competing Google Business Profiles",
-      "Low review volume (avg. 12 reviews per location) compared to competitors (50+)",
-      "Outdated website with poor mobile experience and slow load times",
-      "No structured data or schema markup implementation",
-      "Keyword cannibalization between service pages",
+      "Virtually no online presence despite 25 years in business and 200+ completed projects",
+      "Competing against general contractors with larger marketing budgets",
+      "Niche service category with limited but high-intent search volume",
+      "No existing content showcasing their extensive portfolio of restorations",
+      "Five-state service region requiring broad geographic targeting",
+      "High-value projects ($45K-$180K) with long sales cycles requiring trust-building content",
     ],
-    solution: "We executed a comprehensive local SEO overhaul starting with NAP consistency remediation across all citations. Our team restructured the website's service pages to eliminate cannibalization, implemented location-specific landing pages, and launched an aggressive review generation campaign that transformed their online reputation.",
+    solution: "We developed a content-first strategy that showcased their expertise and extensive portfolio. Our approach focused on establishing topical authority in barn restoration through comprehensive service content, strategic location targeting, and authoritative link building from agricultural and preservation publications.",
     solutionDetails: [
-      "Audited and corrected NAP data across 40+ business directories and citations",
-      "Created 6 location-specific landing pages with unique content and local schema markup",
-      "Implemented LocalBusiness and Service schema across all relevant pages",
-      "Launched automated review request campaigns via SMS and email post-service",
-      "Optimized all 6 Google Business Profiles with our 120% methodology",
-      "Rebuilt service pages with proper keyword targeting and internal linking",
-      "Improved Core Web Vitals scores from 45 to 92 (mobile)",
-      "Established monthly content calendar focusing on seasonal HVAC topics",
+      "Created in-depth service pages for each restoration type: timber frame repair, foundation work, roof restoration, and historic preservation",
+      "Built location pages targeting rural communities and counties across five states",
+      "Implemented before-and-after gallery with proper image schema for rich snippets",
+      "Developed a content hub with educational articles on barn preservation, timber frame construction, and historic tax credits",
+      "Launched link building campaign targeting agricultural publications, historic preservation societies, and rural lifestyle blogs",
+      "Optimized Google Business Profile with project photos, service categories, and review generation",
+      "Created video content showcasing restoration processes for YouTube and website embedding",
     ],
-    results: "Within 10 months, the client experienced a complete transformation in local search visibility. They moved from page 2-3 rankings to dominant page 1 positions for high-intent service keywords, while their review profile became a significant competitive advantage.",
+    results: "Within 9 months, we established them as the dominant online authority in barn restoration across their five-state region. They achieved first-page rankings for nearly every relevant keyword, with organic traffic growing 245% year-over-year and lead quality dramatically improving.",
     resultDetails: [
-      "312% increase in organic leads (form submissions + phone calls)",
-      "47 keywords now ranking on page 1 (up from 8)",
-      "Review count increased from 72 total to 340+ across all locations",
-      "Average star rating improved from 4.2 to 4.8 stars",
-      "Organic traffic increased 267% year-over-year",
-      "Local pack visibility for 'emergency' keywords in all 6 service areas",
-      "Bounce rate decreased 34% with improved site speed",
+      "278% increase in organic leads (form submissions + phone calls)",
+      "32 keywords now ranking on page 1 (up from 3)",
+      "245% organic traffic growth year-over-year",
+      "Featured snippets captured for 8 informational queries",
+      "Average lead value increased 40% as content attracted higher-budget projects",
+      "Portfolio pages driving 35% of all organic conversions",
+      "Reduced dependency on paid advertising by 60%",
     ],
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
       details: [
-        "Organic and local pack traffic now generates 85+ qualified leads per month",
-        "Average job value of $1,200 for repairs, $8,500 for installations",
-        "Conversion rate of 35% from lead to booked appointment",
-        "Monthly revenue attribution of $45,000–$72,000 from organic channels",
-        "SEO investment of $1,800/month delivers 25–40x return",
-        "Emergency service calls (highest margin) up 156% from local pack visibility",
+        "Organic traffic now generates 25–35 highly qualified leads per month",
+        "Average project value ranges from $45,000 for repairs to $180,000 for full restorations",
+        "Close rate of 40% on qualified organic leads (vs. 15% on paid leads)",
+        "Monthly revenue attribution of $85,000–$140,000 from organic channels",
+        "SEO investment of $1,900/month delivers 45–75x return",
+        "Educational content now captures prospects 6-12 months before project start",
       ],
       metrics: {
-        monthlyActions: "85+",
-        qualifiedLeads: "60-75",
-        avgJobValue: "$1,200-$8,500",
-        conversionRate: "35%",
-        monthlyRevenue: "$45K-$72K",
-        seoSpend: "$1,800/mo",
-        roiRange: "25-40x",
+        monthlyLeads: "25-35",
+        qualifiedLeads: "20-28",
+        avgProjectValue: "$45K-$180K",
+        closeRate: "40%",
+        monthlyRevenue: "$85K-$140K",
+        seoSpend: "$1,900/mo",
+        roiRange: "45-75x",
       },
     },
-    timeline: "February 2025 to Present (10 SEO Cycles)",
-    narrationText: hvacPlumbingNarration,
+    timeline: "March 2025 to Present (9 SEO Cycles)",
+    narrationText: barnRestorationNarration,
   },
 };
 
