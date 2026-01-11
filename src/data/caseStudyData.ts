@@ -68,8 +68,8 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "9", label: "SEO Cycles" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$4.5K-$10K/mo",
-      roiRange: "3-6.5x",
+      monthlyRevenue: "$9.6K-$30K/mo",
+      roiRange: "6-20x",
       seoSpend: "$1,538/mo",
     },
     challenge: "Reversed severe organic decline from risky PBN tactics — a complete SEO turnaround from -28% to +32% YoY in just 9 months.",
@@ -161,7 +161,7 @@ From January through August 2025, the client experienced persistent year-over-ye
 
 ROI Impact.
 
-With an average SEO investment of $1,538 per month, the client is now positioned to generate 25–50 organic leads monthly. Assuming a modest conversion rate of 5–10%, this results in 1–5 new bookings monthly. At an average booking value of $1,200–$2,000, this translates to $4,500–$10,000 in monthly revenue, for a projected 3x–6.5x return on investment.
+With an average SEO investment of $1,538 per month, the client now generates 400 to 700 monthly organic actions. At the industry-standard 7% lead conversion rate, this yields 28 to 50 qualified leads monthly. With a 30% close rate, that results in 8 to 15 new bookings per month. At an average booking value of $1,200 to $2,000, this translates to $9,600 to $30,000 in monthly revenue potential — a 6x to 20x return on investment.
 `;
 
 const touristVehicleRentalsNarration = `
@@ -344,7 +344,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "-28% → +32%", label: "YoY Swing" },
       { value: "+31%", label: "Engaged Sessions" },
       { value: "9", label: "SEO Cycles" },
-      { value: "3-6.5x", label: "ROI Range" },
+      { value: "6-20x", label: "ROI Range" },
     ],
     challenge: "A Florida-based wedding and family photography business partnered with our agency partner in April 2025 after experiencing severe organic visibility decline of -28% year-over-year due to legacy PBN tactics from a previous SEO provider.",
     challengeDetails: [
@@ -380,21 +380,21 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
       details: [
-        "Client positioned to generate 25–50 organic leads per month",
-        "Assuming 5–10% conversion rate, results in 1–5 new bookings monthly",
+        "Organic traffic now generates 400–700 monthly actions (page views, clicks, calls)",
+        "At industry-standard 7% lead conversion, this yields 28–50 qualified leads monthly",
+        "With a 30% close rate, results in 8–15 new bookings monthly",
         "Average booking value of $1,200–$2,000 per photography session",
-        "Translates to $4,500–$10,000 in monthly revenue",
-        "For just $1,538/month in SEO spend — a 3x to 6.5x return on investment",
-        "Gains driven by consistent visibility improvements and GMB engagement",
+        "Translates to $9,600–$30,000 in monthly revenue potential",
+        "For just $1,538/month in SEO spend — a 6x to 20x return on investment",
       ],
       metrics: {
-        monthlyLeads: "25-50",
-        conversionRate: "5-10%",
-        newBookings: "1-5",
+        monthlyActions: "400-700 (est.)",
+        qualifiedLeads: "28-50 (est.)",
+        newBookings: "8-15",
         avgBookingValue: "$1,200-$2,000",
-        monthlyRevenue: "$4.5K-$10K",
+        monthlyRevenue: "$9.6K-$30K",
         seoSpend: "$1,538/mo",
-        roiRange: "3-6.5x",
+        roiRange: "6-20x",
       },
     },
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
