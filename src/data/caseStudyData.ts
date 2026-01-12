@@ -168,11 +168,11 @@ export const caseStudyCards: CaseStudy[] = [
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
-      value: "70",
-      label: "Keywords Tracked",
+      value: "+306%",
+      label: "Google Organic YoY Growth",
     },
     secondaryMetrics: [
-      { value: "2", label: "#1 Rankings" },
+      { value: "70", label: "Keywords Tracked" },
       { value: "20+", label: "Top 10 Keywords" },
     ],
     roiHighlight: {
@@ -848,13 +848,13 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
-      value: "70",
-      label: "Keywords Tracked (Jan 2026)",
+      value: "+306%",
+      label: "Google Organic YoY Growth",
     },
     secondaryMetrics: [
+      { value: "70", label: "Keywords Tracked" },
       { value: "2", label: "#1 Rankings" },
       { value: "20+", label: "Top 10 Keywords" },
-      { value: "50+", label: "First Page Keywords" },
       { value: "High", label: "ROI" },
     ],
     challenge: "A Dallas-based plumbing company with a solid domain history had hit a plateau — organic traffic stagnated and visibility was buried behind competitors in one of the most competitive metro markets in Texas.",
