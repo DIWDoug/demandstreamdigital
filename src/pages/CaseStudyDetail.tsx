@@ -384,6 +384,109 @@ const CaseStudyDetail = () => {
                 </div>
               )}
               
+              {/* Proof of Concept: Off-Page vs Content-Driven Comparison */}
+              {content.noContentBadge && (
+                <div className="bg-card border border-border rounded-2xl overflow-hidden">
+                  <div className="bg-gradient-to-r from-primary/10 to-amber-500/10 px-8 py-4 border-b border-border">
+                    <h3 className="text-xl font-bold flex items-center gap-3">
+                      <span className="w-8 h-8 bg-primary/20 text-primary rounded-lg flex items-center justify-center text-sm">⚡</span>
+                      Proof of Concept: Off-Page SEO Effectiveness
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-1">How do these results compare to traditional content-driven campaigns?</p>
+                  </div>
+                  
+                  <div className="p-8">
+                    {/* Comparison Grid */}
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      {/* This Campaign */}
+                      <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/5 border border-amber-500/30 rounded-xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <FileX className="w-5 h-5 text-amber-400" />
+                          <h4 className="font-semibold text-amber-400">This Campaign</h4>
+                        </div>
+                        <p className="text-xs text-amber-400/80 uppercase tracking-wide mb-3">Off-Page SEO Only</p>
+                        <ul className="space-y-3 text-sm">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground"><span className="text-foreground font-medium">0 blog posts</span> published</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground"><span className="text-foreground font-medium">0 location pages</span> created</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground"><span className="text-foreground font-medium">Text-free homepage</span> still ranks #1</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground"><span className="text-foreground font-medium">9 months</span> to market leadership</span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 pt-4 border-t border-amber-500/20">
+                          <div className="text-center">
+                            <p className="text-3xl font-bold text-amber-400">+531%</p>
+                            <p className="text-xs text-muted-foreground">New User Growth</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Typical Content Campaign */}
+                      <div className="bg-surface-elevated border border-border rounded-xl p-6">
+                        <div className="flex items-center gap-2 mb-4">
+                          <BookOpen className="w-5 h-5 text-muted-foreground" />
+                          <h4 className="font-semibold text-muted-foreground">Typical Content Campaign</h4>
+                        </div>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wide mb-3">Content-Heavy Approach</p>
+                        <ul className="space-y-3 text-sm">
+                          <li className="flex items-start gap-2">
+                            <span className="w-4 h-4 rounded-full border border-border mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">20-50+ blog posts required</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="w-4 h-4 rounded-full border border-border mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">Location pages for each market</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="w-4 h-4 rounded-full border border-border mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">12-18 months for traction</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="w-4 h-4 rounded-full border border-border mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">Ongoing content investment</span>
+                          </li>
+                        </ul>
+                        <div className="mt-4 pt-4 border-t border-border">
+                          <div className="text-center">
+                            <p className="text-3xl font-bold text-muted-foreground">Variable</p>
+                            <p className="text-xs text-muted-foreground">Results Depend on Content Quality</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Key Takeaways */}
+                    <div className="bg-gradient-to-r from-primary/5 to-transparent border-l-4 border-primary rounded-r-lg p-6">
+                      <h4 className="font-semibold mb-3">Key Takeaways</h4>
+                      <div className="grid md:grid-cols-3 gap-4 text-sm">
+                        <div className="flex items-start gap-2">
+                          <TrendingUp className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">Off-page signals (links, citations, GBP) can drive rankings <span className="text-foreground">independently of content</span></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <TrendingUp className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">Local Pack visibility requires <span className="text-foreground">authority signals, not word count</span></span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <TrendingUp className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-muted-foreground">Clean technical foundation + strategic links = <span className="text-foreground">faster time to results</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               {/* Growth Chart Section */}
               {content.growthChart && (
                 <div className="rounded-2xl overflow-hidden border border-border">
