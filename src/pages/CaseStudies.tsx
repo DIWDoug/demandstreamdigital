@@ -5,9 +5,18 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, TrendingUp, Target, BarChart3, Filter, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2 } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3, Filter, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Percent, Layers } from "lucide-react";
 import { caseStudyCards } from "@/data/caseStudyData";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 // Case study data structure
 export interface CaseStudy {
@@ -48,13 +57,66 @@ const industryFilters = [
   { id: "Auction House", label: "Auction", icon: Gavel },
 ];
 
+// Sorting options
+type SortOption = "growth-desc" | "growth-asc" | "industry" | "recency";
+
+const sortOptions: { id: SortOption; label: string; icon: React.ElementType }[] = [
+  { id: "growth-desc", label: "Highest Growth", icon: ArrowUp },
+  { id: "growth-asc", label: "Lowest Growth", icon: ArrowDown },
+  { id: "industry", label: "Industry A-Z", icon: Layers },
+  { id: "recency", label: "Most Recent", icon: Calendar },
+];
+
+// Helper to extract growth number from hero metric
+const extractGrowthNumber = (study: CaseStudy): number => {
+  const value = study.heroMetric.value;
+  // Handle percentage values like "+306%", "444%", "+85%"
+  const match = value.match(/[+-]?(\d+)/);
+  return match ? parseInt(match[1]) : 0;
+};
+
+// Order for "recency" - most recent campaigns first (based on typical engagement order)
+const recencyOrder = [
+  "dallas-plumbing-seo",      // July 2025 - Present
+  "florida-photography-seo",   // April 2025 - Dec 2025
+  "tourist-vehicle-rentals-seo", // April 2025 - Dec 2025
+  "recreational-boating-seo",  // April 2025 - Present
+  "custom-home-builder-seo",   // May 2025 - Dec 2025
+  "barn-restoration-seo",      // May 2024 - Present
+  "auction-house-seo",         // 2022 - 2024
+];
+
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [sortBy, setSortBy] = useState<SortOption>("growth-desc");
   
-  const filteredStudies = useMemo(() => {
-    if (activeFilter === "all") return caseStudies;
-    return caseStudies.filter(study => study.industry === activeFilter);
-  }, [activeFilter]);
+  const filteredAndSortedStudies = useMemo(() => {
+    let studies = activeFilter === "all" 
+      ? [...caseStudies] 
+      : caseStudies.filter(study => study.industry === activeFilter);
+    
+    // Apply sorting
+    switch (sortBy) {
+      case "growth-desc":
+        studies.sort((a, b) => extractGrowthNumber(b) - extractGrowthNumber(a));
+        break;
+      case "growth-asc":
+        studies.sort((a, b) => extractGrowthNumber(a) - extractGrowthNumber(b));
+        break;
+      case "industry":
+        studies.sort((a, b) => a.industry.localeCompare(b.industry));
+        break;
+      case "recency":
+        studies.sort((a, b) => {
+          const aIndex = recencyOrder.indexOf(a.slug);
+          const bIndex = recencyOrder.indexOf(b.slug);
+          return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
+        });
+        break;
+    }
+    
+    return studies;
+  }, [activeFilter, sortBy]);
 
   // Get unique industries from case studies for dynamic filter badges
   const availableIndustries = useMemo(() => {
@@ -144,44 +206,80 @@ const CaseStudies = () => {
           </div>
         </section>
         
-        {/* Filter Bar */}
-        <section className="py-8 border-b border-border/50 sticky top-16 bg-background/95 backdrop-blur-md z-40">
+        {/* Filter & Sort Bar */}
+        <section className="py-6 border-b border-border/50 sticky top-16 bg-background/95 backdrop-blur-md z-40">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mr-2 flex-shrink-0">
-                <Filter className="w-4 h-4" />
-                <span className="hidden sm:inline">Filter:</span>
-              </div>
-              {availableIndustries.map((filter) => {
-                const Icon = filter.icon;
-                const isActive = activeFilter === filter.id;
-                const count = filter.id === "all" 
-                  ? caseStudies.length 
-                  : caseStudies.filter(s => s.industry === filter.id).length;
-                
-                return (
-                  <button
-                    key={filter.id}
-                    onClick={() => setActiveFilter(filter.id)}
-                    className={`
-                      flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all flex-shrink-0
-                      ${isActive 
-                        ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25' 
-                        : 'bg-card border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
-                      }
-                    `}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{filter.label}</span>
-                    <Badge 
-                      variant="secondary" 
-                      className={`text-xs px-1.5 py-0 h-5 ${isActive ? 'bg-primary-foreground/20 text-primary-foreground' : ''}`}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              {/* Filter Pills */}
+              <div className="flex items-center gap-3 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide flex-1">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mr-1 flex-shrink-0">
+                  <Filter className="w-4 h-4" />
+                  <span className="hidden sm:inline">Filter:</span>
+                </div>
+                {availableIndustries.map((filter) => {
+                  const Icon = filter.icon;
+                  const isActive = activeFilter === filter.id;
+                  const count = filter.id === "all" 
+                    ? caseStudies.length 
+                    : caseStudies.filter(s => s.industry === filter.id).length;
+                  
+                  return (
+                    <button
+                      key={filter.id}
+                      onClick={() => setActiveFilter(filter.id)}
+                      className={`
+                        flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all flex-shrink-0
+                        ${isActive 
+                          ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25' 
+                          : 'bg-card border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
+                        }
+                      `}
                     >
-                      {count}
-                    </Badge>
-                  </button>
-                );
-              })}
+                      <Icon className="w-3.5 h-3.5" />
+                      <span className="hidden md:inline">{filter.label}</span>
+                      <Badge 
+                        variant="secondary" 
+                        className={`text-xs px-1.5 py-0 h-5 ${isActive ? 'bg-primary-foreground/20 text-primary-foreground' : ''}`}
+                      >
+                        {count}
+                      </Badge>
+                    </button>
+                  );
+                })}
+              </div>
+              
+              {/* Sort Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="flex-shrink-0 gap-2">
+                    <ArrowUpDown className="w-4 h-4" />
+                    <span className="hidden sm:inline">Sort:</span>
+                    <span className="font-medium">
+                      {sortOptions.find(o => o.id === sortBy)?.label}
+                    </span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48">
+                  <DropdownMenuLabel>Sort By</DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  {sortOptions.map((option) => {
+                    const Icon = option.icon;
+                    return (
+                      <DropdownMenuItem
+                        key={option.id}
+                        onClick={() => setSortBy(option.id)}
+                        className={`flex items-center gap-2 cursor-pointer ${sortBy === option.id ? 'bg-primary/10 text-primary' : ''}`}
+                      >
+                        <Icon className="w-4 h-4" />
+                        {option.label}
+                        {sortBy === option.id && (
+                          <span className="ml-auto text-primary">✓</span>
+                        )}
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </section>
@@ -190,16 +288,16 @@ const CaseStudies = () => {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-6 lg:px-8">
             <AnimatePresence mode="wait">
-              {filteredStudies.length > 0 ? (
+              {filteredAndSortedStudies.length > 0 ? (
                 <motion.div 
-                  key={activeFilter}
+                  key={`${activeFilter}-${sortBy}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
                   className="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
-                  {filteredStudies.map((study, index) => (
+                  {filteredAndSortedStudies.map((study, index) => (
                     <motion.div
                       key={study.slug}
                       initial={{ opacity: 0, y: 20 }}
