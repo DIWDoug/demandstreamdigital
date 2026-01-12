@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -21,8 +22,42 @@ const SectionDivider = () => (
   </div>
 );
 
+const anchorLinks = [
+  { label: 'What is Inbound?', href: '#white-label-explainer', id: 'white-label-explainer' },
+  { label: 'The Reality', href: '#pain-points', id: 'pain-points' },
+  { label: 'Is This the Right Fit?', href: '#fit-qualifier', id: 'fit-qualifier' },
+  { label: 'Our Framework', href: '#framework', id: 'framework' },
+  { label: 'Testimonials', href: '#testimonials', id: 'testimonials' },
+  { label: 'Results', href: '#results', id: 'results' },
+  { label: 'Our Process', href: '#onboarding', id: 'onboarding' },
+  { label: 'Expertise', href: '#expertise', id: 'expertise' },
+  { label: 'FAQ', href: '#faq', id: 'faq' },
+  { label: 'Next Steps', href: '#contact', id: 'contact' },
+];
+
 const Services = () => {
   const servicesSchema = getServicesPageSchema();
+  const [activeSection, setActiveSection] = useState<string>('white-label-explainer');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150; // Offset for sticky nav
+      
+      // Find the current section
+      for (let i = anchorLinks.length - 1; i >= 0; i--) {
+        const section = document.getElementById(anchorLinks[i].id);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(anchorLinks[i].id);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Set initial state
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -79,22 +114,15 @@ const Services = () => {
       <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
-            {[
-              { label: 'What is Inbound?', href: '#white-label-explainer' },
-              { label: 'The Reality', href: '#pain-points' },
-              { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
-              { label: 'Our Framework', href: '#framework' },
-              { label: 'Testimonials', href: '#testimonials' },
-              { label: 'Results', href: '#results' },
-              { label: 'Our Process', href: '#onboarding' },
-              { label: 'Expertise', href: '#expertise' },
-              { label: 'FAQ', href: '#faq' },
-              { label: 'Next Steps', href: '#contact' },
-            ].map((item) => (
+            {anchorLinks.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm md:text-base font-medium text-white/90 hover:text-white whitespace-nowrap transition-colors duration-200 px-2 py-1"
+                className={`text-sm md:text-base font-medium whitespace-nowrap transition-all duration-200 px-2 py-1 rounded-md ${
+                  activeSection === item.id
+                    ? 'text-white bg-white/20'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
               >
                 {item.label}
               </a>
