@@ -1,10 +1,20 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+// Valid case study slugs to prevent abuse - only allow TTS for actual case studies
+const VALID_CASE_STUDY_SLUGS = [
+  "recreational-boating-seo",
+  "barn-restoration-seo",
+  "florida-photography-seo",
+  "tourist-vehicle-rentals-seo",
+  "custom-home-builder-seo",
+  "auction-house-seo",
+  "dallas-plumbing-seo",
+];
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -12,30 +22,23 @@ serve(async (req) => {
   }
 
   try {
-    // Authentication check
-    const authHeader = req.headers.get('Authorization');
-    if (!authHeader) {
+    const { text, voiceId = "JBFqnCBsd6RMkjVDRZzb", slug } = await req.json(); // George voice
+
+    // Validate this is a legitimate case study request
+    if (!slug || !VALID_CASE_STUDY_SLUGS.includes(slug)) {
       return new Response(
-        JSON.stringify({ error: 'Authorization required' }),
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: "Invalid case study" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL')!,
-      Deno.env.get('SUPABASE_ANON_KEY')!,
-      { global: { headers: { Authorization: authHeader } } }
-    );
-
-    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
-    if (authError || !user) {
+    // Rate limiting: Limit text length to prevent abuse
+    if (!text || text.length > 10000) {
       return new Response(
-        JSON.stringify({ error: 'Invalid authentication' }),
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ error: "Invalid text length" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
-
-    const { text, voiceId = "JBFqnCBsd6RMkjVDRZzb" } = await req.json(); // George voice
     
     // Try the connector key first, fall back to the original
     const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY_1") || Deno.env.get("ELEVENLABS_API_KEY");
@@ -56,7 +59,7 @@ serve(async (req) => {
       .replace(/\n/g, ' ') // Replace single newlines with space
       .trim();
 
-    console.log("Generating TTS for user:", user.id, "text length:", cleanedText.length);
+    console.log("Generating TTS for case study:", slug, "text length:", cleanedText.length);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`,
