@@ -1,11 +1,13 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
-import { ArrowRight, Phone, Linkedin } from "lucide-react";
+import { ArrowRight, Phone, Linkedin, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -644,6 +646,29 @@ const About = () => {
               </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* See Our Work CTA */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+              <Briefcase className="w-8 h-8 text-primary" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
+              See the Results in Action
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto mb-8">
+              Explore detailed case studies showcasing real growth metrics, ROI breakdowns, and the strategies behind our partners' success.
+            </p>
+            <Button asChild size="lg" className="group">
+              <Link to="/case-studies">
+                See Our Work
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
