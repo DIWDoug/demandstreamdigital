@@ -7,6 +7,7 @@ import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg
 import floridaPhotographyHero from "@/assets/case-studies/florida-photography-hero.jpg";
 import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-rentals-hero.jpg";
 import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
+import customHomeBuilderGrowthChart from "@/assets/case-studies/custom-home-builder-growth-chart.png";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -590,6 +591,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "May 2025 to December 2025 (8 SEO Cycles)",
     heroImage: customHomeBuilderHero,
+    growthChart: customHomeBuilderGrowthChart,
     pdfDownload: "/case-studies/custom-home-builder-seo.pdf",
     narrationText: customHomeBuilderNarration,
   },
