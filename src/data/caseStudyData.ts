@@ -71,10 +71,10 @@ export const caseStudyCards: CaseStudy[] = [
     headline: "Local SEO Turnaround for a South Florida Photography Business",
     heroMetric: {
       value: "60pt",
-      label: "Performance Turnaround",
+      label: "Performance Turnaround (-28% → +32% YoY Organic Traffic)",
     },
     secondaryMetrics: [
-      { value: "-28% → +32%", label: "YoY Swing" },
+      { value: "-28% → +32%", label: "YoY Organic Traffic Swing" },
       { value: "9", label: "SEO Cycles" },
     ],
     roiHighlight: {
@@ -93,7 +93,7 @@ export const caseStudyCards: CaseStudy[] = [
     headline: "Local SEO Turnaround for a Tourist Vehicle Rental Company",
     heroMetric: {
       value: "+531%",
-      label: "New User Growth",
+      label: "Organic New User Growth",
     },
     secondaryMetrics: [
       { value: "+112%", label: "Total Users" },
@@ -137,7 +137,7 @@ export const caseStudyCards: CaseStudy[] = [
     headline: "Local SEO Dominance for a Multi-Category Auction House",
     heroMetric: {
       value: "+68%",
-      label: "Total Sessions Growth",
+      label: "Organic Traffic Growth",
     },
     secondaryMetrics: [
       { value: "+64%", label: "Engaged Sessions" },
@@ -446,10 +446,10 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     headline: "Local SEO Turnaround for a South Florida Photography Business",
     heroMetric: {
       value: "60pt",
-      label: "Performance Turnaround",
+      label: "Performance Turnaround (-28% → +32% YoY Organic Traffic)",
     },
     secondaryMetrics: [
-      { value: "-28% → +32%", label: "YoY Swing" },
+      { value: "-28% → +32%", label: "YoY Organic Traffic Swing" },
       { value: "+31%", label: "Engaged Sessions" },
       { value: "9", label: "SEO Cycles" },
       { value: "5-14x", label: "ROI Range" },
@@ -517,7 +517,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     headline: "Local SEO Turnaround for a Tourist Vehicle Rental Company",
     heroMetric: {
       value: "+531%",
-      label: "New User Growth",
+      label: "Organic New User Growth",
     },
     secondaryMetrics: [
       { value: "+112%", label: "Total Users" },
@@ -667,7 +667,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     headline: "Local SEO Dominance for a Multi-Category Auction House",
     heroMetric: {
       value: "+68%",
-      label: "Total Sessions Year-over-Year",
+      label: "Organic Traffic Growth",
     },
     secondaryMetrics: [
       { value: "+64%", label: "Engaged Sessions" },
