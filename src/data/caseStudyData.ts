@@ -199,7 +199,8 @@ export const caseStudyCards: CaseStudy[] = [
     ],
     roiHighlight: {
       monthlyRevenue: "$40K+/mo",
-      roiRange: "High ROI",
+      roiRange: "25x+",
+      seoSpend: "$1,600/mo",
     },
     challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement (RYNO → Blue Corona), and no SEO structure — reversed entirely within 5 months.",
     thumbnail: lasVegasPlumbingHero,
@@ -703,7 +704,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and built a foundation of clean SEO practices following the prior PBN-related penalty. By aligning local search strategy with technical precision and multi-location coverage, this tourist rental business is now positioned to scale in 2026.",
     resultDetails: [
       "+531% dramatic increase in new users discovering the business",
-      "+112% increase in total users (December 2025 vs. January 2026)",
+      "+112% increase in total users (December 2025 vs. December 2024)",
       "+28% improvement in engagement rate",
       "+79% increase in average engagement time",
       "+108% increase in event count",
