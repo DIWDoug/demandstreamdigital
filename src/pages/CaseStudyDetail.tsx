@@ -3,10 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { useState, useRef } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2, FileX } from "lucide-react";
+import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2, FileX, ExternalLink } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
 import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
-import PDFViewerModal from "@/components/case-studies/PDFViewerModal";
 
 
 // Extended case study content structure
@@ -60,8 +59,6 @@ const CaseStudyDetail = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
   
-  // PDF viewer modal state
-  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
   
   
   
@@ -224,13 +221,15 @@ const CaseStudyDetail = () => {
                         <Download className="w-4 h-4" />
                         Download PDF
                       </a>
-                      <button
-                        onClick={() => setIsPDFModalOpen(true)}
+                      <a
+                        href={content.pdfDownload}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:bg-surface-elevated transition-colors"
                       >
-                        <BookOpen className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4" />
                         View PDF
-                      </button>
+                      </a>
                     </>
                   )}
                   
@@ -622,16 +621,6 @@ const CaseStudyDetail = () => {
           </div>
         </section>
       </main>
-      
-      {/* PDF Viewer Modal */}
-      {content.pdfDownload && (
-        <PDFViewerModal
-          isOpen={isPDFModalOpen}
-          onClose={() => setIsPDFModalOpen(false)}
-          pdfUrl={content.pdfDownload}
-          title={content.headline}
-        />
-      )}
       
       <Footer />
     </div>
