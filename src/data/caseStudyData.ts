@@ -844,6 +844,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
   "dallas-plumbing-seo": {
     slug: "dallas-plumbing-seo",
     client: "Dallas Plumbing",
+    relationshipType: "direct",
     industry: "Plumbing/Home Services",
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
