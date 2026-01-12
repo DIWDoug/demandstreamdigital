@@ -856,6 +856,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     timeline: "July 2025 to Present (Ongoing Engagement)",
     heroImage: dallasPlumbingHero,
     growthChart: dallasPlumbingGrowthChart,
+    pdfDownload: "/case-studies/dallas-plumbing-seo.pdf",
     narrationText: dallasPlumbingNarration,
   },
 };
