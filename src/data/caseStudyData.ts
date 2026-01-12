@@ -176,7 +176,7 @@ export const caseStudyCards: CaseStudy[] = [
       { value: "20+", label: "Top 10 Keywords" },
     ],
     roiHighlight: {
-      monthlyRevenue: "$50K+/mo",
+      monthlyRevenue: "$50K+/mo (est.)",
       roiRange: "High ROI",
     },
     challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
@@ -912,7 +912,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         position1Rankings: "2",
         top10Keywords: "20+",
         firstPageKeywords: "50+",
-        monthlyRevenue: "$50K+",
+        monthlyRevenue: "$50K+ (est.)",
         roiRange: "High",
       },
     },
