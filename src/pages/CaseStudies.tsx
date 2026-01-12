@@ -5,7 +5,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, TrendingUp, Target, BarChart3, Filter, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Percent, Layers } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Layers } from "lucide-react";
 import { caseStudyCards } from "@/data/caseStudyData";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -45,18 +45,6 @@ export interface CaseStudy {
 // Export for use in detail page
 export const caseStudies: CaseStudy[] = caseStudyCards;
 
-// Industry filter options with icons
-const industryFilters = [
-  { id: "all", label: "All Industries", icon: Sparkles },
-  { id: "Plumbing/Home Services", label: "Home Services", icon: Wrench },
-  { id: "Recreational Boating", label: "Boating", icon: Anchor },
-  { id: "Barn Restoration", label: "Construction", icon: Building2 },
-  { id: "Photography", label: "Photography", icon: Camera },
-  { id: "Tourist Vehicle Rentals", label: "Rentals", icon: Car },
-  { id: "Custom Home Building", label: "Home Building", icon: Home },
-  { id: "Auction House", label: "Auction", icon: Gavel },
-];
-
 // Sorting options
 type SortOption = "growth-desc" | "growth-asc" | "industry" | "recency";
 
@@ -87,13 +75,10 @@ const recencyOrder = [
 ];
 
 const CaseStudies = () => {
-  const [activeFilter, setActiveFilter] = useState("all");
   const [sortBy, setSortBy] = useState<SortOption>("growth-desc");
   
-  const filteredAndSortedStudies = useMemo(() => {
-    let studies = activeFilter === "all" 
-      ? [...caseStudies] 
-      : caseStudies.filter(study => study.industry === activeFilter);
+  const sortedStudies = useMemo(() => {
+    let studies = [...caseStudies];
     
     // Apply sorting
     switch (sortBy) {
@@ -116,13 +101,7 @@ const CaseStudies = () => {
     }
     
     return studies;
-  }, [activeFilter, sortBy]);
-
-  // Get unique industries from case studies for dynamic filter badges
-  const availableIndustries = useMemo(() => {
-    const industries = new Set(caseStudies.map(s => s.industry));
-    return industryFilters.filter(f => f.id === "all" || industries.has(f.id));
-  }, []);
+  }, [sortBy]);
 
   // Calculate aggregate stats
   const stats = useMemo(() => {
@@ -206,52 +185,18 @@ const CaseStudies = () => {
           </div>
         </section>
         
-        {/* Filter & Sort Bar */}
-        <section className="py-6 border-b border-border/50 sticky top-16 bg-background/95 backdrop-blur-md z-40">
+        {/* Sort Bar */}
+        <section className="py-6 border-b border-border/50">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-              {/* Filter Pills */}
-              <div className="flex items-center gap-3 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide flex-1">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mr-1 flex-shrink-0">
-                  <Filter className="w-4 h-4" />
-                  <span className="hidden sm:inline">Filter:</span>
-                </div>
-                {availableIndustries.map((filter) => {
-                  const Icon = filter.icon;
-                  const isActive = activeFilter === filter.id;
-                  const count = filter.id === "all" 
-                    ? caseStudies.length 
-                    : caseStudies.filter(s => s.industry === filter.id).length;
-                  
-                  return (
-                    <button
-                      key={filter.id}
-                      onClick={() => setActiveFilter(filter.id)}
-                      className={`
-                        flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all flex-shrink-0
-                        ${isActive 
-                          ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/25' 
-                          : 'bg-card border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
-                        }
-                      `}
-                    >
-                      <Icon className="w-3.5 h-3.5" />
-                      <span className="hidden md:inline">{filter.label}</span>
-                      <Badge 
-                        variant="secondary" 
-                        className={`text-xs px-1.5 py-0 h-5 ${isActive ? 'bg-primary-foreground/20 text-primary-foreground' : ''}`}
-                      >
-                        {count}
-                      </Badge>
-                    </button>
-                  );
-                })}
-              </div>
+            <div className="flex items-center justify-between">
+              <p className="text-muted-foreground text-sm">
+                Showing {sortedStudies.length} case studies
+              </p>
               
               {/* Sort Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="flex-shrink-0 gap-2">
+                  <Button variant="outline" size="sm" className="gap-2">
                     <ArrowUpDown className="w-4 h-4" />
                     <span className="hidden sm:inline">Sort:</span>
                     <span className="font-medium">
@@ -287,50 +232,24 @@ const CaseStudies = () => {
         {/* Case Studies Grid */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-6 lg:px-8">
-            <AnimatePresence mode="wait">
-              {filteredAndSortedStudies.length > 0 ? (
-                <motion.div 
-                  key={`${activeFilter}-${sortBy}`}
+            <motion.div 
+              key={sortBy}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+            >
+              {sortedStudies.map((study, index) => (
+                <motion.div
+                  key={study.slug}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  {filteredAndSortedStudies.map((study, index) => (
-                    <motion.div
-                      key={study.slug}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                    >
-                      <CaseStudyCard study={study} />
-                    </motion.div>
-                  ))}
+                  <CaseStudyCard study={study} />
                 </motion.div>
-              ) : (
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-center py-16"
-                >
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <BarChart3 className="w-10 h-10 text-primary" />
-                  </div>
-                  <h2 className="text-2xl font-semibold mb-4">No Case Studies Found</h2>
-                  <p className="text-muted-foreground max-w-md mx-auto mb-8">
-                    No case studies match the selected filter. Try selecting a different industry.
-                  </p>
-                  <button 
-                    onClick={() => setActiveFilter("all")}
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                  >
-                    View All Case Studies
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
+              ))}
+            </motion.div>
           </div>
         </section>
         
