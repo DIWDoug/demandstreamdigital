@@ -12,6 +12,7 @@ import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
 import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
+import ServicesResultsInAction from "@/components/services/ServicesResultsInAction";
 import { getServicesPageSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
@@ -121,6 +122,9 @@ const Services = () => {
       <div id="testimonials" className="scroll-mt-32">
         <ServicesTestimonials />
       </div>
+      
+      {/* Results in Action - Case Studies */}
+      <ServicesResultsInAction />
       
       <SectionDivider />
       
