@@ -103,8 +103,8 @@ export const caseStudyCards: CaseStudy[] = [
     ],
     roiHighlight: {
       monthlyRevenue: "$6.4K+/mo",
-      roiRange: "6x+",
-      seoSpend: "$1,045/mo",
+      roiRange: "5x+",
+      seoSpend: "$1,318/mo",
     },
     challenge: "Reversed declining organic visibility following PBN dismantling — delivering 531% new user growth and market leadership across multiple tourist destinations.",
     thumbnail: touristVehicleRentalsHero,
@@ -245,23 +245,23 @@ With an average SEO investment of $1,538 per month and a 5% lead conversion rate
 const touristVehicleRentalsNarration = `
 Local SEO Turnaround for a Tourist Vehicle Rental Company.
 
-A tourist vehicle rental company partnered with our agency partner in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network with exact-match anchor text backlinks and a visible footprint. When the client dismantled this legacy PBN in May 2025, traffic dropped sharply. We stepped in to detoxify these harmful backlinks and stabilize rankings through clean link-building and improved on-page execution.
+A tourist vehicle rental company partnered with our agency partner in April 2025 after several months of declining organic visibility. Within nine SEO cycles, we reversed that trajectory, delivering substantial year-over-year session growth, improved engagement, and expanded rankings across multiple high-intent local search terms.
 
 The Challenge.
 
-Before our engagement, the client struggled with a toxic backlink profile from their previous SEO provider. The legacy PBN created ranking penalties and when dismantled in May 2025, caused an immediate traffic drop. The business needed to establish clean SEO practices while maintaining visibility during peak tourist season across multiple high-value locations.
+Before the engagement, the client had worked with another SEO provider whose strategy relied heavily on a private blog network with exact-match anchor text backlinks and a visible footprint. In May 2025, the client dismantled the legacy PBN, which caused a sharp drop in traffic. We stepped in to detoxify these harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. We also provided strategic direction on the timing of a new website launch to minimize disruption during peak seasons.
 
 Our Approach.
 
-We implemented a comprehensive strategy covering technical SEO, local SEO, content development, and link building. Technical work included metadata cleanup, H1 structure alignment, and canonical adjustments. For local SEO, we focused on unstructured citation building and Google Business Profile optimization across multiple locations. Our link building campaign used mixed link types including guest posts and niche edits from DR40+ sources.
+The agency partner supporting this account also engaged in paid search advertising throughout the campaign. We consistently recommend this as a strategic complement to SEO — allowing paid media to generate leads and brand visibility while SEO efforts build organic equity over time. Our execution included on-page SEO audits and optimizations, structured and unstructured citation building, data aggregate submissions, Google Business Profile optimization with 120% completeness, guest post outreach on DR40+ domains, social media signal syndication, and hyper-local citation expansion.
 
 The Results.
 
-Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year improvements. Total users increased by 112%, with a remarkable 531% growth in new users discovering the business through organic search. Engagement metrics improved significantly with 28% higher engagement rate and 79% increase in average engagement time. We secured #1 rankings for critical keywords like 'city golf cart rental' and established strong Local Pack visibility across multiple tourist destinations.
+Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and built a foundation of clean SEO practices. Total users increased by 112%, with a remarkable 531% growth in new users. Engagement rate improved by 28% and average engagement time increased by 79%. We secured number one rankings for critical keywords like city golf cart rental and achieved Local Pack and Finder dominance across multiple locations.
 
 ROI Impact.
 
-The campaign generated over $6,400 in direct purchase revenue within the tracking period, with organic search driving 93% of all traffic. The business now dominates local search for tourist vehicle rentals across key destination markets, positioning them for continued growth in 2026.
+The campaign generated over $6,440 in direct purchase revenue within the tracking period, with organic search driving 93% of all traffic. For $1,318 per month in SEO spend, the business achieved a 5x+ return on investment. The business is now in a strong position to scale in 2026.
 `;
 
 const customHomeBuilderNarration = `
@@ -571,37 +571,42 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "+112%", label: "Total Users" },
       { value: "+28%", label: "Engagement Rate" },
       { value: "9", label: "SEO Cycles" },
-      { value: "6x+", label: "ROI Range" },
+      { value: "5x+", label: "ROI Range" },
     ],
-    challenge: "A tourist vehicle rental company partnered with our agency partner in April 2025 after experiencing several months of declining organic visibility. The client had previously worked with an SEO provider whose strategy relied heavily on a private blog network (PBN) with exact-match anchor text backlinks.",
+    challenge: "A tourist vehicle rental company partnered with our agency partner in April 2025 after several months of declining organic visibility. The client had previously worked with another SEO provider whose strategy relied heavily on a private blog network (PBN) with exact-match anchor text backlinks and a visible footprint.",
     challengeDetails: [
-      "Previous SEO provider used risky private blog network (PBN) tactics",
-      "Exact-match anchor text backlinks created a visible footprint",
-      "May 2025 PBN dismantling caused immediate sharp traffic drop",
-      "Needed to detoxify harmful backlinks and rebuild clean authority",
-      "Required multi-location strategy across tourist destinations",
-      "Timing critical to avoid disrupting peak tourist season",
+      "Previous SEO provider used risky private blog network (PBN) tactics with exact-match anchor text",
+      "May 2025 PBN dismantling caused sharp traffic drop",
+      "Needed to detoxify harmful backlinks and stabilize rankings",
+      "Established domain authority but high design quality website with limited content",
+      "Required strategic timing of new website launch to minimize peak season disruption",
+      "Multi-location strategy needed across tourist destinations",
     ],
-    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. Our comprehensive strategy covered technical SEO, local SEO, content development, and strategic link building.",
+    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. The agency partner also engaged in paid search advertising throughout the campaign — a strategic complement allowing paid media to generate leads while SEO builds organic equity.",
     solutionDetails: [
-      "Metadata cleanup, H1 structure alignment, and canonical adjustments for proper crawlability",
-      "Unstructured citation building and rich content updates",
-      "Google Business Profile optimization across multiple locations",
-      "Mixed link types including guest posts and niche edits from DR40+ sources",
-      "Strategic timing of website relaunch to avoid peak season disruption",
-      "Integration of paid search to support organic growth during transition",
-      "Content development and on-page optimization for key service pages",
+      "Month 1–2: On-page SEO audit & optimizations, structured and unstructured citation building",
+      "Data aggregate submissions and GBP optimization (120%+ completeness)",
+      "Reporting configuration & Link Whisper internal linking tool setup",
+      "Month 2–3: Launch guest post outreach (2–3/month via partner network)",
+      "Social media signal syndication and competitor backlink gap analysis",
+      "Hyper-local citation expansion and GBP content updates",
+      "Month 4+: Continued guest posting on DR40+ domains",
+      "Regular GBP maintenance and photo updates",
+      "Social posting and syndication with sustained citation strategy",
+      "Strategic timing and execution of site relaunch",
     ],
-    results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year growth. The comprehensive strategy proved the power of clean SEO practices and local optimization.",
+    results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and built a foundation of clean SEO practices following the prior PBN-related penalty. By aligning local search strategy with technical precision and multi-location coverage, this tourist rental business is now positioned to scale in 2026.",
     resultDetails: [
       "+531% dramatic increase in new users discovering the business",
       "+112% increase in total users (December 2025 vs. January 2026)",
-      "+28% improvement in engagement rate showing higher quality traffic",
+      "+28% improvement in engagement rate",
       "+79% increase in average engagement time",
+      "+108% increase in event count",
+      "Detoxification of harmful PBN backlinks",
       "#1 rankings for '{city} golf cart rental' and related terms",
-      "Top 3 positions for 'rent golf carts {city}' and variations",
-      "Strong Local Pack and Finder visibility across multiple tourist destinations",
-      "Market leadership established in key coastal markets",
+      "#1 for '{city} rentals golf cart' and 'golf cart rental {city} {state}'",
+      "Top 3 rankings for 'rent golf carts {city}' and 'luxury golf cart rental near me'",
+      "Local Pack & Finder dominance across multiple locations",
     ],
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
@@ -610,7 +615,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         "Over $6,440 in direct purchase revenue tracked within period",
         "508 key events recorded from organic traffic",
         "Google organic alone delivered 1,313 users (100% YoY growth)",
-        "For $1,045/month in SEO spend — a 6x+ return on investment",
+        "For $1,318/month in SEO spend — a 5x+ return on investment",
         "Strong foundation established for continued 2026 growth",
       ],
       metrics: {
@@ -619,8 +624,8 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         engagementRate: "69.86%",
         purchaseRevenue: "$6,440+",
         monthlyRevenue: "$6.4K+",
-        seoSpend: "$1,045/mo",
-        roiRange: "6x+",
+        seoSpend: "$1,318/mo",
+        roiRange: "5x+",
       },
     },
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
