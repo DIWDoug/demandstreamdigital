@@ -7,6 +7,12 @@ import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg
 import floridaPhotographyHero from "@/assets/case-studies/florida-photography-hero.jpg";
 import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-rentals-hero.jpg";
 import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
+
+// Growth chart images
+import recreationalBoatingGrowthChart from "@/assets/case-studies/recreational-boating-growth-chart.png";
+import barnRestorationGrowthChart from "@/assets/case-studies/barn-restoration-growth-chart.png";
+import floridaPhotographyGrowthChart from "@/assets/case-studies/florida-photography-growth-chart.png";
+import touristVehicleRentalsGrowthChart from "@/assets/case-studies/tourist-vehicle-rentals-growth-chart.png";
 import customHomeBuilderGrowthChart from "@/assets/case-studies/custom-home-builder-growth-chart.png";
 
 // ============ CASE STUDY CARDS (for landing page) ============
@@ -303,6 +309,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "April 2025 to Present (8 SEO Cycles)",
     heroImage: recreationalBoatingHero,
+    growthChart: recreationalBoatingGrowthChart,
     pdfDownload: "/case-studies/recreational-boating-seo.pdf",
     narrationText: recreationalBoatingNarration,
   },
@@ -377,6 +384,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "May 2024 to Present (22 SEO Cycles)",
     heroImage: barnRestorationHero,
+    growthChart: barnRestorationGrowthChart,
     pdfDownload: "/case-studies/barn-restoration-seo.pdf",
     narrationText: barnRestorationNarration,
   },
@@ -447,6 +455,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
     heroImage: floridaPhotographyHero,
+    growthChart: floridaPhotographyGrowthChart,
     pdfDownload: "/case-studies/florida-photography-seo.pdf",
     narrationText: floridaPhotographyNarration,
   },
@@ -518,6 +527,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
     heroImage: touristVehicleRentalsHero,
+    growthChart: touristVehicleRentalsGrowthChart,
     pdfDownload: "/case-studies/tourist-vehicle-rentals-seo.pdf",
     narrationText: touristVehicleRentalsNarration,
   },
