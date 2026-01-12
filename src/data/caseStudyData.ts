@@ -249,7 +249,7 @@ Our campaign focused on keyword research and mapping across barn-related service
 
 The Results.
 
-As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel [state]' and 'Old barn repair [state]' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 4,512 sessions (up 496.8%), 4,074 Google Organic sessions (up 522%), and significant growth across Bing and DuckDuckGo as well.
+As of the latest reporting, the site achieved #1 rankings for multiple local and service keywords, including 'Barn remodel [state]' and 'Old barn repair [state]' terms across the Northeast, 'Barn restoration companies near me', 'Pole barn repair contractors near me', and 'Barn roof repair near me'. Visibility spanned across organic desktop (Top 3 across 12+ terms), mobile and local pack (Top 2 for most service queries). Full-year organic performance showed 478% year-over-year growth in total sessions and 491% growth in Google Organic traffic.
 `;
 
 const floridaPhotographyNarration = `
@@ -379,7 +379,7 @@ This Las Vegas-based plumbing and HVAC company partnered directly with our SEO t
 
 The Challenge.
 
-Prior to working with us, the client had been with Rhino, which was later acquired by Blue Corona. During that transition, their account was reassigned multiple times, leading to inconsistent strategy, poor communication, and ultimately, stagnation in results. Our July SEO Roadmap uncovered missing GA4 filters, lost historical redirects, and low-quality backlinks — all of which were resolved before campaign launch.
+Prior to working with us, the client had been with RYNO, which was later acquired by Blue Corona. During that transition, their account was reassigned multiple times, leading to inconsistent strategy, poor communication, and ultimately, stagnation in results. Our July SEO Roadmap uncovered missing GA4 filters, lost historical redirects, and low-quality backlinks — all of which were resolved before campaign launch.
 
 It's important to note that the client also runs paid advertising campaigns managed by a separate partner agency. The organic traffic and ranking improvements documented in this case study are exclusively the result of our SEO efforts and are tracked independently from any paid search activity.
 
@@ -944,7 +944,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "66", label: "Top 10 Keywords" },
       { value: "25x+", label: "ROI Range" },
     ],
-    challenge: "This Las Vegas-based plumbing and HVAC company had experienced long-term year-over-year declines due to tracking issues, prior mismanagement from agency transitions (Rhino → Blue Corona), and no structured SEO foundation. Previous campaigns became lost in the shuffle with limited progress.",
+    challenge: "This Las Vegas-based plumbing and HVAC company had experienced long-term year-over-year declines due to tracking issues, prior mismanagement from agency transitions (RYNO → Blue Corona), and no structured SEO foundation. Previous campaigns became lost in the shuffle with limited progress.",
     challengeDetails: [
       "Multi-year year-over-year organic traffic decline (-54% at worst)",
       "Previous agency transitions led to inconsistent strategy and poor communication",
