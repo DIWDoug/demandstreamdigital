@@ -168,17 +168,16 @@ export const caseStudyCards: CaseStudy[] = [
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
-      value: "+306%",
-      label: "Google Organic YoY Growth",
+      value: "70",
+      label: "Keywords Tracked",
     },
     secondaryMetrics: [
-      { value: "#46→#17", label: "Avg Position" },
-      { value: "8→35", label: "Top 10 Keywords" },
+      { value: "2", label: "#1 Rankings" },
+      { value: "20+", label: "Top 10 Keywords" },
     ],
     roiHighlight: {
       monthlyRevenue: "$50K+/mo",
-      roiRange: "30x+",
-      seoSpend: "$1,650/mo",
+      roiRange: "High ROI",
     },
     challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
     thumbnail: dallasPlumbingHero,
@@ -200,8 +199,7 @@ export const caseStudyCards: CaseStudy[] = [
     ],
     roiHighlight: {
       monthlyRevenue: "$40K+/mo",
-      roiRange: "25x+",
-      seoSpend: "$1,650/mo",
+      roiRange: "High ROI",
     },
     challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement (RYNO → Blue Corona), and no SEO structure — reversed entirely within 5 months.",
     thumbnail: lasVegasPlumbingHero,
@@ -367,9 +365,7 @@ We focused on high-profitability services first, prioritizing gas line repair, h
 
 The Results.
 
-The transformation was extraordinary. Average keyword position improved from #46 to #17. Keywords in the Top 10 grew from 8 to 35, a gain of 27 positions. Keywords in the Top 30 expanded from 31 to 63. Google Organic year-over-year growth peaked at +306% in December 2025.
-
-We secured #1 rankings for 'hydro jetting services' and 'hydro jetting service', along with Top 10 positions for 'emergency plumbing service', 'plumbing services dallas', 'drain cleaning dallas', and numerous other high-value terms. The campaign demonstrates the power of focused strategy and disciplined execution in a competitive metro market.
+We now track 70 keywords with strong rankings across high-value plumbing services. We secured #1 rankings for 'hydro jetting services' and 'hydro jetting service', with gains of 26 and 30 positions respectively since September. We also achieved #2 for 'drainage cleaning services', #3 for 'hydro jetting services near me', #4 for 'plumbing services in dallas tx' and 'emergency plumbing services', and Top 10 positions for numerous other high-value terms including 'water heater repair dallas tx', 'plumbing leak detection services', and 'best plumbers in dallas texas'.
 `;
 
 const lasVegasPlumbingNarration = `
@@ -395,7 +391,7 @@ We now track 65 keywords with strong rankings across the board. Position 1 ranki
 
 Revenue and ROI Impact.
 
-In December 2025, the client achieved approximately $40,000 in year-over-year revenue growth directly attributable to organic traffic improvements. This figure represents the incremental revenue compared to the same period the prior year. Given the diverse service mix across plumbing, HVAC, water heater, and emergency services, revenue per job varies significantly. However, the overall trajectory demonstrates clear ROI from the SEO investment. For $1,650 per month in SEO spend, the client is seeing an estimated 25x or greater return on investment.
+In December 2025, the client achieved approximately $40,000 in year-over-year revenue growth directly attributable to organic traffic improvements. This figure represents the incremental revenue compared to the same period the prior year. Given the diverse service mix across plumbing, HVAC, water heater, and emergency services, revenue per job varies significantly. However, the overall trajectory demonstrates strong ROI from the SEO investment.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -852,14 +848,14 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
-      value: "+306%",
-      label: "Google Organic YoY Growth (December 2025)",
+      value: "70",
+      label: "Keywords Tracked (Jan 2026)",
     },
     secondaryMetrics: [
-      { value: "#46 → #17", label: "Avg Keyword Position" },
-      { value: "8 → 35", label: "Top 10 Keywords" },
-      { value: "31 → 63", label: "Top 30 Keywords" },
-      { value: "30x+", label: "ROI Range" },
+      { value: "2", label: "#1 Rankings" },
+      { value: "20+", label: "Top 10 Keywords" },
+      { value: "50+", label: "First Page Keywords" },
+      { value: "High", label: "ROI" },
     ],
     challenge: "A Dallas-based plumbing company with a solid domain history had hit a plateau — organic traffic stagnated and visibility was buried behind competitors in one of the most competitive metro markets in Texas.",
     challengeDetails: [
@@ -884,40 +880,40 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Hub-and-spoke methodology with Core30 Strategy implementation",
       "Compact Keyword Strategy: One keyword per page for topical focus",
     ],
-    results: "Within five months, we achieved dramatic improvements across all key metrics. Average keyword position improved from #46 to #17, Top 10 keywords grew from 8 to 35, and December 2025 saw +306% Google Organic YoY growth. Multiple #1 rankings secured for high-value service terms.",
+    results: "70 keywords now tracked with strong rankings across high-value plumbing services. Multiple #1 rankings secured for hydrojetting terms, with 20+ keywords in Top 10 and 50+ on Page 1.",
     resultDetails: [
-      "+306% Google Organic year-over-year growth (December 2025)",
-      "+119% Total Organic YoY growth (December 2025)",
-      "Average position improved from #46 to #17",
-      "Keywords in Top 10: 8 → 35 (+27 keywords)",
-      "Keywords in Top 30: 31 → 63 (+32 keywords)",
-      "#1 for 'hydro jetting services' (▲26 positions)",
-      "#1 for 'hydro jetting service' (▲30 positions)",
-      "#6 for 'emergency plumbing service' (▲94 positions)",
-      "#6 for 'plumbing services dallas' (▲61 positions)",
-      "#7 for 'drain cleaning in dallas' (▲93 positions)",
-      "#7 for 'best plumbers in dallas texas' (▲30 positions)",
-      "#8 for 'drain cleaning dallas' (▲35 positions)",
-      "#9 for 'leak detection dallas' (▲7 positions)",
+      "70 keywords tracked with majority on Page 1",
+      "#1 for 'hydro jetting services' (▲26 from Sep)",
+      "#1 for 'hydro jetting service' (▲30 from Sep)",
+      "#2 for 'drainage cleaning services' (▲18 from Sep)",
+      "#3 for 'hydro jetting services near me' (▲37 from Sep)",
+      "#4 for 'plumbing services in dallas tx' (▲96 from Sep)",
+      "#4 for 'emergency plumbing services' (6.6K search vol, ▲96 from Sep)",
+      "#4 for 'water heater servicing near me' (290 search vol)",
+      "#5 for 'water heater repair dallas tx' (320 search vol)",
+      "#5 for 'plumbing leak detection services' (260 search vol)",
+      "#6 for 'emergency plumbing service' (360 search vol, ▲94 from Sep)",
+      "#6 for 'plumbing services dallas' (▲61 from Sep)",
+      "#7 for 'best plumbers in dallas texas' (210 search vol, ▲30 from Sep)",
+      "#7 for 'drain cleaning in dallas' (▲93 from Sep)",
     ],
     roiImpact: {
       headline: "Ranking Velocity & Revenue Impact",
       details: [
-        "Over 50% of tracked keywords now in Top 10 — up from just 11% five months earlier",
-        "December showed peak performance with +306% Google Organic YoY growth",
-        "Consistent month-over-month acceleration: +75% (June), +98% (July), +180% (Nov), +306% (Dec)",
-        "High-profitability services like hydrojetting and emergency plumbing now dominant",
-        "Each emergency plumbing call worth $300-$1,500+ in service revenue",
-        "For just $1,650/month in SEO spend — estimated 30x+ return on investment",
+        "70 keywords tracked with majority ranking on Page 1",
+        "Dominant rankings for high-profitability services: hydrojetting, emergency plumbing, water heater",
+        "#1 rankings for hydrojetting terms with significant position gains",
+        "Multiple keywords with massive gains (▲90+ positions from September)",
+        "High-volume keywords like 'emergency plumbing services' (6.6K searches) now in Top 5",
+        "Strong foundation for continued growth in competitive Dallas market",
       ],
       metrics: {
-        avgPosition: "#46 → #17",
-        top10Keywords: "8 → 35",
-        top30Keywords: "31 → 63",
-        peakYoYGrowth: "+306%",
+        keywordsTracked: "70",
+        position1Rankings: "2",
+        top10Keywords: "20+",
+        firstPageKeywords: "50+",
         monthlyRevenue: "$50K+",
-        seoSpend: "$1,650/mo",
-        roiRange: "30x+",
+        roiRange: "High",
       },
     },
     timeline: "July 2025 to Present (Ongoing Engagement)",
@@ -991,7 +987,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         "10+ #1 rankings and 15+ #2 rankings for high-conversion service terms",
         "65 keywords tracked with majority ranking in Top 7 positions",
         "December 2025: $40K year-over-year revenue growth attributable to organic",
-        "For $1,650/month in SEO spend — estimated 25x+ return on investment",
+        "Strong ROI from focused SEO execution",
       ],
       metrics: {
         keywordsTracked: "65",
@@ -999,8 +995,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         position2Rankings: "15+",
         performanceSwing: "57pt",
         monthlyRevenue: "$40K+",
-        seoSpend: "$1,650/mo",
-        roiRange: "25x+",
+        roiRange: "High",
       },
     },
     timeline: "August 2025 to Present (5+ SEO Cycles)",
