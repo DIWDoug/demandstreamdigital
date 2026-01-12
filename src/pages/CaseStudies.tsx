@@ -5,7 +5,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Layers } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Layers, Users, User, Flame } from "lucide-react";
 import { caseStudyCards } from "@/data/caseStudyData";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -40,6 +40,7 @@ export interface CaseStudy {
   };
   challenge: string;
   thumbnail?: string;
+  relationshipType?: "partner" | "direct";
 }
 
 // Export for use in detail page
@@ -65,6 +66,7 @@ const extractGrowthNumber = (study: CaseStudy): number => {
 
 // Order for "recency" - most recent campaigns first (based on typical engagement order)
 const recencyOrder = [
+  "las-vegas-plumbing-seo",   // January 2025 - Present
   "dallas-plumbing-seo",      // July 2025 - Present
   "florida-photography-seo",   // April 2025 - Dec 2025
   "tourist-vehicle-rentals-seo", // April 2025 - Dec 2025
@@ -312,6 +314,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
   const getIndustryIcon = (industry: string) => {
     const iconMap: Record<string, React.ElementType> = {
       "Plumbing/Home Services": Wrench,
+      "Plumbing & HVAC": Flame,
       "Recreational Boating": Anchor,
       "Barn Restoration": Building2,
       "Photography": Camera,
@@ -322,6 +325,8 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
     const Icon = iconMap[industry] || Target;
     return <Icon className="w-4 h-4" />;
   };
+  
+  const isPartner = study.relationshipType === "partner" || study.relationshipType === undefined;
 
   return (
     <Link to={`/case-studies/${study.slug}`} className="group block h-full">
@@ -338,13 +343,26 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
             
             {/* Industry Badge */}
-            <div className="absolute top-4 left-4">
+            <div className="absolute top-4 left-4 flex flex-wrap gap-2">
               <Badge 
                 variant="secondary" 
                 className="bg-background/90 backdrop-blur-sm border-0 text-foreground flex items-center gap-1.5 px-3 py-1"
               >
                 {getIndustryIcon(study.industry)}
                 {study.industry}
+              </Badge>
+              
+              {/* Relationship Type Badge */}
+              <Badge 
+                variant="secondary" 
+                className={`backdrop-blur-sm border-0 flex items-center gap-1.5 px-3 py-1 ${
+                  isPartner 
+                    ? "bg-primary/90 text-primary-foreground" 
+                    : "bg-amber-500/90 text-white"
+                }`}
+              >
+                {isPartner ? <Users className="w-3 h-3" /> : <User className="w-3 h-3" />}
+                {isPartner ? "Partner" : "Direct"}
               </Badge>
             </div>
             
@@ -360,6 +378,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
             </div>
           </div>
         )}
+        
         
         <CardContent className="p-6 flex flex-col flex-1">
           {/* Headline */}
@@ -422,6 +441,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
   const getIndustryIcon = (industry: string) => {
     const iconMap: Record<string, React.ElementType> = {
       "Plumbing/Home Services": Wrench,
+      "Plumbing & HVAC": Flame,
       "Recreational Boating": Anchor,
       "Barn Restoration": Building2,
       "Photography": Camera,
@@ -432,6 +452,8 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
     const Icon = iconMap[industry] || Target;
     return <Icon className="w-5 h-5" />;
   };
+  
+  const isPartner = study.relationshipType === "partner" || study.relationshipType === undefined;
 
   return (
     <Link to={`/case-studies/${study.slug}`} className="group block">
@@ -449,10 +471,22 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent lg:hidden" />
               
               {/* Featured Badge */}
-              <div className="absolute top-4 left-4">
+              <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                 <Badge className="bg-primary text-primary-foreground border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg">
                   <Sparkles className="w-4 h-4" />
                   Featured Case Study
+                </Badge>
+                
+                {/* Relationship Type Badge */}
+                <Badge 
+                  className={`border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg ${
+                    isPartner 
+                      ? "bg-blue-600 text-white" 
+                      : "bg-amber-500 text-white"
+                  }`}
+                >
+                  {isPartner ? <Users className="w-4 h-4" /> : <User className="w-4 h-4" />}
+                  {isPartner ? "Partner" : "Direct"}
                 </Badge>
               </div>
             </div>

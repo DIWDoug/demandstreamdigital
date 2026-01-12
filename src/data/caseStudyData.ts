@@ -44,6 +44,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "New website launch with zero organic foundation, needing to establish visibility across four geographic locations in a competitive marine industry.",
     thumbnail: recreationalBoatingHero,
+    relationshipType: "partner",
   },
   {
     slug: "barn-restoration-seo",
@@ -66,6 +67,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Barn restoration company in the Northeast market with limited organic visibility, competing for local search terms against general contractors.",
     thumbnail: barnRestorationHero,
+    relationshipType: "partner",
   },
   {
     slug: "florida-photography-seo",
@@ -88,6 +90,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Reversed severe organic decline from risky PBN tactics — a complete SEO turnaround from -28% to +32% YoY in just 9 months.",
     thumbnail: floridaPhotographyHero,
+    relationshipType: "partner",
   },
   {
     slug: "tourist-vehicle-rentals-seo",
@@ -110,6 +113,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Reversed declining organic visibility following PBN dismantling — delivering 531% new user growth and market leadership across multiple tourist destinations.",
     thumbnail: touristVehicleRentalsHero,
+    relationshipType: "partner",
   },
   {
     slug: "custom-home-builder-seo",
@@ -132,6 +136,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "High-end custom home builder with strong brand awareness but significantly under-leveraged organic visibility in the ultra-competitive Tampa Bay luxury home market.",
     thumbnail: customHomeBuilderHero,
+    relationshipType: "partner",
   },
   {
     slug: "auction-house-seo",
@@ -154,6 +159,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Well-established auction house seeking to dominate local search across multiple high-value categories including fine art, rare coins, jewelry, watches, and collectibles in competitive Florida markets.",
     thumbnail: auctionHouseHero,
+    relationshipType: "partner",
   },
   {
     slug: "dallas-plumbing-seo",
@@ -176,10 +182,11 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
     thumbnail: dallasPlumbingHero,
+    relationshipType: "partner",
   },
   {
     slug: "las-vegas-plumbing-seo",
-    client: "Las Vegas Plumbing Partner",
+    client: "Las Vegas Plumbing & HVAC",
     industry: "Plumbing & HVAC",
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO"],
     headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
@@ -198,6 +205,7 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement, and no SEO structure — reversed entirely within 5 months.",
     thumbnail: lasVegasPlumbingHero,
+    relationshipType: "direct",
   },
 ];
 

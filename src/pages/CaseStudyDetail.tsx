@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useState, useRef } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2, FileX, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2, FileX, ExternalLink, Users, User } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
 import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
 
@@ -45,6 +45,7 @@ export interface CaseStudyContent {
   pdfDownload?: string;
   narrationText?: string;
   noContentBadge?: boolean;
+  relationshipType?: "partner" | "direct";
 }
 
 // Use imported content
@@ -179,11 +180,26 @@ const CaseStudyDetail = () => {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                {/* Industry Tag & No Content Badge */}
+                {/* Industry Tag, Relationship Badge & No Content Badge */}
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
                     {content.industry}
                   </div>
+                  
+                  {/* Relationship Type Badge */}
+                  {(() => {
+                    const isPartner = content.relationshipType === "partner" || content.relationshipType === undefined;
+                    return (
+                      <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium ${
+                        isPartner 
+                          ? "bg-blue-600/20 text-blue-400 border border-blue-500/40" 
+                          : "bg-amber-500/20 text-amber-400 border border-amber-500/40"
+                      }`}>
+                        {isPartner ? <Users className="w-4 h-4" /> : <User className="w-4 h-4" />}
+                        {isPartner ? "Partner Relationship" : "Direct Relationship"}
+                      </div>
+                    );
+                  })()}
                   
                   {content.noContentBadge && (
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/40 text-amber-400 rounded-full text-sm font-semibold animate-pulse">
