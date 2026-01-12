@@ -1003,6 +1003,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: lasVegasPlumbingGrowthChart,
     pdfDownload: "/case-studies/las-vegas-plumbing-seo.pdf",
     narrationText: lasVegasPlumbingNarration,
+    relationshipType: "direct",
   },
 };
 
