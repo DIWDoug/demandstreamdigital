@@ -394,6 +394,10 @@ The data tells a powerful story of recovery. From -54% year-over-year decline in
 Beyond traffic metrics, we tracked dramatic improvements in average search position for non-branded queries. Average position improved from #59 in January 2025 to #27 in January 2026 — an improvement of 32 positions across all service categories. Top 3 keywords increased from 18 to 27, with a total of 66 ranking terms in the Top 10.
 
 We secured Position 1 for 'tankless water heater installation', 'water heater installation services', and 'plumbing fixture replacement'. Position 2 rankings for 'air duct repair las vegas', 'mini split air conditioning', and 'hvac repair near me'. Position 4 for 'emergency plumbing las vegas', 'drain cleaning services near me', and 'hydrojetting las vegas'.
+
+Revenue and ROI Impact.
+
+In December 2025, the client achieved approximately $40,000 in year-over-year revenue growth directly attributable to organic traffic improvements. This figure represents the incremental revenue compared to the same period the prior year. Given the diverse service mix across plumbing, HVAC, water heater, and emergency services, revenue per job varies significantly. However, the overall trajectory demonstrates clear ROI from the SEO investment. For $1,650 per month in SEO spend, the client is seeing an estimated 25x or greater return on investment.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
