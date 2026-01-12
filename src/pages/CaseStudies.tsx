@@ -229,8 +229,15 @@ const CaseStudies = () => {
           </div>
         </section>
         
+        {/* Featured Case Study */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-6 lg:px-8">
+            <FeaturedCaseStudy study={caseStudies.find(s => s.slug === "barn-restoration-seo")!} />
+          </div>
+        </section>
+        
         {/* Case Studies Grid */}
-        <section className="py-16 md:py-24">
+        <section className="pb-16 md:pb-24">
           <div className="container mx-auto px-6 lg:px-8">
             <motion.div 
               key={sortBy}
@@ -405,6 +412,128 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
             <ArrowRight className="w-4 h-4" />
           </div>
         </CardContent>
+      </Card>
+    </Link>
+  );
+};
+
+// Featured Case Study Component
+const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
+  const getIndustryIcon = (industry: string) => {
+    const iconMap: Record<string, React.ElementType> = {
+      "Plumbing/Home Services": Wrench,
+      "Recreational Boating": Anchor,
+      "Barn Restoration": Building2,
+      "Photography": Camera,
+      "Tourist Vehicle Rentals": Car,
+      "Custom Home Building": Home,
+      "Auction House": Gavel,
+    };
+    const Icon = iconMap[industry] || Target;
+    return <Icon className="w-5 h-5" />;
+  };
+
+  return (
+    <Link to={`/case-studies/${study.slug}`} className="group block">
+      <Card className="bg-gradient-to-br from-primary/5 via-card to-card border-primary/30 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-0">
+          {/* Image Side */}
+          {study.thumbnail && (
+            <div className="aspect-[16/10] lg:aspect-auto lg:min-h-[400px] bg-surface-dark overflow-hidden relative">
+              <img 
+                src={study.thumbnail} 
+                alt={`${study.client} case study`}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden lg:block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent lg:hidden" />
+              
+              {/* Featured Badge */}
+              <div className="absolute top-4 left-4">
+                <Badge className="bg-primary text-primary-foreground border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg">
+                  <Sparkles className="w-4 h-4" />
+                  Featured Case Study
+                </Badge>
+              </div>
+            </div>
+          )}
+          
+          {/* Content Side */}
+          <CardContent className="p-8 lg:p-10 flex flex-col justify-center">
+            {/* Industry Badge */}
+            <div className="flex items-center gap-3 mb-4">
+              <Badge 
+                variant="secondary" 
+                className="bg-background border-border text-foreground flex items-center gap-1.5 px-3 py-1"
+              >
+                {getIndustryIcon(study.industry)}
+                {study.industry}
+              </Badge>
+            </div>
+            
+            {/* Headline */}
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
+              {study.headline}
+            </h2>
+            
+            {/* Challenge */}
+            <p className="text-muted-foreground mb-6 line-clamp-3">
+              {study.challenge}
+            </p>
+            
+            {/* Metrics Row */}
+            <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="text-center p-3 bg-gradient-to-br from-primary/10 to-transparent rounded-lg border border-primary/20">
+                <div className="text-2xl lg:text-3xl font-bold text-primary flex items-center justify-center gap-1">
+                  {study.heroMetric.value}
+                  <TrendingUp className="w-5 h-5" />
+                </div>
+                <p className="text-xs text-muted-foreground mt-1 leading-tight">{study.heroMetric.label}</p>
+              </div>
+              {study.secondaryMetrics?.slice(0, 2).map((metric, i) => (
+                <div key={i} className="text-center p-3 bg-muted/50 rounded-lg border border-border/50">
+                  <div className="text-xl lg:text-2xl font-bold text-foreground">{metric.value}</div>
+                  <p className="text-xs text-muted-foreground mt-1 leading-tight">{metric.label}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* ROI Highlight */}
+            {study.roiHighlight && (
+              <div className="bg-gradient-to-r from-green-500/10 to-primary/10 border border-green-500/20 rounded-lg p-4 mb-6">
+                <div className="flex items-center justify-around gap-4">
+                  <div className="text-center">
+                    <p className="text-xl lg:text-2xl font-bold text-green-500">{study.roiHighlight.roiRange}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">ROI</p>
+                  </div>
+                  <div className="w-px h-12 bg-border/50" />
+                  <div className="text-center">
+                    <p className="text-xl lg:text-2xl font-bold text-primary">{study.roiHighlight.monthlyRevenue}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Revenue Potential</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Services */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {study.services.map((service) => (
+                <span 
+                  key={service}
+                  className="text-xs px-2.5 py-1 bg-muted text-muted-foreground rounded-full"
+                >
+                  {service}
+                </span>
+              ))}
+            </div>
+            
+            {/* CTA */}
+            <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
+              Read Full Case Study
+              <ArrowRight className="w-5 h-5" />
+            </div>
+          </CardContent>
+        </div>
       </Card>
     </Link>
   );
