@@ -704,6 +704,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: customHomeBuilderGrowthChart,
     pdfDownload: "/case-studies/custom-home-builder-seo.pdf",
     narrationText: customHomeBuilderNarration,
+    noContentBadge: true,
   },
   "auction-house-seo": {
     slug: "auction-house-seo",
