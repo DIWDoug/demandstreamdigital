@@ -85,6 +85,7 @@ const Services = () => {
               { label: 'Is This the Right Fit?', href: '#fit-qualifier' },
               { label: 'Our Framework', href: '#framework' },
               { label: 'Testimonials', href: '#testimonials' },
+              { label: 'Results', href: '#results' },
               { label: 'Our Process', href: '#onboarding' },
               { label: 'Expertise', href: '#expertise' },
               { label: 'FAQ', href: '#faq' },
