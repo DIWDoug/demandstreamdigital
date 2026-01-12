@@ -36,7 +36,7 @@ export interface CaseStudy {
   roiHighlight?: {
     monthlyRevenue: string;
     roiRange: string;
-    seoSpend: string;
+    seoSpend?: string;
   };
   challenge: string;
   thumbnail?: string;
