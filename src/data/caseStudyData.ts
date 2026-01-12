@@ -1122,13 +1122,13 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     highlights: [
       {
         icon: "crown" as const,
-        title: "#1 for HVAC Contractor Las Vegas",
-        description: "Secured the top organic position for one of the highest-value HVAC keywords in the Las Vegas market.",
+        title: "#1 HVAC Contractor Las Vegas",
+        description: "Secured the top organic position for the highest-value HVAC keyword in the Las Vegas market.",
       },
       {
         icon: "target" as const,
-        title: "Top 3 Google Maps",
-        description: "Ranking in the Local 3-Pack for 'plumber Las Vegas' — driving direct calls and map-based leads.",
+        title: "Top 3 Google Maps for Plumber Las Vegas",
+        description: "Ranking in the Local 3-Pack for the primary plumbing keyword — driving direct calls and map-based leads.",
       },
       {
         icon: "rocket" as const,

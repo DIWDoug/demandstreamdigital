@@ -334,6 +334,55 @@ const CaseStudyDetail = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto space-y-16">
               
+              {/* Key Highlights Cards - At Top */}
+              {content.highlights && content.highlights.length > 0 && (
+                <div className="not-prose">
+                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm font-bold">★</span>
+                    Key Highlights
+                  </h2>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {content.highlights.map((highlight, index) => {
+                      const IconComponent = {
+                        trophy: Trophy,
+                        target: Target,
+                        rocket: Rocket,
+                        chart: BarChart3,
+                        star: Star,
+                        shield: Shield,
+                        zap: Zap,
+                        crown: Crown,
+                      }[highlight.icon];
+                      
+                      const gradients = [
+                        "from-primary/20 to-blue-500/10 border-primary/30",
+                        "from-green-500/20 to-emerald-500/10 border-green-500/30",
+                        "from-amber-500/20 to-orange-500/10 border-amber-500/30",
+                      ];
+                      
+                      const iconColors = [
+                        "text-primary",
+                        "text-green-500",
+                        "text-amber-500",
+                      ];
+                      
+                      return (
+                        <div 
+                          key={index}
+                          className={`relative overflow-hidden bg-gradient-to-br ${gradients[index % 3]} border rounded-xl p-6`}
+                        >
+                          <div className={`w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm flex items-center justify-center mb-4 ${iconColors[index % 3]}`}>
+                            <IconComponent className="w-6 h-6" />
+                          </div>
+                          <h3 className="font-bold text-lg mb-2">{highlight.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              
               {/* The Challenge */}
               <div>
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
@@ -390,55 +439,6 @@ const CaseStudyDetail = () => {
                   </ul>
                 )}
               </div>
-              
-              {/* Key Highlights Cards */}
-              {content.highlights && content.highlights.length > 0 && (
-                <div className="not-prose">
-                  <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center text-sm font-bold">★</span>
-                    Key Highlights
-                  </h2>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    {content.highlights.map((highlight, index) => {
-                      const IconComponent = {
-                        trophy: Trophy,
-                        target: Target,
-                        rocket: Rocket,
-                        chart: BarChart3,
-                        star: Star,
-                        shield: Shield,
-                        zap: Zap,
-                        crown: Crown,
-                      }[highlight.icon];
-                      
-                      const gradients = [
-                        "from-primary/20 to-blue-500/10 border-primary/30",
-                        "from-green-500/20 to-emerald-500/10 border-green-500/30",
-                        "from-amber-500/20 to-orange-500/10 border-amber-500/30",
-                      ];
-                      
-                      const iconColors = [
-                        "text-primary",
-                        "text-green-500",
-                        "text-amber-500",
-                      ];
-                      
-                      return (
-                        <div 
-                          key={index}
-                          className={`relative overflow-hidden bg-gradient-to-br ${gradients[index % 3]} border rounded-xl p-6`}
-                        >
-                          <div className={`w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm flex items-center justify-center mb-4 ${iconColors[index % 3]}`}>
-                            <IconComponent className="w-6 h-6" />
-                          </div>
-                          <h3 className="font-bold text-lg mb-2">{highlight.title}</h3>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
               
               {/* No Content Callout Box */}
               {content.noContentBadge && (
