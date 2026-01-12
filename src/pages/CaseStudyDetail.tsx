@@ -42,6 +42,7 @@ export interface CaseStudyContent {
     title: string;
   };
   heroImage?: string;
+  growthChart?: string;
   pdfDownload?: string;
   narrationText?: string;
 }
@@ -343,6 +344,18 @@ const CaseStudyDetail = () => {
                   </ul>
                 )}
               </div>
+              
+              {/* Growth Chart Section */}
+              {content.growthChart && (
+                <div className="rounded-2xl overflow-hidden border border-border">
+                  <img 
+                    src={content.growthChart} 
+                    alt={`${content.client} organic traffic growth chart`}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+              )}
               
               {/* ROI Impact Section */}
               {content.roiImpact && (
