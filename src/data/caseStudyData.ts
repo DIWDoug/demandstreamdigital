@@ -533,6 +533,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: touristVehicleRentalsGrowthChart,
     pdfDownload: "/case-studies/tourist-vehicle-rentals-seo.pdf",
     narrationText: touristVehicleRentalsNarration,
+    noContentBadge: true,
   },
   "custom-home-builder-seo": {
     slug: "custom-home-builder-seo",

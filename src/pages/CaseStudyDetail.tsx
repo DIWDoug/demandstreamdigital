@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useState, useRef } from "react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, TrendingUp, CheckCircle2, Download, Volume2, VolumeX, Pause, Play, BookOpen, X, Loader2, FileX } from "lucide-react";
 import { caseStudies } from "./CaseStudies";
 import { caseStudyFullContent, getCaseStudyNarration } from "@/data/caseStudyData";
 import PDFViewerModal from "@/components/case-studies/PDFViewerModal";
@@ -45,6 +45,7 @@ export interface CaseStudyContent {
   growthChart?: string;
   pdfDownload?: string;
   narrationText?: string;
+  noContentBadge?: boolean;
 }
 
 // Use imported content
@@ -181,9 +182,18 @@ const CaseStudyDetail = () => {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                {/* Industry Tag */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-6">
-                  {content.industry}
+                {/* Industry Tag & No Content Badge */}
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                    {content.industry}
+                  </div>
+                  
+                  {content.noContentBadge && (
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/40 text-amber-400 rounded-full text-sm font-semibold animate-pulse">
+                      <FileX className="w-4 h-4" />
+                      Zero On-Site Content
+                    </div>
+                  )}
                 </div>
                 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -344,6 +354,35 @@ const CaseStudyDetail = () => {
                   </ul>
                 )}
               </div>
+              
+              {/* No Content Callout Box */}
+              {content.noContentBadge && (
+                <div className="relative overflow-hidden bg-gradient-to-br from-amber-500/10 via-orange-500/10 to-amber-500/5 border-2 border-amber-500/30 rounded-2xl p-8">
+                  {/* Decorative corner elements */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-500/20 to-transparent rounded-bl-full" />
+                  <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-orange-500/20 to-transparent rounded-tr-full" />
+                  
+                  <div className="relative flex flex-col md:flex-row items-center gap-6">
+                    <div className="flex-shrink-0 w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg shadow-amber-500/20">
+                      <FileX className="w-10 h-10 text-white" />
+                    </div>
+                    
+                    <div className="text-center md:text-left">
+                      <h3 className="text-xl font-bold text-amber-400 mb-2">
+                        No Content Required
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        This entire turnaround was achieved with <span className="text-amber-400 font-semibold">zero on-site content development</span>. 
+                        The homepage remains completely text-free to this day — proving that strategic off-page SEO, 
+                        GBP optimization, and clean link-building can drive massive growth even without traditional content marketing.
+                      </p>
+                      <p className="text-sm text-amber-400/80 mt-3 font-medium">
+                        ✦ A testament to the power of technical SEO and local optimization
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
               
               {/* Growth Chart Section */}
               {content.growthChart && (
