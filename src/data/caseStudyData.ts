@@ -459,6 +459,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "33-100x",
       },
     },
+    highlights: [
+      {
+        icon: "trophy" as const,
+        title: "Organic Share Dominance",
+        description: "93.4% of all traffic now comes from organic search — a testament to sustainable SEO.",
+      },
+      {
+        icon: "target" as const,
+        title: "#1 Local Pack Rankings",
+        description: "Top position in Google Maps for high-intent boating keywords across multiple Florida markets.",
+      },
+      {
+        icon: "chart" as const,
+        title: "$30K/mo Revenue Potential",
+        description: "Organic traffic driving qualified leads at 15x–30x return on SEO investment.",
+      },
+    ],
     timeline: "April 2025 to Present (8 SEO Cycles)",
     heroImage: recreationalBoatingHero,
     growthChart: recreationalBoatingGrowthChart,
@@ -534,6 +551,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "33-66x",
       },
     },
+    highlights: [
+      {
+        icon: "rocket" as const,
+        title: "478% YoY Growth",
+        description: "Nearly 5x year-over-year organic growth in a highly specialized niche market.",
+      },
+      {
+        icon: "crown" as const,
+        title: "Multiple #1 Rankings",
+        description: "Dominating local search for barn restoration, pole barn repair, and related keywords.",
+      },
+      {
+        icon: "star" as const,
+        title: "33-66x ROI",
+        description: "Just $750/mo in SEO spend generating $25K-$50K monthly revenue potential.",
+      },
+    ],
     timeline: "May 2024 to Present (22 SEO Cycles)",
     heroImage: barnRestorationHero,
     growthChart: barnRestorationGrowthChart,
@@ -605,6 +639,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "5-14x",
       },
     },
+    highlights: [
+      {
+        icon: "shield" as const,
+        title: "PBN Recovery Success",
+        description: "Reversed damage from risky previous tactics with clean, white-hat link building.",
+      },
+      {
+        icon: "zap" as const,
+        title: "60pt Performance Swing",
+        description: "From -28% decline to +32% growth — complete trajectory reversal in 9 months.",
+      },
+      {
+        icon: "target" as const,
+        title: "Multiple #1 Rankings",
+        description: "Secured top positions for high-intent local photography keywords across South Florida.",
+      },
+    ],
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
     heroImage: floridaPhotographyHero,
     growthChart: floridaPhotographyGrowthChart,
@@ -682,6 +733,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "5x+",
       },
     },
+    highlights: [
+      {
+        icon: "rocket" as const,
+        title: "+531% New User Growth",
+        description: "Massive increase in new organic visitors discovering the rental business.",
+      },
+      {
+        icon: "shield" as const,
+        title: "PBN Detox Complete",
+        description: "Cleaned up harmful backlinks from previous provider and rebuilt with white-hat tactics.",
+      },
+      {
+        icon: "crown" as const,
+        title: "#1 for Golf Cart Rentals",
+        description: "Dominating local search across multiple Florida tourist destinations.",
+      },
+    ],
     timeline: "April 2025 to December 2025 (9 SEO Cycles)",
     heroImage: touristVehicleRentalsHero,
     growthChart: touristVehicleRentalsGrowthChart,
@@ -761,6 +829,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "200x+",
       },
     },
+    highlights: [
+      {
+        icon: "trophy" as const,
+        title: "11 #1 Rankings",
+        description: "Dominating luxury home builder keywords across desktop, mobile, and local search.",
+      },
+      {
+        icon: "zap" as const,
+        title: "Zero Content Required",
+        description: "All growth achieved with no blog posts, no location pages, and a text-free homepage.",
+      },
+      {
+        icon: "star" as const,
+        title: "200x+ ROI Potential",
+        description: "Each organic lead represents $300K-$1M+ in project value for just $1,318/mo SEO spend.",
+      },
+    ],
     timeline: "May 2025 to December 2025 (8 SEO Cycles)",
     heroImage: customHomeBuilderHero,
     growthChart: customHomeBuilderGrowthChart,
@@ -836,6 +921,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "50x+",
       },
     },
+    highlights: [
+      {
+        icon: "chart" as const,
+        title: "89.58% Organic Share",
+        description: "Organic search became the dominant traffic source, driving qualified auction bidders.",
+      },
+      {
+        icon: "target" as const,
+        title: "Top 3 Local Pack",
+        description: "Dominant visibility in Google Maps for Tampa Bay and Clearwater auction queries.",
+      },
+      {
+        icon: "trophy" as const,
+        title: "2-Year Partnership",
+        description: "Sustained growth over 24 SEO cycles demonstrating long-term, compounding results.",
+      },
+    ],
     timeline: "2022 to 2024 (~2 Years, 24 SEO Cycles)",
     heroImage: auctionHouseHero,
     pdfDownload: "/case-studies/auction-house-seo.pdf",
@@ -917,6 +1019,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "High",
       },
     },
+    highlights: [
+      {
+        icon: "rocket" as const,
+        title: "+306% Google Organic",
+        description: "Year-over-year organic traffic growth in one of Texas's most competitive markets.",
+      },
+      {
+        icon: "crown" as const,
+        title: "#1 for Hydrojetting",
+        description: "Secured top rankings for high-profitability service keywords with massive position gains.",
+      },
+      {
+        icon: "zap" as const,
+        title: "90+ Position Gains",
+        description: "Multiple keywords jumped 90+ positions from September baseline.",
+      },
+    ],
     timeline: "July 2025 to Present (Ongoing Engagement)",
     heroImage: dallasPlumbingHero,
     growthChart: dallasPlumbingGrowthChart,
@@ -1000,6 +1119,23 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
         roiRange: "High",
       },
     },
+    highlights: [
+      {
+        icon: "crown" as const,
+        title: "#1 for HVAC Contractor Las Vegas",
+        description: "Secured the top organic position for one of the highest-value HVAC keywords in the Las Vegas market.",
+      },
+      {
+        icon: "target" as const,
+        title: "Top 3 Google Maps",
+        description: "Ranking in the Local 3-Pack for 'plumber Las Vegas' — driving direct calls and map-based leads.",
+      },
+      {
+        icon: "rocket" as const,
+        title: "57pt Performance Swing",
+        description: "From -54% YoY decline to +3% growth — a complete trajectory reversal in just 5 months.",
+      },
+    ],
     timeline: "August 2025 to Present (5+ SEO Cycles)",
     heroImage: lasVegasPlumbingHero,
     growthChart: lasVegasPlumbingGrowthChart,
