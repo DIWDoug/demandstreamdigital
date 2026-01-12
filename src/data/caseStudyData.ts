@@ -201,15 +201,15 @@ A tourist vehicle rental company partnered with our agency partner in April 2025
 
 The Challenge.
 
-Before our engagement, the client struggled with a toxic backlink profile from their previous SEO provider. The legacy PBN created ranking penalties and when dismantled in May 2025, caused an immediate traffic drop. The business needed to establish clean SEO practices while maintaining visibility during peak tourist season across multiple high-value locations.
+Before our engagement, the client struggled with a toxic backlink profile from their previous SEO provider. The legacy PBN created ranking penalties and when dismantled in May 2025, caused an immediate traffic drop. The business needed to establish clean SEO practices while maintaining visibility during peak tourist season across multiple high-value locations. Adding to the challenge, the client declined all content development — their homepage remains completely text-free to this day.
 
 Our Approach.
 
-We implemented a comprehensive strategy covering technical SEO, local SEO, link building, and on-page optimization. Technical work included metadata cleanup, H1 structure alignment, and canonical adjustments. For local SEO, we focused on unstructured citation building, rich content updates, and Google Business Profile optimization across multiple locations. Our link building campaign used mixed link types including guest posts and niche edits from DR40+ sources. On-page work covered keyword mapping, topical content creation, and service page updates.
+Despite the client's decision to forgo content development entirely, we implemented a comprehensive strategy covering technical SEO, local SEO, and link building. Technical work included metadata cleanup, H1 structure alignment, and canonical adjustments. For local SEO, we focused on unstructured citation building and Google Business Profile optimization across multiple locations. Our link building campaign used mixed link types including guest posts and niche edits from DR40+ sources. All growth was achieved through off-page SEO and local optimization alone — with no on-site content whatsoever.
 
 The Results.
 
-Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year improvements. Total users increased by 112%, with a remarkable 531% growth in new users discovering the business through organic search. Engagement metrics improved significantly with 28% higher engagement rate and 79% increase in average engagement time. We secured #1 rankings for critical keywords like 'city golf cart rental' and established strong Local Pack visibility across multiple tourist destinations.
+Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year improvements. Total users increased by 112%, with a remarkable 531% growth in new users discovering the business through organic search. Engagement metrics improved significantly with 28% higher engagement rate and 79% increase in average engagement time. We secured #1 rankings for critical keywords like 'city golf cart rental' and established strong Local Pack visibility across multiple tourist destinations — all without any homepage content.
 
 ROI Impact.
 
@@ -483,16 +483,17 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Needed to detoxify harmful backlinks and rebuild clean authority",
       "Required multi-location strategy across tourist destinations",
       "Timing critical to avoid disrupting peak tourist season",
+      "Client declined all content development — homepage remains text-free to this day",
     ],
-    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. We also provided strategic direction on timing a new website launch to minimize disruption during peak seasons.",
+    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. Despite the client's decision to forgo content development entirely, we achieved remarkable results through off-page SEO and local optimization alone.",
     solutionDetails: [
       "Metadata cleanup, H1 structure alignment, and canonical adjustments for proper crawlability",
       "Unstructured citation building and rich content updates",
       "Google Business Profile optimization across multiple locations",
       "Mixed link types including guest posts and niche edits from DR40+ sources",
-      "Keyword mapping, topical content creation, and service page updates",
       "Strategic timing of website relaunch to avoid peak season disruption",
       "Integration of paid search to support organic growth during transition",
+      "All growth achieved without any on-site content — homepage still has no text",
     ],
     results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year session growth, improved engagement, and expanded rankings across multiple high-intent local search terms.",
     resultDetails: [
