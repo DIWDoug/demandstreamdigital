@@ -249,15 +249,15 @@ A tourist vehicle rental company partnered with our agency partner in April 2025
 
 The Challenge.
 
-Before our engagement, the client struggled with a toxic backlink profile from their previous SEO provider. The legacy PBN created ranking penalties and when dismantled in May 2025, caused an immediate traffic drop. The business needed to establish clean SEO practices while maintaining visibility during peak tourist season across multiple high-value locations. Adding to the challenge, the client declined all content development — their homepage remains completely text-free to this day.
+Before our engagement, the client struggled with a toxic backlink profile from their previous SEO provider. The legacy PBN created ranking penalties and when dismantled in May 2025, caused an immediate traffic drop. The business needed to establish clean SEO practices while maintaining visibility during peak tourist season across multiple high-value locations.
 
 Our Approach.
 
-Despite the client's decision to forgo content development entirely, we implemented a comprehensive strategy covering technical SEO, local SEO, and link building. Technical work included metadata cleanup, H1 structure alignment, and canonical adjustments. For local SEO, we focused on unstructured citation building and Google Business Profile optimization across multiple locations. Our link building campaign used mixed link types including guest posts and niche edits from DR40+ sources. All growth was achieved through off-page SEO and local optimization alone — with no on-site content whatsoever.
+We implemented a comprehensive strategy covering technical SEO, local SEO, content development, and link building. Technical work included metadata cleanup, H1 structure alignment, and canonical adjustments. For local SEO, we focused on unstructured citation building and Google Business Profile optimization across multiple locations. Our link building campaign used mixed link types including guest posts and niche edits from DR40+ sources.
 
 The Results.
 
-Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year improvements. Total users increased by 112%, with a remarkable 531% growth in new users discovering the business through organic search. Engagement metrics improved significantly with 28% higher engagement rate and 79% increase in average engagement time. We secured #1 rankings for critical keywords like 'city golf cart rental' and established strong Local Pack visibility across multiple tourist destinations — all without any homepage content.
+Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year improvements. Total users increased by 112%, with a remarkable 531% growth in new users discovering the business through organic search. Engagement metrics improved significantly with 28% higher engagement rate and 79% increase in average engagement time. We secured #1 rankings for critical keywords like 'city golf cart rental' and established strong Local Pack visibility across multiple tourist destinations.
 
 ROI Impact.
 
@@ -267,27 +267,29 @@ The campaign generated over $6,400 in direct purchase revenue within the trackin
 const customHomeBuilderNarration = `
 SEO Growth for Custom Home Builder in Tampa Bay.
 
-A high-end custom home builder in Florida partnered with our agency in May 2025 to improve non-branded organic visibility. Despite having a strong brand and local awareness, their organic performance was significantly under-leveraged. Within eight months, we drove an 85% increase in organic sessions and secured 11 number one rankings for high-value local search terms through strategic off-page SEO and local optimization.
+A high-end custom home builder based in Florida partnered with our agency partner in May 2025 to improve non-branded organic visibility. Despite having a strong brand and local awareness, their organic performance was significantly under-leveraged, especially given their authority and presence in the local Google Maps pack. They had no homepage content, limited internal linking, and little-to-no supporting content on-site.
+
+The client had aesthetic and simplicity requirements, preferring a minimal, design-forward website — which limited our ability to implement typical on-page optimizations. Instead, the SEO strategy focused heavily on off-page work and technical adjustments, as well as GBP optimization.
 
 The Challenge.
 
-Our agency partner engaged us to improve organic visibility for a high-end custom home builder operating in the ultra-competitive Tampa Bay market. Despite strong brand recognition and local awareness, the client's organic search performance was significantly under-leveraged. The competitive nature of the luxury home building industry meant established players dominated search results.
+The client faced several unique challenges: no homepage content (still true today), limited ability to publish blog content or build internal page structures, a competitive industry with high-value transactional keywords, and no accurate analytics data prior to May 2025.
 
 Our Approach.
 
-We launched a phased SEO campaign beginning with a comprehensive on-page and technical SEO audit. The foundational phase focused on internal linking strategy and Google Business Profile optimization for local visibility. Ongoing monthly execution included sustained GBP optimization, high-relevance DR40 plus guest post outreach, backlink gap analysis, and continuous internal linking refinements.
+Our execution approach was built around a phased SEO structure. In the foundational phase, we conducted a full on-page audit and optimization, including technical SEO and internal linking strategy. We submitted to structured and unstructured citation directories, set up data aggregators to ensure NAP consistency, implemented Google Business Profile enhancements for Local Pack visibility, and established performance reporting infrastructure.
+
+Ongoing monthly execution included continued GBP optimization and maintenance ensuring presence in the top 3 local listings, guest post outreach and link insertions with high-relevance DR40+ partners, backlink gap analysis, social signal syndication, additional citation development, and ongoing internal linking refinements.
 
 The Results.
 
-The campaign delivered remarkable results. Organic sessions increased from 1,161 to 2,149 in just 8 months — an 85% growth rate. Sessions reached a peak of 2,375 in September, representing a 94% increase from May. This growth was achieved primarily through disciplined off-page SEO, local optimization, and high-authority link building, with no new blog content or page publications required.
+Within eight months, we delivered remarkable results. Organic sessions increased by 85% from 1,161 to 2,149, with peak performance of 2,375 sessions in September — a 94% increase from May. We secured 11 number one rankings and 9 number two rankings across organic and local search, all achieved with no new blog content or page publications.
 
-Ranking Summary.
-
-As of December 2025, the site achieved 11 number one rankings across desktop, mobile, and local search, including: luxury custom home builders, new homes for sale, home builders in the target city, new home builders, and new home construction company. An additional 9 number two rankings were secured across competitive terms.
+Key ranking achievements include number one positions for 'luxury custom home builders' on desktop and mobile, 'new homes for sale FL' in local search, 'home builders FL' on mobile, 'new home builders' across desktop, mobile, and local pack, and 'new home construction company' across all platforms.
 
 ROI Impact.
 
-In the Tampa Bay market, custom home projects typically range from $300,000 to over $1 million. Each organic lead generated through these rankings represents substantial lifetime value, making the $1,318 monthly SEO investment highly cost-effective compared to average project values.
+Tampa Bay custom home builds range from $300,000 to over $1 million, with high-end luxury homes exceeding $1 million with land and finishes. Each organic lead represents substantial lifetime value. For just $1,318 per month in SEO spend, the potential return on a single conversion exceeds 200x.
 `;
 
 const auctionHouseNarration = `
@@ -579,9 +581,8 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Needed to detoxify harmful backlinks and rebuild clean authority",
       "Required multi-location strategy across tourist destinations",
       "Timing critical to avoid disrupting peak tourist season",
-      "Client declined all content development — homepage remains text-free to this day",
     ],
-    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. Despite the client's decision to forgo content development entirely, we achieved remarkable results through off-page SEO and local optimization alone.",
+    solution: "We stepped in to detoxify harmful backlinks and stabilize rankings through clean link-building and improved on-page execution. Our comprehensive strategy covered technical SEO, local SEO, content development, and strategic link building.",
     solutionDetails: [
       "Metadata cleanup, H1 structure alignment, and canonical adjustments for proper crawlability",
       "Unstructured citation building and rich content updates",
@@ -589,11 +590,10 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Mixed link types including guest posts and niche edits from DR40+ sources",
       "Strategic timing of website relaunch to avoid peak season disruption",
       "Integration of paid search to support organic growth during transition",
-      "All growth achieved without any on-site content — homepage still has no text",
+      "Content development and on-page optimization for key service pages",
     ],
-    results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year growth — all without a single piece of on-site content. The homepage remains completely text-free, proving the power of off-page SEO and local optimization.",
+    results: "Within nine SEO cycles from April to December 2025, we reversed the declining trajectory and delivered substantial year-over-year growth. The comprehensive strategy proved the power of clean SEO practices and local optimization.",
     resultDetails: [
-      "All results achieved with ZERO on-site content — homepage still has no text",
       "+531% dramatic increase in new users discovering the business",
       "+112% increase in total users (December 2025 vs. January 2026)",
       "+28% improvement in engagement rate showing higher quality traffic",
@@ -602,12 +602,11 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Top 3 positions for 'rent golf carts {city}' and variations",
       "Strong Local Pack and Finder visibility across multiple tourist destinations",
       "Market leadership established in key coastal markets",
-      "Proof that off-page SEO and GBP optimization alone can drive massive growth",
     ],
     roiImpact: {
       headline: "Lead Quality & ROI Impact",
       details: [
-        "Organic search now drives 93% of all traffic — with no homepage content",
+        "Organic search now drives 93% of all traffic",
         "Over $6,440 in direct purchase revenue tracked within period",
         "508 key events recorded from organic traffic",
         "Google organic alone delivered 1,313 users (100% YoY growth)",
@@ -629,7 +628,6 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: touristVehicleRentalsGrowthChart,
     pdfDownload: "/case-studies/tourist-vehicle-rentals-seo.pdf",
     narrationText: touristVehicleRentalsNarration,
-    noContentBadge: true,
   },
   "custom-home-builder-seo": {
     slug: "custom-home-builder-seo",
@@ -647,27 +645,29 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       { value: "8", label: "SEO Cycles" },
       { value: "200x+", label: "ROI Range" },
     ],
-    challenge: "Our agency partner engaged us to improve organic visibility for a high-end custom home builder operating in the ultra-competitive Tampa Bay market. Despite strong brand recognition and local awareness, their organic search performance was significantly under-leveraged.",
+    challenge: "A high-end custom home builder based in Florida partnered with our agency partner in May 2025 to improve non-branded organic visibility. Despite having a strong brand and local awareness, their organic performance was significantly under-leveraged. They had no homepage content, limited internal linking, and little-to-no supporting content on-site.",
     challengeDetails: [
-      "Strong brand awareness but under-leveraged organic performance",
-      "Ultra-competitive Tampa Bay luxury home building market",
-      "Established local players dominating search results",
-      "No reliable tracking available prior to engagement",
-      "Needed comprehensive off-page SEO strategy to compete",
-      "Required authority building without relying on new content publications",
+      "No homepage content (still true today)",
+      "Limited ability to publish blog content or build internal page structures",
+      "Client had aesthetic and simplicity requirements, preferring a minimal, design-forward website",
+      "Ultra-competitive Tampa Bay luxury home building market with high-value transactional keywords",
+      "No accurate analytics data available prior to May 2025",
+      "Design constraints limited typical on-page optimization opportunities",
     ],
-    solution: "We launched a phased SEO campaign beginning with a comprehensive on-page and technical SEO audit. Our execution approach was built around disciplined off-page SEO, local optimization, and high-authority link building to maximize results within the client's design constraints.",
+    solution: "The SEO strategy focused heavily on off-page work and technical adjustments, as well as GBP optimization. Our execution approach was built around a phased SEO structure to maximize results within the client's design constraints.",
     solutionDetails: [
-      "Comprehensive on-page and technical SEO audits in foundational phase",
-      "Established internal linking strategy for improved crawlability",
-      "Google Business Profile optimization for local visibility",
-      "Sustained GBP optimization for top local listings",
-      "High-relevance (DR40+) guest post outreach",
-      "Backlink gap analysis and strategic link acquisition",
-      "Continuous internal linking refinements",
-      "Focus on quality over quantity in backlink acquisition",
+      "Full on-page audit and optimization, including technical SEO and internal linking strategy (manual + plugin-assisted)",
+      "Submission to structured and unstructured citation directories",
+      "Setup of data aggregators to ensure NAP consistency across platforms",
+      "Google Business Profile enhancements to improve Local Pack visibility",
+      "Performance reporting infrastructure setup in foundational phase",
+      "Continued GBP optimization ensuring presence in top 3 local listings",
+      "Guest post outreach and link insertions with high-relevance DR40+ partners",
+      "Backlink gap analysis to identify and close gaps with top competitors",
+      "Social signal syndication via branded channels",
+      "Ongoing monitoring and refinement of internal linking structure",
     ],
-    results: "The campaign delivered remarkable results within 8 months. Organic sessions increased by 85% with no new blog content or page publications required. We secured 11 #1 rankings and 9 #2 rankings across organic and local search results.",
+    results: "The campaign delivered remarkable results within 8 months. Organic sessions increased by 85% with no new blog content or page publications required. Traffic remained highly transactional in nature with strong upward momentum despite no content publication.",
     resultDetails: [
       "85% increase in organic sessions (1,161 to 2,149) in 8 months",
       "Peak performance of 2,375 sessions in September (+94% from May)",
@@ -677,7 +677,10 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "#1 for 'luxury custom home builders' (Desktop & Mobile)",
       "#1 for 'new homes for sale {city} FL' (Local)",
       "#1 for 'home builders in {city} FL' (Mobile)",
+      "#1 for 'new home builders' (Desktop, Mobile, Local Pack)",
       "#1 for 'new home construction company' (Desktop, Mobile, Local Pack)",
+      "#1 for 'custom home building process' (Local)",
+      "#1 for 'custom build homes' (Bing)",
     ],
     roiImpact: {
       headline: "Market Context & Revenue Impact",
