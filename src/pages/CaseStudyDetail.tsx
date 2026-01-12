@@ -291,6 +291,22 @@ const CaseStudyDetail = () => {
           </div>
         </section>
         
+        {/* Featured Hero Image */}
+        {content.heroImage && (
+          <section className="pb-8 md:pb-12">
+            <div className="container mx-auto px-6 lg:px-8">
+              <div className="relative aspect-[21/9] md:aspect-[3/1] rounded-2xl overflow-hidden">
+                <img 
+                  src={content.heroImage} 
+                  alt={`${content.client} - ${content.industry}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              </div>
+            </div>
+          </section>
+        )}
+        
         
         {/* Content Sections */}
         <section className="py-16 md:py-24">
