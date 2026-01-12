@@ -7,6 +7,7 @@ import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg
 import floridaPhotographyHero from "@/assets/case-studies/florida-photography-hero.jpg";
 import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-rentals-hero.jpg";
 import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
+import auctionHouseHero from "@/assets/case-studies/auction-house-hero.jpg";
 
 // Growth chart images
 import recreationalBoatingGrowthChart from "@/assets/case-studies/recreational-boating-growth-chart.png";
@@ -14,6 +15,7 @@ import barnRestorationGrowthChart from "@/assets/case-studies/barn-restoration-g
 import floridaPhotographyGrowthChart from "@/assets/case-studies/florida-photography-growth-chart.png";
 import touristVehicleRentalsGrowthChart from "@/assets/case-studies/tourist-vehicle-rentals-growth-chart.png";
 import customHomeBuilderGrowthChart from "@/assets/case-studies/custom-home-builder-growth-chart.png";
+import auctionHouseGrowthChart from "@/assets/case-studies/auction-house-growth-chart.png";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -126,6 +128,28 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "High-end custom home builder with strong brand awareness but significantly under-leveraged organic visibility in the ultra-competitive Tampa Bay luxury home market.",
     thumbnail: customHomeBuilderHero,
+  },
+  {
+    slug: "auction-house-seo",
+    client: "Tampa Bay Auction Partner",
+    industry: "Auction House",
+    services: ["Local SEO", "GBP Optimization", "Technical SEO", "Schema Implementation"],
+    headline: "Local SEO Dominance for a Multi-Category Auction House",
+    heroMetric: {
+      value: "+68%",
+      label: "Total Sessions Growth",
+    },
+    secondaryMetrics: [
+      { value: "+64%", label: "Engaged Sessions" },
+      { value: "24", label: "SEO Cycles" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$50K-$150K/mo",
+      roiRange: "50x+",
+      seoSpend: "$950/mo",
+    },
+    challenge: "Well-established auction house seeking to dominate local search across multiple high-value categories including fine art, rare coins, jewelry, watches, and collectibles in competitive Florida markets.",
+    thumbnail: auctionHouseHero,
   },
 ];
 
@@ -240,6 +264,32 @@ As of December 2025, the site achieved 11 number one rankings across desktop, mo
 ROI Impact.
 
 In the Tampa Bay market, custom home projects typically range from $300,000 to over $1 million. Each organic lead generated through these rankings represents substantial lifetime value, making the $1,318 monthly SEO investment highly cost-effective compared to average project values.
+`;
+
+const auctionHouseNarration = `
+Local SEO Dominance for a Multi-Category Auction House.
+
+A well-established auction house in the Tampa Bay area partnered with our agency to transform their local organic visibility and drive qualified search traffic across multiple high-value categories including fine art, rare coins, jewelry, watches, collectibles, and firearms. Over the course of a nearly two-year engagement, we implemented a comprehensive local SEO strategy focused exclusively on visibility growth within Florida markets, resulting in exceptional performance gains.
+
+The Challenge.
+
+Our agency partner engaged us to help a multi-category auction house achieve dominant local search visibility across the Tampa Bay region and broader Florida markets. The business offered diverse auction categories from fine art to firearms, requiring a sophisticated keyword strategy that could capture intent across multiple verticals while maintaining geographic precision.
+
+Our Approach.
+
+We developed a comprehensive local SEO strategy combining technical excellence with geographic precision. This included full schema implementation for auction events and inventory, Google Business Profile optimization across target locations, category-specific keyword mapping for all major auction verticals, and strategic preparation for peak auction seasons to maximize visibility during high-demand periods.
+
+The Results.
+
+The transformation was substantial over the two-year engagement. Total sessions increased by 68% year-over-year, with engaged sessions growing by 64%. Peak seasonal performance saw some months nearly triple the previous year's traffic. The auction house achieved top positions for numerous high-intent keywords including Tampa Auction House at Position 3 in Maps and Organic, Clearwater Auction in Top 3 Google Maps, and State Auctions in Florida at Position 2 in organic search.
+
+Category-Specific Success.
+
+Beyond general auction terms, the strategy delivered Page 1 visibility for category-specific searches across all major product lines. Coin auctions, artwork auctions, jewelry auctions, and firearms auctions all achieved prominent rankings for geo-targeted keywords, ensuring the auction house appeared prominently when potential bidders searched for specific items in their local area.
+
+Key Success Factors.
+
+Several critical factors contributed to the sustained growth. Geographic precision ensured focused targeting on high-value Florida markets. Category depth provided comprehensive optimization across all major auction categories. Technical excellence including structured data and proper schema implementation created a solid foundation. Seasonal optimization maximized visibility during peak auction periods when buyer intent was strongest.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -608,6 +658,80 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: customHomeBuilderGrowthChart,
     pdfDownload: "/case-studies/custom-home-builder-seo.pdf",
     narrationText: customHomeBuilderNarration,
+  },
+  "auction-house-seo": {
+    slug: "auction-house-seo",
+    client: "Tampa Bay Auction Partner",
+    industry: "Auction House",
+    services: ["Local SEO", "GBP Optimization", "Technical SEO", "Schema Implementation", "Seasonal Optimization"],
+    headline: "Local SEO Dominance for a Multi-Category Auction House",
+    heroMetric: {
+      value: "+68%",
+      label: "Total Sessions Year-over-Year",
+    },
+    secondaryMetrics: [
+      { value: "+64%", label: "Engaged Sessions" },
+      { value: "~2yrs", label: "Partnership Duration" },
+      { value: "Top 3", label: "Local Pack Rankings" },
+      { value: "50x+", label: "ROI Range" },
+    ],
+    challenge: "Our agency partner engaged us to help a well-established auction house in the Tampa Bay area achieve dominant local search visibility across multiple high-value categories. The business offered diverse auction categories from fine art to firearms, requiring a sophisticated keyword strategy across multiple verticals while maintaining geographic precision in competitive Florida markets.",
+    challengeDetails: [
+      "Multi-category auction business spanning fine art, coins, jewelry, watches, and collectibles",
+      "Competitive Tampa Bay and Clearwater local markets",
+      "Required geographic precision across multiple Florida locations",
+      "Seasonal demand fluctuations requiring strategic timing",
+      "Category-specific keyword complexity across diverse product lines",
+      "Need for dominant Local Pack visibility in addition to organic rankings",
+    ],
+    solution: "We developed a comprehensive local SEO strategy combining technical excellence with geographic precision. Our approach focused on category-specific optimization while preparing for seasonal demand peaks to maximize visibility during critical revenue periods.",
+    solutionDetails: [
+      "Full structured data and schema markup implementation",
+      "Google Business Profile optimization for Tampa Bay and Clearwater markets",
+      "Category-specific keyword mapping across all major auction verticals",
+      "Strategic seasonal optimization for peak auction periods",
+      "Local citation building and geographic targeting",
+      "Technical foundation improvements including site architecture optimization",
+      "Multi-location visibility strategy for broader Florida reach",
+      "High-quality engagement metric optimization",
+    ],
+    results: "The nearly two-year engagement delivered exceptional results with 68% total session growth and 64% engaged session increase. The auction house achieved dominant local rankings across all major category keywords and geographic targets, with peak seasonal months showing nearly triple year-over-year traffic.",
+    resultDetails: [
+      "+68% year-over-year increase in total sessions",
+      "+64% growth in high-quality engaged sessions",
+      "Peak months showing nearly 3x previous year's traffic",
+      "Position 3 for 'Tampa Auction House' in Maps + Organic",
+      "Top 3 in Google Maps for 'Clearwater Auction'",
+      "Position 2 for 'State Auctions in Florida' in organic search",
+      "Page 1 visibility for coin auction city-specific searches",
+      "Page 1 visibility for fine art auction queries",
+      "Dominant seasonal performance during peak summer months",
+    ],
+    roiImpact: {
+      headline: "Sustainable Growth & Revenue Impact",
+      details: [
+        "Auction activity surged during summer months with nearly triple traffic",
+        "Organic search became dominant acquisition source at 89.58% of traffic",
+        "High engagement rates indicating qualified auction bidders",
+        "Dominant Local Pack visibility drives in-person auction attendance",
+        "Category-specific rankings capture high-intent buyers across all verticals",
+        "Two-year partnership demonstrates sustainable, compounding results",
+      ],
+      metrics: {
+        monthlyTraffic: "3,000+",
+        organicShare: "89.58%",
+        trafficGrowth: "+68%",
+        engagementGrowth: "+64%",
+        monthlyRevenue: "$50K-$150K/mo",
+        seoSpend: "$950/mo",
+        roiRange: "50x+",
+      },
+    },
+    timeline: "2022 to 2024 (~2 Years, 24 SEO Cycles)",
+    heroImage: auctionHouseHero,
+    growthChart: auctionHouseGrowthChart,
+    pdfDownload: "/case-studies/auction-house-seo.pdf",
+    narrationText: auctionHouseNarration,
   },
 };
 
