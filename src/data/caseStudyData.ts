@@ -9,6 +9,7 @@ import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-ren
 import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
 import auctionHouseHero from "@/assets/case-studies/auction-house-hero.jpg";
 import dallasPlumbingHero from "@/assets/case-studies/dallas-plumbing-hero.jpg";
+import lasVegasPlumbingHero from "@/assets/case-studies/las-vegas-plumbing-hero.jpg";
 
 // Growth chart images
 import recreationalBoatingGrowthChart from "@/assets/case-studies/recreational-boating-growth-chart.png";
@@ -18,6 +19,7 @@ import touristVehicleRentalsGrowthChart from "@/assets/case-studies/tourist-vehi
 import customHomeBuilderGrowthChart from "@/assets/case-studies/custom-home-builder-growth-chart.png";
 import auctionHouseGrowthChart from "@/assets/case-studies/auction-house-growth-chart.png";
 import dallasPlumbingGrowthChart from "@/assets/case-studies/dallas-plumbing-growth-chart.png";
+import lasVegasPlumbingGrowthChart from "@/assets/case-studies/las-vegas-plumbing-growth-chart.jpg";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -174,6 +176,28 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
     thumbnail: dallasPlumbingHero,
+  },
+  {
+    slug: "las-vegas-plumbing-seo",
+    client: "Las Vegas Plumbing Partner",
+    industry: "Plumbing & HVAC",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO"],
+    headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
+    heroMetric: {
+      value: "57pt",
+      label: "Performance Turnaround (-54% → +3% YoY)",
+    },
+    secondaryMetrics: [
+      { value: "#59 → #27", label: "Avg Position" },
+      { value: "18 → 27", label: "Top 3 Keywords" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$40K+/mo",
+      roiRange: "25x+",
+      seoSpend: "$1,650/mo",
+    },
+    challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement, and no SEO structure — reversed entirely within 5 months.",
+    thumbnail: lasVegasPlumbingHero,
   },
 ];
 
@@ -338,6 +362,30 @@ The Results.
 The transformation was extraordinary. Average keyword position improved from #46 to #17. Keywords in the Top 10 grew from 8 to 35, a gain of 27 positions. Keywords in the Top 30 expanded from 31 to 63. Google Organic year-over-year growth peaked at +306% in December 2025.
 
 We secured #1 rankings for 'hydro jetting services' and 'hydro jetting service', along with Top 10 positions for 'emergency plumbing service', 'plumbing services dallas', 'drain cleaning dallas', and numerous other high-value terms. The campaign demonstrates the power of focused strategy and disciplined execution in a competitive metro market.
+`;
+
+const lasVegasPlumbingNarration = `
+SEO Recovery for Las Vegas Plumbing & HVAC Company.
+
+This Las Vegas-based plumbing and HVAC company partnered directly with our SEO team in August 2025, following a comprehensive SEO Roadmap we delivered in July. The brand had previously experienced long-term year-over-year declines in both total and Google organic traffic due to tracking issues, prior mismanagement, and no SEO structure. By launching a structured multi-phase campaign focused on on-page repairs, safe off-page link building, and a Hub-and-Spoke content strategy, the company reversed its negative trend and achieved measurable gains in visibility, rankings, and user engagement.
+
+The Challenge.
+
+Prior to working with us, the client had been with Rhino, which was later acquired by Blue Corona. During that transition, their account was reassigned multiple times, leading to inconsistent strategy, poor communication, and ultimately, stagnation in results. Our July SEO Roadmap uncovered missing GA4 filters, lost historical redirects, and low-quality backlinks — all of which were resolved before campaign launch.
+
+It's important to note that the client also runs paid advertising campaigns managed by a separate partner agency. The organic traffic and ranking improvements documented in this case study are exclusively the result of our SEO efforts and are tracked independently from any paid search activity.
+
+Our Approach.
+
+We began with a detailed Roadmap Phase in July 2025: full visual, on-page, and technical audit, competitor backlink gap analysis, disavow and link detox, historical URL redirect mapping, keyword clustering and mapping, and schema recommendations. Phase 1 Foundation in August 2025 included structured and unstructured citation cleanup, on-page optimization and schema deployment, GSC indexing and sitemap cleanup, GA4 event setup, and GBP optimization. Phase 2 and beyond focused on off-page authority: monthly guest posts on safe, niche-relevant domains, GBP posting and QA updates, and mixed-link campaigns with unstructured citations and niche edits. Our content strategy used Hub-and-Spoke methodology with topical authority building, Core30 and Compact Keyword frameworks, and spokes-of-spokes for deeper support pages.
+
+The Results.
+
+The data tells a powerful story of recovery. From -54% year-over-year decline in February 2025 to +3% year-over-year growth in December 2025 — a complete reversal of multi-year negative trends in just 10 months. SEO execution began August 2025, first measurable gains were visible in September, and we achieved positive year-over-year growth by December.
+
+Beyond traffic metrics, we tracked dramatic improvements in average search position for non-branded queries. Average position improved from #59 in January 2025 to #27 in January 2026 — an improvement of 32 positions across all service categories. Top 3 keywords increased from 18 to 27, with a total of 66 ranking terms in the Top 10.
+
+We secured Position 1 for 'tankless water heater installation', 'water heater installation services', and 'plumbing fixture replacement'. Position 2 rankings for 'air duct repair las vegas', 'mini split air conditioning', and 'hvac repair near me'. Position 4 for 'emergency plumbing las vegas', 'drain cleaning services near me', and 'hydrojetting las vegas'.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -867,6 +915,87 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     growthChart: dallasPlumbingGrowthChart,
     pdfDownload: "/case-studies/dallas-plumbing-seo.pdf",
     narrationText: dallasPlumbingNarration,
+  },
+  "las-vegas-plumbing-seo": {
+    slug: "las-vegas-plumbing-seo",
+    client: "Las Vegas Plumbing Partner",
+    industry: "Plumbing & HVAC",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO", "On-Page SEO"],
+    headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
+    heroMetric: {
+      value: "57pt",
+      label: "Performance Turnaround (-54% → +3% YoY Organic Traffic)",
+    },
+    secondaryMetrics: [
+      { value: "#59 → #27", label: "Avg Keyword Position" },
+      { value: "18 → 27", label: "Top 3 Keywords" },
+      { value: "66", label: "Top 10 Keywords" },
+      { value: "25x+", label: "ROI Range" },
+    ],
+    challenge: "This Las Vegas-based plumbing and HVAC company had experienced long-term year-over-year declines due to tracking issues, prior mismanagement from agency transitions (Rhino → Blue Corona), and no structured SEO foundation. Previous campaigns became lost in the shuffle with limited progress.",
+    challengeDetails: [
+      "Multi-year year-over-year organic traffic decline (-54% at worst)",
+      "Previous agency transitions led to inconsistent strategy and poor communication",
+      "Missing GA4 filters and fragmented performance tracking",
+      "Lost historical redirects causing traffic leakage",
+      "Low-quality backlinks from prior campaigns requiring detox",
+      "No structured SEO methodology or keyword strategy in place",
+    ],
+    solution: "We delivered a comprehensive SEO Roadmap in July 2025, then launched a structured multi-phase campaign in August 2025 focused on on-page repairs, safe off-page link building, and a Hub-and-Spoke content strategy. Within 5 months, we reversed the negative trend entirely.",
+    solutionDetails: [
+      "July 2025 Roadmap: Full visual, on-page, and technical audit",
+      "Competitor backlink gap analysis and link detox/disavow",
+      "Historical URL redirect mapping and recovery",
+      "Keyword clustering and mapping with schema recommendations",
+      "Phase 1 Foundation: Structured & unstructured citation cleanup",
+      "On-page optimization and schema deployment across all service pages",
+      "GSC indexing and sitemap cleanup, GA4 event setup",
+      "GBP optimization with our proprietary 120% methodology",
+      "Phase 2+: Monthly guest posts on safe, niche-relevant domains",
+      "GBP posting and QA updates, mixed-link campaigns",
+      "Hub-and-Spoke content methodology with Core30 and Compact Keyword frameworks",
+    ],
+    results: "From -54% YoY decline in February 2025 to +3% YoY growth in December 2025 — a complete 57 percentage point swing reversing multi-year negative trends in just 10 months. Average search position improved from #59 to #27, with multiple #1 rankings secured for high-value service terms.",
+    resultDetails: [
+      "57 percentage point performance swing (-54% to +3% YoY)",
+      "First positive YoY growth achieved by December 2025",
+      "Average position improved from #59 to #27 (32-position gain)",
+      "Top 3 keywords increased from 18 to 27",
+      "66 total keywords now ranking in Top 10",
+      "#1 for 'tankless water heater installation'",
+      "#1 for 'water heater installation services'",
+      "#1 for 'plumbing fixture replacement'",
+      "#2 for 'air duct repair las vegas'",
+      "#2 for 'mini split air conditioning'",
+      "#2 for 'hvac repair near me'",
+      "#4 for 'emergency plumbing las vegas'",
+      "#4 for 'drain cleaning services near me'",
+    ],
+    roiImpact: {
+      headline: "Recovery Trajectory & Revenue Impact",
+      details: [
+        "Complete reversal of multi-year decline trajectory within 5 months of execution",
+        "Strategic focus on high-profit services: water heaters, HVAC, emergency plumbing",
+        "Multiple #1 and #2 rankings for high-conversion service terms",
+        "66 keywords now in Top 10 positions driving qualified organic traffic",
+        "Each emergency plumbing/HVAC call worth $300-$2,000+ in service revenue",
+        "For $1,650/month in SEO spend — estimated 25x+ return on investment",
+      ],
+      metrics: {
+        avgPosition: "#59 → #27",
+        top3Keywords: "18 → 27",
+        top10Keywords: "66",
+        performanceSwing: "57pt",
+        monthlyRevenue: "$40K+",
+        seoSpend: "$1,650/mo",
+        roiRange: "25x+",
+      },
+    },
+    timeline: "August 2025 to Present (5+ SEO Cycles)",
+    heroImage: lasVegasPlumbingHero,
+    growthChart: lasVegasPlumbingGrowthChart,
+    pdfDownload: "/case-studies/las-vegas-plumbing-seo.pdf",
+    narrationText: lasVegasPlumbingNarration,
   },
 };
 
