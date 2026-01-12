@@ -202,14 +202,14 @@ const Header = () => {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-0">
+            <nav className="hidden lg:flex items-center gap-0">
               {/* Pre-Service Links (About) */}
               {preServiceLinks.map((link, index) => (
                 link.isRoute ? (
                   <Link
                     key={`pre-${index}`}
                     to={link.href}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                   >
                     {link.label}
                   </Link>
@@ -217,7 +217,7 @@ const Header = () => {
                   <a
                     key={`pre-${index}`}
                     href={getAnchorHref(link.href)}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                   >
                     {link.label}
                   </a>
@@ -236,10 +236,10 @@ const Header = () => {
                     setIsMegaMenuOpen(true);
                   }
                 }}
-                className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
               >
                 Services
-                <ChevronDown className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
               </Link>
               
               {/* Post-Service Links */}
@@ -248,7 +248,7 @@ const Header = () => {
                   <Link
                     key={`post-${index}`}
                     to={link.href}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                   >
                     {link.label}
                   </Link>
@@ -256,7 +256,7 @@ const Header = () => {
                   <a
                     key={`post-${index}`}
                     href={getAnchorHref(link.href)}
-                    className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                   >
                     {link.label}
                   </a>
@@ -285,10 +285,10 @@ const Header = () => {
                       setIsToolsMenuOpen(true);
                     }
                   }}
-                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide"
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                 >
                   Partner Tools
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
                 </Link>
                 
                 {isToolsMenuOpen && (
@@ -328,12 +328,12 @@ const Header = () => {
           </div>
 
           {/* Right side - Phone, Search & CTA */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-4">
             <a 
               href={PHONE_HREF}
-              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group"
+              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group whitespace-nowrap"
             >
-              <Phone className="h-4 w-4 text-cta" />
+              <Phone className="h-4 w-4 text-cta flex-shrink-0" />
               <span className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-cta after:transition-all after:duration-300 group-hover:after:w-full">
                 {PHONE_NUMBER}
               </span>
@@ -342,12 +342,12 @@ const Header = () => {
               href="/contact" 
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-cta text-sm py-2.5 px-6"
+              className="btn-cta text-sm py-2 px-4 whitespace-nowrap"
             >
-              Schedule a Discovery Call
+              Discovery Call
             </a>
             <button 
-              className="p-2.5 rounded-full bg-cta hover:bg-cta-glow transition-colors"
+              className="p-2 rounded-full bg-cta hover:bg-cta-glow transition-colors flex-shrink-0"
               aria-label="Search"
             >
               <Search className="h-4 w-4 text-cta-foreground" />
@@ -356,7 +356,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
