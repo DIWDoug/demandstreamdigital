@@ -27,7 +27,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "recreational-boating-seo",
     client: "Florida Marina Partner",
     industry: "Recreational Boating",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Transforming Organic Visibility in the Recreational Boating Industry",
     heroMetric: {
       value: "444%",
@@ -50,7 +50,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -73,7 +73,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "florida-photography-seo",
     client: "South Florida Photography Partner",
     industry: "Photography",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Turnaround for a South Florida Photography Business",
     heroMetric: {
       value: "60pt",
@@ -96,7 +96,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "tourist-vehicle-rentals-seo",
     client: "Florida Tourist Rental Partner",
     industry: "Tourist Vehicle Rentals",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO", "Citation Building"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Turnaround for a Tourist Vehicle Rental Company",
     heroMetric: {
       value: "+531%",
@@ -119,7 +119,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "custom-home-builder-seo",
     client: "Florida Custom Home Builder Partner",
     industry: "Custom Home Building",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "SEO Growth for Custom Home Builder in Tampa Bay",
     heroMetric: {
       value: "+85%",
@@ -142,7 +142,7 @@ export const caseStudyCards: CaseStudy[] = [
     slug: "auction-house-seo",
     client: "Tampa Bay Auction Partner",
     industry: "Auction House",
-    services: ["Local SEO", "GBP Optimization", "Technical SEO", "Schema Implementation"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Dominance for a Multi-Category Auction House",
     heroMetric: {
       value: "+68%",
@@ -163,9 +163,9 @@ export const caseStudyCards: CaseStudy[] = [
   },
   {
     slug: "dallas-plumbing-seo",
-    client: "Dallas Plumbing Partner",
+    client: "Dallas Plumbing",
     industry: "Plumbing/Home Services",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
       value: "+306%",
@@ -182,13 +182,13 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
     thumbnail: dallasPlumbingHero,
-    relationshipType: "partner",
+    relationshipType: "direct",
   },
   {
     slug: "las-vegas-plumbing-seo",
     client: "Las Vegas Plumbing & HVAC",
     industry: "Plumbing & HVAC",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
     heroMetric: {
       value: "57pt",
@@ -402,7 +402,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "recreational-boating-seo",
     client: "Florida Marina Partner",
     industry: "Recreational Boating",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO", "Content Development"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Transforming Organic Visibility in the Recreational Boating Industry",
     heroMetric: {
       value: "444%",
@@ -471,7 +471,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "barn-restoration-seo",
     client: "Northeast Barn Restoration Partner",
     industry: "Barn Restoration",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Growth for a Barn Restoration Company",
     heroMetric: {
       value: "478%",
@@ -546,7 +546,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "florida-photography-seo",
     client: "South Florida Photography Partner",
     industry: "Photography",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO", "Citation Building"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Turnaround for a South Florida Photography Business",
     heroMetric: {
       value: "60pt",
@@ -617,7 +617,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "tourist-vehicle-rentals-seo",
     client: "Florida Tourist Rental Partner",
     industry: "Tourist Vehicle Rentals",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO", "Citation Building"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Turnaround for a Tourist Vehicle Rental Company",
     heroMetric: {
       value: "+531%",
@@ -694,7 +694,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "custom-home-builder-seo",
     client: "Florida Custom Home Builder Partner",
     industry: "Custom Home Building",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "SEO Growth for Custom Home Builder in Tampa Bay",
     heroMetric: {
       value: "+85%",
@@ -774,7 +774,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     slug: "auction-house-seo",
     client: "Tampa Bay Auction Partner",
     industry: "Auction House",
-    services: ["Local SEO", "GBP Optimization", "Technical SEO", "Schema Implementation", "Seasonal Optimization"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Local SEO Dominance for a Multi-Category Auction House",
     heroMetric: {
       value: "+68%",
@@ -845,9 +845,9 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
   },
   "dallas-plumbing-seo": {
     slug: "dallas-plumbing-seo",
-    client: "Dallas Plumbing Partner",
+    client: "Dallas Plumbing",
     industry: "Plumbing/Home Services",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO", "On-Page SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "Rapid SEO Growth for Dallas Plumbing Company",
     heroMetric: {
       value: "+306%",
@@ -926,9 +926,9 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
   },
   "las-vegas-plumbing-seo": {
     slug: "las-vegas-plumbing-seo",
-    client: "Las Vegas Plumbing Partner",
+    client: "Las Vegas Plumbing & HVAC",
     industry: "Plumbing & HVAC",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO", "On-Page SEO"],
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
     headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
     heroMetric: {
       value: "57pt",
