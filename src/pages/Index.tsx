@@ -17,6 +17,7 @@ import FAQ, { getHomepageFAQSchema } from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 import WaveDivider from "@/components/WaveDivider";
+import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import { getHomepageSchema } from "@/lib/schema";
 
 const Index = () => {
@@ -99,6 +100,8 @@ const Index = () => {
       </div>
       
       <MidPageCTA variant="dark" />
+      
+      <FeaturedCaseStudies />
       
       <div id="testimonials">
         <Testimonials />
