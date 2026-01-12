@@ -6,6 +6,7 @@ import recreationalBoatingHero from "@/assets/case-studies/recreational-boating-
 import barnRestorationHero from "@/assets/case-studies/barn-restoration-hero.jpg";
 import floridaPhotographyHero from "@/assets/case-studies/florida-photography-hero.jpg";
 import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-rentals-hero.jpg";
+import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -97,6 +98,28 @@ export const caseStudyCards: CaseStudy[] = [
     challenge: "Reversed declining organic visibility following PBN dismantling — delivering 531% new user growth and market leadership across multiple tourist destinations.",
     thumbnail: touristVehicleRentalsHero,
   },
+  {
+    slug: "custom-home-builder-seo",
+    client: "Florida Custom Home Builder Partner",
+    industry: "Custom Home Building",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    headline: "SEO Growth for Custom Home Builder in Tampa Bay",
+    heroMetric: {
+      value: "+85%",
+      label: "Organic Traffic Growth",
+    },
+    secondaryMetrics: [
+      { value: "11", label: "#1 Rankings" },
+      { value: "8", label: "SEO Cycles" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$300K-$1M+/project",
+      roiRange: "200x+",
+      seoSpend: "$1,318/mo",
+    },
+    challenge: "High-end custom home builder with strong brand awareness but significantly under-leveraged organic visibility in the ultra-competitive Tampa Bay luxury home market.",
+    thumbnail: customHomeBuilderHero,
+  },
 ];
 
 // ============ NARRATION TEXT FOR TTS ============
@@ -184,6 +207,32 @@ Within nine SEO cycles from April to December 2025, we reversed the declining tr
 ROI Impact.
 
 The campaign generated over $6,400 in direct purchase revenue within the tracking period, with organic search driving 93% of all traffic. The business now dominates local search for tourist vehicle rentals across key destination markets, positioning them for continued growth in 2026.
+`;
+
+const customHomeBuilderNarration = `
+SEO Growth for Custom Home Builder in Tampa Bay.
+
+A high-end custom home builder in Florida partnered with our agency in May 2025 to improve non-branded organic visibility. Despite having a strong brand and local awareness, their organic performance was significantly under-leveraged. Within eight months, we drove an 85% increase in organic sessions and secured 11 number one rankings for high-value local search terms through strategic off-page SEO and local optimization.
+
+The Challenge.
+
+Our agency partner engaged us to improve organic visibility for a high-end custom home builder operating in the ultra-competitive Tampa Bay market. Despite strong brand recognition and local awareness, the client's organic search performance was significantly under-leveraged. The competitive nature of the luxury home building industry meant established players dominated search results.
+
+Our Approach.
+
+We launched a phased SEO campaign beginning with a comprehensive on-page and technical SEO audit. The foundational phase focused on internal linking strategy and Google Business Profile optimization for local visibility. Ongoing monthly execution included sustained GBP optimization, high-relevance DR40 plus guest post outreach, backlink gap analysis, and continuous internal linking refinements.
+
+The Results.
+
+The campaign delivered remarkable results. Organic sessions increased from 1,161 to 2,149 in just 8 months — an 85% growth rate. Sessions reached a peak of 2,375 in September, representing a 94% increase from May. This growth was achieved primarily through disciplined off-page SEO, local optimization, and high-authority link building, with no new blog content or page publications required.
+
+Ranking Summary.
+
+As of December 2025, the site achieved 11 number one rankings across desktop, mobile, and local search, including: luxury custom home builders, new homes for sale, home builders in the target city, new home builders, and new home construction company. An additional 9 number two rankings were secured across competitive terms.
+
+ROI Impact.
+
+In the Tampa Bay market, custom home projects typically range from $300,000 to over $1 million. Each organic lead generated through these rankings represents substantial lifetime value, making the $1,318 monthly SEO investment highly cost-effective compared to average project values.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -470,6 +519,79 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     heroImage: touristVehicleRentalsHero,
     pdfDownload: "/case-studies/tourist-vehicle-rentals-seo.pdf",
     narrationText: touristVehicleRentalsNarration,
+  },
+  "custom-home-builder-seo": {
+    slug: "custom-home-builder-seo",
+    client: "Florida Custom Home Builder Partner",
+    industry: "Custom Home Building",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Technical SEO"],
+    headline: "SEO Growth for Custom Home Builder in Tampa Bay",
+    heroMetric: {
+      value: "+85%",
+      label: "Organic Traffic Growth",
+    },
+    secondaryMetrics: [
+      { value: "2,149", label: "Monthly Sessions" },
+      { value: "11", label: "#1 Rankings" },
+      { value: "8", label: "SEO Cycles" },
+      { value: "200x+", label: "ROI Range" },
+    ],
+    challenge: "Our agency partner engaged us to improve organic visibility for a high-end custom home builder operating in the ultra-competitive Tampa Bay market. Despite strong brand recognition and local awareness, their organic search performance was significantly under-leveraged.",
+    challengeDetails: [
+      "Strong brand awareness but under-leveraged organic performance",
+      "Ultra-competitive Tampa Bay luxury home building market",
+      "Established local players dominating search results",
+      "No reliable tracking available prior to engagement",
+      "Needed comprehensive off-page SEO strategy to compete",
+      "Required authority building without relying on new content publications",
+    ],
+    solution: "We launched a phased SEO campaign beginning with a comprehensive on-page and technical SEO audit. Our execution approach was built around disciplined off-page SEO, local optimization, and high-authority link building to maximize results within the client's design constraints.",
+    solutionDetails: [
+      "Comprehensive on-page and technical SEO audits in foundational phase",
+      "Established internal linking strategy for improved crawlability",
+      "Google Business Profile optimization for local visibility",
+      "Sustained GBP optimization for top local listings",
+      "High-relevance (DR40+) guest post outreach",
+      "Backlink gap analysis and strategic link acquisition",
+      "Continuous internal linking refinements",
+      "Focus on quality over quantity in backlink acquisition",
+    ],
+    results: "The campaign delivered remarkable results within 8 months. Organic sessions increased by 85% with no new blog content or page publications required. We secured 11 #1 rankings and 9 #2 rankings across organic and local search results.",
+    resultDetails: [
+      "85% increase in organic sessions (1,161 to 2,149) in 8 months",
+      "Peak performance of 2,375 sessions in September (+94% from May)",
+      "11 #1 rankings across desktop, mobile, and local search",
+      "9 #2 rankings for competitive terms",
+      "Growth achieved with no new blog content or page publications",
+      "#1 for 'luxury custom home builders' (Desktop & Mobile)",
+      "#1 for 'new homes for sale {city} FL' (Local)",
+      "#1 for 'home builders in {city} FL' (Mobile)",
+      "#1 for 'new home construction company' (Desktop, Mobile, Local Pack)",
+    ],
+    roiImpact: {
+      headline: "Market Context & Revenue Impact",
+      details: [
+        "Tampa Bay custom home builds range from $300,000 to over $1 million",
+        "High-end luxury custom homes can exceed $1 million with land and finishes",
+        "Average construction cost of $150/sq ft with significant project complexity",
+        "Each organic lead represents substantial lifetime value",
+        "Rankings align with significant transactional intent and revenue potential",
+        "For just $1,318/month in SEO spend — a 200x+ return on a single conversion",
+      ],
+      metrics: {
+        monthlyTraffic: "2,149",
+        peakTraffic: "2,375 (Sept)",
+        trafficGrowth: "+85%",
+        projectValue: "$300K-$1M+",
+        monthlyRevenue: "$300K-$1M+/project",
+        seoSpend: "$1,318/mo",
+        roiRange: "200x+",
+      },
+    },
+    timeline: "May 2025 to December 2025 (8 SEO Cycles)",
+    heroImage: customHomeBuilderHero,
+    pdfDownload: "/case-studies/custom-home-builder-seo.pdf",
+    narrationText: customHomeBuilderNarration,
   },
 };
 
