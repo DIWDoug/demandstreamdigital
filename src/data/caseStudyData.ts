@@ -8,6 +8,7 @@ import floridaPhotographyHero from "@/assets/case-studies/florida-photography-he
 import touristVehicleRentalsHero from "@/assets/case-studies/tourist-vehicle-rentals-hero.jpg";
 import customHomeBuilderHero from "@/assets/case-studies/custom-home-builder-hero.jpg";
 import auctionHouseHero from "@/assets/case-studies/auction-house-hero.jpg";
+import dallasPlumbingHero from "@/assets/case-studies/dallas-plumbing-hero.jpg";
 
 // Growth chart images
 import recreationalBoatingGrowthChart from "@/assets/case-studies/recreational-boating-growth-chart.png";
@@ -16,6 +17,7 @@ import floridaPhotographyGrowthChart from "@/assets/case-studies/florida-photogr
 import touristVehicleRentalsGrowthChart from "@/assets/case-studies/tourist-vehicle-rentals-growth-chart.png";
 import customHomeBuilderGrowthChart from "@/assets/case-studies/custom-home-builder-growth-chart.png";
 import auctionHouseGrowthChart from "@/assets/case-studies/auction-house-growth-chart.png";
+import dallasPlumbingGrowthChart from "@/assets/case-studies/dallas-plumbing-growth-chart.png";
 
 // ============ CASE STUDY CARDS (for landing page) ============
 export const caseStudyCards: CaseStudy[] = [
@@ -150,6 +152,28 @@ export const caseStudyCards: CaseStudy[] = [
     },
     challenge: "Well-established auction house seeking to dominate local search across multiple high-value categories including fine art, rare coins, jewelry, watches, and collectibles in competitive Florida markets.",
     thumbnail: auctionHouseHero,
+  },
+  {
+    slug: "dallas-plumbing-seo",
+    client: "Dallas Plumbing Partner",
+    industry: "Plumbing/Home Services",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO"],
+    headline: "Rapid SEO Growth for Dallas Plumbing Company",
+    heroMetric: {
+      value: "+306%",
+      label: "Google Organic YoY Growth",
+    },
+    secondaryMetrics: [
+      { value: "#46→#17", label: "Avg Position" },
+      { value: "8→35", label: "Top 10 Keywords" },
+    ],
+    roiHighlight: {
+      monthlyRevenue: "$50K+/mo",
+      roiRange: "30x+",
+      seoSpend: "$1,650/mo",
+    },
+    challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
+    thumbnail: dallasPlumbingHero,
   },
 ];
 
@@ -290,6 +314,28 @@ Beyond general auction terms, the strategy delivered Page 1 visibility for categ
 Key Success Factors.
 
 Several critical factors contributed to the sustained growth. Geographic precision ensured focused targeting on high-value Florida markets. Category depth provided comprehensive optimization across all major auction categories. Technical excellence including structured data and proper schema implementation created a solid foundation. Seasonal optimization maximized visibility during peak auction periods when buyer intent was strongest.
+`;
+
+const dallasPlumbingNarration = `
+Rapid SEO Growth for Dallas Plumbing Company.
+
+A Dallas-based plumbing company partnered with our team in mid-2025 to execute a full SEO and digital visibility overhaul. Prior to our engagement, the client had active Google Analytics tracking, allowing us to measure precise year-over-year growth. Over the course of just five months, we achieved significant keyword ranking increases, strong growth in Google Organic traffic, and improved search visibility in the highly competitive Dallas-Fort Worth metro.
+
+The Challenge.
+
+The client is a local plumbing company offering services like emergency plumbing, leak detection, water heater installation and repair, and sump pump service. Despite having a solid domain history, their organic traffic had plateaued and visibility was buried behind competitors. The competitive nature of the Dallas plumbing market meant established players dominated search results for high-value service keywords.
+
+Our Approach.
+
+Our relationship began with a newly developed SEO Roadmap project — a comprehensive one-time audit and strategic analysis. This roadmap was created to clearly showcase expertise, uncover high-value opportunities, and act as a strategic appetizer before the full-service SEO engagement. The roadmap led to a 6-month SEO commitment starting in August 2025.
+
+We focused on high-profitability services first, prioritizing gas line repair, hydrojetting, sump pump repair, main water line repair, and emergency plumbing services. We applied a hub-and-spoke methodology, creating topically relevant clusters around each core service. We used the Compact Keyword Strategy focusing on one keyword per page, and the Core30 Strategy for localized hub-and-spoke implementation.
+
+The Results.
+
+The transformation was extraordinary. Average keyword position improved from #46 to #17. Keywords in the Top 10 grew from 8 to 35, a gain of 27 positions. Keywords in the Top 30 expanded from 31 to 63. Google Organic year-over-year growth peaked at +306% in December 2025.
+
+We secured #1 rankings for 'hydro jetting services' and 'hydro jetting service', along with Top 10 positions for 'emergency plumbing service', 'plumbing services dallas', 'drain cleaning dallas', and numerous other high-value terms. The campaign demonstrates the power of focused strategy and disciplined execution in a competitive metro market.
 `;
 
 // ============ FULL CASE STUDY CONTENT (for detail pages) ============
@@ -731,6 +777,86 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     heroImage: auctionHouseHero,
     pdfDownload: "/case-studies/auction-house-seo.pdf",
     narrationText: auctionHouseNarration,
+  },
+  "dallas-plumbing-seo": {
+    slug: "dallas-plumbing-seo",
+    client: "Dallas Plumbing Partner",
+    industry: "Plumbing/Home Services",
+    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Technical SEO", "On-Page SEO"],
+    headline: "Rapid SEO Growth for Dallas Plumbing Company",
+    heroMetric: {
+      value: "+306%",
+      label: "Google Organic YoY Growth (December 2025)",
+    },
+    secondaryMetrics: [
+      { value: "#46 → #17", label: "Avg Keyword Position" },
+      { value: "8 → 35", label: "Top 10 Keywords" },
+      { value: "31 → 63", label: "Top 30 Keywords" },
+      { value: "30x+", label: "ROI Range" },
+    ],
+    challenge: "A Dallas-based plumbing company with a solid domain history had hit a plateau — organic traffic stagnated and visibility was buried behind competitors in one of the most competitive metro markets in Texas.",
+    challengeDetails: [
+      "Organic traffic had plateaued despite solid domain history",
+      "Visibility buried behind established competitors in Dallas-Fort Worth",
+      "High-value service keywords dominated by larger players",
+      "Competitive market requiring strategic keyword prioritization",
+      "Needed comprehensive technical, on-page, and off-page strategy",
+      "Required focus on high-profitability services for maximum ROI",
+    ],
+    solution: "We began with a detailed foundational audit and SEO Roadmap — a comprehensive one-time analysis that led to a 6-month SEO commitment. Our strategy prioritized high-profitability services and applied hub-and-spoke methodology with topically relevant content clusters.",
+    solutionDetails: [
+      "Full site audit covering technical, visual, and on-page elements",
+      "Competitor keyword and backlink gap analysis",
+      "Historical URL redirect map and backlink recovery",
+      "Guest post scripting, prospecting, and outreach",
+      "Disavow toxic backlinks and link detox",
+      "On-Page SEO: Schema, keyword-mapped metas, internal linking, sitemap cleanup",
+      "Off-Page SEO: Structured & unstructured citations, brand mentions, backlink gap wins",
+      "Content: Monthly PowerPosts and service page optimization",
+      "Local SEO: GBP maintenance with 15+ posts monthly, competitive benchmarking",
+      "Hub-and-spoke methodology with Core30 Strategy implementation",
+      "Compact Keyword Strategy: One keyword per page for topical focus",
+    ],
+    results: "Within five months, we achieved dramatic improvements across all key metrics. Average keyword position improved from #46 to #17, Top 10 keywords grew from 8 to 35, and December 2025 saw +306% Google Organic YoY growth. Multiple #1 rankings secured for high-value service terms.",
+    resultDetails: [
+      "+306% Google Organic year-over-year growth (December 2025)",
+      "+119% Total Organic YoY growth (December 2025)",
+      "Average position improved from #46 to #17",
+      "Keywords in Top 10: 8 → 35 (+27 keywords)",
+      "Keywords in Top 30: 31 → 63 (+32 keywords)",
+      "#1 for 'hydro jetting services' (▲26 positions)",
+      "#1 for 'hydro jetting service' (▲30 positions)",
+      "#6 for 'emergency plumbing service' (▲94 positions)",
+      "#6 for 'plumbing services dallas' (▲61 positions)",
+      "#7 for 'drain cleaning in dallas' (▲93 positions)",
+      "#7 for 'best plumbers in dallas texas' (▲30 positions)",
+      "#8 for 'drain cleaning dallas' (▲35 positions)",
+      "#9 for 'leak detection dallas' (▲7 positions)",
+    ],
+    roiImpact: {
+      headline: "Ranking Velocity & Revenue Impact",
+      details: [
+        "Over 50% of tracked keywords now in Top 10 — up from just 11% five months earlier",
+        "December showed peak performance with +306% Google Organic YoY growth",
+        "Consistent month-over-month acceleration: +75% (June), +98% (July), +180% (Nov), +306% (Dec)",
+        "High-profitability services like hydrojetting and emergency plumbing now dominant",
+        "Each emergency plumbing call worth $300-$1,500+ in service revenue",
+        "For just $1,650/month in SEO spend — estimated 30x+ return on investment",
+      ],
+      metrics: {
+        avgPosition: "#46 → #17",
+        top10Keywords: "8 → 35",
+        top30Keywords: "31 → 63",
+        peakYoYGrowth: "+306%",
+        monthlyRevenue: "$50K+",
+        seoSpend: "$1,650/mo",
+        roiRange: "30x+",
+      },
+    },
+    timeline: "July 2025 to Present (Ongoing Engagement)",
+    heroImage: dallasPlumbingHero,
+    growthChart: dallasPlumbingGrowthChart,
+    narrationText: dallasPlumbingNarration,
   },
 };
 
