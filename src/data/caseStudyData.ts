@@ -729,7 +729,6 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
     },
     timeline: "2022 to 2024 (~2 Years, 24 SEO Cycles)",
     heroImage: auctionHouseHero,
-    growthChart: auctionHouseGrowthChart,
     pdfDownload: "/case-studies/auction-house-seo.pdf",
     narrationText: auctionHouseNarration,
   },
