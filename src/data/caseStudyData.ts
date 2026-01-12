@@ -195,15 +195,15 @@ export const caseStudyCards: CaseStudy[] = [
       label: "Performance Turnaround (-54% → +3% YoY)",
     },
     secondaryMetrics: [
-      { value: "#59 → #27", label: "Avg Position" },
-      { value: "18 → 27", label: "Top 3 Keywords" },
+      { value: "65", label: "Keywords Tracked" },
+      { value: "10+", label: "#1 Rankings" },
     ],
     roiHighlight: {
       monthlyRevenue: "$40K+/mo",
       roiRange: "25x+",
       seoSpend: "$1,650/mo",
     },
-    challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement, and no SEO structure — reversed entirely within 5 months.",
+    challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement (RYNO → Blue Corona), and no SEO structure — reversed entirely within 5 months.",
     thumbnail: lasVegasPlumbingHero,
     relationshipType: "direct",
   },
@@ -391,9 +391,7 @@ The Results.
 
 The data tells a powerful story of recovery. From -54% year-over-year decline in February 2025 to +3% year-over-year growth in December 2025 — a complete reversal of multi-year negative trends in just 10 months. SEO execution began August 2025, first measurable gains were visible in September, and we achieved positive year-over-year growth by December.
 
-Beyond traffic metrics, we tracked dramatic improvements in average search position for non-branded queries. Average position improved from #59 in January 2025 to #27 in January 2026 — an improvement of 32 positions across all service categories. Top 3 keywords increased from 18 to 27, with a total of 66 ranking terms in the Top 10.
-
-We secured Position 1 for 'tankless water heater installation', 'water heater installation services', and 'plumbing fixture replacement'. Position 2 rankings for 'air duct repair las vegas', 'mini split air conditioning', and 'hvac repair near me'. Position 4 for 'emergency plumbing las vegas', 'drain cleaning services near me', and 'hydrojetting las vegas'.
+We now track 65 keywords with strong rankings across the board. Position 1 rankings include 'plumbing and hvac services', 'plumbing fixture replacement', 'duct insulation contractors near me', 'tankless water heater solutions', and 'new water heater installation services'. Position 2 rankings include 'water line repair las vegas', 'air duct repair las vegas', 'heater repair near me', 'plumbing leak detection', and 'general plumbing services'. We also secured Position 5 for 'plumbing las vegas' — a high-volume term with 4,400 monthly searches.
 
 Revenue and ROI Impact.
 
@@ -939,9 +937,9 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       label: "Performance Turnaround (-54% → +3% YoY Organic Traffic)",
     },
     secondaryMetrics: [
-      { value: "#59 → #27", label: "Avg Keyword Position" },
-      { value: "18 → 27", label: "Top 3 Keywords" },
-      { value: "66", label: "Top 10 Keywords" },
+      { value: "65", label: "Keywords Tracked" },
+      { value: "10+", label: "#1 Rankings" },
+      { value: "15+", label: "#2 Rankings" },
       { value: "25x+", label: "ROI Range" },
     ],
     challenge: "This Las Vegas-based plumbing and HVAC company had experienced long-term year-over-year declines due to tracking issues, prior mismanagement from agency transitions (RYNO → Blue Corona), and no structured SEO foundation. Previous campaigns became lost in the shuffle with limited progress.",
@@ -967,36 +965,38 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "GBP posting and QA updates, mixed-link campaigns",
       "Hub-and-Spoke content methodology with Core30 and Compact Keyword frameworks",
     ],
-    results: "From -54% YoY decline in February 2025 to +3% YoY growth in December 2025 — a complete 57 percentage point swing reversing multi-year negative trends in just 10 months. Average search position improved from #59 to #27, with multiple #1 rankings secured for high-value service terms.",
+    results: "From -54% YoY decline in February 2025 to +3% YoY growth in December 2025 — a complete 57 percentage point swing reversing multi-year negative trends in just 10 months. 65 keywords now tracked, with strong rankings across plumbing, HVAC, and specialty services.",
     resultDetails: [
       "57 percentage point performance swing (-54% to +3% YoY)",
       "First positive YoY growth achieved by December 2025",
-      "Average position improved from #59 to #27 (32-position gain)",
-      "Top 3 keywords increased from 18 to 27",
-      "66 total keywords now ranking in Top 10",
-      "#1 for 'tankless water heater installation'",
-      "#1 for 'water heater installation services'",
+      "65 keywords tracked with majority in Top 7 positions",
+      "#1 for 'plumbing and hvac services'",
       "#1 for 'plumbing fixture replacement'",
-      "#2 for 'air duct repair las vegas'",
-      "#2 for 'mini split air conditioning'",
-      "#2 for 'hvac repair near me'",
-      "#4 for 'emergency plumbing las vegas'",
-      "#4 for 'drain cleaning services near me'",
+      "#1 for 'duct insulation contractors near me'",
+      "#1 for 'duct insulation companies near me'",
+      "#1 for 'tankless water heater solutions'",
+      "#1 for 'new water heater installation services'",
+      "#2 for 'water line repair las vegas' (▲15 from Sep)",
+      "#2 for 'air duct repair las vegas' (▲8 from Sep)",
+      "#2 for 'heater repair near me' (▲8 from Sep)",
+      "#2 for 'plumbing leak detection'",
+      "#2 for 'general plumbing services'",
+      "#5 for 'plumbing las vegas' (4.4K search vol)",
     ],
     roiImpact: {
       headline: "Recovery Trajectory & Revenue Impact",
       details: [
         "Complete reversal of multi-year decline trajectory within 5 months of execution",
-        "Strategic focus on high-profit services: water heaters, HVAC, emergency plumbing",
-        "Multiple #1 and #2 rankings for high-conversion service terms",
-        "66 keywords now in Top 10 positions driving qualified organic traffic",
-        "Each emergency plumbing/HVAC call worth $300-$2,000+ in service revenue",
+        "Strategic focus on high-profit services: water heaters, HVAC, plumbing",
+        "10+ #1 rankings and 15+ #2 rankings for high-conversion service terms",
+        "65 keywords tracked with majority ranking in Top 7 positions",
+        "December 2025: $40K year-over-year revenue growth attributable to organic",
         "For $1,650/month in SEO spend — estimated 25x+ return on investment",
       ],
       metrics: {
-        avgPosition: "#59 → #27",
-        top3Keywords: "18 → 27",
-        top10Keywords: "66",
+        keywordsTracked: "65",
+        position1Rankings: "10+",
+        position2Rankings: "15+",
         performanceSwing: "57pt",
         monthlyRevenue: "$40K+",
         seoSpend: "$1,650/mo",
