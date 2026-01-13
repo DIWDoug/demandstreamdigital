@@ -19,6 +19,10 @@ export const pageOgImages: Record<string, string> = {
   'content-marketing-calculator': `${BASE_URL}/content-marketing-calculator.jpg`,
   'social-media-roi-calculator': `${BASE_URL}/social-media-roi-calculator.png`,
   'ai-ready-check': `${BASE_URL}/ai-ready-check.jpg`,
+  'testimonials': `${BASE_URL}/testimonials.jpg`,
+  'privacy': `${BASE_URL}/privacy.jpg`,
+  'terms': `${BASE_URL}/terms.jpg`,
+  'thank-you': `${BASE_URL}/thank-you.jpg`,
 };
 
 /**
