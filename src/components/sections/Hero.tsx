@@ -70,71 +70,91 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen bg-background flex items-center justify-center overflow-hidden">
-      {/* Warm luxury gradient overlay - subtle cream tones */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-[150px] bg-gradient-to-bl from-cta/10 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full blur-[120px] bg-gradient-to-tr from-accent-blue/8 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full blur-[200px] bg-gradient-radial from-cta/5 via-transparent to-transparent" />
+    <section id="hero" className="relative min-h-screen gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
+      {/* Enhanced abstract data texture overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[120px] bg-gradient-radial from-cta/25 via-accent-blue/15 to-transparent" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[60px] bg-gradient-to-bl from-accent-blue/35 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full blur-[70px] bg-gradient-to-tr from-cta/30 to-transparent animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
       </div>
 
-      {/* Subtle floating particles - muted for light theme */}
+      {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
+        {/* Primary green particles */}
+        {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full bg-cta/40 animate-float"
+            className="absolute w-1 h-1 rounded-full bg-cta animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDuration: `${12 + Math.random() * 15}s`,
+              animationDuration: `${10 + Math.random() * 15}s`,
               animationDelay: `${Math.random() * 5}s`,
+              opacity: 0.3 + Math.random() * 0.2,
             }}
           />
         ))}
-        {[...Array(6)].map((_, i) => (
+        {/* Blue accent particles */}
+        {[...Array(10)].map((_, i) => (
           <div
             key={`blue-${i}`}
-            className="absolute w-1.5 h-1.5 rounded-full bg-accent-blue/30 animate-float"
+            className="absolute w-1.5 h-1.5 rounded-full bg-accent-blue animate-float"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDuration: `${14 + Math.random() * 12}s`,
+              animationDuration: `${12 + Math.random() * 12}s`,
               animationDelay: `${Math.random() * 6}s`,
+              opacity: 0.25 + Math.random() * 0.2,
+            }}
+          />
+        ))}
+        {/* Larger glow particles */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={`glow-${i}`}
+            className="absolute w-3 h-3 rounded-full bg-cta blur-sm animate-float"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${16 + Math.random() * 10}s`,
+              animationDelay: `${Math.random() * 8}s`,
+              opacity: 0.2,
             }}
           />
         ))}
       </div>
 
-      {/* Elegant grid pattern - very subtle on light */}
+      {/* Grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--foreground)/0.15) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--foreground)/0.15) 1px, transparent 1px)`,
-          backgroundSize: '80px 80px'
+          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
         }}
       />
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-24 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Contextual eyebrow - subtle */}
-          <p className="text-sm text-muted-foreground uppercase tracking-widest mb-8 animate-fade-in-up">
+          <p className="text-sm text-text-muted uppercase tracking-widest mb-8 animate-fade-in-up">
             AI-Enhanced · White-Label Digital Marketing Partner
           </p>
 
           {/* Single dominant headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-bold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
             White-Label <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span> for Agencies
           </h1>
 
           {/* Supporting sentence - benefit first, customization as proof */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
             SEO, local search, paid media, and authority building. Scoped to each client's market, not forced into a template.
           </p>
 
           {/* Payoff sentence */}
-          <p className="text-base text-muted-foreground/80 mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base text-text-muted mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Clients stay longer. Margins stay healthy. Fulfillment becomes predictable.
           </p>
 

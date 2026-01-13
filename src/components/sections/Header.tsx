@@ -178,8 +178,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" 
-          : "bg-background/80 backdrop-blur-sm"
+          ? "bg-surface-dark/95 backdrop-blur-md border-b border-border shadow-lg" 
+          : "bg-transparent"
       }`}
       ref={megaMenuRef}
     >
@@ -193,7 +193,7 @@ const Header = () => {
                 src={logo} 
                 alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
                 title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
-                className={`w-auto transition-all duration-300 ${
+                className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
                   isScrolled 
                     ? "h-5 md:h-6 max-w-[24px] md:max-w-[28px] object-cover object-left" 
                     : "h-5 md:h-6"
@@ -293,7 +293,7 @@ const Header = () => {
                 
                 {isToolsMenuOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-72 bg-card border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in"
+                    className="absolute top-full left-0 mt-2 w-72 bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in"
                     onMouseLeave={() => setIsToolsMenuOpen(false)}
                   >
                     <div className="p-2">
@@ -302,10 +302,10 @@ const Header = () => {
                           key={index}
                           to={tool.href}
                           onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-3 rounded-lg hover:bg-muted transition-colors"
+                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors"
                         >
                           <p className="text-sm font-medium text-foreground uppercase tracking-wide">{tool.label}</p>
-                          <p className="text-xs text-muted-foreground mt-0.5 normal-case tracking-normal">{tool.description}</p>
+                          <p className="text-xs text-text-muted mt-0.5 normal-case tracking-normal">{tool.description}</p>
                         </Link>
                       ))}
                       {/* View All Link */}
@@ -313,7 +313,7 @@ const Header = () => {
                         <Link
                           to="/partner-tools"
                           onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-3 rounded-lg hover:bg-muted transition-colors text-center"
+                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors text-center"
                         >
                           <p className="text-sm font-medium text-accent-blue">View All Partner Tools →</p>
                         </Link>
@@ -374,11 +374,11 @@ const Header = () => {
 
         {/* Mega Menu Dropdown */}
         {isMegaMenuOpen && (
-          <div className="hidden md:block absolute left-0 right-0 top-full bg-card border-b border-border shadow-2xl animate-fade-in origin-top z-50">
+          <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50 animate-fade-in origin-top z-50">
             {/* Close Button */}
             <button
               onClick={() => setIsMegaMenuOpen(false)}
-              className="absolute top-4 right-6 lg:right-8 p-2 rounded-lg bg-muted/50 hover:bg-muted border border-border/50 hover:border-border transition-colors z-10"
+              className="absolute top-4 right-6 lg:right-8 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
               aria-label="Close menu"
             >
               <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />

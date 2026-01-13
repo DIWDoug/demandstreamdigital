@@ -1,4 +1,4 @@
-// Cache bust: 2026-01-13T07:45 - Light hero theme
+// Cache bust: 2026-01-08T15:10
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
