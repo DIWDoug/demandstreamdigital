@@ -15,6 +15,7 @@ import SpokeEcosystemOrbit from "@/components/services/SpokeEcosystemOrbit";
 import SpokeProcessTimeline from "@/components/services/SpokeProcessTimeline";
 import { spokeContentBlocks, spokeFAQs } from "@/data/spoke-content-blocks";
 import { parseServiceUrl, getHubUrl, getSpokeUrl } from "@/lib/urlMappings";
+import { getSpokeOgImage } from "@/lib/ogImages";
 import {
   Accordion,
   AccordionContent,
@@ -139,6 +140,7 @@ const SpokePage = () => {
 
   const canonicalUrl = `https://dialedinweb.com${getSpokeUrl(hubSlug || '', spokeSlug || '')}`;
   const spokeKeywords = spokeKeywordsMap[spokeSlug || ''];
+  const ogImageUrl = getSpokeOgImage(spokeSlug || '');
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
@@ -159,13 +161,15 @@ const SpokePage = () => {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
         <meta name="twitter:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
       
       <Header />

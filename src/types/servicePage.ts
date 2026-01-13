@@ -79,6 +79,7 @@ export interface ServicePageConfig {
   metaDescription: string;
   canonicalUrl: string;
   keywords?: string;
+  ogImage?: string; // Optional OG image URL for social sharing
 
   // Hero Section
   hero: {
