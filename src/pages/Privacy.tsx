@@ -25,11 +25,15 @@ const Privacy = () => {
         <meta property="og:url" content="https://dialedinweb.com/privacy" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/privacy.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privacy Policy | Dialed-In Web" />
         <meta name="twitter:description" content="Learn how Dialed-In Web collects, uses, and protects your personal information." />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/privacy.jpg" />
       </Helmet>
 
       <Header />
