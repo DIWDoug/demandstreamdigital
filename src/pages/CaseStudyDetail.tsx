@@ -151,6 +151,26 @@ const CaseStudyDetail = () => {
     }
   };
 
+  // Generate OG image URL from slug
+  const getOgImageUrl = (caseStudySlug: string) => {
+    const slugToImage: Record<string, string> = {
+      'recreational-boating-seo': 'recreational-boating-hero.jpg',
+      'barn-restoration-seo': 'barn-restoration-hero.jpg',
+      'florida-photography-seo': 'florida-photography-hero.jpg',
+      'tourist-vehicle-rentals-seo': 'tourist-vehicle-rentals-hero.jpg',
+      'custom-home-builder-seo': 'custom-home-builder-hero.jpg',
+      'auction-house-seo': 'auction-house-hero.jpg',
+      'dallas-plumbing-seo': 'dallas-plumbing-hero.jpg',
+      'las-vegas-plumbing-seo': 'las-vegas-plumbing-hero.jpg',
+    };
+    const imageName = slugToImage[caseStudySlug] || 'dialedinweb-logo.png';
+    return slugToImage[caseStudySlug] 
+      ? `https://dialedinweb.com/og-images/${imageName}`
+      : `https://dialedinweb.com/${imageName}`;
+  };
+
+  const ogImageUrl = getOgImageUrl(slug || '');
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -167,13 +187,15 @@ const CaseStudyDetail = () => {
         <meta property="og:url" content={`https://dialedinweb.com/case-studies/${slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${content.headline} | Case Study`} />
         <meta name="twitter:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A white label marketing success story.`} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
       
       <Header />
