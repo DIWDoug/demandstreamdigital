@@ -315,13 +315,15 @@ const SocialMediaROICalculator = () => {
         <meta property="og:url" content="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/social-media-roi-calculator.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Social Media ROI Calculator | Measure Campaign Performance | Dialed-in Web" />
         <meta name="twitter:description" content="Calculate the return on investment of your social media campaigns. Measure leads, sales, and revenue generated from social media marketing." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/social-media-roi-calculator.png" />
       </Helmet>
       
       <Header />

@@ -1,10 +1,32 @@
 /**
- * OG Image Mapping for Service Hubs and Spokes
+ * OG Image Mapping for all pages
  * Maps slugs to public OG image URLs for social sharing
  */
 
 const BASE_URL = 'https://dialedinweb.com/og-images';
 const DEFAULT_OG = 'https://dialedinweb.com/dialedinweb-logo.png';
+
+// Page-level OG images
+export const pageOgImages: Record<string, string> = {
+  'about': `${BASE_URL}/about.jpg`,
+  'contact': `${BASE_URL}/contact.png`,
+  'partner-tools': `${BASE_URL}/partner-tools.png`,
+  'roi-calculator': `${BASE_URL}/roi-calculator.png`,
+  'seo-calculator': `${BASE_URL}/seo-calculator.jpg`,
+  'ad-budget-calculator': `${BASE_URL}/ad-budget-calculator.png`,
+  'investment-calculator': `${BASE_URL}/investment-calculator.png`,
+  'email-calculator': `${BASE_URL}/email-calculator.jpg`,
+  'content-marketing-calculator': `${BASE_URL}/content-marketing-calculator.jpg`,
+  'social-media-roi-calculator': `${BASE_URL}/social-media-roi-calculator.png`,
+  'ai-ready-check': `${BASE_URL}/ai-ready-check.jpg`,
+};
+
+/**
+ * Get OG image URL for a page
+ */
+export function getPageOgImage(pageSlug: string): string {
+  return pageOgImages[pageSlug] || DEFAULT_OG;
+}
 
 // Hub slug to OG image mapping
 export const hubOgImages: Record<string, string> = {
