@@ -351,7 +351,7 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "What's included in each service area page?", answer: "Unique content, local schema markup, internal linking, keyword targeting specific to that market, and clear conversion paths." },
     { question: "How long until geographic content ranks?", answer: "New pages typically show ranking movement within 2-4 months. Less competitive markets often rank faster." }
   ],
-  "topical-content": [
+  "topical-authority": [
     { question: "How does topical content differ from regular blog posts?", answer: "Topical content is strategically planned to build authority on core topics. It's organized in clusters, not random posts." },
     { question: "Do you write for both search engines and readers?", answer: "Always. Content must be useful to humans first. Search optimization enhances discoverability without sacrificing quality." },
     { question: "How do you measure topical authority?", answer: "Rankings across topic clusters, featured snippets earned, and organic traffic growth for related keywords." },
@@ -2594,7 +2594,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
     }
   ],
 
-  "topical-content": [
+  "topical-authority": [
     {
       category: "Building Topical Authority",
       headline: "Expertise That Search Engines Trust",
