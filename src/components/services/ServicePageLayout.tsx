@@ -5,6 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import type { ServicePageConfig, BreadcrumbItem } from "@/types/servicePage";
+import { getHubOgImage } from "@/lib/ogImages";
 
 // Generic section components
 import ServiceHeroGeneric from "./generic/ServiceHeroGeneric";
@@ -85,6 +86,9 @@ const ServicePageLayout = ({
     { label: config.title }
   ];
 
+  // Get OG image - use config override, or fall back to hub-based image
+  const ogImageUrl = config.ogImage || getHubOgImage(config.slug);
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -104,13 +108,15 @@ const ServicePageLayout = ({
         <meta property="og:url" content={config.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={config.metaTitle} />
         <meta name="twitter:description" content={config.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
       
       <Header />
