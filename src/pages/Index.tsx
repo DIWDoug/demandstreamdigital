@@ -63,11 +63,9 @@ const Index = () => {
         <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
-      {/* Dark header/hero section */}
-      <div className="dark">
-        <Header />
-        <Hero />
-      </div>
+      {/* Light header/hero section - warm luxury */}
+      <Header />
+      <Hero />
       
       <TrustReel />
       
