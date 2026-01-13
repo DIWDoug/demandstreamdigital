@@ -4,6 +4,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 // Countries explicitly blocked (overrides continent allowlist)
 const BLOCKED_COUNTRIES = ["JP", "CN", "RU"];
 
+// Countries explicitly allowed (overrides continent blocklist)
+const ALLOWED_COUNTRIES = ["PH"];
+
 // Allowed continents
 // NA = North America (US, Canada, Mexico)
 // EU = Europe
@@ -88,6 +91,15 @@ export function useGeoBlock() {
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
           navigate("/region-blocked", { replace: true });
+          return;
+        }
+        
+        // Check if explicitly allowed (overrides continent block)
+        if (ALLOWED_COUNTRIES.includes(countryCode)) {
+          console.log("Country explicitly allowed:", countryCode);
+          sessionStorage.setItem("geo_checked", "true");
+          sessionStorage.setItem("geo_blocked", "false");
+          setIsChecking(false);
           return;
         }
         
