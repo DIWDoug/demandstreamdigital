@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const BLOCKED_COUNTRIES = ["JP", "CN", "RU"];
 
 // Countries explicitly allowed (overrides continent blocklist)
-const ALLOWED_COUNTRIES = ["PH"];
+const ALLOWED_COUNTRIES = ["PH", "IN"];
 
 // Allowed continents
 // NA = North America (US, Canada, Mexico)
