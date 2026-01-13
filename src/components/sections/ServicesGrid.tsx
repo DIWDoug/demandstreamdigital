@@ -109,7 +109,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
       href={service.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative rounded-xl bg-surface-card border border-border/50 hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/5 overflow-hidden"
+      className="group relative rounded-xl bg-card border border-border hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 overflow-hidden"
     >
       {/* Pixabay image background */}
       {imageUrl && (
@@ -134,7 +134,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
         <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-accent-blue transition-colors">
           {service.title}
         </h3>
-        <p className="text-text-secondary text-sm leading-relaxed">
+        <p className="text-muted-foreground text-sm leading-relaxed">
           {service.description}
         </p>
         
@@ -150,9 +150,6 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 const ServicesGrid = () => {
   return (
     <section className="py-20 lg:py-28 bg-background relative">
-      {/* Top gradient transition */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-surface-dark to-transparent pointer-events-none" />
-      
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Two-column layout */}
@@ -166,10 +163,10 @@ const ServicesGrid = () => {
                 White Label Inbound Marketing,<br />
                 <span className="text-accent-blue">Fully Executed</span>
               </h2>
-              <p className="text-text-secondary leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 Inbound isn't a single tactic. It's multiple channels working as one system to attract, convert, and retain customers.
               </p>
-              <p className="text-text-secondary leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 Each service reinforces the others. Together, they create predictable growth your clients can count on.
               </p>
               
@@ -205,7 +202,7 @@ const ServicesGrid = () => {
                     <h3 className="text-foreground font-semibold mb-1 group-hover:text-cta transition-colors">
                       Explore Our Partner Tools
                     </h3>
-                    <p className="text-text-secondary text-sm">
+                    <p className="text-muted-foreground text-sm">
                       ROI calculators, investment tools, and resources for agency partners.
                     </p>
                   </div>

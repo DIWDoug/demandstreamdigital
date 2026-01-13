@@ -9,7 +9,7 @@ const TrustReel = () => {
   ];
 
   return (
-    <section className="py-8 bg-surface-dark border-y border-border overflow-hidden">
+    <section className="py-8 bg-card border-y border-border overflow-hidden">
       <div className="relative">
         {/* Single row, slower animation, more spacing */}
         <div className="flex animate-slide-left">
@@ -18,7 +18,7 @@ const TrustReel = () => {
             {trustItems.map((item, index) => (
               <span 
                 key={index} 
-                className="text-sm text-text-muted whitespace-nowrap tracking-wide uppercase"
+                className="text-sm text-muted-foreground whitespace-nowrap tracking-wide uppercase"
               >
                 {item}
               </span>
@@ -29,7 +29,7 @@ const TrustReel = () => {
             {trustItems.map((item, index) => (
               <span 
                 key={`dup-${index}`} 
-                className="text-sm text-text-muted whitespace-nowrap tracking-wide uppercase"
+                className="text-sm text-muted-foreground whitespace-nowrap tracking-wide uppercase"
               >
                 {item}
               </span>

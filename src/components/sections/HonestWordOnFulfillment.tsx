@@ -7,11 +7,11 @@ const HonestWordOnFulfillment = () => {
   return (
     <section 
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden reveal-section"
+      className="py-20 lg:py-28 bg-card border-y border-border relative overflow-hidden reveal-section"
     >
       {/* Subtle dot grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
@@ -34,7 +34,7 @@ const HonestWordOnFulfillment = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left - Photo */}
             <div className="relative flex justify-center lg:justify-start lg:ml-28">
-              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border max-w-xs">
+              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-muted to-background border border-border max-w-xs shadow-lg">
                 <img 
                   src={dougHeadshot} 
                   alt="Doug Bryson - Founder and CEO of Dialed-In Web, white label digital marketing agency"
@@ -43,7 +43,7 @@ const HonestWordOnFulfillment = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
                   <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
-                  <p className="text-text-secondary">Founder, Dialed-In Web</p>
+                  <p className="text-muted-foreground">Founder, Dialed-In Web</p>
                 </div>
               </div>
             </div>
@@ -51,9 +51,9 @@ const HonestWordOnFulfillment = () => {
             {/* Right - Letter Content */}
             <div className="relative">
               {/* Quotation mark */}
-              <div className="absolute -top-2 -left-2 text-6xl text-cta/20 font-serif leading-none">"</div>
+              <div className="absolute -top-2 -left-2 text-6xl text-cta/30 font-serif leading-none">"</div>
               
-              <div className="space-y-5 text-text-secondary leading-relaxed pt-8 font-handwriting text-lg">
+              <div className="space-y-5 text-muted-foreground leading-relaxed pt-8 font-handwriting text-lg">
                 <p className="text-foreground font-medium text-lg">I've been running agencies since 2011.</p>
                 
                 <p>

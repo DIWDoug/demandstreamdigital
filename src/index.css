@@ -38,33 +38,38 @@
 
 @layer base {
   :root {
-    /* Light mode - not primary for this site */
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* ═══════════════════════════════════════════════════════════════
+       WARM LUXURY LIGHT THEME - Mercedes-Inspired
+       ═══════════════════════════════════════════════════════════════ */
+    
+    /* Base cream/warm white palette */
+    --background: 40 20% 97%;           /* Warm cream #FAF9F7 */
+    --foreground: 220 25% 12%;          /* Rich charcoal for text */
 
-    --card: 0 0% 98%;
-    --card-foreground: 220 20% 10%;
+    --card: 40 15% 99%;                 /* Almost white with warmth */
+    --card-foreground: 220 25% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 40 15% 99%;
+    --popover-foreground: 220 25% 12%;
 
+    /* Olive green primary - kept for CTAs */
     --primary: 76 42% 41%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 20%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 40 10% 92%;            /* Light warm grey */
+    --secondary-foreground: 220 20% 20%;
 
-    --muted: 220 10% 90%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 40 10% 94%;                /* Subtle cream */
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 220 15% 95%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 40 15% 95%;
+    --accent-foreground: 220 25% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 85%;
-    --input: 220 10% 90%;
+    --border: 40 15% 88%;               /* Warm grey border */
+    --input: 40 10% 94%;
     --ring: 76 42% 41%;
 
     --radius: 0.5rem;
@@ -74,27 +79,31 @@
     --cta-foreground: 0 0% 100%;
     --cta-glow: 76 42% 51%;
     
-    /* Blue accent - for icons, highlights, borders */
-    --accent-blue: 224 60% 55%;
-    --accent-blue-glow: 224 60% 65%;
+    /* Blue accent - refined for light mode */
+    --accent-blue: 220 65% 45%;
+    --accent-blue-glow: 220 60% 55%;
     
-    /* Pop accent - for emphasis text (warm red like existing site) */
+    /* Pop accent */
     --accent-pop: 4 74% 49%;
     --accent-pop-glow: 4 74% 59%;
     
-    --surface-dark: 220 20% 8%;
-    --surface-elevated: 220 18% 12%;
-    --surface-card: 220 15% 15%;
+    /* Surface colors for light mode */
+    --surface-dark: 40 15% 94%;
+    --surface-elevated: 40 12% 96%;
+    --surface-card: 40 15% 99%;
     
-    --text-primary: 0 0% 98%;
-    --text-secondary: 220 10% 70%;
+    /* Text hierarchy for light mode */
+    --text-primary: 220 25% 12%;
+    --text-secondary: 220 15% 35%;
     --text-muted: 220 10% 50%;
     
-    --border-subtle: 220 15% 20%;
-    --border-card: 220 12% 25%;
+    /* Border tokens */
+    --border-subtle: 40 15% 85%;
+    --border-card: 40 12% 88%;
   }
 
   .dark {
+    /* Dark mode for dramatic hero sections */
     --background: 220 20% 6%;
     --foreground: 0 0% 98%;
 
@@ -123,10 +132,28 @@
     --input: 220 15% 15%;
     --ring: 76 42% 41%;
 
+    /* Dark mode surfaces */
+    --surface-dark: 220 20% 8%;
+    --surface-elevated: 220 18% 12%;
+    --surface-card: 220 15% 15%;
+    
+    /* Dark mode text */
+    --text-primary: 0 0% 98%;
+    --text-secondary: 220 10% 70%;
+    --text-muted: 220 10% 50%;
+    
+    /* Dark mode borders */
+    --border-subtle: 220 15% 20%;
+    --border-card: 220 12% 25%;
+
     /* CTA tokens for dark mode - olive green #7d953d */
     --cta: 76 42% 41%;
     --cta-foreground: 0 0% 100%;
     --cta-glow: 76 42% 51%;
+    
+    /* Blue accent for dark mode */
+    --accent-blue: 224 60% 55%;
+    --accent-blue-glow: 224 60% 65%;
   }
 }
 
