@@ -54,7 +54,7 @@ const FitQualifier = () => {
   ];
 
   return (
-    <section id="fit-qualifier" className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+    <section id="fit-qualifier" className="py-20 lg:py-28 bg-card border-y border-border relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -65,7 +65,7 @@ const FitQualifier = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Is This the Right Fit?
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               We're selective about who we work with, and you should be too. Here's a quick way to tell if this partnership makes sense for both of us.
             </p>
           </div>
@@ -73,7 +73,7 @@ const FitQualifier = () => {
           {/* Two Column Layout */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Good Fit */}
-            <div className="bg-surface-elevated rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50">
+            <div className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-sm">
               <div className="flex items-center gap-3 mb-5 md:mb-6">
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cta/10 flex items-center justify-center shrink-0">
                   <Check className="h-4 w-4 md:h-5 md:w-5 text-cta" />
@@ -92,13 +92,13 @@ const FitQualifier = () => {
                         <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
                         <ChevronDown 
                           className={cn(
-                            "h-4 w-4 text-text-muted transition-transform duration-200 shrink-0 mt-0.5",
+                            "h-4 w-4 text-muted-foreground transition-transform duration-200 shrink-0 mt-0.5",
                             openGoodFit === index && "rotate-180"
                           )} 
                         />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
+                        <p className="text-muted-foreground text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
                           {item.detail}
                         </p>
                       </CollapsibleContent>
@@ -109,7 +109,7 @@ const FitQualifier = () => {
             </div>
 
             {/* Not a Fit */}
-            <div className="bg-surface-elevated rounded-2xl p-5 sm:p-6 md:p-8 border border-border/50">
+            <div className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-sm">
               <div className="flex items-center gap-3 mb-5 md:mb-6">
                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
                   <X className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
@@ -128,13 +128,13 @@ const FitQualifier = () => {
                         <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
                         <ChevronDown 
                           className={cn(
-                            "h-4 w-4 text-text-muted transition-transform duration-200 shrink-0 mt-0.5",
+                            "h-4 w-4 text-muted-foreground transition-transform duration-200 shrink-0 mt-0.5",
                             openNotFit === index && "rotate-180"
                           )} 
                         />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
-                        <p className="text-text-muted text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
+                        <p className="text-muted-foreground text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">
                           {item.detail}
                         </p>
                       </CollapsibleContent>

@@ -34,7 +34,7 @@ const Index = () => {
   };
 
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <Helmet>
         <title>White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web</title>
         <meta name="description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
@@ -62,19 +62,21 @@ const Index = () => {
         <meta name="twitter:description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
         <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
-      <Header />
-      <Hero />
+      
+      {/* Dark header/hero section */}
+      <div className="dark">
+        <Header />
+        <Hero />
+      </div>
+      
       <TrustReel />
       
-      {/* Wave transition into Problem/Solution */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="wave" />
+      {/* Problem/Solution - dramatic dark section */}
+      <div className="dark">
         <ProblemSolution />
       </div>
-      {/* Soft divider between sections */}
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="border-t border-border/40" />
-      </div>
+      
+      {/* Light sections - warm luxury feel */}
       <HonestWordOnFulfillment />
       <WhyPartnerWithUs />
       <FitQualifier />
@@ -83,23 +85,21 @@ const Index = () => {
         <ServicesGrid />
       </div>
       
-      {/* Curved transition into TopicalExpertise */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--background))" toColor="hsl(var(--surface-dark))" variant="curve" flip />
+      {/* Expertise - back to dark for drama */}
+      <div className="dark">
         <TopicalExpertise />
       </div>
       
       <LocalGrowthEngine />
       
-      {/* Layered wave transition into WhatWeSolve */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(var(--primary))" toColor="hsl(var(--surface-dark))" variant="layered" />
+      {/* What We Solve - dark dramatic section */}
+      <div className="dark">
         <div id="about">
           <WhatWeSolve />
         </div>
       </div>
       
-      <MidPageCTA variant="dark" />
+      <MidPageCTA variant="light" />
       
       <FeaturedCaseStudies />
       
@@ -109,9 +109,11 @@ const Index = () => {
       
       <FAQ />
       
-      <ContactForm />
-      
-      <Footer />
+      {/* Contact & Footer - dark elegant finish */}
+      <div className="dark">
+        <ContactForm />
+        <Footer />
+      </div>
     </div>
   );
 };
