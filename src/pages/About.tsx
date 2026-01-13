@@ -159,13 +159,15 @@ const About = () => {
         <meta property="og:url" content="https://dialedinweb.com/about" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/about.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />
         <meta name="twitter:description" content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/about.jpg" />
         {/* Connected Organization + Person Schema for AI/LLM visibility */}
         <script type="application/ld+json">
           {JSON.stringify({

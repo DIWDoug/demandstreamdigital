@@ -156,13 +156,15 @@ const AdBudgetCalculator = () => {
         <meta property="og:url" content="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/ad-budget-calculator.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web" />
         <meta name="twitter:description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/ad-budget-calculator.png" />
       </Helmet>
       
       <Header />

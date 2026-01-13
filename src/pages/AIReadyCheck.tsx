@@ -214,13 +214,15 @@ const AIReadyCheck = () => {
         <meta property="og:url" content="https://dialedinweb.com/partner-tools/ai-ready-check" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/ai-ready-check.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web" />
         <meta name="twitter:description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/ai-ready-check.jpg" />
       </Helmet>
       
       <Header />

@@ -50,13 +50,15 @@ const Contact = () => {
         <meta property="og:url" content="https://dialedinweb.com/contact" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content="https://dialedinweb.com/og-images/contact.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />
         <meta name="twitter:description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://dialedinweb.com/og-images/contact.png" />
       </Helmet>
 
       <Header />
