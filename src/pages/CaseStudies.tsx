@@ -140,6 +140,8 @@ const CaseStudies = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Case Studies | White Label Marketing Results for Agency Partners" />
         <meta name="twitter:description" content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Dialed-In Web" />
       </Helmet>
       
       <Header />

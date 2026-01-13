@@ -122,6 +122,17 @@ const routesToPrerender = [
   '/white-label-faq-content',
   '/white-label-hub-spoke-buildouts',
   
+  // ============ CASE STUDIES ============
+  '/case-studies',
+  '/case-studies/recreational-boating-seo',
+  '/case-studies/barn-restoration-seo',
+  '/case-studies/florida-photography-seo',
+  '/case-studies/tourist-vehicle-rentals-seo',
+  '/case-studies/custom-home-builder-seo',
+  '/case-studies/auction-house-seo',
+  '/case-studies/dallas-plumbing-seo',
+  '/case-studies/las-vegas-plumbing-seo',
+  
   // Utility pages (noindex but prerendered for user experience)
   '/thank-you',
   '/region-blocked',
