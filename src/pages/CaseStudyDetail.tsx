@@ -166,6 +166,14 @@ const CaseStudyDetail = () => {
         <meta property="og:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A white label marketing success story.`} />
         <meta property="og:url" content={`https://dialedinweb.com/case-studies/${slug}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${content.headline} | Case Study`} />
+        <meta name="twitter:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A white label marketing success story.`} />
+        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
       </Helmet>
       
       <Header />
