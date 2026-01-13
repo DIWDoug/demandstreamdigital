@@ -916,8 +916,8 @@ export const hubs: Hub[] = [
         metaDescription: "We create location-specific pages to help clients rank locally. Sell geo content as your own. Schedule a strategy session today."
       },
       {
-        title: "Topical Content",
-        slug: "topical-content",
+        title: "Topical Authority",
+        slug: "topical-authority",
         description: "Industry expertise articles that build authority and answer customer questions.",
         fullDescription: "Topical content demonstrates expertise and captures informational queries. We create articles that position your client as the authority Google trusts for their industry.",
         benefits: ["Build topical authority", "Capture long-tail queries", "Support E-E-A-T signals", "Create internal linking opportunities", "Feed social and email channels"],

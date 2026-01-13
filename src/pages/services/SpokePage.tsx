@@ -61,7 +61,7 @@ const spokeKeywordsMap: Record<string, string> = {
   'performance-analytics': 'email analytics, campaign reporting, email performance metrics, delivery analytics',
   // Content Marketing spokes
   'geographical-content': 'geographical content, city pages, service area content, location-specific SEO',
-  'topical-content': 'topical content, industry blog posts, thought leadership content, expertise articles',
+  'topical-authority': 'topical content, industry blog posts, thought leadership content, expertise articles',
   'power-posts': 'power posts, pillar content, comprehensive guides, long-form SEO content',
   'ebooks-guides': 'ebooks, lead magnets, downloadable guides, gated content, content marketing assets',
   'lead-magnets': 'lead magnets, checklists, templates, conversion content, email list building',
