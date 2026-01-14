@@ -9,6 +9,7 @@ const DEFAULT_OG = 'https://dialedinweb.com/dialedinweb-logo.png';
 // Page-level OG images
 export const pageOgImages: Record<string, string> = {
   'about': `${BASE_URL}/about.jpg`,
+  'case-studies': `${BASE_URL}/case-studies.jpg`,
   'contact': `${BASE_URL}/contact.png`,
   'partner-tools': `${BASE_URL}/partner-tools.png`,
   'roi-calculator': `${BASE_URL}/roi-calculator.png`,
