@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-// Countries explicitly blocked (overrides continent allowlist)
-const BLOCKED_COUNTRIES = ["JP", "CN", "RU"];
+// Countries that show 404 (completely hidden - as if site doesn't exist)
+const HARD_BLOCKED_COUNTRIES = ["CN"];
+
+// Countries redirected to region-blocked page
+const BLOCKED_COUNTRIES = ["JP", "RU"];
 
 // Countries explicitly allowed (overrides continent blocklist)
 const ALLOWED_COUNTRIES = ["PH", "IN"];
@@ -84,9 +87,19 @@ export function useGeoBlock() {
         
         console.log("Geo check result:", { country: countryCode, continent: continentCode, ip: userIP });
         
-        // Check if explicitly blocked first (overrides continent)
+        // Check if hard blocked (show 404 - site doesn't exist for them)
+        if (HARD_BLOCKED_COUNTRIES.includes(countryCode)) {
+          console.log("Country hard blocked (404):", countryCode);
+          sessionStorage.setItem("geo_checked", "true");
+          sessionStorage.setItem("geo_blocked", "true");
+          setIsBlocked(true);
+          navigate("/page-not-found-404", { replace: true });
+          return;
+        }
+        
+        // Check if soft blocked (show region-blocked page)
         if (BLOCKED_COUNTRIES.includes(countryCode)) {
-          console.log("Country explicitly blocked:", countryCode);
+          console.log("Country blocked:", countryCode);
           sessionStorage.setItem("geo_checked", "true");
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
