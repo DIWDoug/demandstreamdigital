@@ -11,6 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, Linkedin, ExternalLink, Calendar, ArrowRight, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
+import { getPageOgImage } from "@/lib/ogImages";
 
 // Map author slugs to their blog post slugs
 const authorArticleMap: Record<string, string[]> = {
@@ -65,6 +66,8 @@ const Author = () => {
   if (!author) {
     return <Navigate to="/about" replace />;
   }
+
+  const ogImage = getPageOgImage('author');
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -122,13 +125,13 @@ const Author = () => {
         <meta property="og:url" content={`https://dialedinweb.com/authors/${author.slug}`} />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${author.name} - ${author.role} | Dialed-In Web`} />
         <meta name="twitter:description" content={author.shortBio} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
       
       <Header />

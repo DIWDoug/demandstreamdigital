@@ -8,9 +8,14 @@ const DEFAULT_OG = 'https://dialedinweb.com/dialedinweb-logo.png';
 
 // Page-level OG images
 export const pageOgImages: Record<string, string> = {
+  'index': `${BASE_URL}/homepage.jpg`,
+  'home': `${BASE_URL}/homepage.jpg`,
   'about': `${BASE_URL}/about.jpg`,
+  'blog': `${BASE_URL}/blog.jpg`,
   'case-studies': `${BASE_URL}/case-studies.jpg`,
   'contact': `${BASE_URL}/contact.png`,
+  'services': `${BASE_URL}/services.jpg`,
+  'white-label-inbound-marketing-services': `${BASE_URL}/services.jpg`,
   'partner-tools': `${BASE_URL}/partner-tools.png`,
   'roi-calculator': `${BASE_URL}/roi-calculator.png`,
   'seo-calculator': `${BASE_URL}/seo-calculator.jpg`,
@@ -24,6 +29,8 @@ export const pageOgImages: Record<string, string> = {
   'privacy': `${BASE_URL}/privacy.jpg`,
   'terms': `${BASE_URL}/terms.jpg`,
   'thank-you': `${BASE_URL}/thank-you.jpg`,
+  'author': `${BASE_URL}/author.jpg`,
+  'doug-bryson': `${BASE_URL}/author.jpg`,
 };
 
 /**
