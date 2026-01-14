@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import PixabayImage from "@/components/PixabayImage";
+import { getPageOgImage } from "@/lib/ogImages";
 
 // Import blog images statically for proper resolution
 import whiteLabelSeoBenefitsHero from "@/assets/blog/white-label-seo-benefits-hero.jpg";
@@ -84,6 +85,7 @@ const OurBlog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
+  const ogImage = getPageOgImage('blog');
 
   const { data: posts = [], isLoading, error } = useQuery({
     queryKey: ["our-blog-posts"],
@@ -191,6 +193,20 @@ const OurBlog = () => {
           content="Expert insights on white label SEO, PPC management, and agency growth strategies. Practical guides for digital marketing agency owners."
         />
         <link rel="canonical" href="https://dialedinweb.com/our-blog" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Agency Growth Blog | White Label SEO, PPC & Marketing Insights" />
+        <meta property="og:description" content="Expert insights on white label SEO, PPC management, and agency growth strategies. Practical guides for digital marketing agency owners." />
+        <meta property="og:url" content="https://dialedinweb.com/our-blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:image" content={ogImage} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Agency Growth Blog | White Label SEO, PPC & Marketing Insights" />
+        <meta name="twitter:description" content="Expert insights on white label SEO, PPC management, and agency growth strategies." />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
 
       <Header />

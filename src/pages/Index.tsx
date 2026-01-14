@@ -19,10 +19,12 @@ import Footer from "@/components/sections/Footer";
 import WaveDivider from "@/components/WaveDivider";
 import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import { getHomepageSchema } from "@/lib/schema";
+import { getPageOgImage } from "@/lib/ogImages";
 
 const Index = () => {
   const homepageSchema = getHomepageSchema();
   const faqSchema = getHomepageFAQSchema();
+  const ogImage = getPageOgImage('index');
 
   // Combine schemas
   const combinedSchema = {
@@ -54,13 +56,13 @@ const Index = () => {
         <meta property="og:url" content="https://dialedinweb.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web" />
         <meta name="twitter:description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
       
       {/* Dark header/hero section */}

@@ -51,7 +51,11 @@ const routesToPrerender = [
   '/partner-tools/seo-calculator',
   '/partner-tools/email-calculator',
   '/partner-tools/content-marketing-calculator',
+  '/partner-tools/social-media-roi-calculator',
   '/partner-tools/ai-ready-check',
+  
+  // Blog
+  '/our-blog',
   
   // Services Hub
   '/white-label-inbound-marketing-services',

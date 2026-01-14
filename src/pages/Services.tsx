@@ -15,6 +15,7 @@ import ServicesTestimonials from "@/components/services/ServicesTestimonials";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesResultsInAction from "@/components/services/ServicesResultsInAction";
 import { getServicesPageSchema } from "@/lib/schema";
+import { getPageOgImage } from "@/lib/ogImages";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -38,6 +39,7 @@ const anchorLinks = [
 const Services = () => {
   const servicesSchema = getServicesPageSchema();
   const [activeSection, setActiveSection] = useState<string>('white-label-explainer');
+  const ogImage = getPageOgImage('services');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,13 +82,13 @@ const Services = () => {
         <meta property="og:url" content="https://dialedinweb.com/white-label-inbound-marketing-services" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web" />
         <meta name="twitter:description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
       
       <Header />
