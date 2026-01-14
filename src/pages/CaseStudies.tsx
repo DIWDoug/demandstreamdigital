@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp, Target, BarChart3, Sparkles, Wrench, Anchor, Camera, Car, Home, Gavel, Building2, ArrowUpDown, ArrowUp, ArrowDown, Calendar, Layers, Users, User, Flame } from "lucide-react";
 import { caseStudyCards } from "@/data/caseStudyData";
 import { motion, AnimatePresence } from "framer-motion";
+import { getPageOgImage } from "@/lib/ogImages";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -78,6 +79,7 @@ const recencyOrder = [
 
 const CaseStudies = () => {
   const [sortBy, setSortBy] = useState<SortOption>("growth-desc");
+  const ogImage = getPageOgImage('case-studies');
   
   const sortedStudies = useMemo(() => {
     let studies = [...caseStudies];
@@ -134,13 +136,13 @@ const CaseStudies = () => {
         <meta property="og:description" content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." />
         <meta property="og:url" content="https://dialedinweb.com/case-studies" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Case Studies | White Label Marketing Results for Agency Partners" />
         <meta name="twitter:description" content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content={ogImage} />
         <meta property="og:site_name" content="Dialed-In Web" />
       </Helmet>
       
