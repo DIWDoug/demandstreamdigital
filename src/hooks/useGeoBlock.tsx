@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 // Countries that show 404 (completely hidden - as if site doesn't exist)
-const HARD_BLOCKED_COUNTRIES = ["CN"];
+const HARD_BLOCKED_COUNTRIES = ["CN", "JP", "RU"];
 
-// Countries redirected to region-blocked page
-const BLOCKED_COUNTRIES = ["JP", "RU"];
+// Countries redirected to region-blocked page (currently none)
+const BLOCKED_COUNTRIES: string[] = [];
 
 // Countries explicitly allowed (overrides continent blocklist)
 const ALLOWED_COUNTRIES = ["PH", "IN"];
