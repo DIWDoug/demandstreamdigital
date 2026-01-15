@@ -450,7 +450,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border bg-surface-dark relative">
+          <div className="md:hidden py-6 border-t border-border bg-surface-dark relative max-h-[calc(100vh-64px)] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
