@@ -450,7 +450,9 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-6 border-t border-border bg-surface-dark relative max-h-[calc(100vh-64px)] overflow-y-auto">
+          <div className="md:hidden border-t border-border bg-surface-dark relative">
+            {/* Scrollable content wrapper */}
+            <div className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20">
             {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -574,6 +576,7 @@ const Header = () => {
                 </a>
               </div>
             </nav>
+            </div>
           </div>
         )}
       </div>
