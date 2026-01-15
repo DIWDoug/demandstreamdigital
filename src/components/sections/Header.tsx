@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const location = useLocation();
@@ -449,10 +450,23 @@ const Header = () => {
         )}
 
         {/* Mobile menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-surface-dark relative">
-            {/* Scrollable content wrapper */}
-            <div className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20">
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="md:hidden border-t border-border bg-surface-dark relative overflow-hidden"
+            >
+              {/* Scrollable content wrapper */}
+              <motion.div 
+                initial={{ y: -20 }}
+                animate={{ y: 0 }}
+                exit={{ y: -20 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20"
+              >
             {/* Close Button */}
             <button
               onClick={() => setIsMobileMenuOpen(false)}
@@ -576,9 +590,10 @@ const Header = () => {
                 </a>
               </div>
             </nav>
-            </div>
-          </div>
-        )}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
