@@ -555,17 +555,14 @@ const Header = () => {
               ))}
 
               {/* Mobile Partner Tools (no dropdown) */}
-              <a
-                href="/partner-tools"
+              <Link
+                to="/partner-tools"
                 className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateMobile("/partner-tools");
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 <span className="w-1 h-4 bg-cta rounded-full" />
                 Partner Tools
-              </a>
+              </Link>
 
 
 

@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Home } from "lucide-react";
@@ -35,20 +35,20 @@ const NotFound = () => {
           Looks like this page got lost somewhere between the algorithm updates. Let's get you back on track.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="/" 
+          <Link 
+            to="/" 
             className="btn-cta group flex items-center gap-2"
           >
             <Home className="h-5 w-5" />
             Back to Home
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a 
-            href="/#contact" 
+          </Link>
+          <Link 
+            to="/contact" 
             className="px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </div>

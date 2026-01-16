@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
@@ -90,6 +90,7 @@ const spokeKeywordsMap: Record<string, string> = {
 
 const SpokePage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const parsed = parseServiceUrl(location.pathname);
   
   const [formData, setFormData] = useState({
@@ -100,13 +101,13 @@ const SpokePage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Open contact page in new window with pre-filled data
+    // Navigate to contact page with pre-filled data
     const params = new URLSearchParams({
       name: formData.fullName,
       website: formData.website,
       email: formData.email,
     });
-    window.open(`/contact?${params.toString()}`, '_blank', 'noopener,noreferrer');
+    navigate(`/contact?${params.toString()}`);
   };
   
   // Find the hub and spoke from the parsed URL
