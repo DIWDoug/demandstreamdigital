@@ -78,10 +78,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/authors/:slug" element={<Author />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
-          <Route path="/our-blog" element={<OurBlog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog-old" element={<Navigate to="/blog" replace />} />
+        <Route path="/blog/white-label-local-ppc" element={<Navigate to="/white-label-paid-media" replace />} />
+        <Route path="/our-blog" element={<OurBlog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/white-label-inbound-marketing-services" element={<Services />} />
         <Route path="/partner-tools" element={<PartnerTools />} />
         <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
