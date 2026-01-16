@@ -102,54 +102,42 @@ const VALID_ROUTES = new Set([
 
 // ============= 301 PERMANENT REDIRECTS =============
 const PERMANENT_REDIRECTS: Record<string, string> = {
-  // Legacy service pages -> New hubs
+  // ===== LEGACY SERVICE PAGES -> NEW HUBS =====
   '/search-engine-optimization': '/white-label-local-seo',
   '/seo': '/white-label-local-seo',
-  '/seo/': '/white-label-local-seo',
   '/local-search-marketing': '/white-label-local-seo',
-  '/local-search-marketing/': '/white-label-local-seo',
   '/nashville-seo': '/white-label-local-seo',
-  '/nashville-seo/': '/white-label-local-seo',
   '/nashville-local-seo': '/white-label-local-seo',
   '/nashville-local-search-marketing': '/white-label-local-seo',
+  '/local-seo-company': '/white-label-local-seo',
   
-  // PPC/Paid Media redirects
+  // ===== PPC/PAID MEDIA REDIRECTS =====
   '/white-label-local-ppc': '/white-label-paid-media',
-  '/white-label-local-ppc/': '/white-label-paid-media',
   '/ppc': '/white-label-paid-media',
-  '/ppc/': '/white-label-paid-media',
   '/nashville-ppc': '/white-label-paid-media',
-  '/nashville-ppc/': '/white-label-paid-media',
+  '/nashville-paid-search-ppc-marketing': '/white-label-paid-media',
   
-  // Social Media -> Content Marketing
+  // ===== SOCIAL MEDIA -> CONTENT MARKETING =====
   '/social-media-marketing': '/white-label-content-marketing',
-  '/social-media-marketing/': '/white-label-content-marketing',
   '/nashville-social-media-marketing': '/white-label-content-marketing',
   '/facebook-marketing': '/white-label-content-marketing',
-  '/facebook-marketing/': '/white-label-content-marketing',
   '/facebook-advertising': '/white-label-content-marketing',
-  '/facebook-advertising/': '/white-label-content-marketing',
   
-  // Email marketing
+  // ===== EMAIL MARKETING =====
   '/email-marketing': '/white-label-email-marketing',
-  '/email-marketing/': '/white-label-email-marketing',
   '/nashville-email-marketing': '/white-label-email-marketing',
   
-  // Content marketing
+  // ===== CONTENT MARKETING =====
   '/white-label-topical-content': '/white-label-topical-authority',
-  '/white-label-topical-content/': '/white-label-topical-authority',
   '/content-marketing': '/white-label-content-marketing',
-  '/content-marketing/': '/white-label-content-marketing',
+  '/content-marketing-nashville': '/white-label-content-marketing',
   
-  // About/Contact/Services
+  // ===== ABOUT/CONTACT/SERVICES =====
   '/about-us': '/about',
-  '/about-us/': '/about',
   '/contact-us': '/contact',
-  '/contact-us/': '/contact',
   '/services': '/white-label-inbound-marketing-services',
-  '/services/': '/white-label-inbound-marketing-services',
   
-  // Legacy calculator URLs
+  // ===== LEGACY CALCULATOR URLs =====
   '/roi-calculator': '/partner-tools/roi-calculator',
   '/investment-calculator': '/partner-tools/investment-calculator',
   '/ad-budget-calculator': '/partner-tools/ad-budget-calculator',
@@ -159,7 +147,7 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/ai-ready-check': '/partner-tools/ai-ready-check',
   '/agency-calculator': '/partner-tools/roi-calculator',
   
-  // Nested service paths -> Flat paths
+  // ===== NESTED SERVICE PATHS -> FLAT PATHS =====
   '/white-label-inbound-marketing-services/local-seo': '/white-label-local-seo',
   '/white-label-inbound-marketing-services/google-maps': '/white-label-gbp-seo',
   '/white-label-inbound-marketing-services/paid-media': '/white-label-paid-media',
@@ -168,24 +156,90 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/white-label-inbound-marketing-services/reporting': '/white-label-reporting',
   '/white-label-inbound-marketing-services/content-marketing': '/white-label-content-marketing',
   
-  // Old Nashville-specific pages
+  // ===== NASHVILLE-SPECIFIC PAGES =====
   '/nashville-tn-online-review-management': '/white-label-review-management',
   '/nashville-tn-online-reputation-management': '/white-label-review-management',
   '/nashville-mobile-website-design': '/white-label-landing-page-design',
   '/nashville-mobile-marketing': '/white-label-paid-media',
   '/nashville-mobile-advertising': '/white-label-paid-media',
+  '/nashville-online-reputation-management': '/white-label-review-management',
+  '/nashville-web-design': '/white-label-landing-page-design',
+  '/nashville-qr-code-marketing': '/white-label-paid-media',
+  '/nashville-digital-marketing': '/',
   
-  // WordPress remnants
+  // ===== DALLAS-SPECIFIC PAGES =====
+  '/dallas-seo': '/white-label-local-seo',
+  '/dallas-ppc': '/white-label-paid-media',
+  '/dallas-digital-marketing': '/',
+  
+  // ===== REPUTATION MANAGEMENT =====
+  '/online-reputation-management': '/white-label-review-management',
+  '/online-reputation-management-small-businesses': '/white-label-review-management',
+  '/online-presence-management-for-startups': '/white-label-review-management',
+  '/online-presence-audit-startups': '/white-label-review-management',
+  
+  // ===== CONVERSION RATE OPTIMIZATION =====
+  '/conversion-rate-optimization': '/white-label-conversion-tracking',
+  '/conversion-rate-optimization-what-you-need-to-know': '/blog',
+  
+  // ===== WORDPRESS REMNANTS =====
   '/wp-content': '/',
   '/wp-admin': '/',
   '/wp-login.php': '/',
   '/xmlrpc.php': '/',
   
-  // Misc legacy
+  // ===== MISC LEGACY =====
   '/blog-old': '/blog',
-  '/blog-old/': '/blog',
   '/portfolios': '/case-studies',
-  '/portfolios/': '/case-studies',
+  
+  // ===== LEGACY BLOG ARTICLE SLUGS (redirect to blog) =====
+  '/moving-and-storage-seo': '/blog',
+  '/local-seo-for-franchises-moving-firms': '/blog',
+  '/local-link-building-outreach-101-need-know': '/blog',
+  '/local-data-aggregators-matter-ranking-local-business': '/blog',
+  '/local-content-marketing-kpis-which-metrics-should-your-business-track': '/blog',
+  '/ppc-ad-campaigns-why-they-should-differentiate-between-mobile-and-desktop-users': '/blog',
+  '/nine-ways-to-integrate-social-media-into-your-sales-strategy': '/blog',
+  '/content-marketing-gone-green-3-ways-recycle-old-content': '/blog',
+  '/content-marketing-101-what-you-need-to-know': '/blog',
+  '/google-amp-just-one-strategy-in-a-larger-mobile-marketing-puzzle': '/blog',
+  '/google-ama-search-top-7-takeaways': '/blog',
+  '/guide-facebook-messenger-bots-business': '/blog',
+  '/how-to-create-a-twitter-content-strategy-that-doesnt-suck': '/blog',
+  '/how-to-drive-sales-with-pinterest-marketing': '/blog',
+  '/how-to-handle-negative-reviews-like-a-pro': '/blog',
+  '/how-to-increase-organic-traffic-with-rich-snippets-faq-schema': '/blog',
+  '/how-to-optimize-your-linkedin-profile-in-5-easy-steps': '/blog',
+  '/how-to-respond-to-bad-reviews-online': '/blog',
+  '/how-to-save-money-in-google-ads-ppc-part-1-3': '/blog',
+  '/how-to-save-money-in-google-ads-ppc-part-2': '/blog',
+  '/how-to-save-money-in-google-ads-ppc-part-3': '/blog',
+  '/how-to-use-reddit-for-small-business-marketing': '/blog',
+  '/importance-local-seo-small-business': '/blog',
+  '/keywords-for-your-local-seo-campaign': '/blog',
+  '/linkedin-lead-gen-strategies': '/blog',
+  '/make-social-media-roi-reality': '/blog',
+  '/structuring-website-seo': '/blog',
+  '/taking-the-plunge-seo-for-the-pool-spa-industry': '/blog',
+  '/the-importance-of-local-seo': '/blog',
+  '/the-top-5-ways-to-track-the-roi-of-social-media-marketing': '/blog',
+  '/web-design-trends-2020-dallas-nashville': '/blog',
+  '/what-is-schema-markup-and-why-is-it-important-for-local-seo': '/blog',
+  '/what-is-voice-search-optimization': '/blog',
+  '/why-blogging-is-important-for-small-business-marketing': '/blog',
+  '/why-facebook-live-is-a-game-changer': '/blog',
+  '/why-linkedin-is-really-good-for-business': '/blog',
+  '/why-local-seo-is-critical-for-lawyers': '/blog',
+  '/why-reviews-matter-for-local-seo': '/blog',
+  '/why-your-business-should-be-on-facebook': '/blog',
+  '/why-your-business-should-invest-in-mobile-marketing': '/blog',
+  '/why-your-local-business-should-embrace-digital-marketing': '/blog',
+  '/five-ways-you-can-use-instagram-stories-for-marketing': '/blog',
+  '/four-free-and-simple-tips-to-improve-your-local-seo': '/blog',
+  '/get-most-facebook-advertising-seasonal-sales': '/blog',
+  '/how-can-digital-marketing-help-my-business': '/blog',
+  '/how-do-you-find-the-right-seo-company-for-your-business': '/blog',
+  '/how-facebook-business-page-can-help-your-business': '/blog',
 };
 
 // ============= PATTERN-BASED REDIRECTS =============
@@ -200,13 +254,18 @@ const PATTERN_REDIRECTS: Array<{ pattern: RegExp; destination: string }> = [
   // All /portfolio/* pages -> Case Studies
   { pattern: /^\/portfolio\/.*$/, destination: '/case-studies' },
   
+  // All /author/* pages -> About
+  { pattern: /^\/author\/.*$/, destination: '/about' },
+  
   // Old sitemap files -> Homepage
   { pattern: /^\/.*sitemap.*\.xml\/?$/, destination: '/' },
   { pattern: /^\/.*sitemap.*\.html\/?$/, destination: '/' },
+  { pattern: /^\/.*sitemap.*\.xsl\/?$/, destination: '/' },
   
   // Legacy WordPress paths
   { pattern: /^\/dialedin_wp\/.*$/, destination: '/' },
   { pattern: /^\/wp-includes\/.*$/, destination: '/' },
+  { pattern: /^\/wp-content\/.*$/, destination: '/' },
   
   // Legacy nested service paths
   { pattern: /^\/white-label-inbound-marketing-services\/local-seo\/.*$/, destination: '/white-label-local-seo' },
@@ -216,6 +275,36 @@ const PATTERN_REDIRECTS: Array<{ pattern: RegExp; destination: string }> = [
   { pattern: /^\/white-label-inbound-marketing-services\/authority-building\/.*$/, destination: '/white-label-local-authority-building' },
   { pattern: /^\/white-label-inbound-marketing-services\/reporting\/.*$/, destination: '/white-label-reporting' },
   { pattern: /^\/white-label-inbound-marketing-services\/content-marketing\/.*$/, destination: '/white-label-content-marketing' },
+  
+  // Liquid theme WordPress remnants
+  { pattern: /^\/liquid-.*-sitemap\.xml\/?$/, destination: '/' },
+  
+  // KML/location files
+  { pattern: /^\/locations\.kml\/?$/, destination: '/' },
+  
+  // Main sitemap XSL
+  { pattern: /^\/main-sitemap\.xsl\/?$/, destination: '/' },
+  
+  // Any Nashville-specific page with nested external URLs (corrupted links)
+  { pattern: /^\/nashville-.*\/www\..*$/, destination: '/' },
+  
+  // Any portfolio with nested external URLs (corrupted links)
+  { pattern: /^\/portfolio\/.*\/www\..*$/, destination: '/case-studies' },
+  
+  // Nashville pages -> appropriate hubs
+  { pattern: /^\/nashville-.*-seo.*$/, destination: '/white-label-local-seo' },
+  { pattern: /^\/nashville-.*-ppc.*$/, destination: '/white-label-paid-media' },
+  { pattern: /^\/nashville-.*-marketing.*$/, destination: '/' },
+  
+  // Dallas pages -> appropriate hubs
+  { pattern: /^\/dallas-.*-seo.*$/, destination: '/white-label-local-seo' },
+  { pattern: /^\/dallas-.*-ppc.*$/, destination: '/white-label-paid-media' },
+  { pattern: /^\/dallas-.*-marketing.*$/, destination: '/' },
+  
+  // General city-specific pages -> homepage
+  { pattern: /^\/[a-z]+-digital-marketing\/?$/, destination: '/' },
+  { pattern: /^\/[a-z]+-seo\/?$/, destination: '/white-label-local-seo' },
+  { pattern: /^\/[a-z]+-ppc\/?$/, destination: '/white-label-paid-media' },
 ];
 
 // ============= DYNAMIC ROUTE PATTERNS =============
@@ -258,17 +347,10 @@ function isValidRoute(pathname: string): boolean {
 
 function getRedirect(pathname: string): string | null {
   const normalized = normalizePathname(pathname);
-  const withTrailingSlash = pathname.endsWith('/') ? pathname : pathname + '/';
   
-  // Check exact redirects first (both with and without trailing slash)
-  if (PERMANENT_REDIRECTS[pathname]) {
-    return PERMANENT_REDIRECTS[pathname];
-  }
+  // Check exact redirects first (normalized)
   if (PERMANENT_REDIRECTS[normalized]) {
     return PERMANENT_REDIRECTS[normalized];
-  }
-  if (PERMANENT_REDIRECTS[withTrailingSlash]) {
-    return PERMANENT_REDIRECTS[withTrailingSlash];
   }
   
   // Check pattern-based redirects
