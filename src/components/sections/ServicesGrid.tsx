@@ -1,6 +1,7 @@
 import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, BarChart3, Calculator } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { searchPixabayImages } from "@/lib/pixabay";
 
 interface Service {
@@ -60,7 +61,7 @@ const services: Service[] = [
 const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isInView, setIsInView] = useState(false);
-  const cardRef = useRef<HTMLAnchorElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null!);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -104,11 +105,9 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
   }, [isInView, service.pixabayKeyword]);
 
   return (
-    <a 
+    <Link 
       ref={cardRef}
-      href={service.href}
-      target="_blank"
-      rel="noopener noreferrer"
+      to={service.href}
       className="group relative rounded-xl bg-card border border-border hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 overflow-hidden"
     >
       {/* Pixabay image background */}
@@ -143,7 +142,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
           <ArrowRight className="ml-1 h-3 w-3" />
         </span>
       </div>
-    </a>
+    </Link>
   );
 };
 
@@ -170,15 +169,13 @@ const ServicesGrid = () => {
                 Each service reinforces the others. Together, they create predictable growth your clients can count on.
               </p>
               
-              <a 
-                href="/white-label-inbound-marketing"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/white-label-inbound-marketing-services"
                 className="btn-cta group inline-flex items-center gap-2"
               >
                 See the Full Breakdown
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
 
             {/* Right Column - Services Grid (3 cols) */}
@@ -188,10 +185,8 @@ const ServicesGrid = () => {
               ))}
               
               {/* Partner Tools CTA Card */}
-              <a 
-                href="/partner-tools"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/partner-tools"
                 className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
               >
                 <div className="flex items-center gap-4">
@@ -208,7 +203,7 @@ const ServicesGrid = () => {
                   </div>
                   <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
