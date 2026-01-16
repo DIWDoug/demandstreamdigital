@@ -26,3 +26,12 @@ verify_jwt = false
 
 [functions.get-public-config]
 verify_jwt = false
+
+[functions.pdf-to-images]
+verify_jwt = false
+
+[functions.elevenlabs-case-study-tts]
+verify_jwt = false
+
+[functions.url-router]
+verify_jwt = false
