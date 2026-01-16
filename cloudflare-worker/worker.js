@@ -87,17 +87,27 @@ export default {
           const notFoundUrl = new URL('/404.html', ORIGIN_URL);
           const originResponse = await fetch(notFoundUrl.toString());
           
+          // Build response headers
+          const responseHeaders = new Headers({
+            'Content-Type': 'text/html; charset=utf-8',
+            'Cache-Control': `public, max-age=${NOT_FOUND_CACHE_TTL}, s-maxage=${NOT_FOUND_CACHE_TTL}`,
+            'X-Robots-Tag': 'noindex, nofollow',
+            'Vary': 'Accept-Encoding',
+          });
+          
+          // Preserve content encoding if present
+          if (originResponse.headers.has('Content-Encoding')) {
+            responseHeaders.set('Content-Encoding', originResponse.headers.get('Content-Encoding'));
+          }
+          
           // Create proper 404 response
           const response = new Response(originResponse.body, {
             status: 404,
             statusText: 'Not Found',
-            headers: {
-              'Content-Type': 'text/html; charset=utf-8',
-              'Cache-Control': `public, max-age=${NOT_FOUND_CACHE_TTL}`,
-              'X-Robots-Tag': 'noindex',
-            },
+            headers: responseHeaders,
           });
           
+          // Cache the 404 response
           ctx.waitUntil(cache.put(cacheKey, response.clone()));
           return response;
         }
