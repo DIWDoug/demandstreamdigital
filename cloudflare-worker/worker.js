@@ -24,6 +24,14 @@ const NOT_FOUND_CACHE_TTL = 3600; // 1 hour for 404s
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    
+    // WWW to non-WWW 301 permanent redirect
+    if (url.hostname.startsWith('www.')) {
+      const newUrl = new URL(url);
+      newUrl.hostname = newUrl.hostname.replace('www.', '');
+      return Response.redirect(newUrl.toString(), 301);
+    }
+    
     const pathname = url.pathname;
     
     // Skip routing for static assets
