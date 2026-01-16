@@ -330,15 +330,13 @@ const TopicalExpertise = () => {
                   <div className="pt-4 border-t border-border space-y-5">
                     {hub.spokes.map((spoke, spokeIndex) => (
                       <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                        <a 
-                          href={`/white-label-${spoke.slug}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link 
+                          to={`/white-label-${spoke.slug}`}
                           className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           {spoke.title} →
-                        </a>
+                        </Link>
                         <p className="text-text-secondary text-sm leading-relaxed mt-1">
                           {spoke.description}
                         </p>
