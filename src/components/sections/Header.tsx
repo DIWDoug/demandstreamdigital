@@ -339,14 +339,12 @@ const Header = () => {
                 {PHONE_NUMBER}
               </span>
             </a>
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact" 
               className="btn-cta text-sm py-2 px-4 whitespace-nowrap"
             >
               Discovery Call
-            </a>
+            </Link>
             <button 
               className="p-2 rounded-full bg-cta hover:bg-cta-glow transition-colors flex-shrink-0"
               aria-label="Search"
@@ -579,15 +577,13 @@ const Header = () => {
                   <Phone className="h-4 w-4 text-cta" />
                   {PHONE_NUMBER}
                 </a>
-                <a 
-                  href="/contact" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/contact" 
                   className="btn-cta text-center mt-3 w-full"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Schedule a Discovery Call
-                </a>
+                </Link>
               </div>
             </nav>
               </motion.div>

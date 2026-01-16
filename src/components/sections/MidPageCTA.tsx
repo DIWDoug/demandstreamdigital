@@ -1,4 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 interface MidPageCTAProps {
@@ -13,15 +14,13 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           {/* Primary CTA Button - Opens Contact page in new window */}
-          <a 
-            href="/contact" 
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/contact" 
             className="btn-cta group flex items-center gap-2"
           >
             Explore a Partnership
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
           
           {/* OR Divider */}
           <span className={`text-sm font-medium ${isLight ? "text-gray-400" : "text-text-muted"}`}>
