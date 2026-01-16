@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import TrustReel from "@/components/sections/TrustReel";
@@ -347,14 +348,12 @@ const Testimonials = () => {
             <p className="text-text-secondary mb-6 max-w-md">
               Join agencies who trust us with their fulfillment.
             </p>
-            <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-cta text-cta-foreground font-medium rounded-lg hover:bg-cta/90 transition-colors"
             >
               Let's Talk Partnership
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -483,14 +482,12 @@ const Testimonials = () => {
             <p className="text-text-secondary mb-6 max-w-md">
               Let's discuss how we can help grow your business.
             </p>
-            <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-6 py-3 bg-cta text-cta-foreground font-medium rounded-lg hover:bg-cta/90 transition-colors"
             >
               Let's Talk Partnership
-            </a>
+            </Link>
           </div>
         </div>
       </section>

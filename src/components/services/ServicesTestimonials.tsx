@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Quote, ArrowRight, Phone, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import YouTubeModal from "@/components/ui/youtube-modal";
 
@@ -107,15 +108,13 @@ const ServicesTestimonials = () => {
           {/* Integrated CTA */}
           <div className="mt-14 pt-10 border-t border-border/20">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <a 
-                href="/contact" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/contact" 
                 className="btn-cta group flex items-center gap-2"
               >
                 Start a Conversation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
               
               <span className="text-sm font-medium text-text-muted">or</span>
               

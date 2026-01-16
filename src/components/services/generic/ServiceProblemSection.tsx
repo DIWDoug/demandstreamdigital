@@ -1,4 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import type { PainPoint } from "@/types/servicePage";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -92,15 +93,13 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href="/contact" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link 
+                to="/contact" 
                 className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
               >
                 Schedule a Discovery Call
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
               <span className="text-slate-400 text-sm font-medium">or</span>
               <a 
                 href={PHONE_HREF}

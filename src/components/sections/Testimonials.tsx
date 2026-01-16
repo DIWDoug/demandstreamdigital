@@ -119,8 +119,6 @@ const Testimonials = () => {
         <div className="text-center mt-12">
           <Link 
             to="/testimonials" 
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
           >
             View All Testimonials

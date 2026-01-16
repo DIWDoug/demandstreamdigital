@@ -823,15 +823,13 @@ const About = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16">
-                <a 
-                  href="/contact" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/contact" 
                   className="btn-cta group"
                 >
                   Explore a Partnership
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
                 <a 
                   href={PHONE_HREF}
                   className="flex items-center gap-2 px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"

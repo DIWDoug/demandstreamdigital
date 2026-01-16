@@ -91,15 +91,13 @@ const GBPRoadmapSection = ({ config }: GBPRoadmapSectionProps) => {
 
           {/* CTA */}
           <div className="text-center mt-8">
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact" 
               className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
             >
               Discuss Your Roadmap
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import GrowthEngineDiagram from "./GrowthEngineDiagram";
 
 const ServicesHero = () => {
@@ -34,15 +35,13 @@ const ServicesHero = () => {
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-6 sm:mb-8">
               Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes—delivering consistent, scalable results without added overhead.
             </p>
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact" 
               className="btn-cta group inline-flex items-center px-6 py-3"
             >
               Start a Partner Conversation
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
 
           {/* Right: Growth Engine Diagram */}

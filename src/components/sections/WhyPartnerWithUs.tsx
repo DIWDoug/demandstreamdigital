@@ -1,5 +1,6 @@
 import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Filter, ArrowRight, Target } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
 
 const WhyPartnerWithUs = () => {
   const sectionRef = useScrollReveal();
@@ -92,15 +93,13 @@ const WhyPartnerWithUs = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <a 
-            href="/about" 
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/about" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(76,42%,41%)] text-white font-semibold rounded-lg hover:bg-[hsl(76,42%,35%)] transition-colors group"
           >
             Meet the Team Behind the Work
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

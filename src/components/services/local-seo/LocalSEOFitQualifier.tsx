@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
@@ -155,15 +156,13 @@ const LocalSEOFitQualifier = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <a 
-              href="/contact" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/contact" 
               className="btn-cta group inline-flex items-center gap-2"
             >
               Let's Discuss Your Clients
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

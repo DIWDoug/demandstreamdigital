@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, MapPin, Map, MousePointerClick, Mail, PenTool, BarChart3, Phone, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const TopicalExpertise = () => {
@@ -347,25 +348,21 @@ const TopicalExpertise = () => {
 
                   {/* CTA within expanded card */}
                   <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
-                    <a 
-                      href={`/white-label-${hub.slug}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link 
+                      to={`/white-label-${hub.slug}`}
                       className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Learn more about {hub.title} →
-                    </a>
+                    </Link>
                     <span className="hidden sm:inline text-text-muted">|</span>
-                    <a 
-                      href="/contact" 
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link 
+                      to="/contact" 
                       className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Discuss for your agency →
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -383,15 +380,13 @@ const TopicalExpertise = () => {
         
         {/* Section-level CTAs - below cards */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
-          <a 
-            href="/contact" 
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/contact" 
             className="btn-cta inline-flex items-center gap-2"
           >
             Explore a Partnership
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </Link>
           <a 
             href={PHONE_HREF}
             className="inline-flex items-center gap-2 text-foreground hover:text-accent-blue font-medium transition-colors"

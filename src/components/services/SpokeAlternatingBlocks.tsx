@@ -66,15 +66,13 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                   {/* CTA */}
                   {block.ctaText && (
                     <div className="pt-4">
-                      <a 
-                        href="/contact"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link 
+                        to="/contact"
                         className="inline-flex items-center gap-2 btn-cta group"
                       >
                         {block.ctaText}
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
