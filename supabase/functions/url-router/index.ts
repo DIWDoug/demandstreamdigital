@@ -191,6 +191,15 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   // ===== MISC LEGACY =====
   '/blog-old': '/blog',
   '/portfolios': '/case-studies',
+  '/careers-2': '/about',
+  '/author/admin': '/about',
+  '/author/dialedinweb': '/about',
+  '/dialedin_wp/mobile-marketing': '/',
+  
+  // ===== TRAILING SLASH LEGACY PAGES =====
+  '/contact/': '/contact',
+  '/blog/': '/blog',
+  
   
   // ===== LEGACY BLOG ARTICLE SLUGS (redirect to blog) =====
   '/moving-and-storage-seo': '/blog',
