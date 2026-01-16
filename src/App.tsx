@@ -310,7 +310,7 @@ const App = () => (
         <Route path="/local-search-marketing" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/local-search-marketing/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/white-label-local-ppc" element={<Navigate to="/white-label-paid-media" replace />} />
-        <Route path="/white-label-local-ppc/" element={<Navigate to="/blog/white-label-local-ppc" replace />} />
+        <Route path="/white-label-local-ppc/" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/white-label-social-media" element={<Navigate to="/blog/white-label-social-media" replace />} />
         <Route path="/white-label-social-media/" element={<Navigate to="/blog/white-label-social-media" replace />} />
         <Route path="/white-label-local-seo-on-page-optimization-local-seo" element={<Navigate to="/blog/on-page-optimization-local-seo" replace />} />
