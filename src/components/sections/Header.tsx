@@ -229,6 +229,14 @@ const Header = () => {
               <Link
                 to="/white-label-inbound-marketing-services"
                 onMouseEnter={() => setIsMegaMenuOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    if (!isMegaMenuOpen) {
+                      e.preventDefault();
+                      setIsMegaMenuOpen(true);
+                    }
+                  }
+                }}
                 onClick={(e) => {
                   if (isMegaMenuOpen) {
                     // If menu is open, navigate
@@ -238,9 +246,11 @@ const Header = () => {
                   }
                 }}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
+                aria-haspopup="true"
+                aria-expanded={isMegaMenuOpen}
               >
                 Services
-                <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Link>
               
               {/* Post-Service Links */}
@@ -278,6 +288,14 @@ const Header = () => {
                 <Link
                   to="/partner-tools"
                   onMouseEnter={() => setIsToolsMenuOpen(true)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      if (!isToolsMenuOpen) {
+                        e.preventDefault();
+                        setIsToolsMenuOpen(true);
+                      }
+                    }
+                  }}
                   onClick={(e) => {
                     if (isToolsMenuOpen) {
                       // If menu is open, navigate
@@ -287,9 +305,11 @@ const Header = () => {
                     }
                   }}
                   className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
+                  aria-haspopup="true"
+                  aria-expanded={isToolsMenuOpen}
                 >
                   Partner Tools
-                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </Link>
                 
                 {isToolsMenuOpen && (
@@ -357,8 +377,11 @@ const Header = () => {
           <button
             className="lg:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </button>
         </div>
 
@@ -450,7 +473,10 @@ const Header = () => {
         {/* Mobile menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div 
+            <motion.nav 
+              id="mobile-menu"
+              role="navigation"
+              aria-label="Mobile navigation"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -584,7 +610,7 @@ const Header = () => {
               </div>
             </nav>
               </motion.div>
-            </motion.div>
+            </motion.nav>
           )}
         </AnimatePresence>
       </div>

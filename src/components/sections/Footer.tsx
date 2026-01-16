@@ -98,7 +98,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       <SubtleOrbs variant="bottom-left" />
 
       {/* Service Categories Grid */}
-      <div className="py-12 border-b border-border">
+      <nav aria-label="Service categories" className="py-12 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
             {serviceCategories.map((category, index) => (
@@ -125,7 +125,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
             ))}
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Main Footer Content - 3 Column Layout */}
       <div className="py-12">
