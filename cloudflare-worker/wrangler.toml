@@ -1,23 +1,15 @@
 # Cloudflare Worker Configuration
 # https://developers.cloudflare.com/workers/wrangler/configuration/
 
-name = "dialedin-url-router"
+name = "dialedinweb-router"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
-# Routes - configure for your domain
-# Uncomment and update with your actual domain
-# routes = [
-#   { pattern = "dialedinweb.com/*", zone_name = "dialedinweb.com" },
-#   { pattern = "www.dialedinweb.com/*", zone_name = "dialedinweb.com" }
-# ]
+# Routes for dialedinweb.com
+routes = [
+  { pattern = "dialedinweb.com/*", zone_name = "dialedinweb.com" },
+  { pattern = "www.dialedinweb.com/*", zone_name = "dialedinweb.com" }
+]
 
-# Environment Variables (optional - can also be set in dashboard)
-# [vars]
-# ORIGIN_URL = "https://heart-crafted-shine.lovable.app"
-
-# Production environment
-[env.production]
-# routes = [
-#   { pattern = "dialedinweb.com/*", zone_name = "dialedinweb.com" }
-# ]
+[vars]
+ENVIRONMENT = "production"
