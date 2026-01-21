@@ -225,41 +225,41 @@ const SEOCalculator = () => {
     if (!isComplete) return null;
 
     // Package-based pricing aligned to HC OEM tiers
-    // HC Series: $1,199, $1,399, $1,599, $1,799
+    // HC Series: $1,319, $1,539, $1,759, $1,979 (10% increase)
     // Low competition uses lower range
     const baseByCompetition: Record<string, { low: number; high: number }> = {
-      "low": { low: 650, high: 1199 },      // Starter range
-      "medium": { low: 1000, high: 1599 },  // Mid range
-      "high": { low: 1199, high: 1799 }     // HC Series full range
+      "low": { low: 715, high: 1319 },      // Starter range (+10%)
+      "medium": { low: 1100, high: 1759 },  // Mid range (+10%)
+      "high": { low: 1319, high: 1979 }     // HC Series full range (+10%)
     };
 
-    // Minimum floors aligned to HC OEM tiers
-    // HC Series: $1,199, $1,399, $1,599, $1,799
+    // Minimum floors aligned to HC OEM tiers (+10%)
+    // HC Series: $1,319, $1,539, $1,759, $1,979
     const getMinimumFloor = (comp: string, metroTier: string | null): number => {
       if (comp === "high") {
         // High competition starts at HC tier minimum
-        if (metroTier === "mega") return 1599;   // HC 300
-        if (metroTier === "major") return 1399;  // HC 200
-        if (metroTier === "large") return 1199;  // HC 100
-        if (metroTier === "medium") return 1199; // HC 100
-        return 1199; // HC 100 base
+        if (metroTier === "mega") return 1759;   // HC 300
+        if (metroTier === "major") return 1539;  // HC 200
+        if (metroTier === "large") return 1319;  // HC 100
+        if (metroTier === "medium") return 1319; // HC 100
+        return 1319; // HC 100 base
       }
       if (comp === "medium") {
         // Medium competition uses mid range
-        if (metroTier === "mega") return 1399;
-        if (metroTier === "major") return 1199;
-        if (metroTier === "large") return 1000;
-        if (metroTier === "medium") return 1000;
-        return 900;
+        if (metroTier === "mega") return 1539;
+        if (metroTier === "major") return 1319;
+        if (metroTier === "large") return 1100;
+        if (metroTier === "medium") return 1100;
+        return 990;
       }
       // Low competition uses starter range
-      if (metroTier === "mega") return 900;
-      if (metroTier === "major") return 750;
-      if (metroTier === "large") return 650;
-      return 650; // Starter base
+      if (metroTier === "mega") return 990;
+      if (metroTier === "major") return 825;
+      if (metroTier === "large") return 715;
+      return 715; // Starter base
     };
 
-    const base = baseByCompetition[competition] || { low: 605, high: 1265 };
+    const base = baseByCompetition[competition] || { low: 666, high: 1392 };
     let baseLow = base.low;
     let baseHigh = base.high;
 
@@ -371,10 +371,10 @@ const SEOCalculator = () => {
     monthlyLow = Math.max(monthlyLow, minimumFloor);
     monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.3 / 50) * 50);
 
-    // Apply CSM uplift if enabled (10%)
+    // Apply CSM fixed fee if enabled ($149/mo)
     if (includeCSM) {
-      monthlyLow = Math.round(monthlyLow * 1.1 / 50) * 50;
-      monthlyHigh = Math.round(monthlyHigh * 1.1 / 50) * 50;
+      monthlyLow = monthlyLow + 149;
+      monthlyHigh = monthlyHigh + 149;
     }
 
     // Estimate timeline based on competition and rankings
@@ -913,19 +913,19 @@ const SEOCalculator = () => {
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {(pricingSeries === "hc" ? [
-                              { name: "HC 100", cost: 1199, tooltip: "Foundation tier: On-page SEO, GBP optimization, 2 blog posts/mo, basic citation building, monthly reporting" },
-                              { name: "HC 200", cost: 1399, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
-                              { name: "HC 300", cost: 1599, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
-                              { name: "HC 400", cost: 1799, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
+                              { name: "HC 100", cost: 1319, tooltip: "Foundation tier: On-page SEO, GBP optimization, 2 blog posts/mo, basic citation building, monthly reporting" },
+                              { name: "HC 200", cost: 1539, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
+                              { name: "HC 300", cost: 1759, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
+                              { name: "HC 400", cost: 1979, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
                             ] : [
-                              { name: "LC 100", cost: 549, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
-                              { name: "LC 200", cost: 749, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
-                              { name: "LC 300", cost: 949, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
-                              { name: "LC 400", cost: 1149, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
+                              { name: "LC 100", cost: 604, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
+                              { name: "LC 200", cost: 824, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
+                              { name: "LC 300", cost: 1044, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
+                              { name: "LC 400", cost: 1264, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
                             ]).map((tier, i) => {
-                              // Apply CSM uplift if enabled - round to nearest .95
+                              // Apply CSM fixed fee if enabled ($149/mo)
                               const baseCost = includeCSM 
-                                ? Math.round(tier.cost * 1.1 / 50) * 50 - 0.05
+                                ? tier.cost + 149
                                 : tier.cost;
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
                               const marginMultiplier = 1 + (clientHourlyRate / 100);
