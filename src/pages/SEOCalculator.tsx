@@ -368,12 +368,12 @@ const SEOCalculator = () => {
         { name: "HC 400", min: 1799, max: Infinity }
       ];
       
-      // LC Series: $649, $749, $849, $949
+      // LC Series: $550, $750, $950, $1,150
       const lcTiers = [
-        { name: "LC 100", min: 649, max: 748 },
-        { name: "LC 200", min: 749, max: 848 },
-        { name: "LC 300", min: 849, max: 948 },
-        { name: "LC 400", min: 949, max: Infinity }
+        { name: "LC 100", min: 550, max: 749 },
+        { name: "LC 200", min: 750, max: 949 },
+        { name: "LC 300", min: 950, max: 1149 },
+        { name: "LC 400", min: 1150, max: Infinity }
       ];
       
       // Determine which series to recommend based on competition
@@ -780,6 +780,23 @@ const SEOCalculator = () => {
                             </button>
                           </div>
 
+                          {/* Client Success Manager Checkbox - Above Tiers */}
+                          <label className="flex items-center gap-3 p-3 rounded-lg border border-border/50 bg-surface-dark mb-4 cursor-pointer hover:border-cta/50 transition-colors">
+                            <input
+                              type="checkbox"
+                              checked={includeCSM}
+                              onChange={(e) => setIncludeCSM(e.target.checked)}
+                              className="w-4 h-4 rounded border-border text-cta focus:ring-cta focus:ring-offset-0 bg-surface-dark"
+                            />
+                            <span className="text-sm font-medium text-foreground flex-1">Client Success Manager</span>
+                            <span className={cn(
+                              "text-xs font-semibold px-2 py-0.5 rounded",
+                              includeCSM ? "bg-cta/10 text-cta" : "text-text-muted"
+                            )}>
+                              +10%
+                            </span>
+                          </label>
+
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {(pricingSeries === "hc" ? [
@@ -788,10 +805,10 @@ const SEOCalculator = () => {
                               { name: "HC 300", cost: 1599 },
                               { name: "HC 400", cost: 1799 }
                             ] : [
-                              { name: "LC 100", cost: 649 },
-                              { name: "LC 200", cost: 749 },
-                              { name: "LC 300", cost: 849 },
-                              { name: "LC 400", cost: 949 }
+                              { name: "LC 100", cost: 550 },
+                              { name: "LC 200", cost: 750 },
+                              { name: "LC 300", cost: 950 },
+                              { name: "LC 400", cost: 1150 }
                             ]).map((tier, i) => {
                               // Apply CSM uplift if enabled
                               const baseCost = includeCSM ? Math.round(tier.cost * 1.1) : tier.cost;
@@ -821,21 +838,6 @@ const SEOCalculator = () => {
                               );
                             })}
                           </div>
-
-                          {/* Client Success Manager Toggle */}
-                          <button
-                            type="button"
-                            onClick={() => setIncludeCSM(!includeCSM)}
-                            className={cn(
-                              "w-full flex items-center justify-between p-3 rounded-lg border transition-all mb-4",
-                              includeCSM 
-                                ? "bg-cta/10 border-cta text-cta" 
-                                : "bg-surface-dark border-border/50 text-text-secondary hover:border-accent-blue/50"
-                            )}
-                          >
-                            <span className="text-sm font-medium">+ Client Success Manager</span>
-                            <span className="text-xs font-semibold">{includeCSM ? "Added (+10%)" : "+10%"}</span>
-                          </button>
 
                           {/* Client MSRP Margin Slider */}
                           <div className="bg-surface-dark rounded-lg p-4 border border-border/30 mb-4">
