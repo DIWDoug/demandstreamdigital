@@ -154,6 +154,7 @@ const SEOCalculator = () => {
   const [clientHourlyRate, setClientHourlyRate] = useState<number>(40);
   const [includeCSM, setIncludeCSM] = useState<boolean>(false);
   const [pricingSeries, setPricingSeries] = useState<"hc" | "lc">("hc");
+  const [tierOverride, setTierOverride] = useState<string | null>(null);
 
   const metroSearchResults = useMemo(() => searchMetros(metroSearch), [metroSearch]);
 
@@ -213,6 +214,7 @@ const SEOCalculator = () => {
     setClientHourlyRate(40);
     setIncludeCSM(false);
     setPricingSeries("hc");
+    setTierOverride(null);
   };
 
   const selectedIndustryName = industryPresets.find(i => i.id === selectedIndustry)?.name || "";
@@ -928,17 +930,27 @@ const SEOCalculator = () => {
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
                               const marginMultiplier = 1 + (clientHourlyRate / 100);
                               const clientMsrp = Math.round(baseCost * marginMultiplier / 50) * 50;
-                              const isRecommended = estimate.recommendedTier.lowTier === tier.name || estimate.recommendedTier.highTier === tier.name;
+                              // Check if this tier is highlighted (override takes priority over recommendation)
+                              const isOverride = tierOverride === tier.name;
+                              const isRecommended = !tierOverride && (estimate.recommendedTier.lowTier === tier.name || estimate.recommendedTier.highTier === tier.name);
+                              const isHighlighted = isOverride || isRecommended;
                               return (
                                 <div 
                                   key={i}
                                   className={cn(
                                     "grid grid-cols-3 gap-2 p-3 rounded-lg bg-surface-dark border",
+                                    isOverride ? "border-yellow-500/60 ring-1 ring-yellow-500/30" :
                                     isRecommended ? "border-cta/40" : "border-border/30"
                                   )}
                                 >
                                   <div className="flex items-center gap-1.5">
-                                    <p className={cn("font-medium text-sm", isRecommended ? "text-cta" : "text-foreground")}>{tier.name}</p>
+                                    <p className={cn(
+                                      "font-medium text-sm",
+                                      isOverride ? "text-yellow-400" : isRecommended ? "text-cta" : "text-foreground"
+                                    )}>{tier.name}</p>
+                                    {isOverride && (
+                                      <span className="text-[9px] px-1 py-0.5 rounded bg-yellow-500/20 text-yellow-400 font-medium">Override</span>
+                                    )}
                                     <TooltipProvider delayDuration={0}>
                                       <Tooltip>
                                         <TooltipTrigger asChild>
@@ -955,7 +967,10 @@ const SEOCalculator = () => {
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">
                                     ${baseCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                   </p>
-                                  <p className={cn("text-sm font-bold text-right self-center", isRecommended ? "text-cta" : "text-foreground")}>
+                                  <p className={cn(
+                                    "text-sm font-bold text-right self-center",
+                                    isOverride ? "text-yellow-400" : isRecommended ? "text-cta" : "text-foreground"
+                                  )}>
                                     ${clientMsrp.toLocaleString()}
                                   </p>
                                 </div>
@@ -990,16 +1005,8 @@ const SEOCalculator = () => {
                               ? "bg-gradient-to-r from-destructive/10 to-orange-500/10 border-destructive/30"
                               : "bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border-emerald-500/30"
                           )}>
-                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Recommended Package</p>
-                            <div className="flex items-center justify-between">
-                              <span className={cn(
-                                "text-lg font-bold",
-                                estimate.recommendedTier.recommendedSeries === "hc" ? "text-destructive" : "text-emerald-500"
-                              )}>
-                                {estimate.recommendedTier.lowTier === estimate.recommendedTier.highTier 
-                                  ? estimate.recommendedTier.lowTier 
-                                  : `${estimate.recommendedTier.lowTier} – ${estimate.recommendedTier.highTier}`}
-                              </span>
+                            <div className="flex items-center justify-between mb-2">
+                              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">Recommended Package</p>
                               <span className={cn(
                                 "text-xs px-2 py-1 rounded-full",
                                 competition === "high" ? "bg-destructive/10 text-destructive" : 
@@ -1008,6 +1015,41 @@ const SEOCalculator = () => {
                               )}>
                                 {estimate.recommendedTier.series}
                               </span>
+                            </div>
+                            <div className="flex items-center justify-between mb-3">
+                              <span className={cn(
+                                "text-lg font-bold",
+                                estimate.recommendedTier.recommendedSeries === "hc" ? "text-destructive" : "text-emerald-500"
+                              )}>
+                                {estimate.recommendedTier.lowTier === estimate.recommendedTier.highTier 
+                                  ? estimate.recommendedTier.lowTier 
+                                  : `${estimate.recommendedTier.lowTier} – ${estimate.recommendedTier.highTier}`}
+                              </span>
+                            </div>
+                            
+                            {/* Tier Override */}
+                            <div className="pt-3 border-t border-border/20">
+                              <div className="flex items-center justify-between gap-2">
+                                <label className="text-xs text-text-muted">Override tier:</label>
+                                <select
+                                  value={tierOverride || ""}
+                                  onChange={(e) => setTierOverride(e.target.value || null)}
+                                  className="flex-1 max-w-[140px] px-2 py-1.5 text-xs rounded-md bg-surface-dark border border-border/50 text-foreground focus:outline-none focus:border-cta/50"
+                                >
+                                  <option value="">Use Recommended</option>
+                                  <optgroup label={pricingSeries === "hc" ? "HC Series" : "LC Series"}>
+                                    <option value={`${pricingSeries.toUpperCase()} 100`}>{pricingSeries.toUpperCase()} 100</option>
+                                    <option value={`${pricingSeries.toUpperCase()} 200`}>{pricingSeries.toUpperCase()} 200</option>
+                                    <option value={`${pricingSeries.toUpperCase()} 300`}>{pricingSeries.toUpperCase()} 300</option>
+                                    <option value={`${pricingSeries.toUpperCase()} 400`}>{pricingSeries.toUpperCase()} 400</option>
+                                  </optgroup>
+                                </select>
+                              </div>
+                              {tierOverride && (
+                                <p className="text-[10px] text-yellow-400 mt-2 flex items-center gap-1">
+                                  <span>⚠️</span> Overriding recommendation to {tierOverride}
+                                </p>
+                              )}
                             </div>
                           </div>
 
