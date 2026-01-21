@@ -156,11 +156,30 @@ const SEOCalculator = () => {
 
   const metroSearchResults = useMemo(() => searchMetros(metroSearch), [metroSearch]);
 
+  // Auto-switch pricing series based on competition level
+  const handleCompetitionChange = (newCompetition: string) => {
+    setCompetition(newCompetition);
+    // Auto-switch to appropriate series
+    if (newCompetition === "low") {
+      setPricingSeries("lc");
+    } else {
+      setPricingSeries("hc");
+    }
+  };
+
   const applyIndustryPreset = (industryId: string) => {
     const preset = industryPresets.find(i => i.id === industryId);
     if (preset) {
       setSelectedIndustry(industryId);
-      if (preset.competition) setCompetition(preset.competition);
+      if (preset.competition) {
+        setCompetition(preset.competition);
+        // Auto-switch series based on preset competition
+        if (preset.competition === "low") {
+          setPricingSeries("lc");
+        } else {
+          setPricingSeries("hc");
+        }
+      }
       if (preset.audience) setAudience(preset.audience);
     }
     setShowIndustryDropdown(false);
@@ -360,20 +379,20 @@ const SEOCalculator = () => {
 
     // Determine recommended package tier based on estimate range
     const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string; recommendedSeries: "hc" | "lc" } => {
-      // HC Series: $1,199, $1,399, $1,599, $1,799
+      // HC Series: $1,299.95, $1,549.95, $1,749.95, $1,999.95
       const hcTiers = [
-        { name: "HC 100", min: 1199, max: 1398 },
-        { name: "HC 200", min: 1399, max: 1598 },
-        { name: "HC 300", min: 1599, max: 1798 },
-        { name: "HC 400", min: 1799, max: Infinity }
+        { name: "HC 100", min: 1299, max: 1549 },
+        { name: "HC 200", min: 1550, max: 1749 },
+        { name: "HC 300", min: 1750, max: 1999 },
+        { name: "HC 400", min: 2000, max: Infinity }
       ];
       
-      // LC Series: $550, $750, $950, $1,150
+      // LC Series: $599.95, $849.95, $1,049.95, $1,249.95
       const lcTiers = [
-        { name: "LC 100", min: 550, max: 749 },
-        { name: "LC 200", min: 750, max: 949 },
-        { name: "LC 300", min: 950, max: 1149 },
-        { name: "LC 400", min: 1150, max: Infinity }
+        { name: "LC 100", min: 599, max: 849 },
+        { name: "LC 200", min: 850, max: 1049 },
+        { name: "LC 300", min: 1050, max: 1249 },
+        { name: "LC 400", min: 1250, max: Infinity }
       ];
       
       // Determine which series to recommend based on competition
@@ -693,9 +712,9 @@ const SEOCalculator = () => {
                       tooltip="High-competition industries (legal, medical, finance) require more aggressive link building and content strategies."
                     >
                       <div className="grid grid-cols-3 gap-2">
-                        <SelectButton selected={competition === "low"} onClick={() => setCompetition("low")}>Low</SelectButton>
-                        <SelectButton selected={competition === "medium"} onClick={() => setCompetition("medium")}>Medium</SelectButton>
-                        <SelectButton selected={competition === "high"} onClick={() => setCompetition("high")}>High</SelectButton>
+                        <SelectButton selected={competition === "low"} onClick={() => handleCompetitionChange("low")}>Low</SelectButton>
+                        <SelectButton selected={competition === "medium"} onClick={() => handleCompetitionChange("medium")}>Medium</SelectButton>
+                        <SelectButton selected={competition === "high"} onClick={() => handleCompetitionChange("high")}>High</SelectButton>
                       </div>
                     </QuestionSection>
 
@@ -800,22 +819,23 @@ const SEOCalculator = () => {
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {(pricingSeries === "hc" ? [
-                              { name: "HC 100", cost: 1199 },
-                              { name: "HC 200", cost: 1399 },
-                              { name: "HC 300", cost: 1599 },
-                              { name: "HC 400", cost: 1799 }
+                              { name: "HC 100", cost: 1299.95 },
+                              { name: "HC 200", cost: 1549.95 },
+                              { name: "HC 300", cost: 1749.95 },
+                              { name: "HC 400", cost: 1999.95 }
                             ] : [
-                              { name: "LC 100", cost: 550 },
-                              { name: "LC 200", cost: 750 },
-                              { name: "LC 300", cost: 950 },
-                              { name: "LC 400", cost: 1150 }
+                              { name: "LC 100", cost: 599.95 },
+                              { name: "LC 200", cost: 849.95 },
+                              { name: "LC 300", cost: 1049.95 },
+                              { name: "LC 400", cost: 1249.95 }
                             ]).map((tier, i) => {
-                              // Apply CSM uplift if enabled
-                              const baseCost = includeCSM ? Math.round(tier.cost * 1.1) : tier.cost;
+                              // Apply CSM uplift if enabled - round to nearest .95
+                              const baseCost = includeCSM 
+                                ? Math.round(tier.cost * 1.1 / 50) * 50 - 0.05
+                                : tier.cost;
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
                               const marginMultiplier = 1.4 + ((clientHourlyRate - 90) / (185 - 90)) * (2.5 - 1.4);
                               const clientMsrp = Math.round(baseCost * marginMultiplier / 50) * 50;
-                              const tierPrefix = pricingSeries === "hc" ? "HC" : "LC";
                               const isRecommended = estimate.recommendedTier.lowTier === tier.name || estimate.recommendedTier.highTier === tier.name;
                               return (
                                 <div 
@@ -829,7 +849,7 @@ const SEOCalculator = () => {
                                     <p className={cn("font-medium text-sm", isRecommended ? "text-cta" : "text-foreground")}>{tier.name}</p>
                                   </div>
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">
-                                    ${baseCost.toLocaleString()}
+                                    ${baseCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                                   </p>
                                   <p className={cn("text-sm font-bold text-right self-center", isRecommended ? "text-cta" : "text-foreground")}>
                                     ${clientMsrp.toLocaleString()}
