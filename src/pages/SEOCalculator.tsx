@@ -29,7 +29,7 @@ const industryPresets = [
   { id: "medical", name: "Medical / Healthcare", competition: "high", audience: "local" },
   { id: "dental", name: "Dental Practices", competition: "high", audience: "local" },
   { id: "medspa", name: "Med Spa / Aesthetics", competition: "high", audience: "local" },
-  { id: "laser-hair", name: "Laser Hair Removal", competition: "high", audience: "local" },
+  
   { id: "plastic-surgery", name: "Plastic Surgery", competition: "high", audience: "local" },
   { id: "chiropractic", name: "Chiropractic", competition: "high", audience: "local" },
   { id: "realestate", name: "Real Estate Agents", competition: "high", audience: "local" },
