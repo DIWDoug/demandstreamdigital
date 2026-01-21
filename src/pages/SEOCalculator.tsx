@@ -7,7 +7,7 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import SEOPdfExport from "@/components/calculators/SEOPdfExport";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search, Phone, RotateCcw } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, ChevronRight, X, Search, Phone, RotateCcw } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -397,78 +397,78 @@ const SEOCalculator = () => {
     ];
 
     // Determine recommended package tier based on inputs (not just price matching)
-    const getRecommendedTier = (): { lowTier: string; highTier: string; series: string; recommendedSeries: "hc" | "lc" } => {
+    const getRecommendedTier = (): { 
+      lowTier: string; 
+      highTier: string; 
+      series: string; 
+      recommendedSeries: "hc" | "lc";
+      scoreBreakdown: {
+        total: number;
+        rawTotal: number;
+        pageFloor: number;
+        items: Array<{ label: string; points: number; maxPoints: number }>;
+      };
+    } => {
       // Determine which series to recommend based on competition
       const recommendedSeries: "hc" | "lc" = competition === "low" ? "lc" : "hc";
       const series = competition === "high" ? "High Competition" : competition === "medium" ? "Medium Competition" : "Low Competition";
       
+      // Track individual score contributions
+      const scoreItems: Array<{ label: string; points: number; maxPoints: number }> = [];
+      
       // Calculate a "need score" from 0-100 based on all inputs
       // Higher score = more aggressive tier needed
-      // Max theoretical score: ~115, but realistic max is ~85-90
       let needScore = 0;
       
       // Competition baseline - high competition industries inherently need more (0-15 points)
-      if (competition === "high") needScore += 15;
-      else if (competition === "medium") needScore += 8;
-      else needScore += 0; // low competition starts with clean slate
+      const competitionPoints = competition === "high" ? 15 : competition === "medium" ? 8 : 0;
+      needScore += competitionPoints;
+      scoreItems.push({ label: "Competition Level", points: competitionPoints, maxPoints: 15 });
       
       // Aggressiveness is the PRIMARY driver (0-25 points)
-      // This should be the biggest single factor
-      if (aggressiveness === "aggressive") needScore += 25;
-      else if (aggressiveness === "moderate") needScore += 12;
-      else needScore += 0; // steady = maintenance mode
+      const aggressivenessPoints = aggressiveness === "aggressive" ? 25 : aggressiveness === "moderate" ? 12 : 0;
+      needScore += aggressivenessPoints;
+      scoreItems.push({ label: "Aggressiveness", points: aggressivenessPoints, maxPoints: 25 });
       
       // Current rankings - the gap to close (0-18 points)
-      // Not ranking at all is a major factor
-      if (currentRankings === "100+") needScore += 18;
-      else if (currentRankings === "31-100") needScore += 12;
-      else if (currentRankings === "11-30") needScore += 5;
-      else needScore += 0; // already top10 = less work needed
+      const rankingsPoints = currentRankings === "100+" ? 18 : currentRankings === "31-100" ? 12 : currentRankings === "11-30" ? 5 : 0;
+      needScore += rankingsPoints;
+      scoreItems.push({ label: "Current Rankings", points: rankingsPoints, maxPoints: 18 });
       
       // Pages needing optimization - THIS ENFORCES MINIMUM TIERS
-      // 1-10 pages: Min Tier 100 (no floor needed)
-      // 11-25 pages: Min Tier 200 (23+ points needed)
-      // 26-50 pages: Min Tier 300 (43+ points needed)
-      // 50+ pages: Min Tier 400 (63+ points needed)
       let pageMinScore = 0;
-      if (pages === "50+") pageMinScore = 63; // Forces Tier 400
-      else if (pages === "26-50") pageMinScore = 43; // Forces Tier 300
-      else if (pages === "11-25") pageMinScore = 23; // Forces Tier 200
-      else pageMinScore = 0; // 1-10 pages allows Tier 100
+      if (pages === "50+") pageMinScore = 63;
+      else if (pages === "26-50") pageMinScore = 43;
+      else if (pages === "11-25") pageMinScore = 23;
       
       // Add incremental points for pages (on top of minimum)
-      if (pages === "50+") needScore += 15;
-      else if (pages === "26-50") needScore += 10;
-      else if (pages === "11-25") needScore += 5;
-      else needScore += 0;
+      const pagesPoints = pages === "50+" ? 15 : pages === "26-50" ? 10 : pages === "11-25" ? 5 : 0;
+      needScore += pagesPoints;
+      scoreItems.push({ label: "Pages to Optimize", points: pagesPoints, maxPoints: 15 });
       
-      // Website age - foundation work needed (0-10 points)
-      if (websiteAge === "new") needScore += 10;
-      else if (websiteAge === "1-3") needScore += 4;
-      else needScore -= 3; // 3+ years = established, slight discount
+      // Website age - foundation work needed (-3 to 10 points)
+      const agePoints = websiteAge === "new" ? 10 : websiteAge === "1-3" ? 4 : -3;
+      needScore += agePoints;
+      scoreItems.push({ label: "Website Age", points: agePoints, maxPoints: 10 });
       
       // Metro size impact (0-10 points)
-      // Mega metros are competitive but shouldn't dominate the score
       const metroTier = selectedMetro?.tier || null;
-      if (metroTier === "mega") needScore += 10;
-      else if (metroTier === "major") needScore += 6;
-      else if (metroTier === "large") needScore += 3;
-      else needScore += 0;
+      const metroPoints = metroTier === "mega" ? 10 : metroTier === "major" ? 6 : metroTier === "large" ? 3 : 0;
+      needScore += metroPoints;
+      scoreItems.push({ label: "Metro Size", points: metroPoints, maxPoints: 10 });
       
       // Locations impact - multi-location complexity (0-8 points)
-      if (locations === "50+") needScore += 8;
-      else if (locations === "21-50") needScore += 5;
-      else if (locations === "6-20") needScore += 2;
-      else needScore += 0; // 1-5 locations is standard
+      const locationPoints = locations === "50+" ? 8 : locations === "21-50" ? 5 : locations === "6-20" ? 2 : 0;
+      needScore += locationPoints;
+      scoreItems.push({ label: "Locations", points: locationPoints, maxPoints: 8 });
+      
+      // Store raw score before floor/cap
+      const rawNeedScore = needScore;
       
       // Ensure score stays in reasonable bounds, BUT enforce page minimum floor
       needScore = Math.max(pageMinScore, Math.min(100, needScore));
       
       // Map score to tier with refined thresholds
-      // 0-22: Tier 100 (maintenance/light optimization)
-      // 23-42: Tier 200 (growth mode)
-      // 43-62: Tier 300 (acceleration)
-      // 63+: Tier 400 (domination/turnaround)
       const getTierFromScore = (score: number, seriesPrefix: string): string => {
         if (score >= 63) return `${seriesPrefix} 400`;
         if (score >= 43) return `${seriesPrefix} 300`;
@@ -482,16 +482,20 @@ const SEOCalculator = () => {
       const baseTier = getTierFromScore(needScore, seriesPrefix);
       
       // High tier buffer: add ~15 points for contingency/upsell opportunity
-      // But cap it so we don't always jump two tiers
       const highScoreBuffer = Math.min(needScore + 15, 100);
       const highTier = getTierFromScore(highScoreBuffer, seriesPrefix);
       
-      // If both tiers are the same, that's a confident single recommendation
       return { 
         lowTier: baseTier, 
         highTier: highTier === baseTier ? baseTier : highTier, 
         series, 
-        recommendedSeries 
+        recommendedSeries,
+        scoreBreakdown: {
+          total: needScore,
+          rawTotal: rawNeedScore,
+          pageFloor: pageMinScore,
+          items: scoreItems
+        }
       };
     };
     
@@ -997,6 +1001,92 @@ const SEOCalculator = () => {
                               </span>
                             </div>
                           </div>
+
+                          {/* Score Breakdown Debug Panel */}
+                          <details className="mt-4 group">
+                            <summary className="flex items-center gap-2 cursor-pointer text-xs font-medium text-text-muted hover:text-foreground transition-colors select-none">
+                              <ChevronRight className="h-3.5 w-3.5 transition-transform group-open:rotate-90" />
+                              <span>Score Breakdown</span>
+                              <span className="ml-auto font-mono text-accent-blue">
+                                {estimate.recommendedTier.scoreBreakdown.total}/100
+                              </span>
+                            </summary>
+                            <div className="mt-3 space-y-3 pt-3 border-t border-border/20">
+                              {/* Score Summary */}
+                              <div className="grid grid-cols-3 gap-2 text-center">
+                                <div className="bg-surface-dark rounded-lg p-2">
+                                  <p className="text-[10px] text-text-muted uppercase tracking-wider">Raw</p>
+                                  <p className="text-sm font-bold text-foreground">{estimate.recommendedTier.scoreBreakdown.rawTotal}</p>
+                                </div>
+                                <div className="bg-surface-dark rounded-lg p-2">
+                                  <p className="text-[10px] text-text-muted uppercase tracking-wider">Page Floor</p>
+                                  <p className="text-sm font-bold text-orange-400">{estimate.recommendedTier.scoreBreakdown.pageFloor || "—"}</p>
+                                </div>
+                                <div className="bg-surface-dark rounded-lg p-2">
+                                  <p className="text-[10px] text-text-muted uppercase tracking-wider">Final</p>
+                                  <p className="text-sm font-bold text-cta">{estimate.recommendedTier.scoreBreakdown.total}</p>
+                                </div>
+                              </div>
+                              
+                              {/* Tier Thresholds */}
+                              <div className="bg-surface-dark rounded-lg p-2">
+                                <div className="relative h-2 bg-background rounded-full overflow-hidden">
+                                  <div className="absolute inset-y-0 left-0 w-[23%] bg-emerald-500/30" />
+                                  <div className="absolute inset-y-0 left-[23%] w-[20%] bg-yellow-500/30" />
+                                  <div className="absolute inset-y-0 left-[43%] w-[20%] bg-orange-500/30" />
+                                  <div className="absolute inset-y-0 left-[63%] right-0 bg-red-500/30" />
+                                  <div 
+                                    className="absolute top-0 bottom-0 w-0.5 bg-foreground"
+                                    style={{ left: `${estimate.recommendedTier.scoreBreakdown.total}%` }}
+                                  />
+                                </div>
+                                <div className="flex justify-between text-[9px] text-text-muted mt-1">
+                                  <span>100</span>
+                                  <span className="ml-[18%]">200</span>
+                                  <span className="ml-[14%]">300</span>
+                                  <span className="ml-[14%]">400</span>
+                                </div>
+                              </div>
+                              
+                              {/* Individual Factors */}
+                              <div className="space-y-1.5">
+                                {estimate.recommendedTier.scoreBreakdown.items.map((item, i) => (
+                                  <div key={i} className="flex items-center justify-between text-xs">
+                                    <span className="text-text-muted">{item.label}</span>
+                                    <div className="flex items-center gap-2">
+                                      <div className="w-16 h-1.5 bg-surface-dark rounded-full overflow-hidden">
+                                        <div 
+                                          className={cn(
+                                            "h-full rounded-full transition-all",
+                                            item.points < 0 ? "bg-emerald-500" :
+                                            item.points === 0 ? "bg-border" :
+                                            item.points <= item.maxPoints * 0.33 ? "bg-emerald-500" :
+                                            item.points <= item.maxPoints * 0.66 ? "bg-yellow-500" : "bg-red-500"
+                                          )}
+                                          style={{ width: `${Math.abs(item.points) / item.maxPoints * 100}%` }}
+                                        />
+                                      </div>
+                                      <span className={cn(
+                                        "font-mono w-8 text-right",
+                                        item.points < 0 ? "text-emerald-400" :
+                                        item.points === 0 ? "text-text-muted" :
+                                        item.points <= item.maxPoints * 0.33 ? "text-emerald-400" :
+                                        item.points <= item.maxPoints * 0.66 ? "text-yellow-400" : "text-red-400"
+                                      )}>
+                                        {item.points > 0 ? "+" : ""}{item.points}
+                                      </span>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                              
+                              {estimate.recommendedTier.scoreBreakdown.pageFloor > 0 && estimate.recommendedTier.scoreBreakdown.rawTotal < estimate.recommendedTier.scoreBreakdown.pageFloor && (
+                                <p className="text-[10px] text-orange-400 bg-orange-500/10 rounded px-2 py-1">
+                                  ⚠️ Page count requires minimum Tier {estimate.recommendedTier.scoreBreakdown.pageFloor >= 63 ? "400" : estimate.recommendedTier.scoreBreakdown.pageFloor >= 43 ? "300" : "200"}
+                                </p>
+                              )}
+                            </div>
+                          </details>
 
                           <div className="space-y-3 pt-4 border-t border-border/30">
                             <div className="flex justify-between items-center">
