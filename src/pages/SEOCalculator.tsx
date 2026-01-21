@@ -150,7 +150,7 @@ const SEOCalculator = () => {
   const [competition, setCompetition] = useState<string>("");
   const [websiteAge, setWebsiteAge] = useState<string>("");
   const [currentRankings, setCurrentRankings] = useState<string>("");
-  const [clientHourlyRate, setClientHourlyRate] = useState<number>(120);
+  const [clientHourlyRate, setClientHourlyRate] = useState<number>(40);
   const [includeCSM, setIncludeCSM] = useState<boolean>(false);
   const [pricingSeries, setPricingSeries] = useState<"hc" | "lc">("hc");
 
@@ -379,20 +379,20 @@ const SEOCalculator = () => {
 
     // Determine recommended package tier based on estimate range
     const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string; recommendedSeries: "hc" | "lc" } => {
-      // HC Series: $1,299.95, $1,549.95, $1,749.95, $1,999.95
+      // HC Series: $1,199, $1,399, $1,599, $1,799
       const hcTiers = [
-        { name: "HC 100", min: 1299, max: 1549 },
-        { name: "HC 200", min: 1550, max: 1749 },
-        { name: "HC 300", min: 1750, max: 1999 },
-        { name: "HC 400", min: 2000, max: Infinity }
+        { name: "HC 100", min: 1199, max: 1398 },
+        { name: "HC 200", min: 1399, max: 1598 },
+        { name: "HC 300", min: 1599, max: 1798 },
+        { name: "HC 400", min: 1799, max: Infinity }
       ];
       
-      // LC Series: $599.95, $849.95, $1,049.95, $1,249.95
+      // LC Series: $549, $749, $949, $1,149
       const lcTiers = [
-        { name: "LC 100", min: 599, max: 849 },
-        { name: "LC 200", min: 850, max: 1049 },
-        { name: "LC 300", min: 1050, max: 1249 },
-        { name: "LC 400", min: 1250, max: Infinity }
+        { name: "LC 100", min: 549, max: 748 },
+        { name: "LC 200", min: 749, max: 948 },
+        { name: "LC 300", min: 949, max: 1148 },
+        { name: "LC 400", min: 1149, max: Infinity }
       ];
       
       // Determine which series to recommend based on competition
@@ -819,22 +819,22 @@ const SEOCalculator = () => {
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {(pricingSeries === "hc" ? [
-                              { name: "HC 100", cost: 1299.95, tooltip: "Foundation tier: On-page SEO, GBP optimization, 2 blog posts/mo, basic citation building, monthly reporting" },
-                              { name: "HC 200", cost: 1549.95, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
-                              { name: "HC 300", cost: 1749.95, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
-                              { name: "HC 400", cost: 1999.95, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
+                              { name: "HC 100", cost: 1199, tooltip: "Foundation tier: On-page SEO, GBP optimization, 2 blog posts/mo, basic citation building, monthly reporting" },
+                              { name: "HC 200", cost: 1399, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
+                              { name: "HC 300", cost: 1599, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
+                              { name: "HC 400", cost: 1799, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
                             ] : [
-                              { name: "LC 100", cost: 599.95, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
-                              { name: "LC 200", cost: 849.95, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
-                              { name: "LC 300", cost: 1049.95, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
-                              { name: "LC 400", cost: 1249.95, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
+                              { name: "LC 100", cost: 549, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
+                              { name: "LC 200", cost: 749, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
+                              { name: "LC 300", cost: 949, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
+                              { name: "LC 400", cost: 1149, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
                             ]).map((tier, i) => {
                               // Apply CSM uplift if enabled - round to nearest .95
                               const baseCost = includeCSM 
                                 ? Math.round(tier.cost * 1.1 / 50) * 50 - 0.05
                                 : tier.cost;
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
-                              const marginMultiplier = 1.4 + ((clientHourlyRate - 90) / (185 - 90)) * (2.5 - 1.4);
+                              const marginMultiplier = 1 + (clientHourlyRate / 100);
                               const clientMsrp = Math.round(baseCost * marginMultiplier / 50) * 50;
                               const isRecommended = estimate.recommendedTier.lowTier === tier.name || estimate.recommendedTier.highTier === tier.name;
                               return (
@@ -875,13 +875,13 @@ const SEOCalculator = () => {
                           <div className="bg-surface-dark rounded-lg p-4 border border-border/30 mb-4">
                             <div className="flex justify-between items-center mb-3">
                               <span className="text-xs text-text-muted">Client MSRP Margin</span>
-                              <span className="text-sm font-semibold text-cta">{Math.round(40 + ((clientHourlyRate - 90) / (180 - 90)) * (150 - 40))}%</span>
+                              <span className="text-sm font-semibold text-cta">{clientHourlyRate}%</span>
                             </div>
                             <Slider
                               value={[clientHourlyRate]}
                               onValueChange={(value) => setClientHourlyRate(value[0])}
-                              min={90}
-                              max={185}
+                              min={40}
+                              max={150}
                               step={5}
                               className="w-full"
                             />
