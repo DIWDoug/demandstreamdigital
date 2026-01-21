@@ -371,10 +371,10 @@ const SEOCalculator = () => {
     monthlyLow = Math.max(monthlyLow, minimumFloor);
     monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.3 / 50) * 50);
 
-    // Apply CSM fixed fee if enabled ($149/mo)
+    // Apply CSM fixed fee if enabled ($150/mo)
     if (includeCSM) {
-      monthlyLow = monthlyLow + 149;
-      monthlyHigh = monthlyHigh + 149;
+      monthlyLow = monthlyLow + 150;
+      monthlyHigh = monthlyHigh + 150;
     }
 
     // Estimate timeline based on competition and rankings
@@ -923,9 +923,9 @@ const SEOCalculator = () => {
                               { name: "LC 300", cost: 1044, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
                               { name: "LC 400", cost: 1264, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
                             ]).map((tier, i) => {
-                              // Apply CSM fixed fee if enabled ($149/mo)
+                              // Apply CSM fixed fee if enabled ($150/mo)
                               const baseCost = includeCSM 
-                                ? tier.cost + 149
+                                ? tier.cost + 150
                                 : tier.cost;
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
                               const marginMultiplier = 1 + (clientHourlyRate / 100);
