@@ -15,12 +15,12 @@ const SEOEducationalContent = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">White-Label Cost</p>
-            <p className="text-2xl font-bold text-foreground">$549 - $1,799</p>
+            <p className="text-2xl font-bold text-foreground">$604 - $1,979</p>
             <p className="text-sm text-text-muted mt-2">Agency partner pricing per location</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
             <p className="text-sm text-text-muted mb-2">Typical MSRP</p>
-            <p className="text-2xl font-bold text-foreground">$769 - $4,498</p>
+            <p className="text-2xl font-bold text-foreground">$846 - $4,948</p>
             <p className="text-sm text-text-muted mt-2">What agencies charge end clients</p>
           </div>
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
@@ -229,16 +229,20 @@ const SEOEducationalContent = () => {
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
-              <p className="text-3xl font-bold text-cta">$549-$1,799</p>
+              <p className="text-3xl font-bold text-cta">$604-$1,979</p>
               <p className="text-sm text-text-muted">Your cost per location</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">$769-$4,498</p>
+              <p className="text-3xl font-bold text-foreground">$846-$4,948</p>
               <p className="text-sm text-text-muted">Typical client MSRP</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-accent-blue">$220-$2,699</p>
+              <p className="text-3xl font-bold text-accent-blue">$242-$2,969</p>
               <p className="text-sm text-text-muted">Your profit per client</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold text-accent-blue">+$149/mo</p>
+              <p className="text-sm text-text-muted">CSM add-on (optional)</p>
             </div>
           </div>
           <div className="pt-6 border-t border-border/30">
