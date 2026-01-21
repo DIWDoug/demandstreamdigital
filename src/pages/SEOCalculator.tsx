@@ -151,6 +151,7 @@ const SEOCalculator = () => {
   const [websiteAge, setWebsiteAge] = useState<string>("");
   const [currentRankings, setCurrentRankings] = useState<string>("");
   const [clientHourlyRate, setClientHourlyRate] = useState<number>(120);
+  const [includeCSM, setIncludeCSM] = useState<boolean>(false);
 
   const metroSearchResults = useMemo(() => searchMetros(metroSearch), [metroSearch]);
 
@@ -183,37 +184,37 @@ const SEOCalculator = () => {
     if (!isComplete) return null;
 
     // Package-based pricing aligned to HC OEM tiers
-    // Starter: $650-$975, Professional: $975-$1,300, Premium: $1,300-$1,950, Elite: $1,950-$2,600
-    // Low competition uses lower end, High competition uses full range
+    // HC Series: $1,199, $1,399, $1,599, $1,799
+    // Low competition uses lower range
     const baseByCompetition: Record<string, { low: number; high: number }> = {
-      "low": { low: 650, high: 1300 },      // Starter to Professional
-      "medium": { low: 975, high: 1950 },   // Professional to Premium
-      "high": { low: 1300, high: 2600 }     // Premium to Elite
+      "low": { low: 650, high: 1199 },      // Starter range
+      "medium": { low: 1000, high: 1599 },  // Mid range
+      "high": { low: 1199, high: 1799 }     // HC Series full range
     };
 
     // Minimum floors aligned to HC OEM tiers
-    // Starter: $650, Professional: $975, Premium: $1,300, Elite: $1,950
+    // HC Series: $1,199, $1,399, $1,599, $1,799
     const getMinimumFloor = (comp: string, metroTier: string | null): number => {
       if (comp === "high") {
-        // High competition starts at Premium tier minimum
-        if (metroTier === "mega") return 1950;   // Elite
-        if (metroTier === "major") return 1550;  // Premium-Elite
-        if (metroTier === "large") return 1300;  // Premium
-        if (metroTier === "medium") return 1300; // Premium
-        return 1300; // Premium base
+        // High competition starts at HC tier minimum
+        if (metroTier === "mega") return 1599;   // HC 300
+        if (metroTier === "major") return 1399;  // HC 200
+        if (metroTier === "large") return 1199;  // HC 100
+        if (metroTier === "medium") return 1199; // HC 100
+        return 1199; // HC 100 base
       }
       if (comp === "medium") {
-        // Medium competition uses Professional-Premium range
-        if (metroTier === "mega") return 1300;
-        if (metroTier === "major") return 1100;
-        if (metroTier === "large") return 975;
-        if (metroTier === "medium") return 975;
-        return 975;
+        // Medium competition uses mid range
+        if (metroTier === "mega") return 1399;
+        if (metroTier === "major") return 1199;
+        if (metroTier === "large") return 1000;
+        if (metroTier === "medium") return 1000;
+        return 900;
       }
-      // Low competition uses Starter-Professional range
-      if (metroTier === "mega") return 975;    // Professional
-      if (metroTier === "major") return 800;   // Starter+
-      if (metroTier === "large") return 650;   // Starter
+      // Low competition uses starter range
+      if (metroTier === "mega") return 900;
+      if (metroTier === "major") return 750;
+      if (metroTier === "large") return 650;
       return 650; // Starter base
     };
 
@@ -329,6 +330,12 @@ const SEOCalculator = () => {
     monthlyLow = Math.max(monthlyLow, minimumFloor);
     monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.3 / 50) * 50);
 
+    // Apply CSM uplift if enabled (10%)
+    if (includeCSM) {
+      monthlyLow = Math.round(monthlyLow * 1.1 / 50) * 50;
+      monthlyHigh = Math.round(monthlyHigh * 1.1 / 50) * 50;
+    }
+
     // Estimate timeline based on competition and rankings
     let timelineMonths = 6;
     if (competition === "high") timelineMonths += 4;
@@ -352,13 +359,12 @@ const SEOCalculator = () => {
 
     // Determine recommended package tier based on estimate range
     const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string } => {
-      // OEM Tiers: Starter ($650-$975), Professional ($975-$1,300), Premium ($1,300-$1,950), Elite ($1,950-$2,600)
-      
+      // HC Series: $1,199, $1,399, $1,599, $1,799
       const tiers = [
-        { name: "Starter", min: 650, max: 974 },
-        { name: "Professional", min: 975, max: 1299 },
-        { name: "Premium", min: 1300, max: 1949 },
-        { name: "Elite", min: 1950, max: Infinity }
+        { name: "HC 100", min: 1199, max: 1398 },
+        { name: "HC 200", min: 1399, max: 1598 },
+        { name: "HC 300", min: 1599, max: 1798 },
+        { name: "HC 400", min: 1799, max: Infinity }
       ];
       
       const series = comp === "high" ? "High Competition" : comp === "medium" ? "Medium Competition" : "Low Competition";
@@ -399,7 +405,7 @@ const SEOCalculator = () => {
       factors,
       recommendedTier
     };
-  }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete]);
+  }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete, includeCSM]);
 
   return (
     <>
@@ -733,39 +739,56 @@ const SEOCalculator = () => {
                             <div className="text-xs text-text-muted font-medium text-right">Client MSRP</div>
                           </div>
 
-                          {/* Tiered Pricing */}
+                          {/* Tiered Pricing - HC Series */}
                           <div className="space-y-2 mb-4">
                             {[
-                              { name: "Starter", costLow: 650, costHigh: 975 },
-                              { name: "Professional", costLow: 975, costHigh: 1300, highlight: true },
-                              { name: "Premium", costLow: 1300, costHigh: 1950 },
-                              { name: "Elite", costLow: 1950, costHigh: 2600 }
+                              { name: "HC 100", cost: 1199 },
+                              { name: "HC 200", cost: 1399 },
+                              { name: "HC 300", cost: 1599 },
+                              { name: "HC 400", cost: 1799 }
                             ].map((tier, i) => {
+                              // Apply CSM uplift if enabled
+                              const baseCost = includeCSM ? Math.round(tier.cost * 1.1) : tier.cost;
                               // MSRP margin: slider goes from 40% (1.4x) to 150% (2.5x)
                               const marginMultiplier = 1.4 + ((clientHourlyRate - 90) / (180 - 90)) * (2.5 - 1.4);
-                              const clientMsrpLow = Math.round(tier.costLow * marginMultiplier / 50) * 50;
-                              const clientMsrpHigh = Math.round(tier.costHigh * marginMultiplier / 50) * 50;
+                              const clientMsrp = Math.round(baseCost * marginMultiplier / 50) * 50;
+                              const isRecommended = estimate.recommendedTier.lowTier === tier.name || estimate.recommendedTier.highTier === tier.name;
                               return (
                                 <div 
                                   key={i}
                                   className={cn(
                                     "grid grid-cols-3 gap-2 p-3 rounded-lg bg-surface-dark border",
-                                    tier.highlight ? "border-cta/40" : "border-border/30"
+                                    isRecommended ? "border-cta/40" : "border-border/30"
                                   )}
                                 >
                                   <div>
-                                    <p className={cn("font-medium text-sm", tier.highlight ? "text-cta" : "text-foreground")}>{tier.name}</p>
+                                    <p className={cn("font-medium text-sm", isRecommended ? "text-cta" : "text-foreground")}>{tier.name}</p>
                                   </div>
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">
-                                    ${tier.costLow.toLocaleString()}-${tier.costHigh.toLocaleString()}
+                                    ${baseCost.toLocaleString()}
                                   </p>
-                                  <p className={cn("text-sm font-bold text-right self-center", tier.highlight ? "text-cta" : "text-foreground")}>
-                                    ${clientMsrpLow.toLocaleString()}-${clientMsrpHigh.toLocaleString()}
+                                  <p className={cn("text-sm font-bold text-right self-center", isRecommended ? "text-cta" : "text-foreground")}>
+                                    ${clientMsrp.toLocaleString()}
                                   </p>
                                 </div>
                               );
                             })}
                           </div>
+
+                          {/* Client Success Manager Toggle */}
+                          <button
+                            type="button"
+                            onClick={() => setIncludeCSM(!includeCSM)}
+                            className={cn(
+                              "w-full flex items-center justify-between p-3 rounded-lg border transition-all mb-4",
+                              includeCSM 
+                                ? "bg-cta/10 border-cta text-cta" 
+                                : "bg-surface-dark border-border/50 text-text-secondary hover:border-accent-blue/50"
+                            )}
+                          >
+                            <span className="text-sm font-medium">+ Client Success Manager</span>
+                            <span className="text-xs font-semibold">{includeCSM ? "Added (+10%)" : "+10%"}</span>
+                          </button>
 
                           {/* Client MSRP Margin Slider */}
                           <div className="bg-surface-dark rounded-lg p-4 border border-border/30 mb-4">
