@@ -241,7 +241,7 @@ const SEOEducationalContent = () => {
               <p className="text-sm text-text-muted">Your profit per client</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-accent-blue">+$149/mo</p>
+              <p className="text-3xl font-bold text-accent-blue">+$150/mo</p>
               <p className="text-sm text-text-muted">CSM add-on (optional)</p>
             </div>
           </div>
