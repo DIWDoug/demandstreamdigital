@@ -406,6 +406,7 @@ const SEOCalculator = () => {
         total: number;
         rawTotal: number;
         pageFloor: number;
+        aggressiveFloor: number;
         items: Array<{ label: string; points: number; maxPoints: number }>;
       };
     } => {
@@ -441,6 +442,10 @@ const SEOCalculator = () => {
       else if (pages === "26-50") pageMinScore = 43;
       else if (pages === "11-25") pageMinScore = 23;
       
+      // Aggressive aggressiveness enforces minimum Tier 300
+      let aggressiveMinScore = 0;
+      if (aggressiveness === "aggressive") aggressiveMinScore = 43;
+      
       // Add incremental points for pages (on top of minimum)
       const pagesPoints = pages === "50+" ? 15 : pages === "26-50" ? 10 : pages === "11-25" ? 5 : 0;
       needScore += pagesPoints;
@@ -465,8 +470,11 @@ const SEOCalculator = () => {
       // Store raw score before floor/cap
       const rawNeedScore = needScore;
       
-      // Ensure score stays in reasonable bounds, BUT enforce page minimum floor
-      needScore = Math.max(pageMinScore, Math.min(100, needScore));
+      // Combine floors: use the maximum of page floor, aggressive floor, and calculated score
+      const combinedFloor = Math.max(pageMinScore, aggressiveMinScore);
+      
+      // Ensure score stays in reasonable bounds, BUT enforce minimum floors
+      needScore = Math.max(combinedFloor, Math.min(100, needScore));
       
       // Map score to tier with refined thresholds
       const getTierFromScore = (score: number, seriesPrefix: string): string => {
@@ -494,6 +502,7 @@ const SEOCalculator = () => {
           total: needScore,
           rawTotal: rawNeedScore,
           pageFloor: pageMinScore,
+          aggressiveFloor: aggressiveMinScore,
           items: scoreItems
         }
       };
@@ -1013,7 +1022,7 @@ const SEOCalculator = () => {
                             </summary>
                             <div className="mt-3 space-y-3 pt-3 border-t border-border/20">
                               {/* Score Summary */}
-                              <div className="grid grid-cols-3 gap-2 text-center">
+                              <div className="grid grid-cols-4 gap-2 text-center">
                                 <div className="bg-surface-dark rounded-lg p-2">
                                   <p className="text-[10px] text-text-muted uppercase tracking-wider">Raw</p>
                                   <p className="text-sm font-bold text-foreground">{estimate.recommendedTier.scoreBreakdown.rawTotal}</p>
@@ -1021,6 +1030,10 @@ const SEOCalculator = () => {
                                 <div className="bg-surface-dark rounded-lg p-2">
                                   <p className="text-[10px] text-text-muted uppercase tracking-wider">Page Floor</p>
                                   <p className="text-sm font-bold text-orange-400">{estimate.recommendedTier.scoreBreakdown.pageFloor || "—"}</p>
+                                </div>
+                                <div className="bg-surface-dark rounded-lg p-2">
+                                  <p className="text-[10px] text-text-muted uppercase tracking-wider">Aggr. Floor</p>
+                                  <p className="text-sm font-bold text-red-400">{estimate.recommendedTier.scoreBreakdown.aggressiveFloor || "—"}</p>
                                 </div>
                                 <div className="bg-surface-dark rounded-lg p-2">
                                   <p className="text-[10px] text-text-muted uppercase tracking-wider">Final</p>
@@ -1083,6 +1096,11 @@ const SEOCalculator = () => {
                               {estimate.recommendedTier.scoreBreakdown.pageFloor > 0 && estimate.recommendedTier.scoreBreakdown.rawTotal < estimate.recommendedTier.scoreBreakdown.pageFloor && (
                                 <p className="text-[10px] text-orange-400 bg-orange-500/10 rounded px-2 py-1">
                                   ⚠️ Page count requires minimum Tier {estimate.recommendedTier.scoreBreakdown.pageFloor >= 63 ? "400" : estimate.recommendedTier.scoreBreakdown.pageFloor >= 43 ? "300" : "200"}
+                                </p>
+                              )}
+                              {estimate.recommendedTier.scoreBreakdown.aggressiveFloor > 0 && estimate.recommendedTier.scoreBreakdown.rawTotal < estimate.recommendedTier.scoreBreakdown.aggressiveFloor && estimate.recommendedTier.scoreBreakdown.aggressiveFloor >= estimate.recommendedTier.scoreBreakdown.pageFloor && (
+                                <p className="text-[10px] text-red-400 bg-red-500/10 rounded px-2 py-1">
+                                  ⚠️ Aggressive strategy requires minimum Tier 300
                                 </p>
                               )}
                             </div>
