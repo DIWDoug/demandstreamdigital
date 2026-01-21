@@ -906,7 +906,7 @@ const SEOCalculator = () => {
                               "text-xs font-semibold px-2 py-0.5 rounded",
                               includeCSM ? "bg-cta/10 text-cta" : "text-text-muted"
                             )}>
-                              +10%
+                              +$150/mo
                             </span>
                           </label>
 
