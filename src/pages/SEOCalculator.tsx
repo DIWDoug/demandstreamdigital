@@ -385,63 +385,79 @@ const SEOCalculator = () => {
       
       // Calculate a "need score" from 0-100 based on all inputs
       // Higher score = more aggressive tier needed
+      // Max theoretical score: ~115, but realistic max is ~85-90
       let needScore = 0;
       
-      // Aggressiveness impact (0-30 points)
-      if (aggressiveness === "aggressive") needScore += 30;
-      else if (aggressiveness === "moderate") needScore += 15;
-      else needScore += 0; // steady
+      // Competition baseline - high competition industries inherently need more (0-15 points)
+      if (competition === "high") needScore += 15;
+      else if (competition === "medium") needScore += 8;
+      else needScore += 0; // low competition starts with clean slate
       
-      // Pages needing optimization (0-20 points)
-      if (pages === "50+") needScore += 20;
-      else if (pages === "26-50") needScore += 14;
-      else if (pages === "11-25") needScore += 7;
-      else needScore += 0; // 1-10
+      // Aggressiveness is the PRIMARY driver (0-25 points)
+      // This should be the biggest single factor
+      if (aggressiveness === "aggressive") needScore += 25;
+      else if (aggressiveness === "moderate") needScore += 12;
+      else needScore += 0; // steady = maintenance mode
       
-      // Current rankings - worse = more work needed (0-20 points)
-      if (currentRankings === "100+") needScore += 20;
-      else if (currentRankings === "31-100") needScore += 14;
-      else if (currentRankings === "11-30") needScore += 7;
-      else needScore += 0; // top10
+      // Current rankings - the gap to close (0-18 points)
+      // Not ranking at all is a major factor
+      if (currentRankings === "100+") needScore += 18;
+      else if (currentRankings === "31-100") needScore += 12;
+      else if (currentRankings === "11-30") needScore += 5;
+      else needScore += 0; // already top10 = less work needed
       
-      // Website age - newer = more foundation work (0-15 points)
-      if (websiteAge === "new") needScore += 15;
-      else if (websiteAge === "1-3") needScore += 7;
-      else needScore += 0; // 3+
+      // Pages needing optimization (0-12 points)
+      // Important but not as critical as rankings/aggressiveness
+      if (pages === "50+") needScore += 12;
+      else if (pages === "26-50") needScore += 8;
+      else if (pages === "11-25") needScore += 4;
+      else needScore += 0; // 1-10 pages is manageable
       
-      // Metro size impact (0-15 points)
+      // Website age - foundation work needed (0-10 points)
+      if (websiteAge === "new") needScore += 10;
+      else if (websiteAge === "1-3") needScore += 4;
+      else needScore -= 3; // 3+ years = established, slight discount
+      
+      // Metro size impact (0-10 points)
+      // Mega metros are competitive but shouldn't dominate the score
       const metroTier = selectedMetro?.tier || null;
-      if (metroTier === "mega") needScore += 15;
-      else if (metroTier === "major") needScore += 10;
-      else if (metroTier === "large") needScore += 5;
+      if (metroTier === "mega") needScore += 10;
+      else if (metroTier === "major") needScore += 6;
+      else if (metroTier === "large") needScore += 3;
       else needScore += 0;
       
-      // Locations impact - multi-location adds complexity (bonus)
-      if (locations === "50+") needScore += 10;
-      else if (locations === "21-50") needScore += 6;
-      else if (locations === "6-20") needScore += 3;
+      // Locations impact - multi-location complexity (0-8 points)
+      if (locations === "50+") needScore += 8;
+      else if (locations === "21-50") needScore += 5;
+      else if (locations === "6-20") needScore += 2;
+      else needScore += 0; // 1-5 locations is standard
       
-      // Map score to tier
-      // 0-25: Tier 100, 26-45: Tier 200, 46-65: Tier 300, 66+: Tier 400
+      // Ensure score stays in reasonable bounds
+      needScore = Math.max(0, Math.min(100, needScore));
+      
+      // Map score to tier with refined thresholds
+      // 0-22: Tier 100 (maintenance/light optimization)
+      // 23-42: Tier 200 (growth mode)
+      // 43-62: Tier 300 (acceleration)
+      // 63+: Tier 400 (domination/turnaround)
       const getTierFromScore = (score: number, seriesPrefix: string): string => {
-        if (score >= 66) return `${seriesPrefix} 400`;
-        if (score >= 46) return `${seriesPrefix} 300`;
-        if (score >= 26) return `${seriesPrefix} 200`;
+        if (score >= 63) return `${seriesPrefix} 400`;
+        if (score >= 43) return `${seriesPrefix} 300`;
+        if (score >= 23) return `${seriesPrefix} 200`;
         return `${seriesPrefix} 100`;
       };
       
       const seriesPrefix = recommendedSeries === "hc" ? "HC" : "LC";
       
-      // Calculate a reasonable range (usually ±1 tier based on inputs)
-      // For the low tier, use the base score
-      // For the high tier, add some buffer for contingencies
+      // Calculate low and high tier recommendations
       const baseTier = getTierFromScore(needScore, seriesPrefix);
       
-      // The high tier is typically one level up, unless already at 400
-      const highScoreBuffer = Math.min(needScore + 20, 100); // Add buffer for high estimate
+      // High tier buffer: add ~15 points for contingency/upsell opportunity
+      // But cap it so we don't always jump two tiers
+      const highScoreBuffer = Math.min(needScore + 15, 100);
       const highTier = getTierFromScore(highScoreBuffer, seriesPrefix);
       
-      // If both tiers are the same, that's a confident recommendation
+      // If both tiers are the same, that's a confident single recommendation
       return { 
         lowTier: baseTier, 
         highTier: highTier === baseTier ? baseTier : highTier, 
