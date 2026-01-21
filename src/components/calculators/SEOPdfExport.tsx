@@ -46,6 +46,7 @@ export default function SEOPdfExport({
 }: SEOPdfExportProps) {
   const [logo, setLogo] = useState<string | null>(null);
   const [logoName, setLogoName] = useState<string>("");
+  const [companyName, setCompanyName] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -88,19 +89,42 @@ export default function SEOPdfExport({
       const margin = 20;
       let yPos = 20;
 
-      // Add logo if uploaded
-      if (logo) {
-        try {
-          pdf.addImage(logo, "PNG", margin, yPos, 40, 20);
-          yPos += 28;
-        } catch {
-          // Skip logo if there's an error
+      // Add logo and/or company name header
+      if (logo || companyName) {
+        if (logo) {
+          try {
+            pdf.addImage(logo, "PNG", margin, yPos, 40, 20);
+            if (companyName) {
+              pdf.setFontSize(16);
+              pdf.setTextColor(30, 30, 30);
+              pdf.setFont("helvetica", "bold");
+              pdf.text(companyName, margin + 48, yPos + 12);
+            }
+            yPos += 28;
+          } catch {
+            // If logo fails, just show company name
+            if (companyName) {
+              pdf.setFontSize(18);
+              pdf.setTextColor(30, 30, 30);
+              pdf.setFont("helvetica", "bold");
+              pdf.text(companyName, margin, yPos + 8);
+              yPos += 16;
+            }
+          }
+        } else if (companyName) {
+          pdf.setFontSize(18);
+          pdf.setTextColor(30, 30, 30);
+          pdf.setFont("helvetica", "bold");
+          pdf.text(companyName, margin, yPos + 8);
+          yPos += 16;
         }
+        yPos += 4;
       }
 
       // Title
       pdf.setFontSize(24);
       pdf.setTextColor(30, 30, 30);
+      pdf.setFont("helvetica", "bold");
       pdf.text("SEO Proposal", margin, yPos);
       yPos += 12;
 
@@ -270,6 +294,19 @@ export default function SEOPdfExport({
       <div className="flex items-center justify-between">
         <p className="text-sm font-semibold text-foreground">Export Proposal</p>
         <FileDown className="h-4 w-4 text-text-muted" />
+      </div>
+
+      {/* Company Name Input */}
+      <div className="space-y-2">
+        <label className="text-xs text-text-muted">Company Name (optional)</label>
+        <input
+          type="text"
+          value={companyName}
+          onChange={(e) => setCompanyName(e.target.value)}
+          placeholder="Your Agency Name"
+          maxLength={50}
+          className="w-full px-3 py-2 text-sm bg-surface-elevated border border-border/50 rounded-lg text-foreground placeholder:text-text-muted focus:outline-none focus:border-accent-blue/50 transition-colors"
+        />
       </div>
 
       {/* Logo Upload */}
