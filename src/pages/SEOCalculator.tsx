@@ -7,7 +7,7 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import SEOPdfExport from "@/components/calculators/SEOPdfExport";
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search, Phone } from "lucide-react";
+import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, X, Search, Phone, RotateCcw } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -195,6 +195,24 @@ const SEOCalculator = () => {
   const clearMetro = () => {
     setSelectedMetro(null);
     setMetroSearch("");
+  };
+
+  const clearAll = () => {
+    setSelectedIndustry("");
+    setSelectedMetro(null);
+    setMetroSearch("");
+    setShowMetroDropdown(false);
+    setShowIndustryDropdown(false);
+    setLocations("");
+    setAudience("");
+    setAggressiveness("");
+    setPages("");
+    setCompetition("");
+    setWebsiteAge("");
+    setCurrentRankings("");
+    setClientHourlyRate(40);
+    setIncludeCSM(false);
+    setPricingSeries("hc");
   };
 
   const selectedIndustryName = industryPresets.find(i => i.id === selectedIndustry)?.name || "";
@@ -567,9 +585,19 @@ const SEOCalculator = () => {
                 {/* Left Column - Inputs */}
                 <div className="lg:col-span-3 space-y-6">
                   <div className="bg-surface-elevated rounded-2xl p-6 md:p-8 border border-border/30 space-y-8">
-                    <div>
-                      <h2 className="text-xl font-bold text-foreground mb-2">Tell us about the project</h2>
-                      <p className="text-sm text-text-muted">Answer each question to calculate an estimated monthly investment.</p>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h2 className="text-xl font-bold text-foreground mb-2">Tell us about the project</h2>
+                        <p className="text-sm text-text-muted">Answer each question to calculate an estimated monthly investment.</p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={clearAll}
+                        className="text-xs text-text-muted hover:text-foreground transition-colors flex items-center gap-1 px-2 py-1 rounded hover:bg-surface-dark"
+                      >
+                        <RotateCcw className="h-3 w-3" />
+                        Clear All
+                      </button>
                     </div>
 
                     {/* Industry Preset Selector */}
