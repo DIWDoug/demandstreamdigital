@@ -377,56 +377,80 @@ const SEOCalculator = () => {
       { label: "Current Rankings", value: currentRankings, impact: (rankMult.low + rankMult.high) / 2, color: rankMult.low > 1.3 ? "bg-red-500" : rankMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" }
     ];
 
-    // Determine recommended package tier based on estimate range
-    const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string; recommendedSeries: "hc" | "lc" } => {
-      // HC Series: $1,199, $1,399, $1,599, $1,799
-      const hcTiers = [
-        { name: "HC 100", min: 1199, max: 1398 },
-        { name: "HC 200", min: 1399, max: 1598 },
-        { name: "HC 300", min: 1599, max: 1798 },
-        { name: "HC 400", min: 1799, max: Infinity }
-      ];
-      
-      // LC Series: $549, $749, $949, $1,149
-      const lcTiers = [
-        { name: "LC 100", min: 549, max: 748 },
-        { name: "LC 200", min: 749, max: 948 },
-        { name: "LC 300", min: 949, max: 1148 },
-        { name: "LC 400", min: 1149, max: Infinity }
-      ];
-      
+    // Determine recommended package tier based on inputs (not just price matching)
+    const getRecommendedTier = (): { lowTier: string; highTier: string; series: string; recommendedSeries: "hc" | "lc" } => {
       // Determine which series to recommend based on competition
-      const recommendedSeries: "hc" | "lc" = comp === "high" ? "hc" : comp === "medium" ? "hc" : "lc";
-      const tiers = recommendedSeries === "hc" ? hcTiers : lcTiers;
+      const recommendedSeries: "hc" | "lc" = competition === "low" ? "lc" : "hc";
+      const series = competition === "high" ? "High Competition" : competition === "medium" ? "Medium Competition" : "Low Competition";
       
-      const series = comp === "high" ? "High Competition" : comp === "medium" ? "Medium Competition" : "Low Competition";
+      // Calculate a "need score" from 0-100 based on all inputs
+      // Higher score = more aggressive tier needed
+      let needScore = 0;
       
-      // Find tier for low estimate
-      let lowTier = tiers[0].name;
-      for (const tier of tiers) {
-        if (low >= tier.min && low <= tier.max) {
-          lowTier = tier.name;
-          break;
-        } else if (low > tier.max) {
-          lowTier = tier.name;
-        }
-      }
+      // Aggressiveness impact (0-30 points)
+      if (aggressiveness === "aggressive") needScore += 30;
+      else if (aggressiveness === "moderate") needScore += 15;
+      else needScore += 0; // steady
       
-      // Find tier for high estimate
-      let highTier = tiers[tiers.length - 1].name;
-      for (const tier of tiers) {
-        if (high >= tier.min && high <= tier.max) {
-          highTier = tier.name;
-          break;
-        } else if (high > tier.max) {
-          highTier = tier.name;
-        }
-      }
+      // Pages needing optimization (0-20 points)
+      if (pages === "50+") needScore += 20;
+      else if (pages === "26-50") needScore += 14;
+      else if (pages === "11-25") needScore += 7;
+      else needScore += 0; // 1-10
       
-      return { lowTier, highTier, series, recommendedSeries };
+      // Current rankings - worse = more work needed (0-20 points)
+      if (currentRankings === "100+") needScore += 20;
+      else if (currentRankings === "31-100") needScore += 14;
+      else if (currentRankings === "11-30") needScore += 7;
+      else needScore += 0; // top10
+      
+      // Website age - newer = more foundation work (0-15 points)
+      if (websiteAge === "new") needScore += 15;
+      else if (websiteAge === "1-3") needScore += 7;
+      else needScore += 0; // 3+
+      
+      // Metro size impact (0-15 points)
+      const metroTier = selectedMetro?.tier || null;
+      if (metroTier === "mega") needScore += 15;
+      else if (metroTier === "major") needScore += 10;
+      else if (metroTier === "large") needScore += 5;
+      else needScore += 0;
+      
+      // Locations impact - multi-location adds complexity (bonus)
+      if (locations === "50+") needScore += 10;
+      else if (locations === "21-50") needScore += 6;
+      else if (locations === "6-20") needScore += 3;
+      
+      // Map score to tier
+      // 0-25: Tier 100, 26-45: Tier 200, 46-65: Tier 300, 66+: Tier 400
+      const getTierFromScore = (score: number, seriesPrefix: string): string => {
+        if (score >= 66) return `${seriesPrefix} 400`;
+        if (score >= 46) return `${seriesPrefix} 300`;
+        if (score >= 26) return `${seriesPrefix} 200`;
+        return `${seriesPrefix} 100`;
+      };
+      
+      const seriesPrefix = recommendedSeries === "hc" ? "HC" : "LC";
+      
+      // Calculate a reasonable range (usually ±1 tier based on inputs)
+      // For the low tier, use the base score
+      // For the high tier, add some buffer for contingencies
+      const baseTier = getTierFromScore(needScore, seriesPrefix);
+      
+      // The high tier is typically one level up, unless already at 400
+      const highScoreBuffer = Math.min(needScore + 20, 100); // Add buffer for high estimate
+      const highTier = getTierFromScore(highScoreBuffer, seriesPrefix);
+      
+      // If both tiers are the same, that's a confident recommendation
+      return { 
+        lowTier: baseTier, 
+        highTier: highTier === baseTier ? baseTier : highTier, 
+        series, 
+        recommendedSeries 
+      };
     };
     
-    const recommendedTier = getRecommendedTier(monthlyLow, monthlyHigh, competition);
+    const recommendedTier = getRecommendedTier();
 
     return {
       monthlyLow,
