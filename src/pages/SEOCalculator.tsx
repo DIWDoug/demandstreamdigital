@@ -407,12 +407,22 @@ const SEOCalculator = () => {
       else if (currentRankings === "11-30") needScore += 5;
       else needScore += 0; // already top10 = less work needed
       
-      // Pages needing optimization (0-12 points)
-      // Important but not as critical as rankings/aggressiveness
-      if (pages === "50+") needScore += 12;
-      else if (pages === "26-50") needScore += 8;
-      else if (pages === "11-25") needScore += 4;
-      else needScore += 0; // 1-10 pages is manageable
+      // Pages needing optimization - THIS ENFORCES MINIMUM TIERS
+      // 1-10 pages: Min Tier 100 (no floor needed)
+      // 11-25 pages: Min Tier 200 (23+ points needed)
+      // 26-50 pages: Min Tier 300 (43+ points needed)
+      // 50+ pages: Min Tier 400 (63+ points needed)
+      let pageMinScore = 0;
+      if (pages === "50+") pageMinScore = 63; // Forces Tier 400
+      else if (pages === "26-50") pageMinScore = 43; // Forces Tier 300
+      else if (pages === "11-25") pageMinScore = 23; // Forces Tier 200
+      else pageMinScore = 0; // 1-10 pages allows Tier 100
+      
+      // Add incremental points for pages (on top of minimum)
+      if (pages === "50+") needScore += 15;
+      else if (pages === "26-50") needScore += 10;
+      else if (pages === "11-25") needScore += 5;
+      else needScore += 0;
       
       // Website age - foundation work needed (0-10 points)
       if (websiteAge === "new") needScore += 10;
@@ -433,8 +443,8 @@ const SEOCalculator = () => {
       else if (locations === "6-20") needScore += 2;
       else needScore += 0; // 1-5 locations is standard
       
-      // Ensure score stays in reasonable bounds
-      needScore = Math.max(0, Math.min(100, needScore));
+      // Ensure score stays in reasonable bounds, BUT enforce page minimum floor
+      needScore = Math.max(pageMinScore, Math.min(100, needScore));
       
       // Map score to tier with refined thresholds
       // 0-22: Tier 100 (maintenance/light optimization)
