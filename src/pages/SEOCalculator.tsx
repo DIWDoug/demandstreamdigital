@@ -352,13 +352,63 @@ const SEOCalculator = () => {
       { label: "Current Rankings", value: currentRankings, impact: (rankMult.low + rankMult.high) / 2, color: rankMult.low > 1.3 ? "bg-red-500" : rankMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" }
     ];
 
+    // Determine recommended package tier based on estimate range
+    const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string } => {
+      // HC Series: HC 100 = $1,319, HC 200 = $1,539, HC 300 = $1,759, HC 400 = $1,979
+      // LC Series: LC 100 = $605, LC 200 = $825, LC 300 = $1,045, LC 400 = $1,265
+      
+      const hcTiers = [
+        { name: "HC 100", min: 1319, max: 1538 },
+        { name: "HC 200", min: 1539, max: 1758 },
+        { name: "HC 300", min: 1759, max: 1978 },
+        { name: "HC 400", min: 1979, max: Infinity }
+      ];
+      
+      const lcTiers = [
+        { name: "LC 100", min: 605, max: 824 },
+        { name: "LC 200", min: 825, max: 1044 },
+        { name: "LC 300", min: 1045, max: 1264 },
+        { name: "LC 400", min: 1265, max: Infinity }
+      ];
+      
+      const tiers = comp === "high" ? hcTiers : lcTiers;
+      const series = comp === "high" ? "High Competition" : "Low Competition";
+      
+      // Find tier for low estimate
+      let lowTier = tiers[0].name;
+      for (const tier of tiers) {
+        if (low >= tier.min && low <= tier.max) {
+          lowTier = tier.name;
+          break;
+        } else if (low > tier.max) {
+          lowTier = tier.name;
+        }
+      }
+      
+      // Find tier for high estimate
+      let highTier = tiers[tiers.length - 1].name;
+      for (const tier of tiers) {
+        if (high >= tier.min && high <= tier.max) {
+          highTier = tier.name;
+          break;
+        } else if (high > tier.max) {
+          highTier = tier.name;
+        }
+      }
+      
+      return { lowTier, highTier, series };
+    };
+    
+    const recommendedTier = getRecommendedTier(monthlyLow, monthlyHigh, competition);
+
     return {
       monthlyLow,
       monthlyHigh,
       annualLow: monthlyLow * 12,
       annualHigh: monthlyHigh * 12,
       timelineMonths,
-      factors
+      factors,
+      recommendedTier
     };
   }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete]);
 
@@ -745,6 +795,26 @@ const SEOCalculator = () => {
                             <div className="flex justify-between mt-2">
                               <span className="text-xs text-text-muted/60">40% margin</span>
                               <span className="text-xs text-text-muted/60">150% margin</span>
+                            </div>
+                          </div>
+
+                          {/* Recommended Package Tier */}
+                          <div className="bg-gradient-to-r from-cta/10 to-accent-blue/10 rounded-lg p-4 border border-cta/30">
+                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">Recommended Package</p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-lg font-bold text-cta">
+                                {estimate.recommendedTier.lowTier === estimate.recommendedTier.highTier 
+                                  ? estimate.recommendedTier.lowTier 
+                                  : `${estimate.recommendedTier.lowTier} – ${estimate.recommendedTier.highTier}`}
+                              </span>
+                              <span className={cn(
+                                "text-xs px-2 py-1 rounded-full",
+                                competition === "high" ? "bg-destructive/10 text-destructive" : 
+                                competition === "medium" ? "bg-yellow-500/10 text-yellow-500" : 
+                                "bg-green-500/10 text-green-500"
+                              )}>
+                                {estimate.recommendedTier.series}
+                              </span>
                             </div>
                           </div>
 
