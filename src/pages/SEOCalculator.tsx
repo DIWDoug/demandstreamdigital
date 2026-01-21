@@ -181,118 +181,132 @@ const SEOCalculator = () => {
   const estimate = useMemo(() => {
     if (!isComplete) return null;
 
-    // Base cost by competition level - wider spread for meaningful differences
+    // Package-based pricing aligned to HC/LC tiers
+    // LC (Low Competition): $605 - $1,265 (LC 100 to LC 400)
+    // MC (Medium Competition): $935 - $1,620 (interpolated between LC and HC)
+    // HC (High Competition): $1,318.90 - $1,978.90 (HC 100 to HC 400)
     const baseByCompetition: Record<string, { low: number; high: number }> = {
-      "low": { low: 400, high: 650 },
-      "medium": { low: 650, high: 1000 },
-      "high": { low: 1100, high: 1700 }
+      "low": { low: 605, high: 1265 },      // LC series
+      "medium": { low: 935, high: 1620 },   // Interpolated tier
+      "high": { low: 1319, high: 1979 }     // HC series (rounded from $1,318.90 / $1,978.90)
     };
 
-    // Minimum floors by competition and metro tier
-    // High competition in larger markets needs realistic minimums
+    // Minimum floors aligned to package tiers
+    // High competition starts at HC 100 baseline regardless of market
+    // Low competition starts at LC 100 baseline
     const getMinimumFloor = (comp: string, metroTier: string | null): number => {
       if (comp === "high") {
-        if (metroTier === "mega") return 3500;
-        if (metroTier === "major") return 2800;
-        if (metroTier === "large") return 2200;
-        if (metroTier === "medium") return 1700;
-        return 1300; // small or no metro selected
+        // HC series minimum is $1,318.90 (HC 100)
+        // Larger metros push toward higher tiers
+        if (metroTier === "mega") return 1759;   // HC 300
+        if (metroTier === "major") return 1539;  // HC 200
+        if (metroTier === "large") return 1319;  // HC 100
+        if (metroTier === "medium") return 1319; // HC 100
+        return 1319; // HC 100 base
       }
       if (comp === "medium") {
-        if (metroTier === "mega") return 2200;
-        if (metroTier === "major") return 1700;
-        if (metroTier === "large") return 1300;
-        if (metroTier === "medium") return 1000;
-        return 750;
+        // Medium competition uses interpolated minimums
+        if (metroTier === "mega") return 1350;
+        if (metroTier === "major") return 1150;
+        if (metroTier === "large") return 1045;
+        if (metroTier === "medium") return 935;
+        return 825;
       }
-      // Low competition
-      if (metroTier === "mega") return 1200;
-      if (metroTier === "major") return 900;
-      if (metroTier === "large") return 700;
-      return 500;
+      // LC series minimum is $605 (LC 100)
+      if (metroTier === "mega") return 1045;   // LC 300
+      if (metroTier === "major") return 825;   // LC 200
+      if (metroTier === "large") return 605;   // LC 100
+      return 605; // LC 100 base
     };
 
-    const base = baseByCompetition[competition] || { low: 500, high: 750 };
+    const base = baseByCompetition[competition] || { low: 605, high: 1265 };
     let baseLow = base.low;
     let baseHigh = base.high;
 
-    // Location multiplier - more aggressive scaling for multi-location
+    // Location multiplier - multi-location campaigns scale up
     const locationMultipliers: Record<string, { low: number; high: number }> = {
-      "none": { low: 0.8, high: 0.85 },
-      "1-5": { low: 1, high: 1.15 },
-      "6-20": { low: 1.6, high: 1.9 },
-      "21-50": { low: 2.5, high: 3.0 },
-      "50+": { low: 4.0, high: 5.5 }
+      "none": { low: 0.95, high: 1.0 },
+      "1-5": { low: 1, high: 1.1 },
+      "6-20": { low: 1.4, high: 1.6 },
+      "21-50": { low: 2.0, high: 2.4 },
+      "50+": { low: 3.0, high: 4.0 }
     };
 
-    // Audience multiplier - larger spread
+    // Audience multiplier - regional/national adds complexity
     const audienceMultipliers: Record<string, { low: number; high: number }> = {
       "local": { low: 1, high: 1 },
-      "regional": { low: 1.4, high: 1.6 },
-      "national": { low: 2.0, high: 2.5 },
-      "global": { low: 2.8, high: 3.5 }
+      "regional": { low: 1.2, high: 1.35 },
+      "national": { low: 1.6, high: 1.9 },
+      "global": { low: 2.0, high: 2.5 }
     };
 
-    // Aggressiveness multiplier - more impactful spread
+    // Aggressiveness multiplier - affects tier selection within series
     const aggressivenessMultipliers: Record<string, { low: number; high: number }> = {
-      "steady": { low: 0.85, high: 0.9 },
-      "moderate": { low: 1.15, high: 1.3 },
-      "aggressive": { low: 1.6, high: 1.9 }
+      "steady": { low: 0.9, high: 0.95 },     // Stays closer to 100-level
+      "moderate": { low: 1.0, high: 1.1 },    // Mid-tier (200-300)
+      "aggressive": { low: 1.15, high: 1.3 }  // Pushes toward 400-level
     };
 
-    // Pages multiplier - site complexity matters more
+    // Pages multiplier - site complexity
     const pagesMultipliers: Record<string, { low: number; high: number }> = {
-      "1-10": { low: 0.9, high: 0.95 },
-      "11-25": { low: 1.1, high: 1.2 },
-      "26-50": { low: 1.35, high: 1.5 },
-      "50+": { low: 1.6, high: 1.85 }
+      "1-10": { low: 0.95, high: 1.0 },
+      "11-25": { low: 1.0, high: 1.1 },
+      "26-50": { low: 1.1, high: 1.2 },
+      "50+": { low: 1.2, high: 1.35 }
     };
 
-    // Website age multiplier (newer = more work needed)
+    // Website age multiplier (newer = more foundation work)
     const ageMultipliers: Record<string, { low: number; high: number }> = {
-      "new": { low: 1.3, high: 1.45 },
-      "1-3": { low: 1.1, high: 1.2 },
+      "new": { low: 1.1, high: 1.2 },
+      "1-3": { low: 1.0, high: 1.05 },
       "3+": { low: 0.95, high: 1.0 }
     };
 
-    // Rankings multiplier (worse rankings = more work)
+    // Rankings multiplier (worse rankings = more catch-up work)
     const rankingsMultipliers: Record<string, { low: number; high: number }> = {
-      "top10": { low: 0.9, high: 0.95 },
-      "11-30": { low: 1.1, high: 1.2 },
-      "31-100": { low: 1.3, high: 1.45 },
-      "100+": { low: 1.5, high: 1.7 }
+      "top10": { low: 0.95, high: 1.0 },
+      "11-30": { low: 1.0, high: 1.1 },
+      "31-100": { low: 1.1, high: 1.2 },
+      "100+": { low: 1.2, high: 1.35 }
     };
 
-    // Metro tier multiplier - much more aggressive for high competition
+    // Metro tier multiplier - larger metros require more effort
     const getMetroMultiplier = (comp: string, tier: string | null): number => {
       if (!tier) return 1;
       
-      // High competition industries are significantly more affected by metro size
+      // High competition industries scale more with metro size
       if (comp === "high") {
         const highCompTiers: Record<string, number> = {
-          small: 0.8,
-          medium: 1.1,
-          large: 1.45,
-          major: 1.9,
-          mega: 2.5
+          small: 0.9,
+          medium: 1.0,
+          large: 1.1,
+          major: 1.25,
+          mega: 1.4
         };
         return highCompTiers[tier] || 1;
       }
       
-      // Medium competition has moderate metro impact
+      // Medium competition
       if (comp === "medium") {
         const medCompTiers: Record<string, number> = {
-          small: 0.85,
-          medium: 1.05,
-          large: 1.3,
-          major: 1.6,
-          mega: 2.0
+          small: 0.9,
+          medium: 1.0,
+          large: 1.1,
+          major: 1.2,
+          mega: 1.35
         };
         return medCompTiers[tier] || 1;
       }
       
-      // Low competition uses standard tier multipliers (still meaningful)
-      return tierMultipliers[tier as keyof typeof tierMultipliers] || 1;
+      // Low competition - still affected but less dramatically
+      const lowCompTiers: Record<string, number> = {
+        small: 0.9,
+        medium: 1.0,
+        large: 1.05,
+        major: 1.15,
+        mega: 1.25
+      };
+      return lowCompTiers[tier] || 1;
     };
 
     const metroTier = selectedMetro?.tier || null;
@@ -315,7 +329,7 @@ const SEOCalculator = () => {
 
     // Enforce minimum floors based on competition and metro
     monthlyLow = Math.max(monthlyLow, minimumFloor);
-    monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.4 / 50) * 50);
+    monthlyHigh = Math.max(monthlyHigh, Math.round(minimumFloor * 1.3 / 50) * 50);
 
     // Estimate timeline based on competition and rankings
     let timelineMonths = 6;
