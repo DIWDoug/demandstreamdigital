@@ -182,42 +182,39 @@ const SEOCalculator = () => {
   const estimate = useMemo(() => {
     if (!isComplete) return null;
 
-    // Package-based pricing aligned to HC/LC tiers
-    // LC (Low Competition): $605 - $1,265 (LC 100 to LC 400)
-    // MC (Medium Competition): $935 - $1,620 (interpolated between LC and HC)
-    // HC (High Competition): $1,318.90 - $1,978.90 (HC 100 to HC 400)
+    // Package-based pricing aligned to HC OEM tiers
+    // Starter: $650-$975, Professional: $975-$1,300, Premium: $1,300-$1,950, Elite: $1,950-$2,600
+    // Low competition uses lower end, High competition uses full range
     const baseByCompetition: Record<string, { low: number; high: number }> = {
-      "low": { low: 605, high: 1265 },      // LC series
-      "medium": { low: 935, high: 1620 },   // Interpolated tier
-      "high": { low: 1319, high: 1979 }     // HC series (rounded from $1,318.90 / $1,978.90)
+      "low": { low: 650, high: 1300 },      // Starter to Professional
+      "medium": { low: 975, high: 1950 },   // Professional to Premium
+      "high": { low: 1300, high: 2600 }     // Premium to Elite
     };
 
-    // Minimum floors aligned to package tiers
-    // High competition starts at HC 100 baseline regardless of market
-    // Low competition starts at LC 100 baseline
+    // Minimum floors aligned to HC OEM tiers
+    // Starter: $650, Professional: $975, Premium: $1,300, Elite: $1,950
     const getMinimumFloor = (comp: string, metroTier: string | null): number => {
       if (comp === "high") {
-        // HC series minimum is $1,318.90 (HC 100)
-        // Larger metros push toward higher tiers
-        if (metroTier === "mega") return 1759;   // HC 300
-        if (metroTier === "major") return 1539;  // HC 200
-        if (metroTier === "large") return 1319;  // HC 100
-        if (metroTier === "medium") return 1319; // HC 100
-        return 1319; // HC 100 base
+        // High competition starts at Premium tier minimum
+        if (metroTier === "mega") return 1950;   // Elite
+        if (metroTier === "major") return 1550;  // Premium-Elite
+        if (metroTier === "large") return 1300;  // Premium
+        if (metroTier === "medium") return 1300; // Premium
+        return 1300; // Premium base
       }
       if (comp === "medium") {
-        // Medium competition uses interpolated minimums
-        if (metroTier === "mega") return 1350;
-        if (metroTier === "major") return 1150;
-        if (metroTier === "large") return 1045;
-        if (metroTier === "medium") return 935;
-        return 825;
+        // Medium competition uses Professional-Premium range
+        if (metroTier === "mega") return 1300;
+        if (metroTier === "major") return 1100;
+        if (metroTier === "large") return 975;
+        if (metroTier === "medium") return 975;
+        return 975;
       }
-      // LC series minimum is $605 (LC 100)
-      if (metroTier === "mega") return 1045;   // LC 300
-      if (metroTier === "major") return 825;   // LC 200
-      if (metroTier === "large") return 605;   // LC 100
-      return 605; // LC 100 base
+      // Low competition uses Starter-Professional range
+      if (metroTier === "mega") return 975;    // Professional
+      if (metroTier === "major") return 800;   // Starter+
+      if (metroTier === "large") return 650;   // Starter
+      return 650; // Starter base
     };
 
     const base = baseByCompetition[competition] || { low: 605, high: 1265 };
@@ -355,25 +352,16 @@ const SEOCalculator = () => {
 
     // Determine recommended package tier based on estimate range
     const getRecommendedTier = (low: number, high: number, comp: string): { lowTier: string; highTier: string; series: string } => {
-      // HC Series: HC 100 = $1,319, HC 200 = $1,539, HC 300 = $1,759, HC 400 = $1,979
-      // LC Series: LC 100 = $605, LC 200 = $825, LC 300 = $1,045, LC 400 = $1,265
+      // OEM Tiers: Starter ($650-$975), Professional ($975-$1,300), Premium ($1,300-$1,950), Elite ($1,950-$2,600)
       
-      const hcTiers = [
-        { name: "HC 100", min: 1319, max: 1538 },
-        { name: "HC 200", min: 1539, max: 1758 },
-        { name: "HC 300", min: 1759, max: 1978 },
-        { name: "HC 400", min: 1979, max: Infinity }
+      const tiers = [
+        { name: "Starter", min: 650, max: 974 },
+        { name: "Professional", min: 975, max: 1299 },
+        { name: "Premium", min: 1300, max: 1949 },
+        { name: "Elite", min: 1950, max: Infinity }
       ];
       
-      const lcTiers = [
-        { name: "LC 100", min: 605, max: 824 },
-        { name: "LC 200", min: 825, max: 1044 },
-        { name: "LC 300", min: 1045, max: 1264 },
-        { name: "LC 400", min: 1265, max: Infinity }
-      ];
-      
-      const tiers = comp === "high" ? hcTiers : lcTiers;
-      const series = comp === "high" ? "High Competition" : "Low Competition";
+      const series = comp === "high" ? "High Competition" : comp === "medium" ? "Medium Competition" : "Low Competition";
       
       // Find tier for low estimate
       let lowTier = tiers[0].name;
