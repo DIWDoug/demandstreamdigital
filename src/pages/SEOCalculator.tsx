@@ -819,15 +819,15 @@ const SEOCalculator = () => {
                           {/* Tiered Pricing */}
                           <div className="space-y-2 mb-4">
                             {(pricingSeries === "hc" ? [
-                              { name: "HC 100", cost: 1299.95 },
-                              { name: "HC 200", cost: 1549.95 },
-                              { name: "HC 300", cost: 1749.95 },
-                              { name: "HC 400", cost: 1999.95 }
+                              { name: "HC 100", cost: 1299.95, tooltip: "Foundation tier: On-page SEO, GBP optimization, 2 blog posts/mo, basic citation building, monthly reporting" },
+                              { name: "HC 200", cost: 1549.95, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
+                              { name: "HC 300", cost: 1749.95, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
+                              { name: "HC 400", cost: 1999.95, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
                             ] : [
-                              { name: "LC 100", cost: 599.95 },
-                              { name: "LC 200", cost: 849.95 },
-                              { name: "LC 300", cost: 1049.95 },
-                              { name: "LC 400", cost: 1249.95 }
+                              { name: "LC 100", cost: 599.95, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
+                              { name: "LC 200", cost: 849.95, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
+                              { name: "LC 300", cost: 1049.95, tooltip: "Acceleration tier: Everything in 200 + 3 blog posts/mo, link building (3-4 links/mo), schema markup" },
+                              { name: "LC 400", cost: 1249.95, tooltip: "Domination tier: Everything in 300 + 4+ blog posts/mo, enhanced link building (5+ links/mo), conversion optimization" }
                             ]).map((tier, i) => {
                               // Apply CSM uplift if enabled - round to nearest .95
                               const baseCost = includeCSM 
@@ -845,8 +845,20 @@ const SEOCalculator = () => {
                                     isRecommended ? "border-cta/40" : "border-border/30"
                                   )}
                                 >
-                                  <div>
+                                  <div className="flex items-center gap-1.5">
                                     <p className={cn("font-medium text-sm", isRecommended ? "text-cta" : "text-foreground")}>{tier.name}</p>
+                                    <TooltipProvider delayDuration={0}>
+                                      <Tooltip>
+                                        <TooltipTrigger asChild>
+                                          <button type="button" className="text-text-muted hover:text-accent-blue transition-colors">
+                                            <Info className="h-3 w-3" />
+                                          </button>
+                                        </TooltipTrigger>
+                                        <TooltipContent side="top" className="max-w-xs bg-surface-elevated border-border/50 text-foreground z-50">
+                                          <p className="text-xs font-body">{tier.tooltip}</p>
+                                        </TooltipContent>
+                                      </Tooltip>
+                                    </TooltipProvider>
                                   </div>
                                   <p className="text-sm font-semibold text-accent-blue text-right self-center">
                                     ${baseCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
