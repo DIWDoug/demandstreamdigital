@@ -800,7 +800,7 @@ const SEOCalculator = () => {
                               value={[clientHourlyRate]}
                               onValueChange={(value) => setClientHourlyRate(value[0])}
                               min={90}
-                              max={180}
+                              max={185}
                               step={5}
                               className="w-full"
                             />
