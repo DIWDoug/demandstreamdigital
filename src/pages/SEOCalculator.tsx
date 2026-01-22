@@ -1078,6 +1078,69 @@ const SEOCalculator = () => {
                             </div>
                           </div>
 
+                          {/* Why You're In This Series - Justification Block */}
+                          <div className={cn(
+                            "rounded-lg p-4 border mt-4",
+                            estimate.recommendedTier.recommendedSeries === "hc" 
+                              ? "bg-destructive/5 border-destructive/20"
+                              : estimate.recommendedTier.recommendedSeries === "mc"
+                              ? "bg-amber-500/5 border-amber-500/20"
+                              : "bg-emerald-500/5 border-emerald-500/20"
+                          )}>
+                            <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+                              Why {estimate.recommendedTier.recommendedSeries.toUpperCase()} Series?
+                            </p>
+                            <p className="text-sm text-text-secondary mb-3">
+                              {estimate.recommendedTier.recommendedSeries === "hc" ? (
+                                <>High competition markets are <span className="text-destructive font-medium">saturated and unforgiving</span>. Rankings are actively defended by well-funded competitors, requiring sustained link velocity, aggressive content creation, and continuous competitive pressure.</>
+                              ) : estimate.recommendedTier.recommendedSeries === "mc" ? (
+                                <>Medium competition markets are <span className="text-amber-500 font-medium">active but winnable</span>. Competitors invest inconsistently, creating opportunities for consistent effort to build and hold position over time.</>
+                              ) : (
+                                <>Low competition markets are <span className="text-emerald-500 font-medium">stable and forgiving</span>. Foundational work is enough to earn and maintain visibility with relatively few competitors actively investing in SEO.</>
+                              )}
+                            </p>
+                            
+                            {/* Series-specific factors that triggered this recommendation */}
+                            <div className="space-y-1.5">
+                              {competition === "high" && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-destructive" />
+                                  <span className="text-text-muted">Industry marked as high competition</span>
+                                </div>
+                              )}
+                              {competition === "medium" && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                  <span className="text-text-muted">Industry marked as medium competition</span>
+                                </div>
+                              )}
+                              {competition === "low" && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                                  <span className="text-text-muted">Industry marked as low competition</span>
+                                </div>
+                              )}
+                              {selectedMetro && (selectedMetro.tier === "mega" || selectedMetro.tier === "major") && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                                  <span className="text-text-muted">{selectedMetro.name} is a {selectedMetro.tier} metro (+competition)</span>
+                                </div>
+                              )}
+                              {aggressiveness === "aggressive" && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                                  <span className="text-text-muted">Aggressive growth goals increase tier requirement</span>
+                                </div>
+                              )}
+                              {(pages === "26-50" || pages === "50+") && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
+                                  <span className="text-text-muted">{pages} pages requires higher tier for proper optimization</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
                           {/* Score Breakdown Debug Panel */}
                           <details className="mt-4 group">
                             <summary className="flex items-center gap-2 cursor-pointer text-xs font-medium text-text-muted hover:text-foreground transition-colors select-none">

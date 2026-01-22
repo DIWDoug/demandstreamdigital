@@ -1,13 +1,65 @@
-import { CheckCircle, XCircle, DollarSign } from "lucide-react";
+import { CheckCircle, XCircle, DollarSign, Shield, Layers, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const PricingComparisonTable = () => {
+  // SEO Series Pricing - LC, MC, HC with all 4 tiers
+  const seriesPricing = {
+    lc: [
+      { tier: "LC 100", cost: 604 },
+      { tier: "LC 200", cost: 824 },
+      { tier: "LC 300", cost: 1044 },
+      { tier: "LC 400", cost: 1264 }
+    ],
+    mc: [
+      { tier: "MC 100", cost: 962 },
+      { tier: "MC 200", cost: 1182 },
+      { tier: "MC 300", cost: 1402 },
+      { tier: "MC 400", cost: 1622 }
+    ],
+    hc: [
+      { tier: "HC 100", cost: 1319 },
+      { tier: "HC 200", cost: 1539 },
+      { tier: "HC 300", cost: 1759 },
+      { tier: "HC 400", cost: 1979 }
+    ]
+  };
+
+  const seriesInfo = [
+    {
+      key: "lc",
+      name: "Low Competition (LC)",
+      color: "emerald",
+      icon: Shield,
+      description: "Stable, lightly contested markets with minimal competitive pressure",
+      industries: ["Landscaping", "Cleaning", "Pool Service", "Florists", "Tutoring"],
+      characteristics: ["Low SERP saturation", "Few authoritative competitors", "Steady work maintains rankings"]
+    },
+    {
+      key: "mc",
+      name: "Medium Competition (MC)",
+      color: "amber",
+      icon: Layers,
+      description: "Active markets requiring consistent effort to win and hold position",
+      industries: ["HVAC", "Plumbing", "Roofing", "Auto Repair", "Restaurants"],
+      characteristics: ["Competitors investing inconsistently", "Rankings move with effort", "Results compound over time"]
+    },
+    {
+      key: "hc",
+      name: "High Competition (HC)",
+      color: "destructive",
+      icon: Target,
+      description: "Saturated, high-stakes markets requiring aggressive, sustained investment",
+      industries: ["Legal", "Medical", "Dental", "Med Spa", "Real Estate"],
+      characteristics: ["High CPCs and strong demand", "Continuous competitive pressure", "Rankings need active defense"]
+    }
+  ];
+
   const comparisonData = [
     {
       service: "Local SEO (per location)",
       inHouse: "$4,000 - $8,000",
       typicalAgency: "$1,500 - $3,000",
-      whiteLabel: "$650 - $1,500",
+      whiteLabel: "$604 - $1,979",
       notes: "Includes technical SEO, content, citations, link building"
     },
     {
@@ -60,8 +112,111 @@ const PricingComparisonTable = () => {
 
   return (
     <div className="space-y-12">
+      {/* SEO Series Pricing Matrix */}
+      <div className="text-center mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-4">
+          <DollarSign className="h-4 w-4" />
+          Competition-Based Pricing
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          SEO Series <span className="text-accent-blue">Pricing Matrix</span>
+        </h2>
+        <p className="text-text-secondary max-w-2xl mx-auto">
+          Pricing aligned to market competition and execution intensity. Choose the series that matches your client's competitive reality.
+        </p>
+      </div>
+
+      {/* Series Cards with Pricing */}
+      <div className="grid md:grid-cols-3 gap-6">
+        {seriesInfo.map((series) => {
+          const Icon = series.icon;
+          const colorClasses = {
+            emerald: {
+              bg: "bg-emerald-500/10",
+              border: "border-emerald-500/30",
+              text: "text-emerald-500",
+              badge: "bg-emerald-500/20"
+            },
+            amber: {
+              bg: "bg-amber-500/10",
+              border: "border-amber-500/30",
+              text: "text-amber-500",
+              badge: "bg-amber-500/20"
+            },
+            destructive: {
+              bg: "bg-destructive/10",
+              border: "border-destructive/30",
+              text: "text-destructive",
+              badge: "bg-destructive/20"
+            }
+          }[series.color];
+
+          return (
+            <div 
+              key={series.key}
+              className={cn(
+                "rounded-2xl p-6 border",
+                colorClasses?.bg,
+                colorClasses?.border
+              )}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className={cn("p-2 rounded-lg", colorClasses?.badge)}>
+                  <Icon className={cn("h-5 w-5", colorClasses?.text)} />
+                </div>
+                <h3 className={cn("font-bold", colorClasses?.text)}>{series.name}</h3>
+              </div>
+              
+              <p className="text-sm text-text-secondary mb-4">{series.description}</p>
+              
+              {/* Tier Pricing */}
+              <div className="space-y-2 mb-4">
+                {seriesPricing[series.key as keyof typeof seriesPricing].map((tier) => (
+                  <div key={tier.tier} className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-surface-dark/50">
+                    <span className="text-sm font-medium text-foreground">{tier.tier}</span>
+                    <span className={cn("text-sm font-bold", colorClasses?.text)}>
+                      ${tier.cost.toLocaleString()}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Industries */}
+              <div className="mb-3">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2">Typical Industries</p>
+                <div className="flex flex-wrap gap-1">
+                  {series.industries.map((ind) => (
+                    <span key={ind} className="text-xs px-2 py-0.5 rounded-full bg-surface-dark text-text-secondary">
+                      {ind}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Characteristics */}
+              <ul className="space-y-1">
+                {series.characteristics.map((char, i) => (
+                  <li key={i} className="text-xs text-text-muted flex items-start gap-2">
+                    <span className={colorClasses?.text}>•</span>
+                    {char}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* CSM Add-on Note */}
+      <div className="bg-surface-elevated rounded-xl p-4 border border-border/30 text-center">
+        <p className="text-sm text-text-secondary">
+          <span className="font-semibold text-foreground">Client Success Manager:</span>{" "}
+          Add $150/mo to any tier for dedicated account management and enhanced communication.
+        </p>
+      </div>
+
       {/* Pricing Comparison Header */}
-      <div className="text-center">
+      <div className="text-center pt-8">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-4">
           <DollarSign className="h-4 w-4" />
           Pricing Comparison
@@ -181,25 +336,25 @@ const PricingComparisonTable = () => {
           <div>
             <h3 className="text-xl font-bold text-foreground mb-3">Your Margin Opportunity</h3>
             <p className="text-text-secondary mb-4">
-              Mark up our white-label pricing by 75-150% and still undercut what clients would pay at a typical agency. You keep the margin. We handle the work.
+              Mark up our white-label pricing by 40-150% and still undercut what clients would pay at a typical agency. You keep the margin. We handle the work.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
-                <p className="text-xs text-text-muted mb-1">Example: Local SEO</p>
-                <p className="text-lg font-bold text-foreground">Your Cost: $650</p>
-                <p className="text-sm text-cta">Sell at: $1,625</p>
-                <p className="text-xs text-green-500 mt-1">150% margin</p>
+                <p className="text-xs text-text-muted mb-1">Example: LC 200</p>
+                <p className="text-lg font-bold text-foreground">Your Cost: $824</p>
+                <p className="text-sm text-cta">Sell at: $1,648</p>
+                <p className="text-xs text-green-500 mt-1">100% margin</p>
               </div>
               <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
-                <p className="text-xs text-text-muted mb-1">Example: GBP + Local</p>
-                <p className="text-lg font-bold text-foreground">Your Cost: $950</p>
-                <p className="text-sm text-cta">Sell at: $2,185</p>
-                <p className="text-xs text-green-500 mt-1">130% margin</p>
+                <p className="text-xs text-text-muted mb-1">Example: HC 300</p>
+                <p className="text-lg font-bold text-foreground">Your Cost: $1,759</p>
+                <p className="text-sm text-cta">Sell at: $3,518</p>
+                <p className="text-xs text-green-500 mt-1">100% margin</p>
               </div>
             </div>
           </div>
           <div className="text-center md:text-right">
-            <p className="text-4xl md:text-5xl font-bold text-cta mb-2">75-150%</p>
+            <p className="text-4xl md:text-5xl font-bold text-cta mb-2">40-150%</p>
             <p className="text-text-secondary">Typical agency partner margins</p>
             <p className="text-sm text-text-muted mt-4">
               Your clients get better pricing than retail agencies. You keep healthy margins. Everyone wins.
