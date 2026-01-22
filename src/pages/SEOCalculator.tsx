@@ -873,18 +873,6 @@ const SEOCalculator = () => {
                           <div className="flex gap-2 mb-4">
                             <button
                               type="button"
-                              onClick={() => setPricingSeries("hc")}
-                              className={cn(
-                                "flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all border",
-                                pricingSeries === "hc"
-                                  ? "bg-destructive/10 border-destructive text-destructive"
-                                  : "bg-surface-dark border-border/50 text-text-secondary hover:border-destructive/50"
-                              )}
-                            >
-                              HC Series
-                            </button>
-                            <button
-                              type="button"
                               onClick={() => setPricingSeries("lc")}
                               className={cn(
                                 "flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all border",
@@ -893,7 +881,31 @@ const SEOCalculator = () => {
                                   : "bg-surface-dark border-border/50 text-text-secondary hover:border-emerald-500/50"
                               )}
                             >
-                              LC Series
+                              LC
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setPricingSeries("mc")}
+                              className={cn(
+                                "flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all border",
+                                pricingSeries === "mc"
+                                  ? "bg-amber-500/10 border-amber-500 text-amber-500"
+                                  : "bg-surface-dark border-border/50 text-text-secondary hover:border-amber-500/50"
+                              )}
+                            >
+                              MC
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => setPricingSeries("hc")}
+                              className={cn(
+                                "flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all border",
+                                pricingSeries === "hc"
+                                  ? "bg-destructive/10 border-destructive text-destructive"
+                                  : "bg-surface-dark border-border/50 text-text-secondary hover:border-destructive/50"
+                              )}
+                            >
+                              HC
                             </button>
                           </div>
 
