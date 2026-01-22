@@ -34,95 +34,137 @@ const SEOEducationalContent = () => {
         </p>
       </section>
 
-      {/* Series Comparison Table */}
+      {/* Competition Levels Framework */}
       <section className="bg-surface-elevated rounded-2xl p-8 md:p-12 border border-border/30">
         <div className="flex items-center gap-3 mb-6">
           <div className="p-2 rounded-lg bg-amber-500/10">
             <Layers className="h-5 w-5 text-amber-500" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">LC vs MC vs HC: Pricing Series Explained</h2>
+          <h2 className="text-2xl font-bold text-foreground">Local SEO Competition Levels Explained</h2>
         </div>
-        <p className="text-text-secondary mb-8">
-          We use three pricing series based on market competition intensity. Each series is calibrated to match the resources required—not just the difficulty, but the ongoing pressure and velocity needed to move the needle.
+        <p className="text-text-secondary mb-6">
+          Local SEO pricing and scope are determined by <strong className="text-foreground">market competition and execution intensity</strong>, not business size, emotion, or guesswork. Different markets require different levels of sustained effort to rank, grow, and hold position. This framework ensures fair pricing, clear expectations, and sustainable delivery.
         </p>
 
-        {/* Series Cards */}
-        <div className="grid lg:grid-cols-3 gap-6 mb-8">
+        {/* Three Series Cards */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-10">
           {/* LC Series */}
-          <div className="bg-surface-dark rounded-xl p-6 border border-emerald-500/30">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-semibold">LC Series</span>
-              <span className="text-text-muted text-xs">Low Competition</span>
-            </div>
-            <p className="text-2xl font-bold text-emerald-500 mb-2">$604 - $1,264</p>
-            <p className="text-sm text-text-muted mb-4">Foundation-level resources for markets with minimal saturation</p>
-            <div className="space-y-2 mb-4">
-              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
-              <div className="flex flex-wrap gap-1.5">
-                {["Landscaping", "Cleaning", "Photography", "Florists", "Tutoring", "Pool Service", "Pressure Washing"].map((ind, i) => (
-                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400">{ind}</span>
-                ))}
+          <div className="bg-surface-dark rounded-xl border border-emerald-500/30 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-bold">LC</span>
+                <span className="text-foreground font-semibold">Low Competition</span>
+              </div>
+              <p className="text-2xl font-bold text-emerald-500 mb-2">$604 – $1,264</p>
+              <p className="text-sm text-text-secondary mb-4">
+                Stable, lightly contested, and forgiving. Relatively few competitors are actively investing in SEO, and consistent foundational work is enough to earn and maintain visibility.
+              </p>
+              
+              <div className="space-y-3 mb-4">
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Typical Characteristics</p>
+                  <ul className="space-y-1.5 text-xs text-text-muted">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-emerald-500 mt-0.5 flex-shrink-0" /> Low SERP saturation</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-emerald-500 mt-0.5 flex-shrink-0" /> Few authoritative competitors</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-emerald-500 mt-0.5 flex-shrink-0" /> Slower ranking volatility</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-emerald-500 mt-0.5 flex-shrink-0" /> Minimal backlink competition</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Common Industries</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Landscaping", "Cleaning", "Junk Removal", "Pressure Washing", "Pool Service", "Florists", "Photography", "Tutoring"].map((ind, i) => (
+                      <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400">{ind}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="pt-4 border-t border-border/30 space-y-1.5">
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> 1-2 blog posts/month</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Basic citation building</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Light link building (1-5/mo)</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Standard GBP optimization</p>
+            <div className="p-4 bg-emerald-500/5 border-t border-emerald-500/20">
+              <p className="text-xs text-emerald-400 font-medium">Expectations</p>
+              <p className="text-xs text-text-muted mt-1">Faster initial traction · Lower monthly effort to maintain · Greater ranking stability once momentum is established</p>
             </div>
           </div>
 
           {/* MC Series */}
-          <div className="bg-surface-dark rounded-xl p-6 border border-amber-500/30 ring-1 ring-amber-500/20">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="px-2 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold">MC Series</span>
-              <span className="text-text-muted text-xs">Medium Competition</span>
-            </div>
-            <p className="text-2xl font-bold text-amber-500 mb-2">$962 - $1,622</p>
-            <p className="text-sm text-text-muted mb-4">Balanced intensity for competitive but manageable markets</p>
-            <div className="space-y-2 mb-4">
-              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
-              <div className="flex flex-wrap gap-1.5">
-                {["HVAC", "Plumbing", "Electrical", "Roofing", "Auto Repair", "Restaurants", "Gyms", "Veterinary", "Insurance"].map((ind, i) => (
-                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-amber-500/10 text-amber-400">{ind}</span>
-                ))}
+          <div className="bg-surface-dark rounded-xl border border-amber-500/40 ring-1 ring-amber-500/20 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-bold">MC</span>
+                <span className="text-foreground font-semibold">Medium Competition</span>
+              </div>
+              <p className="text-2xl font-bold text-amber-500 mb-2">$962 – $1,622</p>
+              <p className="text-sm text-text-secondary mb-4">
+                Active, competitive, and winnable with consistency. These markets require real SEO pressure, but not constant escalation.
+              </p>
+              
+              <div className="space-y-3 mb-4">
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Typical Characteristics</p>
+                  <ul className="space-y-1.5 text-xs text-text-muted">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-amber-500 mt-0.5 flex-shrink-0" /> Competitors investing inconsistently</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-amber-500 mt-0.5 flex-shrink-0" /> Some authoritative players, no total dominance</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-amber-500 mt-0.5 flex-shrink-0" /> Rankings move with sustained effort</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-amber-500 mt-0.5 flex-shrink-0" /> Reviews, links, content matter moderately</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Common Industries</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["HVAC", "Plumbing", "Electrical", "Roofing", "Auto Repair", "Towing", "Gyms", "Veterinary", "Restaurants", "Insurance"].map((ind, i) => (
+                      <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400">{ind}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="pt-4 border-t border-border/30 space-y-1.5">
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> 2-4 blog posts/month</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Expanded citation network</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Moderate link building (3-6/mo)</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Consistent GBP posting</p>
+            <div className="p-4 bg-amber-500/5 border-t border-amber-500/20">
+              <p className="text-xs text-amber-400 font-medium">Expectations</p>
+              <p className="text-xs text-text-muted mt-1">Results compound steadily · Rankings require maintenance to hold · Pausing effort can cause gradual regression</p>
             </div>
           </div>
 
           {/* HC Series */}
-          <div className="bg-surface-dark rounded-xl p-6 border border-destructive/30">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="px-2 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-semibold">HC Series</span>
-              <span className="text-text-muted text-xs">High Competition</span>
-            </div>
-            <p className="text-2xl font-bold text-destructive mb-2">$1,319 - $1,979</p>
-            <p className="text-sm text-text-muted mb-4">Maximum resources for saturated, high-stakes markets</p>
-            <div className="space-y-2 mb-4">
-              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
-              <div className="flex flex-wrap gap-1.5">
-                {["Legal", "Medical", "Dental", "Med Spa", "Plastic Surgery", "Chiropractic", "Real Estate", "Mortgage"].map((ind, i) => (
-                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-destructive/10 text-red-400">{ind}</span>
-                ))}
+          <div className="bg-surface-dark rounded-xl border border-destructive/30 overflow-hidden">
+            <div className="p-6">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-2.5 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-bold">HC</span>
+                <span className="text-foreground font-semibold">High Competition</span>
+              </div>
+              <p className="text-2xl font-bold text-destructive mb-2">$1,319 – $1,979</p>
+              <p className="text-sm text-text-secondary mb-4">
+                Saturated, expensive, and unforgiving. Visibility is actively defended by well-funded competitors and rankings shift quickly if pressure drops.
+              </p>
+              
+              <div className="space-y-3 mb-4">
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Typical Characteristics</p>
+                  <ul className="space-y-1.5 text-xs text-text-muted">
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-destructive mt-0.5 flex-shrink-0" /> Saturated Local Pack and organic SERPs</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-destructive mt-0.5 flex-shrink-0" /> High CPCs indicating strong demand</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-destructive mt-0.5 flex-shrink-0" /> Aggressive review and authority competition</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-3 w-3 text-destructive mt-0.5 flex-shrink-0" /> Volatile rankings, continuous pressure</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Common Industries</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Legal", "Medical", "Dental", "Med Spa", "Plastic Surgery", "Real Estate", "Mortgage", "Multi-Location"].map((ind, i) => (
+                      <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-destructive/10 text-red-400">{ind}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="pt-4 border-t border-border/30 space-y-1.5">
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> 4-8+ blog posts/month</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Aggressive citation strategy</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Premium link building (5-10+/mo)</p>
-              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Multi-channel GBP strategy</p>
+            <div className="p-4 bg-destructive/5 border-t border-destructive/20">
+              <p className="text-xs text-destructive font-medium">Expectations</p>
+              <p className="text-xs text-text-muted mt-1">Longer ramp-up periods · Higher ongoing investment · Rankings require continuous defense · Stopping often results in rapid decline</p>
             </div>
           </div>
         </div>
 
         {/* Pricing Comparison Table */}
-        <div className="bg-surface-dark rounded-xl border border-border/30 overflow-hidden">
+        <div className="bg-surface-dark rounded-xl border border-border/30 overflow-hidden mb-8">
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -168,25 +210,64 @@ const SEOEducationalContent = () => {
           </div>
         </div>
 
-        {/* Series Selection Logic */}
-        <div className="mt-8 p-6 bg-gradient-to-br from-accent-blue/5 to-cta/5 rounded-xl border border-accent-blue/20">
-          <h3 className="text-foreground font-semibold mb-3">How We Determine Your Series</h3>
+        {/* Small Town Considerations */}
+        <div className="bg-gradient-to-br from-accent-blue/5 to-cta/5 rounded-xl p-6 border border-accent-blue/20 mb-8">
+          <h3 className="text-foreground font-semibold mb-3 flex items-center gap-2">
+            <MapPin className="h-4 w-4 text-accent-blue" />
+            Small Town Considerations
+          </h3>
           <p className="text-sm text-text-secondary mb-4">
-            The calculator automatically selects the appropriate series based on industry type. However, metro size and growth strategy can override this:
+            Population alone does not determine competition level. <strong className="text-foreground">Market reality does.</strong>
           </p>
-          <div className="grid sm:grid-cols-3 gap-4 text-sm">
-            <div className="flex items-start gap-2">
-              <span className="text-amber-500 mt-0.5">→</span>
-              <span className="text-text-muted">MC industry in a <strong className="text-foreground">mega metro</strong> may warrant HC</span>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
+              <p className="text-xs font-semibold text-emerald-400 mb-2">A normally HC industry may drop one tier if:</p>
+              <ul className="space-y-1.5 text-xs text-text-muted">
+                <li>• Very few real competitors</li>
+                <li>• Competitors have weak reviews, links, and content</li>
+                <li>• CPCs and paid competition are low</li>
+                <li>• Growth goals are steady, not aggressive</li>
+              </ul>
             </div>
-            <div className="flex items-start gap-2">
-              <span className="text-amber-500 mt-0.5">→</span>
-              <span className="text-text-muted"><strong className="text-foreground">Aggressive growth</strong> strategy adds resource requirements</span>
+            <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
+              <p className="text-xs font-semibold text-destructive mb-2">A business remains HC if:</p>
+              <ul className="space-y-1.5 text-xs text-text-muted">
+                <li>• Within commuting distance of a major metro</li>
+                <li>• One or two dominant competitors control visibility</li>
+                <li>• The service is high-ticket and comparison-driven</li>
+                <li>• Aggressive growth is the goal</li>
+              </ul>
             </div>
-            <div className="flex items-start gap-2">
-              <span className="text-amber-500 mt-0.5">→</span>
-              <span className="text-text-muted">Multi-location campaigns require <strong className="text-foreground">higher tier minimums</strong></span>
-            </div>
+          </div>
+          <p className="text-xs text-text-muted mt-4 italic">
+            It is rare for medical or aesthetic services to qualify as LC, even in small towns.
+          </p>
+        </div>
+
+        {/* Non-Negotiable Guardrails */}
+        <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
+          <h3 className="text-foreground font-semibold mb-4 flex items-center gap-2">
+            <Shield className="h-4 w-4 text-cta" />
+            Non-Negotiable Guardrails
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              "Competition level is based on market conditions, not business size",
+              "Aggressive growth goals push clients up a tier",
+              "Major metros increase competition pressure",
+              "Pricing and delivery must align to tier or quality suffers",
+              "Scope outside a tier is additional and not absorbed"
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-2 text-sm text-text-muted">
+                <span className="text-cta mt-0.5">→</span>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 pt-4 border-t border-border/30">
+            <p className="text-sm text-foreground font-medium">
+              Local SEO only works when effort matches competition. This framework ensures that alignment every time.
+            </p>
           </div>
         </div>
       </section>
