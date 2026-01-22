@@ -922,10 +922,10 @@ const SEOCalculator = () => {
                               { name: "HC 300", cost: 1759, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
                               { name: "HC 400", cost: 1979, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
                             ] : pricingSeries === "mc" ? [
-                              { name: "MC 100", cost: 950, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1-2 blog posts/mo, citation building, monthly reporting" },
-                              { name: "MC 200", cost: 1150, tooltip: "Growth tier: Everything in 100 + 3 blog posts/mo, expanded citations, link building (2-3 links/mo), competitor monitoring" },
-                              { name: "MC 300", cost: 1350, tooltip: "Acceleration tier: Everything in 200 + 4 blog posts/mo, link building (4-5 links/mo), schema markup, conversion optimization" },
-                              { name: "MC 400", cost: 1550, tooltip: "Domination tier: Everything in 300 + 5+ blog posts/mo, enhanced link building (6-8 links/mo), multi-location support" }
+                              { name: "MC 100", cost: 962, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1-2 blog posts/mo, citation building, monthly reporting" },
+                              { name: "MC 200", cost: 1182, tooltip: "Growth tier: Everything in 100 + 3 blog posts/mo, expanded citations, link building (2-3 links/mo), competitor monitoring" },
+                              { name: "MC 300", cost: 1402, tooltip: "Acceleration tier: Everything in 200 + 4 blog posts/mo, link building (4-5 links/mo), schema markup, conversion optimization" },
+                              { name: "MC 400", cost: 1622, tooltip: "Domination tier: Everything in 300 + 5+ blog posts/mo, enhanced link building (6-8 links/mo), multi-location support" }
                             ] : [
                               { name: "LC 100", cost: 604, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
                               { name: "LC 200", cost: 824, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
@@ -1212,10 +1212,10 @@ const SEOCalculator = () => {
                               { level: 300, name: "Acceleration", baseCost: includeCSM ? 1759 + 150 : 1759 },
                               { level: 400, name: "Domination", baseCost: includeCSM ? 1979 + 150 : 1979 }
                             ] : pricingSeries === "mc" ? [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? 950 + 150 : 950 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? 1150 + 150 : 1150 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1350 + 150 : 1350 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? 1550 + 150 : 1550 }
+                              { level: 100, name: "Foundation", baseCost: includeCSM ? 962 + 150 : 962 },
+                              { level: 200, name: "Growth", baseCost: includeCSM ? 1182 + 150 : 1182 },
+                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1402 + 150 : 1402 },
+                              { level: 400, name: "Domination", baseCost: includeCSM ? 1622 + 150 : 1622 }
                             ] : [
                               { level: 100, name: "Foundation", baseCost: includeCSM ? 604 + 150 : 604 },
                               { level: 200, name: "Growth", baseCost: includeCSM ? 824 + 150 : 824 },
