@@ -7,7 +7,7 @@ import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 
 import { useState, useMemo } from "react";
-import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, ChevronRight, X, Search, Phone, RotateCcw } from "lucide-react";
+import { Calculator, MapPin, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, ChevronRight, X, Search, Phone, RotateCcw } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -145,7 +145,7 @@ const SEOCalculator = () => {
   const [metroSearch, setMetroSearch] = useState("");
   const [showMetroDropdown, setShowMetroDropdown] = useState(false);
   const [locations, setLocations] = useState<string>("");
-  const [audience, setAudience] = useState<string>("");
+  
   const [aggressiveness, setAggressiveness] = useState<string>("");
   const [pages, setPages] = useState<string>("");
   const [competition, setCompetition] = useState<string>("");
@@ -186,7 +186,7 @@ const SEOCalculator = () => {
           setPricingSeries("hc");
         }
       }
-      if (preset.audience) setAudience(preset.audience);
+      
     }
     setShowIndustryDropdown(false);
   };
@@ -209,7 +209,7 @@ const SEOCalculator = () => {
     setShowMetroDropdown(false);
     setShowIndustryDropdown(false);
     setLocations("");
-    setAudience("");
+    
     setAggressiveness("");
     setPages("");
     setCompetition("");
@@ -223,7 +223,7 @@ const SEOCalculator = () => {
 
   const selectedIndustryName = industryPresets.find(i => i.id === selectedIndustry)?.name || "";
 
-  const isComplete = locations && audience && aggressiveness && pages && competition && websiteAge && currentRankings;
+  const isComplete = locations && aggressiveness && pages && competition && websiteAge && currentRankings;
 
   const estimate = useMemo(() => {
     if (!isComplete) return null;
@@ -276,13 +276,6 @@ const SEOCalculator = () => {
       "50+": { low: 3.0, high: 4.0 }
     };
 
-    // Audience multiplier - regional/national adds complexity
-    const audienceMultipliers: Record<string, { low: number; high: number }> = {
-      "local": { low: 1, high: 1 },
-      "regional": { low: 1.2, high: 1.35 },
-      "national": { low: 1.6, high: 1.9 },
-      "global": { low: 2.0, high: 2.5 }
-    };
 
     // Aggressiveness multiplier - affects tier selection within series
     const aggressivenessMultipliers: Record<string, { low: number; high: number }> = {
@@ -358,14 +351,14 @@ const SEOCalculator = () => {
     const minimumFloor = getMinimumFloor(competition, metroTier);
 
     const locMult = locationMultipliers[locations] || { low: 1, high: 1 };
-    const audMult = audienceMultipliers[audience] || { low: 1, high: 1 };
+    
     const aggMult = aggressivenessMultipliers[aggressiveness] || { low: 1, high: 1 };
     const pageMult = pagesMultipliers[pages] || { low: 1, high: 1 };
     const ageMult = ageMultipliers[websiteAge] || { low: 1, high: 1 };
     const rankMult = rankingsMultipliers[currentRankings] || { low: 1, high: 1 };
 
-    const totalMultLow = locMult.low * audMult.low * aggMult.low * pageMult.low * ageMult.low * rankMult.low * metroMult;
-    const totalMultHigh = locMult.high * audMult.high * aggMult.high * pageMult.high * ageMult.high * rankMult.high * metroMult;
+    const totalMultLow = locMult.low * aggMult.low * pageMult.low * ageMult.low * rankMult.low * metroMult;
+    const totalMultHigh = locMult.high * aggMult.high * pageMult.high * ageMult.high * rankMult.high * metroMult;
 
     // Calculate and apply minimum floor
     let monthlyLow = Math.round(baseLow * totalMultLow / 50) * 50;
@@ -395,7 +388,7 @@ const SEOCalculator = () => {
       { label: "Competition", value: competition, impact: competition === "high" ? 2.6 : competition === "medium" ? 1.5 : 1, color: competition === "high" ? "bg-red-500" : competition === "medium" ? "bg-yellow-500" : "bg-emerald-500" },
       { label: "Metro Size", value: selectedMetro?.tier || "none", impact: metroMult, color: metroMult > 1.5 ? "bg-red-500" : metroMult > 1.2 ? "bg-yellow-500" : "bg-emerald-500" },
       { label: "Locations", value: locations, impact: (locMult.low + locMult.high) / 2, color: locMult.low > 2 ? "bg-red-500" : locMult.low > 1.3 ? "bg-yellow-500" : "bg-emerald-500" },
-      { label: "Target Audience", value: audience, impact: (audMult.low + audMult.high) / 2, color: audMult.low > 1.5 ? "bg-red-500" : audMult.low > 1.2 ? "bg-yellow-500" : "bg-emerald-500" },
+      
       { label: "Aggressiveness", value: aggressiveness, impact: (aggMult.low + aggMult.high) / 2, color: aggMult.low > 1.4 ? "bg-red-500" : aggMult.low > 1.1 ? "bg-yellow-500" : "bg-emerald-500" },
       { label: "Site Size", value: pages, impact: (pageMult.low + pageMult.high) / 2, color: pageMult.low > 1.3 ? "bg-red-500" : pageMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" },
       { label: "Website Age", value: websiteAge, impact: (ageMult.low + ageMult.high) / 2, color: ageMult.low > 1.2 ? "bg-red-500" : ageMult.low > 1.05 ? "bg-yellow-500" : "bg-emerald-500" },
@@ -525,7 +518,7 @@ const SEOCalculator = () => {
       factors,
       recommendedTier
     };
-  }, [locations, audience, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete, includeCSM]);
+  }, [locations, aggressiveness, pages, competition, websiteAge, currentRankings, selectedMetro, isComplete, includeCSM]);
 
   return (
     <>
@@ -766,18 +759,6 @@ const SEOCalculator = () => {
                       </div>
                     </QuestionSection>
 
-                    <QuestionSection 
-                      icon={Globe} 
-                      title="Target audience reach?"
-                      tooltip="Local targets a single metro area. Regional spans multiple cities. National and global require significantly more authority building."
-                    >
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                        <SelectButton selected={audience === "local"} onClick={() => setAudience("local")}>Local</SelectButton>
-                        <SelectButton selected={audience === "regional"} onClick={() => setAudience("regional")}>Regional</SelectButton>
-                        <SelectButton selected={audience === "national"} onClick={() => setAudience("national")}>National</SelectButton>
-                        <SelectButton selected={audience === "global"} onClick={() => setAudience("global")}>Global</SelectButton>
-                      </div>
-                    </QuestionSection>
 
                     <QuestionSection 
                       icon={Zap} 
