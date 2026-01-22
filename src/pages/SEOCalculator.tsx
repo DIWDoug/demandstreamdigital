@@ -401,6 +401,7 @@ const SEOCalculator = () => {
       highTier: string; 
       series: string; 
       recommendedSeries: "hc" | "mc" | "lc";
+      wasUpgradedFromLC: boolean;
       scoreBreakdown: {
         total: number;
         rawTotal: number;
@@ -417,6 +418,7 @@ const SEOCalculator = () => {
       // Low competition in large metros gets bumped to MC
       let recommendedSeries: "hc" | "mc" | "lc";
       let series: string;
+      let wasUpgradedFromLC = false;
       
       if (competition === "high") {
         recommendedSeries = "hc";
@@ -428,6 +430,7 @@ const SEOCalculator = () => {
         // Low competition + large market = MC (market size demands more effort)
         recommendedSeries = "mc";
         series = "Low Competition + Large Market";
+        wasUpgradedFromLC = true;
       } else {
         recommendedSeries = "lc";
         series = "Low Competition";
@@ -517,6 +520,7 @@ const SEOCalculator = () => {
         highTier: highTier === baseTier ? baseTier : highTier, 
         series, 
         recommendedSeries,
+        wasUpgradedFromLC,
         scoreBreakdown: {
           total: needScore,
           rawTotal: rawNeedScore,
@@ -1033,13 +1037,22 @@ const SEOCalculator = () => {
                               <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">Recommended Package</p>
                               <span className={cn(
                                 "text-xs px-2 py-1 rounded-full",
-                                competition === "high" ? "bg-destructive/10 text-destructive" : 
-                                competition === "medium" ? "bg-amber-500/10 text-amber-500" : 
+                                estimate.recommendedTier.recommendedSeries === "hc" ? "bg-destructive/10 text-destructive" : 
+                                estimate.recommendedTier.recommendedSeries === "mc" ? "bg-amber-500/10 text-amber-500" : 
                                 "bg-emerald-500/10 text-emerald-500"
                               )}>
                                 {estimate.recommendedTier.series}
                               </span>
                             </div>
+                            {/* Market Size Upgrade Indicator */}
+                            {estimate.recommendedTier.wasUpgradedFromLC && (
+                              <div className="flex items-center gap-2 mb-3 px-2 py-1.5 rounded-md bg-amber-500/10 border border-amber-500/30">
+                                <TrendingUp className="h-3.5 w-3.5 text-amber-500" />
+                                <span className="text-xs text-amber-500 font-medium">
+                                  Upgraded LC → MC due to large market size
+                                </span>
+                              </div>
+                            )}
                             <div className="flex items-center justify-between mb-3">
                               <span className={cn(
                                 "text-lg font-bold",
@@ -1121,10 +1134,18 @@ const SEOCalculator = () => {
                                   <span className="text-text-muted">Industry marked as low competition</span>
                                 </div>
                               )}
-                              {selectedMetro && (selectedMetro.tier === "mega" || selectedMetro.tier === "major") && (
+                              {selectedMetro && (selectedMetro.tier === "mega" || selectedMetro.tier === "major" || selectedMetro.tier === "large") && (
                                 <div className="flex items-center gap-2 text-xs">
                                   <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                                   <span className="text-text-muted">{selectedMetro.name} is a {selectedMetro.tier} metro (+competition)</span>
+                                </div>
+                              )}
+                              {estimate.recommendedTier.wasUpgradedFromLC && (
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                                  <span className="text-text-muted">
+                                    <span className="font-medium text-amber-500">Series upgraded from LC → MC</span> — large metro markets require more consistent effort to maintain visibility
+                                  </span>
                                 </div>
                               )}
                               {aggressiveness === "aggressive" && (
