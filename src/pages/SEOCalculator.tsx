@@ -374,14 +374,14 @@ const SEOCalculator = () => {
       monthlyHigh = monthlyHigh + 150;
     }
 
-    // Estimate timeline based on competition and rankings
-    let timelineMonths = 6;
-    if (competition === "high") timelineMonths += 4;
-    if (competition === "medium") timelineMonths += 2;
-    if (currentRankings === "100+") timelineMonths += 3;
-    if (currentRankings === "31-100") timelineMonths += 2;
-    if (aggressiveness === "steady") timelineMonths += 2;
-    if (metroTier === "mega" || metroTier === "major") timelineMonths += 2;
+    // Estimate timeline based on competition and rankings (generous but realistic)
+    let timelineMonths = 4; // Base timeline
+    if (competition === "high") timelineMonths += 2;
+    else if (competition === "medium") timelineMonths += 1;
+    if (currentRankings === "100+") timelineMonths += 2;
+    else if (currentRankings === "31-100") timelineMonths += 1;
+    if (aggressiveness === "steady") timelineMonths += 1;
+    if (metroTier === "mega" || metroTier === "major") timelineMonths += 1;
 
     // Factor breakdown for visualization
     const factors = [
