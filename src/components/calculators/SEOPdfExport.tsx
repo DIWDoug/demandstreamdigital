@@ -21,7 +21,7 @@ interface EstimateData {
     lowTier: string;
     highTier: string;
     series: string;
-    recommendedSeries: "hc" | "lc";
+    recommendedSeries: "hc" | "mc" | "lc";
   };
 }
 
@@ -212,7 +212,7 @@ export default function SEOPdfExport({
 
         pdf.setTextColor(tier.isRecommended ? 220 : 60, tier.isRecommended ? 80 : 60, tier.isRecommended ? 50 : 60);
         
-        const seriesPrefix = estimate.recommendedTier.recommendedSeries === "hc" ? "HC" : "LC";
+        const seriesPrefix = estimate.recommendedTier.recommendedSeries === "hc" ? "HC" : estimate.recommendedTier.recommendedSeries === "mc" ? "MC" : "LC";
         pdf.text(`${seriesPrefix} ${tier.level}`, margin + 2, yPos);
         pdf.text(tier.name, margin + colWidths[0] + 2, yPos);
         pdf.text(`$${tier.baseCost.toLocaleString()}`, margin + colWidths[0] + colWidths[1] + 2, yPos);
