@@ -298,6 +298,99 @@ const SEOEducationalContent = () => {
         </div>
       </section>
 
+      {/* Organic SEO vs GBP/Maps Rankings */}
+      <section className="bg-gradient-to-br from-amber-500/5 to-cta/5 rounded-2xl p-8 md:p-12 border border-amber-500/20">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 rounded-lg bg-amber-500/10">
+            <Layers className="h-5 w-5 text-amber-500" />
+          </div>
+          <h2 className="text-2xl font-bold text-foreground">Organic SEO vs. GBP/Maps Rankings</h2>
+        </div>
+        <p className="text-text-secondary text-lg mb-6">
+          Organic search rankings and Google Business Profile (Maps) rankings <strong className="text-foreground">operate on different algorithms</strong>. While traditional organic SEO tends to be more predictable and controllable, GBP rankings are influenced by factors that are harder to manipulate—particularly searcher proximity.
+        </p>
+        
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
+          {/* Organic SEO */}
+          <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
+            <h3 className="text-foreground font-semibold mb-4 flex items-center gap-2">
+              <TrendingUp className="h-4 w-4 text-accent-blue" />
+              Organic SEO (Traditional)
+            </h3>
+            <p className="text-sm text-text-secondary mb-4">
+              Organic rankings are influenced by on-page optimization, backlinks, content quality, and technical SEO. These factors are <strong className="text-foreground">directly controllable</strong> and respond predictably to sustained effort.
+            </p>
+            <ul className="space-y-2">
+              {[
+                "Content relevance and depth",
+                "Backlink profile and authority",
+                "Technical site health",
+                "User experience signals",
+                "Keyword optimization"
+              ].map((item, i) => (
+                <li key={i} className="text-sm text-text-muted flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-accent-blue mt-0.5 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* GBP/Maps */}
+          <div className="bg-surface-dark rounded-xl p-6 border border-amber-500/30">
+            <h3 className="text-foreground font-semibold mb-4 flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-amber-500" />
+              GBP/Maps Rankings
+            </h3>
+            <p className="text-sm text-text-secondary mb-4">
+              Maps rankings are governed by <strong className="text-foreground">Proximity, Prominence, and Relevance</strong>. Because proximity to the searcher is a major factor, rankings can vary dramatically based on where someone is searching from.
+            </p>
+            <ul className="space-y-2">
+              {[
+                "Proximity to the searcher (uncontrollable)",
+                "Review quantity and quality",
+                "GBP profile completeness",
+                "Category and service relevance",
+                "Citation consistency"
+              ].map((item, i) => (
+                <li key={i} className="text-sm text-text-muted flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* The Three Pillars */}
+        <div className="bg-surface-dark rounded-xl p-6 border border-border/30 mb-6">
+          <h3 className="text-foreground font-semibold mb-4 text-center">The Three Pillars of GBP Rankings</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="text-center p-4 bg-amber-500/5 rounded-lg border border-amber-500/20">
+              <p className="text-2xl mb-2">📍</p>
+              <p className="text-foreground font-semibold">Proximity</p>
+              <p className="text-xs text-text-muted mt-1">How close the business is to the searcher's location</p>
+            </div>
+            <div className="text-center p-4 bg-amber-500/5 rounded-lg border border-amber-500/20">
+              <p className="text-2xl mb-2">⭐</p>
+              <p className="text-foreground font-semibold">Prominence</p>
+              <p className="text-xs text-text-muted mt-1">How well-known the business is (reviews, links, mentions)</p>
+            </div>
+            <div className="text-center p-4 bg-amber-500/5 rounded-lg border border-amber-500/20">
+              <p className="text-2xl mb-2">🎯</p>
+              <p className="text-foreground font-semibold">Relevance</p>
+              <p className="text-xs text-text-muted mt-1">How well the profile matches the search query</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-surface-elevated rounded-xl p-5 border border-border/30">
+          <p className="text-sm text-text-secondary">
+            <strong className="text-foreground">Key Insight:</strong> While organic SEO efforts do influence local prominence (which helps GBP rankings), the <strong className="text-foreground">proximity factor makes GBP rankings inherently more volatile</strong> and location-dependent. A business can rank #1 in the Local Pack for searchers nearby but not appear at all for someone across town. This is why comprehensive local SEO strategies address both organic and GBP optimization—they work together but require different tactics.
+          </p>
+        </div>
+      </section>
+
       {/* Why Local SEO Matters for Small Businesses */}
       <section className="bg-surface-elevated rounded-2xl p-8 md:p-12 border border-border/30">
         <div className="flex items-center gap-3 mb-6">
