@@ -1,4 +1,4 @@
-import { TrendingUp, Clock, AlertTriangle, DollarSign, Shield, CheckCircle, XCircle, Target, Lightbulb, BarChart3, MapPin } from "lucide-react";
+import { TrendingUp, Clock, AlertTriangle, DollarSign, Shield, CheckCircle, XCircle, Target, Lightbulb, BarChart3, MapPin, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SEOEducationalContent = () => {
@@ -32,6 +32,163 @@ const SEOEducationalContent = () => {
         <p className="text-text-secondary">
           Local SEO pricing varies based on market competition, number of locations, and campaign scope. A single-location plumber in a small town has different needs than a 10-location dental group in a major metro. Our calculator factors in these variables for realistic estimates.
         </p>
+      </section>
+
+      {/* Series Comparison Table */}
+      <section className="bg-surface-elevated rounded-2xl p-8 md:p-12 border border-border/30">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="p-2 rounded-lg bg-amber-500/10">
+            <Layers className="h-5 w-5 text-amber-500" />
+          </div>
+          <h2 className="text-2xl font-bold text-foreground">LC vs MC vs HC: Pricing Series Explained</h2>
+        </div>
+        <p className="text-text-secondary mb-8">
+          We use three pricing series based on market competition intensity. Each series is calibrated to match the resources required—not just the difficulty, but the ongoing pressure and velocity needed to move the needle.
+        </p>
+
+        {/* Series Cards */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-8">
+          {/* LC Series */}
+          <div className="bg-surface-dark rounded-xl p-6 border border-emerald-500/30">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-semibold">LC Series</span>
+              <span className="text-text-muted text-xs">Low Competition</span>
+            </div>
+            <p className="text-2xl font-bold text-emerald-500 mb-2">$604 - $1,264</p>
+            <p className="text-sm text-text-muted mb-4">Foundation-level resources for markets with minimal saturation</p>
+            <div className="space-y-2 mb-4">
+              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
+              <div className="flex flex-wrap gap-1.5">
+                {["Landscaping", "Cleaning", "Photography", "Florists", "Tutoring", "Pool Service", "Pressure Washing"].map((ind, i) => (
+                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400">{ind}</span>
+                ))}
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border/30 space-y-1.5">
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> 1-2 blog posts/month</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Basic citation building</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Light link building (1-5/mo)</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-emerald-500" /> Standard GBP optimization</p>
+            </div>
+          </div>
+
+          {/* MC Series */}
+          <div className="bg-surface-dark rounded-xl p-6 border border-amber-500/30 ring-1 ring-amber-500/20">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-semibold">MC Series</span>
+              <span className="text-text-muted text-xs">Medium Competition</span>
+            </div>
+            <p className="text-2xl font-bold text-amber-500 mb-2">$962 - $1,622</p>
+            <p className="text-sm text-text-muted mb-4">Balanced intensity for competitive but manageable markets</p>
+            <div className="space-y-2 mb-4">
+              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
+              <div className="flex flex-wrap gap-1.5">
+                {["HVAC", "Plumbing", "Electrical", "Roofing", "Auto Repair", "Restaurants", "Gyms", "Veterinary", "Insurance"].map((ind, i) => (
+                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-amber-500/10 text-amber-400">{ind}</span>
+                ))}
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border/30 space-y-1.5">
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> 2-4 blog posts/month</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Expanded citation network</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Moderate link building (3-6/mo)</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-amber-500" /> Consistent GBP posting</p>
+            </div>
+          </div>
+
+          {/* HC Series */}
+          <div className="bg-surface-dark rounded-xl p-6 border border-destructive/30">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-semibold">HC Series</span>
+              <span className="text-text-muted text-xs">High Competition</span>
+            </div>
+            <p className="text-2xl font-bold text-destructive mb-2">$1,319 - $1,979</p>
+            <p className="text-sm text-text-muted mb-4">Maximum resources for saturated, high-stakes markets</p>
+            <div className="space-y-2 mb-4">
+              <p className="text-xs font-semibold text-foreground uppercase tracking-wider">Typical Industries</p>
+              <div className="flex flex-wrap gap-1.5">
+                {["Legal", "Medical", "Dental", "Med Spa", "Plastic Surgery", "Chiropractic", "Real Estate", "Mortgage"].map((ind, i) => (
+                  <span key={i} className="text-xs px-2 py-1 rounded-full bg-destructive/10 text-red-400">{ind}</span>
+                ))}
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border/30 space-y-1.5">
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> 4-8+ blog posts/month</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Aggressive citation strategy</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Premium link building (5-10+/mo)</p>
+              <p className="text-xs text-text-muted flex items-center gap-2"><CheckCircle className="h-3 w-3 text-destructive" /> Multi-channel GBP strategy</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Pricing Comparison Table */}
+        <div className="bg-surface-dark rounded-xl border border-border/30 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border/30 bg-background/50">
+                  <th className="text-left p-4 font-semibold text-foreground">Tier</th>
+                  <th className="text-center p-4 font-semibold text-emerald-500">LC Series</th>
+                  <th className="text-center p-4 font-semibold text-amber-500">MC Series</th>
+                  <th className="text-center p-4 font-semibold text-destructive">HC Series</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-border/20">
+                  <td className="p-4 text-text-muted">100 (Foundation)</td>
+                  <td className="p-4 text-center text-foreground font-medium">$604</td>
+                  <td className="p-4 text-center text-foreground font-medium">$962</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,319</td>
+                </tr>
+                <tr className="border-b border-border/20">
+                  <td className="p-4 text-text-muted">200 (Growth)</td>
+                  <td className="p-4 text-center text-foreground font-medium">$824</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,182</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,539</td>
+                </tr>
+                <tr className="border-b border-border/20">
+                  <td className="p-4 text-text-muted">300 (Acceleration)</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,044</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,402</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,759</td>
+                </tr>
+                <tr>
+                  <td className="p-4 text-text-muted">400 (Domination)</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,264</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,622</td>
+                  <td className="p-4 text-center text-foreground font-medium">$1,979</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="p-4 border-t border-border/30 bg-background/30">
+            <p className="text-xs text-text-muted text-center">
+              All prices are monthly wholesale rates. Add +$150/mo for optional Client Success Manager. MSRP calculated at 40-150% markup.
+            </p>
+          </div>
+        </div>
+
+        {/* Series Selection Logic */}
+        <div className="mt-8 p-6 bg-gradient-to-br from-accent-blue/5 to-cta/5 rounded-xl border border-accent-blue/20">
+          <h3 className="text-foreground font-semibold mb-3">How We Determine Your Series</h3>
+          <p className="text-sm text-text-secondary mb-4">
+            The calculator automatically selects the appropriate series based on industry type. However, metro size and growth strategy can override this:
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">→</span>
+              <span className="text-text-muted">MC industry in a <strong className="text-foreground">mega metro</strong> may warrant HC</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">→</span>
+              <span className="text-text-muted"><strong className="text-foreground">Aggressive growth</strong> strategy adds resource requirements</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-amber-500 mt-0.5">→</span>
+              <span className="text-text-muted">Multi-location campaigns require <strong className="text-foreground">higher tier minimums</strong></span>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* What is Local SEO */}
@@ -227,7 +384,7 @@ const SEOEducationalContent = () => {
           <p className="text-text-secondary text-lg mb-6">
             Local SEO is the perfect white-label service. Small businesses need it, but most agencies lack the bandwidth to execute it in-house. With white-label fulfillment, you capture 40-150% margins while we handle the heavy lifting.
           </p>
-          <div className="grid sm:grid-cols-3 gap-6 mb-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             <div className="text-center">
               <p className="text-3xl font-bold text-cta">$604-$1,979</p>
               <p className="text-sm text-text-muted">Your cost per location</p>
@@ -241,7 +398,7 @@ const SEOEducationalContent = () => {
               <p className="text-sm text-text-muted">Your profit per client</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-accent-blue">+$150/mo</p>
+              <p className="text-3xl font-bold text-amber-500">+$150/mo</p>
               <p className="text-sm text-text-muted">CSM add-on (optional)</p>
             </div>
           </div>
