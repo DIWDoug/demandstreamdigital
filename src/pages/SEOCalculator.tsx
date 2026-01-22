@@ -153,7 +153,7 @@ const SEOCalculator = () => {
   const [currentRankings, setCurrentRankings] = useState<string>("");
   const [clientHourlyRate, setClientHourlyRate] = useState<number>(40);
   const [includeCSM, setIncludeCSM] = useState<boolean>(false);
-  const [pricingSeries, setPricingSeries] = useState<"hc" | "lc">("hc");
+  const [pricingSeries, setPricingSeries] = useState<"hc" | "mc" | "lc">("hc");
   const [tierOverride, setTierOverride] = useState<string | null>(null);
 
   const metroSearchResults = useMemo(() => searchMetros(metroSearch), [metroSearch]);
@@ -161,9 +161,11 @@ const SEOCalculator = () => {
   // Auto-switch pricing series based on competition level
   const handleCompetitionChange = (newCompetition: string) => {
     setCompetition(newCompetition);
-    // Auto-switch to appropriate series
+    // Auto-switch to appropriate series: HC for high, MC for medium, LC for low
     if (newCompetition === "low") {
       setPricingSeries("lc");
+    } else if (newCompetition === "medium") {
+      setPricingSeries("mc");
     } else {
       setPricingSeries("hc");
     }
@@ -175,9 +177,11 @@ const SEOCalculator = () => {
       setSelectedIndustry(industryId);
       if (preset.competition) {
         setCompetition(preset.competition);
-        // Auto-switch series based on preset competition
+        // Auto-switch series based on preset competition: HC for high, MC for medium, LC for low
         if (preset.competition === "low") {
           setPricingSeries("lc");
+        } else if (preset.competition === "medium") {
+          setPricingSeries("mc");
         } else {
           setPricingSeries("hc");
         }
@@ -403,7 +407,7 @@ const SEOCalculator = () => {
       lowTier: string; 
       highTier: string; 
       series: string; 
-      recommendedSeries: "hc" | "lc";
+      recommendedSeries: "hc" | "mc" | "lc";
       scoreBreakdown: {
         total: number;
         rawTotal: number;
@@ -412,8 +416,8 @@ const SEOCalculator = () => {
         items: Array<{ label: string; points: number; maxPoints: number }>;
       };
     } => {
-      // Determine which series to recommend based on competition
-      const recommendedSeries: "hc" | "lc" = competition === "low" ? "lc" : "hc";
+      // Determine which series to recommend based on competition: HC for high, MC for medium, LC for low
+      const recommendedSeries: "hc" | "mc" | "lc" = competition === "low" ? "lc" : competition === "medium" ? "mc" : "hc";
       const series = competition === "high" ? "High Competition" : competition === "medium" ? "Medium Competition" : "Low Competition";
       
       // Track individual score contributions
@@ -486,7 +490,7 @@ const SEOCalculator = () => {
         return `${seriesPrefix} 100`;
       };
       
-      const seriesPrefix = recommendedSeries === "hc" ? "HC" : "LC";
+      const seriesPrefix = recommendedSeries === "hc" ? "HC" : recommendedSeries === "mc" ? "MC" : "LC";
       
       // Calculate low and high tier recommendations
       const baseTier = getTierFromScore(needScore, seriesPrefix);
@@ -917,6 +921,11 @@ const SEOCalculator = () => {
                               { name: "HC 200", cost: 1539, tooltip: "Growth tier: Everything in 100 + 4 blog posts/mo, expanded citations, link building (2-4 links/mo), competitor monitoring" },
                               { name: "HC 300", cost: 1759, tooltip: "Acceleration tier: Everything in 200 + 6 blog posts/mo, aggressive link building (5-8 links/mo), schema markup, conversion optimization" },
                               { name: "HC 400", cost: 1979, tooltip: "Domination tier: Everything in 300 + 8+ blog posts/mo, premium link building (10+ links/mo), multi-location support, priority support" }
+                            ] : pricingSeries === "mc" ? [
+                              { name: "MC 100", cost: 950, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1-2 blog posts/mo, citation building, monthly reporting" },
+                              { name: "MC 200", cost: 1150, tooltip: "Growth tier: Everything in 100 + 3 blog posts/mo, expanded citations, link building (2-3 links/mo), competitor monitoring" },
+                              { name: "MC 300", cost: 1350, tooltip: "Acceleration tier: Everything in 200 + 4 blog posts/mo, link building (4-5 links/mo), schema markup, conversion optimization" },
+                              { name: "MC 400", cost: 1550, tooltip: "Domination tier: Everything in 300 + 5+ blog posts/mo, enhanced link building (6-8 links/mo), multi-location support" }
                             ] : [
                               { name: "LC 100", cost: 604, tooltip: "Foundation tier: On-page SEO, GBP optimization, 1 blog post/mo, basic citation building, monthly reporting" },
                               { name: "LC 200", cost: 824, tooltip: "Growth tier: Everything in 100 + 2 blog posts/mo, expanded citations, light link building (1-2 links/mo)" },
@@ -1003,6 +1012,8 @@ const SEOCalculator = () => {
                             "rounded-lg p-4 border",
                             estimate.recommendedTier.recommendedSeries === "hc" 
                               ? "bg-gradient-to-r from-destructive/10 to-orange-500/10 border-destructive/30"
+                              : estimate.recommendedTier.recommendedSeries === "mc"
+                              ? "bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border-amber-500/30"
                               : "bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border-emerald-500/30"
                           )}>
                             <div className="flex items-center justify-between mb-2">
@@ -1010,7 +1021,7 @@ const SEOCalculator = () => {
                               <span className={cn(
                                 "text-xs px-2 py-1 rounded-full",
                                 competition === "high" ? "bg-destructive/10 text-destructive" : 
-                                competition === "medium" ? "bg-yellow-500/10 text-yellow-500" : 
+                                competition === "medium" ? "bg-amber-500/10 text-amber-500" : 
                                 "bg-emerald-500/10 text-emerald-500"
                               )}>
                                 {estimate.recommendedTier.series}
@@ -1019,7 +1030,9 @@ const SEOCalculator = () => {
                             <div className="flex items-center justify-between mb-3">
                               <span className={cn(
                                 "text-lg font-bold",
-                                estimate.recommendedTier.recommendedSeries === "hc" ? "text-destructive" : "text-emerald-500"
+                                estimate.recommendedTier.recommendedSeries === "hc" ? "text-destructive" : 
+                                estimate.recommendedTier.recommendedSeries === "mc" ? "text-amber-500" : 
+                                "text-emerald-500"
                               )}>
                                 {estimate.recommendedTier.lowTier === estimate.recommendedTier.highTier 
                                   ? estimate.recommendedTier.lowTier 
@@ -1037,7 +1050,7 @@ const SEOCalculator = () => {
                                   className="flex-1 max-w-[140px] px-2 py-1.5 text-xs rounded-md bg-surface-dark border border-border/50 text-foreground focus:outline-none focus:border-cta/50"
                                 >
                                   <option value="">Use Recommended</option>
-                                  <optgroup label={pricingSeries === "hc" ? "HC Series" : "LC Series"}>
+                                  <optgroup label={pricingSeries === "hc" ? "HC Series" : pricingSeries === "mc" ? "MC Series" : "LC Series"}>
                                     <option value={`${pricingSeries.toUpperCase()} 100`}>{pricingSeries.toUpperCase()} 100</option>
                                     <option value={`${pricingSeries.toUpperCase()} 200`}>{pricingSeries.toUpperCase()} 200</option>
                                     <option value={`${pricingSeries.toUpperCase()} 300`}>{pricingSeries.toUpperCase()} 300</option>
@@ -1194,15 +1207,20 @@ const SEOCalculator = () => {
                           <SEOPdfExport
                             estimate={estimate}
                             tiers={(pricingSeries === "hc" ? [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? Math.round(1199 * 1.1 / 50) * 50 - 0.05 : 1199 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? Math.round(1399 * 1.1 / 50) * 50 - 0.05 : 1399 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? Math.round(1599 * 1.1 / 50) * 50 - 0.05 : 1599 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? Math.round(1799 * 1.1 / 50) * 50 - 0.05 : 1799 }
+                              { level: 100, name: "Foundation", baseCost: includeCSM ? 1319 + 150 : 1319 },
+                              { level: 200, name: "Growth", baseCost: includeCSM ? 1539 + 150 : 1539 },
+                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1759 + 150 : 1759 },
+                              { level: 400, name: "Domination", baseCost: includeCSM ? 1979 + 150 : 1979 }
+                            ] : pricingSeries === "mc" ? [
+                              { level: 100, name: "Foundation", baseCost: includeCSM ? 950 + 150 : 950 },
+                              { level: 200, name: "Growth", baseCost: includeCSM ? 1150 + 150 : 1150 },
+                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1350 + 150 : 1350 },
+                              { level: 400, name: "Domination", baseCost: includeCSM ? 1550 + 150 : 1550 }
                             ] : [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? Math.round(549 * 1.1 / 50) * 50 - 0.05 : 549 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? Math.round(749 * 1.1 / 50) * 50 - 0.05 : 749 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? Math.round(949 * 1.1 / 50) * 50 - 0.05 : 949 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? Math.round(1149 * 1.1 / 50) * 50 - 0.05 : 1149 }
+                              { level: 100, name: "Foundation", baseCost: includeCSM ? 604 + 150 : 604 },
+                              { level: 200, name: "Growth", baseCost: includeCSM ? 824 + 150 : 824 },
+                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1044 + 150 : 1044 },
+                              { level: 400, name: "Domination", baseCost: includeCSM ? 1264 + 150 : 1264 }
                             ]).map(tier => ({
                               ...tier,
                               clientMsrp: Math.round(tier.baseCost * (1 + clientHourlyRate / 100) / 50) * 50,
