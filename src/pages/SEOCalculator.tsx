@@ -409,9 +409,29 @@ const SEOCalculator = () => {
         items: Array<{ label: string; points: number; maxPoints: number }>;
       };
     } => {
-      // Determine which series to recommend based on competition: HC for high, MC for medium, LC for low
-      const recommendedSeries: "hc" | "mc" | "lc" = competition === "low" ? "lc" : competition === "medium" ? "mc" : "hc";
-      const series = competition === "high" ? "High Competition" : competition === "medium" ? "Medium Competition" : "Low Competition";
+      // Determine which series to recommend based on competition AND metro size
+      // Large metros (major/mega = 1M+ population) bump low competition to MC
+      const currentMetroTier = selectedMetro?.tier || null;
+      const isLargeMetro = currentMetroTier === "major" || currentMetroTier === "mega" || currentMetroTier === "large";
+      
+      // Low competition in large metros gets bumped to MC
+      let recommendedSeries: "hc" | "mc" | "lc";
+      let series: string;
+      
+      if (competition === "high") {
+        recommendedSeries = "hc";
+        series = "High Competition";
+      } else if (competition === "medium") {
+        recommendedSeries = "mc";
+        series = "Medium Competition";
+      } else if (competition === "low" && isLargeMetro) {
+        // Low competition + large market = MC (market size demands more effort)
+        recommendedSeries = "mc";
+        series = "Low Competition + Large Market";
+      } else {
+        recommendedSeries = "lc";
+        series = "Low Competition";
+      }
       
       // Track individual score contributions
       const scoreItems: Array<{ label: string; points: number; maxPoints: number }> = [];
