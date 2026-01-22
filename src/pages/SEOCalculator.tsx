@@ -5,7 +5,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import SEOEducationalContent from "@/components/calculators/SEOEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
-import SEOPdfExport from "@/components/calculators/SEOPdfExport";
+
 import { useState, useMemo } from "react";
 import { Calculator, MapPin, Globe, Zap, FileText, Swords, Calendar, TrendingUp, DollarSign, Info, Building, ChevronDown, ChevronRight, X, Search, Phone, RotateCcw } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
@@ -1203,37 +1203,6 @@ const SEOCalculator = () => {
                             </p>
                           </div>
 
-                          {/* PDF Export */}
-                          <SEOPdfExport
-                            estimate={estimate}
-                            tiers={(pricingSeries === "hc" ? [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? 1319 + 150 : 1319 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? 1539 + 150 : 1539 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1759 + 150 : 1759 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? 1979 + 150 : 1979 }
-                            ] : pricingSeries === "mc" ? [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? 962 + 150 : 962 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? 1182 + 150 : 1182 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1402 + 150 : 1402 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? 1622 + 150 : 1622 }
-                            ] : [
-                              { level: 100, name: "Foundation", baseCost: includeCSM ? 604 + 150 : 604 },
-                              { level: 200, name: "Growth", baseCost: includeCSM ? 824 + 150 : 824 },
-                              { level: 300, name: "Acceleration", baseCost: includeCSM ? 1044 + 150 : 1044 },
-                              { level: 400, name: "Domination", baseCost: includeCSM ? 1264 + 150 : 1264 }
-                            ]).map(tier => ({
-                              ...tier,
-                              clientMsrp: Math.round(tier.baseCost * (1 + clientHourlyRate / 100) / 50) * 50,
-                              profit: Math.round(tier.baseCost * (1 + clientHourlyRate / 100) / 50) * 50 - tier.baseCost,
-                              isRecommended: estimate.recommendedTier.lowTier.includes(tier.level.toString()) || 
-                                            estimate.recommendedTier.highTier.includes(tier.level.toString())
-                            }))}
-                            selectedIndustryName={selectedIndustryName}
-                            selectedMetroName={selectedMetro?.name || ""}
-                            competition={competition}
-                            aggressiveness={aggressiveness}
-                            clientMargin={clientHourlyRate}
-                          />
 
                           <p className="text-xs text-text-muted mt-4">
                             Adjust slider to set your margin. "Professional" tier is most common.
