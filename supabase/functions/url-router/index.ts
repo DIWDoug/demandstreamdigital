@@ -249,6 +249,11 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/how-can-digital-marketing-help-my-business': '/blog',
   '/how-do-you-find-the-right-seo-company-for-your-business': '/blog',
   '/how-facebook-business-page-can-help-your-business': '/blog',
+  
+  // Additional legacy blog articles
+  '/10-hacks-to-solidify-your-business-positive-reputation-online': '/blog',
+  '/3-awesome-local-seo-and-content-marketing-strategies-no-one-is-doing': '/blog',
+  '/7-reasons-why-online-reviews-are-essential-for-your-brand': '/blog',
 };
 
 // ============= PATTERN-BASED REDIRECTS =============
@@ -265,6 +270,10 @@ const PATTERN_REDIRECTS: Array<{ pattern: RegExp; destination: string }> = [
   
   // All /author/* pages -> About
   { pattern: /^\/author\/.*$/, destination: '/about' },
+  
+  // Date-prefixed blog posts (e.g., /2016/10/post-slug/) -> Blog
+  { pattern: /^\/\d{4}\/\d{2}\/[a-z0-9-]+\/?$/, destination: '/blog' },
+  { pattern: /^\/\d{4}\/\d{2}\/\d{2}\/[a-z0-9-]+\/?$/, destination: '/blog' },
   
   // Old sitemap files -> Homepage
   { pattern: /^\/.*sitemap.*\.xml\/?$/, destination: '/' },
