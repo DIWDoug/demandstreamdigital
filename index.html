@@ -45,6 +45,25 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTRZV5G"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Pre-hydration splash overlay - covers pre-rendered content until React mounts -->
+    <div id="app-splash" aria-hidden="true" role="presentation" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#FAF9F7;transition:opacity 0.3s ease-out;">
+      <div class="splash-spinner"></div>
+    </div>
+    <style>
+      @keyframes splash-spin {
+        to { transform: rotate(360deg); }
+      }
+      .splash-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e5e5;
+        border-top-color: #7d953d;
+        border-radius: 50%;
+        animation: splash-spin 0.8s linear infinite;
+      }
+    </style>
+    
     <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

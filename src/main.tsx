@@ -30,4 +30,12 @@ if (shouldHydrate) {
   createRoot(root).render(app);
 }
 
-
+// Remove splash overlay after React mounts
+// Uses requestAnimationFrame to ensure at least one paint frame with React content
+requestAnimationFrame(() => {
+  const splash = document.getElementById('app-splash');
+  if (splash) {
+    splash.style.opacity = '0';
+    setTimeout(() => splash.remove(), 300);
+  }
+});
