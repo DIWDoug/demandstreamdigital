@@ -202,7 +202,7 @@ const BlogPostPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
             <p className="text-muted-foreground mb-8">The blog post you are looking for does not exist.</p>
-            <Link to="/blog">
+            <Link to="/our-blog">
               <Button variant="outline">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
@@ -225,7 +225,7 @@ const BlogPostPage = () => {
   // Build breadcrumb items for schema
   const breadcrumbItems = [
     { name: "Home", url: "https://dialedinweb.com" },
-    { name: "Blog", url: "https://dialedinweb.com/blog" },
+    { name: "Blog", url: "https://dialedinweb.com/our-blog" },
   ];
   if (blog.category) {
     breadcrumbItems.push({
@@ -318,7 +318,7 @@ const BlogPostPage = () => {
       <main className="pt-16">
         {/* Back Link - Fixed Position */}
         <div className="container mx-auto px-4 py-4">
-          <Link to="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/our-blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="w-3 h-3 mr-1.5" />
             Back to Blog
           </Link>
@@ -439,7 +439,7 @@ const BlogPostPage = () => {
             </li>
             <li>
               <Link 
-                to="/blog" 
+                to="/our-blog"
                 className="hover:text-foreground transition-colors"
               >
                 Blog
