@@ -1,36 +1,29 @@
 
-# Comment Out Leadsy AI Tag
+# Disable Elfsight Widget
 
 ## Overview
 
-The Leadsy AI tracking tag is causing multiple CORS errors that may be contributing to page rendering issues. The errors originate from:
-- `https://wvbknd.leadsy.ai/v1/website-visitors/test` - blocked by CORS
-- `https://origin.dialedinweb.com/~api/analytics` - blocked by CORS
+Completely disable the Elfsight reviews widget to eliminate the `APP_VIEWS_LIMIT_REACHED` console errors. The current error handling catches errors after the script loads, but the script itself logs the error before React can intercept it.
 
-These are third-party configuration issues that cannot be fixed from within the application code. Commenting out the tag will eliminate these errors.
+## Change
 
-## Changes
+### File: `src/components/ElfsightReviews.tsx`
 
-### File: `index.html`
+Replace the entire component to return `null` immediately, preventing the `platform.js` script from loading at all:
 
-**Line 17** - Comment out the DNS prefetch:
-```html
-<!-- <link rel="dns-prefetch" href="https://r2.leadsy.ai"> -->
-```
+```tsx
+const ElfsightReviews = () => {
+  // TEMPORARILY DISABLED: Elfsight widget hitting APP_VIEWS_LIMIT_REACHED
+  // Re-enable when subscription is upgraded or view limits reset
+  return null;
+};
 
-**Lines 31-32** - Comment out the Leadsy AI script tag:
-```html
-<!-- Leadsy AI Tag - DISABLED: CORS errors from third-party endpoints -->
-<!-- <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="1549LCLNvr72vdmhw" data-version="062024"></script> -->
+export default ElfsightReviews;
 ```
 
 ## Result
 
-After this change:
-- No more CORS errors from Leadsy AI endpoints
-- The `/contact` page should load without these JavaScript errors potentially interfering with rendering
-- You can re-enable the tag later once the CORS issues are resolved on Leadsy's end
-
-## Note
-
-The memory integration note about Leadsy AI tracking will remain in place for future reference when you decide to re-enable it.
+- No Elfsight script will be loaded
+- No `APP_VIEWS_LIMIT_REACHED` console errors
+- The `/contact` page will load without Elfsight-related issues
+- Easy to re-enable later by restoring the original code
