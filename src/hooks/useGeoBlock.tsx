@@ -156,9 +156,9 @@ export function useGeoBlock() {
                 }
               }
             }
-          } catch (vpnError) {
-            console.error("VPN check error (allowing access):", vpnError);
-            // Continue without VPN check if it fails
+          } catch {
+            // VPN check failed silently - continue without blocking
+            // This is expected when CORS blocks the request (e.g., from Lighthouse)
           }
         }
         
