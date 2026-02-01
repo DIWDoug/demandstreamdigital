@@ -1,7 +1,6 @@
 import { useState, forwardRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowRight, Loader2, CheckCircle, ChevronLeft } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import PhoneInput from "@/components/ui/phone-input";
@@ -63,6 +62,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     setIsSubmittingStep1(true);
 
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
       // Submit partial lead (step 1)
       const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
@@ -100,6 +100,8 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     try {
       // Get reCAPTCHA token
       const recaptchaToken = await executeRecaptcha("contact_form_submit");
+
+      const { supabase } = await import("@/integrations/supabase/client");
       
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {

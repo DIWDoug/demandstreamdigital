@@ -16,11 +16,9 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 import { useGeoBlock } from "./hooks/useGeoBlock";
 
-// Eagerly loaded pages (critical path)
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-
 // Lazy loaded pages - split into separate chunks
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 const Services = lazy(() => import("./pages/Services"));
 const ROICalculator = lazy(() => import("./pages/ROICalculator"));
 const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
