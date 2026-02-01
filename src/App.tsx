@@ -283,7 +283,6 @@ const App = () => (
         <Route path="/dallas-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/moving-and-storage-seo" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/moving-and-storage-seo/" element={<Navigate to="/white-label-local-seo" replace />} />
-        <Route path="/contact/" element={<Navigate to="/contact" replace />} />
         <Route path="/small-business-social-advertising" element={<Navigate to="/white-label-meta-ads" replace />} />
         <Route path="/small-business-social-advertising/" element={<Navigate to="/white-label-meta-ads" replace />} />
         <Route path="/white-label-seo-campaigns" element={<Navigate to="/white-label-local-seo" replace />} />
@@ -314,7 +313,6 @@ const App = () => (
         <Route path="/nashville-digital-marketing/" element={<Navigate to="/white-label-inbound-marketing-services" replace />} />
         <Route path="/search-engine-advertising" element={<Navigate to="/white-label-paid-media" replace />} />
         <Route path="/search-engine-advertising/" element={<Navigate to="/white-label-paid-media" replace />} />
-        <Route path="/blog/" element={<Navigate to="/blog" replace />} />
         <Route path="/local-search-marketing" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/local-search-marketing/" element={<Navigate to="/white-label-local-seo" replace />} />
         <Route path="/white-label-local-ppc" element={<Navigate to="/white-label-paid-media" replace />} />
