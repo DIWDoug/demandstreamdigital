@@ -51,6 +51,18 @@ function applyAssetCachingHeaders(resp) {
   return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
 }
 
+function applyHtmlCachingHeaders(resp) {
+  const h = new Headers(resp.headers);
+
+  // Strip cookies to keep HTML cacheable.
+  h.delete("set-cookie");
+
+  // Cache HTML at the edge briefly; keep browser cache short.
+  h.set("cache-control", "public, max-age=0, s-maxage=300");
+
+  return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
+}
+
 
 function addDebug(resp, env, action) {
   if ((env.DEBUG_HEADERS || "0") !== "1") return resp;
@@ -62,6 +74,51 @@ function addDebug(resp, env, action) {
     statusText: resp.statusText,
     headers: h,
   });
+}
+
+function addCorsHeaders(resp, request) {
+  const origin = request.headers.get("origin");
+  const allowedOrigins = new Set([
+    "https://www.dialedinweb.com",
+    "https://dialedinweb.com",
+    "https://origin.dialedinweb.com",
+    "https://edge.dialedinweb.com"
+  ]);
+
+  if (!origin || !allowedOrigins.has(origin)) {
+    return resp;
+  }
+
+  const h = new Headers(resp.headers);
+  h.set("access-control-allow-origin", origin);
+  h.set("access-control-allow-methods", "GET, POST, OPTIONS");
+  h.set("access-control-allow-headers", "content-type, x-requested-with");
+  h.set("access-control-allow-credentials", "true");
+  h.set("vary", "origin");
+  return new Response(resp.body, { status: resp.status, statusText: resp.statusText, headers: h });
+}
+
+function buildCorsPreflight(request) {
+  const origin = request.headers.get("origin");
+  const allowedOrigins = new Set([
+    "https://www.dialedinweb.com",
+    "https://dialedinweb.com",
+    "https://origin.dialedinweb.com",
+    "https://edge.dialedinweb.com"
+  ]);
+
+  if (!origin || !allowedOrigins.has(origin)) {
+    return new Response("Forbidden", { status: 403 });
+  }
+
+  const headers = new Headers();
+  headers.set("access-control-allow-origin", origin);
+  headers.set("access-control-allow-methods", "GET, POST, OPTIONS");
+  headers.set("access-control-allow-headers", "content-type, x-requested-with");
+  headers.set("access-control-allow-credentials", "true");
+  headers.set("access-control-max-age", "86400");
+  headers.set("vary", "origin");
+  return new Response(null, { status: 204, headers });
 }
 
 function redirect301(env, location, action) {
@@ -107,6 +164,7 @@ async function fetchFromOrigin(request, env, publicUrl, hops = 0) {
       const isPublicHost =
           locUrl.hostname === canonicalHost ||
           locUrl.hostname === "dialedinweb.com" ||
+          locUrl.hostname === "origin.dialedinweb.com" ||
           locUrl.hostname === "edge.dialedinweb.com";
 
       if (isPublicHost) {
@@ -126,6 +184,15 @@ export default {
     const url = new URL(request.url);
     const host = url.hostname;
     const pathname = normalizePath(url.pathname);
+
+    if (pathname.startsWith("/~api/analytics")) {
+      if (request.method === "OPTIONS") {
+        return addDebug(buildCorsPreflight(request), env, "analytics-preflight");
+      }
+
+      const originResp = await fetchFromOrigin(request, env, url.toString());
+      return addDebug(addCorsHeaders(originResp, request), env, "analytics-cors");
+    }
 
     const canonicalHost = env.CANONICAL_HOST || DEFAULT_CANONICAL_HOST;
 
@@ -148,10 +215,10 @@ export default {
       dest.search = url.search;
       return redirect301(env, dest.toString(), "legacy-redirect");
     }
-
+    const isGetOrHead = request.method === "GET" || request.method === "HEAD";
     const accept = request.headers.get("accept") || "";
-    const isHtmlNav =
-        (request.method === "GET" || request.method === "HEAD") && accept.includes("text/html");
+
+    const isHtmlNav = isGetOrHead && accept.includes("text/html");
 
     if (!isHtmlNav || STATIC_ASSET_PATTERN.test(pathname)) {
       const originResp = await fetchFromOrigin(request, env, url.toString());
@@ -162,8 +229,12 @@ export default {
       return originResp;
     }
 
-    if (VALID_ROUTES.has(pathname)) {
-      return fetchFromOrigin(request, env, url.toString());
+    if (VALID_ROUTES.has(pathname) && isGetOrHead) {
+      const originResp = await fetchFromOrigin(request, env, url.toString());
+      if (originResp.ok) {
+        return addDebug(applyHtmlCachingHeaders(originResp), env, "html-cache");
+      }
+      return originResp;
     }
 
     const notFoundPublic = new URL(url.toString());
