@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +8,7 @@ import {
 import SubtleOrbs from "@/components/SubtleOrbs";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 
-const ContactForm = () => {
+const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   const steps = [
     {
       title: "Discovery & Alignment",
@@ -36,7 +37,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <section id="contact" className="relative">
+    <section id="contact" ref={ref} className="relative">
       {/* Background that stops where the card bleeds */}
       <div className="absolute inset-0 bg-surface-elevated" style={{ bottom: '5rem' }} />
       
@@ -106,6 +107,8 @@ const ContactForm = () => {
       </div>
     </section>
   );
-};
+});
+
+ContactForm.displayName = "ContactForm";
 
 export default ContactForm;

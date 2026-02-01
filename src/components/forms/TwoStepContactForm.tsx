@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowRight, Loader2, CheckCircle, ChevronLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,14 +17,18 @@ interface TwoStepContactFormProps {
   compact?: boolean;
 }
 
-const TwoStepContactForm = ({
-  formType,
-  submitButtonText = "Let's Talk Partnership",
-  step1ButtonText = "Continue",
-  showServicesInterested = true,
-  className = "",
-  compact = false,
-}: TwoStepContactFormProps) => {
+const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
+  (
+    {
+      formType,
+      submitButtonText = "Let's Talk Partnership",
+      step1ButtonText = "Continue",
+      showServicesInterested = true,
+      className = "",
+      compact = false,
+    },
+    ref
+  ) => {
   const { toast } = useToast();
   const navigate = useNavigate();
   const { executeRecaptcha, isReady: isRecaptchaReady, initRecaptcha } = useRecaptcha();
@@ -143,7 +147,7 @@ const TwoStepContactForm = ({
   const labelClass = compact ? "block text-xs text-foreground mb-1.5" : "block text-sm text-foreground mb-2";
 
   return (
-    <div className={className}>
+    <div ref={ref} className={className}>
       {step === 1 ? (
         <form onSubmit={handleStep1Submit} className="space-y-4">
           {/* Honeypot */}
@@ -324,6 +328,9 @@ const TwoStepContactForm = ({
       )}
     </div>
   );
-};
+  }
+);
+
+TwoStepContactForm.displayName = "TwoStepContactForm";
 
 export default TwoStepContactForm;
