@@ -1,189 +1,218 @@
 
-# Route-Based Code Splitting Implementation Plan
+
+# Reduce Critical Request Chain Depth
 
 ## Problem Statement
-The current `App.tsx` eagerly imports **35+ page components** at the top level, causing the entire application bundle to be loaded on initial page load. This results in:
-- **867ms** of script evaluation time
-- **414ms** of script parsing and compilation
-- Total **2.2 seconds** of main-thread work that could be saved
+The Lighthouse audit flagged "Avoid chaining critical requests" which occurs when resources are loaded sequentially rather than in parallel, creating a "waterfall" effect that delays page rendering.
+
+### Current Critical Request Chain Analysis
+
+Based on the codebase analysis, the current dependency tree looks like this:
+
+```text
+document (index.html)
+├── [Render-Blocking] reCAPTCHA script (inline, creates new script element)
+│   └── https://www.google.com/recaptcha/api.js
+├── [Render-Blocking] jQuery stub (inline, sync)
+├── [Render-Blocking] GTM script (inline, loads external)
+│   └── https://www.googletagmanager.com/gtm.js
+├── [Critical Resource] /src/main.tsx (module)
+│   └── App.tsx → Index.tsx
+│       └── Header.tsx → framer-motion (dynamic import)
+│       └── Hero.tsx → supabase client
+│       └── 15+ section components
+├── [External Chain] Google Fonts
+│   └── fonts.googleapis.com/css2 → fonts.gstatic.com (woff2 files)
+└── [Late Load] Leadsy tag (async)
+└── [Late Load] Elfsight (React useEffect)
+```
+
+### Key Chain Bottlenecks Identified
+
+| Resource Chain | Depth | Impact |
+|---------------|-------|--------|
+| HTML → reCAPTCHA inline → external script | 2 | Blocks head parsing |
+| HTML → GTM inline → gtm.js → GTM-loaded scripts | 3+ | Creates multiple chains |
+| HTML → main.tsx → App → Index → 17 section imports | 4+ | Deep JS dependency |
+| HTML → Fonts CSS → WOFF2 files | 2 | LCP/FCP delay |
+| Index → Header → framer-motion | 3 | Animation library chain |
+
+---
 
 ## Solution Overview
-Implement React.lazy() with Suspense for all page components except the homepage (Index), which must remain eagerly loaded for optimal First Contentful Paint. This splits the bundle so only the code needed for the current route is loaded.
 
----
+Reduce chain depth through parallelization and deferral strategies without affecting functionality.
 
-## Implementation Strategy
+### Strategy 1: Defer Third-Party Scripts to After First Paint
 
-### What Stays Eagerly Loaded
-| Component | Reason |
-|-----------|--------|
-| `Index` | Homepage - critical path, needs instant load |
-| `NotFound` | Catch-all fallback, must be available immediately |
-| Global components | `ErrorBoundary`, `ScrollToTop`, `BackToTop`, `CookieConsent`, etc. |
-
-### What Gets Lazy Loaded
-All other 33+ page components including:
-- Service hub pages (7): LocalSEO, GoogleMaps, PaidMedia, etc.
-- Calculator pages (8): ROICalculator, SEOCalculator, etc.
-- Blog pages (4): BlogIndex, BlogPost, OurBlog, Author
-- Utility pages (8): About, Contact, ThankYou, Privacy, Terms, etc.
-- SpokePage (1): Used for all tactical spoke routes
-
----
-
-## Technical Details
-
-### File: `src/App.tsx`
-
-**Step 1: Add React imports**
-```typescript
-import { lazy, Suspense } from "react";
+**Current State:**
+```html
+<head>
+  <!-- reCAPTCHA loads immediately in head -->
+  <script>
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js...';
+      script.async = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+  <!-- GTM also loads in head -->
+  <script>(function(w,d,s,l,i){...})(...);</script>
+</head>
 ```
 
-**Step 2: Create a loading fallback component**
-```typescript
-// Minimal loading fallback matching the dark theme
-const PageLoader = () => (
-  <div className="min-h-screen bg-background" />
-);
-```
+**Proposed Change:**
+Move third-party script initialization to after DOMContentLoaded or use requestIdleCallback:
 
-**Step 3: Convert static imports to lazy imports**
-
-Replace all static imports (lines 15-51) with lazy imports:
-
-```typescript
-// Keep these eagerly loaded
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-
-// Lazy load all other pages
-const Services = lazy(() => import("./pages/Services"));
-const ROICalculator = lazy(() => import("./pages/ROICalculator"));
-const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
-const AdBudgetCalculator = lazy(() => import("./pages/AdBudgetCalculator"));
-const SEOCalculator = lazy(() => import("./pages/SEOCalculator"));
-const EmailCalculator = lazy(() => import("./pages/EmailCalculator"));
-const ContentMarketingCalculator = lazy(() => import("./pages/ContentMarketingCalculator"));
-const SocialMediaROICalculator = lazy(() => import("./pages/SocialMediaROICalculator"));
-const AIReadyCheck = lazy(() => import("./pages/AIReadyCheck"));
-const PartnerTools = lazy(() => import("./pages/PartnerTools"));
-const About = lazy(() => import("./pages/About"));
-const BlogIndex = lazy(() => import("./pages/BlogIndex"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const OurBlog = lazy(() => import("./pages/OurBlog"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Testimonials = lazy(() => import("./pages/Testimonials"));
-const ThankYou = lazy(() => import("./pages/ThankYou"));
-const CaseStudies = lazy(() => import("./pages/CaseStudies"));
-const CaseStudyDetail = lazy(() => import("./pages/CaseStudyDetail"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
-const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
-
-// Author Pages
-const Author = lazy(() => import("./pages/Author"));
-
-// Service Hub Pages
-const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
-const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
-const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
-const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
-const Authority = lazy(() => import("./pages/services/Authority"));
-const Reporting = lazy(() => import("./pages/services/Reporting"));
-const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
-const SpokePage = lazy(() => import("./pages/services/SpokePage"));
-```
-
-**Step 4: Wrap Routes in Suspense**
-
-Wrap the `<Routes>` component in a `<Suspense>` boundary:
-
-```typescript
-<Suspense fallback={<PageLoader />}>
-  <Routes>
-    {/* Homepage - eagerly loaded, no change */}
-    <Route path="/" element={<Index />} />
+```html
+<head>
+  <!-- Preconnects remain for early connection -->
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+</head>
+<body>
+  <!-- ... content ... -->
+  <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Defer non-critical scripts until after initial render -->
+  <script>
+    // Load third-party scripts after first paint
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadThirdPartyScripts);
+    } else {
+      window.addEventListener('load', loadThirdPartyScripts);
+    }
     
-    {/* All other routes remain the same syntax */}
-    <Route path="/about" element={<About />} />
-    {/* ... rest of routes ... */}
-    
-    {/* 404 - eagerly loaded, no change */}
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-</Suspense>
+    function loadThirdPartyScripts() {
+      // reCAPTCHA
+      var recaptcha = document.createElement('script');
+      recaptcha.src = 'https://www.google.com/recaptcha/api.js?render=...';
+      recaptcha.async = true;
+      document.head.appendChild(recaptcha);
+      
+      // GTM
+      (function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-MTRZV5G');
+    }
+  </script>
+</body>
+```
+
+### Strategy 2: Add Critical Preloads for First-Party Resources
+
+Add modulepreload for the critical application bundle:
+
+```html
+<head>
+  <!-- Preload critical module chunk -->
+  <link rel="modulepreload" href="/src/main.tsx">
+  
+  <!-- Existing font preloads are good -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/inter/..." as="font" type="font/woff2" crossorigin>
+</head>
+```
+
+### Strategy 3: Lazy Load framer-motion in Header Component
+
+Currently Header.tsx loads framer-motion synchronously:
+```typescript
+import { motion, AnimatePresence } from "framer-motion";
+```
+
+**Proposed Change:** Conditionally import framer-motion only when mega menu opens:
+
+```typescript
+// Replace static import with dynamic
+const [MotionComponents, setMotionComponents] = useState<typeof import('framer-motion') | null>(null);
+
+useEffect(() => {
+  // Lazy load framer-motion on first interaction
+  if (isMegaMenuOpen && !MotionComponents) {
+    import('framer-motion').then(setMotionComponents);
+  }
+}, [isMegaMenuOpen]);
+
+// Use native CSS transitions for initial render
+// Fall back to framer-motion once loaded
+```
+
+Alternatively, replace framer-motion with CSS-only animations for the mega menu since the animations are simple fade/slide effects.
+
+### Strategy 4: Optimize Font Loading Chain
+
+Current setup already uses the print/onload swap pattern which is good. Add fetchpriority to critical font preloads:
+
+```html
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/..." 
+      as="font" type="font/woff2" crossorigin fetchpriority="high">
 ```
 
 ---
 
-## Bundle Impact Analysis
+## Implementation Files
 
-### Before (Current State)
+| File | Change | Impact |
+|------|--------|--------|
+| `index.html` | Move reCAPTCHA and GTM to deferred loading after first paint | Reduces head blocking |
+| `index.html` | Add preconnect for google.com (reCAPTCHA) | Parallelizes connection |
+| `index.html` | Add modulepreload for main entry | Hints browser to fetch early |
+| `src/components/sections/Header.tsx` | Replace framer-motion with CSS animations OR lazy load | Reduces JS chain depth |
+| `src/pages/CaseStudies.tsx` | Already lazy loaded, no change needed | N/A |
+
+---
+
+## Expected Impact
+
+### Before
 ```text
-Initial Bundle: ~500KB+ (all pages bundled together)
-Main-thread work: 2.2s
+Critical Request Chain Depth: 3-4 levels
+Third-party scripts: Block head parsing
+framer-motion: Loaded on every page load (~40KB)
 ```
 
-### After (With Code Splitting)
+### After
 ```text
-Initial Bundle: ~150-200KB (core + homepage only)
-Route Chunks: 15-50KB each (loaded on demand)
-Expected savings: 1.0-1.5s main-thread work
+Critical Request Chain Depth: 2 levels
+Third-party scripts: Load after first contentful paint
+framer-motion: Only loaded when mega menu opens OR replaced with CSS
 ```
 
----
-
-## Route-to-Component Mapping
-
-All routes will continue to work identically. The only difference is when the component code is fetched:
-
-| Route Pattern | Component | Load Behavior |
-|--------------|-----------|---------------|
-| `/` | Index | Immediate (eager) |
-| `/about` | About | On navigation |
-| `/blog` | BlogIndex | On navigation |
-| `/blog/:slug` | BlogPost | On navigation |
-| `/contact` | Contact | On navigation |
-| `/partner-tools/*` | Calculator pages | On navigation |
-| `/white-label-*` | Service/Spoke pages | On navigation |
-| `*` | NotFound | Immediate (eager) |
+**Estimated Savings:** 200-400ms reduction in Time to Interactive
 
 ---
 
-## SSG/Prerendering Compatibility
+## Risk Assessment
 
-The existing `prerender.js` script will continue to work because:
-1. React.lazy() components are resolved during SSR/SSG builds
-2. The prerender script uses `renderToString` which awaits lazy components
-3. No changes needed to the prerendering pipeline
-
----
-
-## Risk Mitigation
-
-| Risk | Mitigation |
-|------|------------|
-| Flash of loading state | Minimal `PageLoader` with matching background color |
-| SEO impact | None - prerendered pages already have full HTML |
-| User experience | Near-instant for cached routes; acceptable 50-150ms for cold loads |
+| Change | Risk | Mitigation |
+|--------|------|------------|
+| Deferred GTM | Analytics may miss very quick bounces | GTM still loads within 1-2s, acceptable tradeoff |
+| Deferred reCAPTCHA | Form validation delay on quick submits | Hero form shows after page load anyway |
+| CSS animations for Header | Slightly different animation feel | CSS animations are smooth, may not be noticeable |
 
 ---
 
-## Files to Modify
+## Technical Notes
 
-| File | Changes |
-|------|---------|
-| `src/App.tsx` | Convert 33 imports to lazy(), add Suspense wrapper, add PageLoader |
+### Why requestIdleCallback?
+- Runs callbacks during browser idle periods
+- Doesn't block main thread or delay rendering
+- Falls back to load event for older browsers
+
+### Font Preload Strategy
+The current preload approach is correct. The font files are preloaded while CSS is loaded with print/onload swap. Adding fetchpriority="high" explicitly prioritizes the LCP-critical fonts.
+
+### Alternative: Use Partytown for Third-Party Scripts
+A more advanced solution would be to run GTM and other trackers in a web worker using Partytown. This completely removes them from the main thread but requires more significant changes.
 
 ---
 
 ## Testing Checklist
 
-After implementation, verify:
-1. Homepage loads instantly without loading flash
-2. Navigating to `/about` shows brief loading then content
-3. Direct URL access to `/contact` works correctly
-4. 404 page appears immediately for invalid routes
-5. Browser DevTools Network tab shows separate chunks being loaded
-6. Lighthouse re-audit shows improved main-thread work score
+After implementation:
+1. Run Lighthouse performance audit
+2. Verify critical request chain depth is reduced
+3. Confirm GTM dataLayer events still fire
+4. Test reCAPTCHA validation on contact forms
+5. Verify mega menu animations work correctly
+6. Check Network tab waterfall shows improved parallelization
+
