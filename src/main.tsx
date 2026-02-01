@@ -1,10 +1,11 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import App from "./App.tsx";
+import App from "./App";
 import "./index.css";
 
 const root = document.getElementById("root")!;
+
 const app = (
   <HelmetProvider>
     <BrowserRouter>
@@ -13,19 +14,20 @@ const app = (
   </HelmetProvider>
 );
 
-// Only hydrate if there's pre-rendered content AND the route is safe to hydrate.
-// Some routes (like /blog, /contact) render dynamic content and can cause hydration mismatches.
-const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-const hasPrerenderedContent = root.innerHTML.trim().length > 0 && !root.innerHTML.includes("<!--app-html-->");
+// If there's pre-rendered markup in #root, hydrate it.
+// Otherwise do normal client render.
+const hasPrerenderedContent = root.innerHTML.trim().length > 0;
 
 if (import.meta.env.PROD && hasPrerenderedContent) {
-  hydrateRoot(root, app);
+  hydrateRoot(root, app, {
+    // optional but very useful: surface hydration issues instead of "mystery flashes"
+    onRecoverableError: (err) => console.warn("[hydrate recoverable]", err),
+  });
 } else {
   createRoot(root).render(app);
 }
 
-// Remove splash overlay after React mounts
-// Uses requestAnimationFrame to ensure at least one paint frame with React content
+// Remove splash overlay (fine to keep)
 requestAnimationFrame(() => {
   const splash = document.getElementById("app-splash");
   if (splash) {
