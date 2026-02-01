@@ -153,6 +153,8 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   src={logo} 
                   alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
                   title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
+                  width={206}
+                  height={32}
                   className="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
                 />
               </Link>
