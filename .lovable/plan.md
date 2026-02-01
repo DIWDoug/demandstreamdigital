@@ -1,46 +1,36 @@
 
-
-# Add Silent Error Handling to ElfsightReviews Component
+# Comment Out Leadsy AI Tag
 
 ## Overview
 
-The Elfsight reviews widget throws a JavaScript exception when the `APP_VIEWS_LIMIT_REACHED` error occurs. Since this component is rendered globally in `App.tsx`, the exception can propagate and disrupt other pages like `/contact`. This plan adds robust error handling so the widget fails silently without affecting the rest of the application.
+The Leadsy AI tracking tag is causing multiple CORS errors that may be contributing to page rendering issues. The errors originate from:
+- `https://wvbknd.leadsy.ai/v1/website-visitors/test` - blocked by CORS
+- `https://origin.dialedinweb.com/~api/analytics` - blocked by CORS
 
-## Technical Details
+These are third-party configuration issues that cannot be fixed from within the application code. Commenting out the tag will eliminate these errors.
 
-### Changes to `src/components/ElfsightReviews.tsx`
+## Changes
 
-**1. Add Script Load Error Handling**
-- Add `onerror` handler to the dynamically created script element
-- If the script fails to load, simply don't render the widget
+### File: `index.html`
 
-**2. Add Global Error Listener for Elfsight Errors**
-- Listen for `error` events on window that originate from the Elfsight platform
-- Catch errors containing "APP_VIEWS_LIMIT_REACHED" or "elfsight"
-- Set component state to hide the widget when these errors occur
+**Line 17** - Comment out the DNS prefetch:
+```html
+<!-- <link rel="dns-prefetch" href="https://r2.leadsy.ai"> -->
+```
 
-**3. Return Nothing on Error**
-- When an error is detected, render `null` instead of the widget container
-- This prevents empty elements from affecting page layout
+**Lines 31-32** - Comment out the Leadsy AI script tag:
+```html
+<!-- Leadsy AI Tag - DISABLED: CORS errors from third-party endpoints -->
+<!-- <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="1549LCLNvr72vdmhw" data-version="062024"></script> -->
+```
 
-### Changes to `src/App.tsx`
+## Result
 
-**4. Wrap ElfsightReviews in Silent Error Boundary**
-- Create a lightweight `SilentErrorBoundary` component specifically for third-party widgets
-- Unlike the main `ErrorBoundary`, this one renders `null` on error instead of showing an error UI
-- Wrap only the `ElfsightReviews` component with this boundary
+After this change:
+- No more CORS errors from Leadsy AI endpoints
+- The `/contact` page should load without these JavaScript errors potentially interfering with rendering
+- You can re-enable the tag later once the CORS issues are resolved on Leadsy's end
 
-## File Changes Summary
+## Note
 
-| File | Change |
-|------|--------|
-| `src/components/ElfsightReviews.tsx` | Add error state, script error handler, global error listener |
-| `src/App.tsx` | Add `SilentErrorBoundary` wrapper around `ElfsightReviews` |
-
-## Benefits
-
-- **No UI disruption**: Widget silently disappears when view limit is reached
-- **Other pages unaffected**: The `/contact` page and other routes will work normally
-- **Minimal code changes**: Only modifying 2 files with targeted error handling
-- **Zero visual impact**: When the widget works, it displays as normal; when it fails, it simply doesn't show
-
+The memory integration note about Leadsy AI tracking will remain in place for future reference when you decide to re-enable it.
