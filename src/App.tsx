@@ -1,4 +1,5 @@
 // Cache bust: 2026-01-30T13:50
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,45 +11,48 @@ import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import ElfsightReviews from "./components/ElfsightReviews";
 import CookieConsent from "./components/CookieConsent";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Services from "./pages/Services";
-import ROICalculator from "./pages/ROICalculator";
-import InvestmentCalculator from "./pages/InvestmentCalculator";
-import AdBudgetCalculator from "./pages/AdBudgetCalculator";
-import SEOCalculator from "./pages/SEOCalculator";
-import EmailCalculator from "./pages/EmailCalculator";
-import ContentMarketingCalculator from "./pages/ContentMarketingCalculator";
-import SocialMediaROICalculator from "./pages/SocialMediaROICalculator";
-import AIReadyCheck from "./pages/AIReadyCheck";
-import PartnerTools from "./pages/PartnerTools";
-import About from "./pages/About";
-import BlogIndex from "./pages/BlogIndex";
-import BlogPost from "./pages/BlogPost";
-import OurBlog from "./pages/OurBlog";
-import Contact from "./pages/Contact";
-import Testimonials from "./pages/Testimonials";
-import ThankYou from "./pages/ThankYou";
-import CaseStudies from "./pages/CaseStudies";
-import CaseStudyDetail from "./pages/CaseStudyDetail";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import RegionBlocked from "./pages/RegionBlocked";
+import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 import { useGeoBlock } from "./hooks/useGeoBlock";
 
-// Service Hub Pages
-import LocalSEO from "./pages/services/LocalSEO";
-import GoogleMaps from "./pages/services/GoogleMaps";
-import PaidMedia from "./pages/services/PaidMedia";
-import EmailMarketing from "./pages/services/EmailMarketing";
-import Authority from "./pages/services/Authority";
-import Reporting from "./pages/services/Reporting";
-import ContentMarketing from "./pages/services/ContentMarketing";
-import SpokePage from "./pages/services/SpokePage";
+// Eagerly loaded pages (critical path)
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-// Author Pages
-import Author from "./pages/Author";
+// Lazy loaded pages - split into separate chunks
+const Services = lazy(() => import("./pages/Services"));
+const ROICalculator = lazy(() => import("./pages/ROICalculator"));
+const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
+const AdBudgetCalculator = lazy(() => import("./pages/AdBudgetCalculator"));
+const SEOCalculator = lazy(() => import("./pages/SEOCalculator"));
+const EmailCalculator = lazy(() => import("./pages/EmailCalculator"));
+const ContentMarketingCalculator = lazy(() => import("./pages/ContentMarketingCalculator"));
+const SocialMediaROICalculator = lazy(() => import("./pages/SocialMediaROICalculator"));
+const AIReadyCheck = lazy(() => import("./pages/AIReadyCheck"));
+const PartnerTools = lazy(() => import("./pages/PartnerTools"));
+const About = lazy(() => import("./pages/About"));
+const BlogIndex = lazy(() => import("./pages/BlogIndex"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const OurBlog = lazy(() => import("./pages/OurBlog"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const CaseStudyDetail = lazy(() => import("./pages/CaseStudyDetail"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
+const Author = lazy(() => import("./pages/Author"));
+
+// Service Hub Pages - Lazy loaded
+const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
+const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
+const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
+const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
+const Authority = lazy(() => import("./pages/services/Authority"));
+const Reporting = lazy(() => import("./pages/services/Reporting"));
+const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
+const SpokePage = lazy(() => import("./pages/services/SpokePage"));
 
 const queryClient = new QueryClient();
 
@@ -74,6 +78,7 @@ const App = () => (
         <BackToTop />
         <ElfsightReviews />
         <CookieConsent />
+        <Suspense fallback={<RouteLoadingFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -444,7 +449,8 @@ const App = () => (
 
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
-      </Routes>
+        </Routes>
+        </Suspense>
       </ErrorBoundary>
     </TooltipProvider>
   </QueryClientProvider>
