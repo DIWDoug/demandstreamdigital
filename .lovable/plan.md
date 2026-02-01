@@ -1,149 +1,46 @@
 
-# Eliminate Render-Blocking CSS
 
-## Problem Statement
-Lighthouse reports that the main CSS file (`/assets/index-*.css`, 23.3 KiB) is blocking page render for approximately 160ms, delaying both First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
+# Add Silent Error Handling to ElfsightReviews Component
 
-## Current Situation
+## Overview
 
-The CSS is loaded synchronously via Vite's standard injection:
-```html
-<link rel="stylesheet" href="/assets/index-PEpWxu7o.css">
-```
-
-This blocks rendering because:
-1. Browser must download the full 23.3 KiB CSS file
-2. Browser must parse entire stylesheet before rendering any content
-3. Nothing appears on screen until CSS is fully loaded and parsed
-
-## Solution: Inline Critical CSS + Async Load Full Stylesheet
-
-The optimization strategy involves three changes:
-
-### 1. Install beasties (Vite Plugin)
-
-Add `vite-plugin-beasties` to automatically extract and inline critical (above-the-fold) CSS during build, while deferring the rest.
-
-### 2. Configure Vite with Beasties Plugin
-
-Update `vite.config.ts` to include the beasties plugin:
-
-```typescript
-import { beasties } from 'vite-plugin-beasties'
-
-export default defineConfig(({ mode }) => ({
-  // existing config...
-  plugins: [
-    react(),
-    mode === "development" && componentTagger(),
-    beasties({
-      options: {
-        preload: 'swap',       // Use font-display: swap for preloaded fonts
-        pruneSource: false,    // Keep original CSS file intact
-        inlineThreshold: 0,    // Always inline critical CSS
-      }
-    })
-  ].filter(Boolean),
-  // ...
-}));
-```
-
-### 3. How Beasties Works
-
-During build, beasties:
-1. Analyzes the HTML output
-2. Identifies CSS rules needed for above-the-fold content
-3. Inlines those critical rules in a `<style>` tag in the `<head>`
-4. Converts the main CSS `<link>` to async loading with preload
-
-**Result:**
-```html
-<!-- Critical CSS inlined -->
-<style>/* essential rules for initial render */</style>
-
-<!-- Full CSS loaded asynchronously -->
-<link rel="preload" href="/assets/index-*.css" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/assets/index-*.css"></noscript>
-```
-
----
+The Elfsight reviews widget throws a JavaScript exception when the `APP_VIEWS_LIMIT_REACHED` error occurs. Since this component is rendered globally in `App.tsx`, the exception can propagate and disrupt other pages like `/contact`. This plan adds robust error handling so the widget fails silently without affecting the rest of the application.
 
 ## Technical Details
 
-### Why Beasties Over Critters?
+### Changes to `src/components/ElfsightReviews.tsx`
 
-Beasties is the maintained successor to Critters (same author). It:
-- Has active maintenance
-- Works seamlessly with Vite via `vite-plugin-beasties`
-- Supports modern CSS features
-- Handles the SSG prerender flow
+**1. Add Script Load Error Handling**
+- Add `onerror` handler to the dynamically created script element
+- If the script fails to load, simply don't render the widget
 
-### What Gets Inlined?
+**2. Add Global Error Listener for Elfsight Errors**
+- Listen for `error` events on window that originate from the Elfsight platform
+- Catch errors containing "APP_VIEWS_LIMIT_REACHED" or "elfsight"
+- Set component state to hide the widget when these errors occur
 
-Critical CSS includes:
-- CSS custom properties (`:root`, `.dark` variables)
-- Base typography (`body`, `h1`, `h2`, etc.)
-- Layout primitives (`flex`, `grid`, basic spacing)
-- Hero section styles (above-the-fold content)
-- Navigation styles
+**3. Return Nothing on Error**
+- When an error is detected, render `null` instead of the widget container
+- This prevents empty elements from affecting page layout
 
-Non-critical CSS (deferred):
-- Component-specific styles for below-fold content
-- Animation keyframes
-- Interactive states for components not visible on load
+### Changes to `src/App.tsx`
 
-### Integration with Prerender
+**4. Wrap ElfsightReviews in Silent Error Boundary**
+- Create a lightweight `SilentErrorBoundary` component specifically for third-party widgets
+- Unlike the main `ErrorBoundary`, this one renders `null` on error instead of showing an error UI
+- Wrap only the `ElfsightReviews` component with this boundary
 
-The beasties plugin processes HTML files after Vite build. Since the prerender script runs after the client build (`build:client && build:server && build:prerender`), the critical CSS inlining will apply to the template that prerender uses.
-
----
-
-## Files to Modify
+## File Changes Summary
 
 | File | Change |
 |------|--------|
-| `package.json` | Add `vite-plugin-beasties` as devDependency |
-| `vite.config.ts` | Import and configure beasties plugin |
+| `src/components/ElfsightReviews.tsx` | Add error state, script error handler, global error listener |
+| `src/App.tsx` | Add `SilentErrorBoundary` wrapper around `ElfsightReviews` |
 
----
+## Benefits
 
-## Expected Impact
+- **No UI disruption**: Widget silently disappears when view limit is reached
+- **Other pages unaffected**: The `/contact` page and other routes will work normally
+- **Minimal code changes**: Only modifying 2 files with targeted error handling
+- **Zero visual impact**: When the widget works, it displays as normal; when it fails, it simply doesn't show
 
-| Metric | Current | Expected |
-|--------|---------|----------|
-| Render-blocking duration | 160ms | ~0ms (inline critical renders immediately) |
-| FCP | Blocked by CSS | Unblocked |
-| LCP | Delayed | Improved |
-
-The full CSS still loads, but asynchronously after the initial paint, so users see styled content immediately.
-
----
-
-## Risk Assessment
-
-| Risk | Mitigation |
-|------|------------|
-| Flash of unstyled content (FOUC) | Critical CSS includes all visible-on-load styles |
-| Increased HTML size | Critical CSS typically adds 5-10KB; offset by faster FCP |
-| Build time increase | Minimal; beasties is efficient |
-
----
-
-## Alternative Considered: Manual Critical CSS
-
-Manual extraction would require:
-1. Creating a separate `critical.css` file
-2. Inlining it in `index.html`
-3. Maintaining it separately from main CSS
-
-This is error-prone and maintenance-heavy. The automated approach via beasties is more sustainable.
-
----
-
-## Testing Checklist
-
-After implementation:
-1. Run Lighthouse audit - "Eliminate render-blocking resources" should pass
-2. Verify no FOUC on page load
-3. Confirm all styles load correctly after initial paint
-4. Test on slow 3G throttling to see improvement
