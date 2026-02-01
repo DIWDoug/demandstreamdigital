@@ -193,6 +193,8 @@ const Header = () => {
                 src={logo} 
                 alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
                 title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
+                width={154}
+                height={24}
                 className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
                   isScrolled 
                     ? "h-5 md:h-6 max-w-[24px] md:max-w-[28px] object-cover object-left" 
