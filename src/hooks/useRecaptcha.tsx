@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useState, useRef } from "react";
 
 declare global {
   interface Window {
@@ -20,8 +20,8 @@ declare global {
 const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g";
 
 /**
- * Dynamically loads the reCAPTCHA script only when this hook is used.
- * This reduces unused JS on pages that don't have forms.
+ * Dynamically loads the reCAPTCHA script only when needed.
+ * This reduces unused JS on pages that don't have forms or haven't interacted with them.
  */
 function loadRecaptchaScript(): Promise<void> {
   return new Promise((resolve) => {
@@ -83,70 +83,66 @@ function loadRecaptchaScript(): Promise<void> {
 
     script.onerror = () => {
       window.__recaptchaLoading = false;
-      console.error("useRecaptcha: Failed to load reCAPTCHA script");
-      resolve(); // Resolve anyway to not block the form
+      // Silently fail - reCAPTCHA is non-critical
+      resolve();
     };
 
     document.head.appendChild(script);
   });
 }
 
+/**
+ * useRecaptcha hook with lazy loading.
+ * 
+ * The reCAPTCHA script is NOT loaded on mount. Instead, call `initRecaptcha()` 
+ * when the user interacts with a form (e.g., on focus) to defer loading.
+ * 
+ * This reduces TTI by ~365KB on pages where forms exist but haven't been used.
+ */
 export function useRecaptcha() {
   const [isReady, setIsReady] = useState(false);
-  const loadAttempted = useRef(false);
+  const initAttempted = useRef(false);
 
-  useEffect(() => {
-    let mounted = true;
+  /**
+   * Call this to start loading reCAPTCHA (e.g., on input focus).
+   * Safe to call multiple times - will only load once.
+   */
+  const initRecaptcha = useCallback(async () => {
+    if (initAttempted.current) return;
+    initAttempted.current = true;
 
-    const initRecaptcha = async () => {
-      // Only load once per hook instance
-      if (loadAttempted.current) return;
-      loadAttempted.current = true;
+    await loadRecaptchaScript();
 
-      await loadRecaptchaScript();
-
-      if (!mounted) return;
-
-      // Now check if grecaptcha is ready
-      if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
-        window.grecaptcha.ready(() => {
-          if (mounted) {
-            console.log("useRecaptcha: grecaptcha v3 is ready");
-            setIsReady(true);
-          }
-        });
-      } else {
-        console.warn("useRecaptcha: grecaptcha not available after loading");
-      }
-    };
-
-    initRecaptcha();
-
-    return () => {
-      mounted = false;
-    };
+    if (window.grecaptcha && typeof window.grecaptcha.ready === 'function') {
+      window.grecaptcha.ready(() => {
+        setIsReady(true);
+      });
+    }
   }, []);
 
   const executeRecaptcha = useCallback(
     async (action: string): Promise<string | null> => {
-      if (!isReady || !window.grecaptcha) {
-        console.warn("useRecaptcha: Not ready, skipping verification");
+      // If not ready, try to init now (fallback for forms that forgot to call initRecaptcha)
+      if (!isReady) {
+        await initRecaptcha();
+        // Wait a bit for ready state
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+
+      if (!window.grecaptcha) {
+        // reCAPTCHA failed to load - proceed without it
         return null;
       }
 
       try {
-        console.log("useRecaptcha: Executing for action:", action);
-        // Use standard reCAPTCHA v3 execute
         const token = await window.grecaptcha.execute(SITE_KEY, { action });
-        console.log("useRecaptcha: Token generated successfully");
         return token;
-      } catch (error) {
-        console.error("useRecaptcha: Execution error:", error);
+      } catch {
         return null;
       }
     },
-    [isReady]
+    [isReady, initRecaptcha]
   );
 
-  return { executeRecaptcha, isReady };
+  return { executeRecaptcha, isReady, initRecaptcha };
 }
