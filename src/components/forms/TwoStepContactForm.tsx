@@ -27,7 +27,7 @@ const TwoStepContactForm = ({
 }: TwoStepContactFormProps) => {
   const { toast } = useToast();
   const navigate = useNavigate();
-  const { executeRecaptcha, isReady: isRecaptchaReady } = useRecaptcha();
+  const { executeRecaptcha, isReady: isRecaptchaReady, initRecaptcha } = useRecaptcha();
   const [step, setStep] = useState(1);
   const [isSubmittingStep1, setIsSubmittingStep1] = useState(false);
   const [isSubmittingStep2, setIsSubmittingStep2] = useState(false);
@@ -166,6 +166,7 @@ const TwoStepContactForm = ({
               required
               value={step1Data.name}
               onChange={(e) => setStep1Data({ ...step1Data, name: e.target.value })}
+              onFocus={initRecaptcha}
               placeholder="Your name"
               className={inputClass}
             />
@@ -303,7 +304,7 @@ const TwoStepContactForm = ({
 
             <button
               type="submit"
-              disabled={isSubmittingStep2 || !isRecaptchaReady}
+              disabled={isSubmittingStep2}
               className="btn-cta w-full group disabled:opacity-50"
             >
               {isSubmittingStep2 ? (

@@ -14,7 +14,7 @@ const LocalGrowthEngine = () => {
   const [honeypot, setHoneypot] = useState(""); // Bot trap field
   const formLoadTime = useRef<number>(Date.now());
   const { toast } = useToast();
-  const { executeRecaptcha, isReady: isRecaptchaReady } = useRecaptcha();
+  const { executeRecaptcha, isReady: isRecaptchaReady, initRecaptcha } = useRecaptcha();
 
   // Reset form load time when component mounts
   useEffect(() => {
@@ -222,13 +222,14 @@ const LocalGrowthEngine = () => {
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
+                          onFocus={initRecaptcha}
                           placeholder="Enter your email"
                           required
                           className="flex-1 px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[hsl(76,42%,41%)]/50 focus:border-[hsl(76,42%,41%)] transition-all"
                         />
                         <button
                           type="submit"
-                          disabled={isSubmitting || !isRecaptchaReady}
+                          disabled={isSubmitting}
                           className="btn-cta flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
                         >
                           {isSubmitting ? (
