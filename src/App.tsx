@@ -10,6 +10,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
 import ElfsightReviews from "./components/ElfsightReviews";
+import SilentErrorBoundary from "./components/SilentErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { useKonamiCode } from "./hooks/useKonamiCode";
@@ -76,7 +77,9 @@ const App = () => (
         <Sonner />
         <ScrollToTop />
         <BackToTop />
-        <ElfsightReviews />
+        <SilentErrorBoundary>
+          <ElfsightReviews />
+        </SilentErrorBoundary>
         <CookieConsent />
         <Suspense fallback={<RouteLoadingFallback />}>
         <Routes>
