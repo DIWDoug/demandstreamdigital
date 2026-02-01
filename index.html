@@ -48,19 +48,11 @@
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- Deferred third-party scripts - loaded after first paint to reduce critical chain depth -->
+    <!-- Note: reCAPTCHA is now loaded dynamically by useRecaptcha hook only when forms need it -->
     <script>
       (function() {
         function loadThirdPartyScripts() {
-          // reCAPTCHA v3
-          var siteKey = '%VITE_RECAPTCHA_SITE_KEY%' !== '' && '%VITE_RECAPTCHA_SITE_KEY%'.indexOf('VITE_') === -1 
-            ? '%VITE_RECAPTCHA_SITE_KEY%' 
-            : '6Ld_0EEsAAAAABYi-nOJU0ciaZGNM6_d0Xk5ED8g';
-          var recaptcha = document.createElement('script');
-          recaptcha.src = 'https://www.google.com/recaptcha/api.js?render=' + siteKey;
-          recaptcha.async = true;
-          document.head.appendChild(recaptcha);
-          
-          // Google Tag Manager
+          // Google Tag Manager (reCAPTCHA moved to dynamic loading in useRecaptcha.tsx)
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
