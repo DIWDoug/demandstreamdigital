@@ -16,15 +16,9 @@ const app = (
 // Only hydrate if there's pre-rendered content AND the route is safe to hydrate.
 // Some routes (like /blog, /contact) render dynamic content and can cause hydration mismatches.
 const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-const forceClientRender = pathname.startsWith("/blog") || pathname.startsWith("/contact");
+const hasPrerenderedContent = root.innerHTML.trim().length > 0 && !root.innerHTML.includes("<!--app-html-->");
 
-const hasPrerenderedContent =
-  root.innerHTML.trim().length > 0 && !root.innerHTML.includes("<!--app-html-->");
-
-const shouldHydrate =
-  import.meta.env.PROD && hasPrerenderedContent && !forceClientRender;
-
-if (shouldHydrate) {
+if (import.meta.env.PROD && hasPrerenderedContent) {
   hydrateRoot(root, app);
 } else {
   createRoot(root).render(app);
@@ -33,9 +27,9 @@ if (shouldHydrate) {
 // Remove splash overlay after React mounts
 // Uses requestAnimationFrame to ensure at least one paint frame with React content
 requestAnimationFrame(() => {
-  const splash = document.getElementById('app-splash');
+  const splash = document.getElementById("app-splash");
   if (splash) {
-    splash.style.opacity = '0';
+    splash.style.opacity = "0";
     setTimeout(() => splash.remove(), 300);
   }
 });
