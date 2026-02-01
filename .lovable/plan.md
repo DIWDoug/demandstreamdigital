@@ -1,218 +1,177 @@
 
-
-# Reduce Critical Request Chain Depth
+# Optimize Font Display Strategy
 
 ## Problem Statement
-The Lighthouse audit flagged "Avoid chaining critical requests" which occurs when resources are loaded sequentially rather than in parallel, creating a "waterfall" effect that delays page rendering.
+The SEO audit flagged font-display optimization to ensure text is consistently visible and minimize Cumulative Layout Shift (CLS). Currently:
 
-### Current Critical Request Chain Analysis
+1. Google Fonts URL uses `display=swap` but this only applies when CSS loads
+2. Preloaded WOFF2 files arrive before CSS declares `@font-face`
+3. No font metric overrides exist to reduce layout shifts during swap
+4. Patrick Hand font (handwriting) has no preload despite being used
 
-Based on the codebase analysis, the current dependency tree looks like this:
+## Current Font Loading Flow
 
 ```text
-document (index.html)
-├── [Render-Blocking] reCAPTCHA script (inline, creates new script element)
-│   └── https://www.google.com/recaptcha/api.js
-├── [Render-Blocking] jQuery stub (inline, sync)
-├── [Render-Blocking] GTM script (inline, loads external)
-│   └── https://www.googletagmanager.com/gtm.js
-├── [Critical Resource] /src/main.tsx (module)
-│   └── App.tsx → Index.tsx
-│       └── Header.tsx → framer-motion (dynamic import)
-│       └── Hero.tsx → supabase client
-│       └── 15+ section components
-├── [External Chain] Google Fonts
-│   └── fonts.googleapis.com/css2 → fonts.gstatic.com (woff2 files)
-└── [Late Load] Leadsy tag (async)
-└── [Late Load] Elfsight (React useEffect)
+Timeline:
+0ms   → HTML starts rendering with system fonts (Georgia, system-ui)
+50ms  → WOFF2 preloads begin fetching
+100ms → CSS link has media="print" (not applied yet)
+200ms → Fonts arrive but can't be used (no @font-face yet)
+300ms → CSS onload fires, media switches to "all"
+350ms → Fonts swap → LAYOUT SHIFT
 ```
 
-### Key Chain Bottlenecks Identified
+## Solution: Local @font-face with font-display: swap and Size Adjustments
 
-| Resource Chain | Depth | Impact |
-|---------------|-------|--------|
-| HTML → reCAPTCHA inline → external script | 2 | Blocks head parsing |
-| HTML → GTM inline → gtm.js → GTM-loaded scripts | 3+ | Creates multiple chains |
-| HTML → main.tsx → App → Index → 17 section imports | 4+ | Deep JS dependency |
-| HTML → Fonts CSS → WOFF2 files | 2 | LCP/FCP delay |
-| Index → Header → framer-motion | 3 | Animation library chain |
+### Strategy
+
+Define local `@font-face` rules in CSS that:
+1. Declare `font-display: swap` directly (no dependency on Google's CSS)
+2. Use the preloaded WOFF2 URLs
+3. Include `size-adjust`, `ascent-override`, and `descent-override` to match fallback metrics
+4. Reduce CLS by making system fonts render at similar sizes to web fonts
 
 ---
 
-## Solution Overview
+## Implementation
 
-Reduce chain depth through parallelization and deferral strategies without affecting functionality.
+### File: `src/index.css`
 
-### Strategy 1: Defer Third-Party Scripts to After First Paint
+Add `@font-face` declarations at the very top (before `@tailwind` directives):
 
-**Current State:**
-```html
-<head>
-  <!-- reCAPTCHA loads immediately in head -->
-  <script>
-    (function() {
-      var script = document.createElement('script');
-      script.src = 'https://www.google.com/recaptcha/api.js...';
-      script.async = true;
-      document.head.appendChild(script);
-    })();
-  </script>
-  <!-- GTM also loads in head -->
-  <script>(function(w,d,s,l,i){...})(...);</script>
-</head>
+```css
+/* =============================================================
+   FONT DEFINITIONS with font-display: swap and metric overrides
+   These use preloaded fonts from index.html for optimal loading
+   ============================================================= */
+
+/* Inter - Primary UI/Heading Font */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  /* Fallback adjustment: system-ui metrics */
+  size-adjust: 100%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+/* Lora - Body Text Serif Font */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOuGQbT0gvTJPa787weuyJGmKxemMeZ.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  /* Fallback adjustment: Georgia metrics */
+  size-adjust: 97%;
+  ascent-override: 87%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+/* Patrick Hand - Handwriting/Signature Font */
+@font-face {
+  font-family: 'Patrick Hand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/patrickhand/v23/LDI1apSQOAYtSuYWp8ZhfYe8UcLLq7oc.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ... rest of file continues ... */
 ```
 
-**Proposed Change:**
-Move third-party script initialization to after DOMContentLoaded or use requestIdleCallback:
+### File: `index.html`
 
-```html
-<head>
-  <!-- Preconnects remain for early connection -->
-  <link rel="preconnect" href="https://www.google.com" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-</head>
-<body>
-  <!-- ... content ... -->
-  <script type="module" src="/src/main.tsx"></script>
-  
-  <!-- Defer non-critical scripts until after initial render -->
-  <script>
-    // Load third-party scripts after first paint
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadThirdPartyScripts);
-    } else {
-      window.addEventListener('load', loadThirdPartyScripts);
-    }
-    
-    function loadThirdPartyScripts() {
-      // reCAPTCHA
-      var recaptcha = document.createElement('script');
-      recaptcha.src = 'https://www.google.com/recaptcha/api.js?render=...';
-      recaptcha.async = true;
-      document.head.appendChild(recaptcha);
-      
-      // GTM
-      (function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-MTRZV5G');
-    }
-  </script>
-</body>
-```
-
-### Strategy 2: Add Critical Preloads for First-Party Resources
-
-Add modulepreload for the critical application bundle:
-
-```html
-<head>
-  <!-- Preload critical module chunk -->
-  <link rel="modulepreload" href="/src/main.tsx">
-  
-  <!-- Existing font preloads are good -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/inter/..." as="font" type="font/woff2" crossorigin>
-</head>
-```
-
-### Strategy 3: Lazy Load framer-motion in Header Component
-
-Currently Header.tsx loads framer-motion synchronously:
-```typescript
-import { motion, AnimatePresence } from "framer-motion";
-```
-
-**Proposed Change:** Conditionally import framer-motion only when mega menu opens:
-
-```typescript
-// Replace static import with dynamic
-const [MotionComponents, setMotionComponents] = useState<typeof import('framer-motion') | null>(null);
-
-useEffect(() => {
-  // Lazy load framer-motion on first interaction
-  if (isMegaMenuOpen && !MotionComponents) {
-    import('framer-motion').then(setMotionComponents);
-  }
-}, [isMegaMenuOpen]);
-
-// Use native CSS transitions for initial render
-// Fall back to framer-motion once loaded
-```
-
-Alternatively, replace framer-motion with CSS-only animations for the mega menu since the animations are simple fade/slide effects.
-
-### Strategy 4: Optimize Font Loading Chain
-
-Current setup already uses the print/onload swap pattern which is good. Add fetchpriority to critical font preloads:
+Add preload for Patrick Hand font (used for signatures/handwriting):
 
 ```html
-<link rel="preload" href="https://fonts.gstatic.com/s/inter/..." 
-      as="font" type="font/woff2" crossorigin fetchpriority="high">
+<!-- Fonts - Preload Critical Fonts for LCP -->
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+<link rel="preload" href="https://fonts.gstatic.com/s/lora/v35/0QI6MX1D_JOuGQbT0gvTJPa787weuyJGmKxemMeZ.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+<link rel="preload" href="https://fonts.gstatic.com/s/patrickhand/v23/LDI1apSQOAYtSuYWp8ZhfYe8UcLLq7oc.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+The Google Fonts CSS link can remain as a fallback for extended character sets and italic variants.
+
+---
+
+## Technical Details
+
+### Font Metric Overrides Explained
+
+| Property | Purpose | Inter Value | Lora Value |
+|----------|---------|-------------|------------|
+| `size-adjust` | Scale font to match fallback size | 100% | 97% |
+| `ascent-override` | Match text baseline position | 90% | 87% |
+| `descent-override` | Match descender space | 22% | 22% |
+| `line-gap-override` | Match line spacing | 0% | 0% |
+
+These values minimize the visual "jump" when fonts swap from system fallbacks to web fonts.
+
+### Why This Works Better
+
+**Before (Current Flow):**
+```text
+1. System fonts render (no @font-face)
+2. WOFF2 files arrive via preload
+3. Google CSS loads (async)
+4. Google CSS provides @font-face
+5. Fonts swap with potential CLS
+```
+
+**After (New Flow):**
+```text
+1. CSS parses @font-face immediately
+2. font-display: swap shows text in fallback
+3. WOFF2 preloads complete
+4. Fonts swap with minimal CLS (metric overrides)
 ```
 
 ---
 
-## Implementation Files
+## Files to Modify
 
-| File | Change | Impact |
-|------|--------|--------|
-| `index.html` | Move reCAPTCHA and GTM to deferred loading after first paint | Reduces head blocking |
-| `index.html` | Add preconnect for google.com (reCAPTCHA) | Parallelizes connection |
-| `index.html` | Add modulepreload for main entry | Hints browser to fetch early |
-| `src/components/sections/Header.tsx` | Replace framer-motion with CSS animations OR lazy load | Reduces JS chain depth |
-| `src/pages/CaseStudies.tsx` | Already lazy loaded, no change needed | N/A |
+| File | Change |
+|------|--------|
+| `src/index.css` | Add @font-face declarations with font-display: swap and metric overrides at top of file |
+| `index.html` | Add preload for Patrick Hand font |
 
 ---
 
 ## Expected Impact
 
-### Before
-```text
-Critical Request Chain Depth: 3-4 levels
-Third-party scripts: Block head parsing
-framer-motion: Loaded on every page load (~40KB)
-```
-
-### After
-```text
-Critical Request Chain Depth: 2 levels
-Third-party scripts: Load after first contentful paint
-framer-motion: Only loaded when mega menu opens OR replaced with CSS
-```
-
-**Estimated Savings:** 200-400ms reduction in Time to Interactive
+- **FOIT Prevention**: Text always visible (swap ensures fallback renders)
+- **Reduced CLS**: Metric overrides make swap less jarring
+- **Faster Font Application**: Preloads + local @font-face = immediate use
+- **SEO Audit Pass**: Explicitly declared font-display: swap satisfies requirement
 
 ---
 
 ## Risk Assessment
 
-| Change | Risk | Mitigation |
-|--------|------|------------|
-| Deferred GTM | Analytics may miss very quick bounces | GTM still loads within 1-2s, acceptable tradeoff |
-| Deferred reCAPTCHA | Form validation delay on quick submits | Hero form shows after page load anyway |
-| CSS animations for Header | Slightly different animation feel | CSS animations are smooth, may not be noticeable |
-
----
-
-## Technical Notes
-
-### Why requestIdleCallback?
-- Runs callbacks during browser idle periods
-- Doesn't block main thread or delay rendering
-- Falls back to load event for older browsers
-
-### Font Preload Strategy
-The current preload approach is correct. The font files are preloaded while CSS is loaded with print/onload swap. Adding fetchpriority="high" explicitly prioritizes the LCP-critical fonts.
-
-### Alternative: Use Partytown for Third-Party Scripts
-A more advanced solution would be to run GTM and other trackers in a web worker using Partytown. This completely removes them from the main thread but requires more significant changes.
+| Risk | Mitigation |
+|------|------------|
+| Metric values not perfect | Values are estimated from common tools; fine-tune if needed |
+| Double font loading | Google CSS remains for extended glyphs; Latin range served locally |
+| Patrick Hand preload adds bytes | Small file (~15KB), low priority, only affects initial load |
 
 ---
 
 ## Testing Checklist
 
 After implementation:
-1. Run Lighthouse performance audit
-2. Verify critical request chain depth is reduced
-3. Confirm GTM dataLayer events still fire
-4. Test reCAPTCHA validation on contact forms
-5. Verify mega menu animations work correctly
-6. Check Network tab waterfall shows improved parallelization
-
+1. Verify text is visible immediately on page load (no FOIT)
+2. Check font swap animation is minimal (no jarring jump)
+3. Confirm Lighthouse "Ensure text remains visible during webfont load" passes
+4. Test on slow 3G to ensure fallback fonts display properly
