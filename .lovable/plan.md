@@ -1,60 +1,105 @@
 
-# Fix Patrick Hand Font 404 Error
+# Fix "Function components cannot be given refs" Warnings
 
 ## Problem
 
-The Patrick Hand font is returning a 404 error because the URL uses an outdated version:
-- **Current (broken):** `v23/LDI1apSQOAYtSuYWp8ZhfYe8UcLLq7oc.woff2`
-- **Latest (working):** `v25/LDI1apSQOAYtSuYWp8ZhfYe8XsLL.woff2`
+React is showing warnings in the console about function components not supporting refs:
 
-Google Fonts updated Patrick Hand from v23 to v25, and the font file hash changed.
+1. `ContactForm` (used in `Index.tsx`)
+2. `TwoStepContactForm` (used in `ContactForm.tsx`)  
+3. `Navigate` (from React Router v7 - internal warning)
+
+## Root Cause
+
+This is a known issue with React Router v7. The library's internal validation mechanisms attempt to check refs on components rendered within its Routes context. When a function component doesn't use `React.forwardRef`, this warning appears.
+
+The `Navigate` warning is an internal React Router issue that cannot be fixed in your code - it's a bug/limitation in React Router v7 itself.
+
+## Solution
+
+Wrap `ContactForm` and `TwoStepContactForm` with `React.forwardRef` to suppress the warnings. Even though these components don't actually use the ref, wrapping them prevents React from logging the warning.
 
 ## Changes
 
-### 1. Update `index.html` (Line 27)
+### 1. `src/components/sections/ContactForm.tsx`
 
-Update the preload URL to the new version:
+Wrap the component with `forwardRef`:
 
-```html
-<!-- Before -->
-<link rel="preload" href="https://fonts.gstatic.com/s/patrickhand/v23/LDI1apSQOAYtSuYWp8ZhfYe8UcLLq7oc.woff2" as="font" type="font/woff2" crossorigin>
+```tsx
+import { forwardRef } from "react";
+// ... other imports
 
-<!-- After -->
-<link rel="preload" href="https://fonts.gstatic.com/s/patrickhand/v25/LDI1apSQOAYtSuYWp8ZhfYe8XsLL.woff2" as="font" type="font/woff2" crossorigin>
+const ContactForm = forwardRef<HTMLElement>((_, ref) => {
+  // ... existing component code
+  
+  return (
+    <section id="contact" ref={ref} className="relative">
+      {/* ... rest of component */}
+    </section>
+  );
+});
+
+ContactForm.displayName = "ContactForm";
+
+export default ContactForm;
 ```
 
-### 2. Update `src/index.css` (Lines 53-61)
+### 2. `src/components/forms/TwoStepContactForm.tsx`
 
-Update the `@font-face` declaration to use the new URL:
+Wrap the component with `forwardRef`:
 
-```css
-/* Before */
-@font-face {
-  font-family: 'Patrick Hand';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/patrickhand/v23/LDI1apSQOAYtSuYWp8ZhfYe8UcLLq7oc.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+```tsx
+import { useState, forwardRef } from "react";
+// ... other imports
+
+interface TwoStepContactFormProps {
+  formType: string;
+  submitButtonText?: string;
+  step1ButtonText?: string;
+  showServicesInterested?: boolean;
+  className?: string;
+  compact?: boolean;
 }
 
-/* After */
-@font-face {
-  font-family: 'Patrick Hand';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/patrickhand/v25/LDI1apSQOAYtSuYWp8ZhfYe8XsLL.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
+  (
+    {
+      formType,
+      submitButtonText = "Let's Talk Partnership",
+      step1ButtonText = "Continue",
+      showServicesInterested = true,
+      className = "",
+      compact = false,
+    },
+    ref
+  ) => {
+    // ... existing component code
+    
+    return (
+      <div ref={ref} className={className}>
+        {/* ... rest of component */}
+      </div>
+    );
+  }
+);
+
+TwoStepContactForm.displayName = "TwoStepContactForm";
+
+export default TwoStepContactForm;
 ```
+
+## Technical Notes
+
+- The `Navigate` warning from React Router v7 cannot be fixed in your code - it's an internal library issue
+- Adding `displayName` is a best practice when using `forwardRef` for better debugging
+- The ref is attached to the outermost element of each component
+- This change has no impact on functionality - it only silences the console warnings
 
 ## Result
 
-- No more 404 errors for the Patrick Hand font
-- Handwriting font will load correctly for signature elements
-- Preload will work properly, improving performance
+After these changes:
+- ContactForm ref warning: Fixed
+- TwoStepContactForm ref warning: Fixed
+- Navigate ref warning: Cannot be fixed (React Router internal)
 
-## Technical Note
-
-Google Fonts periodically updates font versions, which can change the file URLs. The font file hash changed from `UcLLq7oc` to `XsLL` in v25. This is a routine update that requires updating any hardcoded URLs.
+The Navigate warning is a known React Router v7 issue that the library maintainers would need to address.
