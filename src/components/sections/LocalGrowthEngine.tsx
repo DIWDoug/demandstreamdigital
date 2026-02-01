@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
-import { supabase } from "@/integrations/supabase/client";
 import bookCover from "@/assets/local-growth-engine-cover.png";
 
 const LocalGrowthEngine = () => {
@@ -57,6 +56,8 @@ const LocalGrowthEngine = () => {
     try {
       // Get reCAPTCHA token
       const recaptchaToken = await executeRecaptcha("ebook_download");
+
+      const { supabase } = await import("@/integrations/supabase/client");
       
       const { data, error } = await supabase.functions.invoke('submit-ebook-lead', {
         body: { email, recaptchaToken }

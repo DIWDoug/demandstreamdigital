@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "@/components/ui/phone-input";
 
@@ -41,6 +40,7 @@ const Hero = () => {
     setIsSubmitting(true);
 
     try {
+      const { supabase } = await import("@/integrations/supabase/client");
       const { data, error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
           name: formData.fullName,

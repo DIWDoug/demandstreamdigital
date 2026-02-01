@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en" class="dark">
   <head>
-    <!-- jQuery stub for GTM tags that expect jQuery -->
-    <script>window.jQuery=window.jQuery||function(){return{ready:function(){},on:function(){},off:function(){},find:function(){return[]},each:function(){},ajax:function(){},get:function(){},post:function(){}}};window.$=window.jQuery;</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -52,6 +50,23 @@
     <script>
       (function() {
         function loadThirdPartyScripts() {
+          // jQuery stub for GTM tags that expect jQuery
+          if (!window.jQuery) {
+            window.jQuery = function() {
+              return {
+                ready: function() {},
+                on: function() {},
+                off: function() {},
+                find: function() { return []; },
+                each: function() {},
+                ajax: function() {},
+                get: function() {},
+                post: function() {}
+              };
+            };
+            window.$ = window.jQuery;
+          }
+
           // Google Tag Manager (reCAPTCHA moved to dynamic loading in useRecaptcha.tsx)
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
