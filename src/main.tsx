@@ -6,6 +6,15 @@ import "./index.css";
 
 const root = document.getElementById("root")!;
 
+const normalizePath = (pathname: string) => {
+  if (!pathname) return "/";
+  return pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+};
+
+const currentPath = normalizePath(window.location.pathname);
+const prerenderedPath = normalizePath(root.dataset.prerenderPath || "");
+const hasMatchingPrerender = Boolean(prerenderedPath) && prerenderedPath === currentPath;
+
 const app = (
   <HelmetProvider>
     <BrowserRouter>
@@ -18,7 +27,11 @@ const app = (
 // Otherwise do normal client render.
 const hasPrerenderedContent = root.innerHTML.trim().length > 0;
 
-if (import.meta.env.PROD && hasPrerenderedContent) {
+if (!hasMatchingPrerender && hasPrerenderedContent) {
+  root.innerHTML = "";
+}
+
+if (import.meta.env.PROD && hasPrerenderedContent && hasMatchingPrerender) {
   hydrateRoot(root, app, {
     // optional but very useful: surface hydration issues instead of "mystery flashes"
     onRecoverableError: (err) => console.warn("[hydrate recoverable]", err),

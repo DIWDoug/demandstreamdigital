@@ -185,7 +185,8 @@ const routesToPrerender = [
       // Replace placeholders
       const html = template
         .replace('<!--app-head-->', headContent)
-        .replace('<!--app-html-->', appHtml);
+        .replace('<!--app-html-->', appHtml)
+        .replace('<!--app-path-->', route);
 
       // Create output path
       const filePath = `dist${route === '/' ? '/index' : route}.html`;
