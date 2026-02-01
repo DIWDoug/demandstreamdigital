@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/dialedinweb-logo.png";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const location = useLocation();
@@ -470,149 +469,137 @@ const Header = () => {
           </div>
         )}
 
-        {/* Mobile menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.nav 
-              id="mobile-menu"
-              role="navigation"
-              aria-label="Mobile navigation"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden border-t border-border bg-surface-dark relative overflow-hidden"
-            >
-              {/* Scrollable content wrapper */}
-              <motion.div 
-                initial={{ y: -20 }}
-                animate={{ y: 0 }}
-                exit={{ y: -20 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20"
-              >
-            {/* Close Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
-              aria-label="Close menu"
-            >
-              <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
-            </button>
-            <nav className="flex flex-col gap-1 pt-8">
-              {/* Services Accordion */}
-              <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
-                <a
-                  href="/white-label-inbound-marketing-services"
-                  className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    navigateMobile("/white-label-inbound-marketing-services");
-                  }}
-                >
-                  <span className="w-1 h-4 bg-cta rounded-full" />
-                  Services
-                </a>
-                <button
-                  onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                  className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
-                  aria-label="Toggle services menu"
-                >
-                  <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-              {isMegaMenuOpen && (
-                <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4 grid grid-cols-2 gap-4">
-                  {serviceCategories.map((category, index) => (
-                    <div key={index}>
-                      <a 
-                        href={category.href}
-                        className="text-xs font-semibold text-cta uppercase tracking-widest mb-2 block active:text-cta-glow transition-colors underline underline-offset-2 decoration-cta/30"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateMobile(category.href);
-                        }}
-                      >
-                        {category.title}
-                      </a>
-                      <ul className="space-y-2">
-                        {category.items.map((item, itemIndex) => (
-                            <li key={itemIndex}>
-                              <a 
-                                href={item.href}
-                                className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  navigateMobile(item.href);
-                                }}
-                              >
-                                {item.label}
-                              </a>
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              )}
-              
-              {[...preServiceLinks, ...postServiceLinks].map((link, index) => (
-                link.isRoute ? (
-                  <Link
-                    key={index}
-                    to={link.href}
-                    className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span className="w-1 h-4 bg-cta rounded-full" />
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={index}
-                    href={getAnchorHref(link.href)}
-                    className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    <span className="w-1 h-4 bg-cta rounded-full" />
-                    {link.label}
-                  </a>
-                )
-              ))}
-
-              {/* Mobile Partner Tools (no dropdown) */}
-              <Link
-                to="/partner-tools"
-                className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
+        {/* Mobile menu - CSS-only animations for reduced bundle size */}
+        {isMobileMenuOpen && (
+          <nav 
+            id="mobile-menu"
+            role="navigation"
+            aria-label="Mobile navigation"
+            className="md:hidden border-t border-border bg-surface-dark relative overflow-hidden animate-mobile-menu-open"
+          >
+            {/* Scrollable content wrapper */}
+            <div className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20 animate-mobile-menu-content">
+              {/* Close Button */}
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-4 right-4 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
+                aria-label="Close menu"
               >
-                <span className="w-1 h-4 bg-cta rounded-full" />
-                Partner Tools
-              </Link>
+                <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
+              </button>
+              <nav className="flex flex-col gap-1 pt-8">
+                {/* Services Accordion */}
+                <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
+                  <a
+                    href="/white-label-inbound-marketing-services"
+                    className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigateMobile("/white-label-inbound-marketing-services");
+                    }}
+                  >
+                    <span className="w-1 h-4 bg-cta rounded-full" />
+                    Services
+                  </a>
+                  <button
+                    onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                    className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
+                    aria-label="Toggle services menu"
+                  >
+                    <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+                {isMegaMenuOpen && (
+                  <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4 grid grid-cols-2 gap-4">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index}>
+                        <a 
+                          href={category.href}
+                          className="text-xs font-semibold text-cta uppercase tracking-widest mb-2 block active:text-cta-glow transition-colors underline underline-offset-2 decoration-cta/30"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateMobile(category.href);
+                          }}
+                        >
+                          {category.title}
+                        </a>
+                        <ul className="space-y-2">
+                          {category.items.map((item, itemIndex) => (
+                              <li key={itemIndex}>
+                                <a 
+                                  href={item.href}
+                                  className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    navigateMobile(item.href);
+                                  }}
+                                >
+                                  {item.label}
+                                </a>
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                {[...preServiceLinks, ...postServiceLinks].map((link, index) => (
+                  link.isRoute ? (
+                    <Link
+                      key={index}
+                      to={link.href}
+                      className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="w-1 h-4 bg-cta rounded-full" />
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={index}
+                      href={getAnchorHref(link.href)}
+                      className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="w-1 h-4 bg-cta rounded-full" />
+                      {link.label}
+                    </a>
+                  )
+                ))}
 
-
-
-              <div className="pt-4 mt-2 border-t border-border">
-                <a 
-                  href={PHONE_HREF}
-                  className="flex items-center gap-2 py-3 text-foreground font-medium"
-                >
-                  <Phone className="h-4 w-4 text-cta" />
-                  {PHONE_NUMBER}
-                </a>
-                <Link 
-                  to="/contact" 
-                  className="btn-cta text-center mt-3 w-full"
+                {/* Mobile Partner Tools (no dropdown) */}
+                <Link
+                  to="/partner-tools"
+                  className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Schedule a Discovery Call
+                  <span className="w-1 h-4 bg-cta rounded-full" />
+                  Partner Tools
                 </Link>
-              </div>
-            </nav>
-              </motion.div>
-            </motion.nav>
-          )}
-        </AnimatePresence>
+
+
+
+                <div className="pt-4 mt-2 border-t border-border">
+                  <a 
+                    href={PHONE_HREF}
+                    className="flex items-center gap-2 py-3 text-foreground font-medium"
+                  >
+                    <Phone className="h-4 w-4 text-cta" />
+                    {PHONE_NUMBER}
+                  </a>
+                  <Link 
+                    to="/contact" 
+                    className="btn-cta text-center mt-3 w-full"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Schedule a Discovery Call
+                  </Link>
+                </div>
+              </nav>
+            </div>
+          </nav>
+        )}
       </div>
     </header>
   );
