@@ -43,6 +43,9 @@ const Terms = lazy(() => import("./pages/Terms"));
 const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
 
+// Listicle Pages - Lazy loaded
+const TopWhiteLabelSEOAgencies = lazy(() => import("./pages/TopWhiteLabelSEOAgencies"));
+
 // Service Hub Pages - Lazy loaded
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
@@ -117,6 +120,9 @@ const App = () => (
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/region-blocked" element={<RegionBlocked />} />
+
+        {/* ============ LISTICLE PAGES ============ */}
+        <Route path="/top-agencies/white-label-seo" element={<TopWhiteLabelSEOAgencies />} />
 
         {/* ============ NEW FLAT URL STRUCTURE ============ */}
         
