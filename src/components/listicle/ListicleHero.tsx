@@ -6,6 +6,7 @@ interface ListicleHeroProps {
   author: {
     name: string;
     avatar?: string;
+    slug?: string;
   };
   lastUpdated: string;
   breadcrumbs?: { label: string; href?: string }[];
@@ -64,7 +65,13 @@ const ListicleHero = ({ title, author, lastUpdated, breadcrumbs }: ListicleHeroP
                 <User className="w-4 h-4 text-primary" />
               </div>
             )}
-            <span className="font-medium text-foreground">{author.name}</span>
+            {author.slug ? (
+              <Link to={`/authors/${author.slug}`} className="font-medium text-foreground hover:text-primary transition-colors">
+                {author.name}
+              </Link>
+            ) : (
+              <span className="font-medium text-foreground">{author.name}</span>
+            )}
           </div>
           <span className="text-border">|</span>
           <div className="flex items-center gap-2">
