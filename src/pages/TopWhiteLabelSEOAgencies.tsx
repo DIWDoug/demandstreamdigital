@@ -7,6 +7,7 @@ import {
   ListicleAgencyTable,
   ListicleAgencyCard,
   ListicleCTA,
+  ListicleScrollCTA,
 } from "@/components/listicle";
 import { whiteLabelSEOAgenciesConfig } from "@/data/listicles/white-label-seo-agencies";
 import {
@@ -248,6 +249,7 @@ const TopWhiteLabelSEOAgencies = () => {
       </main>
 
       <Footer />
+      <ListicleScrollCTA />
     </div>
   );
 };

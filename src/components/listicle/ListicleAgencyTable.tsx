@@ -8,20 +8,17 @@ interface ListicleAgencyTableProps {
   onScrollToAgency?: (anchor: string) => void;
 }
 
-type SortField = "rank" | "finalScore" | "clientRating" | "yearsInBusiness" | "monthlyVisits";
+type SortField = "rank" | "clientRating" | "yearsInBusiness" | "monthlyVisits";
 type SortDirection = "asc" | "desc";
-type ScoreFilter = "all" | "high" | "medium" | "low";
 
 const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTableProps) => {
   const [sortField, setSortField] = useState<SortField>("rank");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
-  const [scoreFilter, setScoreFilter] = useState<ScoreFilter>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredAndSortedAgencies = useMemo(() => {
     let result = [...agencies];
 
-    // Apply search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       result = result.filter(
@@ -31,26 +28,11 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
       );
     }
 
-    // Apply score filter
-    if (scoreFilter !== "all") {
-      result = result.filter((agency) => {
-        if (scoreFilter === "high") return agency.finalScore >= 70;
-        if (scoreFilter === "medium") return agency.finalScore >= 50 && agency.finalScore < 70;
-        if (scoreFilter === "low") return agency.finalScore < 50;
-        return true;
-      });
-    }
-
-    // Apply sorting
     result.sort((a, b) => {
       let aVal: number;
       let bVal: number;
 
       switch (sortField) {
-        case "finalScore":
-          aVal = a.finalScore;
-          bVal = b.finalScore;
-          break;
         case "clientRating":
           aVal = a.clientRating;
           bVal = b.clientRating;
@@ -72,7 +54,7 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
     });
 
     return result;
-  }, [agencies, sortField, sortDirection, scoreFilter, searchQuery]);
+  }, [agencies, sortField, sortDirection, searchQuery]);
 
   const handleSort = (field: SortField) => {
     if (sortField === field) {
@@ -92,36 +74,10 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
     );
   };
 
-  const getScoreBadgeClass = (score: number) => {
-    if (score >= 70) return "bg-green-500/10 text-green-600 border-green-500/20";
-    if (score >= 50) return "bg-yellow-500/10 text-yellow-600 border-yellow-500/20";
-    return "bg-red-500/10 text-red-600 border-red-500/20";
-  };
-
   return (
     <div className="space-y-4">
-      {/* Filters */}
-      <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-muted-foreground" />
-          <span className="text-sm font-medium text-foreground">Filter by Score:</span>
-          <div className="flex gap-1">
-            {(["all", "high", "medium", "low"] as ScoreFilter[]).map((filter) => (
-              <Button
-                key={filter}
-                variant={scoreFilter === filter ? "default" : "outline"}
-                size="sm"
-                onClick={() => setScoreFilter(filter)}
-                className="text-xs h-7"
-              >
-                {filter === "all" && "All"}
-                {filter === "high" && "High (70+)"}
-                {filter === "medium" && "Medium (50-69)"}
-                {filter === "low" && "Low (<50)"}
-              </Button>
-            ))}
-          </div>
-        </div>
+      {/* Search */}
+      <div className="flex justify-end">
         <input
           type="text"
           placeholder="Search agencies..."
@@ -138,7 +94,7 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
 
       {/* Table */}
       <div className="overflow-x-auto border border-border rounded-xl">
-        <table className="w-full min-w-[900px]">
+        <table className="w-full min-w-[800px]">
           <thead>
             <tr className="bg-muted/50 border-b border-border">
               <th
@@ -174,16 +130,10 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
               <th className="px-4 py-3 text-left text-xs font-semibold text-foreground">
                 Min Project
               </th>
-              <th
-                className="px-4 py-3 text-left text-xs font-semibold text-foreground cursor-pointer hover:bg-muted/80 transition-colors"
-                onClick={() => handleSort("finalScore")}
-              >
-                Score <SortIcon field="finalScore" />
-              </th>
             </tr>
           </thead>
           <tbody>
-            {filteredAndSortedAgencies.map((agency, index) => (
+            {filteredAndSortedAgencies.map((agency) => (
               <tr
                 key={agency.name}
                 className={`border-b border-border/50 hover:bg-muted/30 transition-colors ${
@@ -226,15 +176,6 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
                   </div>
                 </td>
                 <td className="px-4 py-3 text-sm text-muted-foreground">{agency.minProject}</td>
-                <td className="px-4 py-3">
-                  <span
-                    className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold border ${getScoreBadgeClass(
-                      agency.finalScore
-                    )}`}
-                  >
-                    {agency.finalScore}
-                  </span>
-                </td>
               </tr>
             ))}
           </tbody>
