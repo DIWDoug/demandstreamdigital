@@ -200,12 +200,12 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
     {
       rank: 0,
       name: "Dialed-In Web",
-      website: "https://www.dialedin-web.com",
-      websiteDisplay: "dialedin-web.com",
+      website: "https://www.dialedinweb.com",
+      websiteDisplay: "dialedinweb.com",
       minProject: "$1,000",
       hourlyRate: "$66/hr",
       clientRating: 5.0,
-      clientReviews: 12,
+      clientReviews: 25,
       employeeRating: 5.0,
       employeeReviews: 3,
       yearFounded: 2011,
@@ -214,8 +214,8 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
       monthlyVisits: "1K-5K",
       isTopPick: true,
       deepDive: {
-        tagline: "Boutique white label SEO with transparent pricing and strategic partnership focus.",
-        description: "Dialed-In Web takes a fundamentally different approach to white label SEO. While most providers operate on a high-volume, package-based model, Dialed-In Web functions as a true strategic partner with transparent hourly billing at $66/hour. This means you know exactly what you're paying for, and more importantly, your clients' campaigns get the attention they deserve rather than being processed through an assembly line. The founder's background in agency operations means they understand the dynamics of managing client expectations, hitting deadlines, and maintaining the quality that keeps clients renewing year after year.",
+        tagline: "Built by a marketer, for marketers — boutique white label SEO with transparent pricing.",
+        description: "Dialed-In Web takes a fundamentally different approach to white label SEO. Founded in 2011 by a veteran marketer who has lived the agency grind firsthand, Dialed-In Web was built specifically for marketers who need a fulfillment partner that actually understands their world. While most providers operate on a high-volume, package-based model, Dialed-In Web functions as a true strategic partner with transparent hourly billing at $66/hour. This means you know exactly what you're paying for, and more importantly, your clients' campaigns get the attention they deserve rather than being processed through an assembly line. The founder's 15+ years in agency operations means they understand the dynamics of managing client expectations, hitting deadlines, and maintaining the quality that keeps clients renewing year after year.",
         coreServices: [
           "Technical SEO audits with prioritized action plans tailored to client resources",
           "Content strategy and production with your brand voice and style guidelines",
