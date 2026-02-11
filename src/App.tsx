@@ -45,6 +45,7 @@ const Author = lazy(() => import("./pages/Author"));
 
 // Listicle Pages - Lazy loaded
 const TopWhiteLabelSEOAgencies = lazy(() => import("./pages/TopWhiteLabelSEOAgencies"));
+const TopWhiteLabelPPCAgencies = lazy(() => import("./pages/TopWhiteLabelPPCAgencies"));
 
 // Service Hub Pages - Lazy loaded
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
@@ -123,6 +124,7 @@ const App = () => (
 
         {/* ============ LISTICLE PAGES ============ */}
         <Route path="/top-agencies/white-label-seo" element={<TopWhiteLabelSEOAgencies />} />
+        <Route path="/top-agencies/white-label-ppc" element={<TopWhiteLabelPPCAgencies />} />
 
         {/* ============ NEW FLAT URL STRUCTURE ============ */}
         
