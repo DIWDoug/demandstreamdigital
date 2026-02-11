@@ -2,6 +2,8 @@
 // Comprehensive fact-checked data for Top 30 agencies with 20 deep dives
 // Last updated: February 2026
 
+import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+
 export interface AgencyData {
   rank: number;
   name: string;
@@ -38,6 +40,7 @@ export interface ListicleConfig {
   author: {
     name: string;
     avatar?: string;
+    slug?: string;
   };
   introduction: {
     paragraphs: string[];
@@ -79,7 +82,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
   keywords: "white label SEO, white label SEO agencies, SEO reseller programs, private label SEO, white label SEO services, SEO outsourcing, white label link building, white label content writing",
   lastUpdated: "February 5, 2026",
   author: {
-    name: "Dialed-In Web Editorial Team",
+    name: "Doug Bryson",
+    avatar: dougHeadshot,
+    slug: "doug-bryson",
   },
 
   introduction: {
