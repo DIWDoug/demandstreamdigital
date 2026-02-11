@@ -73,6 +73,49 @@ const TopWhiteLabelSEOAgencies = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={config.metaTitle} />
         <meta name="twitter:description" content={config.metaDescription} />
+
+        {/* Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Article",
+                "@id": `${config.canonicalUrl}#article`,
+                "headline": config.title,
+                "description": config.metaDescription,
+                "url": config.canonicalUrl,
+                "datePublished": "2026-02-05",
+                "dateModified": "2026-02-05",
+                "author": {
+                  "@type": "Person",
+                  "@id": "https://dialedinweb.com/authors/doug-bryson#person",
+                  "name": "Doug Bryson",
+                  "url": "https://dialedinweb.com/authors/doug-bryson",
+                  "sameAs": ["https://www.linkedin.com/in/douglasebryson"]
+                },
+                "publisher": {
+                  "@id": "https://dialedinweb.com/#organization"
+                },
+                "isPartOf": {
+                  "@id": "https://dialedinweb.com/#website"
+                },
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": `${config.canonicalUrl}#webpage`
+                },
+                "inLanguage": "en-US"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dialedinweb.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Top White Label SEO Agencies", "item": config.canonicalUrl }
+                ]
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header />
