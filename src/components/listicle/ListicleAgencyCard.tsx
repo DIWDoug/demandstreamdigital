@@ -39,15 +39,19 @@ const ListicleAgencyCard = ({ agency, isTopPick }: ListicleAgencyCardProps) => {
               <Globe className="w-4 h-4 text-muted-foreground" />
               <div>
                 <p className="text-xs text-muted-foreground">Website</p>
-                <a
-                  href={agency.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-[hsl(var(--accent-blue))] hover:underline inline-flex items-center gap-1"
-                >
-                  {agency.websiteDisplay}
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+                {isTopPick ? (
+                  <a
+                    href={agency.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-[hsl(var(--accent-blue))] hover:underline inline-flex items-center gap-1"
+                  >
+                    {agency.websiteDisplay}
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                ) : (
+                  <span className="text-sm font-medium text-foreground">{agency.websiteDisplay}</span>
+                )}
               </div>
             </div>
             <div className="flex items-center gap-2">
