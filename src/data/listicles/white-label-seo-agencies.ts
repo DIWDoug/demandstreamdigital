@@ -172,22 +172,21 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
     topPickNote: "⭐ Our Top Pick offers a unique combination of transparent pricing, personalized service, and proven results that sets them apart from high-volume competitors.",
     items: [
       { rank: 0, name: "Dialed-In Web", anchor: "top-pick-dialed-in-web", description: "Boutique white label partner with $66/hr transparent pricing and hands-on strategic support" },
-      { rank: 1, name: "The HOTH", anchor: "1-the-hoth", description: "Industry pioneer with comprehensive managed SEO and à la carte link building services" },
-      { rank: 2, name: "Boostability", anchor: "2-boostability", description: "Enterprise-scale provider specializing in small business SEO with 450+ employees" },
-      { rank: 3, name: "SEOReseller", anchor: "3-seoreseller", description: "Full-service reseller platform with white label dashboard and comprehensive reporting" },
-      { rank: 4, name: "DashClicks", anchor: "4-dashclicks", description: "SaaS-first platform with 1,500+ verified reviews and agency management tools" },
-      { rank: 5, name: "WebFX", anchor: "5-webfx", description: "Award-winning agency with proprietary MarketingCloudFX technology and 500+ employees" },
-      { rank: 6, name: "Fat Joe", anchor: "6-fat-joe", description: "UK-based content and link building powerhouse processing 800+ orders daily" },
-      { rank: 7, name: "Loganix", anchor: "7-loganix", description: "Specialized in local SEO with done-for-you citation building and link outreach" },
-      { rank: 8, name: "Victorious", anchor: "8-victorious", description: "Data-driven SEO agency with transparent reporting and enterprise-level strategies" },
-      { rank: 9, name: "OuterBox", anchor: "9-outerbox", description: "E-commerce SEO specialists with 20+ years experience in online retail" },
-      { rank: 10, name: "Sure Oak", anchor: "10-sure-oak", description: "Growth-focused agency combining SEO with conversion optimization strategies" },
-      { rank: 11, name: "Page One Power", anchor: "11-page-one-power", description: "Premium link building agency with manual outreach and transparent processes" },
-      { rank: 12, name: "Coalition Technologies", anchor: "12-coalition-technologies", description: "Los Angeles-based agency with design-forward approach and proven ROI focus" },
-      { rank: 13, name: "Straight North", anchor: "13-straight-north", description: "Lead generation specialists with proprietary lead validation technology" },
-      { rank: 14, name: "SEO.com", anchor: "14-seocom", description: "Legacy SEO brand with enterprise partnerships and comprehensive service suite" },
-      { rank: 15, name: "Thrive Internet Marketing Agency", anchor: "15-thrive-internet-marketing-agency", description: "Texas-based full-service agency with strong local SEO and reputation management" },
-      { rank: 16, name: "SEO Brand", anchor: "16-seo-brand", description: "Boutique agency with custom strategies for mid-market and enterprise clients" },
+      { rank: 2, name: "The HOTH", anchor: "2-the-hoth", description: "Industry pioneer with comprehensive managed SEO and à la carte link building services" },
+      { rank: 3, name: "Boostability", anchor: "3-boostability", description: "Enterprise-scale provider specializing in small business SEO with 450+ employees" },
+      { rank: 4, name: "SEOReseller", anchor: "4-seoreseller", description: "Full-service reseller platform with white label dashboard and comprehensive reporting" },
+      { rank: 5, name: "DashClicks", anchor: "5-dashclicks", description: "SaaS-first platform with 1,500+ verified reviews and agency management tools" },
+      { rank: 6, name: "WebFX", anchor: "6-webfx", description: "Award-winning agency with proprietary MarketingCloudFX technology and 500+ employees" },
+      { rank: 7, name: "Fat Joe", anchor: "7-fat-joe", description: "UK-based content and link building powerhouse processing 800+ orders daily" },
+      { rank: 8, name: "Loganix", anchor: "8-loganix", description: "Specialized in local SEO with done-for-you citation building and link outreach" },
+      { rank: 9, name: "Victorious", anchor: "9-victorious", description: "Data-driven SEO agency with transparent reporting and enterprise-level strategies" },
+      { rank: 10, name: "OuterBox", anchor: "10-outerbox", description: "E-commerce SEO specialists with 20+ years experience in online retail" },
+      { rank: 11, name: "Sure Oak", anchor: "11-sure-oak", description: "Growth-focused agency combining SEO with conversion optimization strategies" },
+      { rank: 12, name: "Page One Power", anchor: "12-page-one-power", description: "Premium link building agency with manual outreach and transparent processes" },
+      { rank: 13, name: "Coalition Technologies", anchor: "13-coalition-technologies", description: "Los Angeles-based agency with design-forward approach and proven ROI focus" },
+      { rank: 14, name: "Straight North", anchor: "14-straight-north", description: "Lead generation specialists with proprietary lead validation technology" },
+      { rank: 15, name: "SEO.com", anchor: "15-seocom", description: "Legacy SEO brand with enterprise partnerships and comprehensive service suite" },
+      { rank: 16, name: "Thrive Internet Marketing Agency", anchor: "16-thrive-internet-marketing-agency", description: "Texas-based full-service agency with strong local SEO and reputation management" },
       { rank: 17, name: "Digital Current", anchor: "17-digital-current", description: "Content-led SEO agency with award-winning campaigns and creative approach" },
       { rank: 18, name: "Ignite Visibility", anchor: "18-ignite-visibility", description: "San Diego-based Inc. 5000 agency with forecasting and analytics focus" },
       { rank: 19, name: "Searchbloom", anchor: "19-searchbloom", description: "Utah-based agency with proprietary ranking methodology and local expertise" },
@@ -238,9 +237,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 1 - The HOTH
+    // Rank 2 - The HOTH
     {
-      rank: 1,
+      rank: 2,
       name: "The HOTH",
       website: "https://www.thehoth.com",
       websiteDisplay: "thehoth.com",
@@ -278,9 +277,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 2 - Boostability
+    // Rank 3 - Boostability
     {
-      rank: 2,
+      rank: 3,
       name: "Boostability",
       website: "https://www.boostability.com",
       websiteDisplay: "boostability.com",
@@ -318,9 +317,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 3 - SEOReseller
+    // Rank 4 - SEOReseller
     {
-      rank: 3,
+      rank: 4,
       name: "SEOReseller",
       website: "https://www.seoreseller.com",
       websiteDisplay: "seoreseller.com",
@@ -358,9 +357,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 4 - DashClicks
+    // Rank 5 - DashClicks
     {
-      rank: 4,
+      rank: 5,
       name: "DashClicks",
       website: "https://www.dashclicks.com",
       websiteDisplay: "dashclicks.com",
@@ -398,9 +397,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 5 - WebFX
+    // Rank 6 - WebFX
     {
-      rank: 5,
+      rank: 6,
       name: "WebFX",
       website: "https://www.webfx.com",
       websiteDisplay: "webfx.com",
@@ -438,9 +437,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 6 - Fat Joe
+    // Rank 7 - Fat Joe
     {
-      rank: 6,
+      rank: 7,
       name: "Fat Joe",
       website: "https://fatjoe.com",
       websiteDisplay: "fatjoe.com",
@@ -478,9 +477,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 7 - Loganix
+    // Rank 8 - Loganix
     {
-      rank: 7,
+      rank: 8,
       name: "Loganix",
       website: "https://loganix.com",
       websiteDisplay: "loganix.com",
@@ -518,9 +517,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 8 - Victorious
+    // Rank 9 - Victorious
     {
-      rank: 8,
+      rank: 9,
       name: "Victorious",
       website: "https://victorious.com",
       websiteDisplay: "victorious.com",
@@ -558,9 +557,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 9 - OuterBox
+    // Rank 10 - OuterBox
     {
-      rank: 9,
+      rank: 10,
       name: "OuterBox",
       website: "https://www.outerboxdesign.com",
       websiteDisplay: "outerboxdesign.com",
@@ -598,9 +597,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 10 - Sure Oak
+    // Rank 11 - Sure Oak
     {
-      rank: 10,
+      rank: 11,
       name: "Sure Oak",
       website: "https://www.sureoak.com",
       websiteDisplay: "sureoak.com",
@@ -638,9 +637,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 11 - Page One Power
+    // Rank 12 - Page One Power
     {
-      rank: 11,
+      rank: 12,
       name: "Page One Power",
       website: "https://www.pageonepower.com",
       websiteDisplay: "pageonepower.com",
@@ -678,9 +677,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 12 - Coalition Technologies
+    // Rank 13 - Coalition Technologies
     {
-      rank: 12,
+      rank: 13,
       name: "Coalition Technologies",
       website: "https://coalitiontechnologies.com",
       websiteDisplay: "coalitiontechnologies.com",
@@ -718,9 +717,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 13 - Straight North
+    // Rank 14 - Straight North
     {
-      rank: 13,
+      rank: 14,
       name: "Straight North",
       website: "https://www.straightnorth.com",
       websiteDisplay: "straightnorth.com",
@@ -758,9 +757,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 14 - SEO.com
+    // Rank 15 - SEO.com
     {
-      rank: 14,
+      rank: 15,
       name: "SEO.com",
       website: "https://www.seo.com",
       websiteDisplay: "seo.com",
@@ -798,9 +797,9 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Rank 15 - Thrive Internet Marketing Agency
+    // Rank 16 - Thrive Internet Marketing Agency
     {
-      rank: 15,
+      rank: 16,
       name: "Thrive Internet Marketing Agency",
       website: "https://thriveagency.com",
       websiteDisplay: "thriveagency.com",
@@ -835,46 +834,6 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
           "Their reputation management helped our clients dominate local searches.",
           "WordPress SEO is their specialty—they understand the platform inside out.",
           "Reliable partner for local business clients. Consistent results month over month.",
-        ],
-      },
-    },
-    // Rank 16 - SEO Brand
-    {
-      rank: 16,
-      name: "SEO Brand",
-      website: "https://seobrand.net",
-      websiteDisplay: "seobrand.net",
-      minProject: "$2,000",
-      hourlyRate: "$125-$175",
-      clientRating: 4.6,
-      clientReviews: 56,
-      employeeRating: 4.1,
-      employeeReviews: 34,
-      yearFounded: 2007,
-      yearsInBusiness: currentYear - 2007,
-      linkedInMembers: "51-200",
-      monthlyVisits: "15K-25K",
-      deepDive: {
-        tagline: "Boutique agency with custom strategies for mid-market and enterprise clients.",
-        description: "SEO Brand operates as a boutique agency that competes with larger providers on strategy depth rather than volume. Based in Florida, they focus on mid-market and enterprise clients who need customized SEO approaches.",
-        coreServices: [
-          "Custom SEO strategy development",
-          "Competitive analysis and market positioning",
-          "Technical SEO for complex websites",
-          "Content strategy with brand voice integration",
-          "Enterprise link building through relationships",
-          "White label consulting and strategy support",
-        ],
-        whyTheyRank: [
-          "Boutique attention with enterprise-level strategic thinking",
-          "Custom approaches rather than package-driven fulfillment",
-          "17+ years of experience with complex SEO challenges",
-          "Limited partnerships ensure dedicated focus",
-        ],
-        clientTestimonials: [
-          "They took time to understand our client's industry before proposing anything.",
-          "Finally a partner that develops custom strategies instead of running us through templates.",
-          "Higher-touch than the high-volume providers. Worth it for our enterprise clients.",
         ],
       },
     },
@@ -1038,7 +997,7 @@ export const whiteLabelSEOAgenciesConfig: ListicleConfig = {
         ],
       },
     },
-    // Remaining agencies without deep dives (21-30)
+    // Remaining agencies without deep dives (21-29)
     {
       rank: 21,
       name: "SEO Discovery",
