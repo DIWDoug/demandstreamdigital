@@ -156,15 +156,19 @@ const ListicleAgencyTable = ({ agencies, onScrollToAgency }: ListicleAgencyTable
                   </span>
                 </td>
                 <td className="px-4 py-3">
-                  <a
-                    href={agency.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-[hsl(var(--accent-blue))] hover:underline inline-flex items-center gap-1"
-                  >
-                    {agency.websiteDisplay}
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+                  {agency.isTopPick ? (
+                    <a
+                      href={agency.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[hsl(var(--accent-blue))] hover:underline inline-flex items-center gap-1"
+                    >
+                      {agency.websiteDisplay}
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <span className="text-sm text-muted-foreground">{agency.websiteDisplay}</span>
+                  )}
                 </td>
                 <td className="px-4 py-3 text-sm text-muted-foreground">{agency.monthlyVisits}</td>
                 <td className="px-4 py-3 text-sm text-muted-foreground">{agency.yearsInBusiness}</td>
