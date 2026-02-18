@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator, FileText } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/dialedinweb-logo.png";
+import logo from "@/assets/dialedin-local-logo.png";
 
 const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [

@@ -64,35 +64,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Agency Design System - Dialed-In Web
+/* Premium Design System - Dialed-In Local
    
    ═══════════════════════════════════════════════════════════════
    BRAND COLOR SYSTEM
    ═══════════════════════════════════════════════════════════════
    
-   OLIVE GREEN (--cta / hsl(76,42%,41%))
+   DEEP NAVY (#0a2240 / hsl(213,73%,15%))
    ────────────────────────────────────────
-   = ACTION + IDENTITY
-   • All CTA buttons (primary actions)
-   • Light section icons & accents
-   • Doug/Personal elements (signature, letter)
-   • Brand touchpoints & dividers
-   • Link hover states on light backgrounds
+   = AUTHORITY + TRUST
+   • Dark backgrounds, hero sections, header
+   • Conveys professionalism and reliability
+   • Primary brand identity color
    
-   BLUE (--accent-blue / hsl(224,60%,55%))
+   CRIMSON RED (hsl(350,68%,38%))
+   ────────────────────────────────────────
+   = ACTION + ENERGY
+   • All CTA buttons (primary actions)
+   • Urgent elements, key highlights
+   • Brand accent from logo
+   
+   STEEL BLUE (hsl(210,55%,50%))
    ────────────────────────────────────────
    = INFORMATION + NAVIGATION
-   • Headline accent words (especially on dark)
-   • Dark section icons & borders
-   • Navigation tabs & active states
-   • Framework/methodology elements
-   • Interactive affordances (links, hovers on dark)
+   • Links, interactive elements
+   • Icon accents, badges
+   • Secondary highlights
    
    THE RULES:
-   • Light sections → Olive accents
-   • Dark sections → Blue accents  
-   • CTAs → ALWAYS Olive (any background)
-   • Headline highlights → Blue (visual pop)
+   • Light sections → Navy text, red CTAs
+   • Dark sections → White text, red CTAs, blue accents
+   • CTAs → ALWAYS Crimson Red (any background)
+   • Headings → Navy on light, white on dark
    ═══════════════════════════════════════════════════════════════
 */
 
@@ -101,121 +104,121 @@
 @layer base {
   :root {
     /* ═══════════════════════════════════════════════════════════════
-       WARM LUXURY LIGHT THEME - Mercedes-Inspired
+       CLEAN PROFESSIONAL LIGHT THEME - Trades Industry
        ═══════════════════════════════════════════════════════════════ */
     
-    /* Base cream/warm white palette */
-    --background: 40 20% 97%;           /* Warm cream #FAF9F7 */
-    --foreground: 220 25% 12%;          /* Rich charcoal for text */
+    /* Clean near-white base */
+    --background: 0 0% 98%;              /* #f9f9f9 */
+    --foreground: 213 73% 15%;           /* Deep navy #0a2240 */
 
-    --card: 40 15% 99%;                 /* Almost white with warmth */
-    --card-foreground: 220 25% 12%;
+    --card: 0 0% 100%;                   /* Pure white cards */
+    --card-foreground: 213 73% 15%;
 
-    --popover: 40 15% 99%;
-    --popover-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 73% 15%;
 
-    /* Olive green primary - kept for CTAs */
-    --primary: 76 42% 41%;
+    /* Crimson red primary - for CTAs */
+    --primary: 350 68% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 10% 92%;            /* Light warm grey */
-    --secondary-foreground: 220 20% 20%;
+    --secondary: 210 15% 93%;            /* Light cool grey */
+    --secondary-foreground: 213 50% 20%;
 
-    --muted: 40 10% 94%;                /* Subtle cream */
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 10% 95%;
+    --muted-foreground: 213 20% 46%;
 
-    --accent: 40 15% 95%;
-    --accent-foreground: 220 25% 12%;
+    --accent: 210 15% 96%;
+    --accent-foreground: 213 73% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 15% 88%;               /* Warm grey border */
-    --input: 40 10% 94%;
-    --ring: 76 42% 41%;
+    --border: 210 15% 89%;
+    --input: 210 10% 95%;
+    --ring: 350 68% 38%;
 
     --radius: 0.5rem;
 
     /* Premium color tokens */
-    --cta: 76 42% 41%;
+    --cta: 350 68% 38%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 76 42% 51%;
+    --cta-glow: 350 68% 45%;
     
-    /* Blue accent - refined for light mode */
-    --accent-blue: 220 65% 45%;
-    --accent-blue-glow: 220 60% 55%;
+    /* Steel blue accent */
+    --accent-blue: 210 55% 50%;
+    --accent-blue-glow: 210 55% 60%;
     
-    /* Pop accent */
-    --accent-pop: 4 74% 49%;
-    --accent-pop-glow: 4 74% 59%;
+    /* Pop accent (orange for urgency) */
+    --accent-pop: 25 95% 53%;
+    --accent-pop-glow: 25 95% 63%;
     
     /* Surface colors for light mode */
-    --surface-dark: 40 15% 94%;
-    --surface-elevated: 40 12% 96%;
-    --surface-card: 40 15% 99%;
+    --surface-dark: 210 15% 95%;
+    --surface-elevated: 210 12% 97%;
+    --surface-card: 0 0% 100%;
     
     /* Text hierarchy for light mode */
-    --text-primary: 220 25% 12%;
-    --text-secondary: 220 15% 35%;
-    --text-muted: 220 10% 50%;
+    --text-primary: 213 73% 15%;
+    --text-secondary: 213 30% 35%;
+    --text-muted: 213 15% 55%;
     
     /* Border tokens */
-    --border-subtle: 40 15% 85%;
-    --border-card: 40 12% 88%;
+    --border-subtle: 210 15% 87%;
+    --border-card: 210 12% 90%;
   }
 
   .dark {
-    /* Dark mode for dramatic hero sections */
-    --background: 220 20% 6%;
+    /* Dark mode - deep navy hero sections */
+    --background: 213 73% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 220 18% 10%;
+    --card: 213 60% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 18% 10%;
+    --popover: 213 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 76 42% 41%;
+    --primary: 350 68% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
+    --secondary: 213 40% 16%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 213 40% 18%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 220 15% 18%;
+    --accent: 213 40% 18%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 15%;
-    --ring: 76 42% 41%;
+    --border: 213 40% 18%;
+    --input: 213 40% 16%;
+    --ring: 350 68% 38%;
 
     /* Dark mode surfaces */
-    --surface-dark: 220 20% 8%;
-    --surface-elevated: 220 18% 12%;
-    --surface-card: 220 15% 15%;
+    --surface-dark: 213 73% 8%;
+    --surface-elevated: 213 60% 12%;
+    --surface-card: 213 50% 15%;
     
     /* Dark mode text */
     --text-primary: 0 0% 98%;
-    --text-secondary: 220 10% 70%;
-    --text-muted: 220 10% 50%;
+    --text-secondary: 210 15% 72%;
+    --text-muted: 210 10% 52%;
     
     /* Dark mode borders */
-    --border-subtle: 220 15% 20%;
-    --border-card: 220 12% 25%;
+    --border-subtle: 213 40% 20%;
+    --border-card: 213 35% 25%;
 
-    /* CTA tokens for dark mode - olive green #7d953d */
-    --cta: 76 42% 41%;
+    /* CTA tokens for dark mode - crimson red */
+    --cta: 350 68% 42%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 76 42% 51%;
+    --cta-glow: 350 68% 50%;
     
     /* Blue accent for dark mode */
-    --accent-blue: 224 60% 55%;
-    --accent-blue-glow: 224 60% 65%;
+    --accent-blue: 210 60% 58%;
+    --accent-blue-glow: 210 60% 68%;
   }
 }
 
@@ -377,13 +380,13 @@
     transform: translateY(-1px);
   }
 
-  /* Premium gradient backgrounds - enhanced */
+  /* Premium gradient backgrounds - deep navy */
   .gradient-hero {
     background: 
-      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(76 42% 8% / 0.25), transparent),
-      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(220 25% 3% / 0.98), transparent),
-      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(76 42% 10% / 0.1), transparent),
-      linear-gradient(180deg, hsl(220 22% 2%), hsl(220 22% 1%));
+      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(350 68% 20% / 0.15), transparent),
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(213 73% 8% / 0.98), transparent),
+      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(210 55% 20% / 0.1), transparent),
+      linear-gradient(180deg, hsl(213 73% 7%), hsl(213 73% 5%));
   }
 
   .gradient-section {
@@ -394,13 +397,13 @@
     );
   }
 
-  /* Light contrast section - with subtle texture */
+  /* Light contrast section - clean professional */
   .section-light {
     background: 
-      radial-gradient(ellipse 80% 50% at 50% 0%, hsla(76, 42%, 41%, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 20% 80%, hsla(224, 60%, 55%, 0.02) 0%, transparent 40%),
-      linear-gradient(180deg, #FCFCFA 0%, #F8F8F6 100%);
-    color: hsl(220 20% 10%);
+      radial-gradient(ellipse 80% 50% at 50% 0%, hsla(210, 55%, 50%, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsla(350, 68%, 38%, 0.02) 0%, transparent 40%),
+      linear-gradient(180deg, #f9f9f9 0%, #f4f4f4 100%);
+    color: hsl(213 73% 15%);
     position: relative;
   }
   
@@ -417,6 +420,18 @@
   .section-light h2,
   .section-light h3,
   .section-light h4 {
+    color: hsl(213 73% 15%);
+  }
+
+  .section-light p,
+  .section-light li {
+    color: hsl(213 30% 30%);
+  }
+
+  .section-light h1,
+  .section-light h2,
+  .section-light h3,
+  .section-light h4 {
     color: hsl(220 20% 10%);
   }
 
@@ -427,12 +442,12 @@
 
   /* Slightly elevated dark section */
   .section-elevated {
-    background: linear-gradient(180deg, hsl(220 18% 12%), hsl(220 20% 8%));
+    background: linear-gradient(180deg, hsl(213 60% 12%), hsl(213 73% 8%));
   }
 
-  /* Green accent section */
+  /* Accent section - deep red tinted */
   .section-accent {
-    background: linear-gradient(135deg, hsl(76 42% 15%), hsl(76 35% 10%));
+    background: linear-gradient(135deg, hsl(350 68% 15%), hsl(350 50% 10%));
   }
 
   /* Text gradient for emphasis */
