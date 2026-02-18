@@ -8,40 +8,10 @@ const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-type StorageLike = Pick<Storage, "getItem" | "setItem" | "removeItem">;
-
-const createInMemoryStorage = (): StorageLike => {
-  const store = new Map<string, string>();
-  return {
-    getItem: (key) => store.get(key) ?? null,
-    setItem: (key, value) => {
-      store.set(key, value);
-    },
-    removeItem: (key) => {
-      store.delete(key);
-    },
-  };
-};
-
-const resolveStorage = (): StorageLike => {
-  if (typeof window === "undefined") {
-    return createInMemoryStorage();
-  }
-
-  try {
-    const testKey = "__supabase_storage_test__";
-    window.localStorage.setItem(testKey, "ok");
-    window.localStorage.removeItem(testKey);
-    return window.localStorage;
-  } catch {
-    return createInMemoryStorage();
-  }
-};
-
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: {
-    storage: resolveStorage(),
+    storage: localStorage,
     persistSession: true,
     autoRefreshToken: true,
-  },
+  }
 });
