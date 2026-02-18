@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator, FileText } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/serviceforge-digital-logo.png";
+import logo from "@/assets/serviceforge-digital-logo-white.png";
 
 const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
@@ -155,7 +155,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
                   width={240}
                   height={40}
-                  className="h-10 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-10 opacity-80 hover:opacity-100 transition-opacity"
                 />
               </Link>
             </div>

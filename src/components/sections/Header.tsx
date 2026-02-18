@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/serviceforge-digital-logo.png";
+import logo from "@/assets/serviceforge-digital-logo-white.png";
 
 const Header = () => {
   const location = useLocation();
@@ -195,7 +195,7 @@ const Header = () => {
                 title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
                 width={200}
                 height={32}
-                className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
+                className={`w-auto opacity-90 transition-all duration-300 ${
                   isScrolled 
                     ? "h-8 md:h-9" 
                     : "h-9 md:h-10"
