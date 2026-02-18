@@ -3,11 +3,10 @@ import { ArrowRight, TrendingUp, Award, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { caseStudyCards } from "@/data/caseStudyData";
 
-// Featured case studies - Barn Restoration, Las Vegas Plumbing, Custom Home Builder
+// Featured case studies - Las Vegas Plumbing & Dallas Plumbing
 const featuredSlugs = [
-  "barn-restoration-seo",
   "las-vegas-plumbing-seo",
-  "custom-home-builder-seo",
+  "dallas-plumbing-seo",
 ];
 
 const getIcon = (index: number) => {
@@ -37,7 +36,7 @@ const FeaturedCaseStudies = () => {
         </div>
 
         {/* Case Study Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-10">
           {featuredStudies.map((study, index) => {
             if (!study) return null;
             const Icon = getIcon(index);
