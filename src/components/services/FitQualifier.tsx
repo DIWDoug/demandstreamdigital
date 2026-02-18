@@ -10,47 +10,47 @@ const FitQualifier = () => {
 
   const goodFit = [
     {
-      point: "You're running an established agency",
-      detail: "Generally $30K+/month in revenue with existing clients who need ongoing marketing support."
+      point: "You run a plumbing or HVAC company with steady revenue",
+      detail: "We work best with established shops doing $500K+ annually. You've got the trucks and techs — you need a marketing partner who understands the trades."
     },
     {
-      point: "You have clients but need execution capacity",
-      detail: "You're good at sales and relationships. You need reliable people to handle the actual fulfillment."
+      point: "You're tired of marketing agencies that don't get your business",
+      detail: "Most agencies treat you like every other client. We specialize in plumbing and HVAC — we know your seasonality, your customers, and what actually drives calls."
     },
     {
-      point: "You want a system, not just extra hands",
-      detail: "You're looking for documented processes, clear communication, and predictable delivery."
+      point: "You want more calls, not just 'impressions' and 'clicks'",
+      detail: "We measure what matters: phone calls, booked jobs, and revenue. If it's not driving real business, we change the approach."
     },
     {
-      point: "You understand that good work takes time",
-      detail: "SEO and local marketing don't produce overnight results. You're willing to set realistic expectations with clients."
+      point: "You understand marketing is an investment, not an expense",
+      detail: "The best plumbing and HVAC companies treat marketing like a new truck — it pays for itself many times over when done right."
     },
     {
-      point: "You care about client retention",
-      detail: "Keeping clients for years matters more to you than churning through new ones every quarter."
+      point: "You're ready to dominate your local market",
+      detail: "Whether you're looking to own your city on Google Maps, outrank competitors, or fill your schedule year-round, we build the system to get you there."
     }
   ];
 
   const notFit = [
     {
-      point: "You're primarily shopping on price",
-      detail: "We're not the cheapest option, and we're not trying to be. If budget is the main factor, there are other providers."
+      point: "You're just looking for the cheapest option",
+      detail: "Bargain marketing gets bargain results. If price is your only consideration, there are cheaper providers — but you'll get what you pay for."
     },
     {
-      point: "You want to direct every task yourself",
-      detail: "We work best with agencies who trust our process. If you need to approve every small decision, the workflow breaks down."
+      point: "You want overnight results",
+      detail: "Real local dominance takes 3-6 months to build. If someone promises you page-one rankings in 30 days, they're either lying or using tactics that'll get you penalized."
     },
     {
-      point: "You're looking for someone to build your pipeline",
-      detail: "We handle fulfillment for your existing clients. We don't do agency sales or lead generation for you."
+      point: "You're not willing to answer the phone",
+      detail: "We can drive all the calls in the world, but if they go to voicemail or get mishandled, the marketing won't matter. You need a team ready to convert leads."
     },
     {
-      point: "Your clients aren't willing to participate",
-      detail: "Local marketing requires client input: access to accounts, feedback on content, timely approvals. We can't do it alone."
+      point: "You don't serve a physical location or service area",
+      detail: "Our strategies are built for local businesses with a Google Business Profile and a defined service territory. National or online-only businesses aren't our specialty."
     },
     {
-      point: "You need results in 30 days or less",
-      detail: "If you're promising clients fast rankings or immediate ROI, we're not the right partner for that conversation."
+      point: "You've given up on marketing entirely",
+      detail: "We need partners who are committed to growth. If you've mentally checked out on marketing, even the best strategy won't save the investment."
     }
   ];
 
@@ -61,13 +61,13 @@ const FitQualifier = () => {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              Before We Talk
+              Straight Talk
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Is This the Right Fit?
+              Are We the Right Fit for Your Shop?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We're selective about who we work with, and you should be too. Here's a quick way to tell if this partnership makes sense for both of us.
+              We don't work with everyone — and that's on purpose. Here's how to tell if we're the right marketing partner for your plumbing or HVAC business.
             </p>
           </div>
 
@@ -152,7 +152,7 @@ const FitQualifier = () => {
               to="/contact" 
               className="btn-cta group inline-flex items-center gap-2"
             >
-              Let's Talk Partnership
+              Get Your Free Marketing Audit
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
