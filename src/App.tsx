@@ -57,6 +57,11 @@ const Reporting = lazy(() => import("./pages/services/Reporting"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const SpokePage = lazy(() => import("./pages/services/SpokePage"));
 
+// Interactive Tools - Lazy loaded
+const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
+const FinancingCalculator = lazy(() => import("./pages/tools/FinancingCalculator"));
+const PlumbingCostQuiz = lazy(() => import("./pages/tools/PlumbingCostQuiz"));
+
 const queryClient = new QueryClient();
 
 const KonamiCodeListener = () => {
@@ -103,6 +108,11 @@ const App = () => (
         <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
         <Route path="/partner-tools/social-media-roi-calculator" element={<SocialMediaROICalculator />} />
         <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
+
+        {/* Interactive Homeowner Tools */}
+        <Route path="/tools/job-cost-estimator" element={<JobCostEstimator />} />
+        <Route path="/tools/financing-calculator" element={<FinancingCalculator />} />
+        <Route path="/tools/plumbing-cost-quiz" element={<PlumbingCostQuiz />} />
 
         {/* Legacy calculator redirects for SEO preservation */}
         <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
