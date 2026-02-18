@@ -1,43 +1,33 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, ArrowRight, Play } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import { Link } from "react-router-dom";
-import YouTubeModal from "@/components/ui/youtube-modal";
 
 const testimonials = [
   {
-    quote: "I've owned an ad agency in Dallas for a decade and partnered with Doug's team for seven years. They're second to none: incredibly articulate when it comes to campaign structure, from paid advertising to organic SEO to answer engine optimization. Extremely competitive pricing for the level of wisdom and responsiveness you receive. They will make your company money.",
-    author: "Cole", 
-    role: "Digital Marketing Agency Owner, Dallas",
-    tenure: "10 Years in Business, 7 Years Partner",
-    services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"]
+    quote: "Five stars, for sure. Travis was professional, fast, and honest right out of the gate. You can tell he's experienced and knows what he's talking about. I told him what I thought the problem was, so after diagnosing the problem for free, he gave me his honest answer. He wasn't pushy and gave me options. I decided to move forward with the leak, and he was able to fix it in just a few hrs. He cleaned up after himself and left the yard as he saw it. I highly recommend him if you need a good plumber.",
+    author: "Chris T.",
+    source: "Google Review",
+    company: "Pure Plumbing & Air",
+    rating: 5,
   },
   {
-    quote: "Our challenge was executing real campaigns at tight price points without sacrificing delivery. We needed flexibility, not rigid packages. The ability to design campaigns around franchise budgets, while still maintaining standards and leveraging AI to stay efficient, allowed us to deliver consistently without blowing margins.",
-    author: "Trevor Anderson",
-    role: "Founder & CEO, Anderson Collaborative",
-    tenure: "5 Years Partner",
-    services: ["Local SEO", "GBP SEO", "National SEO", "Authority Building", "Paid Media", "AEO"]
+    quote: "I woke up to a flood in my kitchen and was able to schedule an appointment very quickly. My technician, Daniel L., showed up, and he was very professional, knowledgeable, kind, and personable. He listened to me and went over all the possible causes of the flood. He was very upfront about pricing and ensured they didn't have any hidden fees. He was able to find the problem and get it fixed in a quick but very thorough manner.",
+    author: "Ralynn R.",
+    source: "Google Review",
+    company: "Pure Plumbing & Air",
+    rating: 5,
   },
   {
-    quote: "We needed a partner we could depend on to build customized strategies for almost every client that came through the door. Our business is rooted in web design, and generic marketing packages were never going to work. Being able to tailor execution around each site and market made a measurable difference in client retention. Most clients stayed at least a year, with several continuing for multiple cycles.",
-    author: "Jeremy", 
-    role: "Digital Marketing Agency Owner, Florida",
-    tenure: "5 Years Partner",
-    services: ["Local SEO", "PPC", "Authority Building", "GBP SEO"]
-  }
-];
-
-const videoTestimonials = [
-  { id: "DlOyjDWaCZo", title: "Cole - Dallas Agency Owner" },
-  { id: "dR2Yxbldi1Q", title: "Trevor - Agency Partner" },
-  { id: "i66XV1on6pM", title: "Jeremy - Florida Agency Owner" }
+    quote: "Jason showed up with Pure Plumbing and Air. I was very impressed. He was very respectful. He first asked if he could come in and then put his covers over his shoes. He went right to work diagnosing our problem with our AC. The free estimate worked out great for us. Jason gave all the information that we need to make an informed decision regarding our AC unit and then a few more suggestions to help us in the future.",
+    author: "Dee Ann M.",
+    source: "Google Review",
+    company: "Pure Plumbing and Air",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
   const sectionRef = useScrollReveal();
-  const [selectedVideo, setSelectedVideo] = useState<{ id: string; title: string } | null>(null);
   
   return (
     <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
@@ -45,40 +35,19 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-            What Agency Partners <span className="text-accent-blue">Say</span>
+            What Our Clients <span className="text-accent-blue">Say</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            Real feedback from agencies who value trust, clarity, and consistent execution.
+            Real reviews from real homeowners who trusted us with their plumbing and HVAC needs.
           </p>
-        </div>
-
-        {/* Video Testimonials */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {videoTestimonials.map((video, index) => (
-            <div 
-              key={index} 
-              className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer group"
-              onClick={() => setSelectedVideo(video)}
-            >
-              {/* YouTube thumbnail */}
-              <img 
-                src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                alt={`${video.title} - White Label Agency Partner Testimonial`}
-                title={`${video.title} | Dialed-In Web Partner Review`}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              {/* Play overlay */}
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition-colors">
-                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <Play className="h-7 w-7 text-slate-900 ml-1" fill="currentColor" />
-                </div>
-              </div>
-              {/* Title overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                <p className="text-white text-sm font-medium">{video.title}</p>
-              </div>
+          <div className="flex items-center justify-center gap-2 mt-4">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+              ))}
             </div>
-          ))}
+            <span className="text-slate-600 text-sm font-medium">4.8 stars · 2,287 Google Reviews</span>
+          </div>
         </div>
 
         {/* Quote Cards */}
@@ -89,53 +58,25 @@ const Testimonials = () => {
               className="bg-white border-slate-200 hover:border-accent-blue/30 transition-all duration-300 hover:-translate-y-1"
             >
               <CardContent className="p-6 flex flex-col h-full">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  ))}
+                </div>
                 <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
                 <p className="text-slate-600 text-sm mb-6 flex-grow">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-slate-200 pt-4 mb-3">
+                <div className="border-t border-slate-200 pt-4">
                   <p className="text-slate-900 font-medium">{testimonial.author}</p>
-                  <p className="text-slate-500 text-sm">{testimonial.role}</p>
-                  <p className="text-accent-blue text-xs mt-1">{testimonial.tenure}</p>
-                </div>
-                <div className="flex flex-wrap gap-1">
-                  {testimonial.services.slice(0, 4).map((service, i) => (
-                    <span key={i} className="px-2 py-0.5 bg-accent-blue/10 text-accent-blue text-xs rounded-full">
-                      {service}
-                    </span>
-                  ))}
-                  {testimonial.services.length > 4 && (
-                    <span className="px-2 py-0.5 bg-slate-100 text-slate-500 text-xs rounded-full">
-                      +{testimonial.services.length - 4}
-                    </span>
-                  )}
+                  <p className="text-slate-500 text-sm">{testimonial.company}</p>
+                  <p className="text-accent-blue text-xs mt-1">{testimonial.source}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
-
-        {/* View All Link */}
-        <div className="text-center mt-12">
-          <Link 
-            to="/testimonials" 
-            className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-medium transition-colors group"
-          >
-            View All Testimonials
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
       </div>
-
-      {/* YouTube Modal */}
-      {selectedVideo && (
-        <YouTubeModal
-          isOpen={!!selectedVideo}
-          onClose={() => setSelectedVideo(null)}
-          videoId={selectedVideo.id}
-          title={selectedVideo.title}
-        />
-      )}
     </section>
   );
 };
