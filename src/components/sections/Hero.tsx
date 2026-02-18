@@ -18,7 +18,7 @@ const Hero = () => {
     revenue: "",
     consent: false,
     notRobot: false,
-    honeypot: "", // Hidden field for bot detection
+    honeypot: "",
   });
 
   const handleStep1Submit = (e: React.FormEvent) => {
@@ -31,7 +31,6 @@ const Hero = () => {
   const handleStep2Submit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Bot detection: if honeypot is filled, silently reject
     if (formData.honeypot) {
       navigate("/thank-you?type=contact");
       return;
@@ -54,8 +53,6 @@ const Hero = () => {
       });
 
       if (error) throw error;
-
-      // Redirect to thank you page
       navigate("/thank-you?type=contact");
     } catch (error: any) {
       console.error("Form submission error:", error);
@@ -82,7 +79,6 @@ const Hero = () => {
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Primary green particles */}
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
@@ -96,7 +92,6 @@ const Hero = () => {
             }}
           />
         ))}
-        {/* Blue accent particles */}
         {[...Array(10)].map((_, i) => (
           <div
             key={`blue-${i}`}
@@ -110,7 +105,6 @@ const Hero = () => {
             }}
           />
         ))}
-        {/* Larger glow particles */}
         {[...Array(6)].map((_, i) => (
           <div
             key={`glow-${i}`}
@@ -138,24 +132,24 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-24 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Contextual eyebrow - subtle */}
+          {/* Contextual eyebrow */}
           <p className="text-sm text-text-muted uppercase tracking-widest mb-8 animate-fade-in-up">
-            AI-Enhanced · White-Label Digital Marketing Partner
+            Growth Marketing for Plumbing & HVAC Companies
           </p>
 
           {/* Single dominant headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-semibold mb-8 animate-fade-in-up text-foreground" style={{ animationDelay: "0.1s", lineHeight: "1.1" }}>
-            White-Label <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">Digital Marketing Fulfillment</span> for Agencies
+            More Calls. More Jobs. <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">More Growth.</span>
           </h1>
 
-          {/* Supporting sentence - benefit first, customization as proof */}
+          {/* Supporting sentence */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            SEO, local search, paid media, and authority building. Scoped to each client's market, not forced into a template.
+            SEO, Google Maps, paid ads, and reputation management built specifically for plumbing and HVAC companies. Every campaign scoped to your market — not a one-size-fits-all package.
           </p>
 
           {/* Payoff sentence */}
           <p className="text-base text-text-muted mb-14 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Clients stay longer. Margins stay healthy. Fulfillment becomes predictable.
+            Your phone rings more. Your schedule stays full. Your business grows predictably.
           </p>
 
           {/* Two-Step Form */}
@@ -164,7 +158,7 @@ const Hero = () => {
               <form onSubmit={handleStep1Submit} className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="text"
-                  placeholder="yourwebsite.com"
+                  placeholder="yourcompany.com"
                   value={website}
                   onChange={(e) => setWebsite(e.target.value)}
                   required
@@ -174,7 +168,7 @@ const Hero = () => {
                   type="submit"
                   className="btn-cta group whitespace-nowrap"
                 >
-                  Start the Conversation
+                  Get a Free Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
               </form>
@@ -195,7 +189,7 @@ const Hero = () => {
                 </div>
 
                 <form onSubmit={handleStep2Submit} className="space-y-4">
-                  {/* Honeypot field - hidden from users, catches bots */}
+                  {/* Honeypot field */}
                   <input
                     type="text"
                     name="website_url"
@@ -216,7 +210,7 @@ const Hero = () => {
                     />
                     <input
                       type="email"
-                      placeholder="Work Email"
+                      placeholder="Email Address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -254,7 +248,7 @@ const Hero = () => {
                       className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
                     />
                     <span className="text-xs text-text-muted leading-relaxed">
-                      I consent to automated marketing messages from Dialed-In Web via email and/or SMS. View our{" "}
+                      I consent to automated marketing messages from Dialed-In Local via email and/or SMS. View our{" "}
                       <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link> and{" "}
                       <Link to="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>.
                     </span>
@@ -284,13 +278,13 @@ const Hero = () => {
                       </>
                     ) : (
                       <>
-                        Let's Talk Partnership
+                        Let's Grow Your Business
                         <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                       </>
                     )}
                   </button>
                   <p className="text-xs text-text-muted text-center pt-2">
-                    This starts a conversation, not a sales call.
+                    This starts a conversation, not a sales pitch.
                   </p>
                 </form>
               </div>

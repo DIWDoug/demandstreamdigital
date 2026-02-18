@@ -151,8 +151,8 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
-                  title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
+                  alt="Dialed-In Local - Growth Marketing for Plumbing & HVAC Companies" 
+                  title="Dialed-In Local | SEO, PPC & Content Marketing for Plumbing & HVAC"
                   width={206}
                   height={32}
                   className="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
@@ -210,7 +210,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-text-muted">
-                © {new Date().getFullYear()} Dialed-In Web. All Rights Reserved.
+                © {new Date().getFullYear()} Dialed-In Local. All Rights Reserved.
               </p>
               <div className="flex items-center gap-6">
                 <Link 

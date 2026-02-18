@@ -1,16 +1,16 @@
 // Shared constants across the site
 
 // Site URL (canonical, non-www)
-export const SITE_URL = "https://dialedinweb.com";
+export const SITE_URL = "https://dialedinlocal.com";
 
 // Contact Information
 export const PHONE_NUMBER = "+1 (214) 307-2995";
 export const PHONE_NUMBER_RAW = "+12143072995";
 export const PHONE_HREF = `tel:${PHONE_NUMBER_RAW}`;
-export const EMAIL = "hello@dialedinweb.com";
+export const EMAIL = "hello@dialedinlocal.com";
 
 // NAP (Name, Address, Phone) - Critical for Local SEO
-export const BUSINESS_NAME = "Dialed-In Web LLC";
+export const BUSINESS_NAME = "Dialed-In Local";
 export const ADDRESS = {
   street: "4849 Greenville Ave Suite 100 176",
   city: "Dallas",

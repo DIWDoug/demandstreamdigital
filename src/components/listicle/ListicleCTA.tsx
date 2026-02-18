@@ -10,9 +10,9 @@ interface ListicleCTAProps {
 }
 
 const ListicleCTA = ({
-  title = "Looking for a White Label SEO Partner?",
-  description = "SEO is alive and well. Scale your agency with a fulfillment partner built for sustainable partnerships.",
-  buttonText = "Start the Conversation",
+  title = "Looking for Growth Marketing for Your Plumbing or HVAC Business?",
+  description = "We help plumbing and HVAC companies get more calls, more jobs, and more revenue with marketing that actually works.",
+  buttonText = "Get a Free Strategy Call",
   buttonHref = "/contact",
 }: ListicleCTAProps) => {
   return (

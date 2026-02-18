@@ -191,8 +191,8 @@ const Header = () => {
             <Link to="/" className="flex items-center overflow-hidden">
               <img 
                 src={logo} 
-                alt="Dialed-In Web - White Label Digital Marketing for Agencies" 
-                title="Dialed-In Web | White Label SEO, PPC & Content Marketing"
+                alt="Dialed-In Local - Growth Marketing for Plumbing & HVAC Companies" 
+                title="Dialed-In Local | SEO, PPC & Content Marketing for Plumbing & HVAC"
                 width={154}
                 height={24}
                 className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
@@ -364,7 +364,7 @@ const Header = () => {
               to="/contact" 
               className="btn-cta text-sm py-2 px-4 whitespace-nowrap"
             >
-              Discovery Call
+              Free Strategy Call
             </Link>
             <button 
               className="p-2 rounded-full bg-cta hover:bg-cta-glow transition-colors flex-shrink-0"
@@ -457,10 +457,10 @@ const Header = () => {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-foreground group-hover:text-cta transition-colors">
-                        White-Label Inbound Marketing
+                      Full-Service Growth Marketing
                       </p>
                       <p className="text-xs text-text-muted">
-                        See how all services work together as one integrated system
+                        See how all services work together to grow your plumbing or HVAC business
                       </p>
                     </div>
                   </div>
@@ -595,7 +595,7 @@ const Header = () => {
                     className="btn-cta text-center mt-3 w-full"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Schedule a Discovery Call
+                    Get a Free Strategy Call
                   </Link>
                 </div>
               </nav>

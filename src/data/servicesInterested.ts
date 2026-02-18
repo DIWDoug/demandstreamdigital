@@ -11,5 +11,5 @@ export const serviceInterestOptions: ServiceInterestOption[] = [
   { value: "reporting", label: "Reporting & Dashboards" },
   { value: "authority", label: "Authority / Links" },
   { value: "email-marketing", label: "Email Marketing" },
-  { value: "social-media", label: "Social Media" },
+  { value: "reputation", label: "Reputation Management" },
 ];
