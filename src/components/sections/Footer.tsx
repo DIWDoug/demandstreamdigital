@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator, FileText } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/dialedin-local-logo.png";
+import logo from "@/assets/serviceforge-digital-logo.png";
 
 const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
@@ -151,11 +151,11 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="Dialed-In Local - Growth Marketing for Plumbing & HVAC Companies" 
-                  title="Dialed-In Local | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                  width={206}
-                  height={32}
-                  className="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                  alt="ServiceForge Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                  title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                  width={240}
+                  height={40}
+                  className="h-10 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
                 />
               </Link>
             </div>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/dialedin-local-logo.png";
+import logo from "@/assets/serviceforge-digital-logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -191,14 +191,14 @@ const Header = () => {
             <Link to="/" className="flex items-center overflow-hidden">
               <img 
                 src={logo} 
-                alt="Dialed-In Local - Growth Marketing for Plumbing & HVAC Companies" 
-                title="Dialed-In Local | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                width={154}
-                height={24}
+                alt="ServiceForge Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                width={200}
+                height={32}
                 className={`w-auto brightness-0 invert opacity-90 transition-all duration-300 ${
                   isScrolled 
-                    ? "h-5 md:h-6 max-w-[24px] md:max-w-[28px] object-cover object-left" 
-                    : "h-5 md:h-6"
+                    ? "h-8 md:h-9" 
+                    : "h-9 md:h-10"
                 }`}
               />
             </Link>
