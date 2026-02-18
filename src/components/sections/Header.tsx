@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/serviceforge-digital-logo-white.png";
 
@@ -176,13 +176,30 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-surface-dark/95 backdrop-blur-md border-b border-border shadow-lg" 
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
       ref={megaMenuRef}
     >
+      {/* Top Utility Bar — inspired by Pure Plumbing */}
+      <div className={`bg-cta text-cta-foreground transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
+        <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between py-1.5 text-xs font-medium">
+          <Link to="/contact" className="hover:underline tracking-wide">
+            📞 Free Marketing Audit — See Where You're Losing Leads
+          </Link>
+          <div className="hidden sm:flex items-center gap-4">
+            <span className="flex items-center gap-1.5 uppercase tracking-widest text-[10px] font-bold">
+              <span className="w-2 h-2 rounded-full bg-cta-foreground animate-pulse" />
+              Plumbing & HVAC Specialists
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Nav Bar */}
+      <div className={`transition-all duration-300 ${
+        isScrolled 
+          ? "bg-surface-dark/95 backdrop-blur-md border-b border-border shadow-lg" 
+          : "bg-background/80 backdrop-blur-sm"
+      }`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Nav together */}
@@ -349,29 +366,26 @@ const Header = () => {
             </nav>
           </div>
 
-          {/* Right side - Phone, Search & CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Right side - Phone & CTA (Pure Plumbing inspired bold layout) */}
+          <div className="hidden lg:flex items-center gap-5">
             <a 
               href={PHONE_HREF}
-              className="flex items-center gap-2 text-foreground font-medium hover:text-cta transition-colors group whitespace-nowrap"
+              className="flex items-center gap-2 hover:text-cta transition-colors group whitespace-nowrap"
             >
-              <Phone className="h-4 w-4 text-cta flex-shrink-0" />
-              <span className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-cta after:transition-all after:duration-300 group-hover:after:w-full">
-                {PHONE_NUMBER}
-              </span>
+              <Phone className="h-5 w-5 text-cta flex-shrink-0" />
+              <div className="flex flex-col leading-none">
+                <span className="text-[10px] uppercase tracking-widest text-text-muted font-semibold">Call Us Today</span>
+                <span className="text-base font-bold text-foreground group-hover:text-cta transition-colors">
+                  {PHONE_NUMBER}
+                </span>
+              </div>
             </a>
             <Link 
               to="/contact" 
-              className="btn-cta text-sm py-2 px-4 whitespace-nowrap"
+              className="btn-cta text-sm py-2.5 px-5 whitespace-nowrap"
             >
-              Free Strategy Call
+              Schedule a Call
             </Link>
-            <button 
-              className="p-2 rounded-full bg-cta hover:bg-cta-glow transition-colors flex-shrink-0"
-              aria-label="Search"
-            >
-              <Search className="h-4 w-4 text-cta-foreground" />
-            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -602,6 +616,7 @@ const Header = () => {
             </div>
           </nav>
         )}
+      </div>
       </div>
     </header>
   );
