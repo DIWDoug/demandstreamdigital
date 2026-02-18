@@ -16,42 +16,42 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "Show up when local customers search. We handle technical fixes, content, and on-page work that builds organic visibility over time.",
+    description: "Show up when homeowners search for plumbing or HVAC services in your area. We handle the technical work that builds organic visibility over time.",
     href: "/white-label-local-seo",
-    pixabayKeyword: "search engine optimization website ranking"
+    pixabayKeyword: "plumber working pipes"
   },
   {
     icon: Map,
-    title: "GBP SEO",
-    description: "Dominate the local pack. Optimized profiles, consistent citations, and review systems that build trust with searchers.",
+    title: "Google Maps / GBP",
+    description: "Dominate the local map pack. Optimized profiles, consistent citations, and review systems that build trust with homeowners searching for service pros.",
     href: "/white-label-gbp-seo",
-    pixabayKeyword: "google maps location"
+    pixabayKeyword: "hvac technician air conditioning"
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "Turn ad spend into leads. Google and Meta campaigns built to generate calls, forms, and measurable ROI.",
+    description: "Turn ad spend into booked jobs. Google and Meta campaigns built to generate calls from homeowners who need plumbing or HVAC service now.",
     href: "/white-label-paid-media",
     pixabayKeyword: "online advertising campaign clicks"
   },
   {
     icon: PenTool,
     title: "Content Development",
-    description: "Strategic content that ranks locally and converts. Service area pages, power posts, and lead magnets that drive visibility.",
+    description: "Strategic content that ranks locally and converts. Service area pages, seasonal guides, and blog posts that drive visibility and trust.",
     href: "/white-label-content-marketing",
     pixabayKeyword: "content writing strategy marketing"
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Stay top of mind and close more deals. Automated sequences that nurture leads into loyal, repeat customers.",
+    description: "Stay top of mind with past customers. Automated sequences for maintenance reminders, seasonal tune-ups, and referral requests.",
     href: "/white-label-email-marketing",
     pixabayKeyword: "email marketing newsletter"
   },
   {
     icon: BarChart3,
-    title: "Reporting",
-    description: "Keep clients confident with clear results. Branded dashboards and summaries that make your agency look sharp.",
+    title: "Reporting & Dashboards",
+    description: "See exactly what's working. Clear dashboards showing calls, leads, rankings, and ROI — so you always know where your marketing dollars go.",
     href: "/white-label-reporting",
     pixabayKeyword: "analytics dashboard reporting"
   }
@@ -110,13 +110,12 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
       to={service.href}
       className="group relative rounded-xl bg-card border border-border hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 overflow-hidden"
     >
-      {/* Pixabay image background */}
       {imageUrl && (
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <img 
             src={imageUrl} 
-            alt={`${service.title} - White label ${service.description.toLowerCase()}`}
-            title={`${service.title} | Dialed-In Web`}
+            alt={`${service.title} for plumbing and HVAC companies`}
+            title={`${service.title} | Dialed-In Local`}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover"
@@ -125,7 +124,6 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
       )}
       
       <div className="relative p-6">
-        {/* Icon badge */}
         <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
           <service.icon className="w-4 h-4" strokeWidth={2} />
         </span>
@@ -151,22 +149,20 @@ const ServicesGrid = () => {
     <section className="py-20 lg:py-28 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Two-column layout */}
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Left Column - Inbound Marketing Overview (2 cols) */}
             <div className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start">
               <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                White Label Inbound Marketing,<br />
-                <span className="text-accent-blue">Fully Executed</span>
+                Full-Service Growth Marketing,<br />
+                <span className="text-accent-blue">Built for Your Trade</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Inbound isn't a single tactic. It's multiple channels working as one system to attract, convert, and retain customers.
+                Marketing for plumbing and HVAC isn't a single tactic. It's multiple channels working together to generate calls, build trust, and keep your schedule full.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Each service reinforces the others. Together, they create predictable growth your clients can count on.
+                Each service reinforces the others. Together, they create predictable growth you can count on.
               </p>
               
               <Link 
@@ -178,13 +174,11 @@ const ServicesGrid = () => {
               </Link>
             </div>
 
-            {/* Right Column - Services Grid (3 cols) */}
             <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
                 <ServiceCard key={index} service={service} index={index} />
               ))}
               
-              {/* Partner Tools CTA Card */}
               <Link 
                 to="/partner-tools"
                 className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
@@ -195,10 +189,10 @@ const ServicesGrid = () => {
                   </span>
                   <div className="flex-1">
                     <h3 className="text-foreground font-semibold mb-1 group-hover:text-cta transition-colors">
-                      Explore Our Partner Tools
+                      Explore Our Free Tools
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      ROI calculators, investment tools, and resources for agency partners.
+                      ROI calculators, investment tools, and resources to help you plan your marketing budget.
                     </p>
                   </div>
                   <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />

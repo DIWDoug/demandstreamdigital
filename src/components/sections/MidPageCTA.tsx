@@ -13,21 +13,18 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
     <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-background"}`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          {/* Primary CTA Button - Opens Contact page in new window */}
           <Link 
             to="/contact" 
             className="btn-cta group flex items-center gap-2"
           >
-            Explore a Partnership
+            Get a Free Strategy Call
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           
-          {/* OR Divider */}
           <span className={`text-sm font-medium ${isLight ? "text-gray-400" : "text-text-muted"}`}>
             or
           </span>
           
-          {/* Secondary CTA - Phone */}
           <a 
             href={PHONE_HREF}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all font-medium text-sm ${

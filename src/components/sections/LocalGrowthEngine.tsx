@@ -178,22 +178,22 @@ const LocalGrowthEngine = () => {
               <div>
                 <p className="text-gray-500 text-base mb-1">Discover How To</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  Scale Your Agency<br />
-                  Without the Chaos
+                  Grow Your Plumbing or<br />
+                  HVAC Business Predictably
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-[hsl(76,42%,41%)] mb-5" />
 
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  The Framework for White-Label Local Marketing That Actually Works
+                  The Marketing Framework Built for Plumbing & HVAC Growth
                 </h3>
                 
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  If you're an agency owner looking to add local marketing services without hiring specialists or burning through freelancers, this is for you. The Local Growth Engine is the methodology behind $2M+ in retainer revenue for our partners.
+                  If you're a plumbing or HVAC owner looking to grow without guessing what works, this is for you. The Local Growth Engine is the methodology behind hundreds of successful local marketing campaigns.
                 </p>
 
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                  Inside, you'll discover the three-layer system we use across Local SEO, Google Maps, paid media, and reputation management. All white-labeled and built for scale.
+                  Inside, you'll discover the three-layer system we use across Local SEO, Google Maps, paid media, and reputation management — all tailored for service businesses like yours.
                 </p>
 
                 {/* Email signup or CTA */}

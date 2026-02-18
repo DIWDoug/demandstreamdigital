@@ -1,13 +1,10 @@
 // Centralized Schema.org markup utilities
-// Implements best practices for Organization, LocalBusiness, Service, and page-specific schemas
-
 import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, BUSINESS_NAME, SITE_URL } from "./constants";
 
-// Core business information
 export const BUSINESS_INFO = {
   name: BUSINESS_NAME,
-  legalName: BUSINESS_NAME,
-  alternateName: "Dialed-In Web",
+  legalName: "Dialed-In Local LLC",
+  alternateName: "Dialed-In Local",
   foundingDate: "2011",
   url: SITE_URL,
   logo: `${SITE_URL}/dialedinweb-logo.png`,
@@ -25,10 +22,9 @@ export const BUSINESS_INFO = {
     longitude: -96.7693
   },
   sameAs: [
-    "https://www.linkedin.com/company/dialed-in-web/",
-    "https://www.facebook.com/dialedinweb",
-    "https://www.instagram.com/dialedinweb/",
-    "https://share.google/IXw0qAzlgpjR1SIKP"
+    "https://www.linkedin.com/company/dialed-in-local/",
+    "https://www.facebook.com/dialedinlocal",
+    "https://www.instagram.com/dialedinlocal/",
   ],
   aggregateRating: {
     ratingValue: 4.9,
@@ -36,20 +32,19 @@ export const BUSINESS_INFO = {
   }
 };
 
-// Organization Schema - Used site-wide
 export const getOrganizationSchema = () => ({
   "@type": "Organization",
-  "@id": "https://dialedinweb.com/#organization",
+  "@id": `${SITE_URL}/#organization`,
   "name": BUSINESS_INFO.name,
   "legalName": BUSINESS_INFO.legalName,
   "alternateName": BUSINESS_INFO.alternateName,
   "url": BUSINESS_INFO.url,
   "logo": {
     "@type": "ImageObject",
-    "@id": "https://dialedinweb.com/#logo",
+    "@id": `${SITE_URL}/#logo`,
     "url": BUSINESS_INFO.logo,
     "contentUrl": BUSINESS_INFO.logo,
-    "caption": "Dialed-In Web Logo"
+    "caption": "Dialed-In Local Logo"
   },
   "image": BUSINESS_INFO.logo,
   "email": BUSINESS_INFO.email,
@@ -69,10 +64,9 @@ export const getOrganizationSchema = () => ({
   }
 });
 
-// LocalBusiness Schema - For local SEO
 export const getLocalBusinessSchema = () => ({
   "@type": "LocalBusiness",
-  "@id": "https://dialedinweb.com/#localbusiness",
+  "@id": `${SITE_URL}/#localbusiness`,
   "name": BUSINESS_INFO.name,
   "image": BUSINESS_INFO.logo,
   "url": BUSINESS_INFO.url,
@@ -106,18 +100,16 @@ export const getLocalBusinessSchema = () => ({
   }
 });
 
-// WebSite Schema with SearchAction
 export const getWebSiteSchema = () => ({
   "@type": "WebSite",
-  "@id": "https://dialedinweb.com/#website",
+  "@id": `${SITE_URL}/#website`,
   "url": BUSINESS_INFO.url,
   "name": BUSINESS_INFO.name,
-  "description": "White-label digital marketing fulfillment for agencies",
-  "publisher": { "@id": "https://dialedinweb.com/#organization" },
+  "description": "Growth marketing for plumbing and HVAC companies — SEO, paid ads, reputation management, and more.",
+  "publisher": { "@id": `${SITE_URL}/#organization` },
   "inLanguage": "en-US"
 });
 
-// Service Schema generator
 export const getServiceSchema = (service: {
   name: string;
   description: string;
@@ -130,7 +122,7 @@ export const getServiceSchema = (service: {
   "description": service.description,
   "url": service.url,
   "serviceType": service.serviceType || "Marketing Service",
-  "provider": { "@id": "https://dialedinweb.com/#organization" },
+  "provider": { "@id": `${SITE_URL}/#organization` },
   "areaServed": {
     "@type": "Country",
     "name": "United States"
@@ -148,19 +140,17 @@ export const getServiceSchema = (service: {
   }
 });
 
-// AboutPage Schema
 export const getAboutPageSchema = () => ({
   "@type": "AboutPage",
-  "@id": "https://dialedinweb.com/about#webpage",
-  "url": "https://dialedinweb.com/about",
-  "name": "About Dialed-In Web - White-Label Marketing Fulfillment",
-  "description": "Learn about Dialed-In Web, a white-label digital marketing fulfillment partner for agencies. Founded in 2011.",
-  "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-  "about": { "@id": "https://dialedinweb.com/#organization" },
-  "mainEntity": { "@id": "https://dialedinweb.com/#organization" }
+  "@id": `${SITE_URL}/about#webpage`,
+  "url": `${SITE_URL}/about`,
+  "name": "About Dialed-In Local - Growth Marketing for Plumbing & HVAC",
+  "description": "Learn about Dialed-In Local, a growth marketing company built specifically for plumbing and HVAC businesses. Founded in 2011.",
+  "isPartOf": { "@id": `${SITE_URL}/#website` },
+  "about": { "@id": `${SITE_URL}/#organization` },
+  "mainEntity": { "@id": `${SITE_URL}/#organization` }
 });
 
-// BreadcrumbList Schema generator
 export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => ({
   "@type": "BreadcrumbList",
   "itemListElement": items.map((item, index) => ({
@@ -171,7 +161,6 @@ export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => (
   }))
 });
 
-// Review Schema generator
 export const getReviewSchema = (review: {
   author: string;
   reviewBody: string;
@@ -191,10 +180,9 @@ export const getReviewSchema = (review: {
     "worstRating": 1
   },
   "datePublished": review.datePublished || new Date().toISOString().split('T')[0],
-  "itemReviewed": { "@id": "https://dialedinweb.com/#organization" }
+  "itemReviewed": { "@id": `${SITE_URL}/#organization` }
 });
 
-// FAQPage Schema generator
 export const getFAQPageSchema = (faqs: { question: string; answer: string }[]) => ({
   "@type": "FAQPage",
   "mainEntity": faqs.map(faq => ({
@@ -207,7 +195,6 @@ export const getFAQPageSchema = (faqs: { question: string; answer: string }[]) =
   }))
 });
 
-// Full homepage schema graph
 export const getHomepageSchema = () => ({
   "@context": "https://schema.org",
   "@graph": [
@@ -216,59 +203,58 @@ export const getHomepageSchema = () => ({
     getWebSiteSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://dialedinweb.com/#webpage",
-      "url": "https://dialedinweb.com",
-      "name": "White-Label Digital Marketing Fulfillment for Agencies | Dialed-In Web",
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-      "about": { "@id": "https://dialedinweb.com/#organization" },
-      "description": "We partner with agencies to deliver custom white-label SEO, local search, paid media, and authority building."
+      "@id": `${SITE_URL}/#webpage`,
+      "url": SITE_URL,
+      "name": "Growth Marketing for Plumbing & HVAC Companies | Dialed-In Local",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/#organization` },
+      "description": "More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies."
     }
   ]
 });
 
-// Services page schema with all service offerings
 export const getServicesPageSchema = () => {
   const services = [
     {
-      name: "White-Label Local SEO",
-      description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building.",
-      url: "https://dialedinweb.com/white-label-local-seo",
+      name: "Local SEO for Plumbing & HVAC",
+      description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building for plumbing and HVAC companies.",
+      url: `${SITE_URL}/white-label-local-seo`,
       serviceType: "Local SEO Service"
     },
     {
-      name: "White-Label Google Business Profile SEO",
-      description: "Google Business Profile optimization, review management, and local map pack visibility services.",
-      url: "https://dialedinweb.com/white-label-gbp-seo",
+      name: "Google Business Profile SEO",
+      description: "Google Business Profile optimization, review management, and local map pack visibility for plumbing and HVAC businesses.",
+      url: `${SITE_URL}/white-label-gbp-seo`,
       serviceType: "GBP SEO Service"
     },
     {
-      name: "White-Label Paid Media",
-      description: "Google Ads, Meta Ads, and local service ads management for agencies.",
-      url: "https://dialedinweb.com/white-label-paid-media",
+      name: "Paid Media for Plumbing & HVAC",
+      description: "Google Ads, Meta Ads, and local service ads management to generate calls and booked jobs.",
+      url: `${SITE_URL}/white-label-paid-media`,
       serviceType: "PPC Advertising Service"
     },
     {
-      name: "White-Label Email Marketing",
-      description: "Email campaign strategy, automation, and list management services.",
-      url: "https://dialedinweb.com/white-label-email-marketing",
+      name: "Email Marketing",
+      description: "Email campaign strategy, automation, and list management for plumbing and HVAC companies.",
+      url: `${SITE_URL}/white-label-email-marketing`,
       serviceType: "Email Marketing Service"
     },
     {
-      name: "White-Label Authority Building",
-      description: "Link building, digital PR, and content marketing for local authority.",
-      url: "https://dialedinweb.com/white-label-local-authority-building",
+      name: "Authority Building",
+      description: "Link building, digital PR, and content marketing for local authority in the plumbing and HVAC space.",
+      url: `${SITE_URL}/white-label-local-authority-building`,
       serviceType: "Link Building Service"
     },
     {
-      name: "White-Label Reporting",
-      description: "Custom dashboards, rank tracking, and ROI reporting for agency clients.",
-      url: "https://dialedinweb.com/white-label-reporting",
+      name: "Reporting & Dashboards",
+      description: "Custom dashboards, rank tracking, and ROI reporting so you always know what's working.",
+      url: `${SITE_URL}/white-label-reporting`,
       serviceType: "Marketing Analytics Service"
     },
     {
-      name: "White-Label Content Marketing",
-      description: "Blog content, location pages, and topical authority content development.",
-      url: "https://dialedinweb.com/white-label-content-marketing",
+      name: "Content Marketing",
+      description: "Blog content, location pages, and topical authority content development for plumbing and HVAC businesses.",
+      url: `${SITE_URL}/white-label-content-marketing`,
       serviceType: "Content Marketing Service"
     }
   ];
@@ -279,34 +265,32 @@ export const getServicesPageSchema = () => {
       getOrganizationSchema(),
       {
         "@type": "WebPage",
-        "@id": "https://dialedinweb.com/white-label-inbound-marketing-services#webpage",
-        "url": "https://dialedinweb.com/white-label-inbound-marketing-services",
-        "name": "White-Label Inbound Marketing Services for Agencies",
-        "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-        "about": { "@id": "https://dialedinweb.com/#organization" }
+        "@id": `${SITE_URL}/white-label-inbound-marketing-services#webpage`,
+        "url": `${SITE_URL}/white-label-inbound-marketing-services`,
+        "name": "Growth Marketing Services for Plumbing & HVAC Companies",
+        "isPartOf": { "@id": `${SITE_URL}/#website` },
+        "about": { "@id": `${SITE_URL}/#organization` }
       },
       ...services.map(service => getServiceSchema(service))
     ]
   };
 };
 
-// Testimonials page schema
 export const getTestimonialsPageSchema = (reviews: { author: string; reviewBody: string; ratingValue: number }[]) => ({
   "@context": "https://schema.org",
   "@graph": [
     getOrganizationSchema(),
     {
       "@type": "WebPage",
-      "@id": "https://dialedinweb.com/testimonials#webpage",
-      "url": "https://dialedinweb.com/testimonials",
-      "name": "Client Testimonials & Reviews | Dialed-In Web",
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" }
+      "@id": `${SITE_URL}/testimonials#webpage`,
+      "url": `${SITE_URL}/testimonials`,
+      "name": "Client Testimonials & Reviews | Dialed-In Local",
+      "isPartOf": { "@id": `${SITE_URL}/#website` }
     },
     ...reviews.map(review => getReviewSchema(review))
   ]
 });
 
-// About page schema
 export const getAboutSchema = () => ({
   "@context": "https://schema.org",
   "@graph": [
@@ -315,7 +299,6 @@ export const getAboutSchema = () => ({
   ]
 });
 
-// Service hub page schema generator (includes FAQ)
 export const getServiceHubSchema = (config: {
   name: string;
   description: string;
@@ -334,13 +317,12 @@ export const getServiceHubSchema = (config: {
         "url": config.url,
         "name": config.name,
         "description": config.description,
-        "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-        "about": { "@id": "https://dialedinweb.com/#organization" }
+        "isPartOf": { "@id": `${SITE_URL}/#website` },
+        "about": { "@id": `${SITE_URL}/#organization` }
       }
     ]
   };
 
-  // Add FAQ schema if FAQ groups exist
   if (config.faqGroups && config.faqGroups.length > 0) {
     const allFaqs = config.faqGroups.flatMap(group => 
       group.items.map(item => ({
@@ -348,7 +330,6 @@ export const getServiceHubSchema = (config: {
         answer: item.answer
       }))
     );
-    // Add unique @id based on the page URL to prevent duplicate schema issues
     const faqSchemaWithId = {
       ...getFAQPageSchema(allFaqs),
       "@id": `${config.url}#faq`
@@ -359,27 +340,26 @@ export const getServiceHubSchema = (config: {
   return schema;
 };
 
-// ContactPage Schema
 export const getContactPageSchema = () => ({
   "@context": "https://schema.org",
   "@graph": [
     getOrganizationSchema(),
     {
       "@type": "ContactPage",
-      "@id": "https://dialedinweb.com/contact#webpage",
-      "url": "https://dialedinweb.com/contact",
-      "name": "Contact Dialed-In Web - Start a White Label Partnership",
-      "description": "Reach out to Dialed-In Web to explore a white label partnership for SEO, paid ads, and content marketing services.",
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-      "about": { "@id": "https://dialedinweb.com/#organization" },
+      "@id": `${SITE_URL}/contact#webpage`,
+      "url": `${SITE_URL}/contact`,
+      "name": "Contact Dialed-In Local - Get a Free Strategy Call",
+      "description": "Reach out to Dialed-In Local to explore growth marketing for your plumbing or HVAC business.",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/#organization` },
       "mainEntity": {
         "@type": "Organization",
-        "@id": "https://dialedinweb.com/#organization"
+        "@id": `${SITE_URL}/#organization`
       }
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://dialedinweb.com/#localbusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
       "name": BUSINESS_INFO.name,
       "telephone": BUSINESS_INFO.telephone,
       "email": BUSINESS_INFO.email,
@@ -399,33 +379,31 @@ export const getContactPageSchema = () => ({
   ]
 });
 
-// Blog Schema
 export const getBlogSchema = () => ({
   "@context": "https://schema.org",
   "@graph": [
     getOrganizationSchema(),
     {
       "@type": "Blog",
-      "@id": "https://dialedinweb.com/blog#blog",
-      "url": "https://dialedinweb.com/blog",
-      "name": "Digital Marketing Insights - White Label SEO & PPC Blog",
-      "description": "Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-In Web digital marketing blog.",
-      "publisher": { "@id": "https://dialedinweb.com/#organization" },
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+      "@id": `${SITE_URL}/blog#blog`,
+      "url": `${SITE_URL}/blog`,
+      "name": "Plumbing & HVAC Marketing Blog | Dialed-In Local",
+      "description": "Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, reputation management, and growth strategies.",
+      "publisher": { "@id": `${SITE_URL}/#organization` },
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
       "inLanguage": "en-US"
     },
     {
       "@type": "WebPage",
-      "@id": "https://dialedinweb.com/blog#webpage",
-      "url": "https://dialedinweb.com/blog",
-      "name": "Digital Marketing Insights | White Label SEO & PPC Blog",
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-      "about": { "@id": "https://dialedinweb.com/blog#blog" }
+      "@id": `${SITE_URL}/blog#webpage`,
+      "url": `${SITE_URL}/blog`,
+      "name": "Plumbing & HVAC Marketing Blog | Dialed-In Local",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/blog#blog` }
     }
   ]
 });
 
-// SoftwareApplication Schema for Calculators
 export const getCalculatorSchema = (config: {
   name: string;
   description: string;
@@ -448,8 +426,8 @@ export const getCalculatorSchema = (config: {
         "price": "0",
         "priceCurrency": "USD"
       },
-      "author": { "@id": "https://dialedinweb.com/#organization" },
-      "provider": { "@id": "https://dialedinweb.com/#organization" }
+      "author": { "@id": `${SITE_URL}/#organization` },
+      "provider": { "@id": `${SITE_URL}/#organization` }
     },
     {
       "@type": "WebPage",
@@ -457,7 +435,7 @@ export const getCalculatorSchema = (config: {
       "url": config.url,
       "name": config.name,
       "description": config.description,
-      "isPartOf": { "@id": "https://dialedinweb.com/#website" }
+      "isPartOf": { "@id": `${SITE_URL}/#website` }
     }
   ]
 });

@@ -26,7 +26,6 @@ const Index = () => {
   const faqSchema = getHomepageFAQSchema();
   const ogImage = getPageOgImage('index');
 
-  // Combine schemas
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -38,34 +37,29 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web</title>
-        <meta name="description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
-        <meta name="keywords" content="white label digital marketing, white label SEO services, white label PPC management, agency fulfillment partner, wholesale marketing services" />
-        <link rel="canonical" href="https://dialedinweb.com/" />
+        <title>Growth Marketing for Plumbing & HVAC Companies | SEO, PPC, Reputation by Dialed-In Local</title>
+        <meta name="description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
+        <meta name="keywords" content="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing" />
+        <link rel="canonical" href="https://dialedinlocal.com/" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/" />
+        <link rel="alternate" hrefLang="en-US" href="https://dialedinlocal.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://dialedinlocal.com/" />
         
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
         
-        {/* Open Graph */}
-        <meta property="og:title" content="White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web" />
-        <meta property="og:description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
-        <meta property="og:url" content="https://dialedinweb.com/" />
+        <meta property="og:title" content="Growth Marketing for Plumbing & HVAC Companies | Dialed-In Local" />
+        <meta property="og:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
+        <meta property="og:url" content="https://dialedinlocal.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Dialed-In Local" />
         <meta property="og:image" content={ogImage} />
         
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Label Digital Marketing Services for Agencies | SEO, PPC, Content & Web by Dialed-in Web" />
-        <meta name="twitter:description" content="Scale your agency with white label SEO, paid media, content, and web—fully managed by Dialed-in Web under your brand." />
+        <meta name="twitter:title" content="Growth Marketing for Plumbing & HVAC Companies | Dialed-In Local" />
+        <meta name="twitter:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
       
-      {/* Dark header/hero section */}
       <div className="dark">
         <Header />
         <Hero />
@@ -73,12 +67,10 @@ const Index = () => {
       
       <TrustReel />
       
-      {/* Problem/Solution - dramatic dark section */}
       <div className="dark">
         <ProblemSolution />
       </div>
       
-      {/* Light sections - warm luxury feel */}
       <HonestWordOnFulfillment />
       <WhyPartnerWithUs />
       <FitQualifier />
@@ -87,14 +79,12 @@ const Index = () => {
         <ServicesGrid />
       </div>
       
-      {/* Expertise - back to dark for drama */}
       <div className="dark">
         <TopicalExpertise />
       </div>
       
       <LocalGrowthEngine />
       
-      {/* What We Solve - dark dramatic section */}
       <div className="dark">
         <div id="about">
           <WhatWeSolve />
@@ -111,7 +101,6 @@ const Index = () => {
       
       <FAQ />
       
-      {/* Contact & Footer - dark elegant finish */}
       <div className="dark">
         <ContactForm />
         <Footer />
