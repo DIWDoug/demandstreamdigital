@@ -49,7 +49,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             {/* Centered Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-                Fulfillment in <span className="text-accent-blue">6 Clear Steps</span>
+                Fulfillment in <span className="text-primary">6 Clear Steps</span>
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
                 A predictable process designed for agencies that value control and client delight. All steps are executed behind the scenes, under your brand, with you retaining full client ownership.
@@ -66,7 +66,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                       <AccordionItem 
                         key={index} 
                         value={`item-${index}`}
-                        className="bg-background/50 border border-border rounded-lg px-5 data-[state=open]:border-accent-blue/30 data-[state=open]:shadow-lg data-[state=open]:shadow-accent-blue/10 transition-all duration-300"
+                        className="bg-background/50 border border-border rounded-lg px-5 data-[state=open]:border-primary/30 data-[state=open]:shadow-lg data-[state=open]:shadow-primary/10 transition-all duration-300"
                       >
                         <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline py-4">
                           <div className="flex items-center gap-4">

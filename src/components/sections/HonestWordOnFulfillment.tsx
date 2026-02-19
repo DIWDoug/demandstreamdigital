@@ -33,13 +33,13 @@ const HonestWordOnFulfillment = () => {
               <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-muted to-background border border-border max-w-xs shadow-lg">
                 <img 
                   src={dougHeadshot} 
-                  alt="Doug Bryson - Founder and CEO of Dialed-In Local, growth marketing for plumbing and HVAC companies"
-                  title="Doug Bryson | Founder, Dialed-In Local"
+                  alt="Doug Bryson - Founder and CEO of ServiceForge Digital, growth marketing for plumbing and HVAC companies"
+                  title="Doug Bryson | Founder, ServiceForge Digital"
                   className="w-full h-auto object-cover aspect-[3/4]"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent p-6">
                   <p className="text-xl font-semibold text-foreground">Doug Bryson</p>
-                  <p className="text-muted-foreground">Founder, Dialed-In Local</p>
+                  <p className="text-muted-foreground">Founder, ServiceForge Digital</p>
                 </div>
               </div>
             </div>

@@ -36,7 +36,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-            What Our Clients <span className="text-accent-blue">Say</span>
+            What Our Clients <span className="text-primary">Say</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
             Real reviews from real homeowners who trusted us with their plumbing and HVAC needs.
@@ -52,21 +52,21 @@ const Testimonials = () => {
         </div>
 
         {/* Featured Partnership Review */}
-        <Card className="bg-white border-accent-blue/20 shadow-lg mb-8 max-w-4xl mx-auto">
+        <Card className="bg-white border-primary/20 shadow-lg mb-8 max-w-4xl mx-auto">
           <CardContent className="p-8 md:p-10">
             <div className="flex items-center gap-1 mb-4">
               {[...Array(featuredTestimonial.rating)].map((_, i) => (
                 <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
               ))}
             </div>
-            <Quote className="h-10 w-10 text-accent-blue/40 mb-5" />
+            <Quote className="h-10 w-10 text-primary/40 mb-5" />
             <p className="text-slate-700 text-base leading-relaxed whitespace-pre-line mb-6">
               "{featuredTestimonial.quote}"
             </p>
             <div className="flex items-center justify-between border-t border-slate-200 pt-5">
               <div>
                 <p className="text-slate-900 font-semibold text-lg">{featuredTestimonial.author}</p>
-                <p className="text-accent-blue text-sm">{featuredTestimonial.source}</p>
+                <p className="text-primary text-sm">{featuredTestimonial.source}</p>
               </div>
               <div className="bg-cta/10 text-cta font-semibold text-sm px-4 py-2 rounded-full">
                 {featuredTestimonial.highlight}
@@ -80,7 +80,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="bg-white border-slate-200 hover:border-accent-blue/30 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white border-slate-200 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
             >
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center gap-1 mb-4">
@@ -88,14 +88,14 @@ const Testimonials = () => {
                     <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
                   ))}
                 </div>
-                <Quote className="h-8 w-8 text-accent-blue/40 mb-4" />
+                <Quote className="h-8 w-8 text-primary/40 mb-4" />
                 <p className="text-slate-600 text-sm mb-6 flex-grow">
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t border-slate-200 pt-4">
                   <p className="text-slate-900 font-medium">{testimonial.author}</p>
                   <p className="text-slate-500 text-sm">{testimonial.company}</p>
-                  <p className="text-accent-blue text-xs mt-1">{testimonial.source}</p>
+                  <p className="text-primary text-xs mt-1">{testimonial.source}</p>
                 </div>
               </CardContent>
             </Card>
