@@ -177,7 +177,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 </svg>
               </a>
               <a 
-                href="https://facebook.com/dialedinweb" 
+                href="https://facebook.com/serviceforgedigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -186,7 +186,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
-                href="https://instagram.com/dialedinweb" 
+                href="https://instagram.com/serviceforgedigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -195,7 +195,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
-                href="https://www.linkedin.com/company/dialed-in-web/" 
+                href="https://www.linkedin.com/company/serviceforge-digital/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -210,7 +210,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-text-muted">
-                © {new Date().getFullYear()} Dialed-In Local. All Rights Reserved.
+                © {new Date().getFullYear()} ServiceForge Digital. All Rights Reserved.
               </p>
               <div className="flex items-center gap-6">
                 <Link 

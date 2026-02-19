@@ -37,25 +37,25 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Growth Marketing for Plumbing & HVAC Companies | SEO, PPC, Reputation by Dialed-In Local</title>
+        <title>Growth Marketing for Plumbing & HVAC Companies | SEO, PPC, Reputation by ServiceForge Digital</title>
         <meta name="description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
         <meta name="keywords" content="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing" />
-        <link rel="canonical" href="https://dialedinlocal.com/" />
+        <link rel="canonical" href="https://serviceforgedigital.com/" />
         
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinlocal.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinlocal.com/" />
+        <link rel="alternate" hrefLang="en-US" href="https://serviceforgedigital.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://serviceforgedigital.com/" />
         
         <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
         
-        <meta property="og:title" content="Growth Marketing for Plumbing & HVAC Companies | Dialed-In Local" />
+        <meta property="og:title" content="Growth Marketing for Plumbing & HVAC Companies | ServiceForge Digital" />
         <meta property="og:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
-        <meta property="og:url" content="https://dialedinlocal.com/" />
+        <meta property="og:url" content="https://serviceforgedigital.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Local" />
+        <meta property="og:site_name" content="ServiceForge Digital" />
         <meta property="og:image" content={ogImage} />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Growth Marketing for Plumbing & HVAC Companies | Dialed-In Local" />
+        <meta name="twitter:title" content="Growth Marketing for Plumbing & HVAC Companies | ServiceForge Digital" />
         <meta name="twitter:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>

@@ -54,8 +54,8 @@ export const getOpenGraphMeta = (options: {
   "og:description": options.description,
   "og:url": options.url,
   "og:type": options.type || "website",
-  "og:site_name": "Dialed-In Web",
-  "og:image": options.image || `${SITE_URL}/dialedinweb-logo.png`,
+  "og:site_name": "ServiceForge Digital",
+  "og:image": options.image || `${SITE_URL}/serviceforge-digital-logo.png`,
 });
 
 /**
@@ -72,5 +72,5 @@ export const getTwitterMeta = (options: {
   "twitter:card": "summary_large_image",
   "twitter:title": options.title,
   "twitter:description": options.description,
-  "twitter:image": options.image || `${SITE_URL}/dialedinweb-logo.png`,
+  "twitter:image": options.image || `${SITE_URL}/serviceforge-digital-logo.png`,
 });

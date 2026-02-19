@@ -29,8 +29,8 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
             href={PHONE_HREF}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all font-medium text-sm ${
               isLight 
-                ? "border-gray-300 text-gray-700 hover:bg-accent-blue hover:border-accent-blue hover:text-white" 
-                : "border-border text-text-secondary hover:text-white hover:border-accent-blue hover:bg-accent-blue"
+                ? "border-gray-300 text-gray-700 hover:bg-primary hover:border-primary hover:text-white" 
+                : "border-border text-text-secondary hover:text-white hover:border-primary hover:bg-primary"
             }`}
           >
             <Phone className="h-4 w-4" />

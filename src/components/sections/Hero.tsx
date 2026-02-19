@@ -38,7 +38,7 @@ const Hero = () => {
               style={{ animationDelay: "0.1s", lineHeight: "1.1" }}
             >
               More Calls. More Jobs.{" "}
-              <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">
+              <span className="text-cta drop-shadow-[0_0_30px_hsl(var(--cta)/0.5)]">
                 More Growth.
               </span>
             </h1>

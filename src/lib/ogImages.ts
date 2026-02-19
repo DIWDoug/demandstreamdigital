@@ -3,8 +3,8 @@
  * Maps slugs to public OG image URLs for social sharing
  */
 
-const BASE_URL = 'https://dialedinweb.com/og-images';
-const DEFAULT_OG = 'https://dialedinweb.com/dialedinweb-logo.png';
+const BASE_URL = 'https://serviceforgedigital.com/og-images';
+const DEFAULT_OG = 'https://serviceforgedigital.com/serviceforge-digital-logo.png';
 
 // Page-level OG images
 export const pageOgImages: Record<string, string> = {

@@ -9,7 +9,7 @@ import { getFAQPageSchema } from "@/lib/schema";
 
 export const homepageFAQs = [
   {
-    question: "How does working with Dialed-In Local work?",
+    question: "How does working with ServiceForge Digital work?",
     answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution — SEO, ads, reputation management — so you can focus on running your business."
   },
   {
@@ -83,7 +83,7 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-left-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-primary/30 transition-all duration-300 shadow-sm"
                 >
                   <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
                     {faq.question}
@@ -100,7 +100,7 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-right-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-[hsl(224,60%,55%)]/30 transition-all duration-300 shadow-sm"
+                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-primary/30 transition-all duration-300 shadow-sm"
                 >
                   <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
                     {faq.question}

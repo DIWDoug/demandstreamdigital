@@ -117,8 +117,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 213 73% 15%;
 
-    /* Crimson red primary - for CTAs */
-    --primary: 350 68% 38%;
+    /* Deep crimson red primary - for CTAs */
+    --primary: 350 72% 30%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 15% 93%;            /* Light cool grey */
@@ -140,9 +140,9 @@
     --radius: 0.5rem;
 
     /* Premium color tokens */
-    --cta: 350 68% 38%;
+    --cta: 350 72% 30%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 350 68% 45%;
+    --cta-glow: 350 72% 38%;
     
     /* Steel blue accent */
     --accent-blue: 210 55% 50%;
@@ -178,7 +178,7 @@
     --popover: 213 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 350 68% 38%;
+    --primary: 350 72% 30%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 213 40% 16%;
