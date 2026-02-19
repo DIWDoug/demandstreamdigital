@@ -2,14 +2,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Quote, Star } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
+const featuredTestimonial = {
+  quote: "Working with our SEO partner has been one of the best marketing decisions we've made. In just a few months, he has completely transformed our SEO performance with a roadmap that is not only strategic, but clearly tailored to our business. For the first time, we don't feel like we're guessing — we have a plan, data to back it up, and a partner who keeps us accountable.\n\nWhat truly sets him apart is transparency. After past experiences with agencies where SEO felt like a \"black box,\" it's refreshing to work with a team that provides real, clear data and explains what's working and why. His insights are thoughtful, his ideas are strong, and his use of AI is smart and intentional — not gimmicky.\n\nBeyond the strategy, the results speak for themselves. We saw a 40% year-over-year revenue increase this past December, and while SEO isn't the only factor, it has absolutely contributed to that growth.\n\nHe is passionate about what he does, and it shows in both his work and his team. This is not a vendor relationship — this is a true partnership.\n\nIf you're looking for an SEO company that is strategic, transparent, and genuinely invested in your success, I can't recommend him enough.",
+  author: "Pure Plumbing & Air",
+  source: "Google Review",
+  highlight: "40% year-over-year revenue increase",
+  rating: 5,
+};
+
 const testimonials = [
-  {
-    quote: "Five stars, for sure. Travis was professional, fast, and honest right out of the gate. You can tell he's experienced and knows what he's talking about. I told him what I thought the problem was, so after diagnosing the problem for free, he gave me his honest answer. He wasn't pushy and gave me options. I decided to move forward with the leak, and he was able to fix it in just a few hrs. He cleaned up after himself and left the yard as he saw it. I highly recommend him if you need a good plumber.",
-    author: "Chris T.",
-    source: "Google Review",
-    company: "Pure Plumbing & Air",
-    rating: 5,
-  },
   {
     quote: "I woke up to a flood in my kitchen and was able to schedule an appointment very quickly. My technician, Daniel L., showed up, and he was very professional, knowledgeable, kind, and personable. He listened to me and went over all the possible causes of the flood. He was very upfront about pricing and ensured they didn't have any hidden fees. He was able to find the problem and get it fixed in a quick but very thorough manner.",
     author: "Ralynn R.",
@@ -21,7 +22,7 @@ const testimonials = [
     quote: "Jason showed up with Pure Plumbing and Air. I was very impressed. He was very respectful. He first asked if he could come in and then put his covers over his shoes. He went right to work diagnosing our problem with our AC. The free estimate worked out great for us. Jason gave all the information that we need to make an informed decision regarding our AC unit and then a few more suggestions to help us in the future.",
     author: "Dee Ann M.",
     source: "Google Review",
-    company: "Pure Plumbing and Air",
+    company: "Pure Plumbing & Air",
     rating: 5,
   },
 ];
@@ -50,8 +51,32 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Quote Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Featured Partnership Review */}
+        <Card className="bg-white border-accent-blue/20 shadow-lg mb-8 max-w-4xl mx-auto">
+          <CardContent className="p-8 md:p-10">
+            <div className="flex items-center gap-1 mb-4">
+              {[...Array(featuredTestimonial.rating)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+              ))}
+            </div>
+            <Quote className="h-10 w-10 text-accent-blue/40 mb-5" />
+            <p className="text-slate-700 text-base leading-relaxed whitespace-pre-line mb-6">
+              "{featuredTestimonial.quote}"
+            </p>
+            <div className="flex items-center justify-between border-t border-slate-200 pt-5">
+              <div>
+                <p className="text-slate-900 font-semibold text-lg">{featuredTestimonial.author}</p>
+                <p className="text-accent-blue text-sm">{featuredTestimonial.source}</p>
+              </div>
+              <div className="bg-cta/10 text-cta font-semibold text-sm px-4 py-2 rounded-full">
+                {featuredTestimonial.highlight}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Homeowner Reviews */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
