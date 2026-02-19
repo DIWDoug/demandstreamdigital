@@ -28,7 +28,7 @@ const ProblemSolution = () => {
   return (
     <section 
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="reveal-section py-20 lg:py-28 bg-surface-dark relative overflow-hidden"
+      className="reveal-section py-20 lg:py-28 section-light relative overflow-hidden"
     >
       <div 
         className="absolute inset-0 opacity-[0.03]"

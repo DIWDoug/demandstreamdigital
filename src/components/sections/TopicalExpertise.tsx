@@ -257,7 +257,7 @@ const TopicalExpertise = () => {
   const isExpanded = (index: number) => expandedIndices.has(index);
 
   return (
-    <section id="expertise" className="py-24 lg:py-32 bg-surface-dark relative">
+    <section id="expertise" className="py-24 lg:py-32 section-light relative">
       {/* Smooth transition from ServicesGrid */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none" />
       <div className="container mx-auto px-6 lg:px-8">
