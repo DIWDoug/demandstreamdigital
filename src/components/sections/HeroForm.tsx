@@ -19,6 +19,7 @@ const serviceOptions = [
 const HeroForm = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const [step, setStep] = useState<1 | 2>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,6 @@ const HeroForm = () => {
     honeypot: "",
   });
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -53,6 +53,11 @@ const HeroForm = () => {
         ? prev.services.filter(s => s !== service)
         : [...prev.services, service],
     }));
+  };
+
+  const handleStep1 = (e: React.FormEvent) => {
+    e.preventDefault();
+    setStep(2);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -100,14 +105,67 @@ const HeroForm = () => {
         ? formData.services.join(", ")
         : `${formData.services.length} services selected`;
 
+  const inputClass =
+    "w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base";
+
+  // Step 1: Simple website URL entry
+  if (step === 1) {
+    return (
+      <div className="w-full">
+        <div className="bg-background/90 backdrop-blur-md border border-border rounded-xl p-6 sm:p-8 shadow-2xl">
+          <h3 className="text-lg font-semibold text-foreground mb-2">
+            Get Your Free Marketing Proposal
+          </h3>
+          <p className="text-sm text-text-muted mb-5">
+            Enter your website and we'll show you exactly where you're losing leads.
+          </p>
+
+          <form onSubmit={handleStep1} className="space-y-4">
+            <div className="flex gap-3">
+              <input
+                type="text"
+                placeholder="yourcompany.com"
+                value={formData.website}
+                onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                required
+                maxLength={255}
+                className={`${inputClass} flex-1`}
+              />
+              <button
+                type="submit"
+                className="btn-cta group whitespace-nowrap px-5"
+              >
+                Get a Proposal
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </button>
+            </div>
+            <p className="text-xs text-text-muted text-center">
+              No commitment required. Takes 30 seconds.
+            </p>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
+  // Step 2: Full contact form
   return (
     <div className="w-full">
       <div className="bg-background/90 backdrop-blur-md border border-border rounded-xl p-6 sm:p-8 shadow-2xl">
-        <h3 className="text-lg font-semibold text-foreground mb-2">
-          Get Your Free Marketing Audit
-        </h3>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-lg font-semibold text-foreground">
+            Almost There — Tell Us About You
+          </h3>
+          <button
+            type="button"
+            onClick={() => setStep(1)}
+            className="text-xs text-text-muted hover:text-foreground transition-colors"
+          >
+            ← Back
+          </button>
+        </div>
         <p className="text-sm text-text-muted mb-5">
-          See exactly where you're losing leads — and how to fix it.
+          We'll build a custom proposal for <span className="font-medium text-foreground">{formData.website}</span>
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -131,7 +189,7 @@ const HeroForm = () => {
               onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
               required
               maxLength={100}
-              className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+              className={inputClass}
             />
             <input
               type="text"
@@ -140,7 +198,7 @@ const HeroForm = () => {
               onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
               required
               maxLength={100}
-              className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+              className={inputClass}
             />
           </div>
 
@@ -152,7 +210,7 @@ const HeroForm = () => {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
             maxLength={255}
-            className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+            className={inputClass}
           />
 
           {/* Phone */}
@@ -164,14 +222,14 @@ const HeroForm = () => {
             placeholder="Phone Number"
           />
 
-          {/* Website */}
+          {/* Website (pre-filled, editable) */}
           <input
             type="text"
-            placeholder="Website URL (e.g. yourcompany.com)"
+            placeholder="Website URL"
             value={formData.website}
             onChange={(e) => setFormData({ ...formData, website: e.target.value })}
             maxLength={255}
-            className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
+            className={inputClass}
           />
 
           {/* Services Multi-Select Dropdown */}
@@ -259,7 +317,7 @@ const HeroForm = () => {
               </>
             ) : (
               <>
-                Get a Free Strategy Call
+                Get My Free Proposal
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </>
             )}
