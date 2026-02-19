@@ -67,10 +67,7 @@ const Index = () => {
       
       <TrustReel />
       
-      <div className="dark">
-        <ProblemSolution />
-      </div>
-      
+      <ProblemSolution />
       
       <WhyPartnerWithUs />
       <FitQualifier />
@@ -79,16 +76,12 @@ const Index = () => {
         <ServicesGrid />
       </div>
       
-      <div className="dark">
-        <TopicalExpertise />
-      </div>
+      <TopicalExpertise />
       
       <LocalGrowthEngine />
       
-      <div className="dark">
-        <div id="about">
-          <WhatWeSolve />
-        </div>
+      <div id="about">
+        <WhatWeSolve />
       </div>
       
       <MidPageCTA variant="light" />
@@ -101,8 +94,9 @@ const Index = () => {
       
       <FAQ />
       
+      <ContactForm />
+      
       <div className="dark">
-        <ContactForm />
         <Footer />
       </div>
     </div>

@@ -39,7 +39,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section id="contact" ref={ref} className="relative">
       {/* Background that stops where the card bleeds */}
-      <div className="absolute inset-0 bg-surface-elevated" style={{ bottom: '5rem' }} />
+      <div className="absolute inset-0 bg-background" style={{ bottom: '5rem' }} />
       
       <div className="relative pt-24 lg:pt-32 pb-8">
         <SubtleOrbs variant="top-right" />
@@ -57,7 +57,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             </div>
 
             {/* Bleed-over Card */}
-            <div className="relative z-20 bg-surface-dark border border-border rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] mb-[-5rem]">
+            <div className="relative z-20 bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.08)] mb-[-5rem]">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 {/* Left Column - Accordion */}
                 <div>
