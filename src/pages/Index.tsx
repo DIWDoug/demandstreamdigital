@@ -71,7 +71,7 @@ const Index = () => {
         <ProblemSolution />
       </div>
       
-      <HonestWordOnFulfillment />
+      
       <WhyPartnerWithUs />
       <FitQualifier />
       
