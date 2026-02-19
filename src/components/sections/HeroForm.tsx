@@ -12,6 +12,7 @@ const serviceOptions = [
   "Email Marketing",
   "Reputation Management",
   "Reporting & Dashboards",
+  "Website Design & Hosting",
   "Not Sure Yet",
 ];
 
