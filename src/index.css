@@ -118,7 +118,7 @@
     --popover-foreground: 213 73% 15%;
 
     /* Deep crimson red primary - for CTAs */
-    --primary: 350 72% 30%;
+    --primary: 357 66% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 15% 93%;            /* Light cool grey */
@@ -135,14 +135,14 @@
 
     --border: 210 15% 89%;
     --input: 210 10% 95%;
-    --ring: 350 68% 38%;
+    --ring: 357 66% 45%;
 
     --radius: 0.5rem;
 
     /* Premium color tokens */
-    --cta: 350 72% 30%;
+    --cta: 357 66% 45%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 350 72% 38%;
+    --cta-glow: 357 66% 52%;
     
     /* Steel blue accent */
     --accent-blue: 210 55% 50%;
@@ -178,7 +178,7 @@
     --popover: 213 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 350 72% 30%;
+    --primary: 357 66% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 213 40% 16%;
@@ -195,7 +195,7 @@
 
     --border: 213 40% 18%;
     --input: 213 40% 16%;
-    --ring: 350 68% 38%;
+    --ring: 357 66% 45%;
 
     /* Dark mode surfaces */
     --surface-dark: 213 73% 8%;
@@ -212,9 +212,9 @@
     --border-card: 213 35% 25%;
 
     /* CTA tokens for dark mode - crimson red */
-    --cta: 350 68% 42%;
+    --cta: 357 66% 48%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 350 68% 50%;
+    --cta-glow: 357 66% 55%;
     
     /* Blue accent for dark mode */
     --accent-blue: 210 60% 58%;
@@ -383,7 +383,7 @@
   /* Premium gradient backgrounds - deep navy */
   .gradient-hero {
     background: 
-      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(350 68% 20% / 0.15), transparent),
+      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(357 66% 20% / 0.15), transparent),
       radial-gradient(ellipse 80% 50% at 50% -20%, hsl(213 73% 8% / 0.98), transparent),
       radial-gradient(ellipse 60% 30% at 80% 80%, hsl(210 55% 20% / 0.1), transparent),
       linear-gradient(180deg, hsl(213 73% 7%), hsl(213 73% 5%));
@@ -447,7 +447,7 @@
 
   /* Accent section - deep red tinted */
   .section-accent {
-    background: linear-gradient(135deg, hsl(350 68% 15%), hsl(350 50% 10%));
+    background: linear-gradient(135deg, hsl(357 66% 15%), hsl(357 50% 10%));
   }
 
   /* Text gradient for emphasis */
