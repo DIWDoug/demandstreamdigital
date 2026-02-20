@@ -1,105 +1,39 @@
 
-# Fix "Function components cannot be given refs" Warnings
+# Fix Card Color Issues Across the Site
 
 ## Problem
-
-React is showing warnings in the console about function components not supporting refs:
-
-1. `ContactForm` (used in `Index.tsx`)
-2. `TwoStepContactForm` (used in `ContactForm.tsx`)  
-3. `Navigate` (from React Router v7 - internal warning)
-
-## Root Cause
-
-This is a known issue with React Router v7. The library's internal validation mechanisms attempt to check refs on components rendered within its Routes context. When a function component doesn't use `React.forwardRef`, this warning appears.
-
-The `Navigate` warning is an internal React Router issue that cannot be fixed in your code - it's a bug/limitation in React Router v7 itself.
-
-## Solution
-
-Wrap `ContactForm` and `TwoStepContactForm` with `React.forwardRef` to suppress the warnings. Even though these components don't actually use the ref, wrapping them prevents React from logging the warning.
+Cards throughout the site have a washed-out blue-grey appearance on light backgrounds. The root cause is that card components use semi-transparent or CSS-variable-based backgrounds that don't contrast properly against light sections. Additionally, some sections use off-brand accent colors.
 
 ## Changes
 
-### 1. `src/components/sections/ContactForm.tsx`
+### 1. Fix ProblemSolution Cards (Trust / Clarity / Execution)
+- **File:** `src/components/sections/ProblemSolution.tsx`
+- Change `bg-background/50` to `bg-white` so the cards are crisp white on the light section background
+- Update `border-border/30` to a more visible `border-gray-200` for clean definition
 
-Wrap the component with `forwardRef`:
+### 2. Fix WhyPartnerWithUs Cards + Remove Off-Brand Green
+- **File:** `src/components/sections/WhyPartnerWithUs.tsx`
+- The olive green accent `hsl(76,42%,41%)` is off-brand -- replace with the brand red `#BF272E` for CTAs and the steel blue accent for icon backgrounds
+- Cards already use `from-white to-[#F0F0ED]` which is fine, but icon accents need brand alignment
 
-```tsx
-import { forwardRef } from "react";
-// ... other imports
+### 3. Fix ContactForm Accordion Cards
+- **File:** `src/components/sections/ContactForm.tsx`
+- Change `bg-background/50` on accordion items to `bg-white` for clarity on light backgrounds
 
-const ContactForm = forwardRef<HTMLElement>((_, ref) => {
-  // ... existing component code
-  
-  return (
-    <section id="contact" ref={ref} className="relative">
-      {/* ... rest of component */}
-    </section>
-  );
-});
+### 4. Fix `premium-card` CSS Class
+- **File:** `src/index.css`
+- The `.premium-card` class uses `--surface-card` and `--surface-elevated` which are dark-tinted. Add light-mode overrides so these resolve to clean whites/near-whites when used inside `.section-light` or on light backgrounds
 
-ContactForm.displayName = "ContactForm";
+### 5. Fix TrustReel and FeaturedCaseStudies
+- **File:** `src/components/sections/TrustReel.tsx` and `src/components/sections/FeaturedCaseStudies.tsx`
+- These use `bg-card` which resolves correctly in light mode (white), so they should be fine -- will verify and adjust only if needed
 
-export default ContactForm;
-```
+---
 
-### 2. `src/components/forms/TwoStepContactForm.tsx`
+## Technical Details
 
-Wrap the component with `forwardRef`:
+The core issue: CSS variables like `--background`, `--surface-card`, and `--surface-elevated` have dark-mode values (deep navy blues) that look fine in `.dark` wrappers, but when used with partial opacity (`/50`) in light sections, they create a blue-grey muddy appearance. The fix is to use explicit light colors (`bg-white`, `border-gray-200`) in sections that are always light, rather than relying on theme variables with opacity modifiers.
 
-```tsx
-import { useState, forwardRef } from "react";
-// ... other imports
+For the `.premium-card` class, the gradient uses `hsl(var(--surface-card))` which in light mode is `0 0% 100%` (white) and in dark mode is `213 50% 15%` (navy). The light-mode rendering should already be white, but the issue may be compounded by the inset box-shadow using `hsl(0 0% 0% / 0.2)` which darkens the card. We'll lighten the shadow for light sections.
 
-interface TwoStepContactFormProps {
-  formType: string;
-  submitButtonText?: string;
-  step1ButtonText?: string;
-  showServicesInterested?: boolean;
-  className?: string;
-  compact?: boolean;
-}
-
-const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
-  (
-    {
-      formType,
-      submitButtonText = "Let's Talk Partnership",
-      step1ButtonText = "Continue",
-      showServicesInterested = true,
-      className = "",
-      compact = false,
-    },
-    ref
-  ) => {
-    // ... existing component code
-    
-    return (
-      <div ref={ref} className={className}>
-        {/* ... rest of component */}
-      </div>
-    );
-  }
-);
-
-TwoStepContactForm.displayName = "TwoStepContactForm";
-
-export default TwoStepContactForm;
-```
-
-## Technical Notes
-
-- The `Navigate` warning from React Router v7 cannot be fixed in your code - it's an internal library issue
-- Adding `displayName` is a best practice when using `forwardRef` for better debugging
-- The ref is attached to the outermost element of each component
-- This change has no impact on functionality - it only silences the console warnings
-
-## Result
-
-After these changes:
-- ContactForm ref warning: Fixed
-- TwoStepContactForm ref warning: Fixed
-- Navigate ref warning: Cannot be fixed (React Router internal)
-
-The Navigate warning is a known React Router v7 issue that the library maintainers would need to address.
+The WhyPartnerWithUs green (`hsl(76,42%,41%)`) will be replaced with the brand red (`#BF272E` / CTA variable) for buttons and steel blue (`--accent-blue`) for icon accents to stay on-brand.
