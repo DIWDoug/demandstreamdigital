@@ -10,22 +10,13 @@ const featuredTestimonial = {
   rating: 5,
 };
 
-const testimonials = [
-  {
-    quote: "I woke up to a flood in my kitchen and was able to schedule an appointment very quickly. My technician, Daniel L., showed up, and he was very professional, knowledgeable, kind, and personable. He listened to me and went over all the possible causes of the flood. He was very upfront about pricing and ensured they didn't have any hidden fees. He was able to find the problem and get it fixed in a quick but very thorough manner.",
-    author: "Ralynn R.",
-    source: "Google Review",
-    company: "Pure Plumbing & Air",
-    rating: 5,
-  },
-  {
-    quote: "Jason showed up with Pure Plumbing and Air. I was very impressed. He was very respectful. He first asked if he could come in and then put his covers over his shoes. He went right to work diagnosing our problem with our AC. The free estimate worked out great for us. Jason gave all the information that we need to make an informed decision regarding our AC unit and then a few more suggestions to help us in the future.",
-    author: "Dee Ann M.",
-    source: "Google Review",
-    company: "Pure Plumbing & Air",
-    rating: 5,
-  },
-];
+const testimonials: Array<{
+  quote: string;
+  author: string;
+  source: string;
+  company: string;
+  rating: number;
+}> = [];
 
 const Testimonials = () => {
   const sectionRef = useScrollReveal();

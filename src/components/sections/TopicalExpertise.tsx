@@ -289,9 +289,9 @@ const TopicalExpertise = () => {
             <div 
               id={anchorId}
               key={index}
-              className={`premium-card cursor-pointer transition-all duration-300 scroll-mt-32 ${
+              className={`bg-white border border-gray-200 rounded-xl p-6 lg:p-8 shadow-sm cursor-pointer transition-all duration-300 scroll-mt-32 ${
                 isExpanded(index) 
-                  ? "ring-1 ring-accent-blue/50 bg-surface-elevated" 
+                  ? "ring-1 ring-accent-blue/50 bg-white" 
                   : "hover:translate-y-[-2px]"
               }`}
               onClick={() => toggleExpand(index)}

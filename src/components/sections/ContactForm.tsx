@@ -39,7 +39,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section id="contact" ref={ref} className="relative">
       {/* Background that stops where the card bleeds */}
-      <div className="absolute inset-0 bg-background" style={{ bottom: '5rem' }} />
+      <div className="absolute inset-0 bg-[#f9f9f9]" style={{ bottom: '5rem' }} />
       
       <div className="relative pt-24 lg:pt-32 pb-8">
         <SubtleOrbs variant="top-right" />
@@ -48,10 +48,10 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
           <div className="max-w-6xl mx-auto">
             {/* Centered Header */}
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-                Fulfillment in <span className="text-primary">6 Clear Steps</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+                Fulfillment in <span className="text-cta">6 Clear Steps</span>
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 A predictable process designed for agencies that value control and client delight. All steps are executed behind the scenes, under your brand, with you retaining full client ownership.
               </p>
             </div>
