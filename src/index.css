@@ -118,7 +118,7 @@
     --popover-foreground: 213 73% 15%;
 
     /* Deep crimson red primary - for CTAs */
-    --primary: 357 66% 45%;
+    --primary: 357 70% 38%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 15% 93%;            /* Light cool grey */
@@ -135,14 +135,14 @@
 
     --border: 210 15% 89%;
     --input: 210 10% 95%;
-    --ring: 357 66% 45%;
+    --ring: 357 70% 38%;
 
     --radius: 0.5rem;
 
     /* Premium color tokens */
-    --cta: 357 66% 45%;
+    --cta: 357 70% 38%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 357 66% 52%;
+    --cta-glow: 357 70% 46%;
     
     /* Steel blue accent */
     --accent-blue: 210 55% 50%;
