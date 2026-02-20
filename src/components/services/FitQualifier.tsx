@@ -76,8 +76,8 @@ const FitQualifier = () => {
             {/* Good Fit */}
             <div className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-sm">
               <div className="flex items-center gap-3 mb-5 md:mb-6">
-                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-cta/10 flex items-center justify-center shrink-0">
-                  <Check className="h-4 w-4 md:h-5 md:w-5 text-cta" />
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
+                  <Check className="h-4 w-4 md:h-5 md:w-5 text-green-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-foreground">This Could Work Well</h3>
               </div>
@@ -89,7 +89,7 @@ const FitQualifier = () => {
                       onOpenChange={(open) => setOpenGoodFit(open ? index : null)}
                     >
                       <CollapsibleTrigger className="flex items-start gap-2.5 md:gap-3 w-full text-left group cursor-pointer py-2.5 md:py-2 min-h-[44px]">
-                        <Check className="h-4 w-4 md:h-5 md:w-5 text-cta shrink-0 mt-0.5" />
+                        <Check className="h-4 w-4 md:h-5 md:w-5 text-green-600 shrink-0 mt-0.5" />
                         <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
                         <ChevronDown 
                           className={cn(
