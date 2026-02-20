@@ -60,14 +60,15 @@ const Index = () => {
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
       
-      <div className="dark">
-        <Header />
-        <Hero />
-      </div>
+      <Header />
+      <Hero />
       
       <TrustReel />
       
-      <ProblemSolution />
+      <div className="dark">
+        <ProblemSolution />
+      
+      </div>
       
       <WhyPartnerWithUs />
       <FitQualifier />

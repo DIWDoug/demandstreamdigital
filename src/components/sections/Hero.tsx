@@ -14,12 +14,12 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-background">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
       {/* Subtle dot pattern background */}
       <div 
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--cta)) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
           backgroundSize: '24px 24px'
         }}
       />
@@ -29,7 +29,7 @@ const Hero = () => {
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 animate-fade-in-up text-foreground"
+              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 animate-fade-in-up text-gray-900"
               style={{ lineHeight: "1.1" }}
             >
               Marketing, SEO, & AI for{" "}
@@ -39,7 +39,7 @@ const Hero = () => {
             </h1>
 
             <p
-              className="text-lg text-text-secondary leading-relaxed mb-10 animate-fade-in-up"
+              className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
               From visibility to profitability, our program produces better leads and more jobs that your home service business needs to thrive.
@@ -56,7 +56,7 @@ const Hero = () => {
                 placeholder="Enter your website"
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
-                className="flex-1 px-5 py-4 rounded-lg bg-white border border-gray-200 text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base shadow-sm"
+                className="flex-1 px-5 py-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base shadow-sm"
               />
               <button
                 type="submit"
