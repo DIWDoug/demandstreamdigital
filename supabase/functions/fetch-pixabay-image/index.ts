@@ -174,7 +174,8 @@ Deno.serve(async (req) => {
     const response = await fetch(`https://pixabay.com/api/?${params.toString()}`);
 
     if (!response.ok) {
-      console.error('Pixabay API error:', response.status, response.statusText);
+      const errorBody = await response.text();
+      console.error('Pixabay API error:', response.status, response.statusText, errorBody);
       return new Response(
         JSON.stringify({ success: false, error: 'Failed to fetch images' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
