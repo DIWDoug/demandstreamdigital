@@ -66,7 +66,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                       <AccordionItem 
                         key={index} 
                         value={`item-${index}`}
-                        className="bg-background/50 border border-border rounded-lg px-5 data-[state=open]:border-primary/30 data-[state=open]:shadow-lg data-[state=open]:shadow-primary/10 transition-all duration-300"
+                        className="bg-white border border-gray-200 rounded-lg px-5 data-[state=open]:border-cta/30 data-[state=open]:shadow-lg data-[state=open]:shadow-cta/10 transition-all duration-300"
                       >
                         <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline py-4">
                           <div className="flex items-center gap-4">

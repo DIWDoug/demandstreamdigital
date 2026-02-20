@@ -56,15 +56,15 @@ const ProblemSolution = () => {
             {pillars.map((pillar, index) => (
               <div 
                 key={index}
-                className="group bg-background/50 rounded-xl p-6 lg:p-8 border border-border/30 hover:border-accent-blue/30 transition-all duration-300"
+                className="group bg-white rounded-xl p-6 lg:p-8 border border-gray-200 hover:border-cta/30 transition-all duration-300 shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-5 group-hover:bg-accent-blue/20 transition-colors">
-                  <pillar.icon className="h-5 w-5 text-accent-blue" />
+                <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center mb-5 group-hover:bg-cta/15 transition-colors">
+                  <pillar.icon className="h-5 w-5 text-cta" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-1">
                   {pillar.title}
                 </h3>
-                <p className="text-accent-blue text-sm font-medium mb-4">
+                <p className="text-cta text-sm font-medium mb-4">
                   {pillar.subtitle}
                 </p>
                 <p className="text-text-secondary text-sm leading-relaxed">

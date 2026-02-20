@@ -75,9 +75,9 @@ const WhyPartnerWithUs = () => {
               <div className={`inline-flex items-center justify-center p-4 rounded-xl mb-5 ${
                 benefit.isQualifier 
                   ? 'bg-gray-400/15 border border-gray-400/25' 
-                  : 'bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20'
+                  : 'bg-cta/10 border border-cta/20'
               }`}>
-                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-[hsl(76,42%,35%)]'}`} strokeWidth={1.5} />
+                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-cta'}`} strokeWidth={1.5} />
               </div>
               <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
                 {benefit.title}
@@ -92,7 +92,7 @@ const WhyPartnerWithUs = () => {
         <div className="text-center mt-12">
           <Link 
             to="/about" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[hsl(76,42%,41%)] text-white font-semibold rounded-lg hover:bg-[hsl(76,42%,35%)] transition-colors group"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-cta text-white font-semibold rounded-lg hover:bg-cta/90 transition-colors group"
           >
             Meet the Team Behind Your Growth
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
