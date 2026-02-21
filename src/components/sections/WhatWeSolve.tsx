@@ -5,7 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import StreamTexture from "@/components/StreamTexture";
+
 
 const WhatWeSolve = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -110,7 +110,7 @@ const WhatWeSolve = () => {
   return (
     <TooltipProvider>
       <section className="pt-24 pb-8 lg:pt-32 lg:pb-10 bg-background relative overflow-hidden">
-        <StreamTexture variant="dark" opacity={0.08} />
+        
         <div className="absolute top-0 left-0 right-0 z-[1]">
           <div className="section-divider" />
         </div>

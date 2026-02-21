@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import bookCover from "@/assets/local-growth-engine-cover.png";
-import StreamTexture from "@/components/StreamTexture";
+
 
 const LocalGrowthEngine = () => {
   const navigate = useNavigate();
@@ -94,7 +94,7 @@ const LocalGrowthEngine = () => {
     <section className="relative overflow-hidden">
       {/* Dark background */}
       <div className="absolute inset-0 bg-background" style={{ bottom: '5rem' }} />
-      <StreamTexture variant="dark" opacity={0.08} />
+      
       
       <div className="relative py-16 lg:py-20 pb-8 z-10">
         <div className="container mx-auto px-6 lg:px-8">
@@ -113,7 +113,7 @@ const LocalGrowthEngine = () => {
                     <div className="relative overflow-hidden rounded-lg">
                       <img 
                         src={bookCover} 
-                        alt="The Local Growth Engine ebook" 
+                        alt="DemandStream: The No-BS Growth Guide ebook" 
                         className="w-full"
                         style={{ 
                           filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
@@ -130,7 +130,7 @@ const LocalGrowthEngine = () => {
                     <div className="relative overflow-hidden rounded-lg">
                       <img 
                         src={bookCover} 
-                        alt="The Local Growth Engine ebook" 
+                        alt="DemandStream: The No-BS Growth Guide ebook" 
                         className="w-full"
                         style={{ 
                           filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
@@ -147,7 +147,7 @@ const LocalGrowthEngine = () => {
                     <div className="relative overflow-hidden rounded-lg">
                       <img 
                         src={bookCover} 
-                        alt="The Local Growth Engine ebook" 
+                        alt="DemandStream: The No-BS Growth Guide ebook" 
                         className="w-full"
                         style={{ 
                           filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.35))',
@@ -164,7 +164,7 @@ const LocalGrowthEngine = () => {
                     <div className="relative overflow-hidden rounded-lg">
                       <img 
                         src={bookCover} 
-                        alt="The Local Growth Engine ebook" 
+                        alt="DemandStream: The No-BS Growth Guide ebook" 
                         className="w-full"
                         style={{ 
                           filter: 'drop-shadow(0 35px 60px rgba(0,0,0,0.5))',

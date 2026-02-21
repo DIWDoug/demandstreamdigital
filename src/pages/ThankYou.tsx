@@ -51,7 +51,7 @@ const ThankYou = () => {
                   Your Ebook is <span className="text-accent-blue">Ready</span>
                 </h1>
                 <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                  Thank you for your interest! Check your inbox for a download link to "The Local Growth Engine" ebook. If you don't see it within a few minutes, check your spam folder.
+                  Thank you for your interest! Check your inbox for a download link to "DemandStream: The No-BS Growth Guide" ebook. If you don't see it within a few minutes, check your spam folder.
                 </p>
               </>
             ) : (

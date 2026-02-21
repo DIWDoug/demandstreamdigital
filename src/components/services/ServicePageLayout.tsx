@@ -6,7 +6,7 @@ import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import type { ServicePageConfig, BreadcrumbItem } from "@/types/servicePage";
 import { getHubOgImage } from "@/lib/ogImages";
-import StreamTexture from "@/components/StreamTexture";
+
 
 // Generic section components
 import ServiceHeroGeneric from "./generic/ServiceHeroGeneric";
@@ -92,7 +92,7 @@ const ServicePageLayout = ({
 
   return (
     <div className="dark min-h-screen bg-background text-foreground relative overflow-hidden">
-      <StreamTexture variant="dark" opacity={0.08} />
+      
       <Helmet>
         <title>{config.metaTitle}</title>
         <meta name="description" content={config.metaDescription} />

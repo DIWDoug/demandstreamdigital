@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import YouTubeModal from "@/components/ui/youtube-modal";
-import StreamTexture from "@/components/StreamTexture";
+import TopoTexture from "@/components/TopoTexture";
 
 const Hero = () => {
   const [website, setWebsite] = useState("");
@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
-      <StreamTexture variant="light" opacity={0.1} />
+      <TopoTexture opacity={0.08} />
       {/* Subtle dot pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
