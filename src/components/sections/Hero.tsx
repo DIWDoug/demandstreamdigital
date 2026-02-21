@@ -65,6 +65,78 @@ const Hero = () => {
         }}
       />
 
+      {/* Animated flowing accent lines */}
+      <svg
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        viewBox="0 0 1440 800"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        {/* Primary flowing line */}
+        <path
+          d="M-100,320 C150,280 350,420 600,350 S950,220 1200,300 S1400,400 1540,340"
+          fill="none"
+          stroke="hsl(210 55% 50% / 0.12)"
+          strokeWidth="2"
+          strokeLinecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0,0; 40,15; 0,0; -30,-10; 0,0"
+            dur="25s"
+            repeatCount="indefinite"
+          />
+        </path>
+        {/* Secondary flowing line — offset */}
+        <path
+          d="M-50,360 C200,320 400,460 650,380 S1000,250 1250,340 S1450,440 1540,380"
+          fill="none"
+          stroke="hsl(210 55% 50% / 0.07)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0,0; -35,20; 0,0; 25,-15; 0,0"
+            dur="30s"
+            repeatCount="indefinite"
+          />
+        </path>
+        {/* Lower accent line */}
+        <path
+          d="M-80,580 C200,540 450,660 700,590 S1050,470 1300,550 S1450,630 1540,580"
+          fill="none"
+          stroke="hsl(210 55% 50% / 0.08)"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0,0; 30,-12; 0,0; -25,18; 0,0"
+            dur="35s"
+            repeatCount="indefinite"
+          />
+        </path>
+        {/* Thin whisper line */}
+        <path
+          d="M-60,400 C180,370 380,490 630,420 S980,310 1230,380 S1430,470 1540,420"
+          fill="none"
+          stroke="hsl(210 55% 50% / 0.05)"
+          strokeWidth="1"
+          strokeLinecap="round"
+        >
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0,0; -20,10; 0,0; 35,-8; 0,0"
+            dur="40s"
+            repeatCount="indefinite"
+          />
+        </path>
+      </svg>
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left column — Headline, copy & website input */}
