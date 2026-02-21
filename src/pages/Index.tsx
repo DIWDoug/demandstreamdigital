@@ -65,10 +65,7 @@ const Index = () => {
       
       <TrustReel />
       
-      <div className="dark">
-        <ProblemSolution />
-      
-      </div>
+      <ProblemSolution />
       
       <WhyPartnerWithUs />
       <FitQualifier />

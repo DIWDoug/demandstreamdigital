@@ -60,7 +60,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             <div className="relative z-20 bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.08)] mb-[-5rem]">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                 {/* Left Column - Accordion */}
-                <div>
+              <div>
                   <Accordion type="single" collapsible defaultValue="item-4" className="space-y-3">
                     {steps.map((step, index) => (
                       <AccordionItem 
@@ -68,13 +68,13 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                         value={`item-${index}`}
                         className="bg-white border border-gray-200 rounded-lg px-5 data-[state=open]:border-cta/30 data-[state=open]:shadow-lg data-[state=open]:shadow-cta/10 transition-all duration-300"
                       >
-                        <AccordionTrigger className="text-lg font-medium text-foreground hover:no-underline py-4">
+                        <AccordionTrigger className="text-lg font-medium text-gray-900 hover:no-underline py-4">
                           <div className="flex items-center gap-4">
                             <span className="step-badge">{index + 1}</span>
                             <span>{step.title}</span>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="text-text-secondary pb-4 pl-14">
+                        <AccordionContent className="text-gray-600 pb-4 pl-14">
                           {step.content}
                         </AccordionContent>
                       </AccordionItem>
