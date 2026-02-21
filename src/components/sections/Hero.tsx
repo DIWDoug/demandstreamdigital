@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
-      <StreamTexture variant="light" opacity={0.07} />
+      <StreamTexture variant="light" opacity={0.1} />
       {/* Subtle dot pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"

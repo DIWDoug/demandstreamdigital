@@ -1,6 +1,7 @@
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import StreamTexture from "@/components/StreamTexture";
 
 interface MidPageCTAProps {
   variant?: "light" | "dark";
@@ -10,8 +11,9 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
   const isLight = variant === "light";
   
   return (
-    <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-background"}`}>
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className={`py-10 lg:py-14 ${isLight ? "section-light" : "bg-background"} relative overflow-hidden`}>
+      <StreamTexture variant={isLight ? "light" : "dark"} opacity={isLight ? 0.1 : 0.08} />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <Link 
             to="/contact" 

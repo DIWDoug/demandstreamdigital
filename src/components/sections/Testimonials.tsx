@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, Star } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import StreamTexture from "@/components/StreamTexture";
 
 const featuredTestimonial = {
   quote: "Working with our SEO partner has been one of the best marketing decisions we've made. In just a few months, he has completely transformed our SEO performance with a roadmap that is not only strategic, but clearly tailored to our business. For the first time, we don't feel like we're guessing — we have a plan, data to back it up, and a partner who keeps us accountable.\n\nWhat truly sets him apart is transparency. After past experiences with agencies where SEO felt like a \"black box,\" it's refreshing to work with a team that provides real, clear data and explains what's working and why. His insights are thoughtful, his ideas are strong, and his use of AI is smart and intentional — not gimmicky.\n\nBeyond the strategy, the results speak for themselves. We saw a 40% year-over-year revenue increase this past December, and while SEO isn't the only factor, it has absolutely contributed to that growth.\n\nHe is passionate about what he does, and it shows in both his work and his team. This is not a vendor relationship — this is a true partnership.\n\nIf you're looking for an SEO company that is strategic, transparent, and genuinely invested in your success, I can't recommend him enough.",
@@ -22,8 +23,9 @@ const Testimonials = () => {
   const sectionRef = useScrollReveal();
   
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
-      <div className="container mx-auto px-6 max-w-6xl">
+    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section relative overflow-hidden">
+      <StreamTexture variant="light" opacity={0.1} />
+      <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">

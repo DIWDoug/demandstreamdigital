@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import StreamTexture from "@/components/StreamTexture";
 import { cn } from "@/lib/utils";
 
 const FitQualifier = () => {
@@ -56,7 +57,8 @@ const FitQualifier = () => {
 
   return (
     <section id="fit-qualifier" className="py-20 lg:py-28 bg-card border-y border-border relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
+      <StreamTexture variant="dark" opacity={0.08} />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">

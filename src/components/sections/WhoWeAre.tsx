@@ -9,9 +9,9 @@ const WhoWeAre = () => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-24 lg:py-32 section-light reveal-section"
+      className="py-24 lg:py-32 section-light reveal-section overflow-hidden"
     >
-      <StreamTexture variant="light" opacity={0.07} />
+      <StreamTexture variant="light" opacity={0.1} />
       <SubtleOrbs variant="scattered" />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">

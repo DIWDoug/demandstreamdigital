@@ -11,7 +11,7 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
 
   return (
     <div 
-      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+      className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}
       aria-hidden="true"
     >
       <svg 
