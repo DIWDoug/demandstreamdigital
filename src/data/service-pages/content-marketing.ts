@@ -1,20 +1,21 @@
 import { FileText, PenTool, BookOpen, Target, Megaphone, BarChart3, Sparkles, MapPin, Lightbulb, HelpCircle, Layers, Award, Search, Map, Mail, Shield } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const contentMarketingConfig: ServicePageConfig = {
   slug: "content-marketing",
   title: "Content Marketing",
-  metaTitle: "White Label Content Marketing Services for Agencies | Blog Posts, Lead Magnets, SEO Copy | Dialed-in Web",
-  metaDescription: "Dialed-in Web delivers SEO-driven content: blog posts, ebooks, case studies, and more—white labeled for digital agencies.",
-  canonicalUrl: "https://dialedinweb.com/white-label-content-marketing",
+  metaTitle: "Content Marketing for Plumbing & HVAC | Blog Posts, Lead Magnets, SEO Copy | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital delivers SEO-driven content for plumbing and HVAC companies: blog posts, service pages, lead magnets, and more.",
+  canonicalUrl: `${SITE_URL}/white-label-content-marketing`,
 
   hero: {
-    headline: "White Label Content Marketing for",
-    highlightedText: "Digital Agencies",
-    subheadline: "We create the content that makes local businesses visible: service area pages, power posts, lead magnets, and strategic content that converts visitors into customers.",
-    qualifierLine: "You stay the hero. We handle the research, writing, and optimization that makes content actually work.",
+    headline: "Content Marketing for",
+    highlightedText: "Plumbing & HVAC Companies",
+    subheadline: "We create the content that makes your business visible: service area pages, power posts, lead magnets, and strategic content that converts visitors into booked jobs.",
+    qualifierLine: "You focus on your crew and your customers. We handle the research, writing, and optimization that makes content actually work.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies serving local businesses who need content that ranks and converts."
+    ctaSubtext: "Built for plumbing and HVAC companies who need content that ranks and converts."
   },
 
   problem: {
@@ -25,12 +26,12 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         icon: BarChart3,
         title: "Misunderstood Metrics",
-        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas dentist ranking for 'laser vs Zoom teeth whitening' gets California traffic that will never convert."
+        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas plumber ranking for general questions gets California traffic that will never convert."
       },
       {
         icon: MapPin,
         title: "Geographic Mismatch",
-        body: "Informational content that ranks nationally but attracts visitors from cities you don't serve. Impressive traffic reports that mean nothing to a local business's bottom line."
+        body: "Informational content that ranks nationally but attracts visitors from cities you don't serve. Impressive traffic reports that mean nothing to your bottom line."
       },
       {
         icon: Target,
@@ -40,12 +41,12 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         icon: FileText,
         title: "Content Without Intent Alignment",
-        body: "Blog posts targeting informational queries when the business needs transactional visibility. Traffic from people researching, not people ready to buy."
+        body: "Blog posts targeting informational queries when your business needs transactional visibility. Traffic from people researching, not people ready to call."
       },
       {
         icon: Sparkles,
         title: "AI-Invisible Content",
-        body: "Content that search engines index but AI systems ignore. Without semantic structure and authoritative depth, LLMs will never cite your client's business in local recommendations."
+        body: "Content that search engines index but AI systems ignore. Without semantic structure and authoritative depth, LLMs will never cite your business in local recommendations."
       }
     ],
     closingLine: "We build content that ranks where it matters and converts when it counts.",
@@ -63,15 +64,15 @@ export const contentMarketingConfig: ServicePageConfig = {
       },
       {
         title: "Topical Authority Recognition",
-        description: "Deep content that positions your client as the expert Google trusts. Authority compounds as interlinked content reinforces expertise signals."
+        description: "Deep content that positions your business as the expert Google trusts. Authority compounds as interlinked content reinforces expertise signals."
       },
       {
         title: "Lead Generation at Scale",
-        description: "Content assets that capture email addresses and phone numbers. E-books, guides, and lead magnets that build lists while you sleep."
+        description: "Content assets that capture phone calls and form submissions. Guides and resources that build trust while you sleep."
       },
       {
         title: "AI Visibility and Citations",
-        description: "Semantically structured content that AI systems reference. When ChatGPT and Perplexity answer local queries, your client's content appears."
+        description: "Semantically structured content that AI systems reference. When ChatGPT and Perplexity answer local queries, your business appears."
       }
     ]
   },
@@ -119,7 +120,7 @@ export const contentMarketingConfig: ServicePageConfig = {
         title: "Lead Magnets & Growth",
         description: "Building content assets that capture leads and expand reach.",
         activities: [
-          "E-book and guide creation",
+          "Guide and resource creation",
           "Lead magnet development",
           "Case study production",
           "Press release distribution",
@@ -152,7 +153,7 @@ export const contentMarketingConfig: ServicePageConfig = {
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Levers We Pull Based on Content Goals",
-    subheadline: "Each component is scoped based on industry, market, and content gaps.",
+    subheadline: "Each component is scoped based on your market and content gaps.",
     blocks: [
       {
         title: "Geographical Content",
@@ -173,7 +174,7 @@ export const contentMarketingConfig: ServicePageConfig = {
         icon: Award
       },
       {
-        title: "E-books & Guides",
+        title: "Guides & Resources",
         slug: "ebooks-guides",
         description: "Long-form downloadable content that captures leads and demonstrates expertise.",
         icon: FileText
@@ -181,7 +182,7 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         title: "Lead Generation Magnets",
         slug: "lead-magnets",
-        description: "Checklists, templates, and tools that convert visitors into email subscribers.",
+        description: "Checklists, templates, and tools that convert visitors into contacts.",
         icon: Target
       },
       {
@@ -217,23 +218,23 @@ export const contentMarketingConfig: ServicePageConfig = {
     subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "Your clients understand content as an investment",
-        detail: "Content marketing compounds over time. We partner with agencies whose clients see content as infrastructure, not an expense line."
+        point: "You understand content as an investment",
+        detail: "Content marketing compounds over time. We work with businesses who see content as infrastructure, not an expense line."
       },
       {
         point: "You value quality over quantity",
         detail: "One strategic power post outperforms ten generic blogs. We focus on content that ranks and converts, not content calendars filled with filler."
       },
       {
-        point: "Your clients have expertise worth documenting",
-        detail: "Great content requires subject matter input. We partner with agencies whose clients can provide the insights that make content authoritative."
+        point: "You have expertise worth documenting",
+        detail: "Great content requires subject matter input. We work with businesses that can provide the insights that make content authoritative."
       },
       {
         point: "You need geographic market coverage",
-        detail: "Local businesses need local content. If your clients serve multiple cities or service areas, content marketing creates compound local visibility."
+        detail: "Plumbing and HVAC companies that serve multiple cities or service areas benefit enormously from local content that creates compound visibility."
       },
       {
-        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
+        point: "You need to replace inconsistent vendors",
         detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish content baselines, and deliver without disruption."
       }
     ],
@@ -243,23 +244,19 @@ export const contentMarketingConfig: ServicePageConfig = {
         detail: "We use AI as a research tool, not a replacement for human expertise. Content that ranks requires original insights and genuine authority."
       },
       {
-        point: "Clients who cannot provide subject matter input",
-        detail: "The best content comes from real expertise. If clients are unresponsive to content interviews or reviews, quality suffers."
+        point: "Unable to provide subject matter input",
+        detail: "The best content comes from real expertise. If you are unresponsive to content interviews or reviews, quality suffers."
       },
       {
         point: "Short-term engagement expectations",
         detail: "Content compounds over time. Engagements shorter than 6 months rarely show the full potential of strategic content marketing."
       },
       {
-        point: "Industries with nothing worth saying",
-        detail: "Content marketing requires substance. If there is no genuine expertise or differentiation to document, content will underperform."
-      },
-      {
         point: "Volume-based deliverable expectations",
         detail: "We do not sell content by word count. Our approach prioritizes impact, which sometimes means fewer but more strategic pieces."
       }
     ],
-    ctaText: "Let's Discuss Your Clients"
+    ctaText: "Let's Talk About Your Business"
   },
 
   faq: {
@@ -270,13 +267,13 @@ export const contentMarketingConfig: ServicePageConfig = {
         items: [
           { question: "How long does it take to see results from content marketing?", answer: "Initial ranking movement may appear within 2-3 months. Lead generation and conversion improvements often show earlier. Compound effects become significant at 6-12 months." },
           { question: "How do you measure content performance?", answer: "We track rankings, organic traffic, time on page, conversion rates, and lead generation. The real measure is business impact: leads and revenue attributable to content." },
-          { question: "How many pieces of content do you produce per month?", answer: "It depends on strategy, not arbitrary quotas. Some clients need 2 power posts. Others need 20 service area pages. We scope based on goals and gaps." }
+          { question: "How many pieces of content do you produce per month?", answer: "It depends on strategy, not arbitrary quotas. Some businesses need 2 power posts. Others need 20 service area pages. We scope based on goals and gaps." }
         ]
       },
       {
         category: "Services & Approach",
         items: [
-          { question: "Do you write the content or do clients?", answer: "We handle all writing. We conduct intake interviews to capture client expertise, then create content that reflects their voice and knowledge." },
+          { question: "Do you write the content or do I?", answer: "We handle all writing. We conduct intake interviews to capture your expertise, then create content that reflects your voice and knowledge." },
           { question: "How do you handle content for multiple locations?", answer: "We create unique, locally relevant content for each service area. No duplicate content with city names swapped. Each page provides genuine local value." },
           { question: "What makes your content AI-optimized?", answer: "Semantic structure, clear headings, FAQ schema, and authoritative depth. We structure content so AI systems can parse, understand, and cite it." }
         ]
@@ -284,9 +281,9 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         category: "Partnership & Process",
         items: [
-          { question: "How does white-label content delivery work?", answer: "All content is delivered under your brand. We can publish directly to client sites or deliver via shared drives. You maintain the client relationship." },
+          { question: "How does content delivery work?", answer: "All content is delivered ready to publish. We can publish directly to your site or deliver via shared drives. Clear, simple, no hassle." },
           { question: "Do you require long-term contracts?", answer: "No mandatory contracts, but we recommend 6+ month commitments. Content compounds over time, and short engagements rarely show full potential." },
-          { question: "What do you need from clients to get started?", answer: "Website access, brand guidelines, target keywords, and availability for one intake call. The more context on their expertise, the better the content." }
+          { question: "What do you need to get started?", answer: "Website access, brand guidelines, target keywords, and availability for one intake call. The more context on your expertise, the better the content." }
         ]
       }
     ]
@@ -295,9 +292,9 @@ export const contentMarketingConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Content Marketing Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "Content powers every other channel when it is done right.",
-    body: "Content supports local rankings. Lead magnets grow email lists. Case studies close deals. We offer each service independently, but the magic happens when they work in concert.",
+    body: "Content supports local rankings. Lead magnets grow your contact list. Case studies close deals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-content-marketing", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/white-label-local-seo" },
@@ -305,7 +302,7 @@ export const contentMarketingConfig: ServicePageConfig = {
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
       { icon: Award, id: "authority", title: "Authority Building", description: "Links and citations that compound.", href: "/white-label-local-authority-building" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing-services"

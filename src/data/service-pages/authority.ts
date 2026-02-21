@@ -1,20 +1,21 @@
 import { Award, Shield, TrendingUp, Users, Globe, FileText, Handshake, Star, Search, Map, Sparkles, Mail, BarChart3, Share2, Megaphone, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const authorityConfig: ServicePageConfig = {
   slug: "authority",
   title: "Authority Building",
-  metaTitle: "White Label Authority Building for Agencies | Wholesale SEO Trust Signals & Backlinks by Dialed-in Web",
-  metaDescription: "Dialed-in Web builds online authority through links and signals that boost rankings. Strengthen client SEO. Partner with us today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-authority-building",
+  metaTitle: "Local Authority & Link Building for Plumbing & HVAC | Trust Signals & Backlinks | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital builds online authority through links and trust signals that boost rankings for plumbing and HVAC companies. Strengthen your SEO today.",
+  canonicalUrl: `${SITE_URL}/white-label-authority-building`,
 
   hero: {
-    headline: "White Label Local Authority Building for",
-    highlightedText: "Digital Agencies",
+    headline: "Local Authority Building for",
+    highlightedText: "Plumbing & HVAC Companies",
     subheadline: "We build the off-page signals that make local rankings stick: quality links, strategic citations, and community authority that compounds over time.",
-    qualifierLine: "You stay the hero. We handle the link building and citation management that makes rankings defensible.",
+    qualifierLine: "You focus on serving your customers. We handle the link building and citation management that makes rankings defensible.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies serving local businesses in competitive markets."
+    ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."
   },
 
   problem: {
@@ -71,7 +72,7 @@ export const authorityConfig: ServicePageConfig = {
       },
       {
         title: "Competitive Differentiation",
-        description: "When competitors cannot match your client's backlink profile and citation depth, they cannot compete on equal footing. Authority creates moats."
+        description: "When competitors cannot match your backlink profile and citation depth, they cannot compete on equal footing. Authority creates moats."
       }
     ]
   },
@@ -189,7 +190,6 @@ export const authorityConfig: ServicePageConfig = {
         slug: "press-releases",
         description: "Newsworthy announcements distributed for visibility and citation building.",
         icon: Megaphone,
-        // Links to Content Marketing hub's press releases spoke
       }
     ]
   },
@@ -200,15 +200,15 @@ export const authorityConfig: ServicePageConfig = {
     subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "Your clients are willing to invest in long-term credibility",
-        detail: "Authority building is not a quick fix. It requires consistent effort over 6-12+ months. We partner with agencies whose clients understand this timeline."
+        point: "You are willing to invest in long-term credibility",
+        detail: "Authority building is not a quick fix. It requires consistent effort over 6-12+ months. We work with businesses that understand this timeline."
       },
       {
         point: "You understand authority as a ranking factor",
-        detail: "Links and citations support local rankings when done right. We partner with agencies who understand how off-page signals compound over time."
+        detail: "Links and citations support local rankings when done right. We work with businesses who understand how off-page signals compound over time."
       },
       {
-        point: "Your clients have a real business worth promoting",
+        point: "You have a real business worth promoting",
         detail: "We build authority around legitimate local businesses. Quality link sources want to associate with real companies doing good work."
       },
       {
@@ -216,8 +216,8 @@ export const authorityConfig: ServicePageConfig = {
         detail: "Our focus is relevant, earned links from real sites. Not bulk directory submissions or low-quality link packages."
       },
       {
-        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
+        point: "You need to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption."
       }
     ],
     notFit: [
@@ -230,19 +230,15 @@ export const authorityConfig: ServicePageConfig = {
         detail: "We do not sell links by volume. Our approach prioritizes relevance and quality, which means fewer but more impactful placements."
       },
       {
-        point: "Clients in spammy or gray-hat industries",
-        detail: "Quality link sources vet who they link to. Businesses in questionable verticals struggle to earn legitimate authority signals."
+        point: "Short-term engagement expectations",
+        detail: "Authority compounds over time. Engagements shorter than 6 months rarely show the full potential of this work."
       },
       {
         point: "Guaranteed specific placements or DA targets",
         detail: "We cannot guarantee specific sites or domain authority thresholds. We can guarantee consistent, strategic outreach and quality standards."
-      },
-      {
-        point: "Short-term engagement expectations",
-        detail: "Authority compounds over time. Engagements shorter than 6 months rarely show the full potential of this work."
       }
     ],
-    ctaText: "Let's Discuss Your Clients"
+    ctaText: "Let's Talk About Your Business"
   },
 
   faq: {
@@ -267,9 +263,9 @@ export const authorityConfig: ServicePageConfig = {
       {
         category: "Partnership & Process",
         items: [
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All reporting and deliverables are branded as yours. You maintain the client relationship." },
+          { question: "How does communication work?", answer: "You get a dedicated strategist. All reporting and deliverables are clear and straightforward. No jargon, no runaround." },
           { question: "Do you require long-term contracts?", answer: "No mandatory contracts, but we recommend 6+ month commitments. Authority compounds over time, and short engagements rarely show full potential." },
-          { question: "What do you need from clients to get started?", answer: "Access to their website, current backlink profile, and target keywords. The more context on their competitive landscape, the faster we can build a strategy." }
+          { question: "What do you need to get started?", answer: "Access to your website, current backlink profile, and target keywords. The more context on your competitive landscape, the faster we can build a strategy." }
         ]
       }
     ]
@@ -278,7 +274,7 @@ export const authorityConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Authority Building Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "Links and citations accelerate every other channel when they're done right.",
     body: "Off-page authority supports local rankings. Quality backlinks build domain strength. Citations reinforce geographic relevance. We offer each service independently, but the magic happens when they work in concert.",
     services: [
@@ -288,7 +284,7 @@ export const authorityConfig: ServicePageConfig = {
       { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/white-label-content-marketing" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing-services"

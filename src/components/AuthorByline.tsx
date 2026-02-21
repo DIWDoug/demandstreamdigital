@@ -36,7 +36,7 @@ const AuthorByline = ({ author, showImage = true, size = "md" }: AuthorBylinePro
       {showImage && (
         <img
           src={author.image}
-          alt={`${author.name} - ${author.role} at Dialed-In Web`}
+          alt={`${author.name} - ${author.role} at Demand Stream Digital`}
           title={`${author.name} | ${author.role}`}
           className={`${classes.image} rounded-full object-cover ring-2 ring-border group-hover:ring-primary transition-colors`}
         />

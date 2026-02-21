@@ -39,7 +39,7 @@ const PaidMedia = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label Paid Media & PPC Management",
+    name: "Paid Media & PPC for Plumbing & HVAC",
     description: paidMediaConfig.metaDescription,
     url: paidMediaConfig.canonicalUrl,
     serviceType: "PPC Advertising Service",
@@ -51,7 +51,7 @@ const PaidMedia = () => {
       <Helmet>
         <title>{paidMediaConfig.metaTitle}</title>
         <meta name="description" content={paidMediaConfig.metaDescription} />
-        <meta name="keywords" content="white label PPC management, paid media fulfillment, Google Ads management, Meta Ads services, agency PPC partner" />
+        <meta name="keywords" content="plumbing HVAC PPC management, paid media, Google Ads management, Meta Ads services, local service ads" />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -66,14 +66,14 @@ const PaidMedia = () => {
         <meta property="og:description" content={paidMediaConfig.metaDescription} />
         <meta property="og:url" content={paidMediaConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={paidMediaConfig.metaTitle} />
         <meta name="twitter:description" content={paidMediaConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

@@ -13,8 +13,8 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found | Dialed-In Web</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Dialed-In Web's homepage for white label digital marketing services." />
+        <title>Page Not Found | Demand Stream Digital</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Demand Stream Digital's homepage for growth marketing services for plumbing and HVAC companies." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="dark min-h-screen bg-background flex items-center justify-center relative overflow-hidden">

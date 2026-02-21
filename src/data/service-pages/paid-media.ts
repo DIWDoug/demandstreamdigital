@@ -1,26 +1,27 @@
 import { MousePointerClick, Zap, Target, TrendingUp, DollarSign, BarChart3, FileText, Settings, Search, Map, Sparkles, Star, Mail, Globe, Share2, Layers, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const paidMediaConfig: ServicePageConfig = {
   slug: "paid-media",
   title: "Paid Media",
-  metaTitle: "White Label Paid Media Management for Agencies | Google Ads, Meta Ads, LSAs & CRO | Dialed-in Web",
-  metaDescription: "Dialed-in Web runs data-driven PPC campaigns across Google, Meta & more. Fully managed and white labeled for your agency.",
-  canonicalUrl: "https://dialedinweb.com/white-label-paid-media",
+  metaTitle: "Paid Media for Plumbing & HVAC | Google Ads, Meta Ads, LSAs & CRO | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital runs data-driven PPC campaigns for plumbing and HVAC companies across Google, Meta & more. Get more calls and booked jobs.",
+  canonicalUrl: `${SITE_URL}/white-label-paid-media`,
 
   hero: {
-    headline: "White Label Paid Media for",
-    highlightedText: "Digital Agencies",
-    subheadline: "Paid media works when strategy is proactive and waste is cut systematically. We build the campaigns, tracking, and optimization systems that turn ad spend into measurable pipeline—executed entirely under your brand.",
-    qualifierLine: "You stay the hero. We handle the daily refinement that turns ad spend into pipeline.",
+    headline: "Paid Media for",
+    highlightedText: "Plumbing & HVAC Companies",
+    subheadline: "Paid media works when strategy is proactive and waste is cut systematically. We build the campaigns, tracking, and optimization systems that turn ad spend into booked jobs—so you can focus on running your business.",
+    qualifierLine: "You focus on your crew and your customers. We handle the daily refinement that turns ad spend into pipeline.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies who need results they can stand behind."
+    ctaSubtext: "Built for plumbing and HVAC shops who need results they can measure."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Most White-Label PPC Fails",
-    intro: "You have seen this before. The campaigns launched, spend is flowing, but leads are weak, costs are high, and you are left explaining why the numbers do not match the promises.",
+    headline: "Why Most PPC Campaigns Fail",
+    intro: "You have seen this before. The campaigns launched, spend is flowing, but leads are weak, costs are high, and you are left wondering where all that money went.",
     painPoints: [
       {
         icon: Target,
@@ -40,7 +41,7 @@ export const paidMediaConfig: ServicePageConfig = {
       {
         icon: FileText,
         title: "Reporting That Obscures Reality",
-        body: "Clients receive dashboards full of clicks and impressions instead of clarity. Data without context creates confusion, not confidence."
+        body: "You receive dashboards full of clicks and impressions instead of clarity. Data without context creates confusion, not confidence."
       },
       {
         icon: TrendingUp,
@@ -49,7 +50,7 @@ export const paidMediaConfig: ServicePageConfig = {
       }
     ],
     closingLine: "We build paid media specifically for local lead generation, with structure, tracking, and optimization",
-    closingHighlight: "agencies can stand behind.",
+    closingHighlight: "you can stand behind.",
     ctaText: "Schedule a Discovery Call"
   },
 
@@ -212,7 +213,7 @@ export const paidMediaConfig: ServicePageConfig = {
     subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "Your clients have realistic budget expectations",
+        point: "You have realistic budget expectations",
         detail: "We recommend minimum $2,000/month in ad spend for local campaigns. Less than that rarely generates enough data or leads to prove value."
       },
       {
@@ -220,7 +221,7 @@ export const paidMediaConfig: ServicePageConfig = {
         detail: "We focus on leads and revenue, not impressions and clicks. Our reporting connects spend to outcomes."
       },
       {
-        point: "Your clients answer the phone and respond to leads fast",
+        point: "Your team answers the phone and responds to leads fast",
         detail: "Paid media generates leads quickly. If calls go to voicemail or form submissions sit for days, the investment is wasted."
       },
       {
@@ -235,7 +236,7 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         point: "No internal process for closing leads",
-        detail: "We generate leads, we do not close them. If calls go unanswered or your client lacks a sales process, the investment will not convert to revenue."
+        detail: "We generate leads, we do not close them. If calls go unanswered or you lack a process for follow-up, the investment will not convert to revenue."
       },
       {
         point: "Expecting overnight results without optimization time",
@@ -243,14 +244,14 @@ export const paidMediaConfig: ServicePageConfig = {
       },
       {
         point: "Looking for sales training or conversion coaching",
-        detail: "Our job ends when the lead comes in. What happens after the form fill or phone call is up to your client's team."
+        detail: "Our job ends when the lead comes in. What happens after the form fill or phone call is up to your team."
       },
       {
         point: "Price is the only decision factor",
         detail: "Quality paid media management requires investment. If you are shopping purely on management fee, we are not the right fit."
       }
     ],
-    ctaText: "Let's Discuss Your Clients"
+    ctaText: "Let's Talk About Your Business"
   },
 
   faq: {
@@ -260,7 +261,7 @@ export const paidMediaConfig: ServicePageConfig = {
         category: "Results & Performance",
         items: [
           { question: "How quickly will we see results?", answer: "Campaigns launch in 1-2 weeks and typically generate leads within the first week. Performance improves as we gather data and optimize." },
-          { question: "What kind of ROI can we expect?", answer: "ROI varies by industry, but we track cost per lead and work to continuously improve it." },
+          { question: "What kind of ROI can we expect?", answer: "ROI varies by market and service mix, but we track cost per lead and work to continuously improve it." },
           { question: "What if a campaign is not performing?", answer: "We monitor daily and optimize weekly. If something is not working, we pivot quickly." }
         ]
       },
@@ -276,9 +277,9 @@ export const paidMediaConfig: ServicePageConfig = {
         category: "Partnership & Process",
         items: [
           { question: "Is there a setup fee?", answer: "Yes. A one-time setup fee covers foundation work including tracking, strategy, and campaign buildout. This ensures campaigns launch correctly the first time." },
-          { question: "Are you responsible for closing leads?", answer: "No. We generate leads through advertising. What happens after the call or form submission is up to your client. We are marketers, not sales trainers. If clients lack a process for answering calls and following up, the investment will not convert to revenue." },
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you." },
-          { question: "Do you provide white-labeled reports?", answer: "Yes. All reporting is branded with your agency logo and colors." },
+          { question: "Are you responsible for closing leads?", answer: "No. We generate leads through advertising. What happens after the call or form submission is up to your team. We are marketers, not sales trainers. If your team lacks a process for answering calls and following up, the investment will not convert to revenue." },
+          { question: "How does communication work?", answer: "You get a dedicated strategist who keeps you informed with regular updates, monthly reports, and clear next steps." },
+          { question: "Do you provide branded reports?", answer: "Yes. All reporting is clean, clear, and focused on the metrics that matter to your business." },
           { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy." }
         ]
       }
@@ -288,7 +289,7 @@ export const paidMediaConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Paid Media Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "Paid media fills the pipeline while SEO compounds demand.",
     body: "Each service works independently, but performance accelerates when they are aligned.",
     services: [
@@ -297,7 +298,7 @@ export const paidMediaConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-gbp-seo" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/white-label-email-marketing" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing"

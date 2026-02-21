@@ -1,32 +1,33 @@
 import { Map, MapPin, Zap, Users, Target, Star, MessageSquare, Globe, Layers, TrendingUp, Search, Sparkles, Mail, BarChart3, Share2, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
   title: "GBP SEO",
-  metaTitle: "Google Maps SEO Services for Agencies | White Label GBP Optimization & Local Visibility | Dialed-in Web",
-  metaDescription: "Dialed-in Web manages Google Business Profiles, reviews, citations, and posts to improve local SEO—white labeled for agencies.",
-  canonicalUrl: "https://dialedinweb.com/white-label-gbp-seo",
+  metaTitle: "Google Maps SEO for Plumbing & HVAC | GBP Optimization & Local Visibility | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital manages Google Business Profiles, reviews, citations, and posts to improve local SEO for plumbing and HVAC companies.",
+  canonicalUrl: `${SITE_URL}/white-label-gbp-seo`,
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
-    highlightedText: "White-Label GBP SEO Services",
-    subheadline: "We help agencies earn and hold Google Maps visibility for their clients through white-label GBP optimization built for competitive local markets.",
+    highlightedText: "GBP SEO for Plumbing & HVAC",
+    subheadline: "We help plumbing and HVAC companies earn and hold Google Maps visibility through GBP optimization built for competitive local markets.",
     bullets: [
       "No cookie-cutter profile setups",
       "No generic posting calendars",
       "No ignoring competitive signals"
     ],
-    qualifierLine: "Every engagement is scoped to the local pack landscape, category dynamics, and client capacity so execution matches the market.",
+    qualifierLine: "Every engagement is scoped to the local pack landscape, category dynamics, and your capacity so execution matches the market.",
     integrationNote: "GBP SEO, Local SEO, and Authority Building overlap by design. Engaged independently they create lift, but coordinated they drive durable map pack visibility.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Tell us about your agency. We'll take it from there."
+    ctaSubtext: "Tell us about your business. We'll take it from there."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Most GBP Management Fails Your Clients",
-    intro: "The profile was claimed and optimized once, but months later visibility is flat and competitors are outranking your client in their own backyard.",
+    headline: "Why Most GBP Management Fails",
+    intro: "The profile was claimed and optimized once, but months later visibility is flat and competitors are outranking you in your own backyard.",
     painPoints: [
       {
         icon: Users,
@@ -184,13 +185,13 @@ export const googleMapsConfig: ServicePageConfig = {
       }
     ],
     executionNote: "",
-    footerNote: "Execution happens entirely under your brand, with documented scope and clear checkpoints. Phase duration varies by market competitiveness. Most clients see meaningful pack movement within 3-4 months."
+    footerNote: "Execution is fully managed with documented scope and clear checkpoints. Phase duration varies by market competitiveness. Most businesses see meaningful pack movement within 3-4 months."
   },
 
   buildingBlocks: {
     eyebrow: "Earn and Hold Google Maps Visibility",
     headline: "The Levers We Pull Based on Market Reality",
-    subheadline: "The components below are applied based on market competition and client goals, not templates.",
+    subheadline: "The components below are applied based on market competition and your goals, not templates.",
     blocks: [
       {
         title: "GBP Profile Optimization",
@@ -246,19 +247,19 @@ export const googleMapsConfig: ServicePageConfig = {
       },
       {
         point: "Ongoing management, not one-time optimization",
-        detail: "Google Maps visibility requires ongoing effort. We partner with agencies who understand that GBP management is a continuous service, not a project."
+        detail: "Google Maps visibility requires ongoing effort. We work with businesses who understand that GBP management is a continuous service, not a project."
       },
       {
         point: "Willingness to participate in review generation",
-        detail: "Review velocity requires client cooperation. Businesses need to ask customers for reviews. We provide the systems; they need to use them."
+        detail: "Review velocity requires your cooperation. You need to ask customers for reviews. We provide the systems; you need to use them."
       },
       {
         point: "Focus on retention over quick wins",
-        detail: "Our approach builds sustainable visibility that compounds over time. If your goal is keeping clients for years, this partnership makes sense."
+        detail: "Our approach builds sustainable visibility that compounds over time. If your goal is long-term growth, this partnership makes sense."
       },
       {
         point: "Need to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption."
       }
     ],
     notFit: [
@@ -276,14 +277,14 @@ export const googleMapsConfig: ServicePageConfig = {
       },
       {
         point: "Inability or refusal to ask for reviews",
-        detail: "Review velocity is critical. If clients will not participate in review generation, results will suffer."
+        detail: "Review velocity is critical. If you will not participate in review generation, results will suffer."
       },
       {
         point: "One-time optimization with no continuity",
         detail: "GBP visibility degrades without ongoing attention. We do not offer one-time optimization services."
       }
     ],
-    ctaText: "Let's Discuss Your Clients"
+    ctaText: "Let's Talk About Your Business"
   },
 
   faq: {
@@ -292,11 +293,11 @@ export const googleMapsConfig: ServicePageConfig = {
       {
         category: "Results & Timing",
         items: [
-          { question: "How long does it take to see Google Maps results?", answer: "Most clients see meaningful movement in local pack positions within 2-4 months. Competitive markets may take longer. We set realistic expectations during discovery based on actual market data." },
+          { question: "How long does it take to see Google Maps results?", answer: "Most businesses see meaningful movement in local pack positions within 2-4 months. Competitive markets may take longer. We set realistic expectations during discovery based on actual market data." },
           { question: "How do you improve Google Maps rankings?", answer: "Maps rankings depend on three factors: relevance, distance, and prominence. We optimize relevance through category and keyword optimization, build prominence through reviews and citations, and help businesses serve wider areas through strategic content and optimization." },
-          { question: "Can you guarantee first-page rankings?", answer: "No legitimate agency can guarantee specific rankings. What we can guarantee is consistent, strategic optimization based on proven methodologies. Our track record demonstrates the results this approach produces." },
-          { question: "What is the difference between GBP optimization and Local SEO?", answer: "GBP optimization focuses specifically on Google Business Profile visibility—rankings in the local 3-pack and Maps. Local SEO is broader, encompassing organic search results, on-page optimization, technical SEO, and link building. GBP optimization is one component of a complete local SEO strategy, and the two work together. Strong GBP signals reinforce organic rankings, and strong organic content reinforces GBP relevance." },
-          { question: "How does GBP SEO support AI search and local answers?", answer: "AI search systems like Google's AI Overviews and conversational assistants pull information from trusted, well-structured sources. A fully optimized GBP with consistent NAP data, reviews, and schema markup increases the likelihood of being cited in AI-generated local answers. Our optimization approach accounts for both traditional pack rankings and emerging AI visibility factors." }
+          { question: "Can you guarantee first-page rankings?", answer: "No one can guarantee specific rankings. What we can guarantee is consistent, strategic optimization based on proven methodologies. Our track record demonstrates the results this approach produces." },
+          { question: "What is the difference between GBP optimization and Local SEO?", answer: "GBP optimization focuses specifically on Google Business Profile visibility—rankings in the local 3-pack and Maps. Local SEO is broader, encompassing organic search results, on-page optimization, technical SEO, and link building. GBP optimization is one component of a complete local SEO strategy, and the two work together." },
+          { question: "How does GBP SEO support AI search and local answers?", answer: "AI search systems like Google's AI Overviews pull information from trusted, well-structured sources. A fully optimized GBP with consistent NAP data, reviews, and schema markup increases the likelihood of being cited in AI-generated local answers." }
         ]
       },
       {
@@ -305,7 +306,7 @@ export const googleMapsConfig: ServicePageConfig = {
           { question: "Do you handle review responses?", answer: "Yes. We draft professional responses to all reviews—positive and negative—for your approval before posting. Our responses are designed to build trust with potential customers while addressing any concerns raised." },
           { question: "What about fake or spam reviews?", answer: "We have processes for identifying and reporting fake reviews to Google. While removal is not guaranteed, we are successful in getting many policy-violating reviews removed. We also help build authentic review volume to dilute any negative impact." },
           { question: "Can you help with suspended listings?", answer: "Yes. We have experience recovering suspended GBP listings. The process depends on the suspension reason, but we have successfully restored listings suspended for guideline violations, verification issues, and other common problems." },
-          { question: "How do you handle multi-location businesses?", answer: "We have specific processes for multi-location GBP management including bulk optimization, centralized reporting, and scalable review management. Many of our agency partners specialize in franchises and multi-location brands." }
+          { question: "How do you handle multi-location businesses?", answer: "We have specific processes for multi-location GBP management including bulk optimization, centralized reporting, and scalable review management." }
         ]
       },
       {
@@ -313,7 +314,7 @@ export const googleMapsConfig: ServicePageConfig = {
         items: [
           { question: "How is pricing determined?", answer: "GBP management pricing depends on the number of locations, market competitiveness, and scope of services. We scope every engagement to the actual opportunity rather than arbitrary packages." },
           { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, meaningful GBP results require consistency over time." },
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship and present the work as your own." }
+          { question: "How does communication work?", answer: "You get a dedicated strategist who keeps you informed with regular updates, monthly reports, and clear next steps. We handle the execution so you can focus on running your business." }
         ]
       }
     ]
@@ -322,7 +323,7 @@ export const googleMapsConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "GBP SEO Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "GBP SEO acts as the demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
     body: "Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
@@ -331,7 +332,7 @@ export const googleMapsConfig: ServicePageConfig = {
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/white-label-email-marketing" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards your clients love.", href: "/white-label-reporting" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing"

@@ -21,8 +21,8 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
         
         // Generate descriptive alt and title text based on category and headline
         const descriptiveAlt = block.imageAlt || 
-          `${block.category} - ${block.headline} | White label ${spokeSlug?.replace(/-/g, ' ') || 'digital marketing'} services`;
-        const descriptiveTitle = `${block.headline} | ${block.category} | Dialed-In Web`;
+          `${block.category} - ${block.headline} | ${spokeSlug?.replace(/-/g, ' ') || 'digital marketing'} services for plumbing and HVAC`;
+        const descriptiveTitle = `${block.headline} | ${block.category} | Demand Stream Digital`;
         
         return (
           <div

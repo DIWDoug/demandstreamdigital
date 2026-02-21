@@ -1,20 +1,21 @@
 import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const localSEOConfig: ServicePageConfig = {
   slug: "local-seo",
   title: "Local SEO",
-  metaTitle: "White Label Local SEO for Agencies | Wholesale On-Page, Links & Citation Services by Dialed-in Web",
-  metaDescription: "From citations to content, Dialed-in Web helps agencies deliver local SEO at scale. Resell location SEO now. Talk to our team today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-local-seo",
+  metaTitle: "Local SEO for Plumbing & HVAC Companies | On-Page, Links & Citations | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital helps plumbing and HVAC companies dominate local search. Citations, content, and technical SEO that drives calls. Talk to our team today.",
+  canonicalUrl: `${SITE_URL}/white-label-local-seo`,
 
   hero: {
-    headline: "White Label Local SEO for",
-    highlightedText: "Digital Agencies",
-    subheadline: "We help agencies deliver comprehensive local SEO services that drive organic visibility, qualified traffic, and measurable results for their clients.",
-    qualifierLine: "You stay the hero. We handle the execution that makes local rankings happen.",
+    headline: "Local SEO for",
+    highlightedText: "Plumbing & HVAC Companies",
+    subheadline: "We help plumbing and HVAC companies build organic visibility that drives qualified calls, booked jobs, and measurable growth in your service area.",
+    qualifierLine: "You focus on running your shop. We handle the SEO execution that makes local rankings happen.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies serving local businesses in competitive markets."
+    ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."
   },
 
   problem: {
@@ -68,7 +69,7 @@ export const localSEOConfig: ServicePageConfig = {
       },
       {
         title: "Competitive Defense in Local Search",
-        description: "If you are not ranking, your client's competitors are taking those calls. Local SEO is defensive as much as offensive."
+        description: "If you are not ranking, your competitors are taking those calls. Local SEO is defensive as much as offensive."
       },
       {
         title: "Sales From Local Organic Visibility",
@@ -130,7 +131,7 @@ export const localSEOConfig: ServicePageConfig = {
           "Content expansion based on performance data",
           "Hyperlocal landing pages for high-value service areas",
           "Link velocity increase through proven channels",
-          "New market targeting based on client capacity",
+          "New market targeting based on capacity",
           "Competitor gap analysis for content opportunities",
           "Advanced schema implementation for rich results",
           "AI Overview optimization through structured content",
@@ -144,7 +145,7 @@ export const localSEOConfig: ServicePageConfig = {
         phase: 4,
         name: "Dominance",
         title: "Market Leadership & Defense",
-        description: "Defend positions and maintain competitive advantage. Rankings earned require ongoing protection. Competitors will target your client's success.",
+        description: "Defend positions and maintain competitive advantage. Rankings earned require ongoing protection. Competitors will target your success.",
         activities: [
           "Defensive optimization against competitor advances",
           "Continuous competitor monitoring and response",
@@ -161,13 +162,13 @@ export const localSEOConfig: ServicePageConfig = {
       }
     ],
     executionNote: "Each phase builds on the previous. Foundation work is non-negotiable. Content without technical health underperforms. Links without content have nothing to point to.",
-    footerNote: "Phase duration varies by market competitiveness and client capacity. Most clients see meaningful movement within 3-4 months, with substantial results by month 6."
+    footerNote: "Phase duration varies by market competitiveness and your capacity. Most businesses see meaningful movement within 3-4 months, with substantial results by month 6."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Levers We Pull Based on Market Reality",
-    subheadline: "Each component is scoped based on market competition and client goals, not templated packages.",
+    subheadline: "Each component is scoped based on market competition and your goals, not templated packages.",
     blocks: [
       {
         title: "On-Page Optimization",
@@ -216,19 +217,19 @@ export const localSEOConfig: ServicePageConfig = {
 
   qualification: {
     eyebrow: "Selective Fit",
-    headline: "Is This Right for Your Agency?",
-    subheadline: "We work best with agencies who understand that local SEO is a long-term strategic investment, not a quick fix.",
+    headline: "Is This Right for Your Business?",
+    subheadline: "We work best with plumbing and HVAC companies who understand that local SEO is a long-term strategic investment, not a quick fix.",
     goodFit: [
-      { point: "Your clients have verified, address-visible GBP listings", detail: "Local SEO requires address-visible Google Business Profiles. Service-area-only listings need a different approach." },
-      { point: "You need a reliable fulfillment partner to replace inconsistent vendors", detail: "We become an extension of your team with documented processes and predictable delivery." },
-      { point: "Your clients understand SEO is a 6-12 month investment", detail: "Rankings don't happen overnight. You set realistic expectations and clients are willing to invest in the process." },
-      { point: "You want white-label execution under your brand", detail: "We operate invisibly. Your clients see your brand, your reports, your results." }
+      { point: "You have a verified, address-visible Google Business Profile", detail: "Local SEO requires address-visible Google Business Profiles. Service-area-only listings need a different approach." },
+      { point: "You need a reliable growth partner to replace inconsistent vendors", detail: "We become an extension of your team with documented processes and predictable delivery." },
+      { point: "You understand SEO is a 6-12 month investment", detail: "Rankings don't happen overnight. We set realistic expectations and you're willing to invest in the process." },
+      { point: "You want expert execution so you can focus on running your business", detail: "We handle the SEO strategy and execution. You focus on serving your customers and growing your shop." }
     ],
     notFit: [
-      { point: "Your clients expect top rankings within weeks", detail: "If you're promising fast results to close deals, we're not the right partner for that conversation." },
-      { point: "Clients rely solely on service-area or address-hidden Google Business Profile listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
+      { point: "You expect top rankings within weeks", detail: "If someone promised you fast results, they were not being honest. Real SEO takes time and consistent effort." },
+      { point: "Your business relies solely on service-area or address-hidden Google Business Profile listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
       { point: "There's no willingness to invest in content and links", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
-      { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either lying or using black hat tactics that deliver temporary results and long-term penalties. We focus on sustainable, systematic improvement." }
+      { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either lying or using tactics that deliver temporary results and long-term penalties. We focus on sustainable, systematic improvement." }
     ],
     ctaText: "Start the Conversation"
   },
@@ -243,14 +244,14 @@ export const localSEOConfig: ServicePageConfig = {
           { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. Google's algorithm considers hundreds of factors, many outside anyone's control. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." },
           { question: "How do AI Overviews affect local SEO?", answer: "AI Overviews pull from trusted sources including GBP data, review platforms, and structured website content. Our approach optimizes for both traditional rankings and AI visibility through schema markup, NAP consistency, and LLM-ready content structure with semantic chunking." },
           { question: "What happens if rankings drop?", answer: "Ranking fluctuations are normal, especially after algorithm updates. We monitor rankings daily and investigate significant drops immediately. Our approach builds sustainable visibility that recovers faster than competitors relying on shortcuts." },
-          { question: "How do you measure local SEO success?", answer: "We track rankings across target keywords and locations, organic traffic from local searches, GBP impressions and actions, and ultimately leads and conversions. Monthly reports connect activities to outcomes so you can demonstrate value to clients." }
+          { question: "How do you measure local SEO success?", answer: "We track rankings across target keywords and locations, organic traffic from local searches, GBP impressions and actions, and ultimately leads and conversions. Monthly reports connect activities to outcomes so you always know what's working." }
         ]
       },
       {
         category: "Process & Delivery",
         items: [
-          { question: "How do you handle client communication?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. Your clients never know we exist." },
-          { question: "What access do you need from clients?", answer: "We need access to Google Business Profile, website CMS, and ideally Google Analytics and Search Console. We can work with limited access but recommend full access for best results." },
+          { question: "How do you handle communication?", answer: "You get a dedicated strategist who keeps you informed with regular updates, monthly reports, and clear next steps. No jargon, no runaround." },
+          { question: "What access do you need?", answer: "We need access to Google Business Profile, website CMS, and ideally Google Analytics and Search Console. We can work with limited access but recommend full access for best results." },
           { question: "How often do you report on progress?", answer: "We provide comprehensive monthly reports with ranking changes, traffic data, completed activities, and next-month priorities. Dashboards provide real-time visibility between reports." },
           { question: "What is your content creation process?", answer: "We research topics based on keyword data and competitor gaps, create content briefs, write optimized content with semantic structure for both users and AI, and deliver for your review before publishing." },
           { question: "How do you build links for local businesses?", answer: "We focus on relevant local sources: community organizations, local publications, industry directories, and sponsorship opportunities. Every link is earned through outreach, not purchased." }
@@ -261,9 +262,9 @@ export const localSEOConfig: ServicePageConfig = {
         items: [
           { question: "Do you work with service-area businesses?", answer: "We specialize in businesses with verified, address-visible Google Business Profile listings. Service-area-only businesses require different tactics and may not be the best fit for our core local SEO framework." },
           { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, local SEO is a long-term investment and most meaningful results require 6+ months of consistent effort." },
-          { question: "What industries do you work with?", answer: "We work with local service businesses across most industries: HVAC, plumbing, legal, dental, medical, home services, and more. We have deep experience in competitive verticals where local visibility drives real revenue." },
+          { question: "What industries do you work with?", answer: "We specialize in plumbing, HVAC, and home services companies. We have deep experience in competitive verticals where local visibility drives real revenue." },
           { question: "Can you take over from another SEO provider?", answer: "Yes. We audit existing work, document current rankings, identify quick wins and ongoing issues, and build a transition plan. Most handoffs complete within 2-4 weeks without disruption." },
-          { question: "What if my client has multiple locations?", answer: "We have specific processes for multi-location local SEO including centralized strategy, location-specific execution, and scalable reporting. Pricing scales with location count." }
+          { question: "What if I have multiple locations?", answer: "We have specific processes for multi-location local SEO including centralized strategy, location-specific execution, and scalable reporting. Pricing scales with location count." }
         ]
       }
     ]
@@ -272,8 +273,8 @@ export const localSEOConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Local SEO Is One Piece of the",
-    highlightedText: "360° Ecosystem",
-    intro: "While local SEO drives organic visibility in search and Google Maps, it compounds when integrated with the broader inbound ecosystem.",
+    highlightedText: "360° Growth Engine",
+    intro: "While local SEO drives organic visibility in search and Google Maps, it compounds when integrated with the broader growth ecosystem.",
     body: "GBP optimization, authority building, and paid media all reinforce SEO performance. We can engage these services independently or as a unified strategy.",
     services: [
       {
@@ -316,7 +317,7 @@ export const localSEOConfig: ServicePageConfig = {
         icon: BarChart3,
         id: "reporting",
         title: "Reporting",
-        description: "White-label dashboards that prove value.",
+        description: "Dashboards that prove value.",
         href: "/white-label-reporting"
       }
     ],

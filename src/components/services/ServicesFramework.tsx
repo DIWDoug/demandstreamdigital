@@ -38,7 +38,7 @@ const ServicesFramework = () => {
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">
                 How We Approach{" "}
-                <span className="text-slate-500">White Label Fulfillment</span>
+                <span className="text-slate-500">Growth Marketing</span>
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed">
                 Custom fulfillment only works when it is controlled. We scope each engagement based on real factors: location count, competition, and goals. When priorities shift, we surface issues early, align on adjustments, and document changes before execution moves. You stay informed and in control while we handle the work.

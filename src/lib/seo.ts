@@ -3,7 +3,7 @@ import { SITE_URL } from "./constants";
 
 /**
  * Generates the canonical URL for a given path.
- * Always uses non-www domain (https://dialedinweb.com)
+ * Always uses non-www domain (https://demandstreamdigital.com)
  * 
  * @param path - The path relative to root (e.g., "/about" or "/blog/my-post")
  * @returns Full canonical URL without trailing slash (except for root)
