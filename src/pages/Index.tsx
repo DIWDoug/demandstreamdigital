@@ -65,34 +65,48 @@ const Index = () => {
       
       <TrustReel />
       
-      <div className="dark">
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" />
         <ProblemSolution />
       </div>
       
-      <WhyPartnerWithUs />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" flip />
+        <WhyPartnerWithUs />
+      </div>
       <FitQualifier />
       
-      <div className="dark" id="services">
+      <div className="dark relative" id="services">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <ServicesGrid />
       </div>
       
-      <TopicalExpertise />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <TopicalExpertise />
+      </div>
       
-      <div className="dark">
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <LocalGrowthEngine />
       </div>
       
-      <div className="dark" id="about">
+      <div className="dark relative" id="about">
         <WhatWeSolve />
       </div>
       
-      <MidPageCTA variant="light" />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <MidPageCTA variant="light" />
+      </div>
       
-      <div className="dark">
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <FeaturedCaseStudies />
       </div>
       
-      <div id="testimonials">
+      <div id="testimonials" className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
         <Testimonials />
       </div>
       
