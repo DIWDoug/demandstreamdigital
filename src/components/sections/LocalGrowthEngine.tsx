@@ -180,7 +180,7 @@ const LocalGrowthEngine = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
                   Steady Stream: The No-BS<br />
                   Guide to Filling Your Schedule<br />
-                  365 Days a Year
+                  365/7
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-cta mb-5" />
