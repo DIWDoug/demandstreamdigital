@@ -197,8 +197,8 @@ const Header = () => {
       {/* Main Nav Bar */}
       <div className={`transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#0a2240] border-b border-white/10 shadow-lg" 
-          : "bg-[#0a2240]"
+          ? "bg-[#0F2742] border-b border-white/10 shadow-lg" 
+          : "bg-[#0F2742]"
       }`}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

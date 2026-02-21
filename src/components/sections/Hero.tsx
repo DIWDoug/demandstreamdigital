@@ -31,7 +31,7 @@ const Hero = () => {
         }}
       />
       {/* Subtle gradient wash */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#0a2240]/[0.02] to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#0F2742]/[0.02] to-transparent" />
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
