@@ -240,32 +240,16 @@ const Header = () => {
               ))}
 
               {/* Services Mega Menu Trigger */}
-              <Link
-                to="/white-label-inbound-marketing-services"
-                onMouseEnter={() => setIsMegaMenuOpen(true)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    if (!isMegaMenuOpen) {
-                      e.preventDefault();
-                      setIsMegaMenuOpen(true);
-                    }
-                  }
-                }}
-                onClick={(e) => {
-                  if (isMegaMenuOpen) {
-                    // If menu is open, navigate
-                  } else {
-                    e.preventDefault();
-                    setIsMegaMenuOpen(true);
-                  }
-                }}
+              <button
+                type="button"
+                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
                 className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                 aria-haspopup="true"
                 aria-expanded={isMegaMenuOpen}
               >
                 Services
                 <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </Link>
+              </button>
               
               {/* Post-Service Links */}
               {postServiceLinks.map((link, index) => (
@@ -299,37 +283,21 @@ const Header = () => {
 
               {/* Partner Tools Dropdown */}
               <div className="relative z-50" ref={toolsMenuRef}>
-                <Link
-                  to="/partner-tools"
-                  onMouseEnter={() => setIsToolsMenuOpen(true)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      if (!isToolsMenuOpen) {
-                        e.preventDefault();
-                        setIsToolsMenuOpen(true);
-                      }
-                    }
-                  }}
-                  onClick={(e) => {
-                    if (isToolsMenuOpen) {
-                      // If menu is open, navigate
-                    } else {
-                      e.preventDefault();
-                      setIsToolsMenuOpen(true);
-                    }
-                  }}
+                <button
+                  type="button"
+                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
                   className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
                   aria-haspopup="true"
                   aria-expanded={isToolsMenuOpen}
                 >
                   Partner Tools
                   <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-                </Link>
+                </button>
                 
                 {isToolsMenuOpen && (
                   <div 
                     className="absolute top-full left-0 mt-2 w-72 bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in"
-                    onMouseLeave={() => setIsToolsMenuOpen(false)}
+                    
                   >
                     <div className="p-2">
                       {partnerToolsLinks.map((tool, index) => (
