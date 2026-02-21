@@ -9,7 +9,7 @@ import { getFAQPageSchema } from "@/lib/schema";
 
 export const homepageFAQs = [
   {
-    question: "How does working with ServiceForge Digital work?",
+    question: "How does working with Demand Stream Digital work?",
     answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution — SEO, ads, reputation management — so you can focus on running your business."
   },
   {

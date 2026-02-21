@@ -100,7 +100,7 @@ const Hero = () => {
         isOpen={isVideoOpen}
         onClose={() => setIsVideoOpen(false)}
         videoId="VIDEO_ID_HERE"
-        title="ServiceForge Digital - Get Better Leads"
+        title="Demand Stream Digital - Get Better Leads"
       />
     </section>
   );
