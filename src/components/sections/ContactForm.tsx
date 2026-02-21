@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SubtleOrbs from "@/components/SubtleOrbs";
+import StreamTexture from "@/components/StreamTexture";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 
 const ContactForm = forwardRef<HTMLElement>((_, ref) => {
@@ -37,11 +38,12 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   ];
 
   return (
-    <section id="contact" ref={ref} className="relative">
+    <section id="contact" ref={ref} className="relative overflow-hidden">
       {/* Background that stops where the card bleeds */}
       <div className="absolute inset-0 bg-[#f9f9f9]" style={{ bottom: '5rem' }} />
+      <StreamTexture variant="light" opacity={0.1} />
       
-      <div className="relative pt-24 lg:pt-32 pb-8">
+      <div className="relative pt-24 lg:pt-32 pb-8 z-10">
         <SubtleOrbs variant="top-right" />
         
         <div className="container mx-auto px-6 lg:px-8">

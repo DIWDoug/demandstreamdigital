@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import bookCover from "@/assets/local-growth-engine-cover.png";
+import StreamTexture from "@/components/StreamTexture";
 
 const LocalGrowthEngine = () => {
   const navigate = useNavigate();
@@ -90,11 +91,12 @@ const LocalGrowthEngine = () => {
   };
 
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       {/* Dark background */}
       <div className="absolute inset-0 bg-background" style={{ bottom: '5rem' }} />
+      <StreamTexture variant="dark" opacity={0.08} />
       
-      <div className="relative py-16 lg:py-20 pb-8">
+      <div className="relative py-16 lg:py-20 pb-8 z-10">
         <div className="container mx-auto px-6 lg:px-8">
           {/* Bleed-over Card */}
           <div className="relative z-20 bg-white/5 rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/10 mb-[-5rem]">

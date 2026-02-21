@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { getFAQPageSchema } from "@/lib/schema";
+import StreamTexture from "@/components/StreamTexture";
 
 export const homepageFAQs = [
   {
@@ -65,8 +66,9 @@ const FAQ = () => {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section relative overflow-hidden">
+      <StreamTexture variant="light" opacity={0.1} />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">

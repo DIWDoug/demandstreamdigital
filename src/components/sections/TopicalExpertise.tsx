@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, MapPin, Map, MousePointerClick, Mail, PenTool, BarChart3, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import StreamTexture from "@/components/StreamTexture";
 
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
@@ -257,10 +258,11 @@ const TopicalExpertise = () => {
   const isExpanded = (index: number) => expandedIndices.has(index);
 
   return (
-    <section id="expertise" className="py-24 lg:py-32 section-light relative">
+    <section id="expertise" className="py-24 lg:py-32 section-light relative overflow-hidden">
+      <StreamTexture variant="light" opacity={0.1} />
       {/* Smooth transition from ServicesGrid */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none" />
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-[1]" />
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">

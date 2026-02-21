@@ -45,11 +45,11 @@ const WhyPartnerWithUs = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative reveal-section">
-      <StreamTexture variant="light" opacity={0.07} />
+    <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative reveal-section overflow-hidden">
+      <StreamTexture variant="light" opacity={0.1} />
       <div className="section-divider absolute top-0" />
       
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Why Plumbing & HVAC Owners Choose Us
