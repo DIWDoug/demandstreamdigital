@@ -70,7 +70,7 @@ const Index = () => {
       <WhyPartnerWithUs />
       <FitQualifier />
       
-      <div id="services">
+      <div className="dark" id="services">
         <ServicesGrid />
       </div>
       
@@ -78,13 +78,15 @@ const Index = () => {
       
       <LocalGrowthEngine />
       
-      <div id="about">
+      <div className="dark" id="about">
         <WhatWeSolve />
       </div>
       
       <MidPageCTA variant="light" />
       
-      <FeaturedCaseStudies />
+      <div className="dark">
+        <FeaturedCaseStudies />
+      </div>
       
       <div id="testimonials">
         <Testimonials />

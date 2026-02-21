@@ -146,7 +146,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#f9f9f9] relative">
+    <section className="py-20 lg:py-28 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
@@ -154,9 +154,9 @@ const ServicesGrid = () => {
               <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
                 The System
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Full-Service Growth Marketing,<br />
-                <span className="text-[#0a2240]">Built for Your Trade</span>
+                <span className="text-primary">Built for Your Trade</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Marketing for plumbing and HVAC isn't a single tactic. It's multiple channels working together to generate calls, build trust, and keep your schedule full.
