@@ -387,9 +387,9 @@ const TopicalExpertise = () => {
           </Link>
           <a 
             href={PHONE_HREF}
-            className="inline-flex items-center gap-2 text-foreground hover:text-accent-blue font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-cta hover:text-cta/80 font-semibold transition-colors text-lg"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-5 w-5" />
             {PHONE_NUMBER}
           </a>
         </div>
