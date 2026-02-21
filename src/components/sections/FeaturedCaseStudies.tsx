@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Award, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { caseStudyCards } from "@/data/caseStudyData";
+import StreamTexture from "@/components/StreamTexture";
 
 
 // Featured case studies - Las Vegas Plumbing & Dallas Plumbing
@@ -22,7 +23,7 @@ const FeaturedCaseStudies = () => {
 
   return (
     <section className="py-20 bg-background relative overflow-hidden">
-      
+      <StreamTexture variant="dark" opacity={0.08} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
