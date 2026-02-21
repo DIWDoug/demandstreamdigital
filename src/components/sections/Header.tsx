@@ -211,7 +211,7 @@ const Header = () => {
                 alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
                 title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
                 className={`w-auto opacity-90 transition-all duration-300 ${
-                  isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
+                  isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
                 }`}
               />
             </Link>

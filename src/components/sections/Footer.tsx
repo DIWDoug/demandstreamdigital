@@ -153,7 +153,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   src={logo} 
                   alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
                   title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                  className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 />
               </Link>
             </div>
