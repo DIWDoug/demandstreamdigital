@@ -178,22 +178,23 @@ const LocalGrowthEngine = () => {
               <div>
                 <p className="text-gray-500 text-base mb-1">Discover How To</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
-                  Grow Your Plumbing or<br />
-                  HVAC Business Predictably
+                  Steady Stream: The No-BS<br />
+                  Guide to Filling Your Schedule<br />
+                  365 Days a Year
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-[hsl(76,42%,41%)] mb-5" />
 
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  The Marketing Framework Built for Plumbing & HVAC Growth
+                  The Marketing Playbook Built for Plumbing & HVAC Growth
                 </h3>
                 
                 <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  If you're a plumbing or HVAC owner looking to grow without guessing what works, this is for you. The Local Growth Engine is the methodology behind hundreds of successful local marketing campaigns.
+                  If you're a plumbing or HVAC owner tired of slow seasons and unpredictable leads, this is for you. Steady Stream is the methodology behind hundreds of successful local marketing campaigns.
                 </p>
 
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                  Inside, you'll discover the three-layer system we use across Local SEO, Google Maps, paid media, and reputation management — all tailored for service businesses like yours.
+                  Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year — not just when the weather cooperates.
                 </p>
 
                 {/* Email signup or CTA */}
