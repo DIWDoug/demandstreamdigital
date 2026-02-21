@@ -109,13 +109,13 @@
     
     /* Clean near-white base */
     --background: 0 0% 98%;              /* #f9f9f9 */
-    --foreground: 213 73% 15%;           /* Deep navy #0a2240 */
+    --foreground: 213 64% 16%;           /* Deep navy #0F2742 */
 
     --card: 0 0% 100%;                   /* Pure white cards */
-    --card-foreground: 213 73% 15%;
+    --card-foreground: 213 64% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 213 73% 15%;
+    --popover-foreground: 213 64% 16%;
 
     /* Deep crimson red primary - for CTAs */
     --primary: 357 78% 23%;
@@ -128,7 +128,7 @@
     --muted-foreground: 213 20% 46%;
 
     --accent: 210 15% 96%;
-    --accent-foreground: 213 73% 15%;
+    --accent-foreground: 213 64% 16%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -158,7 +158,7 @@
     --surface-card: 0 0% 100%;
     
     /* Text hierarchy for light mode */
-    --text-primary: 213 73% 15%;
+    --text-primary: 213 64% 16%;
     --text-secondary: 213 30% 35%;
     --text-muted: 213 15% 55%;
     
@@ -169,7 +169,7 @@
 
   .dark {
     /* Dark mode - deep navy hero sections */
-    --background: 213 73% 8%;
+    --background: 213 64% 8%;
     --foreground: 0 0% 98%;
 
     --card: 213 60% 12%;
@@ -198,7 +198,7 @@
     --ring: 357 66% 45%;
 
     /* Dark mode surfaces */
-    --surface-dark: 213 73% 8%;
+    --surface-dark: 213 64% 8%;
     --surface-elevated: 213 60% 12%;
     --surface-card: 213 50% 15%;
     
