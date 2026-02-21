@@ -92,7 +92,7 @@ const ServicePageLayout = ({
 
   return (
     <div className="dark min-h-screen bg-background text-foreground relative overflow-hidden">
-      <StreamTexture variant="dark" opacity={0.05} />
+      <StreamTexture variant="dark" opacity={0.08} />
       <Helmet>
         <title>{config.metaTitle}</title>
         <meta name="description" content={config.metaDescription} />

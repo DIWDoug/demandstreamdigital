@@ -7,7 +7,7 @@ import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 const FinalCTA = () => {
   return (
     <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      <StreamTexture variant="dark" opacity={0.05} />
+      <StreamTexture variant="dark" opacity={0.08} />
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-gradient-radial from-accent-blue/10 to-transparent blur-3xl" />
       </div>
