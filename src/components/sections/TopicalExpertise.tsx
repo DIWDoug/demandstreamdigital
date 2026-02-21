@@ -359,7 +359,7 @@ const TopicalExpertise = () => {
                       className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Discuss for your agency →
+                      Discuss for your business →
                     </Link>
                   </div>
                 </div>

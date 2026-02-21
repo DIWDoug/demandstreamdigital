@@ -49,7 +49,7 @@ const ProblemSolution = () => {
                 className="group bg-white/5 rounded-xl p-6 lg:p-8 border border-white/10 hover:border-accent-blue/30 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5 group-hover:bg-white/15 transition-colors">
-                  <pillar.icon className="h-5 w-5 text-white" />
+                  <pillar.icon className="h-5 w-5 text-accent-blue" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-1">
                   {pillar.title}
