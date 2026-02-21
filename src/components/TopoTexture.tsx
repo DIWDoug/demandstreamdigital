@@ -17,7 +17,7 @@ const TopoTexture = ({ opacity = 0.06, className = '' }: TopoTextureProps) => {
           height: '60%',
           top: '-5%',
           left: '-10%',
-          background: `radial-gradient(ellipse at center, hsla(213, 20%, 86%, ${opacity * 14}) 0%, transparent 70%)`,
+          background: `radial-gradient(ellipse at center, hsla(210, 40%, 78%, ${Math.min(opacity * 16, 0.95)}) 0%, transparent 70%)`,
         }}
       />
 
@@ -29,7 +29,7 @@ const TopoTexture = ({ opacity = 0.06, className = '' }: TopoTextureProps) => {
           height: '55%',
           top: '15%',
           right: '-8%',
-          background: `radial-gradient(ellipse at center, hsla(210, 18%, 82%, ${opacity * 12}) 0%, transparent 70%)`,
+          background: `radial-gradient(ellipse at center, hsla(200, 35%, 75%, ${Math.min(opacity * 14, 0.9)}) 0%, transparent 70%)`,
           animationDelay: '-20s',
           animationDirection: 'reverse',
         }}
@@ -43,7 +43,7 @@ const TopoTexture = ({ opacity = 0.06, className = '' }: TopoTextureProps) => {
           height: '45%',
           bottom: '0%',
           left: '25%',
-          background: `radial-gradient(ellipse at center, hsla(215, 15%, 89%, ${opacity * 10}) 0%, transparent 70%)`,
+          background: `radial-gradient(ellipse at center, hsla(220, 30%, 80%, ${Math.min(opacity * 12, 0.85)}) 0%, transparent 70%)`,
           animationDelay: '-40s',
         }}
       />
