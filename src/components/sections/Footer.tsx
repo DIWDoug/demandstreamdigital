@@ -149,15 +149,12 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
             {/* Center - Logo */}
             <div className="flex justify-center order-first md:order-none mb-4 md:mb-0">
               <Link to="/">
-                <div className="overflow-hidden h-10" style={{ width: '240px' }}>
-                  <img 
-                    src={logo} 
-                    alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                    title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                    className="h-full w-auto max-w-none opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
-                    style={{ objectFit: 'cover', objectPosition: 'left center', transform: 'scale(2.8)', transformOrigin: '8% 35%' }}
-                  />
-                </div>
+                <img 
+                  src={logo} 
+                  alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                  title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                  className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                />
               </Link>
             </div>
 

@@ -205,18 +205,15 @@ const Header = () => {
           {/* Logo & Nav together */}
           <div className="flex items-center gap-8">
             {/* Logo */}
-            <Link to="/" className="flex items-center overflow-hidden">
-              <div className={`overflow-hidden transition-all duration-300 ${
+            <Link to="/" className="flex items-center">
+              <img 
+                src={logo} 
+                alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                className={`w-auto opacity-90 transition-all duration-300 ${
                   isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
-                }`} style={{ width: '200px' }}>
-                <img 
-                  src={logo} 
-                  alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                  title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                  className="h-full w-auto max-w-none opacity-90 brightness-0 invert"
-                  style={{ objectFit: 'cover', objectPosition: 'left center', transform: 'scale(2.8)', transformOrigin: '8% 35%' }}
-                />
-              </div>
+                }`}
+              />
             </Link>
 
             {/* Desktop Nav */}
