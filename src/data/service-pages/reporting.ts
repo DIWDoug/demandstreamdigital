@@ -1,77 +1,78 @@
 import { BarChart3, CheckCircle, Users, TrendingUp, FileText, Target, Settings, Phone, Search, Map, Sparkles, Star, Mail, Globe, Share2, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const reportingConfig: ServicePageConfig = {
   slug: "reporting",
   title: "Reporting & Analytics",
-  metaTitle: "White Label Reporting for Agencies | Wholesale SEO & PPC Client Reports | Scalable Delivery by Dialed-in Web",
-  metaDescription: "Dialed-in Web delivers clean, branded reports your clients will trust. Save time and scale your agency. Request a walkthrough today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-reporting",
+  metaTitle: "Reporting & Analytics for Plumbing & HVAC | Dashboards, Rank Tracking & ROI | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital delivers clean, clear reports that show exactly what's working. Save time, understand your marketing, and grow your business.",
+  canonicalUrl: `${SITE_URL}/white-label-reporting`,
 
   hero: {
-    headline: "White Label Reporting for",
-    highlightedText: "Digital Agencies",
-    subheadline: "Clients do not leave because of poor results. They leave because they do not understand their results. We provide white-label reporting that proves value, builds trust, and retains clients—delivered under your brand.",
-    qualifierLine: "You stay the hero. We handle the reporting that makes cancellations uncomfortable.",
+    headline: "Reporting & Analytics for",
+    highlightedText: "Plumbing & HVAC Companies",
+    subheadline: "You should never wonder where your marketing dollars are going. We provide clear, honest reporting that proves value, builds trust, and shows exactly what's driving calls and booked jobs.",
+    qualifierLine: "You focus on running your business. We handle the reporting that keeps you informed and confident.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies who know that reporting is retention."
+    ctaSubtext: "Built for plumbing and HVAC companies who want to see results, not just activity."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Most Agency Reporting Fails",
-    intro: "You have seen this before. Reports go out monthly, but clients do not read them. When they do, they are confused. Cancellation conversations start with 'I do not understand what I am getting for my money.'",
+    headline: "Why Most Marketing Reporting Fails",
+    intro: "You have seen this before. Reports go out monthly, but you do not read them. When you do, you are confused. The conversation always starts with 'I do not understand what I am getting for my money.'",
     painPoints: [
       {
         icon: FileText,
         title: "Data Dumps, Not Insights",
-        body: "Pages of metrics with no narrative. Clients receive spreadsheets instead of stories. Numbers without context create confusion, not confidence."
+        body: "Pages of metrics with no narrative. You receive spreadsheets instead of stories. Numbers without context create confusion, not confidence."
       },
       {
         icon: Target,
         title: "No Connection to Business Outcomes",
-        body: "Rankings and traffic are interesting, but clients care about leads and revenue. Reports that do not connect marketing to money leave value on the table."
+        body: "Rankings and traffic are interesting, but you care about leads and revenue. Reports that do not connect marketing to money leave value on the table."
       },
       {
         icon: Settings,
         title: "Inconsistent Delivery",
-        body: "Reports go out when someone remembers to send them. Inconsistency signals disorganization and erodes client confidence in the partnership."
+        body: "Reports go out when someone remembers to send them. Inconsistency signals disorganization and erodes confidence in the partnership."
       },
       {
         icon: Users,
-        title: "Generic Templates for Every Client",
-        body: "The same report regardless of client goals or preferences. What matters to a plumber differs from what matters to a law firm. One-size-fits-none."
+        title: "Generic Templates for Every Business",
+        body: "The same report regardless of your goals or preferences. What matters to a plumber differs from what matters to an HVAC company. One-size-fits-none."
       },
       {
         icon: TrendingUp,
         title: "No Story of Progress",
-        body: "Each report exists in isolation. No comparison to last month. No trend lines. No narrative arc. Clients cannot see whether things are improving or declining."
+        body: "Each report exists in isolation. No comparison to last month. No trend lines. No narrative arc. You cannot see whether things are improving or declining."
       }
     ],
-    closingLine: "We build reporting that tells the story your clients need to hear.",
-    closingHighlight: "Clients understand their value. You keep the revenue you earned.",
+    closingLine: "We build reporting that tells the story you need to hear.",
+    closingHighlight: "You understand your value. Your marketing dollars are accountable.",
     ctaText: "Start the Conversation"
   },
 
   outcomes: {
     headline: "What Actually Changes When Reporting Works",
-    subheadline: "The outcomes your agency experiences when clients understand their value.",
+    subheadline: "The outcomes you experience when you understand your marketing performance.",
     items: [
       {
-        title: "Retention Improves Dramatically",
-        description: "Clients who understand their results stay longer. Clear reporting transforms month-to-month anxiety into long-term partnerships."
+        title: "Confidence in Your Marketing Investment",
+        description: "When you understand your results, you invest with confidence. Clear reporting transforms uncertainty into strategic decision-making."
       },
       {
-        title: "Client Conversations Get Easier",
-        description: "When the report tells the story, you do not have to defend value in every call. Reporting becomes a relationship builder, not a chore."
+        title: "Better Conversations With Your Team",
+        description: "When the report tells the story, you do not have to guess at what is working. Reporting becomes a decision tool, not a chore."
       },
       {
         title: "Strategy Improves With Data",
-        description: "Good reporting is not just for clients. It informs your decisions. Data-driven strategy leads to better results for everyone."
+        description: "Good reporting informs better decisions. Data-driven strategy leads to better results and smarter investments."
       },
       {
-        title: "Upsells Become Natural",
-        description: "When clients see clear ROI, investing more makes sense. Reporting that proves value opens the door to expanded scope."
+        title: "Growth Becomes Predictable",
+        description: "When you see clear ROI, investing more makes sense. Reporting that proves value opens the door to scaling what works."
       }
     ]
   },
@@ -79,15 +80,15 @@ export const reportingConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Setup to Automated Delivery",
-    subheadline: "Every reporting program is customized to agency and client needs. This is how we build it.",
+    subheadline: "Every reporting program is customized to your business needs. This is how we build it.",
     phases: [
       {
         phase: 1,
         name: "Discovery",
         title: "Requirements, Integrations & Baseline",
-        description: "Understanding what matters to you and your clients, and connecting the data sources that tell the story.",
+        description: "Understanding what matters to you and connecting the data sources that tell the story.",
         activities: [
-          "Requirements gathering by client type",
+          "Requirements gathering based on your goals",
           "KPI and metric prioritization",
           "Data source identification",
           "Platform integrations (GA, GSC, Ads, etc.)",
@@ -102,14 +103,14 @@ export const reportingConfig: ServicePageConfig = {
         phase: 2,
         name: "Build",
         title: "Dashboard & Report Development",
-        description: "Creating the dashboards and report templates that will serve your clients.",
+        description: "Creating the dashboards and report templates that will serve your business.",
         activities: [
           "Dashboard design and development",
           "Report template creation",
           "Executive summary framework",
           "Data visualization design",
-          "White-label branding implementation",
-          "Client access configuration",
+          "Branded reporting implementation",
+          "Access configuration",
           "Testing and validation"
         ],
         icon: BarChart3,
@@ -123,7 +124,7 @@ export const reportingConfig: ServicePageConfig = {
         activities: [
           "Automated delivery scheduling",
           "Report distribution setup",
-          "Client notification configuration",
+          "Notification configuration",
           "Training and documentation",
           "First report review and refinement",
           "Feedback incorporation"
@@ -135,14 +136,14 @@ export const reportingConfig: ServicePageConfig = {
         phase: 4,
         name: "Optimize",
         title: "Refinement & Continuous Improvement",
-        description: "Ongoing optimization based on client feedback and evolving needs.",
+        description: "Ongoing optimization based on your feedback and evolving needs.",
         activities: [
-          "Client feedback collection",
+          "Feedback collection",
           "Report refinement",
           "New metric addition",
           "Dashboard enhancements",
           "Quarterly review and updates",
-          "New client onboarding support"
+          "Onboarding support for new services"
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
@@ -153,13 +154,13 @@ export const reportingConfig: ServicePageConfig = {
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Levers We Pull Based on Agency Needs",
-    subheadline: "Each component is scoped based on your agency needs and client types.",
+    headline: "The Levers We Pull Based on Your Needs",
+    subheadline: "Each component is scoped based on your business needs and goals.",
     blocks: [
       {
-        title: "White-Label Dashboards",
+        title: "Custom Dashboards",
         slug: "branded-dashboards",
-        description: "Custom-branded live dashboards that give clients real-time visibility into campaign performance.",
+        description: "Live dashboards that give you real-time visibility into campaign performance.",
         icon: BarChart3
       },
       {
@@ -187,9 +188,9 @@ export const reportingConfig: ServicePageConfig = {
         icon: Target
       },
       {
-        title: "Client Presentation Decks",
+        title: "Strategic Review Decks",
         slug: "client-presentation-decks",
-        description: "Professional slide decks and QBR materials for strategic client conversations.",
+        description: "Professional slide decks and QBR materials for strategic growth conversations.",
         icon: Users
       }
     ]
@@ -201,38 +202,38 @@ export const reportingConfig: ServicePageConfig = {
     subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "You have active clients who need consistent reporting",
-        detail: "Reporting infrastructure makes sense when you have ongoing clients. Agencies with at least 5+ active accounts benefit most from systematized reporting."
+        point: "You have active marketing campaigns that need reporting",
+        detail: "Reporting infrastructure makes sense when you have ongoing marketing. Businesses investing in SEO, paid media, or email benefit most from systematized reporting."
       },
       {
-        point: "Your clients care about results, not just activity",
-        detail: "Our reporting focuses on outcomes—leads, revenue, ROI. We partner with agencies whose clients want to see business impact."
+        point: "You care about results, not just activity",
+        detail: "Our reporting focuses on outcomes—leads, revenue, ROI. We work with businesses who want to see business impact, not vanity metrics."
       },
       {
-        point: "You want to systematize and scale reporting",
-        detail: "Ad-hoc reporting does not scale. We build systems that grow with your agency, reducing per-client reporting effort over time."
+        point: "You want to understand where your marketing dollars go",
+        detail: "Our reports connect spend to results. You will always know what is working and what needs to change."
       },
       {
-        point: "You value presentation as much as data",
-        detail: "Data without design is just numbers. We create reports that clients actually want to read—professional, clear, and compelling."
+        point: "You value clear presentation as much as data",
+        detail: "Data without design is just numbers. We create reports that you actually want to read—professional, clear, and compelling."
       },
       {
         point: "You are willing to invest in reporting infrastructure",
-        detail: "Good reporting requires setup investment. Agencies who see reporting as a retention tool, not a cost center, get the most value."
+        detail: "Good reporting requires setup investment. Businesses who see reporting as a growth tool, not a cost center, get the most value."
       },
       {
-        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
+        point: "You need to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption."
       }
     ],
     notFit: [
       {
-        point: "Fewer than 5 active clients",
-        detail: "For very small client rosters, systematized reporting may be overkill. The investment makes more sense at scale."
+        point: "No active marketing campaigns to report on",
+        detail: "Reporting requires marketing activities to measure. Without active campaigns, there is nothing meaningful to track."
       },
       {
-        point: "Clients who do not read reports anyway",
-        detail: "If clients genuinely do not care about reporting, investing in beautiful reports may not be the priority. Though often this signals a relationship problem."
+        point: "You do not look at reports anyway",
+        detail: "If you genuinely do not care about reporting, investing in reports may not be the priority. Though often this signals a bigger problem."
       },
       {
         point: "Looking for the cheapest possible solution",
@@ -247,7 +248,7 @@ export const reportingConfig: ServicePageConfig = {
         detail: "Reporting requires integration with your data sources. If access cannot be granted, we cannot build meaningful reporting."
       }
     ],
-    ctaText: "Let's Discuss Your Reporting Needs"
+    ctaText: "Let's Talk About Your Reporting Needs"
   },
 
   faq: {
@@ -256,9 +257,9 @@ export const reportingConfig: ServicePageConfig = {
       {
         category: "Customization & Branding",
         items: [
-          { question: "Can reports be customized for each client?", answer: "Absolutely. We can customize KPIs, metrics, branding, and format for each client based on their specific needs and preferences. Some clients want detailed data; others prefer executive summaries." },
-          { question: "Do clients get live dashboard access?", answer: "Yes. We can set up client-facing dashboards that give them real-time visibility into key metrics. Dashboards are fully branded with your agency's look and feel." },
-          { question: "Is everything truly white-labeled?", answer: "Yes. All dashboards, reports, and client-facing materials carry your branding only. Clients never see our name or logo." }
+          { question: "Can reports be customized for my business?", answer: "Absolutely. We can customize KPIs, metrics, branding, and format based on your specific needs and preferences. Some businesses want detailed data; others prefer executive summaries." },
+          { question: "Do I get live dashboard access?", answer: "Yes. We can set up dashboards that give you real-time visibility into key metrics. Dashboards are clean, professional, and easy to understand." },
+          { question: "Is everything branded to my business?", answer: "Yes. All dashboards, reports, and materials carry your branding. Professional and consistent." }
         ]
       },
       {
@@ -272,9 +273,9 @@ export const reportingConfig: ServicePageConfig = {
       {
         category: "Delivery & Support",
         items: [
-          { question: "How do you handle client questions about reports?", answer: "We provide you with report walkthroughs and talking points so you can confidently present data to clients. For complex questions, your strategist can provide detailed answers you can relay." },
-          { question: "How often are reports delivered?", answer: "Most clients receive monthly reports on a consistent schedule. Dashboards provide real-time access between formal reports. We can adjust frequency based on needs." },
-          { question: "What if we need to change metrics or format?", answer: "Reports evolve with client needs. We build flexibility into all our reporting systems and can adjust metrics, format, or focus as requirements change." }
+          { question: "How do you handle questions about reports?", answer: "We provide report walkthroughs and talking points so you always understand what you're looking at. For complex questions, your strategist can provide detailed answers." },
+          { question: "How often are reports delivered?", answer: "Most businesses receive monthly reports on a consistent schedule. Dashboards provide real-time access between formal reports. We can adjust frequency based on needs." },
+          { question: "What if we need to change metrics or format?", answer: "Reports evolve with your needs. We build flexibility into all our reporting systems and can adjust metrics, format, or focus as requirements change." }
         ]
       }
     ]
@@ -283,7 +284,7 @@ export const reportingConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Reporting Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "Effective local marketing is interconnected.",
     body: "Reporting proves the value of SEO, paid media, and email. It connects activities to outcomes. We offer each service independently, but the magic happens when they work in concert.",
     services: [

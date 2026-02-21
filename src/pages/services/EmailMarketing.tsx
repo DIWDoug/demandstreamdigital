@@ -36,7 +36,7 @@ const EmailMarketing = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label Email Marketing Services",
+    name: "Email Marketing for Plumbing & HVAC",
     description: emailMarketingConfig.metaDescription,
     url: emailMarketingConfig.canonicalUrl,
     serviceType: "Email Marketing Service",
@@ -48,7 +48,7 @@ const EmailMarketing = () => {
       <Helmet>
         <title>{emailMarketingConfig.metaTitle}</title>
         <meta name="description" content={emailMarketingConfig.metaDescription} />
-        <meta name="keywords" content="white label email marketing, email campaign management, newsletter services, email automation, agency email partner" />
+        <meta name="keywords" content="plumbing HVAC email marketing, email campaign management, newsletter services, email automation, service business email" />
         <link rel="canonical" href={emailMarketingConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -63,14 +63,14 @@ const EmailMarketing = () => {
         <meta property="og:description" content={emailMarketingConfig.metaDescription} />
         <meta property="og:url" content={emailMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={emailMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={emailMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

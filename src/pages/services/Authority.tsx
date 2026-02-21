@@ -36,7 +36,7 @@ const Authority = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label Local Authority & Link Building",
+    name: "Local Authority & Link Building for Plumbing & HVAC",
     description: authorityConfig.metaDescription,
     url: authorityConfig.canonicalUrl,
     serviceType: "Link Building Service",
@@ -48,7 +48,7 @@ const Authority = () => {
       <Helmet>
         <title>{authorityConfig.metaTitle}</title>
         <meta name="description" content={authorityConfig.metaDescription} />
-        <meta name="keywords" content="white label link building, local authority building, digital PR, backlink services, agency link building partner" />
+        <meta name="keywords" content="plumbing HVAC link building, local authority building, digital PR, backlink services, local SEO authority" />
         <link rel="canonical" href={authorityConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -63,14 +63,14 @@ const Authority = () => {
         <meta property="og:description" content={authorityConfig.metaDescription} />
         <meta property="og:url" content={authorityConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={authorityConfig.metaTitle} />
         <meta name="twitter:description" content={authorityConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

@@ -174,19 +174,19 @@ const CaseStudyDetail = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{content.headline} | Case Study | Dialed-In Web</title>
+        <title>{content.headline} | Case Study | Demand Stream Digital</title>
         <meta 
           name="description" 
-          content={`${content.heroMetric.value} ${content.heroMetric.label}. See how we helped this ${content.industry} client achieve exceptional results.`} 
+          content={`${content.heroMetric.value} ${content.heroMetric.label}. See how we helped this ${content.industry} business achieve exceptional results.`} 
         />
-        <link rel="canonical" href={`https://dialedinweb.com/case-studies/${slug}`} />
+        <link rel="canonical" href={`https://demandstreamdigital.com/case-studies/${slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={`${content.headline} | Case Study`} />
-        <meta property="og:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A white label marketing success story.`} />
-        <meta property="og:url" content={`https://dialedinweb.com/case-studies/${slug}`} />
+        <meta property="og:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A growth marketing success story.`} />
+        <meta property="og:url" content={`https://demandstreamdigital.com/case-studies/${slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -194,7 +194,7 @@ const CaseStudyDetail = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${content.headline} | Case Study`} />
-        <meta name="twitter:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A white label marketing success story.`} />
+        <meta name="twitter:description" content={`${content.heroMetric.value} ${content.heroMetric.label}. A growth marketing success story.`} />
         <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
       

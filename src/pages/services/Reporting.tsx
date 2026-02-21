@@ -36,7 +36,7 @@ const Reporting = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label Reporting & Analytics Dashboards",
+    name: "Reporting & Analytics for Plumbing & HVAC",
     description: reportingConfig.metaDescription,
     url: reportingConfig.canonicalUrl,
     serviceType: "Marketing Analytics Service",
@@ -48,7 +48,7 @@ const Reporting = () => {
       <Helmet>
         <title>{reportingConfig.metaTitle}</title>
         <meta name="description" content={reportingConfig.metaDescription} />
-        <meta name="keywords" content="white label reporting, agency dashboards, SEO reporting, marketing analytics, client reporting services" />
+        <meta name="keywords" content="plumbing HVAC reporting, marketing dashboards, SEO reporting, marketing analytics, performance reporting" />
         <link rel="canonical" href={reportingConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -63,14 +63,14 @@ const Reporting = () => {
         <meta property="og:description" content={reportingConfig.metaDescription} />
         <meta property="og:url" content={reportingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={reportingConfig.metaTitle} />
         <meta name="twitter:description" content={reportingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

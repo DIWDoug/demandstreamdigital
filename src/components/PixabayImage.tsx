@@ -37,8 +37,8 @@ const PixabayImage = ({
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Generate descriptive alt text based on keyword
-  const descriptiveAlt = alt || `${keyword} - white label digital marketing services for agencies`;
-  const descriptiveTitle = title || `${keyword} | Dialed-In Web`;
+  const descriptiveAlt = alt || `${keyword} - growth marketing services for plumbing and HVAC`;
+  const descriptiveTitle = title || `${keyword} | Demand Stream Digital`;
 
   // Intersection Observer for lazy loading
   useEffect(() => {

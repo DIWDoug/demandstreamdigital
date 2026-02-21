@@ -1,20 +1,21 @@
 import { Mail, TrendingUp, Users, Zap, Target, FileText, Settings, Repeat, BarChart3, Search, Map, Sparkles, Star, Globe, Share2, PenTool } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
+import { SITE_URL } from "@/lib/constants";
 
 export const emailMarketingConfig: ServicePageConfig = {
   slug: "email-marketing",
   title: "Email Marketing",
-  metaTitle: "White Label Email Marketing Services for Agencies | Wholesale Campaign Solutions by Dialed-in Web",
-  metaDescription: "Email marketing from Dialed-in Web drives client engagement and retention. Resell full-service campaigns. Book your strategy call today.",
-  canonicalUrl: "https://dialedinweb.com/white-label-email-marketing",
+  metaTitle: "Email Marketing for Plumbing & HVAC Companies | Campaigns, Automation & List Growth | Demand Stream Digital",
+  metaDescription: "Demand Stream Digital builds email programs that drive repeat business for plumbing and HVAC companies. Automation, campaigns, and list growth. Book a strategy call.",
+  canonicalUrl: `${SITE_URL}/white-label-email-marketing`,
 
   hero: {
-    headline: "White Label Email Marketing for",
-    highlightedText: "Local Business Clients",
-    subheadline: "For local businesses, email turns one-time customers into regulars and keeps the business top-of-mind between visits. We build email programs that deliver value consistently and drive repeat revenue.",
-    qualifierLine: "You stay the hero. We handle the email execution that keeps customers coming back.",
+    headline: "Email Marketing for",
+    highlightedText: "Plumbing & HVAC Companies",
+    subheadline: "For plumbing and HVAC businesses, email turns one-time customers into regulars and keeps your business top-of-mind between service calls. We build email programs that deliver value consistently and drive repeat revenue.",
+    qualifierLine: "You focus on running your shop. We handle the email execution that keeps customers coming back.",
     ctaText: "Start the Conversation",
-    ctaSubtext: "Built for agencies serving local service businesses and retailers."
+    ctaSubtext: "Built for plumbing and HVAC companies that want repeat business on autopilot."
   },
 
   problem: {
@@ -40,7 +41,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         icon: Target,
         title: "Forgotten Between Visits",
-        body: "Customers need HVAC service once a year. Dental cleanings twice. Without consistent, valuable touchpoints, the business fades from memory when it matters most."
+        body: "Customers need HVAC service once a year. Plumbing emergencies are unpredictable. Without consistent, valuable touchpoints, your business fades from memory when it matters most."
       },
       {
         icon: TrendingUp,
@@ -49,21 +50,21 @@ export const emailMarketingConfig: ServicePageConfig = {
       }
     ],
     closingLine: "We build email programs that nurture relationships, stay top of mind, and convert when the timing is right.",
-    closingHighlight: "Your clients build lasting customer relationships. You keep the margin you earned.",
+    closingHighlight: "Your customers keep coming back. You keep the revenue flowing.",
     ctaText: "Start the Conversation"
   },
 
   outcomes: {
-    headline: "What Changes for Local Businesses",
-    subheadline: "The outcomes your clients experience when email is done right.",
+    headline: "What Changes for Your Business",
+    subheadline: "The outcomes you experience when email is done right.",
     items: [
       {
         title: "Repeat Revenue on Autopilot",
-        description: "Local businesses thrive on repeat customers. Automated sequences remind past customers to return, promote seasonal services, and drive bookings without manual effort."
+        description: "Plumbing and HVAC businesses thrive on repeat customers. Automated sequences remind past customers to schedule maintenance, promote seasonal services, and drive bookings without manual effort."
       },
       {
-        title: "Top-of-Mind Between Visits",
-        description: "For service businesses with long buying cycles, email keeps the brand present. When the customer is ready to buy again, your client is the first call."
+        title: "Top-of-Mind Between Service Calls",
+        description: "For service businesses with long buying cycles, email keeps your brand present. When the customer needs service again, you're the first call."
       },
       {
         title: "Inbox Placement That Protects Reputation",
@@ -79,7 +80,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   roadmap: {
     eyebrow: "The Framework",
     headline: "From Setup to Local Revenue Engine",
-    subheadline: "Every email program is built for the specific business and local market. This is how we sequence the work.",
+    subheadline: "Every email program is built for your specific business and local market. This is how we sequence the work.",
     phases: [
       {
         phase: 1,
@@ -92,7 +93,7 @@ export const emailMarketingConfig: ServicePageConfig = {
           "List hygiene and permission verification",
           "Opt-in form optimization",
           "Welcome sequence development",
-          "Template design for local brand",
+          "Template design for your brand",
           "Deliverability baseline establishment",
           "Tracking and analytics configuration"
         ],
@@ -121,7 +122,7 @@ export const emailMarketingConfig: ServicePageConfig = {
         phase: 3,
         name: "Expansion",
         title: "Segmentation & Targeting",
-        description: "Delivering the right message to the right local customer based on their history and interests.",
+        description: "Delivering the right message to the right customer based on their history and interests.",
         activities: [
           "Service-based segmentation",
           "Purchase history targeting",
@@ -151,18 +152,18 @@ export const emailMarketingConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Phase duration varies by list size, platform, and goals. Most local business clients see measurable engagement improvements within 4-6 weeks."
+    footerNote: "Phase duration varies by list size, platform, and goals. Most businesses see measurable engagement improvements within 4-6 weeks."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Levers We Pull Based on Business Model",
-    subheadline: "Each component is scoped based on the local business model, customer base, and goals.",
+    subheadline: "Each component is scoped based on your business model, customer base, and goals.",
     blocks: [
       {
         title: "Campaign Strategy",
         slug: "campaign-strategy",
-        description: "Editorial calendars, seasonal campaigns, and send cadence planning tailored to local business cycles.",
+        description: "Editorial calendars, seasonal campaigns, and send cadence planning tailored to plumbing and HVAC business cycles.",
         icon: Target
       },
       {
@@ -204,28 +205,28 @@ export const emailMarketingConfig: ServicePageConfig = {
     subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
     goodFit: [
       {
-        point: "Your clients have an existing list or clear path to building one",
-        detail: "Email marketing requires an audience. Clients need at least 500+ subscribers or a strategy for rapid list growth to see meaningful results."
+        point: "You have an existing customer list or clear path to building one",
+        detail: "Email marketing requires an audience. You need at least 500+ contacts or a strategy for rapid list growth to see meaningful results."
       },
       {
         point: "You understand email as a long-term channel",
-        detail: "Email builds trust over time. We partner with agencies who see email as an ongoing program, not a one-time project."
+        detail: "Email builds trust over time. We work with businesses who see email as an ongoing program, not a one-time project."
       },
       {
-        point: "Your clients can provide content input and approvals",
-        detail: "The best email content reflects client expertise. Clients need to provide input, approve content, and engage with the process."
+        point: "You can provide content input and approvals",
+        detail: "The best email content reflects your expertise. You need to provide input, approve content, and engage with the process."
       },
       {
         point: "You value engagement over vanity metrics",
         detail: "We optimize for opens, clicks, and conversions. Not list size alone. A smaller, engaged list beats a large, dead one."
       },
       {
-        point: "Your clients have something worth emailing about",
-        detail: "Regular email requires regular value. Clients need offers, content, updates, or insights to share consistently."
+        point: "You have something worth emailing about",
+        detail: "Regular email requires regular value. Seasonal maintenance tips, promotions, and service reminders give customers a reason to engage."
       },
       {
-        point: "You need a reliable fulfillment partner to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption to your client relationships."
+        point: "You need to replace inconsistent vendors",
+        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish baselines, and deliver without disruption."
       }
     ],
     notFit: [
@@ -238,8 +239,8 @@ export const emailMarketingConfig: ServicePageConfig = {
         detail: "Email programs build over time. First campaigns establish baselines. Optimization creates improvement. Patience is required."
       },
       {
-        point: "Clients who will not approve content in timely fashion",
-        detail: "Email requires consistent sends. If approvals take weeks, the program stalls. We need clients who can engage with the process."
+        point: "Unwilling to approve content in timely fashion",
+        detail: "Email requires consistent sends. If approvals take weeks, the program stalls. We need you to engage with the process."
       },
       {
         point: "Purchased or rented email lists",
@@ -250,7 +251,7 @@ export const emailMarketingConfig: ServicePageConfig = {
         detail: "Email marketing is a program, not a project. One-off campaigns without ongoing strategy rarely deliver meaningful value."
       }
     ],
-    ctaText: "Let's Discuss Your Clients"
+    ctaText: "Let's Talk About Your Business"
   },
 
   faq: {
@@ -259,7 +260,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         category: "Results & Performance",
         items: [
-          { question: "What kind of results can we expect?", answer: "Results vary by industry and list quality, but email typically delivers $36-42 for every $1 spent. We focus on engagement metrics, conversion rates, and revenue attribution." },
+          { question: "What kind of results can we expect?", answer: "Results vary by list quality, but email typically delivers $36-42 for every $1 spent. We focus on engagement metrics, conversion rates, and revenue attribution." },
           { question: "How quickly will we see results?", answer: "Initial improvements in open rates and engagement often appear within 4-6 weeks. Revenue impact builds over time as automations and list engagement mature." },
           { question: "How do you measure email success?", answer: "We track open rates, click rates, conversion rates, list growth, and when possible, revenue attribution. Regular reporting shows what is working and where we are improving." }
         ]
@@ -276,9 +277,9 @@ export const emailMarketingConfig: ServicePageConfig = {
       {
         category: "Partnership & Process",
         items: [
-          { question: "How does white-label communication work?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, content for approval, and talking points. You maintain the client relationship." },
+          { question: "How does communication work?", answer: "You get a dedicated strategist who keeps you informed. We provide reports, content for approval, and talking points. Simple, clear, and no runaround." },
           { question: "Do you require long-term contracts?", answer: "No mandatory long-term contracts. We work month-to-month. That said, email programs need time to mature. Most meaningful results require 3+ months of consistent effort." },
-          { question: "How often do you send campaigns?", answer: "Frequency depends on the business and audience. Most clients benefit from 2-4 campaigns per month plus automated sequences. We develop the right cadence during strategy." }
+          { question: "How often do you send campaigns?", answer: "Frequency depends on your business and audience. Most businesses benefit from 2-4 campaigns per month plus automated sequences. We develop the right cadence during strategy." }
         ]
       }
     ]
@@ -287,7 +288,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Email Marketing Is One Piece of the",
-    highlightedText: "360° Ecosystem",
+    highlightedText: "360° Growth Engine",
     intro: "Effective local marketing is interconnected.",
     body: "Email nurtures leads from SEO and paid media. Automations convert website visitors. We offer each service independently, but the magic happens when they work in concert.",
     services: [
@@ -296,7 +297,7 @@ export const emailMarketingConfig: ServicePageConfig = {
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-gbp-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "White-labeled dashboards.", href: "/white-label-reporting" }
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
     ],
     ctaText: "Explore All Services",
     ctaHref: "/white-label-inbound-marketing"
