@@ -21,8 +21,8 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
           top: '-10%',
           left: '-15%',
           background: isDark
-            ? `radial-gradient(ellipse at center, hsla(213, 50%, 18%, ${opacity * 12}) 0%, transparent 70%)`
-            : `radial-gradient(ellipse at center, hsla(213, 20%, 88%, ${opacity * 14}) 0%, transparent 70%)`,
+            ? `radial-gradient(ellipse at center, hsla(213, 60%, 22%, ${Math.min(opacity * 14, 0.9)}) 0%, transparent 70%)`
+            : `radial-gradient(ellipse at center, hsla(210, 40%, 78%, ${Math.min(opacity * 16, 0.95)}) 0%, transparent 70%)`,
         }}
       />
 
@@ -35,8 +35,8 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
           top: '20%',
           right: '-10%',
           background: isDark
-            ? `radial-gradient(ellipse at center, hsla(210, 45%, 22%, ${opacity * 10}) 0%, transparent 70%)`
-            : `radial-gradient(ellipse at center, hsla(210, 15%, 84%, ${opacity * 12}) 0%, transparent 70%)`,
+            ? `radial-gradient(ellipse at center, hsla(210, 55%, 26%, ${Math.min(opacity * 12, 0.85)}) 0%, transparent 70%)`
+            : `radial-gradient(ellipse at center, hsla(200, 35%, 75%, ${Math.min(opacity * 14, 0.9)}) 0%, transparent 70%)`,
           animationDelay: '-20s',
           animationDirection: 'reverse',
         }}
@@ -51,8 +51,8 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
           bottom: '-5%',
           left: '10%',
           background: isDark
-            ? `radial-gradient(ellipse at center, hsla(215, 55%, 15%, ${opacity * 8}) 0%, transparent 70%)`
-            : `radial-gradient(ellipse at center, hsla(215, 18%, 90%, ${opacity * 10}) 0%, transparent 70%)`,
+            ? `radial-gradient(ellipse at center, hsla(215, 65%, 18%, ${Math.min(opacity * 10, 0.8)}) 0%, transparent 70%)`
+            : `radial-gradient(ellipse at center, hsla(220, 30%, 80%, ${Math.min(opacity * 12, 0.85)}) 0%, transparent 70%)`,
           animationDelay: '-40s',
         }}
       />
