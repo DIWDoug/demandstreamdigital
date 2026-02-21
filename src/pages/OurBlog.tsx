@@ -8,7 +8,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
-import PixabayImage from "@/components/PixabayImage";
 import { getPageOgImage } from "@/lib/ogImages";
 
 // Import blog images statically for proper resolution
@@ -35,19 +34,6 @@ const resolveFeaturedImage = (featuredImage: string | null): string | null => {
   return featuredImageMap[featuredImage] || null;
 };
 
-// Generate a relevant Pixabay search keyword from post title/category
-const getImageKeyword = (title: string, category?: string | null): string => {
-  const lowerTitle = title.toLowerCase();
-  if (lowerTitle.includes('seo') || lowerTitle.includes('search')) return 'digital marketing SEO';
-  if (lowerTitle.includes('ppc') || lowerTitle.includes('paid') || lowerTitle.includes('ads')) return 'advertising marketing';
-  if (lowerTitle.includes('content') || lowerTitle.includes('blog')) return 'content marketing writing';
-  if (lowerTitle.includes('social') || lowerTitle.includes('media')) return 'social media marketing';
-  if (lowerTitle.includes('email')) return 'email marketing business';
-  if (lowerTitle.includes('local')) return 'local business storefront';
-  if (lowerTitle.includes('agency') || lowerTitle.includes('white label')) return 'business team collaboration';
-  if (category) return `${category} marketing`;
-  return 'digital marketing business';
-};
 
 interface BlogPost {
   id: string;
@@ -362,13 +348,7 @@ const OurBlog = () => {
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           />
                         ) : (
-                          <PixabayImage
-                            keyword={getImageKeyword(featuredPost.title, featuredPost.category)}
-                            alt={featuredPost.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            placeholderClassName="w-full h-full"
-                            priority
-                          />
+                          <div className="w-full h-full bg-gradient-to-br from-surface-elevated to-surface-card" />
                         )}
                       </div>
                       <div className="p-8 lg:py-12 flex flex-col justify-center">
@@ -417,12 +397,7 @@ const OurBlog = () => {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                           ) : (
-                            <PixabayImage
-                              keyword={getImageKeyword(post.title, post.category)}
-                              alt={post.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                              placeholderClassName="w-full h-48"
-                            />
+                            <div className="w-full h-full bg-gradient-to-br from-surface-elevated to-surface-card" />
                           )}
                         </div>
                         <div className="p-6">

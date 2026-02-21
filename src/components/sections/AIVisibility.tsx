@@ -1,79 +1,5 @@
 import { Sparkles, MessageSquare, Search, Globe } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
-import { useState, useEffect, useRef } from "react";
-import { searchPixabayImages } from "@/lib/pixabay";
-
-// Lazy-loaded Pixabay image for the AI section
-const LazyPixabayCard = ({ keyword, alt }: { keyword: string; alt: string }) => {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '100px', threshold: 0.1 }
-    );
-
-    if (imgRef.current) observer.observe(imgRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const fetchImage = async () => {
-      try {
-        const response = await searchPixabayImages({
-          query: keyword,
-          imageType: 'photo',
-          orientation: 'horizontal',
-          perPage: 3,
-          minWidth: 600,
-          safeSearch: true,
-          order: 'popular'
-        });
-
-        if (response.hits.length > 0) {
-          setImageUrl(response.hits[0].webformatURL);
-        }
-      } catch (error) {
-        console.error('Error fetching image:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchImage();
-  }, [isInView, keyword]);
-
-  return (
-    <div ref={imgRef} className="relative h-40 rounded-lg overflow-hidden mb-6">
-      {(isLoading || !isInView) && (
-        <div className="absolute inset-0 bg-gradient-to-br from-surface-elevated to-surface-card animate-pulse" />
-      )}
-      {imageUrl && (
-        <>
-          <img
-            src={imageUrl}
-            alt={alt}
-            loading="lazy"
-            decoding="async"
-            className={`w-full h-full object-cover transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-            onLoad={() => setIsLoading(false)}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-transparent" />
-        </>
-      )}
-    </div>
-  );
-};
 
 const AIVisibility = () => {
   const platforms = [
@@ -105,12 +31,8 @@ const AIVisibility = () => {
             </p>
           </div>
 
-          {/* The insight with Pixabay image */}
+          {/* The insight */}
           <div className="premium-card mb-12">
-            <LazyPixabayCard 
-              keyword="artificial intelligence technology futuristic" 
-              alt="AI technology and machine learning visualization"
-            />
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">
