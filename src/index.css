@@ -148,6 +148,10 @@
     --accent-blue: 210 55% 50%;
     --accent-blue-glow: 210 55% 60%;
     
+    /* Forest green accent - for decorative elements */
+    --accent-green: 155 42% 28%;
+    --accent-green-glow: 155 42% 36%;
+    
     /* Pop accent (orange for urgency) */
     --accent-pop: 25 95% 53%;
     --accent-pop-glow: 25 95% 63%;
@@ -219,6 +223,10 @@
     /* Blue accent for dark mode */
     --accent-blue: 210 60% 58%;
     --accent-blue-glow: 210 60% 68%;
+
+    /* Forest green accent for dark mode */
+    --accent-green: 155 45% 40%;
+    --accent-green-glow: 155 45% 50%;
   }
 }
 
@@ -342,7 +350,7 @@
   }
 
   .premium-card:hover {
-    border-color: hsl(var(--cta) / 0.3);
+    border-color: hsl(var(--accent-green) / 0.3);
     background: linear-gradient(
       135deg,
       hsl(var(--surface-elevated)),
@@ -350,7 +358,7 @@
     );
     box-shadow: 
       0 8px 30px hsl(0 0% 0% / 0.12),
-      0 0 40px hsl(var(--cta) / 0.1),
+      0 0 40px hsl(var(--accent-green) / 0.1),
       inset 0 1px 0 hsl(0 0% 100% / 0.08);
     transform: translateY(-2px);
   }
@@ -375,7 +383,7 @@
   }
 
   .pill-badge:hover {
-    border-color: hsl(var(--cta) / 0.4);
+    border-color: hsl(var(--accent-green) / 0.4);
     color: hsl(var(--text-primary));
     transform: translateY(-1px);
   }
@@ -473,7 +481,7 @@
   /* Stats number styling */
   .stat-number {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold;
-    background: linear-gradient(135deg, hsl(var(--cta)), hsl(var(--cta-glow)));
+    background: linear-gradient(135deg, hsl(var(--accent-green)), hsl(var(--accent-green-glow)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -726,7 +734,7 @@
     content: counter(list-counter) ".";
     flex-shrink: 0;
     font-weight: 700;
-    color: hsl(var(--cta));
+    color: hsl(var(--accent-green));
     min-width: 1.5rem;
   }
   

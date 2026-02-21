@@ -46,7 +46,7 @@ const OnboardingRoadmap = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
               The Process
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
@@ -60,7 +60,7 @@ const OnboardingRoadmap = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line - hidden on mobile */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cta/50 via-slate-300 to-cta/50" />
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-green/50 via-slate-300 to-accent-green/50" />
 
             <div className="space-y-8 lg:space-y-0">
               {steps.map((step, index) => (
@@ -73,15 +73,15 @@ const OnboardingRoadmap = () => {
                   {/* Card */}
                   <div className={`
                     bg-white border border-slate-200 rounded-xl p-6 shadow-sm
-                    hover:border-cta/30 transition-colors
+                    hover:border-accent-green/30 transition-colors
                     ${index % 2 === 0 ? 'lg:text-right lg:col-start-1' : 'lg:col-start-2'}
                   `}>
                     <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                      <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center shrink-0">
-                        <step.icon className="h-5 w-5 text-cta" />
+                      <div className="w-10 h-10 rounded-lg bg-accent-green/10 flex items-center justify-center shrink-0">
+                        <step.icon className="h-5 w-5 text-accent-green" />
                       </div>
                       <div>
-                        <span className="text-cta text-xs font-medium uppercase tracking-wider">{step.phase}</span>
+                        <span className="text-accent-green text-xs font-medium uppercase tracking-wider">{step.phase}</span>
                         <h3 className="text-lg font-semibold text-slate-900">{step.title}</h3>
                       </div>
                     </div>

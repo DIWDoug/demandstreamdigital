@@ -31,7 +31,7 @@ const AgencyPartnerVideos = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-semibold uppercase tracking-wider mb-4">
               Agency Partners
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -71,7 +71,7 @@ const AgencyPartnerVideos = () => {
                   <div className="pt-3 border-t border-border">
                     <p className="text-foreground font-semibold">{partner.name}</p>
                     <p className="text-sm text-text-muted">{partner.title}</p>
-                    <p className="text-xs text-cta mt-1">{partner.tenure}</p>
+                    <p className="text-xs text-accent-green mt-1">{partner.tenure}</p>
                   </div>
                 </div>
               </div>

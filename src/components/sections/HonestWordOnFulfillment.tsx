@@ -20,7 +20,7 @@ const HonestWordOnFulfillment = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+            <p className="text-sm text-accent-green uppercase tracking-widest font-medium mb-4">
               An Honest Word on Marketing
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -45,7 +45,7 @@ const HonestWordOnFulfillment = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute -top-2 -left-2 text-6xl text-cta/30 font-serif leading-none">"</div>
+              <div className="absolute -top-2 -left-2 text-6xl text-accent-green/30 font-serif leading-none">"</div>
               
               <div className="space-y-5 text-muted-foreground leading-relaxed pt-8 font-handwriting text-lg">
                 <p className="text-foreground font-medium text-lg">I've been in digital marketing since 2011.</p>
@@ -86,7 +86,7 @@ const HonestWordOnFulfillment = () => {
                   If that sounds like what you've been looking for, let's talk.
                 </p>
                 
-                <p className="text-cta font-medium pt-2">
+                <p className="text-accent-green font-medium pt-2">
                   — Doug
                 </p>
               </div>

@@ -36,8 +36,8 @@ const InvestmentEducationalContent = () => {
       {/* Pricing Models Explained */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Scale className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Scale className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Pricing Models Explained</h2>
         </div>
@@ -72,11 +72,11 @@ const InvestmentEducationalContent = () => {
               <h3 className="text-foreground font-semibold text-lg mb-4">{model.title}</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-cta mb-2">Pros</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent-green mb-2">Pros</p>
                   <ul className="space-y-1">
                     {model.pros.map((pro, j) => (
                       <li key={j} className="text-sm text-text-muted flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-cta flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="h-4 w-4 text-accent-green flex-shrink-0 mt-0.5" />
                         {pro}
                       </li>
                     ))}
@@ -120,7 +120,7 @@ const InvestmentEducationalContent = () => {
             { title: "Reporting Needs", desc: "Custom dashboards, weekly calls, and detailed reporting add to fulfillment costs." }
           ].map((item, i) => (
             <div key={i} className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cta/10 flex items-center justify-center text-cta font-bold text-sm">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-green/10 flex items-center justify-center text-accent-green font-bold text-sm">
                 {i + 1}
               </div>
               <div>
@@ -135,8 +135,8 @@ const InvestmentEducationalContent = () => {
       {/* Setting Your Margins */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <TrendingUp className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <TrendingUp className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Setting Your Agency Margins</h2>
         </div>
@@ -158,7 +158,7 @@ const InvestmentEducationalContent = () => {
               </div>
               <div className="flex justify-between items-center pb-3 border-b border-border/30">
                 <span className="text-text-muted">Healthy agency margin</span>
-                <span className="text-cta font-semibold">75-100%</span>
+                <span className="text-accent-green font-semibold">75-100%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-text-muted">Premium positioning</span>
@@ -209,7 +209,7 @@ const InvestmentEducationalContent = () => {
                 "Transparent time tracking on projects"
               ].map((item, i) => (
                 <li key={i} className="text-sm text-text-muted flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-cta flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-4 w-4 text-accent-green flex-shrink-0 mt-0.5" />
                   {item}
                 </li>
               ))}
@@ -221,12 +221,12 @@ const InvestmentEducationalContent = () => {
       {/* Getting Started */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Lightbulb className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Lightbulb className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Getting Started with White-Label</h2>
         </div>
-        <div className="bg-gradient-to-br from-cta/5 to-accent-blue/5 rounded-2xl p-8 border border-cta/20">
+        <div className="bg-gradient-to-br from-accent-green/5 to-accent-blue/5 rounded-2xl p-8 border border-accent-green/20">
           <p className="text-text-secondary text-lg mb-6">
             White-label fulfillment lets you scale without hiring. You focus on sales and client relationships. We handle the delivery.
           </p>
@@ -237,7 +237,7 @@ const InvestmentEducationalContent = () => {
               { step: "3", title: "We Deliver", desc: "Seamless white-label execution under your brand" }
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center text-cta font-bold text-lg mx-auto mb-3">
+                <div className="w-12 h-12 rounded-full bg-accent-green/20 flex items-center justify-center text-accent-green font-bold text-lg mx-auto mb-3">
                   {item.step}
                 </div>
                 <h3 className="text-foreground font-semibold mb-1">{item.title}</h3>

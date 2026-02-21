@@ -13,7 +13,7 @@ const LocalSEOExplainer = () => {
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cta/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">

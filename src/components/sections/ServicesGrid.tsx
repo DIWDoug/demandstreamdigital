@@ -151,7 +151,7 @@ const ServicesGrid = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             <div className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start">
-              <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
+              <span className="inline-block px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-semibold uppercase tracking-wider mb-6">
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -181,21 +181,21 @@ const ServicesGrid = () => {
               
               <Link 
                 to="/partner-tools"
-                className="group relative p-6 rounded-xl bg-gradient-to-br from-cta/10 to-cta/5 border border-cta/30 hover:border-cta/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10 sm:col-span-2"
+                className="group relative p-6 rounded-xl bg-gradient-to-br from-accent-green/10 to-accent-green/5 border border-accent-green/30 hover:border-accent-green/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-green/10 sm:col-span-2"
               >
                 <div className="flex items-center gap-4">
-                  <span className="w-12 h-12 rounded-xl bg-cta/20 text-cta flex items-center justify-center group-hover:bg-cta group-hover:text-white transition-colors">
+                  <span className="w-12 h-12 rounded-xl bg-accent-green/20 text-accent-green flex items-center justify-center group-hover:bg-accent-green group-hover:text-white transition-colors">
                     <Calculator className="w-6 h-6" strokeWidth={2} />
                   </span>
                   <div className="flex-1">
-                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-cta transition-colors">
+                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-accent-green transition-colors">
                       Explore Our Free Tools
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       ROI calculators, investment tools, and resources to help you plan your marketing budget.
                     </p>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-cta opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
+                  <ArrowRight className="h-5 w-5 text-accent-green opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
                 </div>
               </Link>
             </div>

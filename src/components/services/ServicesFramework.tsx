@@ -33,7 +33,7 @@ const ServicesFramework = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Left Column - Header */}
             <div className="lg:sticky lg:top-32 lg:self-start text-center lg:text-left">
-              <p className="text-cta text-sm font-medium tracking-wider uppercase mb-4">
+              <p className="text-accent-green text-sm font-medium tracking-wider uppercase mb-4">
                 Our Framework
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">
@@ -56,12 +56,12 @@ const ServicesFramework = () => {
                 >
                   <div className="flex gap-4">
                     <div className="flex-shrink-0">
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cta/10 text-cta transition-all duration-300 group-hover:bg-cta group-hover:text-white">
+                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent-green/10 text-accent-green transition-all duration-300 group-hover:bg-accent-green group-hover:text-white">
                         <pillar.icon className="w-3.5 h-3.5" strokeWidth={2} />
                       </span>
                     </div>
                     <div>
-                      <strong className="block text-slate-900 text-lg font-semibold mb-2 group-hover:text-cta transition-colors duration-300">
+                      <strong className="block text-slate-900 text-lg font-semibold mb-2 group-hover:text-accent-green transition-colors duration-300">
                         {pillar.title}
                       </strong>
                       <p className="text-slate-600 text-sm leading-relaxed">

@@ -25,7 +25,7 @@ const ServicesHero = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Left: Text content */}
           <div>
-            <p className="text-cta font-medium uppercase tracking-widest text-sm mb-4">
+            <p className="text-accent-green font-medium uppercase tracking-widest text-sm mb-4">
               White Label Inbound Marketing
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-[1.15]">

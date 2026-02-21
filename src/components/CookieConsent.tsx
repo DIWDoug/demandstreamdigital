@@ -41,8 +41,8 @@ const CookieConsent = () => {
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center">
             {/* Icon & Text */}
             <div className="flex gap-4 flex-1">
-              <div className="shrink-0 w-10 h-10 rounded-full bg-cta/10 flex items-center justify-center">
-                <Cookie className="h-5 w-5 text-cta" />
+              <div className="shrink-0 w-10 h-10 rounded-full bg-accent-green/10 flex items-center justify-center">
+                <Cookie className="h-5 w-5 text-accent-green" />
               </div>
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-foreground mb-1">

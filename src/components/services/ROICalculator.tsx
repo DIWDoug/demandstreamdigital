@@ -46,16 +46,16 @@ const ROICalculator = () => {
     <div className={cn(
       "rounded-xl p-5 border transition-all",
       highlight 
-        ? "bg-cta/5 border-cta/30" 
+        ? "bg-accent-green/5 border-accent-green/30" 
         : "bg-surface-elevated border-border/30"
     )}>
       <div className="flex items-center gap-2 mb-3">
-        <Icon className={cn("h-4 w-4", highlight ? "text-cta" : "text-accent-blue")} />
+        <Icon className={cn("h-4 w-4", highlight ? "text-accent-green" : "text-accent-blue")} />
         <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">{label}</span>
       </div>
       <p className={cn(
         "text-3xl md:text-4xl font-bold mb-1",
-        highlight ? "text-cta" : "text-cta"
+        highlight ? "text-accent-green" : "text-accent-green"
       )}>
         {value}
       </p>
@@ -69,7 +69,7 @@ const ROICalculator = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-green/10 text-accent-green text-sm font-medium mb-4">
               <Calculator className="h-4 w-4" />
               ROI Calculator
             </div>
