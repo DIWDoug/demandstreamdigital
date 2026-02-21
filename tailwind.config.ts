@@ -140,7 +140,7 @@ export default {
         "float": "float ease-in-out infinite",
         "mobile-menu-open": "mobile-menu-open 0.3s ease-in-out forwards",
         "mobile-menu-content": "mobile-menu-content 0.3s ease-out forwards",
-        "stream-drift": "stream-drift 30s ease-in-out infinite",
+        "stream-drift": "stream-drift 60s ease-in-out infinite",
       },
     },
   },
