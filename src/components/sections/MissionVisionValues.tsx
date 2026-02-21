@@ -21,14 +21,14 @@ const MissionVisionValues = () => {
       />
       
       {/* Subtle gradient orbs */}
-      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-cta/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-accent-green/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 lg:mb-16">
-            <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+            <p className="text-sm text-accent-green uppercase tracking-widest font-medium mb-4">
               Our Foundation
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
@@ -41,8 +41,8 @@ const MissionVisionValues = () => {
             {/* Mission */}
             <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                  <Target className="w-6 h-6 text-cta" />
+                <div className="w-12 h-12 rounded-full bg-accent-green/10 flex items-center justify-center border-2 border-accent-green">
+                  <Target className="w-6 h-6 text-accent-green" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground">Our Mission</h3>
               </div>

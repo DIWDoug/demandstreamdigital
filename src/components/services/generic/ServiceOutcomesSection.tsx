@@ -29,7 +29,7 @@ const ServiceOutcomesSection = ({ config }: ServiceOutcomesSectionProps) => {
           {config.items.map((outcome, index) => {
             // Different accent colors for visual distinction
             const accentColors = [
-              'bg-cta/10 border-cta/20 text-cta',
+              'bg-accent-green/10 border-accent-green/20 text-accent-green',
               'bg-accent-blue/10 border-accent-blue/20 text-accent-blue',
               'bg-amber-500/10 border-amber-500/20 text-amber-500',
               'bg-purple-500/10 border-purple-500/20 text-purple-500'

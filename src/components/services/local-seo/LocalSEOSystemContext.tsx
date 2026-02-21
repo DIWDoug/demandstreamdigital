@@ -87,12 +87,12 @@ const LocalSEOSystemContext = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
             <div>
-              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+              <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
                 The Bigger Picture
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">
                 Local SEO Is One Piece of the{" "}
-                <span className="text-cta">360° Ecosystem</span>
+                <span className="text-accent-green">360° Ecosystem</span>
               </h2>
               
               <p className="text-slate-600 text-lg leading-relaxed mb-4">

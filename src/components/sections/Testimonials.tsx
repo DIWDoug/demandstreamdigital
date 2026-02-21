@@ -59,7 +59,7 @@ const Testimonials = () => {
                 <p className="text-slate-900 font-semibold text-lg">{featuredTestimonial.author}</p>
                 <p className="text-primary text-sm">{featuredTestimonial.source}</p>
               </div>
-              <div className="bg-cta/10 text-cta font-semibold text-sm px-4 py-2 rounded-full">
+              <div className="bg-accent-green/10 text-accent-green font-semibold text-sm px-4 py-2 rounded-full">
                 {featuredTestimonial.highlight}
               </div>
             </div>

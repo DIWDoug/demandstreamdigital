@@ -22,7 +22,7 @@ const FAQAnswerWithBlogLink = ({ question, answer }: { question: string; answer:
       {blogLink && (
         <Link 
           to={blogLink.blogUrl}
-          className="block mt-3 text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors"
+          className="block mt-3 text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-accent-green hover:decoration-accent-green transition-colors"
         >
           Learn more: {blogLink.blogTitle} →
         </Link>
@@ -40,7 +40,7 @@ const HubFAQ = ({ title, faqs }: HubFAQProps) => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-3">
               Common Questions
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -53,7 +53,7 @@ const HubFAQ = ({ title, faqs }: HubFAQProps) => {
               <Accordion key={index} type="single" collapsible>
                 <AccordionItem 
                   value={`faq-${index}`}
-                  className="border border-border rounded-xl px-6 bg-surface-elevated data-[state=open]:border-cta/30"
+                  className="border border-border rounded-xl px-6 bg-surface-elevated data-[state=open]:border-accent-green/30"
                 >
                   <AccordionTrigger className="text-left text-foreground hover:no-underline py-5 text-base font-medium">
                     {faq.question}

@@ -247,8 +247,8 @@ const LocalGrowthEngine = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-cta/10 border border-cta/20 max-w-md">
-                    <CheckCircle2 className="h-5 w-5 text-cta flex-shrink-0" />
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-green/10 border border-accent-green/20 max-w-md">
+                    <CheckCircle2 className="h-5 w-5 text-accent-green flex-shrink-0" />
                     <p className="text-foreground">
                       You're on the list! We'll be in touch soon.
                     </p>

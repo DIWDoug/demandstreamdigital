@@ -136,8 +136,8 @@ const HubBenefits = ({ hubSlug }: HubBenefitsProps) => {
               key={benefit.title}
               className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50"
             >
-              <div className="inline-flex items-center justify-center p-4 rounded-xl mb-5 bg-cta/10 border border-cta/20">
-                <benefit.icon className="w-7 h-7 text-cta" strokeWidth={1.5} />
+              <div className="inline-flex items-center justify-center p-4 rounded-xl mb-5 bg-accent-green/10 border border-accent-green/20">
+                <benefit.icon className="w-7 h-7 text-accent-green" strokeWidth={1.5} />
               </div>
               <h3 className="text-lg md:text-xl font-semibold mb-3 text-foreground text-balance">
                 {benefit.title}

@@ -31,7 +31,7 @@ const LocalSEOPainPoints = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
               The Pattern We See
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
@@ -47,11 +47,11 @@ const LocalSEOPainPoints = () => {
             {painPoints.map((point, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-cta/30 transition-colors"
+                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-accent-green/30 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
-                    <point.icon className="h-5 w-5 text-cta" />
+                  <div className="w-12 h-12 rounded-xl bg-accent-green/10 flex items-center justify-center shrink-0">
+                    <point.icon className="h-5 w-5 text-accent-green" />
                   </div>
                   <strong className="text-lg font-semibold text-slate-900">
                     {point.title}

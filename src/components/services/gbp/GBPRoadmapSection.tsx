@@ -31,7 +31,7 @@ const GBPRoadmapSection = ({ config }: GBPRoadmapSectionProps) => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6">
@@ -93,7 +93,7 @@ const GBPRoadmapSection = ({ config }: GBPRoadmapSectionProps) => {
           <div className="text-center mt-8">
             <Link 
               to="/contact" 
-              className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
+              className="inline-flex items-center gap-2 text-accent-green font-medium hover:text-accent-green/80 transition-colors"
             >
               Discuss Your Roadmap
               <ArrowRight className="w-4 h-4" />

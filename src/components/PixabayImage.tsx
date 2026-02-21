@@ -132,7 +132,7 @@ const PixabayImage = ({
       {/* Loading placeholder */}
       {(isLoading || !isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-surface-elevated to-surface-card rounded-2xl animate-pulse flex items-center justify-center">
-          <div className="w-12 h-12 rounded-full border-2 border-cta/30 border-t-cta animate-spin" />
+          <div className="w-12 h-12 rounded-full border-2 border-accent-green/30 border-t-accent-green animate-spin" />
         </div>
       )}
       
