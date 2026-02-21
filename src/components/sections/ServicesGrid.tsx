@@ -1,15 +1,12 @@
 import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, BarChart3, Calculator } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { searchPixabayImages } from "@/lib/pixabay";
 
 interface Service {
   icon: LucideIcon;
   title: string;
   description: string;
   href: string;
-  pixabayKeyword: string;
 }
 
 const services: Service[] = [
@@ -18,111 +15,45 @@ const services: Service[] = [
     title: "Local SEO",
     description: "Show up when homeowners search for plumbing or HVAC services in your area. We handle the technical work that builds organic visibility over time.",
     href: "/white-label-local-seo",
-    pixabayKeyword: "plumber working pipes"
   },
   {
     icon: Map,
     title: "Google Maps / GBP",
     description: "Dominate the local map pack. Optimized profiles, consistent citations, and review systems that build trust with homeowners searching for service pros.",
     href: "/white-label-gbp-seo",
-    pixabayKeyword: "hvac technician air conditioning"
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
     description: "Turn ad spend into booked jobs. Google and Meta campaigns built to generate calls from homeowners who need plumbing or HVAC service now.",
     href: "/white-label-paid-media",
-    pixabayKeyword: "online advertising campaign clicks"
   },
   {
     icon: PenTool,
     title: "Content Development",
     description: "Strategic content that ranks locally and converts. Service area pages, seasonal guides, and blog posts that drive visibility and trust.",
     href: "/white-label-content-marketing",
-    pixabayKeyword: "content writing strategy marketing"
   },
   {
     icon: Mail,
     title: "Email Marketing",
     description: "Stay top of mind with past customers. Automated sequences for maintenance reminders, seasonal tune-ups, and referral requests.",
     href: "/white-label-email-marketing",
-    pixabayKeyword: "email marketing newsletter"
   },
   {
     icon: BarChart3,
     title: "Reporting & Dashboards",
     description: "See exactly what's working. Clear dashboards showing calls, leads, rankings, and ROI — so you always know where your marketing dollars go.",
     href: "/white-label-reporting",
-    pixabayKeyword: "analytics dashboard reporting"
   }
 ];
 
-// Lazy-loaded service card with Pixabay image
-const ServiceCard = ({ service, index }: { service: Service; index: number }) => {
-  const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [isInView, setIsInView] = useState(false);
-  const cardRef = useRef<HTMLAnchorElement>(null!);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '100px', threshold: 0.1 }
-    );
-
-    if (cardRef.current) observer.observe(cardRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const fetchImage = async () => {
-      try {
-        const response = await searchPixabayImages({
-          query: service.pixabayKeyword,
-          imageType: 'photo',
-          orientation: 'horizontal',
-          perPage: 3,
-          minWidth: 400,
-          safeSearch: true,
-          order: 'popular'
-        });
-
-        if (response.hits.length > 0) {
-          setImageUrl(response.hits[0].webformatURL);
-        }
-      } catch (error) {
-        console.error('Error fetching image:', error);
-      }
-    };
-
-    fetchImage();
-  }, [isInView, service.pixabayKeyword]);
-
+const ServiceCard = ({ service }: { service: Service }) => {
   return (
     <Link 
-      ref={cardRef}
       to={service.href}
       className="group relative rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden"
     >
-      {imageUrl && (
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
-          <img 
-            src={imageUrl} 
-            alt={`${service.title} for plumbing and HVAC companies`}
-            title={`${service.title} | Demand Stream Digital`}
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )}
-      
       <div className="relative p-6">
         <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
           <service.icon className="w-4 h-4" strokeWidth={2} />
@@ -176,7 +107,7 @@ const ServicesGrid = () => {
 
             <div className="lg:col-span-3 grid sm:grid-cols-2 gap-4">
               {services.map((service, index) => (
-                <ServiceCard key={index} service={service} index={index} />
+                <ServiceCard key={index} service={service} />
               ))}
               
               <Link 
