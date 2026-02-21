@@ -187,21 +187,21 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               required
               value={step1Data.email}
               onChange={(e) => setStep1Data({ ...step1Data, email: e.target.value })}
-              placeholder="you@agency.com"
+              placeholder="you@yourcompany.com"
               className={inputClass}
             />
           </div>
 
           <div>
             <label className={labelClass}>
-              Agency Website <span className="text-red-500">*</span>
+              Your Website <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
               required
               value={step1Data.website}
               onChange={(e) => setStep1Data({ ...step1Data, website: e.target.value })}
-              placeholder="youragency.com"
+              placeholder="yourcompany.com"
               className={inputClass}
             />
           </div>

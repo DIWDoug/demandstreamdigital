@@ -91,13 +91,13 @@ const LocalGrowthEngine = () => {
 
   return (
     <section className="relative">
-      {/* Light background that stops where the card bleeds */}
-      <div className="absolute inset-0 section-light" style={{ bottom: '5rem' }} />
+      {/* Dark background */}
+      <div className="absolute inset-0 bg-background" style={{ bottom: '5rem' }} />
       
       <div className="relative py-16 lg:py-20 pb-8">
         <div className="container mx-auto px-6 lg:px-8">
           {/* Bleed-over Card */}
-          <div className="relative z-20 bg-white rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-gray-200/80 mb-[-5rem]">
+          <div className="relative z-20 bg-white/5 rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/10 mb-[-5rem]">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Fanned Book Stack */}
               <div className="relative flex justify-center items-center min-h-[350px] lg:min-h-[420px]">
@@ -176,24 +176,24 @@ const LocalGrowthEngine = () => {
 
               {/* Right: Content */}
               <div>
-                <p className="text-gray-500 text-base mb-1">Discover How To</p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+                <p className="text-muted-foreground text-base mb-1">Discover How To</p>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
                   Steady Stream: The No-BS<br />
                   Guide to Filling Your Schedule<br />
                   365 Days a Year
                 </h2>
                 
-                <div className="w-12 h-0.5 bg-[hsl(76,42%,41%)] mb-5" />
+                <div className="w-12 h-0.5 bg-cta mb-5" />
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                <h3 className="text-lg font-semibold text-foreground mb-3">
                   The Marketing Playbook Built for Plumbing & HVAC Growth
                 </h3>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   If you're a plumbing or HVAC owner tired of slow seasons and unpredictable leads, this is for you. Steady Stream is the methodology behind hundreds of successful local marketing campaigns.
                 </p>
 
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
                   Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year — not just when the weather cooperates.
                 </p>
 
@@ -227,7 +227,7 @@ const LocalGrowthEngine = () => {
                           onFocus={initRecaptcha}
                           placeholder="Enter your email"
                           required
-                          className="flex-1 px-4 py-3 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[hsl(76,42%,41%)]/50 focus:border-[hsl(76,42%,41%)] transition-all"
+                          className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all"
                         />
                         <button
                           type="submit"
@@ -244,19 +244,19 @@ const LocalGrowthEngine = () => {
                           )}
                         </button>
                       </form>
-                      <p className="text-gray-400 text-xs mt-2">Protected by reCAPTCHA</p>
+                      <p className="text-muted-foreground text-xs mt-2">Protected by reCAPTCHA</p>
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-[hsl(76,42%,41%)]/10 border border-[hsl(76,42%,41%)]/20 max-w-md">
-                    <CheckCircle2 className="h-5 w-5 text-[hsl(76,42%,35%)] flex-shrink-0" />
-                    <p className="text-gray-900">
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-cta/10 border border-cta/20 max-w-md">
+                    <CheckCircle2 className="h-5 w-5 text-cta flex-shrink-0" />
+                    <p className="text-foreground">
                       You're on the list! We'll be in touch soon.
                     </p>
                   </div>
                 )}
 
-                <p className="text-gray-500 text-sm mt-4">
+                <p className="text-muted-foreground text-sm mt-4">
                   Coming soon. Join the waitlist to get notified + exclusive bonus content.
                 </p>
               </div>
