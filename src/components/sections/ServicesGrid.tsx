@@ -1,6 +1,7 @@
 import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, BarChart3, Calculator } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import StreamTexture from "@/components/StreamTexture";
 
 interface Service {
   icon: LucideIcon;
@@ -77,7 +78,8 @@ const ServiceCard = ({ service }: { service: Service }) => {
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 lg:py-28 bg-background relative">
+    <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
+      <StreamTexture variant="dark" opacity={0.06} />
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">

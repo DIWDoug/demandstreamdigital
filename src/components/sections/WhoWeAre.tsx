@@ -1,4 +1,5 @@
 import SubtleOrbs from "@/components/SubtleOrbs";
+import StreamTexture from "@/components/StreamTexture";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import teamMeetingImage from "@/assets/team/team-meeting.jpg";
 
@@ -10,6 +11,7 @@ const WhoWeAre = () => {
       ref={ref as React.RefObject<HTMLElement>}
       className="py-24 lg:py-32 section-light reveal-section"
     >
+      <StreamTexture variant="light" opacity={0.04} />
       <SubtleOrbs variant="scattered" />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
