@@ -158,7 +158,7 @@ const WhatWeSolve = () => {
                 <div className="md:hidden section-divider" />
 
                 <div className="md:border-l md:border-border md:pl-12">
-                  <p className="text-sm text-primary uppercase tracking-widest mb-4">
+                  <p className="text-sm text-accent-blue uppercase tracking-widest mb-4">
                     Our Role
                   </p>
                   <p className="text-lg text-foreground mb-6">
@@ -167,7 +167,7 @@ const WhatWeSolve = () => {
                   <ul className="space-y-3">
                     {tabs[activeTab].ourRoleDetails.map((detail, index) => (
                       <li key={index} className="flex items-start gap-3 text-text-secondary">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2.5 flex-shrink-0" />
                         <span>{renderDetailText(detail)}</span>
                       </li>
                     ))}
