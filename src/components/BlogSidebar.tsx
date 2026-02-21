@@ -94,13 +94,13 @@ const BlogSidebar = () => {
                   <div className="flex-1 min-w-0">
                     {/* Category */}
                     {post.category && (
-                      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-cta mb-1 block">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent-green mb-1 block">
                         {categoryLabels[post.category] || post.category}
                       </span>
                     )}
                     
                     {/* Title */}
-                    <h4 className="text-sm font-medium text-foreground group-hover:text-cta transition-colors leading-snug line-clamp-3">
+                    <h4 className="text-sm font-medium text-foreground group-hover:text-accent-green transition-colors leading-snug line-clamp-3">
                       {post.title}
                     </h4>
                   </div>
@@ -113,14 +113,14 @@ const BlogSidebar = () => {
 
       {/* Free Tools */}
       <div className="pb-8 border-b border-border">
-        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-cta mb-5">
+        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-accent-green mb-5">
           Free Tools
         </h3>
         <ul className="space-y-3">
           <li>
             <Link
               to="/partner-tools/roi-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               ROI Calculator
@@ -129,7 +129,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/investment-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               Investment Calculator
@@ -138,7 +138,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/seo-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               SEO Calculator
@@ -147,7 +147,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/ad-budget-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               Ad Budget Calculator
@@ -156,7 +156,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/email-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               Email Calculator
@@ -165,7 +165,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/content-marketing-calculator"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               Content Marketing Calculator
@@ -174,7 +174,7 @@ const BlogSidebar = () => {
           <li>
             <Link
               to="/partner-tools/ai-ready-check"
-              className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+              className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
             >
               <ArrowRight className="w-3 h-3" />
               AI Ready Check
@@ -210,7 +210,7 @@ const BlogSidebar = () => {
             <li key={category.slug}>
               <Link
                 to={`/blog?category=${category.slug}`}
-                className="text-sm text-muted-foreground hover:text-cta transition-colors flex items-center gap-2"
+                className="text-sm text-muted-foreground hover:text-accent-green transition-colors flex items-center gap-2"
               >
                 <ArrowRight className="w-3 h-3" />
                 {category.name}

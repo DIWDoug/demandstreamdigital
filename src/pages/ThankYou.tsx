@@ -40,7 +40,7 @@ const ThankYou = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             {/* Success Icon */}
-            <div className={`mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full ${isEbook ? "bg-accent-blue/20 text-accent-blue" : "bg-cta/20 text-cta"}`}>
+            <div className={`mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full ${isEbook ? "bg-accent-blue/20 text-accent-blue" : "bg-accent-green/20 text-accent-green"}`}>
               {isEbook ? <BookOpen className="w-10 h-10" /> : <CheckCircle className="w-10 h-10" />}
             </div>
 

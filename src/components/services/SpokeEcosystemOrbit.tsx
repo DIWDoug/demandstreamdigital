@@ -121,12 +121,12 @@ const SpokeEcosystemOrbit = ({
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
             <div>
-              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+              <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
                 Part of {hubTitle}
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">
                 {currentSpoke.title} Works With{" "}
-                <span className="text-cta">Every Component</span>
+                <span className="text-accent-green">Every Component</span>
               </h2>
               
               <p className="text-slate-600 text-lg leading-relaxed mb-4">
@@ -147,8 +147,8 @@ const SpokeEcosystemOrbit = ({
                   if (isCurrentSpoke) {
                     return (
                       <div key={spoke.slug} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 flex-shrink-0 text-cta" />
-                        <span className="font-medium text-cta">{spoke.title}</span>
+                        <CheckCircle className="w-5 h-5 flex-shrink-0 text-accent-green" />
+                        <span className="font-medium text-accent-green">{spoke.title}</span>
                       </div>
                     );
                   }
@@ -158,10 +158,10 @@ const SpokeEcosystemOrbit = ({
                     <Link 
                       key={spoke.slug}
                       to={spokeUrl}
-                      className="flex items-center gap-2 group transition-colors hover:text-cta"
+                      className="flex items-center gap-2 group transition-colors hover:text-accent-green"
                     >
-                      <CheckCircle className="w-5 h-5 flex-shrink-0 text-slate-400 group-hover:text-cta transition-colors" />
-                      <span className="font-medium text-slate-700 group-hover:text-cta transition-colors">
+                      <CheckCircle className="w-5 h-5 flex-shrink-0 text-slate-400 group-hover:text-accent-green transition-colors" />
+                      <span className="font-medium text-slate-700 group-hover:text-accent-green transition-colors">
                         {spoke.title}
                       </span>
                     </Link>
@@ -171,7 +171,7 @@ const SpokeEcosystemOrbit = ({
 
               <Link 
                 to={getHubUrl(hubSlug)}
-                className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
+                className="inline-flex items-center gap-2 text-accent-green font-medium hover:text-accent-green/80 transition-colors"
               >
                 View Full {hubTitle} Service
                 <ArrowRight className="w-4 h-4" />

@@ -123,7 +123,7 @@ const LocalSEORoadmap = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mb-10">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-green mb-4">
             The Framework
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
@@ -278,7 +278,7 @@ const LocalSEORoadmap = () => {
                 
                 <button
                   onClick={() => setShowAllActivities(!showAllActivities)}
-                  className="mt-4 flex items-center gap-2 text-sm font-medium text-cta hover:text-cta/80 transition-colors"
+                  className="mt-4 flex items-center gap-2 text-sm font-medium text-accent-green hover:text-accent-green/80 transition-colors"
                 >
                   <span>{showAllActivities ? "Show less" : "View full execution checklist"}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${showAllActivities ? "rotate-180" : ""}`} />
