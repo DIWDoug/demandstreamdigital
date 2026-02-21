@@ -46,7 +46,7 @@ const WhyPartnerWithUs = () => {
 
   return (
     <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative reveal-section">
-      <StreamTexture variant="light" opacity={0.04} />
+      <StreamTexture variant="light" opacity={0.07} />
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8">

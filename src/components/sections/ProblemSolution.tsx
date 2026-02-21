@@ -31,7 +31,7 @@ const ProblemSolution = () => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="reveal-section py-20 lg:py-28 bg-background relative overflow-hidden"
     >
-      <StreamTexture variant="dark" opacity={0.06} />
+      <StreamTexture variant="dark" opacity={0.09} />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">

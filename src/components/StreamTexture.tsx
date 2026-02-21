@@ -15,7 +15,7 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
       aria-hidden="true"
     >
       <svg 
-        className="absolute w-[200%] h-full left-[-50%] top-0"
+        className="absolute w-[200%] h-full left-[-50%] top-0 animate-stream-drift"
         viewBox="0 0 2400 1000" 
         preserveAspectRatio="none"
         fill="none"

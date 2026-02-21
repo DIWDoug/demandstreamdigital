@@ -126,6 +126,11 @@ export default {
           from: { opacity: "0", transform: "translateY(-20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "stream-drift": {
+          "0%": { transform: "translateX(0%)" },
+          "50%": { transform: "translateX(5%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -135,6 +140,7 @@ export default {
         "float": "float ease-in-out infinite",
         "mobile-menu-open": "mobile-menu-open 0.3s ease-in-out forwards",
         "mobile-menu-content": "mobile-menu-content 0.3s ease-out forwards",
+        "stream-drift": "stream-drift 30s ease-in-out infinite",
       },
     },
   },
