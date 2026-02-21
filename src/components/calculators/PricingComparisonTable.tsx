@@ -114,7 +114,7 @@ const PricingComparisonTable = () => {
     <div className="space-y-12">
       {/* SEO Series Pricing Matrix */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-4">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-green/10 text-accent-green text-sm font-medium mb-4">
           <DollarSign className="h-4 w-4" />
           Competition-Based Pricing
         </div>
@@ -217,7 +217,7 @@ const PricingComparisonTable = () => {
 
       {/* Pricing Comparison Header */}
       <div className="text-center pt-8">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-medium mb-4">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-green/10 text-accent-green text-sm font-medium mb-4">
           <DollarSign className="h-4 w-4" />
           Pricing Comparison
         </div>

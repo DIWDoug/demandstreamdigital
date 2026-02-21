@@ -36,8 +36,8 @@ const AdBudgetEducationalContent = () => {
       {/* Platform Comparison */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <PieChart className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <PieChart className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Platform Performance Comparison</h2>
         </div>
@@ -64,7 +64,7 @@ const AdBudgetEducationalContent = () => {
                   <span className="text-foreground font-medium">{item.conv}</span>
                 </div>
               </div>
-              <p className="text-xs text-cta">{item.best}</p>
+              <p className="text-xs text-accent-green">{item.best}</p>
             </div>
           ))}
         </div>
@@ -103,8 +103,8 @@ const AdBudgetEducationalContent = () => {
       {/* Optimization Levers */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Zap className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Zap className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Levers to Improve Performance</h2>
         </div>
@@ -205,8 +205,8 @@ const AdBudgetEducationalContent = () => {
       {/* Getting Expert Help */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Lightbulb className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Lightbulb className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">When to Get Expert Help</h2>
         </div>

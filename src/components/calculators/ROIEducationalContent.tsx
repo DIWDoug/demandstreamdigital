@@ -36,8 +36,8 @@ const ROIEducationalContent = () => {
       {/* Why ROI Matters */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Target className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Target className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Why ROI Matters for Agency Partners</h2>
         </div>
@@ -113,8 +113,8 @@ const ROIEducationalContent = () => {
       {/* Factors That Impact ROI */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <BarChart3 className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <BarChart3 className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Factors That Impact Marketing ROI</h2>
         </div>
@@ -168,8 +168,8 @@ const ROIEducationalContent = () => {
       {/* ROI Presentation Tips */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Lightbulb className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Lightbulb className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">Presenting ROI to Clients</h2>
         </div>

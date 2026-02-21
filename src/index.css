@@ -182,7 +182,7 @@
     --popover: 213 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 357 66% 40%;
+    --primary: 357 66% 42%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 213 40% 16%;
@@ -199,7 +199,7 @@
 
     --border: 213 40% 18%;
     --input: 213 40% 16%;
-    --ring: 357 66% 40%;
+    --ring: 357 66% 42%;
 
     /* Dark mode surfaces */
     --surface-dark: 213 64% 8%;

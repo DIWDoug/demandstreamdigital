@@ -228,7 +228,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
         <div>
           {/* Step indicator */}
           <div className="flex items-center gap-3 mb-5 pb-4 border-b border-border">
-            <div className="flex items-center gap-2 text-cta">
+            <div className="flex items-center gap-2 text-accent-green">
               <CheckCircle className="h-4 w-4" />
               <span className="text-sm font-medium truncate max-w-[180px]">{step1Data.email}</span>
             </div>

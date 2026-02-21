@@ -275,8 +275,8 @@ const SEOEducationalContent = () => {
       {/* What is Local SEO */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <MapPin className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <MapPin className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">What is Local SEO?</h2>
         </div>
@@ -446,9 +446,9 @@ const SEOEducationalContent = () => {
               <div className="flex items-center justify-center">
                 <span className="text-accent-blue text-xl">↓</span>
               </div>
-              <div className="p-4 bg-cta/10 rounded-lg border border-cta/30">
+              <div className="p-4 bg-accent-green/10 rounded-lg border border-accent-green/30">
                 <p className="text-xs text-text-muted mb-1">Expected Monthly Revenue Equivalent</p>
-                <p className="text-lg font-semibold text-cta">Projected Visibility × Improved Leads × Close Rate × Avg. Ticket</p>
+                <p className="text-lg font-semibold text-accent-green">Projected Visibility × Improved Leads × Close Rate × Avg. Ticket</p>
               </div>
               <p className="text-xs text-text-muted text-center">The delta between current and expected is the SEO opportunity value.</p>
             </div>
@@ -459,8 +459,8 @@ const SEOEducationalContent = () => {
       {/* What Goes Into Local SEO Pricing */}
       <section className="bg-surface-elevated rounded-2xl p-8 md:p-12 border border-border/30">
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <BarChart3 className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <BarChart3 className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">What Drives Local SEO Pricing?</h2>
         </div>
@@ -549,8 +549,8 @@ const SEOEducationalContent = () => {
       {/* The Agency Opportunity */}
       <section>
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-cta/10">
-            <Lightbulb className="h-5 w-5 text-cta" />
+          <div className="p-2 rounded-lg bg-accent-green/10">
+            <Lightbulb className="h-5 w-5 text-accent-green" />
           </div>
           <h2 className="text-2xl font-bold text-foreground">The White-Label Opportunity</h2>
         </div>
