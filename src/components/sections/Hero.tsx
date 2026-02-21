@@ -16,24 +16,54 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
-      <TopoTexture opacity={0.08} />
-      {/* Subtle dot pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
+      <TopoTexture opacity={0.12} />
+
+      {/* Visible gradient color washes */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute rounded-full blur-[120px] animate-stream-drift"
+          style={{
+            width: '55%',
+            height: '60%',
+            top: '-15%',
+            left: '-5%',
+            background: 'radial-gradient(ellipse at center, hsla(210, 50%, 72%, 0.35) 0%, transparent 70%)',
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-[100px] animate-stream-drift"
+          style={{
+            width: '45%',
+            height: '50%',
+            top: '30%',
+            right: '-10%',
+            background: 'radial-gradient(ellipse at center, hsla(200, 40%, 76%, 0.25) 0%, transparent 70%)',
+            animationDelay: '-25s',
+            animationDirection: 'reverse',
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-[100px] animate-stream-drift"
+          style={{
+            width: '40%',
+            height: '40%',
+            bottom: '-10%',
+            left: '30%',
+            background: 'radial-gradient(ellipse at center, hsla(220, 35%, 78%, 0.2) 0%, transparent 70%)',
+            animationDelay: '-45s',
+          }}
+        />
+      </div>
+
+      {/* Fine grid texture overlay for depth */}
+      <div
+        className="absolute inset-0 opacity-[0.04] z-0"
         style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
+          backgroundImage: `linear-gradient(hsl(213 64% 16% / 0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(213 64% 16% / 0.3) 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
         }}
       />
-      {/* Diagonal line texture */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, hsl(var(--foreground)) 35px, hsl(var(--foreground)) 36px)`,
-        }}
-      />
-      {/* Subtle gradient wash */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#0F2742]/[0.02] to-transparent" />
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
