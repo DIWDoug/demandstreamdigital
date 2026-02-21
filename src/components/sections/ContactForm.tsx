@@ -12,27 +12,27 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   const steps = [
     {
       title: "Discovery & Alignment",
-      content: "We start with a deep-dive conversation to understand your agency's goals, client base, and fulfillment needs. No cookie-cutter approaches. Just clarity."
+      content: "We start with a deep-dive conversation to understand your business goals, service area, and growth targets. No cookie-cutter approaches — just clarity on what will move the needle."
     },
     {
       title: "Scope & Pricing",
-      content: "Receive transparent, agency-friendly pricing that protects your margins. We map out deliverables and set clear expectations upfront."
+      content: "Receive transparent pricing that protects your bottom line. We map out deliverables and set clear expectations upfront so there are never surprises."
     },
     {
       title: "Seamless Onboarding",
-      content: "We provide white-label onboarding materials so your clients never know we exist. Your brand, your process, zero friction."
+      content: "We handle setup across your Google Business Profile, website, ad accounts, and review platforms — so you can focus on running your crew."
     },
     {
       title: "Execute with Precision",
-      content: "Our team handles the heavy lifting: campaigns, optimizations, and reporting. You focus on growing your agency while we deliver."
+      content: "Our team handles the heavy lifting: SEO, Google Ads, content, and reputation management. You focus on jobs while we drive calls."
     },
     {
       title: "Deliver & Communicate",
-      content: "You receive white-labeled deliverables ready for client presentation. Proactive updates keep you informed every step of the way."
+      content: "You receive clear monthly reports showing leads, calls, and ROI. Proactive updates keep you informed every step of the way."
     },
     {
       title: "Delight & Retain",
-      content: "We go beyond delivery—helping you exceed client expectations, strengthen relationships, and build long-term retention."
+      content: "We go beyond delivery — helping you exceed growth targets, build a stronger local reputation, and keep your schedule booked year-round."
     }
   ];
 
@@ -49,10 +49,10 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             {/* Centered Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                Fulfillment in <span className="text-cta">6 Clear Steps</span>
+                Growth in <span className="text-cta">6 Clear Steps</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                A predictable process designed for agencies that value control and client delight. All steps are executed behind the scenes, under your brand, with you retaining full client ownership.
+                A predictable process designed for plumbing and HVAC companies that value transparency and results. Every step is built to drive more calls and fill your schedule.
               </p>
             </div>
 
@@ -86,7 +86,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                 <div>
                   <TwoStepContactForm
                     formType="fulfillment_steps"
-                    submitButtonText="Explore a Partnership"
+                    submitButtonText="Get a Free Proposal"
                     step1ButtonText="Continue"
                   />
 

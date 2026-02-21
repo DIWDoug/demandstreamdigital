@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
-      {/* Subtle dot pattern background */}
+      {/* Subtle dot pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -23,6 +23,15 @@ const Hero = () => {
           backgroundSize: '24px 24px'
         }}
       />
+      {/* Diagonal line texture */}
+      <div 
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, hsl(var(--foreground)) 35px, hsl(var(--foreground)) 36px)`,
+        }}
+      />
+      {/* Subtle gradient wash */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#0a2240]/[0.02] to-transparent" />
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -32,9 +41,9 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 animate-fade-in-up text-gray-900"
               style={{ lineHeight: "1.1" }}
             >
-              Marketing, SEO, & AI for{" "}
+              Digital Marketing for{" "}
               <span className="text-cta">
-                Plumbing & HVAC Contractors
+                Plumbing & HVAC Companies
               </span>
             </h1>
 
@@ -42,7 +51,7 @@ const Hero = () => {
               className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              From visibility to profitability, our program produces better leads and more jobs that your home service business needs to thrive.
+              SEO, Google Ads, reputation management, and AI-powered lead generation built specifically for plumbing and HVAC contractors. More calls, more booked jobs, all year round.
             </p>
 
             {/* Website input + CTA */}
