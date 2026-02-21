@@ -7,7 +7,7 @@
     <text x="320" y="104" text-anchor="middle" font-family="Inter, Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="6">DIGITAL</text>
 
     <!-- Lines -->
-    <rect x="48" y="92" width="200" height="2" rx="1"></rect>
-    <rect x="392" y="92" width="200" height="2" rx="1"></rect>
+    <rect x="130" y="92" width="118" height="2" rx="1"></rect>
+    <rect x="392" y="92" width="118" height="2" rx="1"></rect>
   </g>
 </svg>
