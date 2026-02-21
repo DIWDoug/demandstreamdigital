@@ -12,9 +12,9 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
       className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}
       aria-hidden="true"
     >
-      {/* Large ambient gradient blob — top left */}
+      {/* Large ambient gradient blob — top left, slow drift */}
       <div
-        className="absolute rounded-full blur-3xl"
+        className="absolute rounded-full blur-3xl animate-stream-drift"
         style={{
           width: '60%',
           height: '70%',
@@ -26,9 +26,9 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
         }}
       />
 
-      {/* Medium blob — center right */}
+      {/* Medium blob — center right, reverse drift */}
       <div
-        className="absolute rounded-full blur-3xl"
+        className="absolute rounded-full blur-3xl animate-stream-drift"
         style={{
           width: '50%',
           height: '60%',
@@ -37,12 +37,14 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
           background: isDark
             ? `radial-gradient(ellipse at center, hsla(210, 45%, 22%, ${opacity * 5}) 0%, transparent 70%)`
             : `radial-gradient(ellipse at center, hsla(210, 15%, 84%, ${opacity * 7}) 0%, transparent 70%)`,
+          animationDelay: '-20s',
+          animationDirection: 'reverse',
         }}
       />
 
-      {/* Small accent blob — bottom left */}
+      {/* Small accent blob — bottom left, offset timing */}
       <div
-        className="absolute rounded-full blur-3xl"
+        className="absolute rounded-full blur-3xl animate-stream-drift"
         style={{
           width: '40%',
           height: '50%',
@@ -51,6 +53,7 @@ const StreamTexture = ({ variant = 'light', opacity = 0.06, className = '' }: St
           background: isDark
             ? `radial-gradient(ellipse at center, hsla(215, 55%, 15%, ${opacity * 4}) 0%, transparent 70%)`
             : `radial-gradient(ellipse at center, hsla(215, 18%, 90%, ${opacity * 6}) 0%, transparent 70%)`,
+          animationDelay: '-40s',
         }}
       />
     </div>
