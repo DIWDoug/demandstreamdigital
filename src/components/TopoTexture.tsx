@@ -6,7 +6,7 @@ interface TopoTextureProps {
 const TopoTexture = ({ opacity = 0.06, className = '' }: TopoTextureProps) => {
   return (
     <div 
-      className={`absolute inset-0 overflow-hidden pointer-events-none -z-10 ${className}`}
+      className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}
       aria-hidden="true"
     >
       {/* Soft warm wash — upper area */}
