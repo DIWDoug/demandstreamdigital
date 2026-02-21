@@ -117,8 +117,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 213 64% 16%;
 
-    /* Deep crimson red primary - for CTAs */
-    --primary: 357 78% 23%;
+    /* Deep crimson red primary - for CTAs only */
+    --primary: 357 78% 20%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 15% 93%;            /* Light cool grey */
@@ -135,14 +135,14 @@
 
     --border: 210 15% 89%;
     --input: 210 10% 95%;
-    --ring: 357 78% 23%;
+    --ring: 357 78% 20%;
 
     --radius: 0.5rem;
 
     /* Premium color tokens */
-    --cta: 357 78% 23%;
+    --cta: 357 78% 20%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 357 78% 30%;
+    --cta-glow: 357 78% 26%;
     
     /* Steel blue accent */
     --accent-blue: 210 55% 50%;
@@ -178,7 +178,7 @@
     --popover: 213 60% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 357 66% 45%;
+    --primary: 357 66% 40%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 213 40% 16%;
@@ -195,7 +195,7 @@
 
     --border: 213 40% 18%;
     --input: 213 40% 16%;
-    --ring: 357 66% 45%;
+    --ring: 357 66% 40%;
 
     /* Dark mode surfaces */
     --surface-dark: 213 64% 8%;
@@ -212,9 +212,9 @@
     --border-card: 213 35% 25%;
 
     /* CTA tokens for dark mode - crimson red */
-    --cta: 357 66% 48%;
+    --cta: 357 66% 42%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 357 66% 55%;
+    --cta-glow: 357 66% 48%;
     
     /* Blue accent for dark mode */
     --accent-blue: 210 60% 58%;

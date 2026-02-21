@@ -79,7 +79,7 @@ const JobCostEstimator = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Instant Job Cost Estimator | Plumbing & HVAC | ServiceForge Digital</title>
+        <title>Instant Job Cost Estimator | Plumbing & HVAC | Demand Stream Digital</title>
         <meta name="description" content="Get instant ballpark cost estimates for common plumbing and HVAC jobs. Know what to expect before you call." />
       </Helmet>
 

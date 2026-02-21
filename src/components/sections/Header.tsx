@@ -208,8 +208,8 @@ const Header = () => {
             <Link to="/" className="flex items-center overflow-hidden">
               <img 
                 src={logo} 
-                alt="ServiceForge Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
                 width={200}
                 height={32}
                 className={`w-auto opacity-90 transition-all duration-300 ${

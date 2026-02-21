@@ -75,9 +75,9 @@ const WhyPartnerWithUs = () => {
               <div className={`inline-flex items-center justify-center p-4 rounded-xl mb-5 ${
                 benefit.isQualifier 
                   ? 'bg-gray-400/15 border border-gray-400/25' 
-                  : 'bg-cta/10 border border-cta/20'
+                  : 'bg-foreground/5 border border-foreground/10'
               }`}>
-                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-cta'}`} strokeWidth={1.5} />
+                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-foreground/70'}`} strokeWidth={1.5} />
               </div>
               <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
                 {benefit.title}

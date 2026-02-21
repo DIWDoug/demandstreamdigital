@@ -167,7 +167,7 @@ const PlumbingCostQuiz = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>How Much Is Your Plumbing Costing You? | Free Quiz | ServiceForge Digital</title>
+        <title>How Much Is Your Plumbing Costing You? | Free Quiz | Demand Stream Digital</title>
         <meta name="description" content="Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands." />
       </Helmet>
 

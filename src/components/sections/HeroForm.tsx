@@ -287,7 +287,7 @@ const HeroForm = () => {
               className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
             />
             <span className="text-xs text-text-muted leading-relaxed">
-              I consent to automated marketing messages from ServiceForge Digital via email and/or SMS. View our{" "}
+              I consent to automated marketing messages from Demand Stream Digital via email and/or SMS. View our{" "}
               <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link> and{" "}
               <Link to="/terms" className="text-primary hover:underline">Terms of Service</Link>.
             </span>

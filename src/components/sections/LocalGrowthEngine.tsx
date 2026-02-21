@@ -179,8 +179,7 @@ const LocalGrowthEngine = () => {
                 <p className="text-muted-foreground text-base mb-1">Discover How To</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
                   DemandStream: The No-BS<br />
-                  Growth Guide for<br />
-                  Plumbing & HVAC
+                  Growth Guide for Plumbing &amp; HVAC
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-cta mb-5" />

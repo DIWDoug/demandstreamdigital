@@ -3,11 +3,11 @@ import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, BUSINESS_NAME, SITE_URL } from "./con
 
 export const BUSINESS_INFO = {
   name: BUSINESS_NAME,
-  legalName: "ServiceForge Digital LLC",
-  alternateName: "ServiceForge Digital",
+  legalName: "Demand Stream Digital LLC",
+  alternateName: "Demand Stream Digital",
   foundingDate: "2011",
   url: SITE_URL,
-  logo: `${SITE_URL}/serviceforge-digital-logo.png`,
+  logo: `${SITE_URL}/demand-stream-digital-logo.png`,
   email: EMAIL,
   telephone: PHONE_NUMBER_RAW,
   address: {
@@ -22,9 +22,9 @@ export const BUSINESS_INFO = {
     longitude: -96.7693
   },
   sameAs: [
-    "https://www.linkedin.com/company/serviceforge-digital/",
-    "https://www.facebook.com/serviceforgedigital",
-    "https://www.instagram.com/serviceforgedigital/",
+    "https://www.linkedin.com/company/demand-stream-digital/",
+    "https://www.facebook.com/demandstreamdigital",
+    "https://www.instagram.com/demandstreamdigital/",
   ],
   aggregateRating: {
     ratingValue: 4.9,
@@ -44,7 +44,7 @@ export const getOrganizationSchema = () => ({
     "@id": `${SITE_URL}/#logo`,
     "url": BUSINESS_INFO.logo,
     "contentUrl": BUSINESS_INFO.logo,
-    "caption": "ServiceForge Digital Logo"
+    "caption": "Demand Stream Digital Logo"
   },
   "image": BUSINESS_INFO.logo,
   "email": BUSINESS_INFO.email,
@@ -144,8 +144,8 @@ export const getAboutPageSchema = () => ({
   "@type": "AboutPage",
   "@id": `${SITE_URL}/about#webpage`,
   "url": `${SITE_URL}/about`,
-  "name": "About ServiceForge Digital - Growth Marketing for Plumbing & HVAC",
-  "description": "Learn about ServiceForge Digital, a growth marketing company built specifically for plumbing and HVAC businesses. Founded in 2011.",
+  "name": "About Demand Stream Digital - Growth Marketing for Plumbing & HVAC",
+  "description": "Learn about Demand Stream Digital, a growth marketing company built specifically for plumbing and HVAC businesses. Founded in 2011.",
   "isPartOf": { "@id": `${SITE_URL}/#website` },
   "about": { "@id": `${SITE_URL}/#organization` },
   "mainEntity": { "@id": `${SITE_URL}/#organization` }
@@ -205,7 +205,7 @@ export const getHomepageSchema = () => ({
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
       "url": SITE_URL,
-      "name": "Growth Marketing for Plumbing & HVAC Companies | ServiceForge Digital",
+      "name": "Growth Marketing for Plumbing & HVAC Companies | Demand Stream Digital",
       "isPartOf": { "@id": `${SITE_URL}/#website` },
       "about": { "@id": `${SITE_URL}/#organization` },
       "description": "More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies."
@@ -284,7 +284,7 @@ export const getTestimonialsPageSchema = (reviews: { author: string; reviewBody:
       "@type": "WebPage",
       "@id": `${SITE_URL}/testimonials#webpage`,
       "url": `${SITE_URL}/testimonials`,
-      "name": "Client Testimonials & Reviews | ServiceForge Digital",
+      "name": "Client Testimonials & Reviews | Demand Stream Digital",
       "isPartOf": { "@id": `${SITE_URL}/#website` }
     },
     ...reviews.map(review => getReviewSchema(review))
@@ -348,8 +348,8 @@ export const getContactPageSchema = () => ({
       "@type": "ContactPage",
       "@id": `${SITE_URL}/contact#webpage`,
       "url": `${SITE_URL}/contact`,
-      "name": "Contact ServiceForge Digital - Get a Free Strategy Call",
-      "description": "Reach out to ServiceForge Digital to explore growth marketing for your plumbing or HVAC business.",
+      "name": "Contact Demand Stream Digital - Get a Free Strategy Call",
+      "description": "Reach out to Demand Stream Digital to explore growth marketing for your plumbing or HVAC business.",
       "isPartOf": { "@id": `${SITE_URL}/#website` },
       "about": { "@id": `${SITE_URL}/#organization` },
       "mainEntity": {
@@ -387,7 +387,7 @@ export const getBlogSchema = () => ({
       "@type": "Blog",
       "@id": `${SITE_URL}/blog#blog`,
       "url": `${SITE_URL}/blog`,
-      "name": "Plumbing & HVAC Marketing Blog | ServiceForge Digital",
+      "name": "Plumbing & HVAC Marketing Blog | Demand Stream Digital",
       "description": "Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, reputation management, and growth strategies.",
       "publisher": { "@id": `${SITE_URL}/#organization` },
       "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -397,7 +397,7 @@ export const getBlogSchema = () => ({
       "@type": "WebPage",
       "@id": `${SITE_URL}/blog#webpage`,
       "url": `${SITE_URL}/blog`,
-      "name": "Plumbing & HVAC Marketing Blog | ServiceForge Digital",
+      "name": "Plumbing & HVAC Marketing Blog | Demand Stream Digital",
       "isPartOf": { "@id": `${SITE_URL}/#website` },
       "about": { "@id": `${SITE_URL}/blog#blog` }
     }

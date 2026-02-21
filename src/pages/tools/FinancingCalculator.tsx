@@ -30,7 +30,7 @@ const FinancingCalculator = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Financing Payment Calculator | Plumbing & HVAC | ServiceForge Digital</title>
+        <title>Financing Payment Calculator | Plumbing & HVAC | Demand Stream Digital</title>
         <meta name="description" content="Calculate monthly payments for plumbing and HVAC jobs. See what financing options look like before you commit." />
       </Helmet>
 

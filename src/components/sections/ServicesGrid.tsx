@@ -115,7 +115,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
           <img 
             src={imageUrl} 
             alt={`${service.title} for plumbing and HVAC companies`}
-            title={`${service.title} | ServiceForge Digital`}
+            title={`${service.title} | Demand Stream Digital`}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover"

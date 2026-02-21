@@ -151,8 +151,8 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="ServiceForge Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                  title="ServiceForge Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                  alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                  title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
                   width={240}
                   height={40}
                   className="h-10 opacity-80 hover:opacity-100 transition-opacity"
@@ -177,7 +177,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 </svg>
               </a>
               <a 
-                href="https://facebook.com/serviceforgedigital" 
+                href="https://facebook.com/demandstreamdigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -186,7 +186,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a 
-                href="https://instagram.com/serviceforgedigital" 
+                href="https://instagram.com/demandstreamdigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -195,7 +195,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a 
-                href="https://www.linkedin.com/company/serviceforge-digital/" 
+                href="https://www.linkedin.com/company/demand-stream-digital/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-foreground transition-colors"
@@ -210,7 +210,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
           <div className="mt-12 pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-text-muted">
-                © {new Date().getFullYear()} ServiceForge Digital. All Rights Reserved.
+                © {new Date().getFullYear()} Demand Stream Digital. All Rights Reserved.
               </p>
               <div className="flex items-center gap-6">
                 <Link 
