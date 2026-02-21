@@ -1,6 +1,6 @@
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import StreamTexture from "@/components/StreamTexture";
+
 
 const HonestWordOnFulfillment = () => {
   const sectionRef = useScrollReveal();
@@ -10,7 +10,7 @@ const HonestWordOnFulfillment = () => {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="py-20 lg:py-28 bg-card border-y border-border relative overflow-hidden reveal-section"
     >
-      <StreamTexture variant="dark" opacity={0.08} />
+      
       <div 
         className="absolute inset-0 opacity-[0.02]"
         style={{
