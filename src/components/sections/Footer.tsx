@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, Calculator, FileText } from "lucide-react";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/serviceforge-digital-logo-white.png";
+import logo from "@/assets/demandstream-digital-logo.png";
 
 const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
@@ -149,14 +149,15 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
             {/* Center - Logo */}
             <div className="flex justify-center order-first md:order-none mb-4 md:mb-0">
               <Link to="/">
-                <img 
-                  src={logo} 
-                  alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                  title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                  width={240}
-                  height={40}
-                  className="h-10 opacity-80 hover:opacity-100 transition-opacity"
-                />
+                <div className="overflow-hidden h-10" style={{ width: '240px' }}>
+                  <img 
+                    src={logo} 
+                    alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                    title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                    className="h-full w-auto max-w-none opacity-80 hover:opacity-100 transition-opacity brightness-0 invert"
+                    style={{ objectFit: 'cover', objectPosition: 'left center', transform: 'scale(2.8)', transformOrigin: '8% 35%' }}
+                  />
+                </div>
               </Link>
             </div>
 

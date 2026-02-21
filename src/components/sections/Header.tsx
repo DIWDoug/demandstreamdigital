@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import logo from "@/assets/serviceforge-digital-logo-white.png";
+import logo from "@/assets/demandstream-digital-logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -206,18 +206,17 @@ const Header = () => {
           <div className="flex items-center gap-8">
             {/* Logo */}
             <Link to="/" className="flex items-center overflow-hidden">
-              <img 
-                src={logo} 
-                alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                width={200}
-                height={32}
-                className={`w-auto opacity-90 transition-all duration-300 ${
-                  isScrolled 
-                    ? "h-8 md:h-9" 
-                    : "h-9 md:h-10"
-                }`}
-              />
+              <div className={`overflow-hidden transition-all duration-300 ${
+                  isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
+                }`} style={{ width: '200px' }}>
+                <img 
+                  src={logo} 
+                  alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
+                  title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
+                  className="h-full w-auto max-w-none opacity-90 brightness-0 invert"
+                  style={{ objectFit: 'cover', objectPosition: 'left center', transform: 'scale(2.8)', transformOrigin: '8% 35%' }}
+                />
+              </div>
             </Link>
 
             {/* Desktop Nav */}
