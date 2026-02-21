@@ -127,7 +127,7 @@ const WhatWeSolve = () => {
                   onClick={() => setActiveTab(index)}
                   className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                     activeTab === index
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-accent-blue text-white"
                       : "bg-surface-elevated text-text-secondary hover:text-foreground border border-border"
                   }`}
                 >
