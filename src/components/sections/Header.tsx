@@ -62,90 +62,27 @@ const Header = () => {
 
   const serviceCategories = [
     {
-      title: "LOCAL SEO",
-      href: "/white-label-local-seo",
+      title: "PLUMBING",
+      href: "/plumbing-seo",
       items: [
-        { label: "On-Page Optimization", href: "/white-label-onpage-optimization" },
-        { label: "Technical SEO", href: "/white-label-technical-seo" },
-        { label: "Local Keyword Strategy", href: "/white-label-local-keyword-strategy" },
-        { label: "Content Development", href: "/white-label-content-development" },
-        { label: "Link Building", href: "/white-label-link-building" },
-        { label: "Schema Markup", href: "/white-label-schema-markup" },
-        { label: "NAP Citations", href: "/white-label-nap-citations" }
+        { label: "Plumbing SEO", href: "/plumbing-seo" },
+        { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
+        { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
+        { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
+        { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
+        { label: "Plumbing Reporting", href: "/plumbing-reporting" }
       ]
     },
     {
-      title: "GBP SEO",
-      href: "/white-label-gbp-seo",
+      title: "HVAC",
+      href: "/hvac-seo",
       items: [
-        { label: "GBP Profile Optimization", href: "/white-label-gbp-optimization" },
-        { label: "Review Generation & Response", href: "/white-label-review-management" },
-        { label: "Citation Building & Cleanup", href: "/white-label-citation-building" },
-        { label: "Photo & Media Management", href: "/white-label-photo-optimization" },
-        { label: "Local Pack Strategy", href: "/white-label-qa-management" },
-        { label: "GBP Posting & Content", href: "/white-label-post-scheduling" }
-      ]
-    },
-    {
-      title: "CONTENT MARKETING",
-      href: "/white-label-content-marketing",
-      items: [
-        { label: "Geographical Content", href: "/white-label-geographical-content" },
-        { label: "Topical Authority", href: "/white-label-topical-authority" },
-        { label: "Power Posts", href: "/white-label-power-posts" },
-        { label: "E-books & Guides", href: "/white-label-ebooks-guides" },
-        { label: "Lead Magnets", href: "/white-label-lead-magnets" },
-        { label: "Press Releases", href: "/white-label-press-releases" },
-        { label: "FAQ Content", href: "/white-label-faq-content" },
-        { label: "Case Studies", href: "/white-label-case-studies" }
-      ]
-    },
-    {
-      title: "PAID MEDIA",
-      href: "/white-label-paid-media",
-      items: [
-        { label: "Google Ads", href: "/white-label-google-ads" },
-        { label: "Meta Ads", href: "/white-label-meta-ads" },
-        { label: "Local Service Ads", href: "/white-label-local-service-ads" },
-        { label: "Retargeting Campaigns", href: "/white-label-retargeting-campaigns" },
-        { label: "Landing Page Design", href: "/white-label-landing-page-design" },
-        { label: "Conversion Tracking", href: "/white-label-conversion-tracking" }
-      ]
-    },
-    {
-      title: "EMAIL MARKETING",
-      href: "/white-label-email-marketing",
-      items: [
-        { label: "Campaign Strategy", href: "/white-label-campaign-strategy" },
-        { label: "List Management", href: "/white-label-list-management" },
-        { label: "Automation Flows", href: "/white-label-automation-flows" },
-        { label: "Newsletter Design", href: "/white-label-newsletter-design" },
-        { label: "A/B Testing", href: "/white-label-ab-testing" },
-        { label: "Performance Analytics", href: "/white-label-performance-analytics" }
-      ]
-    },
-    {
-      title: "AUTHORITY",
-      href: "/white-label-local-authority-building",
-      items: [
-        { label: "Structured Citations", href: "/white-label-structured-citations" },
-        { label: "Unstructured Citations", href: "/white-label-unstructured-citations" },
-        { label: "Brand Mentions", href: "/white-label-brand-mentions" },
-        { label: "Anchor Text", href: "/white-label-anchor-text" },
-        { label: "Sponsorships", href: "/white-label-sponsorships" },
-        { label: "Press Releases", href: "/white-label-press-releases" }
-      ]
-    },
-    {
-      title: "REPORTING",
-      href: "/white-label-reporting",
-      items: [
-        { label: "White-Label Dashboards", href: "/white-label-branded-dashboards" },
-        { label: "Monthly Performance Reports", href: "/white-label-monthly-performance-reports" },
-        { label: "Rank Tracking & Visibility", href: "/white-label-rank-tracking-visibility" },
-        { label: "Call Tracking & Attribution", href: "/white-label-call-tracking-lead-attribution" },
-        { label: "ROI & Revenue Analysis", href: "/white-label-roi-revenue-analysis" },
-        { label: "Client Presentation Decks", href: "/white-label-client-presentation-decks" }
+        { label: "HVAC SEO", href: "/hvac-seo" },
+        { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
+        { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
+        { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },
+        { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
+        { label: "HVAC Reporting", href: "/hvac-reporting" }
       ]
     }
   ];

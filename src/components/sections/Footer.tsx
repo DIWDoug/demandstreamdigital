@@ -40,14 +40,14 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
     },
     {
       title: "SERVICES",
-      href: "/contact",
+      href: "/#services",
       items: [
-        { label: "Local SEO", href: "/white-label-local-seo" },
-        { label: "Google Maps / GBP", href: "/white-label-gbp-seo" },
-        { label: "Paid Advertising", href: "/white-label-paid-media" },
-        { label: "Content Marketing", href: "/white-label-content-marketing" },
-        { label: "Email Marketing", href: "/white-label-email-marketing" },
-        { label: "Reporting & Dashboards", href: "/white-label-reporting" },
+        { label: "Local SEO", href: "/plumbing-seo" },
+        { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+        { label: "Paid Advertising", href: "/plumbing-paid-advertising" },
+        { label: "Content Marketing", href: "/plumbing-content-marketing" },
+        { label: "Email Marketing", href: "/plumbing-email-marketing" },
+        { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
       ]
     },
     {
