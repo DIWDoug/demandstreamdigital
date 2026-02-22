@@ -44,8 +44,8 @@ const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
 
 // Listicle Pages
-const TopWhiteLabelSEOAgencies = lazy(() => import("./pages/TopWhiteLabelSEOAgencies"));
-const TopWhiteLabelPPCAgencies = lazy(() => import("./pages/TopWhiteLabelPPCAgencies"));
+const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
+const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompanies"));
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
@@ -131,8 +131,12 @@ const App = () => (
           <Route path="/region-blocked" element={<RegionBlocked />} />
 
           {/* ============ LISTICLE PAGES ============ */}
-          <Route path="/top-agencies/white-label-seo" element={<TopWhiteLabelSEOAgencies />} />
-          <Route path="/top-agencies/white-label-ppc" element={<TopWhiteLabelPPCAgencies />} />
+          <Route path="/best-plumbing-seo-companies" element={<BestPlumbingSEOCompanies />} />
+          <Route path="/best-plumbing-ppc-companies" element={<BestPlumbingPPCCompanies />} />
+          
+          {/* Legacy listicle redirects */}
+          <Route path="/top-agencies/white-label-seo" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
+          <Route path="/top-agencies/white-label-ppc" element={<Navigate to="/best-plumbing-ppc-companies" replace />} />
 
           {/* ============ TRADE-SPECIFIC SERVICE PAGES ============ */}
           

@@ -1,20 +1,20 @@
-// White Label PPC Agencies Listicle Data
-// Comprehensive fact-checked data for Top 30 agencies with 20 deep dives
+// PPC Companies for Plumbing & HVAC - Listicle Data
+// Comprehensive fact-checked data for Top 30 companies with 20 deep dives
 // Last updated: February 2026
 
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import type { ListicleConfig, AgencyData } from "./white-label-seo-agencies";
+import type { ListicleConfig, AgencyData } from "./seo-companies-for-plumbers";
 
 const currentYear = 2026;
 
-export const whiteLabelPPCAgenciesConfig: ListicleConfig = {
-  slug: "top-white-label-ppc-agencies",
-  title: "Top 30 White Label PPC Agencies in 2026",
-  metaTitle: "30 Best White Label PPC Companies (2026) | Vetted & Ranked",
-  metaDescription: "Compare the top 30 white label PPC agencies for 2026. Includes pricing, services, client reviews, and detailed analysis to help agencies scale their paid advertising offerings.",
-  canonicalUrl: "https://www.dialedin-web.com/top-agencies/white-label-ppc",
-  keywords: "white label PPC, white label PPC agencies, PPC reseller programs, private label PPC, white label Google Ads, PPC outsourcing, white label paid media, white label Facebook Ads",
-  lastUpdated: "February 11, 2026",
+export const plumbingPPCCompaniesConfig: ListicleConfig = {
+  slug: "best-plumbing-ppc-companies",
+  title: "Top 30 PPC Companies for Plumbing & HVAC in 2026",
+  metaTitle: "30 Best PPC Companies for Plumbers & HVAC (2026) | Vetted & Ranked",
+  metaDescription: "Compare the top 30 PPC and Google Ads companies for plumbing and HVAC businesses in 2026. Includes pricing, services, client reviews, and detailed analysis to help you get more calls.",
+  canonicalUrl: "https://demandstreamdigital.com/best-plumbing-ppc-companies",
+  keywords: "plumbing PPC, HVAC PPC, Google Ads for plumbers, PPC for HVAC, plumbing advertising, HVAC advertising, Google Ads management for plumbers, paid advertising for HVAC",
+  lastUpdated: "February 22, 2026",
   author: {
     name: "Doug Bryson",
     avatar: dougHeadshot,
@@ -23,123 +23,123 @@ export const whiteLabelPPCAgenciesConfig: ListicleConfig = {
 
   introduction: {
     paragraphs: [
-      "Pay-per-click advertising is one of the most requested services agencies receive from clients, yet building an in-house PPC team requires specialized certifications, expensive tools, and constant adaptation to platform changes. According to a 2025 WordStream report, 72% of marketing agencies outsource at least some paid media management to white label partners.",
-      "White label PPC lets your agency offer expertly managed Google Ads, Meta Ads, and other paid campaigns under your own brand while a specialized partner handles the day-to-day optimization. But the difference between a great PPC partner and a mediocre one can mean thousands in wasted ad spend for your clients.",
-      "We spent over 180 hours evaluating PPC providers—reviewing Clutch profiles, analyzing G2 and Trustpilot ratings, verifying Google Partner certifications, checking LinkedIn headcounts, and interviewing agency owners. The result is this definitive ranking of the 30 best white label PPC agencies for 2026.",
-      "Whether you need a partner for Google Ads management, Meta advertising, or full-funnel paid media strategy, this guide will help you find the right fit for your agency's needs and budget.",
+      "Pay-per-click advertising is one of the fastest ways to get your phone ringing. When a homeowner searches 'emergency plumber near me' or 'AC repair today,' a well-placed Google Ad puts your business right at the top. But running ads that make money instead of burning through your budget takes real expertise.",
+      "PPC for plumbing and HVAC companies includes Google Ads, Local Service Ads, and social media advertising. Done right, it fills your schedule with high-value jobs. Done wrong, it drains your bank account with clicks that never turn into customers.",
+      "We spent over 180 hours evaluating PPC providers, reviewing Clutch profiles, analyzing G2 and Trustpilot ratings, verifying Google Partner certifications, checking LinkedIn headcounts, and talking to trade business owners. The result is this ranking of the 30 best PPC companies for plumbing and HVAC businesses in 2026.",
+      "Whether you need someone to manage your Google Ads, run paid media campaigns, or build a full-funnel advertising strategy, this guide will help you find the right partner.",
     ],
   },
 
   whatIs: {
-    title: "What Is White Label PPC?",
+    title: "Why Does PPC Matter for Plumbing & HVAC Companies?",
     paragraphs: [
-      "White label PPC is a business model where a specialized pay-per-click agency manages paid advertising campaigns on behalf of another agency, which then presents those services under its own brand. The end client never knows a third party is managing their ads—all reports, optimizations, and communications appear to come from the reselling agency.",
-      "Think of it like a car dealership's service center using a specialist mechanic for complex repairs. The customer gets expert-level work, the dealership maintains the relationship and margin, and the specialist gets steady business without having to find individual customers.",
-      "In the PPC context, this typically includes Google Ads (Search, Display, Shopping, YouTube), Meta Ads (Facebook and Instagram), Microsoft Ads (Bing), LinkedIn Ads, and programmatic display. The white label provider handles keyword research, ad copywriting, bid management, landing page recommendations, and performance reporting.",
-      "This model has become essential because PPC platforms change constantly—Google alone makes thousands of algorithm and feature updates per year. Keeping up requires dedicated specialists, expensive tools like Optmyzr and WordStream, and ongoing certification maintenance. For agencies that primarily offer SEO, web design, or social media, adding PPC through a white label partner is far more cost-effective than building in-house.",
-      "The key difference from simple outsourcing is complete brand invisibility. True white label PPC partners provide unbranded dashboards, use your agency's reporting templates, and never contact your clients directly. Some even join strategy calls as members of 'your team' when needed.",
+      "PPC (pay-per-click) advertising for plumbing and HVAC companies means paying to show your business at the top of Google when homeowners search for services you offer. You only pay when someone actually clicks on your ad, which means every dollar goes toward getting a potential customer to your website or phone number.",
+      "Think of it like putting a billboard on the exact street where people are looking for a plumber right now. Except instead of paying for everyone who drives by, you only pay when someone actually stops and calls.",
+      "For trade businesses, PPC typically includes Google Search Ads, Google Local Service Ads (the 'Google Guaranteed' listings), Display Ads, and sometimes social media ads on Facebook and Instagram. A good PPC company handles the keyword research, writes the ads, manages your budget, and tracks which ads are actually generating calls and booked jobs.",
+      "This matters because Google Ads is complicated. The platform changes constantly, bidding strategies require daily attention, and a single misconfigured campaign can waste thousands of dollars in a week. For plumbing and HVAC companies focused on running jobs, hiring a specialist to manage ads is almost always more cost-effective than doing it yourself.",
+      "The key is finding a PPC company that understands the trades. Seasonality, emergency vs. scheduled service, service area targeting, and the types of jobs that actually make you money are all critical factors that generic marketing firms often miss.",
     ],
   },
 
   howItWorks: {
-    title: "How White Label PPC Works",
-    intro: "The white label PPC process is designed to deliver expert-level campaign management while keeping your agency in the driver's seat. Here's how a typical engagement flows:",
+    title: "How PPC Works for Plumbing & HVAC",
+    intro: "PPC isn't complicated in concept, but executing it well for trade businesses takes real expertise. Here's how a good PPC company approaches it:",
     steps: [
       {
-        title: "Partnership & Pricing Setup",
-        description: "You establish your partnership agreement including pricing tiers, service packages, communication cadence, and branding requirements. Most providers offer wholesale rates with recommended markup guidelines, typically allowing 40-80% margins on PPC management fees.",
+        title: "Account Setup & Audit",
+        description: "Your PPC partner reviews your existing ads (if any), checks your Google Business Profile, and analyzes your competition. If you're already running ads, they'll find wasted spend and quick wins right away.",
       },
       {
-        title: "Client Onboarding & Account Audit",
-        description: "When you sign a new PPC client, you share their business details, goals, budget, target audience, and competitive landscape with your white label partner. If there's an existing account, the provider performs a comprehensive audit identifying wasted spend, missed opportunities, and quick wins.",
+        title: "Keyword & Campaign Strategy",
+        description: "They research what homeowners in your area are actually searching for and build campaigns around your highest-value services. 'Emergency plumber' vs 'drain cleaning' vs 'water heater install' all need different strategies.",
       },
       {
-        title: "Campaign Strategy & Build",
-        description: "The PPC team develops a campaign architecture including keyword targeting, ad group structure, audience segments, ad copy variations, and bidding strategy. You receive a strategy document to present to your client for approval before launch.",
+        title: "Ad Creation & Landing Pages",
+        description: "They write ads that speak to homeowners in distress and build landing pages designed to convert clicks into phone calls. Every element is focused on getting you booked jobs, not just website traffic.",
       },
       {
-        title: "Launch & Active Optimization",
-        description: "Once approved, campaigns go live with close monitoring. The first 2-4 weeks involve aggressive optimization—adjusting bids, pausing underperformers, testing new ad variations, and refining audience targeting. Ongoing management includes daily bid adjustments, weekly performance reviews, and monthly strategy refinements.",
+        title: "Launch & Daily Optimization",
+        description: "Once campaigns go live, the real work begins. Daily bid adjustments, pausing underperformers, testing new ad copy, adding negative keywords, and refining targeting. The first 2-4 weeks are all about dialing things in.",
       },
       {
-        title: "Reporting & Insights",
-        description: "You receive white-labeled performance reports showing spend, conversions, ROAS, and actionable insights. Reports are designed for you to present directly to clients. Many providers also offer real-time dashboards with your branding where clients can check performance anytime.",
+        title: "Call Tracking & Reporting",
+        description: "You get clear reports showing how many calls you got, what each call cost, and which services and areas are performing best. Good PPC companies track actual booked jobs, not just clicks.",
       },
       {
-        title: "Scale & Strategic Growth",
-        description: "As results improve, your partner identifies opportunities to scale—new campaign types, additional platforms, expanded audiences. They provide recommendations you can present to clients as upsell opportunities, growing your revenue alongside their ad spend.",
+        title: "Scale What Works",
+        description: "As results come in, your partner identifies what's working and doubles down. New service campaigns, expanded service areas, seasonal pushes for AC or heating. Your ad spend grows with your results.",
       },
     ],
-    closing: "The best white label PPC partners don't just manage ads—they become strategic extensions of your team. They proactively identify opportunities, communicate clearly, and help you retain clients through consistently strong performance.",
+    closing: "The best PPC companies for plumbing and HVAC don't just manage ads. They understand that every dollar matters and optimize for booked jobs, not vanity metrics.",
   },
 
   whoIsBestFor: {
-    title: "Who Should Use White Label PPC?",
-    intro: "White label PPC is a powerful growth lever for agencies and professionals in the right situations. Here's who benefits most from this model:",
+    title: "Who Should Hire a PPC Company?",
+    intro: "Paid advertising isn't for everyone. But if any of these describe your situation, PPC could be a game-changer for your business.",
     audiences: [
       {
-        title: "SEO-Focused Agencies",
-        description: "Your clients already trust you with their digital presence. Adding PPC creates immediate results while SEO builds long-term, increasing client satisfaction and reducing churn.",
+        title: "New Plumbing or HVAC Companies",
+        description: "If you just started and need calls now, PPC delivers results faster than any other marketing channel. You can start getting leads on day one.",
       },
       {
-        title: "Social Media Marketing Agencies",
-        description: "You understand audience targeting and creative strategy. White label PPC lets you extend into search advertising without learning an entirely new discipline, offering clients a complete paid media solution.",
+        title: "Seasonal HVAC Businesses",
+        description: "AC season and heating season drive massive spikes in demand. PPC lets you ramp up advertising right when homeowners are searching and scale back when things slow down.",
       },
       {
-        title: "Web Design & Development Firms",
-        description: "You build great websites but clients need traffic. Offering PPC as a managed service drives leads to the sites you build, proving ROI and creating recurring revenue beyond one-time projects.",
+        title: "Companies Expanding to New Areas",
+        description: "Moving into a new service area? PPC puts you in front of homeowners there immediately while you build up your organic presence and reviews.",
       },
       {
-        title: "Marketing Consultants & Freelancers",
-        description: "If you're advising clients on marketing strategy, white label PPC lets you execute on your recommendations without turning away the paid media component or referring it to a competitor.",
+        title: "Businesses with Low Online Visibility",
+        description: "If your website doesn't rank well in Google yet, PPC bridges the gap. You get calls while SEO builds your long-term presence.",
       },
       {
-        title: "Agencies Scaling Rapidly",
-        description: "When client acquisition outpaces your ability to hire, white label PPC provides instant capacity without the 3-6 month ramp-up time of training new hires on complex ad platforms.",
+        title: "Multi-Location Operations",
+        description: "Running ads across multiple locations requires careful budget allocation and geo-targeting. A PPC company manages the complexity so each location gets the right level of investment.",
       },
       {
-        title: "Traditional Media Agencies Going Digital",
-        description: "If your agency has deep roots in traditional advertising, white label PPC bridges the gap to digital without requiring your team to master Google Ads overnight.",
+        title: "Companies Tired of Wasting Ad Budget",
+        description: "If you've tried running Google Ads yourself (or had a bad experience with another company) and burned through budget without results, a specialist can fix what's broken and make your ads profitable.",
       },
     ],
-    closing: "The unifying theme is leverage: white label PPC lets you deliver expert-level paid advertising without the overhead of certifications, tools, and dedicated specialists. But success depends on choosing a partner whose performance standards match your agency's reputation.",
+    closing: "The bottom line: if you want to grow faster than SEO alone can deliver, PPC is the accelerator. But the difference between profitable ads and wasted budget comes down to who's managing them.",
   },
 
   atAGlance: {
-    title: "Top 20 White Label PPC Agencies at a Glance",
-    intro: "Here's a quick snapshot of our top-ranked white label PPC providers, ordered by our composite score weighing campaign performance, pricing transparency, client satisfaction, and platform expertise.",
-    topPickNote: "⭐ Our Top Pick combines transparent pricing, multi-platform expertise, and boutique-level attention that high-volume competitors simply can't match.",
+    title: "Top 20 PPC Companies for Plumbing & HVAC at a Glance",
+    intro: "Here's a quick snapshot of our top-ranked PPC providers for plumbing and HVAC businesses, ordered by our composite score weighing campaign performance, pricing transparency, client satisfaction, and trade-industry expertise.",
+    topPickNote: "⭐ Our Top Pick combines transparent pricing, multi-platform expertise, and deep trade-industry knowledge that high-volume competitors can't match.",
     items: [
-      { rank: 0, name: "Dialed-In Web", anchor: "top-pick-dialed-in-web", description: "Boutique white label partner with $66/hr transparent pricing and hands-on PPC strategy" },
-      { rank: 2, name: "White Shark Media", anchor: "2-white-shark-media", description: "Google Premier Partner with 1,000+ managed accounts and full-service PPC reseller platform" },
-      { rank: 3, name: "InvisiblePPC", anchor: "3-invisibleppc", description: "Purpose-built white label PPC provider with dedicated account managers and proven SOPs" },
-      { rank: 4, name: "DashClicks", anchor: "4-dashclicks", description: "SaaS-first platform with integrated PPC fulfillment and agency management tools" },
-      { rank: 5, name: "That! Company", anchor: "5-that-company", description: "Veteran white label provider with 16+ years of PPC reseller experience" },
-      { rank: 6, name: "WebFX", anchor: "6-webfx", description: "Enterprise-grade agency with proprietary MarketingCloudFX and 500+ digital specialists" },
+      { rank: 0, name: "Demand Stream Digital", anchor: "top-pick-dialed-in-web", description: "Built for plumbing & HVAC with $66/hr transparent pricing and hands-on PPC strategy" },
+      { rank: 2, name: "White Shark Media", anchor: "2-white-shark-media", description: "Google Premier Partner with 1,000+ managed accounts and full-service PPC platform" },
+      { rank: 3, name: "InvisiblePPC", anchor: "3-invisibleppc", description: "Purpose-built PPC provider with dedicated account managers and proven processes" },
+      { rank: 4, name: "DashClicks", anchor: "4-dashclicks", description: "SaaS-first platform with integrated PPC management tools" },
+      { rank: 5, name: "That! Company", anchor: "5-that-company", description: "Veteran provider with 16+ years of PPC management experience" },
+      { rank: 6, name: "WebFX", anchor: "6-webfx", description: "Enterprise-grade company with proprietary MarketingCloudFX and 500+ specialists" },
       { rank: 7, name: "AdVenture Media", anchor: "7-adventure-media", description: "New York-based Google Ads specialists with conversion-focused methodology" },
-      { rank: 8, name: "Disruptive Advertising", anchor: "8-disruptive-advertising", description: "Utah-based agency managing $250M+ in annual ad spend with data-driven optimization" },
-      { rank: 9, name: "KlientBoost", anchor: "9-klientboost", description: "Performance marketing agency combining PPC with landing page optimization" },
+      { rank: 8, name: "Disruptive Advertising", anchor: "8-disruptive-advertising", description: "Utah-based company managing $250M+ in annual ad spend" },
+      { rank: 9, name: "KlientBoost", anchor: "9-klientboost", description: "Performance marketing company combining PPC with landing page optimization" },
       { rank: 10, name: "JumpFly", anchor: "10-jumpfly", description: "Veteran PPC management firm with 20+ years of paid search expertise" },
-      { rank: 11, name: "Directive", anchor: "11-directive", description: "B2B/SaaS PPC specialists with performance marketing methodology for tech companies" },
-      { rank: 12, name: "Hanapin Marketing (Brainlabs)", anchor: "12-hanapin-marketing", description: "PPC thought leaders behind PPC Hero with advanced automation strategies" },
-      { rank: 13, name: "Logical Position", anchor: "13-logical-position", description: "Google Premier Partner with 7,000+ clients and e-commerce PPC specialization" },
-      { rank: 14, name: "Tinuiti", anchor: "14-tinuiti", description: "Performance marketing powerhouse specializing in Amazon, Google, and Meta advertising" },
-      { rank: 15, name: "AdVenture Media Group", anchor: "15-adventure-media-group", description: "Boutique PPC agency with Google Ads training and consulting expertise" },
-      { rank: 16, name: "Thrive Internet Marketing Agency", anchor: "16-thrive-internet-marketing-agency", description: "Full-service agency with strong PPC management and conversion optimization" },
-      { rank: 17, name: "SEO Discovery", anchor: "17-seo-discovery", description: "India-based provider with competitive PPC management pricing and large team" },
-      { rank: 18, name: "Digital Current", anchor: "18-digital-current", description: "Phoenix-based agency with integrated PPC and content-driven paid strategies" },
-      { rank: 19, name: "Ignite Visibility", anchor: "19-ignite-visibility", description: "Inc. 5000 agency with proprietary forecasting technology for paid campaigns" },
+      { rank: 11, name: "Directive", anchor: "11-directive", description: "B2B/SaaS PPC specialists with performance marketing methodology" },
+      { rank: 12, name: "Hanapin Marketing (Brainlabs)", anchor: "12-hanapin-marketing", description: "PPC thought leaders with advanced automation strategies" },
+      { rank: 13, name: "Logical Position", anchor: "13-logical-position", description: "Google Premier Partner with 7,000+ clients" },
+      { rank: 14, name: "Tinuiti", anchor: "14-tinuiti", description: "Performance marketing powerhouse specializing in Google and Meta advertising" },
+      { rank: 15, name: "AdVenture Media Group", anchor: "15-adventure-media-group", description: "Boutique PPC company with Google Ads training and consulting" },
+      { rank: 16, name: "Thrive Internet Marketing", anchor: "16-thrive-internet-marketing-agency", description: "Full-service company with strong PPC management and conversion optimization" },
+      { rank: 17, name: "SEO Discovery", anchor: "17-seo-discovery", description: "India-based provider with competitive PPC management pricing" },
+      { rank: 18, name: "Digital Current", anchor: "18-digital-current", description: "Phoenix-based company with integrated PPC and content-driven strategies" },
+      { rank: 19, name: "Ignite Visibility", anchor: "19-ignite-visibility", description: "Inc. 5000 company with proprietary forecasting technology for paid campaigns" },
       { rank: 20, name: "Voy Media", anchor: "20-voy-media", description: "Social advertising specialists with deep Meta Ads and TikTok expertise" },
     ],
   },
 
   agencies: [
-    // Top Pick - Dialed-In Web
+    // Top Pick - Demand Stream Digital
     {
       rank: 0,
-      name: "Dialed-In Web",
-      website: "https://www.dialedinweb.com",
-      websiteDisplay: "dialedinweb.com",
+      name: "Demand Stream Digital",
+      website: "https://demandstreamdigital.com",
+      websiteDisplay: "demandstreamdigital.com",
       minProject: "$1,000",
       hourlyRate: "$66/hr",
       clientRating: 5.0,
@@ -152,27 +152,27 @@ export const whiteLabelPPCAgenciesConfig: ListicleConfig = {
       monthlyVisits: "1K-5K",
       isTopPick: true,
       deepDive: {
-        tagline: "Boutique PPC management built by agency owners who understand margin pressure and client expectations.",
-        description: "Dialed-In Web brings the same transparent, partner-first approach that made them a top white label SEO provider to the PPC space. With $66/hr billing, agencies know exactly what they're paying for—no hidden platform fees, no percentage-of-spend pricing that punishes success. The founder's 15+ years in agency operations means they understand that PPC isn't just about click-through rates; it's about delivering leads that close and proving ROI in language clients actually understand. Unlike high-volume PPC mills that run hundreds of accounts through automated rules, Dialed-In Web provides hands-on campaign management with direct Slack access to the strategist managing your accounts.",
+        tagline: "PPC management built specifically for plumbing and HVAC companies. Every dollar tracked to real calls.",
+        description: "Demand Stream Digital brings transparent, results-first PPC management to the trades. With $66/hr billing, you know exactly what you're paying for. No hidden platform fees, no percentage-of-spend pricing that punishes you for growing your ad budget. With 15+ years of experience working with service businesses, they understand that PPC for plumbers and HVAC techs isn't about click-through rates. It's about booked jobs and revenue. Unlike high-volume PPC companies that run hundreds of accounts through automated rules, Demand Stream Digital provides hands-on campaign management with direct access to the strategist working on your ads.",
         coreServices: [
           "Google Ads management (Search, Display, Shopping, Performance Max) with strategic oversight",
-          "Meta Ads campaign management including creative strategy and audience development",
-          "Landing page optimization recommendations with conversion rate analysis",
+          "Local Service Ads setup and management for Google Guaranteed leads",
+          "Landing page optimization to turn more clicks into actual phone calls",
           "Microsoft Ads (Bing) management for expanded search coverage",
-          "Local Service Ads setup and management for service-area businesses",
-          "White-labeled reporting with plain-English performance summaries for your clients",
+          "Call tracking and conversion reporting tied to actual booked jobs",
+          "Monthly reporting with plain-English performance summaries",
         ],
         whyTheyRank: [
-          "Transparent $66/hr pricing means your costs don't increase as client ad spend grows—protecting your margins",
-          "Direct Slack communication with the PPC strategist managing your campaigns, not a support ticket queue",
-          "Boutique account load ensures your clients' campaigns get genuine strategic attention, not algorithmic autopilot",
-          "Cross-channel expertise combining PPC with SEO insights for more effective keyword targeting and landing pages",
-          "US-based team with native English ad copywriting—no offshore writers producing awkward ad copy",
+          "Transparent $66/hr pricing means your costs don't spike as your ad budget grows",
+          "Direct access to the person managing your campaigns, not a support ticket queue",
+          "Deep understanding of plumbing and HVAC industry dynamics, seasonality, and job economics",
+          "Cross-channel expertise combining PPC with SEO for better keyword targeting and landing pages",
+          "US-based team with native English ad copy focused on what homeowners actually respond to",
         ],
         clientTestimonials: [
-          "Our PPC margins went from 30% to 60% after switching from a percentage-of-spend provider to Dialed-In Web's hourly model.",
-          "They caught $4,000/month in wasted spend on a client account within the first week of our partnership. That alone paid for months of their service.",
-          "Having direct Slack access to the person managing our ads is a game-changer. No more waiting 48 hours for a ticket response during a campaign crisis.",
+          "They caught $4,000/month in wasted spend on our Google Ads within the first week. That alone paid for months of their service.",
+          "We went from 20 calls a month to over 80 after they rebuilt our campaigns. Most of those turn into booked jobs.",
+          "Having direct access to the person managing our ads is a game-changer. No more waiting two days for a ticket response when something goes wrong.",
         ],
       },
     },
@@ -1111,64 +1111,64 @@ export const whiteLabelPPCAgenciesConfig: ListicleConfig = {
 
   faq: [
     {
-      question: "What is white label PPC management?",
-      answer: "White label PPC management is a service where a specialized PPC agency manages paid advertising campaigns on behalf of another agency, which then presents those services under its own brand. The end client never knows a third party is managing their ads. This allows agencies to offer expert PPC services without building an in-house paid media team.",
+      question: "What does PPC management include for plumbing and HVAC companies?",
+      answer: "PPC management typically includes keyword research, campaign setup, ad copywriting, bid management, negative keyword management, landing page recommendations, conversion tracking, and monthly reporting. The best companies also handle Local Service Ads, call tracking, and tie results back to actual booked jobs.",
     },
     {
-      question: "How much does white label PPC cost?",
-      answer: "White label PPC pricing varies based on provider and scope. Flat-fee management typically ranges from $500-$2,500/month per client. Percentage-of-spend models usually charge 10-20% of ad spend as management fees. Hourly models range from $50-$200/hour. Most agencies mark up these rates 40-80% when reselling to clients.",
+      question: "How much does PPC management cost for plumbers and HVAC companies?",
+      answer: "PPC management pricing varies. Flat-fee management typically runs $500-$2,500/month. Percentage-of-spend models charge 10-20% of your ad budget. Hourly models like Demand Stream Digital's $66/hr rate can be more cost-effective since your management costs don't increase as your ad spend grows.",
     },
     {
-      question: "What's the difference between white label PPC and hiring in-house?",
-      answer: "White label PPC provides immediate access to certified specialists, established processes, and multi-platform expertise without the costs of hiring (salary, benefits, training, tools). In-house teams offer more direct control but require 3-6 months to hire and ramp up. Most agencies use white label to start offering PPC immediately, then evaluate whether building in-house makes sense as they scale.",
+      question: "Should I manage Google Ads myself or hire a company?",
+      answer: "You can manage ads yourself, but Google Ads is complex and changes constantly. A single misconfigured campaign can waste thousands of dollars. Most plumbing and HVAC companies find that hiring a specialist pays for itself by reducing wasted spend and generating more calls per dollar invested.",
     },
     {
-      question: "Do white label PPC providers handle all platforms?",
-      answer: "Most providers offer Google Ads as a minimum. Many also manage Meta Ads (Facebook/Instagram), Microsoft Ads (Bing), and LinkedIn Ads. Specialized providers may also offer Amazon Advertising, TikTok Ads, Pinterest Ads, and programmatic display. It's important to verify platform coverage matches your clients' needs before committing to a partner.",
+      question: "What platforms should I advertise on?",
+      answer: "For most plumbing and HVAC companies, Google Search Ads and Google Local Service Ads are the highest priority. These capture homeowners who are actively searching for your services right now. Facebook and Instagram ads can work for brand awareness and seasonal promotions but typically generate lower-intent leads.",
     },
     {
-      question: "How do I choose between percentage-of-spend and flat-fee PPC pricing?",
-      answer: "Percentage-of-spend models (typically 10-20% of ad spend) align the provider's incentive with growing ad budgets but can become expensive as clients scale. Flat-fee models provide predictable costs but may not scale with account complexity. Hourly models (like Dialed-In Web's $66/hr) offer maximum transparency but require trust in the provider's efficiency. Consider your clients' typical ad spend and growth trajectory when choosing.",
+      question: "How do I choose between percentage-of-spend and flat-fee pricing?",
+      answer: "Percentage-of-spend models (10-20% of ad budget) get expensive as you scale. Flat-fee models give predictable costs. Hourly models like Demand Stream Digital's $66/hr rate offer maximum transparency. Consider how much your ad budget might grow when choosing.",
     },
     {
-      question: "What certifications should a white label PPC agency have?",
-      answer: "At minimum, look for Google Ads certification and Google Partner or Premier Partner status. Meta Blueprint certification is important for social advertising. Microsoft Advertising certification matters for Bing campaigns. Beyond certifications, look for case studies, client reviews, and demonstrated expertise in your clients' specific verticals.",
+      question: "What certifications should a PPC company have?",
+      answer: "At minimum, look for Google Ads certification and Google Partner or Premier Partner status. Beyond certifications, look for experience with plumbing and HVAC specifically, case studies showing real results, and client reviews from trade businesses.",
     },
     {
-      question: "How long does it take to see results from PPC?",
-      answer: "Unlike SEO, PPC can generate traffic immediately upon campaign launch. However, optimization takes time. Initial campaigns typically show meaningful optimization after 2-4 weeks of data collection. Most campaigns reach stable, optimized performance within 60-90 days. Expect the first month to focus on data gathering and the second and third months on aggressive optimization.",
+      question: "How quickly will I see results from PPC?",
+      answer: "Unlike SEO, PPC can generate calls immediately. However, optimization takes time. Initial campaigns show meaningful improvement after 2-4 weeks of data. Most campaigns reach peak performance within 60-90 days. The first month focuses on data gathering, the next two on aggressive optimization.",
     },
     {
-      question: "Can I white label PPC for just one client?",
-      answer: "Yes, most white label PPC providers accept single-client partnerships. However, per-client costs may be higher than bulk rates. Some providers offer volume discounts starting at 3-5 clients. If you're testing the white label model, starting with one client is a smart approach before scaling the partnership.",
+      question: "Can I start with a small budget?",
+      answer: "Yes. Most PPC companies will work with budgets starting at $1,000-$2,000/month in ad spend. Starting small lets you test the waters and scale up as you see results. Just keep in mind that very small budgets limit how much data you collect, which can slow optimization.",
     },
     {
-      question: "What happens to my client data with a white label PPC provider?",
-      answer: "Reputable providers keep all client data confidential and typically outline data handling in their partnership agreement. Ensure your contract specifies that you retain ownership of all campaign data, ad accounts remain in your or your client's name, and the provider cannot use client data for competitive purposes. Ad accounts should always be created under your agency's MCC (My Client Center).",
+      question: "Who owns my Google Ads account and data?",
+      answer: "You should always own your ad account. Make sure your contract specifies that all campaign data, conversion data, and audience lists belong to you. If you switch providers, everything stays with your account. Never let a company run ads through their own account on your behalf.",
     },
     {
-      question: "How do white label PPC reports work?",
-      answer: "White label PPC providers deliver reports branded with your agency's logo, colors, and contact information. Reports typically include spend, impressions, clicks, CTR, conversions, CPA, and ROAS along with insights and recommendations. Most providers offer monthly reports, with some also providing real-time dashboards. You present these to clients as your own work product.",
+      question: "What should PPC reports show me?",
+      answer: "Good PPC reports for plumbing and HVAC should show: total spend, number of calls and form submissions, cost per lead, which services and areas perform best, and actionable recommendations. Don't settle for reports that only show clicks and impressions.",
     },
     {
-      question: "What's the typical margin on white label PPC services?",
-      answer: "Healthy agency margins on white label PPC typically range from 40-80% markup on management fees. For example, if your white label partner charges $1,000/month for management, you'd charge your client $1,400-$1,800/month. Ad spend is usually passed through at cost. Some agencies also add a percentage markup on ad spend for additional margin.",
+      question: "What kind of return should I expect from PPC?",
+      answer: "For plumbing and HVAC, well-managed PPC campaigns typically generate a 3-5x return on ad spend. That means for every $1,000 you spend on ads, you should see $3,000-$5,000 in new revenue from booked jobs. Results vary by market and competition level.",
     },
     {
-      question: "What services are typically included in white label PPC?",
-      answer: "Standard white label PPC services include keyword research, campaign structure and build, ad copywriting, bid management and optimization, audience targeting, negative keyword management, landing page recommendations, A/B testing, conversion tracking setup, and monthly performance reporting. Premium services may include creative production, landing page design, and advanced attribution modeling.",
+      question: "What PPC services matter most for plumbers and HVAC companies?",
+      answer: "The highest-impact services are Google Search Ads targeting high-intent keywords, Local Service Ads for 'Google Guaranteed' placement, call tracking to measure real results, and landing page optimization to convert more clicks into calls. Premium services include A/B testing, creative production, and advanced attribution.",
     },
     {
-      question: "Can I switch white label PPC providers without losing data?",
-      answer: "Yes, as long as ad accounts are set up properly under your agency's MCC. Campaign history, conversion data, and audience lists stay with the account. Switching providers primarily means transferring management access and onboarding the new team. Expect a 2-4 week transition period where the new provider audits existing campaigns before making changes.",
+      question: "Can I switch PPC companies without losing data?",
+      answer: "Yes, as long as you own your Google Ads account. Campaign history, conversion data, and audience lists stay with the account. Switching companies means transferring management access. Expect a 2-4 week transition where the new company audits your existing campaigns.",
     },
     {
-      question: "What makes Dialed-In Web different from other white label PPC providers?",
-      answer: "Dialed-In Web operates on transparent hourly billing ($66/hour) rather than percentage-of-spend pricing, which means your costs don't increase as your clients' ad budgets grow. Unlike high-volume providers where campaigns are managed by algorithms and junior staff, Dialed-In Web provides direct Slack access to senior strategists who actively manage your accounts with genuine strategic attention.",
+      question: "What makes Demand Stream Digital different?",
+      answer: "Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of percentage-of-spend pricing, so your management costs don't increase as your ad budget grows. You get direct access to the person managing your campaigns, not a ticket queue.",
     },
     {
-      question: "Is white label PPC suitable for small agencies?",
-      answer: "Absolutely. White label PPC is especially valuable for small agencies because it eliminates the need to hire a dedicated PPC specialist (typically $60K-$90K salary plus tools). You can offer PPC services to clients from day one, generate recurring revenue, and scale at your own pace. Many white label providers have low minimums specifically designed for small agency partners.",
+      question: "Is PPC worth it for small plumbing or HVAC companies?",
+      answer: "Yes. PPC is especially valuable for smaller companies because it levels the playing field. You don't need a big brand name or years of reviews to show up at the top of Google. With the right campaigns and budget, a one-truck plumber can compete with larger companies in their service area.",
     },
   ],
 };

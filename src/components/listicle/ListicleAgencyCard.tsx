@@ -1,6 +1,6 @@
 import { ExternalLink, Star, Users, Calendar, Globe, DollarSign, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { AgencyData } from "@/data/listicles/white-label-seo-agencies";
+import type { AgencyData } from "@/data/listicles/seo-companies-for-plumbers";
 
 interface ListicleAgencyCardProps {
   agency: AgencyData;
