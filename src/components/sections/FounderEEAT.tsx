@@ -27,11 +27,20 @@ const FounderEEAT = () => {
               className="w-36 h-36 lg:w-44 lg:h-44 rounded-full object-cover mx-auto md:mx-0 mb-6 shadow-lg border-4 border-white"
             />
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Built by a Marketer, For Plumbing & HVAC Companies
+              Most Plumbing & HVAC Companies Don't Lose Customers Because of Results
             </h2>
-            <p className="text-gray-600 leading-relaxed">
-              15+ years in SEO, paid media, and local search. Hundreds of campaigns managed. Millions in ad spend optimized. I've worked with businesses across dozens of industries, but today I focus exclusively on plumbing and HVAC companies — because that's where my experience delivers the most impact. Every campaign is scoped to your market, not a template.
-            </p>
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>I've been in digital marketing since 2011.</p>
+              <p>I've watched plumbing and HVAC companies hire agencies that sold big promises and delivered cookie-cutter packages. Sometimes it worked. Sometimes it was a disaster. They never knew what they'd get until the report landed in their inbox.</p>
+              <p>Then I realized the obvious thing:</p>
+              <p><strong className="text-gray-900">Every market is different. Every company is different. Cookie-cutter campaigns forced onto unique situations is a race to the bottom.</strong></p>
+              <p>So I built something different.</p>
+              <p>Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches — building campaigns, fixing what broke, understanding why things actually rank.</p>
+              <p>This experience now shapes how we scope, execute, and communicate every engagement.</p>
+              <p>Work you can understand without jargon. Execution scoped to your actual market. No crossed fingers required.</p>
+              <p>If that sounds like what you've been looking for, let's talk.</p>
+              <p className="font-semibold text-gray-900">— Doug</p>
+            </div>
           </div>
 
           {/* Right: Credentials + CTA */}
