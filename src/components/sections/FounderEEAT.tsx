@@ -27,17 +27,17 @@ const FounderEEAT = () => {
               className="w-36 h-36 lg:w-44 lg:h-44 rounded-full object-cover mx-auto md:mx-0 mb-6 shadow-lg border-4 border-white"
             />
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Built on 15+ Years of Experience
+              Built by a Marketer, For Plumbing & HVAC Companies
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              DemandStream Digital was founded by a digital marketing strategist with over 15 years of experience in SEO and paid media. Today, we focus exclusively on plumbing and HVAC companies — helping them compete and win in local search markets across the country.
+              15+ years in SEO, paid media, and local search. Hundreds of campaigns managed. Millions in ad spend optimized. I've worked with businesses across dozens of industries, but today I focus exclusively on plumbing and HVAC companies — because that's where my experience delivers the most impact. Every campaign is scoped to your market, not a template.
             </p>
           </div>
 
           {/* Right: Credentials + CTA */}
           <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
-              Doug Bryson — CEO & Founder
+              Doug Bryson, CEO & Founder
             </h3>
             <ul className="space-y-4 mb-8">
               {credentials.map((cred, i) => (
