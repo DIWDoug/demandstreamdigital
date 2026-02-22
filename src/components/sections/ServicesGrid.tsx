@@ -88,7 +88,7 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Complete Digital Marketing Services for<br />
+                Full Circle Digital Marketing for<br />
                 <span className="text-accent-blue">Plumbing & HVAC Companies</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">

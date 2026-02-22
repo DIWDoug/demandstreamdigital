@@ -17,7 +17,7 @@ const FounderEEAT = () => {
             An Honest Word From the Founder
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Most Plumbing & HVAC Companies Don't Lose Customers Because of Results
+            Marketing Isn't One Thing Anymore. It's Everything, Connected.
           </h2>
         </div>
 
@@ -43,15 +43,15 @@ const FounderEEAT = () => {
             <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
               <p className="text-white font-medium">I've been in digital marketing since 2011.</p>
-              <p>I've watched plumbing and HVAC companies hire agencies that sold big promises and delivered cookie-cutter packages. Sometimes it worked. Sometimes it was a disaster. They never knew what they'd get until the report landed in their inbox.</p>
-              <p>I watched other business owners do the same thing. Buy a "package." Hope it works. When it doesn't, move on. Repeat.</p>
-              <p className="text-white font-medium">Then I realized the obvious thing:</p>
-              <p className="text-white">Every market is different. Every company is different. Cookie-cutter campaigns forced onto unique situations is a race to the bottom.</p>
-              <p className="text-white font-medium">So I built something different.</p>
-              <p>Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches, building campaigns, fixing what broke, understanding why things actually rank.</p>
-              <p>This experience now shapes how we scope, execute, and communicate every engagement.</p>
-              <p className="text-white font-medium">Work you can understand without jargon. Execution scoped to your actual market. No crossed fingers required.</p>
-              <p>If that sounds like what you've been looking for, let's talk.</p>
+              <p>Here's what I've learned working with hundreds of plumbing and HVAC companies: marketing isn't one thing anymore. It's not just SEO. It's not just Google Ads. It's not just a website or a few review requests.</p>
+              <p>Today's customers don't make decisions in one click. They search, they read reviews, they compare websites, they check your Google Business Profile, they open your emails, they see your ads. Even in an emergency, they don't want to hire the wrong company and pay double.</p>
+              <p className="text-white font-medium">Every touchpoint is connected.</p>
+              <p>Your SEO feeds your Google Maps presence. Your reputation fuels your ad performance. Your website converts the traffic. Your email follow-ups close the leads that didn't book the first time. Your web design builds the trust that turns a click into a call.</p>
+              <p>When one piece is missing, the whole system leaks. When everything works together, you dominate your local market.</p>
+              <p className="text-white font-medium">That's why we built a full-circle approach.</p>
+              <p>SEO, paid advertising, reputation management, email marketing, web design, follow-up sequences, content strategy. Not as separate services bolted together, but as one connected system built around how your customers actually find and choose a plumbing or HVAC company.</p>
+              <p className="text-white font-medium">This isn't a package. It's a growth engine where every piece makes the others stronger.</p>
+              <p>If that's the kind of marketing you've been looking for, let's talk.</p>
               <p className="text-white font-semibold mt-6">Doug</p>
             </div>
             <Link
