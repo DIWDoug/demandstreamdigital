@@ -27,7 +27,7 @@ const TopicalExpertise = () => {
         {
           title: "Local Keyword Strategy",
           slug: "local-keyword-strategy",
-          description: "Seed keyword development from services and pain points, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping."
+          description: "Seed keyword development from services and customer problems, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping."
         },
         {
           title: "Content Development",
@@ -42,7 +42,7 @@ const TopicalExpertise = () => {
         {
           title: "Schema Markup",
           slug: "schema-markup",
-          description: "Structured data implementation including LocalBusiness, FAQ, and service schemas that enhance visibility in search results and AI Overviews."
+          description: "Structured data implementation including LocalBusiness, FAQ, and service schemas that improve visibility in search results and AI Overviews."
         },
         {
           title: "NAP Citations",
@@ -184,7 +184,7 @@ const TopicalExpertise = () => {
         {
           title: "Power Posts",
           slug: "power-posts",
-          description: "Comprehensive pillar content that dominates competitive keywords and establishes thought leadership."
+          description: "Comprehensive pillar content that dominates competitive keywords and establishes authority."
         },
         {
           title: "E-books & Guides",
@@ -269,7 +269,7 @@ const TopicalExpertise = () => {
             Specialized Expertise Across<br />Every Growth Channel
           </h2>
           <p className="text-lg text-text-secondary">
-            Every channel we deploy — from SEO to paid media — is aligned with the KPIs that matter to plumbing and HVAC companies: cost per booked call, booking rate, close rate, average ticket, membership attach, and technician utilization.
+            Every channel we deploy, from SEO to paid media, is aligned with the metrics that matter to plumbing and HVAC companies: cost per booked call, booking rate, close rate, average ticket, membership attach, and technician utilization.
           </p>
         </div>
 

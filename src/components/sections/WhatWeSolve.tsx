@@ -14,13 +14,13 @@ const WhatWeSolve = () => {
   const tabs = [
     {
       label: "Expertise",
-      yourRole: "You focus on running your plumbing or HVAC business — scheduling jobs, managing crews, keeping customers happy. The marketing gets handled by people who've done it for years.",
+      yourRole: "You focus on running your plumbing or HVAC business: scheduling jobs, managing crews, keeping customers happy. The marketing gets handled by people who've done it for years.",
       yourRoleDetails: [
         "Answer customer questions knowing your online presence is handled",
         "Offer services confidently backed by strong local visibility",
         "Focus on what you're best at instead of learning marketing"
       ],
-      ourRole: "We go deep on local marketing so you don't have to. Local search, paid ads, reputation management — senior-level execution without the senior-level payroll.",
+      ourRole: "We go deep on local marketing so you don't have to. Local search, paid ads, reputation management: senior-level execution without the senior-level payroll.",
       ourRoleDetails: [
         "Specialists who've run thousands of local campaigns",
         "Constant training on platform changes and algorithm shifts",
@@ -84,7 +84,7 @@ const WhatWeSolve = () => {
       ourRoleDetails: [
         "Call tracking so you know which leads come from us",
         "ROI reporting that connects marketing spend to revenue",
-        "Continuous optimization to lower your cost per lead"
+        "Continuous improvement to lower your cost per lead"
       ]
     },
     {

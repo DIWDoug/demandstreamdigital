@@ -11,13 +11,13 @@ const ProblemSolution = () => {
       icon: Shield,
       title: "Trust",
       subtitle: "Earned through consistency",
-      body: "Transparent reporting down to cost per booked call, booking rate, and average ticket — not vanity metrics. You'll see exactly where every dollar goes and what it produces."
+      body: "Transparent reporting down to cost per booked call, booking rate, and average ticket, not vanity metrics. You'll see exactly where every dollar goes and what it produces."
     },
     {
       icon: MessageSquare,
       title: "Clarity",
       subtitle: "Results you can see",
-      body: "Know exactly where your leads come from, how they convert, and how they affect technician capacity. No jargon, no vague promises — just the numbers that run your business."
+      body: "Know exactly where your leads come from, how they convert, and how they affect technician capacity. No jargon, no vague promises. Just the numbers that run your business."
     },
     {
       icon: Settings,

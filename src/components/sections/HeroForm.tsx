@@ -153,9 +153,9 @@ const HeroForm = () => {
     <div className="w-full">
       <div className="bg-background/90 backdrop-blur-md border border-border rounded-xl p-6 sm:p-8 shadow-2xl">
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold text-foreground">
-            Almost There — Tell Us About You
-          </h3>
+           <h3 className="text-lg font-semibold text-foreground">
+             Almost There. Tell Us About You
+           </h3>
           <button
             type="button"
             onClick={() => setStep(1)}
