@@ -13,7 +13,7 @@ const FounderEEAT = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Top heading */}
         <div className="text-center mb-14 max-w-4xl mx-auto">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">
+          <p className="text-accent-blue font-semibold tracking-widest uppercase text-sm mb-4">
             An Honest Word From the Founder
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -40,7 +40,7 @@ const FounderEEAT = () => {
 
           {/* Right: Letter */}
           <div>
-            <span className="text-primary text-5xl font-serif leading-none block mb-4">"</span>
+            <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
               <p className="text-white font-medium">I've been in digital marketing since 2011.</p>
               <p>I've watched plumbing and HVAC companies hire agencies that sold big promises and delivered cookie-cutter packages. Sometimes it worked. Sometimes it was a disaster. They never knew what they'd get until the report landed in their inbox.</p>

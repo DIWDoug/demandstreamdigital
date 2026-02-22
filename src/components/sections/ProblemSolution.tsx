@@ -23,7 +23,7 @@ const ProblemSolution = () => {
       icon: Settings,
       title: "Execution",
       subtitle: "Built for your market",
-      body: "SEO, paid ads, Google Maps, and reputation management handled by specialists who know plumbing and HVAC."
+      body: "SEO, Google Business Profile, paid ads, reputation management, email marketing, and web design — handled by specialists who know plumbing and HVAC."
     }
   ];
 

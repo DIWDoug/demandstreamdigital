@@ -14,7 +14,7 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "Rank your plumbing or HVAC company in your service areas for high-intent searches like \"plumber near me\" and \"AC repair in [city].\"",
+    description: "We focus on what's most profitable for you first. High-value searches like \"hydro jetting [city]\" and \"water heater installation [city]\" — not just generic near-me terms.",
     href: "/white-label-local-seo",
   },
   {
@@ -26,7 +26,7 @@ const services: Service[] = [
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "Capture immediate demand with Google Ads built around emergency repair and installation searches.",
+    description: "More than Google Ads. We run a full-circle paid strategy including Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram — focused on reviews, testimonials, and staying top of mind.",
     href: "/white-label-paid-media",
   },
   {
@@ -84,7 +84,7 @@ const ServicesGrid = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             <div className="lg:col-span-2 lg:sticky lg:top-32 lg:self-start">
-              <span className="inline-block px-3 py-1 rounded-full bg-accent-green/10 text-accent-green text-xs font-semibold uppercase tracking-wider mb-6">
+              <span className="inline-block px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-semibold uppercase tracking-wider mb-6">
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
@@ -121,21 +121,21 @@ const ServicesGrid = () => {
               
               <Link 
                 to="/partner-tools"
-                className="group relative p-6 rounded-xl bg-gradient-to-br from-accent-green/10 to-accent-green/5 border border-accent-green/30 hover:border-accent-green/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-green/10 sm:col-span-2"
+                className="group relative p-6 rounded-xl bg-gradient-to-br from-accent-blue/10 to-accent-blue/5 border border-accent-blue/30 hover:border-accent-blue/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 sm:col-span-2"
               >
                 <div className="flex items-center gap-4">
-                  <span className="w-12 h-12 rounded-xl bg-accent-green/20 text-accent-green flex items-center justify-center group-hover:bg-accent-green group-hover:text-white transition-colors">
+                  <span className="w-12 h-12 rounded-xl bg-accent-blue/20 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
                     <Calculator className="w-6 h-6" strokeWidth={2} />
                   </span>
                   <div className="flex-1">
-                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-accent-green transition-colors">
+                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-accent-blue transition-colors">
                       Explore Our Free Tools
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       ROI calculators, investment tools, and resources to help you plan your marketing budget.
                     </p>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-accent-green opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
+                  <ArrowRight className="h-5 w-5 text-accent-blue opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
                 </div>
               </Link>
             </div>

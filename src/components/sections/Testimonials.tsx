@@ -40,7 +40,7 @@ const Testimonials = () => {
                 <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
               ))}
             </div>
-            <span className="text-slate-600 text-sm font-medium">4.8 stars · 2,287 Google Reviews</span>
+            <span className="text-slate-600 text-sm font-medium">4.9 out of 5 · 22 Reviews (cumulative of Google, Dialed In Web & Demand Stream)</span>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ const Testimonials = () => {
                 <p className="text-slate-900 font-semibold text-lg">{featuredTestimonial.author}</p>
                 <p className="text-primary text-sm">{featuredTestimonial.source}</p>
               </div>
-              <div className="bg-accent-green/10 text-accent-green font-semibold text-sm px-4 py-2 rounded-full">
+              <div className="bg-accent-blue/10 text-accent-blue font-semibold text-sm px-4 py-2 rounded-full">
                 {featuredTestimonial.highlight}
               </div>
             </div>
