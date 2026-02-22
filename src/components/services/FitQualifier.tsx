@@ -69,7 +69,7 @@ const FitQualifier = () => {
               Are We the Right Fit for Your Shop?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We don't work with everyone — and that's on purpose. Here's how to tell if we're the right marketing partner for your plumbing or HVAC business.
+              We work with established plumbing and HVAC companies that understand marketing must align with booking rate, close rate, technician utilization, and seasonality — not just traffic.
             </p>
           </div>
 

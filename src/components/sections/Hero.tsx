@@ -145,17 +145,23 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 animate-fade-in-up text-gray-900"
               style={{ lineHeight: "1.1" }}
             >
-              Digital Marketing for{" "}
+              Plumbing & HVAC Marketing Company Focused on{" "}
               <span className="text-cta">
-                Plumbing & HVAC Companies
+                More Booked Service Calls
               </span>
             </h1>
 
             <p
-              className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up"
+              className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              Local SEO, Google Ads, reputation management, and AI-powered lead generation built specifically for plumbing and HVAC contractors. Drive more service calls, increase booked jobs, and dominate your local market — from Google Business Profile optimization to high-converting landing pages, all year round.
+              We help plumbing and HVAC companies generate more booked jobs through SEO, Google Maps optimization, and paid advertising — engineered around dispatch capacity, seasonality, and technician utilization.
+            </p>
+            <p
+              className="text-sm text-gray-500 font-medium mb-10 animate-fade-in-up"
+              style={{ animationDelay: "0.15s" }}
+            >
+              Built exclusively for plumbing and HVAC contractors — not generic home services.
             </p>
 
             {/* Website input + CTA */}

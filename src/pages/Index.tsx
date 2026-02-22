@@ -37,8 +37,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Plumbing & HVAC Digital Marketing | SEO, PPC & Lead Generation | Demand Stream Digital</title>
-        <meta name="description" content="Digital marketing for plumbing and HVAC companies. SEO, Google Ads, reputation management, and AI-powered lead generation to fill your schedule 365 days a year." />
+        <title>Plumbing & HVAC Marketing Company | SEO, PPC & Lead Generation | Demand Stream Digital</title>
+        <meta name="description" content="Plumbing and HVAC marketing company focused on more booked service calls. SEO, Google Maps optimization, paid advertising, and reputation management engineered around dispatch capacity and seasonality." />
         <meta name="keywords" content="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing" />
         <link rel="canonical" href="https://demandstreamdigital.com/" />
         

@@ -11,19 +11,19 @@ const ProblemSolution = () => {
       icon: Shield,
       title: "Trust",
       subtitle: "Earned through consistency",
-      body: "You need a marketing partner who delivers the same quality every month. We show up with clear reports, honest updates, and campaigns that actually move the needle for your plumbing or HVAC business."
+      body: "Transparent reporting down to cost per booked call, booking rate, and average ticket — not vanity metrics. You'll see exactly where every dollar goes and what it produces."
     },
     {
       icon: MessageSquare,
       title: "Clarity",
       subtitle: "Results you can see",
-      body: "No marketing jargon. No vague promises. You'll always know exactly what we're doing, why we're doing it, and how it's driving more calls and jobs to your business."
+      body: "Know exactly where your leads come from, how they convert, and how they affect technician capacity. No jargon, no vague promises — just the numbers that run your business."
     },
     {
       icon: Settings,
       title: "Execution",
       subtitle: "Built for your market",
-      body: "Every plumbing and HVAC market is different. We scope campaigns around your actual service area, competition, and seasonal demand — so you see real growth, not generic activity."
+      body: "Capacity-aligned campaigns that scale in peak season and stabilize shoulder months. Every strategy is scoped to your service area, competition, and seasonal demand patterns."
     }
   ];
 
@@ -39,7 +39,7 @@ const ProblemSolution = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              Marketing Built on Trust, Clarity & Execution
+              Marketing Built for Plumbing & HVAC Operators
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               These three things determine whether your marketing investment grows your business or quietly drains it. We built our entire approach around getting them right for plumbing and HVAC companies.

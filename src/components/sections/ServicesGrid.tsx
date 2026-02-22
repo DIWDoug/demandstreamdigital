@@ -88,11 +88,11 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                A Full-Stack Growth System,<br />
-                <span className="text-primary">Built for Your Trade</span>
+                Complete Digital Marketing Services for<br />
+                <span className="text-primary">Plumbing & HVAC Companies</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Marketing for plumbing and HVAC isn't a single tactic. It's multiple channels working together to generate calls, build trust, and keep your schedule full.
+                Our plumbing and HVAC marketing services combine local SEO, Google Maps optimization, paid advertising, reputation growth, and conversion-focused strategy — structured to increase booked service calls and revenue stability.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Each service reinforces the others. Together, they create predictable growth you can count on.
@@ -111,6 +111,13 @@ const ServicesGrid = () => {
               {services.map((service, index) => (
                 <ServiceCard key={index} service={service} />
               ))}
+
+              {/* Operator authority block */}
+              <div className="sm:col-span-2 p-5 rounded-xl bg-card/50 border border-border/50">
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Plumbing and HVAC companies operate under real-world pressures — EPA Section 608 requirements, refrigerant transition timelines, peak-season demand spikes, and technician capacity constraints. Our strategies are built to reflect those realities, not ignore them.
+                </p>
+              </div>
               
               <Link 
                 to="/partner-tools"

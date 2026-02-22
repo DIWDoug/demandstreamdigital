@@ -166,7 +166,7 @@ export const caseStudyCards: CaseStudy[] = [
     client: "Dallas Plumbing",
     industry: "Plumbing/Home Services",
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
-    headline: "Rapid SEO Growth for Dallas Plumbing Company",
+    headline: "Plumbing SEO Case Study – Dallas | +306% Organic Growth",
     heroMetric: {
       value: "+306%",
       label: "Google Organic YoY Growth",
@@ -188,7 +188,7 @@ export const caseStudyCards: CaseStudy[] = [
     client: "Las Vegas Plumbing & HVAC",
     industry: "Plumbing & HVAC",
     services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
-    headline: "SEO Recovery for Las Vegas Plumbing & HVAC Company",
+    headline: "Plumbing & HVAC SEO Case Study – Las Vegas | 57-Point Keyword Growth",
     heroMetric: {
       value: "57pt",
       label: "Performance Turnaround (-54% → +3% YoY)",
