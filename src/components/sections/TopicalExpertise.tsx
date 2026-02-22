@@ -130,7 +130,7 @@ const TopicalExpertise = () => {
                   <div className="pt-4 border-t border-border space-y-3">
                     {industry.services.map((service, sIdx) => (
                       <div key={sIdx} className="pl-4 border-l-2 border-accent-blue/30">
-                        <span className="text-sm font-medium text-foreground">
+                        <span className="text-sm font-medium text-gray-900">
                           {service}
                         </span>
                       </div>
