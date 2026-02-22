@@ -99,13 +99,13 @@ const Services = () => {
         heroHeadline="White Label Inbound Marketing"
         heroSubtitle="Executed as a System"
         description={{
-          intro: "Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow.",
+          intro: "Most home service companies don't lack ambition. They lack a reliable digital marketing system — one that drives qualified leads from local search, paid ads, and content marketing without the guesswork.",
           bullets: [
-            "You retain the client relationship",
-            "We execute behind the scenes",
-            "Consistent, scalable results"
+            "Local SEO & Google Business Profile management",
+            "Targeted PPC campaigns and lead funnels",
+            "Reputation management and review generation"
           ],
-          closing: "No added overhead. No crossed fingers. Just reliable fulfillment that makes your agency look great."
+          closing: "No wasted ad spend. No inconsistent results. Just a proven growth engine for plumbing and HVAC businesses that turns online visibility into booked jobs."
         }}
         breadcrumbs={[
           { label: "Inbound Marketing Services" }
