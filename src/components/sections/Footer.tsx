@@ -35,12 +35,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       title: "FRANCHISE MARKETING",
       href: "/contact",
       items: [
-        { label: "Franchise SEO", href: "/contact" },
-        { label: "Franchise Google Maps / GBP", href: "/contact" },
-        { label: "Franchise PPC / Google Ads", href: "/contact" },
-        { label: "Franchise Web Design", href: "/contact" },
-        { label: "Franchise Reputation Management", href: "/contact" },
-        { label: "Franchise Email Marketing", href: "/contact" },
+        { label: "Franchise Plumbing & HVAC Marketing", href: "/contact" },
       ]
     },
     {
