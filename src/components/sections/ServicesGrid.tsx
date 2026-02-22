@@ -15,37 +15,37 @@ const services: Service[] = [
     icon: MapPin,
     title: "Local SEO",
     description: "We target high-value, high-volume searches like \"hydro jetting [city]\" and \"water heater installation [city]\" alongside high-intent near-me terms — prioritizing what drives the most booked jobs.",
-    href: "/white-label-local-seo",
+    href: "/plumbing-seo",
   },
   {
     icon: Map,
     title: "Google Maps / GBP",
     description: "Increase visibility in the map pack with improved Google Business Profiles, reviews, and local signals.",
-    href: "/white-label-gbp-seo",
+    href: "/plumbing-google-maps",
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
     description: "More than Google Ads. We run a full-circle paid strategy including Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram — focused on reviews, testimonials, and staying top of mind.",
-    href: "/white-label-paid-media",
+    href: "/plumbing-paid-advertising",
   },
   {
     icon: PenTool,
     title: "Content Development",
     description: "Service pages, city pages, and authority content built to strengthen rankings and increase trust.",
-    href: "/white-label-content-marketing",
+    href: "/plumbing-content-marketing",
   },
   {
     icon: Mail,
     title: "Email Marketing",
     description: "Stay top of mind with past customers through seasonal reminders, maintenance promotions, and follow-ups.",
-    href: "/white-label-email-marketing",
+    href: "/plumbing-email-marketing",
   },
   {
     icon: BarChart3,
     title: "Reporting & Dashboards",
     description: "See rankings, leads, and campaign performance clearly — without digging through spreadsheets.",
-    href: "/white-label-reporting",
+    href: "/plumbing-reporting",
   }
 ];
 
