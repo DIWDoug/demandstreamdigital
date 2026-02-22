@@ -183,7 +183,7 @@ const Header = () => {
       <div className={`bg-cta text-cta-foreground transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
         <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between py-1.5 text-xs font-medium">
           <Link to="/contact" className="hover:underline tracking-wide">
-            📞 Free Marketing Audit — See Where You're Losing Leads
+            📞 Free Marketing Audit: See Where You're Losing Leads
           </Link>
           <div className="hidden sm:flex items-center gap-4">
             <span className="flex items-center gap-1.5 uppercase tracking-widest text-[10px] font-bold">

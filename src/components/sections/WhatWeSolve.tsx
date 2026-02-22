@@ -35,7 +35,7 @@ const WhatWeSolve = () => {
         "Set realistic expectations together",
         "Know exactly what you're investing in"
       ],
-      ourRole: "We build a custom strategy combining the right channels — SEO, ads, maps, reputation — based on your market data.",
+      ourRole: "We build a custom strategy combining the right channels (SEO, ads, maps, reputation) based on your market data.",
       ourRoleDetails: [
         "Channel selection based on your market and budget",
         "Prioritized action plan with clear milestones",
@@ -65,7 +65,7 @@ const WhatWeSolve = () => {
         "Approve changes before they go live",
         "See conversion improvements in your call volume"
       ],
-      ourRole: "We optimize your website for speed, mobile experience, and conversion — so the traffic we drive actually turns into booked jobs.",
+      ourRole: "We improve your website for speed, mobile experience, and conversion so the traffic we drive actually turns into booked jobs.",
       ourRoleDetails: [
         "Landing pages built for local service searches",
         "Click-to-call and form optimization",
@@ -76,7 +76,7 @@ const WhatWeSolve = () => {
       label: "Review & Reputation Growth",
       yourRole: "Deliver great service. We make it easy for happy customers to leave reviews.",
       yourRoleDetails: [
-        "Focus on what you do best — the work",
+        "Focus on what you do best: the work",
         "Watch your online reputation strengthen",
         "More reviews means more trust and more calls"
       ],

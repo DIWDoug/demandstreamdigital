@@ -12,11 +12,11 @@ const FitQualifier = () => {
   const goodFit = [
     {
       point: "You run a plumbing or HVAC company with annual revenue greater than $250,000",
-      detail: "We work best with established shops doing over a quarter million a year. You've got the trucks and techs — you need a marketing partner who understands the trades."
+      detail: "We work best with established shops doing over a quarter million a year. You've got the trucks and techs. You need a marketing partner who understands the trades."
     },
     {
       point: "You're tired of marketing agencies that don't get your business",
-      detail: "Most agencies treat you like every other client. We specialize in plumbing and HVAC — we know your seasonality, your customers, and what actually drives calls."
+      detail: "Most agencies treat you like every other client. We specialize in plumbing and HVAC. We know your seasonality, your customers, and what actually drives calls."
     },
     {
       point: "You want more calls, not just 'impressions' and 'clicks'",
@@ -24,7 +24,7 @@ const FitQualifier = () => {
     },
     {
       point: "You understand marketing is an investment, not an expense",
-      detail: "The best plumbing and HVAC companies treat marketing like a new truck — it pays for itself many times over when done right."
+      detail: "The best plumbing and HVAC companies treat marketing like a new truck. It pays for itself many times over when done right."
     },
     {
       point: "You're ready to dominate your local market",
@@ -35,7 +35,7 @@ const FitQualifier = () => {
   const notFit = [
     {
       point: "You're just looking for the cheapest option",
-      detail: "Bargain marketing gets bargain results. If price is your only consideration, there are cheaper providers — but you'll get what you pay for."
+      detail: "Bargain marketing gets bargain results. If price is your only consideration, there are cheaper providers, but you'll get what you pay for."
     },
     {
       point: "You want overnight results",
@@ -69,7 +69,7 @@ const FitQualifier = () => {
               Are We the Right Fit for Your Shop?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We work with established plumbing and HVAC companies that want to dominate their local market — not just generate random traffic.
+              We work with established plumbing and HVAC companies that want to dominate their local market, not just generate random traffic.
             </p>
           </div>
 
