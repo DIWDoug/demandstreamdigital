@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { ExternalLink, ChevronUp, ChevronDown, Star, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { AgencyData } from "@/data/listicles/white-label-seo-agencies";
+import type { AgencyData } from "@/data/listicles/seo-companies-for-plumbers";
 
 interface ListicleAgencyTableProps {
   agencies: AgencyData[];

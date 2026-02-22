@@ -77,18 +77,18 @@ const ListicleScrollCTA = () => {
 
               <div className="p-5 pt-6">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  White Label SEO Partner
+                  Growth Marketing for the Trades
                 </p>
                 <h3 className="text-lg font-bold text-foreground mb-2 pr-6">
-                  Ready to Scale Your Agency?
+                  Ready to Get More Calls?
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  Dialed-In Web handles fulfillment so you can focus on growth. Transparent pricing, no contracts, real results.
+                  Demand Stream Digital helps plumbing and HVAC companies grow with SEO and paid ads that actually work. Transparent pricing, no contracts.
                 </p>
                 <div className="flex gap-2">
                   <Button asChild size="sm" className="bg-primary hover:bg-primary/90 flex-1">
                     <Link to="/contact" className="inline-flex items-center justify-center gap-2">
-                      Let's Talk Partnership
+                      Let's Talk
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </Button>
