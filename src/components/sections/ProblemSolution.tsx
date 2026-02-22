@@ -39,7 +39,7 @@ const ProblemSolution = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              Contractor Marketing That Delivers Trust, Clarity & Execution
+              Marketing Built on Trust, Clarity & Execution
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               These three things determine whether your marketing investment grows your business or quietly drains it. We built our entire approach around getting them right for plumbing and HVAC companies.

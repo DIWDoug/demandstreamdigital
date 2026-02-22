@@ -88,7 +88,7 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Local SEO, Google Ads & Content Marketing<br />
+                A Full-Stack Growth System,<br />
                 <span className="text-primary">Built for Your Trade</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
