@@ -38,7 +38,7 @@ const industries = [
   {
     icon: Building2,
     title: "Franchises",
-    summary: "Multi-location marketing for home service franchises. Consistent branding, local execution, and centralized reporting across every territory.",
+    summary: "Multi-location marketing for plumbing and HVAC franchises. Consistent branding, local execution, and centralized reporting across every territory.",
     services: [
       "Franchise SEO",
       "Franchise Web Design",
