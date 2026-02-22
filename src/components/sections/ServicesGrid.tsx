@@ -53,21 +53,21 @@ const ServiceCard = ({ service }: { service: Service }) => {
   return (
     <Link 
       to={service.href}
-      className="group relative rounded-xl bg-card border border-border hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 overflow-hidden"
+      className="group relative rounded-xl bg-card border border-border hover:border-accent-blue/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 overflow-hidden"
     >
       <div className="relative p-6">
-        <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+        <span className="absolute top-4 right-4 w-9 h-9 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
           <service.icon className="w-4 h-4" strokeWidth={2} />
         </span>
         
-        <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-primary transition-colors">
+        <h3 className="text-foreground font-semibold mb-2 pr-10 group-hover:text-accent-blue transition-colors">
           {service.title}
         </h3>
         <p className="text-muted-foreground text-sm leading-relaxed">
           {service.description}
         </p>
         
-        <span className="inline-flex items-center text-xs font-medium text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className="inline-flex items-center text-xs font-medium text-accent-blue mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
           Learn more
           <ArrowRight className="ml-1 h-3 w-3" />
         </span>
@@ -89,7 +89,7 @@ const ServicesGrid = () => {
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Complete Digital Marketing Services for<br />
-                <span className="text-primary">Plumbing & HVAC Companies</span>
+                <span className="text-accent-blue">Plumbing & HVAC Companies</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and conversion-focused strategy, all structured to increase booked service calls and revenue stability.
