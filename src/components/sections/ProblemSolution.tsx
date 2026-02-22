@@ -23,7 +23,7 @@ const ProblemSolution = () => {
       icon: Settings,
       title: "Execution",
       subtitle: "Built for your market",
-      body: "SEO, Google Business Profile, paid ads, reputation management, email marketing, and web design — handled by specialists who know plumbing and HVAC."
+      body: "SEO, Google Business Profile, paid ads, reputation management, email marketing, and web design. All handled by specialists who know plumbing and HVAC."
     }
   ];
 
@@ -42,7 +42,7 @@ const ProblemSolution = () => {
               Marketing Built for Plumbing & HVAC Operators
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Most marketing agencies treat plumbing and HVAC companies like any other business. We don't. We build strategies around how customers search for plumbers and HVAC services in your local market — and how to turn that visibility into booked jobs.
+              Most marketing agencies treat plumbing and HVAC companies like any other business. We don't. We build strategies around how customers search for plumbers and HVAC services in your local market, and how to turn that visibility into booked jobs.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const ProblemSolution = () => {
 
           <div className="text-center">
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Generic marketing treats every business the same. We build around your service area, your competition, and what actually drives calls — whether that's search, paid ads, email, or reputation.
+              Generic marketing treats every business the same. We build around your service area, your competition, and what actually drives calls, whether that's search, paid ads, email, or reputation.
             </p>
           </div>
         </div>

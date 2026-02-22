@@ -22,7 +22,7 @@ const HonestWordOnFulfillment = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-sm text-accent-green uppercase tracking-widest font-medium mb-4">
+            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
               An Honest Word on Marketing
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -47,13 +47,13 @@ const HonestWordOnFulfillment = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute -top-2 -left-2 text-6xl text-accent-green/30 font-serif leading-none">"</div>
+              <div className="absolute -top-2 -left-2 text-6xl text-accent-blue/30 font-serif leading-none">"</div>
               
               <div className="space-y-5 text-muted-foreground leading-relaxed pt-8 font-handwriting text-lg">
                 <p className="text-foreground font-medium text-lg">I've been in digital marketing since 2011.</p>
                 
                 <p>
-                  I've worked with hundreds of local service businesses — plumbers, HVAC techs, contractors. Most of them had been burned by a marketing company before they found us. Vague promises, zero transparency, and campaigns that felt like they were built for someone else's business.
+                  I've worked with hundreds of local service businesses: plumbers, HVAC techs, contractors. Most of them had been burned by a marketing company before they found us. Vague promises, zero transparency, and campaigns that felt like they were built for someone else's business.
                 </p>
                 
                 <p>
@@ -73,7 +73,7 @@ const HonestWordOnFulfillment = () => {
                 </p>
                 
                 <p>
-                  Not as a tech bro chasing scale. As a marketer who learned by doing the work — building campaigns, fixing what broke, understanding why some businesses dominate their local market while others stay invisible.
+                  Not as a tech bro chasing scale. As a marketer who learned by doing the work. Building campaigns, fixing what broke, understanding why some businesses dominate their local market while others stay invisible.
                 </p>
                 
                 <p>
@@ -88,8 +88,8 @@ const HonestWordOnFulfillment = () => {
                   If that sounds like what you've been looking for, let's talk.
                 </p>
                 
-                <p className="text-accent-green font-medium pt-2">
-                  — Doug
+                <p className="text-accent-blue font-medium pt-2">
+                  Doug
                 </p>
               </div>
             </div>

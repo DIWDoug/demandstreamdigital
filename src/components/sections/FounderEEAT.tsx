@@ -48,11 +48,11 @@ const FounderEEAT = () => {
               <p className="text-white font-medium">Then I realized the obvious thing:</p>
               <p className="text-white">Every market is different. Every company is different. Cookie-cutter campaigns forced onto unique situations is a race to the bottom.</p>
               <p className="text-white font-medium">So I built something different.</p>
-              <p>Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches — building campaigns, fixing what broke, understanding why things actually rank.</p>
+              <p>Not as a visionary trying to scale. As a marketer who learned by doing the work. I've been the one in the trenches, building campaigns, fixing what broke, understanding why things actually rank.</p>
               <p>This experience now shapes how we scope, execute, and communicate every engagement.</p>
               <p className="text-white font-medium">Work you can understand without jargon. Execution scoped to your actual market. No crossed fingers required.</p>
               <p>If that sounds like what you've been looking for, let's talk.</p>
-              <p className="text-white font-semibold mt-6">— Doug</p>
+              <p className="text-white font-semibold mt-6">Doug</p>
             </div>
             <Link
               to="/contact"

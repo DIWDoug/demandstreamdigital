@@ -19,11 +19,11 @@ export const homepageFAQs = [
   },
   {
     question: "How long does HVAC SEO take?",
-    answer: "Paid ads can start generating calls within the first few weeks. SEO and reputation building typically take 3–6 months to show significant momentum. We set realistic expectations upfront so there are no surprises."
+    answer: "Paid ads can start generating calls within the first few weeks. SEO and reputation building typically take 3 to 6 months to show significant momentum. We set realistic expectations upfront so there are no surprises."
   },
   {
     question: "How much does plumbing marketing cost?",
-    answer: "We scope work based on your market, competition, and goals, then price transparently. Most plumbing and HVAC companies invest between $2,000–$8,000/month depending on services and market size. You always know exactly what's included before we start."
+    answer: "We scope work based on your market, competition, and goals, then price transparently. Most plumbing and HVAC companies invest between $2,000 and $8,000/month depending on services and market size. You always know exactly what's included before we start."
   },
   {
     question: "Do you offer exclusive service areas?",
@@ -55,11 +55,11 @@ export const homepageFAQs = [
   },
   {
     question: "What is plumbing SEO?",
-    answer: "Plumbing SEO is the process of optimizing your website, Google Business Profile, and online presence so your plumbing company ranks higher in local search results. When homeowners search for terms like 'plumber near me' or 'emergency plumber in [city],' SEO helps your business appear at the top — driving more calls and booked jobs."
+    answer: "Plumbing SEO is the process of improving your website, Google Business Profile, and online presence so your plumbing company ranks higher in local search results. When homeowners search for terms like 'plumber near me' or 'emergency plumber in [city],' SEO helps your business appear at the top, driving more calls and booked jobs."
   },
   {
     question: "What is HVAC SEO?",
-    answer: "HVAC SEO focuses on improving your heating and cooling company's visibility in local search results. This includes optimizing for keywords like 'AC repair near me,' 'furnace installation [city],' and 'HVAC company near me.' A strong HVAC SEO strategy combines on-page optimization, Google Maps visibility, reviews, and local content to generate consistent leads year-round."
+    answer: "HVAC SEO focuses on improving your heating and cooling company's visibility in local search results. This includes targeting keywords like 'AC repair near me,' 'furnace installation [city],' and 'HVAC company near me.' A strong HVAC SEO strategy combines on-page improvements, Google Maps visibility, reviews, and local content to generate consistent leads year-round."
   }
 ];
 
