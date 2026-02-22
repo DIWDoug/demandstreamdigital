@@ -106,9 +106,13 @@ const Index = () => {
         <FeaturedCaseStudies />
       </div>
       
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="hsl(213, 64%, 8%)" variant="curve" />
+        <FounderEEAT />
+      </div>
+      
       <div id="testimonials" className="relative">
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
-        <FounderEEAT />
         <Testimonials />
       </div>
       
