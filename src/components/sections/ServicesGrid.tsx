@@ -20,7 +20,7 @@ const services: Service[] = [
   {
     icon: Map,
     title: "Google Maps / GBP",
-    description: "Dominate the local map pack. Optimized profiles, consistent citations, and review systems that build trust with homeowners searching for service pros.",
+    description: "Dominate the local map pack. Refined profiles, consistent citations, and review systems that build trust with homeowners searching for service pros.",
     href: "/white-label-gbp-seo",
   },
   {

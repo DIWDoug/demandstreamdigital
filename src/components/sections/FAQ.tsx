@@ -11,11 +11,11 @@ import StreamTexture from "@/components/StreamTexture";
 export const homepageFAQs = [
   {
     question: "How does marketing for plumbing companies work?",
-    answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution — SEO, Google Maps, paid ads, reputation management — so you can focus on running your business and dispatching techs."
+    answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution: SEO, Google Maps, paid ads, reputation management. You focus on running your business and dispatching techs."
   },
   {
     question: "What is the best marketing strategy for HVAC companies?",
-    answer: "The best HVAC marketing strategy combines local SEO, Google Maps optimization, and paid advertising — aligned to seasonal demand patterns. We engineer campaigns around peak cooling and heating seasons, shoulder months, and technician capacity to maximize booked jobs year-round."
+    answer: "The best HVAC marketing strategy combines local SEO, Google Maps optimization, and paid advertising, aligned to seasonal demand patterns. We engineer campaigns around peak cooling and heating seasons, shoulder months, and technician capacity to maximize booked jobs year-round."
   },
   {
     question: "How long does HVAC SEO take?",
@@ -23,11 +23,11 @@ export const homepageFAQs = [
   },
   {
     question: "How much does plumbing marketing cost?",
-    answer: "We scope work based on your market, competition, and goals — then price transparently. Most plumbing and HVAC companies invest between $2,000–$8,000/month depending on services and market size. You always know exactly what's included before we start."
+    answer: "We scope work based on your market, competition, and goals, then price transparently. Most plumbing and HVAC companies invest between $2,000–$8,000/month depending on services and market size. You always know exactly what's included before we start."
   },
   {
     question: "Do you offer exclusive service areas?",
-    answer: "Yes. We limit the number of clients we take on per market to avoid conflicts. When you partner with us, we're fully invested in your growth — not splitting attention between you and a competitor across town."
+    answer: "Yes. We limit the number of clients we take on per market to avoid conflicts. When you partner with us, we're fully invested in your growth, not splitting attention between you and a competitor across town."
   },
   {
     question: "How is this different from other marketing companies?",
@@ -35,7 +35,7 @@ export const homepageFAQs = [
   },
   {
     question: "What size companies do you typically work with?",
-    answer: "We work with plumbing and HVAC companies of all sizes — from owner-operators to multi-truck operations. Our sweet spot is businesses doing $25k+ in monthly revenue that are ready to invest in consistent growth."
+    answer: "We work with plumbing and HVAC companies of all sizes, from owner-operators to multi-truck operations. Our sweet spot is businesses doing $25k+ in monthly revenue that are ready to invest in consistent growth."
   },
   {
     question: "Do you require long-term contracts?",
@@ -43,7 +43,7 @@ export const homepageFAQs = [
   },
   {
     question: "What happens if I want to pause or cancel?",
-    answer: "We ask for 30 days notice so we can wrap up work properly and transition everything cleanly. No penalties, no hard feelings — just professional courtesy."
+    answer: "We ask for 30 days notice so we can wrap up work properly and transition everything cleanly. No penalties, no hard feelings. Just professional courtesy."
   },
   {
     question: "Where is your team based?",
@@ -51,7 +51,7 @@ export const homepageFAQs = [
   },
   {
     question: "What happens if something isn't working?",
-    answer: "We review performance together during regular check-ins and adjust deliberately. If something needs to change, we surface it early and work through it together — not wait until it's a problem."
+    answer: "We review performance together during regular check-ins and adjust deliberately. If something needs to change, we surface it early and work through it together, not wait until it's a problem."
   }
 ];
 

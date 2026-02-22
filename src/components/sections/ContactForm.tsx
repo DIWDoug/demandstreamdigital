@@ -13,15 +13,15 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
   const steps = [
     {
       title: "Discovery & Alignment",
-      content: "We start with a deep-dive conversation to understand your business goals, service area, and growth targets. No cookie-cutter approaches — just clarity on what will move the needle."
+      content: "We start with a focused conversation to understand your business goals, service area, and growth targets. No cookie-cutter approaches. Just clarity on what will show results."
     },
     {
       title: "Scope & Pricing",
       content: "Receive transparent pricing that protects your bottom line. We map out deliverables and set clear expectations upfront so there are never surprises."
     },
     {
-      title: "Seamless Onboarding",
-      content: "We handle setup across your Google Business Profile, website, ad accounts, and review platforms — so you can focus on running your crew."
+      title: "Smooth Onboarding",
+      content: "We handle setup across your Google Business Profile, website, ad accounts, and review platforms so you can focus on running your crew."
     },
     {
       title: "Execute with Precision",
