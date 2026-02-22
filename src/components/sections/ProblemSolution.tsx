@@ -11,7 +11,7 @@ const ProblemSolution = () => {
       icon: Eye,
       title: "Transparency",
       subtitle: "Complete visibility at every step",
-      body: "Rankings, calls, leads, reviews, review replies, email campaigns, ad performance, content updates. You see every piece of work being done and where your budget is going."
+      body: "You see every piece of work being done and where your budget is going."
     },
     {
       icon: MessageSquare,
