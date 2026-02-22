@@ -155,13 +155,13 @@ const Hero = () => {
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              We help plumbing and HVAC companies generate more booked jobs through SEO, Google Maps optimization, and paid advertising, engineered around dispatch capacity, seasonality, and technician utilization.
+              We help plumbing and HVAC companies generate more booked service calls through SEO, Google Maps optimization, paid advertising, Local Services Ads, email marketing, and high-converting website design.
             </p>
             <p
               className="text-sm text-gray-500 font-medium mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.15s" }}
             >
-              Built exclusively for plumbing and HVAC contractors, not generic home services.
+              No generic home service marketing. Built specifically for plumbing and HVAC companies.
             </p>
 
             {/* Website input + CTA */}

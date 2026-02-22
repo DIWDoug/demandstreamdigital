@@ -269,7 +269,7 @@ const TopicalExpertise = () => {
             Specialized Expertise Across<br />Every Growth Channel
           </h2>
           <p className="text-lg text-text-secondary">
-            Every channel we deploy, from SEO to paid media, is aligned with the metrics that matter to plumbing and HVAC companies: cost per booked call, booking rate, close rate, average ticket, membership attach, and technician utilization.
+            Every marketing channel we deploy — from SEO to paid ads — is aligned with one goal: increasing visibility, generating qualified leads, and helping your business grow.
           </p>
         </div>
 

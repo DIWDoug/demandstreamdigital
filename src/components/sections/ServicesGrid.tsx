@@ -14,37 +14,37 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "Show up when homeowners search for plumbing or HVAC services in your area. We handle the technical work that builds organic visibility over time.",
+    description: "Rank your plumbing or HVAC company in your service areas for high-intent searches like \"plumber near me\" and \"AC repair in [city].\"",
     href: "/white-label-local-seo",
   },
   {
     icon: Map,
     title: "Google Maps / GBP",
-    description: "Dominate the local map pack. Refined profiles, consistent citations, and review systems that build trust with homeowners searching for service pros.",
+    description: "Increase visibility in the map pack with optimized Google Business Profiles, reviews, and local signals.",
     href: "/white-label-gbp-seo",
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "Turn ad spend into booked jobs. Google and Meta campaigns built to generate calls from homeowners who need plumbing or HVAC service now.",
+    description: "Capture immediate demand with Google Ads built around emergency repair and installation searches.",
     href: "/white-label-paid-media",
   },
   {
     icon: PenTool,
     title: "Content Development",
-    description: "Strategic content that ranks locally and converts. Service area pages, seasonal guides, and blog posts that drive visibility and trust.",
+    description: "Service pages, city pages, and authority content built to strengthen rankings and increase trust.",
     href: "/white-label-content-marketing",
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Stay top of mind with past customers. Automated sequences for maintenance reminders, seasonal tune-ups, and referral requests.",
+    description: "Stay top of mind with past customers through seasonal reminders, maintenance promotions, and follow-ups.",
     href: "/white-label-email-marketing",
   },
   {
     icon: BarChart3,
     title: "Reporting & Dashboards",
-    description: "See exactly what's working. Clear dashboards showing calls, leads, rankings, and ROI — so you always know where your marketing dollars go.",
+    description: "See rankings, leads, and campaign performance clearly — without digging through spreadsheets.",
     href: "/white-label-reporting",
   }
 ];

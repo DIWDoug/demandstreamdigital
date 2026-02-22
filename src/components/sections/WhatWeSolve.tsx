@@ -13,93 +13,93 @@ const WhatWeSolve = () => {
 
   const tabs = [
     {
-      label: "Expertise",
-      yourRole: "You focus on running your plumbing or HVAC business: scheduling jobs, managing crews, keeping customers happy. The marketing gets handled by people who've done it for years.",
+      label: "Market & Competitor Analysis",
+      yourRole: "Share your goals, service area, and the competitors you see in the field. We handle the research.",
       yourRoleDetails: [
-        "Answer customer questions knowing your online presence is handled",
-        "Offer services confidently backed by strong local visibility",
-        "Focus on what you're best at instead of learning marketing"
+        "Tell us which markets and services matter most",
+        "Share what you know about your competition",
+        "Identify your growth priorities"
       ],
-      ourRole: "We go deep on local marketing so you don't have to. Local search, paid ads, reputation management: senior-level execution without the senior-level payroll.",
+      ourRole: "We analyze your local market, competitor positioning, and search landscape to identify the biggest opportunities.",
       ourRoleDetails: [
-        "Specialists who've run thousands of local campaigns",
-        "Constant training on platform changes and algorithm shifts",
-        "Deep experience in plumbing, HVAC, and home services"
+        "Competitive keyword and ranking analysis",
+        "Local search opportunity mapping",
+        "Market gap identification"
       ]
     },
     {
-      label: "Transparency",
-      yourRole: "You stay informed without doing the work. No mysteries, no vague updates. Just clear answers and real data showing how marketing is driving calls.",
+      label: "Strategy Development",
+      yourRole: "Review and approve a clear marketing plan built around your business goals and budget.",
       yourRoleDetails: [
-        "Check campaign status anytime without chasing anyone down",
-        "Get a heads-up on issues before they cost you money",
-        "Actually understand what's happening so you feel confident"
+        "Understand the plan before anything launches",
+        "Set realistic expectations together",
+        "Know exactly what you're investing in"
       ],
-      ourRole: "We keep you in the loop with clear reporting and honest communication. You'll never be caught off guard by a bad month.",
+      ourRole: "We build a custom strategy combining the right channels — SEO, ads, maps, reputation — based on your market data.",
       ourRoleDetails: [
-        "Weekly updates written for business owners, not marketing nerds",
-        "Live dashboards showing calls, leads, and rankings",
-        "Plain language. Just what matters and why"
+        "Channel selection based on your market and budget",
+        "Prioritized action plan with clear milestones",
+        "Transparent pricing and deliverables"
       ]
     },
     {
-      label: "Growth",
-      yourRole: "You focus on delivering great service and expanding your territory. We make sure the phone keeps ringing.",
+      label: "SEO & Paid Campaign Launch",
+      yourRole: "Focus on running your business while we handle the marketing execution.",
       yourRoleDetails: [
-        "Expand into new service areas knowing marketing will follow",
-        "Take on more jobs without worrying about lead flow",
-        "Scale revenue predictably month over month"
+        "No need to learn SEO or Google Ads",
+        "We handle setup, targeting, and optimization",
+        "Campaigns launch on your timeline"
       ],
-      ourRole: "We build marketing systems that compound over time. SEO gains build on each other. Reputation grows. Your cost per lead drops as your brand strengthens.",
+      ourRole: "We launch and manage SEO, Google Ads, Local Services Ads, and Google Maps campaigns designed to generate calls.",
       ourRoleDetails: [
-        "Real results you can see in your call volume",
-        "Fast onboarding so new campaigns start generating quickly",
-        "Capacity that grows with your business"
+        "Keyword targeting for high-intent local searches",
+        "Ad campaigns built around emergency and installation searches",
+        "Google Business Profile optimization"
       ]
     },
     {
-      label: "Workflow",
-      yourRole: "You run your business, not your marketing. Your time goes to customers and crews, not chasing deliverables or managing campaigns.",
+      label: "Website & Conversion Optimization",
+      yourRole: "You provide feedback on design and messaging. We make sure your website turns visitors into calls.",
       yourRoleDetails: [
-        "Reclaim the hours you lose to figuring out marketing",
-        "Trust that campaigns are running without constant check-ins",
-        "Grow the business instead of managing the marketing"
+        "Review your website with fresh eyes",
+        "Approve changes before they go live",
+        "See conversion improvements in your call volume"
       ],
-      ourRole: "We run tight processes so you don't have to micromanage. Defined timelines, predictable delivery, minimal surprises.",
+      ourRole: "We optimize your website for speed, mobile experience, and conversion — so the traffic we drive actually turns into booked jobs.",
       ourRoleDetails: [
-        "Structured campaigns with clear milestones",
-        "Dedicated account managers who know your business",
-        "Systems built for service businesses, not adapted from something else"
+        "Landing pages built for local service searches",
+        "Click-to-call and form optimization",
+        "Page speed and mobile improvements"
       ]
     },
     {
-      label: "Results",
-      yourRole: "You see real, measurable results — more phone calls, more booked jobs, more revenue. Not vanity metrics that don't pay the bills.",
+      label: "Review & Reputation Growth",
+      yourRole: "Deliver great service. We make it easy for happy customers to leave reviews.",
+      yourRoleDetails: [
+        "Focus on what you do best — the work",
+        "Watch your online reputation strengthen",
+        "More reviews means more trust and more calls"
+      ],
+      ourRole: "We implement review systems and manage your online reputation so new customers trust you before they ever pick up the phone.",
+      ourRoleDetails: [
+        "Automated review request systems",
+        "Professional review response management",
+        "Reputation monitoring across platforms"
+      ]
+    },
+    {
+      label: "Ongoing Optimization & Reporting",
+      yourRole: "You see real, measurable results — more phone calls, more booked jobs, more revenue. Not vanity metrics.",
       yourRoleDetails: [
         "Track exactly how many calls and leads come from marketing",
         "See your Google rankings climb for the searches that matter",
-        "Watch your online reputation strengthen month over month"
+        "Watch your cost per lead drop over time"
       ],
-      ourRole: "We measure what matters: calls, leads, jobs booked, revenue generated. Everything we do ties back to your bottom line.",
+      ourRole: "We continuously optimize campaigns and provide clear reporting that connects marketing spend to revenue.",
       ourRoleDetails: [
-        "Call tracking so you know which leads come from us",
-        "ROI reporting that connects marketing spend to revenue",
-        "Continuous improvement to lower your cost per lead"
-      ]
-    },
-    {
-      label: "Execution",
-      yourRole: "You set the goals, we handle the details. Every campaign is executed with the same quality and attention to detail.",
-      yourRoleDetails: [
-        "Know that your marketing runs consistently every month",
-        "See steady improvement without micromanaging",
-        "Trust the process and focus on your operations"
-      ],
-      ourRole: "We deliver the work consistently, at the standard your reputation depends on. Every campaign, every month.",
-      ourRoleDetails: [
-        "Processes refined over a decade of local marketing",
-        "QA checkpoints before anything goes live",
-        "Same quality whether you have 1 location or 10"
+        "Monthly performance reports in plain English",
+        "Continuous campaign optimization",
+        "ROI tracking that ties spend to booked jobs"
       ]
     }
   ];
@@ -119,7 +119,7 @@ const WhatWeSolve = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-                How We Keep Service Calls<br />Coming All Year Round
+                Our Digital Marketing Process
               </h2>
             </div>
 

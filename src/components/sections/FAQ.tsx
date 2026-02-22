@@ -52,6 +52,14 @@ export const homepageFAQs = [
   {
     question: "What happens if something isn't working?",
     answer: "We review performance together during regular check-ins and adjust deliberately. If something needs to change, we surface it early and work through it together, not wait until it's a problem."
+  },
+  {
+    question: "What is plumbing SEO?",
+    answer: "Plumbing SEO is the process of optimizing your website, Google Business Profile, and online presence so your plumbing company ranks higher in local search results. When homeowners search for terms like 'plumber near me' or 'emergency plumber in [city],' SEO helps your business appear at the top — driving more calls and booked jobs."
+  },
+  {
+    question: "What is HVAC SEO?",
+    answer: "HVAC SEO focuses on improving your heating and cooling company's visibility in local search results. This includes optimizing for keywords like 'AC repair near me,' 'furnace installation [city],' and 'HVAC company near me.' A strong HVAC SEO strategy combines on-page optimization, Google Maps visibility, reviews, and local content to generate consistent leads year-round."
   }
 ];
 

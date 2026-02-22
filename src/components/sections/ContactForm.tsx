@@ -54,7 +54,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                 Your Marketing Onboarding in <span className="text-accent-green">6 Clear Steps</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                A predictable process designed for plumbing and HVAC companies that value transparency and results. Every step is built to drive more calls and fill your schedule.
+                A predictable process designed for plumbing and HVAC companies that value transparency and results. Every step is built to increase visibility, generate leads, and grow your business.
               </p>
             </div>
 
