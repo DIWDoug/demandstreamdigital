@@ -10,8 +10,8 @@ const ProblemSolution = () => {
     {
       icon: Eye,
       title: "Transparency",
-      subtitle: "Complete visibility into everything",
-      body: "Clear reporting on rankings, calls, leads, and work delivered. You see exactly where your money goes and what gets done."
+      subtitle: "Complete visibility at every step",
+      body: "Rankings, calls, leads, reviews, review replies, email campaigns, ad performance, content updates. You see every piece of work being done and where your budget is going."
     },
     {
       icon: MessageSquare,
