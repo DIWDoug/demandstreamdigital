@@ -47,7 +47,7 @@ export const homepageFAQs = [
   },
   {
     question: "Where is your team based?",
-    answer: "Our leadership is based in Dallas, TX with team members across the U.S. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
+    answer: "Our team is US-based and headquartered in Dallas, TX. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
   },
   {
     question: "What happens if something isn't working?",
