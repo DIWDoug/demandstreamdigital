@@ -145,8 +145,8 @@ const PartnerTools = () => {
   return (
     <>
       <Helmet>
-        <title>White Label Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Dialed-in Web</title>
-        <meta name="description" content="Use Dialed-in Web's calculators and tools to support white label SEO, PPC, and content strategy planning for your agency." />
+        <title>Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Demand Stream Digital</title>
+        <meta name="description" content="Use Demand Stream Digital's calculators and tools to support SEO, PPC, and content strategy planning for your agency." />
         <meta name="keywords" content="marketing agency tools, SEO calculators, PPC budget tools, agency proposal resources, white label marketing calculators" />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools" />
         
@@ -156,8 +156,8 @@ const PartnerTools = () => {
         <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="White Label Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Dialed-in Web" />
-        <meta property="og:description" content="Use Dialed-in Web's calculators and tools to support white label SEO, PPC, and content strategy planning for your agency." />
+        <meta property="og:title" content="Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Demand Stream Digital" />
+        <meta property="og:description" content="Use Demand Stream Digital's calculators and tools to support SEO, PPC, and content strategy planning for your agency." />
         <meta property="og:url" content="https://dialedinweb.com/partner-tools" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />

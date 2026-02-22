@@ -192,8 +192,8 @@ const Testimonials = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White Label SEO & Marketing Testimonials | Why Agencies Trust Dialed-in Web to Deliver Behind the Scenes</title>
-        <meta name="description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
+        <title>Agency Partner Testimonials | Why Agencies Trust Demand Stream Digital | Demand Stream Digital</title>
+        <meta name="description" content="See how agencies use Demand Stream Digital for expert SEO, PPC, and content marketing—delivered under their own brand." />
         <meta name="keywords" content="white label SEO reviews, agency partner testimonials, marketing fulfillment feedback, client success stories, SEO agency reviews" />
         <link rel="canonical" href="https://dialedinweb.com/testimonials" />
         
@@ -205,8 +205,8 @@ const Testimonials = () => {
         <script type="application/ld+json">{JSON.stringify(testimonialsSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="White Label SEO & Marketing Testimonials | Why Agencies Trust Dialed-in Web to Deliver Behind the Scenes" />
-        <meta property="og:description" content="See how agencies use Dialed-in Web for expert white label SEO, PPC, and content marketing—delivered under their own brand." />
+        <meta property="og:title" content="Agency Partner Testimonials | Why Agencies Trust Demand Stream Digital" />
+        <meta property="og:description" content="See how agencies use Demand Stream Digital for expert SEO, PPC, and content marketing—delivered under their own brand." />
         <meta property="og:url" content="https://dialedinweb.com/testimonials" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />

@@ -60,8 +60,8 @@ const faqGroups: FAQGroup[] = [
     title: "Process & Reporting",
     faqs: [
       { question: "What is included in your local SEO service?", answer: "Our comprehensive service includes technical SEO audits, on-page optimization, content strategy and development, link building, citation management, GBP optimization, and monthly reporting. We customize scope based on market competition and client goals." },
-      { question: "How do you handle client communication?", answer: "We operate 100% white-label. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship and present the work as your own." },
-      { question: "How do you handle reporting?", answer: "Monthly reports show what moved, not just what we did. We track rankings, organic traffic, GBP insights, and lead indicators. Reports are white-labeled and ready for client presentation. We also provide talking points for your client conversations." },
+      { question: "How do you handle client communication?", answer: "We operate as your strategic partner. All communication flows through you. We provide reports, updates, and talking points. You maintain the client relationship and present the work as your own." },
+      { question: "How do you handle reporting?", answer: "Monthly reports show what moved, not just what we did. We track rankings, organic traffic, GBP insights, and lead indicators. Reports are unbranded and ready for client presentation. We also provide talking points for your client conversations." },
       { question: "What access do you need from clients?", answer: "We need access to GBP, website CMS, and ideally Google Analytics and Search Console. We also need timely feedback on content drafts and occasional input for review campaigns. The more responsive the client, the faster we can move." },
       { question: "Can you help with GBP suspensions?", answer: "Yes. We have experience recovering suspended GBP listings. The process depends on the suspension reason, but we have successfully restored listings suspended for guideline violations, verification issues, and other common problems." },
     ]
