@@ -52,7 +52,7 @@ const WhyPartnerWithUs = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Why Plumbing & HVAC Contractors Trust Our Lead Generation
+            Why Trade Contractors Trust Us to Grow Their Business
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             More calls. Fewer headaches. Marketing you can stand behind.

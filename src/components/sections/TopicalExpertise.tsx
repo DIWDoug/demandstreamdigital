@@ -266,7 +266,7 @@ const TopicalExpertise = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            SEO, PPC & Content Services<br />for Home Service Businesses
+            Specialized Expertise Across<br />Every Growth Channel
           </h2>
           <p className="text-lg text-text-secondary">
             Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
