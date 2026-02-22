@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Wrench, Flame, Zap, Phone, ArrowRight } from "lucide-react";
+import { ChevronDown, Wrench, Flame, Zap, Building2, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import StreamTexture from "@/components/StreamTexture";
@@ -50,6 +50,21 @@ const industries = [
       "Electrical Reporting & Dashboards",
     ],
   },
+  {
+    icon: Building2,
+    title: "Franchises",
+    summary: "Multi-location marketing for home service franchises. Consistent branding, local execution, and centralized reporting across every territory.",
+    services: [
+      "Franchise SEO",
+      "Franchise Web Design",
+      "Franchise Google Maps / GBP",
+      "Franchise PPC / Google Ads",
+      "Franchise Content Marketing",
+      "Franchise Email Marketing",
+      "Franchise Reputation Management",
+      "Franchise Reporting & Dashboards",
+    ],
+  },
 ];
 
 const TopicalExpertise = () => {
@@ -85,76 +100,88 @@ const TopicalExpertise = () => {
         </div>
 
         {/* Industry cards grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`bg-white border border-gray-200 rounded-xl p-6 lg:p-8 shadow-sm cursor-pointer transition-all duration-300 ${
+              className={`bg-white rounded-xl shadow-sm cursor-pointer transition-all duration-300 overflow-hidden ${
                 isExpanded(index)
-                  ? "ring-1 ring-accent-blue/50 bg-white"
+                  ? "ring-1 ring-accent-blue/50"
                   : "hover:translate-y-[-2px]"
               }`}
               onClick={() => toggleExpand(index)}
             >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
-                    <industry.icon className="h-5 w-5 text-accent-blue" />
+              {/* Card top with accent bar */}
+              <div className="h-1 bg-gradient-to-r from-accent-blue to-accent-blue/40" />
+              
+              <div className="p-6 lg:p-7 border border-t-0 border-gray-200 rounded-b-xl">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
+                      <industry.icon className="h-5 w-5 text-accent-blue" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground">{industry.title}</h3>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">{industry.title}</h3>
+                  <ChevronDown
+                    className={`h-5 w-5 text-text-muted transition-transform duration-300 ${
+                      isExpanded(index) ? "rotate-180" : ""
+                    }`}
+                  />
                 </div>
-                <ChevronDown
-                  className={`h-5 w-5 text-text-muted transition-transform duration-300 ${
-                    isExpanded(index) ? "rotate-180" : ""
-                  }`}
-                />
-              </div>
 
-              {/* Summary */}
-              <p className="text-text-secondary text-sm mb-4">
-                {industry.summary}
-              </p>
-
-              {/* Services dropdown */}
-              <div
-                className={`transition-all duration-300 ${
-                  isExpanded(index)
-                    ? "grid-rows-[1fr] opacity-100"
-                    : "grid-rows-[0fr] opacity-0 pointer-events-none"
-                }`}
-                style={{ display: "grid" }}
-                aria-hidden={!isExpanded(index)}
-              >
-                <div className="overflow-hidden">
-                  <div className="pt-4 border-t border-border space-y-3">
-                    {industry.services.map((service, sIdx) => (
-                      <div key={sIdx} className="pl-4 border-l-2 border-accent-blue/30">
-                        <span className="text-sm font-medium text-gray-900">
-                          {service}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <Link
-                      to="/contact"
-                      className="text-cta hover:text-cta/80 text-sm font-medium transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Get a {industry.title} marketing proposal →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Collapsed hint */}
-              {!isExpanded(index) && (
-                <p className="text-accent-blue text-xs font-medium">
-                  {industry.services.length} services. Click to explore
+                {/* Summary */}
+                <p className="text-text-secondary text-sm mb-4">
+                  {industry.summary}
                 </p>
-              )}
+
+                {/* Services dropdown */}
+                <div
+                  className={`transition-all duration-300 ${
+                    isExpanded(index)
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                  }`}
+                  style={{ display: "grid" }}
+                  aria-hidden={!isExpanded(index)}
+                >
+                  <div className="overflow-hidden">
+                    <div className="pt-4 border-t border-gray-200 space-y-0">
+                      {industry.services.map((service, sIdx) => (
+                        <div
+                          key={sIdx}
+                          className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
+                            sIdx % 2 === 0 ? "bg-slate-50" : "bg-white"
+                          }`}
+                        >
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
+                          <span className="text-sm font-medium text-gray-900">
+                            {service}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-5 pt-4 border-t border-gray-200">
+                      <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-1.5 text-cta hover:text-cta/80 text-sm font-semibold transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Get a {industry.title} proposal
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Collapsed hint */}
+                {!isExpanded(index) && (
+                  <p className="text-accent-blue text-xs font-medium">
+                    {industry.services.length} services. Click to explore
+                  </p>
+                )}
+              </div>
             </div>
           ))}
         </div>

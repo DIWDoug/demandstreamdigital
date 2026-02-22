@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
-import { Shield, MessageSquare, Settings } from "lucide-react";
+import { Eye, MessageSquare, Settings, Equal } from "lucide-react";
 import StreamTexture from "@/components/StreamTexture";
 
 
@@ -8,10 +8,10 @@ const ProblemSolution = () => {
 
   const pillars = [
     {
-      icon: Shield,
-      title: "Trust",
-      subtitle: "Earned through consistency",
-      body: "Clear reporting on rankings, calls, and leads. No confusion about where your money is going."
+      icon: Eye,
+      title: "Transparency",
+      subtitle: "Complete visibility into everything",
+      body: "Clear reporting on rankings, calls, leads, and work delivered. You see exactly where your money goes and what gets done."
     },
     {
       icon: MessageSquare,
@@ -46,7 +46,7 @@ const ProblemSolution = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
             {pillars.map((pillar, index) => (
               <div 
                 key={index}
@@ -66,6 +66,16 @@ const ProblemSolution = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* = Trust conclusion */}
+          <div className="flex items-center justify-center gap-4 mb-16">
+            <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent to-white/20" />
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
+              <Equal className="h-5 w-5 text-accent-blue" />
+              <span className="text-lg font-bold text-foreground tracking-wide">Trust</span>
+            </div>
+            <div className="h-px flex-1 max-w-24 bg-gradient-to-l from-transparent to-white/20" />
           </div>
 
           <div className="text-center">
