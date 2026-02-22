@@ -102,77 +102,36 @@ const LocalGrowthEngine = () => {
           {/* Bleed-over Card */}
           <div className="relative z-20 bg-white/5 rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/10 mb-[-5rem]">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left: Fanned Book Stack */}
+              {/* Left: Stacked Book Display */}
               <div className="relative flex justify-center items-center min-h-[350px] lg:min-h-[420px]">
-                {/* Fanned ebook mockup */}
-                <div className="relative" style={{ perspective: '1000px' }}>
-                  {/* Back book - most rotated */}
+                <div className="relative w-56 md:w-64 lg:w-72">
+                  {/* Back book - offset behind */}
                   <div 
-                    className="absolute -left-16 lg:-left-24 top-8 w-40 md:w-48 lg:w-56 -rotate-12 opacity-50"
-                    style={{ transformStyle: 'preserve-3d' }}
+                    className="absolute -left-6 -top-3 w-full opacity-60"
+                    style={{ 
+                      transform: 'rotate(-4deg) scale(0.95)',
+                      transformOrigin: 'bottom center'
+                    }}
                   >
-                    <div className="relative overflow-hidden rounded-lg">
-                      <img 
-                        src={bookCover} 
-                        alt="DemandStream: The No-BS Growth Guide ebook" 
-                        className="w-full"
-                        style={{ 
-                          filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
-                          mixBlendMode: 'multiply'
-                        }}
-                      />
-                    </div>
-                  </div>
-                  {/* Middle-back book */}
-                  <div 
-                    className="absolute -left-8 lg:-left-12 top-4 w-40 md:w-48 lg:w-56 -rotate-6 opacity-70"
-                    style={{ transformStyle: 'preserve-3d' }}
-                  >
-                    <div className="relative overflow-hidden rounded-lg">
-                      <img 
-                        src={bookCover} 
-                        alt="DemandStream: The No-BS Growth Guide ebook" 
-                        className="w-full"
-                        style={{ 
-                          filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.4))',
-                          mixBlendMode: 'multiply'
-                        }}
-                      />
-                    </div>
-                  </div>
-                  {/* Middle-front book */}
-                  <div 
-                    className="absolute left-1 lg:left-2 top-2 w-40 md:w-48 lg:w-56 rotate-0 opacity-85"
-                    style={{ transformStyle: 'preserve-3d' }}
-                  >
-                    <div className="relative overflow-hidden rounded-lg">
-                      <img 
-                        src={bookCover} 
-                        alt="DemandStream: The No-BS Growth Guide ebook" 
-                        className="w-full"
-                        style={{ 
-                          filter: 'drop-shadow(0 25px 50px rgba(0,0,0,0.35))',
-                          mixBlendMode: 'multiply'
-                        }}
-                      />
-                    </div>
+                    <img 
+                      src={bookCover} 
+                      alt="DemandStream ebook" 
+                      className="w-full rounded-lg"
+                      style={{ 
+                        filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.4))',
+                      }}
+                    />
                   </div>
                   {/* Front book - main focus */}
-                  <div 
-                    className="relative left-12 lg:left-20 w-44 md:w-52 lg:w-64 rotate-6 z-10"
-                    style={{ transformStyle: 'preserve-3d' }}
-                  >
-                    <div className="relative overflow-hidden rounded-lg">
-                      <img 
-                        src={bookCover} 
-                        alt="DemandStream: The No-BS Growth Guide ebook" 
-                        className="w-full"
-                        style={{ 
-                          filter: 'drop-shadow(0 35px 60px rgba(0,0,0,0.5))',
-                          mixBlendMode: 'multiply'
-                        }}
-                      />
-                    </div>
+                  <div className="relative z-10">
+                    <img 
+                      src={bookCover} 
+                      alt="DemandStream: The Digital Marketing Playbook for Plumbing & HVAC Contractors" 
+                      className="w-full rounded-lg"
+                      style={{ 
+                        filter: 'drop-shadow(0 35px 60px rgba(0,0,0,0.5))',
+                      }}
+                    />
                   </div>
                 </div>
               </div>
