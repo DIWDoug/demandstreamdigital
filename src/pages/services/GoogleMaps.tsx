@@ -37,12 +37,12 @@ const GoogleMaps = () => {
   if (!hub) return null;
 
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: googleMapsConfig.title }
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label GBP SEO & Google Maps Optimization",
+    name: "GBP SEO & Google Maps for Plumbing & HVAC",
     description: googleMapsConfig.metaDescription,
     url: googleMapsConfig.canonicalUrl,
     serviceType: "GBP SEO Service",
@@ -54,7 +54,7 @@ const GoogleMaps = () => {
       <Helmet>
         <title>{googleMapsConfig.metaTitle}</title>
         <meta name="description" content={googleMapsConfig.metaDescription} />
-        <meta name="keywords" content="white label GBP optimization, Google Business Profile management, local pack ranking, Google Maps SEO, review management services" />
+        <meta name="keywords" content="plumbing Google Maps SEO, HVAC GBP optimization, Google Business Profile for plumbers, local pack ranking, plumbing review management" />
         <link rel="canonical" href={googleMapsConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -69,14 +69,14 @@ const GoogleMaps = () => {
         <meta property="og:description" content={googleMapsConfig.metaDescription} />
         <meta property="og:url" content={googleMapsConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={googleMapsConfig.metaTitle} />
         <meta name="twitter:description" content={googleMapsConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

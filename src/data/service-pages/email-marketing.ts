@@ -7,7 +7,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   title: "Email Marketing",
   metaTitle: "Email Marketing for Plumbing & HVAC Companies | Campaigns, Automation & List Growth | Demand Stream Digital",
   metaDescription: "Demand Stream Digital builds email programs that drive repeat business for plumbing and HVAC companies. Automation, campaigns, and list growth. Book a strategy call.",
-  canonicalUrl: `${SITE_URL}/white-label-email-marketing`,
+  canonicalUrl: `${SITE_URL}/plumbing-email-marketing`,
 
   hero: {
     headline: "Email Marketing for",
@@ -292,14 +292,14 @@ export const emailMarketingConfig: ServicePageConfig = {
     intro: "Effective local marketing is interconnected.",
     body: "Email nurtures leads from SEO and paid media. Automations convert website visitors. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads and drive repeat business.", href: "/white-label-email-marketing", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/white-label-local-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/white-label-gbp-seo" },
-      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/white-label-paid-media" },
-      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/white-label-content-marketing" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/white-label-reporting" }
+      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads and drive repeat business.", href: "/plumbing-email-marketing", isCenter: true },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/plumbing-seo" },
+      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
+      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/plumbing-paid-advertising" },
+      { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/plumbing-content-marketing" },
+      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/plumbing-reporting" }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing"
+    ctaHref: "/#services"
   }
 };

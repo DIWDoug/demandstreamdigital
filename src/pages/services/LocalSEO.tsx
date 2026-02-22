@@ -42,14 +42,14 @@ const LocalSEO = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: hub.title }
   ];
 
   // Build combined schema
   const faqSchema = getFAQPageSchema(getFlatFAQs());
   const serviceSchema = getServiceSchema({
-    name: "White Label Local SEO Services",
+    name: "Local SEO for Plumbing & HVAC",
     description: localSEOConfig.metaDescription,
     url: localSEOConfig.canonicalUrl,
     serviceType: "Local SEO Service"
@@ -69,7 +69,7 @@ const LocalSEO = () => {
       <Helmet>
         <title>{localSEOConfig.metaTitle}</title>
         <meta name="description" content={localSEOConfig.metaDescription} />
-        <meta name="keywords" content="white label local SEO, local SEO fulfillment, local search optimization, agency SEO partner, citation building services" />
+        <meta name="keywords" content="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing" />
         <link rel="canonical" href={localSEOConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -84,14 +84,14 @@ const LocalSEO = () => {
         <meta property="og:description" content={localSEOConfig.metaDescription} />
         <meta property="og:url" content={localSEOConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={localSEOConfig.metaTitle} />
         <meta name="twitter:description" content={localSEOConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

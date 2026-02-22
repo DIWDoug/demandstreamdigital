@@ -34,7 +34,7 @@ const PaidMedia = () => {
   if (!hub) return null;
 
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: paidMediaConfig.title }
   ];
 
