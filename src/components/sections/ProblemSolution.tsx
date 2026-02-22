@@ -73,7 +73,7 @@ const ProblemSolution = () => {
             <div className="h-px flex-1 max-w-24 bg-gradient-to-r from-transparent to-white/20" />
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
               <Equal className="h-5 w-5 text-accent-blue" />
-              <span className="text-lg font-bold text-foreground tracking-wide">Trust</span>
+              <span className="text-2xl font-black text-foreground tracking-widest uppercase">Trust</span>
             </div>
             <div className="h-px flex-1 max-w-24 bg-gradient-to-l from-transparent to-white/20" />
           </div>
