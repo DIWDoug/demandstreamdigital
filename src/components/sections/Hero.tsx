@@ -155,7 +155,7 @@ const Hero = () => {
               className="text-lg text-gray-600 leading-relaxed mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              SEO, Google Ads, reputation management, and AI-powered lead generation built specifically for plumbing and HVAC contractors. More calls, more booked jobs, all year round.
+              Local SEO, Google Ads, reputation management, and AI-powered lead generation built specifically for plumbing and HVAC contractors. Drive more service calls, increase booked jobs, and dominate your local market — from Google Business Profile optimization to high-converting landing pages, all year round.
             </p>
 
             {/* Website input + CTA */}

@@ -105,7 +105,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <div key={index}>
                 <Link 
                   to={category.href}
-                  className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-cta transition-colors"
+                  className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-accent-blue transition-colors"
                 >
                   {category.title}
                 </Link>
@@ -114,7 +114,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                     <li key={itemIndex}>
                       <Link 
                         to={item.href}
-                        className="text-xs text-text-secondary hover:text-cta transition-colors"
+                        className="text-xs text-text-secondary hover:text-accent-blue transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -213,7 +213,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               <div className="flex items-center gap-6">
                 <Link 
                   to="/case-studies"
-                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-cta transition-colors"
+                   className="flex items-center gap-1.5 text-xs text-text-muted hover:text-accent-blue transition-colors"
                 >
                   <FileText className="h-3.5 w-3.5" />
                   Case Studies
