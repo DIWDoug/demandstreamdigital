@@ -11,19 +11,19 @@ const ProblemSolution = () => {
       icon: Shield,
       title: "Trust",
       subtitle: "Earned through consistency",
-      body: "Transparent reporting down to cost per booked call, booking rate, and average ticket, not vanity metrics. You'll see exactly where every dollar goes and what it produces."
+      body: "Clear reporting on rankings, calls, and leads. No confusion about where your money is going."
     },
     {
       icon: MessageSquare,
       title: "Clarity",
       subtitle: "Results you can see",
-      body: "Know exactly where your leads come from, how they convert, and how they affect technician capacity. No jargon, no vague promises. Just the numbers that run your business."
+      body: "You understand what is working and why. No marketing jargon."
     },
     {
       icon: Settings,
       title: "Execution",
       subtitle: "Built for your market",
-      body: "Capacity-aligned campaigns that scale in peak season and stabilize shoulder months. Every strategy is scoped to your service area, competition, and seasonal demand patterns."
+      body: "SEO, paid ads, Google Maps, and reputation management handled by specialists who know plumbing and HVAC."
     }
   ];
 
@@ -42,7 +42,7 @@ const ProblemSolution = () => {
               Marketing Built for Plumbing & HVAC Operators
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              These three things determine whether your marketing investment grows your business or quietly drains it. We built our entire approach around getting them right for plumbing and HVAC companies.
+              Most marketing agencies treat plumbing and HVAC companies like any other business. We don't. We build strategies around how customers search for plumbers and HVAC services in your local market — and how to turn that visibility into booked jobs.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ const ProblemSolution = () => {
 
           <div className="text-center">
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Generic marketing treats every business the same. We scope to your service area, adapt to your seasonal demand, and build around what actually drives calls — whether that's search, paid ads, email, or reputation.
+              Generic marketing treats every business the same. We build around your service area, your competition, and what actually drives calls — whether that's search, paid ads, email, or reputation.
             </p>
           </div>
         </div>

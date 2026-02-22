@@ -18,6 +18,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 import WaveDivider from "@/components/WaveDivider";
 import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
+import FounderEEAT from "@/components/sections/FounderEEAT";
 import { getHomepageSchema } from "@/lib/schema";
 import { getPageOgImage } from "@/lib/ogImages";
 
@@ -107,6 +108,7 @@ const Index = () => {
       
       <div id="testimonials" className="relative">
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <FounderEEAT />
         <Testimonials />
       </div>
       

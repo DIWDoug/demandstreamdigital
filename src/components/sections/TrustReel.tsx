@@ -1,13 +1,12 @@
 const TrustReel = () => {
   const trustItems = [
     "Plumbing & HVAC Marketing Specialists",
-    "Built Exclusively for Service-Call Companies",
-    "Booked Calls > Clicks",
-    "Dispatch-Aware Campaigns",
-    "Local SEO & Google Maps Visibility",
-    "Revenue per Call Focused",
-    "Transparent Reporting",
-    "Multi-Location Expansion Ready",
+    "SEO & Google Maps Experts",
+    "Paid Search & Local Services Ads",
+    "Reputation & Review Growth",
+    "Email & Retention Marketing",
+    "High-Converting Website Design",
+    "Franchise & Multi-Location Ready",
   ];
 
   return (
