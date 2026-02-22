@@ -83,7 +83,7 @@ const ServicePageLayout = ({
   customSections = {}
 }: ServicePageLayoutProps) => {
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: config.title }
   ];
 
@@ -109,7 +109,7 @@ const ServicePageLayout = ({
         <meta property="og:description" content={config.metaDescription} />
         <meta property="og:url" content={config.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />

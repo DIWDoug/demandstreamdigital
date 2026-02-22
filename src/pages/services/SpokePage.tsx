@@ -32,60 +32,60 @@ const SectionDivider = () => (
 // Keywords mapping for new flat URL structure
 const spokeKeywordsMap: Record<string, string> = {
   // Local SEO spokes
-  'on-page-optimization': 'white label on-page SEO, local on-page optimization, meta tag optimization, content optimization services',
-  'technical-seo': 'white label technical SEO, site speed optimization, crawl optimization, structured data implementation',
-  'local-keyword-strategy': 'local keyword research, local search intent, geo-targeted keywords, local keyword mapping',
-  'content-development': 'local SEO content, location page content, service area content, local blog writing',
-  'link-building': 'white label link building, local link acquisition, authority building, local backlinks',
-  'schema-markup': 'local business schema, structured data markup, rich snippets, schema implementation',
-  'nap-citations': 'NAP citation building, citation cleanup, local directory listings, citation management',
+  'on-page-optimization': 'on-page SEO for plumbers, local on-page optimization, plumbing meta tags, HVAC content optimization',
+  'technical-seo': 'technical SEO for plumbers, plumbing site speed, HVAC crawl optimization, structured data for plumbers',
+  'local-keyword-strategy': 'plumbing keyword research, HVAC local keywords, geo-targeted plumbing keywords, local keyword mapping',
+  'content-development': 'plumbing SEO content, HVAC location pages, service area content for plumbers, local plumbing blog',
+  'link-building': 'link building for plumbers, HVAC backlinks, local authority building, plumbing local links',
+  'schema-markup': 'plumbing schema markup, HVAC structured data, rich snippets for plumbers, local business schema',
+  'nap-citations': 'plumbing citation building, HVAC directory listings, NAP consistency for plumbers, citation management',
   // Google Maps spokes
-  'gbp-optimization': 'GBP optimization services, Google Business Profile setup, GMB management, local listing optimization',
-  'review-management': 'white label review management, Google review generation, review response services, reputation management',
-  'citation-building': 'citation building services, local citation management, directory submissions, NAP consistency',
-  'photo-optimization': 'GBP photo optimization, business photo management, Google Maps images, visual optimization',
-  'qa-management': 'Google Q&A management, GBP questions answers, local business FAQs, customer Q&A optimization',
-  'post-scheduling': 'GBP post scheduling, Google Business posts, local social posting, GMB content calendar',
+  'gbp-optimization': 'plumbing GBP optimization, HVAC Google Business Profile, plumber GMB management, local listing optimization',
+  'review-management': 'plumbing review management, HVAC review generation, plumber reputation management, Google review response',
+  'citation-building': 'plumbing citation building, HVAC directory submissions, plumber NAP consistency, local citation management',
+  'photo-optimization': 'plumbing GBP photos, HVAC business photos, plumber Google Maps images, visual optimization',
+  'qa-management': 'plumbing Google Q&A, HVAC business FAQs, plumber Q&A management, customer Q&A optimization',
+  'post-scheduling': 'plumbing GBP posts, HVAC Google Business posts, plumber local posting, GMB content calendar',
   // Paid Media spokes
-  'google-ads': 'white label Google Ads, Google Ads management, search advertising, PPC campaign management',
-  'meta-ads': 'white label Meta Ads, Facebook Ads management, Instagram advertising, social media ads',
-  'local-service-ads': 'Local Service Ads management, LSA setup, Google Guaranteed, home service ads',
-  'retargeting-campaigns': 'white label retargeting, display remarketing, audience retargeting, conversion optimization',
-  'landing-page-design': 'PPC landing pages, conversion landing page design, campaign landing pages, high-converting pages',
-  'conversion-tracking': 'conversion tracking setup, PPC analytics, Google Ads tracking, conversion attribution',
+  'google-ads': 'plumbing Google Ads, HVAC PPC management, plumber search advertising, plumbing pay per click',
+  'meta-ads': 'plumbing Facebook Ads, HVAC Meta Ads, plumber Instagram advertising, plumbing social media ads',
+  'local-service-ads': 'plumbing Local Service Ads, HVAC LSA setup, plumber Google Guaranteed, home service ads',
+  'retargeting-campaigns': 'plumbing retargeting, HVAC display remarketing, plumber audience retargeting, conversion optimization',
+  'landing-page-design': 'plumbing landing pages, HVAC conversion pages, plumber PPC landing pages, high-converting pages',
+  'conversion-tracking': 'plumbing conversion tracking, HVAC PPC analytics, plumber call tracking, conversion attribution',
   // Email Marketing spokes
-  'campaign-strategy': 'email campaign strategy, email marketing planning, campaign calendar, email content strategy',
-  'list-management': 'email list management, list hygiene, subscriber management, email segmentation',
-  'automation-flows': 'email automation flows, drip campaigns, automated sequences, marketing automation',
-  'newsletter-design': 'newsletter design services, email template design, HTML email design, branded newsletters',
-  'ab-testing': 'email A/B testing, subject line testing, email optimization, conversion testing',
-  'performance-analytics': 'email analytics, campaign reporting, email performance metrics, delivery analytics',
+  'campaign-strategy': 'plumbing email campaigns, HVAC email marketing, plumber email strategy, service business email',
+  'list-management': 'plumbing email list, HVAC subscriber management, plumber email segmentation, list hygiene',
+  'automation-flows': 'plumbing email automation, HVAC drip campaigns, plumber follow-up sequences, marketing automation',
+  'newsletter-design': 'plumbing newsletter design, HVAC email templates, plumber branded newsletters, email design',
+  'ab-testing': 'plumbing email testing, HVAC subject line testing, plumber email optimization, conversion testing',
+  'performance-analytics': 'plumbing email analytics, HVAC campaign reporting, plumber email metrics, delivery analytics',
   // Content Marketing spokes
-  'geographical-content': 'geographical content, city pages, service area content, location-specific SEO',
-  'topical-authority': 'topical content, industry blog posts, thought leadership content, expertise articles',
-  'power-posts': 'power posts, pillar content, comprehensive guides, long-form SEO content',
-  'ebooks-guides': 'ebooks, lead magnets, downloadable guides, gated content, content marketing assets',
-  'lead-magnets': 'lead magnets, checklists, templates, conversion content, email list building',
-  'press-releases': 'press releases, PR distribution, news announcements, media coverage',
-  'case-studies': 'case studies, client success stories, testimonial content, proof assets',
-  'aio-content': 'AI optimized content, AIO content, LLM visibility, answer engine optimization',
-  'faq-content': 'FAQ content, question answer pages, featured snippets, voice search optimization',
-  'hub-spoke-buildouts': 'hub and spoke content, topic clusters, content architecture, topical authority',
+  'geographical-content': 'plumbing city pages, HVAC service area content, plumber location SEO, geographical content',
+  'topical-authority': 'plumbing blog posts, HVAC thought leadership, plumber expertise articles, industry content',
+  'power-posts': 'plumbing pillar content, HVAC comprehensive guides, plumber long-form SEO content, power posts',
+  'ebooks-guides': 'plumbing guides, HVAC lead magnets, plumber downloadable content, gated content',
+  'lead-magnets': 'plumbing lead magnets, HVAC checklists, plumber conversion content, email list building',
+  'press-releases': 'plumbing press releases, HVAC PR distribution, plumber news announcements, media coverage',
+  'case-studies': 'plumbing case studies, HVAC success stories, plumber testimonial content, proof assets',
+  'aio-content': 'plumbing AI optimized content, HVAC AIO content, plumber LLM visibility, answer engine optimization',
+  'faq-content': 'plumbing FAQ content, HVAC question answer pages, plumber featured snippets, voice search',
+  'hub-spoke-buildouts': 'plumbing hub spoke content, HVAC topic clusters, plumber content architecture, topical authority',
   // Authority Building spokes
-  'local-links': 'local link building, community backlinks, local news links, regional authority',
-  'unstructured-citations': 'unstructured citations, press mentions, podcast features, media citations',
-  'brand-mentions': 'brand mention building, online mentions, brand awareness, entity building',
-  'anchor-text': 'anchor text optimization, link anchor strategy, branded anchors, natural anchor distribution',
-  'sponsorships': 'local sponsorship links, community sponsorships, event sponsorship SEO, nonprofit links',
-  'reputation-signals': 'reputation signals, trust signals, E-E-A-T building, authority signals',
-  'guest-posts-niche-edits': 'guest posting services, niche edits, blogger outreach, editorial links',
+  'local-links': 'plumbing local links, HVAC community backlinks, plumber local news links, regional authority',
+  'unstructured-citations': 'plumbing press mentions, HVAC podcast features, plumber media citations, unstructured citations',
+  'brand-mentions': 'plumbing brand mentions, HVAC online mentions, plumber brand awareness, entity building',
+  'anchor-text': 'plumbing anchor text, HVAC link strategy, plumber branded anchors, natural anchor distribution',
+  'sponsorships': 'plumbing sponsorship links, HVAC community sponsorships, plumber event sponsorship, nonprofit links',
+  'reputation-signals': 'plumbing reputation signals, HVAC trust signals, plumber E-E-A-T building, authority signals',
+  'guest-posts-niche-edits': 'plumbing guest posting, HVAC niche edits, plumber blogger outreach, editorial links',
   // Reporting spokes
-  'branded-dashboards': 'white label dashboards, branded analytics, client dashboards, custom reporting',
-  'monthly-performance-reports': 'monthly SEO reports, performance reporting, client reports, marketing reports',
-  'rank-tracking-visibility': 'rank tracking services, keyword monitoring, SERP tracking, visibility reporting',
-  'call-tracking-lead-attribution': 'call tracking services, lead attribution, phone tracking, conversion attribution',
-  'roi-revenue-analysis': 'ROI analysis, revenue reporting, marketing ROI tracking, performance analytics',
-  'client-presentation-decks': 'client presentation decks, marketing presentations, QBR slides, client reporting decks',
+  'branded-dashboards': 'plumbing marketing dashboards, HVAC analytics, plumber custom reporting, performance dashboards',
+  'monthly-performance-reports': 'plumbing SEO reports, HVAC performance reporting, plumber marketing reports, monthly reports',
+  'rank-tracking-visibility': 'plumbing rank tracking, HVAC keyword monitoring, plumber SERP tracking, visibility reporting',
+  'call-tracking-lead-attribution': 'plumbing call tracking, HVAC lead attribution, plumber phone tracking, conversion attribution',
+  'roi-revenue-analysis': 'plumbing ROI analysis, HVAC revenue reporting, plumber marketing ROI, performance analytics',
+  'client-presentation-decks': 'plumbing marketing presentations, HVAC QBR slides, plumber reporting decks, strategic reviews',
 };
 
 const SpokePage = () => {
@@ -122,7 +122,7 @@ const SpokePage = () => {
       <div className="dark min-h-screen bg-background text-foreground flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Service Not Found</h1>
-          <Link to="/white-label-inbound-marketing-services" className="text-cta hover:underline">
+          <Link to="/#services" className="text-cta hover:underline">
             Back to Services
           </Link>
         </div>
@@ -131,7 +131,7 @@ const SpokePage = () => {
   }
 
   const breadcrumbItems = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: hub.title, href: getHubUrl(hub.slug) },
     { label: spoke.title }
   ];
@@ -139,14 +139,14 @@ const SpokePage = () => {
   // Find sibling spokes for ecosystem
   const siblingSpokes = hub.spokes.filter((s) => s.slug !== spokeSlug);
 
-  const canonicalUrl = `https://dialedinweb.com${getSpokeUrl(hubSlug || '', spokeSlug || '')}`;
+  const canonicalUrl = `https://demandstreamdigital.com${getSpokeUrl(hubSlug || '', spokeSlug || '')}`;
   const spokeKeywords = spokeKeywordsMap[spokeSlug || ''];
   const ogImageUrl = getSpokeOgImage(spokeSlug || '');
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`}</title>
+        <title>{spoke.metaTitle || `${spoke.title} | ${hub.title} | Demand Stream Digital`}</title>
         <meta name="description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
         {spokeKeywords && <meta name="keywords" content={spokeKeywords} />}
         <link rel="canonical" href={canonicalUrl} />
@@ -157,18 +157,18 @@ const SpokePage = () => {
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
+        <meta property="og:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Demand Stream Digital`} />
         <meta property="og:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         <meta property="og:image" content={ogImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Dialed-In Web`} />
+        <meta name="twitter:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Demand Stream Digital`} />
         <meta name="twitter:description" content={spoke.metaDescription || spoke.fullDescription.slice(0, 160)} />
         <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
@@ -238,7 +238,7 @@ const SpokePage = () => {
             <div className="animate-fade-in">
               <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 lg:p-8 shadow-xl">
                 <h2 className="text-xl font-semibold text-foreground mb-2">Start a Conversation</h2>
-                <p className="text-sm text-text-muted mb-6">Tell us about your agency. We'll take it from there.</p>
+                <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>

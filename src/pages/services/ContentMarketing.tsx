@@ -31,12 +31,12 @@ const ContentMarketing = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: hub.title }
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "White-Label Content Marketing Services",
+    name: "Content Marketing for Plumbing & HVAC",
     description: contentMarketingConfig.metaDescription,
     url: contentMarketingConfig.canonicalUrl,
     serviceType: "Content Marketing Service",
@@ -48,7 +48,7 @@ const ContentMarketing = () => {
       <Helmet>
         <title>{contentMarketingConfig.metaTitle}</title>
         <meta name="description" content={contentMarketingConfig.metaDescription} />
-        <meta name="keywords" content="white label content marketing, blog writing services, content strategy, SEO content creation, agency content partner" />
+        <meta name="keywords" content="plumbing content marketing, HVAC blog writing, SEO content for plumbers, service area pages, plumbing lead magnets" />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -63,14 +63,14 @@ const ContentMarketing = () => {
         <meta property="og:description" content={contentMarketingConfig.metaDescription} />
         <meta property="og:url" content={contentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={contentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={contentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://dialedinweb.com/dialedinweb-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
       
       <Header />

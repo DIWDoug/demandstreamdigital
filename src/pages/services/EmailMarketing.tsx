@@ -31,7 +31,7 @@ const EmailMarketing = () => {
   if (!hub) return null;
 
   const breadcrumbItems = [
-    { label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" },
+    { label: "Services", href: "/#services" },
     { label: hub.title }
   ];
 

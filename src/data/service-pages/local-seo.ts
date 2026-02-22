@@ -7,7 +7,7 @@ export const localSEOConfig: ServicePageConfig = {
   title: "Local SEO",
   metaTitle: "Local SEO for Plumbing & HVAC Companies | On-Page, Links & Citations | Demand Stream Digital",
   metaDescription: "Demand Stream Digital helps plumbing and HVAC companies dominate local search. Citations, content, and technical SEO that drives calls. Talk to our team today.",
-  canonicalUrl: `${SITE_URL}/white-label-local-seo`,
+  canonicalUrl: `${SITE_URL}/plumbing-seo`,
 
   hero: {
     headline: "Local SEO for",
@@ -282,7 +282,7 @@ export const localSEOConfig: ServicePageConfig = {
         id: "local-seo",
         title: "Local SEO",
         description: "Organic visibility in local search results.",
-        href: "/white-label-local-seo",
+        href: "/plumbing-seo",
         isCenter: true
       },
       {
@@ -290,38 +290,38 @@ export const localSEOConfig: ServicePageConfig = {
         id: "google-maps",
         title: "GBP SEO",
         description: "Dominate the local 3-pack with optimized Google Business Profiles.",
-        href: "/white-label-gbp-seo"
+        href: "/plumbing-google-maps"
       },
       {
         icon: Sparkles,
         id: "paid-media",
         title: "Paid Media",
         description: "Capture demand immediately while organic visibility builds.",
-        href: "/white-label-paid-media"
+        href: "/plumbing-paid-advertising"
       },
       {
         icon: Mail,
         id: "email",
         title: "Email Marketing",
         description: "Nurture leads and drive repeat business.",
-        href: "/white-label-email-marketing"
+        href: "/plumbing-email-marketing"
       },
       {
         icon: PenTool,
         id: "content",
         title: "Content Development",
         description: "Strategic content that ranks and converts.",
-        href: "/white-label-content-marketing"
+        href: "/plumbing-content-marketing"
       },
       {
         icon: BarChart3,
         id: "reporting",
         title: "Reporting",
         description: "Dashboards that prove value.",
-        href: "/white-label-reporting"
+        href: "/plumbing-reporting"
       }
     ],
     ctaText: "Explore All Services",
-    ctaHref: "/white-label-inbound-marketing-services"
+    ctaHref: "/#services"
   }
 };
