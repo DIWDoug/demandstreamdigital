@@ -14,7 +14,7 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "We focus on what's most profitable for you first. High-value searches like \"hydro jetting [city]\" and \"water heater installation [city]\" — not just generic near-me terms.",
+    description: "We target high-value, high-volume searches like \"hydro jetting [city]\" and \"water heater installation [city]\" alongside high-intent near-me terms — prioritizing what drives the most booked jobs.",
     href: "/white-label-local-seo",
   },
   {
