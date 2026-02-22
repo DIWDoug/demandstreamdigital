@@ -1,39 +1,88 @@
 
-# Fix Card Color Issues Across the Site
 
-## Problem
-Cards throughout the site have a washed-out blue-grey appearance on light backgrounds. The root cause is that card components use semi-transparent or CSS-variable-based backgrounds that don't contrast properly against light sections. Additionally, some sections use off-brand accent colors.
+# Phase 2: Rewrite Service Page Content for Trade-Specific Branding
 
-## Changes
+## Overview
 
-### 1. Fix ProblemSolution Cards (Trust / Clarity / Execution)
-- **File:** `src/components/sections/ProblemSolution.tsx`
-- Change `bg-background/50` to `bg-white` so the cards are crisp white on the light section background
-- Update `border-border/30` to a more visible `border-gray-200` for clean definition
-
-### 2. Fix WhyPartnerWithUs Cards + Remove Off-Brand Green
-- **File:** `src/components/sections/WhyPartnerWithUs.tsx`
-- The olive green accent `hsl(76,42%,41%)` is off-brand -- replace with the brand red `#BF272E` for CTAs and the steel blue accent for icon backgrounds
-- Cards already use `from-white to-[#F0F0ED]` which is fine, but icon accents need brand alignment
-
-### 3. Fix ContactForm Accordion Cards
-- **File:** `src/components/sections/ContactForm.tsx`
-- Change `bg-background/50` on accordion items to `bg-white` for clarity on light backgrounds
-
-### 4. Fix `premium-card` CSS Class
-- **File:** `src/index.css`
-- The `.premium-card` class uses `--surface-card` and `--surface-elevated` which are dark-tinted. Add light-mode overrides so these resolve to clean whites/near-whites when used inside `.section-light` or on light backgrounds
-
-### 5. Fix TrustReel and FeaturedCaseStudies
-- **File:** `src/components/sections/TrustReel.tsx` and `src/components/sections/FeaturedCaseStudies.tsx`
-- These use `bg-card` which resolves correctly in light mode (white), so they should be fine -- will verify and adjust only if needed
+This phase updates all service page data configs and page components to remove every "white-label" reference and align canonical URLs, breadcrumbs, ecosystem links, schema names, meta keywords, and `og:site_name` with the new trade-specific URL structure and Demand Stream Digital branding.
 
 ---
 
-## Technical Details
+## Scope of Changes
 
-The core issue: CSS variables like `--background`, `--surface-card`, and `--surface-elevated` have dark-mode values (deep navy blues) that look fine in `.dark` wrappers, but when used with partial opacity (`/50`) in light sections, they create a blue-grey muddy appearance. The fix is to use explicit light colors (`bg-white`, `border-gray-200`) in sections that are always light, rather than relying on theme variables with opacity modifiers.
+### 7 Data Config Files (`src/data/service-pages/*.ts`)
 
-For the `.premium-card` class, the gradient uses `hsl(var(--surface-card))` which in light mode is `0 0% 100%` (white) and in dark mode is `213 50% 15%` (navy). The light-mode rendering should already be white, but the issue may be compounded by the inset box-shadow using `hsl(0 0% 0% / 0.2)` which darkens the card. We'll lighten the shadow for light sections.
+Each of the 7 config files needs identical categories of updates:
 
-The WhyPartnerWithUs green (`hsl(76,42%,41%)`) will be replaced with the brand red (`#BF272E` / CTA variable) for buttons and steel blue (`--accent-blue`) for icon accents to stay on-brand.
+**1. Canonical URLs** -- Update from `/white-label-*` to `/plumbing-*`
+- `local-seo.ts`: `/white-label-local-seo` to `/plumbing-seo`
+- `google-maps.ts`: `/white-label-gbp-seo` to `/plumbing-google-maps`
+- `paid-media.ts`: `/white-label-paid-media` to `/plumbing-paid-advertising`
+- `email-marketing.ts`: `/white-label-email-marketing` to `/plumbing-email-marketing`
+- `content-marketing.ts`: `/white-label-content-marketing` to `/plumbing-content-marketing`
+- `authority.ts`: `/white-label-authority-building` to `/plumbing-authority-building`
+- `reporting.ts`: `/white-label-reporting` to `/plumbing-reporting`
+
+**2. Ecosystem `href` links** -- Every config has an `ecosystem.services` array with 6-7 service links all pointing to `/white-label-*` URLs. Update all to `/plumbing-*` equivalents.
+
+**3. Ecosystem `ctaHref`** -- Update from `/white-label-inbound-marketing-services` to `/#services`
+
+---
+
+### 7 Page Components (`src/pages/services/*.tsx`)
+
+**1. Breadcrumbs** -- Update `{ label: "Inbound Marketing Services", href: "/white-label-inbound-marketing-services" }` to `{ label: "Services", href: "/#services" }` in all 7 files.
+
+**2. Schema names** -- Remove "White Label" from schema service names (e.g., `"White Label Local SEO Services"` to `"Local SEO for Plumbing & HVAC"`)
+
+**3. Meta keywords** -- Remove all white-label keywords (e.g., `"white label local SEO, local SEO fulfillment, agency SEO partner"`) and replace with trade-specific keywords (e.g., `"plumbing SEO, HVAC SEO, local SEO for plumbers"`)
+
+**4. `og:site_name`** -- Update from `"Dialed-In Web"` to `"Demand Stream Digital"` wherever present in service pages
+
+---
+
+### ServicePageLayout.tsx
+
+Update the default breadcrumb from `"Inbound Marketing Services"` / `/white-label-inbound-marketing-services` to `"Services"` / `/#services`
+
+---
+
+### SpokePage.tsx
+
+Update all white-label keywords in the `spokeKeywordsMap` to trade-specific equivalents (this page still renders for any legacy traffic before redirects kick in).
+
+---
+
+## File-by-File Summary
+
+| File | Changes |
+|------|---------|
+| `src/data/service-pages/local-seo.ts` | canonicalUrl, 7 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/google-maps.ts` | canonicalUrl, 7 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/paid-media.ts` | canonicalUrl, 6 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/email-marketing.ts` | canonicalUrl, 6 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/content-marketing.ts` | canonicalUrl, 7 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/authority.ts` | canonicalUrl, 7 ecosystem hrefs, ctaHref |
+| `src/data/service-pages/reporting.ts` | canonicalUrl, 6 ecosystem hrefs, ctaHref |
+| `src/pages/services/LocalSEO.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/GoogleMaps.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/PaidMedia.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/EmailMarketing.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/ContentMarketing.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/Authority.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/pages/services/Reporting.tsx` | breadcrumbs, schema name, meta keywords, og:site_name |
+| `src/components/services/ServicePageLayout.tsx` | default breadcrumb label and href |
+| `src/pages/services/SpokePage.tsx` | keyword map cleanup |
+
+**Total: 16 files touched**
+
+---
+
+## What This Does NOT Cover (saved for later phases)
+
+- Listicle page rebrand (Phase 3)
+- Partner tools rebrand (Phase 4)
+- Other site-wide "Dialed-In Web" references outside service pages
+- The `src/data/services.ts` hub data file (used by `getHubBySlug`) -- contains its own copy that may need updating separately
+- HVAC-specific page variants (currently HVAC routes point to the same components as plumbing)
+
