@@ -19,6 +19,7 @@ import Footer from "@/components/sections/Footer";
 import WaveDivider from "@/components/WaveDivider";
 import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import FounderEEAT from "@/components/sections/FounderEEAT";
+import GrowthProcess from "@/components/sections/GrowthProcess";
 import { getHomepageSchema } from "@/lib/schema";
 import { getPageOgImage } from "@/lib/ogImages";
 
@@ -86,6 +87,8 @@ const Index = () => {
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
         <TopicalExpertise />
       </div>
+      
+      <GrowthProcess />
       
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
