@@ -51,7 +51,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             {/* Centered Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                Growth in <span className="text-accent-green">6 Clear Steps</span>
+                Your Marketing Onboarding in <span className="text-accent-green">6 Clear Steps</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 A predictable process designed for plumbing and HVAC companies that value transparency and results. Every step is built to drive more calls and fill your schedule.
