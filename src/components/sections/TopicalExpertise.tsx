@@ -334,12 +334,12 @@ const TopicalExpertise = () => {
                       <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
                         <Link 
                           to={`/white-label-${spoke.slug}`}
-                          className="text-sm font-medium text-foreground hover:text-accent-blue transition-colors"
+                          className="text-sm font-medium text-gray-900 hover:text-accent-blue transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           {spoke.title} →
                         </Link>
-                        <p className="text-text-secondary text-sm leading-relaxed mt-1">
+                        <p className="text-gray-600 text-sm leading-relaxed mt-1">
                           {spoke.description}
                         </p>
                       </div>
