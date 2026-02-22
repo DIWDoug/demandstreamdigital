@@ -217,7 +217,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-0">
+            <nav className="hidden lg:flex items-center gap-0 ml-2">
               {/* Pre-Service Links (About) */}
               {preServiceLinks.map((link, index) => (
                 link.isRoute ? (
@@ -331,7 +331,7 @@ const Header = () => {
           </div>
 
           {/* Right side - Phone & CTA (Pure Plumbing inspired bold layout) */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-6 ml-auto pl-6">
             <a 
               href={PHONE_HREF}
               className="flex items-center gap-2 hover:text-cta transition-colors group whitespace-nowrap"
