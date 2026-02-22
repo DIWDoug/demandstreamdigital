@@ -100,7 +100,7 @@ const LocalGrowthEngine = () => {
       <div className="relative py-16 lg:py-20 pb-8 z-10">
         <div className="container mx-auto px-6 lg:px-8">
           {/* Bleed-over Card */}
-          <div className="relative z-20 bg-white/5 rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.25)] border border-white/10 mb-[-5rem]">
+          <div className="relative z-20 bg-white/[0.03] backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] border border-white/[0.06] mb-[-5rem]">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left: Stacked Book Display */}
               <div className="relative flex justify-center items-center min-h-[350px] lg:min-h-[420px]">
@@ -209,8 +209,8 @@ const LocalGrowthEngine = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-green/10 border border-accent-green/20 max-w-md">
-                    <CheckCircle2 className="h-5 w-5 text-accent-green flex-shrink-0" />
+                    <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-blue/10 border border-accent-blue/20 max-w-md">
+                    <CheckCircle2 className="h-5 w-5 text-accent-blue flex-shrink-0" />
                     <p className="text-foreground">
                       You're on the list! We'll be in touch soon.
                     </p>

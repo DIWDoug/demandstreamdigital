@@ -142,14 +142,17 @@ const Hero = () => {
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-6 animate-fade-in-up text-gray-900"
-              style={{ lineHeight: "1.1" }}
+              className="text-3xl md:text-4xl lg:text-5xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
+              style={{ lineHeight: "1.15" }}
             >
-              Plumbing & HVAC Marketing Company Focused on{" "}
-              <span className="text-cta">
-                More Booked Service Calls
-              </span>
+              Plumbing & HVAC Marketing
             </h1>
+            <p
+              className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
+              style={{ animationDelay: "0.05s" }}
+            >
+              Focused on More Booked Service Calls
+            </p>
 
             <p
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"

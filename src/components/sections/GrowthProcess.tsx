@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ClipboardList, Wrench, TrendingUp, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
@@ -147,6 +148,8 @@ const managedServices = [
 
 const GrowthProcess = () => {
   const sectionRef = useScrollReveal();
+  const [activePhase, setActivePhase] = useState(0);
+  const phase = phases[activePhase];
 
   return (
     <section
@@ -166,7 +169,7 @@ const GrowthProcess = () => {
         </div>
 
         {/* Intro */}
-        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-12 space-y-4">
           <p className="text-slate-700 text-base leading-relaxed">
             We do not treat marketing like a monthly experiment. We build it in phases.
             Every phase has a purpose. Every phase builds on the last.
@@ -174,100 +177,112 @@ const GrowthProcess = () => {
           <p className="text-slate-500 text-sm leading-relaxed">
             The 30-Day Strategic Growth Roadmap is a standalone engagement. If you move
             forward with implementation, a minimum six-month commitment begins after
-            roadmap delivery. That timeline allows the strategy to execute and produce
-            measurable growth.
+            roadmap delivery.
           </p>
         </div>
 
-        {/* Phase Cards */}
-        <div className="space-y-10 max-w-5xl mx-auto">
-          {phases.map((phase) => (
-            <div
-              key={phase.number}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow p-8 md:p-10"
-            >
-              {/* Phase header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shrink-0">
-                  <phase.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <span className="text-primary font-semibold text-xs tracking-widest uppercase">
-                    Phase {phase.number}
-                  </span>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-900">
-                    {phase.name}
-                  </h3>
-                </div>
+        {/* Phase Tabs */}
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {phases.map((p, index) => (
+              <button
+                key={index}
+                onClick={() => setActivePhase(index)}
+                className={`flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  activePhase === index
+                    ? "bg-primary text-white shadow-lg shadow-primary/20"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-primary/30 hover:text-slate-900"
+                }`}
+              >
+                <p.icon className="h-4 w-4" />
+                <span className="hidden sm:inline">Phase {p.number}:</span> {p.name}
+              </button>
+            ))}
+          </div>
+
+          {/* Active Phase Card */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 md:p-10">
+            {/* Phase header */}
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shrink-0">
+                <phase.icon className="h-6 w-6" />
               </div>
-
-              <p className="text-slate-600 leading-relaxed mb-8">
-                {phase.overview}
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* What We Focus On */}
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
-                    What We Focus On
-                  </h4>
-                  <div className="space-y-4">
-                    {phase.focusGroups.map((group, gi) => (
-                      <div key={gi}>
-                        {group.label && (
-                          <p className="text-primary font-medium text-sm mb-2">
-                            {group.label}
-                          </p>
-                        )}
-                        <ul className="space-y-2">
-                          {group.items.map((item, ii) => (
-                            <li
-                              key={ii}
-                              className="flex items-start gap-2 text-slate-600 text-sm"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* What You Can Expect */}
-                <div>
-                  <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
-                    What You Can Expect
-                  </h4>
-                  <p className="text-slate-900 font-medium text-sm mb-1">
-                    {phase.expectIntro}
-                  </p>
-                  {phase.expectNote && (
-                    <p className="text-slate-500 text-sm mb-3">
-                      {phase.expectNote}
-                    </p>
-                  )}
-                  <ul className="space-y-2 mb-3">
-                    {phase.expectBullets.map((b, bi) => (
-                      <li
-                        key={bi}
-                        className="flex items-start gap-2 text-slate-600 text-sm"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent-green mt-1.5 shrink-0" />
-                        {b}
-                      </li>
-                    ))}
-                  </ul>
-                  {phase.expectClosing && (
-                    <p className="text-slate-900 font-semibold text-sm">
-                      {phase.expectClosing}
-                    </p>
-                  )}
-                </div>
+              <div>
+                <span className="text-primary font-semibold text-xs tracking-widest uppercase">
+                  Phase {phase.number}
+                </span>
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900">
+                  {phase.name}
+                </h3>
               </div>
             </div>
-          ))}
+
+            <p className="text-slate-600 leading-relaxed mb-8">
+              {phase.overview}
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* What We Focus On */}
+              <div>
+                <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
+                  What We Focus On
+                </h4>
+                <div className="space-y-4">
+                  {phase.focusGroups.map((group, gi) => (
+                    <div key={gi}>
+                      {group.label && (
+                        <p className="text-primary font-medium text-sm mb-2">
+                          {group.label}
+                        </p>
+                      )}
+                      <ul className="space-y-2">
+                        {group.items.map((item, ii) => (
+                          <li
+                            key={ii}
+                            className="flex items-start gap-2 text-slate-600 text-sm"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* What You Can Expect */}
+              <div>
+                <h4 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
+                  What You Can Expect
+                </h4>
+                <p className="text-slate-900 font-medium text-sm mb-1">
+                  {phase.expectIntro}
+                </p>
+                {phase.expectNote && (
+                  <p className="text-slate-500 text-sm mb-3">
+                    {phase.expectNote}
+                  </p>
+                )}
+                <ul className="space-y-2 mb-3">
+                  {phase.expectBullets.map((b, bi) => (
+                    <li
+                      key={bi}
+                      className="flex items-start gap-2 text-slate-600 text-sm"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-1.5 shrink-0" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                {phase.expectClosing && (
+                  <p className="text-slate-900 font-semibold text-sm">
+                    {phase.expectClosing}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Closing block */}

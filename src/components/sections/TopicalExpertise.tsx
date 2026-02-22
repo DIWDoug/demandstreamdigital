@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Wrench, Flame, Zap, Building2, Phone, ArrowRight } from "lucide-react";
+import { ChevronDown, Wrench, Flame, Building2, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import StreamTexture from "@/components/StreamTexture";
@@ -33,21 +33,6 @@ const industries = [
       "HVAC Email Marketing",
       "HVAC Reputation Management",
       "HVAC Reporting & Dashboards",
-    ],
-  },
-  {
-    icon: Zap,
-    title: "Electrical",
-    summary: "Marketing strategies for electrical contractors — residential, commercial, and emergency services. Get visible where it matters.",
-    services: [
-      "Electrical SEO",
-      "Electrical Web Design",
-      "Electrical Google Maps / GBP",
-      "Electrical PPC / Google Ads",
-      "Electrical Content Marketing",
-      "Electrical Email Marketing",
-      "Electrical Reputation Management",
-      "Electrical Reporting & Dashboards",
     ],
   },
   {
@@ -100,7 +85,7 @@ const TopicalExpertise = () => {
         </div>
 
         {/* Industry cards grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {industries.map((industry, index) => (
             <div
               key={index}

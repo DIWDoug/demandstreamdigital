@@ -11,104 +11,61 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       title: "PLUMBING MARKETING",
       href: "/contact",
       items: [
-        { label: "Plumbing Marketing Services", href: "/contact" },
-        { label: "Plumbing Lead Generation", href: "/contact" },
-        { label: "Plumbing Digital Marketing", href: "/contact" },
+        { label: "Plumbing SEO", href: "/contact" },
+        { label: "Plumbing Google Maps / GBP", href: "/contact" },
+        { label: "Plumbing PPC / Google Ads", href: "/contact" },
+        { label: "Plumbing Web Design", href: "/contact" },
+        { label: "Plumbing Reputation Management", href: "/contact" },
+        { label: "Plumbing Email Marketing", href: "/contact" },
       ]
     },
     {
       title: "HVAC MARKETING",
       href: "/contact",
       items: [
-        { label: "HVAC Marketing Services", href: "/contact" },
-        { label: "HVAC Lead Generation", href: "/contact" },
-        { label: "HVAC Digital Marketing", href: "/contact" },
+        { label: "HVAC SEO", href: "/contact" },
+        { label: "HVAC Google Maps / GBP", href: "/contact" },
+        { label: "HVAC PPC / Google Ads", href: "/contact" },
+        { label: "HVAC Web Design", href: "/contact" },
+        { label: "HVAC Reputation Management", href: "/contact" },
+        { label: "HVAC Email Marketing", href: "/contact" },
       ]
     },
     {
-      title: "LOCAL SEO",
-      href: "/white-label-local-seo",
+      title: "FRANCHISE MARKETING",
+      href: "/contact",
       items: [
-        { label: "On-Page Optimization", href: "/white-label-onpage-optimization" },
-        { label: "Technical SEO", href: "/white-label-technical-seo" },
-        { label: "Local Keyword Strategy", href: "/white-label-local-keyword-strategy" },
-        { label: "Content Development", href: "/white-label-content-development" },
-        { label: "Link Building", href: "/white-label-link-building" },
-        { label: "Schema Markup", href: "/white-label-schema-markup" }
+        { label: "Franchise SEO", href: "/contact" },
+        { label: "Franchise Google Maps / GBP", href: "/contact" },
+        { label: "Franchise PPC / Google Ads", href: "/contact" },
+        { label: "Franchise Web Design", href: "/contact" },
+        { label: "Franchise Reputation Management", href: "/contact" },
+        { label: "Franchise Email Marketing", href: "/contact" },
       ]
     },
     {
-      title: "GBP SEO",
-      href: "/white-label-gbp-seo",
+      title: "SERVICES",
+      href: "/contact",
       items: [
-        { label: "GBP Profile Optimization", href: "/white-label-gbp-optimization" },
-        { label: "Review Generation & Response", href: "/white-label-review-management" },
-        { label: "Citation Building & Cleanup", href: "/white-label-citation-building" },
-        { label: "Photo & Media Management", href: "/white-label-photo-optimization" },
-        { label: "Local Pack Strategy", href: "/white-label-qa-management" },
-        { label: "GBP Posting & Content", href: "/white-label-post-scheduling" }
+        { label: "Local SEO", href: "/white-label-local-seo" },
+        { label: "Google Maps / GBP", href: "/white-label-gbp-seo" },
+        { label: "Paid Advertising", href: "/white-label-paid-media" },
+        { label: "Content Marketing", href: "/white-label-content-marketing" },
+        { label: "Email Marketing", href: "/white-label-email-marketing" },
+        { label: "Reporting & Dashboards", href: "/white-label-reporting" },
       ]
     },
     {
-      title: "CONTENT MARKETING",
-      href: "/white-label-content-marketing",
+      title: "RESOURCES",
+      href: "/contact",
       items: [
-        { label: "Geographical Content", href: "/white-label-geographical-content" },
-        { label: "Topical Authority", href: "/white-label-topical-authority" },
-        { label: "Power Posts", href: "/white-label-power-posts" },
-        { label: "E-books & Guides", href: "/white-label-ebooks-guides" },
-        { label: "Lead Magnets", href: "/white-label-lead-magnets" },
-        { label: "FAQ Content", href: "/white-label-faq-content" }
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Partner Tools", href: "/partner-tools" },
+        { label: "Blog", href: "/blog" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
       ]
     },
-    {
-      title: "PAID MEDIA",
-      href: "/white-label-paid-media",
-      items: [
-        { label: "Google Ads", href: "/white-label-google-ads" },
-        { label: "Meta Ads", href: "/white-label-meta-ads" },
-        { label: "Local Service Ads", href: "/white-label-local-service-ads" },
-        { label: "Retargeting Campaigns", href: "/white-label-retargeting-campaigns" },
-        { label: "Landing Page Design", href: "/white-label-landing-page-design" },
-        { label: "Conversion Tracking", href: "/white-label-conversion-tracking" }
-      ]
-    },
-    {
-      title: "EMAIL MARKETING",
-      href: "/white-label-email-marketing",
-      items: [
-        { label: "Campaign Strategy", href: "/white-label-campaign-strategy" },
-        { label: "List Management", href: "/white-label-list-management" },
-        { label: "Automation Flows", href: "/white-label-automation-flows" },
-        { label: "Newsletter Design", href: "/white-label-newsletter-design" },
-        { label: "A/B Testing", href: "/white-label-ab-testing" },
-        { label: "Performance Analytics", href: "/white-label-performance-analytics" }
-      ]
-    },
-    {
-      title: "AUTHORITY",
-      href: "/white-label-local-authority-building",
-      items: [
-        { label: "Structured Citations", href: "/white-label-structured-citations" },
-        { label: "Unstructured Citations", href: "/white-label-unstructured-citations" },
-        { label: "Brand Mentions", href: "/white-label-brand-mentions" },
-        { label: "Press Releases", href: "/white-label-press-releases" },
-        { label: "Sponsorships", href: "/white-label-sponsorships" },
-        { label: "Anchor Text", href: "/white-label-anchor-text" }
-      ]
-    },
-    {
-      title: "REPORTING",
-      href: "/white-label-reporting",
-      items: [
-        { label: "White-Label Dashboards", href: "/white-label-branded-dashboards" },
-        { label: "Monthly Performance Reports", href: "/white-label-monthly-performance-reports" },
-        { label: "Rank Tracking & Visibility", href: "/white-label-rank-tracking-visibility" },
-        { label: "Call Tracking & Attribution", href: "/white-label-call-tracking-lead-attribution" },
-        { label: "ROI & Revenue Analysis", href: "/white-label-roi-revenue-analysis" },
-        { label: "Client Presentation Decks", href: "/white-label-client-presentation-decks" }
-      ]
-    }
   ];
 
   return (
@@ -118,7 +75,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       {/* Service Categories Grid */}
       <nav aria-label="Service categories" className="py-12 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-5">
             {serviceCategories.map((category, index) => (
               <div key={index}>
                 <Link 
@@ -182,7 +139,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 href="https://share.google/IXw0qAzlgpjR1SIKP" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
+                className="text-text-secondary hover:text-accent-blue transition-colors"
                 aria-label="Google Business Profile"
               >
                 <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -196,7 +153,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 href="https://facebook.com/demandstreamdigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
+                className="text-text-secondary hover:text-accent-blue transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -205,7 +162,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 href="https://instagram.com/demandstreamdigital" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
+                className="text-text-secondary hover:text-accent-blue transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
@@ -214,7 +171,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 href="https://www.linkedin.com/company/demand-stream-digital/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-foreground transition-colors"
+                className="text-text-secondary hover:text-accent-blue transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -238,7 +195,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 </Link>
                 <Link 
                   to="/partner-tools"
-                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-cta transition-colors"
+                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-accent-blue transition-colors"
                 >
                   <Calculator className="h-3.5 w-3.5" />
                   Partner Tools
