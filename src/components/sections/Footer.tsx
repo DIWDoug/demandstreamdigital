@@ -8,6 +8,24 @@ import logo from "@/assets/demandstream-digital-logo.svg";
 const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
     {
+      title: "PLUMBING MARKETING",
+      href: "/contact",
+      items: [
+        { label: "Plumbing Marketing Services", href: "/contact" },
+        { label: "Plumbing Lead Generation", href: "/contact" },
+        { label: "Plumbing Digital Marketing", href: "/contact" },
+      ]
+    },
+    {
+      title: "HVAC MARKETING",
+      href: "/contact",
+      items: [
+        { label: "HVAC Marketing Services", href: "/contact" },
+        { label: "HVAC Lead Generation", href: "/contact" },
+        { label: "HVAC Digital Marketing", href: "/contact" },
+      ]
+    },
+    {
       title: "LOCAL SEO",
       href: "/white-label-local-seo",
       items: [

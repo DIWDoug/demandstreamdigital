@@ -269,7 +269,7 @@ const TopicalExpertise = () => {
             Specialized Expertise Across<br />Every Growth Channel
           </h2>
           <p className="text-lg text-text-secondary">
-            Each service area is backed by specialized knowledge, proven processes, and years of execution experience. Click any topic to explore what's included.
+            Every channel we deploy — from SEO to paid media — is aligned with the KPIs that matter to plumbing and HVAC companies: cost per booked call, booking rate, close rate, average ticket, membership attach, and technician utilization.
           </p>
         </div>
 

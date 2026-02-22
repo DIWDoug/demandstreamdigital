@@ -29,10 +29,10 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-            Trusted by Plumbing & HVAC <span className="text-primary">Professionals</span>
+            Plumbing & HVAC Marketing Reviews
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            Real reviews from real homeowners who trusted us with their plumbing and HVAC needs.
+            Real results from real plumbing and HVAC companies that trust us to grow their business.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex">

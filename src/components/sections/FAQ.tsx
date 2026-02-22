@@ -10,16 +10,24 @@ import StreamTexture from "@/components/StreamTexture";
 
 export const homepageFAQs = [
   {
-    question: "How does working with Demand Stream Digital work?",
-    answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution — SEO, ads, reputation management — so you can focus on running your business."
+    question: "How does marketing for plumbing companies work?",
+    answer: "We start with a strategy call to understand your business, service area, and goals. From there, we build a custom marketing plan and handle execution — SEO, Google Maps, paid ads, reputation management — so you can focus on running your business and dispatching techs."
   },
   {
-    question: "Who is this the best fit for?",
-    answer: "Plumbing and HVAC companies that want to grow predictably. Most of our clients do $25k–$250k+ in monthly revenue and want more calls, more jobs, and a marketing partner they can actually trust."
+    question: "What is the best marketing strategy for HVAC companies?",
+    answer: "The best HVAC marketing strategy combines local SEO, Google Maps optimization, and paid advertising — aligned to seasonal demand patterns. We engineer campaigns around peak cooling and heating seasons, shoulder months, and technician capacity to maximize booked jobs year-round."
   },
   {
-    question: "Do I have to buy all the services together?",
-    answer: "No. You can start with the services that make the most sense for your business right now — whether that's SEO, Google Ads, or reputation management. That said, they work best together and we often recommend combining services for stronger results."
+    question: "How long does HVAC SEO take?",
+    answer: "Paid ads can start generating calls within the first few weeks. SEO and reputation building typically take 3–6 months to show significant momentum. We set realistic expectations upfront so there are no surprises."
+  },
+  {
+    question: "How much does plumbing marketing cost?",
+    answer: "We scope work based on your market, competition, and goals — then price transparently. Most plumbing and HVAC companies invest between $2,000–$8,000/month depending on services and market size. You always know exactly what's included before we start."
+  },
+  {
+    question: "Do you offer exclusive service areas?",
+    answer: "Yes. We limit the number of clients we take on per market to avoid conflicts. When you partner with us, we're fully invested in your growth — not splitting attention between you and a competitor across town."
   },
   {
     question: "How is this different from other marketing companies?",
@@ -30,10 +38,6 @@ export const homepageFAQs = [
     answer: "We work with plumbing and HVAC companies of all sizes — from owner-operators to multi-truck operations. Our sweet spot is businesses doing $25k+ in monthly revenue that are ready to invest in consistent growth."
   },
   {
-    question: "Where is your team based?",
-    answer: "Our leadership is based in Dallas, TX with team members across the U.S. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
-  },
-  {
     question: "Do you require long-term contracts?",
     answer: "We start with a 6-month agreement because meaningful SEO and marketing results take time to build. After that, we operate on rolling agreements with 30-day notice. This gives both sides stability and flexibility."
   },
@@ -42,12 +46,8 @@ export const homepageFAQs = [
     answer: "We ask for 30 days notice so we can wrap up work properly and transition everything cleanly. No penalties, no hard feelings — just professional courtesy."
   },
   {
-    question: "How quickly will I see results?",
-    answer: "Paid ads can start generating calls within the first few weeks. SEO and reputation building typically take 3–6 months to show significant momentum. We set realistic expectations upfront so there are no surprises."
-  },
-  {
-    question: "How do you scope and price your services?",
-    answer: "We scope work based on your market, competition, and goals — then price transparently. You always know exactly what's included before we start, so there are no hidden fees or surprise invoices."
+    question: "Where is your team based?",
+    answer: "Our leadership is based in Dallas, TX with team members across the U.S. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
   },
   {
     question: "What happens if something isn't working?",

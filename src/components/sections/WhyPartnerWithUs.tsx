@@ -55,7 +55,7 @@ const WhyPartnerWithUs = () => {
             Why Trade Contractors Trust Us to Grow Their Business
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            More calls. Fewer headaches. Marketing you can stand behind.
+            As a specialized plumbing and HVAC marketing agency, we design campaigns around how service-call businesses actually operate — from no-heat surges to no-cool spikes, dispatch board overload, and seasonal revenue swings.
           </p>
         </div>
 
