@@ -1,247 +1,59 @@
 import { useState } from "react";
-import { ChevronDown, MapPin, Map, MousePointerClick, Mail, PenTool, BarChart3, Phone, ArrowRight } from "lucide-react";
+import { ChevronDown, Wrench, Flame, Zap, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import StreamTexture from "@/components/StreamTexture";
 
+const industries = [
+  {
+    icon: Wrench,
+    title: "Plumbing",
+    summary: "Marketing built for plumbing companies — from drain cleaning to full repiping. We help you rank, get found, and book more jobs.",
+    services: [
+      "Plumbing SEO",
+      "Plumbing Web Design",
+      "Plumbing Google Maps / GBP",
+      "Plumbing PPC / Google Ads",
+      "Plumbing Content Marketing",
+      "Plumbing Email Marketing",
+      "Plumbing Reputation Management",
+      "Plumbing Reporting & Dashboards",
+    ],
+  },
+  {
+    icon: Flame,
+    title: "HVAC",
+    summary: "Marketing engineered around HVAC seasonality, service calls, and install revenue. Built to keep your schedule full year-round.",
+    services: [
+      "HVAC SEO",
+      "HVAC Web Design",
+      "HVAC Google Maps / GBP",
+      "HVAC PPC / Google Ads",
+      "HVAC Content Marketing",
+      "HVAC Email Marketing",
+      "HVAC Reputation Management",
+      "HVAC Reporting & Dashboards",
+    ],
+  },
+  {
+    icon: Zap,
+    title: "Electrical",
+    summary: "Marketing strategies for electrical contractors — residential, commercial, and emergency services. Get visible where it matters.",
+    services: [
+      "Electrical SEO",
+      "Electrical Web Design",
+      "Electrical Google Maps / GBP",
+      "Electrical PPC / Google Ads",
+      "Electrical Content Marketing",
+      "Electrical Email Marketing",
+      "Electrical Reputation Management",
+      "Electrical Reporting & Dashboards",
+    ],
+  },
+];
+
 const TopicalExpertise = () => {
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
-
-  const hubs = [
-    {
-      icon: MapPin,
-      title: "Local SEO",
-      slug: "local-seo",
-      summary: "Dominate local organic search results and drive qualified traffic from your service areas.",
-      spokes: [
-        {
-          title: "On-Page Optimization",
-          slug: "on-page-optimization",
-          description: "Location-specific title tags, meta descriptions, schema markup, and content that signals relevance to search engines for every target market."
-        },
-        {
-          title: "Technical SEO",
-          slug: "technical-seo",
-          description: "Site architecture, internal linking, and crawlability fixes that help search engines understand your client's service area hierarchy."
-        },
-        {
-          title: "Local Keyword Strategy",
-          slug: "local-keyword-strategy",
-          description: "Seed keyword development from services and customer problems, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping."
-        },
-        {
-          title: "Content Development",
-          slug: "content-development",
-          description: "Service area pages, location-specific blog content, and FAQ sections that capture long-tail local search queries."
-        },
-        {
-          title: "Link Building",
-          slug: "link-building",
-          description: "Outreach to local publications, sponsorships, and community organizations that build geographic authority signals."
-        },
-        {
-          title: "Schema Markup",
-          slug: "schema-markup",
-          description: "Structured data implementation including LocalBusiness, FAQ, and service schemas that improve visibility in search results and AI Overviews."
-        },
-        {
-          title: "NAP Citations",
-          slug: "nap-citations",
-          description: "NAP consistency audits, citation cleanup, and directory submissions that validate business identity for rankings and AI visibility."
-        }
-      ]
-    },
-    {
-      icon: Map,
-      title: "GBP SEO",
-      slug: "google-maps",
-      summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
-      spokes: [
-        {
-          title: "GBP Profile Optimization",
-          slug: "gbp-optimization",
-          description: "Complete profile optimization including categories, attributes, services, products, and posts that maximize visibility in map results and AI Overviews."
-        },
-        {
-          title: "Review Generation & Response",
-          slug: "review-management",
-          description: "Systematic review acquisition strategies and professional response management that builds trust, improves rankings, and feeds AI recommendation systems."
-        },
-        {
-          title: "Citation Building & Cleanup",
-          slug: "citation-building",
-          description: "NAP consistency across 50+ directories, data aggregators, and AI-cited platforms like Yelp and TripAdvisor that validate business legitimacy."
-        },
-        {
-          title: "Photo & Media Management",
-          slug: "photo-optimization",
-          description: "Professional photo management, geotagging, and visual content strategies that increase engagement and click-through rates."
-        },
-        {
-          title: "Local Pack Strategy",
-          slug: "qa-management",
-          description: "Service and product gap analysis with topical map matching between GBP and website pages."
-        },
-        {
-          title: "GBP Posting & Content",
-          slug: "post-scheduling",
-          description: "Strategic GBP posts, offers, and updates that signal activity and engage searchers."
-        }
-      ]
-    },
-    {
-      icon: MousePointerClick,
-      title: "Paid Media",
-      slug: "paid-media",
-      summary: "Capture high-intent local searches with campaigns built for calls and form submissions.",
-      spokes: [
-        {
-          title: "Google Ads",
-          slug: "google-ads",
-          description: "Search, display, and shopping campaigns with service area targeting, location-specific ad groups, and keyword strategies designed for local lead generation."
-        },
-        {
-          title: "Meta Ads",
-          slug: "meta-ads",
-          description: "Facebook and Instagram campaigns with geographic, demographic, and interest-based audiences tailored to each client's service area."
-        },
-        {
-          title: "Local Service Ads",
-          slug: "local-service-ads",
-          description: "Google-verified LSAs with pay-per-lead pricing for service businesses."
-        },
-        {
-          title: "Retargeting Campaigns",
-          slug: "retargeting-campaigns",
-          description: "Website visitor retargeting and lookalike audience expansion via Google Display, Meta, and AdRoll."
-        },
-        {
-          title: "Landing Page Design",
-          slug: "landing-page-design",
-          description: "Conversion-focused landing pages with local trust signals, click-to-call buttons, and form optimization."
-        },
-        {
-          title: "Conversion Tracking",
-          slug: "conversion-tracking",
-          description: "Call tracking, form tracking, and multi-touch attribution that proves ROI and informs optimization."
-        }
-      ]
-    },
-    {
-      icon: Mail,
-      title: "Email Marketing",
-      slug: "email-marketing",
-      summary: "Nurture leads and drive repeat business through strategic email campaigns and automation.",
-      spokes: [
-        {
-          title: "Campaign Strategy",
-          slug: "campaign-strategy",
-          description: "Editorial calendars, seasonal campaigns, and send cadence planning tailored to local business cycles."
-        },
-        {
-          title: "List Management",
-          slug: "list-management",
-          description: "Opt-in practices, list hygiene, segmentation, and subscriber cleanup that protects deliverability."
-        },
-        {
-          title: "Automation Flows",
-          slug: "automation-flows",
-          description: "Welcome sequences, post-service follow-ups, win-back campaigns, and review request automations."
-        },
-        {
-          title: "Newsletter Design",
-          slug: "newsletter-design",
-          description: "Brand-consistent templates, mobile-optimized layouts, and compelling visual design."
-        },
-        {
-          title: "A/B Testing",
-          slug: "ab-testing",
-          description: "Subject line testing, send time optimization, and content experiments that improve performance."
-        },
-        {
-          title: "Performance Analytics",
-          slug: "performance-analytics",
-          description: "Open rates, click rates, conversion tracking, and revenue attribution reporting."
-        }
-      ]
-    },
-    {
-      icon: PenTool,
-      title: "Content Development",
-      slug: "content-marketing",
-      summary: "Strategic content that ranks locally, converts visitors, and feeds AI discovery systems.",
-      spokes: [
-        {
-          title: "Geographical Content",
-          slug: "geographical-content",
-          description: "Service area pages that capture local search intent and support Google Business Profile rankings."
-        },
-        {
-          title: "Topical Content",
-          slug: "topical-content",
-          description: "Industry expertise articles that build topical authority and support GBP rankings through relevance signals."
-        },
-        {
-          title: "Power Posts",
-          slug: "power-posts",
-          description: "Comprehensive pillar content that dominates competitive keywords and establishes authority."
-        },
-        {
-          title: "E-books & Guides",
-          slug: "ebooks-guides",
-          description: "Long-form downloadable content that captures leads and demonstrates expertise."
-        },
-        {
-          title: "Lead Generation Magnets",
-          slug: "lead-magnets",
-          description: "Checklists, templates, and tools that convert visitors into email subscribers."
-        },
-        {
-          title: "Case Studies",
-          slug: "case-studies",
-          description: "Success stories that build trust and demonstrate real-world results."
-        }
-      ]
-    },
-    {
-      icon: BarChart3,
-      title: "Reporting",
-      slug: "reporting",
-      summary: "White-label dashboards and reports that prove value and keep clients informed.",
-      spokes: [
-        {
-          title: "White-Label Dashboards",
-          slug: "branded-dashboards",
-          description: "Custom-branded dashboards that aggregate performance data across all marketing channels."
-        },
-        {
-          title: "Monthly Performance Reports",
-          slug: "monthly-performance-reports",
-          description: "Comprehensive monthly reports with insights, recommendations, and next-step actions."
-        },
-        {
-          title: "Rank Tracking & Visibility",
-          slug: "rank-tracking-visibility",
-          description: "Local and organic rank tracking across target keywords and geographic areas."
-        },
-        {
-          title: "Call Tracking & Attribution",
-          slug: "call-tracking-lead-attribution",
-          description: "Call recording, lead scoring, and attribution that connects marketing to phone leads."
-        },
-        {
-          title: "ROI & Revenue Analysis",
-          slug: "roi-revenue-analysis",
-          description: "Revenue attribution and ROI calculations that justify marketing investment."
-        },
-        {
-          title: "Client Presentation Decks",
-          slug: "client-presentation-decks",
-          description: "Executive summaries and presentation-ready materials for client meetings."
-        }
-      ]
-    }
-  ];
 
   const toggleExpand = (index: number) => {
     setExpandedIndices(prev => {
@@ -260,134 +72,103 @@ const TopicalExpertise = () => {
   return (
     <section id="expertise" className="py-24 lg:py-32 section-light relative overflow-hidden">
       <StreamTexture variant="light" opacity={0.1} />
-      {/* Smooth transition from ServicesGrid */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-[1]" />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Specialized Expertise Across<br />Every Growth Channel
+            Industries We Serve
           </h2>
           <p className="text-lg text-text-secondary">
             Every marketing channel we deploy — from SEO to paid ads — is aligned with one goal: increasing visibility, generating qualified leads, and helping your business grow.
           </p>
         </div>
 
-        {/* Hub cards grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {hubs.map((hub, index) => {
-            // Map slugs to anchor IDs for the sticky nav
-            const anchorMap: Record<string, string> = {
-              'local-seo': 'local-seo',
-              'google-maps': 'gbp-seo',
-              'paid-media': 'paid-media',
-              'email-marketing': 'email',
-              'content-marketing': 'content',
-              'reporting': 'reporting'
-            };
-            const anchorId = anchorMap[hub.slug] || hub.slug;
-            
-            return (
-            <div 
-              id={anchorId}
+        {/* Industry cards grid */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {industries.map((industry, index) => (
+            <div
               key={index}
-              className={`bg-white border border-gray-200 rounded-xl p-6 lg:p-8 shadow-sm cursor-pointer transition-all duration-300 scroll-mt-32 ${
-                isExpanded(index) 
-                  ? "ring-1 ring-accent-blue/50 bg-white" 
+              className={`bg-white border border-gray-200 rounded-xl p-6 lg:p-8 shadow-sm cursor-pointer transition-all duration-300 ${
+                isExpanded(index)
+                  ? "ring-1 ring-accent-blue/50 bg-white"
                   : "hover:translate-y-[-2px]"
               }`}
               onClick={() => toggleExpand(index)}
             >
-              {/* Hub header */}
+              {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-lg bg-accent-blue/10 border border-accent-blue/20">
-                    <hub.icon className="h-5 w-5 text-accent-blue" />
+                    <industry.icon className="h-5 w-5 text-accent-blue" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">{hub.title}</h3>
+                  <h3 className="text-lg font-semibold text-foreground">{industry.title}</h3>
                 </div>
-                <ChevronDown 
+                <ChevronDown
                   className={`h-5 w-5 text-text-muted transition-transform duration-300 ${
                     isExpanded(index) ? "rotate-180" : ""
-                  }`} 
+                  }`}
                 />
               </div>
 
-              {/* Hub summary */}
+              {/* Summary */}
               <p className="text-text-secondary text-sm mb-4">
-                {hub.summary}
+                {industry.summary}
               </p>
 
-              {/* Spokes - always in DOM for crawlability, visually hidden when collapsed */}
-              <div 
+              {/* Services dropdown */}
+              <div
                 className={`transition-all duration-300 ${
-                  isExpanded(index) 
-                    ? "grid-rows-[1fr] opacity-100" 
+                  isExpanded(index)
+                    ? "grid-rows-[1fr] opacity-100"
                     : "grid-rows-[0fr] opacity-0 pointer-events-none"
                 }`}
-                style={{ display: 'grid' }}
+                style={{ display: "grid" }}
                 aria-hidden={!isExpanded(index)}
               >
                 <div className="overflow-hidden">
-                  <div className="pt-4 border-t border-border space-y-5">
-                    {hub.spokes.map((spoke, spokeIndex) => (
-                      <div key={spokeIndex} className="pl-4 border-l-2 border-accent-blue/30">
-                        <Link 
-                          to={`/white-label-${spoke.slug}`}
-                          className="text-sm font-medium text-gray-900 hover:text-accent-blue transition-colors"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          {spoke.title} →
-                        </Link>
-                        <p className="text-gray-600 text-sm leading-relaxed mt-1">
-                          {spoke.description}
-                        </p>
+                  <div className="pt-4 border-t border-border space-y-3">
+                    {industry.services.map((service, sIdx) => (
+                      <div key={sIdx} className="pl-4 border-l-2 border-accent-blue/30">
+                        <span className="text-sm font-medium text-foreground">
+                          {service}
+                        </span>
                       </div>
                     ))}
                   </div>
 
-                  {/* CTA within expanded card */}
-                  <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center gap-3">
-                    <Link 
-                      to={`/white-label-${hub.slug}`}
-                      className="text-accent-blue hover:text-accent-blue/80 text-sm font-medium transition-colors"
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <Link
+                      to="/contact"
+                      className="text-cta hover:text-cta/80 text-sm font-medium transition-colors"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Learn more about {hub.title} →
-                    </Link>
-                    <span className="hidden sm:inline text-text-muted">|</span>
-                    <Link 
-                      to="/contact" 
-                      className="text-cta hover:text-[hsl(76,42%,51%)] text-sm font-medium transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Discuss for your business →
+                      Get a {industry.title} marketing proposal →
                     </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Collapsed state hint */}
+              {/* Collapsed hint */}
               {!isExpanded(index) && (
                 <p className="text-accent-blue text-xs font-medium">
-                  {hub.spokes.length} specialized areas. Click to explore
+                  {industry.services.length} services. Click to explore
                 </p>
               )}
             </div>
-          );
-          })}
+          ))}
         </div>
-        
-        {/* Section-level CTAs - below cards */}
+
+        {/* Section CTAs */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="btn-cta inline-flex items-center gap-2"
           >
             Explore a Partnership
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <a 
+          <a
             href={PHONE_HREF}
             className="inline-flex items-center gap-2 text-cta hover:text-cta/80 font-semibold transition-colors text-lg"
           >
