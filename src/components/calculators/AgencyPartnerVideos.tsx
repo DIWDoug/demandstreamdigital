@@ -38,7 +38,7 @@ const AgencyPartnerVideos = () => {
               Hear From Our <span className="text-accent-blue">Long-Term Partners</span>
             </h2>
             <p className="text-text-secondary max-w-2xl mx-auto">
-              Real agency owners share their experience partnering with us for white-label fulfillment.
+              Real agency owners share their experience partnering with us for fulfillment.
             </p>
           </div>
 

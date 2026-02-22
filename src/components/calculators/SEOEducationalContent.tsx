@@ -14,7 +14,7 @@ const SEOEducationalContent = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-surface-dark rounded-xl p-6 border border-border/30">
-            <p className="text-sm text-text-muted mb-2">White-Label Cost</p>
+            <p className="text-sm text-text-muted mb-2">Partner Cost</p>
             <p className="text-2xl font-bold text-foreground">$604 - $1,979</p>
             <p className="text-sm text-text-muted mt-2">Agency partner pricing per location</p>
           </div>

@@ -35,7 +35,7 @@ const LocalSEOPainPoints = () => {
               The Pattern We See
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 text-balance">
-              Why Most White-Label SEO Fails Your Clients
+              Why Most SEO Programs Fail Local Businesses
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               You have seen this before. The package looked good on paper, but six months later clients are frustrated, questioning the spend, and you are left explaining why results never matched expectations.

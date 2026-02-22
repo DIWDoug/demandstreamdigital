@@ -607,7 +607,7 @@ const SEOCalculator = () => {
                 Local SEO Cost Calculator
               </h1>
               <p className="text-text-secondary text-lg font-body">
-                Estimate your client's monthly local SEO investment. Answer a few questions to get transparent white-label pricing for small business clients.
+                Estimate your monthly local SEO investment. Answer a few questions to get transparent pricing based on your market and competition.
               </p>
             </div>
           </div>
@@ -1344,7 +1344,7 @@ const SEOCalculator = () => {
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-cta mt-0.5">✓</span>
-                              White-label monthly reporting
+                              Monthly performance reporting
                             </li>
                           </ul>
                         </div>

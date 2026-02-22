@@ -184,7 +184,7 @@ const ContentMarketingCalculator = () => {
     <>
       <Helmet>
         <title>Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web</title>
-        <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
+        <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
         <link rel="canonical" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
         <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />
         
@@ -197,7 +197,7 @@ const ContentMarketingCalculator = () => {
         
         {/* Open Graph */}
         <meta property="og:title" content="Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web" />
-        <meta property="og:description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
+        <meta property="og:description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
         <meta property="og:url" content="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Dialed-In Web" />
@@ -208,7 +208,7 @@ const ContentMarketingCalculator = () => {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web" />
-        <meta name="twitter:description" content="Estimate traffic and lead value from content campaigns. Use Dialed-in Web's calculator to support your white label proposals." />
+        <meta name="twitter:description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
         <meta name="twitter:image" content="https://dialedinweb.com/og-images/content-marketing-calculator.jpg" />
       </Helmet>
       

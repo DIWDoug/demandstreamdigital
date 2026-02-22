@@ -7,7 +7,7 @@ const LaptopMockup = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            White-Label Reporting Dashboard
+            Performance Reporting Dashboard
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Your clients see your brand, your insights, your value—powered by our infrastructure.
@@ -26,7 +26,7 @@ const LaptopMockup = () => {
               <div className="bg-zinc-900 rounded-lg overflow-hidden shadow-2xl aspect-[16/10] flex items-center justify-center">
                 <img 
                   src={dashboardScreenshot} 
-                  alt="White-label reporting dashboard showing organic visibility metrics, ranking positions, and value trends"
+                  alt="Reporting dashboard showing organic visibility metrics, ranking positions, and value trends"
                   className="w-full h-full object-cover"
                 />
               </div>

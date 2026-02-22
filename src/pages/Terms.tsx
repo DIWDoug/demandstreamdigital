@@ -8,31 +8,31 @@ const Terms = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Terms of Service | Dialed-In Web | White Label Marketing Agreement</title>
-        <meta name="description" content="Terms of Service for Dialed-In Web. Review our service agreement, usage policies, and legal terms for white label digital marketing services." />
-        <meta name="keywords" content="terms of service, terms and conditions, Dialed-In Web terms, service agreement" />
-        <link rel="canonical" href="https://dialedinweb.com/terms" />
+        <title>Terms of Service | Demand Stream Digital</title>
+        <meta name="description" content="Terms of Service for Demand Stream Digital. Review our service agreement, usage policies, and legal terms for digital marketing services." />
+        <meta name="keywords" content="terms of service, terms and conditions, Demand Stream Digital terms, service agreement" />
+        <link rel="canonical" href="https://demandstreamdigital.com/terms" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/terms" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/terms" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/terms" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/terms" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/terms" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/terms" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Terms of Service | Dialed-In Web" />
-        <meta property="og:description" content="Review our service agreement, usage policies, and legal terms for white label digital marketing services." />
-        <meta property="og:url" content="https://dialedinweb.com/terms" />
+        <meta property="og:title" content="Terms of Service | Demand Stream Digital" />
+        <meta property="og:description" content="Review our service agreement, usage policies, and legal terms for digital marketing services." />
+        <meta property="og:url" content="https://demandstreamdigital.com/terms" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/terms.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/terms.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms of Service | Dialed-In Web" />
+        <meta name="twitter:title" content="Terms of Service | Demand Stream Digital" />
         <meta name="twitter:description" content="Review our service agreement, usage policies, and legal terms." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/terms.jpg" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/terms.jpg" />
       </Helmet>
 
       <Header />
@@ -47,7 +47,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">1. Agreement to Terms</h2>
               <p className="text-text-secondary leading-relaxed">
-                These Terms of Service ("Terms") constitute a legally binding agreement between you ("you," "your," or "Client") and Dialed-In Web, LLC ("Dialed-In Web," "we," "us," or "our") governing your access to and use of https://www.dialedinweb.com (the "Website") and any related services, tools, or content.
+                These Terms of Service ("Terms") constitute a legally binding agreement between you ("you," "your," or "Client") and Demand Stream Digital, LLC ("Demand Stream Digital," "we," "us," or "our") governing your access to and use of https://www.demandstreamdigital.com (the "Website") and any related services, tools, or content.
               </p>
               <p className="text-text-secondary leading-relaxed mt-4">
                 By accessing or using the Website or engaging our services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not use the Website or our services.
@@ -58,7 +58,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Services</h2>
               <p className="text-text-secondary leading-relaxed">
-                Dialed-In Web provides white label digital marketing services to marketing agencies, including but not limited to:
+                Demand Stream Digital provides growth marketing services for plumbing and HVAC companies, including but not limited to:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
                 <li>Local SEO and organic search optimization</li>
@@ -88,18 +88,18 @@ const Terms = () => {
               </ul>
             </section>
 
-            {/* 4. White Label Services */}
+            {/* 4. Service Delivery */}
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">4. White Label Services</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">4. Service Delivery</h2>
               <p className="text-text-secondary leading-relaxed">
-                Our white label services are designed for marketing agencies reselling services under their own brand. By engaging our white label services, you acknowledge and agree that:
+                Our marketing services are designed to help plumbing and HVAC companies grow through digital marketing. By engaging our services, you acknowledge and agree that:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Services are performed by Dialed-In Web on your behalf</li>
-                <li>You may rebrand deliverables under your agency name</li>
-                <li>You maintain the direct relationship with your end clients</li>
-                <li>You are responsible for managing expectations and communications with your clients</li>
-                <li>Dialed-In Web will not contact your end clients directly unless authorized</li>
+                <li>Services are performed by Demand Stream Digital on your behalf</li>
+                <li>You maintain ownership of your brand, website, and client relationships</li>
+                <li>You are responsible for providing timely feedback and access as needed</li>
+                <li>Results depend on market conditions, competition, and cooperation</li>
+                <li>Demand Stream Digital will communicate directly with you regarding campaign progress</li>
               </ul>
             </section>
 
@@ -128,13 +128,13 @@ const Terms = () => {
                 Unless otherwise specified in a service agreement:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
-                <li>Dialed-In Web retains ownership of proprietary methodologies, tools, and processes</li>
+                <li>Demand Stream Digital retains ownership of proprietary methodologies, tools, and processes</li>
                 <li>Upon full payment, clients receive a license to use deliverables for their intended purpose</li>
                 <li>Content created for clients becomes the property of the client upon payment</li>
                 <li>You may not resell or redistribute our proprietary tools or training materials</li>
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
-                All trademarks, logos, and brand elements of Dialed-In Web remain our exclusive property.
+                All trademarks, logos, and brand elements of Demand Stream Digital remain our exclusive property.
               </p>
             </section>
 
@@ -165,10 +165,10 @@ const Terms = () => {
                 We do not guarantee specific results from our marketing services. Performance depends on numerous factors including market conditions, competition, and client cooperation.
               </p>
               <p className="text-text-secondary leading-relaxed mt-4">
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, DIALED-IN WEB SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES.
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, DEMAND STREAM DIGITAL SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES.
               </p>
               <p className="text-text-secondary leading-relaxed mt-4">
-                Our total liability for any claims arising from or related to these Terms or our services shall not exceed the amount paid by you to Dialed-In Web in the twelve (12) months preceding the claim.
+                Our total liability for any claims arising from or related to these Terms or our services shall not exceed the amount paid by you to Demand Stream Digital in the twelve (12) months preceding the claim.
               </p>
             </section>
 
@@ -176,7 +176,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">9. Indemnification</h2>
               <p className="text-text-secondary leading-relaxed">
-                You agree to indemnify, defend, and hold harmless Dialed-In Web and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including reasonable attorneys' fees) arising from:
+                You agree to indemnify, defend, and hold harmless Demand Stream Digital and its officers, directors, employees, and agents from any claims, damages, losses, or expenses (including reasonable attorneys' fees) arising from:
               </p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
                 <li>Your use of the Website or services</li>
@@ -269,7 +269,7 @@ const Terms = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">17. Entire Agreement</h2>
               <p className="text-text-secondary leading-relaxed">
-                These Terms, together with any applicable service agreements and our Privacy Policy, constitute the entire agreement between you and Dialed-In Web regarding the use of the Website and services, superseding any prior agreements.
+                These Terms, together with any applicable service agreements and our Privacy Policy, constitute the entire agreement between you and Demand Stream Digital regarding the use of the Website and services, superseding any prior agreements.
               </p>
             </section>
 
@@ -280,16 +280,16 @@ const Terms = () => {
                 For questions regarding these Terms of Service, please contact:
               </p>
               <div className="mt-4 p-6 bg-surface-dark rounded-xl border border-border">
-                <p className="text-foreground font-medium mb-3">Dialed-In Web, LLC</p>
+                <p className="text-foreground font-medium mb-3">Demand Stream Digital, LLC</p>
                 <p className="text-text-secondary">4849 Greenville Ave, Suite 100-176</p>
                 <p className="text-text-secondary">Dallas, TX 75206</p>
                 <p className="text-text-secondary">United States</p>
                 <p className="text-text-secondary mt-3">Phone: +1 214-307-2995</p>
-                <p className="text-text-secondary">Email: doug@dialedinweb.com</p>
+                <p className="text-text-secondary">Email: hello@demandstreamdigital.com</p>
                 <p className="text-text-secondary">
                   Website:{" "}
-                  <a href="https://www.dialedinweb.com" className="text-accent-blue hover:underline">
-                    https://www.dialedinweb.com
+                  <a href="https://www.demandstreamdigital.com" className="text-accent-blue hover:underline">
+                    https://www.demandstreamdigital.com
                   </a>
                 </p>
               </div>

@@ -57,10 +57,10 @@ export default function BlogIndex() {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
+        <title>Digital Marketing Insights | Plumbing & HVAC Marketing Blog</title>
         <meta
           name="description"
-          content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog."
+          content="Actionable tips for agency owners. Explore local SEO, PPC, email, and more on the Demand Stream Digital blog."
         />
         <link rel="canonical" href="https://dialedinweb.com/blog" />
       </Helmet>
@@ -76,10 +76,10 @@ export default function BlogIndex() {
                 Agency Growth Insights
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-                The Dialed-In Web <span className="text-cta">Blog</span>
+                The Demand Stream Digital <span className="text-cta">Blog</span>
               </h1>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
-                Search, scan, and share in-depth guides on white-label fulfillment, local SEO, paid media, and agency operations.
+                Search, scan, and share in-depth guides on fulfillment, local SEO, paid media, and agency operations.
               </p>
 
               <div className="max-w-xl mx-auto relative">

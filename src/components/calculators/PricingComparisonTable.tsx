@@ -103,7 +103,7 @@ const PricingComparisonTable = () => {
     { feature: "Hire & train specialists", inHouse: false, typicalAgency: false, whiteLabel: true },
     { feature: "Predictable monthly costs", inHouse: false, typicalAgency: true, whiteLabel: true },
     { feature: "Scale up/down instantly", inHouse: false, typicalAgency: true, whiteLabel: true },
-    { feature: "White-label deliverables", inHouse: false, typicalAgency: false, whiteLabel: true },
+    { feature: "Specialized deliverables", inHouse: false, typicalAgency: false, whiteLabel: true },
     { feature: "Your brand, your client relationship", inHouse: true, typicalAgency: false, whiteLabel: true },
     { feature: "No overhead or benefits costs", inHouse: false, typicalAgency: true, whiteLabel: true },
     { feature: "Expert-level execution", inHouse: "varies", typicalAgency: "varies", whiteLabel: true },
@@ -222,10 +222,10 @@ const PricingComparisonTable = () => {
           Pricing Comparison
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          White-Label vs. <span className="text-accent-blue">Other Options</span>
+          Our Model vs. <span className="text-accent-blue">Other Options</span>
         </h2>
         <p className="text-text-secondary max-w-2xl mx-auto">
-          See how white-label fulfillment compares to hiring in-house or working with a traditional agency. Protect your margins while delivering expert-level work.
+          See how our fulfillment compares to hiring in-house or working with a traditional agency. Protect your margins while delivering expert-level work.
         </p>
       </div>
 
@@ -249,7 +249,7 @@ const PricingComparisonTable = () => {
               </th>
               <th className="text-center py-4 px-4 text-cta font-semibold">
                 <div className="flex flex-col items-center">
-                  <span>White-Label</span>
+                  <span>Partner</span>
                   <span className="text-xs text-cta/70">(your cost)</span>
                 </div>
               </th>
@@ -289,7 +289,7 @@ const PricingComparisonTable = () => {
                 <th className="text-left py-3 px-4 text-foreground font-medium">Feature</th>
                 <th className="text-center py-3 px-4 text-text-muted text-sm">In-House</th>
                 <th className="text-center py-3 px-4 text-text-muted text-sm">Typical Agency</th>
-                <th className="text-center py-3 px-4 text-cta text-sm font-semibold">White-Label</th>
+                <th className="text-center py-3 px-4 text-cta text-sm font-semibold">Partner</th>
               </tr>
             </thead>
             <tbody>
@@ -336,7 +336,7 @@ const PricingComparisonTable = () => {
           <div>
             <h3 className="text-xl font-bold text-foreground mb-3">Your Margin Opportunity</h3>
             <p className="text-text-secondary mb-4">
-              Mark up our white-label pricing by 40-150% and still undercut what clients would pay at a typical agency. You keep the margin. We handle the work.
+              Partner pricing allows you to maintain healthy margins while still undercutting what clients would pay at a typical agency. You keep the margin. We handle the work.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-surface-dark rounded-lg p-4 border border-border/30">
@@ -365,7 +365,7 @@ const PricingComparisonTable = () => {
 
       {/* Disclaimer */}
       <p className="text-xs text-text-muted text-center">
-        Pricing ranges are estimates based on typical market rates and may vary by market, competition, and scope. White-label pricing shown reflects OEM costs before your markup.
+        Pricing ranges are estimates based on typical market rates and may vary by market, competition, and scope. Partner pricing shown reflects wholesale costs before your markup.
       </p>
     </div>
   );
