@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import StreamTexture from "@/components/StreamTexture";
+import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 const FounderEEAT = () => {
   const sectionRef = useScrollReveal();
@@ -11,6 +12,11 @@ const FounderEEAT = () => {
       <StreamTexture variant="light" opacity={0.1} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
+          <img
+            src={dougHeadshot}
+            alt="Doug Bryson, Founder of DemandStream Digital"
+            className="w-28 h-28 rounded-full object-cover mx-auto mb-6 shadow-lg border-4 border-white"
+          />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Built on 15+ Years of Digital Marketing Experience
           </h2>
