@@ -32,7 +32,7 @@ const Testimonials = () => {
             Plumbing & HVAC Marketing Reviews
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            Real results from real plumbing and HVAC companies that trust us to grow their business.
+            Demand Stream Digital is built by the same team behind Dialed-In Web — with 15+ years and 100+ clients served. Same owner, same expertise, now focused exclusively on plumbing and HVAC.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex">
