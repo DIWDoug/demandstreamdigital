@@ -11,8 +11,8 @@ const FitQualifier = () => {
 
   const goodFit = [
     {
-      point: "You run a plumbing or HVAC company with annual revenue greater than $500,000",
-      detail: "We work best with established shops doing over half a million a year. You've got the trucks and techs — you need a marketing partner who understands the trades."
+      point: "You run a plumbing or HVAC company with annual revenue greater than $250,000",
+      detail: "We work best with established shops doing over a quarter million a year. You've got the trucks and techs — you need a marketing partner who understands the trades."
     },
     {
       point: "You're tired of marketing agencies that don't get your business",
