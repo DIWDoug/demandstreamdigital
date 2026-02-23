@@ -29,6 +29,7 @@ import iraSalvador from "@/assets/team/ira-salvador.png";
 import samantaLeal from "@/assets/team/samanta-leal.webp";
 import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
+import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
 import athenaYenko from "@/assets/team/athena-yenko.jpeg";
 
@@ -103,6 +104,12 @@ const About = () => {
       bio: "Handles on-page optimization across client sites: headings, meta data, internal linking, and page structure built for local search.",
       image: leilaniMaravillas,
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
+    },
+    {
+      name: "Muhammad Bilal",
+      role: "Web Developer",
+      bio: "Builds and maintains client websites with a focus on speed, structure, and conversion-ready design for plumbing and HVAC companies.",
+      image: muhammadBilal,
     },
   ];
 
