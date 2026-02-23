@@ -292,7 +292,7 @@ const GrowthProcess = () => {
         {/* Closing block */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-            One System. Every Channel. Built for Your Market.
+            Every Channel Working Together. That's the Difference.
           </h3>
           <p className="text-slate-600 mb-6">
             We do not sell isolated services. All working together under one roof.
