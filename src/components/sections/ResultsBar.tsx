@@ -16,8 +16,9 @@ const ResultsBar = () => {
     <section ref={sectionRef} className="py-16 lg:py-20 section-light reveal-section">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">15+ Years of Execution</p>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
-            15 Years of Local Service Marketing. Now Focused on the Trades.
+            Local Service Marketing. Now Focused on the Trades.
           </h2>
           <p className="text-slate-600 text-base mb-12 max-w-2xl mx-auto">
             For over 15 years, the team behind DemandStream has been the fulfillment engine behind successful agencies and direct clients alike. Through Dialed In Web and Dialed In Local, we've built marketing systems for SMBs and national brands across paid advertising, SEO, email marketing, web design, and content development. All of that experience now powers DemandStream Digital.

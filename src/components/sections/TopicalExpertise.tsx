@@ -60,9 +60,10 @@ const TopicalExpertise = () => {
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent pointer-events-none z-[1]" />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+         <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Plumbing & HVAC</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Marketing Built for Plumbers and HVAC Contractors
+            Built for Both. Tailored to Each.
           </h2>
           <p className="text-lg text-text-secondary">
             Every channel (SEO, paid ads, Maps, email) points to one outcome: more booked service calls.

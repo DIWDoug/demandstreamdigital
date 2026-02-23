@@ -50,9 +50,10 @@ const WhyPartnerWithUs = () => {
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+         <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">The Partnership</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            What Working With DemandStream Actually Looks Like
+            What Working With Us Looks Like
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Every campaign is built around how customers search for plumbers and HVAC companies in your specific market, and what it takes to get them to call.

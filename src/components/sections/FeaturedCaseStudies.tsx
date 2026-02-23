@@ -30,9 +30,9 @@ const FeaturedCaseStudies = () => {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
             Proven Results
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Marketing Results for Plumbing & HVAC Companies
-          </h2>
+           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+             Plumbing & HVAC Marketing Results
+           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Real results for real clients. See how we've helped businesses dominate their local markets.
           </p>
