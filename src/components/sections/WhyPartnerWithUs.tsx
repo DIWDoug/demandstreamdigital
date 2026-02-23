@@ -8,20 +8,20 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "You See Every Dollar",
-      description: "You know where your budget is going and what it's producing. Leads, calls, cost per booked call. No black boxes. No activity reports that hide results.",
+      title: "Monthly Strategy Reviews",
+      description: "Every month we walk through what's working, what's changing, and what's next. No guessing, no waiting for quarterly reports.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Your Booking Rate Is the Metric That Matters",
-      description: "We don't report impressions. We track booked calls, cost per booked call, and booking rate — because those are the numbers that show up on your dispatch board.",
+      title: "Direct Access to Your Team",
+      description: "You talk to the people doing the work, not an account manager relaying messages. Questions get answered the same day.",
       isQualifier: false
     },
     {
       icon: Target,
-      title: "Built for Your Market, Not a Template",
-      description: "We don't apply the same keyword list and call it done. Your service area, your competition, and your peak seasons drive every decision.",
+      title: "Campaigns Built Around Your Capacity",
+      description: "We scale marketing up or down based on your tech count, your schedule, and your season. No wasted spend when you're already booked.",
       isQualifier: false
     },
     {
@@ -33,7 +33,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: GraduationCap,
       title: "Real Marketers, Not Bots",
-      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search — not account managers reading from a script.",
+      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search, not account managers reading from a script.",
       isQualifier: false
     },
     {
@@ -55,7 +55,7 @@ const WhyPartnerWithUs = () => {
             What Working With DemandStream Actually Looks Like
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Every campaign is built around how customers search for plumbers and HVAC companies in your specific market — and what it takes to get them to call.
+            Every campaign is built around how customers search for plumbers and HVAC companies in your specific market, and what it takes to get them to call.
           </p>
         </div>
 

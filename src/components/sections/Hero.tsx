@@ -142,10 +142,10 @@ const Hero = () => {
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
             <h1
-              className="text-3xl md:text-4xl lg:text-5xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
-              style={{ lineHeight: "1.15" }}
+              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
+              style={{ lineHeight: "1.1" }}
             >
-              Plumbing & HVAC Digital Marketing
+              Plumbing & HVAC Digital Marketing Systems
             </h1>
             <p
               className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
@@ -158,7 +158,7 @@ const Hero = () => {
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, and website design — built as one connected system.
+              We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, and website design, built as one connected system.
             </p>
             <p
               className="text-sm text-gray-500 font-medium mb-10 animate-fade-in-up"

@@ -26,7 +26,7 @@ const services: Service[] = [
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "More than Google Ads. We run a connected paid strategy — Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram — built to capture demand, follow up on missed calls, and keep your name in front of people who searched but didn't book.",
+    description: "More than Google Ads. We run a connected paid strategy: Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram. Built to capture demand, follow up on missed calls, and keep your name in front of people who searched but didn't book.",
     href: "/plumbing-paid-advertising",
   },
   {
@@ -92,7 +92,7 @@ const ServicesGrid = () => {
                 <span className="text-accent-blue">Plumbing & HVAC Companies</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and website design built to convert — all structured to increase booked service calls and revenue stability.
+                Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and website design built to convert. All structured to increase booked service calls and revenue stability.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Each service reinforces the others. That connection is what creates predictable call flow you can build a schedule around.

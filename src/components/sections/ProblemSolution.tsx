@@ -11,13 +11,13 @@ const ProblemSolution = () => {
       icon: Eye,
       title: "You See Every Dollar",
       subtitle: "Complete visibility at every step",
-      body: "You know where your budget is going and what it's producing. Leads, calls, cost per booked call. No black boxes. No activity reports that hide results."
+      body: "You know where your budget is going and what it's producing. Leads, calls, cost per booked call. No black boxes."
     },
     {
       icon: MessageSquare,
       title: "Your Booking Rate Is the Metric That Matters",
       subtitle: "Results you can see",
-      body: "We don't report impressions. We track booked calls, cost per booked call, and booking rate — because those are the numbers that show up on your dispatch board."
+      body: "We don't report impressions. We track booked calls, cost per booked call, and booking rate. Those are the numbers that show up on your dispatch board."
     },
     {
       icon: Settings,
@@ -42,7 +42,7 @@ const ProblemSolution = () => {
               Marketing Built for Plumbing & HVAC Operators
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Most marketing agencies treat plumbing and HVAC companies like any other business. DemandStream doesn't. Every strategy is built around how customers search for plumbers and HVAC services in your local market — and what it takes to turn that search into a booked job.
+              Most marketing agencies treat plumbing and HVAC companies like any other business. DemandStream doesn't. Every strategy is built around how customers search for plumbers and HVAC services in your local market, and what it takes to turn that search into a booked job.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const ProblemSolution = () => {
 
           <div className="text-center">
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Generic marketing ignores your service area, your competition, and your season. DemandStream builds around all three — search, paid ads, email, and reputation working together to drive calls.
+              Generic marketing ignores your service area, your competition, and your season. DemandStream builds around all three: search, paid ads, email, and reputation working together to drive calls.
             </p>
           </div>
         </div>

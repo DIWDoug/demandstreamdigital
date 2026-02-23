@@ -10,7 +10,7 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
-import ReputationVelocity from "@/components/sections/ReputationVelocity";
+
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
@@ -101,10 +101,8 @@ const Index = () => {
         <MidPageCTA variant="light" />
       </div>
       
-      {/* Reputation & Review Velocity */}
-      <ReputationVelocity />
-      
       {/* Industry expertise */}
+      
       <TopicalExpertise />
       
       {/* Market exclusivity */}
