@@ -264,7 +264,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left - Title */}
             <div>
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 About DemandStream Digital
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1] mb-6">
@@ -335,7 +335,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 How We Got Here
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
@@ -378,7 +378,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 The Operating Experience Behind Demand Stream Digital
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
@@ -718,7 +718,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 What Agencies and Business Owners Say
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground">
@@ -886,7 +886,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-10">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 From Those Who Know Us Best
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
@@ -911,7 +911,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 lg:mb-16">
-              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
                 The People Behind the Work
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4">
