@@ -28,11 +28,12 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
+          <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">What Plumbing & HVAC Operators Say</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-            Plumbing & HVAC Marketing Reviews
+            Real Results. Real Operators.
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            Doug Bryson brings 15+ years and 100+ client engagements to DemandStream — now focused exclusively on plumbing and HVAC.
+            These are not agency reviews. These come from plumbing and HVAC companies that wanted more booked calls — and got them.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex">
