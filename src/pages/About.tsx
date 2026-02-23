@@ -140,10 +140,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies</title>
+        <title>About Our Plumbing & HVAC Marketing Experts | DemandStream Digital</title>
         <meta 
           name="description" 
-          content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." 
+          content="Exclusively serving plumbing and HVAC companies, our team has managed millions in ad spend and built revenue-first marketing systems that generate more booked service calls. Meet the team." 
         />
         <meta name="keywords" content="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas" />
         <link rel="canonical" href="https://demandstreamdigital.com/about" />
@@ -264,36 +264,39 @@ const About = () => {
             {/* Left - Title */}
             <div>
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                About Demand Stream Digital
+                About DemandStream Digital
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1] mb-6">
-                Built by a Marketer, <span className="text-accent-blue">For Marketers</span>
+                Built for Plumbing <span className="text-accent-blue">& HVAC Companies.</span>
               </h1>
-              {/* Credibility stats - Cashvertising: specificity builds trust */}
+              {/* Credibility stats */}
               <div className="flex flex-wrap gap-6 lg:gap-8">
                 <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">14</p>
-                  <p className="text-sm text-text-secondary">Years</p>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">15+</p>
+                  <p className="text-sm text-text-secondary">Years of Execution</p>
                 </div>
                 <div>
                   <p className="text-3xl lg:text-4xl font-bold text-cta">100+</p>
-                  <p className="text-sm text-text-secondary">Clients</p>
+                  <p className="text-sm text-text-secondary">SMB & National Campaigns</p>
                 </div>
                 <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">$M+</p>
-                  <p className="text-sm text-text-secondary">Ad Spend</p>
+                  <p className="text-3xl lg:text-4xl font-bold text-cta">$10M+</p>
+                  <p className="text-sm text-text-secondary">Ad Spend Managed</p>
                 </div>
                 <div>
                   <p className="text-3xl lg:text-4xl font-bold text-cta">4.9★</p>
-                  <p className="text-sm text-text-secondary">Rating</p>
+                  <p className="text-sm text-text-secondary">Average Client Rating</p>
                 </div>
               </div>
             </div>
             
             {/* Right - Description */}
             <div className="lg:border-l lg:border-border/50 lg:pl-12">
-              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed">
-                Since 2011, we've worked directly with small and mid-sized businesses and alongside agencies—building and fulfilling inbound marketing campaigns across local, regional, and national markets. SEO, paid advertising, email marketing, and more. All scoped to the market, explained in plain English, and executed by practitioners who've done the work themselves.
+              <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed mb-4">
+                We work exclusively with plumbing and HVAC companies. Not dentists. Not restaurants. Not e-commerce. Every system we build, every keyword we target, every campaign we run is designed around one outcome: more booked service calls for trade operators.
+              </p>
+              <p className="font-serif text-base lg:text-lg text-text-secondary leading-relaxed">
+                If you run 3 to 40+ trucks and want a marketing partner who understands your service area, your seasonal swings, and what a full dispatch board actually requires: this is where that starts.
               </p>
             </div>
           </div>
@@ -324,6 +327,39 @@ const About = () => {
           </div>
         </div>
       </nav>
+
+      {/* How We Got Here */}
+      <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
+                How We Got Here
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+                15 Years in the Field. One Decision That Changed Everything.
+              </h2>
+            </div>
+            <div className="space-y-5 text-text-secondary leading-relaxed text-base lg:text-lg font-serif">
+              <p>
+                DemandStream Digital is the result of 15 years of hands-on digital marketing work across 100+ SMB and national campaigns. SEO, paid advertising, reputation management, web design. Every channel. Every market. Built and executed by practitioners, not account managers reading from a script.
+              </p>
+              <p>
+                Doug Bryson spent that time earning an Expert-Vetted designation on Upwork, reaching the top 1% of freelancers globally in paid advertising and SEO. He managed millions in ad spend across industries ranging from apartment locators to national franchises to e-commerce brands.
+              </p>
+              <p>
+                But a pattern kept emerging. The clients that got the best results, the ones where marketing actually moved the dispatch board, were plumbing and HVAC companies. Call-driven. Seasonal. Reputation-dependent. Businesses where every dollar of marketing spend either produced a booked job or it did not.
+              </p>
+              <p>
+                So the decision was made to stop serving every industry and go all in on the trades. Not as a pivot of necessity. As a deliberate choice to take 15 years of execution experience and build a system designed entirely around how plumbing and HVAC companies grow.
+              </p>
+              <p className="text-foreground font-medium">
+                That is what DemandStream is. Not a general agency that takes trade clients. A trade-specific growth system built by someone who has done the work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Mission & Vision Section */}
       <div id="mission-values" className="scroll-mt-32">
