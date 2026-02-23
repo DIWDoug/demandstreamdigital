@@ -72,6 +72,13 @@ const Index = () => {
       {/* Results bar - credibility stats */}
       <ResultsBar />
       
+      {/* Down arrow transition */}
+      <div className="flex justify-center -mb-4 relative z-10">
+        <div className="w-10 h-10 rounded-full bg-background border border-border shadow-md flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent-blue"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+      
       {/* Problem framing */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" />
