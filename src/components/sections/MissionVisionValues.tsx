@@ -76,10 +76,10 @@ const MissionVisionValues = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Integrity */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Integrity</h4>
                 </div>
@@ -89,10 +89,10 @@ const MissionVisionValues = () => {
               </div>
 
               {/* Transparency */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <Eye className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <Eye className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Transparency</h4>
                 </div>
@@ -102,10 +102,10 @@ const MissionVisionValues = () => {
               </div>
 
               {/* Partnership */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <Handshake className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <Handshake className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Partnership</h4>
                 </div>
@@ -115,10 +115,10 @@ const MissionVisionValues = () => {
               </div>
 
               {/* Reliability */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Reliability</h4>
                 </div>
@@ -128,10 +128,10 @@ const MissionVisionValues = () => {
               </div>
 
               {/* Ethical Practices */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <CheckCircle className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Ethical Execution</h4>
                 </div>
@@ -141,10 +141,10 @@ const MissionVisionValues = () => {
               </div>
 
               {/* Competency */}
-              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors">
+              <div className="bg-surface-dark/50 border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-cta" />
+                  <div className="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-accent-blue" />
                   </div>
                   <h4 className="text-lg font-semibold text-foreground">Trade Expertise</h4>
                 </div>
