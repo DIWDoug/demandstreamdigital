@@ -45,41 +45,48 @@ const About = () => {
     {
       name: "Doug Bryson",
       role: "CEO & Founder",
+      bio: "15 years building marketing systems for local service businesses. The last several focused entirely on plumbing and HVAC. Doug built DemandStream around a single conviction: trade operators deserve marketing that speaks their language and reports in metrics they can act on.",
       image: dougHeadshot,
       linkedin: "https://www.linkedin.com/in/douglasebryson/"
     },
     {
-      name: "John Joseph Santos",
-      role: "OnPage SEO & Paid Ads Specialist",
+      name: "John Joseph Santos (JJ)",
+      role: "Team Lead",
+      bio: "Specialist in on-page optimization and paid advertising for local service companies. Builds and manages campaigns with a focus on qualified call volume and cost per booked call.",
       image: johnSantos,
       linkedin: "https://www.linkedin.com/in/jj-santosads/"
     },
     {
       name: "Wyler",
       role: "Chief Morale Officer",
+      bio: "Ensures team morale stays high. Undefeated in this role.",
       image: wyler
     },
     {
       name: "Shera Lee Fabian",
       role: "Senior Project Manager",
+      bio: "Keeps client campaigns on schedule and communication clear. Ensures every deliverable is executed on time and every client always knows where things stand.",
       image: sheraFabian,
       linkedin: "https://www.linkedin.com/in/sheraleefabian/"
     },
     {
       name: "Ira Salvador",
       role: "Project Manager",
+      bio: "Manages campaign workflows and client deliverables. Focused on execution quality and timeline consistency.",
       image: iraSalvador,
       linkedin: "https://www.linkedin.com/in/indira-salvador-926b7a212/"
     },
     {
       name: "Samanta Sanchezborja Leal",
       role: "Client Success Manager",
+      bio: "Point of contact for client communication and campaign performance reviews. Focused on making sure clients always have clarity on results.",
       image: samantaLeal,
       linkedin: "https://www.linkedin.com/in/esamanthasbl87/"
     },
     {
       name: "Lanilyn Erauda",
-      role: "SOP Specialist",
+      role: "Systems and Processes",
+      bio: "Builds and maintains the internal processes that keep campaign quality consistent across every client account.",
       image: lanilynErauda,
       linkedin: "https://www.linkedin.com/in/lanilyn-erauda-87b077265/"
     },
@@ -98,12 +105,14 @@ const About = () => {
     {
       name: "Desiree Abbariao",
       role: "Content Strategist",
+      bio: "Creates content that connects high-value searches to booked service calls. Trade-aware writing built for local search performance.",
       image: desireeAbbariao,
       linkedin: "https://www.linkedin.com/in/desireeabbariao/"
     },
     {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
+      bio: "Handles on-page optimization across client sites: headings, meta data, internal linking, and page structure built for local search.",
       image: leilaniMaravillas,
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
     },
@@ -754,7 +763,7 @@ const About = () => {
                 Our Team
               </h2>
               <p className="text-text-secondary max-w-2xl mx-auto">
-                A delivery-first team built for execution, communication, and long-term client support.
+                A delivery-focused team built for execution, communication, and long-term client results. Everyone here works exclusively on plumbing and HVAC accounts.
               </p>
             </div>
 
@@ -765,12 +774,17 @@ const About = () => {
                   key={index}
                   className="group text-center"
                 >
-                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-surface-dark border border-border group-hover:border-cta/30 transition-colors">
+                  <div className="aspect-[4/5] mb-4 rounded-xl overflow-hidden bg-surface-dark border border-border group-hover:border-accent-blue/30 transition-colors relative">
                     <img 
                       src={member.image}
                       alt={`${member.name}, ${member.role}`}
                       className="w-full h-full object-cover object-top"
                     />
+                    {member.bio && (
+                      <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                        <p className="text-text-secondary text-xs leading-relaxed text-center">{member.bio}</p>
+                      </div>
+                    )}
                   </div>
                   <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
                     {member.name}
