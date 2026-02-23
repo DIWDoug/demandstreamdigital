@@ -35,33 +35,32 @@ const Contact = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency</title>
-        <meta name="description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
-        <link rel="canonical" href="https://dialedinweb.com/contact" />
-        <meta name="keywords" content="contact white label SEO, agency partnership inquiry, white label PPC contact, digital marketing fulfillment partner" />
+        <title>Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies</title>
+        <meta name="description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
+        <link rel="canonical" href="https://demandstreamdigital.com/contact" />
+        <meta name="keywords" content="contact plumbing marketing, HVAC marketing consultation, plumber SEO contact, growth marketing for trades" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/contact" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/contact" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/contact" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/contact" />
         
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />
-        <meta property="og:description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
-        <meta property="og:url" content="https://dialedinweb.com/contact" />
+        <meta property="og:title" content="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies" />
+        <meta property="og:description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
+        <meta property="og:url" content="https://demandstreamdigital.com/contact" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/contact.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/contact.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Dialed-in Web | Start a White Label SEO, PPC, and Content Marketing Partnership for Your Agency" />
-        <meta name="twitter:description" content="Reach out to Dialed-in Web to explore a white label partnership for SEO, paid ads, and content marketing services." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/contact.png" />
+        <meta name="twitter:title" content="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies" />
+        <meta name="twitter:description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/contact.png" />
       </Helmet>
 
       <Header />
@@ -83,7 +82,7 @@ const Contact = () => {
                     Start a <span className="text-accent-blue">Conversation</span>
                   </h1>
                   <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                    Whether you're exploring white-label fulfillment for the first time or looking to replace an inconsistent vendor, we're here to help. Tell us about your agency—we'll take it from there.
+                    Whether you're looking to grow your plumbing or HVAC business, or you need a marketing partner who understands your industry, we're here to help. Tell us about your business—we'll take it from there.
                   </p>
 
                   {/* Contact Info */}
@@ -134,7 +133,7 @@ const Contact = () => {
                 {/* Right Column - Two-Step Form */}
                 <div className="bg-surface-card border border-border rounded-2xl p-8 shadow-lg">
                   <h2 className="text-xl font-semibold text-foreground mb-2">
-                    Tell us about your agency
+                    Tell us about your business
                   </h2>
                   <p className="text-sm text-text-muted mb-6">
                     We'll take it from there.

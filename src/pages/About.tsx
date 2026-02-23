@@ -140,66 +140,64 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process</title>
+        <title>About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies</title>
         <meta 
           name="description" 
-          content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." 
+          content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." 
         />
-        <meta name="keywords" content="white label marketing agency, agency fulfillment team, Doug Bryson SEO, Dialed-In Web team, marketing partnership Dallas" />
-        <link rel="canonical" href="https://dialedinweb.com/about" />
+        <meta name="keywords" content="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas" />
+        <link rel="canonical" href="https://demandstreamdigital.com/about" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/about" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/about" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/about" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/about" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/about" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />
-        <meta property="og:description" content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." />
-        <meta property="og:url" content="https://dialedinweb.com/about" />
+        <meta property="og:title" content="About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies" />
+        <meta property="og:description" content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." />
+        <meta property="og:url" content="https://demandstreamdigital.com/about" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/about.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/about.jpg" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Label Digital Marketing Partner for Agencies | About Dialed-in Web's Team, Mission & Process" />
-        <meta name="twitter:description" content="Discover how Dialed-in Web helps agencies scale through white label SEO, PPC, content, and web—delivered under your brand." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/about.jpg" />
+        <meta name="twitter:title" content="About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies" />
+        <meta name="twitter:description" content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/about.jpg" />
         {/* Connected Organization + Person Schema for AI/LLM visibility */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Organization",
-                "@id": "https://dialedinweb.com/#organization",
-                "name": "Dialed-In Web",
-                "legalName": "Dialed-In Web LLC",
-                "url": "https://dialedinweb.com",
+              "@type": "Organization",
+                "@id": "https://demandstreamdigital.com/#organization",
+                "name": "Demand Stream Digital",
+                "legalName": "Demand Stream Digital LLC",
+                "url": "https://demandstreamdigital.com",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://dialedinweb.com/logo.png"
+                  "url": "https://demandstreamdigital.com/logo.png"
                 },
                 "foundingDate": "2011",
-                "founder": { "@id": "https://dialedinweb.com/#founder" },
+                "founder": { "@id": "https://demandstreamdigital.com/#founder" },
                 "areaServed": [
-                  { "@type": "Country", "name": "United States" },
-                  { "@type": "Country", "name": "Canada" }
+                  { "@type": "Country", "name": "United States" }
                 ],
                 "knowsAbout": [
                   { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
                   { "@type": "Thing", "name": "Google Business Profile Optimization" },
-                  { "@type": "Thing", "name": "White-Label Marketing Services" },
+                  { "@type": "Thing", "name": "Plumbing & HVAC Marketing" },
                   { "@type": "Thing", "name": "Pay-Per-Click Advertising", "sameAs": "https://en.wikipedia.org/wiki/Pay-per-click" }
                 ],
                 "sameAs": [
-                  "https://www.linkedin.com/company/dialed-in-web/",
-                  "https://www.facebook.com/dialedinweb",
-                  "https://www.instagram.com/dialedinweb/",
-                  "https://share.google/IXw0qAzlgpjR1SIKP"
+                  "https://www.linkedin.com/company/demand-stream-digital/",
+                  "https://www.facebook.com/demandstreamdigital",
+                  "https://www.instagram.com/demandstreamdigital/"
                 ],
                 "aggregateRating": {
                   "@type": "AggregateRating",
@@ -211,18 +209,18 @@ const About = () => {
               },
               {
                 "@type": "Person",
-                "@id": "https://dialedinweb.com/#founder",
+                "@id": "https://demandstreamdigital.com/#founder",
                 "name": "Doug Bryson",
                 "jobTitle": "CEO & Founder",
-                "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and agency operations. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
-                "worksFor": { "@id": "https://dialedinweb.com/#organization" },
+                "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and growth marketing for service businesses. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
+                "worksFor": { "@id": "https://demandstreamdigital.com/#organization" },
                 "knowsAbout": [
                   { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
                   { "@type": "Thing", "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
                   { "@type": "Thing", "name": "Meta Advertising" },
                   { "@type": "Thing", "name": "Amazon PPC" },
-                  { "@type": "Thing", "name": "White-Label Marketing" },
-                  { "@type": "Thing", "name": "Agency Operations" }
+                  { "@type": "Thing", "name": "Plumbing & HVAC Marketing" },
+                  { "@type": "Thing", "name": "Growth Marketing Operations" }
                 ],
                 "sameAs": [
                   "https://www.linkedin.com/in/dougbryson",
@@ -231,12 +229,12 @@ const About = () => {
               },
               {
                 "@type": "AboutPage",
-                "@id": "https://dialedinweb.com/about#webpage",
-                "url": "https://dialedinweb.com/about",
-                "name": "About Us | Dialed-In Web",
-                "isPartOf": { "@id": "https://dialedinweb.com/#website" },
-                "about": { "@id": "https://dialedinweb.com/#organization" },
-                "mainEntity": { "@id": "https://dialedinweb.com/#organization" }
+                "@id": "https://demandstreamdigital.com/about#webpage",
+                "url": "https://demandstreamdigital.com/about",
+                "name": "About Us | Demand Stream Digital",
+                "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
+                "about": { "@id": "https://demandstreamdigital.com/#organization" },
+                "mainEntity": { "@id": "https://demandstreamdigital.com/#organization" }
               }
             ]
           })}
@@ -266,7 +264,7 @@ const About = () => {
             {/* Left - Title */}
             <div>
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                About Dialed-In Web
+                About Demand Stream Digital
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground leading-[1.1] mb-6">
                 Built by a Marketer, <span className="text-accent-blue">For Marketers</span>
@@ -343,7 +341,7 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-cta uppercase tracking-widest font-medium mb-4">
-                The Operating Experience Behind Dialed-In Web
+                The Operating Experience Behind Demand Stream Digital
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
                 From Nashville Songwriter to Full-Service Agency
@@ -493,7 +491,7 @@ const About = () => {
                       <p className="text-sm text-text-secondary">E-commerce SEO + paid advertising</p>
                     </div>
                     <div>
-                      <p className="text-sm text-text-secondary italic">Dialed-In Web goes full-service: web dev, paid media, comprehensive digital marketing</p>
+                      <p className="text-sm text-text-secondary italic">Demand Stream Digital goes full-service: web dev, paid media, comprehensive digital marketing</p>
                     </div>
                   </div>
                 </div>
@@ -586,11 +584,11 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-cta uppercase tracking-wide">2021-Present</p>
-                      <p className="text-lg font-semibold text-foreground">White-Label Pivot</p>
+                      <p className="text-lg font-semibold text-foreground">Growth Marketing Pivot</p>
                     </div>
                   </div>
-                  <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Pivoted to serving agencies. Managed several million dollars in paid advertising + SEO.
+                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
+                   Pivoted to serving plumbing and HVAC companies directly. Managed several million dollars in paid advertising + SEO.
                   </p>
                   <div className="pt-4 border-t border-border/50 space-y-3">
                     <div>

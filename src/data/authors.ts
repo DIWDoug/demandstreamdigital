@@ -33,17 +33,17 @@ export const authors: Author[] = [
     name: "Doug Bryson",
     role: "CEO & Founder",
     image: dougHeadshot,
-    shortBio: "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and agency operations.",
-    fullBio: `Doug Bryson is the founder and CEO of Dialed-In Web, a white-label fulfillment partner for digital marketing agencies. With over 14 years in the industry, Doug has managed millions of dollars in ad spend across Google Ads, Meta, and local service advertising platforms.
+    shortBio: "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and growth marketing for service businesses.",
+    fullBio: `Doug Bryson is the founder and CEO of Demand Stream Digital, a growth marketing company built specifically for plumbing and HVAC businesses. With over 14 years in the industry, Doug has managed millions of dollars in ad spend across Google Ads, Meta, and local service advertising platforms.
 
-Before founding Dialed-In Web, Doug built his expertise working directly with clients ranging from local service businesses to billion-dollar energy companies, theme parks, and multi-location automotive franchises. This diverse experience shaped his understanding of what agencies actually need from a fulfillment partner: reliability, transparency, and work they can confidently present to their clients.
+Before founding Demand Stream Digital, Doug built his expertise working directly with clients ranging from local service businesses to billion-dollar energy companies, theme parks, and multi-location automotive franchises. This diverse experience shaped his understanding of what trades businesses actually need from a marketing partner: reliability, transparency, and results they can measure in booked jobs.
 
 Doug is an Expert-Vetted specialist on Upwork—a distinction held by less than 1% of freelancers on the platform—and has served over 100 clients across local SEO, paid media, and authority building campaigns. His approach emphasizes clear communication, documented processes, and sustainable results over quick wins.`,
     expertise: [
       "Local SEO Strategy",
       "Google Ads Management",
-      "Agency Operations",
-      "White-Label Fulfillment",
+      "Marketing Operations",
+      "Plumbing & HVAC Marketing",
       "GBP Optimization",
       "Paid Media Strategy"
     ],
@@ -77,7 +77,7 @@ Doug is an Expert-Vetted specialist on Upwork—a distinction held by less than 
     role: "Content Strategist",
     image: richardBaylon,
     shortBio: "Content strategist specializing in local SEO content, service area pages, and topical authority development.",
-    fullBio: `Richard Baylon is a Content Strategist at Dialed-In Web, where he develops localized content strategies that help service businesses dominate their target markets. His work focuses on creating content that ranks—and converts—by aligning search intent with conversion architecture.
+    fullBio: `Richard Baylon is a Content Strategist at Demand Stream Digital, where he develops localized content strategies that help service businesses dominate their target markets. His work focuses on creating content that ranks—and converts—by aligning search intent with conversion architecture.
 
 Richard specializes in geographical content development, creating unique service area pages that avoid doorway page penalties while capturing local search demand. He understands that great local content isn't just about swapping city names—it's about demonstrating genuine local relevance and expertise.
 
@@ -91,7 +91,7 @@ His approach to content development emphasizes E-E-A-T signals, semantic structu
       "AI-Optimized Content"
     ],
     credentials: [
-      "Content Strategist at Dialed-In Web",
+      "Content Strategist at Demand Stream Digital",
       "Local SEO Content Specialist"
     ],
     socialLinks: {
@@ -115,7 +115,7 @@ His approach to content development emphasizes E-E-A-T signals, semantic structu
     role: "Content Strategist",
     image: desireeAbbariao,
     shortBio: "Content strategist focused on blog content, power posts, and comprehensive content development for local businesses.",
-    fullBio: `Desiree Abbariao is a Content Strategist at Dialed-In Web, where she creates comprehensive content that positions local businesses as trusted authorities in their industries. Her work spans blog content, power posts, and topical cluster development.
+    fullBio: `Desiree Abbariao is a Content Strategist at Demand Stream Digital, where she creates comprehensive content that positions local businesses as trusted authorities in their industries. Her work spans blog content, power posts, and topical cluster development.
 
 Desiree understands that content marketing for local businesses requires a different approach than national brands. She develops content strategies that balance informational value with conversion architecture—ensuring that traffic turns into leads, not just pageviews.
 
@@ -129,7 +129,7 @@ Her expertise includes developing hub-and-spoke content architectures, FAQ conte
       "Content Conversion Optimization"
     ],
     credentials: [
-      "Content Strategist at Dialed-In Web",
+      "Content Strategist at Demand Stream Digital",
       "Topical Content Specialist"
     ],
     socialLinks: {

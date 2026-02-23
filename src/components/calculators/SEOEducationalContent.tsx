@@ -471,7 +471,7 @@ const SEOEducationalContent = () => {
             { title: "Service Area Size", desc: "Larger service areas require more location pages, more citations, and broader link building." },
             { title: "Current Online Presence", desc: "Businesses with inconsistent citations, no reviews, or technical issues require more upfront cleanup." },
             { title: "Review Velocity Goals", desc: "Aggressive review generation requires automation, follow-up sequences, and platform diversification." },
-            { title: "Reporting Requirements", desc: "White-label dashboards, call tracking, and custom reporting add to fulfillment scope." }
+            { title: "Reporting Requirements", desc: "Custom dashboards, call tracking, and performance reporting add to the scope." }
           ].map((item, i) => (
             <div key={i} className="flex gap-4">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent-blue/10 flex items-center justify-center text-accent-blue font-bold text-sm">
@@ -501,7 +501,7 @@ const SEOEducationalContent = () => {
             { title: "On-Page Local SEO", items: ["Location page optimization", "Local schema markup", "Service area targeting", "Internal linking"] },
             { title: "Review Management", items: ["Review generation campaigns", "Response templates", "Platform diversification", "Sentiment monitoring"] },
             { title: "Local Link Building", items: ["Community sponsorships", "Local partnerships", "Chamber of Commerce", "Industry directories"] },
-            { title: "Reporting & Tracking", items: ["Rank tracking by location", "Call tracking", "Lead attribution", "White-label dashboards"] }
+            { title: "Reporting & Tracking", items: ["Rank tracking by location", "Call tracking", "Lead attribution", "Custom dashboards"] }
           ].map((category, i) => (
             <div key={i} className="bg-surface-elevated rounded-xl p-5 border border-border/30">
               <h3 className="text-foreground font-semibold mb-3">{category.title}</h3>
@@ -552,11 +552,11 @@ const SEOEducationalContent = () => {
           <div className="p-2 rounded-lg bg-accent-green/10">
             <Lightbulb className="h-5 w-5 text-accent-green" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">The White-Label Opportunity</h2>
+          <h2 className="text-2xl font-bold text-foreground">The Growth Opportunity</h2>
         </div>
         <div className="bg-gradient-to-br from-cta/5 to-accent-blue/5 rounded-2xl p-8 border border-cta/20">
           <p className="text-text-secondary text-lg mb-6">
-            Local SEO is the perfect white-label service. Small businesses need it, but most agencies lack the bandwidth to execute it in-house. With white-label fulfillment, you capture 40-150% margins while we handle the heavy lifting.
+            Local SEO is the most effective lead generation channel for plumbing and HVAC companies. Most service businesses underinvest in SEO and miss out on high-intent traffic that's already searching for their services. With expert management, you capture more calls while competitors waste money on low-quality leads.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             <div className="text-center">

@@ -124,26 +124,26 @@ const CaseStudies = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Case Studies | White Label Marketing Results for Agency Partners</title>
+        <title>Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies</title>
         <meta 
           name="description" 
-          content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." 
+          content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." 
         />
-        <link rel="canonical" href="https://dialedinweb.com/case-studies" />
+        <link rel="canonical" href="https://demandstreamdigital.com/case-studies" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Case Studies | White Label Marketing Results for Agency Partners" />
-        <meta property="og:description" content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." />
-        <meta property="og:url" content="https://dialedinweb.com/case-studies" />
+        <meta property="og:title" content="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies" />
+        <meta property="og:description" content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." />
+        <meta property="og:url" content="https://demandstreamdigital.com/case-studies" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Case Studies | White Label Marketing Results for Agency Partners" />
-        <meta name="twitter:description" content="Real results from real agency partnerships. See how we've helped agencies scale with white label SEO, PPC, and content marketing services." />
+        <meta name="twitter:title" content="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies" />
+        <meta name="twitter:description" content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." />
         <meta name="twitter:image" content={ogImage} />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
       </Helmet>
       
       <Header />
@@ -168,8 +168,8 @@ const CaseStudies = () => {
                 <span className="text-primary">Partnerships</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                See how we've helped agency partners scale their client results with 
-                white label SEO, paid media, and content marketing services.
+                See how we've helped plumbing and HVAC companies grow with 
+                local SEO, paid media, and content marketing.
               </p>
             </div>
             

@@ -163,10 +163,10 @@ const CaseStudyDetail = () => {
       'dallas-plumbing-seo': 'dallas-plumbing-hero.jpg',
       'las-vegas-plumbing-seo': 'las-vegas-plumbing-hero.jpg',
     };
-    const imageName = slugToImage[caseStudySlug] || 'dialedinweb-logo.png';
+    const imageName = slugToImage[caseStudySlug] || 'demand-stream-digital-logo.png';
     return slugToImage[caseStudySlug] 
-      ? `https://dialedinweb.com/og-images/${imageName}`
-      : `https://dialedinweb.com/${imageName}`;
+      ? `https://demandstreamdigital.com/og-images/${imageName}`
+      : `https://demandstreamdigital.com/${imageName}`;
   };
 
   const ogImageUrl = getOgImageUrl(slug || '');

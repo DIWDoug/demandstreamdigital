@@ -74,9 +74,8 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, hero
               </h1>
             ) : (
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold mb-8 animate-fade-in text-foreground" style={{ lineHeight: "1.15" }}>
-                White-Label{" "}
                 <span className="text-accent-blue drop-shadow-[0_0_30px_hsl(var(--accent-blue)/0.5)]">{title}</span>{" "}
-                Services
+                for Plumbing & HVAC
               </h1>
             )}
             

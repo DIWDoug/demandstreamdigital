@@ -74,15 +74,15 @@ const Author = () => {
     "@graph": [
       {
         "@type": "Person",
-        "@id": `https://dialedinweb.com/authors/${author.slug}#person`,
+        "@id": `https://demandstreamdigital.com/authors/${author.slug}#person`,
         "name": author.name,
         "jobTitle": author.role,
         "description": author.shortBio,
         "image": author.image,
         "worksFor": {
           "@type": "Organization",
-          "@id": "https://dialedinweb.com/#organization",
-          "name": "Dialed-In Web"
+          "@id": "https://demandstreamdigital.com/#organization",
+          "name": "Demand Stream Digital"
         },
         "sameAs": author.schemaData.sameAs,
         "knowsAbout": author.schemaData.knowsAbout.map(topic => ({
@@ -93,11 +93,11 @@ const Author = () => {
       },
       {
         "@type": "ProfilePage",
-        "@id": `https://dialedinweb.com/authors/${author.slug}`,
+        "@id": `https://demandstreamdigital.com/authors/${author.slug}`,
         "name": `${author.name} - ${author.role}`,
         "description": author.shortBio,
-        "mainEntity": { "@id": `https://dialedinweb.com/authors/${author.slug}#person` },
-        "isPartOf": { "@id": "https://dialedinweb.com/#website" }
+        "mainEntity": { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
+        "isPartOf": { "@id": "https://demandstreamdigital.com/#website" }
       }
     ]
   };
@@ -105,31 +105,30 @@ const Author = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{author.name} - {author.role} | Dialed-In Web</title>
+        <title>{author.name} - {author.role} | Demand Stream Digital</title>
         <meta name="description" content={author.shortBio} />
-        <link rel="canonical" href={`https://dialedinweb.com/authors/${author.slug}`} />
-        <meta name="keywords" content={`${author.name}, ${author.role}, white label marketing expert, agency SEO specialist`} />
+        <link rel="canonical" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
+        <meta name="keywords" content={`${author.name}, ${author.role}, plumbing HVAC marketing expert, local SEO specialist`} />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={`https://dialedinweb.com/authors/${author.slug}`} />
-        <link rel="alternate" hrefLang="en-CA" href={`https://dialedinweb.com/authors/${author.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://dialedinweb.com/authors/${author.slug}`} />
+        <link rel="alternate" hrefLang="en-US" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
         
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
         
         {/* Open Graph */}
-        <meta property="og:title" content={`${author.name} - ${author.role} | Dialed-In Web`} />
+        <meta property="og:title" content={`${author.name} - ${author.role} | Demand Stream Digital`} />
         <meta property="og:description" content={author.shortBio} />
-        <meta property="og:url" content={`https://dialedinweb.com/authors/${author.slug}`} />
+        <meta property="og:url" content={`https://demandstreamdigital.com/authors/${author.slug}`} />
         <meta property="og:type" content="profile" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${author.name} - ${author.role} | Dialed-In Web`} />
+        <meta name="twitter:title" content={`${author.name} - ${author.role} | Demand Stream Digital`} />
         <meta name="twitter:description" content={author.shortBio} />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>

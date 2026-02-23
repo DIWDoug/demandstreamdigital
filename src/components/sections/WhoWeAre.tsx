@@ -35,8 +35,8 @@ const WhoWeAre = () => {
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-surface-dark to-background border border-border aspect-[4/3]">
                 <img 
                   src={teamMeetingImage} 
-                  alt="Dialed-In Local team collaborating on growth marketing strategy for plumbing and HVAC companies"
-                  title="Growth Marketing Team | Dialed-In Local"
+                  alt="Demand Stream Digital team collaborating on growth marketing strategy for plumbing and HVAC companies"
+                  title="Growth Marketing Team | Demand Stream Digital"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
