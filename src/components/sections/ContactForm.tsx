@@ -96,7 +96,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                   />
 
                   {/* Partner Quote */}
-                  <div className="mt-8 pt-6 border-t border-border">
+                  <div className="mt-8 py-6 border-t border-border">
                     <p className="text-sm text-text-secondary italic text-center">
                       "What truly sets them apart is transparency. After past experiences with agencies where SEO felt like a 'black box,' it's refreshing to work with a team that provides real, clear data and explains what's working and why."
                     </p>
