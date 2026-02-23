@@ -189,23 +189,6 @@ const Hero = () => {
               </button>
             </form>
 
-            {/* Micro-trust proof strip */}
-            <div 
-              className="flex flex-wrap gap-x-6 gap-y-2 mt-8 animate-fade-in-up"
-              style={{ animationDelay: "0.25s" }}
-            >
-              {[
-                "15+ Years of Execution",
-                "$10M+ Managed Ad Spend",
-                "100+ Trade Campaigns",
-                "4.9★ Client Rating"
-              ].map((item, i) => (
-                <span key={i} className="text-sm text-gray-500 font-medium flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cta flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* Right column — Video placeholder */}
@@ -223,6 +206,24 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Micro-trust proof strip — below the grid */}
+        <div 
+          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mt-12 animate-fade-in-up"
+          style={{ animationDelay: "0.3s" }}
+        >
+          {[
+            "15+ Years of Execution",
+            "$10M+ Managed Ad Spend",
+            "100+ Trade Campaigns",
+            "4.9★ Client Rating"
+          ].map((item, i) => (
+            <span key={i} className="text-sm text-gray-500 font-medium flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-cta flex-shrink-0" />
+              {item}
+            </span>
+          ))}
         </div>
       </div>
 
