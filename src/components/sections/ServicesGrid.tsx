@@ -91,10 +91,10 @@ const ServicesGrid = () => {
                 One System. Every Channel.<br />
                 <span className="text-accent-blue">More Booked Service Calls</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and website design built to convert. All structured to increase booked service calls and revenue stability.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
+              <p className="text-muted-foreground leading-relaxed mb-8">
                 Each service reinforces the others. That connection is what creates predictable call flow you can build a schedule around.
               </p>
               
