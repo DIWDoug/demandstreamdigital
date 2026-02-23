@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
 import ProblemSolution from "@/components/sections/ProblemSolution";
-import HonestWordOnFulfillment from "@/components/sections/HonestWordOnFulfillment";
+
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import FitQualifier from "@/components/services/FitQualifier";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -67,53 +67,63 @@ const Index = () => {
       
       <TrustReel />
       
+      {/* Problem framing */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" />
         <ProblemSolution />
       </div>
       
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" flip />
-        <WhyPartnerWithUs />
-      </div>
-      <FitQualifier />
-      
+      {/* Services: what we do */}
       <div className="dark relative" id="services">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <ServicesGrid />
       </div>
       
+      {/* Process: how we do it */}
       <div className="relative">
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
-        <TopicalExpertise />
+        <GrowthProcess />
       </div>
       
-      <GrowthProcess />
-      
-      <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
-        <LocalGrowthEngine />
-      </div>
-      
-      <div className="dark relative" id="about">
-        <WhatWeSolve />
-      </div>
-      
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
-        <MidPageCTA variant="light" />
-      </div>
-      
+      {/* Proof: case studies */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <FeaturedCaseStudies />
       </div>
       
+      {/* Convert warm leads */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <MidPageCTA variant="light" />
+      </div>
+      
+      {/* Depth of knowledge */}
+      <TopicalExpertise />
+      
+      {/* Lead magnet */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="hsl(213, 64%, 8%)" variant="curve" />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <LocalGrowthEngine />
+      </div>
+      
+      {/* Qualification */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <WhyPartnerWithUs />
+      </div>
+      <FitQualifier />
+      
+      {/* Reinforce pain points */}
+      <div className="dark relative" id="about">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <WhatWeSolve />
+      </div>
+      
+      {/* Personal trust */}
+      <div className="dark relative">
         <FounderEEAT />
       </div>
       
+      {/* Social proof */}
       <div id="testimonials" className="relative">
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
         <Testimonials />
