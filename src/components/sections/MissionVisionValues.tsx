@@ -21,7 +21,7 @@ const MissionVisionValues = () => {
       />
       
       {/* Subtle gradient orbs */}
-      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-accent-green/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -41,13 +41,13 @@ const MissionVisionValues = () => {
             {/* Mission */}
             <div className="bg-surface-dark border border-border rounded-2xl p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-accent-green/10 flex items-center justify-center border-2 border-accent-green">
-                  <Target className="w-6 h-6 text-accent-green" />
+                <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
+                  <Target className="w-6 h-6 text-accent-blue" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground">Our Mission</h3>
               </div>
               <p className="text-text-secondary leading-relaxed text-lg">
-                To give agency partners a fulfillment relationship they can rely on. We deliver ethical, results-driven digital marketing that helps local businesses across America grow. Every engagement is scoped to the market reality, executed with precision, and communicated with complete transparency.
+                To build connected marketing systems that generate more booked service calls for plumbing and HVAC companies. Every campaign is scoped to your market reality, executed by people who understand how trade businesses operate, and reported in terms that show up on your dispatch board.
               </p>
             </div>
 
@@ -60,7 +60,7 @@ const MissionVisionValues = () => {
                 <h3 className="text-2xl font-semibold text-foreground">Our Vision</h3>
               </div>
               <p className="text-text-secondary leading-relaxed text-lg">
-                To be the fulfillment partner agencies never have to second-guess. We believe when agencies can count on their backend operations, they can focus on growth, client relationships, and building something meaningful. Together, we help American small businesses thrive through marketing that actually works.
+                To be the growth partner plumbing and HVAC companies never have to second-guess. When operators can trust their marketing is working, they can focus on running strong shops, retaining good techs, and growing on their own terms.
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ const MissionVisionValues = () => {
             <div className="text-center mb-10">
               <h3 className="text-2xl font-semibold text-foreground mb-3">Our Core Values</h3>
               <p className="text-text-secondary max-w-2xl mx-auto">
-                We believe agency partnerships thrive on reliability and ethical execution. Every engagement is built on sustainable, white-hat practices that protect your reputation and deliver results you can stand behind.
+                Every engagement is built on transparent execution and measurable outcomes. No black boxes. No vanity metrics. No tactics that don't tie back to booked calls.
               </p>
             </div>
             
@@ -84,7 +84,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Integrity</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  We do what we say. Your agency can count on deliverables that match the scope, timelines that hold, and work you never have to apologize for.
+                  We build strategies we can stand behind. No keyword stuffing, no misleading ad copy, no inflated reporting. What we tell you we're doing is exactly what we're doing.
                 </p>
               </div>
 
@@ -97,7 +97,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Transparency</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Full visibility into every campaign. You get complete reports, agreed-upon strategies, and no surprises. Ever.
+                  You see every dollar, every campaign, every result. We report on booked calls, cost per booked call, and booking rate: because those are the numbers that matter to your business.
                 </p>
               </div>
 
@@ -110,7 +110,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Partnership</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  We succeed when you succeed. This is a mutual investment: we bring the execution, you bring the client relationship, and together we deliver results.
+                  We take one plumbing client and one HVAC client per market. Your growth is our only focus in your territory. There is no divided loyalty here.
                 </p>
               </div>
 
@@ -123,7 +123,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Reliability</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Same team. Same process. Low turnover means your agency works with people who know your clients and deliver consistent quality month after month.
+                  Same team. Consistent process. Proactive communication. You should never have to chase your marketing partner for updates.
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ const MissionVisionValues = () => {
                   <h4 className="text-lg font-semibold text-foreground">Ethical Execution</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Only white-hat tactics that align with search engine guidelines. Your clients get sustainable rankings. Your agency keeps its reputation intact.
+                  We use only white-hat SEO and compliant paid advertising practices. Your rankings and reputation are built to last.
                 </p>
               </div>
 
@@ -146,10 +146,10 @@ const MissionVisionValues = () => {
                   <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-cta" />
                   </div>
-                  <h4 className="text-lg font-semibold text-foreground">Expertise</h4>
+                  <h4 className="text-lg font-semibold text-foreground">Trade Expertise</h4>
                 </div>
                 <p className="text-text-secondary text-sm leading-relaxed">
-                  Experienced specialists, not junior contractors. Our team stays current on algorithms and trends so you can confidently sell what we deliver.
+                  We understand LSA optimization, service-area SEO, seasonal demand shifts, and the metrics plumbing and HVAC operators actually use to run their businesses.
                 </p>
               </div>
             </div>
