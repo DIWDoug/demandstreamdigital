@@ -206,23 +206,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Micro-trust proof strip — under video */}
-            <div 
-              className="grid grid-cols-2 gap-x-4 gap-y-2 mt-4 animate-fade-in-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              {[
-                "15+ Years of Execution",
-                "$10M+ Managed Ad Spend",
-                "100+ Trade Campaigns",
-                "4.9★ Client Rating"
-              ].map((item, i) => (
-                <span key={i} className="text-xs text-gray-500 font-medium flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cta flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </div>
