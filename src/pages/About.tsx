@@ -374,99 +374,49 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
-                The Operating Experience Behind Demand Stream Digital
+                The Experience Behind DemandStream Digital
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
-                From Nashville Songwriter to Full-Service Agency
+                From Nashville Songwriter to Plumbing & HVAC Marketing
               </h2>
               <p className="text-text-secondary max-w-3xl mx-auto">
-                Each phase below represents constraints learned, mistakes corrected, and systems refined that now inform how we scope, execute, and support our clients today.
+                Every phase below represents constraints learned, mistakes corrected, and systems refined. That experience now runs through how DemandStream serves plumbing and HVAC companies today.
               </p>
             </div>
             
             {/* Timeline with connecting lines */}
             <div className="relative">
               {/* Vertical connecting line - visible on desktop */}
-              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cta via-accent-blue to-cta opacity-30" style={{ transform: 'translateX(-50%)' }} />
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-blue via-cta to-accent-blue opacity-30" style={{ transform: 'translateX(-50%)' }} />
               
               {/* Timeline Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-                
-                {/* Horizontal dotted connector - top row */}
-                <div className="hidden lg:block absolute top-24 left-0 right-0 border-t-2 border-dashed border-cta/20" />
-                
-                {/* 2011-2015 - Nashville Days */}
-                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
-                  <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
+
+                {/* 2011-2015 - Building the Foundation */}
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                      <span className="text-cta font-bold text-sm">'11</span>
+                    <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
+                      <span className="text-accent-blue font-bold text-sm">'11</span>
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-cta uppercase tracking-wide">2011-2015</p>
-                      <p className="text-lg font-semibold text-foreground">The Nashville Days</p>
+                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2011-2015</p>
+                      <p className="text-lg font-semibold text-foreground">Building the Foundation</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Nashville songwriter turned digital marketer. Tower Records closed. Publishing deal ended. A new road opened. Found the local SEO niche and started ranking businesses across multiple industries.
+                    Started in local SEO and digital marketing across multiple industries. Learned the mechanics of local search, review velocity, and what it takes to rank in competitive markets.
                   </p>
-                  <div className="pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Angel Maids</p>
-                      <p className="text-sm text-text-secondary">15→75+ cleanings/week. Page 1 for 20+ keywords. Still one of the most recognized cleaning companies in all of Nashville.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Wash N Roll</p>
-                      <p className="text-sm text-text-secondary">Page 1: "Nashville Car Wash," "Brentwood Car Wash," "Brentwood Truck Wash." Hundreds of reviews. Social media + coupon recoupment.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Sonya Smithson DDS</p>
-                      <p className="text-sm text-text-secondary">Page 1: "Brentwood Dentist," "Brentwood Sedation Dentist," "Brentwood Family Dentistry"</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Next Level Fitness</p>
-                      <p className="text-sm text-text-secondary">#1 for "Nashville Personal Trainer." Page 1: "Personal Trainer Near Me," "Nashville Fitness"</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Southside Grill</p>
-                      <p className="text-sm text-text-secondary">Page 1 for multiple brunch and lunch keywords</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Darfon's Restaurant</p>
-                      <p className="text-sm text-text-secondary">Top ranking: "Nashville Romantic Restaurants." Several hundred reviews through strategic review campaign.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">HandyPro + Veteran's Auto</p>
-                      <p className="text-sm text-text-secondary">Page 1: "Nashville Handyman," "Nashville Auto Service"</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Armor Roofing</p>
-                      <p className="text-sm text-text-secondary">Page 1 for multiple roofing and gutter terms</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Joseph Dillon / Equitable Mediation</p>
-                      <p className="text-sm text-text-secondary">Page 1: "Chicago Divorce Mediation"</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Love & Pho</p>
-                      <p className="text-sm text-text-secondary">Reputation + rankings for Nashville pho keywords</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Maid Right of Williamson County</p>
-                      <p className="text-sm text-text-secondary">Local SEO and reputation management (2014)</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-text-secondary italic">+ Farrow Pediatric Dentistry, G7 Marketing, Local Search Masters contract work</p>
-                    </div>
+                  <div className="pt-4 border-t border-border/50 space-y-2">
+                    <p className="text-sm text-foreground font-medium">Ranked local service businesses across Nashville in multiple categories.</p>
+                    <p className="text-sm text-text-secondary">Developed reputation management systems that still inform how we handle review growth today.</p>
                   </div>
                 </div>
 
-                {/* 2015 - Agency Side */}
+                {/* 2014-2015 - Agency Training */}
                 <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
-                  <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
-                      <span className="text-accent-blue font-bold text-sm">'15</span>
+                      <span className="text-accent-blue font-bold text-sm">'14</span>
                     </div>
                     <div>
                       <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2014-2015</p>
@@ -474,211 +424,97 @@ const About = () => {
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Freelancing wasn't for me at that stage. Sold my clientele to Horton Group and joined their team. Learned what it really meant to focus on the big picture: the 360. This is where the paid advertising adventure started.
+                    Joined a full-service agency. Learned integrated marketing at scale: SEO, paid advertising, and media strategy working together. This is where the system-over-tactics mindset was forged.
                   </p>
-                  <div className="pt-4 border-t border-border/50">
-                    <div>
-                      <p className="text-sm text-accent-blue font-semibold">Horton Group (Nashville, 2014-2015)</p>
-                      <p className="text-sm text-text-secondary">Inbound marketing. SEO + paid media integration. Worked on several clients.</p>
-                    </div>
+                  <div className="pt-4 border-t border-border/50 space-y-2">
+                    <p className="text-sm text-foreground font-medium">Inbound marketing: SEO + paid media integration.</p>
+                    <p className="text-sm text-text-secondary">Managed client accounts across verticals, learning what separates sustainable growth from short-term wins.</p>
                   </div>
                 </div>
 
-                {/* Horizontal dotted connector - second row */}
-                <div className="hidden lg:block absolute top-[calc(50%-80px)] left-0 right-0 border-t-2 border-dashed border-accent-blue/20" />
-
-                {/* 2015-2019 - Dallas Days */}
-                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 lg:col-span-2 relative">
-                  <div className="hidden lg:block absolute -right-3 top-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateY(-50%)' }} />
+                {/* 2015-2019 - Paid Advertising at Scale */}
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
                       <span className="text-cta font-bold text-xs">'15-19</span>
                     </div>
                     <div>
                       <p className="text-xs font-bold text-cta uppercase tracking-wide">2015-2019</p>
-                      <p className="text-lg font-semibold text-foreground">The Dallas Days</p>
+                      <p className="text-lg font-semibold text-foreground">Paid Advertising at Scale</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Moved to Dallas. Heavy focus on paid advertising and SEO. Dominated the apartment locator niche.
+                    Moved to Dallas. Ran paid advertising campaigns across industries: apartments, dental, home services, and e-commerce. Managed $100K-$150K/mo in ad spend. Learned what call-driven businesses need from paid campaigns versus everything else.
                   </p>
-                  <div className="pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm text-cta font-semibold">ASAP Apartment Finders</p>
-                      <p className="text-sm text-text-secondary">Most leads they ever received. Still page 1 for Dallas apartment locator keywords today.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Advanced Locators</p>
-                      <p className="text-sm text-text-secondary">Paid advertising (social + search). 400+ leads in one month.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Car Spa (11 locations)</p>
-                      <p className="text-sm text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Elite Dental</p>
-                      <p className="text-sm text-text-secondary">Page 1 for several "Uptown Dentist" keywords</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Couch Crazy</p>
-                      <p className="text-sm text-text-secondary">E-commerce SEO + paid advertising</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-text-secondary italic">Demand Stream Digital goes full-service: web dev, paid media, comprehensive digital marketing</p>
-                    </div>
+                  <div className="pt-4 border-t border-border/50 space-y-2">
+                    <p className="text-sm text-foreground font-medium">400+ leads in a single month for a locator client using paid search + social.</p>
+                    <p className="text-sm text-text-secondary">Multiple proximity-based rankings and national-scale SEO for service companies.</p>
                   </div>
                 </div>
 
-                {/* 2019-2020 - iProspect + Coaching */}
-                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
-                  <div className="hidden lg:block absolute -left-3 top-1/2 w-6 h-6 rounded-full bg-accent-blue/20 border-2 border-accent-blue" style={{ transform: 'translateY(-50%)' }} />
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
-                      <span className="text-accent-blue font-bold text-xs">'19-20</span>
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2019-2020</p>
-                      <p className="text-lg font-semibold text-foreground">iProspect + Coaching</p>
-                    </div>
-                  </div>
-                  <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Agency life confirmed it wasn't for me, but the results spoke: 180% retainment on Reliant Energy through a pay-per-performance campaign. Generated close to a million dollars in retainer fees for that one client. All through good paid advertising.
-                  </p>
-                  <div className="pt-4 border-t border-border/50 space-y-3">
-                    <div>
-                      <p className="text-sm text-accent-blue font-semibold">iProspect</p>
-                      <p className="text-sm text-text-secondary">Reliant Energy. Enterprise paid media.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-accent-blue font-semibold">Kevin Hutto (Coaching)</p>
-                      <p className="text-sm text-text-secondary">Worked under the well-known digital marketing influencer. Managed clients: Kevin Nations, Shanda Sumpter, Taki Moore, Kisma.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Horizontal dotted connector - third row */}
-                <div className="hidden lg:block absolute bottom-[280px] left-0 right-0 border-t-2 border-dashed border-cta/20" />
-
-                {/* 2019-2020 - National Clients */}
+                {/* 2019-2020 - Performance Marketing */}
                 <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
-                  <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
                       <span className="text-cta font-bold text-xs">'19-20</span>
                     </div>
                     <div>
                       <p className="text-xs font-bold text-cta uppercase tracking-wide">2019-2020</p>
-                      <p className="text-lg font-semibold text-foreground">National Scale</p>
+                      <p className="text-lg font-semibold text-foreground">Performance Marketing</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Expanded to national-scale SEO and reputation work.
+                    Ran enterprise paid media. Generated close to a million dollars in retainer revenue for one client. Built performance-based campaign structures that tied spend directly to revenue outcomes.
                   </p>
-                  <div className="pt-4 border-t border-border/50 space-y-3">
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Mesa Moving (Grand Junction, CO)</p>
-                      <p className="text-sm text-text-secondary">National moving company. SEO + reputation.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Car Spa (11 locations)</p>
-                      <p className="text-sm text-text-secondary">Multiple proximity-based rankings across the nation. Website rebuild. Page 1 for car wash keywords in every market.</p>
-                    </div>
+                  <div className="pt-4 border-t border-border/50 space-y-2">
+                    <p className="text-sm text-foreground font-medium">Enterprise paid media: direct response at scale.</p>
+                    <p className="text-sm text-text-secondary">This phase confirmed that marketing systems only work when tied to trackable business outcomes.</p>
                   </div>
                 </div>
 
-                {/* 2019-2021 - Upwork */}
+                {/* 2019-2021 - Expert-Vetted Upwork */}
                 <div className="group bg-accent-blue/5 border-2 border-accent-blue rounded-2xl p-6 hover:shadow-xl hover:shadow-accent-blue/30 hover:scale-[1.08] hover:z-20 transition-all duration-300 relative">
-                  <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-accent-blue/30 border-2 border-accent-blue" style={{ transform: 'translateX(-50%)' }} />
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center animate-pulse" style={{ animationDuration: '3s' }}>
                       <span className="text-white font-bold text-xs">'19-21</span>
                     </div>
                     <div>
                       <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2019-2021</p>
-                      <p className="text-lg font-semibold text-accent-blue">Expert-Vetted Upwork</p>
+                      <p className="text-lg font-semibold text-accent-blue">Top 1% Upwork: Expert-Vetted</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Top 1% of all Upwork freelancers for paid advertising and SEO.
+                    Reached top 1% of all Upwork freelancers for paid advertising and SEO. $2M+ in client revenue generated. Worked with multi-location franchises, national service brands, and high-volume e-commerce.
                   </p>
                   <div className="pt-4 border-t border-accent-blue/20 space-y-2">
-                    <p className="text-sm text-foreground font-semibold">$2M+ in client revenue generated</p>
-                    <p className="text-sm text-foreground font-semibold">$100K-$150K/mo paid ad campaigns</p>
-                    <p className="text-sm text-text-secondary">SEO, Amazon PPC, Google Ads, Meta Ads, the works.</p>
+                    <p className="text-sm text-foreground font-medium">Multi-location franchise support.</p>
+                    <p className="text-sm text-text-secondary">National advertising campaigns across multiple industries.</p>
                   </div>
                 </div>
 
-                {/* 2021-2022 */}
-                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-cta/50 transition-all duration-300 hover:shadow-xl hover:shadow-cta/20 hover:scale-[1.08] hover:z-20 relative">
-                  <div className="hidden lg:block absolute -bottom-3 left-1/2 w-6 h-6 rounded-full bg-cta/20 border-2 border-cta" style={{ transform: 'translateX(-50%)' }} />
+                {/* 2021-Present - The Plumbing & HVAC Pivot */}
+                <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-xl hover:shadow-cta/30 hover:scale-[1.08] hover:z-20 transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute top-3 right-3 bg-cta text-white text-xs font-bold px-2 py-1 rounded-full">
+                    NOW
+                  </div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-cta/10 flex items-center justify-center border-2 border-cta">
-                      <span className="text-cta font-bold text-sm">'21</span>
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-3 border-cta shadow-lg">
+                      <img src={dougHeadshot} alt="Doug Bryson" className="w-full h-full object-cover" />
                     </div>
                     <div>
                       <p className="text-xs font-bold text-cta uppercase tracking-wide">2021-Present</p>
-                      <p className="text-lg font-semibold text-foreground">Growth Marketing Pivot</p>
+                      <p className="text-lg font-semibold text-cta">The Plumbing & HVAC Pivot</p>
                     </div>
                   </div>
-                 <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                   Pivoted to serving plumbing and HVAC companies directly. Managed several million dollars in paid advertising + SEO.
+                  <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
+                    Stopped serving every industry. Went all in on plumbing and HVAC. Managed several million dollars in paid advertising and SEO for trade companies. Built the connected system that DemandStream runs on today.
                   </p>
-                  <div className="pt-4 border-t border-border/50 space-y-3">
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Anderson Collaborative</p>
-                      <p className="text-sm text-text-secondary">Millions in paid advertising managed. Multi-location franchises supported. National customized furniture websites. Still partners today.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Tampa Bay Agency</p>
-                      <p className="text-sm text-text-secondary">SMB clients: dog training, dental, digital marketing, tourism, photography, metabolic weight loss (national), heavy machinery lube skids, Kohler generators. Still partners today.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">Cole's Agency (Dallas)</p>
-                      <p className="text-sm text-text-secondary">7-year partnership. Theme parks, water parks, live music festivals, international e-commerce (tens of millions in annual sales), and billion-dollar energy companies.</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-cta font-semibold">John Perieteanu / Amazon</p>
-                      <p className="text-sm text-text-secondary">$150K/mo Amazon ads across 25 SKUs until successful exit</p>
-                    </div>
+                  <div className="pt-4 border-t border-cta/20 space-y-2">
+                    <p className="text-sm text-foreground font-medium">Plumbing and HVAC companies exclusively.</p>
+                    <p className="text-sm text-text-secondary">SEO, paid ads, reputation, and retention built as one system for call-driven service businesses.</p>
                   </div>
                 </div>
 
-              {/* 2025 - The System */}
-              <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-xl hover:shadow-cta/30 hover:scale-[1.08] hover:z-20 transition-all duration-300 relative overflow-hidden">
-                <div className="absolute top-3 right-3 bg-cta text-white text-xs font-bold px-2 py-1 rounded-full">
-                  NOW
-                </div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden border-3 border-cta shadow-lg">
-                    <img src={dougHeadshot} alt="Doug Bryson" className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-cta uppercase tracking-wide">2025</p>
-                    <p className="text-lg font-semibold text-cta">The System</p>
-                  </div>
-                </div>
-                <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                  Everything learned, packaged into one inbound marketing operating system.
-                </p>
-                <div className="pt-4 border-t border-cta/20 grid grid-cols-2 gap-3">
-                  <div className="text-center">
-                    <p className="text-xl font-bold text-foreground">14</p>
-                    <p className="text-sm text-text-secondary">Years</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xl font-bold text-foreground">100+</p>
-                    <p className="text-sm text-text-secondary">Clients</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xl font-bold text-foreground">4.8★</p>
-                    <p className="text-sm text-text-secondary">Google</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-xl font-bold text-foreground">$M+</p>
-                    <p className="text-sm text-text-secondary">Ad Spend</p>
-                  </div>
-                </div>
-              </div>
               </div>
             </div>
           </div>
