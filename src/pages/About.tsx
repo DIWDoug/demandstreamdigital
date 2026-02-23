@@ -384,7 +384,7 @@ const About = () => {
                       The Decision
                     </AccordionTrigger>
                     <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
-                      So the decision was made to stop serving every industry and go all in on the trades. Not as a pivot of necessity. As a deliberate choice to take 15 years of execution experience and build a system designed entirely around how plumbing and HVAC companies grow.
+                      In 2026, the decision was made to take everything that worked best and build a dedicated system for the trades. DemandStream Digital was created as a focused growth engine for plumbing and HVAC companies — built on 15 years of execution experience and designed entirely around how trade businesses grow.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -393,7 +393,7 @@ const About = () => {
                       The Result
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground leading-relaxed text-base font-serif font-medium pb-6">
-                      That is what DemandStream is. Not a general agency that takes trade clients. A trade-specific growth system built by someone who has done the work.
+                      That is what DemandStream is. Not a general agency that happens to take trade clients. A trade-specific growth system built by someone who has done the work — and continues to do it every day.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
