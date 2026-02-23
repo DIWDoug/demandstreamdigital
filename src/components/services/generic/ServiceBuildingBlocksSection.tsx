@@ -35,11 +35,11 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
     const blockContent = (
       <>
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0 group-hover:bg-cta/20 transition-colors">
-            <Icon className="w-6 h-6 text-cta" />
+          <div className="w-12 h-12 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-blue/20 transition-colors">
+            <Icon className="w-6 h-6 text-accent-blue" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-slate-900 font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
+            <h3 className="text-slate-900 font-semibold text-lg mb-2 group-hover:text-accent-blue transition-colors">
               {block.title}
             </h3>
             <p className="text-slate-500 text-sm leading-relaxed">

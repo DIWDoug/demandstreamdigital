@@ -46,11 +46,11 @@ const InboundPainPoints = () => {
             {painPoints.map((point, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-cta/30 transition-colors"
+                className="bg-white rounded-xl p-6 lg:p-8 border border-slate-200 shadow-sm hover:border-accent-blue/30 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
-                    <point.icon className="h-5 w-5 text-cta" />
+                  <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+                    <point.icon className="h-5 w-5 text-accent-blue" />
                   </div>
                   <strong className="text-lg font-semibold text-slate-900">
                     {point.title}

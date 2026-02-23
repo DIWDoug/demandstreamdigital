@@ -280,7 +280,7 @@ const SocialMediaROICalculator = () => {
       large && "col-span-2"
     )}>
       <div className="flex items-center gap-2 mb-3">
-        <Icon className={cn("h-4 w-4", highlight ? "text-cta" : "text-accent-blue")} />
+        <Icon className={cn("h-4 w-4", highlight ? "text-accent-blue" : "text-accent-blue/60")} />
         <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">{label}</span>
       </div>
       <p className={cn(

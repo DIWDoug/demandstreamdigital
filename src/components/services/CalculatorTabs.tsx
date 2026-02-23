@@ -100,7 +100,7 @@ const ROICalculatorContent = () => {
         : "bg-surface-dark border-border/30"
     )}>
       <div className="flex items-center gap-2 mb-3">
-        <Icon className={cn("h-4 w-4", highlight ? "text-cta" : "text-accent-blue")} />
+        <Icon className={cn("h-4 w-4", highlight ? "text-accent-blue" : "text-accent-blue/60")} />
         <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">{label}</span>
       </div>
       <p className="text-3xl md:text-4xl font-bold mb-1 text-cta">
@@ -487,10 +487,10 @@ const InvestmentCalculatorContent = () => {
         formData.services.includes(service) ? "bg-cta/10 border-cta" : "bg-surface-elevated border-border/50 hover:border-accent-blue/50"
       )}
     >
-      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center", formData.services.includes(service) ? "bg-cta/20" : "bg-accent-blue/10")}>
-        <Icon className={cn("h-5 w-5", formData.services.includes(service) ? "text-cta" : "text-accent-blue")} />
+      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center", formData.services.includes(service) ? "bg-accent-blue/20" : "bg-accent-blue/10")}>
+        <Icon className={cn("h-5 w-5", formData.services.includes(service) ? "text-accent-blue" : "text-accent-blue/60")} />
       </div>
-      <span className={cn("font-medium", formData.services.includes(service) ? "text-cta" : "text-foreground")}>{label}</span>
+      <span className={cn("font-medium", formData.services.includes(service) ? "text-accent-blue" : "text-foreground")}>{label}</span>
     </button>
   );
 
