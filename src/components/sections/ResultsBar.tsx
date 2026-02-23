@@ -20,7 +20,7 @@ const ResultsBar = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
             Local Service Marketing. Now Focused on the Trades.
           </h2>
-          <p className="text-slate-600 text-base mb-12 max-w-2xl mx-auto">
+          <p className="text-slate-600 text-base mb-12 max-w-2xl mx-auto text-justify">
             For over 15 years, the team behind DemandStream has been the fulfillment engine behind successful agencies and direct clients alike. Through Dialed In Web and Dialed In Local, we've built marketing systems for SMBs and national brands across paid advertising, SEO, email marketing, web design, and content development. All of that experience now powers DemandStream Digital.
           </p>
 
