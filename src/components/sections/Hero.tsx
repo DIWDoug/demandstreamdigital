@@ -145,8 +145,14 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
               style={{ lineHeight: "1.1" }}
             >
-              Plumbing & HVAC Digital Marketing Built to Drive More Booked Service Calls
+              Plumbing & HVAC Marketing Company
             </h1>
+            <p
+              className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
+              style={{ animationDelay: "0.05s" }}
+            >
+              Built to Drive More Booked Service Calls
+            </p>
 
             <p
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
