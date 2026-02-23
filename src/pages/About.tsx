@@ -64,11 +64,10 @@ const About = () => {
       image: wyler
     },
     {
-      name: "Shera Lee Fabian",
+      name: "Carol Mora",
       role: "Senior Project Manager",
       bio: "Keeps client campaigns on schedule and communication clear. Ensures every deliverable is executed on time and every client always knows where things stand.",
-      image: sheraFabian,
-      linkedin: "https://www.linkedin.com/in/sheraleefabian/"
+      image: sheraFabian, // Placeholder — replace with Carol's headshot
     },
     {
       name: "Ira Salvador",
@@ -92,23 +91,17 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/lanilyn-erauda-87b077265/"
     },
     {
-      name: "Martini Mabifa",
-      role: "SEO Web Developer",
-      image: martiniMabifa,
-      linkedin: "https://www.linkedin.com/in/martini-mabifa-a00657174/"
-    },
-    {
-      name: "Richard Baylon",
-      role: "Content Strategist",
-      image: richardBaylon,
-      linkedin: "https://www.linkedin.com/in/richard-baylon-93632a383/"
-    },
-    {
       name: "Desiree Abbariao",
       role: "Content Strategist",
       bio: "Creates content that connects high-value searches to booked service calls. Trade-aware writing built for local search performance.",
       image: desireeAbbariao,
       linkedin: "https://www.linkedin.com/in/desireeabbariao/"
+    },
+    {
+      name: "Athena Yenko",
+      role: "Senior SEO Content Manager",
+      bio: "Leads SEO content strategy and execution for plumbing and HVAC accounts. Focused on building topical authority through service pages and location content that ranks and drives qualified call volume.",
+      image: leilaniMaravillas, // Placeholder — replace with Athena's headshot
     },
     {
       name: "Leilani Maravillas",
@@ -117,35 +110,6 @@ const About = () => {
       image: leilaniMaravillas,
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
     },
-    {
-      name: "James Belmes",
-      role: "Link Building Specialist",
-      image: jamesBelmes,
-      linkedin: "https://www.linkedin.com/in/james-belmes-702343201/"
-    },
-    {
-      name: "Bel Aniano",
-      role: "Marketing Coordinator",
-      image: belAniano,
-      linkedin: "https://www.linkedin.com/in/belindaaniano/"
-    },
-    {
-      name: "Bianca Lapuz",
-      role: "Marketing Coordinator",
-      image: biancaLapuz,
-      linkedin: "https://www.linkedin.com/in/biancalapuz/"
-    },
-    {
-      name: "Muhammad Bilal",
-      role: "Web Developer",
-      image: muhammadBilal
-    },
-    {
-      name: "Monique Baetiong",
-      role: "CPA",
-      image: moniqueBaetiong,
-      linkedin: "https://www.linkedin.com/in/moniquebaetiong/"
-    }
   ];
 
   return (
