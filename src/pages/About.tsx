@@ -343,59 +343,62 @@ const About = () => {
       <section className="py-20 lg:py-28 bg-[hsl(var(--navy))] relative overflow-hidden">
         <StreamTexture variant="dark" opacity={0.06} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
-                How We Got Here
-              </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
-                15 Years in the Field. One Decision That Changed Everything.
-              </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              {/* Left: headline + intro */}
+              <div>
+                <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
+                  How We Got Here
+                </p>
+                <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold text-foreground leading-tight mb-6">
+                  15 Years in the Field. One Decision That Changed Everything.
+                </h2>
+                <p className="text-text-secondary leading-relaxed text-base lg:text-lg font-serif">
+                  DemandStream Digital is the result of 15 years of hands-on digital marketing work across 100+ SMB and national campaigns. SEO, paid advertising, reputation management, web design. Every channel. Every market. Built and executed by practitioners, not account managers reading from a script.
+                </p>
+              </div>
+
+              {/* Right: accordion */}
+              <div>
+                <Accordion type="single" collapsible className="space-y-3">
+                  <AccordionItem value="credentials" className="border-border/30 rounded-xl bg-background/5 px-6 border">
+                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      The Credentials
+                    </AccordionTrigger>
+                    <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
+                      Doug Bryson spent that time earning an Expert-Vetted designation on Upwork, reaching the top 1% of freelancers globally in paid advertising and SEO. He managed millions in ad spend across industries ranging from apartment locators to national franchises to e-commerce brands.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="pattern" className="border-border/30 rounded-xl bg-background/5 px-6 border">
+                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      The Pattern
+                    </AccordionTrigger>
+                    <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
+                      But a pattern kept emerging. The clients that got the best results, the ones where marketing actually moved the dispatch board, were plumbing and HVAC companies. Call-driven. Seasonal. Reputation-dependent. Businesses where every dollar of marketing spend either produced a booked job or it did not.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="decision" className="border-border/30 rounded-xl bg-background/5 px-6 border">
+                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      The Decision
+                    </AccordionTrigger>
+                    <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
+                      So the decision was made to stop serving every industry and go all in on the trades. Not as a pivot of necessity. As a deliberate choice to take 15 years of execution experience and build a system designed entirely around how plumbing and HVAC companies grow.
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="result" className="border-border/30 rounded-xl bg-background/5 px-6 border">
+                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      The Result
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground leading-relaxed text-base font-serif font-medium pb-6">
+                      That is what DemandStream is. Not a general agency that takes trade clients. A trade-specific growth system built by someone who has done the work.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
             </div>
-
-            {/* Intro paragraph always visible */}
-            <p className="text-text-secondary leading-relaxed text-base lg:text-lg font-serif mb-8">
-              DemandStream Digital is the result of 15 years of hands-on digital marketing work across 100+ SMB and national campaigns. SEO, paid advertising, reputation management, web design. Every channel. Every market. Built and executed by practitioners, not account managers reading from a script.
-            </p>
-
-            {/* Progressive accordion */}
-            <Accordion type="single" collapsible className="space-y-3">
-              <AccordionItem value="credentials" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                  The Credentials
-                </AccordionTrigger>
-                <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
-                  Doug Bryson spent that time earning an Expert-Vetted designation on Upwork, reaching the top 1% of freelancers globally in paid advertising and SEO. He managed millions in ad spend across industries ranging from apartment locators to national franchises to e-commerce brands.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="pattern" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                  The Pattern
-                </AccordionTrigger>
-                <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
-                  But a pattern kept emerging. The clients that got the best results, the ones where marketing actually moved the dispatch board, were plumbing and HVAC companies. Call-driven. Seasonal. Reputation-dependent. Businesses where every dollar of marketing spend either produced a booked job or it did not.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="decision" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                  The Decision
-                </AccordionTrigger>
-                <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
-                  So the decision was made to stop serving every industry and go all in on the trades. Not as a pivot of necessity. As a deliberate choice to take 15 years of execution experience and build a system designed entirely around how plumbing and HVAC companies grow.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="result" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                  The Result
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground leading-relaxed text-base font-serif font-medium pb-6">
-                  That is what DemandStream is. Not a general agency that takes trade clients. A trade-specific growth system built by someone who has done the work.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
           </div>
         </div>
       </section>
