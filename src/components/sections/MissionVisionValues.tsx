@@ -28,7 +28,7 @@ const MissionVisionValues = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 lg:mb-16">
-            <p className="text-sm text-accent-green uppercase tracking-widest font-medium mb-4">
+            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">
               Our Foundation
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight max-w-3xl mx-auto">
