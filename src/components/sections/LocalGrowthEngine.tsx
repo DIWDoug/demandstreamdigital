@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
-import bookCover from "@/assets/local-growth-engine-cover.png";
+import bookCover from "@/assets/ebook-cover.jpg";
 import StreamTexture from "@/components/StreamTexture";
 
 
