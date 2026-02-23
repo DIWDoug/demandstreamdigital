@@ -53,7 +53,7 @@ const HonestWordOnFulfillment = () => {
                 <p className="text-foreground font-medium text-lg">I've been in digital marketing since 2011.</p>
                 
                 <p>
-                  I've worked with hundreds of local service businesses: plumbers, HVAC techs, contractors. Most of them had been burned by a marketing company before they found us. Vague promises, zero transparency, and campaigns that felt like they were built for someone else's business.
+56:                   I've worked with hundreds of local service businesses: plumbers, HVAC techs, contractors. Most of them had been burned by a marketing company before they found us. Vague promises, zero transparency, and campaigns that felt like they were built for someone else's business.
                 </p>
                 
                 <p>

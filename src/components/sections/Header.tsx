@@ -116,7 +116,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
       ref={megaMenuRef}
     >
-      {/* Top Utility Bar — inspired by Pure Plumbing */}
+      {/* Top Utility Bar */}
       <div className={`bg-cta text-cta-foreground transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
         <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between py-1.5 text-xs font-medium">
           <Link to="/contact" className="hover:underline tracking-wide">

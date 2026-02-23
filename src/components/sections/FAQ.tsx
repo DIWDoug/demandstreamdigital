@@ -43,11 +43,11 @@ export const homepageFAQs = [
   },
   {
     question: "What happens if I want to pause or cancel?",
-    answer: "We ask for 30 days notice so we can wrap up work properly and transition everything cleanly. No penalties, no hard feelings. Just professional courtesy."
+    answer: "During the initial six-month engagement, we ask that you stay committed so we can build real momentum. After six months, we move to a rolling agreement with 30 days notice. No penalties, no hard feelings. Just professional courtesy."
   },
   {
     question: "Where is your team based?",
-    answer: "Our team is US-based and headquartered in Dallas, TX. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
+    answer: "We are headquartered in Dallas, TX and operate as a global company. This allows us to maintain high execution standards while keeping pricing sustainable for long-term partnerships."
   },
   {
     question: "What happens if something isn't working?",

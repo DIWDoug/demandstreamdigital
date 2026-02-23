@@ -138,10 +138,10 @@ const LocalGrowthEngine = () => {
 
               {/* Right: Content */}
               <div>
-                <p className="text-muted-foreground text-base mb-1">Discover How To</p>
+                <p className="text-muted-foreground text-base mb-1">Get the Book</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-                  The Plumbing &amp; HVAC<br />
-                  Marketing Playbook
+                  Demand Stream Domination<br />
+                  <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">The Digital Marketing Playbook</span>
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-cta mb-5" />
@@ -155,7 +155,7 @@ const LocalGrowthEngine = () => {
                 </p>
 
                 <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                  Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year — not just when the weather cooperates.
+                  Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year, not just when the weather cooperates.
                 </p>
 
                 {/* Email signup or CTA */}

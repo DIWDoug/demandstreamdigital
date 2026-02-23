@@ -169,15 +169,10 @@ const GrowthProcess = () => {
         </div>
 
         {/* Intro */}
-        <div className="max-w-3xl mx-auto text-center mb-12 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-slate-700 text-base leading-relaxed">
             We do not treat marketing like a monthly experiment. We build it in phases.
             Every phase has a purpose. Every phase builds on the last.
-          </p>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            The 30-Day Strategic Growth Roadmap is a standalone engagement. If you move
-            forward with implementation, a minimum six-month commitment begins after
-            roadmap delivery.
           </p>
         </div>
 
@@ -282,6 +277,15 @@ const GrowthProcess = () => {
                 )}
               </div>
             </div>
+
+            {/* 30-Day Roadmap Note (Phase 1 only) */}
+            {activePhase === 0 && (
+              <div className="mt-6 pt-6 border-t border-slate-200">
+                <p className="text-slate-500 text-sm leading-relaxed">
+                  The 30-Day Strategic Growth Roadmap is a standalone engagement. If you move forward with implementation, a minimum six-month commitment begins after roadmap delivery.
+                </p>
+              </div>
+            )}
           </div>
         </div>
 

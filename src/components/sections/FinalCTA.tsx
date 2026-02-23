@@ -20,7 +20,7 @@ const FinalCTA = () => {
             Ready to <span className="text-accent-blue">Grow Your Business</span> With Marketing That Works?
           </h2>
           <p className="text-lg text-text-secondary mb-10 max-w-2xl mx-auto">
-            Growth marketing built specifically for plumbing and HVAC companies. More calls, more jobs, more revenue — backed by 15+ years of experience.
+            Growth marketing built specifically for plumbing and HVAC companies. More calls, more jobs, more revenue, backed by 15+ years of experience.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

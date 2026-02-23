@@ -14,19 +14,19 @@ const services: Service[] = [
   {
     icon: MapPin,
     title: "Local SEO",
-    description: "We target high-value, high-volume searches like \"hydro jetting [city]\" and \"water heater installation [city]\" alongside high-intent near-me terms — prioritizing what drives the most booked jobs.",
+    description: "We target high-value, high-volume searches like \"hydro jetting [city]\" and \"water heater installation [city]\" alongside high-intent near-me terms, prioritizing what drives the most booked jobs.",
     href: "/plumbing-seo",
   },
   {
     icon: Map,
     title: "Google Maps / GBP",
-    description: "Increase visibility in the map pack with improved Google Business Profiles, reviews, and local signals.",
+    description: "Over 70% of local searches stop at the Google Maps results. We optimize your Google Business Profile, reviews, and local signals to get you into that top three.",
     href: "/plumbing-google-maps",
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "More than Google Ads. We run a full-circle paid strategy including Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram — focused on reviews, testimonials, and staying top of mind.",
+    description: "More than Google Ads. We run a full-circle paid strategy including Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram, focused on reviews, testimonials, and staying top of mind.",
     href: "/plumbing-paid-advertising",
   },
   {
@@ -44,7 +44,7 @@ const services: Service[] = [
   {
     icon: BarChart3,
     title: "Reporting & Dashboards",
-    description: "See rankings, leads, and campaign performance clearly — without digging through spreadsheets.",
+    description: "See rankings, leads, and campaign performance clearly, without digging through spreadsheets.",
     href: "/plumbing-reporting",
   }
 ];
