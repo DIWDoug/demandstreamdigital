@@ -14,10 +14,10 @@ const FounderEEAT = () => {
         {/* Top heading */}
         <div className="text-center mb-14 max-w-4xl mx-auto">
           <p className="text-accent-blue font-semibold tracking-widest uppercase text-sm mb-4">
-            An Honest Word From the Founder
+            An Honest Word From Our Founder
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Your SEO Feeds Your Maps. Your Maps Feed Your Calls. Nothing Works Alone.
+            Marketing Isn't One Thing Anymore. It's Everything, Connected.
           </h2>
         </div>
 
@@ -42,17 +42,11 @@ const FounderEEAT = () => {
           <div>
             <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
-              <p>I kept coming back to the same types of clients: plumbing and HVAC companies. The ones doing great work but struggling to get found. The ones getting burned by agencies that didn't understand their business.</p>
+              <p>Since 2011, I've managed hundreds of campaigns for small businesses across nearly every industry. Through Dialed In Web and Dialed In Local, we built marketing systems for businesses that needed real results, not vanity metrics.</p>
+              <p>Over time, I kept coming back to the same types of clients: plumbing and HVAC companies. The ones doing great work but struggling to get found. The ones getting burned by agencies that didn't understand their business.</p>
               <p>That pattern led me to go all in. I stopped trying to serve every industry and built everything around the trades. The systems, the strategy, the team. All focused on what actually drives booked service calls for plumbing and HVAC companies.</p>
-              <p className="text-white font-medium">Here's what 15 years taught me: a single channel doesn't win markets.</p>
-              <p>Search, ads, reputation, email, and web design have to work together. When one piece is missing, the whole system leaks.</p>
-              <p>Today's customers don't make decisions in one click. They search, they read reviews, they compare websites, they check your Google Business Profile, they open your emails, they see your ads. Even in an emergency, they don't want to hire the wrong company and pay double.</p>
-              <p className="text-white font-medium">Every contact point is connected.</p>
-              <p>Your SEO feeds your Google Maps presence. Your reputation fuels your ad performance. Your website converts the traffic. Your email follow-ups close the leads that didn't book the first time. Your web design builds the trust that turns a click into a call.</p>
-              <p>When one piece is missing, the whole system leaks. When everything works together, you own your market.</p>
-              <p className="text-white font-medium">That's why we built a connected system.</p>
-              <p>SEO, paid advertising, reputation management, email marketing, web design, follow-up sequences, content strategy. Not as separate services bolted together, but as one connected system built around how your customers actually find and choose a plumbing or HVAC company.</p>
-              <p className="text-white font-medium">Every piece makes the others stronger. That's what a growth engine looks like.</p>
+              <p className="text-white font-medium">A single channel doesn't win markets.</p>
+              <p>Search, ads, reputation, email, and web design have to work together. When one piece is missing, the whole system leaks. When everything works together, you own your market.</p>
               <p>If that's the kind of marketing you've been looking for, let's talk.</p>
               <p className="text-white font-semibold mt-6">Doug</p>
             </div>
