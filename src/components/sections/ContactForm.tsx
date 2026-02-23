@@ -98,10 +98,10 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
                   {/* Partner Quote */}
                   <div className="mt-8 pt-6 border-t border-border">
                     <p className="text-sm text-text-secondary italic text-center">
-                      "They're trustworthy, they communicate clearly and really consistently, which is sometimes rare in today's world."
+                      "What truly sets them apart is transparency. After past experiences with agencies where SEO felt like a 'black box,' it's refreshing to work with a team that provides real, clear data and explains what's working and why."
                     </p>
                     <p className="text-xs text-text-muted text-center mt-2">
-                      Trevor Anderson, Founder & CEO, Anderson Collaborative
+                      Pure Plumbing & Air — Google Review
                     </p>
                   </div>
                 </div>
