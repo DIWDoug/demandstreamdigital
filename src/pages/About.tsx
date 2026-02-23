@@ -7,6 +7,7 @@ import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import { ArrowRight, Phone, Linkedin, Briefcase } from "lucide-react";
+import StreamTexture from "@/components/StreamTexture";
 import { Button } from "@/components/ui/button";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Autoplay from "embla-carousel-autoplay";
@@ -329,7 +330,8 @@ const About = () => {
       </nav>
 
       {/* How We Got Here */}
-      <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-[hsl(var(--navy))] relative overflow-hidden">
+        <StreamTexture variant="dark" opacity={0.06} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
