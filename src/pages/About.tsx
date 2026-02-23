@@ -30,6 +30,7 @@ import samantaLeal from "@/assets/team/samanta-leal.webp";
 import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
+import athenaYenko from "@/assets/team/athena-yenko.jpeg";
 
 // Other assets
 import clientLogosBanner from "@/assets/client-logos-banner.png";
@@ -94,7 +95,7 @@ const About = () => {
       name: "Athena Yenko",
       role: "Senior SEO Content Manager",
       bio: "Leads SEO content strategy and execution for plumbing and HVAC accounts. Focused on building topical authority through service pages and location content that ranks and drives qualified call volume.",
-      image: leilaniMaravillas, // Placeholder — replace with Athena's headshot
+      image: athenaYenko,
     },
     {
       name: "Leilani Maravillas",
