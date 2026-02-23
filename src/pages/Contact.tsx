@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
-import { Phone, Mail, MapPin, Quote } from "lucide-react";
+import { Phone, Mail, MapPin, Quote, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SubtleOrbs from "@/components/SubtleOrbs";
@@ -150,7 +151,35 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Free Audit CTA */}
+        <section className="py-12 lg:py-16">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-accent-blue/10 to-cta/10 border border-accent-blue/30 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-accent-blue/20 text-accent-blue flex items-center justify-center">
+                  <Search className="w-7 h-7" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="text-xl font-bold text-foreground mb-1">
+                    Not sure where to start?
+                  </h2>
+                  <p className="text-text-secondary text-sm">
+                    Run a free, instant SEO audit on your website and see exactly what's helping — and hurting — your rankings.
+                  </p>
+                </div>
+                <Link
+                  to="/free-audit"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cta hover:bg-cta/90 text-white font-semibold text-sm transition-colors whitespace-nowrap"
+                >
+                  Run Free Audit
+                  <Search className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
         <section className="py-16 lg:py-24 bg-surface-dark">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">

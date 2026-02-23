@@ -60,6 +60,7 @@ const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"))
 const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
 const FinancingCalculator = lazy(() => import("./pages/tools/FinancingCalculator"));
 const PlumbingCostQuiz = lazy(() => import("./pages/tools/PlumbingCostQuiz"));
+const FreeAudit = lazy(() => import("./pages/FreeAudit"));
 
 const queryClient = new QueryClient();
 
@@ -111,6 +112,7 @@ const App = () => (
           <Route path="/tools/job-cost-estimator" element={<JobCostEstimator />} />
           <Route path="/tools/financing-calculator" element={<FinancingCalculator />} />
           <Route path="/tools/plumbing-cost-quiz" element={<PlumbingCostQuiz />} />
+          <Route path="/free-audit" element={<FreeAudit />} />
 
           {/* Legacy calculator redirects */}
           <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
