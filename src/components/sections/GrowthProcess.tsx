@@ -161,7 +161,7 @@ const GrowthProcess = () => {
         {/* Header */}
         <div className="text-center mb-8 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            How We Grow Plumbing & HVAC Companies
+            How Our Plumbing & HVAC Marketing Process Works
           </h2>
           <p className="text-slate-500 text-lg">
             A structured approach. No guesswork. No random tactics.
