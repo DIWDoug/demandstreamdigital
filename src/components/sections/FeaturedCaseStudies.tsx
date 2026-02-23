@@ -27,7 +27,7 @@ const FeaturedCaseStudies = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-accent-blue/10 text-accent-blue text-sm font-medium rounded-full mb-4">
             Proven Results
           </span>
            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
