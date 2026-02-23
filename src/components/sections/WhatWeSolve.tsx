@@ -117,9 +117,10 @@ const WhatWeSolve = () => {
         </div>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+             <div className="text-center mb-12">
+              <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">How It Works</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-                How Digital Marketing Works for Plumbing & HVAC
+                Digital Marketing for the Trades
               </h2>
             </div>
 
