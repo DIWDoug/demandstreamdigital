@@ -138,10 +138,10 @@ const LocalGrowthEngine = () => {
 
               {/* Right: Content */}
               <div>
-                <p className="text-muted-foreground text-base mb-1">Get the Book</p>
+                <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Pipeline Domination</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
-                  DemandStream Local Domination<br />
-                  <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">The Digital Marketing Playbook for Plumbing & HVAC Contractors</span>
+                  The Local Digital Marketing Playbook<br />
+                  <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">for Plumbing & HVAC Contractors</span>
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-cta mb-5" />

@@ -48,12 +48,12 @@ const ResultsBar = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Pipeline Domination</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">15+ Years of Execution</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-            The Local Digital Marketing Playbook for Plumbing & HVAC
+            Local Service Marketing. Now Focused on the Trades.
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            All of our experience now lives inside DemandStream Digital — applied exclusively to plumbing and HVAC companies ready to own their market.
+            All of that experience now lives inside DemandStream Digital. We've been the fulfillment engine behind successful agencies and direct clients alike — now applied exclusively to plumbing and HVAC.
           </p>
         </div>
 
