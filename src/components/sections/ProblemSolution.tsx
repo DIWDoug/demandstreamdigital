@@ -11,7 +11,7 @@ const ProblemSolution = () => {
       icon: Eye,
       title: "Transparency",
       subtitle: "Complete visibility at every step",
-      body: "You see every piece of work being done and where your budget is going."
+      body: "You see every piece of work being done, where your budget is going, and the strategy behind every decision. Progress, intention, and the thinking behind the method. Not just activity reports."
     },
     {
       icon: MessageSquare,

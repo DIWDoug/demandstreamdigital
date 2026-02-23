@@ -8,7 +8,7 @@ const industries = [
   {
     icon: Wrench,
     title: "Plumbing",
-    summary: "Marketing built for plumbing companies — from drain cleaning to full repiping. We help you rank, get found, and book more jobs.",
+    summary: "Marketing built for plumbing companies, from drain cleaning to full repiping. We help you rank, get found, and book more jobs.",
     services: [
       "Plumbing SEO",
       "Plumbing Web Design",
@@ -80,7 +80,7 @@ const TopicalExpertise = () => {
             Industries We Serve
           </h2>
           <p className="text-lg text-text-secondary">
-            Every marketing channel we deploy — from SEO to paid ads — is aligned with one goal: increasing visibility, generating qualified leads, and helping your business grow.
+            Every marketing channel we deploy, from SEO to paid ads, is aligned with one goal: increasing visibility, generating qualified leads, and helping your business grow.
           </p>
         </div>
 

@@ -89,7 +89,7 @@ const WhatWeSolve = () => {
     },
     {
       label: "Ongoing Optimization & Reporting",
-      yourRole: "You see real, measurable results — more phone calls, more booked jobs, more revenue. Not vanity metrics.",
+      yourRole: "You see real, measurable results: more phone calls, more booked jobs, more revenue. Not vanity metrics.",
       yourRoleDetails: [
         "Track exactly how many calls and leads come from marketing",
         "See your Google rankings climb for the searches that matter",

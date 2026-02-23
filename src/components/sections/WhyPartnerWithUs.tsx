@@ -15,7 +15,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: MessageSquareText,
       title: "Marketing You Can Actually Understand",
-      description: "We explain everything in plain English. You'll know what's working, what we're testing, and why — without needing a marketing degree.",
+      description: "We explain everything in plain English. You'll know what's working, what we're testing, and why, without needing a marketing degree.",
       isQualifier: false
     },
     {

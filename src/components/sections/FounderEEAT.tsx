@@ -43,7 +43,9 @@ const FounderEEAT = () => {
             <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
               <p className="text-white font-medium">I've been in digital marketing since 2011.</p>
-              <p>Here's what I've learned working with hundreds of plumbing and HVAC companies: marketing isn't one thing anymore. It's not just SEO. It's not just Google Ads. It's not just a website or a few review requests.</p>
+              <p>I've spent over a decade working with hundreds of small businesses, helping them build real visibility and generate leads online. Along the way, I kept coming back to the same types of clients: plumbing and HVAC companies. The ones doing great work but struggling to get found. The ones getting burned by agencies that didn't understand their business.</p>
+              <p>That pattern led me to go all in. I stopped trying to serve every industry and built everything around the trades. The systems, the strategy, the team. All focused on what actually drives booked service calls for plumbing and HVAC companies.</p>
+              <p>Here's what I've learned: marketing isn't one thing anymore. It's not just SEO. It's not just Google Ads. It's not just a website or a few review requests.</p>
               <p>Today's customers don't make decisions in one click. They search, they read reviews, they compare websites, they check your Google Business Profile, they open your emails, they see your ads. Even in an emergency, they don't want to hire the wrong company and pay double.</p>
               <p className="text-white font-medium">Every touchpoint is connected.</p>
               <p>Your SEO feeds your Google Maps presence. Your reputation fuels your ad performance. Your website converts the traffic. Your email follow-ups close the leads that didn't book the first time. Your web design builds the trust that turns a click into a call.</p>
