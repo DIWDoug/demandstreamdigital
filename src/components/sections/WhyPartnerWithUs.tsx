@@ -55,7 +55,7 @@ const WhyPartnerWithUs = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             What Working With Us Looks Like
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-justify">
             Every campaign is built around how customers search for plumbers and HVAC companies in your specific market, and what it takes to get them to call.
           </p>
         </div>

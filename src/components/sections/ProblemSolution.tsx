@@ -41,7 +41,7 @@ const ProblemSolution = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Marketing Built for Plumbing & HVAC Operators
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
               Most marketing agencies treat plumbing and HVAC companies like any other business. DemandStream doesn't. Every strategy is built around how customers search for plumbers and HVAC services in your local market, and what it takes to turn that search into a booked job.
             </p>
           </div>
@@ -79,7 +79,7 @@ const ProblemSolution = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto text-justify">
               Generic marketing ignores your service area, your competition, and your season. DemandStream builds around all three: search, paid ads, email, and reputation working together to drive calls.
             </p>
           </div>
