@@ -228,7 +228,7 @@ const AdBudgetEducationalContent = () => {
             ))}
           </div>
           <p className="text-foreground font-medium text-center">
-            Partner with us for white-label paid media management. We handle the campaigns. You grow your agency.
+            Partner with us for expert paid media management. We handle the campaigns. You grow your business.
           </p>
         </div>
       </section>

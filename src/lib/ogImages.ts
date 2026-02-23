@@ -15,7 +15,6 @@ export const pageOgImages: Record<string, string> = {
   'case-studies': `${BASE_URL}/case-studies.jpg`,
   'contact': `${BASE_URL}/contact.png`,
   'services': `${BASE_URL}/services.jpg`,
-  'white-label-inbound-marketing-services': `${BASE_URL}/services.jpg`,
   'partner-tools': `${BASE_URL}/partner-tools.png`,
   'roi-calculator': `${BASE_URL}/roi-calculator.png`,
   'seo-calculator': `${BASE_URL}/seo-calculator.jpg`,

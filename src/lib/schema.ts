@@ -218,43 +218,43 @@ export const getServicesPageSchema = () => {
     {
       name: "Local SEO for Plumbing & HVAC",
       description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building for plumbing and HVAC companies.",
-      url: `${SITE_URL}/white-label-local-seo`,
+      url: `${SITE_URL}/plumbing-seo`,
       serviceType: "Local SEO Service"
     },
     {
       name: "Google Business Profile SEO",
       description: "Google Business Profile optimization, review management, and local map pack visibility for plumbing and HVAC businesses.",
-      url: `${SITE_URL}/white-label-gbp-seo`,
+      url: `${SITE_URL}/plumbing-google-maps`,
       serviceType: "GBP SEO Service"
     },
     {
       name: "Paid Media for Plumbing & HVAC",
       description: "Google Ads, Meta Ads, and local service ads management to generate calls and booked jobs.",
-      url: `${SITE_URL}/white-label-paid-media`,
+      url: `${SITE_URL}/plumbing-paid-advertising`,
       serviceType: "PPC Advertising Service"
     },
     {
       name: "Email Marketing",
       description: "Email campaign strategy, automation, and list management for plumbing and HVAC companies.",
-      url: `${SITE_URL}/white-label-email-marketing`,
+      url: `${SITE_URL}/plumbing-email-marketing`,
       serviceType: "Email Marketing Service"
     },
     {
       name: "Authority Building",
       description: "Link building, digital PR, and content marketing for local authority in the plumbing and HVAC space.",
-      url: `${SITE_URL}/white-label-local-authority-building`,
+      url: `${SITE_URL}/plumbing-authority-building`,
       serviceType: "Link Building Service"
     },
     {
       name: "Reporting & Dashboards",
       description: "Custom dashboards, rank tracking, and ROI reporting so you always know what's working.",
-      url: `${SITE_URL}/white-label-reporting`,
+      url: `${SITE_URL}/plumbing-reporting`,
       serviceType: "Marketing Analytics Service"
     },
     {
       name: "Content Marketing",
       description: "Blog content, location pages, and topical authority content development for plumbing and HVAC businesses.",
-      url: `${SITE_URL}/white-label-content-marketing`,
+      url: `${SITE_URL}/plumbing-content-marketing`,
       serviceType: "Content Marketing Service"
     }
   ];
@@ -265,8 +265,8 @@ export const getServicesPageSchema = () => {
       getOrganizationSchema(),
       {
         "@type": "WebPage",
-        "@id": `${SITE_URL}/white-label-inbound-marketing-services#webpage`,
-        "url": `${SITE_URL}/white-label-inbound-marketing-services`,
+        "@id": `${SITE_URL}/services#webpage`,
+        "url": `${SITE_URL}/services`,
         "name": "Growth Marketing Services for Plumbing & HVAC Companies",
         "isPartOf": { "@id": `${SITE_URL}/#website` },
         "about": { "@id": `${SITE_URL}/#organization` }

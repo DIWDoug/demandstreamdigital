@@ -8,7 +8,7 @@ import { getBlogFeaturedImage } from "@/lib/blogImages";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 
 const blogCategories = [
-  { name: "White-Label SEO", slug: "white-label-seo" },
+  { name: "Trade SEO", slug: "white-label-seo" },
   { name: "Local SEO", slug: "local-seo" },
   { name: "Agency Growth", slug: "agency-growth" },
   { name: "Paid Media", slug: "paid-media" },
@@ -17,7 +17,7 @@ const blogCategories = [
 ];
 
 const categoryLabels: Record<string, string> = {
-  'white-label-seo': 'White-Label SEO',
+  'white-label-seo': 'Trade SEO',
   'local-seo': 'Local SEO',
   'agency-growth': 'Agency Growth',
   'paid-media': 'Paid Media',
@@ -196,7 +196,7 @@ const BlogSidebar = () => {
           compact
         />
         <p className="text-[10px] text-muted-foreground text-center leading-tight mt-4">
-          By pressing Submit, you agree that Dialed-In Web may contact you.
+          By pressing Submit, you agree that Demand Stream Digital may contact you.
         </p>
       </div>
 

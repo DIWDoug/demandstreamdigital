@@ -360,7 +360,7 @@ const Header = () => {
               {/* Featured Inbound Marketing Hub Callout */}
               <div className="mt-8 pt-6 border-t border-border/30">
                 <Link
-                  to="/white-label-inbound-marketing-services"
+                  to="/services"
                   onClick={() => setIsMegaMenuOpen(false)}
                   className="group flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-cta/10 via-cta/5 to-transparent border border-cta/20 hover:border-cta/40 transition-all"
                 >

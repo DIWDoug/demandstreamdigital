@@ -9,44 +9,44 @@ import { Link } from "react-router-dom";
 
 const faqs = [
   {
-    question: "What is white label inbound marketing and how does it work?",
-    answer: "White label inbound marketing is a partnership model where agencies outsource digital marketing execution to a fulfillment partner who delivers all work under the agency's brand. The agency owns the client relationship and strategic direction. The fulfillment partner handles day-to-day execution (SEO, paid media, email marketing, content, reporting) invisibly. The end client never knows a partner is involved."
+    question: "What does a full-service marketing partnership look like for plumbing and HVAC companies?",
+    answer: "We handle SEO, paid advertising, content marketing, email marketing, and reporting — all coordinated as one unified growth strategy. You focus on running your business while we drive calls, leads, and booked jobs through your marketing channels."
   },
   {
-    question: "Why do agencies use white label digital marketing?",
-    answer: "Agencies use white label digital marketing to expand service offerings without hiring specialists, maintain quality through documented processes, and scale accounts without proportional overhead increases. It eliminates recruitment costs, training time, and management burden while providing immediate access to specialized expertise across multiple marketing disciplines."
+    question: "Why do plumbing and HVAC companies need specialized marketing?",
+    answer: "Trade businesses compete differently than other industries. You need local visibility, Google Maps rankings, and lead generation that converts to booked service calls — not vanity metrics. Our strategies are built specifically around dispatch capacity, seasonality, and service area coverage."
   },
   {
-    question: "How does white labeling help an agency scale?",
-    answer: "White labeling removes the constraint of internal capacity. Agencies can accept new clients and service lines immediately without hiring delays. Fixed overhead stays controlled while revenue grows. This model also reduces risk—if client volume fluctuates, you're not carrying underutilized staff."
+    question: "How does your marketing approach help my business scale?",
+    answer: "We remove the guesswork from marketing. With coordinated SEO, paid ads, and content, your business builds a predictable lead pipeline. As visibility grows, you generate more calls without proportional increases in ad spend."
   },
   {
-    question: "What is the difference between white label and outsourcing?",
-    answer: "Traditional outsourcing often means fragmented freelancers or offshore teams handling isolated tasks. White label fulfillment is a complete system: strategy, execution, reporting, and ongoing optimization across all channels—delivered as a coordinated service under your brand with consistent standards and accountability."
+    question: "What's the difference between working with you versus a general marketing agency?",
+    answer: "General agencies spread thin across dozens of industries. We focus exclusively on plumbing and HVAC, which means we already know your competitive landscape, seasonal patterns, and which strategies actually generate booked jobs — not just clicks."
   },
   {
-    question: "How do I ensure the quality of white label SEO and marketing services?",
-    answer: "Quality assurance comes from documented processes, transparent reporting, and clear communication rhythms. We provide detailed work logs, monthly performance reviews, and defined quality standards for every deliverable. You maintain oversight and approval authority. Our reputation depends on your client results."
+    question: "How do you ensure the quality of SEO and marketing services?",
+    answer: "Quality comes from documented processes, transparent reporting, and clear communication. We provide detailed monthly reports, strategy updates, and defined quality standards for every deliverable. Our reputation depends on your results."
   },
   {
-    question: "Who communicates with the end client in a white label model?",
-    answer: "You do. The agency maintains all client communication. We operate behind the scenes, providing you with reports, strategy recommendations, and execution updates that you present under your brand. Some partners prefer we join calls silently or draft responses for them to send—we adapt to your preference."
+    question: "How much does marketing for a plumbing or HVAC company cost?",
+    answer: "A typical growth marketing engagement runs $2,000-$5,000/month depending on the number of services, market competition, and your growth goals. This includes 40-45 hours of execution per month across SEO, content, and paid media management."
   },
   {
-    question: "Can I rebrand reports and dashboards as my own?",
-    answer: "Yes. All deliverables—reports, strategy documents, audits, dashboards—are designed to be white labeled. We remove our branding and structure everything for you to present directly to clients. Many partners add their logo and customize the presentation layer."
+    question: "What kind of ROI can I expect?",
+    answer: "Most of our clients see 5-100x ROI depending on their market and service mix. A plumbing company spending $1,500/month on SEO typically generates $15,000-$50,000+ in revenue from organic leads alone within 6-12 months."
   },
   {
-    question: "How much does white label digital marketing cost?",
-    answer: "A typical full-service white label inbound marketing engagement runs $2,000-$5,000/month depending on the number of channels activated and client complexity. This includes 40-45 hours of execution per month. Single-service engagements start lower and scale with scope."
+    question: "Can I rebrand reports and dashboards for my own records?",
+    answer: "Yes. All deliverables — reports, strategy documents, audits, dashboards — are designed to be clear and actionable. We structure everything for easy review so you always know exactly what's happening with your marketing."
   },
   {
-    question: "How do agencies price white label services for profit?",
-    answer: "Most agency partners apply a 40-60% markup on our rates. If we charge $3,000/month for fulfillment, you might bill your client $5,000-$6,000. Your margin covers client management, strategic oversight, and relationship development. The math works because you're not carrying full-time specialist salaries."
+    question: "Do you require long-term contracts?",
+    answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, sustainable SEO requires consistency — most meaningful results come within 3-6 months of focused effort."
   },
   {
-    question: "Is white label marketing ethical for clients?",
-    answer: "Yes. Agencies routinely use specialized partners, contractors, and vendors to deliver services—it's standard practice. What matters is results and accountability. Your client hired you for outcomes, not to verify who executes each task. Transparency with your team is recommended; disclosure to clients is your choice."
+    question: "Is it worth investing in marketing when I already get referrals?",
+    answer: "Referrals are great but unpredictable. Marketing creates a consistent, scalable lead pipeline that doesn't depend on word-of-mouth alone. The businesses that grow fastest combine referral reputation with strong online visibility."
   }
 ];
 
@@ -81,7 +81,7 @@ const ServicesFAQ = () => {
               Common Questions
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              White Label Inbound Marketing FAQ
+              Plumbing & HVAC Marketing FAQ
             </h2>
           </div>
           

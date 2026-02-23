@@ -50,7 +50,7 @@ const getPostAuthor = (slug: string): Author => {
 };
 
 const categoryLabels: Record<string, string> = {
-  'white-label-seo': 'White-Label SEO',
+  'white-label-seo': 'Trade SEO',
   'local-seo': 'Local SEO',
   'agency-growth': 'Agency Growth',
   'paid-media': 'Paid Media',
@@ -224,18 +224,18 @@ const BlogPostPage = () => {
 
   // Build breadcrumb items for schema
   const breadcrumbItems = [
-    { name: "Home", url: "https://dialedinweb.com" },
-    { name: "Blog", url: "https://dialedinweb.com/our-blog" },
+    { name: "Home", url: "https://demandstreamdigital.com" },
+    { name: "Blog", url: "https://demandstreamdigital.com/our-blog" },
   ];
   if (blog.category) {
     breadcrumbItems.push({
       name: categoryLabels[blog.category] || blog.category,
-      url: `https://dialedinweb.com/blog?category=${blog.category}`
+      url: `https://demandstreamdigital.com/blog?category=${blog.category}`
     });
   }
   breadcrumbItems.push({
     name: blog.title,
-    url: `https://dialedinweb.com/blog/${blog.slug}`
+    url: `https://demandstreamdigital.com/blog/${blog.slug}`
   });
 
   const articleSchema = {
@@ -245,27 +245,27 @@ const BlogPostPage = () => {
       getBreadcrumbSchema(breadcrumbItems),
       {
         "@type": "Article",
-        "@id": `https://dialedinweb.com/blog/${blog.slug}#article`,
+        "@id": `https://demandstreamdigital.com/blog/${blog.slug}#article`,
         "headline": blog.title,
-        "description": blog.excerpt || `Read ${blog.title} on Dialed-In Web`,
+        "description": blog.excerpt || `Read ${blog.title} on Demand Stream Digital`,
         "image": resolvedFeaturedImage || undefined,
         "datePublished": blog.published_at,
         "dateModified": blog.published_at,
-        "author": { "@id": `https://dialedinweb.com/authors/${author.slug}#person` },
-        "publisher": { "@id": "https://dialedinweb.com/#organization" },
-        "mainEntityOfPage": { "@id": `https://dialedinweb.com/blog/${blog.slug}` },
-        "isPartOf": { "@id": "https://dialedinweb.com/#website" },
+        "author": { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
+        "publisher": { "@id": "https://demandstreamdigital.com/#organization" },
+        "mainEntityOfPage": { "@id": `https://demandstreamdigital.com/blog/${blog.slug}` },
+        "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
         "keywords": blog.category ? categoryLabels[blog.category] : undefined,
         "timeRequired": `PT${readingTime}M`
       },
       {
         "@type": "Person",
-        "@id": `https://dialedinweb.com/authors/${author.slug}#person`,
+        "@id": `https://demandstreamdigital.com/authors/${author.slug}#person`,
         "name": author.name,
         "jobTitle": author.role,
         "description": author.shortBio,
-        "url": `https://dialedinweb.com/authors/${author.slug}`,
-        "worksFor": { "@id": "https://dialedinweb.com/#organization" },
+        "url": `https://demandstreamdigital.com/authors/${author.slug}`,
+        "worksFor": { "@id": "https://demandstreamdigital.com/#organization" },
         "sameAs": author.schemaData.sameAs,
         "knowsAbout": author.schemaData.knowsAbout.map(topic => ({
           "@type": "Thing",
@@ -279,39 +279,38 @@ const BlogPostPage = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{blog.title} | Dialed-In Web</title>
-        <meta name="description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
-        <link rel="canonical" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <title>{blog.title} | Demand Stream Digital</title>
+        <meta name="description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <link rel="canonical" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={`https://dialedinweb.com/blog/${blog.slug}`} />
-        <link rel="alternate" hrefLang="en-CA" href={`https://dialedinweb.com/blog/${blog.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <link rel="alternate" hrefLang="en-US" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content={`${blog.title} | Dialed-In Web`} />
-        <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
-        <meta property="og:url" content={`https://dialedinweb.com/blog/${blog.slug}`} />
+        <meta property="og:title" content={`${blog.title} | Demand Stream Digital`} />
+        <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <meta property="og:url" content={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content={resolvedFeaturedImage || "https://dialedinweb.com/dialedinweb-logo.png"} />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${blog.title} | Dialed-In Web`} />
-        <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Dialed-In Web`} />
-        <meta name="twitter:image" content={resolvedFeaturedImage || "https://dialedinweb.com/dialedinweb-logo.png"} />
+        <meta name="twitter:title" content={`${blog.title} | Demand Stream Digital`} />
+        <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <meta name="twitter:image" content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"} />
       </Helmet>
       
       <Header />
 
       {/* Social Share Bar */}
       <SocialShareBar 
-        url={`https://dialedinweb.com/blog/${blog.slug}`} 
+        url={`https://demandstreamdigital.com/blog/${blog.slug}`} 
         title={blog.title}
       />
       
@@ -329,7 +328,7 @@ const BlogPostPage = () => {
           <figure className="w-full">
             <img 
               src={getBlogFeaturedImage(blog.featured_image)!} 
-              alt={`Featured image for ${blog.title} - agency marketing strategy illustration`}
+              alt={`Featured image for ${blog.title} - plumbing HVAC marketing strategy`}
               className="w-full h-[50vh] md:h-[60vh] object-cover"
             />
           </figure>
@@ -365,7 +364,7 @@ const BlogPostPage = () => {
             <Link to={`/authors/${author.slug}`} className="mb-4">
               <img 
                 src={author.image} 
-                alt={`${author.name} - ${author.role} at Dialed-In Web`}
+                alt={`${author.name} - ${author.role} at Demand Stream Digital`}
                 className="w-16 h-16 rounded-full object-cover border-2 border-border hover:border-cta transition-colors"
               />
             </Link>
