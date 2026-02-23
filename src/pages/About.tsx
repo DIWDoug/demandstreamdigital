@@ -280,7 +280,7 @@ const About = () => {
       </section>
 
       {/* Anchor Navigation */}
-      <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
+      <nav className="sticky top-16 z-40 bg-accent-blue border-y border-accent-blue/80 shadow-lg">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
@@ -502,7 +502,27 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* 2021-Present - The Plumbing & HVAC Pivot */}
+                {/* 2021-2025 - White Label Partnerships */}
+                <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
+                      <span className="text-accent-blue font-bold text-xs">'21-25</span>
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2021-2025</p>
+                      <p className="text-lg font-semibold text-foreground">White Label Partnerships</p>
+                    </div>
+                  </div>
+                  <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
+                    Managed white label fulfillment across a wide range of industries — from cowboy boots to water parks, national luxury outdoor furniture to local service brands. Built repeatable systems for agency partners who needed reliable execution without the overhead.
+                  </p>
+                  <div className="pt-4 border-t border-border/50 space-y-2">
+                    <p className="text-sm text-foreground font-medium">Full-service fulfillment: SEO, paid media, content, and reporting.</p>
+                    <p className="text-sm text-text-secondary">Managed campaigns across dozens of verticals under agency brands.</p>
+                  </div>
+                </div>
+
+                {/* 2026-Present - The Plumbing & HVAC Pivot */}
                 <div className="group bg-cta/10 border-2 border-cta rounded-2xl p-6 hover:shadow-xl hover:shadow-cta/30 hover:scale-[1.08] hover:z-20 transition-all duration-300 relative overflow-hidden">
                   <div className="absolute top-3 right-3 bg-cta text-white text-xs font-bold px-2 py-1 rounded-full">
                     NOW
@@ -512,7 +532,7 @@ const About = () => {
                       <img src={dougHeadshot} alt="Doug Bryson" className="w-full h-full object-cover" />
                     </div>
                     <div>
-                      <p className="text-xs font-bold text-cta uppercase tracking-wide">2021-Present</p>
+                      <p className="text-xs font-bold text-cta uppercase tracking-wide">2026-Present</p>
                       <p className="text-lg font-semibold text-cta">The Plumbing & HVAC Pivot</p>
                     </div>
                   </div>
