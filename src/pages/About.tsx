@@ -271,18 +271,23 @@ const About = () => {
                 Built for Plumbing <span className="text-accent-blue">& HVAC Companies.</span>
               </h1>
               {/* Credibility stats */}
-              <div className="flex items-baseline gap-3 lg:gap-5 flex-wrap">
-                <span className="text-xl lg:text-2xl font-bold text-cta">15+</span>
-                <span className="text-xs text-text-secondary">Years of Execution</span>
-                <span className="text-text-secondary/30">|</span>
-                <span className="text-xl lg:text-2xl font-bold text-cta">100+</span>
-                <span className="text-xs text-text-secondary">SMB & National Campaigns</span>
-                <span className="text-text-secondary/30">|</span>
-                <span className="text-xl lg:text-2xl font-bold text-cta">$10M+</span>
-                <span className="text-xs text-text-secondary">Ad Spend Managed</span>
-                <span className="text-text-secondary/30">|</span>
-                <span className="text-xl lg:text-2xl font-bold text-cta">4.9★</span>
-                <span className="text-xs text-text-secondary">Average Client Rating</span>
+              <div className="flex items-start gap-6 lg:gap-10">
+                <div>
+                  <p className="text-2xl lg:text-3xl font-bold text-cta">15+</p>
+                  <p className="text-xs text-text-secondary">Years of Execution</p>
+                </div>
+                <div>
+                  <p className="text-2xl lg:text-3xl font-bold text-cta">100+</p>
+                  <p className="text-xs text-text-secondary">SMB & National Campaigns</p>
+                </div>
+                <div>
+                  <p className="text-2xl lg:text-3xl font-bold text-cta">$10M+</p>
+                  <p className="text-xs text-text-secondary">Ad Spend Managed</p>
+                </div>
+                <div>
+                  <p className="text-2xl lg:text-3xl font-bold text-cta">4.9★</p>
+                  <p className="text-xs text-text-secondary">Average Client Rating</p>
+                </div>
               </div>
             </div>
             
