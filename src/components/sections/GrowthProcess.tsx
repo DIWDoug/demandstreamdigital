@@ -8,7 +8,7 @@ const phases = [
   {
     number: "01",
     icon: ClipboardList,
-    name: "Build the Plan",
+    name: "Audit & Roadmap",
     overview:
       "Before anything is rebuilt or launched, we map the next 6 to 12 months of growth.",
     focusGroups: [
@@ -36,7 +36,7 @@ const phases = [
   {
     number: "02",
     icon: Wrench,
-    name: "Build It Right",
+    name: "Launch",
     overview:
       "This is where we front-load the heavy work and rebuild your marketing foundation correctly.",
     focusGroups: [
@@ -72,7 +72,7 @@ const phases = [
   {
     number: "03",
     icon: TrendingUp,
-    name: "Build Momentum",
+    name: "Improve",
     overview:
       "This is where we operate like your marketing department. Every month, we focus on what will move the business forward fastest.",
     focusGroups: [
@@ -110,7 +110,7 @@ const phases = [
   {
     number: "04",
     icon: Shield,
-    name: "Strengthen & Expand",
+    name: "Grow & Retain",
     overview:
       "With traction established, we focus on strengthening your position and expanding your reach.",
     focusGroups: [
@@ -292,7 +292,7 @@ const GrowthProcess = () => {
         {/* Closing block */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-            We Operate Like Your Marketing Department
+            One System. Every Channel. Built for Your Market.
           </h3>
           <p className="text-slate-600 mb-6">
             We do not sell isolated services. All working together under one roof.
@@ -308,7 +308,7 @@ const GrowthProcess = () => {
             ))}
           </div>
           <p className="text-slate-500 text-sm mb-8">
-            You get strategy, execution, and optimization under one roof.
+            You get strategy, execution, and ongoing refinement — under one roof.
           </p>
           <Link
             to="/contact"

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Wrench, Flame, Building2, Phone, ArrowRight } from "lucide-react";
+import { ChevronDown, Wrench, Flame, Phone, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import StreamTexture from "@/components/StreamTexture";
@@ -8,7 +8,7 @@ const industries = [
   {
     icon: Wrench,
     title: "Plumbing",
-    summary: "Marketing built for plumbing companies, from drain cleaning to full repiping. We help you rank, get found, and book more jobs.",
+    summary: "Marketing built for plumbing companies, from drain cleaning to full repiping. We help you rank, get found, and book more jobs. Also available for multi-location operators.",
     services: [
       "Plumbing SEO",
       "Plumbing Web Design",
@@ -23,7 +23,7 @@ const industries = [
   {
     icon: Flame,
     title: "HVAC",
-    summary: "Marketing engineered around HVAC seasonality, service calls, and install revenue. Built to keep your schedule full year-round.",
+    summary: "Marketing built around HVAC seasonality, service calls, and install revenue. Built to keep your schedule full year-round.",
     services: [
       "HVAC SEO",
       "HVAC Web Design",
@@ -33,21 +33,6 @@ const industries = [
       "HVAC Email Marketing",
       "HVAC Reputation Management",
       "HVAC Reporting & Dashboards",
-    ],
-  },
-  {
-    icon: Building2,
-    title: "Franchises",
-    summary: "Multi-location marketing for plumbing and HVAC franchises. Consistent branding, local execution, and centralized reporting across every territory.",
-    services: [
-      "Franchise SEO",
-      "Franchise Web Design",
-      "Franchise Google Maps / GBP",
-      "Franchise PPC / Google Ads",
-      "Franchise Content Marketing",
-      "Franchise Email Marketing",
-      "Franchise Reputation Management",
-      "Franchise Reporting & Dashboards",
     ],
   },
 ];
@@ -77,15 +62,15 @@ const TopicalExpertise = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Industries We Serve
+            Plumbing & HVAC — Built for Both
           </h2>
           <p className="text-lg text-text-secondary">
-            Every marketing channel we deploy, from SEO to paid ads, is aligned with one goal: increasing visibility, generating qualified leads, and helping your business grow.
+            Every channel — SEO, paid ads, Maps, email — points to one outcome: more booked service calls.
           </p>
         </div>
 
         {/* Industry cards grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {industries.map((industry, index) => (
             <div
               key={index}
@@ -153,7 +138,7 @@ const TopicalExpertise = () => {
                         className="inline-flex items-center gap-1.5 text-cta hover:text-cta/80 text-sm font-semibold transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        Get a {industry.title} proposal
+                        See what's included
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
@@ -177,7 +162,7 @@ const TopicalExpertise = () => {
             to="/contact"
             className="btn-cta inline-flex items-center gap-2"
           >
-            Explore a Partnership
+            Get a Free Audit
             <ArrowRight className="h-4 w-4" />
           </Link>
           <a

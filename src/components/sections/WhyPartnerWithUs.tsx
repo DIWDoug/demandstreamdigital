@@ -8,32 +8,32 @@ const WhyPartnerWithUs = () => {
   const allBenefits = [
     {
       icon: ClipboardCheck,
-      title: "Clear Plan. No Surprises.",
-      description: "You'll always know what we're working on, what's coming next, and how your budget is being spent. No gray areas, no hidden fees.",
+      title: "You See Every Dollar",
+      description: "You know where your budget is going and what it's producing. Leads, calls, cost per booked call. No black boxes. No activity reports that hide results.",
       isQualifier: false
     },
     {
       icon: MessageSquareText,
-      title: "Marketing You Can Actually Understand",
-      description: "We explain everything in plain English. You'll know what's working, what we're testing, and why, without needing a marketing degree.",
+      title: "Your Booking Rate Is the Metric That Matters",
+      description: "We don't report impressions. We track booked calls, cost per booked call, and booking rate — because those are the numbers that show up on your dispatch board.",
       isQualifier: false
     },
     {
       icon: Target,
-      title: "Built for Your Service Area",
-      description: "No two plumbing or HVAC markets are the same. We build campaigns around your actual competition, seasonal demand, and service radius.",
+      title: "Built for Your Market, Not a Template",
+      description: "We don't apply the same keyword list and call it done. Your service area, your competition, and your peak seasons drive every decision.",
       isQualifier: false
     },
     {
       icon: BellOff,
       title: "Problems Get Caught Early",
-      description: "We monitor campaigns constantly and flag issues before they cost you money. You'll never be surprised by a bad month.",
+      description: "We monitor campaigns constantly and catch issues before they show up in your numbers. No surprise bad months.",
       isQualifier: false
     },
     {
       icon: GraduationCap,
       title: "Real Marketers, Not Bots",
-      description: "Your campaigns are managed by experienced marketers who understand plumbing, HVAC, and the local search environment.",
+      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search — not account managers reading from a script.",
       isQualifier: false
     },
     {
@@ -52,10 +52,10 @@ const WhyPartnerWithUs = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Why Plumbing & HVAC Companies Trust Us to Grow Their Business
+            What Working With DemandStream Actually Looks Like
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            As a specialized plumbing and HVAC marketing agency, we design campaigns around how customers search for service providers in competitive local markets.
+            Every campaign is built around how customers search for plumbers and HVAC companies in your specific market — and what it takes to get them to call.
           </p>
         </div>
 

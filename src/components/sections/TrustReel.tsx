@@ -6,7 +6,6 @@ const TrustReel = () => {
     "Reputation & Review Growth",
     "Email & Retention Marketing",
     "High-Converting Website Design",
-    "Franchise & Multi-Location Ready",
   ];
 
   return (

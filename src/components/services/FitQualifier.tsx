@@ -27,7 +27,7 @@ const FitQualifier = () => {
       detail: "The best plumbing and HVAC companies treat marketing like a new truck. It pays for itself many times over when done right."
     },
     {
-      point: "You're ready to dominate your local market",
+      point: "You're ready to be the first call in your market",
       detail: "Whether you're looking to own your city on Google Maps, outrank competitors, or fill your schedule year-round, we build the system to get you there."
     }
   ];
@@ -69,7 +69,7 @@ const FitQualifier = () => {
               Are We the Right Fit for Your Shop?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We work with established plumbing and HVAC companies that want to dominate their local market, not just generate random traffic.
+              We work with established plumbing and HVAC companies that want to own their service area — not just generate random traffic.
             </p>
           </div>
 

@@ -17,6 +17,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Plumbing Web Design", href: "/contact" },
         { label: "Plumbing Reputation Management", href: "/contact" },
         { label: "Plumbing Email Marketing", href: "/contact" },
+        { label: "Multi-Location Plumbing & HVAC", href: "/contact" },
       ]
     },
     {
@@ -29,13 +30,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "HVAC Web Design", href: "/contact" },
         { label: "HVAC Reputation Management", href: "/contact" },
         { label: "HVAC Email Marketing", href: "/contact" },
-      ]
-    },
-    {
-      title: "FRANCHISE MARKETING",
-      href: "/contact",
-      items: [
-        { label: "Franchise Plumbing & HVAC Marketing", href: "/contact" },
+        { label: "Multi-Location Plumbing & HVAC", href: "/contact" },
       ]
     },
     {
@@ -70,7 +65,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       {/* Service Categories Grid */}
       <nav aria-label="Service categories" className="py-12 border-b border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-5">
             {serviceCategories.map((category, index) => (
               <div key={index}>
                 <Link 
