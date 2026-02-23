@@ -52,8 +52,8 @@ const ResultsBar = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
             Local Service Marketing. Now Focused on the Trades.
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-bold">
-            All of that experience now lives inside DemandStream Digital. We've been the fulfillment engine behind successful agencies and direct clients alike — now applied exclusively to plumbing and HVAC.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <strong>All of that experience now lives inside DemandStream Digital.</strong> We've been the fulfillment engine behind successful agencies and direct clients alike — now applied exclusively to plumbing and HVAC.
           </p>
         </div>
 
