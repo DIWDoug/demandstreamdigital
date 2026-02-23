@@ -31,7 +31,7 @@ const FeaturedCaseStudies = () => {
             Proven Results
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Real Results From Real Contractors
+            Marketing Results for Plumbing & HVAC Companies
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Real results for real clients. See how we've helped businesses dominate their local markets.
