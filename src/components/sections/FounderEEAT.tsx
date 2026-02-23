@@ -44,11 +44,10 @@ const FounderEEAT = () => {
             <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
               <p className="text-white text-lg font-semibold">It's everything, connected.</p>
-              <p>Since 2011, I've managed hundreds of campaigns for small businesses across nearly every industry. Through Dialed In Web and Dialed In Local, we built marketing systems for businesses that needed real results, not vanity metrics.</p>
-              <p>Over time, I kept coming back to the same types of clients: plumbing and HVAC companies. The ones doing great work but struggling to get found. The ones getting burned by agencies that didn't understand their business.</p>
-              <p>That pattern led me to go all in. I stopped trying to serve every industry and built everything around the trades. The systems, the strategy, the team. All focused on what actually drives booked service calls for plumbing and HVAC companies.</p>
+              <p>Since 2011, I've managed hundreds of campaigns for local businesses. Over time, I kept coming back to the same types of clients: plumbing and HVAC companies doing great work but struggling to get found online.</p>
+              <p>That pattern led me to go all in. I stopped serving every industry and built everything around the trades — the systems, the strategy, the team.</p>
               <p className="text-white font-medium">A single channel doesn't win markets.</p>
-              <p>Search, ads, reputation, email, and web design have to work together. When one piece is missing, the whole system leaks. When everything works together, you own your market.</p>
+              <p>Search, ads, reputation, email, and web design have to work together. When everything connects, you own your market.</p>
               <p>If that's the kind of marketing you've been looking for, let's talk.</p>
               <p className="text-white font-semibold mt-6">Doug</p>
             </div>

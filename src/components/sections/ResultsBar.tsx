@@ -48,9 +48,9 @@ const ResultsBar = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">15+ Years of Execution</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Proven Track Record</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-            Local Service Marketing. Now Focused on the Trades.
+            15+ Years of Digital Marketing — Applied Exclusively to Plumbing & HVAC
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             All of that experience now lives inside DemandStream Digital. We've been the fulfillment engine behind successful agencies and direct clients alike — <strong>now applied exclusively to plumbing and HVAC.</strong>

@@ -56,6 +56,9 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Tell us where you operate and what you're working toward. We'll take it from there.
               </p>
+              <p className="text-sm text-gray-500 font-medium mt-3">
+                We only partner with one plumbing and one HVAC company per market.
+              </p>
             </div>
 
             {/* Bleed-over Card */}

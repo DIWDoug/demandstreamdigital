@@ -9,7 +9,7 @@ import FitQualifier from "@/components/services/FitQualifier";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
-import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
+
 
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
@@ -76,7 +76,7 @@ const Index = () => {
         </div>
       </div>
       
-      {/* Results bar - credibility stats */}
+      {/* Positioning / credential stats */}
       <ResultsBar />
       
       {/* Problem framing */}
@@ -85,60 +85,58 @@ const Index = () => {
         <ProblemSolution />
       </div>
       
-      {/* Services: what we do */}
+      {/* Services: the system */}
       <div className="dark relative" id="services">
         <ServicesGrid />
       </div>
       
+      {/* Proof: case studies (moved up) */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <FeaturedCaseStudies />
+      </div>
+      
+      {/* Market exclusivity (after proof) */}
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <MarketExclusivity />
+      </div>
+
       {/* Process: how we do it */}
       <div className="relative">
         <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
         <GrowthProcess />
       </div>
       
-      {/* Proof: case studies */}
+      {/* Convert warm leads */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
-        <FeaturedCaseStudies />
-      </div>
-      
-      {/* Convert warm leads */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
         <MidPageCTA variant="light" />
       </div>
       
-      {/* Industry expertise */}
-      
-      <TopicalExpertise />
-      
-      {/* Market exclusivity */}
-      <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
-        <MarketExclusivity />
+      {/* Industry expertise (condensed) */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <TopicalExpertise />
       </div>
       
       {/* What working with us looks like */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
-        <WhyPartnerWithUs />
-      </div>
-      <FitQualifier />
-      
-      {/* Lead magnet */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
-        <LocalGrowthEngine />
+        <WhyPartnerWithUs />
       </div>
       
-      {/* Reinforce pain points */}
+      {/* Personal trust - Founder */}
       <div className="dark relative" id="about">
-        <WhatWeSolve />
+        <FounderEEAT />
       </div>
       
-      {/* Personal trust */}
+      <FitQualifier />
+
+      {/* Reinforce pain points */}
       <div className="dark relative">
-        <FounderEEAT />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <WhatWeSolve />
       </div>
       
       {/* Social proof */}
