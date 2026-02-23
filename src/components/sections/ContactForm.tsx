@@ -63,7 +63,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
 
             {/* Bleed-over Card */}
             <div className="relative z-20 bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.08)] mb-[-5rem]">
-              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 {/* Left Column - Accordion */}
               <div className="bg-[hsl(213,64%,12%)] rounded-xl p-6">
                   <Accordion type="single" collapsible defaultValue="item-4" className="space-y-3">
