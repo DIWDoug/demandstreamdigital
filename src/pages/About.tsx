@@ -24,19 +24,12 @@ import {
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
-import sheraFabian from "@/assets/team/shera-fabian.webp";
+import carolMora from "@/assets/team/carol-mora.png";
 import iraSalvador from "@/assets/team/ira-salvador.png";
 import samantaLeal from "@/assets/team/samanta-leal.webp";
 import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
-import martiniMabifa from "@/assets/team/martini-mabifa.jpg";
-import richardBaylon from "@/assets/team/richard-baylon.webp";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
-import jamesBelmes from "@/assets/team/james-belmes.webp";
-import belAniano from "@/assets/team/bel-aniano.jpeg";
-import biancaLapuz from "@/assets/team/bianca-lapuz.webp";
-import muhammadBilal from "@/assets/team/muhammad-bilal.png";
-import moniqueBaetiong from "@/assets/team/monique-baetiong.jpg";
 
 // Other assets
 import clientLogosBanner from "@/assets/client-logos-banner.png";
@@ -67,7 +60,7 @@ const About = () => {
       name: "Carol Mora",
       role: "Senior Project Manager",
       bio: "Keeps client campaigns on schedule and communication clear. Ensures every deliverable is executed on time and every client always knows where things stand.",
-      image: sheraFabian, // Placeholder — replace with Carol's headshot
+      image: carolMora,
     },
     {
       name: "Ira Salvador",
