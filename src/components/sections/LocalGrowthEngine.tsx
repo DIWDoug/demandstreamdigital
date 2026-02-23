@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import bookCover from "@/assets/ebook-cover.jpg";
@@ -9,7 +9,10 @@ import StreamTexture from "@/components/StreamTexture";
 
 const LocalGrowthEngine = () => {
   const navigate = useNavigate();
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [city, setCity] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [honeypot, setHoneypot] = useState(""); // Bot trap field
@@ -24,7 +27,7 @@ const LocalGrowthEngine = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !fullName || !city) return;
     
     // CAPTCHA Check 1: Honeypot field should be empty (bots often fill hidden fields)
     if (honeypot) {
@@ -62,7 +65,7 @@ const LocalGrowthEngine = () => {
       const { supabase } = await import("@/integrations/supabase/client");
       
       const { data, error } = await supabase.functions.invoke('submit-ebook-lead', {
-        body: { email, recaptchaToken }
+        body: { email, recaptchaToken, fullName, website, city }
       });
 
       if (error) {
@@ -154,68 +157,95 @@ const LocalGrowthEngine = () => {
                   Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year — not just when the weather cooperates.
                 </p>
 
-                {/* Email signup or CTA */}
+                {/* Market availability heading */}
+                <h3 className="text-lg font-semibold text-foreground mb-1">See If Your Market Is Available</h3>
+
+                {/* Current markets */}
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="h-4 w-4 text-cta flex-shrink-0" />
+                  <p className="text-muted-foreground text-xs">
+                    Current markets: <span className="text-foreground font-medium">Greater Dallas–Fort Worth</span> &amp; <span className="text-foreground font-medium">Las Vegas, Nevada</span>
+                  </p>
+                </div>
+
+                {/* Form */}
                 {!isSubmitted ? (
-                  <div className="flex flex-col sm:flex-row gap-4 items-start">
-                    <div className="flex-1 w-full sm:w-auto">
-                      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                        {/* Honeypot field - hidden from users, bots will fill it */}
+                  <div>
+                    <form onSubmit={handleSubmit} className="space-y-3">
+                      {/* Honeypot field */}
+                      <input
+                        type="text"
+                        name="company_address"
+                        value={honeypot}
+                        onChange={(e) => setHoneypot(e.target.value)}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0, pointerEvents: 'none' }}
+                        aria-hidden="true"
+                      />
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <input
                           type="text"
-                          name="website_url"
-                          value={honeypot}
-                          onChange={(e) => setHoneypot(e.target.value)}
-                          tabIndex={-1}
-                          autoComplete="off"
-                          style={{ 
-                            position: 'absolute', 
-                            left: '-9999px', 
-                            opacity: 0, 
-                            height: 0, 
-                            width: 0,
-                            pointerEvents: 'none'
-                          }}
-                          aria-hidden="true"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          onFocus={initRecaptcha}
+                          placeholder="Full name"
+                          required
+                          maxLength={100}
+                          className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all text-sm"
                         />
                         <input
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          onFocus={initRecaptcha}
-                          placeholder="Enter your email"
+                          placeholder="Email address"
                           required
-                          className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all"
+                          maxLength={255}
+                          className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all text-sm"
                         />
+                        <input
+                          type="url"
+                          value={website}
+                          onChange={(e) => setWebsite(e.target.value)}
+                          placeholder="Website (optional)"
+                          maxLength={255}
+                          className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all text-sm"
+                        />
+                        <input
+                          type="text"
+                          value={city}
+                          onChange={(e) => setCity(e.target.value)}
+                          placeholder="City your business is in"
+                          required
+                          maxLength={100}
+                          className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-cta/50 focus:border-cta transition-all text-sm"
+                        />
+                      </div>
+                      <div className="flex items-center gap-3">
                         <button
                           type="submit"
                           disabled={isSubmitting}
                           className="btn-cta flex items-center justify-center gap-2 whitespace-nowrap disabled:opacity-50"
                         >
-                          {isSubmitting ? (
-                            "Joining..."
-                          ) : (
+                          {isSubmitting ? "Submitting..." : (
                             <>
-                              Get Early Access
+                              Check Availability
                               <ArrowRight className="h-4 w-4" />
                             </>
                           )}
                         </button>
-                      </form>
-                      <p className="text-muted-foreground text-xs mt-2">Protected by reCAPTCHA</p>
-                    </div>
+                        <p className="text-muted-foreground text-xs">Protected by reCAPTCHA</p>
+                      </div>
+                    </form>
                   </div>
                 ) : (
-                    <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-blue/10 border border-accent-blue/20 max-w-md">
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-accent-blue/10 border border-accent-blue/20 max-w-md">
                     <CheckCircle2 className="h-5 w-5 text-accent-blue flex-shrink-0" />
                     <p className="text-foreground">
-                      You're on the list! We'll be in touch soon.
+                      Thanks! We'll check your market and get back to you shortly.
                     </p>
                   </div>
                 )}
-
-                <p className="text-muted-foreground text-sm mt-4">
-                  Coming soon. Join the waitlist to get notified + exclusive bonus content.
-                </p>
               </div>
             </div>
           </div>
