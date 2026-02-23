@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/demandstream-digital-logo.svg";
+import DoNotClick from "@/components/DoNotClick";
 
 const Header = () => {
   const location = useLocation();
@@ -287,6 +288,7 @@ const Header = () => {
             >
               Schedule a Call
             </Link>
+            <DoNotClick />
           </div>
 
           {/* Mobile menu button */}
