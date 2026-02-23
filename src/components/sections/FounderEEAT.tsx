@@ -17,7 +17,7 @@ const FounderEEAT = () => {
             An Honest Word From Our Founder
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Marketing Isn't One Thing Anymore. It's Everything, Connected.
+            Marketing Isn't One Thing Anymore...
           </h2>
         </div>
 
@@ -42,6 +42,7 @@ const FounderEEAT = () => {
           <div>
             <span className="text-accent-blue text-5xl font-serif leading-none block mb-4">"</span>
             <div className="text-white/80 leading-relaxed space-y-4 text-[15px] lg:text-base">
+              <p className="text-white text-lg font-semibold">It's everything, connected.</p>
               <p>Since 2011, I've managed hundreds of campaigns for small businesses across nearly every industry. Through Dialed In Web and Dialed In Local, we built marketing systems for businesses that needed real results, not vanity metrics.</p>
               <p>Over time, I kept coming back to the same types of clients: plumbing and HVAC companies. The ones doing great work but struggling to get found. The ones getting burned by agencies that didn't understand their business.</p>
               <p>That pattern led me to go all in. I stopped trying to serve every industry and built everything around the trades. The systems, the strategy, the team. All focused on what actually drives booked service calls for plumbing and HVAC companies.</p>

@@ -1,4 +1,4 @@
-import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Filter, ArrowRight, Target } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Filter, ArrowRight, BarChart3, UserCheck } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import StreamTexture from "@/components/StreamTexture";
@@ -13,15 +13,15 @@ const WhyPartnerWithUs = () => {
       isQualifier: false
     },
     {
-      icon: MessageSquareText,
-      title: "Direct Access to Your Team",
-      description: "You talk to the people doing the work, not an account manager relaying messages. Questions get answered the same day.",
+      icon: UserCheck,
+      title: "Dedicated Account Lead",
+      description: "One point of contact who knows your business inside and out. Not a rotating door of reps who need to be caught up every call.",
       isQualifier: false
     },
     {
-      icon: Target,
-      title: "Campaigns Built Around Your Capacity",
-      description: "We scale marketing up or down based on your tech count, your schedule, and your season. No wasted spend when you're already booked.",
+      icon: BarChart3,
+      title: "Clarity Dashboards",
+      description: "See your rankings, leads, ad spend, and booked calls in one place. No digging through spreadsheets or waiting for a report.",
       isQualifier: false
     },
     {
@@ -33,7 +33,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: GraduationCap,
       title: "Real Marketers, Not Bots",
-      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search, not account managers reading from a script.",
+      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search. Not account managers reading from a script.",
       isQualifier: false
     },
     {
