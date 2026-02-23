@@ -176,7 +176,7 @@ const AdBudgetEducationalContent = () => {
                 "Landing page conversion rate stable"
               ].map((item, i) => (
                 <li key={i} className="text-sm text-text-muted flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-cta flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-4 w-4 text-accent-blue flex-shrink-0 mt-0.5" />
                   {item}
                 </li>
               ))}

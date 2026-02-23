@@ -81,14 +81,14 @@ const GBPBuildingBlocksSection = () => {
                 <Link
                   key={block.slug}
                   to={block.href || "#"}
-                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-cta/30 transition-colors group"
+                  className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-cta/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-cta" />
+                    <div className="w-12 h-12 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-accent-blue" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-foreground font-semibold text-lg mb-2 group-hover:text-cta transition-colors">
+                      <h3 className="text-foreground font-semibold text-lg mb-2 group-hover:text-accent-blue transition-colors">
                         {block.title}
                       </h3>
                       <p className="text-text-secondary text-sm leading-relaxed">

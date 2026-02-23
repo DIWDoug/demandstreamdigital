@@ -61,10 +61,10 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
                   <div className={`flex items-center gap-4 ${isFirst ? 'mb-5' : 'mb-4'}`}>
                     <div className={`rounded-xl flex items-center justify-center shrink-0 ${
                       isFirst 
-                        ? 'w-14 h-14 bg-cta/15 shadow-sm' 
-                        : 'w-12 h-12 bg-cta/10'
+                        ? 'w-14 h-14 bg-accent-blue/15 shadow-sm' 
+                        : 'w-12 h-12 bg-accent-blue/10'
                     }`}>
-                      <point.icon className={`text-cta ${isFirst ? 'h-7 w-7' : 'h-5 w-5'}`} />
+                      <point.icon className={`text-accent-blue ${isFirst ? 'h-7 w-7' : 'h-5 w-5'}`} />
                     </div>
                     <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
                       {point.title}

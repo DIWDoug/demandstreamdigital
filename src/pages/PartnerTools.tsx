@@ -39,9 +39,9 @@ const calculators = [
     description: "Demonstrate the revenue impact of inbound marketing. Show clients how improved traffic, conversion rates, and close rates translate to real business growth.",
     href: "/partner-tools/roi-calculator",
     icon: TrendingUp,
-    color: "from-cta/20 to-cta/10",
-    borderColor: "border-cta/30",
-    iconColor: "text-cta",
+    color: "from-accent-blue/20 to-accent-blue/10",
+    borderColor: "border-accent-blue/30",
+    iconColor: "text-accent-blue",
     features: [
       "Industry benchmarks",
       "Revenue projections",

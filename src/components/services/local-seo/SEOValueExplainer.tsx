@@ -129,8 +129,8 @@ const SEOValueExplainer = () => {
               }
             ].map((item, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-cta" />
+                <div className="w-10 h-10 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 text-accent-blue" />
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-semibold mb-1">{item.title}</h4>

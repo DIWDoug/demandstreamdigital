@@ -76,7 +76,7 @@ const Blog = () => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-8 mb-10">
                 <div className="flex items-center gap-2 text-text-secondary">
-                  <BookOpen className="w-5 h-5 text-cta" />
+                  <BookOpen className="w-5 h-5 text-accent-blue" />
                   <span className="text-sm">In-Depth Guides</span>
                 </div>
                 <div className="flex items-center gap-2 text-text-secondary">
@@ -84,7 +84,7 @@ const Blog = () => {
                   <span className="text-sm">Proven Strategies</span>
                 </div>
                 <div className="flex items-center gap-2 text-text-secondary">
-                  <Users className="w-5 h-5 text-cta" />
+                  <Users className="w-5 h-5 text-accent-blue" />
                   <span className="text-sm">Agency-Focused</span>
                 </div>
               </div>

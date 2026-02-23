@@ -251,8 +251,8 @@ const InvestmentCalculator = () => {
         formData.services.includes(service) ? "bg-cta/10 border-cta" : "bg-surface-elevated border-border/50 hover:border-accent-blue/50"
       )}
     >
-      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0", formData.services.includes(service) ? "bg-cta/20" : "bg-accent-blue/10")}>
-        <Icon className={cn("h-5 w-5", formData.services.includes(service) ? "text-cta" : "text-accent-blue")} />
+      <div className={cn("w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0", formData.services.includes(service) ? "bg-accent-blue/20" : "bg-accent-blue/10")}>
+        <Icon className={cn("h-5 w-5", formData.services.includes(service) ? "text-accent-blue" : "text-accent-blue/60")} />
       </div>
       <div className="flex flex-col">
         <span className={cn("font-medium", formData.services.includes(service) ? "text-cta" : "text-foreground")}>{label}</span>
