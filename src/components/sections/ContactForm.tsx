@@ -53,8 +53,11 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
                 See If Your Market Is Available
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-3">
                 Tell us where you operate and what you're working toward. We'll take it from there.
+              </p>
+              <p className="text-sm text-gray-500">
+                Current markets: <span className="font-semibold text-gray-700">Greater Dallas–Fort Worth</span> &amp; <span className="font-semibold text-gray-700">Las Vegas, Nevada</span>
               </p>
             </div>
 
