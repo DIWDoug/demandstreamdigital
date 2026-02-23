@@ -17,7 +17,8 @@ const FounderEEAT = () => {
             An Honest Word From Our Founder
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Marketing Isn't One Thing Anymore...
+            Marketing Isn't One Thing Anymore.<br />
+            <span className="text-accent-blue">It's Everything, Connected.</span>
           </h2>
         </div>
 

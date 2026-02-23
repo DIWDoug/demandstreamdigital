@@ -1,4 +1,4 @@
-import { ClipboardCheck, MessageSquareText, BellOff, GraduationCap, Filter, ArrowRight, BarChart3, UserCheck } from "lucide-react";
+import { ClipboardCheck, MessageSquareText, BellOff, Cpu, Filter, ArrowRight, BarChart3, UserCheck } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import StreamTexture from "@/components/StreamTexture";
@@ -31,9 +31,9 @@ const WhyPartnerWithUs = () => {
       isQualifier: false
     },
     {
-      icon: GraduationCap,
-      title: "Real Marketers, Not Bots",
-      description: "Your campaigns are managed by people who know plumbing, HVAC, and local search. Not account managers reading from a script.",
+      icon: Cpu,
+      title: "AI-Resourced Strategy",
+      description: "We use AI tools to increase output, sharpen targeting, and stretch your budget further — all guided by experienced marketers who know the trades.",
       isQualifier: false
     },
     {
