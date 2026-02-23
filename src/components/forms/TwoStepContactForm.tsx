@@ -40,6 +40,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     name: "",
     email: "",
     website: "",
+    city: "",
     honeypot: "",
   });
 
@@ -69,6 +70,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           name: step1Data.name,
           email: step1Data.email,
           website: step1Data.website,
+          city: step1Data.city,
           formType: `${formType}_step1`,
         },
       });
@@ -109,6 +111,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           name: step1Data.name,
           email: step1Data.email,
           website: step1Data.website,
+          city: step1Data.city,
           phone: step2Data.phone,
           phoneCountryCode: step2Data.phoneCountryCode,
           revenue: step2Data.revenue,
@@ -202,6 +205,21 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               value={step1Data.website}
               onChange={(e) => setStep1Data({ ...step1Data, website: e.target.value })}
               placeholder="yourcompany.com"
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className={labelClass}>
+              City Your Business Is In <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              required
+              value={step1Data.city}
+              onChange={(e) => setStep1Data({ ...step1Data, city: e.target.value })}
+              placeholder="e.g. Dallas, TX"
+              maxLength={100}
               className={inputClass}
             />
           </div>
