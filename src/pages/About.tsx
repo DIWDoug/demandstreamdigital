@@ -280,7 +280,7 @@ const About = () => {
       </section>
 
       {/* Anchor Navigation */}
-      <nav className="sticky top-16 z-40 bg-accent-blue border-y border-accent-blue/80 shadow-lg">
+      <nav className="sticky top-16 z-40 bg-cta border-y border-cta/80 shadow-lg">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-center gap-2 md:gap-6 lg:gap-10 py-3 overflow-x-auto">
             {[
