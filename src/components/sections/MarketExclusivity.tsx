@@ -15,7 +15,7 @@ const MarketExclusivity = () => {
             Exclusivity
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Exclusive Plumbing & HVAC Marketing Coverage
+            We Only Work With One Company Per Market
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed mb-4">
             When you work with DemandStream, your competitors don't. We take one plumbing client and one HVAC client per service area. That's the model. It keeps our incentives consistent with yours and guarantees the strategy we build is designed to put you ahead, not split between you and the shop down the street.
