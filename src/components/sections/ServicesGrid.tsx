@@ -88,8 +88,8 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Plumbing & HVAC Marketing Services That Drive Booked Calls
-                
+                One System. Every Channel.<br />
+                <span className="text-accent-blue">More Booked Service Calls</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and website design built to convert. All structured to increase booked service calls and revenue stability.
