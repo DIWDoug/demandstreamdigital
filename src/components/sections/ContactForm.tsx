@@ -86,10 +86,6 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
 
                 {/* Right Column - Two-Step Form */}
                 <div>
-                  <p className="text-sm text-text-muted mb-5 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-cta" />
-                    Current markets not available: <span className="font-semibold text-foreground">Greater Dallas–Fort Worth</span> &amp; <span className="font-semibold text-foreground">Las Vegas, Nevada</span>
-                  </p>
                   <TwoStepContactForm
                     formType="fulfillment_steps"
                     submitButtonText="Get a Free Proposal"
