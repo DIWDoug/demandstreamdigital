@@ -1,11 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 
 const stats = [
-  { value: "15 Years", label: "In local service marketing" },
-  { value: "100+", label: "Businesses served across career" },
-  { value: "25x+", label: "ROI documented in case studies" },
+  { value: "15+", label: "Years of Execution" },
+  { value: "100+", label: "SMB & National Campaigns" },
+  { value: "$10M+", label: "Ad Spend Managed" },
+  { value: "4.9", label: "Average Client Rating", isStar: true },
 ];
 
 const ResultsBar = () => {
@@ -19,29 +20,41 @@ const ResultsBar = () => {
             15 Years. One Focus. Real Results.
           </h2>
           <p className="text-slate-600 text-base mb-12 max-w-2xl mx-auto">
-            For the past 15 years, Doug Bryson and the teams behind Dialed In Local and Dialed In Web have been building marketing systems for local and national businesses across paid advertising, SEO, email marketing, optimized web design, and content development. All of that experience now lives inside DemandStream Digital.
+            For over 15 years, the team behind DemandStream has been the fulfillment engine behind successful agencies and direct clients alike. Through Dialed In Web and Dialed In Local, we've built marketing systems for SMBs and national brands across paid advertising, SEO, email marketing, web design, and content development. All of that experience now powers DemandStream Digital.
           </p>
 
-          <div className="grid grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</p>
+                <p className="text-3xl md:text-4xl font-bold text-cta mb-1 flex items-center justify-center gap-1">
+                  {stat.value}
+                  {stat.isStar && <Star className="h-6 w-6 text-cta fill-cta" />}
+                </p>
                 <p className="text-sm text-slate-500">{stat.label}</p>
               </div>
             ))}
           </div>
 
-          <p className="text-slate-600 text-sm font-medium mb-6">
+          <p className="text-slate-600 text-sm font-medium mb-8">
             Now applied exclusively to plumbing and HVAC companies.
           </p>
 
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-cta hover:text-cta/80 transition-colors"
-          >
-            See our Dialed In Web case studies
-            <ArrowRight className="h-3.5 w-3.5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              to="/case-studies"
+              className="btn-cta group inline-flex items-center gap-2"
+            >
+              See Our Historical Case Studies
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-cta hover:text-cta/80 transition-colors border border-cta/30 rounded-lg px-5 py-3 hover:bg-cta/5"
+            >
+              <User className="h-4 w-4" />
+              Meet the Founder
+            </Link>
+          </div>
         </div>
       </div>
     </section>
