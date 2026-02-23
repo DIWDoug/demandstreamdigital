@@ -1,27 +1,32 @@
 import { useState } from "react";
-import { ArrowRight, Star, User, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, User, ChevronDown, Flame, Target, DollarSign, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
+import StreamTexture from "@/components/StreamTexture";
 
 const stats = [
   {
     value: "15+",
     label: "Years of Execution",
+    icon: Flame,
     detail: "Since 2011, Doug Bryson and the teams behind Dialed In Local and Dialed In Web have been building marketing systems for local and national businesses across paid advertising, SEO, email marketing, web design, and content development.",
   },
   {
     value: "100+",
     label: "SMB & National Campaigns",
+    icon: Target,
     detail: "From single-location shops to multi-state service brands, we've managed campaigns across nearly every local service vertical. That experience now powers everything we build for plumbing and HVAC companies.",
   },
   {
     value: "$10M+",
     label: "Ad Spend Managed",
+    icon: DollarSign,
     detail: "Google Ads, Local Services Ads, Meta, AdRoll, and programmatic display. We've managed budgets from $2K/month to six figures, always tied to booked calls and measurable ROI.",
   },
   {
     value: "4.9",
     label: "Average Client Rating",
+    icon: Trophy,
     isStar: true,
     detail: "Across Google, Clutch, and direct client feedback. We earn it by being transparent, responsive, and focused on the numbers that matter to business owners.",
   },
@@ -36,81 +41,95 @@ const ResultsBar = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-20 section-light reveal-section">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            {/* Left column: headline + intro */}
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">15+ Years of Execution</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-                Local Service Marketing. Now Focused on the Trades.
-              </h2>
-              <p className="text-slate-600 text-base leading-relaxed mb-6">
-                All of that experience now lives inside DemandStream Digital. We've been the fulfillment engine behind successful agencies and direct clients alike.
-              </p>
-              <p className="text-slate-500 text-sm">
-                Now applied exclusively to plumbing and HVAC companies.
-              </p>
-            </div>
+    <section ref={sectionRef} className="py-16 lg:py-20 section-light relative reveal-section overflow-hidden">
+      <StreamTexture variant="light" opacity={0.1} />
+      <div className="section-divider absolute top-0" />
 
-            {/* Right column: accordion stats */}
-            <div className="space-y-2">
-              {stats.map((stat, index) => (
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Pipeline Domination</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+            The Local Digital Marketing Playbook for Plumbing & HVAC
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            All of our experience now lives inside DemandStream Digital — applied exclusively to plumbing and HVAC companies ready to own their market.
+          </p>
+        </div>
+
+        {/* Stats grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto mb-12">
+          {stats.map((stat, index) => {
+            const Icon = stat.icon;
+            const isOpen = openIndex === index;
+
+            return (
+              <button
+                key={index}
+                onClick={() => toggle(index)}
+                className="text-left rounded-xl border border-gray-300/50 bg-gradient-to-br from-white to-[#F0F0ED] p-6 transition-all duration-300 hover:scale-[1.02] group"
+                style={{
+                  boxShadow: isOpen
+                    ? 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 12px 32px rgba(0,0,0,0.14)'
+                    : 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)',
+                }}
+              >
+                {/* Icon */}
+                <div className="inline-flex items-center justify-center p-3 rounded-xl mb-4 bg-accent-blue/10 border border-accent-blue/20">
+                  <Icon className="w-6 h-6 text-accent-blue" strokeWidth={1.5} />
+                </div>
+
+                {/* Value */}
+                <div className="flex items-center gap-1 mb-1">
+                  <span className="text-3xl md:text-4xl font-bold text-cta">
+                    {stat.value}
+                  </span>
+                  {stat.isStar && <Star className="h-5 w-5 text-cta fill-cta" />}
+                </div>
+
+                {/* Label + chevron */}
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold text-gray-900">{stat.label}</span>
+                  <ChevronDown
+                    className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+
+                {/* Expandable detail */}
                 <div
-                  key={index}
-                  className="border border-gray-200 rounded-lg overflow-hidden bg-white"
+                  className={`transition-all duration-300 overflow-hidden ${
+                    isOpen ? "max-h-48 opacity-100 mt-2" : "max-h-0 opacity-0"
+                  }`}
                 >
-                  <button
-                    onClick={() => toggle(index)}
-                    className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl md:text-3xl font-bold text-cta flex items-center gap-0.5">
-                        {stat.value}
-                        {stat.isStar && <Star className="h-5 w-5 text-cta fill-cta" />}
-                      </span>
-                      <span className="text-sm font-medium text-slate-700">{stat.label}</span>
-                    </div>
-                    <ChevronDown
-                      className={`h-4 w-4 text-slate-400 transition-transform duration-200 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  <div
-                    className={`transition-all duration-200 ${
-                      openIndex === index
-                        ? "max-h-40 opacity-100"
-                        : "max-h-0 opacity-0"
-                    } overflow-hidden`}
-                  >
-                    <p className="px-5 pb-4 text-sm text-slate-600 leading-relaxed">
+                  <div className="border-t border-gray-200/60 pt-3">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       {stat.detail}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </button>
+            );
+          })}
+        </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <Link
-              to="/case-studies"
-              className="btn-cta group inline-flex items-center gap-2"
-            >
-              See Our Historical Case Studies
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-cta hover:text-cta/80 transition-colors border border-cta/30 rounded-lg px-5 py-3 hover:bg-cta/5"
-            >
-              <User className="h-4 w-4" />
-              Meet the Founder
-            </Link>
-          </div>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/case-studies"
+            className="btn-cta group inline-flex items-center gap-2"
+          >
+            See Our Historical Case Studies
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-cta hover:text-cta/80 transition-colors border border-cta/30 rounded-lg px-5 py-3 hover:bg-cta/5"
+          >
+            <User className="h-4 w-4" />
+            Meet the Founder
+          </Link>
         </div>
       </div>
     </section>
