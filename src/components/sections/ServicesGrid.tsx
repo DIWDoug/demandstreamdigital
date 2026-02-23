@@ -20,25 +20,25 @@ const services: Service[] = [
   {
     icon: Map,
     title: "Google Maps / GBP",
-    description: "Over 70% of local searches stop at the Google Maps results. We optimize your Google Business Profile, reviews, and local signals to get you into that top three.",
+    description: "Over 70% of local searches stop at the Google Maps results. We improve your Google Business Profile, reviews, and local signals to get you into that top three.",
     href: "/plumbing-google-maps",
   },
   {
     icon: MousePointerClick,
     title: "Paid Advertising",
-    description: "More than Google Ads. We run a full-circle paid strategy including Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram, focused on reviews, testimonials, and staying top of mind.",
+    description: "More than Google Ads. We run a connected paid strategy — Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram — built to capture demand, follow up on missed calls, and keep your name in front of people who searched but didn't book.",
     href: "/plumbing-paid-advertising",
   },
   {
     icon: PenTool,
     title: "Content Development",
-    description: "Service pages, city pages, and authority content built to strengthen rankings and increase trust.",
+    description: "Service pages and city pages built to rank for high-intent searches in your market. Content that turns traffic into calls.",
     href: "/plumbing-content-marketing",
   },
   {
     icon: Mail,
     title: "Email Marketing",
-    description: "Stay top of mind with past customers through seasonal reminders, maintenance promotions, and follow-ups.",
+    description: "Keep past customers coming back with seasonal reminders, maintenance offers, and follow-up sequences that book the next job before they search for someone else.",
     href: "/plumbing-email-marketing",
   },
   {
@@ -88,14 +88,14 @@ const ServicesGrid = () => {
                 The System
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                Full Circle Digital Marketing for<br />
+                A Connected Marketing System for<br />
                 <span className="text-accent-blue">Plumbing & HVAC Companies</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and conversion-focused strategy, all structured to increase booked service calls and revenue stability.
+                Our plumbing and HVAC marketing services combine local SEO, Google Maps, paid advertising, reputation growth, and website design built to convert — all structured to increase booked service calls and revenue stability.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Each service reinforces the others. Together, they create predictable growth you can count on.
+                Each service reinforces the others. That connection is what creates predictable call flow you can build a schedule around.
               </p>
               
               <Link 
@@ -118,26 +118,6 @@ const ServicesGrid = () => {
                   Plumbing and HVAC companies operate under real-world pressures: EPA Section 608 requirements, refrigerant transition timelines, peak-season demand spikes, and technician capacity constraints. Our strategies are built to reflect those realities, not ignore them.
                 </p>
               </div>
-              
-              <Link 
-                to="/partner-tools"
-                className="group relative p-6 rounded-xl bg-gradient-to-br from-accent-blue/10 to-accent-blue/5 border border-accent-blue/30 hover:border-accent-blue/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10 sm:col-span-2"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="w-12 h-12 rounded-xl bg-accent-blue/20 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
-                    <Calculator className="w-6 h-6" strokeWidth={2} />
-                  </span>
-                  <div className="flex-1">
-                    <h3 className="text-foreground font-semibold mb-1 group-hover:text-accent-blue transition-colors">
-                      Explore Our Free Tools
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      ROI calculators, investment tools, and resources to help you plan your marketing budget.
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-accent-blue opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1" />
-                </div>
-              </Link>
             </div>
           </div>
         </div>

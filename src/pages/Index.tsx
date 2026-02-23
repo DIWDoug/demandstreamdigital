@@ -2,14 +2,16 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
+import ResultsBar from "@/components/sections/ResultsBar";
 import ProblemSolution from "@/components/sections/ProblemSolution";
-
 import WhyPartnerWithUs from "@/components/sections/WhyPartnerWithUs";
 import FitQualifier from "@/components/services/FitQualifier";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 import LocalGrowthEngine from "@/components/sections/LocalGrowthEngine";
+import ReputationVelocity from "@/components/sections/ReputationVelocity";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
@@ -67,6 +69,9 @@ const Index = () => {
       
       <TrustReel />
       
+      {/* Results bar - credibility stats */}
+      <ResultsBar />
+      
       {/* Problem framing */}
       <div className="dark relative">
         <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" />
@@ -96,8 +101,24 @@ const Index = () => {
         <MidPageCTA variant="light" />
       </div>
       
-      {/* Depth of knowledge */}
+      {/* Reputation & Review Velocity */}
+      <ReputationVelocity />
+      
+      {/* Industry expertise */}
       <TopicalExpertise />
+      
+      {/* Market exclusivity */}
+      <div className="dark relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <MarketExclusivity />
+      </div>
+      
+      {/* What working with us looks like */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <WhyPartnerWithUs />
+      </div>
+      <FitQualifier />
       
       {/* Lead magnet */}
       <div className="dark relative">
@@ -105,16 +126,8 @@ const Index = () => {
         <LocalGrowthEngine />
       </div>
       
-      {/* Qualification */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
-        <WhyPartnerWithUs />
-      </div>
-      <FitQualifier />
-      
       {/* Reinforce pain points */}
       <div className="dark relative" id="about">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
         <WhatWeSolve />
       </div>
       

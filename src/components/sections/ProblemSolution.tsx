@@ -9,21 +9,21 @@ const ProblemSolution = () => {
   const pillars = [
     {
       icon: Eye,
-      title: "Transparency",
+      title: "You See Every Dollar",
       subtitle: "Complete visibility at every step",
-      body: "You see every piece of work being done, where your budget is going, and the strategy behind every decision. Progress, intention, and the thinking behind the method. Not just activity reports."
+      body: "You know where your budget is going and what it's producing. Leads, calls, cost per booked call. No black boxes. No activity reports that hide results."
     },
     {
       icon: MessageSquare,
-      title: "Clarity",
+      title: "Your Booking Rate Is the Metric That Matters",
       subtitle: "Results you can see",
-      body: "You understand what is working and why. No marketing jargon."
+      body: "We don't report impressions. We track booked calls, cost per booked call, and booking rate — because those are the numbers that show up on your dispatch board."
     },
     {
       icon: Settings,
-      title: "Execution",
+      title: "Built for Your Market, Not a Template",
       subtitle: "Built for your market",
-      body: "SEO, Google Business Profile, paid ads, reputation management, email marketing, and web design. All handled by specialists who know plumbing and HVAC."
+      body: "We don't apply the same keyword list and call it done. Your service area, your competition, and your peak seasons drive every decision."
     }
   ];
 
@@ -42,7 +42,7 @@ const ProblemSolution = () => {
               Marketing Built for Plumbing & HVAC Operators
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Most marketing agencies treat plumbing and HVAC companies like any other business. We don't. We build strategies around how customers search for plumbers and HVAC services in your local market, and how to turn that visibility into booked jobs.
+              Most marketing agencies treat plumbing and HVAC companies like any other business. DemandStream doesn't. Every strategy is built around how customers search for plumbers and HVAC services in your local market — and what it takes to turn that search into a booked job.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ const ProblemSolution = () => {
 
           <div className="text-center">
             <p className="text-muted-foreground text-base max-w-2xl mx-auto">
-              Generic marketing treats every business the same. We build around your service area, your competition, and what actually drives calls, whether that's search, paid ads, email, or reputation.
+              Generic marketing ignores your service area, your competition, and your season. DemandStream builds around all three — search, paid ads, email, and reputation working together to drive calls.
             </p>
           </div>
         </div>
