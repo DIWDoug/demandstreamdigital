@@ -145,14 +145,8 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
               style={{ lineHeight: "1.1" }}
             >
-              Plumbing & HVAC Marketing Company
+              Plumbing & HVAC Digital Marketing Built to Drive More Booked Service Calls
             </h1>
-            <p
-              className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
-              style={{ animationDelay: "0.05s" }}
-            >
-              Focused on More Booked Service Calls
-            </p>
 
             <p
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
@@ -184,10 +178,28 @@ const Hero = () => {
                 type="submit"
                 className="btn-cta group whitespace-nowrap px-6 py-4"
               >
-                Get a Free Audit
+                Get Your Free Growth Audit
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
             </form>
+
+            {/* Micro-trust proof strip */}
+            <div 
+              className="flex flex-wrap gap-x-6 gap-y-2 mt-8 animate-fade-in-up"
+              style={{ animationDelay: "0.25s" }}
+            >
+              {[
+                "15+ Years of Execution",
+                "$10M+ Managed Ad Spend",
+                "100+ Trade Campaigns",
+                "4.9★ Client Rating"
+              ].map((item, i) => (
+                <span key={i} className="text-sm text-gray-500 font-medium flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cta flex-shrink-0" />
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Right column — Video placeholder */}
