@@ -41,12 +41,12 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     email: "",
     website: "",
     city: "",
+    phone: "",
+    phoneCountryCode: "+1",
     honeypot: "",
   });
 
   const [step2Data, setStep2Data] = useState({
-    phone: "",
-    phoneCountryCode: "+1",
     revenue: "",
     servicesInterested: [] as string[],
   });
@@ -71,6 +71,8 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           email: step1Data.email,
           website: step1Data.website,
           city: step1Data.city,
+          phone: step1Data.phone,
+          phoneCountryCode: step1Data.phoneCountryCode,
           formType: `${formType}_step1`,
         },
       });
@@ -112,8 +114,8 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           email: step1Data.email,
           website: step1Data.website,
           city: step1Data.city,
-          phone: step2Data.phone,
-          phoneCountryCode: step2Data.phoneCountryCode,
+          phone: step1Data.phone,
+          phoneCountryCode: step1Data.phoneCountryCode,
           revenue: step2Data.revenue,
           servicesInterested: step2Data.servicesInterested,
           formType,
@@ -224,6 +226,18 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
             />
           </div>
 
+          <div>
+            <label className={labelClass}>
+              Phone Number
+            </label>
+            <PhoneInput
+              value={step1Data.phone}
+              onChange={(phone) => setStep1Data({ ...step1Data, phone })}
+              countryCode={step1Data.phoneCountryCode}
+              onCountryCodeChange={(code) => setStep1Data({ ...step1Data, phoneCountryCode: code })}
+            />
+          </div>
+
           <button
             type="submit"
             disabled={isSubmittingStep1}
@@ -261,18 +275,6 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           </div>
 
           <form onSubmit={handleStep2Submit} className="space-y-4">
-            <div>
-              <label className={labelClass}>
-                SMS Enabled Phone # <span className="text-red-500">*</span>
-              </label>
-              <PhoneInput
-                value={step2Data.phone}
-                onChange={(phone) => setStep2Data({ ...step2Data, phone })}
-                countryCode={step2Data.phoneCountryCode}
-                onCountryCodeChange={(code) => setStep2Data({ ...step2Data, phoneCountryCode: code })}
-                required
-              />
-            </div>
 
             <div>
               <label className={labelClass}>
