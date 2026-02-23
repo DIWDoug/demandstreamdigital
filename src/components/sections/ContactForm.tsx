@@ -51,7 +51,7 @@ const ContactForm = forwardRef<HTMLElement>((_, ref) => {
             {/* Centered Header */}
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                Ready to Find Out If Your Market Is Available?
+                Get a Free Plumbing & HVAC Marketing Audit
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Tell us where you operate and what you're working toward. We'll take it from there.
