@@ -141,21 +141,17 @@ const LocalGrowthEngine = () => {
                 <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Pipeline Domination</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
                   The Local Digital Marketing Playbook<br />
-                  <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">for Plumbing & HVAC Contractors</span>
+                  <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">for Plumbing & HVAC Growth</span>
                 </h2>
                 
                 <div className="w-12 h-0.5 bg-cta mb-5" />
 
-                <h3 className="text-lg font-semibold text-foreground mb-3">
-                  The Marketing Playbook Built for Plumbing & HVAC Growth
-                </h3>
-                
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  If you're a plumbing or HVAC owner tired of slow seasons and unpredictable leads, this is for you. Steady Stream is the methodology behind hundreds of successful local marketing campaigns.
+                  If you're a plumbing or HVAC owner tired of slow seasons and unpredictable leads, this is for you. Pipeline Domination is the playbook behind hundreds of successful local marketing campaigns.
                 </p>
 
                 <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                  Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year, not just when the weather cooperates.
+                  Inside, you'll discover the system we use across Local SEO, Google Maps, paid media, and reputation management to keep your phone ringing all year — not just when the weather cooperates.
                 </p>
 
                 {/* Email signup or CTA */}
