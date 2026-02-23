@@ -271,22 +271,22 @@ const About = () => {
                 Built for Plumbing <span className="text-accent-blue">& HVAC Companies.</span>
               </h1>
               {/* Credibility stats */}
-              <div className="flex flex-wrap gap-6 lg:gap-8">
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">15+</p>
-                  <p className="text-sm text-text-secondary">Years of Execution</p>
+              <div className="flex flex-wrap items-center gap-8 lg:gap-10">
+                <div className="flex items-baseline gap-1.5">
+                  <p className="text-xl lg:text-2xl font-bold text-cta">15+</p>
+                  <p className="text-xs text-text-secondary">Years of Execution</p>
                 </div>
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">100+</p>
-                  <p className="text-sm text-text-secondary">SMB & National Campaigns</p>
+                <div className="flex items-baseline gap-1.5">
+                  <p className="text-xl lg:text-2xl font-bold text-cta">100+</p>
+                  <p className="text-xs text-text-secondary">SMB & National Campaigns</p>
                 </div>
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">$10M+</p>
-                  <p className="text-sm text-text-secondary">Ad Spend Managed</p>
+                <div className="flex items-baseline gap-1.5">
+                  <p className="text-xl lg:text-2xl font-bold text-cta">$10M+</p>
+                  <p className="text-xs text-text-secondary">Ad Spend Managed</p>
                 </div>
-                <div>
-                  <p className="text-3xl lg:text-4xl font-bold text-cta">4.9★</p>
-                  <p className="text-sm text-text-secondary">Average Client Rating</p>
+                <div className="flex items-baseline gap-1.5">
+                  <p className="text-xl lg:text-2xl font-bold text-cta">4.9★</p>
+                  <p className="text-xs text-text-secondary">Average Client Rating</p>
                 </div>
               </div>
             </div>
