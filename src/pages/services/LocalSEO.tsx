@@ -15,7 +15,7 @@ import {
   ServiceGroupedFAQ,
   ServiceEcosystemSection
 } from "@/components/services/generic";
-import ServiceHeroGeneric from "@/components/services/generic/ServiceHeroGeneric";
+import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
 import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
@@ -107,7 +107,7 @@ const LocalSEO = () => {
       
       {/* 1. HERO */}
       <div className="pt-16">
-        <ServiceHeroGeneric 
+        <LocalSEOTwoColumnHero 
           config={localSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
         />
