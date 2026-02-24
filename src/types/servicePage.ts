@@ -98,6 +98,7 @@ export interface ServicePageConfig {
     eyebrow: string;
     headline: string;
     intro: string;
+    introCallout?: string; // Optional urgency callout displayed as a card below intro
     painPoints: PainPoint[];
     systemClosing?: string; // Optional summary line after pain points
     closingLine: string;

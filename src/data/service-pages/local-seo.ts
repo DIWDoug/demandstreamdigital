@@ -21,7 +21,8 @@ export const localSEOConfig: ServicePageConfig = {
   problem: {
     eyebrow: "The Pattern We See",
     headline: "Why Cookie-Cutter Local SEO Fails Plumbing & HVAC Companies",
-    intro: "Plumbing and HVAC are not generic home service businesses. They are regulated, seasonal, capacity-constrained trades where a missed call in peak season is real revenue walking out the door. Generic local SEO packages don't account for any of that. When a homeowner's AC goes out in July, they don't browse. They search and they call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency, not applied from a template that works the same way for a dentist or a dog groomer.",
+    intro: "Plumbing and HVAC are not generic home service businesses. They are regulated, seasonal, capacity-constrained trades where a missed call in peak season is real revenue walking out the door. Generic local SEO packages don't account for any of that.",
+    introCallout: "When a homeowner's AC goes out in July, they don't browse. They search and they call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency, not applied from a template that works the same way for a dentist or a dog groomer.",
     painPoints: [
       {
         icon: MapPin,
