@@ -1,58 +1,58 @@
-import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool } from "lucide-react";
+import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool, Phone } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 import { SITE_URL } from "@/lib/constants";
 
 export const localSEOConfig: ServicePageConfig = {
   slug: "local-seo",
   title: "Local SEO",
-  metaTitle: "Local SEO for Plumbing & HVAC Companies | On-Page, Links & Citations | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital helps plumbing and HVAC companies dominate local search. Citations, content, and technical SEO that drives calls. Talk to our team today.",
+  metaTitle: "Plumbing & HVAC Local SEO Services for More Booked Calls | DemandStream Digital",
+  metaDescription: "Tired of local SEO that reports rankings but not revenue? DemandStream builds connected local SEO systems for plumbing and HVAC companies that generate more booked service calls. See how.",
   canonicalUrl: `${SITE_URL}/plumbing-seo`,
 
   hero: {
-    headline: "Local SEO for",
-    highlightedText: "Plumbing & HVAC Companies",
-    subheadline: "We help plumbing and HVAC companies build organic visibility that drives qualified calls, booked jobs, and measurable growth in your service area.",
-    qualifierLine: "You focus on running your shop. We handle the SEO execution that makes local rankings happen.",
-    ctaText: "Start the Conversation",
+    headline: "Local SEO for Plumbing & HVAC Companies",
+    highlightedText: "That Want More Booked Service Calls",
+    subheadline: "Plumbing & HVAC local SEO from DemandStream is built to put your company in the top three spots in Google Maps — and keep it there. Not with templated packages. With a connected strategy built around how customers search for plumbers and HVAC companies in your specific market.",
+    qualifierLine: "No generic home services approach. Built for plumbing and HVAC operators only.",
+    ctaText: "Get a Free Local SEO Audit",
     ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."
   },
 
   problem: {
     eyebrow: "The Pattern We See",
-    headline: "Why Cookie-Cutter SEO Packages Fail Local Businesses",
-    intro: "Local SEO is not a checklist. It is a competitive discipline where proximity, relevance, and prominence interact dynamically in local search and Google Maps. Generic packages ignore this reality.",
+    headline: "Why Cookie-Cutter Local SEO Fails Plumbing & HVAC Companies",
+    intro: "Plumbing and HVAC are not generic home service businesses. They are regulated, seasonal, capacity-constrained trades where a missed call in peak season is real revenue walking out the door. Generic local SEO packages don't account for any of that.",
     painPoints: [
       {
         icon: MapPin,
         title: "Proximity Changes Everything",
-        body: "Local rankings shift based on where the searcher is standing. A business ranking #1 three miles away may not appear at all from across town."
+        body: "A plumbing company ranking #1 from three miles away may not appear at all from across the service area. Local rankings shift based on where the searcher is standing. A strategy built around one ZIP code is not a strategy — it's a starting point."
+      },
+      {
+        icon: Search,
+        title: "Emergency Intent Is Different",
+        body: "A homeowner searching 'no-heat repair' at 6am on a cold morning is not comparison shopping. That call goes to whoever shows up in the Map Pack right now. HVAC local SEO and plumbing local SEO have to prioritize emergency and high-intent searches first — not just high-volume keywords."
       },
       {
         icon: Target,
         title: "Competition Varies by Market",
-        body: "A plumber in Boise faces different local competition than one in Chicago. Cookie-cutter local SEO packages treat them the same."
+        body: "A plumber in Boise competes in a completely different landscape than one in Dallas or Chicago. Market density, review counts, and GBP signal requirements are different in every market. Applying the same tactics everywhere produces inconsistent results."
       },
       {
-        icon: Search,
-        title: "Intent Signals Are Local",
-        body: "Local searchers have distinct intent patterns. Understanding local search intent is what separates effective local SEO from wasted effort."
+        icon: TrendingUp,
+        title: "Review Velocity Drives Rankings",
+        body: "Review volume, recency, and response discipline are direct ranking factors in local search. Most generic SEO packages treat reviews as an afterthought. In plumbing and HVAC, review velocity is one of the highest-leverage activities in the entire strategy."
       },
       {
         icon: Shield,
         title: "Authority Requirements Differ",
-        body: "Some markets require aggressive local link building. Others require citation cleanup and consistency. Generic packages apply the same tactics everywhere."
-      },
-      {
-        icon: TrendingUp,
-        title: "Reviews Drive Visibility",
-        body: "Review velocity, recency, and response quality influence local rankings. Most packages ignore review strategy entirely or treat it as an afterthought."
+        body: "Some markets require aggressive local link building. Others need citation cleanup and GBP signal refinement. A package that delivers the same deliverables everywhere misses the actual bottleneck in each market."
       }
     ],
-    systemClosing: "Effective local SEO requires scoping to the actual market, not templated deliverables.",
-    closingLine: "We scope every engagement to competitive reality.",
-    closingHighlight: "That is why our local SEO work performs consistently.",
-    ctaText: "Start the Conversation"
+    systemClosing: "Effective plumbing & HVAC local SEO requires scoping to the actual market — not templated deliverables.",
+    closingLine: "That is why our local SEO work performs consistently",
+    closingHighlight: "across different markets and trade types.",
+    ctaText: "Schedule a Discovery Call"
   },
 
   outcomes: {
@@ -60,156 +60,154 @@ export const localSEOConfig: ServicePageConfig = {
     subheadline: "These outcomes only appear when strategy matches market reality.",
     items: [
       {
-        title: "Organic Local Visibility That Compounds",
-        description: "Rankings achieved today continue driving leads months and years later. Unlike paid ads, SEO builds equity."
+        title: "More Booked Service Calls",
+        description: "Rankings achieved today continue driving booked calls months and years from now. Unlike paid ads, local SEO compounds. Every improvement to your Maps position, your review velocity, and your service area pages builds on the last. The calls don't stop when you stop paying."
       },
       {
-        title: "Qualified Local Traffic",
-        description: "Local searchers are ready to buy. They are not researching. They are looking for a provider right now."
+        title: "Higher-Quality Calls",
+        description: "Organic local searchers are ready to book. They have a problem that needs solving today. When your company shows up in the Map Pack for 'water heater replacement near me' or 'HVAC tune-up,' the person calling already knows they need service. Fewer price shoppers. Better booking rate."
       },
       {
-        title: "Competitive Defense in Local Search",
-        description: "If you are not ranking, your competitors are taking those calls. Local SEO is defensive as much as offensive."
+        title: "Competitive Defense",
+        description: "If your company is not ranking in your market, someone else is taking those calls. Local SEO is as much about protecting your market position as it is about growing. A competitor with strong Maps visibility and consistent review velocity will consistently outbook a company that ignores local search."
       },
       {
-        title: "Sales From Local Organic Visibility",
-        description: "Organic traffic converts at higher rates because searchers trust earned results over paid placements."
+        title: "Revenue Stability",
+        description: "Predictable local visibility reduces the volatility that makes dispatch planning difficult. When your organic presence is strong across your service area — for emergency calls, seasonal demand, and planned maintenance — you build a more stable call flow. That stability protects capacity and margin."
       }
     ]
   },
 
   roadmap: {
     eyebrow: "The Framework",
-    headline: "How We Execute Local SEO",
-    subheadline: "A phased local SEO approach that builds a foundation before chasing rankings. Skipping steps breaks the system.",
+    headline: "How We Execute Plumbing & HVAC Local SEO",
+    subheadline: "A phased approach that builds a foundation before chasing rankings. Skipping steps breaks the system. We do not treat local SEO like a monthly checklist. We build it in phases. Every phase has a purpose. Every phase builds on the last.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
         title: "Technical & On-Page Foundation",
-        description: "Audit and fix the fundamentals that determine a site's local ranking ceiling. No amount of content or links will move rankings if the foundation is broken.",
+        description: "Build a crawlable, revenue-aligned structure that converts high-intent searches into booked calls. No amount of content or link building will move rankings if the technical foundation is broken.",
         activities: [
-          "Complete technical SEO audit and priority fix list",
-          "Core Web Vitals optimization",
-          "On-page optimization for target locations and services",
-          "LocalBusiness and Service schema markup implementation",
+          "Separate, properly structured pages for plumbing and HVAC — no consolidation that dilutes relevance",
+          "Clean, short URLs aligned to service + city structure and truck coverage radius",
+          "Primary keyword in H1, CTR-driven title tags, and ad-style meta descriptions",
+          "Schema markup: LocalBusiness, Service, FAQ, and Review",
+          "Mobile-first performance and Core Web Vitals optimization",
+          "Click-to-call prominence on every key page",
           "NAP consistency audit across all platforms",
-          "Internal linking structure optimization",
-          "URL structure and site architecture review",
-          "Baseline ranking documentation",
-          "Competitor backlink and content analysis",
-          "Google Search Console and Analytics configuration"
+          "Internal linking structure that supports both plumbing and HVAC authority silos",
+          "Complete technical SEO audit and priority fix list",
+          "On-page optimization for target locations and services"
         ],
         icon: Shield,
         color: "hsl(76, 42%, 41%)"
       },
       {
         phase: 2,
-        name: "Authority",
-        title: "Content & Link Building",
-        description: "Build the content and authority signals that move rankings. Content fills topical gaps. Links build domain strength. Both require consistent execution.",
+        name: "GBP & Maps",
+        title: "Google Business Profile & Maps Optimization",
+        description: "Win Map Pack visibility where emergency revenue lives. Over 70% of local searches end at the Map Pack. For plumbing emergency calls, no-cool spikes, and same-day HVAC bookings, Maps is where the revenue decision happens.",
         activities: [
-          "Service area page development with LLM-ready semantic structure",
-          "Local content strategy execution aligned to keyword map",
-          "FAQ content expansion targeting People Also Ask",
-          "Link acquisition from local publications and community sites",
-          "Citation building across industry and local directories",
-          "Data aggregator submissions for NAP syndication",
-          "Review generation strategy and response templates",
-          "Guest post outreach to relevant local blogs",
-          "Brand mention monitoring and acquisition"
+          "Primary category selection aligned to highest-revenue services, not just general trade",
+          "Secondary categories strategically selected to capture adjacent demand",
+          "Fully built-out services list with service-specific descriptions",
+          "Accurate service area configuration aligned to truck coverage — not just city names",
+          "Weekly photo uploads with location and service relevance",
+          "Geo-aligned content updates tied to seasonal demand patterns",
+          "Post-job SMS review acquisition system",
+          "Review response discipline — every review answered, on schedule",
+          "Active GBP posting tied to seasonal demand: freeze prep, no-cool season, maintenance offers",
+          "Seasonal GBP posting calendar and service area alignment"
         ],
-        icon: TrendingUp,
+        icon: Map,
         color: "hsl(200, 70%, 50%)"
       },
       {
         phase: 3,
-        name: "Velocity",
-        title: "Momentum & Expansion",
-        description: "Accelerate what is working and expand geographic reach. Double down on content types driving traffic. Scale link acquisition channels performing well.",
+        name: "Authority",
+        title: "Authority & Review Growth",
+        description: "Increase prominence signals to stabilize rankings and strengthen trust. Rankings in competitive markets require more than a clean GBP and optimized pages. Prominence signals have to be built deliberately over time.",
         activities: [
-          "Content expansion based on performance data",
-          "Hyperlocal landing pages for high-value service areas",
-          "Link velocity increase through proven channels",
-          "New market targeting based on capacity",
-          "Competitor gap analysis for content opportunities",
-          "Advanced schema implementation for rich results",
-          "AI Overview optimization through structured content",
-          "Review velocity acceleration campaigns",
-          "Cross-linking between location and service pages"
+          "Local link acquisition: Chamber of Commerce, trade associations, suppliers, and community organizations",
+          "Citation cleanup: NAP consistency across all directories and data aggregators",
+          "Trade-aware blog and authority content that targets high-intent, long-tail searches",
+          "Review response discipline: consistent, service-specific replies that reinforce keyword relevance",
+          "Review velocity tracking: monitoring cadence and identifying gaps",
+          "Website review integration with schema markup for rich results",
+          "Local link portfolio aligned to trade and geography",
+          "Authority content targeting long-tail service searches"
         ],
-        icon: Zap,
+        icon: TrendingUp,
         color: "hsl(35, 90%, 50%)"
       },
       {
         phase: 4,
-        name: "Dominance",
-        title: "Market Leadership & Defense",
-        description: "Defend positions and maintain competitive advantage. Rankings earned require ongoing protection. Competitors will target your success.",
+        name: "Defense",
+        title: "Market Defense & Expansion",
+        description: "Protect rankings and scale strategically as capacity allows. Rankings are not permanent. Competitors improve. Algorithms shift. This phase is about staying ahead — monitoring, defending, and expanding only when your operation is ready.",
         activities: [
-          "Defensive optimization against competitor advances",
-          "Continuous competitor monitoring and response",
-          "Algorithm update adaptation and recovery",
-          "Quarterly strategic reviews and roadmap updates",
-          "Content refresh and consolidation audits",
-          "Link profile health monitoring",
-          "New service and location expansion",
-          "AI visibility tracking and optimization",
-          "Long-term visibility planning and goal setting"
+          "Competitor ranking and review monitoring in your service area",
+          "Ranking volatility tracking and rapid response to drops",
+          "Service area expansion aligned to truck coverage and capacity — not just opportunity",
+          "Defensive content for high-margin services: water heater replacements, HVAC changeouts, slab leak repairs",
+          "Emergency keyword capture pages for high-urgency, high-conversion searches",
+          "Call tracking integration with booking rate optimization",
+          "Capacity-based marketing throttling: pulling back when boards are full, accelerating during shoulder season"
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
       }
     ],
     executionNote: "Each phase builds on the previous. Foundation work is non-negotiable. Content without technical health underperforms. Links without content have nothing to point to.",
-    footerNote: "Phase duration varies by market competitiveness and your capacity. Most businesses see meaningful movement within 3-4 months, with substantial results by month 6."
+    footerNote: "Phase duration varies by market competitiveness and site condition. Most businesses see meaningful movement within 3 to 4 months, with substantial results by month 6."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Levers We Pull Based on Market Reality",
-    subheadline: "Each component is scoped based on market competition and your goals, not templated packages.",
+    subheadline: "Each component is scoped based on your market competition and goals — not bundled into a package that delivers the same thing everywhere.",
     blocks: [
       {
         title: "On-Page Optimization",
         slug: "on-page-optimization",
-        description: "Location-specific title tags, meta descriptions, headers, and on-page local SEO optimization.",
+        description: "Location-specific title tags, meta descriptions, headers, and on-page content that targets how customers in your market search for plumbing and HVAC services.",
         icon: FileText
       },
       {
         title: "Technical SEO",
         slug: "technical-seo",
-        description: "Site architecture, crawlability, Core Web Vitals, and technical SEO fixes that support local search performance.",
+        description: "Site architecture, crawlability, Core Web Vitals, and technical fixes that establish the ranking ceiling. Foundation work that makes every other tactic more effective.",
         icon: Settings
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "Seed keyword development, implicit vs explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping.",
+        description: "Seed keyword development, implicit vs. explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping aligned to your service area and truck coverage.",
         icon: Search
       },
       {
         title: "Content Development",
         slug: "content-development",
-        description: "Service area pages, local blog content, and FAQ sections designed to capture long-tail local search queries.",
+        description: "Service area pages, trade-specific blog content, and FAQ sections built to capture high-intent local searches and turn that visibility into calls.",
         icon: FileText
       },
       {
         title: "Link Building",
         slug: "link-building",
-        description: "Outreach to local publications, community organizations, and relevant sites to build geographic authority.",
+        description: "Outreach to local publications, community organizations, trade associations, and relevant industry sites to build geographic authority that strengthens Map Pack and organic rankings.",
         icon: Link2
       },
       {
         title: "Schema Markup",
         slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results and AI Overview citations.",
+        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results, supports AI Overview citations, and reinforces trust signals across search results.",
         icon: Code
       },
       {
         title: "NAP Citations",
         slug: "nap-citations",
-        description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity for rankings and AI visibility.",
+        description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity for rankings, trust signals, and AI search visibility.",
         icon: Globe
       }
     ]
@@ -217,54 +215,55 @@ export const localSEOConfig: ServicePageConfig = {
 
   qualification: {
     eyebrow: "Selective Fit",
-    headline: "Is This Right for Your Business?",
-    subheadline: "We work best with plumbing and HVAC companies who understand that local SEO is a long-term strategic investment, not a quick fix.",
+    headline: "Is This Local SEO Strategy Right for Your Business?",
+    subheadline: "We work best with established plumbing and HVAC companies that want to own their service area — not just generate random traffic.",
     goodFit: [
-      { point: "You have a verified, address-visible Google Business Profile", detail: "Local SEO requires address-visible Google Business Profiles. Service-area-only listings need a different approach." },
-      { point: "You need a reliable growth partner to replace inconsistent vendors", detail: "We become an extension of your team with documented processes and predictable delivery." },
-      { point: "You understand SEO is a 6-12 month investment", detail: "Rankings don't happen overnight. We set realistic expectations and you're willing to invest in the process." },
-      { point: "You want expert execution so you can focus on running your business", detail: "We handle the SEO strategy and execution. You focus on serving your customers and growing your shop." }
+      { point: "You run a plumbing or HVAC company with an active dispatch board and real service capacity", detail: "We build strategies for shops that can actually handle the call volume local SEO produces." },
+      { point: "You want more booked service calls — not impressions, clicks, or 'brand awareness'", detail: "We measure success in booked calls and cost per booked call — not vanity metrics." },
+      { point: "You understand that local SEO is a 6 to 12 month investment, not an overnight fix", detail: "The first three to four months are foundation work that everything else builds on." },
+      { point: "You are willing to invest in review velocity as part of the system", detail: "Review signals account for a significant portion of local ranking weight. This is non-negotiable." },
+      { point: "You want a growth partner who reports on booked calls and cost per booked call — not just rankings", detail: "Rankings are a means to an end. Booked calls are the end." }
     ],
     notFit: [
       { point: "You expect top rankings within weeks", detail: "If someone promised you fast results, they were not being honest. Real SEO takes time and consistent effort." },
-      { point: "Your business relies solely on service-area or address-hidden Google Business Profile listings", detail: "These profiles require different tactics. Our local SEO framework is built for address-visible listings." },
-      { point: "There's no willingness to invest in content and links", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
-      { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either lying or using tactics that deliver temporary results and long-term penalties. We focus on sustainable, systematic improvement." }
+      { point: "Your business relies solely on service-area or address-hidden Google Business Profile listings", detail: "These profiles face significant structural limitations in local search that no amount of optimization can fully overcome." },
+      { point: "You are not willing to invest in content, links, or reviews", detail: "Local SEO requires ongoing content and authority building. If the budget only covers 'basic optimization,' results will reflect that." },
+      { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either misleading you or has no idea what they are promising. We focus on systematic improvement and accountability." },
+      { point: "You are looking for the cheapest option available", detail: "Effective local SEO for competitive trades requires real investment. We are not the cheapest option — we are the option that produces results." }
     ],
     ctaText: "Start the Conversation"
   },
 
   faq: {
-    headline: "Frequently Asked Questions",
+    headline: "Frequently Asked Questions About Plumbing & HVAC Local SEO",
     groups: [
       {
         category: "Results & Timing",
         items: [
-          { question: "How long does it take to see local SEO results?", answer: "Most campaigns show meaningful movement within 3-4 months, with substantial results by month 6. Competitive markets may take longer. We document baseline rankings and track progress monthly so you can see exactly how visibility is improving." },
-          { question: "Can you guarantee specific rankings?", answer: "No one can guarantee specific rankings. Google's algorithm considers hundreds of factors, many outside anyone's control. We focus on systematic improvement based on proven ranking factors and transparent reporting on progress." },
-          { question: "How do AI Overviews affect local SEO?", answer: "AI Overviews pull from trusted sources including GBP data, review platforms, and structured website content. Our approach optimizes for both traditional rankings and AI visibility through schema markup, NAP consistency, and LLM-ready content structure with semantic chunking." },
-          { question: "What happens if rankings drop?", answer: "Ranking fluctuations are normal, especially after algorithm updates. We monitor rankings daily and investigate significant drops immediately. Our approach builds sustainable visibility that recovers faster than competitors relying on shortcuts." },
-          { question: "How do you measure local SEO success?", answer: "We track rankings across target keywords and locations, organic traffic from local searches, GBP impressions and actions, and ultimately leads and conversions. Monthly reports connect activities to outcomes so you always know what's working." }
-        ]
-      },
-      {
-        category: "Process & Delivery",
-        items: [
-          { question: "How do you handle communication?", answer: "You get a dedicated strategist who keeps you informed with regular updates, monthly reports, and clear next steps. No jargon, no runaround." },
-          { question: "What access do you need?", answer: "We need access to Google Business Profile, website CMS, and ideally Google Analytics and Search Console. We can work with limited access but recommend full access for best results." },
-          { question: "How often do you report on progress?", answer: "We provide comprehensive monthly reports with ranking changes, traffic data, completed activities, and next-month priorities. Dashboards provide real-time visibility between reports." },
-          { question: "What is your content creation process?", answer: "We research topics based on keyword data and competitor gaps, create content briefs, write optimized content with semantic structure for both users and AI, and deliver for your review before publishing." },
-          { question: "How do you build links for local businesses?", answer: "We focus on relevant local sources: community organizations, local publications, industry directories, and sponsorship opportunities. Every link is earned through outreach, not purchased." }
+          { question: "How long does local SEO take to produce booked calls?", answer: "The honest answer depends on three things: your current baseline, your market competition, and how quickly we can close technical gaps. In most cases, plumbing and HVAC companies start seeing measurable movement in local rankings within 3 to 4 months of completing the technical foundation phase. Meaningful improvements to Map Pack visibility typically follow in months 4 through 6. Local SEO compounds. A company that starts today and stays consistent will have significantly stronger local visibility in 12 months than one that waits." },
+          { question: "How much does plumbing or HVAC local SEO cost?", answer: "We do not publish package pricing because every engagement is scoped to your market, your competition, and your specific revenue goals. What we can tell you is how we think about cost: every dollar of SEO investment should be measurable against booked calls and cost per booked call. If we cannot show you a clear line from marketing spend to calls on your dispatch board, the spend is not justified. The audit phase gives you a clear picture of what your market requires before you commit." },
+          { question: "Do you guarantee specific rankings?", answer: "No. Any agency that guarantees specific rankings is either misleading you or has no idea what they are promising. Google controls its algorithm. What we do control — and what we are accountable for — is execution quality: technical foundation, GBP optimization, review velocity systems, authority building, and content that targets the right intent. We measure success in booked calls, booking rate, and cost per booked call." },
+          { question: "How do AI Overviews affect local SEO for plumbing and HVAC companies?", answer: "AI Overviews appear more frequently for informational and research-style searches. For high-intent local searches — 'HVAC repair near me,' 'emergency plumber [city]' — the Map Pack and standard organic results remain the dominant format. That said, structured data, schema markup, and authoritative content do factor into AI Overview citations. The technical work we do in the foundation phase contributes to both traditional local visibility and emerging AI search formats." },
+          { question: "What happens if rankings drop?", answer: "Ranking volatility happens. Algorithm updates, seasonal shifts, and competitor improvements all affect local rankings. Our job is to catch drops early and respond before they affect call volume. Clients in Phase 4 receive ranking volatility monitoring and get notified when significant changes occur. We diagnose the cause, implement corrections, and report on recovery." }
         ]
       },
       {
         category: "Eligibility & Fit",
         items: [
-          { question: "Do you work with service-area businesses?", answer: "We specialize in businesses with verified, address-visible Google Business Profile listings. Service-area-only businesses require different tactics and may not be the best fit for our core local SEO framework." },
-          { question: "Do you require long-term contracts?", answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, local SEO is a long-term investment and most meaningful results require 6+ months of consistent effort." },
-          { question: "What industries do you work with?", answer: "We specialize in plumbing, HVAC, and home services companies. We have deep experience in competitive verticals where local visibility drives real revenue." },
-          { question: "Can you take over from another SEO provider?", answer: "Yes. We audit existing work, document current rankings, identify quick wins and ongoing issues, and build a transition plan. Most handoffs complete within 2-4 weeks without disruption." },
-          { question: "What if I have multiple locations?", answer: "We have specific processes for multi-location local SEO including centralized strategy, location-specific execution, and scalable reporting. Pricing scales with location count." }
+          { question: "Do you work with service-area businesses that don't have a physical address listed on their GBP?", answer: "Google Business Profile requires a verified, address-visible listing to rank competitively in the Map Pack for most plumbing and HVAC searches. Service-area-only businesses face significant structural limitations in local search. If your business operates this way, we will be direct about those limitations during the audit. In some cases, there are strategies that improve visibility within those constraints." },
+          { question: "Do you require long-term contracts?", answer: "We work on a minimum six-month commitment after roadmap delivery. This is not arbitrary. Local SEO produces compounding results — and the first three to four months are foundation work. A 90-day engagement does not produce the outcomes that justify the investment. We are not in the business of locking clients in. We are in the business of producing results that make clients want to stay." },
+          { question: "What industries do you work with?", answer: "Plumbing and HVAC only. Not general home services. Not electrical. Not roofing. This is a deliberate choice. The depth of trade-specific knowledge required to execute local SEO well for plumbing and HVAC is significant. We built everything around these two trades so we can execute at a level that a generalist agency cannot match." },
+          { question: "Can you take over from another SEO provider?", answer: "Yes. A significant portion of our new clients come to us after working with generalist agencies that produced rankings without results, or results without transparency. We start with a full audit of what exists — what is working, what is not, and what may need to be corrected. We assess the baseline and build from what is there." },
+          { question: "Do you work with multiple companies in the same market?", answer: "No. We take one plumbing client and one HVAC client per service area. That is the model. It keeps our incentives aligned with yours and ensures that the strategy we build is designed to put your company ahead — not split between you and a competitor. If your market is available, it is worth finding out before someone else does." }
+        ]
+      },
+      {
+        category: "Process & Delivery",
+        items: [
+          { question: "How do you handle communication and reporting?", answer: "You receive clear monthly reports showing rankings, calls, booking metrics, and campaign performance. Reports are built around the numbers that show up on your dispatch board — not impressions and click-through rates. Beyond monthly reports, we communicate proactively when something changes: a ranking drop, new competitor activity, or a seasonal shift that affects campaign direction." },
+          { question: "What access do you need from us?", answer: "At minimum: Google Business Profile access, Google Search Console access, and Google Analytics access. For clients running paid ads concurrently, Google Ads access as well. The more visibility we have into actual booking and revenue data, the better we can optimize the system." },
+          { question: "What is your content creation process?", answer: "We research the keyword intent, competitive landscape, and service-specific language for your market before writing anything. Service area pages are written to rank for specific city and service combinations. Blog content targets high-intent informational searches that lead to bookings. All content goes through a review process before publishing. Everything is written from the perspective of a plumbing or HVAC expert speaking to homeowners who need service." },
+          { question: "How do you build links for local businesses?", answer: "Through targeted outreach to local and trade-relevant sources: Chamber of Commerce listings, local business associations, supplier and distributor directories, trade associations like ACCA and PHCC, and locally relevant publications. We do not use link farms or low-quality directory blasts. Link building is scoped to what your market requires." }
         ]
       }
     ]
@@ -273,9 +272,9 @@ export const localSEOConfig: ServicePageConfig = {
   ecosystem: {
     eyebrow: "The Bigger Picture",
     headline: "Local SEO Is One Piece of the",
-    highlightedText: "360° Growth Engine",
-    intro: "While local SEO drives organic visibility in search and Google Maps, it compounds when integrated with the broader growth ecosystem.",
-    body: "GBP optimization, authority building, and paid media all reinforce SEO performance. We can engage these services independently or as a unified strategy.",
+    highlightedText: "Connected Growth System",
+    intro: "Local SEO drives organic visibility in search and Google Maps. But it compounds when it works with the rest of the system — not in isolation.",
+    body: "Your GBP optimization reinforces your organic rankings. Your paid ads capture demand that organic SEO misses during ramp-up. Your review velocity improves both Maps performance and paid ad quality scores. Your email marketing reactivates past customers before they search for someone new. When every channel is connected and pulling in the same direction, you get predictable call flow you can build a schedule around.",
     services: [
       {
         icon: MapPin,
@@ -288,14 +287,14 @@ export const localSEOConfig: ServicePageConfig = {
       {
         icon: Map,
         id: "google-maps",
-        title: "GBP SEO",
+        title: "Google Maps / GBP",
         description: "Dominate the local 3-pack with optimized Google Business Profiles.",
         href: "/plumbing-google-maps"
       },
       {
         icon: Sparkles,
         id: "paid-media",
-        title: "Paid Media",
+        title: "Paid Advertising",
         description: "Capture demand immediately while organic visibility builds.",
         href: "/plumbing-paid-advertising"
       },
@@ -303,7 +302,7 @@ export const localSEOConfig: ServicePageConfig = {
         icon: Mail,
         id: "email",
         title: "Email Marketing",
-        description: "Nurture leads and drive repeat business.",
+        description: "Reactivate past customers before they search for someone new.",
         href: "/plumbing-email-marketing"
       },
       {
@@ -316,8 +315,8 @@ export const localSEOConfig: ServicePageConfig = {
       {
         icon: BarChart3,
         id: "reporting",
-        title: "Reporting",
-        description: "Dashboards that prove value.",
+        title: "Reporting & Dashboards",
+        description: "Dashboards that prove value in booked calls.",
         href: "/plumbing-reporting"
       }
     ],

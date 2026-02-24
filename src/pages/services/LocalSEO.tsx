@@ -2,9 +2,8 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-
+import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
-import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
@@ -16,12 +15,14 @@ import {
   ServiceGroupedFAQ,
   ServiceEcosystemSection
 } from "@/components/services/generic";
+import ServiceHeroGeneric from "@/components/services/generic/ServiceHeroGeneric";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
-import { getHubBySlug } from "@/data/services";
 import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
-// Local SEO specific component
+// Local SEO specific components
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
+import PhoneNotRankings from "@/components/services/local-seo/PhoneNotRankings";
+import BuiltForBoth from "@/components/services/local-seo/BuiltForBoth";
 
 // Flatten FAQ groups for schema
 const getFlatFAQs = () => {
@@ -37,13 +38,21 @@ const SectionDivider = () => (
   </div>
 );
 
-const LocalSEO = () => {
-  const hub = getHubBySlug("local-seo");
-  if (!hub) return null;
+const anchorItems = [
+  { label: 'Pattern', href: '#problem' },
+  { label: 'What Changes', href: '#outcomes' },
+  { label: 'Our Process', href: '#roadmap' },
+  { label: 'Levers', href: '#building-blocks' },
+  { label: 'Fit', href: '#qualification' },
+  { label: 'Reviews', href: '#testimonials' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Next Steps', href: '#contact' },
+];
 
+const LocalSEO = () => {
   const breadcrumbItems = [
     { label: "Services", href: "/#services" },
-    { label: hub.title }
+    { label: "Local SEO" }
   ];
 
   // Build combined schema
@@ -69,7 +78,7 @@ const LocalSEO = () => {
       <Helmet>
         <title>{localSEOConfig.metaTitle}</title>
         <meta name="description" content={localSEOConfig.metaDescription} />
-        <meta name="keywords" content="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing" />
+        <meta name="keywords" content="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing, plumbing local SEO, HVAC local SEO" />
         <link rel="canonical" href={localSEOConfig.canonicalUrl} />
         
         {/* Hreflang Tags */}
@@ -98,16 +107,22 @@ const LocalSEO = () => {
       
       {/* 1. HERO */}
       <div className="pt-16">
-        <ServiceHubHero 
-          title={hub.title}
-          description={hub.heroDescription}
+        <ServiceHeroGeneric 
+          config={localSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
-          integrationNote={hub.integrationNote}
         />
       </div>
+
+      {/* TRUST REEL */}
+      <TrustReel />
       
       {/* STICKY ANCHOR NAV */}
-      <ServiceHubAnchorNav />
+      <ServiceHubAnchorNav items={anchorItems} />
+
+      {/* 02B. PHONE NOT RANKINGS */}
+      <PhoneNotRankings />
+      
+      <SectionDivider />
       
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
@@ -120,13 +135,22 @@ const LocalSEO = () => {
       <div id="outcomes" className="scroll-mt-32">
         <ServiceOutcomesSection config={localSEOConfig.outcomes} />
       </div>
+
+      {/* Outcomes closing paragraph */}
+      <div className="bg-surface-dark pb-10">
+        <div className="container mx-auto px-6 lg:px-8">
+          <p className="text-text-secondary text-base text-center max-w-4xl mx-auto leading-relaxed">
+            Local SEO must also account for operational realities specific to plumbing and HVAC. Certifications, equipment transitions, permit timelines, and seasonal demand shifts all influence how marketing converts into revenue. A local SEO strategy built without this context will generate calls the business is not positioned to convert.
+          </p>
+        </div>
+      </div>
       
-      {/* Ranking Factors - Local SEO specific */}
+      {/* 5. Ranking Factors */}
       <LocalRankingFactors />
       
       <SectionDivider />
       
-      {/* 5. ROADMAP */}
+      {/* 6. ROADMAP */}
       <div id="roadmap" className="scroll-mt-32">
         <ServiceRoadmapSection config={localSEOConfig.roadmap} />
       </div>
@@ -136,36 +160,41 @@ const LocalSEO = () => {
       
       <SectionDivider />
       
-      {/* 6. BUILDING BLOCKS */}
+      {/* 7. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
         <ServiceBuildingBlocksSection config={localSEOConfig.buildingBlocks} hubSlug="local-seo" />
       </div>
       
       <SectionDivider />
+
+      {/* 8. BUILT FOR BOTH */}
+      <BuiltForBoth />
       
-      {/* 7. QUALIFICATION */}
+      <SectionDivider />
+      
+      {/* 9. QUALIFICATION */}
       <div id="qualification" className="scroll-mt-32">
         <ServiceFitQualifierSection config={localSEOConfig.qualification} />
       </div>
       
-      {/* 8. TESTIMONIALS */}
+      {/* 10. TESTIMONIALS */}
       <div id="testimonials" className="scroll-mt-32">
         <Testimonials />
       </div>
       
       <SectionDivider />
       
-      {/* 9. FAQ */}
+      {/* 11. FAQ */}
       <div id="faq" className="scroll-mt-32">
         <ServiceGroupedFAQ config={localSEOConfig.faq} />
       </div>
       
       <SectionDivider />
       
-      {/* 10. ECOSYSTEM */}
+      {/* 12. ECOSYSTEM */}
       <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
       
-      {/* 11. CONTACT */}
+      {/* 13. CONTACT */}
       <div id="contact" className="scroll-mt-32">
         <ContactForm />
       </div>
