@@ -169,7 +169,7 @@ export const localSEOConfig: ServicePageConfig = {
         color: "hsl(200, 80%, 55%)"
       }
     ],
-    executionNote: "All four pillars run concurrently. Priority is scoped to your market — what moves the needle fastest gets the most attention first.",
+    executionNote: "All five pillars run concurrently. Priority is scoped to your market — what moves the needle fastest gets the most attention first.",
     footerNote: "Most businesses see meaningful movement within 3 to 4 months, with substantial results by month 6."
   },
 
