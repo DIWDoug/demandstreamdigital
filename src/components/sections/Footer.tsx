@@ -37,7 +37,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       title: "SERVICES",
       href: "/#services",
       items: [
-        { label: "Local SEO", href: "/plumbing-seo" },
+        { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
         { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
         { label: "Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "Content Marketing", href: "/plumbing-content-marketing" },

@@ -328,7 +328,7 @@ export const googleMapsConfig: ServicePageConfig = {
     body: "Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/plumbing-google-maps", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/plumbing-seo" },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/hvac-and-plumbing-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/plumbing-paid-advertising" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/plumbing-email-marketing" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/plumbing-content-marketing" },

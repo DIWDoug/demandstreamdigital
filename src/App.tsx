@@ -142,8 +142,9 @@ const App = () => (
 
           {/* ============ TRADE-SPECIFIC SERVICE PAGES ============ */}
           
-          {/* Plumbing Service Pages */}
-          <Route path="/plumbing-seo" element={<LocalSEO />} />
+          {/* Plumbing & HVAC Service Pages */}
+          <Route path="/hvac-and-plumbing-seo" element={<LocalSEO />} />
+          <Route path="/plumbing-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/plumbing-google-maps" element={<GoogleMaps />} />
           <Route path="/plumbing-paid-advertising" element={<PaidMedia />} />
           <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
@@ -152,7 +153,7 @@ const App = () => (
           <Route path="/plumbing-reporting" element={<Reporting />} />
 
           {/* HVAC Service Pages */}
-          <Route path="/hvac-seo" element={<LocalSEO />} />
+          <Route path="/hvac-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/hvac-google-maps" element={<GoogleMaps />} />
           <Route path="/hvac-paid-advertising" element={<PaidMedia />} />
           <Route path="/hvac-email-marketing" element={<EmailMarketing />} />
@@ -164,7 +165,7 @@ const App = () => (
           
           {/* Hub page redirects */}
           <Route path="/white-label-inbound-marketing-services" element={<Navigate to="/#services" replace />} />
-          <Route path="/white-label-local-seo" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/white-label-local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-gbp-seo" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
@@ -172,14 +173,14 @@ const App = () => (
           <Route path="/white-label-reporting" element={<Navigate to="/plumbing-reporting" replace />} />
           <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
 
-          {/* Local SEO spoke pages → consolidated plumbing-seo */}
-          <Route path="/white-label-onpage-optimization" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-technical-seo" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-local-keyword-strategy" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-content-development" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-link-building" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-schema-markup" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-nap-citations" element={<Navigate to="/plumbing-seo" replace />} />
+          {/* Local SEO spoke pages → consolidated hvac-and-plumbing-seo */}
+          <Route path="/white-label-onpage-optimization" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-technical-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-local-keyword-strategy" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-content-development" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-link-building" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-schema-markup" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-nap-citations" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
 
           {/* Google Maps spoke pages → consolidated plumbing-google-maps */}
           <Route path="/white-label-gbp-optimization" element={<Navigate to="/plumbing-google-maps" replace />} />
@@ -236,7 +237,7 @@ const App = () => (
 
           {/* ============ OLD NESTED STRUCTURE REDIRECTS ============ */}
           
-          <Route path="/white-label-inbound-marketing-services/local-seo" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/white-label-inbound-marketing-services/local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-inbound-marketing-services/google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-inbound-marketing-services/paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-inbound-marketing-services/email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
@@ -245,7 +246,7 @@ const App = () => (
           <Route path="/white-label-inbound-marketing-services/content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
 
           {/* Old nested spoke redirects → consolidated hub pages */}
-          <Route path="/white-label-inbound-marketing-services/local-seo/*" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/white-label-inbound-marketing-services/local-seo/*" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-inbound-marketing-services/google-maps/*" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-inbound-marketing-services/paid-media/*" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-inbound-marketing-services/email-marketing/*" element={<Navigate to="/plumbing-email-marketing" replace />} />
@@ -256,7 +257,7 @@ const App = () => (
           {/* Legacy /services redirects */}
           <Route path="/services" element={<Navigate to="/#services" replace />} />
           <Route path="/services/" element={<Navigate to="/#services" replace />} />
-          <Route path="/services/local-seo" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/services/local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/services/google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-google-maps-local-seo" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
@@ -267,34 +268,34 @@ const App = () => (
           <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
 
           {/* Legacy site URL redirects */}
-          <Route path="/search-engine-optimization" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/search-engine-optimization/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/search-engine-optimization" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/search-engine-optimization/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/dallas-digital-marketing" element={<Navigate to="/" replace />} />
           <Route path="/dallas-digital-marketing/" element={<Navigate to="/" replace />} />
-          <Route path="/moving-and-storage-seo" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/moving-and-storage-seo/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/moving-and-storage-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/moving-and-storage-seo/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/small-business-social-advertising" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/small-business-social-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-seo-campaigns" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/white-label-seo-campaigns/" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/shopify-seo-services" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/shopify-seo-services/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/white-label-seo-campaigns" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/white-label-seo-campaigns/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/shopify-seo-services" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/shopify-seo-services/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/about-us" element={<Navigate to="/about" replace />} />
           <Route path="/about-us/" element={<Navigate to="/about" replace />} />
-          <Route path="/advanced-local-seo-services" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/advanced-local-seo-services/" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/orthodontist-seo" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/orthodontist-seo/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/advanced-local-seo-services" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/advanced-local-seo-services/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/orthodontist-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/orthodontist-seo/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/dentist-seo-company" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/dentist-seo-company/" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/local-seo-company" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/local-seo-company/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/dentist-seo-company" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/dentist-seo-company/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/local-seo-company" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/local-seo-company/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/dentist-digital-marketing" element={<Navigate to="/" replace />} />
           <Route path="/dentist-digital-marketing/" element={<Navigate to="/" replace />} />
-          <Route path="/e-commerce-seo" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/e-commerce-seo/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/e-commerce-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/e-commerce-seo/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/orthodontist-digital-marketing" element={<Navigate to="/" replace />} />
           <Route path="/orthodontist-digital-marketing/" element={<Navigate to="/" replace />} />
           <Route path="/affordable-web-design-small-business" element={<Navigate to="/" replace />} />
@@ -303,8 +304,8 @@ const App = () => (
           <Route path="/nashville-digital-marketing/" element={<Navigate to="/" replace />} />
           <Route path="/search-engine-advertising" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/search-engine-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/local-search-marketing" element={<Navigate to="/plumbing-seo" replace />} />
-          <Route path="/local-search-marketing/" element={<Navigate to="/plumbing-seo" replace />} />
+          <Route path="/local-search-marketing" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/local-search-marketing/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-local-ppc" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-local-ppc/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-social-media" element={<Navigate to="/blog/white-label-social-media" replace />} />
@@ -454,7 +455,7 @@ const LegacySpokeRedirect = () => {
     const hubSlug = params[1];
     // Map hub slugs to new trade-specific URLs
     const hubMap: Record<string, string> = {
-      'local-seo': '/plumbing-seo',
+      'local-seo': '/hvac-and-plumbing-seo',
       'google-maps': '/plumbing-google-maps',
       'paid-media': '/plumbing-paid-advertising',
       'email-marketing': '/plumbing-email-marketing',

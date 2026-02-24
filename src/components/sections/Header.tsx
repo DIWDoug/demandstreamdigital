@@ -64,9 +64,9 @@ const Header = () => {
   const serviceCategories = [
     {
       title: "PLUMBING",
-      href: "/plumbing-seo",
+      href: "/hvac-and-plumbing-seo",
       items: [
-        { label: "Plumbing SEO", href: "/plumbing-seo" },
+        { label: "Plumbing SEO", href: "/hvac-and-plumbing-seo" },
         { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
         { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
@@ -76,9 +76,9 @@ const Header = () => {
     },
     {
       title: "HVAC",
-      href: "/hvac-seo",
+      href: "/hvac-and-plumbing-seo",
       items: [
-        { label: "HVAC SEO", href: "/hvac-seo" },
+        { label: "HVAC SEO", href: "/hvac-and-plumbing-seo" },
         { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
         { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
         { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },

@@ -293,7 +293,7 @@ export const emailMarketingConfig: ServicePageConfig = {
     body: "Email nurtures leads from SEO and paid media. Automations convert website visitors. We offer each service independently, but the magic happens when they work in concert.",
     services: [
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads and drive repeat business.", href: "/plumbing-email-marketing", isCenter: true },
-      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/plumbing-seo" },
+      { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/hvac-and-plumbing-seo" },
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/plumbing-paid-advertising" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Strategic content that converts.", href: "/plumbing-content-marketing" },
