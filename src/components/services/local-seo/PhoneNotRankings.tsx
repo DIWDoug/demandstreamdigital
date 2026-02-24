@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Phone, BarChart3, Gauge, AlertTriangle, ChevronDown } from "lucide-react";
+import { Phone, BarChart3, Gauge, AlertTriangle } from "lucide-react";
 
 const points = [
   {
@@ -25,8 +24,6 @@ const points = [
 ];
 
 const PhoneNotRankings = () => {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -46,14 +43,17 @@ const PhoneNotRankings = () => {
 
           {/* Insight callout */}
           <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10 text-center">
-            <p className="text-text-secondary text-base leading-relaxed">
-              A shop with a <span className="text-foreground font-semibold">45% booking rate</span> produces different results than one running at <span className="text-foreground font-semibold">75%</span>. That gap is addressable — but it has to be identified first.
+            <p className="text-text-secondary text-base leading-relaxed mb-3">
+              A shop with a <span className="text-foreground font-semibold">45% booking rate</span> produces different results than one running at <span className="text-foreground font-semibold">75%</span>.
+            </p>
+            <p className="text-foreground font-medium text-base">
+              That gap is addressable, but has to be identified first.
             </p>
           </div>
 
-          {/* Points grid - show 2 by default, rest expandable */}
+          {/* Points grid - all 4 visible */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {points.slice(0, 2).map((point, index) => (
+            {points.map((point, index) => (
               <div
                 key={index}
                 className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors"
@@ -67,34 +67,6 @@ const PhoneNotRankings = () => {
                 <p className="text-text-secondary text-sm leading-relaxed">{point.body}</p>
               </div>
             ))}
-          </div>
-
-          {/* Expandable remaining points */}
-          <div className={`grid sm:grid-cols-2 gap-6 mt-6 transition-all duration-300 overflow-hidden ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-            {points.slice(2).map((point, index) => (
-              <div
-                key={index + 2}
-                className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
-                    <point.icon className="h-5 w-5 text-accent-blue" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground">{point.title}</h3>
-                </div>
-                <p className="text-text-secondary text-sm leading-relaxed">{point.body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent-blue hover:text-accent-blue/80 transition-colors"
-            >
-              <span>{expanded ? "Show less" : "See all indicators"}</span>
-              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} />
-            </button>
           </div>
         </div>
       </div>

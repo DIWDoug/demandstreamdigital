@@ -162,7 +162,7 @@ const LocalSEO = () => {
       
       {/* 7. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
-        <ServiceBuildingBlocksSection config={localSEOConfig.buildingBlocks} hubSlug="local-seo" />
+        <ServiceBuildingBlocksSection config={localSEOConfig.buildingBlocks} />
       </div>
       
       <SectionDivider />
