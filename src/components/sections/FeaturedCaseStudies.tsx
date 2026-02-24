@@ -7,9 +7,9 @@ import StreamTexture from "@/components/StreamTexture";
 
 // Featured case studies - Las Vegas Plumbing & Dallas Plumbing
 const featuredSlugs = [
-  "las-vegas-plumbing-seo",
-  "dallas-plumbing-seo",
-];
+"las-vegas-plumbing-seo",
+"dallas-plumbing-seo"];
+
 
 const getIcon = (index: number) => {
   const icons = [TrendingUp, Trophy, Award];
@@ -17,9 +17,9 @@ const getIcon = (index: number) => {
 };
 
 const FeaturedCaseStudies = () => {
-  const featuredStudies = featuredSlugs
-    .map(slug => caseStudyCards.find(c => c.slug === slug))
-    .filter(Boolean);
+  const featuredStudies = featuredSlugs.
+  map((slug) => caseStudyCards.find((c) => c.slug === slug)).
+  filter(Boolean);
 
   return (
     <section className="py-20 bg-background relative overflow-hidden">
@@ -30,9 +30,9 @@ const FeaturedCaseStudies = () => {
           <span className="inline-block px-4 py-1.5 bg-accent-blue/10 text-accent-blue text-sm font-medium rounded-full mb-4">
             Proven Results
           </span>
-           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-             Plumbing & HVAC Marketing Results
-           </h2>
+           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Plumbing & HVAC Digital Marketing Results
+
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Real results for real clients. See how we've helped businesses dominate their local markets.
           </p>
@@ -43,20 +43,20 @@ const FeaturedCaseStudies = () => {
           {featuredStudies.map((study, index) => {
             if (!study) return null;
             const Icon = getIcon(index);
-            
+
             return (
               <Link
                 key={study.slug}
                 to={`/case-studies/${study.slug}`}
-                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
-              >
+                className="group relative bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+
                 {/* Thumbnail */}
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={study.thumbnail}
                     alt={study.client}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {/* Hero Metric Overlay */}
@@ -83,8 +83,8 @@ const FeaturedCaseStudies = () => {
                   </h3>
                   
                   {/* ROI Highlight */}
-                  {study.roiHighlight && (
-                    <div className="flex items-center justify-between text-sm pt-3 border-t border-border/50">
+                  {study.roiHighlight &&
+                  <div className="flex items-center justify-between text-sm pt-3 border-t border-border/50">
                       <div>
                         <span className="text-muted-foreground">Revenue: </span>
                         <span className="text-foreground font-medium">{study.roiHighlight.monthlyRevenue}</span>
@@ -93,15 +93,15 @@ const FeaturedCaseStudies = () => {
                         {study.roiHighlight.roiRange} ROI
                       </div>
                     </div>
-                  )}
+                  }
                 </div>
 
                 {/* Hover Arrow */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <ArrowRight className="w-4 h-4 text-primary" />
                 </div>
-              </Link>
-            );
+              </Link>);
+
           })}
         </div>
 
@@ -115,8 +115,8 @@ const FeaturedCaseStudies = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default FeaturedCaseStudies;
