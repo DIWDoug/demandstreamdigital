@@ -1,4 +1,4 @@
-import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool, Phone } from "lucide-react";
+import { MapPin, Map, Target, TrendingUp, Shield, Search, FileText, Link2, Settings, Code, Zap, Globe, Sparkles, Mail, BarChart3, Award, PenTool, Phone, Bot } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 import { SITE_URL } from "@/lib/constants";
 
@@ -150,6 +150,23 @@ export const localSEOConfig: ServicePageConfig = {
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
+      },
+      {
+        phase: 5,
+        name: "AI & GEO",
+        title: "AI Optimization & Generative Engine Visibility",
+        description: "AI-powered search is changing how customers find plumbing and HVAC companies. We optimize your presence for AI Overviews, generative search engines, and conversational AI platforms so your business gets cited, not just ranked.",
+        activities: [
+          "FAQ schema markup optimized for AI Overview citations",
+          "Structured data aligned to generative engine extraction patterns",
+          "Content structured for conversational AI retrieval and citation",
+          "Entity optimization to strengthen knowledge graph signals",
+          "AI Overview monitoring and citation tracking",
+          "Question-based content targeting AI-surfaced queries",
+          "Local authority signals that reinforce AI trust and citation likelihood"
+        ],
+        icon: Bot,
+        color: "hsl(200, 80%, 55%)"
       }
     ],
     executionNote: "All four pillars run concurrently. Priority is scoped to your market — what moves the needle fastest gets the most attention first.",
@@ -192,10 +209,10 @@ export const localSEOConfig: ServicePageConfig = {
         icon: Link2
       },
       {
-        title: "Schema Markup",
-        slug: "schema-markup",
-        description: "LocalBusiness, Service, FAQ, and Review schema that unlocks rich results, supports AI Overview citations, and reinforces trust signals across search results.",
-        icon: Code
+        title: "AI & GEO Optimization",
+        slug: "ai-optimization",
+        description: "Structured data, FAQ schema, entity optimization, and content formatting that positions your business for AI Overviews, generative search engines, and conversational AI citations.",
+        icon: Bot
       },
       {
         title: "NAP Citations",
@@ -228,7 +245,7 @@ export const localSEOConfig: ServicePageConfig = {
   },
 
   faq: {
-    headline: "Frequently Asked Questions About Plumbing & HVAC Local SEO",
+    headline: "FAQ",
     groups: [
       {
         category: "Results & Timing",
