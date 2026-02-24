@@ -3,10 +3,16 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
+interface HeroSubheadline {
+  intro: string;
+  bullets: string[];
+  closing: string;
+}
+
 interface HeroConfig {
   headline: string;
   highlightedText: string;
-  subheadline: string;
+  subheadline: string | HeroSubheadline;
   qualifierLine: string;
   ctaText: string;
   ctaSubtext: string;
@@ -69,9 +75,28 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
               {config.highlightedText}
             </p>
 
-            <p className="text-lg text-text-secondary max-w-xl mb-4 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              {config.subheadline}
-            </p>
+            {typeof config.subheadline === 'string' ? (
+              <p className="text-lg text-text-secondary max-w-xl mb-4 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
+                {config.subheadline}
+              </p>
+            ) : (
+              <div className="max-w-xl mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                <p className="text-base text-text-secondary leading-relaxed mb-4">
+                  {config.subheadline.intro}
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {config.subheadline.bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
+                      <span className="text-cta mt-0.5">—</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-text-muted leading-relaxed">
+                  {config.subheadline.closing}
+                </p>
+              </div>
+            )}
 
             <p className="text-sm text-text-muted animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               {config.qualifierLine}
