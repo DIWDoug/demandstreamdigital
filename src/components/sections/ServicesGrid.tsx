@@ -15,7 +15,7 @@ const services: Service[] = [
     icon: MapPin,
     title: "Local SEO",
     description: "We target high-value, high-volume searches like \"hydro jetting [city]\" and \"water heater installation [city]\" alongside high-intent near-me terms, prioritizing what drives the most booked jobs.",
-    href: "/plumbing-seo",
+    href: "/hvac-and-plumbing-seo",
   },
   {
     icon: Map,

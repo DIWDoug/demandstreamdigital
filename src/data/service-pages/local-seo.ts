@@ -7,7 +7,7 @@ export const localSEOConfig: ServicePageConfig = {
   title: "Local SEO",
   metaTitle: "Plumbing & HVAC Local SEO Services for More Booked Calls | DemandStream Digital",
   metaDescription: "Tired of local SEO that reports rankings but not revenue? DemandStream builds connected local SEO systems for plumbing and HVAC companies that generate more booked service calls. See how.",
-  canonicalUrl: `${SITE_URL}/plumbing-seo`,
+  canonicalUrl: `${SITE_URL}/hvac-and-plumbing-seo`,
 
   hero: {
     headline: "Local SEO for Plumbing & HVAC Companies",
@@ -224,6 +224,18 @@ export const localSEOConfig: ServicePageConfig = {
         slug: "nap-citations",
         description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity for rankings, trust signals, and AI search visibility.",
         icon: Globe
+      },
+      {
+        title: "Local Reputation Management",
+        slug: "reputation-management",
+        description: "Review generation systems, response management, and reputation monitoring that build trust signals and directly influence local ranking performance.",
+        icon: Award
+      },
+      {
+        title: "Google Business Pro",
+        slug: "gbp-strategy",
+        description: "Advanced Google Business Profile strategy including post scheduling, Q&A management, photo optimization, and attribute management to maximize local pack visibility.",
+        icon: Map
       }
     ]
   },
@@ -250,7 +262,7 @@ export const localSEOConfig: ServicePageConfig = {
   },
 
   faq: {
-    headline: "FAQ",
+    headline: "FAQ for Plumbing and HVAC Contractors",
     groups: [
       {
         category: "Results & Timing",
@@ -296,7 +308,7 @@ export const localSEOConfig: ServicePageConfig = {
         id: "local-seo",
         title: "Local SEO",
         description: "Organic visibility in local search results.",
-        href: "/plumbing-seo",
+        href: "/hvac-and-plumbing-seo",
         isCenter: true
       },
       {

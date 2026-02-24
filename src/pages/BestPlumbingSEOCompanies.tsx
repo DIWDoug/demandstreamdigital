@@ -117,7 +117,7 @@ const BestPlumbingSEOCompanies = () => {
                   If you run a plumbing or HVAC company, you know that word-of-mouth only goes so far. More homeowners are searching online for "plumber near me" and "AC repair" than ever before. According to BrightLocal's 2025 Local Consumer Review Survey, 98% of consumers used the internet to find information about local businesses in the past year.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  SEO (search engine optimization) is how you show up when those homeowners search. It includes everything from <IL to="/plumbing-seo">local SEO</IL> and <IL to="/plumbing-google-maps">Google Maps optimization</IL> to <IL to="/plumbing-content-marketing">content marketing</IL> and <IL to="/plumbing-authority-building">building online authority</IL>. But not every marketing company understands the trades. Finding one that actually gets plumbing and HVAC is the hard part.
+                  SEO (search engine optimization) is how you show up when those homeowners search. It includes everything from <IL to="/hvac-and-plumbing-seo">local SEO</IL> and <IL to="/plumbing-google-maps">Google Maps optimization</IL> to <IL to="/plumbing-content-marketing">content marketing</IL> and <IL to="/plumbing-authority-building">building online authority</IL>. But not every marketing company understands the trades. Finding one that actually gets plumbing and HVAC is the hard part.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   We spent over 200 hours researching this space, analyzing Clutch profiles, combing through G2 reviews, cross-referencing Trustpilot ratings, checking LinkedIn headcounts, and talking to trade business owners who use these services. The result is this guide ranking the 30 best SEO companies for plumbing and HVAC businesses in 2026.
@@ -158,7 +158,7 @@ const BestPlumbingSEOCompanies = () => {
                     Think of it like your truck's signage, but for the internet. A well-wrapped truck catches attention on the road. Good SEO catches attention online. And since most people never scroll past the first few results on Google, ranking higher means more phone calls, more booked jobs, and more revenue.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    For trade businesses, SEO typically includes <IL to="/plumbing-seo">local search optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">creating helpful content</IL> that answers homeowner questions, and <IL to="/plumbing-authority-building">building your online reputation</IL>. An SEO company handles this work so you can focus on running jobs and growing your team.
+                    For trade businesses, SEO typically includes <IL to="/hvac-and-plumbing-seo">local search optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">creating helpful content</IL> that answers homeowner questions, and <IL to="/plumbing-authority-building">building your online reputation</IL>. An SEO company handles this work so you can focus on running jobs and growing your team.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     This matters because homeowners have changed how they find service providers. Yellow Pages are gone. Referrals still help, but most people verify online before they call. If your website doesn't show up, you're losing jobs to competitors who invested in their online presence.
@@ -249,7 +249,7 @@ const BestPlumbingSEOCompanies = () => {
                   <AccordionItem value="faq-11">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[11].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      SEO services for plumbing and HVAC companies typically include: <IL to="/plumbing-seo">local SEO optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">content creation</IL>, <IL to="/plumbing-authority-building">link building and authority development</IL>, <IL to="/plumbing-paid-advertising">paid search campaigns</IL>, and <IL to="/plumbing-reporting">monthly reporting</IL>. Premium services may include reputation management, conversion rate optimization, and advanced analytics.
+                      SEO services for plumbing and HVAC companies typically include: <IL to="/hvac-and-plumbing-seo">local SEO optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">content creation</IL>, <IL to="/plumbing-authority-building">link building and authority development</IL>, <IL to="/plumbing-paid-advertising">paid search campaigns</IL>, and <IL to="/plumbing-reporting">monthly reporting</IL>. Premium services may include reputation management, conversion rate optimization, and advanced analytics.
                     </AccordionContent>
                   </AccordionItem>
 

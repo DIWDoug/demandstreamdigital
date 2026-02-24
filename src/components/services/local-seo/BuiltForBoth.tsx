@@ -57,7 +57,7 @@ const BuiltForBoth = () => {
                 ))}
               </ul>
               <Link 
-                to="/plumbing-seo" 
+                to="/hvac-and-plumbing-seo" 
                 className="inline-flex items-center gap-2 text-accent-blue font-medium hover:text-accent-blue/80 transition-colors text-sm"
               >
                 Plumbing SEO Details

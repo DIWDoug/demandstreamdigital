@@ -218,7 +218,7 @@ export const getServicesPageSchema = () => {
     {
       name: "Local SEO for Plumbing & HVAC",
       description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building for plumbing and HVAC companies.",
-      url: `${SITE_URL}/plumbing-seo`,
+      url: `${SITE_URL}/hvac-and-plumbing-seo`,
       serviceType: "Local SEO Service"
     },
     {

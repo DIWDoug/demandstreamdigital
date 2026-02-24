@@ -5,7 +5,7 @@
 
 // Hub slug to flat URL mapping
 export const HUB_URL_MAP: Record<string, string> = {
-  'local-seo': '/white-label-local-seo',
+  'local-seo': '/hvac-and-plumbing-seo',
   'google-maps': '/white-label-gbp-seo',
   'paid-media': '/white-label-paid-media',
   'email-marketing': '/white-label-email-marketing',
