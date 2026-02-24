@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, AlertTriangle } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { PainPoint } from "@/types/servicePage";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
@@ -7,6 +7,7 @@ interface ProblemConfig {
   eyebrow: string;
   headline: string;
   intro: string;
+  introCallout?: string;
   painPoints: PainPoint[];
   systemClosing?: string;
   closingLine: string;
@@ -34,6 +35,15 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               {config.intro}
             </p>
+
+            {/* Urgency Callout Card */}
+            {config.introCallout && (
+              <div className="mt-8 max-w-3xl mx-auto bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
+                <p className="text-slate-700 text-base leading-relaxed font-medium">
+                  {config.introCallout}
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Pain Point Cards - First card is featured and spans full width */}
