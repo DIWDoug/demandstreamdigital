@@ -27,9 +27,9 @@ const Hero = () => {
             height: '60%',
             top: '-15%',
             left: '-5%',
-            background: 'radial-gradient(ellipse at center, hsla(210, 50%, 72%, 0.35) 0%, transparent 70%)',
-          }}
-        />
+            background: 'radial-gradient(ellipse at center, hsla(210, 50%, 72%, 0.35) 0%, transparent 70%)'
+          }} />
+
         <div
           className="absolute rounded-full blur-[100px] animate-stream-drift"
           style={{
@@ -39,9 +39,9 @@ const Hero = () => {
             right: '-10%',
             background: 'radial-gradient(ellipse at center, hsla(200, 40%, 76%, 0.25) 0%, transparent 70%)',
             animationDelay: '-25s',
-            animationDirection: 'reverse',
-          }}
-        />
+            animationDirection: 'reverse'
+          }} />
+
         <div
           className="absolute rounded-full blur-[100px] animate-stream-drift"
           style={{
@@ -50,9 +50,9 @@ const Hero = () => {
             bottom: '-10%',
             left: '30%',
             background: 'radial-gradient(ellipse at center, hsla(220, 35%, 78%, 0.2) 0%, transparent 70%)',
-            animationDelay: '-45s',
-          }}
-        />
+            animationDelay: '-45s'
+          }} />
+
       </div>
 
       {/* Fine grid texture overlay for depth */}
@@ -61,32 +61,32 @@ const Hero = () => {
         style={{
           backgroundImage: `linear-gradient(hsl(213 64% 16% / 0.3) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(213 64% 16% / 0.3) 1px, transparent 1px)`,
-          backgroundSize: '48px 48px',
-        }}
-      />
+          backgroundSize: '48px 48px'
+        }} />
+
 
       {/* Animated flowing accent lines */}
       <svg
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         viewBox="0 0 1440 800"
         preserveAspectRatio="none"
-        aria-hidden="true"
-      >
+        aria-hidden="true">
+
         {/* Primary flowing line */}
         <path
           d="M-100,320 C150,280 350,420 600,350 S950,220 1200,300 S1400,400 1540,340"
           fill="none"
           stroke="hsl(210 55% 50% / 0.12)"
           strokeWidth="2"
-          strokeLinecap="round"
-        >
+          strokeLinecap="round">
+
           <animateTransform
             attributeName="transform"
             type="translate"
             values="0,0; 40,15; 0,0; -30,-10; 0,0"
             dur="25s"
-            repeatCount="indefinite"
-          />
+            repeatCount="indefinite" />
+
         </path>
         {/* Secondary flowing line — offset */}
         <path
@@ -94,15 +94,15 @@ const Hero = () => {
           fill="none"
           stroke="hsl(210 55% 50% / 0.07)"
           strokeWidth="1.5"
-          strokeLinecap="round"
-        >
+          strokeLinecap="round">
+
           <animateTransform
             attributeName="transform"
             type="translate"
             values="0,0; -35,20; 0,0; 25,-15; 0,0"
             dur="30s"
-            repeatCount="indefinite"
-          />
+            repeatCount="indefinite" />
+
         </path>
         {/* Lower accent line */}
         <path
@@ -110,15 +110,15 @@ const Hero = () => {
           fill="none"
           stroke="hsl(210 55% 50% / 0.08)"
           strokeWidth="1.5"
-          strokeLinecap="round"
-        >
+          strokeLinecap="round">
+
           <animateTransform
             attributeName="transform"
             type="translate"
             values="0,0; 30,-12; 0,0; -25,18; 0,0"
             dur="35s"
-            repeatCount="indefinite"
-          />
+            repeatCount="indefinite" />
+
         </path>
         {/* Thin whisper line */}
         <path
@@ -126,15 +126,15 @@ const Hero = () => {
           fill="none"
           stroke="hsl(210 55% 50% / 0.05)"
           strokeWidth="1"
-          strokeLinecap="round"
-        >
+          strokeLinecap="round">
+
           <animateTransform
             attributeName="transform"
             type="translate"
             values="0,0; -20,10; 0,0; 35,-8; 0,0"
             dur="40s"
-            repeatCount="indefinite"
-          />
+            repeatCount="indefinite" />
+
         </path>
       </svg>
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
@@ -143,47 +143,47 @@ const Hero = () => {
           <div className="max-w-xl">
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
-              style={{ lineHeight: "1.1" }}
-            >
-              Plumbing & HVAC Marketing Company
+              style={{ lineHeight: "1.1" }}>Plumbing & HVAC Digital Marketing & AI Automation Company
+
+
             </h1>
             <p
               className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
-              style={{ animationDelay: "0.05s" }}
-            >
+              style={{ animationDelay: "0.05s" }}>
+
               Built to Drive More Booked Service Calls
             </p>
 
             <p
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, and website design, built as one connected system.
+              style={{ animationDelay: "0.1s" }}>We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, AI Automation and website design, built as one connected system.
+
+
             </p>
             <p
               className="text-sm text-gray-500 font-medium mb-10 animate-fade-in-up"
-              style={{ animationDelay: "0.15s" }}
-            >
+              style={{ animationDelay: "0.15s" }}>
+
               No generic home service marketing. Built for plumbing and HVAC companies only.
             </p>
 
             {/* Website input + CTA */}
-            <form 
-              onSubmit={handleSubmit} 
+            <form
+              onSubmit={handleSubmit}
               className="flex flex-col sm:flex-row gap-3 max-w-lg animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+              style={{ animationDelay: "0.2s" }}>
+
               <input
                 type="text"
                 placeholder="Enter your website"
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
-                className="flex-1 px-5 py-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base shadow-sm"
-              />
+                className="flex-1 px-5 py-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base shadow-sm" />
+
               <button
                 type="submit"
-                className="btn-cta group whitespace-nowrap px-6 py-4"
-              >
+                className="btn-cta group whitespace-nowrap px-6 py-4">
+
                 Get Your Free Growth Audit
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
@@ -193,10 +193,10 @@ const Hero = () => {
 
           {/* Right column — Video placeholder */}
           <div className="animate-fade-in-up lg:pl-4" style={{ animationDelay: "0.2s" }}>
-            <div 
+            <div
               className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 cursor-pointer group shadow-2xl"
-              onClick={() => setIsVideoOpen(true)}
-            >
+              onClick={() => setIsVideoOpen(true)}>
+
               {/* Placeholder content */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center gap-4">
                 <div className="w-20 h-20 rounded-full bg-cta flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cta/30">
@@ -215,10 +215,10 @@ const Hero = () => {
         isOpen={isVideoOpen}
         onClose={() => setIsVideoOpen(false)}
         videoId="VIDEO_ID_HERE"
-        title="Demand Stream Digital - Get Better Leads"
-      />
-    </section>
-  );
+        title="Demand Stream Digital - Get Better Leads" />
+
+    </section>);
+
 };
 
 export default Hero;
