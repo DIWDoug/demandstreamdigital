@@ -12,7 +12,7 @@ export const localSEOConfig: ServicePageConfig = {
   hero: {
     headline: "Local SEO for Plumbing & HVAC Companies",
     highlightedText: "That Want More Booked Service Calls",
-    subheadline: "Plumbing & HVAC local SEO from DemandStream is built to put your company in the top three spots in Google Maps — and keep it there. Not with templated packages. With a connected strategy built around how customers search for plumbers and HVAC companies in your specific market.",
+    subheadline: "Built to put your company in the top three spots in Google Maps and keep it there. Not with templated packages. With a connected strategy built around how customers search in your specific market.",
     qualifierLine: "No generic home services approach. Built for plumbing and HVAC operators only.",
     ctaText: "Get a Free Local SEO Audit",
     ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."
@@ -79,45 +79,41 @@ export const localSEOConfig: ServicePageConfig = {
   },
 
   roadmap: {
-    eyebrow: "The Framework",
+    eyebrow: "The Four Pillars",
     headline: "How We Execute Plumbing & HVAC Local SEO",
-    subheadline: "A phased approach that builds a foundation before chasing rankings. Skipping steps breaks the system. We do not treat local SEO like a monthly checklist. We build it in phases. Every phase has a purpose. Every phase builds on the last.",
+    subheadline: "We don't work in sequential phases. We operate across four pillars simultaneously, prioritizing based on your market and what moves the needle fastest.",
     phases: [
       {
         phase: 1,
-        name: "Foundation",
-        title: "Technical & On-Page Foundation",
-        description: "Build a crawlable, revenue-aligned structure that converts high-intent searches into booked calls. No amount of content or link building will move rankings if the technical foundation is broken.",
+        name: "On-Page & Technical",
+        title: "On-Page & Technical SEO",
+        description: "The foundation everything else builds on. Clean site architecture, optimized service pages, and technical health that lets Google crawl, index, and rank your content.",
         activities: [
-          "Separate, properly structured pages for plumbing and HVAC — no consolidation that dilutes relevance",
-          "Clean, short URLs aligned to service + city structure and truck coverage radius",
+          "Separate, properly structured pages for plumbing and HVAC services",
+          "Clean URLs aligned to service + city structure and truck coverage radius",
           "Primary keyword in H1, CTR-driven title tags, and ad-style meta descriptions",
           "Schema markup: LocalBusiness, Service, FAQ, and Review",
           "Mobile-first performance and Core Web Vitals optimization",
           "Click-to-call prominence on every key page",
-          "NAP consistency audit across all platforms",
-          "Internal linking structure that supports both plumbing and HVAC authority silos",
+          "Internal linking structure supporting plumbing and HVAC authority silos",
           "Complete technical SEO audit and priority fix list",
-          "On-page optimization for target locations and services"
+          "Service category buildouts for each trade and location"
         ],
         icon: Shield,
         color: "hsl(76, 42%, 41%)"
       },
       {
         phase: 2,
-        name: "GBP & Maps",
-        title: "Google Business Profile & Maps Optimization",
-        description: "Win Map Pack visibility where emergency revenue lives. Over 70% of local searches end at the Map Pack. For plumbing emergency calls, no-cool spikes, and same-day HVAC bookings, Maps is where the revenue decision happens.",
+        name: "GBP Optimization",
+        title: "Google Business Profile & Maps",
+        description: "Over 70% of local searches end at the Map Pack. For emergency plumbing and HVAC calls, Maps is where the revenue decision happens. GBP optimization starts on day one.",
         activities: [
-          "Primary category selection aligned to highest-revenue services, not just general trade",
-          "Secondary categories strategically selected to capture adjacent demand",
+          "Primary and secondary category selection aligned to highest-revenue services",
           "Fully built-out services list with service-specific descriptions",
-          "Accurate service area configuration aligned to truck coverage — not just city names",
+          "Accurate service area configuration aligned to truck coverage",
           "Weekly photo uploads with location and service relevance",
           "Geo-aligned content updates tied to seasonal demand patterns",
-          "Post-job SMS review acquisition system",
-          "Review response discipline — every review answered, on schedule",
-          "Active GBP posting tied to seasonal demand: freeze prep, no-cool season, maintenance offers",
+          "Active GBP posting tied to seasonal demand cycles",
           "Seasonal GBP posting calendar and service area alignment"
         ],
         icon: Map,
@@ -125,42 +121,39 @@ export const localSEOConfig: ServicePageConfig = {
       },
       {
         phase: 3,
-        name: "Authority",
-        title: "Authority & Review Growth",
-        description: "Increase prominence signals to stabilize rankings and strengthen trust. Rankings in competitive markets require more than a clean GBP and optimized pages. Prominence signals have to be built deliberately over time.",
+        name: "Off-Page & Authority",
+        title: "Authority & Link Building",
+        description: "Rankings in competitive markets require more than clean pages and a strong GBP. Prominence signals are built deliberately through local link acquisition and strategic content.",
         activities: [
-          "Local link acquisition: Chamber of Commerce, trade associations, suppliers, and community organizations",
-          "Citation cleanup: NAP consistency across all directories and data aggregators",
-          "Trade-aware blog and authority content that targets high-intent, long-tail searches",
-          "Review response discipline: consistent, service-specific replies that reinforce keyword relevance",
-          "Review velocity tracking: monitoring cadence and identifying gaps",
-          "Website review integration with schema markup for rich results",
+          "Local link acquisition: Chamber of Commerce, trade associations, suppliers",
+          "Citation cleanup: NAP consistency across directories and data aggregators",
+          "Trade-aware blog and authority content targeting high-intent long-tail searches",
           "Local link portfolio aligned to trade and geography",
-          "Authority content targeting long-tail service searches"
+          "Guest post and authority link building where budget allows"
         ],
         icon: TrendingUp,
         color: "hsl(35, 90%, 50%)"
       },
       {
         phase: 4,
-        name: "Defense",
-        title: "Market Defense & Expansion",
-        description: "Protect rankings and scale strategically as capacity allows. Rankings are not permanent. Competitors improve. Algorithms shift. This phase is about staying ahead — monitoring, defending, and expanding only when your operation is ready.",
+        name: "Engagement & Reputation",
+        title: "Reputation Management & Acceleration",
+        description: "Review velocity, response discipline, and engagement signals that compound rankings and trust. There is always room to grow. This pillar ensures you keep accelerating.",
         activities: [
-          "Competitor ranking and review monitoring in your service area",
-          "Ranking volatility tracking and rapid response to drops",
-          "Service area expansion aligned to truck coverage and capacity — not just opportunity",
-          "Defensive content for high-margin services: water heater replacements, HVAC changeouts, slab leak repairs",
-          "Emergency keyword capture pages for high-urgency, high-conversion searches",
+          "Post-job SMS review acquisition system",
+          "Review response discipline with service-specific replies",
+          "Review velocity tracking and gap identification",
+          "Website review integration with schema markup for rich results",
+          "Competitive review monitoring and response strategy",
           "Call tracking integration with booking rate optimization",
-          "Capacity-based marketing throttling: pulling back when boards are full, accelerating during shoulder season"
+          "Service area expansion aligned to capacity and truck coverage"
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    executionNote: "Each phase builds on the previous. Foundation work is non-negotiable. Content without technical health underperforms. Links without content have nothing to point to.",
-    footerNote: "Phase duration varies by market competitiveness and site condition. Most businesses see meaningful movement within 3 to 4 months, with substantial results by month 6."
+    executionNote: "All four pillars run concurrently. Priority is scoped to your market — what moves the needle fastest gets the most attention first.",
+    footerNote: "Most businesses see meaningful movement within 3 to 4 months, with substantial results by month 6."
   },
 
   buildingBlocks: {

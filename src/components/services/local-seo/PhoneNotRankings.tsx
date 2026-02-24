@@ -1,4 +1,5 @@
-import { Phone, BarChart3, Gauge, AlertTriangle } from "lucide-react";
+import { useState } from "react";
+import { Phone, BarChart3, Gauge, AlertTriangle, ChevronDown } from "lucide-react";
 
 const points = [
   {
@@ -24,6 +25,8 @@ const points = [
 ];
 
 const PhoneNotRankings = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section className="py-20 lg:py-28 bg-surface-dark relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -37,20 +40,20 @@ const PhoneNotRankings = () => {
               Local SEO Starts With the Phone, Not Rankings
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              A ranking is not revenue. A booked call is revenue. Before we run a single campaign, we look at call tracking data — your answer rate, your booking rate, and how your dispatch board handles volume. Not to judge the operation. To make sure the marketing we build produces calls your shop can actually convert and run.
+              A ranking is not revenue. A booked call is. Before we run a single campaign, we look at call tracking data, your answer rate, and how your dispatch board handles volume.
             </p>
           </div>
 
           {/* Insight callout */}
           <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10 text-center">
             <p className="text-text-secondary text-base leading-relaxed">
-              Local SEO aligned to a shop with a <span className="text-foreground font-semibold">45% booking rate</span> produces different results than the same strategy applied to a shop running at <span className="text-foreground font-semibold">75%</span>. That gap is addressable. But it has to be identified first.
+              A shop with a <span className="text-foreground font-semibold">45% booking rate</span> produces different results than one running at <span className="text-foreground font-semibold">75%</span>. That gap is addressable — but it has to be identified first.
             </p>
           </div>
 
-          {/* Points grid */}
+          {/* Points grid - show 2 by default, rest expandable */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {points.map((point, index) => (
+            {points.slice(0, 2).map((point, index) => (
               <div
                 key={index}
                 className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors"
@@ -66,10 +69,33 @@ const PhoneNotRankings = () => {
             ))}
           </div>
 
-          {/* Closing */}
-          <p className="text-center text-text-secondary text-base mt-10">
-            Local SEO must align with how the business actually runs. Rankings without booking rate are a vanity metric. <span className="text-foreground font-semibold">Booked calls are the measure that matters.</span>
-          </p>
+          {/* Expandable remaining points */}
+          <div className={`grid sm:grid-cols-2 gap-6 mt-6 transition-all duration-300 overflow-hidden ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
+            {points.slice(2).map((point, index) => (
+              <div
+                key={index + 2}
+                className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+                    <point.icon className="h-5 w-5 text-accent-blue" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground">{point.title}</h3>
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">{point.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent-blue hover:text-accent-blue/80 transition-colors"
+            >
+              <span>{expanded ? "Show less" : "See all indicators"}</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} />
+            </button>
+          </div>
         </div>
       </div>
     </section>

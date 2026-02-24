@@ -36,7 +36,7 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
           </p>
         </div>
 
-        {/* Timeline */}
+        {/* Pillar Tabs */}
         <div className="mb-8">
           {/* Mobile dropdown */}
           <div className="lg:hidden">
@@ -53,58 +53,39 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
             >
               {config.phases.map((phase) => (
                 <option key={phase.phase} value={phase.phase}>
-                  Phase {phase.phase}: {phase.name}
+                  {phase.name}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Desktop timeline */}
-          <div className="hidden lg:flex items-center justify-between relative">
-            {/* Connecting line */}
-            <div className="absolute top-6 left-12 right-12 h-0.5 bg-border" />
-            <div 
-              className="absolute top-6 left-12 h-0.5 transition-all duration-500"
-              style={{
-                width: `${((activePhase - 1) / (config.phases.length - 1)) * 100}%`,
-                background: activeData.color
-              }}
-            />
-            
+          {/* Desktop tabs - no timeline connector */}
+          <div className="hidden lg:flex gap-3">
             {config.phases.map((phase) => {
               const isActive = phase.phase === activePhase;
-              const isPast = phase.phase < activePhase;
               const Icon = phase.icon;
               
               return (
                 <button
                   key={phase.phase}
                   onClick={() => setActivePhase(phase.phase)}
-                  className="relative z-10 flex flex-col items-center group flex-1"
+                  className={`relative flex items-center gap-3 px-5 py-3 rounded-xl border transition-all duration-300 flex-1 ${
+                    isActive 
+                      ? "bg-surface-elevated border-transparent shadow-md" 
+                      : "bg-transparent border-border hover:border-text-muted"
+                  }`}
+                  style={isActive ? { borderColor: phase.color } : undefined}
                 >
                   <div 
-                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      isActive 
-                        ? "ring-4 ring-offset-2 ring-offset-background ring-cta/40" 
-                        : isPast 
-                          ? "opacity-60" 
-                          : "bg-surface-elevated border border-border hover:border-text-muted"
-                    }`}
-                    style={{
-                      background: isActive || isPast ? phase.color : undefined
-                    }}
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300`}
+                    style={{ background: isActive ? `${phase.color}20` : undefined }}
                   >
-                    <Icon className={`w-5 h-5 ${isActive || isPast ? "text-white" : "text-text-muted"}`} />
+                    <Icon className="w-5 h-5" style={{ color: isActive ? phase.color : undefined }} />
                   </div>
-                  <span className={`mt-3 text-sm font-semibold transition-colors ${
+                  <span className={`text-sm font-semibold transition-colors ${
                     isActive ? "text-foreground" : "text-text-muted"
                   }`}>
                     {phase.name}
-                  </span>
-                  <span className={`text-xs transition-colors ${
-                    isActive ? "text-text-secondary" : "text-text-muted"
-                  }`}>
-                    Phase {phase.phase}
                   </span>
                 </button>
               );
@@ -136,7 +117,7 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-foreground">{activeData.title}</h3>
-              <p className="text-text-muted text-sm">Phase {activeData.phase}: {activeData.name}</p>
+              <p className="text-text-muted text-sm">{activeData.name}</p>
             </div>
           </div>
           
