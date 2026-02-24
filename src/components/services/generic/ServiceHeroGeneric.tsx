@@ -6,7 +6,7 @@ import type { BreadcrumbItem } from "@/types/servicePage";
 interface HeroConfig {
   headline: string;
   highlightedText: string;
-  subheadline: string;
+  subheadline: string | { intro: string; bullets: string[]; closing: string };
   qualifierLine: string;
   ctaText: string;
   ctaSubtext: string;
@@ -76,7 +76,7 @@ const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) =>
           
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-            {config.subheadline}
+            {typeof config.subheadline === 'string' ? config.subheadline : config.subheadline.intro}
           </p>
 
           {/* Qualifier line */}

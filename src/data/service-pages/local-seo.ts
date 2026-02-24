@@ -12,7 +12,15 @@ export const localSEOConfig: ServicePageConfig = {
   hero: {
     headline: "Local SEO for Plumbing & HVAC Companies",
     highlightedText: "That Want More Booked Service Calls",
-    subheadline: "Most plumbing and HVAC companies are invisible in local search during the moments that matter most. When a homeowner searches for a water heater replacement or an emergency no-cool call, the top three results in Google Maps take the call. Everyone else waits. Plumbing and HVAC local SEO from DemandStream is built to put your company in those three spots and keep it there. Not with templated packages. With a connected strategy built around how customers search for plumbers and HVAC companies in your specific market.",
+    subheadline: {
+      intro: "When a homeowner searches for a water heater replacement or an emergency no-cool call, the top three results in Google Maps take the call. Everyone else waits.",
+      bullets: [
+        "Built around how customers search for plumbers and HVAC companies in your market",
+        "Connected strategy across Google Maps, organic, and local search",
+        "Designed for seasonal demand, service area coverage, and call-based conversion"
+      ],
+      closing: "Not templated packages. A local SEO system built for how plumbing and HVAC actually works."
+    },
     qualifierLine: "No generic home services approach. Built for plumbing and HVAC operators only.",
     ctaText: "Get a Free Local SEO Audit",
     ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."

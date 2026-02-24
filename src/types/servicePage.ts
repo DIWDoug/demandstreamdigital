@@ -85,7 +85,7 @@ export interface ServicePageConfig {
   hero: {
     headline: string;
     highlightedText: string;
-    subheadline: string;
+    subheadline: string | { intro: string; bullets: string[]; closing: string };
     bullets?: string[]; // Optional bullet points for anti-package stances
     qualifierLine: string;
     integrationNote?: string; // Optional note about service integration
