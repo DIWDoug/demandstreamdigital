@@ -4,6 +4,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import TrustReel from "@/components/sections/TrustReel";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import { Star, Quote, Building2, Users } from "lucide-react";
 import { getTestimonialsPageSchema, getOrganizationSchema, BUSINESS_INFO } from "@/lib/schema";
 
@@ -492,6 +493,7 @@ const Testimonials = () => {
         </div>
       </section>
 
+      <MarketExclusivity />
       <ContactForm />
       <Footer />
     </div>

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
 import { CalculatorInputField } from "@/components/calculators/CalculatorInputField";
@@ -685,6 +686,8 @@ const ContentMarketingCalculator = () => {
         <AgencyPartnerVideos />
 
         <SectionDivider />
+
+        <MarketExclusivity />
 
         {/* Contact Form */}
         <ContactForm />

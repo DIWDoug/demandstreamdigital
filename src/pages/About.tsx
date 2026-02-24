@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import WhoWeAre from "@/components/sections/WhoWeAre";
 import MissionVisionValues from "@/components/sections/MissionVisionValues";
 import ContinuingEducation from "@/components/sections/ContinuingEducation";
@@ -830,6 +831,9 @@ const About = () => {
       <div id="continuing-education" className="scroll-mt-32">
         <ContinuingEducation />
       </div>
+
+      {/* Exclusivity */}
+      <MarketExclusivity />
 
       {/* Contact CTA */}
       <div id="contact" className="scroll-mt-32">
