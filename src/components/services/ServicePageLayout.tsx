@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import type { ServicePageConfig, BreadcrumbItem } from "@/types/servicePage";
@@ -186,6 +187,9 @@ const ServicePageLayout = ({
       
       {/* 11. ECOSYSTEM CROSS-SELL */}
       <ServiceEcosystemSection config={config.ecosystem} />
+      
+      {/* EXCLUSIVITY */}
+      <MarketExclusivity />
       
       {/* 12. FINAL CTA */}
       <ContactForm />

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 import Testimonials from "@/components/sections/Testimonials";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
@@ -151,6 +152,8 @@ const GoogleMaps = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={googleMapsConfig.ecosystem} />
+      
+      <MarketExclusivity />
       
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">

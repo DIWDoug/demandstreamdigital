@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import TrustReel from "@/components/sections/TrustReel";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
@@ -193,6 +194,9 @@ const LocalSEO = () => {
       
       {/* 12. ECOSYSTEM */}
       <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
+      
+      {/* EXCLUSIVITY */}
+      <MarketExclusivity />
       
       {/* 13. CONTACT */}
       <div id="contact" className="scroll-mt-32">

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
@@ -140,6 +141,8 @@ const Authority = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={authorityConfig.ecosystem} />
+      
+      <MarketExclusivity />
       
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">

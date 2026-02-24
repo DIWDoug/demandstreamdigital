@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import ROIEducationalContent from "@/components/calculators/ROIEducationalContent";
 import AgencyPartnerVideos from "@/components/calculators/AgencyPartnerVideos";
 import PricingComparisonTable from "@/components/calculators/PricingComparisonTable";
@@ -541,6 +542,8 @@ const ROICalculator = () => {
 
         {/* Agency Partner Videos */}
         <AgencyPartnerVideos />
+
+        <MarketExclusivity />
 
         {/* Contact Form Section */}
         <ContactForm />

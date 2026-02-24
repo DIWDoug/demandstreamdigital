@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import { useState, useMemo, useEffect } from "react";
 import { Calculator, TrendingUp, DollarSign, Users, Target, Share2, ArrowRight, Info, Copy, Check } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -770,6 +771,7 @@ const SocialMediaROICalculator = () => {
           </div>
         </section>
 
+        <MarketExclusivity />
         <ContactForm />
       </main>
       

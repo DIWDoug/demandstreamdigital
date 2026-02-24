@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import { Link } from "react-router-dom";
 import { 
   Calculator, 
@@ -408,6 +409,9 @@ const PartnerTools = () => {
             </div>
           </div>
         </section>
+
+        {/* Exclusivity */}
+        <MarketExclusivity />
 
         {/* Contact Form Section */}
         <ContactForm />
