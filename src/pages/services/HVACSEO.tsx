@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import ContactForm from "@/components/sections/ContactForm";
+import HVACContactForm from "@/components/services/hvac-seo/HVACContactForm";
 import HVACMarketExclusivity from "@/components/services/hvac-seo/HVACMarketExclusivity";
 import HVACTestimonials from "@/components/services/hvac-seo/HVACTestimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
@@ -199,9 +199,8 @@ const HVACSEO = () => {
       {/* 12. ECOSYSTEM */}
       <ServiceEcosystemSection config={hvacSEOConfig.ecosystem} />
 
-      {/* 13. CONTACT */}
       <div id="contact" className="scroll-mt-32">
-        <ContactForm />
+        <HVACContactForm />
       </div>
 
       <Footer />
