@@ -7,7 +7,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import {
-  ServiceProblemSection,
   ServiceOutcomesSection,
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
@@ -24,6 +23,7 @@ import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib
 import PlumbingPhoneNotRankings from "@/components/services/plumbing-seo/PlumbingPhoneNotRankings";
 import PlumbingTwoEngines from "@/components/services/plumbing-seo/PlumbingTwoEngines";
 import BuiltForPlumbers from "@/components/services/plumbing-seo/BuiltForPlumbers";
+import PlumbingProblemSection from "@/components/services/plumbing-seo/PlumbingProblemSection";
 
 const getFlatFAQs = () => {
   if (!plumbingSEOConfig.faq?.groups) return [];
@@ -123,7 +123,7 @@ const PlumbingSEO = () => {
 
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
-        <ServiceProblemSection config={plumbingSEOConfig.problem} />
+        <PlumbingProblemSection />
       </div>
 
       <SectionDivider />
