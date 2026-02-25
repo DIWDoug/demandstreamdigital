@@ -26,7 +26,7 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance max-w-2xl">

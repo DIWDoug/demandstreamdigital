@@ -42,7 +42,7 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
             <div>
-              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+              <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
                 {config.eyebrow}
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 leading-tight">

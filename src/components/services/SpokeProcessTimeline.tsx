@@ -15,7 +15,7 @@ const SpokeProcessTimeline = ({ steps, spokeTitle }: SpokeProcessTimelineProps) 
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               How We Execute
             </p>
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground">

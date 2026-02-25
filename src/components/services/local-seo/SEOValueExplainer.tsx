@@ -10,7 +10,7 @@ const SEOValueExplainer = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               The Value Conversation
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6">
