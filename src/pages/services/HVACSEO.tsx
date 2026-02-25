@@ -46,7 +46,6 @@ const anchorItems = [
   { label: 'What We Do', href: '#building-blocks' },
   { label: 'Fit', href: '#qualification' },
   { label: 'Reviews', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
   { label: 'Get Started', href: '#contact' },
 ];
 
