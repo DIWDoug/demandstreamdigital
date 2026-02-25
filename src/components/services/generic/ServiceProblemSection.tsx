@@ -21,7 +21,7 @@ interface ServiceProblemSectionProps {
 
 const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-surface-dark relative">
+    <section className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
@@ -29,12 +29,12 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance max-w-2xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance max-w-2xl">
               {config.headline}
             </h2>
             <div className="max-w-[600px] space-y-4">
               {config.intro.split("\n\n").map((para, i) => (
-                <p key={i} className="text-lg text-text-secondary">
+                <p key={i} className="text-lg text-slate-600">
                   {para}
                 </p>
               ))}
@@ -42,8 +42,8 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
 
             {/* Urgency Callout Card */}
             {config.introCallout && (
-              <div className="mt-8 max-w-[600px] bg-gradient-to-r from-cta/10 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
-                <p className="text-text-secondary text-base leading-relaxed font-medium">
+              <div className="mt-8 max-w-[600px] bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
+                <p className="text-slate-700 text-base leading-relaxed font-medium">
                   {config.introCallout}
                 </p>
               </div>
@@ -59,8 +59,8 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
                   key={index}
                   className={`rounded-xl p-6 lg:p-8 border transition-all ${
                     isFirst 
-                      ? 'sm:col-span-2 bg-surface-elevated border-cta/30 shadow-[0_4px_20px_-4px_hsl(var(--cta)/0.15)] relative overflow-hidden' 
-                      : 'bg-surface-elevated border-border/50 hover:border-cta/30'
+                      ? 'sm:col-span-2 bg-gradient-to-br from-white via-white to-cta/5 border-cta/30 shadow-[0_4px_20px_-4px_hsl(var(--cta)/0.15)] relative overflow-hidden' 
+                      : 'bg-white border-slate-200 shadow-sm hover:border-cta/30'
                   }`}
                 >
                   {/* Featured badge for first card */}
@@ -75,16 +75,16 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
                   <div className={`flex items-center gap-4 ${isFirst ? 'mb-5' : 'mb-4'}`}>
                     <div className={`rounded-xl flex items-center justify-center shrink-0 ${
                       isFirst 
-                        ? 'w-14 h-14 bg-accent-blue/15' 
+                        ? 'w-14 h-14 bg-accent-blue/15 shadow-sm' 
                         : 'w-12 h-12 bg-accent-blue/10'
                     }`}>
                       <point.icon className={`text-accent-blue ${isFirst ? 'h-7 w-7' : 'h-5 w-5'}`} />
                     </div>
-                    <strong className={`font-semibold text-foreground ${isFirst ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
+                    <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
                       {point.title}
                     </strong>
                   </div>
-                  <p className={`text-text-secondary leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-[13px]'}`}>
+                  <p className={`text-slate-500 leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-[13px]'}`}>
                     {point.body}
                   </p>
                 </div>
@@ -94,15 +94,15 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
 
           {/* System Closing (optional) */}
           {config.systemClosing && config.systemClosing.length > 0 && (
-            <p className="text-center text-text-secondary text-lg font-medium mt-10">
+            <p className="text-center text-slate-700 text-lg font-medium mt-10">
               {config.systemClosing}
             </p>
           )}
 
           {/* Transition Line + CTAs */}
           <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-8`}>
-            <p className="text-text-secondary text-lg">
-              {config.closingLine} <span className="font-semibold text-foreground">{config.closingHighlight}</span>
+            <p className="text-slate-600 text-lg">
+              {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
             </p>
             
             {/* CTA Buttons */}
@@ -114,10 +114,10 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
                 Schedule a Discovery Call
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <span className="text-text-muted text-sm font-medium">or</span>
+              <span className="text-slate-400 text-sm font-medium">or</span>
               <a 
                 href={PHONE_HREF}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:bg-cta hover:border-cta hover:text-white font-medium transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all"
               >
                 <Phone className="h-4 w-4" />
                 {PHONE_NUMBER}
