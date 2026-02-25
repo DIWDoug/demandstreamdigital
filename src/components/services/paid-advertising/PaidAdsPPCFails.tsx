@@ -35,7 +35,7 @@ const failureRows = [
 
 const PaidAdsPPCFails = () => {
   return (
-    <section id="why-ppc-fails" className="py-20 lg:py-28 section-light scroll-mt-32">
+    <section id="why-ppc-fails" className="py-20 lg:py-28 bg-white scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 

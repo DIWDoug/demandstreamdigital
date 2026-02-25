@@ -24,7 +24,7 @@ const PaidAdsBiggerPicture = () => {
   const right = services.slice(3);
 
   return (
-    <section className="py-20 lg:py-28 section-light">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
