@@ -29,16 +29,21 @@ const PlumbingPhoneNotRankings = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               The Starting Point
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
               Plumbing SEO Starts With the Phone, Not Rankings
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Rankings are visible. Booked calls are revenue. Most plumbing companies have been sold on the idea that better rankings automatically mean more business. They do not. A company ranking #1 for 'drain cleaning near me' with a 40% booking rate is producing less revenue per marketing dollar than a company ranking #4 with a 72% booking rate and a CSR who knows how to convert.
-            </p>
+            <div className="max-w-[580px] space-y-4">
+              <p className="text-lg text-text-secondary leading-relaxed">
+                Rankings are visible. Booked calls are revenue. Most plumbing companies have been sold on the idea that better rankings automatically mean more business. They do not.
+              </p>
+              <p className="text-lg text-text-secondary leading-relaxed">
+                A company ranking #1 for 'drain cleaning near me' with a 40% booking rate produces less revenue per marketing dollar than a company ranking #4 with a 72% booking rate and a CSR who knows how to convert.
+              </p>
+            </div>
           </div>
 
           {/* Insight callout */}
