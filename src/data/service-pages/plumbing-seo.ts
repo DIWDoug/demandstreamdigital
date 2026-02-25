@@ -28,7 +28,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
   },
 
   problem: {
-    eyebrow: "The Pattern We See",
+    eyebrow: "The Problem With Generic SEO",
     headline: "Why Generic Contractor SEO Fails Plumbing Companies",
     intro: "Plumbing is not a general home services business. It is an emergency-driven, reputation-sensitive trade where the buying decision happens in under two minutes.\n\nGeneric contractor packages apply the same keyword lists, the same content templates, and the same link building tactics to every trade. They don't account for how plumbing calls actually come in, or what makes a homeowner choose one plumber over another when they're standing in two inches of water.",
     introCallout: "When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up in the Map Pack. Plumbing SEO has to be built around that urgency. Not applied from a template designed for dentists and dog groomers.",
@@ -89,7 +89,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
   },
 
   roadmap: {
-    eyebrow: "The System",
+    eyebrow: "The Process",
     headline: "Our Plumbing SEO System",
     subheadline: "A phased approach built for plumbing operators. Every phase has a purpose. Every phase builds on the last. We do not run campaigns before the foundation is solid. We do not chase rankings before the GBP is refined. We do not scale before we know your booking rate can handle the volume. The sequence matters.",
     phases: [
