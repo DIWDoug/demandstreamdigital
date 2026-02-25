@@ -208,6 +208,34 @@ export const plumbingSEOConfig: ServicePageConfig = {
         ],
         icon: Target,
         color: "hsl(280, 60%, 55%)"
+      },
+      {
+        phase: 5,
+        name: "AI & GEO",
+        title: "AI & Generative Search Visibility",
+        description: "Position your plumbing company to be cited by AI Overviews and generative search engines — not just ranked on the traditional blue-link results page. Search behavior is shifting. AI-generated answers are appearing above organic results for informational and service-intent plumbing queries. If your content and schema are not structured for citation, you are invisible to an increasing share of searchers.",
+        activities: [
+          "FAQ schema and structured data markup that signals answer-ready content to AI systems",
+          "Content reformatting to match the question-answer structure that generative search prefers to cite",
+          "Entity optimization: making sure Google's Knowledge Graph associates your company with the right services, service area, and trade credentials",
+          "AI Overview monitoring: tracking which plumbing queries trigger AI Overviews and whether your company is cited",
+          "E-E-A-T signal reinforcement: author credibility, trade credentials, and first-hand experience signals that AI systems weight heavily",
+          "GBP alignment with AI-surfaced local answers: ensuring your profile data is structured to appear in AI-driven local recommendations",
+          "Voice search and conversational query coverage for plumbing emergency scenarios"
+        ],
+        expect: [
+          "Generative search is not replacing traditional SEO — it is adding a new visibility layer that rewards the same inputs: authoritative content, clean structured data, and a credible business entity. Plumbing companies whose pages are formatted for citation will appear in AI Overviews while competitors relying on legacy on-page SEO alone are filtered out.",
+          "This phase ensures your plumbing company is visible in both the traditional organic results and the AI-generated answer layer that is now appearing above them for a growing share of local search queries."
+        ],
+        walkAway: [
+          "Full schema audit and implementation: FAQ, HowTo, Service, and LocalBusiness markup",
+          "Content reformatting for AI citation readiness across core service pages",
+          "Entity profile strengthening and Knowledge Panel optimization",
+          "AI Overview monitoring setup for target plumbing search queries",
+          "Voice and conversational query content coverage"
+        ],
+        icon: Bot,
+        color: "hsl(160, 60%, 45%)"
       }
     ],
     executionNote: "",
