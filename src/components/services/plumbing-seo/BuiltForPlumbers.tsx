@@ -5,21 +5,21 @@ const columns = [
   {
     icon: Zap,
     title: "Emergency Revenue",
-    body: "The highest-value plumbing calls — burst pipes, main line backups, water heater failures — are emergency-driven. We build your SEO to capture those searches first.",
+    body: "The highest-value plumbing calls: burst pipes, main line backups, water heater failures, are emergency-driven. We build your SEO to capture those searches first.",
     color: "text-cta",
     bg: "bg-cta/10"
   },
   {
     icon: TrendingUp,
     title: "Multi-Truck Growth",
-    body: "As your coverage expands, the SEO architecture scales with it. Every new service area gets a new ranking asset — no duplicate content, no doorway pages, clean geographic expansion.",
+    body: "As your coverage expands, the SEO architecture scales with it. Every new service area gets a new ranking asset. No duplicate content, no doorway pages, clean geographic expansion.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10"
   },
   {
     icon: Shield,
     title: "Market Exclusivity",
-    body: "We take one plumbing client per service area. When you work with DemandStream, your competitors don't. The strategy we build is designed to put you ahead — not split between you and the shop down the street.",
+    body: "We take one plumbing client per service area. When you work with DemandStream, your competitors don't. The strategy we build is designed to put you ahead, not split between you and the shop down the street.",
     color: "text-green-400",
     bg: "bg-green-400/10"
   }

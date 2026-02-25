@@ -20,7 +20,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
         "A main line backup on a Sunday morning",
         "A water heater that stopped working at 10pm"
       ],
-      closing: "The decision happens in seconds. Whoever shows up in the Map Pack gets the call. If your plumbing company is not in the Map Pack and the top organic results for the searches that matter in your market, a competitor gets those calls. Plumbing SEO from DemandStream changes that — with a connected strategy built around how plumbing customers actually search, compare, and call. No generic contractor marketing. Plumbing companies only."
+      closing: "The decision happens in seconds. Whoever shows up in the Map Pack gets the call. If your plumbing company is not in the Map Pack and the top organic results for the searches that matter in your market, a competitor gets those calls. Plumbing SEO from DemandStream changes that, with a connected strategy built around how plumbing customers actually search, compare, and call. No generic contractor marketing. Plumbing companies only."
     },
     qualifierLine: "No generic home services approach. Built for plumbing operators only.",
     ctaText: "Get a Free Plumbing SEO Audit",
@@ -31,12 +31,12 @@ export const plumbingSEOConfig: ServicePageConfig = {
     eyebrow: "The Pattern We See",
     headline: "Why Generic Contractor SEO Fails Plumbing Companies",
     intro: "Plumbing is not a general home services business. It is an emergency-driven, reputation-sensitive trade where the buying decision happens in under two minutes.\n\nGeneric contractor packages apply the same keyword lists, the same content templates, and the same link building tactics to every trade. They don't account for how plumbing calls actually come in, or what makes a homeowner choose one plumber over another when they're standing in two inches of water.",
-    introCallout: "When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up in the Map Pack. Plumbing SEO has to be built around that urgency — not applied from a template designed for dentists and dog groomers.",
+    introCallout: "When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up in the Map Pack. Plumbing SEO has to be built around that urgency. Not applied from a template designed for dentists and dog groomers.",
     painPoints: [
       {
         icon: Zap,
         title: "Emergency Intent Dominates",
-        body: "The majority of high-value plumbing searches are urgent. 'Emergency plumber near me.' 'Water heater not working.' 'Burst pipe repair.' These are not research queries — they are active emergencies. Plumbing SEO has to be built around that urgency first."
+        body: "The majority of high-value plumbing searches are urgent. 'Emergency plumber near me.' 'Water heater not working.' 'Burst pipe repair.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first."
       },
       {
         icon: MapPin,
@@ -59,7 +59,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
         body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix. Your GBP has to be configured to capture that demand 24 hours a day."
       }
     ],
-    systemClosing: "Effective plumbing SEO requires scoping to the actual market — not templated deliverables applied from a generic contractor package.",
+    systemClosing: "Effective plumbing SEO requires scoping to the actual market. Not templated deliverables applied from a generic contractor package.",
     closingLine: "That is why our plumbing SEO work performs consistently",
     closingHighlight: "across different markets and service areas.",
     ctaText: "Schedule a Discovery Call"
@@ -83,7 +83,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
       },
       {
         title: "Revenue Stability Through Predictable Call Flow",
-        description: "Plumbing revenue spikes around freeze events, burst pipes, and water heater failures. When your organic presence is strong year-round — not just during emergencies — you build a more stable baseline of drain cleaning, water heater maintenance, and repiping calls. That baseline is what lets you plan capacity, manage payroll, and grow without relying entirely on seasonal spikes."
+        description: "Plumbing revenue spikes around freeze events, burst pipes, and water heater failures. When your organic presence is strong year-round, not just during emergencies, you build a more stable baseline of drain cleaning, water heater maintenance, and repiping calls. That baseline is what lets you plan capacity, manage payroll, and grow without relying entirely on seasonal spikes."
       }
     ]
   },
@@ -97,21 +97,21 @@ export const plumbingSEOConfig: ServicePageConfig = {
         phase: 1,
         name: "Technical Foundation",
         title: "Technical & On-Page Foundation",
-        description: "Build a crawlable, revenue-aligned plumbing SEO structure that converts high-intent searches into booked calls. The technical foundation determines your ranking ceiling — a plumbing company with a slow, poorly structured site and duplicate service pages cannot outrank a competitor with clean architecture, no matter how many links they build.",
+        description: "Build a crawlable, revenue-aligned plumbing SEO structure that converts high-intent searches into booked calls. The technical foundation sets your ranking ceiling. A plumbing company with a slow, poorly structured site and duplicate service pages cannot outrank a competitor with clean architecture, no matter how many links they build.",
         activities: [
-          "Separate, properly structured pages for each plumbing service — no catch-all 'Plumbing Services' page that dilutes relevance across every keyword",
+          "Separate, properly structured pages for each plumbing service. No catch-all 'Plumbing Services' page that dilutes relevance across every keyword",
           "Clean, short URLs aligned to service + city structure: /water-heater-replacement-dallas/ not /services/plumbing/water-heaters/dallas-tx-2/",
           "Service cluster architecture: hub pages linking to sub-service pages and city pages in a logical hierarchy",
-          "CTR-driven title tags: 'Water Heater Replacement in [City] | Same-Day Service' — not 'Our Water Heater Services'",
+          "CTR-driven title tags: 'Water Heater Replacement in [City] | Same-Day Service' and not 'Our Water Heater Services'",
           "Ad-style meta descriptions that speak to urgency and booking, not feature lists",
           "Schema markup: LocalBusiness, Plumber, Service, FAQ, and Review",
-          "Mobile-first speed — most emergency plumbing searches happen on a phone, often with poor signal",
+          "Mobile-first speed. Most emergency plumbing searches happen on a phone, often with poor signal",
           "Click-to-call prominence on every service page and landing page",
-          "Internal linking across the plumbing service cluster — every sub-service page connects to the hub",
+          "Internal linking across the plumbing service cluster. Every sub-service page connects to the hub",
           "NAP consistency audit across all directories"
         ],
         expect: [
-          "By the end of this phase, your site is built to rank for specific plumbing searches — not just appear for generic contractor queries. A homeowner searching 'slab leak detection near me' lands on a dedicated slab leak page with a clear call path. That page is fast, mobile-refined, and structured to produce a call, not a bounce.",
+          "By the end of this phase, your site is built to rank for specific plumbing searches, not just appear for generic contractor queries. A homeowner searching 'slab leak detection near me' lands on a dedicated slab leak page with a clear call path. That page is fast, mobile-refined, and structured to produce a call, not a bounce.",
           "When a motivated customer finds your site at 11pm with a burst pipe, nothing should stand between them and calling your number. Technical SEO makes sure it doesn't."
         ],
         walkAway: [
@@ -129,24 +129,24 @@ export const plumbingSEOConfig: ServicePageConfig = {
         phase: 2,
         name: "GBP & Maps",
         title: "Google Maps & GBP Improvement",
-        description: "Win Map Pack visibility for the plumbing searches that drive emergency calls and same-day bookings. The Map Pack is where most emergency plumbing calls originate — a main line backup at 9pm, a water heater that failed on a Sunday, a burst pipe during a freeze event. If your GBP is incomplete, stale, or miscategorized, you are invisible at the moment the revenue decision happens.",
+        description: "Win Map Pack visibility for the plumbing searches that drive emergency calls and same-day bookings. The Map Pack is where most emergency plumbing calls originate: a main line backup at 9pm, a water heater that failed on a Sunday, a burst pipe during a freeze event. If your GBP is incomplete, stale, or miscategorized, you are invisible at the moment the revenue decision happens.",
         activities: [
-          "Primary category set to 'Plumber' — not 'Home Services' or 'Contractor,' which dilute relevance",
+          "Primary category set to 'Plumber'. Not 'Home Services' or 'Contractor,' which dilute relevance",
           "Secondary categories selected for highest-revenue adjacent services: 'Drainage Service,' 'Water Damage Restoration Service' where applicable",
-          "GBP services catalog built to mirror website service pages — every service with a dedicated page gets a GBP services entry",
+          "GBP services catalog built to mirror website service pages. Every service with a dedicated page gets a GBP services entry",
           "Service area configuration aligned to actual dispatch radius, not just the major city name",
           "Weekly real-job photo uploads with location and service context",
-          "Post-job SMS review acquisition system — automated, compliant, and consistent",
-          "Response system for every review — positive, negative, and no-text ratings",
+          "Post-job SMS review acquisition system, automated, compliant, and consistent",
+          "Response system for every review: positive, negative, and no-text ratings",
           "Seasonal GBP posting calendar: freeze prep in fall, water heater content before winter, drain cleaning in spring, emergency coverage year-round",
           "Service-specific language encouraged in review requests: 'Mention the service you had done and how quickly we responded'"
         ],
         expect: [
-          "A plumbing company with a fully refined, actively maintained GBP holds Map Pack position more consistently than one running on a set-it-and-forget-it profile. Emergency searches surface your business at the exact moment the homeowner is ready to call. Same-day booking calls — the ones that fill your board without any back-and-forth — come disproportionately from Maps.",
+          "A plumbing company with a fully refined, actively maintained GBP holds Map Pack position more consistently than one running on a set-it-and-forget-it profile. Emergency searches surface your business at the exact moment the homeowner is ready to call. Same-day booking calls, the ones that fill your board without any back-and-forth, come disproportionately from Maps.",
           "If a competitor is in the Map Pack and you are not, they are booking your calls. This phase closes that gap."
         ],
         walkAway: [
-          "Fully refined Google Business Profile — categories, services, service area, attributes",
+          "Fully refined Google Business Profile: categories, services, service area, attributes",
           "Structured review acquisition workflow integrated into your job completion process",
           "Review response system and schedule",
           "Seasonal posting calendar tied to plumbing demand patterns",
@@ -185,14 +185,14 @@ export const plumbingSEOConfig: ServicePageConfig = {
         phase: 4,
         name: "Market Defense",
         title: "Market Defense & Expansion",
-        description: "Protect your plumbing market position and scale strategically as capacity allows. Rankings are not permanent assets. Competitors improve their GBPs, run review campaigns, and build new service pages. Market defense is not passive maintenance — it is an active, ongoing process.",
+        description: "Protect your plumbing market position and scale strategically as capacity allows. Rankings are not permanent assets. Competitors improve their GBPs, run review campaigns, and build new service pages. Market defense is not passive maintenance. It is an active, ongoing process.",
         activities: [
           "Competitor review and ranking monitoring in your plumbing service area",
           "Ranking volatility tracking with early-warning alerts before drops affect call volume",
           "Service area expansion aligned to truck capacity, not just market opportunity",
           "Defensive content for high-margin plumbing services: slab leak detection, repiping, water heater replacement, hydro jetting",
           "Emergency keyword capture pages for high-urgency searches: 'burst pipe repair near me,' '24-hour plumber near me,' 'water heater not working'",
-          "Call tracking integration with booking rate data — tied to source, page, and time of day",
+          "Call tracking integration with booking rate data, tied to source, page, and time of day",
           "Capacity-based marketing throttling: accelerate during slow seasons, protect dispatch during peak freeze events and summer surge"
         ],
         expect: [
@@ -288,13 +288,13 @@ export const plumbingSEOConfig: ServicePageConfig = {
   qualification: {
     eyebrow: "Selective Fit",
     headline: "Is Plumbing SEO Right for Your Company?",
-    subheadline: "We work best with established plumbing companies that want to own their service area — not just generate a few more calls this month.",
+    subheadline: "We work best with established plumbing companies that want to own their service area, not just generate a few more calls this month.",
     goodFit: [
-      { point: "You run a plumbing company with an active dispatch board and real service capacity — ideally 2 or more trucks", detail: "We build strategies for plumbing operators that can handle the call volume local SEO produces." },
-      { point: "You want more booked service calls — not impressions, traffic reports, or 'brand awareness' metrics", detail: "We measure success in booked calls and cost per booked call — not vanity metrics." },
+      { point: "You run a plumbing company with an active dispatch board and real service capacity, ideally 2 or more trucks", detail: "We build strategies for plumbing operators that can handle the call volume local SEO produces." },
+      { point: "You want more booked service calls. Not impressions, traffic reports, or 'brand awareness' metrics", detail: "We measure success in booked calls and cost per booked call, not vanity metrics." },
       { point: "You understand that plumbing SEO is a 6 to 12 month investment with compounding returns, not an overnight fix", detail: "The first three to four months are foundation work that everything else builds on." },
-      { point: "You are willing to invest in review velocity as a core part of the system — not an optional add-on", detail: "Review signals account for a significant portion of local ranking weight. This is non-negotiable." },
-      { point: "You want a growth partner who reports on booked calls and cost per booked call — not just rank positions", detail: "Rankings are a means to an end. Booked calls are the end." },
+      { point: "You are willing to invest in review velocity as a core part of the system, not an optional add-on", detail: "Review signals account for a significant portion of local ranking weight. This is non-negotiable." },
+      { point: "You want a growth partner who reports on booked calls and cost per booked call, not just rank positions", detail: "Rankings are a means to an end. Booked calls are the end." },
       { point: "You have a verified, address-visible Google Business Profile", detail: "GBP is the foundation of Map Pack visibility. A hidden-address profile has structural limitations no optimization can fully overcome." }
     ],
     notFit: [
@@ -302,7 +302,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
       { point: "Your business relies solely on a hidden-address GBP listing with no physical location verification", detail: "These profiles face significant structural limitations in local search that no amount of optimization can fully overcome." },
       { point: "You are not willing to participate in review acquisition", detail: "Review velocity is a mandatory part of the system. Plumbing companies that skip this step cap their Map Pack potential." },
       { point: "You need guaranteed specific ranking positions", detail: "Anyone guaranteeing rankings is either misleading you or has no ability to keep the promise. Google controls its algorithm." },
-      { point: "You are looking for the lowest-cost option available", detail: "Effective plumbing SEO in a competitive market requires real investment. We are not the cheapest option — we are the option that produces results." },
+      { point: "You are looking for the lowest-cost option available", detail: "Effective plumbing SEO in a competitive market requires real investment. We are not the cheapest option. We are the option that produces results." },
       { point: "You are not willing to commit to a minimum 6-month engagement after roadmap delivery", detail: "The first three months are foundation work. You need time for the system to compound before evaluating results." }
     ],
     ctaText: "Start the Conversation"
@@ -385,7 +385,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
     eyebrow: "The Bigger Picture",
     headline: "Plumbing SEO Is Part of a",
     highlightedText: "Bigger Growth System",
-    intro: "Plumbing SEO drives organic visibility and Map Pack rankings. But it produces the strongest results when it works with the rest of the marketing system — not in isolation from it.",
+    intro: "Plumbing SEO drives organic visibility and Map Pack rankings. But it produces the strongest results when it works with the rest of the marketing system, not in isolation from it.",
     body: "Your plumbing SEO feeds your Google Maps performance. Your GBP reviews improve your paid ad quality scores. Your email marketing reactivates past customers before they search for a new plumber. Your reporting dashboard ties all of it together into one clear picture of cost per booked call by source.\n\nWhen every channel is connected and pulling toward the same outcome, you get predictable call flow you can build a schedule around. When they run independently, you get gaps. Gaps mean calls going to competitors.",
     services: [
       {
