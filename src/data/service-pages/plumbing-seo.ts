@@ -386,7 +386,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
     headline: "Plumbing SEO Is Part of a",
     highlightedText: "Bigger Growth System",
     intro: "Plumbing SEO drives organic visibility and Map Pack rankings. But it produces the strongest results when it works with the rest of the marketing system — not in isolation from it.",
-    body: "Your plumbing SEO feeds your Google Maps performance. Your GBP reviews improve your paid ad quality scores. Your email marketing reactivates past customers before they search for a new plumber. Your reporting dashboard ties all of it together into one clear picture of cost per booked call by source. When every channel is connected and pulling toward the same outcome — more booked service calls — you get predictable call flow you can build a schedule around. When they run independently, you get gaps. Gaps mean calls going to competitors.",
+    body: "Your plumbing SEO feeds your Google Maps performance. Your GBP reviews improve your paid ad quality scores. Your email marketing reactivates past customers before they search for a new plumber. Your reporting dashboard ties all of it together into one clear picture of cost per booked call by source.\n\nWhen every channel is connected and pulling toward the same outcome, you get predictable call flow you can build a schedule around. When they run independently, you get gaps. Gaps mean calls going to competitors.",
     services: [
       {
         icon: Droplets,
