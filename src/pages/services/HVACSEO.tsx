@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import HVACMarketExclusivity from "@/components/services/hvac-seo/HVACMarketExclusivity";
-import Testimonials from "@/components/sections/Testimonials";
+import HVACTestimonials from "@/components/services/hvac-seo/HVACTestimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import {
@@ -184,7 +184,7 @@ const HVACSEO = () => {
 
       {/* 10. TESTIMONIALS */}
       <div id="testimonials" className="scroll-mt-32">
-        <Testimonials />
+        <HVACTestimonials />
       </div>
 
       <SectionDivider />
