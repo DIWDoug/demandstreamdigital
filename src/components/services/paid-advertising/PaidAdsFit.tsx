@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const goodFit = [
-  { point: "You have a real booking rate and someone measuring it", detail: "Paid campaigns tied to booking rate data optimize toward the right outcome. Without it, spend flows toward clicks." },
-  { point: "You have available capacity or a plan to add it", detail: "Paid ads fill the board fast. If the board is already full and technician coverage is limited, leads go unanswered." },
+  { point: "You have a specific window you need to fill — now", detail: "Paid advertising solves near-term operational problems. A slow board this week, a shoulder season gap next month, a competitor moving into your market. The timeline is weeks, not quarters." },
+  { point: "You have available capacity in the next 30 to 60 days", detail: "Paid ads fill the board fast. If the board is already full, the leads go unanswered. Capacity has to be there to receive what comes in." },
   { point: "You have call tracking in place or are willing to install it", detail: "Without call tracking, we cannot measure cost per booked call. That is our core metric and the one that matters most." },
   { point: "You want to report on cost per booked call, not impressions", detail: "We do not build reports around vanity metrics. Cost per booked call and booking rate are the numbers that matter." },
   { point: "You understand paid advertising requires ongoing management, not a one-time setup", detail: "Bid strategies, seasonal adjustments, and keyword management require active attention. Set-and-forget campaigns degrade." },
