@@ -36,7 +36,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
       {
         icon: Zap,
         title: "Emergency Intent Dominates",
-        body: "The majority of high-value plumbing searches are urgent. 'Emergency plumber near me.' 'Water heater not working.' 'Burst pipe repair.' These are not research queries. The searcher has a problem right now and they are calling within minutes of finding a result. Plumbing SEO has to prioritize this intent pattern first."
+        body: "The majority of high-value plumbing searches are urgent. 'Emergency plumber near me.' 'Water heater not working.' 'Burst pipe repair.' These are not research queries — they are active emergencies. Plumbing SEO has to be built around that urgency first."
       },
       {
         icon: MapPin,
