@@ -1,4 +1,5 @@
 import { Target, GitFork, Calendar, Map, Gauge, BarChart2 } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const failureRows = [
   {
@@ -39,7 +40,6 @@ const PaidAdsPPCFails = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
-          {/* Label + H2 */}
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Problem</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
             Why Most Contractor PPC Campaigns Fail
@@ -60,19 +60,29 @@ const PaidAdsPPCFails = () => {
               </p>
             </div>
 
-            {/* Right — failure rows */}
-            <div className="space-y-5">
-              {failureRows.map((row, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                  <div className="shrink-0 w-9 h-9 rounded-lg bg-accent-blue/10 flex items-center justify-center mt-0.5">
-                    <row.icon className="w-4 h-4 text-accent-blue" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900 mb-1 text-base">{row.headline}</p>
-                    <p className="text-base text-gray-600 leading-relaxed">{row.body}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Right — accordion */}
+            <div>
+              <Accordion type="single" collapsible className="space-y-2">
+                {failureRows.map((row, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`item-${i}`}
+                    className="border border-gray-200 rounded-lg overflow-hidden px-4"
+                  >
+                    <AccordionTrigger className="text-base font-semibold text-gray-900 hover:no-underline py-4 gap-3">
+                      <div className="flex items-center gap-3 text-left">
+                        <div className="shrink-0 w-7 h-7 rounded-md bg-accent-blue/10 flex items-center justify-center">
+                          <row.icon className="w-3.5 h-3.5 text-accent-blue" strokeWidth={1.5} />
+                        </div>
+                        {row.headline}
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base text-gray-600 leading-relaxed pb-4 pl-10">
+                      {row.body}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
 
           </div>
