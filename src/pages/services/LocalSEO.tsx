@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
-import TrustReel from "@/components/sections/TrustReel";
+
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -114,9 +114,6 @@ const LocalSEO = () => {
         />
       </div>
 
-      {/* TRUST REEL */}
-      <TrustReel />
-      
       {/* STICKY ANCHOR NAV */}
       <ServiceHubAnchorNav items={anchorItems} />
 

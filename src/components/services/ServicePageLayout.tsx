@@ -3,7 +3,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
-import TrustReel from "@/components/sections/TrustReel";
+
 import Testimonials from "@/components/sections/Testimonials";
 import type { ServicePageConfig, BreadcrumbItem } from "@/types/servicePage";
 import { getHubOgImage } from "@/lib/ogImages";
@@ -132,8 +132,6 @@ const ServicePageLayout = ({
         />
       </div>
       
-      {/* 2. TRUST REEL */}
-      <TrustReel />
       {customSections.afterTrustReel}
       
       <SectionDivider />

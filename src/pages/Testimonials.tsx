@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import TrustReel from "@/components/sections/TrustReel";
+
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import { Star, Quote, Building2, Users } from "lucide-react";

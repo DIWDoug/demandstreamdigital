@@ -6,7 +6,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
-import TrustReel from "@/components/sections/TrustReel";
+
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { hubs } from "@/data/services";
 import { Input } from "@/components/ui/input";
@@ -286,9 +286,6 @@ const SpokePage = () => {
           </div>
         </div>
       </section>
-
-      {/* Trust Reel */}
-      <TrustReel />
 
       <SectionDivider />
 
