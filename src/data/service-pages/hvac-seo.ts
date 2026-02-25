@@ -70,20 +70,20 @@ export const hvacSEOConfig: ServicePageConfig = {
     subheadline: "These outcomes only appear when strategy matches how HVAC demand actually works.",
     items: [
       {
-        title: "More Peak-Season Bookings",
-        description: "The calls that matter most in HVAC happen during the hottest and coldest weeks of the year. When your company ranks in the Map Pack and top organic results for emergency HVAC searches in your service area, those calls come to you. Every month you hold position through peak season, the calls keep coming."
+        title: "More No-Cool and No-Heat Emergency Bookings",
+        description: "The calls that matter most in HVAC happen at the worst times. When your company ranks in the Map Pack and top organic results for emergency HVAC searches in your service area, those calls come to you. Every month you hold position, the calls keep coming."
       },
       {
-        title: "Higher Booking Rate on Organic Calls",
-        description: "Organic local searchers are pre-qualified. They found your company because you showed up for the exact service they needed in the area they needed it. A homeowner searching 'AC tune-up near me' who lands on your dedicated AC tune-up page is closer to booking than a general ad click. That intent consistency produces better booking rates than broad paid traffic."
+        title: "Higher Booking Rate for Repair and Install Searches",
+        description: "Organic local searchers are pre-qualified. They found your company because you showed up for the exact service they needed in the area they needed it. A homeowner searching 'heat pump installation near me' who finds your dedicated install page is closer to booking than a general ad click."
       },
       {
-        title: "Defending Your Service Area Year-Round",
-        description: "If your HVAC company is not ranking for AC replacement, furnace repair, and heat pump installation in your market, a competitor is. A competitor with consistent GBP activity and strong service area pages will outrank you on emergency calls regardless of how good your technicians are."
+        title: "Defending Your Service Area Through Peak Season",
+        description: "If your HVAC company is not ranking for AC repair, furnace replacement, and heat pump installation in your market, a competitor is. A competitor with consistent GBP activity and strong service area pages will outrank you on emergency calls regardless of how good your techs are."
       },
       {
-        title: "Revenue Stability Between Seasons",
-        description: "HVAC revenue spikes around summer heat waves and winter cold snaps. When your organic presence is strong year-round, not just during peak season, you build a more stable baseline of tune-ups, maintenance agreements, and IAQ calls. That baseline lets you plan capacity, manage payroll, and grow without relying entirely on seasonal spikes."
+        title: "Revenue Stability Through Heating and Cooling Cycles",
+        description: "HVAC revenue spikes around heat waves, freeze events, and system failures. When your organic presence is strong year-round, not just during emergencies, you build a more stable baseline of maintenance, tune-up, and replacement calls. That baseline lets you plan capacity, manage payroll, and grow without relying entirely on seasonal spikes."
       }
     ]
   },
