@@ -28,7 +28,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">What Plumbing & HVAC Operators Say</p>
+          <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">What Plumbing Operators Say</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
             Real Results. Real Operators.
           </h2>
@@ -41,7 +41,7 @@ const Testimonials = () => {
                 <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
               ))}
             </div>
-            <span className="text-slate-600 text-sm font-medium">4.9 out of 5 · 22 Reviews (cumulative of Google, Dialed In Web & Demand Stream)</span>
+            <span className="text-slate-600 text-sm font-medium">4.9 out of 5 · 22 Reviews | Google Reviews | DemandStream Digital</span>
           </div>
         </div>
 

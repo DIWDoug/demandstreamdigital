@@ -24,7 +24,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
     },
     qualifierLine: "",
     ctaText: "Get a Free Plumbing SEO Audit",
-    ctaSubtext: "Built for plumbing companies in competitive local markets."
+    ctaSubtext: "Plumbing companies only. No HVAC. No general contractors."
   },
 
   problem: {
@@ -62,7 +62,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
     systemClosing: "Effective plumbing SEO requires scoping to the actual market. Not templated deliverables applied from a generic contractor package.",
     closingLine: "That is why our plumbing SEO work performs consistently",
     closingHighlight: "across different markets and service areas.",
-    ctaText: "Schedule a Discovery Call"
+    ctaText: "Claim Your Territory Today"
   },
 
   outcomes: {
@@ -333,7 +333,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
       { point: "You are looking for the lowest-cost option available", detail: "Effective plumbing SEO in a competitive market requires real investment. We are not the cheapest option. We are the option that produces results." },
       { point: "You are not willing to commit to a minimum 6-month engagement after roadmap delivery", detail: "The first three months are foundation work. You need time for the system to compound before evaluating results." }
     ],
-    ctaText: "Start the Conversation"
+    ctaText: "Claim Your Territory Today"
   },
 
   faq: {
