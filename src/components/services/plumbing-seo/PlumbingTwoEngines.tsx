@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, ChevronRight, Droplets, Map } from "lucide-react";
+import { ArrowRight, ChevronRight, Droplets, Map, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const organicPoints = [
@@ -19,6 +19,14 @@ const mapsPoints = [
   "Behavioral signals: click-to-call, direction requests, and photo engagement tracked consistently"
 ];
 
+const aiGeoPoints = [
+  "FAQ schema and structured data markup so your plumbing content gets cited in AI Overviews",
+  "Entity optimization — your business name, services, and location connected as a clear knowledge graph signal",
+  "Content formatted to answer the exact questions AI systems pull from: 'how long does water heater replacement take,' 'signs of a slab leak'",
+  "Conversational search optimization for voice and assistant queries — 'plumber open now near me'",
+  "GBP Q&A seeded with high-intent plumbing questions and direct answers"
+];
+
 const PlumbingTwoEngines = () => {
   const [clusterOpen, setClusterOpen] = useState(false);
 
@@ -32,41 +40,41 @@ const PlumbingTwoEngines = () => {
               The Structure
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              Plumbing SEO Runs on Two Engines
+              Plumbing SEO Runs on Three Systems
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Most plumbing companies think of SEO as one thing. It is two. Organic SEO and Google Maps SEO operate on different signals, reward different inputs, and drive different types of calls. Both have to work.
+              Most plumbing companies think of SEO as one thing. It is three. Organic SEO, Google Maps, and AI & Generative Search each operate on different signals and drive different types of calls. All three have to work.
             </p>
           </div>
 
-          {/* Two Column Cards */}
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-start">
+          {/* Three Column Cards */}
+          <div className="grid md:grid-cols-3 gap-6 items-start">
             {/* Engine 1: Organic */}
-            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8 flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
-                  <Droplets className="h-7 w-7 text-accent-blue" />
+            <div className="bg-surface-elevated rounded-2xl border border-border p-6 flex flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+                  <Droplets className="h-6 w-6 text-accent-blue" />
                 </div>
                 <div>
-                  <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Engine 1</p>
-                  <h3 className="text-xl font-semibold text-foreground">Organic Plumbing SEO</h3>
+                  <p className="text-xs text-text-muted uppercase tracking-widest mb-0.5">System 1</p>
+                  <h3 className="text-base font-semibold text-foreground">Organic Plumbing SEO</h3>
                 </div>
               </div>
-              <p className="text-text-secondary mb-6 leading-relaxed text-sm">
-                Organic rankings are structural. They are built through page architecture, content quality, technical health, and authority signals. The most important structural decision:{" "}
+              <p className="text-text-secondary mb-5 leading-relaxed text-sm">
+                Organic rankings are structural. Built through page architecture, content quality, and authority signals. The most important structural decision:{" "}
                 <span className="text-foreground font-medium">if it's a different phone call, it's a different page.</span>
               </p>
-              <ul className="space-y-3 mb-6 flex-1">
+              <ul className="space-y-2.5 mb-5 flex-1">
                 {organicPoints.map((point, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <li key={i} className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2 shrink-0" />
-                    <span className="text-text-secondary text-sm leading-relaxed">{point}</span>
+                    <span className="text-text-secondary text-[13px] leading-relaxed">{point}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* Collapsed toggle */}
-              <div className="border-t border-border/40 pt-4 mb-5">
+              {/* Collapsed cluster toggle */}
+              <div className="border-t border-border/40 pt-4 mb-4">
                 <button
                   onClick={() => setClusterOpen(!clusterOpen)}
                   className="flex items-center gap-2 text-accent-blue text-sm font-medium hover:opacity-80 transition-opacity"
@@ -94,32 +102,32 @@ const PlumbingTwoEngines = () => {
             </div>
 
             {/* Engine 2: Maps */}
-            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8 flex flex-col">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
-                  <Map className="h-7 w-7 text-cta" />
+            <div className="bg-surface-elevated rounded-2xl border border-border p-6 flex flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
+                  <Map className="h-6 w-6 text-cta" />
                 </div>
                 <div>
-                  <p className="text-xs text-text-muted uppercase tracking-widest mb-1">Engine 2</p>
-                  <h3 className="text-xl font-semibold text-foreground">Google Maps & GBP</h3>
+                  <p className="text-xs text-text-muted uppercase tracking-widest mb-0.5">System 2</p>
+                  <h3 className="text-base font-semibold text-foreground">Google Maps & GBP</h3>
                 </div>
               </div>
               <p className="text-text-secondary mb-4 leading-relaxed text-sm">
                 Maps rankings respond to GBP activity, review signals, and proximity. Over{" "}
                 <span className="text-foreground font-medium">70% of local service searches end at the Map Pack.</span>{" "}
-                For emergency plumbing calls — burst pipes, main line backups — the Map Pack is where the revenue decision happens.
+                For emergency plumbing calls, the Map Pack is where the revenue decision happens.
               </p>
-              <div className="bg-background/50 rounded-lg p-4 mb-6 border border-border/40">
+              <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Maps is Behavioral</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
                   A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly, uploading real job photos, and responding to every review.
                 </p>
               </div>
-              <ul className="space-y-3 mb-6 flex-1">
+              <ul className="space-y-2.5 mb-5 flex-1">
                 {mapsPoints.map((point, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <li key={i} className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-cta mt-2 shrink-0" />
-                    <span className="text-text-secondary text-sm leading-relaxed">{point}</span>
+                    <span className="text-text-secondary text-[13px] leading-relaxed">{point}</span>
                   </li>
                 ))}
               </ul>
@@ -131,10 +139,48 @@ const PlumbingTwoEngines = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+
+            {/* Engine 3: AI & GEO */}
+            <div className="bg-surface-elevated rounded-2xl border border-border p-6 flex flex-col">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-accent-green/10 flex items-center justify-center shrink-0">
+                  <Bot className="h-6 w-6 text-accent-green" />
+                </div>
+                <div>
+                  <p className="text-xs text-text-muted uppercase tracking-widest mb-0.5">System 3</p>
+                  <h3 className="text-base font-semibold text-foreground">AI & Generative Search</h3>
+                </div>
+              </div>
+              <p className="text-text-secondary mb-4 leading-relaxed text-sm">
+                AI Overviews now appear above organic results for a growing share of plumbing searches. A homeowner asking "what causes low water pressure" or "how do I know if I have a slab leak" may never scroll past the AI answer.{" "}
+                <span className="text-foreground font-medium">Your content needs to be the source that gets cited.</span>
+              </p>
+              <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">GEO vs SEO</p>
+                <p className="text-xs text-text-secondary leading-relaxed">
+                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers — a different signal set, but built on the same technical and content foundation.
+                </p>
+              </div>
+              <ul className="space-y-2.5 mb-5 flex-1">
+                {aiGeoPoints.map((point, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-green mt-2 shrink-0" />
+                    <span className="text-text-secondary text-[13px] leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/ai-search-optimization"
+                className="inline-flex items-center gap-2 text-accent-green text-sm font-medium hover:gap-3 transition-all"
+              >
+                See our AI & GEO approach
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
 
           <p className="text-center text-text-muted text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
-            Organic SEO and Maps SEO are the two engines specific to plumbing. Both operate within a broader connected marketing system that includes paid ads, reputation management, email retention, and unified reporting.
+            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured data support AI citations. The system compounds when every channel is aligned.
           </p>
         </div>
       </div>
