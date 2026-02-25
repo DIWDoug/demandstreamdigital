@@ -55,7 +55,7 @@ const PaidAdsDemandControl = () => {
               {concepts.map((c, i) => (
                 <div key={i} className="bg-surface-elevated border border-border rounded-xl p-5">
                   <p className="text-lg font-bold text-foreground mb-2">{c.label}</p>
-                  <p className="text-sm text-text-secondary leading-relaxed">{c.body}</p>
+                  <p className="text-base text-text-secondary leading-relaxed">{c.body}</p>
                 </div>
               ))}
             </div>
