@@ -4,22 +4,22 @@ const points = [
   {
     icon: Phone,
     title: "Call Tracking Is Mandatory",
-    body: "Every plumbing SEO campaign we build includes call tracking so we know which searches and pages are producing booked calls — not just calls. Ranking data without call data is incomplete."
+    body: "Every plumbing SEO campaign we build includes call tracking. We track which searches and pages produce booked calls, not just call volume. Ranking data without call data is incomplete."
   },
   {
     icon: BarChart3,
     title: "Booking Rate Is Tracked, Not Assumed",
-    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is converting to revenue. A plumbing company with a 45% booking rate produces different results than one running at 72%. That gap is addressable — but it has to be identified before we scale volume."
+    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is converting to revenue. A company at 45% produces different results than one at 72%. That gap has to be identified before we scale volume."
   },
   {
     icon: AlertTriangle,
     title: "Missed Calls Are Measurable Losses",
-    body: "A missed call during a freeze event or a no-hot-water spike is a job that went to your competitor. We identify missed call patterns and address them before scaling volume. Emergency calls cannot go to voicemail."
+    body: "A missed call during a freeze event or a no-hot-water spike is a job that went to your competitor. Emergency calls cannot go to voicemail. We identify the patterns before scaling volume."
   },
   {
     icon: Gauge,
     title: "Capacity Alignment Is Built In",
-    body: "If your board is full in July, we throttle. If February is slow, we push. Marketing that ignores your operational reality creates chaos, not growth. Plumbing SEO has to align with how your operation actually runs."
+    body: "If your board is full in July, we throttle. If February is slow, we push. Marketing that ignores your operational reality creates chaos. Plumbing SEO has to align with how your operation runs."
   }
 ];
 
@@ -67,7 +67,7 @@ const PlumbingPhoneNotRankings = () => {
             {points.map((point, index) => (
               <div
                 key={index}
-                className="bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 transition-colors"
+                className="bg-surface-elevated border border-border/50 rounded-xl p-7 hover:border-accent-blue/30 transition-colors"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
