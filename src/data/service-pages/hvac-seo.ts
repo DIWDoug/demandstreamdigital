@@ -329,7 +329,7 @@ export const hvacSEOConfig: ServicePageConfig = {
       { point: "You are looking for the lowest-cost option available", detail: "Effective HVAC SEO in a competitive market requires real investment. We are not the cheapest option. We are the option that produces results." },
       { point: "You are not willing to commit to a minimum 6-month engagement after roadmap delivery", detail: "The first three months are foundation work. You need time for the system to compound before evaluating results." }
     ],
-    ctaText: "Claim Your Territory Today"
+    ctaText: "Start the Conversation"
   },
 
   faq: {
