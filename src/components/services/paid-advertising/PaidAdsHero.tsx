@@ -71,9 +71,6 @@ const PaidAdsHero = () => {
               ))}
             </ul>
 
-            <Link to="/contact" className="btn-cta inline-flex items-center gap-2 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Get a Paid Ads Performance Audit &#8594;
-            </Link>
 
           </div>
 
