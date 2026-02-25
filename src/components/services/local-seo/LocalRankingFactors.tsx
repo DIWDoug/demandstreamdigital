@@ -29,7 +29,7 @@ const LocalRankingFactors = () => {
 
           {/* Caption - why this matters */}
           <p className="text-center mt-5 text-slate-500 text-sm italic">
-            This research informs how we prioritize local SEO investment in every plumbing and HVAC market we work in. GBP signals and review signals together account for over 50% of Map Pack ranking weight — which is why both are core to our system, not optional add-ons.
+            This research informs how we prioritize local SEO investment in every market we work in. GBP signals and review signals together account for over 50% of Map Pack ranking weight. Both are core to our system, not optional add-ons.
           </p>
 
           {/* Source Link */}
