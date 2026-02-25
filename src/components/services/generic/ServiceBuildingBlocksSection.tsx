@@ -39,17 +39,17 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
             <Icon className="w-6 h-6 text-accent-blue" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-slate-900 font-semibold text-lg mb-2 group-hover:text-accent-blue transition-colors">
+            <h3 className="text-foreground font-semibold text-base mb-2 group-hover:text-accent-blue transition-colors">
               {block.title}
             </h3>
-            <p className="text-slate-500 text-sm leading-relaxed">
+            <p className="text-text-secondary text-sm leading-relaxed">
               {block.description}
             </p>
           </div>
         </div>
         {hubSlug && (
-          <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between">
-            <span className="text-xs text-slate-400 font-medium">
+          <div className="mt-4 pt-3 border-t border-border/40 flex items-center justify-between">
+            <span className="text-xs text-text-muted font-medium">
               Included based on scope
             </span>
             <span className="text-xs text-cta font-medium flex items-center gap-1">
@@ -63,14 +63,12 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
 
     // If hubSlug is provided, render as link to spoke page
     if (hubSlug) {
-      // Use flat URL mapping for all spokes
       const linkPath = getSpokeUrl(block.slug);
-      
       return (
         <Link
           key={block.slug}
           to={linkPath}
-          className="group bg-white border border-slate-200 rounded-xl p-6 hover:border-cta/30 hover:shadow-lg transition-all"
+          className="group bg-surface-elevated border border-border/50 rounded-xl p-6 hover:border-accent-blue/30 hover:shadow-lg transition-all"
         >
           {blockContent}
         </Link>
@@ -81,7 +79,7 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
     return (
       <div
         key={block.slug}
-        className="bg-white border border-slate-200 rounded-xl p-6"
+        className="bg-surface-elevated border border-border/50 rounded-xl p-6"
       >
         {blockContent}
       </div>
@@ -89,40 +87,42 @@ const ServiceBuildingBlocksSection = ({ config, hubSlug }: ServiceBuildingBlocks
   };
 
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section className="py-20 lg:py-28 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 lg:mb-16">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-green text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
               {config.headline}
             </h2>
-            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               {config.subheadline}
             </p>
           </div>
 
           {/* Clustered Blocks */}
           {groupedBlocks ? (
-            <div className="space-y-12">
+            <div className="space-y-10">
               {Object.entries(groupedBlocks).map(([clusterName, blocks]) => (
-              <div key={clusterName}>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-cta"></span>
-                    {clusterName}
-                  </h3>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div key={clusterName}>
+                  <div className="flex items-center gap-3 mb-5">
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-text-muted border border-border/60 rounded px-2.5 py-1">
+                      {clusterName}
+                    </span>
+                    <div className="flex-1 h-px bg-border/40" />
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {blocks.map(renderBlock)}
                   </div>
                 </div>
               ))}
             </div>
           ) : (
-            /* Flat Blocks Grid - all items in same grid for consistent layout */
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            /* Flat Blocks Grid */
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {config.blocks.map(renderBlock)}
             </div>
           )}
