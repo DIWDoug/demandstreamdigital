@@ -34,7 +34,9 @@ export interface RoadmapPhase {
   name: string;
   title: string;
   description: string;
-  activities: string[];
+  activities: string[]; // "What We Focus On"
+  expect?: string[]; // "What You Can Expect" — paragraphs
+  walkAway?: string[]; // "What You Walk Away With" — bullets
   icon: LucideIcon;
   color: string; // HSL value
 }
