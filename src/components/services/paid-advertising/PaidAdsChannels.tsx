@@ -86,15 +86,15 @@ const PaidAdsChannels = () => {
                 <h3 className="text-lg font-bold text-foreground mb-4">{channel.title}</h3>
                 <ul className="space-y-2.5 flex-1 mb-6">
                   {channel.bullets.map((bullet, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-sm text-text-secondary">
-                      <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
+                     <li key={j} className="flex items-start gap-2.5 text-sm text-text-secondary">
+                      <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                       <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   to={channel.href}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-cta hover:text-cta/80 transition-colors group mt-auto"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
                 >
                   Explore {channel.title}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />

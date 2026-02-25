@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { cn } from "@/lib/utils";
 
 const goodFit = [
   { point: "You have a real booking rate and someone measuring it", detail: "If you do not have booking rate data, paid advertising is spending without direction. We need a baseline before we can optimize toward it." },
@@ -24,85 +27,86 @@ const PaidAdsFit = () => {
   const [openBad, setOpenBad] = useState<number | null>(null);
 
   return (
-    <section id="fit" className="py-20 lg:py-28 bg-white scroll-mt-32">
+    <section id="fit" className="py-20 lg:py-28 bg-card border-y border-border scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 text-center">Selective Fit</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">
-            Is Paid Advertising Right for Your Business?
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Paid advertising works best when the operation behind it is ready to handle what comes in.
-          </p>
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-4">Selective Fit</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Is Paid Advertising Right for Your Business?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Paid advertising works best when the operation behind it is ready to handle what comes in.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
 
             {/* Good Fit */}
-            <div>
-              <div className="flex items-center gap-2 mb-5">
-                <span className="text-lg text-green-500">&#10003;</span>
-                <h3 className="font-bold text-gray-900 text-lg">This Could Work Well</h3>
+            <div className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-sm">
+              <div className="flex items-center gap-3 mb-5 md:mb-6">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
+                  <Check className="h-4 w-4 md:h-5 md:w-5 text-green-600" />
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground">This Could Work Well</h3>
               </div>
-              <div className="space-y-2">
+              <ul className="space-y-2 md:space-y-3">
                 {goodFit.map((item, i) => (
-                  <div key={i} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
-                    <button
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
-                      onClick={() => setOpenGood(openGood === i ? null : i)}
+                  <li key={i}>
+                    <Collapsible
+                      open={openGood === i}
+                      onOpenChange={(open) => setOpenGood(open ? i : null)}
                     >
-                      <span className="flex items-center gap-3 text-base font-medium text-gray-800">
-                        <span className="text-green-500 shrink-0">&#10003;</span>
-                        {item.point}
-                      </span>
-                      <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openGood === i ? "rotate-180" : ""}`}>&#9660;</span>
-                    </button>
-                    {openGood === i && (
-                      <div className="px-4 pb-4 pt-1 text-base text-gray-600 border-t border-gray-100">
-                        {item.detail}
-                      </div>
-                    )}
-                  </div>
+                      <CollapsibleTrigger className="flex items-start gap-2.5 md:gap-3 w-full text-left group cursor-pointer py-2.5 md:py-2 min-h-[44px]">
+                        <Check className="h-4 w-4 md:h-5 md:w-5 text-green-600 shrink-0 mt-0.5" />
+                        <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
+                        <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200 shrink-0 mt-0.5", openGood === i && "rotate-180")} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                        <p className="text-muted-foreground text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">{item.detail}</p>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             {/* Not a Fit */}
-            <div>
-              <div className="flex items-center gap-2 mb-5">
-                <span className="text-lg text-red-500">&#10007;</span>
-                <h3 className="font-bold text-gray-900 text-lg">Probably Not a Fit</h3>
+            <div className="bg-background rounded-2xl p-5 sm:p-6 md:p-8 border border-border shadow-sm">
+              <div className="flex items-center gap-3 mb-5 md:mb-6">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
+                  <X className="h-4 w-4 md:h-5 md:w-5 text-red-500" />
+                </div>
+                <h3 className="text-lg md:text-xl font-semibold text-foreground">Probably Not a Fit</h3>
               </div>
-              <div className="space-y-2">
+              <ul className="space-y-2 md:space-y-3">
                 {notFit.map((item, i) => (
-                  <div key={i} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
-                    <button
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
-                      onClick={() => setOpenBad(openBad === i ? null : i)}
+                  <li key={i}>
+                    <Collapsible
+                      open={openBad === i}
+                      onOpenChange={(open) => setOpenBad(open ? i : null)}
                     >
-                      <span className="flex items-center gap-3 text-base font-medium text-gray-800">
-                        <span className="text-red-500 shrink-0">&#10007;</span>
-                        {item.point}
-                      </span>
-                      <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openBad === i ? "rotate-180" : ""}`}>&#9660;</span>
-                    </button>
-                    {openBad === i && (
-                      <div className="px-4 pb-4 pt-1 text-base text-gray-600 border-t border-gray-100">
-                        {item.detail}
-                      </div>
-                    )}
-                  </div>
+                      <CollapsibleTrigger className="flex items-start gap-2.5 md:gap-3 w-full text-left group cursor-pointer py-2.5 md:py-2 min-h-[44px]">
+                        <X className="h-4 w-4 md:h-5 md:w-5 text-red-400 shrink-0 mt-0.5" />
+                        <span className="text-foreground font-medium flex-1 text-sm md:text-base leading-snug">{item.point}</span>
+                        <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform duration-200 shrink-0 mt-0.5", openBad === i && "rotate-180")} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up">
+                        <p className="text-muted-foreground text-sm leading-relaxed pl-6 md:pl-8 pb-2 pt-1">{item.detail}</p>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
           </div>
 
-          {/* CTA */}
           <div className="text-center">
-            <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+            <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
               Claim Your Territory Today
-              <span className="ml-1">&#8594;</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 

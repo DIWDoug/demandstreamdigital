@@ -9,7 +9,6 @@ const services = [
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
 ];
 
-// 6 orbit nodes evenly spaced
 const orbitNodes = [
   { label: "Local SEO", angle: 0 },
   { label: "Google Maps / GBP", angle: 60 },
@@ -70,32 +69,32 @@ const PaidAdsBiggerPicture = () => {
 
             {/* Right — hub and spoke diagram */}
             <div className="flex items-center justify-center">
-              <div className="relative w-80 h-80">
+              <div className="relative w-[630px] h-[630px]">
                 {/* Outer ring */}
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-accent-blue/20" />
 
                 {/* Center node */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-cta text-white rounded-full w-28 h-28 flex flex-col items-center justify-center text-center p-2 shadow-lg z-10">
-                    <p className="text-xs font-bold leading-tight">Paid</p>
-                    <p className="text-xs font-bold leading-tight">Advertising</p>
-                    <p className="text-[9px] text-white/75 mt-1 leading-tight px-1">Demand control across 6 channels</p>
+                  <div className="bg-cta text-white rounded-full w-40 h-40 flex flex-col items-center justify-center text-center p-3 shadow-lg z-10">
+                    <p className="text-sm font-bold leading-tight">Paid</p>
+                    <p className="text-sm font-bold leading-tight">Advertising</p>
+                    <p className="text-[11px] text-white/75 mt-1 leading-tight px-2">Demand control across 6 channels</p>
                   </div>
                 </div>
 
                 {/* Orbit nodes */}
                 {orbitNodes.map((node, i) => {
                   const rad = (node.angle * Math.PI) / 180;
-                  const r = 130;
-                  const x = 160 + r * Math.sin(rad);
-                  const y = 160 - r * Math.cos(rad);
+                  const r = 255;
+                  const x = 315 + r * Math.sin(rad);
+                  const y = 315 - r * Math.cos(rad);
                   return (
                     <div
                       key={i}
-                      className="absolute w-16 h-16 bg-surface-elevated border border-border rounded-full flex items-center justify-center text-center shadow-sm"
-                      style={{ left: x - 32, top: y - 32 }}
+                      className="absolute w-24 h-24 bg-surface-elevated border border-border rounded-full flex items-center justify-center text-center shadow-sm"
+                      style={{ left: x - 48, top: y - 48 }}
                     >
-                      <p className="text-[9px] font-semibold text-foreground leading-tight px-1">{node.label}</p>
+                      <p className="text-[11px] font-semibold text-foreground leading-tight px-2">{node.label}</p>
                     </div>
                   );
                 })}

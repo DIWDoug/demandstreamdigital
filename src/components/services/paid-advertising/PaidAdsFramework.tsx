@@ -137,21 +137,6 @@ const PaidAdsFramework = () => {
             </div>
           </div>
 
-          {/* Mid-section CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-            <Link to="/contact" className="btn-cta group flex items-center gap-2">
-              Get a Paid Ads Performance Audit
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <span className="text-gray-400 text-sm">or</span>
-            <a
-              href={PHONE_HREF}
-              className="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-all font-medium text-sm"
-            >
-              <Phone className="h-4 w-4" />
-              {PHONE_NUMBER}
-            </a>
-          </div>
 
         </div>
       </div>
