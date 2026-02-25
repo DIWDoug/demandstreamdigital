@@ -132,15 +132,13 @@ const PaidAdvertising = () => {
       {/* 09. FIT */}
       <PaidAdsFit />
 
-      <SectionDivider />
-
-      {/* 10. BIGGER PICTURE */}
-      <PaidAdsBiggerPicture />
-
-      <SectionDivider />
-
-      {/* 11. MARKET EXCLUSIVITY */}
+      {/* 10. MARKET EXCLUSIVITY */}
       <MarketExclusivity />
+
+      <SectionDivider />
+
+      {/* 11. BIGGER PICTURE */}
+      <PaidAdsBiggerPicture />
 
       {/* 12. LEAD FORM */}
       <PaidAdsContactForm />
