@@ -8,7 +8,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import { 
-  ServiceProblemSection,
   ServiceOutcomesSection,
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
@@ -24,6 +23,7 @@ import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
 import PhoneNotRankings from "@/components/services/local-seo/PhoneNotRankings";
 import BuiltForBoth from "@/components/services/local-seo/BuiltForBoth";
+import LocalSEOProblemSection from "@/components/services/local-seo/LocalSEOProblemSection";
 
 // Flatten FAQ groups for schema
 const getFlatFAQs = () => {
@@ -124,7 +124,7 @@ const LocalSEO = () => {
       
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
-        <ServiceProblemSection config={localSEOConfig.problem} />
+        <LocalSEOProblemSection />
       </div>
       
       <SectionDivider />
