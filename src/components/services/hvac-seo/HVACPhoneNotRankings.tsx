@@ -9,17 +9,17 @@ const points = [
   {
     icon: BarChart3,
     title: "Booking Rate Is Tracked, Not Assumed",
-    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is converting to revenue. A company at 45% produces different results than one running at 72%. That gap has to be identified before we scale volume."
+    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is converting to revenue. A company at 45% produces different results than one at 72%. That gap has to be identified before we scale volume."
   },
   {
     icon: AlertTriangle,
-    title: "Missed Calls Are Measurable Losses",
-    body: "A missed call during a heat wave or a cold snap is a job that went to your competitor. Emergency HVAC calls cannot go to voicemail. We identify the patterns before scaling volume."
+    title: "Missed No-Cool Calls Are Measurable Losses",
+    body: "A missed call during a July heat spike or a January freeze event is a job that went to your competitor. Emergency HVAC calls cannot go to voicemail. We identify the patterns before scaling volume."
   },
   {
     icon: Gauge,
-    title: "Capacity Alignment Is Built In",
-    body: "If your board is full in July, we throttle. If October is slow, we push. Marketing that ignores your operational reality creates chaos. HVAC SEO has to align with how your operation runs."
+    title: "Capacity Is Built In",
+    body: "If your board is full in July, we throttle. If February is slow, we push. Marketing that ignores your operational reality creates chaos. HVAC SEO has to align with how your season runs."
   }
 ];
 
@@ -37,7 +37,7 @@ const HVACPhoneNotRankings = () => {
               HVAC SEO Starts With the Phone, Not Rankings
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              A ranking is not revenue. A booked call is. Before we build a single campaign, we look at call tracking data, your answer rate, and how your dispatch board handles volume.
+              A ranking is not revenue. A booked call is. Before we build a single campaign, we look at call tracking data, your answer rate, and how your dispatch board handles volume during peak season.
             </p>
           </div>
 
