@@ -4,31 +4,28 @@ const services = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
   { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
-  { label: "Paid Advertising", href: "/paid-advertising/" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
 ];
 
-// Orbit positions: 6 nodes evenly spaced in a circle
+// 6 orbit nodes evenly spaced
 const orbitNodes = [
   { label: "Local SEO", angle: 0 },
   { label: "Google Maps / GBP", angle: 60 },
   { label: "Reputation Management", angle: 120 },
   { label: "Email Marketing", angle: 180 },
   { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Paid Advertising", angle: 300, isCenter: true },
+  { label: "Web Design", angle: 300 },
 ];
 
 const PaidAdsBiggerPicture = () => {
-  const left = services.slice(0, 3);
-  const right = services.slice(3);
-
   return (
     <section className="py-20 lg:py-28 bg-background scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Bigger Picture</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Bigger Picture</p>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -53,19 +50,19 @@ const PaidAdsBiggerPicture = () => {
 
               {/* Service checklist two-col */}
               <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-8">
-                {[...left, ...right].map((svc, i) => (
+                {services.map((svc, i) => (
                   <Link
                     key={i}
                     to={svc.href}
-                    className="flex items-center gap-2 text-sm text-text-secondary hover:text-cta transition-colors group"
+                    className="flex items-center gap-2 text-sm text-text-secondary hover:text-accent-blue transition-colors group"
                   >
-                    <span className="text-cta">&#10003;</span>
+                    <span className="text-accent-blue">&#10003;</span>
                     <span className="group-hover:underline">{svc.label}</span>
                   </Link>
                 ))}
               </div>
 
-              <Link to="/plumbing-hvac-digital-marketing/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-cta hover:text-cta/80 transition-colors">
+              <Link to="/plumbing-hvac-digital-marketing/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors">
                 See How the Full System Works
                 <span>&#8594;</span>
               </Link>
@@ -75,7 +72,7 @@ const PaidAdsBiggerPicture = () => {
             <div className="flex items-center justify-center">
               <div className="relative w-80 h-80">
                 {/* Outer ring */}
-                <div className="absolute inset-0 rounded-full border-2 border-dashed border-cta/20" />
+                <div className="absolute inset-0 rounded-full border-2 border-dashed border-accent-blue/20" />
 
                 {/* Center node */}
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -87,7 +84,7 @@ const PaidAdsBiggerPicture = () => {
                 </div>
 
                 {/* Orbit nodes */}
-                {orbitNodes.filter(n => !n.isCenter).map((node, i) => {
+                {orbitNodes.map((node, i) => {
                   const rad = (node.angle * Math.PI) / 180;
                   const r = 130;
                   const x = 160 + r * Math.sin(rad);

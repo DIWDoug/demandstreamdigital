@@ -25,7 +25,7 @@ const PaidAdsDemandControl = () => {
 
           {/* Section label + headline */}
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Difference</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Difference</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Paid Advertising Is Demand Control
             </h2>
@@ -36,9 +36,6 @@ const PaidAdsDemandControl = () => {
 
             {/* Left — body copy */}
             <div className="space-y-5 text-text-secondary leading-relaxed">
-              <p>
-                The contractors who buy paid advertising are not the same as the ones who buy SEO. SEO clients are building something compound over time. They are patient, research-driven, and thinking in quarters. Paid advertising clients have a near-term problem. A slow board. A shoulder season gap. A market they want to defend before a competitor locks it up. The timeline is weeks, not months.
-              </p>
               <p>
                 SEO builds authority over months. Paid advertising activates in days.
               </p>
