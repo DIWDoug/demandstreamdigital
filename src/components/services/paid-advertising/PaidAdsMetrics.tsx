@@ -11,7 +11,7 @@ const ourMetrics = [
 
 const PaidAdsMetrics = () => {
   return (
-    <section id="metrics" className="py-20 lg:py-28 bg-[#f5f5f5] scroll-mt-32">
+    <section id="metrics" className="py-20 lg:py-28 bg-white scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
 

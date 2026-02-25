@@ -24,7 +24,7 @@ const PaidAdsBiggerPicture = () => {
   const right = services.slice(3);
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-white scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
@@ -34,15 +34,15 @@ const PaidAdsBiggerPicture = () => {
 
             {/* Left — copy */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Paid Advertising Is Part of a Bigger Growth System
               </h2>
 
-              <p className="font-semibold text-gray-800 mb-5 leading-relaxed">
+              <p className="font-semibold text-foreground mb-5 leading-relaxed">
                 Paid advertising produces the strongest results when it runs inside a connected system. Not as a standalone channel managed in isolation.
               </p>
 
-              <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
+              <div className="space-y-4 text-text-secondary leading-relaxed mb-8">
                 <p>
                   Your paid campaigns perform better when your GBP reviews are strong, your landing pages are built for intent, and your call tracking feeds data back into campaign decisions. Your SEO lowers the blended cost per booked call over time. Your email marketing reactivates past customers before they search and click on a competitor's ad.
                 </p>
@@ -57,7 +57,7 @@ const PaidAdsBiggerPicture = () => {
                   <Link
                     key={i}
                     to={svc.href}
-                    className="flex items-center gap-2 text-sm text-gray-700 hover:text-cta transition-colors group"
+                    className="flex items-center gap-2 text-sm text-text-secondary hover:text-cta transition-colors group"
                   >
                     <span className="text-cta">&#10003;</span>
                     <span className="group-hover:underline">{svc.label}</span>
