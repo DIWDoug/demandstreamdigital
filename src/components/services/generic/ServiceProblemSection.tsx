@@ -25,20 +25,24 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance max-w-2xl">
               {config.headline}
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              {config.intro}
-            </p>
+            <div className="max-w-[600px] space-y-4">
+              {config.intro.split("\n\n").map((para, i) => (
+                <p key={i} className="text-lg text-slate-600">
+                  {para}
+                </p>
+              ))}
+            </div>
 
             {/* Urgency Callout Card */}
             {config.introCallout && (
-              <div className="mt-8 max-w-3xl mx-auto bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
+              <div className="mt-8 max-w-[600px] bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
                 <p className="text-slate-700 text-base leading-relaxed font-medium">
                   {config.introCallout}
                 </p>
