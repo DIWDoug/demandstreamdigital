@@ -13,7 +13,7 @@ export const localSEOConfig: ServicePageConfig = {
     headline: "Local SEO for Plumbing & HVAC Companies",
     highlightedText: "That Want More Booked Service Calls",
     subheadline: {
-      intro: "When a homeowner searches for a water heater replacement or an emergency no-cool call, the top three results in Google Maps take the call. Everyone else waits.",
+      intro: "When a homeowner searches for a water heater replacement or an emergency no-cool call, the first page of results gets the majority of the calls. Everyone else waits.",
       bullets: [
         "Built around how customers search for plumbers and HVAC companies in your market",
         "Connected strategy across Google Maps, organic, and local search",
