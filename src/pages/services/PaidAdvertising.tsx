@@ -13,8 +13,11 @@ import PaidAdsFramework from "@/components/services/paid-advertising/PaidAdsFram
 import PaidAdsMetrics from "@/components/services/paid-advertising/PaidAdsMetrics";
 import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
 import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAdsBiggerPicture";
+import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
+import PaidAdsSEOIntegration from "@/components/services/paid-advertising/PaidAdsSEOIntegration";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
+import MidPageCTA from "@/components/sections/MidPageCTA";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -26,6 +29,7 @@ const anchorItems = [
   { label: "Demand Control", href: "#demand-control" },
   { label: "Why PPC Fails", href: "#why-ppc-fails" },
   { label: "Channels", href: "#channels" },
+  { label: "Industries", href: "#industries" },
   { label: "Our Process", href: "#our-process" },
   { label: "Metrics", href: "#metrics" },
   { label: "Fit", href: "#fit" },
@@ -103,7 +107,12 @@ const PaidAdvertising = () => {
 
       <SectionDivider />
 
-      {/* 06. FRAMEWORK / PROCESS */}
+      {/* 06. BUILT FOR BOTH */}
+      <PaidAdsBuiltForBoth />
+
+      <SectionDivider />
+
+      {/* 07. FRAMEWORK / PROCESS */}
       <PaidAdsFramework />
 
       <SectionDivider />
@@ -116,12 +125,20 @@ const PaidAdvertising = () => {
       {/* 09. FIT */}
       <PaidAdsFit />
 
-      {/* 10. MARKET EXCLUSIVITY */}
+      {/* 10. MID-PAGE CTA */}
+      <MidPageCTA />
+
+      {/* 11. MARKET EXCLUSIVITY */}
       <MarketExclusivity />
 
       <SectionDivider />
 
-      {/* 11. BIGGER PICTURE */}
+      {/* 12. SEO INTEGRATION */}
+      <PaidAdsSEOIntegration />
+
+      <SectionDivider />
+
+      {/* 13. BIGGER PICTURE */}
       <PaidAdsBiggerPicture />
 
       {/* 12. LEAD FORM */}
