@@ -27,7 +27,7 @@ const PaidAdsSEOIntegration = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Connection</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Connection</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12">
             Paid Ads and SEO Together Control the Market
           </h2>

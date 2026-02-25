@@ -40,7 +40,7 @@ const PaidAdsPPCFails = () => {
         <div className="max-w-6xl mx-auto">
 
           {/* Label + H2 */}
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Problem</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Problem</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
             Why Most Contractor PPC Campaigns Fail
           </h2>
@@ -55,7 +55,7 @@ const PaidAdsPPCFails = () => {
               <p>
                 A plumbing or HVAC PPC campaign that is not built around booked calls, booking rate, and capacity is a budget leak. The calls come in. The wrong ones get booked. The board fills with low-margin work. And the agency sends a report showing record click volume.
               </p>
-              <p className="font-medium text-gray-700 border-l-4 border-cta pl-4">
+              <p className="font-medium text-gray-700 border-l-4 border-accent-blue pl-4">
                 We build paid campaigns around how plumbing and HVAC companies actually measure growth. Not how ad platforms measure activity.
               </p>
             </div>
@@ -64,8 +64,8 @@ const PaidAdsPPCFails = () => {
             <div className="space-y-5">
               {failureRows.map((row, i) => (
                 <div key={i} className="flex gap-4 items-start">
-                  <div className="shrink-0 w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center mt-0.5">
-                    <row.icon className="w-4 h-4 text-cta" strokeWidth={1.5} />
+                  <div className="shrink-0 w-9 h-9 rounded-lg bg-accent-blue/10 flex items-center justify-center mt-0.5">
+                    <row.icon className="w-4 h-4 text-accent-blue" strokeWidth={1.5} />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1 text-sm">{row.headline}</p>

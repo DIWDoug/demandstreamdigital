@@ -28,7 +28,7 @@ const PaidAdsFit = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3 text-center">Selective Fit</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 text-center">Selective Fit</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">
             Is Paid Advertising Right for Your Business?
           </h2>
@@ -101,7 +101,7 @@ const PaidAdsFit = () => {
           {/* CTA */}
           <div className="text-center">
             <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
-              Get a Paid Ads Performance Audit
+              Claim Your Territory Today
               <span className="ml-1">&#8594;</span>
             </Link>
           </div>

@@ -65,7 +65,7 @@ const PaidAdsHero = () => {
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               {bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
-                  <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
+                  <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                   <span>{bullet}</span>
                 </li>
               ))}

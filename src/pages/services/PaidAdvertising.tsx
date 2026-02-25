@@ -17,6 +17,7 @@ import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
 import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAdsBiggerPicture";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
 import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
+import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -136,7 +137,12 @@ const PaidAdvertising = () => {
       {/* 10. BIGGER PICTURE */}
       <PaidAdsBiggerPicture />
 
-      {/* 11. LEAD FORM */}
+      <SectionDivider />
+
+      {/* 11. MARKET EXCLUSIVITY */}
+      <MarketExclusivity />
+
+      {/* 12. LEAD FORM */}
       <PaidAdsContactForm />
 
       {/* 12. FOOTER */}

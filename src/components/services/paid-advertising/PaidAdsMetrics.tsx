@@ -15,7 +15,7 @@ const PaidAdsMetrics = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3 text-center">What Gets Measured</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3 text-center">What Gets Measured</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-center">
             The Metrics That Actually Matter
           </h2>
@@ -44,7 +44,7 @@ const PaidAdsMetrics = () => {
               <div className="space-y-4">
                 {ourMetrics.map((m, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
+                    <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                     <div>
                       <span className="font-semibold text-foreground text-sm">{m.label}</span>
                       <span className="text-text-secondary text-sm"> — {m.desc}</span>
