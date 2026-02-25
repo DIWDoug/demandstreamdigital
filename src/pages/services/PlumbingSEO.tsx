@@ -134,10 +134,10 @@ const PlumbingSEO = () => {
       </div>
 
       {/* Outcomes closing paragraph */}
-      <div className="bg-surface-dark pb-10">
+      <div className="bg-surface-dark border-t border-border/30 py-10">
         <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-text-secondary text-base text-center max-w-4xl mx-auto leading-relaxed">
-            Local SEO must account for the operational realities of running a plumbing company. Permit timelines, licensing requirements, and service capacity all influence how marketing converts into booked revenue. A plumbing SEO strategy built without this context generates calls the operation cannot run.
+          <p className="text-text-secondary text-base text-center max-w-2xl mx-auto leading-relaxed">
+            Local SEO must account for the operational realities of running a plumbing company. A strategy built without that context generates calls the operation cannot run.
           </p>
         </div>
       </div>
