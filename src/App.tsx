@@ -50,6 +50,7 @@ const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompa
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
+const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
 const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
@@ -154,7 +155,7 @@ const App = () => (
           <Route path="/plumbing-reporting" element={<Reporting />} />
 
           {/* HVAC Service Pages */}
-          <Route path="/hvac-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
+          <Route path="/hvac-seo" element={<HVACSEO />} />
           <Route path="/hvac-google-maps" element={<GoogleMaps />} />
           <Route path="/hvac-paid-advertising" element={<PaidMedia />} />
           <Route path="/hvac-email-marketing" element={<EmailMarketing />} />
