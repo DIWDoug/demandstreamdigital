@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, MapPin, Sparkles, Star, Mail, Globe, BarChart3, Share2, CheckCircle, ArrowRight } from "lucide-react";
+import { Search, MapPin, Sparkles, Star, Mail, Globe, Bot, Share2, CheckCircle, ArrowRight } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Service {
@@ -57,11 +57,11 @@ const services: Service[] = [
     href: "/white-label-local-authority-building"
   },
   {
-    icon: BarChart3,
-    id: "reporting",
-    title: "Reporting",
-    description: "White-labeled dashboards your clients love.",
-    href: "/white-label-reporting"
+    icon: Bot,
+    id: "ai-automation",
+    title: "AI Automation",
+    description: "Automate workflows, follow-ups, and client communication with AI.",
+    href: "/contact"
   },
   {
     icon: Share2,
