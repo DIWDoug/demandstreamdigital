@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Check, X, ArrowRight, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Check, X, ChevronDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
@@ -101,13 +100,6 @@ const PaidAdsFit = () => {
               </ul>
             </div>
 
-          </div>
-
-          <div className="text-center">
-            <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
-              Claim Your Territory Today
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
 
         </div>
