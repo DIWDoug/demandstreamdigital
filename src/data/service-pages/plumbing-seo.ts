@@ -41,22 +41,22 @@ export const plumbingSEOConfig: ServicePageConfig = {
       {
         icon: MapPin,
         title: "Proximity Shifts Rankings Dramatically",
-        body: "A plumbing company ranking #1 from three miles away may not appear at all for a searcher across the service area. Local rankings are proximity-weighted. A strategy that targets broad city-level keywords without accounting for service radius and ZIP-level competition leaves revenue on the table."
+        body: "A plumbing company ranking #1 from three miles away may not appear at all for a searcher across the service area. A strategy that ignores ZIP-level competition leaves revenue on the table."
       },
       {
         icon: Award,
         title: "Review Velocity Is a Trust Signal, Not a Bonus",
-        body: "When a homeowner finds two plumbers in the Map Pack, the one with 180 reviews and a response to each one gets the call. Review recency, volume, and response discipline are direct ranking factors and direct conversion factors. Generic SEO packages treat reviews as an afterthought."
+        body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors."
       },
       {
         icon: Search,
         title: "Service Specificity Matters for Rankings",
-        body: "A homeowner searching 'tankless water heater installation near me' has different intent than one searching 'plumber near me.' Generic plumbing pages that try to rank for everything rank well for nothing. Each distinct service — drain cleaning, slab leak detection, repiping, hydro jetting — needs its own page."
+        body: "A homeowner searching 'tankless water heater installation near me' has different intent than one searching 'plumber near me.' Each distinct service needs its own page. Generic catch-all plumbing pages rank well for nothing."
       },
       {
         icon: Phone,
         title: "After-Hours Calls Are High-Margin Calls",
-        body: "Plumbing emergencies don't follow business hours. After-hours calls — burst pipes on weekends, no-hot-water calls on holidays — are often the highest-margin jobs in the mix. Plumbing SEO has to maintain visibility 24 hours a day, and your GBP has to be configured to capture that after-hours demand."
+        body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix. Your GBP has to be configured to capture that demand 24 hours a day."
       }
     ],
     systemClosing: "Effective plumbing SEO requires scoping to the actual market — not templated deliverables applied from a generic contractor package.",

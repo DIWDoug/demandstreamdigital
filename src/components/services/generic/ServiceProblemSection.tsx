@@ -84,7 +84,7 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
                       {point.title}
                     </strong>
                   </div>
-                  <p className={`text-slate-500 leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-sm'}`}>
+                  <p className={`text-slate-500 leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-[13px]'}`}>
                     {point.body}
                   </p>
                 </div>
