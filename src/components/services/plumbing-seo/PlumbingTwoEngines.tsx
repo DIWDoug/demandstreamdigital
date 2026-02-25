@@ -3,7 +3,6 @@ import { ArrowRight, ChevronRight, Droplets, Map, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const organicPoints = [
-  "Every distinct service gets its own page: water heater, drain cleaning, slab leak, repiping, hydro jetting",
   "Clean URL structure aligned to service + city: /water-heater-replacement-dallas/",
   "Three-tier architecture: core service hubs, sub-service specialization, problem-level emergency pages",
   "City pages built around your dispatch radius, not just the nearest major metro",
@@ -85,6 +84,9 @@ const PlumbingTwoEngines = () => {
                 {clusterOpen && (
                   <div className="mt-3 bg-background/50 rounded-lg p-4 border border-border/40">
                     <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Service Cluster Architecture</p>
+                    <p className="text-xs text-text-secondary leading-relaxed mb-2">
+                      Every distinct service gets its own page. Water Heater, Drain Cleaning, Slab Leak, Repiping, Hydro Jetting, each as a hub with sub-service pages targeting specific high-intent searches.
+                    </p>
                     <p className="text-xs text-text-secondary leading-relaxed">
                       Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection, each as a hub with sub-service pages targeting specific high-intent searches.
                     </p>

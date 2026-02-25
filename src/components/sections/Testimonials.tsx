@@ -33,7 +33,7 @@ const Testimonials = () => {
             Real Results. Real Operators.
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            These are not agency reviews. These come from plumbing and HVAC companies that wanted more booked calls — and got them.
+            These are not agency reviews. These come from plumbing companies that wanted more booked calls and got them.
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex">

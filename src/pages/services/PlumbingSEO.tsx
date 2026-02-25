@@ -40,15 +40,14 @@ const SectionDivider = () => (
 
 const anchorItems = [
   { label: 'Phone First', href: '#phone-first' },
-  { label: 'Pattern', href: '#problem' },
+  { label: 'The Problem', href: '#problem' },
   { label: 'What Changes', href: '#outcomes' },
-  { label: 'Five Pillars', href: '#two-engines' },
   { label: 'Our Process', href: '#roadmap' },
-  { label: 'Levers', href: '#building-blocks' },
+  { label: 'What We Do', href: '#building-blocks' },
   { label: 'Fit', href: '#qualification' },
   { label: 'Reviews', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Next Steps', href: '#contact' },
+  { label: 'Get Started', href: '#contact' },
 ];
 
 const PlumbingSEO = () => {
