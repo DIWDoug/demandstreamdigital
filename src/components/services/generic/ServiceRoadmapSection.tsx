@@ -169,17 +169,12 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
           </div>
         </div>
 
-        {/* Execution Note */}
-        {config.executionNote && config.executionNote.length > 0 && (
-          <p className="mt-8 text-text-secondary text-base text-center">
-            {config.executionNote}
+        {/* Bottom note — confidence signal, not disclaimer */}
+        <div className="mt-8 max-w-xl mx-auto text-center border border-border/50 rounded-xl px-6 py-4 bg-surface-elevated">
+          <p className="text-text-secondary text-base">
+            {config.footerNote}
           </p>
-        )}
-
-        {/* Bottom note */}
-        <p className={`${config.executionNote && config.executionNote.length > 0 ? 'mt-4' : 'mt-8'} text-text-muted text-sm text-center`}>
-          {config.footerNote}
-        </p>
+        </div>
       </div>
     </section>
   );

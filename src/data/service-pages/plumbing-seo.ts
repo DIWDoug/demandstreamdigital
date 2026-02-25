@@ -210,7 +210,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    executionNote: "Each phase builds on the previous. Technical foundation work is non-negotiable. Content without technical health underperforms. Links without content have nothing to point to.",
+    executionNote: "",
     footerNote: "Most plumbing companies see meaningful ranking movement within 3 to 4 months, with significant Map Pack improvement by month 6."
   },
 
