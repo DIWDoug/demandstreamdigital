@@ -51,14 +51,14 @@ const PaidAdsFit = () => {
                       className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
                       onClick={() => setOpenGood(openGood === i ? null : i)}
                     >
-                      <span className="flex items-center gap-3 text-sm font-medium text-gray-800">
+                      <span className="flex items-center gap-3 text-base font-medium text-gray-800">
                         <span className="text-green-500 shrink-0">&#10003;</span>
                         {item.point}
                       </span>
                       <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openGood === i ? "rotate-180" : ""}`}>&#9660;</span>
                     </button>
                     {openGood === i && (
-                      <div className="px-4 pb-4 pt-1 text-sm text-gray-600 border-t border-gray-100">
+                      <div className="px-4 pb-4 pt-1 text-base text-gray-600 border-t border-gray-100">
                         {item.detail}
                       </div>
                     )}
@@ -80,14 +80,14 @@ const PaidAdsFit = () => {
                       className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
                       onClick={() => setOpenBad(openBad === i ? null : i)}
                     >
-                      <span className="flex items-center gap-3 text-sm font-medium text-gray-800">
+                      <span className="flex items-center gap-3 text-base font-medium text-gray-800">
                         <span className="text-red-500 shrink-0">&#10007;</span>
                         {item.point}
                       </span>
                       <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openBad === i ? "rotate-180" : ""}`}>&#9660;</span>
                     </button>
                     {openBad === i && (
-                      <div className="px-4 pb-4 pt-1 text-sm text-gray-600 border-t border-gray-100">
+                      <div className="px-4 pb-4 pt-1 text-base text-gray-600 border-t border-gray-100">
                         {item.detail}
                       </div>
                     )}

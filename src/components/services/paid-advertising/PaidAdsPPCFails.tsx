@@ -68,8 +68,8 @@ const PaidAdsPPCFails = () => {
                     <row.icon className="w-4 h-4 text-accent-blue" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900 mb-1 text-sm">{row.headline}</p>
-                    <p className="text-sm text-gray-600 leading-relaxed">{row.body}</p>
+                    <p className="font-semibold text-gray-900 mb-1 text-base">{row.headline}</p>
+                    <p className="text-base text-gray-600 leading-relaxed">{row.body}</p>
                   </div>
                 </div>
               ))}

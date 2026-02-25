@@ -129,7 +129,7 @@ const PaidAdsFramework = () => {
             <p className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-5">What This Phase Includes</p>
             <div className="grid md:grid-cols-2 gap-x-10 gap-y-2.5">
               {[...active.leftItems, ...active.rightItems].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
+                <div key={i} className="flex items-start gap-2.5 text-base text-gray-600">
                   <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                   <span>{item}</span>
                 </div>

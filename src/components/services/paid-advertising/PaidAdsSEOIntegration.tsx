@@ -52,8 +52,8 @@ const PaidAdsSEOIntegration = () => {
               {integrationRows.map((row, i) => (
                 <div key={i} className={`flex gap-5 py-5 ${i < integrationRows.length - 1 ? "border-b border-border/40" : ""}`}>
                   <div>
-                    <p className="font-semibold text-foreground text-sm mb-1">{row.label}</p>
-                    <p className="text-sm text-text-secondary leading-relaxed">{row.body}</p>
+                    <p className="font-semibold text-foreground text-base mb-1">{row.label}</p>
+                    <p className="text-base text-text-secondary leading-relaxed">{row.body}</p>
                   </div>
                 </div>
               ))}

@@ -32,7 +32,7 @@ const PaidAdsMetrics = () => {
                 {agencyReports.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="text-red-400 text-lg font-bold">&times;</span>
-                    <span className="text-gray-400 line-through text-sm">{item}</span>
+                    <span className="text-gray-400 line-through text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -46,8 +46,8 @@ const PaidAdsMetrics = () => {
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                     <div>
-                      <span className="font-semibold text-gray-900 text-sm">{m.label}</span>
-                      <span className="text-gray-600 text-sm"> — {m.desc}</span>
+                      <span className="font-semibold text-gray-900 text-base">{m.label}</span>
+                      <span className="text-gray-600 text-base"> — {m.desc}</span>
                     </div>
                   </div>
                 ))}
