@@ -172,7 +172,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
     headline: "The Levers We Pull in Competitive Plumbing Markets",
-    subheadline: "Each component is scoped based on your plumbing market's competition level, your current rankings, and your specific revenue goals. No standard packages. No fixed deliverable lists.",
+    subheadline: "Each component is scoped based on your plumbing market's competition level, your current rankings, and your specific revenue goals. No standard packages. No fixed deliverable lists that ignore what your market actually requires.",
     blocks: [
       {
         title: "On-Page Optimization",
@@ -205,10 +205,16 @@ export const plumbingSEOConfig: ServicePageConfig = {
         icon: Link2
       },
       {
+        title: "AI & GEO Optimization",
+        slug: "ai-optimization",
+        description: "Structured data, FAQ schema, entity optimization, and content formatting that positions your plumbing business for AI Overviews, generative search engines, and conversational AI citations — so you get cited, not just ranked.",
+        icon: Bot
+      },
+      {
         title: "Schema Markup",
         slug: "schema-markup",
         description: "LocalBusiness, Plumber, Service, FAQ, and Review schema that unlocks rich results in search, supports AI Overview citations, and reinforces trust signals across local and organic results.",
-        icon: Bot
+        icon: Sparkles
       },
       {
         title: "NAP Citations",
