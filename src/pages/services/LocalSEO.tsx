@@ -145,6 +145,9 @@ const LocalSEO = () => {
           </p>
         </div>
       </div>
+
+      {/* EXCLUSIVITY — scarcity right after desire */}
+      <MarketExclusivity />
       
       {/* 5. Ranking Factors */}
       <LocalRankingFactors />
@@ -194,9 +197,6 @@ const LocalSEO = () => {
       
       {/* 12. ECOSYSTEM */}
       <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
-      
-      {/* EXCLUSIVITY */}
-      <MarketExclusivity />
       
       {/* 13. CONTACT */}
       <div id="contact" className="scroll-mt-32">
