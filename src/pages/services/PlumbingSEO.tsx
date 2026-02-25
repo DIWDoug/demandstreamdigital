@@ -169,7 +169,7 @@ const PlumbingSEO = () => {
 
       {/* 7. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
-        <ServiceBuildingBlocksSection config={plumbingSEOConfig.buildingBlocks} hubSlug="plumbing-seo" />
+        <ServiceBuildingBlocksSection config={plumbingSEOConfig.buildingBlocks} />
       </div>
 
       <SectionDivider />
