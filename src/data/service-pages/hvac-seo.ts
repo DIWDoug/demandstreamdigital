@@ -5,8 +5,8 @@ import { SITE_URL } from "@/lib/constants";
 export const hvacSEOConfig: ServicePageConfig = {
   slug: "hvac-seo",
   title: "HVAC SEO",
-  metaTitle: "HVAC SEO Services That Drive More Booked Service Calls | DemandStream Digital",
-  metaDescription: "HVAC SEO built for HVAC companies, not generic contractor marketing. DemandStream builds connected SEO systems that generate more booked service calls. See how.",
+  metaTitle: "HVAC SEO Services for More Booked Service Calls | DemandStream Digital",
+  metaDescription: "Generic HVAC marketing ignores seasonality and emergency intent. Our HVAC SEO is built around how customers actually search and call. See how.",
   canonicalUrl: `${SITE_URL}/hvac-seo`,
   keywords: "HVAC SEO, HVAC SEO services, SEO for HVAC companies, HVAC company SEO, HVAC local SEO, HVAC marketing",
 
