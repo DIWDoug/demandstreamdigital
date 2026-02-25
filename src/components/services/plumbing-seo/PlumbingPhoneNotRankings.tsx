@@ -52,6 +52,16 @@ const PlumbingPhoneNotRankings = () => {
             </p>
           </div>
 
+          {/* Booking rate callout */}
+          <div className="border-l-4 border-destructive/70 bg-destructive/5 rounded-r-lg px-5 py-4 mb-10">
+            <p className="text-text-secondary text-sm leading-relaxed text-center">
+              A plumbing company with a{" "}
+              <span className="text-destructive font-semibold">45% booking rate</span>{" "}
+              produces different results than one running at{" "}
+              <span className="text-destructive font-semibold">72%</span>. That gap is addressable, but it has to be identified before we scale volume.
+            </p>
+          </div>
+
           {/* Points grid */}
           <div className="grid sm:grid-cols-2 gap-6">
             {points.map((point, index) => (
