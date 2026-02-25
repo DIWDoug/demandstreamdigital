@@ -211,12 +211,6 @@ export const plumbingSEOConfig: ServicePageConfig = {
         icon: Bot
       },
       {
-        title: "Schema Markup",
-        slug: "schema-markup",
-        description: "LocalBusiness, Plumber, Service, FAQ, and Review schema that unlocks rich results in search, supports AI Overview citations, and reinforces trust signals across local and organic results.",
-        icon: Sparkles
-      },
-      {
         title: "NAP Citations",
         slug: "nap-citations",
         description: "Citation consistency audits and cleanup across Yelp, HomeAdvisor, Angi, BBB, and all major data aggregators. Consistent Name, Address, and Phone data validates business identity and strengthens both Maps and organic rankings.",
