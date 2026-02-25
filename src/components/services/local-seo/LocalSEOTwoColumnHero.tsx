@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
+import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 
 interface HeroSubheadline {
   intro: string;
@@ -24,13 +23,6 @@ interface LocalSEOTwoColumnHeroProps {
 }
 
 const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroProps) => {
-  const [website, setWebsite] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = `#contact?website=${encodeURIComponent(website)}`;
-  };
-
   return (
     <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
       {/* Background effects */}
@@ -105,27 +97,14 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
 
           {/* Right column - Form card */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-8 shadow-xl">
-              <h2 className="text-xl font-semibold text-foreground mb-2">
-                Get a Free Local SEO Audit
-              </h2>
-              <p className="text-sm text-text-muted mb-6">
-                See where your plumbing or HVAC company stands in local search.
-              </p>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="yourwebsite.com"
-                  value={website}
-                  onChange={(e) => setWebsite(e.target.value)}
-                  required
-                  className="w-full px-5 py-4 rounded-lg bg-background/80 border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base"
-                />
-                <button type="submit" className="btn-cta group w-full justify-center">
-                  {config.ctaText}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </button>
-              </form>
+            <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
+              <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
+              <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
+              <TwoStepContactForm
+                formType="local_seo_hero"
+                submitButtonText="Check My Market"
+                step1ButtonText="Continue"
+              />
               <p className="text-xs text-text-muted text-center mt-4">
                 {config.ctaSubtext}
               </p>
