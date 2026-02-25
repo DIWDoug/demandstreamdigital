@@ -102,8 +102,8 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
               <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
               <TwoStepContactForm
                 formType="local_seo_hero"
-                submitButtonText="Check My Market"
-                step1ButtonText="Continue"
+                submitButtonText="Claim My Territory"
+                step1ButtonText="Claim My Territory"
               />
               <p className="text-xs text-text-muted text-center mt-4">
                 {config.ctaSubtext}
