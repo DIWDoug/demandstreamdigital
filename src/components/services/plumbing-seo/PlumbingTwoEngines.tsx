@@ -1,4 +1,5 @@
-import { ArrowRight, Droplets, Map } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, ChevronRight, Droplets, Map } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const organicPoints = [
@@ -19,6 +20,8 @@ const mapsPoints = [
 ];
 
 const PlumbingTwoEngines = () => {
+  const [clusterOpen, setClusterOpen] = useState(false);
+
   return (
     <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -37,9 +40,9 @@ const PlumbingTwoEngines = () => {
           </div>
 
           {/* Two Column Cards */}
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-start">
             {/* Engine 1: Organic */}
-            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8">
+            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8 flex flex-col">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
                   <Droplets className="h-7 w-7 text-accent-blue" />
@@ -49,17 +52,11 @@ const PlumbingTwoEngines = () => {
                   <h3 className="text-xl font-semibold text-foreground">Organic Plumbing SEO</h3>
                 </div>
               </div>
-              <p className="text-text-secondary mb-4 leading-relaxed text-sm">
+              <p className="text-text-secondary mb-6 leading-relaxed text-sm">
                 Organic rankings are structural. They are built through page architecture, content quality, technical health, and authority signals. The most important structural decision:{" "}
                 <span className="text-foreground font-medium">if it's a different phone call, it's a different page.</span>
               </p>
-              <div className="bg-background/50 rounded-lg p-4 mb-6 border border-border/40">
-                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Service Cluster Architecture</p>
-                <p className="text-xs text-text-secondary leading-relaxed">
-                  Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection — each as a hub with sub-service pages targeting specific high-intent searches.
-                </p>
-              </div>
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-3 mb-6 flex-1">
                 {organicPoints.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2 shrink-0" />
@@ -67,6 +64,26 @@ const PlumbingTwoEngines = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Collapsed toggle */}
+              <div className="border-t border-border/40 pt-4 mb-5">
+                <button
+                  onClick={() => setClusterOpen(!clusterOpen)}
+                  className="flex items-center gap-2 text-accent-blue text-sm font-medium hover:opacity-80 transition-opacity"
+                >
+                  <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${clusterOpen ? "rotate-90" : ""}`} />
+                  View service cluster architecture
+                </button>
+                {clusterOpen && (
+                  <div className="mt-3 bg-background/50 rounded-lg p-4 border border-border/40">
+                    <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Service Cluster Architecture</p>
+                    <p className="text-xs text-text-secondary leading-relaxed">
+                      Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection — each as a hub with sub-service pages targeting specific high-intent searches.
+                    </p>
+                  </div>
+                )}
+              </div>
+
               <Link
                 to="/hvac-and-plumbing-seo"
                 className="inline-flex items-center gap-2 text-accent-blue text-sm font-medium hover:gap-3 transition-all"
@@ -77,7 +94,7 @@ const PlumbingTwoEngines = () => {
             </div>
 
             {/* Engine 2: Maps */}
-            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8">
+            <div className="bg-surface-elevated rounded-2xl border border-border p-6 lg:p-8 flex flex-col">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-xl bg-cta/10 flex items-center justify-center shrink-0">
                   <Map className="h-7 w-7 text-cta" />
@@ -98,7 +115,7 @@ const PlumbingTwoEngines = () => {
                   A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly, uploading real job photos, and responding to every review.
                 </p>
               </div>
-              <ul className="space-y-3 mb-6">
+              <ul className="space-y-3 mb-6 flex-1">
                 {mapsPoints.map((point, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-cta mt-2 shrink-0" />
