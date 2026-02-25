@@ -54,9 +54,13 @@ const ServiceEcosystemSection = ({ config }: ServiceEcosystemSectionProps) => {
                 <strong className="text-slate-900">{config.intro}</strong>
               </p>
               
-              <p className="text-slate-600 leading-relaxed mb-8">
-                {config.body}
-              </p>
+              <div className="mb-8 space-y-4">
+                {config.body.split("\n\n").map((para, i) => (
+                  <p key={i} className="text-text-secondary leading-relaxed">
+                    {para}
+                  </p>
+                ))}
+              </div>
 
               {/* Checklist - linked to services */}
               <div className="grid grid-cols-2 gap-x-8 gap-y-3 mb-8">
