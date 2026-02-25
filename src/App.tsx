@@ -53,6 +53,7 @@ const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
 const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
 const PaidAdvertising = lazy(() => import("./pages/services/PaidAdvertising"));
 const PlumbingPaidAdvertising = lazy(() => import("./pages/services/PlumbingPaidAdvertising"));
+const HVACPaidAdvertising = lazy(() => import("./pages/services/HVACPaidAdvertising"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
 const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
@@ -164,7 +165,7 @@ const App = () => (
           {/* HVAC Service Pages */}
           <Route path="/hvac-seo" element={<HVACSEO />} />
           <Route path="/hvac-google-maps" element={<GoogleMaps />} />
-          <Route path="/hvac-paid-advertising" element={<PaidMedia />} />
+          <Route path="/hvac-paid-advertising" element={<HVACPaidAdvertising />} />
           <Route path="/hvac-email-marketing" element={<EmailMarketing />} />
           <Route path="/hvac-content-marketing" element={<ContentMarketing />} />
           <Route path="/hvac-authority-building" element={<Authority />} />
