@@ -39,7 +39,7 @@ const ServiceOutcomesSection = ({ config }: ServiceOutcomesSectionProps) => {
             return (
               <div 
                 key={outcome.title}
-                className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50"
+                className="text-center p-8 rounded-xl border bg-surface-elevated border-border/50 min-h-[220px] flex flex-col"
               >
                 <div className="flex items-center justify-center mb-5">
                   {outcome.icon ? (
