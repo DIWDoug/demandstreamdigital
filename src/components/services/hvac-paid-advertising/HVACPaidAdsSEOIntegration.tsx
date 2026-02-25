@@ -30,8 +30,8 @@ const HVACPaidAdsSEOIntegration = () => {
         <div className="max-w-6xl mx-auto">
 
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Connection</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12">
-            HVAC SEO and Paid Advertising Together Control the Market
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 max-w-2xl">
+            HVAC SEO and Paid Advertising<br /> Together Control the Market
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
