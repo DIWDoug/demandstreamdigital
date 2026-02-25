@@ -69,25 +69,25 @@ const PaidAdsBiggerPicture = () => {
 
             {/* Right — hub and spoke diagram */}
             <div className="flex items-center justify-center">
-              <div className="relative w-[630px] h-[630px]">
+              <div className="relative w-[472px] h-[472px] rounded-full overflow-hidden">
                 {/* Outer ring */}
                 <div className="absolute inset-0 rounded-full border-2 border-dashed border-accent-blue/20" />
 
                 {/* Center node */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-cta text-white rounded-full w-40 h-40 flex flex-col items-center justify-center text-center p-3 shadow-lg z-10">
+                  <div className="bg-cta text-white rounded-full w-32 h-32 flex flex-col items-center justify-center text-center p-3 shadow-lg z-10">
                     <p className="text-sm font-bold leading-tight">Paid</p>
                     <p className="text-sm font-bold leading-tight">Advertising</p>
-                    <p className="text-[11px] text-white/75 mt-1 leading-tight px-2">Demand control across 6 channels</p>
+                    <p className="text-[10px] text-white/75 mt-1 leading-tight px-2">Demand control across 6 channels</p>
                   </div>
                 </div>
 
                 {/* Orbit nodes */}
                 {orbitNodes.map((node, i) => {
                   const rad = (node.angle * Math.PI) / 180;
-                  const r = 255;
-                  const x = 315 + r * Math.sin(rad);
-                  const y = 315 - r * Math.cos(rad);
+                  const r = 191;
+                  const x = 236 + r * Math.sin(rad);
+                  const y = 236 - r * Math.cos(rad);
                   return (
                     <div
                       key={i}
