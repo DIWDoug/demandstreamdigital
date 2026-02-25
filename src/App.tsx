@@ -52,6 +52,7 @@ const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
 const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
 const PaidAdvertising = lazy(() => import("./pages/services/PaidAdvertising"));
+const PlumbingPaidAdvertising = lazy(() => import("./pages/services/PlumbingPaidAdvertising"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
 const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
@@ -149,7 +150,7 @@ const App = () => (
           <Route path="/hvac-and-plumbing-seo" element={<LocalSEO />} />
           <Route path="/plumbing-seo" element={<PlumbingSEO />} />
           <Route path="/plumbing-google-maps" element={<GoogleMaps />} />
-          <Route path="/plumbing-paid-advertising" element={<PaidMedia />} />
+          <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
           <Route path="/plumbing-content-marketing" element={<ContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
