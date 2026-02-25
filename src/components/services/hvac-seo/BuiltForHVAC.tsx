@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 const columns = [
   {
     icon: Zap,
-    title: "Peak-Season Revenue",
-    body: "The highest-value HVAC calls — AC failures in July and furnace breakdowns in January — are emergency-driven. We build your SEO to capture those searches first, when the urgency and margins are highest.",
+    title: "Emergency Revenue",
+    body: "The highest-value HVAC calls: no-cool in July, no-heat in January, system failures. All emergency-driven. We build your SEO to capture those searches first.",
     color: "text-cta",
     bg: "bg-cta/10"
   },
   {
     icon: TrendingUp,
-    title: "Multi-Truck Growth",
-    body: "As your coverage expands, the SEO architecture scales with it. Every new service area gets a new ranking asset. No duplicate content, no doorway pages, clean geographic expansion.",
+    title: "Install Pipeline Growth",
+    body: "As your install revenue grows, the SEO architecture scales with it. Every new service area gets a new ranking asset. No duplicate content, no doorway pages, clean geographic expansion.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10"
   },
@@ -39,7 +39,7 @@ const BuiltForHVAC = () => {
               Built for HVAC Operators Who Want Market Ownership
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed mb-4">
-              Most HVAC companies run good operations. The technicians show up, the work gets done right, and the customers are happy. The problem is that none of that matters for the next call if the phone doesn't ring.
+              Most HVAC companies run good operations. The techs show up, the work gets done right, and the customers are happy. The problem is that none of that matters for the next call if the phone doesn't ring.
             </p>
             <p className="text-base text-text-secondary max-w-3xl mx-auto leading-relaxed">
               We work exclusively with plumbing and HVAC companies. Not general contractors. Not home services. Everything we build is structured around how HVAC customers actually search and call.
