@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
-import MidPageCTA from "@/components/sections/MidPageCTA";
 import { SITE_URL } from "@/lib/constants";
 
 // Paid Advertising specific components
@@ -10,13 +9,11 @@ import PaidAdsHero from "@/components/services/paid-advertising/PaidAdsHero";
 import PaidAdsDemandControl from "@/components/services/paid-advertising/PaidAdsDemandControl";
 import PaidAdsPPCFails from "@/components/services/paid-advertising/PaidAdsPPCFails";
 import PaidAdsChannels from "@/components/services/paid-advertising/PaidAdsChannels";
-import PaidAdsSEOIntegration from "@/components/services/paid-advertising/PaidAdsSEOIntegration";
 import PaidAdsFramework from "@/components/services/paid-advertising/PaidAdsFramework";
 import PaidAdsMetrics from "@/components/services/paid-advertising/PaidAdsMetrics";
 import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
 import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAdsBiggerPicture";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
-import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 const SectionDivider = () => (
@@ -29,7 +26,6 @@ const anchorItems = [
   { label: "Demand Control", href: "#demand-control" },
   { label: "Why PPC Fails", href: "#why-ppc-fails" },
   { label: "Channels", href: "#channels" },
-  { label: "Industries", href: "#industries" },
   { label: "Our Process", href: "#our-process" },
   { label: "Metrics", href: "#metrics" },
   { label: "Fit", href: "#fit" },
@@ -107,20 +103,8 @@ const PaidAdvertising = () => {
 
       <SectionDivider />
 
-      {/* 06. BUILT FOR BOTH */}
-      <PaidAdsBuiltForBoth />
-
-      <SectionDivider />
-
-      {/* 07. SEO + PAID INTEGRATION */}
-      <PaidAdsSEOIntegration />
-
-      <SectionDivider />
-
-      {/* 07. FRAMEWORK / PROCESS */}
+      {/* 06. FRAMEWORK / PROCESS */}
       <PaidAdsFramework />
-
-      <MidPageCTA />
 
       <SectionDivider />
 
