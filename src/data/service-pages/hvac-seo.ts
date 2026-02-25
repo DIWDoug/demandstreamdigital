@@ -414,7 +414,7 @@ export const hvacSEOConfig: ServicePageConfig = {
     headline: "HVAC SEO Is Part of a",
     highlightedText: "Bigger Growth System",
     intro: "HVAC SEO drives organic visibility and Map Pack rankings. But it produces the strongest results when it works with the rest of the marketing system, not in isolation from it.",
-    body: "Your HVAC SEO feeds your Google Maps performance. Your GBP reviews improve your paid ad quality scores. Your email marketing reactivates past customers before they search for a new HVAC company. Your reporting dashboard ties all of it together into one clear picture of cost per booked call by source.\n\nWhen every channel is connected and pulling toward the same outcome, you get predictable call flow you can build a schedule around. When they run independently, you get gaps. Gaps mean calls going to competitors.",
+    body: "Your HVAC SEO feeds your Google Maps performance. Your GBP reviews improve your paid ad quality scores. Your email marketing reactivates past customers before they search for a new HVAC company. Your reporting dashboard ties all of it into one clear picture of cost per booked call by source.\n\nWhen every channel is connected and pulling toward the same outcome, you get predictable call flow you can build a schedule around. When they run independently, you get gaps. Gaps mean calls going to competitors.",
     services: [
       {
         icon: Thermometer,
