@@ -246,35 +246,35 @@ export const hvacSEOConfig: ServicePageConfig = {
       {
         title: "On-Page Improvement",
         slug: "on-page-optimization",
-        description: "Service-specific title tags, meta descriptions, and on-page content for every distinct HVAC service and city. Built to rank for 'AC repair near me,' not generic contractor terms.",
+        description: "Service-specific title tags, meta descriptions, and on-page content for every distinct HVAC service and city. Built to rank for 'AC replacement near me,' not generic contractor terms.",
         icon: FileText,
         cluster: "TECHNICAL"
       },
       {
         title: "Technical SEO",
         slug: "technical-seo",
-        description: "Site architecture, crawlability, Core Web Vitals, and page speed that set your ranking ceiling. Most emergency HVAC searches happen on a phone during a breakdown.",
+        description: "Site architecture, crawlability, Core Web Vitals, and page speed that set your ranking ceiling. Most emergency HVAC searches happen on a phone.",
         icon: Settings,
         cluster: "TECHNICAL"
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "HVAC-specific keyword research covering emergency intent, service intent, and location intent. AC repair, furnace installation, and heat pump searches each get different priority weights.",
+        description: "HVAC-specific keyword research covering emergency intent, repair intent, install intent, and location intent. AC repair, furnace replacement, and heat pump installation each get different priority weights.",
         icon: Search,
         cluster: "TECHNICAL"
       },
       {
         title: "Content Development",
         slug: "content-development",
-        description: "A dedicated page for every distinct HVAC call type, plus city pages and long-tail content targeting searches like 'signs your AC needs replacement' and 'how long does furnace installation take.'",
+        description: "A dedicated page for every distinct HVAC service and call type, plus city pages and long-tail content targeting searches like 'how much does AC replacement cost' and 'signs your furnace needs replacing.'",
         icon: PenTool,
         cluster: "AUTHORITY"
       },
       {
         title: "Link Building",
         slug: "link-building",
-        description: "Local and trade-specific outreach: ACCA links, supplier directories, Chamber listings, and community publications. Every link evaluated for geographic and trade relevance, not just domain authority.",
+        description: "Local and trade-specific outreach: ACCA links, supplier directories, chamber listings, and community publications. Every link evaluated for geographic and trade relevance, not just domain authority.",
         icon: Link2,
         cluster: "AUTHORITY"
       },
@@ -302,7 +302,7 @@ export const hvacSEOConfig: ServicePageConfig = {
       {
         title: "Google Business Profile",
         slug: "gbp-strategy",
-        description: "Full GBP buildout and ongoing management: category alignment, photo strategy, posting calendar, and response discipline. Not a one-time setup. An ongoing ranking activity.",
+        description: "Full GBP buildout and ongoing management: category setup, photo strategy, posting calendar, and response discipline. Not a one-time setup. An ongoing ranking activity.",
         icon: Map,
         cluster: "VISIBILITY"
       }
