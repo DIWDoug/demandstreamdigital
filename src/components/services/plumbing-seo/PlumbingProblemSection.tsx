@@ -86,32 +86,31 @@ const PlumbingProblemSection = () => {
               </div>
             </div>
 
-            {/* RIGHT: Accordion */}
+            {/* RIGHT: Vertical insight rows */}
             <div>
-              <Accordion type="single" collapsible className="space-y-2">
-                {painPoints.map((point, i) => {
-                  const Icon = point.icon;
-                  return (
-                    <AccordionItem
-                      key={i}
-                      value={`item-${i}`}
-                      className="border border-slate-200 rounded-lg overflow-hidden px-4"
-                    >
-                      <AccordionTrigger className="text-[15px] font-semibold text-slate-900 hover:no-underline py-4 gap-3">
-                        <div className="flex items-center gap-3 text-left">
-                          <div className={`shrink-0 w-7 h-7 rounded-md ${point.bg} flex items-center justify-center`}>
-                            <Icon className={`w-3.5 h-3.5 ${point.color}`} />
-                          </div>
+              {painPoints.map((point, i) => {
+                const Icon = point.icon;
+                return (
+                  <div key={i}>
+                    <div className="flex items-start gap-4 py-6">
+                      <div className={`w-9 h-9 rounded-lg ${point.bg} flex items-center justify-center shrink-0 mt-0.5`}>
+                        <Icon className={`h-4 w-4 ${point.color}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-slate-900 text-[15px] mb-1.5">
                           {point.title}
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-sm text-slate-600 leading-relaxed pb-4 pl-10">
-                        {point.body}
-                      </AccordionContent>
-                    </AccordionItem>
-                  );
-                })}
-              </Accordion>
+                        </p>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          {point.body}
+                        </p>
+                      </div>
+                    </div>
+                    {i < painPoints.length - 1 && (
+                      <hr className="border-t border-slate-200" />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
           </div>
