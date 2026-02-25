@@ -87,20 +87,20 @@ const PaidAdsFramework = () => {
   const active = tabs.find(t => t.id === activeTab) ?? tabs[0];
 
   return (
-    <section id="our-process" className="py-20 lg:py-28 bg-background scroll-mt-32">
+    <section id="our-process" className="py-20 lg:py-28 bg-[#f9f9f9] scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
           <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Process</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Our Paid Advertising Process
           </h2>
-          <p className="text-text-secondary leading-relaxed max-w-3xl mb-10">
+          <p className="text-gray-600 leading-relaxed max-w-3xl mb-10">
             Every paid campaign we build follows the same four-phase sequence. Tracking first. Architecture second. Refinement third. Capacity control fourth. We do not run spend before attribution is clean. We do not scale before booking rate is measured. The sequence matters.
           </p>
 
           {/* Tab list */}
-          <div className="flex flex-wrap gap-2 mb-8 border-b border-border/40 pb-0">
+          <div className="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-0">
             {tabs.map(tab => (
               <button
                 key={tab.id}
@@ -108,7 +108,7 @@ const PaidAdsFramework = () => {
                 className={`px-4 py-3 text-sm font-medium rounded-t-lg transition-colors border-b-2 -mb-px ${
                   activeTab === tab.id
                     ? "text-cta border-cta bg-cta/5"
-                    : "text-text-secondary border-transparent hover:text-foreground"
+                    : "text-gray-500 border-transparent hover:text-gray-900"
                 }`}
               >
                 {tab.label}
@@ -117,19 +117,19 @@ const PaidAdsFramework = () => {
           </div>
 
           {/* Active tab content */}
-          <div className="bg-surface-elevated border border-border rounded-xl p-8">
+          <div className="bg-white border border-gray-200 rounded-xl p-8">
             {active.timingNote && (
               <div className="bg-cta/10 border border-cta/20 rounded-lg px-5 py-3 mb-6 text-sm text-cta font-medium">
                 {active.timingNote}
               </div>
             )}
-            <h3 className="text-xl font-bold text-foreground mb-4">{active.title}</h3>
-            <p className="text-text-secondary leading-relaxed mb-8 max-w-3xl">{active.body}</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">{active.title}</h3>
+            <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl">{active.body}</p>
 
-            <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-5">What This Phase Includes</p>
+            <p className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-5">What This Phase Includes</p>
             <div className="grid md:grid-cols-2 gap-x-10 gap-y-2.5">
               {[...active.leftItems, ...active.rightItems].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5 text-sm text-text-secondary">
+                <div key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
                   <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                   <span>{item}</span>
                 </div>
@@ -143,10 +143,10 @@ const PaidAdsFramework = () => {
               Get a Paid Ads Performance Audit
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <span className="text-text-muted text-sm">or</span>
+            <span className="text-gray-400 text-sm">or</span>
             <a
               href={PHONE_HREF}
-              className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-white hover:border-primary hover:bg-primary transition-all font-medium text-sm"
+              className="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-300 text-gray-600 hover:text-gray-900 hover:border-gray-400 transition-all font-medium text-sm"
             >
               <Phone className="h-4 w-4" />
               {PHONE_NUMBER}

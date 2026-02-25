@@ -59,7 +59,7 @@ const PaidAdsHero = () => {
             </p>
 
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              Paid advertising is not a long-term brand play. It is an immediate operational lever. The board is slow this week. Peak season is six weeks out. A competitor just started spending in your market. These are problems with a today answer, not a six-month strategy. When your dispatch board slows down, we scale spend. When capacity is tight, we throttle back. The goal is not traffic. It is cost per booked call and a board you can actually run.
+              When your dispatch board slows down, we scale spend. When peak season hits and capacity is tight, we throttle. The goal is not traffic. It is cost per booked call. And a board you can actually run.
             </p>
 
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
@@ -70,6 +70,10 @@ const PaidAdsHero = () => {
                 </li>
               ))}
             </ul>
+
+            <Link to="/contact" className="btn-cta inline-flex items-center gap-2 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              Get a Paid Ads Performance Audit &#8594;
+            </Link>
 
           </div>
 

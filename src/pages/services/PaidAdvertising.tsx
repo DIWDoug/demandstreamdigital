@@ -16,6 +16,7 @@ import PaidAdsMetrics from "@/components/services/paid-advertising/PaidAdsMetric
 import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
 import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAdsBiggerPicture";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
+import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -27,6 +28,7 @@ const anchorItems = [
   { label: "Demand Control", href: "#demand-control" },
   { label: "Why PPC Fails", href: "#why-ppc-fails" },
   { label: "Channels", href: "#channels" },
+  { label: "Industries", href: "#industries" },
   { label: "Our Process", href: "#our-process" },
   { label: "Metrics", href: "#metrics" },
   { label: "Fit", href: "#fit" },
@@ -104,7 +106,12 @@ const PaidAdvertising = () => {
 
       <SectionDivider />
 
-      {/* 06. SEO + PAID INTEGRATION */}
+      {/* 06. BUILT FOR BOTH */}
+      <PaidAdsBuiltForBoth />
+
+      <SectionDivider />
+
+      {/* 07. SEO + PAID INTEGRATION */}
       <PaidAdsSEOIntegration />
 
       <SectionDivider />
