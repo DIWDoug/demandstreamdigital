@@ -42,7 +42,7 @@ const BuiltForPlumbers = () => {
               Most plumbing companies run good operations. The techs show up, the work gets done right, and the customers are happy. The problem is that none of that matters for the next call if the phone doesn't ring.
             </p>
             <p className="text-base text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              We work exclusively with plumbing and HVAC companies. Not general contractors. Not home services. Not roofing or electrical. Everything we build — the service cluster architecture, the GBP strategy, the review systems, the seasonal campaign logic — is built around how plumbing companies actually operate and how plumbing customers actually buy.
+              We work exclusively with plumbing and HVAC companies. Not general contractors. Not home services. Everything we build is structured around how plumbing customers actually search and call.
             </p>
           </div>
 
