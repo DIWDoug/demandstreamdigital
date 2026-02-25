@@ -37,7 +37,7 @@ const PlumbingPhoneNotRankings = () => {
               Plumbing SEO Starts With the Phone, Not Rankings
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Rankings are visible. Booked calls are revenue. Most plumbing companies have been sold on the idea that better rankings automatically mean more business. Before we refine a single page or touch your Google Business Profile, we look at your call data.
+              Rankings are visible. Booked calls are revenue. Most plumbing companies have been sold on the idea that better rankings automatically mean more business. They do not. A company ranking #1 for 'drain cleaning near me' with a 40% booking rate is producing less revenue per marketing dollar than a company ranking #4 with a 72% booking rate and a CSR who knows how to convert.
             </p>
           </div>
 
