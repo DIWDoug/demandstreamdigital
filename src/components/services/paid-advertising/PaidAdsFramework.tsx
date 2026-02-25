@@ -91,7 +91,7 @@ const PaidAdsFramework = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
-          <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Process</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Process</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Our Paid Advertising Process
           </h2>

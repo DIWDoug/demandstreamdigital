@@ -7,7 +7,7 @@ const LocalRankingFactors = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header - more compact */}
           <div className="text-center mb-8">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-3">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-3">
               2026 Research
             </p>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-4">

@@ -49,7 +49,7 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               Common Questions
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
