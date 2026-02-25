@@ -1,0 +1,144 @@
+import { useState } from "react";
+import { ChevronDown, ArrowRight, Phone, Zap, MapPin, Award, Search } from "lucide-react";
+import { Link } from "react-router-dom";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+
+const painPoints = [
+  {
+    icon: Zap,
+    title: "Emergency Intent Dominates",
+    body: "The majority of high-value plumbing searches are urgent — 'emergency plumber near me,' 'burst pipe repair,' 'water heater not working.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first, not retrofitted from a template built for dentists and dog groomers.",
+    color: "text-cta",
+    bg: "bg-cta/10",
+  },
+  {
+    icon: MapPin,
+    title: "Proximity Shifts Rankings Dramatically",
+    body: "A plumbing company ranking #1 from three miles away may not appear at all for a searcher on the other side of the service area. Google weights proximity heavily for emergency local searches. A strategy that ignores ZIP-level competition leaves high-margin calls on the table every single day.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
+  },
+  {
+    icon: Award,
+    title: "Review Velocity Is a Ranking Signal",
+    body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors — not a nice-to-have, not a bonus. They are part of the system.",
+    color: "text-accent-green",
+    bg: "bg-accent-green/10",
+  },
+  {
+    icon: Search,
+    title: "Service Specificity Wins Rankings",
+    body: "A homeowner searching 'tankless water heater installation near me' has different intent than 'plumber near me.' Each distinct service needs its own page. Generic catch-all plumbing pages rank well for nothing because they signal relevance for everything and authority for nothing.",
+    color: "text-cta",
+    bg: "bg-cta/10",
+  },
+  {
+    icon: Phone,
+    title: "After-Hours Calls Are High-Margin Calls",
+    body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix — the customer is not price shopping, they need a plumber now. Your GBP and site have to be configured to capture that demand 24 hours a day, not just during office hours.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
+  },
+];
+
+const PlumbingProblemSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+
+  return (
+    <section className="py-20 lg:py-28 section-light relative">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto">
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+            {/* LEFT: Condensed copy */}
+            <div className="lg:sticky lg:top-32">
+              <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
+                The Pattern We See
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance leading-tight">
+                Why Generic Contractor SEO Fails Plumbing Companies
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Plumbing is not a general home services business. It is an emergency-driven, reputation-sensitive trade where the buying decision happens in under two minutes.
+              </p>
+              <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
+                <p className="text-slate-700 text-sm leading-relaxed font-medium">
+                  When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up first. Plumbing SEO has to be built around that urgency — not applied from a template designed for every trade.
+                </p>
+              </div>
+              <p className="text-slate-500 text-sm mb-8">
+                Effective plumbing SEO requires scoping to the actual market. Not templated deliverables applied from a generic contractor package.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
+                >
+                  Schedule a Discovery Call
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href={PHONE_HREF}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
+                >
+                  <Phone className="h-4 w-4" />
+                  {PHONE_NUMBER}
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT: Accordion cards */}
+            <div className="space-y-3">
+              {painPoints.map((point, i) => {
+                const isOpen = openIndex === i;
+                const Icon = point.icon;
+                return (
+                  <div
+                    key={i}
+                    className={`rounded-xl border transition-all duration-200 overflow-hidden ${
+                      isOpen
+                        ? "border-slate-300 shadow-md bg-white"
+                        : "border-slate-200 bg-white hover:border-slate-300"
+                    }`}
+                  >
+                    <button
+                      onClick={() => toggle(i)}
+                      className="w-full flex items-center gap-4 px-5 py-4 text-left"
+                    >
+                      <div className={`w-9 h-9 rounded-lg ${point.bg} flex items-center justify-center shrink-0`}>
+                        <Icon className={`h-4 w-4 ${point.color}`} />
+                      </div>
+                      <span className="flex-1 font-semibold text-slate-900 text-[15px]">
+                        {point.title}
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 pb-5">
+                        <div className="pl-[52px]">
+                          <p className="text-slate-600 text-sm leading-relaxed">
+                            {point.body}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PlumbingProblemSection;
