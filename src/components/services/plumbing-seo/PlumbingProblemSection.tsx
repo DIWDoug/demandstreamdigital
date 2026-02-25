@@ -19,14 +19,14 @@ const painPoints = [
   },
   {
     icon: Award,
-    title: "Review Velocity Is a Ranking Signal",
+    title: "Review Velocity Is a Trust Signal, Not a Bonus",
     body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors — not a nice-to-have, not a bonus. They are part of the system.",
     color: "text-accent-green",
     bg: "bg-accent-green/10",
   },
   {
     icon: Search,
-    title: "Service Specificity Wins Rankings",
+    title: "Service Specificity Matters for Rankings",
     body: "A homeowner searching 'tankless water heater installation near me' has different intent than 'plumber near me.' Each distinct service needs its own page. Generic catch-all plumbing pages rank well for nothing because they signal relevance for everything and authority for nothing.",
     color: "text-cta",
     bg: "bg-cta/10",
@@ -72,7 +72,7 @@ const PlumbingProblemSection = () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
                 >
-                  Schedule a Discovery Call
+                  Claim Your Territory Today
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
