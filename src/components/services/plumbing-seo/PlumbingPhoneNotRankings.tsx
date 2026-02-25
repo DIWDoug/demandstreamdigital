@@ -46,12 +46,16 @@ const PlumbingPhoneNotRankings = () => {
             </div>
           </div>
 
-          {/* Insight callout */}
-          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10 text-center">
-            <p className="text-text-secondary text-base leading-relaxed mb-3">
+          {/* Insight callout — statement 1 */}
+          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-14">
+            <p className="text-text-secondary text-base leading-relaxed">
               Plumbing demand is largely emergency-driven. Main line backups, burst pipes, water heaters that fail overnight —{" "}
               <span className="text-foreground font-semibold">these callers are not price shopping.</span>
             </p>
+          </div>
+
+          {/* Insight callout — statement 2 */}
+          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10">
             <p className="text-foreground font-medium text-base">
               They are calling whoever answers. If that caller reaches your voicemail, you just paid for a lead that went to your competitor.
             </p>
