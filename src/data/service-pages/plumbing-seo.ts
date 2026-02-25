@@ -220,64 +220,67 @@ export const plumbingSEOConfig: ServicePageConfig = {
     subheadline: "Each component is scoped based on your plumbing market's competition level, your current rankings, and your specific revenue goals. No standard packages. No fixed deliverable lists that ignore what your market actually requires.",
     blocks: [
       {
-        title: "On-Page Optimization",
+        title: "On-Page Improvement",
         slug: "on-page-optimization",
-        description: "Service-specific title tags, meta descriptions, headers, and on-page content for every plumbing service and city combination. Built to rank for searches like 'water heater replacement [city]' and 'emergency plumber near me' — not generic contractor terms.",
-        icon: FileText
+        description: "Service-specific title tags, meta descriptions, and on-page content for every distinct plumbing service and city. Built to rank for 'water heater replacement near me,' not generic contractor terms.",
+        icon: FileText,
+        cluster: "TECHNICAL"
       },
       {
         title: "Technical SEO",
         slug: "technical-seo",
-        description: "Site architecture, crawlability, Core Web Vitals, and page speed fixes that set the ranking ceiling for your plumbing site. Particular attention to mobile performance — most emergency plumbing searches happen on a phone.",
-        icon: Settings
+        description: "Site architecture, crawlability, Core Web Vitals, and page speed that set your ranking ceiling. Most emergency plumbing searches happen on a phone.",
+        icon: Settings,
+        cluster: "TECHNICAL"
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
-        description: "Plumbing-specific keyword research covering emergency intent, service intent, and location intent. Includes competitor gap analysis, service-to-URL mapping, and keyword prioritization by revenue value — drain cleaning, water heater, and slab leak searches get different priority weights.",
-        icon: Search
+        description: "Plumbing-specific keyword research covering emergency intent, service intent, and location intent. Drain cleaning, water heater, and slab leak searches each get different priority weights.",
+        icon: Search,
+        cluster: "TECHNICAL"
       },
       {
         title: "Content Development",
         slug: "content-development",
-        description: "Hub-and-spoke service cluster build-outs: a dedicated page for every distinct plumbing call type, plus city pages, FAQ content, and long-tail blog content targeting searches like 'signs you need repiping' and 'how long does sewer line replacement take.'",
-        icon: PenTool
+        description: "A dedicated page for every distinct plumbing call type, plus city pages and long-tail content targeting searches like 'signs you need repiping' and 'how long does sewer line replacement take.'",
+        icon: PenTool,
+        cluster: "AUTHORITY"
       },
       {
         title: "Link Building",
         slug: "link-building",
-        description: "Local and trade-specific outreach targeting PHCC and regional plumbing association links, supplier directories, local Chamber of Commerce listings, and community publications. Every link evaluated for geographic and trade relevance — not just domain authority.",
-        icon: Link2
+        description: "Local and trade-specific outreach: PHCC links, supplier directories, Chamber listings, and community publications. Every link evaluated for geographic and trade relevance, not just domain authority.",
+        icon: Link2,
+        cluster: "AUTHORITY"
       },
       {
-        title: "AI & GEO Optimization",
+        title: "AI & Generative Search",
         slug: "ai-optimization",
-        description: "Structured data, FAQ schema, entity optimization, and content formatting that positions your plumbing business for AI Overviews, generative search engines, and conversational AI citations — so you get cited, not just ranked.",
-        icon: Bot
-      },
-      {
-        title: "Schema Markup",
-        slug: "schema-markup",
-        description: "LocalBusiness, Plumber, Service, FAQ, and Review schema that unlocks rich results in search, supports AI Overview citations, and reinforces trust signals across local and organic results.",
-        icon: Sparkles
+        description: "Structured data, FAQ schema, and content formatting that positions your plumbing business for AI Overviews and generative search citations. So you get cited, not just ranked.",
+        icon: Bot,
+        cluster: "AUTHORITY"
       },
       {
         title: "NAP Citations",
         slug: "nap-citations",
-        description: "Citation consistency audits and cleanup across Yelp, HomeAdvisor, Angi, BBB, and all major data aggregators. Consistent Name, Address, and Phone data validates business identity and strengthens both Maps and organic rankings.",
-        icon: Globe
+        description: "Citation audits and cleanup across Yelp, HomeAdvisor, Angi, BBB, and all major data aggregators. Consistent NAP data strengthens both Maps and organic rankings.",
+        icon: Globe,
+        cluster: "VISIBILITY"
       },
       {
         title: "Local Reputation Management",
         slug: "reputation-management",
-        description: "Post-job review acquisition systems, response systems, and review velocity tracking built specifically for plumbing companies. Structured to turn every completed water heater install, drain cleaning, and slab leak repair into a visible 5-star review.",
-        icon: Award
+        description: "Post-job review acquisition and response systems built for plumbing companies. Structured to turn every completed job into a visible 5-star review.",
+        icon: Award,
+        cluster: "VISIBILITY"
       },
       {
         title: "Google Business Profile",
         slug: "gbp-strategy",
-        description: "Full GBP buildout and ongoing management: category alignment, services catalog, photo strategy, posting calendar tied to plumbing demand patterns, and response discipline. Not a one-time setup — an ongoing ranking activity.",
-        icon: Map
+        description: "Full GBP buildout and ongoing management: category alignment, photo strategy, posting calendar, and response discipline. Not a one-time setup. An ongoing ranking activity.",
+        icon: Map,
+        cluster: "VISIBILITY"
       }
     ]
   },
