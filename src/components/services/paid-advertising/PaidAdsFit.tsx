@@ -24,15 +24,15 @@ const PaidAdsFit = () => {
   const [openBad, setOpenBad] = useState<number | null>(null);
 
   return (
-    <section id="fit" className="py-20 lg:py-28 bg-background scroll-mt-32">
+    <section id="fit" className="py-20 lg:py-28 bg-[#f5f5f5] scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
           <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3 text-center">Selective Fit</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center">
             Is Paid Advertising Right for Your Business?
           </h2>
-          <p className="text-text-secondary text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
             Paid advertising works best when the operation behind it is ready to handle what comes in.
           </p>
 
@@ -42,23 +42,23 @@ const PaidAdsFit = () => {
             <div>
               <div className="flex items-center gap-2 mb-5">
                 <span className="text-lg">&#10003;</span>
-                <h3 className="font-bold text-foreground text-lg">This Could Work Well</h3>
+                <h3 className="font-bold text-gray-900 text-lg">This Could Work Well</h3>
               </div>
               <div className="space-y-2">
                 {goodFit.map((item, i) => (
-                  <div key={i} className="border border-border/60 rounded-lg overflow-hidden">
+                  <div key={i} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
                     <button
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-surface-elevated transition-colors"
+                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
                       onClick={() => setOpenGood(openGood === i ? null : i)}
                     >
-                      <span className="flex items-center gap-3 text-sm font-medium text-foreground">
+                      <span className="flex items-center gap-3 text-sm font-medium text-gray-800">
                         <span className="text-green-500 shrink-0">&#10003;</span>
                         {item.point}
                       </span>
-                      <span className={`text-text-muted text-xs transition-transform shrink-0 ${openGood === i ? "rotate-180" : ""}`}>&#9660;</span>
+                      <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openGood === i ? "rotate-180" : ""}`}>&#9660;</span>
                     </button>
                     {openGood === i && (
-                      <div className="px-4 pb-4 pt-1 text-sm text-text-secondary border-t border-border/40">
+                      <div className="px-4 pb-4 pt-1 text-sm text-gray-600 border-t border-gray-100">
                         {item.detail}
                       </div>
                     )}
@@ -70,24 +70,24 @@ const PaidAdsFit = () => {
             {/* Not a Fit */}
             <div>
               <div className="flex items-center gap-2 mb-5">
-                <span className="text-lg text-destructive">&#10007;</span>
-                <h3 className="font-bold text-foreground text-lg">Probably Not a Fit</h3>
+                <span className="text-lg text-red-500">&#10007;</span>
+                <h3 className="font-bold text-gray-900 text-lg">Probably Not a Fit</h3>
               </div>
               <div className="space-y-2">
                 {notFit.map((item, i) => (
-                  <div key={i} className="border border-border/60 rounded-lg overflow-hidden">
+                  <div key={i} className="border border-gray-200 bg-white rounded-lg overflow-hidden">
                     <button
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-surface-elevated transition-colors"
+                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-gray-50 transition-colors"
                       onClick={() => setOpenBad(openBad === i ? null : i)}
                     >
-                      <span className="flex items-center gap-3 text-sm font-medium text-foreground">
-                        <span className="text-destructive shrink-0">&#10007;</span>
+                      <span className="flex items-center gap-3 text-sm font-medium text-gray-800">
+                        <span className="text-red-500 shrink-0">&#10007;</span>
                         {item.point}
                       </span>
-                      <span className={`text-text-muted text-xs transition-transform shrink-0 ${openBad === i ? "rotate-180" : ""}`}>&#9660;</span>
+                      <span className={`text-gray-400 text-xs transition-transform shrink-0 ${openBad === i ? "rotate-180" : ""}`}>&#9660;</span>
                     </button>
                     {openBad === i && (
-                      <div className="px-4 pb-4 pt-1 text-sm text-text-secondary border-t border-border/40">
+                      <div className="px-4 pb-4 pt-1 text-sm text-gray-600 border-t border-gray-100">
                         {item.detail}
                       </div>
                     )}

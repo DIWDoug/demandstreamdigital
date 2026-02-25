@@ -68,7 +68,7 @@ const channels = [
 
 const PaidAdsChannels = () => {
   return (
-    <section id="channels" className="py-20 lg:py-28 section-light scroll-mt-32">
+    <section id="channels" className="py-20 lg:py-28 bg-white scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
@@ -82,11 +82,11 @@ const PaidAdsChannels = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
             {channels.map((channel, i) => (
-              <div key={i} className="bg-card border border-border rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-foreground mb-4">{channel.title}</h3>
+              <div key={i} className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">{channel.title}</h3>
                 <ul className="space-y-2.5 flex-1 mb-6">
                   {channel.bullets.map((bullet, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-sm text-text-secondary">
+                    <li key={j} className="flex items-start gap-2.5 text-sm text-gray-600">
                       <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                       <span>{bullet}</span>
                     </li>

@@ -11,7 +11,7 @@ const ourMetrics = [
 
 const PaidAdsMetrics = () => {
   return (
-    <section id="metrics" className="py-20 lg:py-28 section-light scroll-mt-32">
+    <section id="metrics" className="py-20 lg:py-28 bg-[#f5f5f5] scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
 
@@ -26,28 +26,28 @@ const PaidAdsMetrics = () => {
           <div className="grid md:grid-cols-2 gap-8">
 
             {/* Left — what agencies report */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <p className="text-sm font-semibold text-text-muted uppercase tracking-widest mb-6">What Most Agencies Report</p>
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+              <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">What Most Agencies Report</p>
               <div className="space-y-4">
                 {agencyReports.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <span className="text-destructive/60 text-lg font-bold">&times;</span>
-                    <span className="text-text-muted line-through text-sm">{item}</span>
+                    <span className="text-red-400 text-lg font-bold">&times;</span>
+                    <span className="text-gray-400 line-through text-sm">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Right — what we report */}
-            <div className="bg-cta/5 border border-cta/20 rounded-xl p-8">
+            <div className="bg-white border-2 border-cta/30 rounded-xl p-8 shadow-sm">
               <p className="text-sm font-semibold text-cta uppercase tracking-widest mb-6">What We Report</p>
               <div className="space-y-4">
                 {ourMetrics.map((m, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                     <div>
-                      <span className="font-semibold text-foreground text-sm">{m.label}</span>
-                      <span className="text-text-secondary text-sm"> — {m.desc}</span>
+                      <span className="font-semibold text-gray-900 text-sm">{m.label}</span>
+                      <span className="text-gray-600 text-sm"> — {m.desc}</span>
                     </div>
                   </div>
                 ))}
