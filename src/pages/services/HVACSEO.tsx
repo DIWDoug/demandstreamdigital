@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
-import MarketExclusivity from "@/components/sections/MarketExclusivity";
+import HVACMarketExclusivity from "@/components/services/hvac-seo/HVACMarketExclusivity";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -141,7 +141,7 @@ const HVACSEO = () => {
       </div>
 
       {/* EXCLUSIVITY — right after outcomes */}
-      <MarketExclusivity />
+      <HVACMarketExclusivity />
 
       {/* RANKING FACTORS */}
       <LocalRankingFactors />
