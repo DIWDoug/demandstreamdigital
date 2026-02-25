@@ -6,7 +6,7 @@ const painPoints = [
   {
     icon: Zap,
     title: "Emergency Intent Dominates",
-    body: "The majority of high-value plumbing searches are urgent — 'emergency plumber near me,' 'burst pipe repair,' 'water heater not working.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first, not retrofitted from a template built for dentists and dog groomers.",
+    body: "The majority of high-value plumbing searches are urgent: 'emergency plumber near me,' 'burst pipe repair,' 'water heater not working.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first, not retrofitted from a template built for dentists and dog groomers.",
     color: "text-cta",
     bg: "bg-cta/10",
   },
@@ -20,7 +20,7 @@ const painPoints = [
   {
     icon: Award,
     title: "Review Velocity Is a Trust Signal, Not a Bonus",
-    body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors — not a nice-to-have, not a bonus. They are part of the system.",
+    body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors. Not a nice-to-have, not a bonus. They are part of the system.",
     color: "text-accent-green",
     bg: "bg-accent-green/10",
   },
@@ -34,7 +34,7 @@ const painPoints = [
   {
     icon: Phone,
     title: "After-Hours Calls Are High-Margin Calls",
-    body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix — the customer is not price shopping, they need a plumber now. Your GBP and site have to be configured to capture that demand 24 hours a day, not just during office hours.",
+    body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix. The customer is not price shopping, they need a plumber now. Your GBP and site have to be configured to capture that demand 24 hours a day, not just during office hours.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
@@ -61,11 +61,11 @@ const PlumbingProblemSection = () => {
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
                 <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                  When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up first. Plumbing SEO has to be built around that urgency — not applied from a template designed for every trade.
+                  When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up first. Plumbing SEO has to be built around that urgency, not applied from a template designed for every trade.
                 </p>
               </div>
               <p className="text-slate-500 text-sm mb-8">
-                Effective plumbing SEO requires scoping to the actual market. Not templated deliverables applied from a generic contractor package.
+                Effective plumbing SEO requires scoping to the actual market. Not templated deliverables applied from a generic contractor package. That is why our plumbing SEO work performs consistently across different markets and service areas.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
