@@ -20,9 +20,9 @@ export const plumbingSEOConfig: ServicePageConfig = {
         "A main line backup on a Sunday morning",
         "A water heater that stopped working at 10pm"
       ],
-      closing: "The decision happens in seconds. Whoever shows up in the Map Pack gets the call. If your plumbing company is not in the Map Pack and the top organic results for the searches that matter in your market, a competitor gets those calls. Plumbing SEO from DemandStream changes that, with a connected strategy built around how plumbing customers actually search, compare, and call. No generic contractor marketing. Plumbing companies only."
+      closing: "Whoever shows up in the Map Pack gets the call. Plumbing SEO from DemandStream is built around how plumbing customers actually search and call. No generic contractor marketing. Plumbing companies only."
     },
-    qualifierLine: "No generic home services approach. Built for plumbing operators only.",
+    qualifierLine: "",
     ctaText: "Get a Free Plumbing SEO Audit",
     ctaSubtext: "Built for plumbing companies in competitive local markets."
   },
