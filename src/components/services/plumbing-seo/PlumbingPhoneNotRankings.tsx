@@ -29,45 +29,25 @@ const PlumbingPhoneNotRankings = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="mb-14">
+          <div className="text-center mb-14">
             <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
               The Starting Point
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 text-balance">
               Plumbing SEO Starts With the Phone, Not Rankings
             </h2>
-            <div className="max-w-[580px] space-y-4">
-              <p className="text-lg text-text-secondary leading-relaxed">
-                Rankings are visible. Booked calls are revenue. Most plumbing companies have been sold on the idea that better rankings automatically mean more business. They do not.
-              </p>
-              <p className="text-lg text-text-secondary leading-relaxed">
-                A company ranking #1 for 'drain cleaning near me' with a 40% booking rate produces less revenue per marketing dollar than a company ranking #4 with a 72% booking rate and a CSR who knows how to convert.
-              </p>
-            </div>
-          </div>
-
-          {/* Insight callout — statement 1 */}
-          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-14">
-            <p className="text-text-secondary text-base leading-relaxed">
-              Plumbing demand is largely emergency-driven. Main line backups, burst pipes, water heaters that fail overnight.{" "}
-              <span className="text-foreground font-semibold">These callers are not price shopping.</span>
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+              A ranking is not revenue. A booked call is. Before we build a single campaign, we look at call tracking data, your answer rate, and how your dispatch board handles volume.
             </p>
           </div>
 
-          {/* Insight callout — statement 2 */}
-          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10">
+          {/* Insight callout */}
+          <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10 text-center">
+            <p className="text-text-secondary text-base leading-relaxed mb-3">
+              A plumbing company with a <span className="text-foreground font-semibold">45% booking rate</span> produces different results than one running at <span className="text-foreground font-semibold">72%</span>.
+            </p>
             <p className="text-foreground font-medium text-base">
-              They are calling whoever answers. If that caller reaches your voicemail, you just paid for a lead that went to your competitor.
-            </p>
-          </div>
-
-          {/* Booking rate callout */}
-          <div className="border-l-4 border-destructive/70 bg-destructive/5 rounded-r-lg px-5 py-4 mb-10">
-            <p className="text-text-secondary text-sm leading-relaxed text-center">
-              A plumbing company with a{" "}
-              <span className="text-destructive font-semibold">45% booking rate</span>{" "}
-              produces different results than one running at{" "}
-              <span className="text-destructive font-semibold">72%</span>. That gap is addressable, but it has to be identified before we scale volume.
+              That gap is addressable, but has to be identified first.
             </p>
           </div>
 
