@@ -156,8 +156,9 @@ const App = () => (
           <Route path="/plumbing-reporting" element={<Reporting />} />
 
           {/* Paid Advertising Hub */}
-          <Route path="/paid-advertising" element={<PaidAdvertising />} />
-          <Route path="/paid-advertising/" element={<PaidAdvertising />} />
+          <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />
+          <Route path="/paid-advertising" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
+          <Route path="/paid-advertising/" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
 
           {/* HVAC Service Pages */}
           <Route path="/hvac-seo" element={<HVACSEO />} />
