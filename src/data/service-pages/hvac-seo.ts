@@ -100,15 +100,11 @@ export const hvacSEOConfig: ServicePageConfig = {
         description: "Build a crawlable, revenue-aligned HVAC SEO structure that converts high-intent searches into booked calls. The technical foundation sets your ranking ceiling. An HVAC company with a slow, poorly structured site and duplicate service pages cannot outrank a competitor with clean architecture, no matter how many links they build.",
         activities: [
           "Separate, properly structured pages for each HVAC service. No catch-all 'HVAC Services' page that dilutes relevance across every keyword",
-          "Clean, short URLs aligned to service + city structure: /ac-repair-dallas/ not /services/hvac/air-conditioning/dallas-tx-2/",
           "Service cluster architecture: hub pages linking to sub-service pages and city pages in a logical hierarchy",
-          "CTR-driven title tags: 'AC Repair in [City] | Same-Day Service' and not 'Our Air Conditioning Services'",
           "Ad-style meta descriptions that speak to urgency and booking, not feature lists",
-          "Schema markup: LocalBusiness, HVACContractor, Service, FAQ, and Review",
-          "Mobile-first speed. Most emergency HVAC searches happen on a phone during a breakdown",
-          "Click-to-call prominence on every service page and landing page",
-          "Internal linking across the HVAC service cluster. Every sub-service page connects to the hub",
-          "NAP consistency audit across all directories"
+          "Clean, short URLs aligned to service + city structure: /ac-repair-dallas/ not /services/hvac/air-conditioning/dallas-tx-2/",
+          "CTR-driven title tags: 'AC Repair in [City] | Same-Day Service' and not 'Our Air Conditioning Services'",
+          "Schema markup: LocalBusiness, HVACContractor, Service, FAQ, and Review"
         ],
         expect: [
           "By the end of this phase, your site is built to rank for specific HVAC searches, not just appear for generic contractor queries. A homeowner searching 'AC repair near me' lands on a dedicated AC repair page with a clear call path. That page is fast, mobile-refined, and structured to produce a call, not a bounce.",
@@ -133,13 +129,13 @@ export const hvacSEOConfig: ServicePageConfig = {
         activities: [
           "Primary category set to 'HVAC Contractor'. Not 'Home Services' or 'Contractor,' which dilute relevance",
           "Secondary categories selected for highest-revenue adjacent services: 'Air Conditioning Contractor,' 'Heating Contractor,' and 'Indoor Air Quality' where applicable",
-          "GBP services catalog built to mirror website service pages. Every service with a dedicated page gets a GBP services entry",
-          "Service area configuration aligned to actual dispatch radius, not just the major city name",
-          "Weekly real-job photo uploads with location and service context",
-          "Post-job SMS review acquisition system, automated, compliant, and consistent",
+          "GBP services catalog built to mirror website service pages exactly",
+          "Service area configuration aligned to actual dispatch radius",
+          "Weekly real-job photo uploads: AC installations, furnace replacements, heat pump jobs",
+          "Post-job SMS review acquisition system — automated, compliant, and consistent",
           "Response system for every review: positive, negative, and no-text ratings",
-          "Seasonal GBP posting calendar: AC prep in spring, emergency coverage in summer, furnace content in fall, heat pump content before winter",
-          "Service-specific language encouraged in review requests: 'Mention the service you had done and how quickly we responded'"
+          "Seasonal GBP posting calendar: pre-season tune-up content before summer and winter",
+          "Review velocity as an ongoing activity, not a one-time setup"
         ],
         expect: [
           "An HVAC company with a fully refined, actively maintained GBP holds Map Pack position more consistently than one running on a set-it-and-forget-it profile. Emergency searches surface your business at the exact moment the homeowner is ready to call. Same-day booking calls, the ones that fill your board without any back-and-forth, come disproportionately from Maps.",
@@ -161,9 +157,9 @@ export const hvacSEOConfig: ServicePageConfig = {
         title: "Authority & Review Growth",
         description: "Build the prominence signals that stabilize rankings and strengthen trust on every call. HVAC is a trust-first trade. Before a homeowner lets a technician into their home, they check reviews. Before Google ranks an HVAC company in the Map Pack, it evaluates authority signals. Both processes reward the same inputs: consistent reviews, credible links, and clean citation data.",
         activities: [
-          "Local link acquisition: HVAC trade associations (ACCA), local Chamber of Commerce, supplier directories, local business publications",
+          "Trade-specific link building: ACCA, supplier directories, local chamber, community publications",
           "Citation cleanup: NAP consistency across Yelp, HomeAdvisor, BBB, Angi, and all data aggregators",
-          "Trade-aware blog content targeting long-tail HVAC searches: 'how long does AC replacement take,' 'signs your heat pump is failing,' 'why is my AC not cooling the house'",
+          "Install case study content and reputation signals that compound over time",
           "Review response discipline: consistent, service-specific responses that reinforce keyword relevance",
           "Review velocity tracking: monitoring cadence, identifying gaps, and escalating acquisition during slow periods",
           "Website review integration with schema markup for rich results"
@@ -187,13 +183,13 @@ export const hvacSEOConfig: ServicePageConfig = {
         title: "Market Defense & Expansion",
         description: "Protect your HVAC market position and scale strategically as capacity allows. Rankings are not permanent assets. Competitors improve their GBPs, run review campaigns, and build new service pages. Market defense is not passive maintenance. It is an active, ongoing process.",
         activities: [
-          "Competitor review and ranking monitoring in your HVAC service area",
+          "Peak season competitor monitoring in your HVAC service area",
+          "Install-focused content expansion during shoulder season",
+          "Territory scaling strategy for multi-truck operators",
+          "Protecting Map Pack position during high-demand periods",
           "Ranking volatility tracking with early-warning alerts before drops affect call volume",
-          "Service area expansion aligned to truck capacity, not just market opportunity",
-          "Defensive content for high-margin HVAC services: AC replacement, furnace installation, heat pump systems, IAQ",
-          "Emergency keyword capture pages for high-urgency searches: 'AC not working near me,' '24-hour HVAC near me,' 'furnace not turning on'",
-          "Call tracking integration with booking rate data, tied to source, page, and time of day",
-          "Capacity-based marketing throttling: accelerate during slow seasons, protect dispatch during peak summer and winter demand"
+          "Capacity-based marketing throttling: accelerate during slow seasons, protect dispatch during peak summer and winter demand",
+          "Call tracking integration with booking rate data, tied to source, page, and time of day"
         ],
         expect: [
           "This phase prevents the outcomes that hurt HVAC operators most: a competitor pulling ahead during a heat wave, ranking drops after a Google update, dispatch overload from marketing that pushes volume the operation cannot handle. HVAC SEO that doesn't align with operational capacity creates chaos, not growth.",
@@ -215,13 +211,13 @@ export const hvacSEOConfig: ServicePageConfig = {
         title: "AI & Generative Search Visibility",
         description: "Position your HVAC company to be cited by AI Overviews and generative search engines — not just ranked on the traditional blue-link results page. Search behavior is shifting. AI-generated answers are appearing above organic results for informational and service-intent HVAC queries. If your content and schema are not structured for citation, you are invisible to an increasing share of searchers.",
         activities: [
-          "FAQ schema and structured data markup that signals answer-ready content to AI systems",
-          "Content reformatting to match the question-answer structure that generative search prefers to cite",
-          "Entity optimization: making sure Google's Knowledge Graph associates your company with the right services, service area, and trade credentials",
+          "FAQ-rich content clusters targeting repair vs replace comparison searches",
+          "Structured data implementation: FAQ, HowTo, Service, and LocalBusiness markup",
+          "'How much does X cost' content that earns AI citations: 'how much does AC replacement cost,' 'how much does furnace replacement cost'",
+          "Conversational query capture for voice and assistant queries: 'HVAC company open now near me'",
+          "GBP Q&A seeded with high-intent HVAC questions and direct answers",
           "AI Overview monitoring: tracking which HVAC queries trigger AI Overviews and whether your company is cited",
-          "E-E-A-T signal reinforcement: author credibility, trade credentials, and first-hand experience signals that AI systems weight heavily",
-          "GBP alignment with AI-surfaced local answers: ensuring your profile data is structured to appear in AI-driven local recommendations",
-          "Voice search and conversational query coverage for HVAC emergency scenarios"
+          "E-E-A-T signal reinforcement: author credibility, trade credentials, and first-hand experience signals"
         ],
         expect: [
           "Generative search is not replacing traditional SEO — it is adding a new visibility layer that rewards the same inputs: authoritative content, clean structured data, and a credible business entity. HVAC companies whose pages are formatted for citation will appear in AI Overviews while competitors relying on legacy on-page SEO alone are filtered out.",
