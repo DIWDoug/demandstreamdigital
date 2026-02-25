@@ -71,15 +71,15 @@ export const plumbingSEOConfig: ServicePageConfig = {
     items: [
       {
         title: "More Emergency Bookings",
-        description: "The calls that matter most in plumbing are the ones that happen at the worst times. When your company ranks in the Map Pack and the top organic results for emergency plumber searches in your service area, those calls come to you — not the competitor who outspent you on ads last month. Emergency SEO visibility compounds. Every month you hold position, the calls keep coming."
+        description: "The calls that matter most in plumbing happen at the worst times. When your company ranks in the Map Pack and top organic results for emergency plumber searches in your service area, those calls come to you, not the competitor who outspent you on ads. Every month you hold position, the calls keep coming."
       },
       {
         title: "Higher Booking Rate on Organic Calls",
         description: "Organic local searchers are pre-qualified. They found your company because you showed up for the exact service they needed in the area they needed it. That intent consistency produces better booking rates than broad paid traffic. A homeowner searching 'hydro jetting near me' who finds your dedicated hydro jetting page is closer to booking than a general ad click."
       },
       {
-        title: "Competitive Defense in Your Service Area",
-        description: "If your plumbing company is not ranking for water heater replacements, slab leaks, and drain cleaning in your market, a competitor is. Local SEO is as much about holding your position as it is about gaining new ground. A competitor with 300 reviews, consistent GBP activity, and strong service area pages will outbook you on emergency calls regardless of how good your techs are."
+        title: "Defending Your Service Area",
+        description: "If your plumbing company is not ranking for water heater replacements, slab leaks, and drain cleaning in your market, a competitor is. A competitor with consistent GBP activity and strong service area pages will outrank you on emergency calls regardless of how good your techs are."
       },
       {
         title: "Revenue Stability Through Predictable Call Flow",
