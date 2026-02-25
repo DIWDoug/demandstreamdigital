@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronDown, ArrowRight, Phone, MapPin, Search, Target, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Phone, MapPin, Search, Target, TrendingUp, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -42,10 +41,6 @@ const painPoints = [
 ];
 
 const LocalSEOProblemSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
-
   return (
     <section className="py-20 lg:py-28 section-light relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -90,44 +85,27 @@ const LocalSEOProblemSection = () => {
               </div>
             </div>
 
-            {/* RIGHT: Accordion cards */}
-            <div className="space-y-3">
+            {/* RIGHT: Insight rows */}
+            <div>
               {painPoints.map((point, i) => {
-                const isOpen = openIndex === i;
                 const Icon = point.icon;
                 return (
-                  <div
-                    key={i}
-                    className={`rounded-xl border transition-all duration-200 overflow-hidden ${
-                      isOpen
-                        ? "border-slate-300 shadow-md bg-white"
-                        : "border-slate-200 bg-white hover:border-slate-300"
-                    }`}
-                  >
-                    <button
-                      onClick={() => toggle(i)}
-                      className="w-full flex items-center gap-4 px-5 py-4 text-left"
-                    >
-                      <div className={`w-9 h-9 rounded-lg ${point.bg} flex items-center justify-center shrink-0`}>
+                  <div key={i}>
+                    <div className="flex items-start gap-4 py-6">
+                      <div className={`w-9 h-9 rounded-lg ${point.bg} flex items-center justify-center shrink-0 mt-0.5`}>
                         <Icon className={`h-4 w-4 ${point.color}`} />
                       </div>
-                      <span className="flex-1 font-semibold text-slate-900 text-[15px]">
-                        {point.title}
-                      </span>
-                      <ChevronDown
-                        className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {isOpen && (
-                      <div className="px-5 pb-5">
-                        <div className="pl-[52px]">
-                          <p className="text-slate-600 text-sm leading-relaxed">
-                            {point.body}
-                          </p>
-                        </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-slate-900 text-[15px] mb-1.5">
+                          {point.title}
+                        </p>
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          {point.body}
+                        </p>
                       </div>
+                    </div>
+                    {i < painPoints.length - 1 && (
+                      <hr className="border-t border-slate-200" />
                     )}
                   </div>
                 );
