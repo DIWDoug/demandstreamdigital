@@ -49,8 +49,8 @@ const PlumbingPhoneNotRankings = () => {
           {/* Insight callout — statement 1 */}
           <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-14">
             <p className="text-text-secondary text-base leading-relaxed">
-              Plumbing demand is largely emergency-driven. Main line backups, burst pipes, water heaters that fail overnight —{" "}
-              <span className="text-foreground font-semibold">these callers are not price shopping.</span>
+              Plumbing demand is largely emergency-driven. Main line backups, burst pipes, water heaters that fail overnight.{" "}
+              <span className="text-foreground font-semibold">These callers are not price shopping.</span>
             </p>
           </div>
 
