@@ -361,6 +361,31 @@ export const hvacSEOConfig: ServicePageConfig = {
         ]
       },
       {
+        category: "HVAC SEO vs. Paid Ads",
+        items: [
+          {
+            question: "Should I run HVAC SEO or Google Ads?",
+            answer: "Both, ideally — but with different expectations for each. Google Ads delivers immediate visibility for emergency HVAC searches. If someone searches 'AC repair near me' right now, a well-run Google Ads campaign can put you in front of that caller today. HVAC SEO cannot do that in week one. What HVAC SEO does that paid ads cannot: it builds a compounding asset. Rankings you earn in month 4 keep producing calls in month 14 without additional spend."
+          },
+          {
+            question: "How is HVAC SEO different from running Google Ads?",
+            answer: "Paid ads generate calls while the campaign is running. When the budget stops, the calls stop. HVAC SEO generates calls that compound over time. Rankings built in month 3 continue driving booked calls in month 18, month 24, and beyond — without proportional increases in spend. The two are not mutually exclusive. Paid ads are often the right strategy during the ramp-up phase of an SEO campaign, especially for emergency HVAC searches where immediate visibility matters."
+          },
+          {
+            question: "Can SEO help generate install leads, not just repair calls?",
+            answer: "Yes. Install leads and repair calls require different page architectures. A homeowner researching 'AC replacement cost' or 'how long does a heat pump last' is in a different stage than one searching 'AC not cooling near me.' Install-focused content — replacement cost guides, repair vs. replace comparison pages, system lifespan content — targets the research phase and pulls in higher-ticket leads before the homeowner has already chosen a competitor. We build both: emergency capture pages for repair demand and research-phase content for replacement and install pipeline."
+          },
+          {
+            question: "How does HVAC SEO perform differently during peak season?",
+            answer: "Emergency search volume spikes during heat waves and freeze events. An HVAC company with a strong Map Pack presence and emergency-specific landing pages captures a disproportionate share of those calls when demand is highest. The companies that see the largest peak-season gains from SEO are the ones who built their foundation during shoulder season — so when July or January hits, the infrastructure is already in place. SEO built for peak demand has to be executed before peak demand arrives."
+          },
+          {
+            question: "How do you build links for HVAC companies?",
+            answer: "Link building for HVAC SEO focuses on trade relevance and geographic relevance — not raw domain authority. A link from the Air Conditioning Contractors of America (ACCA), a regional HVAC supplier directory, a local Chamber of Commerce, or a community publication carries more weight for an HVAC company's local rankings than a generic high-DA link from an unrelated industry."
+          }
+        ]
+      },
+      {
         category: "Eligibility & Fit",
         items: [
           {
@@ -378,27 +403,6 @@ export const hvacSEOConfig: ServicePageConfig = {
           {
             question: "How do you handle communication and reporting?",
             answer: "You receive a monthly report that covers what actually matters on your dispatch board: booked calls by source, ranking movement for your target HVAC keywords, GBP performance metrics — calls, direction requests, and photo views — and review velocity. No vanity dashboards. No impressions graphs. The numbers that connect back to revenue."
-          }
-        ]
-      },
-      {
-        category: "HVAC SEO vs. Paid Ads",
-        items: [
-          {
-            question: "Should I run HVAC SEO or Google Ads?",
-            answer: "Both, ideally — but with different expectations for each. Google Ads delivers immediate visibility for emergency HVAC searches. If someone searches 'AC repair near me' right now, a well-run Google Ads campaign can put you in front of that caller today. HVAC SEO cannot do that in week one. What HVAC SEO does that paid ads cannot: it builds a compounding asset. Rankings you earn in month 4 keep producing calls in month 14 without additional spend."
-          },
-          {
-            question: "How is HVAC SEO different from running Google Ads?",
-            answer: "Paid ads generate calls while the campaign is running. When the budget stops, the calls stop. HVAC SEO generates calls that compound over time. Rankings built in month 3 continue driving booked calls in month 18, month 24, and beyond — without proportional increases in spend. The two are not mutually exclusive. Paid ads are often the right strategy during the ramp-up phase of an SEO campaign, especially for emergency HVAC searches where immediate visibility matters."
-          },
-          {
-            question: "What is your content creation process for HVAC SEO?",
-            answer: "Every page we write is built around a specific HVAC search intent — not repurposed content from a generic contractor template. An AC repair page is written differently than a furnace installation page, because the caller is different, the urgency level is different, and the conversion path is different. We write service pages, city pages, and supporting blog content. All content goes through an HVAC-specific review before it goes live."
-          },
-          {
-            question: "How do you build links for HVAC companies?",
-            answer: "Link building for HVAC SEO focuses on trade relevance and geographic relevance — not raw domain authority. A link from the Air Conditioning Contractors of America (ACCA), a regional HVAC supplier directory, a local Chamber of Commerce, or a community publication carries more weight for an HVAC company's local rankings than a generic high-DA link from an unrelated industry."
           }
         ]
       }
