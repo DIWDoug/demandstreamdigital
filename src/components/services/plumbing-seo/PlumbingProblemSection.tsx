@@ -85,7 +85,7 @@ const PlumbingProblemSection = () => {
               </div>
             </div>
 
-            {/* RIGHT: Insight rows */}
+            {/* RIGHT: Vertical insight rows */}
             <div>
               {painPoints.map((point, i) => {
                 const Icon = point.icon;
