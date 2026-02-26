@@ -9,7 +9,7 @@ const PlumbingPaidAdsChannels = () => {
 
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">What We Deploy</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Plumbing Paid Advertising Channels
+            Paid Channels for Plumbing Companies
           </h2>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl">
             Each channel serves a different part of the demand curve. None are grouped. Each is scoped, managed, and reported separately.
@@ -54,7 +54,7 @@ const PlumbingPaidAdsChannels = () => {
               to="/plumbing-search-advertising/"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group"
             >
-              Explore Plumbing Search Advertising
+              See How Search Advertising Works
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
@@ -83,7 +83,7 @@ const PlumbingPaidAdsChannels = () => {
                 to="/plumbing-facebook-advertising/"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
               >
-                Explore Plumbing Facebook Advertising
+                Explore Facebook for Plumbers
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
@@ -108,7 +108,7 @@ const PlumbingPaidAdsChannels = () => {
                 to="/plumbing-instagram-advertising/"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
               >
-                Explore Plumbing Instagram Advertising
+                Explore Instagram for Plumbers
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
@@ -133,7 +133,7 @@ const PlumbingPaidAdsChannels = () => {
                 to="/plumbing-linkedin-advertising/"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
               >
-                Explore Plumbing LinkedIn Advertising
+                Explore LinkedIn for Commercial Plumbing
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
@@ -161,7 +161,7 @@ const PlumbingPaidAdsChannels = () => {
                 to="/plumbing-programmatic-advertising/"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
               >
-                Explore Plumbing Programmatic Advertising
+                Explore Programmatic for Plumbers
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
