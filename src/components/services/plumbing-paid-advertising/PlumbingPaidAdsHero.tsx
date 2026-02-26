@@ -60,7 +60,7 @@ const PlumbingPaidAdsHero = () => {
             </p>
 
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              When a homeowner searches for a burst pipe or sewer backup, they are not browsing. They are calling whoever shows up first. Plumbing paid advertising built by DemandStream captures that demand immediately — built around cost per booked call, not clicks.
+              When a homeowner searches for a burst pipe or sewer backup, they are not browsing. They are calling whoever shows up first. The search campaigns we build for plumbers capture that demand immediately — structured around cost per booked call, not clicks.
             </p>
 
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
