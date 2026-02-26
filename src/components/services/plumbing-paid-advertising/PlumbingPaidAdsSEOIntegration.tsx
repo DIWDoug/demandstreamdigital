@@ -31,7 +31,7 @@ const PlumbingPaidAdsSEOIntegration = () => {
 
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Connection</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12">
-            Plumbing SEO and Paid Advertising Together Control the Market
+            Search Rankings and Paid Ads Together. The Market Stays Yours.
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
@@ -39,13 +39,13 @@ const PlumbingPaidAdsSEOIntegration = () => {
             {/* Left — body paragraphs */}
             <div className="space-y-5 text-text-secondary leading-relaxed">
               <p>
-                Paid advertising captures the call right now. SEO builds the authority that makes every call cheaper over time.
+                Pay-per-click captures the call right now. Organic search builds the authority that makes every call cheaper over time.
               </p>
               <p>
-                When both run together, the blended cost per booked call drops. Organic traffic from plumbing SEO converts at a higher rate when your reviews are strong and your GBP is active. Paid campaigns perform better when the landing pages behind them are built for intent.
+                When both run together, the blended cost per booked call drops. Organic traffic converts at a higher rate when your reviews are strong and your Google Business Profile is active. Google Ads campaigns perform better when the landing pages behind them are built for intent, not recycled from a generic site.
               </p>
               <p>
-                The data crossfeeds. Keywords that produce booked calls in paid campaigns inform which pages to build organically. Review velocity from the reputation system improves paid ad Quality Scores. Every channel makes the others more efficient.
+                The data crossfeeds. Keywords that drive booked calls in paid campaigns inform which pages to build organically. Review velocity from the reputation system improves Quality Scores. Every channel makes the others more efficient.
               </p>
             </div>
 
