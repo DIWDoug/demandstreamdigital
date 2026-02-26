@@ -56,7 +56,7 @@ const PlumbingPaidAdsHero = () => {
               Plumbing Paid Advertising That Drives Booked Service Calls
             </h1>
             <p className="text-xl md:text-2xl font-sans font-semibold text-cta mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-              Emergency Demand Control for Plumbing Companies
+              Emergency Demand Control. Booked Calls. Not Just Clicks.
             </p>
 
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
