@@ -54,6 +54,21 @@ const PlumbingSearchAds = () => {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much should I budget for plumbing search advertising?", "acceptedAnswer": { "@type": "Answer", "text": "Budget depends on your market size, service mix, and how many trucks you are running. We size budgets around your capacity and cost-per-booked-call targets, not arbitrary spend minimums. Most markets we work in start between $2,000 and $5,000 per month in ad spend, scaling based on what your dispatch board can handle." } },
+      { "@type": "Question", "name": "How long before we see booked calls from search ads?", "acceptedAnswer": { "@type": "Answer", "text": "Emergency campaigns typically produce calls within the first two weeks of launch. Replacement and install campaigns take longer to optimize — expect 60 to 90 days before cost-per-booked-call stabilizes on higher-ticket service types." } },
+      { "@type": "Question", "name": "Do you require long-term contracts?", "acceptedAnswer": { "@type": "Answer", "text": "We require a minimum 6-month engagement. Search advertising compounds over time as campaign data builds. Agencies that let you go month-to-month have no incentive to build campaigns that improve — they just need to hold you for another 30 days." } },
+      { "@type": "Question", "name": "How do you handle peak season budget adjustments?", "acceptedAnswer": { "@type": "Answer", "text": "We build a seasonal bid calendar before campaigns launch. Budgets increase before and during peak demand windows. They throttle back during shoulder season and shift emphasis toward maintenance and install promotions. You are not running the same budget in February as you are in July." } },
+      { "@type": "Question", "name": "What metrics do you actually report on?", "acceptedAnswer": { "@type": "Answer", "text": "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load. Not impressions. Not click-through rate. Every report connects to what shows up on your dispatch board." } },
+      { "@type": "Question", "name": "We have tried Google Ads before and it did not work. Why would this be different?", "acceptedAnswer": { "@type": "Answer", "text": "Most failed campaigns share the same problems — broad match keywords, no service segmentation, budgets that do not adjust for season, and reporting that stops at the lead instead of the booked call. We build the campaign structure from scratch around how your market actually works." } },
+      { "@type": "Question", "name": "Do you work with companies already running ads with another agency?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We conduct a full campaign audit before launch. Most inherited campaigns have significant structural issues that explain poor performance. We document what we find and show you exactly what changes before we touch the budget." } },
+      { "@type": "Question", "name": "What size company do you typically work with?", "acceptedAnswer": { "@type": "Answer", "text": "Companies running 2 or more trucks with an active dispatch board and at least basic call tracking in place. If the phone is not being answered consistently, more ad spend makes the problem worse, not better. We need the operational foundation to be there before we scale volume." } },
+    ]
+  };
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -64,6 +79,7 @@ const PlumbingSearchAds = () => {
         <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
