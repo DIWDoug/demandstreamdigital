@@ -33,6 +33,7 @@ const anchorItems = [
   { label: "Our Process", href: "#our-process" },
   { label: "Metrics", href: "#metrics" },
   { label: "Fit", href: "#fit" },
+  { label: "Exclusivity", href: "#exclusivity" },
   { label: "Get Started", href: "#contact" },
 ];
 
