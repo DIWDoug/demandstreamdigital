@@ -115,7 +115,6 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
-      ref={megaMenuRef}
     >
       {/* Top Utility Bar */}
       <div className={`bg-cta text-cta-foreground transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
@@ -177,17 +176,57 @@ const Header = () => {
                 )
               ))}
 
-              {/* Services Mega Menu Trigger */}
-              <button
-                type="button"
-                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
-                aria-haspopup="true"
-                aria-expanded={isMegaMenuOpen}
-              >
-                Services
-                <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-              </button>
+              {/* Services Dropdown */}
+              <div className="relative z-50" ref={megaMenuRef}>
+                <button
+                  type="button"
+                  onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
+                  aria-haspopup="true"
+                  aria-expanded={isMegaMenuOpen}
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </button>
+
+                {isMegaMenuOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-[480px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
+                    <div className="p-4">
+                      <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                        {serviceCategories.map((category, index) => (
+                          <div key={index} className="mb-3">
+                            <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 px-2">
+                              {category.title}
+                            </p>
+                            <ul className="space-y-0.5">
+                              {category.items.map((item, itemIndex) => (
+                                <li key={itemIndex}>
+                                  <Link
+                                    to={item.href}
+                                    onClick={() => setIsMegaMenuOpen(false)}
+                                    className="block px-2 py-1.5 rounded-lg hover:bg-surface-elevated transition-colors text-sm text-text-secondary hover:text-foreground"
+                                  >
+                                    {item.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="border-t border-border/30 mt-2 pt-2">
+                        <Link
+                          to="/services"
+                          onClick={() => setIsMegaMenuOpen(false)}
+                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors text-center"
+                        >
+                          <p className="text-sm font-medium text-accent-blue">View All Services →</p>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               
               {/* Post-Service Links */}
               {postServiceLinks.map((link, index) => (
@@ -302,91 +341,6 @@ const Header = () => {
             {isMobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </button>
         </div>
-
-        {/* Mega Menu Backdrop */}
-        {isMegaMenuOpen && (
-          <div 
-            className="hidden md:block fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-40 animate-fade-in"
-            onClick={() => setIsMegaMenuOpen(false)}
-            aria-hidden="true"
-          />
-        )}
-
-        {/* Mega Menu Dropdown */}
-        {isMegaMenuOpen && (
-          <div className="hidden md:block absolute left-0 right-0 top-full bg-[#0a0f14] border-b border-border shadow-2xl shadow-black/50 animate-fade-in origin-top z-50">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsMegaMenuOpen(false)}
-              className="absolute top-4 right-6 lg:right-8 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
-              aria-label="Close menu"
-            >
-              <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
-            </button>
-            {/* Top gradient glow */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cta/50 to-transparent" />
-            <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-cta/5 to-transparent pointer-events-none" />
-            <div className="container mx-auto px-6 lg:px-8 py-8 relative font-sans">
-              {/* Service Categories Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 lg:gap-5">
-                {serviceCategories.map((category, index) => (
-                  <div 
-                    key={index}
-                    className="opacity-0 animate-fade-in"
-                    style={{ animationDelay: `${index * 75}ms`, animationFillMode: 'forwards' }}
-                  >
-                    <Link 
-                      to={category.href}
-                      className="text-[11px] font-semibold text-foreground uppercase tracking-widest mb-4 block hover:text-cta transition-colors"
-                      onClick={() => setIsMegaMenuOpen(false)}
-                    >
-                      {category.title}
-                    </Link>
-                    <ul className="space-y-2">
-                      {category.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <Link 
-                            to={item.href}
-                            className="text-[13px] text-text-secondary hover:text-foreground transition-colors"
-                            onClick={() => setIsMegaMenuOpen(false)}
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Featured Inbound Marketing Hub Callout */}
-              <div className="mt-8 pt-6 border-t border-border/30">
-                <Link
-                  to="/services"
-                  onClick={() => setIsMegaMenuOpen(false)}
-                  className="group flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-cta/10 via-cta/5 to-transparent border border-cta/20 hover:border-cta/40 transition-all"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-cta/20 flex items-center justify-center">
-                      <svg className="w-5 h-5 text-cta" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground group-hover:text-cta transition-colors">
-                      Full-Service Growth Marketing
-                      </p>
-                      <p className="text-xs text-text-muted">
-                        See how all services work together to grow your plumbing or HVAC business
-                      </p>
-                    </div>
-                  </div>
-                  <ChevronDown className="h-5 w-5 text-cta -rotate-90 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Mobile menu - CSS-only animations for reduced bundle size */}
         {isMobileMenuOpen && (
