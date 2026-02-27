@@ -52,11 +52,18 @@ const HVACSearchAdsContactForm = forwardRef<HTMLElement>((_, ref) => {
                   submitButtonText="Claim My Territory"
                   step1ButtonText="Claim My Territory"
                 />
-                <div className="mt-8 border-t border-border/40 pt-6">
-                  <p className="text-xs text-text-muted italic leading-relaxed">
+                <div className="mt-6 p-6 rounded-lg" style={{ background: '#FFFFFF', border: '1px solid #E5E7EB', borderRadius: '8px' }}>
+                  <div className="mb-3" style={{ color: '#F59E0B', fontSize: '16px', letterSpacing: '2px' }}>★★★★★</div>
+                  <p className="leading-relaxed mb-4" style={{ color: '#374151', fontSize: '14px', fontStyle: 'normal', fontWeight: 400 }}>
                     "What truly sets them apart is transparency. After past experiences with agencies where SEO felt like a 'black box,' it's refreshing to work with a team that provides real, clear data and explains what's working and why."
                   </p>
-                  <p className="text-xs text-text-muted mt-2 font-medium">Pure Plumbing & Air | Google Review</p>
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div>
+                      <span className="font-bold" style={{ color: '#0F172A', fontSize: '13px' }}>Pure Plumbing & Air</span>
+                      <span className="ml-1" style={{ color: '#6B7280', fontSize: '13px', fontWeight: 400 }}>· Google Review</span>
+                    </div>
+                    <span className="px-3 py-1 rounded-full text-white shrink-0" style={{ background: '#DC2626', fontSize: '12px' }}>40% year-over-year revenue increase</span>
+                  </div>
                 </div>
               </div>
             </div>
