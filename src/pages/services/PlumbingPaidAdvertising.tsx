@@ -19,9 +19,7 @@ import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-adve
 import PlumbingPaidAdsContactForm from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsContactForm";
 
 const SectionDivider = () => (
-  <div className="container mx-auto px-6 lg:px-8">
-    <hr className="border-t border-border/40" />
-  </div>
+  <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
 );
 
 const anchorItems = [
@@ -148,11 +146,11 @@ const PlumbingPaidAdvertising = () => {
       {/* 10. FIT */}
       <PlumbingPaidAdsFit />
 
-      {/* 11. FAQ */}
-      <PlumbingPaidAdsFAQ />
-
-      {/* 12. EXCLUSIVITY */}
+      {/* 11. EXCLUSIVITY */}
       <PlumbingPaidAdsExclusivity />
+
+      {/* 12. FAQ */}
+      <PlumbingPaidAdsFAQ />
 
       {/* 12. LEAD FORM */}
       <PlumbingPaidAdsContactForm />

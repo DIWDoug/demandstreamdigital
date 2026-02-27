@@ -40,8 +40,8 @@ const HVACSearchAdsSeasonalStrategy = () => {
             <div className="grid sm:grid-cols-2 gap-5">
               {blocks.map((block, i) => (
                 <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-5">
-                  <p className="font-semibold text-foreground text-sm mb-2">{block.label}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed">{block.body}</p>
+                  <p className="font-semibold text-foreground text-base mb-2">{block.label}</p>
+                  <p className="text-text-secondary text-base leading-relaxed">{block.body}</p>
                 </div>
               ))}
             </div>

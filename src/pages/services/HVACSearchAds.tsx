@@ -18,9 +18,7 @@ import HVACSearchAdsFitExclusivity from "@/components/services/hvac-search-ads/H
 import HVACSearchAdsContactForm from "@/components/services/hvac-search-ads/HVACSearchAdsContactForm";
 
 const SectionDivider = () => (
-  <div className="container mx-auto px-6 lg:px-8">
-    <hr className="border-t border-border/40" />
-  </div>
+  <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
 );
 
 const anchorItems = [
