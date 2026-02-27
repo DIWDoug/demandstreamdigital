@@ -12,6 +12,7 @@ import HVACSearchAdsMetrics from "@/components/services/hvac-search-ads/HVACSear
 import HVACSearchAdsServiceTitan from "@/components/services/hvac-search-ads/HVACSearchAdsServiceTitan";
 import HVACSearchAdsPMax from "@/components/services/hvac-search-ads/HVACSearchAdsPMax";
 import HVACSearchAdsSEOIntegration from "@/components/services/hvac-search-ads/HVACSearchAdsSEOIntegration";
+import HVACSearchAdsFAQ from "@/components/services/hvac-search-ads/HVACSearchAdsFAQ";
 import HVACSearchAdsFitExclusivity from "@/components/services/hvac-search-ads/HVACSearchAdsFitExclusivity";
 import HVACSearchAdsContactForm from "@/components/services/hvac-search-ads/HVACSearchAdsContactForm";
 
@@ -98,6 +99,7 @@ const HVACSearchAds = () => {
       <SectionDivider />
       <HVACSearchAdsSEOIntegration />
       <SectionDivider />
+      <HVACSearchAdsFAQ />
       <HVACSearchAdsFitExclusivity />
       <HVACSearchAdsContactForm />
 

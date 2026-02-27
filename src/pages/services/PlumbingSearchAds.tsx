@@ -12,6 +12,7 @@ import PlumbingSearchAdsMetrics from "@/components/services/plumbing-search-ads/
 import PlumbingSearchAdsServiceTitan from "@/components/services/plumbing-search-ads/PlumbingSearchAdsServiceTitan";
 import PlumbingSearchAdsPMax from "@/components/services/plumbing-search-ads/PlumbingSearchAdsPMax";
 import PlumbingSearchAdsSEOIntegration from "@/components/services/plumbing-search-ads/PlumbingSearchAdsSEOIntegration";
+import PlumbingSearchAdsFAQ from "@/components/services/plumbing-search-ads/PlumbingSearchAdsFAQ";
 import PlumbingSearchAdsFitExclusivity from "@/components/services/plumbing-search-ads/PlumbingSearchAdsFitExclusivity";
 import PlumbingSearchAdsContactForm from "@/components/services/plumbing-search-ads/PlumbingSearchAdsContactForm";
 
@@ -98,6 +99,7 @@ const PlumbingSearchAds = () => {
       <SectionDivider />
       <PlumbingSearchAdsSEOIntegration />
       <SectionDivider />
+      <PlumbingSearchAdsFAQ />
       <PlumbingSearchAdsFitExclusivity />
       <PlumbingSearchAdsContactForm />
 
