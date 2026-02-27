@@ -51,7 +51,7 @@ const PlumbingPaidAdsChannels = () => {
               </div>
             </div>
             <Link
-              to="/plumbing-search-advertising/"
+              to="/plumbing-search-ads/"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group"
             >
               See How Search Advertising Works
