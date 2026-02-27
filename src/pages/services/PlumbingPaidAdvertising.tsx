@@ -12,6 +12,7 @@ import PlumbingPaidAdsCampaignStrategy from "@/components/services/plumbing-paid
 import PlumbingPaidAdsSEOIntegration from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsSEOIntegration";
 import PlumbingPaidAdsServiceTitan from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsServiceTitan";
 import PlumbingPaidAdsBuiltForBoth from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsBuiltForBoth";
+import PlumbingPaidAdsCredibility from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsCredibility";
 import PlumbingPaidAdsFit from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsFit";
 import PlumbingPaidAdsFAQ from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsFAQ";
 import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
@@ -103,6 +104,7 @@ const PlumbingPaidAdvertising = () => {
 
       {/* 03. WHY IT'S DIFFERENT */}
       <PlumbingPaidAdsPPCFails />
+      <PlumbingPaidAdsCredibility />
 
       <SectionDivider />
 

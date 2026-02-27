@@ -11,6 +11,7 @@ import HVACPaidAdsCampaignStrategy from "@/components/services/hvac-paid-adverti
 import HVACPaidAdsSEOIntegration from "@/components/services/hvac-paid-advertising/HVACPaidAdsSEOIntegration";
 import HVACPaidAdsServiceTitan from "@/components/services/hvac-paid-advertising/HVACPaidAdsServiceTitan";
 import HVACPaidAdsBuiltForBoth from "@/components/services/hvac-paid-advertising/HVACPaidAdsBuiltForBoth";
+import HVACPaidAdsCredibility from "@/components/services/hvac-paid-advertising/HVACPaidAdsCredibility";
 import HVACPaidAdsFit from "@/components/services/hvac-paid-advertising/HVACPaidAdsFit";
 import HVACPaidAdsFAQ from "@/components/services/hvac-paid-advertising/HVACPaidAdsFAQ";
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
@@ -102,6 +103,7 @@ const HVACPaidAdvertising = () => {
 
       {/* 03. WHY IT'S DIFFERENT */}
       <HVACPaidAdsPPCFails />
+      <HVACPaidAdsCredibility />
 
       <SectionDivider />
 
