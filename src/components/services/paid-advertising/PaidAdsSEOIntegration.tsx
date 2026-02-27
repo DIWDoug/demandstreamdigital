@@ -1,5 +1,3 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
 const integrationRows = [
   {
     label: "SEO lowers blended CPL",
@@ -49,24 +47,17 @@ const PaidAdsSEOIntegration = () => {
               </p>
             </div>
 
-            {/* Right — accordion */}
+            {/* Right — row list */}
             <div>
-              <Accordion type="single" collapsible className="space-y-2">
-                {integrationRows.map((row, i) => (
-                  <AccordionItem
-                    key={i}
-                    value={`item-${i}`}
-                    className="border border-border/60 rounded-lg overflow-hidden px-4"
-                  >
-                    <AccordionTrigger className="text-base font-semibold text-foreground hover:no-underline py-4">
-                      {row.label}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-base text-text-secondary leading-relaxed pb-4">
-                      {row.body}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+              {integrationRows.map((row, i) => (
+                <div key={i}>
+                  <div className="py-5">
+                    <p className="font-semibold text-foreground text-[15px] mb-1.5">{row.label}</p>
+                    <p className="text-text-secondary text-sm leading-relaxed">{row.body}</p>
+                  </div>
+                  {i < integrationRows.length - 1 && <hr className="border-t border-border/50" />}
+                </div>
+              ))}
             </div>
 
           </div>

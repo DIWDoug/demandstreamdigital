@@ -36,8 +36,8 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "Paid Advertising for Plumbing & HVAC Companies | DemandStream Digital";
-const metaDescription = "Most contractor PPC campaigns optimize for clicks. We optimize for booked calls. Paid advertising built around dispatch, capacity, and cost per booked call.";
+const metaTitle = "Paid Advertising for Plumbing & HVAC Operators Who Need More Booked Calls | DemandStream Digital";
+const metaDescription = "Paid advertising built for plumbing and HVAC operators. Google Ads, LSAs, and social. All connected to booked calls and revenue. See how DemandStream builds it.";
 const canonicalUrl = `${SITE_URL}/hvac-and-plumbing-paid-ads/`;
 
 const PaidAdvertising = () => {

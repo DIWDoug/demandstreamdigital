@@ -63,6 +63,17 @@ const channels = [
       "Multi-location service contract development",
       "Facility management and building operations audiences"
     ]
+  },
+  {
+    title: "Web Design",
+    href: "/web-design/",
+    bullets: [
+      "Landing pages built to convert paid traffic into booked calls",
+      "Service-specific pages matched to ad campaign intent",
+      "Mobile-first build for emergency search behavior",
+      "Speed and Core Web Vitals that protect Quality Score",
+      "Ad-to-page message match that improves booking rate"
+    ]
   }
 ];
 
@@ -77,10 +88,10 @@ const PaidAdsChannels = () => {
             Paid Advertising Channels We Deploy
           </h2>
           <p className="text-lg text-text-secondary mb-12 max-w-3xl">
-            Each channel serves a different part of the demand curve. No channel grouping. Each is scoped, managed, and reported separately.
+            Each channel serves a different part of the demand curve. No channel grouping. Each is scoped, managed, and reported separately. Web design is included because a paid campaign is only as strong as the page it sends traffic to.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {channels.map((channel, i) => (
               <div key={i} className="bg-surface-elevated border border-border rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-bold text-foreground mb-4">{channel.title}</h3>
