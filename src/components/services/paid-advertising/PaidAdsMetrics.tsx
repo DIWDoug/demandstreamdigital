@@ -55,6 +55,13 @@ const PaidAdsMetrics = () => {
             </div>
 
           </div>
+
+          <div className="mt-12 border-t border-gray-200 pt-8">
+            <p className="text-center text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Every metric we report connects to what shows up on your dispatch board. If it doesn't tie to a booked call, a booking rate, or a cost per booked call, it doesn't belong in the report. That's the standard we hold every paid advertising campaign to.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

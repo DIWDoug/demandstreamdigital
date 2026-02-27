@@ -8,12 +8,11 @@ const PaidAdsBuiltForBoth = () => {
         <div className="max-w-6xl mx-auto">
 
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">Built for Both</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Paid Advertising Built for Plumbing.<br className="hidden md:block" /> Built for HVAC.
+              Paid Advertising Built for Both Trades
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Every channel. Google Ads, LSAs, Facebook, and more. All pointing to one outcome: more booked service calls.
+              Every channel, Google Search, LSA, Facebook, and Programmatic, points to one outcome: more booked service calls. Engineered separately for each trade.
             </p>
           </div>
 
@@ -26,14 +25,14 @@ const PaidAdsBuiltForBoth = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Plumbing Paid Advertising</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Paid advertising built for plumbing companies. Emergency calls, water heater replacements, drain cleaning, slab leaks. We build campaigns around how plumbing customers actually search and call, not a generic contractor template.
+                Emergency-first campaign architecture built for plumbing companies. From drain cleaning and water heater replacement to slab leak and repipe campaigns. We capture urgent demand and defend high-margin services.
               </p>
               <p className="text-sm text-gray-500 italic mb-6">Also available for multi-location plumbing operators.</p>
               <Link
                 to="/plumbing-paid-advertising"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group"
               >
-                See what's included
+                See Plumbing Paid Advertising
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
@@ -45,14 +44,14 @@ const PaidAdsBuiltForBoth = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">HVAC Paid Advertising</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Paid advertising built around HVAC seasonality, no-cool and no-heat emergencies, and install revenue. Campaigns that keep your schedule full through heating and cooling cycles, not just peak season.
+                Seasonal demand control built for HVAC operators. Repair vs install segmentation, emergency surge defense, shoulder season install pushes, and commercial expansion. Built around how HVAC revenue actually moves through the year.
               </p>
               <p className="text-sm text-gray-500 italic mb-6">Also available for multi-location HVAC operators.</p>
               <Link
                 to="/hvac-paid-advertising"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group"
               >
-                See what's included
+                See HVAC Paid Advertising
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>

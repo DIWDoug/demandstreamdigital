@@ -102,6 +102,15 @@ const PaidAdsFit = () => {
 
           </div>
 
+          <div className="text-center">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-cta hover:bg-cta/90 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-base"
+            >
+              Get a Paid Ads Performance Audit →
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
