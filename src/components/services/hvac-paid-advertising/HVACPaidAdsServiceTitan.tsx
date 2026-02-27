@@ -16,10 +16,10 @@ const HVACPaidAdsServiceTitan = () => {
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">Revenue Visibility</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance leading-tight">
-                Ad Spend Connected Directly to Your Dispatch Board
+                HVAC Paid Advertising Connected to Your Dispatch Board
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Most agencies stop at clicks and leads. Neither number shows up on the dispatch board. We connect campaign data to call tracking, booking rate, and where available, closed job revenue from ServiceTitan and similar CRMs. The measurement that matters is cost per booked call by service type, not cost per click by keyword.
+                Most ad campaigns stop at clicks and leads. Neither number shows up on the dispatch board. We connect campaign data to call tracking, booking rate, and where available, closed job revenue from ServiceTitan and similar CRMs. The measurement that matters is cost per booked call by service type — not cost per click by keyword.
               </p>
             </div>
 

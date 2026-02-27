@@ -52,17 +52,17 @@ const HVACPaidAdsPPCFails = () => {
             <div className="lg:sticky lg:top-32">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Problem With Generic PPC</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance leading-tight">
-                Built for HVAC. Not Borrowed from a Contractor Template.
+                HVAC Paid Advertising Is Not Generic Contractor PPC
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                Running Google Ads for an HVAC company is not the same as running them for a general contractor. Seasonal volatility, emergency-first search behavior, repair vs install segmentation, and commercial growth opportunities all require structured, trade-specific campaign architecture.
+                HVAC advertising requires specialization. Seasonal volatility, emergency-first search behavior, repair vs install segmentation, and commercial growth opportunities all require structured campaign architecture. Generic contractor PPC applies the same keyword list and bid strategy to every trade in every season. Budget leaks on low-intent traffic. Emergency calls in July go to competitors who are bidding more precisely on the right terms.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                A no-cool call in August and a system replacement inquiry in September require different pages, different copy, different conversion paths, and different bid logic. Grouping them into one campaign means neither converts correctly — and the reporting hides it.
+                A no-cool call in August and a system replacement inquiry in September require different pages, different copy, different conversion paths, and different bid logic. When campaigns group them together, neither converts correctly — and the reporting hides it.
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-6">
                 <p className="text-gray-700 text-sm leading-relaxed font-medium">
-                  Paid search for HVAC operators has to be engineered around heating and cooling cycles, repair vs install intent, and how homeowners actually search during emergencies. Not templated from a general contractor package.
+                  HVAC paid advertising has to be engineered around heating and cooling cycles, repair vs install intent, and how HVAC customers actually search during emergencies. Not templated from a generic contractor package.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">

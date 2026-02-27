@@ -18,10 +18,10 @@ const PlumbingPaidAdsServiceTitan = () => {
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">Revenue Visibility</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance leading-tight">
-                Ad Spend Connected Directly to Your Dispatch Board
+                Plumbing Paid Advertising Connected to Your Dispatch Board
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Most agencies report on clicks and leads. Neither number shows up on the dispatch board. We connect campaign data to call tracking, booking rate, and where available, closed job revenue from ServiceTitan and similar CRMs. The goal is a clear line from spend to booked call to closed job, not an activity report that stops at the click.
+                Most ad campaigns report on clicks and leads. Neither shows up on the dispatch board. We connect campaign data to call tracking, booking rate, and where available, closed job revenue from ServiceTitan and similar CRMs. The goal is a clear line from ad spend to booked call to closed job — not an activity report that stops at the click.
               </p>
             </div>
 

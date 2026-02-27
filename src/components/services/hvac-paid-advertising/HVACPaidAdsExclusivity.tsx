@@ -14,7 +14,7 @@ const HVACPaidAdsExclusivity = () => {
             One HVAC Company Per Market.
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed mb-4 max-w-2xl mx-auto">
-            When you work with DemandStream, your competitors don't. We take one operator per service area — one HVAC contractor, and that's it. That's the model. It keeps our incentives consistent with yours and guarantees the strategy we build is designed to put you ahead — not split between you and the shop down the street.
+            When you work with DemandStream, your competitors don't. We take one HVAC client per service area. That's the model. It keeps our incentives consistent with yours and guarantees the strategy we build is designed to put you ahead — not split between you and the shop down the street.
           </p>
           <p className="text-muted-foreground text-base mb-10">
             If your market is available, it's worth finding out now.
