@@ -71,19 +71,23 @@ const PlumbingSearchAdsFitExclusivity = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-24 bg-gradient-to-br from-surface-dark via-background to-surface-dark">
+      <section
+        className="bg-gradient-to-br from-surface-dark via-background to-surface-dark"
+        style={{ borderTop: '1px solid rgba(220,38,38,0.6)', borderBottom: '1px solid rgba(220,38,38,0.6)', padding: '80px 0' }}
+      >
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-4">Exclusivity</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <p className="font-semibold uppercase mb-4" style={{ color: '#DC2626', fontSize: '11px', letterSpacing: '0.15em', fontWeight: 600 }}>EXCLUSIVE MODEL</p>
+            <h2 className="font-bold text-foreground mb-6" style={{ fontSize: '42px', fontWeight: 700, lineHeight: 1.15 }}>
               One Plumbing Company. Per Market.
             </h2>
-            <p className="text-base text-text-secondary leading-relaxed mb-8">
+            <p className="text-text-secondary mb-8" style={{ fontSize: '17px', lineHeight: 1.7 }}>
               We partner with one plumbing company per service area for plumbing search advertising. When you work with DemandStream, your competitors do not. The strategy we build is designed to put you ahead. Not split between you and the shop down the street. If your market is available, it is worth finding out now.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 text-white font-semibold rounded-lg transition-colors hover:opacity-90"
+              style={{ background: '#DC2626', minWidth: '220px', justifyContent: 'center' }}
             >
               Claim Your Territory Today
               <ArrowRight className="w-4 h-4" />
