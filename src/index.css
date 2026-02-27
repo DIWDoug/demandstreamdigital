@@ -1,9 +1,8 @@
 /* =============================================================
-   FONT DEFINITIONS with font-display: swap and metric overrides
-   These use preloaded fonts from index.html for optimal loading
+   FONT DEFINITIONS — Inter everywhere per Design System v1.1
    ============================================================= */
 
-/* Inter - Primary UI/Heading Font */
+/* Inter - Primary Font for all text */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -11,222 +10,173 @@
   font-display: swap;
   src: url('https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  /* Fallback adjustment: system-ui metrics to reduce CLS */
   size-adjust: 100%;
   ascent-override: 90%;
   descent-override: 22%;
   line-gap-override: 0%;
 }
 
-/* Lora - Body Text Serif Font (v37 - updated font URLs) */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/lora/v37/0QIvMX1D_JOuM3b7I_FMl_GW8g.woff2') format('woff2'),
-       url('https://fonts.gstatic.com/s/lora/v37/0QIvMX1D_JOuMwr7I_FMl_E.woff2') format('woff2'),
-       url('https://fonts.gstatic.com/s/lora/v37/0QIvMX1D_JOuM2T7I_FMl_GW8g.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  /* Metric overrides to match Georgia fallback - prevents CLS */
-  size-adjust: 98%;
-  ascent-override: 85%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
+/* Remove Lora and Patrick Hand — Inter-only per Design System v1.1 */
 
-/* Lora Italic - for quotes/testimonials (v37) */
-@font-face {
-  font-family: 'Lora';
-  font-style: italic;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/lora/v37/0QIhMX1D_JOuMw_LIftLtfOm8w.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  /* Metric overrides to match Georgia fallback - prevents CLS */
-  size-adjust: 98%;
-  ascent-override: 85%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-/* Patrick Hand - Handwriting/Signature Font */
-@font-face {
-  font-family: 'Patrick Hand';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.gstatic.com/s/patrickhand/v25/LDI1apSQOAYtSuYWp8ZhfYe8XsLL.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Design System - Dialed-In Local
-   
+/* DemandStream Digital — Design System v1.1
    ═══════════════════════════════════════════════════════════════
-   BRAND COLOR SYSTEM
-   ═══════════════════════════════════════════════════════════════
-   
-   DEEP NAVY (#0a2240 / hsl(213,73%,15%))
-   ────────────────────────────────────────
-   = AUTHORITY + TRUST
-   • Dark backgrounds, hero sections, header
-   • Conveys professionalism and reliability
-   • Primary brand identity color
-   
-   CRIMSON RED (hsl(350,68%,38%))
-   ────────────────────────────────────────
-   = ACTION + ENERGY
-   • All CTA buttons (primary actions)
-   • Urgent elements, key highlights
-   • Brand accent from logo
-   
-   STEEL BLUE (hsl(210,55%,50%))
-   ────────────────────────────────────────
-   = INFORMATION + NAVIGATION
-   • Links, interactive elements
-   • Icon accents, badges
-   • Secondary highlights
-   
-   THE RULES:
-   • Light sections → Navy text, red CTAs
-   • Dark sections → White text, red CTAs, blue accents
-   • CTAs → ALWAYS Crimson Red (any background)
-   • Headings → Navy on light, white on dark
+   Navy #0D1B2A — dark sections, nav, footer
+   Navy Light #1A2E44 — cards on dark backgrounds
+   Red #C0392B — ALL CTAs, announcement bar, in-page sub-nav ONLY
+   Accent Blue #4A90B8 — split headline second lines only
+   Teal #2E7D86 — review metric badges only
+   Gold #F59E0B — star ratings only
+   Off-white #F7F8FA — light section backgrounds
+   Black #111827 — body text on light backgrounds
+   Gray #6B7280 — captions, fine print, secondary text
    ═══════════════════════════════════════════════════════════════
 */
 
-/* Fonts loaded via index.html for better performance */
-
 @layer base {
   :root {
-    /* ═══════════════════════════════════════════════════════════════
-       CLEAN PROFESSIONAL LIGHT THEME - Trades Industry
-       ═══════════════════════════════════════════════════════════════ */
-    
-    /* Clean near-white base */
-    --background: 0 0% 98%;              /* #f9f9f9 */
-    --foreground: 213 64% 16%;           /* Deep navy #0F2742 */
+    /* ── Base ── */
+    --background: 0 0% 98%;              /* #F7F8FA off-white */
+    --foreground: 220 20% 10%;           /* #111827 black text */
 
-    --card: 0 0% 100%;                   /* Pure white cards */
-    --card-foreground: 213 64% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 213 64% 16%;
+    --popover-foreground: 220 20% 10%;
 
-    /* Crimson red primary - #bf272e - for CTAs only */
-    --primary: 357 66% 45%;
+    /* Red #C0392B = hsl(6 63% 46%) */
+    --primary: 6 63% 46%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 93%;            /* Light cool grey */
-    --secondary-foreground: 213 50% 20%;
+    --secondary: 210 18% 94%;
+    --secondary-foreground: 210 53% 11%;
 
-    --muted: 210 10% 95%;
-    --muted-foreground: 213 20% 46%;
+    --muted: 210 14% 96%;
+    --muted-foreground: 220 9% 42%;      /* #6B7280 gray */
 
-    --accent: 210 15% 96%;
-    --accent-foreground: 213 64% 16%;
+    --accent: 210 14% 96%;
+    --accent-foreground: 210 53% 11%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 6 63% 46%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 89%;
-    --input: 210 10% 95%;
-    --ring: 357 66% 45%;
+    --border: 220 13% 86%;              /* #D1D5DB */
+    --input: 0 0% 100%;
+    --ring: 6 63% 46%;
 
-    --radius: 0.5rem;
+    /* 4px border-radius per design system */
+    --radius: 0.25rem;
 
-    /* Premium color tokens - #bf272e */
-    --cta: 357 66% 45%;
+    /* ── Brand tokens ── */
+    /* Red #C0392B */
+    --cta: 6 63% 46%;
+    --cta-hover: 6 63% 40%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 357 66% 52%;
-    
-    /* Steel blue accent */
-    --accent-blue: 210 55% 50%;
-    --accent-blue-glow: 210 55% 60%;
-    
-    /* Forest green accent - for decorative elements */
-    --accent-green: 155 42% 28%;
-    --accent-green-glow: 155 42% 36%;
-    
-    /* Pop accent (orange for urgency) */
+    --cta-glow: 6 63% 52%;
+
+    /* Accent Blue #4A90B8 = hsl(204 43% 51%) */
+    --accent-blue: 204 43% 51%;
+    --accent-blue-glow: 204 43% 61%;
+
+    /* Navy #0D1B2A = hsl(210 53% 11%) */
+    --navy: 210 53% 11%;
+    /* Navy Light #1A2E44 = hsl(210 44% 18%) */
+    --navy-light: 210 44% 18%;
+    /* Navy Mid #132338 = hsl(210 47% 15%) */
+    --navy-mid: 210 47% 15%;
+
+    /* Teal #2E7D86 = hsl(184 49% 35%) */
+    --teal: 184 49% 35%;
+    /* Gold #F59E0B = hsl(38 92% 50%) */
+    --gold: 38 92% 50%;
+    /* Green UI indicator #16A34A */
+    --accent-green: 142 71% 36%;
+    --accent-green-glow: 142 71% 44%;
+
+    /* Off-white section backgrounds */
+    --surface-dark: 210 14% 96%;
+    --surface-elevated: 0 0% 99%;
+    --surface-card: 0 0% 100%;
+
+    /* Text hierarchy */
+    --text-primary: 220 20% 10%;        /* #111827 */
+    --text-secondary: 220 15% 30%;      /* dark gray */
+    --text-muted: 220 9% 42%;           /* #6B7280 */
+
+    /* Border tokens */
+    --border-subtle: 220 13% 86%;       /* #D1D5DB */
+    --border-card: 220 13% 91%;         /* #E5E7EB */
+
+    /* Pop accent kept for internal use */
     --accent-pop: 25 95% 53%;
     --accent-pop-glow: 25 95% 63%;
-    
-    /* Surface colors for light mode */
-    --surface-dark: 210 15% 95%;
-    --surface-elevated: 210 12% 97%;
-    --surface-card: 0 0% 100%;
-    
-    /* Text hierarchy for light mode */
-    --text-primary: 213 64% 16%;
-    --text-secondary: 213 30% 35%;
-    --text-muted: 213 15% 55%;
-    
-    /* Border tokens */
-    --border-subtle: 210 15% 87%;
-    --border-card: 210 12% 90%;
   }
 
   .dark {
-    /* Dark mode - deep navy hero sections */
-    --background: 213 64% 8%;
-    --foreground: 0 0% 98%;
+    /* ── Dark mode — navy system ── */
+    /* Navy #0D1B2A */
+    --background: 210 53% 11%;
+    --foreground: 0 0% 100%;
 
-    --card: 213 60% 12%;
-    --card-foreground: 0 0% 98%;
+    /* Navy Light #1A2E44 */
+    --card: 210 44% 18%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 213 60% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 210 44% 18%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 357 66% 42%;
+    /* Red stays consistent */
+    --primary: 6 63% 46%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 213 40% 16%;
+    --secondary: 210 44% 22%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 213 40% 18%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 210 44% 20%;
+    --muted-foreground: 220 9% 60%;
 
-    --accent: 213 40% 18%;
+    --accent: 210 44% 20%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62% 50%;
+    --destructive: 6 63% 46%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 213 40% 18%;
-    --input: 213 40% 16%;
-    --ring: 357 66% 42%;
+    --border: 210 44% 22%;              /* rgba(255,255,255,0.08) equivalent */
+    --input: 210 44% 20%;
+    --ring: 6 63% 46%;
 
-    /* Dark mode surfaces */
-    --surface-dark: 213 64% 8%;
-    --surface-elevated: 213 60% 12%;
-    --surface-card: 213 50% 15%;
-    
+    /* Dark mode surfaces — navy scale */
+    --surface-dark: 210 53% 11%;        /* #0D1B2A */
+    --surface-elevated: 210 44% 18%;    /* #1A2E44 */
+    --surface-card: 210 44% 18%;        /* #1A2E44 */
+
     /* Dark mode text */
-    --text-primary: 0 0% 98%;
-    --text-secondary: 210 15% 72%;
-    --text-muted: 210 10% 52%;
-    
+    --text-primary: 0 0% 100%;
+    --text-secondary: 210 15% 75%;
+    --text-muted: 220 9% 55%;
+
     /* Dark mode borders */
-    --border-subtle: 213 40% 20%;
-    --border-card: 213 35% 25%;
+    --border-subtle: 210 44% 24%;
+    --border-card: 210 44% 26%;
 
-    /* CTA tokens for dark mode - #bf272e */
-    --cta: 357 66% 45%;
+    /* CTA stays red */
+    --cta: 6 63% 46%;
+    --cta-hover: 6 63% 40%;
     --cta-foreground: 0 0% 100%;
-    --cta-glow: 357 66% 52%;
-    
-    /* Blue accent for dark mode */
-    --accent-blue: 210 60% 58%;
-    --accent-blue-glow: 210 60% 68%;
+    --cta-glow: 6 63% 52%;
 
-    /* Forest green accent for dark mode */
-    --accent-green: 155 45% 40%;
-    --accent-green-glow: 155 45% 50%;
+    /* Accent blue in dark mode — stays same hue */
+    --accent-blue: 204 43% 56%;
+    --accent-blue-glow: 204 43% 66%;
+
+    /* Green */
+    --accent-green: 142 71% 44%;
+    --accent-green-glow: 142 71% 52%;
   }
 }
 
@@ -250,58 +200,50 @@
     @apply focus:top-4 transition-all;
   }
 
+  /* Design System v1.1 — Inter everywhere */
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Lora', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.7;
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
-  /* Typography Hierarchy - Inter for all headings, Lora for body */
-  h1, h2, h3, h4, h5, h6 {
+  /* Typography — Inter for everything */
+  h1, h2, h3, h4, h5, h6,
+  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     font-family: 'Inter', system-ui, sans-serif !important;
     @apply tracking-tight;
   }
 
+  /* H1: 48–56px Bold */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-semibold;
+    @apply text-4xl md:text-5xl lg:text-5xl leading-tight font-bold;
   }
 
+  /* H2: 32–36px Bold */
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold;
+    @apply text-3xl md:text-4xl leading-tight font-bold;
   }
 
+  /* H3: 22–24px SemiBold */
   h3 {
-    @apply text-lg md:text-xl lg:text-2xl font-semibold;
+    @apply text-xl md:text-2xl font-semibold;
   }
 
   h4 {
-    @apply text-lg md:text-xl tracking-wide font-semibold;
+    @apply text-lg md:text-xl font-semibold;
   }
 
   h5, h6 {
-    @apply text-sm md:text-base font-medium;
+    @apply text-base font-semibold;
   }
 
-  /* Headings spans should also use Inter */
-  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
-    font-family: 'Inter', system-ui, sans-serif !important;
+  /* Body — Inter 16px Regular */
+  p, li, label, span {
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
-  /* Body text uses Lora with consistent line-height */
-  p, li, label {
-    font-family: 'Lora', Georgia, serif;
-    @apply leading-relaxed;
-  }
-
-  /* Allow local font utilities (e.g. font-handwriting) to win on content blocks */
-  .font-handwriting p,
-  .font-handwriting li,
-  .font-handwriting label {
-    font-family: inherit;
-  }
-
-  /* Buttons and UI elements use Inter */
+  /* Buttons and UI elements */
   button, input, select, textarea, a {
     font-family: 'Inter', system-ui, sans-serif;
   }
@@ -316,61 +258,45 @@
 }
 
 @layer components {
-  /* Premium CTA Button - Enhanced with stronger glow */
+  /* Primary CTA Button — Design System v1.1 */
   .btn-cta {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold;
-    @apply rounded-lg transition-all duration-300 ease-out;
-    background: linear-gradient(135deg, hsl(var(--cta)), hsl(var(--cta-glow)));
+    @apply inline-flex items-center justify-center font-bold transition-colors duration-200;
+    padding: 14px 28px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    background: hsl(var(--cta));
     color: hsl(var(--cta-foreground));
-    box-shadow: 
-      0 4px 15px hsl(var(--cta) / 0.4),
-      0 0 40px hsl(var(--cta) / 0.2);
   }
-  
+
   .btn-cta:hover {
-    background: linear-gradient(135deg, hsl(var(--cta-glow)), hsl(var(--cta)));
-    box-shadow: 
-      0 6px 25px hsl(var(--cta) / 0.5),
-      0 0 60px hsl(var(--cta) / 0.3);
-    transform: translateY(-3px);
+    background: hsl(var(--cta-hover));
   }
 
   /* Premium card with glass effect */
   .premium-card {
-    @apply rounded-xl p-6 transition-all duration-300;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--surface-card)),
-      hsl(var(--surface-elevated) / 0.8)
-    );
-    border: 1px solid hsl(var(--border-subtle));
-    box-shadow: 
-      0 4px 20px hsl(0 0% 0% / 0.08),
-      inset 0 1px 0 hsl(0 0% 100% / 0.05);
+    /* Dark card — Navy Light + subtle border per design system */
+    border-radius: 8px;
+    padding: 32px;
+    transition: all 0.2s ease;
+    background: hsl(var(--navy-light));
+    border: 1px solid rgba(255,255,255,0.08);
   }
 
   .premium-card:hover {
-    border-color: hsl(var(--accent-blue) / 0.3);
-    background: linear-gradient(
-      135deg,
-      hsl(var(--surface-elevated)),
-      hsl(var(--surface-card))
-    );
-    box-shadow: 
-      0 8px 30px hsl(0 0% 0% / 0.12),
-      0 0 40px hsl(var(--accent-blue) / 0.1),
-      inset 0 1px 0 hsl(0 0% 100% / 0.08);
-    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.15);
   }
 
-  /* Section dividers */
+  /* Section divider — gradient blend, no harsh lines */
   .section-divider {
-    @apply w-full h-px;
+    @apply w-full;
+    height: 1px;
     background: linear-gradient(
       90deg,
-      transparent,
-      hsl(var(--border-subtle)),
-      transparent
+      transparent 0%,
+      hsl(var(--border-subtle)) 30%,
+      hsl(var(--border-subtle)) 70%,
+      transparent 100%
     );
   }
 
@@ -388,103 +314,70 @@
     transform: translateY(-1px);
   }
 
-  /* Premium gradient backgrounds - deep navy */
+  /* Hero gradient — Navy #0D1B2A per design system */
   .gradient-hero {
-    background: 
-      radial-gradient(ellipse 100% 80% at 50% -30%, hsl(357 66% 20% / 0.15), transparent),
-      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(213 73% 8% / 0.98), transparent),
-      radial-gradient(ellipse 60% 30% at 80% 80%, hsl(210 55% 20% / 0.1), transparent),
-      linear-gradient(180deg, hsl(213 73% 7%), hsl(213 73% 5%));
+    background: linear-gradient(180deg, hsl(var(--navy)) 0%, hsl(210 53% 8%) 100%);
     position: relative;
-  }
-
-  .gradient-hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 800' fill='none'%3E%3Cpath d='M-100,180 C200,160 400,280 700,230 S1100,130 1400,200 S1800,300 2100,180 S2400,260 2500,230' stroke='%234A90C4' stroke-width='1.2' opacity='0.08' stroke-linecap='round'/%3E%3Cpath d='M-100,215 C250,195 450,315 750,260 S1150,150 1450,230 S1850,330 2150,210 S2450,290 2500,260' stroke='%234A90C4' stroke-width='0.8' opacity='0.05' stroke-linecap='round'/%3E%3Cpath d='M-100,245 C300,225 500,345 800,290 S1200,180 1500,260 S1900,350 2200,240 S2500,320 2600,290' stroke='%234A90C4' stroke-width='0.6' opacity='0.03' stroke-linecap='round'/%3E%3Cpath d='M-50,480 C300,460 550,580 850,520 S1250,410 1550,490 S1950,600 2250,470 S2500,550 2600,520' stroke='%234A90C4' stroke-width='1' opacity='0.06' stroke-linecap='round'/%3E%3Cpath d='M-50,510 C350,490 600,610 900,550 S1300,430 1600,520 S2000,630 2300,500 S2550,580 2650,550' stroke='%234A90C4' stroke-width='0.6' opacity='0.03' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    pointer-events: none;
-    z-index: 0;
   }
 
   .gradient-section {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--background)),
-      hsl(var(--surface-dark))
-    );
+    background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface-dark)));
   }
 
-  /* Light contrast section - clean professional */
+  /* Light section — Off-white #F7F8FA per design system */
   .section-light {
-    background: 
-      radial-gradient(ellipse 80% 50% at 50% 0%, hsla(210, 55%, 50%, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 20% 80%, hsla(350, 68%, 38%, 0.02) 0%, transparent 40%),
-      linear-gradient(180deg, #f9f9f9 0%, #f4f4f4 100%);
-    color: hsl(213 73% 15%);
+    background: #F7F8FA;
+    color: #111827;
     position: relative;
   }
-  
-  .section-light::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2400 800' fill='none'%3E%3Cpath d='M-100,180 C200,160 400,280 700,230 S1100,130 1400,200 S1800,300 2100,180 S2400,260 2500,230' stroke='%230F2742' stroke-width='1.2' opacity='0.045' stroke-linecap='round'/%3E%3Cpath d='M-100,215 C250,195 450,315 750,260 S1150,150 1450,230 S1850,330 2150,210 S2450,290 2500,260' stroke='%230F2742' stroke-width='0.8' opacity='0.03' stroke-linecap='round'/%3E%3Cpath d='M-100,245 C300,225 500,345 800,290 S1200,180 1500,260 S1900,350 2200,240 S2500,320 2600,290' stroke='%230F2742' stroke-width='0.6' opacity='0.02' stroke-linecap='round'/%3E%3Cpath d='M-50,480 C300,460 550,580 850,520 S1250,410 1550,490 S1950,600 2250,470 S2500,550 2600,520' stroke='%230F2742' stroke-width='1' opacity='0.035' stroke-linecap='round'/%3E%3Cpath d='M-50,510 C350,490 600,610 900,550 S1300,430 1600,520 S2000,630 2300,500 S2550,580 2650,550' stroke='%230F2742' stroke-width='0.6' opacity='0.02' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    opacity: 1;
-    pointer-events: none;
-  }
 
   .section-light h1,
   .section-light h2,
   .section-light h3,
   .section-light h4 {
-    color: hsl(213 73% 15%);
+    color: #111827;
   }
 
   .section-light p,
   .section-light li {
-    color: hsl(213 30% 30%);
+    color: #374151;
   }
 
-  .section-light h1,
-  .section-light h2,
-  .section-light h3,
-  .section-light h4 {
-    color: hsl(220 20% 10%);
-  }
-
-  .section-light p,
-  .section-light li {
-    color: hsl(220 15% 30%);
-  }
-
-  /* Slightly elevated dark section */
+  /* Dark section — Navy per design system */
   .section-elevated {
-    background: linear-gradient(180deg, hsl(213 60% 12%), hsl(213 73% 8%));
+    background: hsl(var(--navy-light));
   }
 
-  /* Accent section - deep red tinted */
-  .section-accent {
-    background: linear-gradient(135deg, hsl(357 66% 15%), hsl(357 50% 10%));
+  /* Stat number — Red per design system */
+  .stat-number {
+    font-size: clamp(48px, 6vw, 64px);
+    font-weight: 900;
+    color: hsl(var(--cta));
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1;
   }
 
-  /* Text gradient for emphasis */
+  /* Section eyebrow label */
+  .eyebrow-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(var(--cta));
+  }
+
+  .eyebrow-label-blue {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(var(--accent-blue));
+  }
+
+  /* Text gradient */
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 10% 70%));
-  }
-
-  /* Stats number styling */
-  .stat-number {
-    @apply text-5xl md:text-6xl lg:text-7xl font-bold;
-    background: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-blue-glow)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   /* Mantra/belief statement styling */
@@ -495,7 +388,7 @@
     letter-spacing: 0.1em;
   }
 
-  /* Bucket header styling - uses accent color */
+  /* Bucket header styling */
   .bucket-header {
     @apply text-2xl md:text-3xl font-bold uppercase tracking-widest;
     color: hsl(var(--accent-blue));

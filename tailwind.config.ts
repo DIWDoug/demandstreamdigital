@@ -47,10 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Premium design tokens
+        // Design System v1.1 brand tokens
         cta: {
           DEFAULT: "hsl(var(--cta))",
+          hover: "hsl(var(--cta-hover))",
           foreground: "hsl(var(--cta-foreground))",
+          glow: "hsl(var(--cta-glow))",
         },
         "accent-blue": {
           DEFAULT: "hsl(var(--accent-blue))",
@@ -63,6 +65,18 @@ export default {
         "accent-green": {
           DEFAULT: "hsl(var(--accent-green))",
           glow: "hsl(var(--accent-green-glow))",
+        },
+        // Navy scale
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
+          mid: "hsl(var(--navy-mid))",
+        },
+        teal: {
+          DEFAULT: "hsl(var(--teal))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
         },
         surface: {
           dark: "hsl(var(--surface-dark))",
@@ -86,14 +100,19 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Lora', 'Georgia', 'serif'],
-        handwriting: ['"Patrick Hand"', 'cursive'],
+        sans: ['Inter', 'system-ui', 'Arial', 'sans-serif'],
+        serif: ['Inter', 'system-ui', 'sans-serif'],
+        handwriting: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        // Design system: 4px for buttons/inputs, 8px for cards
+        DEFAULT: "4px",
+        sm: "4px",
+        md: "4px",
+        lg: "8px",
+        xl: "8px",
+        "2xl": "8px",
+        full: "9999px",
       },
       keyframes: {
         "accordion-down": {
