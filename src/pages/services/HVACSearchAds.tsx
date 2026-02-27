@@ -31,7 +31,7 @@ const anchorItems = [
   { label: "Metrics", href: "#metrics" },
   { label: "Performance Max", href: "#performance-max" },
   { label: "Fit", href: "#fit" },
-  { label: "Get Started", href: "#contact" },
+  { label: "Check Your Market", href: "#contact" },
 ];
 
 const metaTitle = "HVAC Search Advertising Built for No-Cool Calls and Install Season Demand | DemandStream Digital";
