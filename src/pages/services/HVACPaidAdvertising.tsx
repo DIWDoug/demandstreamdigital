@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
-import MidPageCTA from "@/components/sections/MidPageCTA";
 import { SITE_URL } from "@/lib/constants";
 
 import HVACPaidAdsHero from "@/components/services/hvac-paid-advertising/HVACPaidAdsHero";
@@ -95,9 +94,16 @@ const HVACPaidAdvertising = () => {
       <SectionDivider />
 
       {/* 05. MID-PAGE CTA */}
-      <MidPageCTA />
-
-      <SectionDivider />
+      <section className="py-16 lg:py-20 bg-background text-center relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Not Clear Which Channel Fits Your Market?</h2>
+          <p className="text-text-secondary mb-8 max-w-xl mx-auto">Repair, replacement, and commercial growth each require a different paid mix. We scope it to your market and your season.</p>
+          <a href="/contact" className="btn-cta inline-flex items-center gap-2">
+            Claim Your Territory Today
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </section>
 
       {/* 06. CAMPAIGN STRATEGY */}
       <HVACPaidAdsCampaignStrategy />

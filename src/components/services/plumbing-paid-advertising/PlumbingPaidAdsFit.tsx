@@ -10,7 +10,7 @@ const goodFit = [
   { point: "You track booking rate or are willing to start", detail: "Booking rate is the core metric. If it is not being measured today, we start there before any spend goes live." },
   { point: "You use ServiceTitan, Housecall Pro, or a similar CRM for job tracking", detail: "CRM data closes the loop between campaign spend and closed job revenue. It also surfaces which call types are actually profitable." },
   { point: "You want to report on cost per booked call, not impressions", detail: "We build reports around the numbers that show up on the dispatch board. Impressions and CTR do not." },
-  { point: "You understand Google Ads campaigns require a 6-month minimum to measure correctly", detail: "Campaign learning cycles and seasonal variance both require time. Short-term evaluations produce incomplete data." },
+  { point: "You understand paid advertising requires a 6-month minimum to measure correctly", detail: "Campaign learning cycles and seasonal variance both require time. Short-term evaluations produce incomplete data." },
   { point: "You have a verified, address-visible Google Business Profile", detail: "GBP signals feed Quality Scores and LSA performance. A weak or unverified profile limits paid ad efficiency." }
 ];
 
@@ -35,10 +35,10 @@ const PlumbingPaidAdsFit = () => {
           <div className="text-center mb-14">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-4">Selective Fit</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Is This the Right Fit for Your Plumbing Company?
+              Is Plumbing Paid Advertising Right for Your Company?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We work best with operators who have the dispatch capacity and tracking infrastructure in place to handle what search campaigns bring in.
+              We work best with plumbing companies that have the operation in place to handle what comes in.
             </p>
           </div>
 

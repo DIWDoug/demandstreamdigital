@@ -6,7 +6,7 @@ const PlumbingPaidAdsCampaignStrategy = () => {
 
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">Campaign Architecture</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
-            Emergency Repairs and Replacements Cannot Share a Campaign
+            Emergency and Replacement Campaigns Require Separate Strategies
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10">

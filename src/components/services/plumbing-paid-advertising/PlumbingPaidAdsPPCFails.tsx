@@ -53,21 +53,21 @@ const PlumbingPaidAdsPPCFails = () => {
             <div className="lg:sticky lg:top-32">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Problem With Generic PPC</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-balance leading-tight">
-                Built for Plumbing. Not Borrowed from a Contractor Template.
+                Plumbing Paid Advertising Is Not Generic Contractor PPC
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                Running Google Ads for a plumbing company is not the same as running them for a general contractor. Emergency intent, mobile-first call behavior, service-specific segmentation, and water heater replacement economics all demand separate campaign design.
+                Plumbing advertising requires urgency-driven architecture. Emergency intent, mobile-first call behavior, service-specific segmentation, and water heater replacement economics all demand separate campaign design. Generic contractor PPC applies the same keyword list, the same ad copy, and the same bidding strategy to every service. Budget leaks out on low-intent traffic. High-margin calls go to competitors who show up more precisely.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Generic PPC applies the same keyword list, the same ad copy, and the same bidding strategy to every trade. Budget leaks out on low-intent traffic. High-margin calls go to competitors who show up more precisely on the right terms.
+                A drain cleaning call and a full repipe inquiry require different pages, different copy, different conversion paths, and different bid logic. When campaigns group them together, neither converts correctly.
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-6">
                 <p className="text-gray-700 text-sm leading-relaxed font-medium">
-                  A drain cleaning call and a full repipe inquiry require different pages, different copy, different conversion paths, and different bid logic. Grouping them into one ad group means neither converts correctly.
+                  Plumbing paid advertising has to be built around how plumbing customers actually search and call. Not applied from a general contractor template.
                 </p>
               </div>
               <p className="text-gray-500 text-sm mb-8">
-                Search campaigns for plumbers have to be built around how homeowners actually search during an emergency. Not pulled from a contractor template and applied without adjustment.
+                When the campaign architecture matches the service type, budget concentrates on the calls that actually fill the dispatch board.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link

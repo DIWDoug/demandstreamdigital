@@ -56,11 +56,11 @@ const PlumbingPaidAdsHero = () => {
               Plumbing Paid Advertising That Drives Booked Service Calls
             </h1>
             <p className="text-xl md:text-2xl font-sans font-semibold text-cta mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-              Emergency Demand Control. Booked Calls. Not Just Clicks.
+              Emergency Demand Control for Plumbing Companies
             </p>
 
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              When a homeowner searches for a burst pipe or sewer backup, they are not browsing. They are calling whoever shows up first. The search campaigns we build for plumbers capture that demand immediately — structured around cost per booked call, not clicks.
+              When a homeowner searches for a burst pipe or sewer backup, they are not browsing. They are calling whoever shows up first. Plumbing paid advertising built by DemandStream captures that demand immediately — around cost per booked call, not clicks.
             </p>
 
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>

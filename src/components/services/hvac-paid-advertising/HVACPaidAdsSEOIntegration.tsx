@@ -31,19 +31,19 @@ const HVACPaidAdsSEOIntegration = () => {
 
           <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Connection</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12">
-            Search Rankings and Paid Ads Together. The Market Stays Yours.
+            HVAC SEO and Paid Advertising Together Control the Market
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="space-y-5 text-text-secondary leading-relaxed">
               <p>
-                Pay-per-click captures the call right now. Organic search builds the authority that makes every call cheaper over time.
+                Paid advertising captures the call right now. SEO builds the authority that makes every call cheaper over time.
               </p>
               <p>
-                When both run together, the blended cost per booked call drops. Organic traffic converts at a higher rate when your GBP reviews are strong and your Maps presence is active. Google Ads campaigns perform better when landing pages are built for HVAC search intent, not recycled from a general contractor site.
+                When both run together, the blended cost per booked call drops. Organic traffic from HVAC SEO converts at a higher rate when your GBP reviews are strong and your Maps presence is active. Paid campaigns perform better when landing pages are built for HVAC search intent — not generic contractor pages.
               </p>
               <p>
-                The data crossfeeds. Keywords that drive booked calls in paid campaigns inform which service pages to build organically. Review velocity from the reputation system improves Quality Scores. When every channel is connected, each one performs better than it would alone.
+                The data crossfeeds. Keywords that produce booked calls in paid campaigns inform which service pages to build organically. Review velocity from the reputation system improves paid ad Quality Scores. When every channel is connected, each one performs better than it would alone.
               </p>
             </div>
 
