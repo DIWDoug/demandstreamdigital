@@ -57,12 +57,15 @@ const PlumbingProblemSection = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance leading-tight">
                 Why Generic Contractor SEO Fails Plumbing Companies
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              <p className="text-lg text-slate-600 leading-relaxed mb-4">
                 Plumbing is not a general home services business. It is an emergency-driven, reputation-sensitive trade where the buying decision happens in under two minutes.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                Generic contractor packages apply the same keyword lists, the same content templates, and the same link building tactics to every trade. They don't account for how plumbing calls actually come in, or what makes a homeowner choose one plumber over another when they're standing in two inches of water.
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
                 <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                  When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up first. Plumbing SEO has to be built around that urgency, not applied from a template designed for every trade.
+                  When a homeowner's pipe bursts at midnight, they don't browse. They search and call whoever shows up in the Map Pack. Plumbing SEO has to be built around that urgency. Not applied from a template designed for dentists and dog groomers.
                 </p>
               </div>
               <p className="text-slate-500 text-sm mb-8">

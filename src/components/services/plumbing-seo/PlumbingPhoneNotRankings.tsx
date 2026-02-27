@@ -70,7 +70,7 @@ const PlumbingPhoneNotRankings = () => {
           </div>
 
           <p className="text-center text-text-muted text-sm mt-8 leading-relaxed">
-            Local SEO must align with how your plumbing operation actually runs. Rankings without booking rate are a vanity metric.
+            Local SEO must account for the operational realities of running a plumbing company. A strategy built without that context generates calls the operation cannot run.
           </p>
         </div>
       </div>

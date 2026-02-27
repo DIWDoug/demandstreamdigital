@@ -71,6 +71,9 @@ const HVACProblemSection = () => {
               <p className="text-slate-500 text-sm mb-8">
                 Effective HVAC SEO requires scoping to the actual market. Not templated outputs applied from a generic contractor package. That is why our HVAC SEO work performs consistently across different markets and service areas.
               </p>
+              <p className="text-slate-500 text-sm mb-8">
+                Effective HVAC SEO requires scoping to the actual market. Not templated outputs applied from a generic contractor package. That is why our HVAC SEO work performs consistently across different markets and service areas.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/contact"
