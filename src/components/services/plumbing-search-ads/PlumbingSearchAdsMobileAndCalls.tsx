@@ -29,8 +29,8 @@ const PlumbingSearchAdsMobileAndCalls = () => {
             <div>
               {rows.map((row, i) => (
                 <div key={i}>
-                  <div className="py-5">
-                    <p className="font-semibold text-gray-900 text-[15px] mb-1.5">{row.label}</p>
+                  <div className="group py-5 transition-all duration-200 hover:pl-3 cursor-default">
+                    <p className="font-semibold text-gray-900 text-[15px] mb-1.5 group-hover:text-accent-blue transition-colors duration-200">{row.label}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{row.body}</p>
                   </div>
                   {i < rows.length - 1 && <hr className="border-t border-gray-200" />}
