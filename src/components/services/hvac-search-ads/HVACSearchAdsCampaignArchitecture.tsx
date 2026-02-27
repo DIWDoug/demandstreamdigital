@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
-import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const tabs = [
   {
@@ -104,24 +101,6 @@ const HVACSearchAdsCampaignArchitecture = () => {
                 ))}
               </ul>
             </div>
-          </div>
-
-          {/* Mid-section CTA */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-10">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
-            >
-              Claim Your Territory Today
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href={PHONE_HREF}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
-            >
-              <Phone className="h-4 w-4" />
-              {PHONE_NUMBER}
-            </a>
           </div>
         </div>
       </div>

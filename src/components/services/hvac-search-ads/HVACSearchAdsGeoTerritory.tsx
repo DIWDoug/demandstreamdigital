@@ -5,7 +5,7 @@ const blocks = [
   },
   {
     label: "High-Margin Neighborhood Priority",
-    body: "Higher-income areas with larger homes produce more repipe, water heater, and sewer line revenue per job.",
+    body: "Higher-income areas with larger homes produce more system replacement, water heater, and high-ticket service revenue per job.",
   },
   {
     label: "Competitive Defense Zones",
@@ -17,7 +17,7 @@ const blocks = [
   },
 ];
 
-const PlumbingSearchAdsGeoTerritory = () => {
+const HVACSearchAdsGeoTerritory = () => {
   return (
     <section id="geo-territory" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
@@ -51,4 +51,4 @@ const PlumbingSearchAdsGeoTerritory = () => {
   );
 };
 
-export default PlumbingSearchAdsGeoTerritory;
+export default HVACSearchAdsGeoTerritory;
