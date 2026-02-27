@@ -16,8 +16,8 @@ import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAds
 import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
 import PaidAdsSEOIntegration from "@/components/services/paid-advertising/PaidAdsSEOIntegration";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
+import PaidAdsExclusivity from "@/components/services/paid-advertising/PaidAdsExclusivity";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
-import MidPageCTA from "@/components/sections/MidPageCTA";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -125,11 +125,8 @@ const PaidAdvertising = () => {
       {/* 09. FIT */}
       <PaidAdsFit />
 
-      {/* 10. MID-PAGE CTA */}
-      <MidPageCTA />
-
-      {/* 11. MARKET EXCLUSIVITY */}
-      <MarketExclusivity />
+      {/* 10. EXCLUSIVITY */}
+      <PaidAdsExclusivity />
 
       <SectionDivider />
 
