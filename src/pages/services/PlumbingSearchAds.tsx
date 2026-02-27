@@ -18,7 +18,7 @@ import PlumbingSearchAdsFitExclusivity from "@/components/services/plumbing-sear
 import PlumbingSearchAdsContactForm from "@/components/services/plumbing-search-ads/PlumbingSearchAdsContactForm";
 
 const SectionDivider = () => (
-  <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
+  <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 );
 
 const anchorItems = [
