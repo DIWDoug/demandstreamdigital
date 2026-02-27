@@ -49,6 +49,9 @@ const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompa
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
+const HVACFacebookAdvertising = lazy(() => import("./pages/services/HVACFacebookAdvertising"));
+const HVACInstagramAdvertising = lazy(() => import("./pages/services/HVACInstagramAdvertising"));
+const HVACLinkedInAdvertising = lazy(() => import("./pages/services/HVACLinkedInAdvertising"));
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
 const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
 const PaidAdvertising = lazy(() => import("./pages/services/PaidAdvertising"));
@@ -161,6 +164,14 @@ const App = () => (
           <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />
           <Route path="/paid-advertising" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
           <Route path="/paid-advertising/" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
+
+          {/* HVAC Channel Spoke Pages */}
+          <Route path="/hvac-facebook-advertising" element={<HVACFacebookAdvertising />} />
+          <Route path="/hvac-facebook-advertising/" element={<HVACFacebookAdvertising />} />
+          <Route path="/hvac-instagram-advertising" element={<HVACInstagramAdvertising />} />
+          <Route path="/hvac-instagram-advertising/" element={<HVACInstagramAdvertising />} />
+          <Route path="/hvac-linkedin-advertising" element={<HVACLinkedInAdvertising />} />
+          <Route path="/hvac-linkedin-advertising/" element={<HVACLinkedInAdvertising />} />
 
           {/* HVAC Service Pages */}
           <Route path="/hvac-seo" element={<HVACSEO />} />
