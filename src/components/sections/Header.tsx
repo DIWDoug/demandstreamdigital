@@ -4,7 +4,6 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/demandstream-digital-logo.svg";
 
-
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,44 +23,42 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
+      if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node))
         setIsMegaMenuOpen(false);
-      }
-      if (toolsMenuRef.current && !toolsMenuRef.current.contains(event.target as Node)) {
+      if (toolsMenuRef.current && !toolsMenuRef.current.contains(event.target as Node))
         setIsToolsMenuOpen(false);
-      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Escape key to close menus
   useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
         setIsMegaMenuOpen(false);
         setIsMobileMenuOpen(false);
         setIsToolsMenuOpen(false);
       }
     };
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
-  const getAnchorHref = (anchor: string) => {
-    return isHomePage ? anchor : `/${anchor}`;
-  };
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
 
-  // Traditional hub-and-spoke structure: each hub has its spoke sub-pages
+  const getAnchorHref = (anchor: string) => (isHomePage ? anchor : `/${anchor}`);
+
   const serviceHubs = [
     {
       label: "Local SEO",
@@ -134,19 +131,12 @@ const Header = () => {
     },
   ];
 
-  // Links that appear BEFORE Services mega menu
-  const preServiceLinks = [
-    { label: "About", href: "/about", isRoute: true }
-  ];
-
-  // Links that appear AFTER Services mega menu
+  const preServiceLinks = [{ label: "About", href: "/about", isRoute: true }];
   const postServiceLinks = [
     { label: "Case Studies", href: "/case-studies", isRoute: true },
     { label: "Testimonials", href: "/testimonials", isRoute: true },
-    { label: "Blog", href: "/our-blog", isRoute: true }
+    { label: "Blog", href: "/our-blog", isRoute: true },
   ];
-
-  // Partner Tools dropdown items
   const partnerToolsLinks = [
     { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", description: "Estimate monthly SEO investment" },
     { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", description: "Show clients their marketing ROI" },
@@ -155,101 +145,108 @@ const Header = () => {
     { label: "Ad Budget Calculator", href: "/partner-tools/ad-budget-calculator", description: "Project ad campaign results" },
     { label: "Email Marketing Calculator", href: "/partner-tools/email-calculator", description: "Calculate email ROI potential" },
     { label: "Content Marketing Calculator", href: "/partner-tools/content-marketing-calculator", description: "Calculate content ROI" },
-    { label: "AI Ready Check", href: "/partner-tools/ai-ready-check", description: "Scan website AI compatibility" }
+    { label: "AI Ready Check", href: "/partner-tools/ai-ready-check", description: "Scan website AI compatibility" },
   ];
 
+  const navLinkClass =
+    "px-3 py-2 text-[15px] font-medium text-white/85 hover:text-white transition-colors whitespace-nowrap";
+
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}
-    >
-      {/* Top Utility Bar */}
-      <div className={`bg-cta text-cta-foreground transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'}`}>
-        <div className="container mx-auto px-6 lg:px-8 flex items-center justify-between py-1.5 text-xs font-medium">
-          <Link to="/contact" className="hover:underline tracking-wide">
-            📞 Free Marketing Audit: See Where You're Losing Leads
+    <>
+      {/* ─── ANNOUNCEMENT BAR ─── */}
+      {/* Fixed, full-width, 40px, red #C0392B, always on top */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "h-0 overflow-hidden opacity-0 pointer-events-none" : "h-10 opacity-100"
+        }`}
+        style={{ backgroundColor: "#C0392B" }}
+        aria-hidden={isScrolled}
+      >
+        <div className="h-full max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+          {/* Left */}
+          <Link
+            to="/free-audit"
+            className="text-[13px] text-white hover:underline underline-offset-2 leading-none"
+          >
+            Free Marketing Audit: See Where You're Losing Leads
           </Link>
-          <div className="hidden sm:flex items-center gap-4">
-            <span className="flex items-center gap-1.5 uppercase tracking-widest text-[10px] font-bold">
-              <span className="w-2 h-2 rounded-full bg-cta-foreground animate-pulse" />
-              Plumbing & HVAC Specialists
-            </span>
-          </div>
+          {/* Right */}
+          <span className="hidden sm:flex items-center gap-2 text-[13px] font-bold text-white uppercase tracking-widest leading-none">
+            <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />
+            Plumbing &amp; HVAC Specialists
+          </span>
         </div>
       </div>
 
-      {/* Main Nav Bar */}
-      <div className={`transition-all duration-300 ${
-        isScrolled 
-          ? "bg-[#0F2742] border-b border-white/10 shadow-lg" 
-          : "bg-[#0F2742]"
-      }`}>
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo & Nav together */}
-          <div className="flex items-center gap-8">
-            {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <img 
-                src={logo} 
-                alt="Demand Stream Digital - Growth Marketing for Plumbing & HVAC Companies" 
-                title="Demand Stream Digital | SEO, PPC & Content Marketing for Plumbing & HVAC"
-                className={`w-auto opacity-90 transition-all duration-300 ${
-                  isScrolled ? "h-12 md:h-14" : "h-14 md:h-16"
-                }`}
+      {/* ─── MAIN HEADER ─── */}
+      <header
+        className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled ? "top-0 shadow-lg" : "top-10"
+        }`}
+        style={{ backgroundColor: "#0D1B2A" }}
+      >
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+
+            {/* ── Logo ── */}
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <img
+                src={logo}
+                alt="DemandStream Digital — Plumbing & HVAC Growth Marketing"
+                className="h-12 w-auto"
               />
             </Link>
 
-            {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-0 ml-2">
-              {/* Pre-Service Links (About) */}
-              {preServiceLinks.map((link, index) => (
+            {/* ── Desktop Nav ── */}
+            <nav className="hidden lg:flex items-center gap-0 mx-4">
+              {/* Pre-service links */}
+              {preServiceLinks.map((link) =>
                 link.isRoute ? (
-                  <Link
-                    key={`pre-${index}`}
-                    to={link.href}
-                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
-                  >
+                  <Link key={link.href} to={link.href} className={navLinkClass}>
                     {link.label}
                   </Link>
                 ) : (
-                  <a
-                    key={`pre-${index}`}
-                    href={getAnchorHref(link.href)}
-                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
-                  >
+                  <a key={link.href} href={getAnchorHref(link.href)} className={navLinkClass}>
                     {link.label}
                   </a>
                 )
-              ))}
+              )}
 
-              {/* Services Dropdown */}
-              <div className="relative z-50" ref={megaMenuRef}>
+              {/* Services dropdown */}
+              <div className="relative" ref={megaMenuRef}>
                 <button
                   type="button"
-                  onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
+                  onClick={() => {
+                    setIsMegaMenuOpen(!isMegaMenuOpen);
+                    setIsToolsMenuOpen(false);
+                  }}
+                  className={`${navLinkClass} flex items-center gap-1`}
                   aria-haspopup="true"
                   aria-expanded={isMegaMenuOpen}
                 >
                   Services
-                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform ${isMegaMenuOpen ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
                 </button>
 
                 {isMegaMenuOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[700px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
+                  <div
+                    className="absolute top-full left-0 mt-1 w-[700px] rounded-lg shadow-2xl overflow-hidden animate-fade-in"
+                    style={{ backgroundColor: "#0D1B2A", border: "1px solid rgba(255,255,255,0.1)" }}
+                  >
                     <div className="p-5">
-                      <div className="grid grid-cols-3 gap-x-5 gap-y-5">
+                      <div className="grid grid-cols-3 gap-x-5 gap-y-4">
                         {serviceHubs.map((hub, i) => (
                           <div key={i}>
-                            {/* Hub parent link — bold header */}
                             <Link
                               to={hub.href}
                               onClick={() => setIsMegaMenuOpen(false)}
-                              className="block text-xs font-bold text-foreground uppercase tracking-widest mb-2 px-2 hover:text-accent-blue transition-colors"
+                              className="block text-[11px] font-bold text-white uppercase tracking-widest mb-2 px-2 hover:text-[#4A90B8] transition-colors"
                             >
                               {hub.label}
                             </Link>
-                            {/* Spoke children */}
                             {hub.spokes.length > 0 && (
                               <ul className="space-y-0.5">
                                 {hub.spokes.map((spoke, j) => (
@@ -257,7 +254,7 @@ const Header = () => {
                                     <Link
                                       to={spoke.href}
                                       onClick={() => setIsMegaMenuOpen(false)}
-                                      className="block px-2 py-1 rounded text-xs text-text-muted hover:text-foreground hover:bg-surface-elevated transition-colors"
+                                      className="block px-2 py-1 rounded text-[12px] text-white/60 hover:text-white hover:bg-white/5 transition-colors"
                                     >
                                       {spoke.label}
                                     </Link>
@@ -268,181 +265,203 @@ const Header = () => {
                           </div>
                         ))}
                       </div>
-                      <div className="border-t border-border/30 mt-4 pt-3">
+                      <div className="mt-4 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                         <Link
                           to="/services"
                           onClick={() => setIsMegaMenuOpen(false)}
-                          className="block px-4 py-2 rounded-lg hover:bg-surface-elevated transition-colors text-center"
+                          className="block text-center text-[13px] font-medium text-[#4A90B8] hover:text-white transition-colors py-1"
                         >
-                          <p className="text-sm font-medium text-accent-blue">View All Services →</p>
+                          View All Services →
                         </Link>
                       </div>
                     </div>
                   </div>
                 )}
               </div>
-              
-              {/* Post-Service Links */}
-              {postServiceLinks.map((link, index) => (
+
+              {/* Post-service links */}
+              {postServiceLinks.map((link) =>
                 link.isRoute ? (
-                  <Link
-                    key={`post-${index}`}
-                    to={link.href}
-                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
-                  >
+                  <Link key={link.href} to={link.href} className={navLinkClass}>
                     {link.label}
                   </Link>
                 ) : (
-                  <a
-                    key={`post-${index}`}
-                    href={getAnchorHref(link.href)}
-                    className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
-                  >
+                  <a key={link.href} href={getAnchorHref(link.href)} className={navLinkClass}>
                     {link.label}
                   </a>
                 )
-              ))}
-
-              {/* Partner Tools Backdrop */}
-              {isToolsMenuOpen && (
-                <div 
-                  className="fixed inset-0 top-16 bg-black/60 backdrop-blur-sm z-40 animate-fade-in"
-                  onClick={() => setIsToolsMenuOpen(false)}
-                  aria-hidden="true"
-                />
               )}
 
-              {/* Partner Tools Dropdown */}
-              <div className="relative z-50" ref={toolsMenuRef}>
+              {/* Partner Tools dropdown */}
+              <div className="relative" ref={toolsMenuRef}>
                 <button
                   type="button"
-                  onClick={() => setIsToolsMenuOpen(!isToolsMenuOpen)}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors uppercase tracking-wide whitespace-nowrap"
+                  onClick={() => {
+                    setIsToolsMenuOpen(!isToolsMenuOpen);
+                    setIsMegaMenuOpen(false);
+                  }}
+                  className={`${navLinkClass} flex items-center gap-1`}
                   aria-haspopup="true"
                   aria-expanded={isToolsMenuOpen}
                 >
                   Partner Tools
-                  <ChevronDown className={`h-4 w-4 flex-shrink-0 transition-transform ${isToolsMenuOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
                 </button>
-                
+
                 {isToolsMenuOpen && (
-                  <div 
-                    className="absolute top-full left-0 mt-2 w-72 bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in"
-                    
+                  <div
+                    className="absolute top-full right-0 mt-1 w-72 rounded-lg shadow-2xl overflow-hidden animate-fade-in"
+                    style={{ backgroundColor: "#0D1B2A", border: "1px solid rgba(255,255,255,0.1)" }}
                   >
                     <div className="p-2">
-                      {partnerToolsLinks.map((tool, index) => (
+                      {partnerToolsLinks.map((tool, i) => (
                         <Link
-                          key={index}
+                          key={i}
                           to={tool.href}
                           onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors"
+                          className="block px-4 py-2.5 rounded-md hover:bg-white/5 transition-colors"
                         >
-                          <p className="text-sm font-medium text-foreground uppercase tracking-wide">{tool.label}</p>
-                          <p className="text-xs text-text-muted mt-0.5 normal-case tracking-normal">{tool.description}</p>
+                          <p className="text-[13px] font-medium text-white">{tool.label}</p>
+                          <p className="text-[12px] text-white/50 mt-0.5">{tool.description}</p>
                         </Link>
                       ))}
-                      {/* View All Link */}
-                      <div className="border-t border-border/30 mt-2 pt-2">
+                      <div className="mt-2 pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                         <Link
                           to="/partner-tools"
                           onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors text-center"
+                          className="block text-center text-[13px] font-medium text-[#4A90B8] hover:text-white transition-colors py-1.5"
                         >
-                          <p className="text-sm font-medium text-accent-blue">View All Partner Tools →</p>
+                          View All Partner Tools →
                         </Link>
                       </div>
                     </div>
                   </div>
                 )}
               </div>
-
-              
             </nav>
-          </div>
 
-          {/* Right side - Phone & CTA (Pure Plumbing inspired bold layout) */}
-          <div className="hidden lg:flex items-center gap-6 ml-auto pl-6">
-            <a 
-              href={PHONE_HREF}
-              className="flex items-center gap-2 hover:text-cta transition-colors group whitespace-nowrap"
-            >
-              <Phone className="h-5 w-5 text-cta flex-shrink-0" />
-              <div className="flex flex-col leading-none">
-                <span className="text-[10px] uppercase tracking-widest text-text-muted font-semibold">Call Us Today</span>
-                <span className="text-base font-bold text-foreground group-hover:text-cta transition-colors">
-                  {PHONE_NUMBER}
-                </span>
-              </div>
-            </a>
-            <Link 
-              to="/contact" 
-              className="btn-cta text-sm py-2.5 px-5 whitespace-nowrap"
-            >
-              Schedule a Call
-            </Link>
-            
-          </div>
+            {/* ── Right: Phone + CTA ── */}
+            <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
+              <a
+                href={PHONE_HREF}
+                className="flex items-center gap-2.5 group"
+              >
+                <Phone className="h-4 w-4 flex-shrink-0" style={{ color: "#C0392B" }} />
+                <div className="flex flex-col leading-none gap-0.5">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Call Us Today
+                  </span>
+                  <span className="text-[15px] font-bold text-white group-hover:text-[#C0392B] transition-colors whitespace-nowrap">
+                    {PHONE_NUMBER}
+                  </span>
+                </div>
+              </a>
 
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
-          </button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center font-bold text-white text-[15px] tracking-[0.04em] whitespace-nowrap transition-colors"
+                style={{
+                  backgroundColor: "#C0392B",
+                  borderRadius: "4px",
+                  padding: "10px 22px",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#A93226")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#C0392B")}
+              >
+                Schedule a Call →
+              </Link>
+            </div>
+
+            {/* ── Mobile hamburger ── */}
+            <button
+              className="lg:hidden p-2 text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile menu - CSS-only animations for reduced bundle size */}
+        {/* ── Mobile menu — full-screen dark overlay ── */}
         {isMobileMenuOpen && (
-          <nav 
-            id="mobile-menu"
-            role="navigation"
-            aria-label="Mobile navigation"
-            className="md:hidden border-t border-border bg-surface-dark relative overflow-hidden animate-mobile-menu-open"
+          <div
+            className="lg:hidden fixed inset-0 z-50 flex flex-col"
+            style={{ backgroundColor: "#0D1B2A", top: isScrolled ? "64px" : "104px" }}
           >
-            {/* Scrollable content wrapper */}
-            <div className="py-6 max-h-[calc(100vh-64px)] overflow-y-auto relative before:pointer-events-none before:absolute before:bottom-0 before:left-0 before:right-0 before:h-16 before:bg-gradient-to-t before:from-surface-dark before:to-transparent before:z-20 animate-mobile-menu-content">
-              {/* Close Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="absolute top-4 right-4 p-2 rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated border border-border/50 hover:border-border transition-colors z-10"
-                aria-label="Close menu"
-              >
-                <X className="h-5 w-5 text-foreground/70 hover:text-foreground" />
-              </button>
-              <nav className="flex flex-col gap-1 pt-8">
-                {/* Services Accordion */}
-                <div className="flex items-center justify-between w-full py-3 px-3 rounded-lg hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors">
+            {/* Close button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-4 right-5 p-2 text-white/70 hover:text-white transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            <nav className="flex-1 overflow-y-auto px-6 py-8 space-y-1">
+              {/* About */}
+              {preServiceLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b border-white/8"
+                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+                >
+                  <span
+                    className="w-1 h-5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: "#C0392B" }}
+                  />
+                  {link.label}
+                </Link>
+              ))}
+
+              {/* Services accordion */}
+              <div>
+                <div
+                  className="flex items-center justify-between py-3 border-b"
+                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+                >
                   <a
-                    href="/white-label-inbound-marketing-services"
-                    className="flex-1 flex items-center gap-2 text-base font-medium text-foreground uppercase tracking-wide"
+                    href="/hvac-and-plumbing-seo"
+                    className="flex items-center gap-3 text-[15px] font-medium text-white flex-1"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigateMobile("/white-label-inbound-marketing-services");
+                      navigateMobile("/services");
                     }}
                   >
-                    <span className="w-1 h-4 bg-cta rounded-full" />
+                    <span
+                      className="w-1 h-5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: "#C0392B" }}
+                    />
                     Services
                   </a>
                   <button
                     onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                    className="p-2 rounded-lg hover:bg-surface-elevated active:bg-cta/20 transition-colors"
-                    aria-label="Toggle services menu"
+                    className="p-1 text-white/60 hover:text-white transition-colors"
+                    aria-label="Toggle services"
                   >
-                    <ChevronDown className={`h-5 w-5 text-foreground/60 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown
+                      className={`h-5 w-5 transition-transform ${isMegaMenuOpen ? "rotate-180" : ""}`}
+                    />
                   </button>
                 </div>
+
                 {isMegaMenuOpen && (
-                  <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4">
+                  <div
+                    className="ml-4 pl-3 py-3 mb-1"
+                    style={{ borderLeft: "2px solid rgba(192,57,43,0.4)" }}
+                  >
                     {serviceHubs.map((hub, i) => (
-                      <div key={i} className="mb-3">
+                      <div key={i} className="mb-4">
                         <a
                           href={hub.href}
-                          className="text-xs font-bold text-cta uppercase tracking-widest mb-1 block"
+                          className="text-[11px] font-bold uppercase tracking-widest mb-2 block"
+                          style={{ color: "#C0392B" }}
                           onClick={(e) => {
                             e.preventDefault();
                             navigateMobile(hub.href);
@@ -451,12 +470,12 @@ const Header = () => {
                           {hub.label}
                         </a>
                         {hub.spokes.length > 0 && (
-                          <ul className="space-y-1 ml-2">
+                          <ul className="space-y-1.5 ml-1">
                             {hub.spokes.map((spoke, j) => (
                               <li key={j}>
                                 <a
                                   href={spoke.href}
-                                  className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-0.5 block"
+                                  className="text-[13px] text-white/60 hover:text-white transition-colors"
                                   onClick={(e) => {
                                     e.preventDefault();
                                     navigateMobile(spoke.href);
@@ -472,66 +491,77 @@ const Header = () => {
                     ))}
                   </div>
                 )}
-                
-                {[...preServiceLinks, ...postServiceLinks].map((link, index) => (
-                  link.isRoute ? (
-                    <Link
-                      key={index}
-                      to={link.href}
-                      className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span className="w-1 h-4 bg-cta rounded-full" />
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={index}
-                      href={getAnchorHref(link.href)}
-                      className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <span className="w-1 h-4 bg-cta rounded-full" />
-                      {link.label}
-                    </a>
-                  )
-                ))}
+              </div>
 
-                {/* Mobile Partner Tools (no dropdown) */}
+              {/* Post-service links */}
+              {postServiceLinks.map((link) => (
                 <Link
-                  to="/partner-tools"
-                  className="flex items-center gap-2 py-3 px-3 rounded-lg text-base font-medium text-foreground uppercase tracking-wide hover:bg-surface-elevated/50 active:bg-surface-elevated transition-colors"
+                  key={link.href}
+                  to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
+                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
                 >
-                  <span className="w-1 h-4 bg-cta rounded-full" />
-                  Partner Tools
+                  <span
+                    className="w-1 h-5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: "#C0392B" }}
+                  />
+                  {link.label}
                 </Link>
+              ))}
 
+              {/* Partner Tools */}
+              <Link
+                to="/partner-tools"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
+                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+              >
+                <span
+                  className="w-1 h-5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: "#C0392B" }}
+                />
+                Partner Tools
+              </Link>
 
+              {/* Phone + CTA */}
+              <div className="pt-6 space-y-4">
+                <a
+                  href={PHONE_HREF}
+                  className="flex items-center gap-3 text-white"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0" style={{ color: "#C0392B" }} />
+                  <div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                      Call Us Today
+                    </div>
+                    <div className="text-[16px] font-bold">{PHONE_NUMBER}</div>
+                  </div>
+                </a>
 
-                <div className="pt-4 mt-2 border-t border-border">
-                  <a 
-                    href={PHONE_HREF}
-                    className="flex items-center gap-2 py-3 text-foreground font-medium"
-                  >
-                    <Phone className="h-4 w-4 text-cta" />
-                    {PHONE_NUMBER}
-                  </a>
-                  <Link 
-                    to="/contact" 
-                    className="btn-cta text-center mt-3 w-full"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get a Free Strategy Call
-                  </Link>
-                </div>
-              </nav>
-            </div>
-          </nav>
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center justify-center w-full font-bold text-white text-[15px] tracking-[0.04em] transition-colors"
+                  style={{
+                    backgroundColor: "#C0392B",
+                    borderRadius: "4px",
+                    padding: "14px 28px",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#A93226")}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#C0392B")}
+                >
+                  Schedule a Call →
+                </Link>
+              </div>
+            </nav>
+          </div>
         )}
-      </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Spacer so page content clears the fixed header */}
+      <div style={{ height: isScrolled ? "64px" : "104px" }} className="transition-all duration-300" />
+    </>
   );
 };
 
