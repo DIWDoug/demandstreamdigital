@@ -71,7 +71,7 @@ const HVACSearchAdsHero = () => {
           </div>
 
           <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
+            <div className="backdrop-blur-md rounded-2xl p-6 lg:p-8" style={{ background: '#1E2A3B', border: '1px solid rgba(220, 38, 38, 0.4)', boxShadow: '0 4px 24px rgba(0,0,0,0.4)' }}>
               <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
               <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
               <TwoStepContactForm
