@@ -27,24 +27,20 @@ const PlumbingSearchAdsGeoTerritory = () => {
             Geo & Territory Bid Strategy
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <div>
-              <p className="text-base text-text-secondary leading-relaxed mb-6">
-                Not every ZIP code in your service area produces the same quality of work. High-income neighborhoods generate higher average tickets on the same service types. Dense residential corridors produce more volume. Competitive zones require stronger bid defense.
-              </p>
-              <p className="text-base text-text-secondary leading-relaxed">
-                We build bid structures that reflect your actual dispatch map. High-priority ZIPs receive heavier bid weight. Lower-margin areas are included but not over-invested. Competitor strongholds get defensive coverage without wasted spend.
-              </p>
-            </div>
+          <p className="text-base text-text-secondary leading-relaxed mb-4 max-w-3xl">
+            Not every ZIP code in your service area produces the same quality of work. High-income neighborhoods generate higher average tickets on the same service types. Dense residential corridors produce more volume. Competitive zones require stronger bid defense.
+          </p>
+          <p className="text-base text-text-secondary leading-relaxed mb-10 max-w-3xl">
+            We build bid structures that reflect your actual dispatch map. High-priority ZIPs receive heavier bid weight. Lower-margin areas are included but not over-invested. Competitor strongholds get defensive coverage without wasted spend.
+          </p>
 
-            <div className="grid sm:grid-cols-2 gap-5">
-              {blocks.map((block, i) => (
-                <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-5">
-                  <p className="font-semibold text-foreground text-sm mb-2">{block.label}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed">{block.body}</p>
-                </div>
-              ))}
-            </div>
+          <div className="space-y-4 max-w-3xl">
+            {blocks.map((block, i) => (
+              <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-5">
+                <p className="font-semibold text-foreground text-sm mb-2">{block.label}</p>
+                <p className="text-text-secondary text-sm leading-relaxed">{block.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
