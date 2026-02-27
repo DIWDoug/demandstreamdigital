@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import PlumbingSearchAdsHero from "@/components/services/plumbing-search-ads/PlumbingSearchAdsHero";
 import PlumbingSearchAdsPPCFails from "@/components/services/plumbing-search-ads/PlumbingSearchAdsPPCFails";
 import PlumbingSearchAdsCampaignArchitecture from "@/components/services/plumbing-search-ads/PlumbingSearchAdsCampaignArchitecture";
+import PlumbingSearchAdsCredibility from "@/components/services/plumbing-search-ads/PlumbingSearchAdsCredibility";
 import PlumbingSearchAdsGeoTerritory from "@/components/services/plumbing-search-ads/PlumbingSearchAdsGeoTerritory";
 import PlumbingSearchAdsMobileAndCalls from "@/components/services/plumbing-search-ads/PlumbingSearchAdsMobileAndCalls";
 import PlumbingSearchAdsMetrics from "@/components/services/plumbing-search-ads/PlumbingSearchAdsMetrics";
@@ -86,6 +87,7 @@ const PlumbingSearchAds = () => {
       <PlumbingSearchAdsPPCFails />
       <SectionDivider />
       <PlumbingSearchAdsCampaignArchitecture />
+      <PlumbingSearchAdsCredibility />
       <SectionDivider />
       <PlumbingSearchAdsGeoTerritory />
       <SectionDivider />

@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import HVACSearchAdsHero from "@/components/services/hvac-search-ads/HVACSearchAdsHero";
 import HVACSearchAdsPPCFails from "@/components/services/hvac-search-ads/HVACSearchAdsPPCFails";
 import HVACSearchAdsCampaignArchitecture from "@/components/services/hvac-search-ads/HVACSearchAdsCampaignArchitecture";
+import HVACSearchAdsCredibility from "@/components/services/hvac-search-ads/HVACSearchAdsCredibility";
 import HVACSearchAdsSeasonalStrategy from "@/components/services/hvac-search-ads/HVACSearchAdsSeasonalStrategy";
 import HVACSearchAdsMobileAndCalls from "@/components/services/hvac-search-ads/HVACSearchAdsMobileAndCalls";
 import HVACSearchAdsMetrics from "@/components/services/hvac-search-ads/HVACSearchAdsMetrics";
@@ -86,6 +87,7 @@ const HVACSearchAds = () => {
       <HVACSearchAdsPPCFails />
       <SectionDivider />
       <HVACSearchAdsCampaignArchitecture />
+      <HVACSearchAdsCredibility />
       <SectionDivider />
       <HVACSearchAdsSeasonalStrategy />
       <SectionDivider />
