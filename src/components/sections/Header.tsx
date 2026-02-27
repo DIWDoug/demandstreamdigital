@@ -63,10 +63,23 @@ const Header = () => {
 
   const serviceCategories = [
     {
-      title: "PLUMBING",
-      href: "/hvac-and-plumbing-seo",
+      title: "ALL SERVICES",
+      href: "/services",
       items: [
-        { label: "Plumbing SEO", href: "/hvac-and-plumbing-seo" },
+        { label: "SEO — Plumbing & HVAC", href: "/hvac-and-plumbing-seo" },
+        { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+        { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+        { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+        { label: "Content Marketing", href: "/plumbing-content-marketing" },
+        { label: "Email Marketing", href: "/plumbing-email-marketing" },
+        { label: "Reporting", href: "/plumbing-reporting" }
+      ]
+    },
+    {
+      title: "PLUMBING",
+      href: "/plumbing-seo",
+      items: [
+        { label: "Plumbing SEO", href: "/plumbing-seo" },
         { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
         { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
@@ -76,9 +89,9 @@ const Header = () => {
     },
     {
       title: "HVAC",
-      href: "/hvac-and-plumbing-seo",
+      href: "/hvac-seo",
       items: [
-        { label: "HVAC SEO", href: "/hvac-and-plumbing-seo" },
+        { label: "HVAC SEO", href: "/hvac-seo" },
         { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
         { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
         { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },
@@ -190,9 +203,9 @@ const Header = () => {
                 </button>
 
                 {isMegaMenuOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[480px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
+                  <div className="absolute top-full left-0 mt-2 w-[680px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
                     <div className="p-4">
-                      <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                      <div className="grid grid-cols-3 gap-x-6 gap-y-1">
                         {serviceCategories.map((category, index) => (
                           <div key={index} className="mb-3">
                             <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 px-2">

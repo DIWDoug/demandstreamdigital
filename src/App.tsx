@@ -65,6 +65,7 @@ const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
+const WebDesign = lazy(() => import("./pages/services/WebDesign"));
 
 // Interactive Tools
 const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
@@ -169,6 +170,8 @@ const App = () => (
 
           {/* HVAC Channel Spoke Pages */}
           <Route path="/hvac-facebook-advertising" element={<HVACFacebookAdvertising />} />
+          <Route path="/plumbing-and-hvac-web-design" element={<WebDesign />} />
+          <Route path="/plumbing-and-hvac-web-design/" element={<WebDesign />} />
           <Route path="/hvac-facebook-advertising/" element={<HVACFacebookAdvertising />} />
           <Route path="/hvac-instagram-advertising" element={<HVACInstagramAdvertising />} />
           <Route path="/hvac-instagram-advertising/" element={<HVACInstagramAdvertising />} />
