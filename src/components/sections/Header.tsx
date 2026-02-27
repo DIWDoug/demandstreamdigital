@@ -61,44 +61,77 @@ const Header = () => {
     return isHomePage ? anchor : `/${anchor}`;
   };
 
-  const serviceCategories = [
+  // Traditional hub-and-spoke structure: each hub has its spoke sub-pages
+  const serviceHubs = [
     {
-      title: "ALL SERVICES",
-      href: "/services",
-      items: [
-        { label: "SEO — Plumbing & HVAC", href: "/hvac-and-plumbing-seo" },
-        { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-        { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-        { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
-        { label: "Content Marketing", href: "/plumbing-content-marketing" },
-        { label: "Email Marketing", href: "/plumbing-email-marketing" },
-        { label: "Reporting", href: "/plumbing-reporting" }
-      ]
-    },
-    {
-      title: "PLUMBING",
-      href: "/plumbing-seo",
-      items: [
+      label: "Local SEO",
+      href: "/hvac-and-plumbing-seo",
+      spokes: [
         { label: "Plumbing SEO", href: "/plumbing-seo" },
-        { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
-        { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
-        { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
-        { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
-        { label: "Plumbing Reporting", href: "/plumbing-reporting" }
-      ]
+        { label: "HVAC SEO", href: "/hvac-seo" },
+        { label: "On-Page SEO", href: "/white-label-on-page-local-optimization" },
+        { label: "Technical SEO", href: "/white-label-technical-seo-multi-location" },
+        { label: "Local Keyword Strategy", href: "/white-label-keyword-research-mapping" },
+        { label: "Content Development", href: "/white-label-local-content-strategy" },
+        { label: "Link Building", href: "/white-label-local-link-acquisition" },
+        { label: "GBP SEO", href: "/white-label-gbp-seo" },
+        { label: "Reputation Management", href: "/white-label-reputation-management" },
+        { label: "AEO for Local", href: "/white-label-aeo-local" },
+      ],
     },
     {
-      title: "HVAC",
-      href: "/hvac-seo",
-      items: [
-        { label: "HVAC SEO", href: "/hvac-seo" },
-        { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
+      label: "Paid Advertising",
+      href: "/hvac-and-plumbing-paid-ads",
+      spokes: [
+        { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
-        { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },
+        { label: "Google Ads for Plumbers", href: "/white-label-google-ads" },
+        { label: "Facebook Ads", href: "/white-label-facebook-advertising" },
+        { label: "LSA / Google Guaranteed", href: "/white-label-local-services-ads" },
+        { label: "Retargeting Campaigns", href: "/white-label-retargeting" },
+      ],
+    },
+    {
+      label: "Google Maps / GBP",
+      href: "/plumbing-google-maps",
+      spokes: [
+        { label: "Plumbing Google Maps", href: "/plumbing-google-maps" },
+        { label: "HVAC Google Maps", href: "/hvac-google-maps" },
+        { label: "GBP Profile Optimization", href: "/white-label-gbp-profile-optimization" },
+        { label: "Review Generation", href: "/white-label-review-generation" },
+        { label: "Citation Building", href: "/white-label-citation-building" },
+        { label: "GBP Posts & Content", href: "/white-label-gbp-posts" },
+      ],
+    },
+    {
+      label: "Web Design",
+      href: "/plumbing-and-hvac-web-design",
+      spokes: [],
+    },
+    {
+      label: "Content Marketing",
+      href: "/plumbing-content-marketing",
+      spokes: [
+        { label: "Plumbing Content", href: "/plumbing-content-marketing" },
+        { label: "HVAC Content", href: "/hvac-content-marketing" },
+      ],
+    },
+    {
+      label: "Email Marketing",
+      href: "/plumbing-email-marketing",
+      spokes: [
+        { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
         { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
-        { label: "HVAC Reporting", href: "/hvac-reporting" }
-      ]
-    }
+      ],
+    },
+    {
+      label: "Reporting & Dashboards",
+      href: "/plumbing-reporting",
+      spokes: [
+        { label: "Plumbing Reporting", href: "/plumbing-reporting" },
+        { label: "HVAC Reporting", href: "/hvac-reporting" },
+      ],
+    },
   ];
 
   // Links that appear BEFORE Services mega menu
@@ -203,35 +236,43 @@ const Header = () => {
                 </button>
 
                 {isMegaMenuOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[680px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
-                    <div className="p-4">
-                      <div className="grid grid-cols-3 gap-x-6 gap-y-1">
-                        {serviceCategories.map((category, index) => (
-                          <div key={index} className="mb-3">
-                            <p className="text-[10px] font-bold text-accent-blue uppercase tracking-widest mb-2 px-2">
-                              {category.title}
-                            </p>
-                            <ul className="space-y-0.5">
-                              {category.items.map((item, itemIndex) => (
-                                <li key={itemIndex}>
-                                  <Link
-                                    to={item.href}
-                                    onClick={() => setIsMegaMenuOpen(false)}
-                                    className="block px-2 py-1.5 rounded-lg hover:bg-surface-elevated transition-colors text-sm text-text-secondary hover:text-foreground"
-                                  >
-                                    {item.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                  <div className="absolute top-full left-0 mt-2 w-[700px] bg-surface-dark border border-border rounded-xl shadow-xl overflow-hidden animate-fade-in">
+                    <div className="p-5">
+                      <div className="grid grid-cols-3 gap-x-5 gap-y-5">
+                        {serviceHubs.map((hub, i) => (
+                          <div key={i}>
+                            {/* Hub parent link — bold header */}
+                            <Link
+                              to={hub.href}
+                              onClick={() => setIsMegaMenuOpen(false)}
+                              className="block text-xs font-bold text-foreground uppercase tracking-widest mb-2 px-2 hover:text-accent-blue transition-colors"
+                            >
+                              {hub.label}
+                            </Link>
+                            {/* Spoke children */}
+                            {hub.spokes.length > 0 && (
+                              <ul className="space-y-0.5">
+                                {hub.spokes.map((spoke, j) => (
+                                  <li key={j}>
+                                    <Link
+                                      to={spoke.href}
+                                      onClick={() => setIsMegaMenuOpen(false)}
+                                      className="block px-2 py-1 rounded text-xs text-text-muted hover:text-foreground hover:bg-surface-elevated transition-colors"
+                                    >
+                                      {spoke.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </div>
                         ))}
                       </div>
-                      <div className="border-t border-border/30 mt-2 pt-2">
+                      <div className="border-t border-border/30 mt-4 pt-3">
                         <Link
                           to="/services"
                           onClick={() => setIsMegaMenuOpen(false)}
-                          className="block px-4 py-3 rounded-lg hover:bg-surface-elevated transition-colors text-center"
+                          className="block px-4 py-2 rounded-lg hover:bg-surface-elevated transition-colors text-center"
                         >
                           <p className="text-sm font-medium text-accent-blue">View All Services →</p>
                         </Link>
@@ -396,35 +437,37 @@ const Header = () => {
                   </button>
                 </div>
                 {isMegaMenuOpen && (
-                  <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4 grid grid-cols-2 gap-4">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index}>
-                        <a 
-                          href={category.href}
-                          className="text-xs font-semibold text-cta uppercase tracking-widest mb-2 block active:text-cta-glow transition-colors underline underline-offset-2 decoration-cta/30"
+                  <div className="ml-4 pl-3 border-l-2 border-cta/30 pb-4">
+                    {serviceHubs.map((hub, i) => (
+                      <div key={i} className="mb-3">
+                        <a
+                          href={hub.href}
+                          className="text-xs font-bold text-cta uppercase tracking-widest mb-1 block"
                           onClick={(e) => {
                             e.preventDefault();
-                            navigateMobile(category.href);
+                            navigateMobile(hub.href);
                           }}
                         >
-                          {category.title}
+                          {hub.label}
                         </a>
-                        <ul className="space-y-2">
-                          {category.items.map((item, itemIndex) => (
-                              <li key={itemIndex}>
-                                <a 
-                                  href={item.href}
-                                  className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-1 block"
+                        {hub.spokes.length > 0 && (
+                          <ul className="space-y-1 ml-2">
+                            {hub.spokes.map((spoke, j) => (
+                              <li key={j}>
+                                <a
+                                  href={spoke.href}
+                                  className="text-xs text-text-secondary hover:text-foreground active:text-cta transition-colors py-0.5 block"
                                   onClick={(e) => {
                                     e.preventDefault();
-                                    navigateMobile(item.href);
+                                    navigateMobile(spoke.href);
                                   }}
                                 >
-                                  {item.label}
+                                  {spoke.label}
                                 </a>
                               </li>
                             ))}
-                        </ul>
+                          </ul>
+                        )}
                       </div>
                     ))}
                   </div>
