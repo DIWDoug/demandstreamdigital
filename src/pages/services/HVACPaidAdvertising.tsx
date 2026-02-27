@@ -12,6 +12,7 @@ import HVACPaidAdsSEOIntegration from "@/components/services/hvac-paid-advertisi
 import HVACPaidAdsServiceTitan from "@/components/services/hvac-paid-advertising/HVACPaidAdsServiceTitan";
 import HVACPaidAdsBuiltForBoth from "@/components/services/hvac-paid-advertising/HVACPaidAdsBuiltForBoth";
 import HVACPaidAdsFit from "@/components/services/hvac-paid-advertising/HVACPaidAdsFit";
+import HVACPaidAdsFAQ from "@/components/services/hvac-paid-advertising/HVACPaidAdsFAQ";
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/HVACPaidAdsContactForm";
 
@@ -50,6 +51,21 @@ const HVACPaidAdvertising = () => {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much should I budget for HVAC paid advertising?", "acceptedAnswer": { "@type": "Answer", "text": "Budget depends on your market size, service mix, and seasonal demand windows. Most HVAC markets start between $2,500 and $6,000 per month in total ad spend across channels, scaling based on what your dispatch board can absorb." } },
+      { "@type": "Question", "name": "Which paid channels work best for HVAC companies?", "acceptedAnswer": { "@type": "Answer", "text": "For emergency repair and no-cool/no-heat calls, Google Search Ads and Local Services Ads are the highest-intent channels. For replacement and install demand, Facebook retargeting and display work well. The right mix depends on your market and service focus." } },
+      { "@type": "Question", "name": "Do you require long-term contracts?", "acceptedAnswer": { "@type": "Answer", "text": "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves." } },
+      { "@type": "Question", "name": "How do you handle budget shifts between heating and cooling seasons?", "acceptedAnswer": { "@type": "Answer", "text": "We build a seasonal bid calendar before any spend begins. Cooling season budgets increase before and during peak summer demand. Heating season budgets ramp heading into winter. Shoulder months shift toward maintenance agreements and install promotions." } },
+      { "@type": "Question", "name": "What metrics do you actually report on?", "acceptedAnswer": { "@type": "Answer", "text": "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to your dispatch board." } },
+      { "@type": "Question", "name": "We have run paid ads before and they did not produce results. Why would this be different?", "acceptedAnswer": { "@type": "Answer", "text": "Most failed HVAC campaigns share the same structural problems — no service segmentation, flat budgets that ignore seasonality, broad match keywords, and reporting that stops at the lead instead of the booked call." } },
+      { "@type": "Question", "name": "Can you manage campaigns we already have running?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch. We document everything and show you exactly what changes before we touch the budget." } },
+      { "@type": "Question", "name": "What size HVAC company do you typically work with?", "acceptedAnswer": { "@type": "Answer", "text": "HVAC companies running 2 or more trucks with an active dispatch board, call tracking in place or willingness to install it, and a verified Google Business Profile." } },
+    ]
+  };
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -61,6 +77,7 @@ const HVACPaidAdvertising = () => {
         <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
@@ -128,7 +145,10 @@ const HVACPaidAdvertising = () => {
       {/* 10. FIT */}
       <HVACPaidAdsFit />
 
-      {/* 11. EXCLUSIVITY */}
+      {/* 11. FAQ */}
+      <HVACPaidAdsFAQ />
+
+      {/* 12. EXCLUSIVITY */}
       <HVACPaidAdsExclusivity />
 
       {/* 12. LEAD FORM */}

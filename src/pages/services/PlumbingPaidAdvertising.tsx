@@ -13,6 +13,7 @@ import PlumbingPaidAdsSEOIntegration from "@/components/services/plumbing-paid-a
 import PlumbingPaidAdsServiceTitan from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsServiceTitan";
 import PlumbingPaidAdsBuiltForBoth from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsBuiltForBoth";
 import PlumbingPaidAdsFit from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsFit";
+import PlumbingPaidAdsFAQ from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsFAQ";
 import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
 import PlumbingPaidAdsContactForm from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsContactForm";
 
@@ -51,6 +52,21 @@ const PlumbingPaidAdvertising = () => {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much should I budget for plumbing paid advertising?", "acceptedAnswer": { "@type": "Answer", "text": "Budget depends on your market size, service mix, and call volume targets. Most plumbing markets start between $2,000 and $5,000 per month in total ad spend across channels, scaling based on what your dispatch board can absorb." } },
+      { "@type": "Question", "name": "Which paid channels work best for plumbing companies?", "acceptedAnswer": { "@type": "Answer", "text": "For emergency drain, sewer, and leak calls, Google Search Ads and Local Services Ads are the highest-intent channels. For water heater replacement and repipe, Facebook retargeting and display keep you in front of homeowners in the longer decision window." } },
+      { "@type": "Question", "name": "Do you require long-term contracts?", "acceptedAnswer": { "@type": "Answer", "text": "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves." } },
+      { "@type": "Question", "name": "How do you manage budget across different service types?", "acceptedAnswer": { "@type": "Answer", "text": "Emergency services get priority budget allocation because intent is immediate. Water heater and repipe campaigns run with longer optimization windows and different bidding strategies. Budgets are reviewed monthly and adjusted based on booking rates by service type." } },
+      { "@type": "Question", "name": "What metrics do you actually report on?", "acceptedAnswer": { "@type": "Answer", "text": "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to your dispatch board." } },
+      { "@type": "Question", "name": "We have run paid ads before and they did not produce results. Why would this be different?", "acceptedAnswer": { "@type": "Answer", "text": "Most failed plumbing campaigns share the same structural problems — no service segmentation, broad match keywords, flat budgets that do not prioritize emergency demand, and reporting that stops at the lead instead of the booked call." } },
+      { "@type": "Question", "name": "Can you manage campaigns we already have running?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch. We document everything and show you exactly what changes before we touch the budget." } },
+      { "@type": "Question", "name": "What size plumbing company do you typically work with?", "acceptedAnswer": { "@type": "Answer", "text": "Plumbing companies running 2 or more trucks with an active dispatch board, call tracking in place or willingness to install it, and a verified Google Business Profile." } },
+    ]
+  };
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
@@ -62,6 +78,7 @@ const PlumbingPaidAdvertising = () => {
         <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
         <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
@@ -129,7 +146,10 @@ const PlumbingPaidAdvertising = () => {
       {/* 10. FIT */}
       <PlumbingPaidAdsFit />
 
-      {/* 11. EXCLUSIVITY */}
+      {/* 11. FAQ */}
+      <PlumbingPaidAdsFAQ />
+
+      {/* 12. EXCLUSIVITY */}
       <PlumbingPaidAdsExclusivity />
 
       {/* 12. LEAD FORM */}
