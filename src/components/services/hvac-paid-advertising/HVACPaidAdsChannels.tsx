@@ -51,7 +51,7 @@ const HVACPaidAdsChannels = () => {
               </div>
             </div>
             <Link
-              to="/hvac-search-advertising/"
+              to="/hvac-search-ads/"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group"
             >
               See How Search Advertising Works
