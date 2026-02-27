@@ -1,7 +1,4 @@
 import { Target, Calendar, BarChart2, Map, Gauge, GitFork } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
-import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const failureRows = [
   {
@@ -65,27 +62,6 @@ const HVACSearchAdsPPCFails = () => {
               <p className="text-base text-text-secondary leading-relaxed mb-6">
                 HVAC search is not generic. A homeowner searching 'AC not cooling' in July has different intent, different urgency, and different margin than one searching 'AC replacement cost' in October. Running both through the same campaign means neither performs correctly. The emergency call gets too little urgency. The install lead gets too little nurture. Both convert below their potential.
               </p>
-              <div className="bg-surface-elevated border border-border/50 rounded-xl px-5 py-4 mb-6">
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  HVAC search ads require campaign architecture built around how heating and cooling demand actually works. Not a contractor template applied without modification.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
-                >
-                  Claim Your Territory Today
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a
-                  href={PHONE_HREF}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border text-text-secondary hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
-                >
-                  <Phone className="h-4 w-4" />
-                  {PHONE_NUMBER}
-                </a>
-              </div>
             </div>
 
             <div>
