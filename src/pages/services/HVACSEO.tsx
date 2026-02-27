@@ -39,7 +39,7 @@ const SectionDivider = () => (
 );
 
 const anchorItems = [
-  { label: 'Phone First', href: '#phone-first' },
+  { label: 'Where We Start', href: '#phone-first' },
   { label: 'The Problem', href: '#problem' },
   { label: 'What Changes', href: '#outcomes' },
   { label: 'Our Process', href: '#roadmap' },

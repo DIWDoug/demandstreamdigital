@@ -5,8 +5,8 @@ import { SITE_URL } from "@/lib/constants";
 export const plumbingSEOConfig: ServicePageConfig = {
   slug: "plumbing-seo",
   title: "Plumbing SEO",
-  metaTitle: "Plumbing SEO Services That Drive More Booked Service Calls | DemandStream Digital",
-  metaDescription: "Plumbing SEO built for plumbing companies, not generic contractor marketing. DemandStream builds connected SEO systems that generate more booked service calls. See how.",
+  metaTitle: "Plumbing SEO Services That Drive More Booked Service Calls for Plumbers | DemandStream Digital",
+  metaDescription: "Plumbing SEO built for plumbing companies, not generic contractor marketing. Connected SEO systems that generate more booked service calls. See how.",
   canonicalUrl: `${SITE_URL}/plumbing-seo`,
   keywords: "plumbing SEO, plumbing SEO services, SEO for plumbers, plumbing company SEO, plumber local SEO, plumbing marketing",
 
@@ -344,44 +344,40 @@ export const plumbingSEOConfig: ServicePageConfig = {
         items: [
           {
             question: "How long does plumbing SEO take to produce booked calls?",
-            answer: "For most plumbing companies, meaningful ranking movement begins within 3 to 4 months of completing the technical foundation phase. Map Pack visibility improvements typically follow in months 4 through 6, assuming the GBP improvement phase runs concurrently with on-page work. The timeline depends on three variables: your current baseline, your market competition, and how quickly we can close technical gaps. A plumbing company in a mid-sized market with a relatively clean site and moderate Map Pack competition moves faster than one in a dense metro going up against five well-refined competitors. What we can say with confidence: plumbing SEO compounds. The calls generated in month 8 come from foundation work done in month 2."
+            answer: "For most plumbing companies, meaningful ranking movement begins within 3 to 4 months of completing the technical foundation phase. Map Pack visibility improvements typically follow in months 4 through 6, assuming the GBP improvement phase runs concurrently with on-page work. The timeline depends on three variables: your current baseline, your market competition, and how quickly we can close technical gaps. Plumbing SEO compounds. The calls generated in month 8 come from foundation work done in month 2. The companies that see the strongest long-term results are the ones that start and stay consistent."
           },
           {
             question: "How much does plumbing SEO cost?",
-            answer: "We do not publish package pricing because every engagement is scoped to your specific market, competition level, and revenue goals. A plumbing company in a smaller market with a clean GBP and a solid existing site has different needs than one in a large metro competing against 30 active plumbing SEO campaigns. What we can tell you is how we frame cost: every dollar invested in plumbing SEO should be measurable against booked calls and cost per booked call. If we cannot show a clear line from marketing spend to calls on your dispatch board, the spend is not justified. The audit and roadmap phase gives you a clear picture of what your market requires and what the investment looks like before you commit to implementation."
+            answer: "We do not publish package pricing because every engagement is scoped to your specific market, competition level, and revenue goals. A plumbing company in a smaller market with a clean GBP and a solid existing site has different needs than one in a large metro competing against 30 active plumbing SEO campaigns. Every dollar invested in plumbing SEO should be measurable against booked calls and cost per booked call. If we cannot show a clear line from marketing spend to calls on your dispatch board, the spend is not justified. The audit and roadmap phase gives you a clear picture of what your market requires and what the investment looks like before you commit to implementation."
           },
           {
             question: "Do you guarantee plumbing SEO rankings?",
-            answer: "No. Any agency that guarantees specific ranking positions is either misleading you or making a promise they have no ability to keep. Google controls its algorithm. We do not. What we control — and what we are accountable for — is execution quality: technical foundation, GBP improvement, review velocity systems, link building, and service cluster content. Those inputs, done correctly and consistently, produce ranking improvements in virtually every market we operate in. We measure success in booked calls, booking rate, and cost per booked call — not in rank position fluctuations that can swing 3 positions on any given day and mean nothing on their own."
+            answer: "No. Any agency that guarantees specific ranking positions is either misleading you or making a promise they have no ability to keep. Google controls its algorithm. We do not. What we control and are accountable for is execution quality: technical foundation, GBP work, review velocity systems, link building, and service cluster content. Those inputs, done correctly and consistently, produce ranking improvements in virtually every market we operate in. We measure success in booked calls, booking rate, and cost per booked call, not in rank position fluctuations that can swing 3 positions on any given day and mean nothing on their own."
           },
           {
             question: "What if we already have some organic rankings for plumbing searches?",
-            answer: "Existing rankings are an asset we build on, not something we reset. If your plumbing company already ranks for some searches, the audit phase identifies which rankings are stable and producing calls, which are fragile and at risk, and which service areas and keywords have significant untapped opportunity. A common pattern we see: a plumbing company has decent rankings for 2 or 3 broad service terms but almost no visibility for high-value searches like 'slab leak detection near me,' 'tankless water heater installation,' or specific service area combinations. The opportunity is usually in the gaps — the specific, high-intent searches that generic plumbing pages miss entirely."
-          },
-          {
-            question: "How do you measure the success of plumbing SEO?",
-            answer: "We measure against the numbers that matter on a plumbing operator's dispatch board: booked calls, answer rate, booking rate, cost per booked call, and source-level call attribution. Rankings are a leading indicator, not a success metric. Monthly reporting includes ranking movement for target keywords and service areas, GBP performance metrics — calls, direction requests, and profile interactions — review velocity, and call tracking data tied to organic search. If rankings are moving but booked calls are not, we investigate the conversion gap and address it before scaling volume."
+            answer: "Existing rankings are an asset we build on, not something we reset. The audit phase identifies which rankings are stable and producing calls, which are fragile and at risk, and which service areas and keywords have significant untapped opportunity. A common pattern: a plumbing company has decent rankings for 2 or 3 broad service terms but almost no visibility for high-value searches like 'slab leak detection near me,' 'tankless water heater installation,' or specific service area combinations. The opportunity is usually in the gaps, the specific, high-intent searches that generic plumbing pages miss entirely."
           }
         ]
       },
       {
-        category: "Eligibility & Fit",
+        category: "Process & Delivery",
         items: [
           {
-            question: "Do you work with multiple plumbing companies in the same market?",
-            answer: "No. We take one plumbing client per service area. When you work with DemandStream, your direct competitors in that market do not. This is a deliberate model. It keeps our incentives aligned with yours and makes sure the strategy we build is designed to put your company ahead — not split across two or three competitors in the same ZIP codes. If your market is available, it is worth finding out before a competitor does."
-          },
-          {
-            question: "Can you take over from another SEO provider?",
-            answer: "Yes. Many of our plumbing clients come to us after working with generalist agencies that produced rankings without revenue, or activity without transparency. We start with a full audit of what exists — what is working, what is not, and what may have been done that needs correction. We do not approach this with blame toward the previous agency. We assess the baseline, identify the gaps, and build from what is there. If there is ranking equity worth preserving, we preserve it. If there is work that needs to be corrected — thin service pages, citation inconsistencies, a mismanaged GBP — we address it in the foundation phase."
-          },
-          {
-            question: "What size plumbing companies do you typically work with?",
-            answer: "We work with plumbing companies running 2 trucks through multi-location operations. The common thread is not size — it is mindset. The plumbing operators who see the strongest results are the ones who treat marketing as an investment aligned to operations, not an expense that should produce immediate returns. Single-truck owner-operators can benefit from plumbing SEO, but the ROI math works best when there is enough dispatch capacity to handle increasing call volume."
-          },
-          {
             question: "How do you handle communication and reporting?",
-            answer: "You receive a monthly report that covers what actually matters on your dispatch board: booked calls by source, ranking movement for your target plumbing keywords, GBP performance metrics — calls, direction requests, and photo views — and review velocity. No vanity dashboards. No impressions graphs. The numbers that connect back to revenue. Beyond monthly reports, we communicate proactively. If something shifts in your rankings, if a competitor runs a review campaign, or if a Google update affects your visibility, you hear from us before it shows up as a problem in your call volume."
+            answer: "You receive a monthly report that covers what matters on your dispatch board: booked calls by source, ranking movement for your target plumbing keywords, GBP performance metrics, calls, direction requests, and photo views, and review velocity. No vanity dashboards. No impressions graphs. Beyond monthly reports, we communicate proactively. If something shifts in your rankings, if a competitor runs a review campaign, or if a Google update affects your visibility, you hear from us before it shows up as a problem in your call volume."
+          },
+          {
+            question: "What access do you need from us?",
+            answer: "To get started, we need admin access to your Google Business Profile, your website CMS or hosting credentials, and your Google Search Console and Analytics accounts. If call tracking is not already set up, we implement it in the first 30 days. On the plumbing side, we ask for real job photos from water heater installs, drain cleaning jobs, and slab leak repairs on an ongoing basis. Stock images do not perform on GBP. Real job photos do. We make the process straightforward so it doesn't add overhead to your office or your techs."
+          },
+          {
+            question: "What is your content process for plumbing SEO?",
+            answer: "Every page we write is built around a specific plumbing search intent, not repurposed content from a generic contractor template. A water heater replacement page is written differently than a slab leak detection page, because the caller is different, the urgency level is different, and the conversion path is different. We write service pages, city pages, and supporting blog content. All content goes through a plumbing-specific review before it goes live. If a page could rank for HVAC with a find-and-replace, it is not doing its job for your plumbing company."
+          },
+          {
+            question: "How do you build links for plumbing companies?",
+            answer: "Link building for plumbing SEO focuses on trade relevance and geographic relevance, not raw domain authority. A link from the Plumbing-Heating-Cooling Contractors Association (PHCC), a regional plumbing supplier directory, a local Chamber of Commerce, or a community publication carries more weight for a plumbing company's local rankings than a generic high-authority link from an unrelated industry. We also prioritize citation consistency across all major data aggregators and plumbing-relevant directories. Clean NAP data validates your business identity across local search, which directly supports both Maps and organic rankings."
           }
         ]
       },
@@ -389,20 +385,20 @@ export const plumbingSEOConfig: ServicePageConfig = {
         category: "Plumbing SEO vs. Paid Ads",
         items: [
           {
-            question: "Should I run plumbing SEO or Google Ads?",
-            answer: "Both, ideally — but with different expectations for each. Google Ads delivers immediate visibility for emergency plumbing searches. If someone searches 'emergency plumber near me' right now, a well-run Google Ads campaign can put you in front of that caller today. Plumbing SEO cannot do that in week one. What plumbing SEO does that paid ads cannot: it builds a compounding asset. Rankings you earn in month 4 keep producing calls in month 14 without additional spend. The optimal strategy for most plumbing companies is paid ads during the SEO ramp-up, then a rebalanced mix as organic visibility builds."
+            question: "Should I run SEO or Google Ads for my plumbing company?",
+            answer: "Both, ideally, but with different expectations for each. Google Ads delivers immediate visibility for emergency plumbing searches. Plumbing SEO builds a compounding asset. Rankings you earn in month 4 keep producing calls in month 14 without additional spend. For drain cleaning, water heater replacement, and planned plumbing work, organic rankings and Map Pack visibility consistently outperform paid placements in click-through rate and trust signals. The right strategy for most plumbing companies is paid ads during the SEO ramp-up, then a rebalanced mix as organic visibility builds."
           },
           {
-            question: "How is plumbing SEO different from running Google Ads?",
-            answer: "Paid ads generate calls while the campaign is running. When the budget stops, the calls stop. Plumbing SEO generates calls that compound over time. Rankings built in month 3 continue driving booked calls in month 18, month 24, and beyond — without proportional increases in spend. The two are not mutually exclusive. Paid ads are often the right strategy during the ramp-up phase of an SEO campaign, especially for emergency plumbing searches where immediate Map Pack or top-of-page visibility matters. SEO and paid ads work better together than either does alone. But the long-term economics of plumbing SEO — compounding visibility, lower cost per booked call over time, and protection against paid competition — make it the more durable investment."
+            question: "How do you measure the success of plumbing SEO?",
+            answer: "We measure against the numbers that matter on a plumbing operator's dispatch board: booked calls, answer rate, booking rate, cost per booked call, and source-level call attribution. Rankings are a leading indicator, not a success metric. Monthly reporting includes ranking movement for target keywords and service areas, GBP performance metrics, review velocity, and call tracking data tied to organic search. If rankings are moving but booked calls are not, we investigate the conversion gap and address it before scaling volume."
           },
           {
-            question: "What is your content creation process for plumbing SEO?",
-            answer: "Every page we write is built around a specific plumbing search intent — not repurposed content from a generic contractor template. A water heater replacement page is written differently than a slab leak detection page, because the caller is different, the urgency level is different, and the conversion path is different. We write service pages, city pages, and supporting blog content. All content goes through a plumbing-specific review before it goes live. We do not publish pages that read like they could belong to any contractor in any trade. If a page could rank for HVAC with a find-and-replace, it is not doing its job for your plumbing company."
+            question: "Do you work with multiple plumbing companies in the same market?",
+            answer: "No. We take one plumbing client per service area. When you work with DemandStream, your direct competitors in that market do not. This keeps our incentives aligned with yours and keeps the strategy we build focused on putting your company ahead. If your market is available, it is worth finding out before a competitor does. We take on a limited number of new plumbing clients at any given time, and availability varies by market."
           },
           {
-            question: "How do you build links for plumbing companies?",
-            answer: "Link building for plumbing SEO focuses on trade relevance and geographic relevance — not raw domain authority. A link from the Plumbing-Heating-Cooling Contractors Association (PHCC), a regional plumbing supplier directory, a local Chamber of Commerce, or a community publication carries more weight for a plumbing company's local rankings than a generic high-DA link from an unrelated industry. We also prioritize citation consistency across all major data aggregators and plumbing-relevant directories. Clean NAP data validates your business identity across local search, which directly supports both Maps and organic rankings."
+            question: "Can you take over from another SEO provider?",
+            answer: "Yes. Many of our plumbing clients come to us after working with generalist agencies that produced rankings without revenue, or activity without transparency. We start with a full audit of what exists, what is working, what is not, and what may need correction. If there is ranking equity worth preserving, we preserve it. If there is work that needs to be corrected, thin service pages, citation inconsistencies, a mismanaged GBP, we address it in the foundation phase."
           }
         ]
       }
