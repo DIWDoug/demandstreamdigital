@@ -52,17 +52,20 @@ const HVACFacebookMainContent = () => {
               {
                 title: "Install & Replacement Campaigns",
                 body: "We structure campaigns around the specific replacement decisions your customers are weighing. AC replacement and upgrade promotions, furnace installation campaigns, heat pump transition messaging, and high-efficiency system offers with financing. Messaging focuses on financing options, energy savings, warranty coverage, and time-limited promotions.",
-                bullets: ["AC replacement and upgrade promotions", "Furnace installation campaigns", "Heat pump transition messaging", "High-efficiency system offers with financing"]
+                bullets: ["AC replacement and upgrade promotions", "Furnace installation campaigns", "Heat pump transition messaging", "High-efficiency system offers with financing"],
+                closing: "Replacement decisions take time — Facebook creates the touchpoints that move homeowners from research to a booked call."
               },
               {
                 title: "Retargeting Non-Booked Visitors",
                 body: "Most website visitors leave without booking. Retargeting brings them back. A homeowner who visited your heat pump page last week and then sees a financing offer in their feed is far closer to booking than a cold impression.",
-                bullets: ["Install page visitors", "Financing page visitors", "Maintenance plan page visitors", "Abandoned form users"]
+                bullets: ["Install page visitors", "Financing page visitors", "Maintenance plan page visitors", "Abandoned form users"],
+                closing: "A homeowner who has already visited your site converts at a significantly higher rate than a cold audience — retargeting captures that value instead of letting it leave."
               },
               {
                 title: "Maintenance Plan Growth",
                 body: "Facebook supports recurring revenue by promoting your maintenance offering to past customers and look-alike audiences. Maintenance plan growth stabilizes revenue in shoulder seasons when emergency volume drops and install pipelines are still building.",
-                bullets: ["Annual maintenance agreements", "Seasonal tune-up promotions", "Membership program offers"]
+                bullets: ["Annual maintenance agreements", "Seasonal tune-up promotions", "Membership program offers"],
+                closing: "Maintenance plan revenue stabilizes a business that would otherwise swing with emergency call volume — Facebook is the most cost-effective channel for growing that base."
               }
             ].map((card, i) => (
               <div key={i} className="bg-surface-elevated border border-border rounded-xl p-6">
@@ -76,6 +79,7 @@ const HVACFacebookMainContent = () => {
                   ))}
                 </ul>
                 <p className="text-sm text-text-secondary leading-relaxed">{card.body}</p>
+                <p className="text-sm text-text-secondary leading-relaxed mt-3">{card.closing}</p>
               </div>
             ))}
           </div>
