@@ -5,21 +5,21 @@ const PlumbingLinkedInMainContent = () => {
   return (
     <>
       {/* SECTION 03 — WHY LINKEDIN MATTERS */}
-      <section id="why-linkedin" className="py-20 lg:py-28 bg-white scroll-mt-32">
+      <section id="why-linkedin" className="py-20 lg:py-28 bg-surface-light scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Most Plumbing Companies Ignore LinkedIn. That Creates Opportunity.
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-4 max-w-3xl">
+            <p className="text-text-secondary leading-relaxed mb-4 max-w-3xl">
               Commercial plumbing decisions are not made by homeowners. They are made by the people responsible for keeping buildings operational — property managers who oversee multi-unit portfolios, facility directors who manage maintenance budgets across multiple locations, and operations leaders who sign service agreements with vendors they trust. These buyers are not typing "plumber near me" into Google. They are making decisions through professional networks and existing vendor relationships.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-10 max-w-3xl">
+            <p className="text-text-secondary leading-relaxed mb-10 max-w-3xl">
               LinkedIn is the only advertising platform built around professional role and company data. That means you can target a facility director at a 50-location commercial real estate portfolio within your service radius — not a broad homeowner audience that may or may not include anyone with commercial plumbing authority. While every other plumbing company in your market is competing for the same residential search clicks, LinkedIn lets you build commercial relationships in a channel where the competition is nearly absent.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-                <h3 className="font-bold text-gray-900 mb-4">Decision-Maker Roles You Can Reach</h3>
+              <div className="bg-surface-elevated border border-border rounded-xl p-8">
+                <h3 className="font-bold text-foreground mb-4">Decision-Maker Roles You Can Reach</h3>
                 <ul className="space-y-3">
                   {[
                     "Property managers",
@@ -29,16 +29,16 @@ const PlumbingLinkedInMainContent = () => {
                     "Multi-location retail and restaurant operators",
                     "HOA and community management companies"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-text-secondary">
                       <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="bg-gray-50 rounded-xl p-8 border border-gray-200">
-                <h3 className="font-bold text-gray-900 mb-4">What LinkedIn Targeting Enables</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+              <div className="bg-surface-elevated border border-border rounded-xl p-8">
+                <h3 className="font-bold text-foreground mb-4">What LinkedIn Targeting Enables</h3>
+                <p className="text-text-secondary text-sm leading-relaxed">
                   LinkedIn's job title, company size, industry, and geography filters let you build an audience of the exact people who control commercial plumbing budgets in your market. No wasted residential impressions. No broad interest targeting that may or may not reach anyone relevant. Every dollar in a LinkedIn campaign reaches someone who could become a contract — and a single commercial maintenance agreement with a multi-building portfolio operator can produce more annual booked calls than most residential search campaigns.
                 </p>
               </div>
@@ -48,13 +48,13 @@ const PlumbingLinkedInMainContent = () => {
       </section>
 
       {/* SECTION 04 — CAMPAIGN STRATEGY */}
-      <section id="campaign-strategy" className="py-20 lg:py-28 bg-[#f9f9f9] scroll-mt-32">
+      <section id="campaign-strategy" className="py-20 lg:py-28 bg-background scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">
               Commercial Plumbing Campaign Strategy
             </h2>
-            <p className="text-lg text-gray-600 mb-10">Three campaign types that build recurring revenue and long-cycle contract opportunities.</p>
+            <p className="text-lg text-text-secondary mb-10">Three campaign types that build recurring revenue and long-cycle contract opportunities.</p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -94,18 +94,18 @@ const PlumbingLinkedInMainContent = () => {
                   closing: "Tighter targeting produces a lower cost per qualified commercial lead than any broad awareness campaign. The audience is smaller, but every person in it has the authority to sign the contract you want."
                 }
               ].map((card, i) => (
-                <div key={i} className="bg-white border border-gray-200 rounded-xl p-7 flex flex-col">
-                  <h3 className="font-bold text-gray-900 mb-3">{card.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{card.body}</p>
+                <div key={i} className="bg-surface-elevated border border-border rounded-xl p-7 flex flex-col">
+                  <h3 className="font-bold text-foreground mb-3">{card.title}</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed mb-4">{card.body}</p>
                   <ul className="space-y-2 mb-4">
                     {card.bullets.map((b, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
+                      <li key={j} className="flex items-start gap-2 text-sm text-text-secondary">
                         <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                         {b}
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs text-gray-500 italic mt-auto">{card.closing}</p>
+                  <p className="text-xs text-text-muted italic mt-auto">{card.closing}</p>
                 </div>
               ))}
             </div>
@@ -175,22 +175,22 @@ const PlumbingLinkedInMainContent = () => {
       </section>
 
       {/* SECTION 06 — CREATIVE AND AUDIENCE */}
-      <section className="py-20 lg:py-28 bg-white scroll-mt-32">
+      <section className="py-20 lg:py-28 bg-background scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Creative and Audience Strategy for Commercial Plumbing LinkedIn Campaigns
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-10 max-w-3xl">
+            <p className="text-text-secondary leading-relaxed mb-10 max-w-3xl">
               LinkedIn performance is driven by credibility, not creativity. The commercial decision-makers you are targeting are professional buyers — they evaluate vendors on demonstrated competence, compliance, and reliability. The creative that performs best on LinkedIn is the creative that looks most like proof: case studies, project documentation, certifications, and the kind of professional language that signals you understand commercial plumbing at scale.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-bold text-gray-900 mb-3">Creative</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <h3 className="font-bold text-foreground mb-3">Creative</h3>
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
                   Commercial plumbing creative should communicate scale, compliance, and reliability — not urgency. A property manager evaluating vendors does not need to be alarmed. They need to be convinced that your company handles commercial work professionally and shows up consistently.
                 </p>
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">What performs:</p>
+                <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3">What performs:</p>
                 <ul className="space-y-2">
                   {[
                     "Professional photography from completed commercial projects",
@@ -199,7 +199,7 @@ const PlumbingLinkedInMainContent = () => {
                     "Compliance and certification messaging: licensed, bonded, permit-compliant, backflow-certified",
                     "Content that speaks the language of commercial buyers — reliability, operational continuity, code compliance"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                       <span className="text-cta mt-0.5 shrink-0">&#10003;</span>
                       {item}
                     </li>
@@ -207,11 +207,11 @@ const PlumbingLinkedInMainContent = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-3">Audience</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <h3 className="font-bold text-foreground mb-3">Audience</h3>
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
                   LinkedIn audience construction is where the platform earns its value. The same targeting precision that makes LinkedIn more expensive than Facebook display is also what makes it the only channel that can reliably reach commercial decision-makers within your service area.
                 </p>
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">How we build audiences:</p>
+                <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-3">How we build audiences:</p>
                 <ul className="space-y-2">
                   {[
                     "Job title targeting within your service radius: facility directors, property managers, operations managers, building owners",
@@ -221,7 +221,7 @@ const PlumbingLinkedInMainContent = () => {
                     "Retargeting pools from LinkedIn company page visitors and content engagers",
                     "Seniority-level filters to reach people with contract-signing authority"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
                       <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
                       {item}
                     </li>
@@ -266,13 +266,13 @@ const PlumbingLinkedInMainContent = () => {
       </section>
 
       {/* SECTION 08 — SYSTEM INTEGRATION */}
-      <section className="py-20 lg:py-28 bg-white scroll-mt-32">
+      <section className="py-20 lg:py-28 bg-surface-light scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               LinkedIn Reinforces the Full Plumbing Growth System
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-10 max-w-3xl">
+            <p className="text-text-secondary leading-relaxed mb-10 max-w-3xl">
               LinkedIn does not replace search or SEO — it reaches the commercial decision-makers those channels cannot. Search captures the residential homeowner already in crisis. SEO earns the organic positions that appear when homeowners search for plumbing services. LinkedIn targets the property manager who is not searching Google at all — who is making vendor decisions through professional channels that search advertising has no access to. All three have to run together to cover the full market.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -281,13 +281,13 @@ const PlumbingLinkedInMainContent = () => {
                 { channel: "SEO", desc: "Builds long-term organic authority for residential and commercial search queries. Every page that ranks reduces the cost per booked call over time and compounds across the life of the campaign." },
                 { channel: "LinkedIn", desc: "Builds commercial contract pipeline. Reaches property managers and facility directors before they put out a bid — in a professional channel where competitors are largely absent and relationship-building happens before the buying decision." }
               ].map((col, i) => (
-                <div key={i} className="border border-gray-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">{col.channel}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{col.desc}</p>
+                <div key={i} className="bg-surface-elevated border border-border rounded-xl p-6">
+                  <h3 className="font-bold text-foreground mb-2">{col.channel}</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed">{col.desc}</p>
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-600 text-sm max-w-3xl mx-auto">
+            <p className="text-center text-text-secondary text-sm max-w-3xl mx-auto">
               When residential emergency volume and commercial contract revenue run together, the business operates with a stability that either channel alone cannot produce. LinkedIn is what builds the commercial side of that equation.
             </p>
           </div>

@@ -25,8 +25,11 @@ const PlumbingLinkedInFitExclusivity = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3 text-center">
             Is Plumbing LinkedIn Advertising Right for Your Company?
           </h2>
-          <p className="text-text-secondary text-center mb-10 max-w-2xl mx-auto">
+          <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
             LinkedIn works best for plumbing companies with the capacity and interest to pursue commercial work alongside residential.
+          </p>
+          <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
+            Plumbing LinkedIn advertising is not the right channel for every operator. It is built for companies with commercial capability and a genuine interest in contract-based recurring revenue. If your business runs entirely on residential emergency calls, LinkedIn will not move your dispatch board. If you have commercial capacity or are building toward it, this is one of the most underused growth channels in the trade.
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white/5 border border-green-500/20 rounded-xl p-6">
