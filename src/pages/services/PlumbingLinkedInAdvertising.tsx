@@ -19,7 +19,7 @@ const anchorItems = [
 
 const metaTitle = "Plumbing LinkedIn Advertising for Commercial Contracts and Service Agreements | DemandStream";
 const metaDescription = "LinkedIn advertising for plumbing companies targeting commercial contracts and facility maintenance agreements. Reach decision-makers in your service area.";
-const canonicalUrl = `${SITE_URL}/plumbing-linkedin-advertising/`;
+const canonicalUrl = `${SITE_URL}/plumbing-linkedin-advertising`;
 
 const PlumbingLinkedInAdvertising = () => {
   const pageSchema = {

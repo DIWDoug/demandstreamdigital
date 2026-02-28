@@ -34,7 +34,7 @@ const anchorItems = [
 
 const metaTitle = "Plumbing Search Advertising Built to Drive More Booked Service Calls | DemandStream Digital";
 const metaDescription = "Plumbing search ads built around booked calls, not clicks. Campaign structure, service area control, and budget allocation tied to cost per booked call.";
-const canonicalUrl = `${SITE_URL}/plumbing-search-ads/`;
+const canonicalUrl = `${SITE_URL}/plumbing-search-ads`;
 
 const PlumbingSearchAds = () => {
   const pageSchema = {

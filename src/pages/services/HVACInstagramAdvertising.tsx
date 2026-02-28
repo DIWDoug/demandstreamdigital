@@ -19,7 +19,7 @@ const anchorItems = [
 
 const metaTitle = "HVAC Instagram Advertising for Brand Authority and Replacement Install Demand | DemandStream";
 const metaDescription = "HVAC Instagram ads built for brand authority and replacement install demand. Visual campaigns tied to booked revenue through ServiceTitan integration.";
-const canonicalUrl = `${SITE_URL}/hvac-instagram-advertising/`;
+const canonicalUrl = `${SITE_URL}/hvac-instagram-advertising`;
 
 const HVACInstagramAdvertising = () => {
   const pageSchema = {
@@ -43,14 +43,14 @@ const HVACInstagramAdvertising = () => {
         "name": "HVAC Instagram Advertising",
         "provider": { "@type": "HVACBusiness", "name": "DemandStream Digital" },
         "areaServed": "United States",
-        "url": "https://demandstreamdigital.com/hvac-instagram-advertising/"
+        "url": "https://demandstreamdigital.com/hvac-instagram-advertising"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://demandstreamdigital.com/" },
-          { "@type": "ListItem", "position": 2, "name": "HVAC Paid Advertising", "item": "https://demandstreamdigital.com/hvac-paid-advertising/" },
-          { "@type": "ListItem", "position": 3, "name": "HVAC Instagram Advertising", "item": "https://demandstreamdigital.com/hvac-instagram-advertising/" }
+          { "@type": "ListItem", "position": 2, "name": "HVAC Paid Advertising", "item": "https://demandstreamdigital.com/hvac-paid-advertising" },
+          { "@type": "ListItem", "position": 3, "name": "HVAC Instagram Advertising", "item": "https://demandstreamdigital.com/hvac-instagram-advertising" }
         ]
       }
     ]

@@ -196,6 +196,13 @@ export default {
 
     const canonicalHost = env.CANONICAL_HOST || DEFAULT_CANONICAL_HOST;
 
+    // Universal trailing-slash 301: redirect /foo/ -> /foo (except root /)
+    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+      const dest = new URL(url.toString());
+      dest.pathname = url.pathname.replace(/\/+$/, "");
+      return redirect301(env, dest.toString(), "trailing-slash");
+    }
+
     if (host === "dialedinweb.com") {
       const dest = new URL(url.toString());
       dest.hostname = canonicalHost;
