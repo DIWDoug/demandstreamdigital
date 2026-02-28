@@ -11,8 +11,8 @@ import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/
 const anchorItems = [
   { label: "Why LinkedIn", href: "#why-linkedin" },
   { label: "Campaign Strategy", href: "#campaign-strategy" },
+  { label: "Commercial vs Residential", href: "#commercial-vs-residential" },
   { label: "Tracking", href: "#tracking" },
-  { label: "Integration", href: "#integration" },
   { label: "Fit", href: "#fit" },
   { label: "Get Started", href: "#contact" },
 ];
