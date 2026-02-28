@@ -27,7 +27,7 @@ const services: Service[] = [
     icon: MousePointerClick,
     title: "Paid Advertising",
     description: "More than Google Ads. We run a connected paid strategy: Google Ads, retargeting with AdRoll, and social ads on Facebook and Instagram. Built to capture demand, follow up on missed calls, and keep your name in front of people who searched but didn't book.",
-    href: "/plumbing-paid-advertising",
+    href: "/hvac-and-plumbing-paid-ads",
   },
   {
     icon: PenTool,

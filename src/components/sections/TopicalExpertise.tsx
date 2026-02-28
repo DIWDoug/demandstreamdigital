@@ -9,28 +9,30 @@ const industries = [
     icon: Wrench,
     title: "Plumbing",
     summary: "Marketing built for plumbing companies, from drain cleaning to full repiping. We help you rank, get found, and book more jobs. Also available for multi-location operators.",
+    ctaHref: "/plumbing-seo",
     services: [
-      "Plumbing SEO",
-      "Plumbing Web Design",
-      "Plumbing Google Maps / GBP",
-      "Plumbing PPC",
-      "Plumbing Content Marketing",
-      "Plumbing Email Marketing",
-      "Plumbing Reputation Management",
+      { label: "Plumbing SEO", href: "/plumbing-seo" },
+      { label: "Plumbing Web Design", href: "/plumbing-and-hvac-web-design" },
+      { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
+      { label: "Plumbing PPC", href: "/plumbing-paid-advertising" },
+      { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
+      { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
+      { label: "Plumbing Reporting", href: "/plumbing-reporting" },
     ],
   },
   {
     icon: Flame,
     title: "HVAC",
     summary: "Marketing built around HVAC seasonality, service calls, and install revenue. Built to keep your schedule full year-round.",
+    ctaHref: "/hvac-seo",
     services: [
-      "HVAC SEO",
-      "HVAC Web Design",
-      "HVAC Google Maps / GBP",
-      "HVAC PPC",
-      "HVAC Content Marketing",
-      "HVAC Email Marketing",
-      "HVAC Reputation Management",
+      { label: "HVAC SEO", href: "/hvac-seo" },
+      { label: "HVAC Web Design", href: "/plumbing-and-hvac-web-design" },
+      { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
+      { label: "HVAC PPC", href: "/hvac-paid-advertising" },
+      { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },
+      { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
+      { label: "HVAC Reporting", href: "/hvac-reporting" },
     ],
   },
 ];
@@ -114,23 +116,25 @@ const TopicalExpertise = () => {
                   <div className="overflow-hidden">
                     <div className="pt-4 border-t border-gray-200 space-y-0">
                       {industry.services.map((service, sIdx) => (
-                        <div
+                        <Link
                           key={sIdx}
-                          className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
+                          to={service.href}
+                          className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors hover:text-accent-blue ${
                             sIdx % 2 === 0 ? "bg-slate-50" : "bg-white"
                           }`}
+                          onClick={(e) => e.stopPropagation()}
                         >
                           <div className="w-1.5 h-1.5 rounded-full bg-accent-blue flex-shrink-0" />
-                          <span className="text-sm font-medium text-gray-900">
-                            {service}
+                          <span className="text-sm font-medium text-gray-900 hover:text-accent-blue transition-colors">
+                            {service.label}
                           </span>
-                        </div>
+                        </Link>
                       ))}
                     </div>
 
                     <div className="mt-5 pt-4 border-t border-gray-200">
                       <Link
-                        to="/contact"
+                        to={industry.ctaHref}
                         className="inline-flex items-center gap-1.5 text-cta hover:text-cta/80 text-sm font-semibold transition-colors"
                         onClick={(e) => e.stopPropagation()}
                       >
