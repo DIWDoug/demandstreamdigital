@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const channels = [
   {
     title: "Google Search Ads",
-    href: "/google-search-ads/",
+    href: "/plumbing-search-ads",
     bullets: [
       "High-intent keyword targeting for emergency and install searches",
       "Repair vs install campaign segmentation",
@@ -15,7 +15,7 @@ const channels = [
   },
   {
     title: "Local Services Ads (LSA)",
-    href: "/local-services-ads/",
+    href: "/hvac-and-plumbing-paid-ads",
     bullets: [
       "Pay-per-lead structure with Google Guarantee",
       "Budget pacing aligned to peak demand windows",
@@ -26,7 +26,7 @@ const channels = [
   },
   {
     title: "Microsoft / Bing Advertising",
-    href: "/microsoft-advertising/",
+    href: "/hvac-and-plumbing-paid-ads",
     bullets: [
       "Lower cost-per-click than Google in most markets",
       "Older homeowner demographic with higher install intent",
@@ -36,7 +36,7 @@ const channels = [
   },
   {
     title: "Facebook Advertising",
-    href: "/facebook-advertising/",
+    href: "/plumbing-facebook-advertising",
     bullets: [
       "Retargeting homeowners who visited but did not book",
       "Install and replacement promotion campaigns",
@@ -46,7 +46,7 @@ const channels = [
   },
   {
     title: "Instagram Advertising",
-    href: "/instagram-advertising/",
+    href: "/plumbing-instagram-advertising",
     bullets: [
       "Visual install and replacement job showcases",
       "Story-based retargeting sequences",
@@ -56,7 +56,7 @@ const channels = [
   },
   {
     title: "LinkedIn Advertising",
-    href: "/linkedin-advertising/",
+    href: "/plumbing-linkedin-advertising",
     bullets: [
       "Commercial HVAC targeting by industry and company size",
       "Property manager and facility director outreach",
@@ -66,7 +66,7 @@ const channels = [
   },
   {
     title: "Web Design",
-    href: "/web-design/",
+    href: "/plumbing-and-hvac-web-design",
     bullets: [
       "Landing pages built to convert paid traffic into booked calls",
       "Service-specific pages matched to ad campaign intent",

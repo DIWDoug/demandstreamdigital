@@ -51,7 +51,7 @@ const services: Service[] = [
     icon: Cpu,
     title: "AIO & GEO",
     description: "Optimize your content for AI-powered search engines and generative answer platforms. As Google SGE, ChatGPT, and Perplexity reshape how homeowners find contractors, we position your brand to appear in AI-generated answers — not just traditional search results.",
-    href: "/aio-geo",
+    href: "/ai-automation",
   },
   {
     icon: Bot,
