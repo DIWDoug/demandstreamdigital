@@ -75,7 +75,7 @@ const HVACLinkedInFitExclusivity = () => {
           <p className="text-text-secondary max-w-2xl mx-auto mb-4 leading-relaxed">
             When you work with DemandStream, your competitors don't. We take one HVAC client per service area. That keeps our incentives consistent with yours and means the LinkedIn strategy we build is focused entirely on putting you ahead, not shared with the shop down the street.
           </p>
-          <p className="text-text-secondary mb-8">If your market is available, it is worth finding out now.</p>
+          <p className="text-text-secondary mb-8">If your market is available, it's worth finding out now. If it isn't, we'll tell you that too.</p>
           <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
             Claim Your Territory Today
             <ArrowRight className="h-4 w-4" />
