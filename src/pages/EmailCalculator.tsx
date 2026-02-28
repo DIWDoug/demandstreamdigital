@@ -17,7 +17,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const emailCalculatorSchema = getCalculatorSchema({
   name: "Email Marketing ROI Calculator for Agencies",
   description: "Calculate email marketing revenue potential and ROI. Free calculator with 2024-2025 industry benchmarks for agencies.",
-  url: "https://dialedinweb.com/partner-tools/email-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/email-calculator",
   category: "BusinessApplication"
 });
 
@@ -177,33 +177,33 @@ const EmailCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web</title>
-        <meta name="description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/email-calculator" />
-        <meta name="keywords" content="email marketing calculator, email ROI calculator, open rate estimator, email campaign planner, agency email tool" />
+        <title>Email Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Forecast email campaign performance and ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/email-calculator" />
+        <meta name="keywords" content="email marketing calculator, email ROI calculator, open rate estimator, email campaign planner, plumbing HVAC email tool" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/email-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/email-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/email-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/email-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/email-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/email-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(emailCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web" />
-        <meta property="og:description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/email-calculator" />
+        <meta property="og:title" content="Email Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Forecast email campaign performance and ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/email-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/email-calculator.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/email-calculator.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Email Marketing Calculator for Agencies | Estimate List ROI, Open Rates & Revenue | Dialed-in Web" />
-        <meta name="twitter:description" content="Forecast email campaign performance and ROI with Dialed-in Web's calculator—designed for agencies offering white label email." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/email-calculator.jpg" />
+        <meta name="twitter:title" content="Email Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Forecast email campaign performance and ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/email-calculator.jpg" />
       </Helmet>
       
       <Header />

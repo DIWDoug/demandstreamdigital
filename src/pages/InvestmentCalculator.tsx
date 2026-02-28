@@ -18,7 +18,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const investmentCalculatorSchema = getCalculatorSchema({
   name: "Marketing Investment Planning Calculator for Agencies",
   description: "Estimate client marketing investments by service and channel. Free scoping tool for digital agencies.",
-  url: "https://dialedinweb.com/partner-tools/investment-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/investment-calculator",
   category: "BusinessApplication"
 });
 
@@ -267,33 +267,33 @@ const InvestmentCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web</title>
-        <meta name="description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/investment-calculator" />
-        <meta name="keywords" content="marketing budget calculator, agency investment planner, client budget estimator, digital marketing scoping tool" />
+        <title>Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
+        <meta name="keywords" content="marketing budget calculator, plumbing marketing investment, HVAC marketing planner, digital marketing budget estimator" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/investment-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/investment-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(investmentCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web" />
-        <meta property="og:description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/investment-calculator" />
+        <meta property="og:title" content="Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/investment-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/investment-calculator.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/investment-calculator.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marketing Investment Planning Calculator | Set Client Budgets by Channel & Service | Dialed-in Web" />
-        <meta name="twitter:description" content="Estimate client investments by service. Dialed-in Web's calculator helps agencies present clear, scalable marketing plans." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/investment-calculator.png" />
+        <meta name="twitter:title" content="Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/investment-calculator.png" />
       </Helmet>
       
       <Header />

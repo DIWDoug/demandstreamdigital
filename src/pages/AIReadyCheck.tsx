@@ -200,29 +200,29 @@ const AIReadyCheck = () => {
   return (
     <>
       <Helmet>
-        <title>White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web</title>
-        <meta name="description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
+        <title>AI Readiness Check for Plumbing & HVAC Websites | Demand Stream Digital</title>
+        <meta name="description" content="Is your plumbing or HVAC website ready for AI search? Run a free AI readiness audit and see exactly what to fix to stay visible." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
         <meta name="keywords" content="AI readiness check, LLM compatibility, AI visibility audit, AEO tool, answer engine optimization" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/ai-ready-check" />
-        <meta property="og:title" content="White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web" />
-        <meta property="og:description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/ai-ready-check" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
+        <meta property="og:title" content="AI Readiness Check for Plumbing & HVAC Websites | Demand Stream Digital" />
+        <meta property="og:description" content="Is your plumbing or HVAC website ready for AI search? Run a free AI readiness audit and see exactly what to fix to stay visible." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/ai-ready-check.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/ai-ready-check.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Label AI Readiness Check for Agencies | Wholesale Marketing Automation Insight by Dialed-in Web" />
-        <meta name="twitter:description" content="Dialed-in Web helps agencies assess AI readiness for marketing success. Offer this check under your brand. Start your AI audit now." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/ai-ready-check.jpg" />
+        <meta name="twitter:title" content="AI Readiness Check for Plumbing & HVAC Websites | Demand Stream Digital" />
+        <meta name="twitter:description" content="Is your plumbing or HVAC website ready for AI search? Run a free AI readiness audit and see exactly what to fix to stay visible." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/ai-ready-check.jpg" />
       </Helmet>
       
       <Header />

@@ -148,29 +148,29 @@ const PartnerTools = () => {
       <Helmet>
         <title>Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Demand Stream Digital</title>
         <meta name="description" content="Use Demand Stream Digital's calculators and tools to support SEO, PPC, and content strategy planning for your agency." />
-        <meta name="keywords" content="marketing agency tools, SEO calculators, PPC budget tools, agency proposal resources, white label marketing calculators" />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools" />
+        <meta name="keywords" content="plumbing marketing tools, HVAC marketing calculators, SEO cost estimator, PPC budget planner, local marketing ROI calculator" />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Demand Stream Digital" />
-        <meta property="og:description" content="Use Demand Stream Digital's calculators and tools to support SEO, PPC, and content strategy planning for your agency." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools" />
+        <meta property="og:title" content="Marketing Tools for Plumbing & HVAC Companies | Forecast ROI, SEO Costs & More | Demand Stream Digital" />
+        <meta property="og:description" content="Use Demand Stream Digital's calculators to plan SEO, paid ads, and content marketing for your plumbing or HVAC business." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/partner-tools.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/partner-tools.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Label Marketing Tools for Agencies | Forecast ROI, SEO Results, Budgets & More | Dialed-in Web" />
-        <meta name="twitter:description" content="Use Dialed-in Web's calculators and tools to support white label SEO, PPC, and content strategy planning for your agency." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/partner-tools.png" />
+        <meta name="twitter:title" content="Marketing Tools for Plumbing & HVAC Companies | Demand Stream Digital" />
+        <meta name="twitter:description" content="Use Demand Stream Digital's calculators to plan SEO, paid ads, and content marketing for your plumbing or HVAC business." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/partner-tools.png" />
       </Helmet>
       
       <Header />

@@ -20,7 +20,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const seoCalculatorSchema = getCalculatorSchema({
   name: "SEO Growth Forecast Calculator for Agencies",
   description: "Forecast organic traffic growth and SEO outcomes. Free calculator for agencies to plan and pitch local SEO campaigns.",
-  url: "https://dialedinweb.com/partner-tools/seo-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/seo-calculator",
   category: "BusinessApplication"
 });
 
@@ -548,33 +548,33 @@ const SEOCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web</title>
-        <meta name="description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/seo-calculator" />
-        <meta name="keywords" content="SEO calculator, local SEO cost estimator, organic traffic forecast, SEO pricing tool, agency SEO planner" />
+        <title>Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
+        <meta name="keywords" content="SEO calculator, local SEO cost estimator, plumbing SEO pricing, HVAC SEO cost, organic traffic forecast" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/seo-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/seo-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/seo-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web" />
-        <meta property="og:description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/seo-calculator" />
+        <meta property="og:title" content="Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/seo-calculator.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/seo-calculator.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SEO Growth Forecast Calculator for Agencies | Project Organic Traffic & Rankings | Dialed-in Web" />
-        <meta name="twitter:description" content="Forecast SEO outcomes and keyword growth. Dialed-in Web's calculator helps agencies pitch and plan scalable campaigns." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/seo-calculator.jpg" />
+        <meta name="twitter:title" content="Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/seo-calculator.jpg" />
       </Helmet>
       
       <Header />

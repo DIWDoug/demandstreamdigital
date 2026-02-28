@@ -16,7 +16,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const contentMarketingCalculatorSchema = getCalculatorSchema({
   name: "Content Marketing ROI Calculator for Agencies",
   description: "Calculate blog content value, traffic projections, and lead generation ROI. Free tool for content strategy planning.",
-  url: "https://dialedinweb.com/partner-tools/content-marketing-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/content-marketing-calculator",
   category: "BusinessApplication"
 });
 
@@ -184,33 +184,33 @@ const ContentMarketingCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web</title>
-        <meta name="description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <title>Content Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Estimate traffic and lead value from content campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(contentMarketingCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web" />
-        <meta property="og:description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/content-marketing-calculator" />
+        <meta property="og:title" content="Content Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Estimate traffic and lead value from content campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/content-marketing-calculator.jpg" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/content-marketing-calculator.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Content Marketing ROI Calculator | Plan Blog, Ebook, and SEO Content Value | Dialed-in Web" />
-        <meta name="twitter:description" content="Estimate traffic and lead value from content campaigns. Use Demand Stream Digital's calculator to support your proposals." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/content-marketing-calculator.jpg" />
+        <meta name="twitter:title" content="Content Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Estimate traffic and lead value from content campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/content-marketing-calculator.jpg" />
       </Helmet>
       
       <Header />
