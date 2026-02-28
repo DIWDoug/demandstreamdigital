@@ -98,7 +98,7 @@ const HVACFacebookMainContent = () => {
               { season: "Before Summer", body: "Build cooling demand in April and May before the first no-cool calls spike. Replacement campaigns run during this window convert at higher rates because homeowners are thinking ahead rather than reacting in the heat." },
               { season: "Before Winter", body: "Push furnace installation and heat pump campaigns in September and October. Homeowners who have been putting off a furnace replacement act when they start thinking about the first cold snap." },
               { season: "Shoulder Season", body: "Promote financing offers and maintenance plans during spring and fall when urgency is lower and homeowners have more time to research. This is when brand reinforcement compounds." },
-              { season: "Peak Competition", body: "Reinforce brand visibility during summer when every HVAC company is running ads. Consistent Facebook presence keeps your name in front of homeowners who may have searched a competitor first." }
+              { season: "Year-Round Retargeting", body: "Run retargeting continuously regardless of season. Homeowners who visited your install or replacement pages and didn't book are in an active decision window that doesn't follow a calendar. A consistent retargeting presence ensures your company is the last brand they see before they pick up the phone — not a competitor's." }
             ].map((item, i) => (
               <div key={i} className="bg-white/5 border border-border/40 rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-2">{item.season}</h3>
