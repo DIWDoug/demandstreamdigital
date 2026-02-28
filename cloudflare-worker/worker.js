@@ -224,6 +224,13 @@ export default {
       const originResp = await fetchFromOrigin(request, env, url.toString());
       // Only apply to actual static assets (not API/non-html)
       if (STATIC_ASSET_PATTERN.test(pathname)) {
+        // PDFs: inject X-Robots-Tag: noindex so Google ignores them
+        if (/\.pdf$/i.test(pathname)) {
+          const assetResp = applyAssetCachingHeaders(originResp);
+          const h = new Headers(assetResp.headers);
+          h.set("x-robots-tag", "noindex, nofollow");
+          return addDebug(new Response(assetResp.body, { status: assetResp.status, statusText: assetResp.statusText, headers: h }), env, "pdf-noindex");
+        }
         return addDebug(applyAssetCachingHeaders(originResp), env, "asset-cache");
       }
       return originResp;
