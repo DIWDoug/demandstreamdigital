@@ -180,7 +180,7 @@ const CaseStudies = () => {
                 <div className="text-sm text-muted-foreground">Case Studies</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-xl border border-border/50 backdrop-blur-sm">
-                <div className="text-3xl md:text-4xl font-bold text-green-500">{stats.avgGrowth}%+</div>
+                <div className="text-3xl md:text-4xl font-bold text-accent-blue">{stats.avgGrowth}%+</div>
                 <div className="text-sm text-muted-foreground">Avg Growth</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-xl border border-border/50 backdrop-blur-sm">
@@ -397,10 +397,10 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
           
           {/* ROI Highlight */}
           {study.roiHighlight && (
-            <div className="bg-gradient-to-r from-green-500/10 to-accent-blue/10 border border-green-500/20 rounded-lg p-3 mb-4">
+            <div className="bg-gradient-to-r from-accent-blue/10 to-accent-blue/5 border border-accent-blue/20 rounded-lg p-3 mb-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="text-center flex-1">
-                  <p className="text-lg font-bold text-green-500">{study.roiHighlight.roiRange}</p>
+                  <p className="text-lg font-bold text-accent-blue">{study.roiHighlight.roiRange}</p>
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wide">ROI</p>
                 </div>
                 <div className="w-px h-10 bg-border/50" />
@@ -538,10 +538,10 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
             
             {/* ROI Highlight */}
             {study.roiHighlight && (
-              <div className="bg-gradient-to-r from-green-500/10 to-accent-blue/10 border border-green-500/20 rounded-lg p-4 mb-6">
+              <div className="bg-gradient-to-r from-accent-blue/10 to-accent-blue/5 border border-accent-blue/20 rounded-lg p-4 mb-6">
                 <div className="flex items-center justify-around gap-4">
                   <div className="text-center">
-                    <p className="text-xl lg:text-2xl font-bold text-green-500">{study.roiHighlight.roiRange}</p>
+                    <p className="text-xl lg:text-2xl font-bold text-accent-blue">{study.roiHighlight.roiRange}</p>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide">ROI</p>
                   </div>
                   <div className="w-px h-12 bg-border/50" />
