@@ -278,7 +278,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
 
             <div>
               <label className={labelClass}>
-                Agency Monthly Revenue <span className="text-red-500">*</span>
+                Annual Business Revenue <span className="text-red-500">*</span>
               </label>
               <select
                 required

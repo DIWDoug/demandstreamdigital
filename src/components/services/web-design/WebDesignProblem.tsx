@@ -32,8 +32,8 @@ const WebDesignProblem = () => {
               <p className="text-text-secondary leading-relaxed mb-6">
                 Template builders, offshore agencies, and generalist web designers produce sites that pass visual inspection. They don't produce dispatch board results. The difference is intentional architecture — every page, every element, every load time decision made around a single outcome.
               </p>
-              <div className="p-4 rounded-xl bg-cta/5 border border-cta/20">
-                <p className="text-sm text-cta font-semibold leading-relaxed">
+              <div className="p-5 rounded-xl bg-accent-blue/8 border border-accent-blue/25">
+                <p className="text-lg md:text-xl text-accent-blue font-semibold leading-relaxed">
                   "A website is not a marketing asset. It's the foundation every other channel runs on. If it's broken, everything downstream costs more."
                 </p>
               </div>

@@ -46,11 +46,16 @@ const WebDesignDeliverables = () => {
             A DemandStream web build isn't a design project. It's a revenue infrastructure project. The design is how it looks. The architecture is what makes it perform.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40">
             {deliverables.map((item, i) => (
-              <div key={i} className="bg-background border border-border/60 rounded-xl p-5">
-                <p className="text-xs font-bold text-accent-blue uppercase tracking-widest mb-2">{item.label}</p>
-                <p className="text-text-secondary text-sm leading-relaxed">{item.body}</p>
+              <div key={i} className="bg-card p-6 lg:p-7 flex gap-4 items-start">
+                <div className="shrink-0 w-8 h-8 rounded-lg bg-accent-blue/10 flex items-center justify-center mt-0.5">
+                  <span className="text-accent-blue text-xs font-bold">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-foreground mb-1">{item.label}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.body}</p>
+                </div>
               </div>
             ))}
           </div>
