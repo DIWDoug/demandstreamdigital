@@ -70,7 +70,7 @@ const Blog = () => {
                 Strategies for <span className="text-cta">Scaling</span> Your Agency
               </h1>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
-                Expert perspectives on white-label fulfillment, local SEO, paid media, and building an agency that thrives.
+                Expert perspectives on local SEO, paid media, AI search, and growing your plumbing or HVAC business.
               </p>
               
               {/* Quick Stats */}

@@ -696,7 +696,7 @@ const BlogPostPage = () => {
                 <div className="mt-12 p-8 md:p-10 bg-cta/10 rounded-xl border border-cta/20 text-center">
                   <h3 className="text-2xl font-bold mb-3 text-foreground">Ready to Scale Your Agency?</h3>
                   <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-                    Let us handle your white-label fulfillment while you focus on growing your business.
+                    Let us handle your marketing while you focus on growing your business.
                   </p>
                   <Link to="/#contact">
                     <Button size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground font-medium">

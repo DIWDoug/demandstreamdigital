@@ -749,7 +749,7 @@ const SocialMediaROICalculator = () => {
                   Need Help Managing Social Media for Clients?
                 </h2>
                 <p className="text-text-secondary mb-8 max-w-xl mx-auto">
-                  We offer white-label social media management and paid social campaigns. Let us handle the execution while you maintain the client relationship.
+                  We offer social media management and paid social campaigns built specifically for plumbing and HVAC companies. Let us handle execution while you focus on booked jobs.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link 

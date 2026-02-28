@@ -801,7 +801,7 @@ const AIReadyCheck = () => {
               <div className="mt-12 bg-gradient-to-br from-cta/10 to-accent-blue/10 rounded-2xl p-8 border border-cta/30 text-center">
                 <h3 className="text-xl font-bold text-foreground mb-2">Need Help Optimizing for AI?</h3>
                 <p className="text-text-muted mb-6 max-w-lg mx-auto">
-                  Our white-label SEO and content services include AI Optimization as a core component. We help agencies deliver AI-ready websites to their clients.
+                  Our SEO and content services include AI Optimization as a core component. We help plumbing and HVAC companies get found in AI-powered search results.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
