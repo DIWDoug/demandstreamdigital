@@ -38,7 +38,7 @@ interface SEOHeadProps {
   ogType?: "website" | "article";
   noIndex?: boolean;
   schemaJson?: object | object[];
-  keywords?: string;
+  keywords?: string; // deprecated — kept for API compatibility but not rendered
   hrefLangs?: HrefLang[];
 }
 
@@ -72,7 +72,6 @@ const SEOHead = ({
       {/* ── Primary ── */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical} />
 
       {/* ── Robots ── */}
