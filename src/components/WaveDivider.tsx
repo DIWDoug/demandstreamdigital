@@ -4,6 +4,7 @@ interface WaveDividerProps {
   toColor?: string;
   variant?: 'wave' | 'curve' | 'tilt' | 'layered';
   flip?: boolean;
+  animated?: boolean;
 }
 
 const WaveDivider = ({ 
@@ -11,7 +12,8 @@ const WaveDivider = ({
   fromColor = 'hsl(var(--background))', 
   toColor = 'hsl(var(--surface-dark))',
   variant = 'wave',
-  flip = false
+  flip = false,
+  animated = false,
 }: WaveDividerProps) => {
   const isTop = position === 'top';
   
@@ -32,13 +34,20 @@ const WaveDivider = ({
   const getHeight = () => {
     switch (variant) {
       case 'tilt':
-        return '80px';
+        return animated ? '100px' : '80px';
       case 'layered':
-        return '70px';
+        return animated ? '90px' : '70px';
       default:
-        return '60px';
+        return animated ? '80px' : '60px';
     }
   };
+
+  // Animated morph path variants for the wave
+  const animPath1 = "M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z";
+  const animPath2 = "M0,40 C200,20 400,90 600,50 C800,10 1000,80 1200,40 L1200,120 L0,120 Z";
+  const animPath3 = "M0,70 C200,40 400,110 600,70 C800,30 1000,90 1200,50 L1200,120 L0,120 Z";
+
+  const animId = `wave-anim-${Math.random().toString(36).substr(2, 6)}`;
   
   return (
     <div 
@@ -54,15 +63,36 @@ const WaveDivider = ({
         className="w-full h-full"
         style={{ display: 'block' }}
       >
+        {animated && (
+          <defs>
+            <style>{`
+              @keyframes ${animId}-morph {
+                0%   { d: path("${animPath1}"); }
+                33%  { d: path("${animPath2}"); }
+                66%  { d: path("${animPath3}"); }
+                100% { d: path("${animPath1}"); }
+              }
+              @keyframes ${animId}-glow {
+                0%, 100% { opacity: 0.25; }
+                50%       { opacity: 0.55; }
+              }
+              .${animId}-main {
+                animation: ${animId}-morph 6s ease-in-out infinite;
+              }
+              .${animId}-shine {
+                animation: ${animId}-glow 3s ease-in-out infinite;
+              }
+            `}</style>
+          </defs>
+        )}
+
         {variant === 'layered' && (
           <>
-            {/* Background layer */}
             <path 
               d="M0,80 Q400,40 800,80 T1200,60 L1200,120 L0,120 Z"
               fill={isTop ? fromColor : toColor}
               opacity="0.3"
             />
-            {/* Middle layer */}
             <path 
               d="M0,70 Q350,100 700,60 T1200,70 L1200,120 L0,120 Z"
               fill={isTop ? fromColor : toColor}
@@ -70,11 +100,63 @@ const WaveDivider = ({
             />
           </>
         )}
+
+        {/* Trailing glow wave behind the main (animated only) */}
+        {animated && (
+          <path 
+            className={`${animId}-shine`}
+            d={animPath2}
+            fill={isTop ? fromColor : toColor}
+            opacity="0"
+          />
+        )}
+
         <path 
-          d={getPath()}
+          className={animated ? `${animId}-main` : undefined}
+          d={animated ? animPath1 : getPath()}
           fill={isTop ? fromColor : toColor}
         />
       </svg>
+
+      {/* Animated scroll-cue chevrons */}
+      {animated && (
+        <div
+          className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-0.5 pointer-events-none"
+          style={{
+            bottom: isTop ? 'auto' : '6px',
+            top: isTop ? '6px' : 'auto',
+            transform: `translateX(-50%) ${isTop ? 'rotate(180deg)' : ''}`,
+          }}
+        >
+          {[0, 1, 2].map((i) => (
+            <svg
+              key={i}
+              width="18"
+              height="10"
+              viewBox="0 0 18 10"
+              fill="none"
+              style={{
+                opacity: 0,
+                animation: `chevron-fade 1.8s ease-in-out ${i * 0.28}s infinite`,
+              }}
+            >
+              <path d="M1 1L9 9L17 1" stroke={toColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          ))}
+        </div>
+      )}
+
+      {/* Keyframes injected globally for chevrons */}
+      {animated && (
+        <style>{`
+          @keyframes chevron-fade {
+            0%   { opacity: 0; transform: translateY(-4px); }
+            40%  { opacity: 0.7; transform: translateY(0px); }
+            80%  { opacity: 0; transform: translateY(4px); }
+            100% { opacity: 0; }
+          }
+        `}</style>
+      )}
     </div>
   );
 };
