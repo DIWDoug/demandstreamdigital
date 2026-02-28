@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Facebook Advertising for Replacement and Membership Growth | DemandStream Digital";
-const metaDescription = "Plumbing Facebook advertising built to drive water heater replacement demand and grow membership plans. Track booked revenue through ServiceTitan. See how.";
+const metaDescription = "Plumbing Facebook ads that drive water heater replacement demand and grow maintenance memberships. Tracked through ServiceTitan to booked revenue.";
 const canonicalUrl = `${SITE_URL}/plumbing-facebook-advertising/`;
 
 const PlumbingFacebookAdvertising = () => {

@@ -10,7 +10,7 @@ const Privacy = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
         title="Privacy Policy | Demand Stream Digital"
-        description="Learn how Demand Stream Digital collects, uses, and protects your personal information. Our privacy policy covers GDPR, data protection, and cookie practices."
+        description="How Demand Stream Digital handles your data. Covers collection, usage, GDPR compliance, cookies, and your rights as a visitor or client."
         canonical="https://demandstreamdigital.com/privacy"
         ogImage="https://demandstreamdigital.com/og-images/privacy.jpg"
         keywords="privacy policy, GDPR, data protection, Demand Stream Digital privacy, cookies"

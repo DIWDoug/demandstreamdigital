@@ -6,7 +6,7 @@ export const aiAutomationConfig: ServicePageConfig = {
   slug: "ai-automation",
   title: "AI Automation",
   metaTitle: "AI Automation for Plumbing & HVAC Companies | Missed Call Recovery & Lead Follow-Up | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital builds AI-powered automation systems for plumbing and HVAC companies. Recover missed calls, re-engage cold leads, and follow up on estimates automatically. Book a strategy call.",
+  metaDescription: "Missed call recovery, estimate follow-up, and lead reactivation on autopilot. AI automation built specifically for plumbing and HVAC dispatch operations.",
   canonicalUrl: `${SITE_URL}/ai-automation`,
   keywords: "AI automation plumbing HVAC, missed call recovery, lead follow-up automation, AI chatbot plumbing, automated scheduling HVAC, CRM automation trades",
 

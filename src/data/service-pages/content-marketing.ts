@@ -6,7 +6,7 @@ export const contentMarketingConfig: ServicePageConfig = {
   slug: "content-marketing",
   title: "Content Marketing",
   metaTitle: "Content Marketing for Plumbing & HVAC | Blog Posts, Lead Magnets, SEO Copy | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital delivers SEO-driven content for plumbing and HVAC companies: blog posts, service pages, lead magnets, and more.",
+  metaDescription: "Blog posts, service pages, lead magnets, and SEO copy written specifically for plumbing and HVAC companies. Content that ranks and drives booked calls.",
   canonicalUrl: `${SITE_URL}/plumbing-content-marketing`,
 
   hero: {

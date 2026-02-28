@@ -32,7 +32,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Paid Advertising for Seasonal Demand Control | DemandStream Digital";
-const metaDescription = "Generic contractor PPC ignores HVAC seasonality. Our HVAC paid advertising is built around repair vs install segmentation, emergency capture, and cost per booked call. See how.";
+const metaDescription = "HVAC paid advertising built around seasonal demand, repair vs. install segmentation, and emergency capture. Track every dollar to cost per booked call.";
 const canonicalUrl = `${SITE_URL}/hvac-paid-advertising`;
 
 const HVACPaidAdvertising = () => {

@@ -1,0 +1,98 @@
+# Demand Stream Digital
+
+> Demand Stream Digital is a marketing company that works exclusively with plumbing and HVAC companies. We provide SEO, Google Maps optimization, paid advertising, content marketing, email marketing, AI automation, and web design, all built around generating more booked service calls. Our strategies are engineered around dispatch capacity, seasonal demand, and emergency service intent.
+
+Important notes:
+
+- Demand Stream Digital ONLY serves plumbing and HVAC companies. We do not work with other industries.
+- We are a direct-to-business company. Plumbing and HVAC operators hire us directly. We are not an agency for other agencies.
+- Our focus is on booked service calls as the primary KPI, not rankings, clicks, or impressions.
+- We integrate with field service platforms like ServiceTitan to track marketing spend to actual booked revenue.
+- All marketing strategies account for HVAC/plumbing-specific factors: seasonal demand shifts, emergency vs. planned service intent, repair vs. replacement segmentation, and dispatch capacity.
+- Demand Stream Digital is based in Dallas, Texas and serves plumbing and HVAC companies across the United States.
+
+## How We Work
+
+Demand Stream Digital operates on an exclusive market model. We only take one plumbing company and one HVAC company per metro market. This means our clients never compete against each other in the same search results. When we build SEO and paid advertising systems, we control the full strategy in that market without conflict of interest.
+
+Our marketing systems are built around the operational reality of running a plumbing or HVAC business:
+
+**Seasonal demand:** HVAC companies see massive demand shifts between cooling season (summer) and heating season (winter). Plumbing companies see spikes around freeze events, spring thaws, and water heater failures in cold months. Our campaigns adjust budgets, keywords, and messaging around these patterns automatically.
+
+**Emergency vs. planned service:** A homeowner with a burst pipe at 2am searches differently than someone planning a water heater replacement. We segment campaigns by intent type and match ad copy, landing pages, and call tracking to each.
+
+**Dispatch capacity:** If a plumbing company can only handle 15 service calls per day, spending money to generate 30 leads wastes budget and frustrates potential customers. We tie marketing spend to actual dispatch capacity so companies never overspend or underdeliver.
+
+**Revenue tracking:** We connect marketing channels to field service management platforms like ServiceTitan so every booked call, completed job, and dollar of revenue is attributed to the campaign that generated it. Plumbing and HVAC operators see cost per booked call, not cost per click.
+
+## Service Details
+
+### Local SEO
+Full local SEO systems for plumbing and HVAC companies. Includes on-page optimization (title tags, headers, content, internal linking), Google Business Profile management, citation building and cleanup across 60+ directories, local link building, content development, and rank tracking. Every SEO action is connected to a measurement system tracking booked service calls.
+
+### Plumbing SEO
+SEO built specifically for plumbing companies. Targets emergency queries ("burst pipe near me," "emergency plumber"), planned service queries ("water heater replacement cost"), and commercial queries ("commercial plumbing contractor"). Covers local pack optimization, service area page creation, and content marketing around plumbing-specific topics.
+
+### HVAC SEO
+HVAC-specific SEO accounting for seasonal search patterns. Targets no-cool emergency queries in summer, no-heat queries in winter, and install/replacement queries year-round. Includes local pack strategy, service area pages by city, and content marketing around HVAC-specific topics like AC maintenance, furnace repair, and system replacement.
+
+### Google Maps & GBP SEO
+Google Business Profile management including: profile optimization, review generation and response, citation building across local directories, weekly Google Posts, Q&A management, photo uploading with geo-tagging, and local pack ranking strategy. Focused on getting plumbing and HVAC companies into the top 3 map pack results.
+
+### Paid Advertising
+Multi-channel paid advertising including Google Search Ads, Google Local Service Ads (LSAs), Facebook Ads, Instagram Ads, LinkedIn Ads (for commercial), and programmatic display/CTV advertising. All campaigns structured around cost per booked call, not cost per click. Platform-specific strategies:
+
+- **Google Search:** Emergency intent capture, service segmentation, geo-targeting by service area
+- **Local Service Ads:** Google Guaranteed badge, pay-per-lead, verification management
+- **Facebook/Instagram:** Replacement demand generation (water heaters, AC systems), membership plan promotion, retargeting
+- **LinkedIn:** Commercial contract acquisition targeting property managers and facility directors
+- **Programmatic/CTV:** Brand awareness and replacement demand via AdRoll and Mountain platforms
+
+### AI Automation
+AI-powered automation for plumbing and HVAC operations:
+- **Missed call recovery:** AI contacts missed callers within minutes via text, captures their service need, and books them or routes them back to dispatch.
+- **Estimate follow-up:** Automatically follows up on unsold estimates with personalized messages at timed intervals.
+- **Cold lead reactivation:** Re-engages leads that went cold after initial contact, bringing them back into the pipeline.
+- **24/7 response:** AI handles after-hours inquiries and routes urgent calls appropriately.
+
+### Content Marketing
+Blog posts, service area pages, lead magnets (checklists, guides), case studies, and SEO copy written specifically for plumbing and HVAC companies. Content is keyword-targeted, locally optimized, and written to match the way plumbing and HVAC customers actually search.
+
+### Email Marketing
+Email programs for plumbing and HVAC companies including: seasonal campaign strategy, maintenance membership reminders, automation flows (welcome sequences, service follow-ups), newsletter design, list segmentation and hygiene, A/B testing, and performance analytics.
+
+### Authority & Link Building
+Building online authority for plumbing and HVAC companies through: local sponsorship links (charities, youth sports, community events), guest posts on home improvement and trade publications, brand mentions on trusted websites, and directory submissions. All link building follows natural anchor text diversity.
+
+### Reporting & Analytics
+Marketing dashboards showing: keyword rankings by service and location, Google Business Profile performance, call tracking with source attribution, cost per booked call by channel, revenue attribution through ServiceTitan integration, and competitive positioning. Monthly reports and live dashboards available.
+
+### Web Design
+Custom websites for plumbing and HVAC companies. No templates. Built for mobile-first conversion (tap-to-call, click-to-schedule), local SEO architecture (city pages, service pages, schema markup), CRM/ServiceTitan integration, and fast page load times. Designed to convert website visitors into phone calls and booked appointments.
+
+## Case Study Results
+
+Demand Stream Digital has documented SEO results across multiple projects:
+
+- **Dallas Plumbing Company**: +306% Google organic growth (YoY). Comprehensive local SEO strategy that tripled search traffic in 12 months.
+- **Las Vegas Plumbing & HVAC Company**: Reversed a -54% traffic decline and returned to positive growth (+3% YoY). Full SEO recovery strategy.
+- **Barn Restoration Company**: 478% year-over-year organic growth through local SEO, content strategy, and GBP optimization.
+- **Tourist Vehicle Rental Company**: +531% organic new user growth through keyword strategy, content, and local SEO.
+- **Recreational Boating Industry**: 444% year-over-year organic growth combining local SEO, content, and GBP strategy.
+- **Tampa Bay Custom Home Builder**: +85% organic traffic through keyword targeting, content development, and local SEO.
+- **Multi-Category Auction House**: +68% organic traffic growth via local SEO strategy.
+- **South Florida Photography Business**: 60-point organic traffic turnaround (from -28% to +32% YoY).
+
+## Company Information
+
+- **Company Name**: Demand Stream Digital
+- **Website**: https://demandstreamdigital.com
+- **Business Type**: Digital marketing company exclusively for plumbing and HVAC companies
+- **Target Client**: Plumbing companies and HVAC companies in the United States
+- **Industries Served**: Plumbing (residential and commercial), HVAC (residential and commercial)
+- **Market Model**: Exclusive (one plumbing company and one HVAC company per metro market)
+- **Primary KPI**: Cost per booked service call
+- **CRM Integration**: ServiceTitan, Housecall Pro, and other field service platforms
+- **Location**: Dallas, Texas (serves clients nationwide)
+- **Free Audit**: https://demandstreamdigital.com/free-audit
+- **Contact**: https://demandstreamdigital.com/contact

@@ -6,7 +6,7 @@ export const hvacSEOConfig: ServicePageConfig = {
   slug: "hvac-seo",
   title: "HVAC SEO",
   metaTitle: "HVAC SEO Services That Generate More Booked Service Calls for HVAC Operators | DemandStream Digital",
-  metaDescription: "Generic HVAC marketing ignores seasonality and emergency intent. Our HVAC SEO is built around how your customers actually search. More booked calls. See how.",
+  metaDescription: "HVAC SEO built around how your customers actually search. Seasonal intent, emergency queries, and local pack strategy that drives more booked service calls.",
   canonicalUrl: `${SITE_URL}/hvac-seo`,
   keywords: "HVAC SEO, HVAC SEO services, SEO for HVAC companies, HVAC company SEO, HVAC local SEO, HVAC marketing",
 

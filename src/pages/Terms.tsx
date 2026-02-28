@@ -9,7 +9,7 @@ const Terms = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
         title="Terms of Service | Demand Stream Digital"
-        description="Terms of Service for Demand Stream Digital. Review our service agreement, usage policies, and legal terms for digital marketing services."
+        description="Review the Demand Stream Digital service agreement. Covers usage policies, client obligations, and legal terms for digital marketing services."
         canonical="https://demandstreamdigital.com/terms"
         ogImage="https://demandstreamdigital.com/og-images/terms.jpg"
         keywords="terms of service, terms and conditions, Demand Stream Digital terms, service agreement"

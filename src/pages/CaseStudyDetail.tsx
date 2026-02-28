@@ -177,7 +177,19 @@ const CaseStudyDetail = () => {
         <title>{content.headline} | Case Study | Demand Stream Digital</title>
         <meta 
           name="description" 
-          content={`${content.heroMetric.value} ${content.heroMetric.label}. See how we helped this ${content.industry} business achieve exceptional results.`} 
+          content={(() => {
+            const slugDescriptions: Record<string, string> = {
+              "auction-house-seo": "+68% organic traffic growth for a multi-category auction house. See the local SEO strategy, timeline, and ranking wins that produced these results.",
+              "barn-restoration-seo": "478% year-over-year organic growth for a barn restoration company. Full breakdown of the local SEO, content, and GBP strategy behind these numbers.",
+              "custom-home-builder-seo": "+85% organic traffic for a Tampa Bay custom home builder. See the keyword strategy, content plan, and local SEO tactics that drove these results.",
+              "dallas-plumbing-seo": "+306% Google organic growth (YoY) for a Dallas plumbing company. See how local SEO tripled their search traffic in 12 months.",
+              "florida-photography-seo": "From -28% to +32% organic traffic: a 60-point turnaround for a South Florida photography business. Full recovery strategy and timeline inside.",
+              "las-vegas-plumbing-seo": "SEO recovery for a Las Vegas plumbing and HVAC company. Reversed a -54% traffic decline and returned to positive growth. Full strategy inside.",
+              "recreational-boating-seo": "444% year-over-year organic growth in recreational boating. See how local SEO, content, and GBP strategy combined to produce these results.",
+              "tourist-vehicle-rentals-seo": "+531% organic new user growth for a tourist vehicle rental company. Full case study: the keyword, content, and local SEO strategy we used.",
+            };
+            return slugDescriptions[slug || ''] || `${content.heroMetric.value} ${content.heroMetric.label}. See how we helped this ${content.industry} business achieve exceptional results.`;
+          })()}
         />
         <link rel="canonical" href={`https://demandstreamdigital.com/case-studies/${slug}`} />
         

@@ -33,7 +33,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Paid Advertising for More Booked Service Calls | DemandStream Digital";
-const metaDescription = "Generic contractor PPC fails plumbing companies. Our plumbing paid advertising is built around emergency intent, service segmentation, and cost per booked call. See how.";
+const metaDescription = "Plumbing paid advertising built around emergency intent, service segmentation, and cost per booked call. Not generic contractor PPC. See the difference.";
 const canonicalUrl = `${SITE_URL}/plumbing-paid-advertising`;
 
 const PlumbingPaidAdvertising = () => {
