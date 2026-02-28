@@ -212,7 +212,7 @@ const HVACInstagramMainContent = () => {
             ))}
           </div>
           <p className="text-sm text-text-muted">
-            The strongest HVAC companies are recognized before they are needed. Instagram builds that recognition.
+            The strongest HVAC growth systems use all three. Blended cost per booked call decreases when every channel reinforces the others — and Instagram is what keeps your brand visible during the long weeks between when a homeowner notices a problem and when they finally call.
           </p>
         </div>
       </section>
