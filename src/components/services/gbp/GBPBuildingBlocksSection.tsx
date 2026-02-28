@@ -15,42 +15,42 @@ const blocks: BuildingBlock[] = [
     slug: "gbp-profile-optimization",
     description: "Profile optimization across categories, attributes, services, products, and descriptions to maximize relevance signals.",
     icon: MapPin,
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     title: "Review Generation & Response",
     slug: "review-generation-response",
     description: "Systematic review acquisition and response management to build trust and improve rankings.",
     icon: Star,
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     title: "Citation Building & Cleanup",
     slug: "citation-building-cleanup",
     description: "NAP consistency across 50+ directories and data aggregators to validate business information and build authority.",
     icon: Globe,
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     title: "GBP Posting & Content",
     slug: "gbp-posting-content",
     description: "Regular posts, offers, and updates to signal activity to Google and engage potential customers.",
     icon: MessageSquare,
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     title: "Photo & Media Management",
     slug: "photo-media-management",
     description: "Photo strategy, geotagging, and visual content to increase engagement and trust.",
     icon: Map,
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     title: "Local Pack Strategy",
     slug: "local-pack-strategy",
     description: "GBP service and product gap analysis with topical map matching between profile and website pages.",
     icon: Target,
-    href: "/white-label-local-seo"
+    href: "/hvac-and-plumbing-seo"
   }
 ];
 

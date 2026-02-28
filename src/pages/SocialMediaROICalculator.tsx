@@ -753,7 +753,7 @@ const SocialMediaROICalculator = () => {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link 
-                    to="/white-label-inbound-marketing-services"
+                    to="/#services"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-cta-foreground rounded-lg font-semibold transition-colors"
                   >
                     Explore Our Services

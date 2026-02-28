@@ -118,7 +118,7 @@ const LocalSEOSystemContext = () => {
               </div>
 
               <Link 
-                to="/white-label-inbound-marketing-services" 
+                to="/#services" 
                 className="inline-flex items-center gap-2 text-cta font-medium hover:text-cta/80 transition-colors"
               >
                 Explore All Services
