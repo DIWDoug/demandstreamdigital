@@ -160,7 +160,7 @@ const HVACInstagramMainContent = () => {
       <section id="tracking" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            <a href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">Instagram advertising</a> + ServiceTitan: Campaigns Tied to Revenue
+            <a href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">Instagram advertising</a> + ServiceTitan: Revenue Tracking That Goes Beyond Impressions
           </h2>
           <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
             Impressions and reach tell you how many people saw your ad. They do not tell you how many picked up the phone, booked a system replacement, or enrolled in a maintenance plan. We connect Instagram campaign performance to call tracking and revenue data so that the reporting answers the only question that matters: what did this spend produce on the dispatch board?
