@@ -22,11 +22,11 @@ const HVACLinkedInFitExclusivity = () => {
       <section id="fit" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-bold tracking-widest text-accent-blue uppercase mb-3 text-center">SELECTIVE FIT</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             Is HVAC LinkedIn Advertising Right for Your Company?
           </h2>
           <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
-            HVAC LinkedIn advertising is not the right channel for every operator. It is built for companies with commercial capacity and a genuine interest in contract-based recurring revenue.
+            LinkedIn works best for HVAC companies with the capacity and interest to pursue commercial work alongside residential.
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white/5 border border-green-500/20 rounded-xl p-6">
