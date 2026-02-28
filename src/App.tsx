@@ -70,6 +70,9 @@ const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const WebDesign = lazy(() => import("./pages/services/WebDesign"));
+const WebDesignHub = lazy(() => import("./pages/services/WebDesignHub"));
+const PlumbingWebsiteDesign = lazy(() => import("./pages/services/PlumbingWebsiteDesign"));
+const HVACWebsiteDesign = lazy(() => import("./pages/services/HVACWebsiteDesign"));
 const AIAutomation = lazy(() => import("./pages/services/AIAutomation"));
 
 // Interactive Tools
@@ -187,6 +190,12 @@ const App = () => (
           <Route path="/hvac-facebook-advertising" element={<HVACFacebookAdvertising />} />
           <Route path="/plumbing-and-hvac-web-design" element={<WebDesign />} />
           <Route path="/plumbing-and-hvac-web-design/" element={<WebDesign />} />
+          <Route path="/website-design" element={<WebDesignHub />} />
+          <Route path="/website-design/" element={<WebDesignHub />} />
+          <Route path="/plumbing-website-design" element={<PlumbingWebsiteDesign />} />
+          <Route path="/plumbing-website-design/" element={<PlumbingWebsiteDesign />} />
+          <Route path="/hvac-website-design" element={<HVACWebsiteDesign />} />
+          <Route path="/hvac-website-design/" element={<HVACWebsiteDesign />} />
           <Route path="/ai-automation" element={<AIAutomation />} />
           <Route path="/hvac-facebook-advertising/" element={<HVACFacebookAdvertising />} />
           <Route path="/hvac-instagram-advertising" element={<HVACInstagramAdvertising />} />

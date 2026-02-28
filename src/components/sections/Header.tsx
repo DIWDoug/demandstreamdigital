@@ -86,8 +86,11 @@ const Header = () => {
     },
     {
       label: "Web Design",
-      href: "/plumbing-and-hvac-web-design",
-      spokes: [],
+      href: "/website-design",
+      spokes: [
+        { label: "Plumbing Website Design", href: "/plumbing-website-design" },
+        { label: "HVAC Website Design", href: "/hvac-website-design" },
+      ],
     },
     {
       label: "Content Marketing",
