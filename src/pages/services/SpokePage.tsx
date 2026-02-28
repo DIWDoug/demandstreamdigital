@@ -152,10 +152,6 @@ const SpokePage = () => {
         {spokeKeywords && <meta name="keywords" content={spokeKeywords} />}
         <link rel="canonical" href={canonicalUrl} />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:title" content={spoke.metaTitle || `${spoke.title} | ${hub.title} | Demand Stream Digital`} />

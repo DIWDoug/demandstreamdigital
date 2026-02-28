@@ -189,10 +189,6 @@ const ContentMarketingCalculator = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(contentMarketingCalculatorSchema)}</script>
         

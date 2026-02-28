@@ -553,10 +553,6 @@ const SEOCalculator = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         <meta name="keywords" content="SEO calculator, local SEO cost estimator, plumbing SEO pricing, HVAC SEO cost, organic traffic forecast" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>
         

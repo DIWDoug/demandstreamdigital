@@ -283,9 +283,6 @@ const BlogPostPage = () => {
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
         <link rel="canonical" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}

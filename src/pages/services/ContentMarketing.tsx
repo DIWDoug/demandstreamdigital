@@ -70,10 +70,6 @@ const ContentMarketing = () => {
         <meta name="keywords" content="plumbing content marketing, HVAC blog writing, SEO content for plumbers, service area pages, plumbing lead magnets" />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={contentMarketingConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={contentMarketingConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={contentMarketingConfig.canonicalUrl} />
         
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         

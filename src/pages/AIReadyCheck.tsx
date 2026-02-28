@@ -205,10 +205,6 @@ const AIReadyCheck = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
         <meta name="keywords" content="AI readiness check, LLM compatibility, AI visibility audit, AEO tool, answer engine optimization" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/ai-ready-check" />
         <meta property="og:title" content="AI Readiness Check for Plumbing & HVAC Websites | Demand Stream Digital" />
         <meta property="og:description" content="Is your plumbing or HVAC website ready for AI search? Run a free AI readiness audit and see exactly what to fix to stay visible." />
         <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/ai-ready-check" />

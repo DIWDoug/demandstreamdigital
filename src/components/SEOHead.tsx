@@ -1,9 +1,6 @@
 /**
  * SEOHead — centralised meta tag component for all pages.
  *
- * Renders into <head> via react-helmet-async. All pages should use this
- * component instead of writing <Helmet> blocks inline.
- *
  * Props
  * ─────────────────────────────────────────────────────────────────────
  * title       – Page <title>. Required.
@@ -13,10 +10,8 @@
  * ogType      – og:type. Defaults to "website".
  * noIndex     – Set true to emit <meta name="robots" content="noindex, nofollow">.
  * schemaJson  – Serialisable JSON-LD object or array of objects.
- *               Accepts a single schema object OR an @graph wrapper object.
- * keywords    – Optional meta keywords string.
- * hrefLangs   – Optional array of { hrefLang, href } for alternate links.
- *               Defaults to en-US + x-default pointing at `canonical`.
+ * keywords    – Deprecated, kept for API compatibility but not rendered.
+ * hrefLangs   – Deprecated, kept for API compatibility but not rendered.
  */
 
 import { Helmet } from "react-helmet-async";
@@ -24,11 +19,6 @@ import { SITE_URL } from "@/lib/constants";
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-images/default.png`;
 const SITE_NAME = "Demand Stream Digital";
-
-interface HrefLang {
-  hrefLang: string;
-  href: string;
-}
 
 interface SEOHeadProps {
   title: string;
@@ -38,8 +28,8 @@ interface SEOHeadProps {
   ogType?: "website" | "article";
   noIndex?: boolean;
   schemaJson?: object | object[];
-  keywords?: string; // deprecated — kept for API compatibility but not rendered
-  hrefLangs?: HrefLang[];
+  keywords?: string;
+  hrefLangs?: unknown;
 }
 
 const SEOHead = ({
@@ -50,17 +40,7 @@ const SEOHead = ({
   ogType = "website",
   noIndex = false,
   schemaJson,
-  keywords,
-  hrefLangs,
 }: SEOHeadProps) => {
-  // Default hrefLang to en-US + x-default pointing at canonical
-  const resolvedHrefLangs: HrefLang[] = hrefLangs ?? [
-    { hrefLang: "en-US", href: canonical },
-    { hrefLang: "x-default", href: canonical },
-  ];
-
-  // Normalise schemaJson: always serialise as an array for clean output.
-  // If it has an @graph property we serialise as-is (already a graph wrapper).
   const schemaBlocks: object[] = !schemaJson
     ? []
     : Array.isArray(schemaJson)
@@ -76,11 +56,6 @@ const SEOHead = ({
 
       {/* ── Robots ── */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
-
-      {/* ── Hreflang ── */}
-      {resolvedHrefLangs.map(({ hrefLang, href }) => (
-        <link key={hrefLang} rel="alternate" hrefLang={hrefLang} href={href} />
-      ))}
 
       {/* ── Open Graph ── */}
       <meta property="og:title" content={title} />
