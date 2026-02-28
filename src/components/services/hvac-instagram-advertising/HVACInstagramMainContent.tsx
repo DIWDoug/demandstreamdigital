@@ -160,7 +160,7 @@ const HVACInstagramMainContent = () => {
       <section id="tracking" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            <a href="https://business.instagram.com/advertising" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">Instagram advertising</a> + ServiceTitan: Campaigns Tied to Revenue
+            <a href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">Instagram advertising</a> + ServiceTitan: Campaigns Tied to Revenue
           </h2>
           <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
             Instagram advertising should produce more than engagement metrics. We connect campaign performance to your revenue reporting so you can see what the spend is contributing to your dispatch board.
