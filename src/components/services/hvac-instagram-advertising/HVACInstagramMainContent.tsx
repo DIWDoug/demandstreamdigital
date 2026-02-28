@@ -193,7 +193,7 @@ const HVACInstagramMainContent = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Instagram Completes the Brand Picture
+            Instagram Reinforces the Full HVAC Growth System
           </h2>
           <p className="text-text-secondary mb-10 max-w-3xl">
             Search and SEO handle urgency and authority. Instagram handles recognition. A homeowner who has seen your installations, watched your videos, and been retargeted across multiple sessions does not evaluate you the same way they evaluate a company they just found in a Google result.
