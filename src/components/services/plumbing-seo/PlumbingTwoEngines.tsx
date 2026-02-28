@@ -172,7 +172,7 @@ const PlumbingTwoEngines = () => {
                 ))}
               </ul>
               <Link
-                to="/ai-search-optimization"
+                to="/ai-automation"
                 className="inline-flex items-center gap-2 text-accent-green text-sm font-medium hover:gap-3 transition-all"
               >
                 See our AI & GEO approach

@@ -158,7 +158,7 @@ const HVACPaidAdsChannels = () => {
                 ))}
               </ul>
               <Link
-                to="/hvac-programmatic-advertising/"
+                to="/plumbing-programmatic-advertising"
                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
               >
                 Explore Programmatic for HVAC
