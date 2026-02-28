@@ -143,10 +143,6 @@ const AdBudgetCalculator = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
         <meta name="keywords" content="PPC calculator, ad budget estimator, Google Ads ROI, Meta Ads calculator, paid media planning tool" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(adBudgetCalculatorSchema)}</script>
         

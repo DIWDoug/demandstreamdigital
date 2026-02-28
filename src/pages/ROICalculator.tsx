@@ -185,10 +185,6 @@ const ROICalculator = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         <meta name="keywords" content="marketing ROI calculator, plumbing marketing ROI, HVAC marketing ROI, SEO return on investment, PPC ROI calculator" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>
         

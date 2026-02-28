@@ -55,10 +55,6 @@ const PaidMedia = () => {
         <meta name="keywords" content="plumbing HVAC PPC management, paid media, Google Ads management, Meta Ads services, local service ads" />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={paidMediaConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={paidMediaConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={paidMediaConfig.canonicalUrl} />
         
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
         

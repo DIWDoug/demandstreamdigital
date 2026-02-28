@@ -110,9 +110,6 @@ const Author = () => {
         <link rel="canonical" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
         <meta name="keywords" content={`${author.name}, ${author.role}, plumbing HVAC marketing expert, local SEO specialist`} />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
         
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}

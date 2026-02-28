@@ -100,10 +100,6 @@ const ServicePageLayout = ({
         <link rel="canonical" href={config.canonicalUrl} />
         {config.keywords && <meta name="keywords" content={config.keywords} />}
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={config.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={config.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={config.canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:title" content={config.metaTitle} />

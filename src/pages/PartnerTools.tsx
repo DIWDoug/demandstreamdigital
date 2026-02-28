@@ -151,10 +151,6 @@ const PartnerTools = () => {
         <meta name="keywords" content="plumbing marketing tools, HVAC marketing calculators, SEO cost estimator, PPC budget planner, local marketing ROI calculator" />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Marketing Tools for Plumbing & HVAC Companies | Forecast ROI, SEO Costs & More | Demand Stream Digital" />

@@ -70,9 +70,6 @@ const Services = () => {
         <meta name="keywords" content="plumbing marketing services, HVAC marketing services, local SEO plumbing, HVAC lead generation, plumbing inbound marketing" />
         <link rel="canonical" href="https://demandstreamdigital.com/services" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/services" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/services" />
         
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         
