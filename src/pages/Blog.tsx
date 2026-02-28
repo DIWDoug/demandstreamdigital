@@ -50,9 +50,9 @@ const Blog = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Digital Marketing Insights | White Label SEO & PPC Blog</title>
-        <meta name="description" content="Actionable tips for agency owners. Explore white label SEO, PPC, email, and more on the Dialed-in Web digital marketing blog." />
-        <link rel="canonical" href="https://dialedinweb.com/blog" />
+        <title>Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital</title>
+        <meta name="description" content="Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, email, and more on the Demand Stream Digital blog." />
+        <link rel="canonical" href="https://demandstreamdigital.com/blog" />
       </Helmet>
       
       <Header />

@@ -16,7 +16,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const adBudgetCalculatorSchema = getCalculatorSchema({
   name: "Ad Budget ROI Calculator for Agencies",
   description: "Calculate expected returns from Google Ads and Meta Ads budgets. Free PPC ROI calculator for digital agencies.",
-  url: "https://dialedinweb.com/partner-tools/ad-budget-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/ad-budget-calculator",
   category: "BusinessApplication"
 });
 
@@ -138,33 +138,33 @@ const AdBudgetCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web</title>
-        <meta name="description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
+        <title>Ad Budget & PPC ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Estimate Google Ads and Meta ad spend ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
         <meta name="keywords" content="PPC calculator, ad budget estimator, Google Ads ROI, Meta Ads calculator, paid media planning tool" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(adBudgetCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web" />
-        <meta property="og:description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/ad-budget-calculator" />
+        <meta property="og:title" content="Ad Budget & PPC ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Estimate Google Ads and Meta ad spend ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/ad-budget-calculator.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/ad-budget-calculator.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PPC Ad Budget Calculator for Agencies | Estimate Spend & Forecast ROI on Paid Media | Dialed-in Web" />
-        <meta name="twitter:description" content="Dialed-in Web's calculator helps agencies estimate PPC ad spend and forecast ROI for Google, Meta, LSAs and more." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/ad-budget-calculator.png" />
+        <meta name="twitter:title" content="Ad Budget & PPC ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Estimate Google Ads and Meta ad spend ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/ad-budget-calculator.png" />
       </Helmet>
       
       <Header />

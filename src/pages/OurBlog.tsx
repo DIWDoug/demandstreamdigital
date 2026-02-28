@@ -173,25 +173,24 @@ const OurBlog = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Agency Growth Blog | White Label SEO, PPC & Marketing Insights</title>
+        <title>Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital</title>
         <meta
           name="description"
-          content="Expert insights on white label SEO, PPC management, and agency growth strategies. Practical guides for digital marketing agency owners."
+          content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital."
         />
-        <link rel="canonical" href="https://dialedinweb.com/our-blog" />
+        <link rel="canonical" href="https://demandstreamdigital.com/blog" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Agency Growth Blog | White Label SEO, PPC & Marketing Insights" />
-        <meta property="og:description" content="Expert insights on white label SEO, PPC management, and agency growth strategies. Practical guides for digital marketing agency owners." />
-        <meta property="og:url" content="https://dialedinweb.com/our-blog" />
+        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital" />
+        <meta property="og:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Agency Growth Blog | White Label SEO, PPC & Marketing Insights" />
-        <meta name="twitter:description" content="Expert insights on white label SEO, PPC management, and agency growth strategies." />
+        <meta name="twitter:title" content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital" />
+        <meta name="twitter:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more." />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
 
