@@ -22,9 +22,12 @@ const HVACInstagramFitExclusivity = () => {
       <section id="fit" className="py-20 lg:py-28 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-bold tracking-widest text-accent-blue uppercase mb-3 text-center">SELECTIVE FIT</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             Is HVAC Instagram Advertising Right for Your Company?
           </h2>
+          <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
+            Instagram works best for HVAC companies investing in brand authority alongside demand generation.
+          </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white/5 border border-green-500/20 rounded-xl p-6">
               <h3 className="font-semibold text-green-400 mb-4">This Could Work Well</h3>
