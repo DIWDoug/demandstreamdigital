@@ -17,6 +17,24 @@ import PlumbingPaidAdsFit from "@/components/services/plumbing-paid-advertising/
 import PlumbingPaidAdsFAQ from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsFAQ";
 import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
 import PlumbingPaidAdsContactForm from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsContactForm";
+import { ServiceBiggerPicture } from "@/components/services/generic";
+
+const PLUMBING_PAID_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Content Marketing", href: "/plumbing-content-marketing" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const PLUMBING_PAID_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Content Marketing", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 
 const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
@@ -143,7 +161,19 @@ const PlumbingPaidAdvertising = () => {
       {/* 12. FAQ */}
       <PlumbingPaidAdsFAQ />
 
-      {/* 12. LEAD FORM */}
+      {/* 13. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Paid Ads Are One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Paid advertising captures immediate demand. But it performs best when the rest of your growth system is working alongside it."
+        body2="Your SEO builds the organic baseline that lowers your cost-per-click over time. Your GBP drives map pack visibility for searches paid ads don't cover. Your email marketing reactivates past customers before they search for a competitor. Your reporting connects ad spend directly to booked calls, so you know exactly what's working. When paid advertising is integrated with every other channel, you stop paying for demand you already own."
+        centerLabel="Paid Advertising"
+        centerSublabel="Capture emergency and high-intent demand fast."
+        services={PLUMBING_PAID_BIGGER_PICTURE_SERVICES}
+        orbitNodes={PLUMBING_PAID_ORBIT_NODES}
+      />
+
+      {/* 14. LEAD FORM */}
       <PlumbingPaidAdsContactForm />
 
       {/* 13. FOOTER */}
