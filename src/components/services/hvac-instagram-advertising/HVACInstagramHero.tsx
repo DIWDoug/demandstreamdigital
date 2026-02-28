@@ -42,7 +42,7 @@ const HVACInstagramHero = () => {
               ))}
             </nav>
             <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-semibold mb-4 animate-fade-in-up text-foreground" style={{ lineHeight: "1.1", animationDelay: "0.1s" }}>
-              HVAC Instagram Advertising That Reinforces Brand and Drives Install Demand
+              HVAC Instagram Advertising That Builds Brand Authority and Drives Replacement Calls
             </h1>
             <p className="text-xl md:text-2xl font-sans font-semibold text-cta mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               Build Authority Before They Call Your Competitor
