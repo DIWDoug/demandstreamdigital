@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, Bot, Layout } from "lucide-react";
+import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, Bot, Layout, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import StreamTexture from "@/components/StreamTexture";
@@ -46,6 +46,12 @@ const services: Service[] = [
     title: "Email Marketing",
     description: "Keep past customers coming back with seasonal reminders, maintenance offers, and follow-up sequences that book the next job before they search for someone else.",
     href: "/plumbing-email-marketing",
+  },
+  {
+    icon: Cpu,
+    title: "AIO & GEO",
+    description: "Optimize your content for AI-powered search engines and generative answer platforms. As Google SGE, ChatGPT, and Perplexity reshape how homeowners find contractors, we position your brand to appear in AI-generated answers — not just traditional search results.",
+    href: "/aio-geo",
   },
   {
     icon: Bot,
