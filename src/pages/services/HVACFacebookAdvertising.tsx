@@ -19,7 +19,7 @@ const anchorItems = [
 
 const metaTitle = "HVAC Facebook Advertising for Replacement and Maintenance Membership Growth | DemandStream";
 const metaDescription = "HVAC Facebook advertising built to drive replacement demand and grow maintenance memberships. Campaigns tracked through ServiceTitan to booked revenue.";
-const canonicalUrl = `${SITE_URL}/hvac-facebook-advertising/`;
+const canonicalUrl = `${SITE_URL}/hvac-facebook-advertising`;
 
 const HVACFacebookAdvertising = () => {
   const pageSchema = {
@@ -43,14 +43,14 @@ const HVACFacebookAdvertising = () => {
         "name": "HVAC Facebook Advertising",
         "provider": { "@type": "HVACBusiness", "name": "DemandStream Digital" },
         "areaServed": "United States",
-        "url": "https://demandstreamdigital.com/hvac-facebook-advertising/"
+        "url": "https://demandstreamdigital.com/hvac-facebook-advertising"
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://demandstreamdigital.com/" },
-          { "@type": "ListItem", "position": 2, "name": "HVAC Paid Advertising", "item": "https://demandstreamdigital.com/hvac-paid-advertising/" },
-          { "@type": "ListItem", "position": 3, "name": "HVAC Facebook Advertising", "item": "https://demandstreamdigital.com/hvac-facebook-advertising/" }
+          { "@type": "ListItem", "position": 2, "name": "HVAC Paid Advertising", "item": "https://demandstreamdigital.com/hvac-paid-advertising" },
+          { "@type": "ListItem", "position": 3, "name": "HVAC Facebook Advertising", "item": "https://demandstreamdigital.com/hvac-facebook-advertising" }
         ]
       }
     ]
