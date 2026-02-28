@@ -52,17 +52,20 @@ const HVACInstagramMainContent = () => {
               {
                 title: "Installation Showcases",
                 body: "Visual proof builds trust before homeowners make the call. We promote real job photography from your installs. Every photo is an opportunity to reinforce that your company does the kind of work homeowners want. Stock imagery does not do this. Real job photos do.",
-                bullets: ["AC replacements and system upgrades", "Furnace installations", "Heat pump projects", "High-efficiency system completions"]
+                bullets: ["AC replacements and system upgrades", "Furnace installations", "Heat pump projects", "High-efficiency system completions"],
+                closing: "Every photo is a proof point — the more of them a homeowner accumulates before they need an HVAC company, the shorter the path from their problem to your booking form."
               },
               {
                 title: "Short-Form Educational Content",
                 body: "Education lowers hesitation. Short-form video and carousel content builds authority and moves homeowners through the decision process. A homeowner who understands why they need a replacement is more likely to book than one who is still uncertain.",
-                bullets: ["Repair vs replace breakdowns", "Energy efficiency explainers", "Financing option walkthroughs", "Seasonal maintenance reminders"]
+                bullets: ["Repair vs replace breakdowns", "Energy efficiency explainers", "Financing option walkthroughs", "Seasonal maintenance reminders"],
+                closing: "A homeowner who understands the problem and trusts your explanation is significantly more likely to book with you than one who is still comparing options."
               },
               {
                 title: "Retargeting & Engagement Campaigns",
                 body: "Website visitors who did not convert are still in the decision process. Instagram retargeting increases conversion rates across Search and Facebook campaigns. When a homeowner sees your brand on multiple platforms, the decision threshold drops.",
-                bullets: ["Website visitors who viewed install pages", "Homeowners who watched your videos", "Previous ad engagers", "People who visited your financing page"]
+                bullets: ["Website visitors who viewed install pages", "Homeowners who watched your videos", "Previous ad engagers", "People who visited your financing page"],
+                closing: "When a homeowner sees your brand on Google, in their Facebook feed, and on Instagram — all reinforcing the same message — the decision threshold drops and your blended cost per booked call improves."
               }
             ].map((card, i) => (
               <div key={i} className="bg-surface-elevated border border-border rounded-xl p-6">
@@ -76,6 +79,7 @@ const HVACInstagramMainContent = () => {
                   ))}
                 </ul>
                 <p className="text-sm text-text-secondary leading-relaxed">{card.body}</p>
+                <p className="text-sm text-text-secondary leading-relaxed mt-3">{card.closing}</p>
               </div>
             ))}
           </div>
