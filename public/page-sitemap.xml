@@ -1,369 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Pages -->
+
+  <!-- ============ CORE PAGES ============ -->
   <url>
-    <loc>https://dialedinweb.com/</loc>
+    <loc>https://demandstreamdigital.com/</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/about</loc>
+    <loc>https://demandstreamdigital.com/about</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/contact</loc>
+    <loc>https://demandstreamdigital.com/contact</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/testimonials</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://demandstreamdigital.com/blog</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/blog</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/partner-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/privacy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <!-- Author Pages -->
-  <url>
-    <loc>https://dialedinweb.com/authors/doug-bryson</loc>
+    <loc>https://demandstreamdigital.com/case-studies</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Partner Tools / Calculators -->
   <url>
-    <loc>https://dialedinweb.com/partner-tools/roi-calculator</loc>
+    <loc>https://demandstreamdigital.com/testimonials</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/partner-tools/investment-calculator</loc>
+    <loc>https://demandstreamdigital.com/free-audit</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/partner-tools/ad-budget-calculator</loc>
+    <loc>https://demandstreamdigital.com/authors/doug-bryson</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/partner-tools/seo-calculator</loc>
+    <loc>https://demandstreamdigital.com/privacy</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://demandstreamdigital.com/terms</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============ SERVICE HUBS (Priority 0.8) ============ -->
+
+  <!-- SEO Hubs -->
+  <url>
+    <loc>https://demandstreamdigital.com/hvac-and-plumbing-seo</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/partner-tools/email-calculator</loc>
+    <loc>https://demandstreamdigital.com/hvac-seo</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/partner-tools/content-marketing-calculator</loc>
+    <loc>https://demandstreamdigital.com/plumbing-seo</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Paid Advertising Hubs -->
   <url>
-    <loc>https://dialedinweb.com/partner-tools/ai-ready-check</loc>
+    <loc>https://demandstreamdigital.com/hvac-and-plumbing-paid-ads</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Services Hub -->
-  <url>
-    <loc>https://dialedinweb.com/white-label-inbound-marketing-services</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Local SEO Hub + Spokes -->
-  <url>
-    <loc>https://dialedinweb.com/white-label-local-seo</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-onpage-optimization</loc>
+    <loc>https://demandstreamdigital.com/hvac-paid-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-technical-seo</loc>
+    <loc>https://demandstreamdigital.com/plumbing-paid-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Google Maps / GBP -->
   <url>
-    <loc>https://dialedinweb.com/white-label-local-keyword-strategy</loc>
+    <loc>https://demandstreamdigital.com/plumbing-google-maps</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-content-development</loc>
+    <loc>https://demandstreamdigital.com/hvac-google-maps</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Web Design -->
   <url>
-    <loc>https://dialedinweb.com/white-label-link-building</loc>
+    <loc>https://demandstreamdigital.com/plumbing-and-hvac-web-design</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- AI Automation -->
   <url>
-    <loc>https://dialedinweb.com/white-label-schema-markup</loc>
+    <loc>https://demandstreamdigital.com/ai-automation</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- ============ CHILD SERVICE PAGES — HVAC (Priority 0.6) ============ -->
+
+  <!-- HVAC Search Ads -->
   <url>
-    <loc>https://dialedinweb.com/white-label-nap-citations</loc>
+    <loc>https://demandstreamdigital.com/hvac-search-ads</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
-  <!-- GBP SEO Hub + Spokes -->
+
+  <!-- HVAC Social / Channel Advertising -->
   <url>
-    <loc>https://dialedinweb.com/white-label-gbp-seo</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-gbp-optimization</loc>
+    <loc>https://demandstreamdigital.com/hvac-facebook-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-review-management</loc>
+    <loc>https://demandstreamdigital.com/hvac-instagram-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-citation-building</loc>
+    <loc>https://demandstreamdigital.com/hvac-linkedin-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
+
+  <!-- HVAC Supporting Services -->
   <url>
-    <loc>https://dialedinweb.com/white-label-photo-optimization</loc>
+    <loc>https://demandstreamdigital.com/hvac-email-marketing</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-qa-management</loc>
+    <loc>https://demandstreamdigital.com/hvac-content-marketing</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-post-scheduling</loc>
+    <loc>https://demandstreamdigital.com/hvac-authority-building</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Paid Media Hub + Spokes -->
-  <url>
-    <loc>https://dialedinweb.com/white-label-paid-media</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-google-ads</loc>
+    <loc>https://demandstreamdigital.com/hvac-reporting</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
+
+  <!-- ============ CHILD SERVICE PAGES — PLUMBING (Priority 0.6) ============ -->
+
+  <!-- Plumbing Search Ads -->
   <url>
-    <loc>https://dialedinweb.com/white-label-meta-ads</loc>
+    <loc>https://demandstreamdigital.com/plumbing-search-ads</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
+
+  <!-- Plumbing Social / Channel Advertising -->
   <url>
-    <loc>https://dialedinweb.com/white-label-local-service-ads</loc>
+    <loc>https://demandstreamdigital.com/plumbing-facebook-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-retargeting-campaigns</loc>
+    <loc>https://demandstreamdigital.com/plumbing-instagram-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-landing-page-design</loc>
+    <loc>https://demandstreamdigital.com/plumbing-linkedin-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-conversion-tracking</loc>
+    <loc>https://demandstreamdigital.com/plumbing-programmatic-advertising</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
-  <!-- Email Marketing Hub + Spokes -->
+
+  <!-- Plumbing Supporting Services -->
   <url>
-    <loc>https://dialedinweb.com/white-label-email-marketing</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-campaign-strategy</loc>
+    <loc>https://demandstreamdigital.com/plumbing-email-marketing</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-list-management</loc>
+    <loc>https://demandstreamdigital.com/plumbing-content-marketing</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-automation-flows</loc>
+    <loc>https://demandstreamdigital.com/plumbing-authority-building</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-newsletter-design</loc>
+    <loc>https://demandstreamdigital.com/plumbing-reporting</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
+
+  <!-- ============ LISTICLE / EDITORIAL PAGES (Priority 0.6) ============ -->
   <url>
-    <loc>https://dialedinweb.com/white-label-ab-testing</loc>
+    <loc>https://demandstreamdigital.com/best-plumbing-seo-companies</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-performance-analytics</loc>
+    <loc>https://demandstreamdigital.com/best-plumbing-ppc-companies</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-  
-  <!-- Content Marketing Hub + Spokes -->
+
+  <!-- ============ PARTNER TOOLS (Priority 0.6) ============ -->
   <url>
-    <loc>https://dialedinweb.com/white-label-content-marketing</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-geographical-content</loc>
+    <loc>https://demandstreamdigital.com/partner-tools</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-topical-authority</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/roi-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-power-posts</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/investment-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-ebooks-guides</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/ad-budget-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-lead-magnets</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/seo-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-press-releases</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/email-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-case-studies</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/content-marketing-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-faq-content</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/social-media-roi-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-hub-spoke-buildouts</loc>
+    <loc>https://demandstreamdigital.com/partner-tools/ai-ready-check</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
-  
-  <!-- Authority Building Hub + Spokes -->
+
+  <!-- ============ HOMEOWNER TOOLS (Priority 0.5) ============ -->
   <url>
-    <loc>https://dialedinweb.com/white-label-local-authority-building</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-structured-citations</loc>
+    <loc>https://demandstreamdigital.com/tools/job-cost-estimator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-unstructured-citations</loc>
+    <loc>https://demandstreamdigital.com/tools/financing-calculator</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://dialedinweb.com/white-label-brand-mentions</loc>
+    <loc>https://demandstreamdigital.com/tools/plumbing-cost-quiz</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-anchor-text</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-sponsorships</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Reporting Hub + Spokes -->
-  <url>
-    <loc>https://dialedinweb.com/white-label-reporting</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-branded-dashboards</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-monthly-performance-reports</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-rank-tracking-visibility</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-call-tracking-lead-attribution</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-roi-revenue-analysis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dialedinweb.com/white-label-client-presentation-decks</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
 </urlset>
