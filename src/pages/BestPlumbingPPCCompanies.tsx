@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import IL from "@/components/IL";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import {
@@ -17,12 +18,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const IL = ({ to, children }: { to: string; children: React.ReactNode }) => (
-  <Link to={to} className="text-[hsl(var(--accent-blue))] underline hover:text-primary transition-colors">
-    {children}
-  </Link>
-);
 
 const BestPlumbingPPCCompanies = () => {
   const config = plumbingPPCCompaniesConfig;
