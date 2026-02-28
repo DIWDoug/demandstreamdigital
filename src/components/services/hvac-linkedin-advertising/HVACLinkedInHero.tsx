@@ -68,8 +68,8 @@ const HVACLinkedInHero = () => {
               <p className="text-sm text-text-muted mb-6">Tell us where you operate. We'll take it from there.</p>
               <TwoStepContactForm
                 formType="hvac_linkedin_hero"
-                submitButtonText="Claim My Territory"
-                step1ButtonText="Claim My Territory"
+                submitButtonText="Claim My Territory →"
+                step1ButtonText="Claim My Territory →"
               />
               <p className="text-xs text-text-muted text-center mt-4">
                 One HVAC company per market.

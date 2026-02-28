@@ -66,10 +66,10 @@ const HVACInstagramHero = () => {
             <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
               <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
               <p className="text-sm text-text-muted mb-6">Tell us where you operate. We'll take it from there.</p>
-              <TwoStepContactForm
+                <TwoStepContactForm
                 formType="hvac_instagram_hero"
-                submitButtonText="Claim My Territory"
-                step1ButtonText="Claim My Territory"
+                submitButtonText="Claim My Territory →"
+                step1ButtonText="Claim My Territory →"
               />
               <p className="text-xs text-text-muted text-center mt-4">
                 One HVAC company per market.
