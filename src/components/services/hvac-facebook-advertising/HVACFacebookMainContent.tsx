@@ -187,7 +187,7 @@ const HVACFacebookMainContent = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Facebook Reinforces the Full Growth System
+            Facebook Reinforces the Full HVAC Growth System
           </h2>
           <p className="text-text-secondary mb-10 max-w-3xl">
             Facebook does not replace search or SEO. It fills the gap those channels leave. Search captures homeowners who are already looking. SEO builds the credibility that makes them choose you. Facebook reaches the homeowners who are not searching yet but will be.
