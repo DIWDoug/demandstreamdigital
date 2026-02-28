@@ -188,6 +188,19 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/wp-login.php': '/',
   '/xmlrpc.php': '/',
   
+  // ===== SOFT 404 FIXES =====
+  '/plumbing-hvac-digital-marketing': '/',
+  '/web-design': '/plumbing-and-hvac-web-design',
+  '/hvac-programmatic-advertising': '/plumbing-programmatic-advertising',
+  '/linkedin-advertising': '/plumbing-linkedin-advertising',
+  '/instagram-advertising': '/plumbing-instagram-advertising',
+  '/facebook-advertising': '/plumbing-facebook-advertising',
+  '/microsoft-advertising': '/hvac-and-plumbing-paid-ads',
+  '/local-services-ads': '/hvac-and-plumbing-paid-ads',
+  '/google-search-ads': '/plumbing-search-ads',
+  '/ai-search-optimization': '/ai-automation',
+  '/aio-geo': '/ai-automation',
+
   // ===== MISC LEGACY =====
   '/blog-old': '/blog',
   '/portfolios': '/case-studies',
