@@ -163,10 +163,10 @@ const HVACInstagramMainContent = () => {
             <a href="https://www.facebook.com/business/ads" target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline">Instagram advertising</a> + ServiceTitan: Campaigns Tied to Revenue
           </h2>
           <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
-            Instagram advertising should produce more than engagement metrics. We connect campaign performance to your revenue reporting so you can see what the spend is contributing to your dispatch board.
+            Impressions and reach tell you how many people saw your ad. They do not tell you how many picked up the phone, booked a system replacement, or enrolled in a maintenance plan. We connect Instagram campaign performance to call tracking and revenue data so that the reporting answers the only question that matters: what did this spend produce on the dispatch board?
           </p>
           <p className="text-text-secondary mb-10 max-w-3xl mx-auto text-sm">
-            HVAC Instagram advertising drives three types of outcomes: booked calls from homeowners who clicked through after seeing an install showcase, demand generation for replacement decisions with longer cycles, and maintenance membership renewals promoted to existing customers and lookalike audiences.
+            Every campaign is tied to the same reporting infrastructure we use across search and paid channels. You see booked calls, cost per booked call, and closed revenue by campaign — not engagement rates.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
             {[
