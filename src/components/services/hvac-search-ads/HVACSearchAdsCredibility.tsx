@@ -19,13 +19,13 @@ const HVACSearchAdsCredibility = () => {
                   <span style={{ fontSize: "24px", fontWeight: 400, color: accentBlue, marginTop: "4px", marginLeft: "4px" }}>{stat.unit}</span>
                 )}
               </div>
-              <p style={{ fontSize: "15px", color: "#94A3B8", marginTop: "8px", maxWidth: "160px", textAlign: "center", lineHeight: 1.5 }}>
+              <p style={{ fontSize: "15px", color: "#FFFFFF", marginTop: "8px", maxWidth: "160px", textAlign: "center", lineHeight: 1.5 }}>
                 {stat.descriptor}
               </p>
             </div>
           ))}
         </div>
-        <p className="text-center" style={{ fontSize: "16px", color: "#CBD5E1", marginTop: "32px" }}>
+        <p className="text-center" style={{ fontSize: "16px", color: "#FFFFFF", marginTop: "32px" }}>
           Built for operators who measure marketing on the dispatch board, not the dashboard.
         </p>
       </div>
