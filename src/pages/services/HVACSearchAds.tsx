@@ -33,7 +33,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Search Advertising Built for No-Cool Calls and Install Season Demand | DemandStream Digital";
-const metaDescription = "Generic HVAC PPC ignores seasonality and emergency intent. We build campaigns around no-cool calls, installs, and cost per booked call. See how.";
+const metaDescription = "HVAC search ads built for no-cool calls and install season demand. Campaigns structured around emergency intent and cost per booked call, not clicks.";
 const canonicalUrl = `${SITE_URL}/hvac-search-ads/`;
 
 const HVACSearchAds = () => {

@@ -118,7 +118,7 @@ const About = () => {
     <>
       <SEOHead
         title="About Our Plumbing & HVAC Marketing Experts | DemandStream Digital"
-        description="Exclusively serving plumbing and HVAC companies, our team has managed millions in ad spend and built revenue-first marketing systems that generate more booked service calls. Meet the team."
+        description="15 years in digital marketing. Now focused exclusively on plumbing and HVAC. Meet the team that's managed millions in ad spend for the trades."
         canonical="https://demandstreamdigital.com/about"
         ogImage="https://demandstreamdigital.com/og-images/about.jpg"
         keywords="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas"

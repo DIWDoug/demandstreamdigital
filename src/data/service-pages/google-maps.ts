@@ -6,7 +6,7 @@ export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
   title: "GBP SEO",
   metaTitle: "Google Maps SEO for Plumbing & HVAC | GBP Optimization & Local Visibility | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital manages Google Business Profiles, reviews, citations, and posts to improve local SEO for plumbing and HVAC companies.",
+  metaDescription: "Google Business Profile management for plumbing and HVAC. Reviews, citations, posts, and local pack strategy that puts your company in the map pack.",
   canonicalUrl: `${SITE_URL}/plumbing-google-maps`,
 
   hero: {

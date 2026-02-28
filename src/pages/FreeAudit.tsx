@@ -95,7 +95,7 @@ const FreeAudit = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
         title="Free SEO Audit for Plumbing & HVAC Companies | Demand Stream Digital"
-        description="Get a free, instant SEO audit for your plumbing or HVAC website. See exactly what's working, what's broken, and what to fix first."
+        description="Free, instant SEO audit for your plumbing or HVAC website. See what's working, what's broken, and exactly what to fix first. Takes 30 seconds."
         canonical="https://demandstreamdigital.com/free-audit"
       />
 

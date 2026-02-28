@@ -6,7 +6,7 @@ export const authorityConfig: ServicePageConfig = {
   slug: "authority",
   title: "Authority Building",
   metaTitle: "Local Authority & Link Building for Plumbing & HVAC | Trust Signals & Backlinks | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital builds online authority through links and trust signals that boost rankings for plumbing and HVAC companies. Strengthen your SEO today.",
+  metaDescription: "Link building and trust signals built for plumbing and HVAC companies. Local sponsorships, guest posts, and brand mentions that strengthen your rankings.",
   canonicalUrl: `${SITE_URL}/plumbing-authority-building`,
 
   hero: {

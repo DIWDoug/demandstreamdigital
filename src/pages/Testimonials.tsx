@@ -194,7 +194,7 @@ const Testimonials = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
         title="Agency Partner Testimonials | Why Agencies Trust Demand Stream Digital"
-        description="See how agencies use Demand Stream Digital for expert SEO, PPC, and content marketing—delivered under their own brand."
+        description="Hear from companies and agency partners who've worked with Demand Stream Digital. Real feedback on our SEO, PPC, and content marketing work."
         canonical="https://demandstreamdigital.com/testimonials"
         ogImage="https://demandstreamdigital.com/og-images/testimonials.jpg"
         keywords="plumbing marketing reviews, HVAC marketing results, client success stories, plumbing SEO testimonials, local marketing feedback"

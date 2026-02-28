@@ -6,7 +6,7 @@ export const localSEOConfig: ServicePageConfig = {
   slug: "local-seo",
   title: "Local SEO",
   metaTitle: "Plumbing & HVAC Local SEO Services for More Booked Calls | DemandStream Digital",
-  metaDescription: "Tired of local SEO that reports rankings but not revenue? DemandStream builds connected local SEO systems for plumbing and HVAC companies that generate more booked service calls. See how.",
+  metaDescription: "Local SEO built for plumbing and HVAC companies, not generic contractors. Rankings, Google Maps, content, and citations connected to booked service calls.",
   canonicalUrl: `${SITE_URL}/hvac-and-plumbing-seo`,
 
   hero: {

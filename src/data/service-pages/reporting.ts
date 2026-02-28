@@ -6,7 +6,7 @@ export const reportingConfig: ServicePageConfig = {
   slug: "reporting",
   title: "Reporting & Analytics",
   metaTitle: "Reporting & Analytics for Plumbing & HVAC | Dashboards, Rank Tracking & ROI | Demand Stream Digital",
-  metaDescription: "Demand Stream Digital delivers clean, clear reports that show exactly what's working. Save time, understand your marketing, and grow your business.",
+  metaDescription: "Marketing reports for plumbing and HVAC companies that show exactly what's working. Dashboards, rank tracking, call attribution, and ROI analysis.",
   canonicalUrl: `${SITE_URL}/plumbing-reporting`,
 
   hero: {

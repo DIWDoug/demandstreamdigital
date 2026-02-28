@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Instagram Advertising for Replacement Demand and Brand Authority | DemandStream Digital";
-const metaDescription = "Plumbing Instagram advertising built to drive water heater replacement demand and build brand authority. Track booked revenue through ServiceTitan. See how.";
+const metaDescription = "Plumbing Instagram ads that drive replacement demand and build brand authority. Visual campaigns tracked to booked revenue through ServiceTitan.";
 const canonicalUrl = `${SITE_URL}/plumbing-instagram-advertising/`;
 
 const PlumbingInstagramAdvertising = () => {

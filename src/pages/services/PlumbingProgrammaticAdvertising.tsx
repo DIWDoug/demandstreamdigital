@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Programmatic Advertising for Replacement Demand and Brand Visibility | DemandStream";
-const metaDescription = "Plumbing programmatic advertising via AdRoll and Mountain CTV. Drive water heater replacement demand and build brand visibility across every screen. See how.";
+const metaDescription = "Plumbing programmatic advertising across display and CTV. Drive water heater replacement demand and keep your brand visible across every screen.";
 const canonicalUrl = `${SITE_URL}/plumbing-programmatic-advertising/`;
 
 const PlumbingProgrammaticAdvertising = () => {

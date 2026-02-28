@@ -125,7 +125,7 @@ const CaseStudies = () => {
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
         title="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies"
-        description="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing."
+        description="Real growth numbers from real companies. Browse case studies with verified organic traffic increases, ranking wins, and local SEO turnarounds."
         canonical="https://demandstreamdigital.com/case-studies"
         ogImage={ogImage}
       />

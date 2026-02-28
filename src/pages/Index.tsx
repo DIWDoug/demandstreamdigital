@@ -73,7 +73,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEOHead
         title="Plumbing & HVAC Marketing Company | SEO, PPC & Lead Generation | Demand Stream Digital"
-        description="Plumbing and HVAC marketing company focused on more booked service calls. SEO, Google Maps optimization, paid advertising, and reputation management engineered around dispatch capacity and seasonality."
+        description="More booked service calls for plumbing and HVAC companies. SEO, Google Maps, paid ads, and AI automation built around dispatch capacity and seasonality."
         canonical="https://demandstreamdigital.com/"
         ogImage={ogImage}
         keywords="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing"
