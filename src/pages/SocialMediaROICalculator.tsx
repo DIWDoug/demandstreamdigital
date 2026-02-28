@@ -298,33 +298,33 @@ const SocialMediaROICalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Social Media ROI Calculator | Measure Campaign Performance | Dialed-in Web</title>
-        <meta name="description" content="Calculate the return on investment of your social media campaigns. Measure leads, sales, and revenue generated from social media marketing." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
-        <meta name="keywords" content="social media ROI calculator, social media marketing ROI, campaign ROI calculator, social media revenue calculator" />
+        <title>Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
+        <meta name="keywords" content="social media ROI calculator, plumbing social media ROI, HVAC social media marketing, campaign ROI calculator" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(socialMediaROISchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Social Media ROI Calculator | Measure Campaign Performance | Dialed-in Web" />
-        <meta property="og:description" content="Calculate the return on investment of your social media campaigns. Measure leads, sales, and revenue generated from social media marketing." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/social-media-roi-calculator" />
+        <meta property="og:title" content="Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/social-media-roi-calculator.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/social-media-roi-calculator.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Social Media ROI Calculator | Measure Campaign Performance | Dialed-in Web" />
-        <meta name="twitter:description" content="Calculate the return on investment of your social media campaigns. Measure leads, sales, and revenue generated from social media marketing." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/social-media-roi-calculator.png" />
+        <meta name="twitter:title" content="Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/social-media-roi-calculator.png" />
       </Helmet>
       
       <Header />
