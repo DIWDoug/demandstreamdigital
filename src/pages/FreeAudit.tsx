@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Search, Loader2, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -93,18 +93,11 @@ const FreeAudit = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Free SEO Audit for Plumbing & HVAC Companies | Demand Stream Digital</title>
-        <meta
-          name="description"
-          content="Get a free, instant SEO audit for your plumbing or HVAC website. See exactly what's working, what's broken, and what to fix first."
-        />
-        <link rel="canonical" href="https://demandstreamdigital.com/free-audit" />
-        <meta property="og:title" content="Free SEO Audit for Plumbing & HVAC Companies" />
-        <meta property="og:description" content="Get a free, instant SEO audit for your plumbing or HVAC website." />
-        <meta property="og:url" content="https://demandstreamdigital.com/free-audit" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title="Free SEO Audit for Plumbing & HVAC Companies | Demand Stream Digital"
+        description="Get a free, instant SEO audit for your plumbing or HVAC website. See exactly what's working, what's broken, and what to fix first."
+        canonical="https://demandstreamdigital.com/free-audit"
+      />
 
       <Header />
 

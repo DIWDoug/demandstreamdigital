@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
@@ -46,26 +46,18 @@ const WebDesign = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content="web design plumbing HVAC, plumbing website design, HVAC website design, contractor website design, custom web design plumbing" />
-        <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        keywords="web design plumbing HVAC, plumbing website design, HVAC website design, contractor website design, custom web design plumbing"
+        hrefLangs={[
+          { hrefLang: "en-US", href: canonicalUrl },
+          { hrefLang: "en-CA", href: canonicalUrl },
+          { hrefLang: "x-default", href: canonicalUrl },
+        ]}
+        schemaJson={pageSchema}
+      />
 
       <Header />
 

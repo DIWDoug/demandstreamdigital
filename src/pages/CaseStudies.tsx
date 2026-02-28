@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -123,28 +123,12 @@ const CaseStudies = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies</title>
-        <meta 
-          name="description" 
-          content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." 
-        />
-        <link rel="canonical" href="https://demandstreamdigital.com/case-studies" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies" />
-        <meta property="og:description" content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." />
-        <meta property="og:url" content="https://demandstreamdigital.com/case-studies" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={ogImage} />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies" />
-        <meta name="twitter:description" content="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing." />
-        <meta name="twitter:image" content={ogImage} />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-      </Helmet>
+      <SEOHead
+        title="Case Studies | SEO & Marketing Results for Plumbing & HVAC Companies"
+        description="Real results from real plumbing and HVAC companies. See how we've driven growth with local SEO, Google Ads, and content marketing."
+        canonical="https://demandstreamdigital.com/case-studies"
+        ogImage={ogImage}
+      />
       
       <Header />
       

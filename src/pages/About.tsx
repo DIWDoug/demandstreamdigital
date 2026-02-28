@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -116,107 +116,64 @@ const About = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About Our Plumbing & HVAC Marketing Experts | DemandStream Digital</title>
-        <meta 
-          name="description" 
-          content="Exclusively serving plumbing and HVAC companies, our team has managed millions in ad spend and built revenue-first marketing systems that generate more booked service calls. Meet the team." 
-        />
-        <meta name="keywords" content="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas" />
-        <link rel="canonical" href="https://demandstreamdigital.com/about" />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/about" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/about" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies" />
-        <meta property="og:description" content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." />
-        <meta property="og:url" content="https://demandstreamdigital.com/about" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/about.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Demand Stream Digital | Growth Marketing for Plumbing & HVAC Companies" />
-        <meta name="twitter:description" content="Discover how Demand Stream Digital helps plumbing and HVAC companies grow through SEO, paid advertising, content marketing, and reputation management." />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/about.jpg" />
-        {/* Connected Organization + Person Schema for AI/LLM visibility */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
+      <SEOHead
+        title="About Our Plumbing & HVAC Marketing Experts | DemandStream Digital"
+        description="Exclusively serving plumbing and HVAC companies, our team has managed millions in ad spend and built revenue-first marketing systems that generate more booked service calls. Meet the team."
+        canonical="https://demandstreamdigital.com/about"
+        ogImage="https://demandstreamdigital.com/og-images/about.jpg"
+        keywords="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas"
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
               "@type": "Organization",
-                "@id": "https://demandstreamdigital.com/#organization",
-                "name": "Demand Stream Digital",
-                "legalName": "Demand Stream Digital LLC",
-                "url": "https://demandstreamdigital.com",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://demandstreamdigital.com/logo.png"
-                },
-                "foundingDate": "2011",
-                "founder": { "@id": "https://demandstreamdigital.com/#founder" },
-                "areaServed": [
-                  { "@type": "Country", "name": "United States" }
-                ],
-                "knowsAbout": [
-                  { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
-                  { "@type": "Thing", "name": "Google Business Profile Optimization" },
-                  { "@type": "Thing", "name": "Plumbing & HVAC Marketing" },
-                  { "@type": "Thing", "name": "Pay-Per-Click Advertising", "sameAs": "https://en.wikipedia.org/wiki/Pay-per-click" }
-                ],
-                "sameAs": [
-                  "https://www.linkedin.com/company/demand-stream-digital/",
-                  "https://www.facebook.com/demandstreamdigital",
-                  "https://www.instagram.com/demandstreamdigital/"
-                ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": 4.9,
-                  "reviewCount": 21,
-                  "bestRating": 5,
-                  "worstRating": 1
-                }
-              },
-              {
-                "@type": "Person",
-                "@id": "https://demandstreamdigital.com/#founder",
-                "name": "Doug Bryson",
-                "jobTitle": "CEO & Founder",
-                "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and growth marketing for service businesses. Expert-vetted Upwork specialist who has managed millions in ad spend and served 100+ clients.",
-                "worksFor": { "@id": "https://demandstreamdigital.com/#organization" },
-                "knowsAbout": [
-                  { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
-                  { "@type": "Thing", "name": "Google Ads", "sameAs": "https://en.wikipedia.org/wiki/Google_Ads" },
-                  { "@type": "Thing", "name": "Meta Advertising" },
-                  { "@type": "Thing", "name": "Amazon PPC" },
-                  { "@type": "Thing", "name": "Plumbing & HVAC Marketing" },
-                  { "@type": "Thing", "name": "Growth Marketing Operations" }
-                ],
-                "sameAs": [
-                  "https://www.linkedin.com/in/dougbryson",
-                  "https://www.upwork.com/freelancers/~01dougbryson"
-                ]
-              },
-              {
-                "@type": "AboutPage",
-                "@id": "https://demandstreamdigital.com/about#webpage",
-                "url": "https://demandstreamdigital.com/about",
-                "name": "About Us | Demand Stream Digital",
-                "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
-                "about": { "@id": "https://demandstreamdigital.com/#organization" },
-                "mainEntity": { "@id": "https://demandstreamdigital.com/#organization" }
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+              "@id": "https://demandstreamdigital.com/#organization",
+              "name": "Demand Stream Digital",
+              "legalName": "Demand Stream Digital LLC",
+              "url": "https://demandstreamdigital.com",
+              "logo": { "@type": "ImageObject", "url": "https://demandstreamdigital.com/logo.png" },
+              "foundingDate": "2011",
+              "founder": { "@id": "https://demandstreamdigital.com/#founder" },
+              "areaServed": [{ "@type": "Country", "name": "United States" }],
+              "knowsAbout": [
+                { "@type": "Thing", "name": "Local SEO", "sameAs": "https://en.wikipedia.org/wiki/Local_search_(Internet)" },
+                { "@type": "Thing", "name": "Google Business Profile Optimization" },
+                { "@type": "Thing", "name": "Plumbing & HVAC Marketing" },
+                { "@type": "Thing", "name": "Pay-Per-Click Advertising", "sameAs": "https://en.wikipedia.org/wiki/Pay-per-click" }
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/demand-stream-digital/",
+                "https://www.facebook.com/demandstreamdigital",
+                "https://www.instagram.com/demandstreamdigital/"
+              ],
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 21, "bestRating": 5, "worstRating": 1 }
+            },
+            {
+              "@type": "Person",
+              "@id": "https://demandstreamdigital.com/#founder",
+              "name": "Doug Bryson",
+              "jobTitle": "CEO & Founder",
+              "description": "Digital marketing veteran with 14+ years of experience in SEO, paid advertising, and growth marketing for service businesses.",
+              "worksFor": { "@id": "https://demandstreamdigital.com/#organization" },
+              "knowsAbout": [
+                { "@type": "Thing", "name": "Local SEO" },
+                { "@type": "Thing", "name": "Google Ads" },
+                { "@type": "Thing", "name": "Plumbing & HVAC Marketing" }
+              ],
+              "sameAs": ["https://www.linkedin.com/in/dougbryson", "https://www.upwork.com/freelancers/~01dougbryson"]
+            },
+            {
+              "@type": "AboutPage",
+              "@id": "https://demandstreamdigital.com/about#webpage",
+              "url": "https://demandstreamdigital.com/about",
+              "name": "About Us | Demand Stream Digital",
+              "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
+              "about": { "@id": "https://demandstreamdigital.com/#organization" },
+              "mainEntity": { "@id": "https://demandstreamdigital.com/#organization" }
+            }
+          ]
+        }}
+      />
 
       <Header />
 

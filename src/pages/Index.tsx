@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import TrustReel from "@/components/sections/TrustReel";
@@ -71,29 +71,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Plumbing & HVAC Marketing Company | SEO, PPC & Lead Generation | Demand Stream Digital</title>
-        <meta name="description" content="Plumbing and HVAC marketing company focused on more booked service calls. SEO, Google Maps optimization, paid advertising, and reputation management engineered around dispatch capacity and seasonality." />
-        <meta name="keywords" content="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing" />
-        <link rel="canonical" href="https://demandstreamdigital.com/" />
-        
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/" />
-        
-        <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
-        
-        <meta property="og:title" content="Growth Marketing for Plumbing & HVAC Companies | Demand Stream Digital" />
-        <meta property="og:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
-        <meta property="og:url" content="https://demandstreamdigital.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content={ogImage} />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Growth Marketing for Plumbing & HVAC Companies | Demand Stream Digital" />
-        <meta name="twitter:description" content="More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies." />
-        <meta name="twitter:image" content={ogImage} />
-      </Helmet>
+      <SEOHead
+        title="Plumbing & HVAC Marketing Company | SEO, PPC & Lead Generation | Demand Stream Digital"
+        description="Plumbing and HVAC marketing company focused on more booked service calls. SEO, Google Maps optimization, paid advertising, and reputation management engineered around dispatch capacity and seasonality."
+        canonical="https://demandstreamdigital.com/"
+        ogImage={ogImage}
+        keywords="plumbing marketing, HVAC marketing, plumber SEO, HVAC SEO, plumbing Google Ads, HVAC lead generation, local marketing plumbing"
+        schemaJson={combinedSchema}
+      />
       
       <Header />
       <Hero />

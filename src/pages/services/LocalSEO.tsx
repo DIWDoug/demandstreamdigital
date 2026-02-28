@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -76,33 +76,18 @@ const LocalSEO = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{localSEOConfig.metaTitle}</title>
-        <meta name="description" content={localSEOConfig.metaDescription} />
-        <meta name="keywords" content="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing, plumbing local SEO, HVAC local SEO" />
-        <link rel="canonical" href={localSEOConfig.canonicalUrl} />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={localSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={localSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={localSEOConfig.canonicalUrl} />
-        
-        <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={localSEOConfig.metaTitle} />
-        <meta property="og:description" content={localSEOConfig.metaDescription} />
-        <meta property="og:url" content={localSEOConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={localSEOConfig.metaTitle} />
-        <meta name="twitter:description" content={localSEOConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={localSEOConfig.metaTitle}
+        description={localSEOConfig.metaDescription}
+        canonical={localSEOConfig.canonicalUrl}
+        keywords="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing"
+        hrefLangs={[
+          { hrefLang: "en-US", href: localSEOConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: localSEOConfig.canonicalUrl },
+          { hrefLang: "x-default", href: localSEOConfig.canonicalUrl },
+        ]}
+        schemaJson={combinedSchema}
+      />
       
       <Header />
       

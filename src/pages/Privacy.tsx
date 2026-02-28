@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { PHONE_NUMBER, EMAIL, ADDRESS } from "@/lib/constants";
@@ -8,30 +8,13 @@ const Privacy = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Privacy Policy | Demand Stream Digital</title>
-        <meta name="description" content="Learn how Demand Stream Digital collects, uses, and protects your personal information. Our privacy policy covers GDPR, data protection, and cookie practices." />
-        <meta name="keywords" content="privacy policy, GDPR, data protection, Demand Stream Digital privacy, cookies" />
-        <link rel="canonical" href="https://demandstreamdigital.com/privacy" />
-        
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/privacy" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/privacy" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/privacy" />
-        
-        <meta property="og:title" content="Privacy Policy | Demand Stream Digital" />
-        <meta property="og:description" content="Learn how Demand Stream Digital collects, uses, and protects your personal information." />
-        <meta property="og:url" content="https://demandstreamdigital.com/privacy" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/privacy.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Privacy Policy | Demand Stream Digital" />
-        <meta name="twitter:description" content="Learn how Demand Stream Digital collects, uses, and protects your personal information." />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/privacy.jpg" />
-      </Helmet>
+      <SEOHead
+        title="Privacy Policy | Demand Stream Digital"
+        description="Learn how Demand Stream Digital collects, uses, and protects your personal information. Our privacy policy covers GDPR, data protection, and cookie practices."
+        canonical="https://demandstreamdigital.com/privacy"
+        ogImage="https://demandstreamdigital.com/og-images/privacy.jpg"
+        keywords="privacy policy, GDPR, data protection, Demand Stream Digital privacy, cookies"
+      />
 
       <Header />
 

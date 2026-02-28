@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Phone, Mail, MapPin, Quote, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
@@ -35,34 +35,14 @@ const Contact = () => {
   
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies</title>
-        <meta name="description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
-        <link rel="canonical" href="https://demandstreamdigital.com/contact" />
-        <meta name="keywords" content="contact plumbing marketing, HVAC marketing consultation, plumber SEO contact, growth marketing for trades" />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/contact" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/contact" />
-        
-        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies" />
-        <meta property="og:description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
-        <meta property="og:url" content="https://demandstreamdigital.com/contact" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/contact.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies" />
-        <meta name="twitter:description" content="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing." />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/contact.png" />
-      </Helmet>
+      <SEOHead
+        title="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies"
+        description="Reach out to Demand Stream Digital for a free marketing audit. We help plumbing and HVAC companies grow with SEO, Google Ads, and content marketing."
+        canonical="https://demandstreamdigital.com/contact"
+        ogImage="https://demandstreamdigital.com/og-images/contact.png"
+        keywords="contact plumbing marketing, HVAC marketing consultation, plumber SEO contact, growth marketing for trades"
+        schemaJson={contactSchema}
+      />
 
       <Header />
 

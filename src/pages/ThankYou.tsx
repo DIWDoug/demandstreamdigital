@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link, useSearchParams } from "react-router-dom";
 import { CheckCircle, ArrowRight, Phone, Mail, Clock, Download, BookOpen } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -13,26 +13,12 @@ const ThankYou = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{isEbook ? "Download Your Ebook | Dialed-in Web" : "Thank You for Contacting Dialed-in Web | Your White Label Digital Marketing Partner Will Be in Touch"}</title>
-        <meta name="description" content={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. A Dialed-in Web strategist will connect with you soon to discuss white label services."} />
-        <meta name="robots" content="noindex, nofollow" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={isEbook ? "Download Your Ebook | Dialed-in Web" : "Thank You | Dialed-in Web"} />
-        <meta property="og:description" content={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. We'll be in touch soon."} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/thank-you.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={isEbook ? "Download Your Ebook | Dialed-in Web" : "Thank You | Dialed-in Web"} />
-        <meta name="twitter:description" content={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. We'll be in touch soon."} />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/thank-you.jpg" />
-      </Helmet>
+        <SEOHead
+          title={isEbook ? "Download Your Ebook | Demand Stream Digital" : "Thank You for Contacting Demand Stream Digital | We'll Be in Touch"}
+          description={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. A Demand Stream Digital strategist will connect with you soon."}
+          canonical="https://demandstreamdigital.com/thank-you"
+          noIndex={true}
+        />
 
       <Header />
 
