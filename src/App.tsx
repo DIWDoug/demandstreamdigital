@@ -66,6 +66,7 @@ const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const WebDesign = lazy(() => import("./pages/services/WebDesign"));
+const AIAutomation = lazy(() => import("./pages/services/AIAutomation"));
 
 // Interactive Tools
 const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
@@ -172,6 +173,7 @@ const App = () => (
           <Route path="/hvac-facebook-advertising" element={<HVACFacebookAdvertising />} />
           <Route path="/plumbing-and-hvac-web-design" element={<WebDesign />} />
           <Route path="/plumbing-and-hvac-web-design/" element={<WebDesign />} />
+          <Route path="/ai-automation" element={<AIAutomation />} />
           <Route path="/hvac-facebook-advertising/" element={<HVACFacebookAdvertising />} />
           <Route path="/hvac-instagram-advertising" element={<HVACInstagramAdvertising />} />
           <Route path="/hvac-instagram-advertising/" element={<HVACInstagramAdvertising />} />
