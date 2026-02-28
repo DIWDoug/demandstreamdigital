@@ -1,5 +1,5 @@
-# Dialed-In Web - Robots.txt
-# https://dialedinweb.com
+# DemandStream Digital - Robots.txt
+# https://demandstreamdigital.com
 
 User-agent: Googlebot
 Allow: /
@@ -29,6 +29,8 @@ User-agent: *
 Allow: /
 Disallow: /region-blocked
 Disallow: /thank-you
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemap Index
-Sitemap: https://dialedinweb.com/sitemap_index.xml
+Sitemap: https://demandstreamdigital.com/sitemap_index.xml
