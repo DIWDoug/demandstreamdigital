@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, BarChart3, Calculator } from "lucide-react";
+import { ArrowRight, MapPin, Map, MousePointerClick, PenTool, Mail, Bot, Layout } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import StreamTexture from "@/components/StreamTexture";
@@ -11,6 +11,12 @@ interface Service {
 }
 
 const services: Service[] = [
+  {
+    icon: Layout,
+    title: "Website Design",
+    description: "Custom high-performance websites built for the trades. Mobile-first, fast-loading, and architected to convert visitors into booked calls — with location and service area pages baked in from day one.",
+    href: "/plumbing-and-hvac-web-design",
+  },
   {
     icon: MapPin,
     title: "Local SEO",
@@ -42,11 +48,11 @@ const services: Service[] = [
     href: "/plumbing-email-marketing",
   },
   {
-    icon: BarChart3,
-    title: "Reporting & Dashboards",
-    description: "See rankings, leads, and campaign performance clearly, without digging through spreadsheets.",
-    href: "/plumbing-reporting",
-  }
+    icon: Bot,
+    title: "AI Automation",
+    description: "Put your follow-up on autopilot. AI-powered workflows that respond to missed calls, re-engage cold leads, and nurture estimates — so no opportunity falls through the cracks.",
+    href: "/contact",
+  },
 ];
 
 const ServiceCard = ({ service }: { service: Service }) => {
