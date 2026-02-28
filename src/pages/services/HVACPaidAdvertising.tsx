@@ -16,6 +16,24 @@ import HVACPaidAdsFit from "@/components/services/hvac-paid-advertising/HVACPaid
 import HVACPaidAdsFAQ from "@/components/services/hvac-paid-advertising/HVACPaidAdsFAQ";
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/HVACPaidAdsContactForm";
+import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
+
+const HVAC_PAID_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const HVAC_PAID_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Reputation Mgmt", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 
 const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
@@ -142,7 +160,19 @@ const HVACPaidAdvertising = () => {
       {/* 12. FAQ */}
       <HVACPaidAdsFAQ />
 
-      {/* 12. LEAD FORM */}
+      {/* 13. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="HVAC Paid Advertising Is Part of a"
+        headingHighlight="Bigger Growth System"
+        body1="Paid advertising captures seasonal demand at the moment of intent. But it compounds when it runs connected to SEO, GBP, and email — not managed in isolation."
+        body2="Your GBP reviews improve paid ad quality scores and reduce cost per click. Your SEO lowers the blended cost per booked call over time. Your email marketing reactivates past customers before they click a competitor's ad. When every channel pulls toward the same outcome — more booked service calls at a lower cost — the system compounds."
+        centerLabel="HVAC Paid Ads"
+        centerSublabel="Seasonal demand control."
+        services={HVAC_PAID_BIGGER_PICTURE_SERVICES}
+        orbitNodes={HVAC_PAID_ORBIT_NODES}
+      />
+
+      {/* 14. LEAD FORM */}
       <HVACPaidAdsContactForm />
 
       {/* 13. FOOTER */}

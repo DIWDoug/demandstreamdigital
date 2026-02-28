@@ -18,6 +18,24 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { emailMarketingConfig } from "@/data/service-pages/email-marketing";
+import { ServiceBiggerPicture } from "@/components/services/generic";
+
+const EMAIL_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Content Marketing", href: "/plumbing-content-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const EMAIL_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Paid Advertising", angle: 120 },
+  { label: "Content Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
@@ -125,7 +143,19 @@ const EmailMarketing = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={emailMarketingConfig.ecosystem} />
-      
+
+      {/* 11. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Email Marketing Is One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Email reactivates the revenue already in your customer list. But it performs best when connected to SEO, paid ads, and GBP — not as a standalone send."
+        body2="Your seasonal email campaigns reinforce paid ad messaging and reduce cost per booked call. Review request sequences feed GBP velocity and organic rankings. Maintenance plan campaigns keep customers from searching for competitors. When email works inside the broader system, every channel gets more efficient — and customer lifetime value compounds."
+        centerLabel="Email Marketing"
+        centerSublabel="Reactivation & lifecycle revenue."
+        services={EMAIL_BIGGER_PICTURE_SERVICES}
+        orbitNodes={EMAIL_ORBIT_NODES}
+      />
+
       <MarketExclusivity />
       
       {/* 11. CONTACT */}

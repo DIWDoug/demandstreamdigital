@@ -18,6 +18,24 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { contentMarketingConfig } from "@/data/service-pages/content-marketing";
+import { ServiceBiggerPicture } from "@/components/services/generic";
+
+const CONTENT_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const CONTENT_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Paid Advertising", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
@@ -141,7 +159,19 @@ const ContentMarketing = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={contentMarketingConfig.ecosystem} />
-      
+
+      {/* 11. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Content Marketing Is One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Content builds topical authority and long-tail organic traffic. But it compounds when it feeds the broader system — not when it runs as an isolated blog strategy."
+        body2="Service area pages reinforce local SEO signals and GBP relevance. How-to content drives organic traffic that paid ads can retarget. Authoritative content strengthens the domain that your link building and paid campaigns rely on. When content is built inside the growth system, every asset earns compounding returns — not just one-time traffic."
+        centerLabel="Content Marketing"
+        centerSublabel="Authority & long-tail organic reach."
+        services={CONTENT_BIGGER_PICTURE_SERVICES}
+        orbitNodes={CONTENT_ORBIT_NODES}
+      />
+
       <MarketExclusivity />
       
       {/* 11. CONTACT */}

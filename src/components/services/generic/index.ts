@@ -9,3 +9,6 @@ export { default as ServiceBuildingBlocksSection } from './ServiceBuildingBlocks
 export { default as ServiceFitQualifierSection } from './ServiceFitQualifierSection';
 export { default as ServiceGroupedFAQ } from './ServiceGroupedFAQ';
 export { default as ServiceEcosystemSection } from './ServiceEcosystemSection';
+export { default as ServiceBiggerPicture } from './ServiceBiggerPicture';
+export { default as ServiceFitSection } from './ServiceFitSection';
+export { default as ServiceContactForm } from './ServiceContactForm';

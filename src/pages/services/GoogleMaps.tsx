@@ -26,6 +26,24 @@ import {
 
 // GBP-specific component
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";
+import { ServiceBiggerPicture } from "@/components/services/generic";
+
+const GBP_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const GBP_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Paid Advertising", angle: 60 },
+  { label: "Reputation Mgmt", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -137,7 +155,19 @@ const GoogleMaps = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={googleMapsConfig.ecosystem} />
-      
+
+      {/* 11. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Google Maps Is One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Your GBP drives pack visibility and direct calls. But it performs best when it's connected to organic SEO, review velocity, and paid advertising — not running in isolation."
+        body2="Strong GBP signals reinforce your local organic rankings. High review velocity improves paid ad quality scores and conversion rates. Your SEO content supports the topical relevance that Maps uses to rank. Every channel feeds the next — and when they work together, call volume compounds faster than any single channel can produce alone."
+        centerLabel="Google Maps"
+        centerSublabel="Local pack visibility & direct calls."
+        services={GBP_BIGGER_PICTURE_SERVICES}
+        orbitNodes={GBP_ORBIT_NODES}
+      />
+
       <MarketExclusivity />
       
       {/* 11. CONTACT */}
