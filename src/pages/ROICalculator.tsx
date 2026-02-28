@@ -18,7 +18,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const roiCalculatorSchema = getCalculatorSchema({
   name: "Marketing ROI Calculator for Agencies",
   description: "Calculate marketing return on investment across SEO, PPC, and content marketing campaigns. Free tool for digital agencies.",
-  url: "https://dialedinweb.com/partner-tools/roi-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/roi-calculator",
   category: "BusinessApplication"
 });
 
@@ -180,33 +180,33 @@ const ROICalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web</title>
-        <meta name="description" content="Demand Stream Digital helps agencies prove ROI across SEO, PPC, and more with a partner-friendly marketing ROI calculator." />
-        <link rel="canonical" href="https://dialedinweb.com/partner-tools/roi-calculator" />
-        <meta name="keywords" content="marketing ROI calculator, agency ROI tool, SEO return on investment, PPC ROI calculator, digital marketing calculator" />
+        <title>Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <meta name="description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
+        <meta name="keywords" content="marketing ROI calculator, plumbing marketing ROI, HVAC marketing ROI, SEO return on investment, PPC ROI calculator" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/partner-tools/roi-calculator" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/partner-tools/roi-calculator" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
+        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         
         <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web" />
-        <meta property="og:description" content="Demand Stream Digital helps agencies prove ROI across SEO, PPC, and more with a partner-friendly marketing ROI calculator." />
-        <meta property="og:url" content="https://dialedinweb.com/partner-tools/roi-calculator" />
+        <meta property="og:title" content="Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta property="og:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
-        <meta property="og:image" content="https://dialedinweb.com/og-images/roi-calculator.png" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/roi-calculator.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marketing ROI Calculator for Agencies | Show Client Value from SEO & Paid Media | Dialed-in Web" />
-        <meta name="twitter:description" content="Demand Stream Digital helps agencies prove ROI across SEO, PPC, and more with a partner-friendly marketing ROI calculator." />
-        <meta name="twitter:image" content="https://dialedinweb.com/og-images/roi-calculator.png" />
+        <meta name="twitter:title" content="Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
+        <meta name="twitter:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/roi-calculator.png" />
       </Helmet>
       
       <Header />

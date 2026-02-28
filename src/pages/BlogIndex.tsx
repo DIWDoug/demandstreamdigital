@@ -62,7 +62,7 @@ export default function BlogIndex() {
           name="description"
           content="Actionable tips for agency owners. Explore local SEO, PPC, email, and more on the Demand Stream Digital blog."
         />
-        <link rel="canonical" href="https://dialedinweb.com/blog" />
+        <link rel="canonical" href="https://demandstreamdigital.com/blog" />
       </Helmet>
 
       <Header />
