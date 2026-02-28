@@ -10,6 +10,24 @@ import WebDesignDeliverables from "@/components/services/web-design/WebDesignDel
 import WebDesignFit from "@/components/services/web-design/WebDesignFit";
 import WebDesignExclusivity from "@/components/services/web-design/WebDesignExclusivity";
 import WebDesignContactForm from "@/components/services/web-design/WebDesignContactForm";
+import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
+
+const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Content Marketing", href: "/plumbing-content-marketing" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+];
+const WEB_DESIGN_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Paid Advertising", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Reporting & Dashboards", angle: 240 },
+  { label: "Content Marketing", angle: 300 },
+];
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -84,6 +102,18 @@ const WebDesign = () => {
 
       {/* 06. EXCLUSIVITY */}
       <WebDesignExclusivity />
+
+      {/* 06B. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Web Design Is One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Your website is the conversion engine everything else drives traffic to. But it compounds when it's built to support SEO, paid ads, and GBP — not just to look good."
+        body2="An SEO-architected site earns organic rankings faster and holds them longer. Speed and mobile experience reduce paid ad cost per click and improve conversion rates. Schema markup strengthens local pack visibility. Review integration builds trust on every landing page. When your website is built inside the system, every channel performs better from day one."
+        centerLabel="Web Design"
+        centerSublabel="Conversion engine for every channel."
+        services={WEB_DESIGN_BIGGER_PICTURE_SERVICES}
+        orbitNodes={WEB_DESIGN_ORBIT_NODES}
+      />
 
       {/* 07. CONTACT */}
       <WebDesignContactForm />

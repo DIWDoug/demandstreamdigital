@@ -18,6 +18,24 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { reportingConfig } from "@/data/service-pages/reporting";
+import { ServiceBiggerPicture } from "@/components/services/generic";
+
+const REPORTING_BIGGER_PICTURE_SERVICES = [
+  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Content Marketing", href: "/plumbing-content-marketing" },
+  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
+];
+const REPORTING_ORBIT_NODES = [
+  { label: "Local SEO", angle: 0 },
+  { label: "Google Maps / GBP", angle: 60 },
+  { label: "Paid Advertising", angle: 120 },
+  { label: "Email Marketing", angle: 180 },
+  { label: "Content Marketing", angle: 240 },
+  { label: "Web Design", angle: 300 },
+];
 import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
@@ -138,7 +156,19 @@ const Reporting = () => {
       
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={reportingConfig.ecosystem} />
-      
+
+      {/* 11. BIGGER PICTURE */}
+      <ServiceBiggerPicture
+        heading="Reporting Is One Piece of the"
+        headingHighlight="Connected Growth System"
+        body1="Reporting shows what's working across every channel. But its real value comes when it feeds decisions back into SEO, paid ads, and email — closing the loop."
+        body2="Call tracking data improves Google Ads bid strategy. Booking rate data identifies which landing pages need to be fixed. Revenue-per-job data shows which service campaigns are worth scaling. When reporting is connected to every channel, the entire system learns faster — and your cost per booked call drops over time instead of staying flat."
+        centerLabel="Reporting"
+        centerSublabel="Data intelligence across all channels."
+        services={REPORTING_BIGGER_PICTURE_SERVICES}
+        orbitNodes={REPORTING_ORBIT_NODES}
+      />
+
       <MarketExclusivity />
       
       {/* 11. CONTACT */}
