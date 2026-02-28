@@ -36,7 +36,11 @@ const steps = [
   }
 ];
 
-const HVACPaidAdsContactForm = forwardRef<HTMLElement>((_, ref) => {
+interface HVACPaidAdsContactFormProps {
+  headline?: string;
+}
+
+const HVACPaidAdsContactForm = forwardRef<HTMLElement, HVACPaidAdsContactFormProps>(({ headline }, ref) => {
   return (
     <section id="contact" ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-[#f9f9f9]" style={{ bottom: '5rem' }} />
@@ -50,7 +54,7 @@ const HVACPaidAdsContactForm = forwardRef<HTMLElement>((_, ref) => {
 
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-                Ready to Control Your Demand?
+                {headline ?? "Ready to Control Your Demand?"}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Tell us where you operate and what you're working toward. We'll take it from there.
