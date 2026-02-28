@@ -11,8 +11,10 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 
-import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
+import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQ, { getHomepageFAQSchema } from "@/components/sections/FAQ";
@@ -22,6 +24,35 @@ import WaveDivider from "@/components/WaveDivider";
 import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import FounderEEAT from "@/components/sections/FounderEEAT";
 import GrowthProcess from "@/components/sections/GrowthProcess";
+
+const TerritoryCallout = () => (
+  <div className="dark relative">
+    <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
+    <div className="py-16 bg-background relative overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-blue mb-3">One Company Per Market</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Your Competitors Don't Get In While You're In
+          </h2>
+          <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-xl mx-auto">
+            We take one plumbing client and one HVAC client per service area. If your market is open, now is when to find out.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+              Claim Your Territory Today
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-semibold transition-colors">
+              <Phone className="h-4 w-4" />
+              {PHONE_NUMBER}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 import { getHomepageSchema } from "@/lib/schema";
 import { getPageOgImage } from "@/lib/ogImages";
 
@@ -96,11 +127,8 @@ const Index = () => {
         <FeaturedCaseStudies />
       </div>
       
-      {/* Market exclusivity (after proof) */}
-      <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
-        <MarketExclusivity />
-      </div>
+      {/* Territory CTA (replaces full MarketExclusivity section) */}
+      <TerritoryCallout />
 
       {/* Process: how we do it */}
       <div className="relative">
