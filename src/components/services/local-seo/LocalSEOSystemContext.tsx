@@ -18,7 +18,7 @@ const services: Service[] = [
     id: "local-seo",
     title: "Local SEO",
     description: "Organic visibility in local search results and Google Maps. The foundation that makes every other channel more effective.",
-    href: "/white-label-local-seo",
+    href: "/hvac-and-plumbing-seo",
     isCenter: true
   },
   {
@@ -26,49 +26,49 @@ const services: Service[] = [
     id: "google-maps",
     title: "GBP SEO",
     description: "Dominate the map pack with optimized profiles and reviews.",
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     icon: Sparkles,
     id: "paid-media",
     title: "Paid Media",
     description: "Accelerate results with Google Ads and Meta campaigns.",
-    href: "/white-label-paid-media"
+    href: "/hvac-and-plumbing-paid-ads"
   },
   {
     icon: Star,
     id: "reputation",
     title: "Reputation",
     description: "Build trust with review generation and management.",
-    href: "/white-label-gbp-seo"
+    href: "/plumbing-google-maps"
   },
   {
     icon: Mail,
     id: "email-marketing",
     title: "Email Marketing",
     description: "Turn one-time customers into repeat buyers.",
-    href: "/white-label-email-marketing"
+    href: "/plumbing-email-marketing"
   },
   {
     icon: Globe,
     id: "authority",
     title: "Authority Building",
     description: "Links and citations that build trust.",
-    href: "/white-label-local-authority-building"
+    href: "/hvac-and-plumbing-seo"
   },
   {
     icon: Bot,
     id: "ai-automation",
     title: "AI Automation",
     description: "Automate workflows, follow-ups, and client communication with AI.",
-    href: "/contact"
+    href: "/ai-automation"
   },
   {
     icon: Share2,
     id: "retargeting",
     title: "Retargeting",
     description: "Stay top of mind with display and social retargeting.",
-    href: "/white-label-paid-media"
+    href: "/hvac-and-plumbing-paid-ads"
   }
 ];
 
