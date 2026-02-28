@@ -52,6 +52,10 @@ const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
 const HVACFacebookAdvertising = lazy(() => import("./pages/services/HVACFacebookAdvertising"));
 const HVACInstagramAdvertising = lazy(() => import("./pages/services/HVACInstagramAdvertising"));
 const HVACLinkedInAdvertising = lazy(() => import("./pages/services/HVACLinkedInAdvertising"));
+const PlumbingFacebookAdvertising = lazy(() => import("./pages/services/PlumbingFacebookAdvertising"));
+const PlumbingInstagramAdvertising = lazy(() => import("./pages/services/PlumbingInstagramAdvertising"));
+const PlumbingLinkedInAdvertising = lazy(() => import("./pages/services/PlumbingLinkedInAdvertising"));
+const PlumbingProgrammaticAdvertising = lazy(() => import("./pages/services/PlumbingProgrammaticAdvertising"));
 const HVACSearchAds = lazy(() => import("./pages/services/HVACSearchAds"));
 const PlumbingSearchAds = lazy(() => import("./pages/services/PlumbingSearchAds"));
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
@@ -168,6 +172,16 @@ const App = () => (
           <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />
           <Route path="/paid-advertising" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
           <Route path="/paid-advertising/" element={<Navigate to="/hvac-and-plumbing-paid-ads" replace />} />
+
+          {/* Plumbing Channel Spoke Pages */}
+          <Route path="/plumbing-facebook-advertising" element={<PlumbingFacebookAdvertising />} />
+          <Route path="/plumbing-facebook-advertising/" element={<PlumbingFacebookAdvertising />} />
+          <Route path="/plumbing-instagram-advertising" element={<PlumbingInstagramAdvertising />} />
+          <Route path="/plumbing-instagram-advertising/" element={<PlumbingInstagramAdvertising />} />
+          <Route path="/plumbing-linkedin-advertising" element={<PlumbingLinkedInAdvertising />} />
+          <Route path="/plumbing-linkedin-advertising/" element={<PlumbingLinkedInAdvertising />} />
+          <Route path="/plumbing-programmatic-advertising" element={<PlumbingProgrammaticAdvertising />} />
+          <Route path="/plumbing-programmatic-advertising/" element={<PlumbingProgrammaticAdvertising />} />
 
           {/* HVAC Channel Spoke Pages */}
           <Route path="/hvac-facebook-advertising" element={<HVACFacebookAdvertising />} />
