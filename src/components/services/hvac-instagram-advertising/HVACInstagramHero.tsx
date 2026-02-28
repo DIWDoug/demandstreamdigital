@@ -8,11 +8,12 @@ const HVACInstagramHero = () => {
   ];
 
   const bullets = [
-    "Showcase high-quality system installations",
-    "Promote seasonal replacement offers",
-    "Retarget website visitors and ad engagers",
-    "Reinforce financing messaging visually",
-    "Support brand visibility before peak demand"
+    "Showcase real system installations and completed replacements",
+    "Promote seasonal replacement and financing offers",
+    "Retarget website visitors and ad engagers who did not book",
+    "Build brand authority before peak cooling and heating seasons",
+    "Grow maintenance membership visibility with existing customers",
+    "Track booked calls and revenue through ServiceTitan integration",
   ];
 
   return (
@@ -48,10 +49,10 @@ const HVACInstagramHero = () => {
               Build Authority Before They Call Your Competitor
             </p>
             <p className="text-base text-text-secondary max-w-xl mb-4 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              Homeowners don't always choose the first company they see. They choose the one they recognize. Instagram advertising builds familiarity before peak season hits, reinforces replacement campaigns, and keeps your brand visible during competitive cycles.
+              Homeowners don't always choose the first HVAC company they find. They choose the one they recognize. Instagram advertising builds that recognition before peak season hits, reinforcing your brand through real job photography, financing campaigns, and retargeting sequences that keep your company visible throughout the replacement decision window.
             </p>
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.22s" }}>
-              We use Instagram to strengthen install demand, promote financing, and support long-term brand authority. Not emergency repair capture.
+              We use Instagram to strengthen install demand, grow brand authority, and support long-term replacement pipeline. Not emergency repair capture. Instagram is the channel that earns the call before homeowners know they are ready to make one.
             </p>
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               {bullets.map((bullet, i) => (
@@ -66,10 +67,10 @@ const HVACInstagramHero = () => {
             <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
               <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
               <p className="text-sm text-text-muted mb-6">Tell us where you operate. We'll take it from there.</p>
-                <TwoStepContactForm
+              <TwoStepContactForm
                 formType="hvac_instagram_hero"
-                submitButtonText="Claim My Territory →"
-                step1ButtonText="Claim My Territory →"
+                submitButtonText="Claim My Territory"
+                step1ButtonText="Claim My Territory"
               />
               <p className="text-xs text-text-muted text-center mt-4">
                 One HVAC company per market.

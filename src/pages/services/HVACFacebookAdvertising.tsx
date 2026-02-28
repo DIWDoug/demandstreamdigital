@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import HVACFacebookHero from "@/components/services/hvac-facebook-advertising/HVACFacebookHero";
 import HVACFacebookMainContent from "@/components/services/hvac-facebook-advertising/HVACFacebookMainContent";
 import HVACFacebookFitExclusivity from "@/components/services/hvac-facebook-advertising/HVACFacebookFitExclusivity";
-import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/HVACPaidAdsContactForm";
+import HVACFacebookContactForm from "@/components/services/hvac-facebook-advertising/HVACFacebookContactForm";
 
 const anchorItems = [
   { label: "How Facebook Works", href: "#how-facebook-works" },
@@ -74,7 +74,7 @@ const HVACFacebookAdvertising = () => {
       <ServiceHubAnchorNav items={anchorItems} />
       <HVACFacebookMainContent />
       <HVACFacebookFitExclusivity />
-      <HVACPaidAdsContactForm />
+      <HVACFacebookContactForm />
       <Footer />
     </div>
   );
