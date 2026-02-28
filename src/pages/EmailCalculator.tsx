@@ -826,7 +826,7 @@ const EmailEducationalContent = () => {
           Our white-label email marketing services let you add a high-margin offering without building the team. We handle strategy, execution, and reporting while you maintain the client relationship.
         </p>
         <Link 
-          to="/white-label-email-marketing"
+          to="/plumbing-email-marketing"
           className="inline-flex items-center gap-2 px-8 py-4 bg-cta hover:bg-cta/90 text-cta-foreground rounded-lg font-semibold transition-colors"
         >
           <Mail className="h-5 w-5" />
