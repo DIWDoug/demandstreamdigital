@@ -25,7 +25,7 @@ const SectionDivider = () => (
 );
 
 const anchorLinks = [
-  { label: 'What is Inbound?', href: '#white-label-explainer', id: 'white-label-explainer' },
+  { label: 'What is Inbound?', href: '#inbound-explainer', id: 'inbound-explainer' },
   { label: 'The Reality', href: '#pain-points', id: 'pain-points' },
   { label: 'Is This the Right Fit?', href: '#fit-qualifier', id: 'fit-qualifier' },
   { label: 'Our Framework', href: '#framework', id: 'framework' },
@@ -39,7 +39,7 @@ const anchorLinks = [
 
 const Services = () => {
   const servicesSchema = getServicesPageSchema();
-  const [activeSection, setActiveSection] = useState<string>('white-label-explainer');
+  const [activeSection, setActiveSection] = useState<string>('inbound-explainer');
   const ogImage = getPageOgImage('services');
 
   useEffect(() => {
@@ -65,30 +65,29 @@ const Services = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web</title>
-        <meta name="description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
-        <meta name="keywords" content="white label inbound marketing, wholesale SEO services, agency fulfillment, white label PPC, content marketing fulfillment" />
-        <link rel="canonical" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <title>Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital</title>
+        <meta name="description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
+        <meta name="keywords" content="plumbing marketing services, HVAC marketing services, local SEO plumbing, HVAC lead generation, plumbing inbound marketing" />
+        <link rel="canonical" href="https://demandstreamdigital.com/services" />
         
         {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
-        <link rel="alternate" hrefLang="en-CA" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
-        <link rel="alternate" hrefLang="x-default" href="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/services" />
         
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web" />
-        <meta property="og:description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
-        <meta property="og:url" content="https://dialedinweb.com/white-label-inbound-marketing-services" />
+        <meta property="og:title" content="Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital" />
+        <meta property="og:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
+        <meta property="og:url" content="https://demandstreamdigital.com/services" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Dialed-In Web" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
         <meta property="og:image" content={ogImage} />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Label Inbound Marketing for Agencies | Wholesale SEO, PPC & Email Campaigns by Dialed-in Web" />
-        <meta name="twitter:description" content="Dialed-in Web delivers end-to-end inbound marketing services to grow your clients. Offer this under your brand. Book a discovery call now." />
+        <meta name="twitter:title" content="Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital" />
+        <meta name="twitter:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
       

@@ -6,12 +6,12 @@
 // Hub slug to flat URL mapping
 export const HUB_URL_MAP: Record<string, string> = {
   'local-seo': '/hvac-and-plumbing-seo',
-  'google-maps': '/white-label-gbp-seo',
-  'paid-media': '/white-label-paid-media',
-  'email-marketing': '/white-label-email-marketing',
-  'local-authority-building': '/white-label-local-authority-building',
-  'reporting': '/white-label-reporting',
-  'content-marketing': '/white-label-content-marketing'
+  'google-maps': '/plumbing-google-maps',
+  'paid-media': '/hvac-and-plumbing-paid-ads',
+  'email-marketing': '/plumbing-email-marketing',
+  'local-authority-building': '/hvac-and-plumbing-seo',
+  'reporting': '/plumbing-reporting',
+  'content-marketing': '/plumbing-content-marketing'
 };
 
 // Flat URL prefix to hub slug mapping (reverse)
@@ -98,7 +98,7 @@ for (const [spokeSlug, { url, hubSlug }] of Object.entries(SPOKE_URL_MAP)) {
  * Get the flat hub URL from a hub slug
  */
 export function getHubUrl(hubSlug: string): string {
-  return HUB_URL_MAP[hubSlug] || `/white-label-${hubSlug}`;
+  return HUB_URL_MAP[hubSlug] || `/hvac-and-plumbing-seo`;
 }
 
 /**
@@ -113,8 +113,8 @@ export function getSpokeUrl(spokeSlugOrHubSlug: string, spokeSlug?: string): str
   if (spokeMapping) {
     return spokeMapping.url;
   }
-  // Fallback: just use spoke slug
-  return `/white-label-${actualSpokeSlug}`;
+  // Fallback: route to the closest hub
+  return `/hvac-and-plumbing-seo`;
 }
 
 /**
@@ -146,12 +146,12 @@ export function parseServiceUrl(pathname: string): { hubSlug: string; spokeSlug:
  * Get canonical URL for a hub
  */
 export function getCanonicalHubUrl(hubSlug: string): string {
-  return `https://dialedinweb.com${getHubUrl(hubSlug)}`;
+  return `https://demandstreamdigital.com${getHubUrl(hubSlug)}`;
 }
 
 /**
  * Get canonical URL for a spoke
  */
 export function getCanonicalSpokeUrl(hubSlug: string, spokeSlug: string): string {
-  return `https://dialedinweb.com${getSpokeUrl(hubSlug, spokeSlug)}`;
+  return `https://demandstreamdigital.com${getSpokeUrl(hubSlug, spokeSlug)}`;
 }
