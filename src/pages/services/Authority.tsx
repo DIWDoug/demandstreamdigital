@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -46,33 +46,18 @@ const Authority = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{authorityConfig.metaTitle}</title>
-        <meta name="description" content={authorityConfig.metaDescription} />
-        <meta name="keywords" content="plumbing HVAC link building, local authority building, digital PR, backlink services, local SEO authority" />
-        <link rel="canonical" href={authorityConfig.canonicalUrl} />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={authorityConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={authorityConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={authorityConfig.canonicalUrl} />
-        
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={authorityConfig.metaTitle} />
-        <meta property="og:description" content={authorityConfig.metaDescription} />
-        <meta property="og:url" content={authorityConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={authorityConfig.metaTitle} />
-        <meta name="twitter:description" content={authorityConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={authorityConfig.metaTitle}
+        description={authorityConfig.metaDescription}
+        canonical={authorityConfig.canonicalUrl}
+        keywords="plumbing HVAC link building, local authority building, digital PR, backlink services, local SEO authority"
+        hrefLangs={[
+          { hrefLang: "en-US", href: authorityConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: authorityConfig.canonicalUrl },
+          { hrefLang: "x-default", href: authorityConfig.canonicalUrl },
+        ]}
+        schemaJson={pageSchema}
+      />
       
       <Header />
       

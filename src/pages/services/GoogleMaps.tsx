@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -52,33 +52,18 @@ const GoogleMaps = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{googleMapsConfig.metaTitle}</title>
-        <meta name="description" content={googleMapsConfig.metaDescription} />
-        <meta name="keywords" content="plumbing Google Maps SEO, HVAC GBP optimization, Google Business Profile for plumbers, local pack ranking, plumbing review management" />
-        <link rel="canonical" href={googleMapsConfig.canonicalUrl} />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href={googleMapsConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={googleMapsConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={googleMapsConfig.canonicalUrl} />
-        
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={googleMapsConfig.metaTitle} />
-        <meta property="og:description" content={googleMapsConfig.metaDescription} />
-        <meta property="og:url" content={googleMapsConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={googleMapsConfig.metaTitle} />
-        <meta name="twitter:description" content={googleMapsConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={googleMapsConfig.metaTitle}
+        description={googleMapsConfig.metaDescription}
+        canonical={googleMapsConfig.canonicalUrl}
+        keywords="plumbing Google Maps SEO, HVAC GBP optimization, Google Business Profile for plumbers, local pack ranking, plumbing review management"
+        hrefLangs={[
+          { hrefLang: "en-US", href: googleMapsConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: googleMapsConfig.canonicalUrl },
+          { hrefLang: "x-default", href: googleMapsConfig.canonicalUrl },
+        ]}
+        schemaJson={pageSchema}
+      />
       
       <Header />
       

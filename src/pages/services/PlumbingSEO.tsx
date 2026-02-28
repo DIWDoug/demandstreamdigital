@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -74,30 +74,18 @@ const PlumbingSEO = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{plumbingSEOConfig.metaTitle}</title>
-        <meta name="description" content={plumbingSEOConfig.metaDescription} />
-        <meta name="keywords" content={plumbingSEOConfig.keywords} />
-        <link rel="canonical" href={plumbingSEOConfig.canonicalUrl} />
-
-        <link rel="alternate" hrefLang="en-US" href={plumbingSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={plumbingSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={plumbingSEOConfig.canonicalUrl} />
-
-        <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
-
-        <meta property="og:title" content={plumbingSEOConfig.metaTitle} />
-        <meta property="og:description" content={plumbingSEOConfig.metaDescription} />
-        <meta property="og:url" content={plumbingSEOConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={plumbingSEOConfig.metaTitle} />
-        <meta name="twitter:description" content={plumbingSEOConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={plumbingSEOConfig.metaTitle}
+        description={plumbingSEOConfig.metaDescription}
+        canonical={plumbingSEOConfig.canonicalUrl}
+        keywords={plumbingSEOConfig.keywords}
+        hrefLangs={[
+          { hrefLang: "en-US", href: plumbingSEOConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: plumbingSEOConfig.canonicalUrl },
+          { hrefLang: "x-default", href: plumbingSEOConfig.canonicalUrl },
+        ]}
+        schemaJson={combinedSchema}
+      />
 
       <Header />
 

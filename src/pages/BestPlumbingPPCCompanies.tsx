@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import IL from "@/components/IL";
 import Header from "@/components/sections/Header";
@@ -41,57 +41,25 @@ const BestPlumbingPPCCompanies = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{config.metaTitle}</title>
-        <meta name="description" content={config.metaDescription} />
-        <link rel="canonical" href={config.canonicalUrl} />
-        <meta name="keywords" content={config.keywords} />
-        <link rel="alternate" hrefLang="en-US" href={config.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={config.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={config.canonicalUrl} />
-        <meta property="og:title" content={config.metaTitle} />
-        <meta property="og:description" content={config.metaDescription} />
-        <meta property="og:url" content={config.canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={config.metaTitle} />
-        <meta name="twitter:description" content={config.metaDescription} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Article",
-                "@id": `${config.canonicalUrl}#article`,
-                "headline": config.title,
-                "description": config.metaDescription,
-                "url": config.canonicalUrl,
-                "datePublished": "2026-02-11",
-                "dateModified": "2026-02-22",
-                "author": {
-                  "@type": "Person",
-                  "@id": "https://demandstreamdigital.com/authors/doug-bryson#person",
-                  "name": "Doug Bryson",
-                  "url": "https://demandstreamdigital.com/authors/doug-bryson",
-                  "sameAs": ["https://www.linkedin.com/in/douglasebryson"]
-                },
-                "publisher": { "@id": "https://demandstreamdigital.com/#organization" },
-                "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
-                "mainEntityOfPage": { "@type": "WebPage", "@id": `${config.canonicalUrl}#webpage` },
-                "inLanguage": "en-US"
-              },
-              {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://demandstreamdigital.com" },
-                  { "@type": "ListItem", "position": 2, "name": "Best PPC Companies for Plumbing & HVAC", "item": config.canonicalUrl }
-                ]
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={config.metaTitle}
+        description={config.metaDescription}
+        canonical={config.canonicalUrl}
+        keywords={config.keywords}
+        ogType="article"
+        hrefLangs={[
+          { hrefLang: "en-US", href: config.canonicalUrl },
+          { hrefLang: "en-CA", href: config.canonicalUrl },
+          { hrefLang: "x-default", href: config.canonicalUrl },
+        ]}
+        schemaJson={{
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Article", "@id": `${config.canonicalUrl}#article`, "headline": config.title, "description": config.metaDescription, "url": config.canonicalUrl, "datePublished": "2026-02-11", "dateModified": "2026-02-28", "author": { "@type": "Person", "@id": "https://demandstreamdigital.com/authors/doug-bryson#person", "name": "Doug Bryson", "url": "https://demandstreamdigital.com/authors/doug-bryson", "sameAs": ["https://www.linkedin.com/in/douglasebryson"] }, "publisher": { "@id": "https://demandstreamdigital.com/#organization" }, "isPartOf": { "@id": "https://demandstreamdigital.com/#website" }, "mainEntityOfPage": { "@type": "WebPage", "@id": `${config.canonicalUrl}#webpage` }, "inLanguage": "en-US" },
+            { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://demandstreamdigital.com" }, { "@type": "ListItem", "position": 2, "name": "Best PPC Companies for Plumbing & HVAC", "item": config.canonicalUrl }] }
+          ]
+        }}
+      />
 
       <Header />
 

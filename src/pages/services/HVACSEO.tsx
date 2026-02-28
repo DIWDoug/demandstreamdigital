@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import HVACContactForm from "@/components/services/hvac-seo/HVACContactForm";
@@ -74,30 +74,18 @@ const HVACSEO = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{hvacSEOConfig.metaTitle}</title>
-        <meta name="description" content={hvacSEOConfig.metaDescription} />
-        <meta name="keywords" content={hvacSEOConfig.keywords} />
-        <link rel="canonical" href={hvacSEOConfig.canonicalUrl} />
-
-        <link rel="alternate" hrefLang="en-US" href={hvacSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={hvacSEOConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={hvacSEOConfig.canonicalUrl} />
-
-        <script type="application/ld+json">{JSON.stringify(combinedSchema)}</script>
-
-        <meta property="og:title" content={hvacSEOConfig.metaTitle} />
-        <meta property="og:description" content={hvacSEOConfig.metaDescription} />
-        <meta property="og:url" content={hvacSEOConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={hvacSEOConfig.metaTitle} />
-        <meta name="twitter:description" content={hvacSEOConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={hvacSEOConfig.metaTitle}
+        description={hvacSEOConfig.metaDescription}
+        canonical={hvacSEOConfig.canonicalUrl}
+        keywords={hvacSEOConfig.keywords}
+        hrefLangs={[
+          { hrefLang: "en-US", href: hvacSEOConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: hvacSEOConfig.canonicalUrl },
+          { hrefLang: "x-default", href: hvacSEOConfig.canonicalUrl },
+        ]}
+        schemaJson={combinedSchema}
+      />
 
       <Header />
 

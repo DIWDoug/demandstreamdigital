@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -51,30 +51,18 @@ const AIAutomation = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{aiAutomationConfig.metaTitle}</title>
-        <meta name="description" content={aiAutomationConfig.metaDescription} />
-        <meta name="keywords" content={aiAutomationConfig.keywords} />
-        <link rel="canonical" href={aiAutomationConfig.canonicalUrl} />
-
-        <link rel="alternate" hrefLang="en-US" href={aiAutomationConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="en-CA" href={aiAutomationConfig.canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={aiAutomationConfig.canonicalUrl} />
-
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
-
-        <meta property="og:title" content={aiAutomationConfig.metaTitle} />
-        <meta property="og:description" content={aiAutomationConfig.metaDescription} />
-        <meta property="og:url" content={aiAutomationConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={aiAutomationConfig.metaTitle} />
-        <meta name="twitter:description" content={aiAutomationConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={aiAutomationConfig.metaTitle}
+        description={aiAutomationConfig.metaDescription}
+        canonical={aiAutomationConfig.canonicalUrl}
+        keywords={aiAutomationConfig.keywords}
+        hrefLangs={[
+          { hrefLang: "en-US", href: aiAutomationConfig.canonicalUrl },
+          { hrefLang: "en-CA", href: aiAutomationConfig.canonicalUrl },
+          { hrefLang: "x-default", href: aiAutomationConfig.canonicalUrl },
+        ]}
+        schemaJson={pageSchema}
+      />
 
       <Header />
 

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
@@ -7,33 +7,13 @@ const Terms = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Terms of Service | Demand Stream Digital</title>
-        <meta name="description" content="Terms of Service for Demand Stream Digital. Review our service agreement, usage policies, and legal terms for digital marketing services." />
-        <meta name="keywords" content="terms of service, terms and conditions, Demand Stream Digital terms, service agreement" />
-        <link rel="canonical" href="https://demandstreamdigital.com/terms" />
-        
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="en-US" href="https://demandstreamdigital.com/terms" />
-        <link rel="alternate" hrefLang="en-CA" href="https://demandstreamdigital.com/terms" />
-        <link rel="alternate" hrefLang="x-default" href="https://demandstreamdigital.com/terms" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Terms of Service | Demand Stream Digital" />
-        <meta property="og:description" content="Review our service agreement, usage policies, and legal terms for digital marketing services." />
-        <meta property="og:url" content="https://demandstreamdigital.com/terms" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/terms.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Terms of Service | Demand Stream Digital" />
-        <meta name="twitter:description" content="Review our service agreement, usage policies, and legal terms." />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/terms.jpg" />
-      </Helmet>
+      <SEOHead
+        title="Terms of Service | Demand Stream Digital"
+        description="Terms of Service for Demand Stream Digital. Review our service agreement, usage policies, and legal terms for digital marketing services."
+        canonical="https://demandstreamdigital.com/terms"
+        ogImage="https://demandstreamdigital.com/og-images/terms.jpg"
+        keywords="terms of service, terms and conditions, Demand Stream Digital terms, service agreement"
+      />
 
       <Header />
 

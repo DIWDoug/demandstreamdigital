@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { ArrowRight, Home } from "lucide-react";
 
 const NotFound = () => {
@@ -12,11 +12,12 @@ const NotFound = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Page Not Found | Demand Stream Digital</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Demand Stream Digital's homepage for growth marketing services for plumbing and HVAC companies." />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      <SEOHead
+        title="Page Not Found | Demand Stream Digital"
+        description="The page you're looking for doesn't exist. Return to Demand Stream Digital's homepage for growth marketing services for plumbing and HVAC companies."
+        canonical="https://demandstreamdigital.com/404"
+        noIndex={true}
+      />
       <div className="dark min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20">
