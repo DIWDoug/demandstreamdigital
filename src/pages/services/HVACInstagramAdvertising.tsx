@@ -24,12 +24,36 @@ const canonicalUrl = `${SITE_URL}/hvac-instagram-advertising/`;
 const HVACInstagramAdvertising = () => {
   const pageSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "HVAC Instagram Advertising",
-    "description": metaDescription,
-    "url": canonicalUrl,
-    "serviceType": "HVAC Instagram Advertising Service",
-    "provider": { "@type": "Organization", "name": "DemandStream Digital", "url": SITE_URL }
+    "@graph": [
+      {
+        "@type": "HVACBusiness",
+        "name": "DemandStream Digital",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4849 Greenville Ave, Suite 100 #176",
+          "addressLocality": "Dallas",
+          "addressRegion": "TX",
+          "postalCode": "75206"
+        },
+        "telephone": "+1-214-307-2995",
+        "url": "https://demandstreamdigital.com"
+      },
+      {
+        "@type": "Service",
+        "name": "HVAC Instagram Advertising",
+        "provider": { "@type": "HVACBusiness", "name": "DemandStream Digital" },
+        "areaServed": "United States",
+        "url": "https://demandstreamdigital.com/hvac-instagram-advertising/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://demandstreamdigital.com/" },
+          { "@type": "ListItem", "position": 2, "name": "HVAC Paid Advertising", "item": "https://demandstreamdigital.com/hvac-paid-advertising/" },
+          { "@type": "ListItem", "position": 3, "name": "HVAC Instagram Advertising", "item": "https://demandstreamdigital.com/hvac-instagram-advertising/" }
+        ]
+      }
+    ]
   };
 
   return (
