@@ -159,13 +159,13 @@ const CaseStudies = () => {
           
           <div className="container mx-auto px-6 lg:px-8 relative">
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm flex items-center justify-center gap-2">
+              <p className="text-accent-blue font-medium mb-4 tracking-wide uppercase text-sm flex items-center justify-center gap-2">
                 <BarChart3 className="w-4 h-4" />
                 Case Studies
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Real Results from Real{" "}
-                <span className="text-primary">Partnerships</span>
+                <span className="text-accent-blue">Partnerships</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 See how we've helped plumbing and HVAC companies grow with 
@@ -176,7 +176,7 @@ const CaseStudies = () => {
             {/* Stats Row */}
             <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
               <div className="text-center p-4 bg-card/50 rounded-xl border border-border/50 backdrop-blur-sm">
-                <div className="text-3xl md:text-4xl font-bold text-primary">{stats.totalCases}</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent-blue">{stats.totalCases}</div>
                 <div className="text-sm text-muted-foreground">Case Studies</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-xl border border-border/50 backdrop-blur-sm">
@@ -184,7 +184,7 @@ const CaseStudies = () => {
                 <div className="text-sm text-muted-foreground">Avg Growth</div>
               </div>
               <div className="text-center p-4 bg-card/50 rounded-xl border border-border/50 backdrop-blur-sm">
-                <div className="text-3xl md:text-4xl font-bold text-primary">{stats.industries}</div>
+                <div className="text-3xl md:text-4xl font-bold text-accent-blue">{stats.industries}</div>
                 <div className="text-sm text-muted-foreground">Industries</div>
               </div>
             </div>
@@ -219,12 +219,12 @@ const CaseStudies = () => {
                       <DropdownMenuItem
                         key={option.id}
                         onClick={() => setSortBy(option.id)}
-                        className={`flex items-center gap-2 cursor-pointer ${sortBy === option.id ? 'bg-primary/10 text-primary' : ''}`}
+                        className={`flex items-center gap-2 cursor-pointer ${sortBy === option.id ? 'bg-accent-blue/10 text-accent-blue' : ''}`}
                       >
                         <Icon className="w-4 h-4" />
                         {option.label}
                         {sortBy === option.id && (
-                          <span className="ml-auto text-primary">✓</span>
+                          <span className="ml-auto text-accent-blue">✓</span>
                         )}
                       </DropdownMenuItem>
                     );
@@ -270,18 +270,18 @@ const CaseStudies = () => {
         {caseStudies.length > 0 && (
           <section className="py-20 bg-gradient-to-b from-surface-dark to-background relative overflow-hidden">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-blue/5 rounded-full blur-3xl" />
             </div>
             
             <div className="container mx-auto px-6 lg:px-8 text-center relative">
               <div className="max-w-2xl mx-auto">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-blue/10 border border-accent-blue/20 rounded-full text-accent-blue text-sm font-medium mb-6">
                   <TrendingUp className="w-4 h-4" />
                   Join Our Success Stories
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Ready to Create Your{" "}
-                  <span className="text-primary">Success Story</span>?
+                  <span className="text-accent-blue">Success Story</span>?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Let's discuss how we can help you deliver exceptional results for your clients 
@@ -334,7 +334,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
 
   return (
     <Link to={`/case-studies/${study.slug}`} className="group block h-full">
-      <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 overflow-hidden flex flex-col">
+      <Card className="h-full bg-card border-border hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/10 overflow-hidden flex flex-col">
         {/* Thumbnail with Overlay */}
         {study.thumbnail && (
           <div className="aspect-[16/10] bg-surface-dark overflow-hidden relative">
@@ -361,7 +361,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
                 variant="secondary" 
                 className={`backdrop-blur-sm border-0 flex items-center gap-1.5 px-3 py-1 ${
                   isPartner 
-                    ? "bg-primary/90 text-primary-foreground" 
+                  ? "bg-accent-blue/90 text-white" 
                     : "bg-amber-500/90 text-white"
                 }`}
               >
@@ -374,8 +374,8 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
             <div className="absolute bottom-4 right-4 text-right">
               <div className="bg-card/95 backdrop-blur-sm rounded-lg p-3 border border-border/50">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-2xl font-bold text-primary">{study.heroMetric.value}</span>
-                  <TrendingUp className="w-4 h-4 text-primary" />
+                  <span className="text-2xl font-bold text-accent-blue">{study.heroMetric.value}</span>
+                  <TrendingUp className="w-4 h-4 text-accent-blue" />
                 </div>
                 <p className="text-xs text-muted-foreground max-w-[140px] leading-tight">{study.heroMetric.label}</p>
               </div>
@@ -386,7 +386,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
         
         <CardContent className="p-6 flex flex-col flex-1">
           {/* Headline */}
-          <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+          <h3 className="text-lg font-semibold mb-3 group-hover:text-accent-blue transition-colors line-clamp-2">
             {study.headline}
           </h3>
           
@@ -397,7 +397,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
           
           {/* ROI Highlight */}
           {study.roiHighlight && (
-            <div className="bg-gradient-to-r from-green-500/10 to-primary/10 border border-green-500/20 rounded-lg p-3 mb-4">
+            <div className="bg-gradient-to-r from-green-500/10 to-accent-blue/10 border border-green-500/20 rounded-lg p-3 mb-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="text-center flex-1">
                   <p className="text-lg font-bold text-green-500">{study.roiHighlight.roiRange}</p>
@@ -405,7 +405,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
                 </div>
                 <div className="w-px h-10 bg-border/50" />
                 <div className="text-center flex-1">
-                  <p className="text-lg font-bold text-primary">{study.roiHighlight.monthlyRevenue}</p>
+                  <p className="text-lg font-bold text-accent-blue">{study.roiHighlight.monthlyRevenue}</p>
                   <p className="text-[10px] text-muted-foreground uppercase tracking-wide">Revenue</p>
                 </div>
               </div>
@@ -430,7 +430,7 @@ const CaseStudyCard = ({ study }: { study: CaseStudy }) => {
           </div>
           
           {/* Read More */}
-          <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all pt-2 border-t border-border/50">
+          <div className="flex items-center gap-2 text-accent-blue font-medium text-sm group-hover:gap-3 transition-all pt-2 border-t border-border/50">
             Read Full Case Study
             <ArrowRight className="w-4 h-4" />
           </div>
@@ -461,7 +461,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
 
   return (
     <Link to={`/case-studies/${study.slug}`} className="group block">
-      <Card className="bg-gradient-to-br from-primary/5 via-card to-card border-primary/30 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 overflow-hidden">
+      <Card className="bg-gradient-to-br from-accent-blue/5 via-card to-card border-accent-blue/20 hover:border-accent-blue/40 transition-all duration-300 hover:shadow-2xl hover:shadow-accent-blue/10 overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-0">
           {/* Image Side */}
           {study.thumbnail && (
@@ -476,7 +476,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
               
               {/* Featured Badge */}
               <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                <Badge className="bg-primary text-primary-foreground border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg">
+                <Badge className="bg-accent-blue text-white border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg">
                   <Sparkles className="w-4 h-4" />
                   Featured Case Study
                 </Badge>
@@ -485,7 +485,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
                 <Badge 
                   className={`border-0 flex items-center gap-1.5 px-3 py-1.5 shadow-lg ${
                     isPartner 
-                      ? "bg-blue-600 text-white" 
+                      ? "bg-accent-blue/80 text-white" 
                       : "bg-amber-500 text-white"
                   }`}
                 >
@@ -510,7 +510,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
             </div>
             
             {/* Headline */}
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-accent-blue transition-colors">
               {study.headline}
             </h2>
             
@@ -521,8 +521,8 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
             
             {/* Metrics Row */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <div className="text-center p-3 bg-gradient-to-br from-primary/10 to-transparent rounded-lg border border-primary/20">
-                <div className="text-2xl lg:text-3xl font-bold text-primary flex items-center justify-center gap-1">
+              <div className="text-center p-3 bg-gradient-to-br from-accent-blue/10 to-transparent rounded-lg border border-accent-blue/20">
+                <div className="text-2xl lg:text-3xl font-bold text-accent-blue flex items-center justify-center gap-1">
                   {study.heroMetric.value}
                   <TrendingUp className="w-5 h-5" />
                 </div>
@@ -538,7 +538,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
             
             {/* ROI Highlight */}
             {study.roiHighlight && (
-              <div className="bg-gradient-to-r from-green-500/10 to-primary/10 border border-green-500/20 rounded-lg p-4 mb-6">
+              <div className="bg-gradient-to-r from-green-500/10 to-accent-blue/10 border border-green-500/20 rounded-lg p-4 mb-6">
                 <div className="flex items-center justify-around gap-4">
                   <div className="text-center">
                     <p className="text-xl lg:text-2xl font-bold text-green-500">{study.roiHighlight.roiRange}</p>
@@ -546,7 +546,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
                   </div>
                   <div className="w-px h-12 bg-border/50" />
                   <div className="text-center">
-                    <p className="text-xl lg:text-2xl font-bold text-primary">{study.roiHighlight.monthlyRevenue}</p>
+                    <p className="text-xl lg:text-2xl font-bold text-accent-blue">{study.roiHighlight.monthlyRevenue}</p>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide">Revenue Potential</p>
                   </div>
                 </div>
@@ -566,7 +566,7 @@ const FeaturedCaseStudy = ({ study }: { study: CaseStudy }) => {
             </div>
             
             {/* CTA */}
-            <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
+            <div className="flex items-center gap-2 text-accent-blue font-semibold group-hover:gap-4 transition-all">
               Read Full Case Study
               <ArrowRight className="w-5 h-5" />
             </div>
