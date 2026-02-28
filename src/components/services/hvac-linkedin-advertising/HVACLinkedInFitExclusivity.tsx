@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const HVACLinkedInFitExclusivity = () => {
   const goodFit = [
-    "You pursue commercial HVAC contracts",
-    "You offer preventative maintenance agreements",
+    "You pursue commercial HVAC contracts or want to",
+    "You offer preventative maintenance agreements for multi-building properties",
     "You want multi-location and portfolio client partnerships",
-    "You have capacity for B2B growth alongside residential operations",
-    "You want a revenue channel that compounds over time"
+    "You have the capacity to handle commercial-scale service agreements",
+    "You want predictable scheduled revenue alongside emergency call volume"
   ];
   const notFit = [
     "Residential-only focus with no commercial service capability",
-    "No CRM or call tracking in place",
-    "No capacity to fulfill commercial contracts",
-    "Looking for same-day call volume only"
+    "No capacity to handle multi-building or scheduled commercial work",
+    "No call tracking or CRM integration in place",
+    "You need immediate emergency call volume rather than longer commercial sales cycles"
   ];
 
   return (
@@ -27,6 +27,9 @@ const HVACLinkedInFitExclusivity = () => {
           </h2>
           <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
             LinkedIn works best for HVAC companies with the capacity and interest to pursue commercial work alongside residential.
+          </p>
+          <p className="text-text-secondary text-center max-w-2xl mx-auto mb-10">
+            HVAC LinkedIn advertising is not the right channel for every operator. It is built for companies with commercial capability and a genuine interest in contract-based recurring revenue. If your business runs entirely on residential emergency calls, LinkedIn will not move your dispatch board. If you have commercial capacity or are building toward it, this is one of the most underused growth channels in the trade.
           </p>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
             <div className="bg-white/5 border border-green-500/20 rounded-xl p-6">
@@ -73,7 +76,7 @@ const HVACLinkedInFitExclusivity = () => {
             One HVAC Company. Per Market.
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto mb-4 leading-relaxed">
-            When you work with DemandStream, your competitors don't. We take one HVAC client per service area. That keeps our incentives consistent with yours and means the LinkedIn strategy we build is focused entirely on putting you ahead, not shared with the shop down the street.
+            When you work with DemandStream, your competitors don't. We take one HVAC client per service area. That keeps our incentives fully aligned with yours. Every LinkedIn campaign, every commercial audience, and every dollar of spend is working to position your company ahead in the commercial market, not divided between you and the HVAC company across town.
           </p>
           <p className="text-text-secondary mb-8">If your market is available, it's worth finding out now. If it isn't, we'll tell you that too.</p>
           <Link to="/contact" className="btn-cta inline-flex items-center gap-2">

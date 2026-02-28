@@ -8,10 +8,10 @@ const HVACLinkedInHero = () => {
   ];
 
   const bullets = [
-    "Target property managers and facility directors",
-    "Reach decision-makers at multi-site businesses",
-    "Promote commercial maintenance contracts and financing options",
-    "Generate B2B install and retrofit opportunities",
+    "Target property managers and facility directors by title and geography",
+    "Reach decision-makers at multi-site commercial and residential properties",
+    "Promote commercial HVAC maintenance contracts and service agreements",
+    "Generate retrofit, upgrade, and inspection opportunities",
     "Track booked calls and revenue through ServiceTitan integration"
   ];
 
@@ -51,7 +51,7 @@ const HVACLinkedInHero = () => {
               Residential demand drives volume. Commercial contracts drive stability. HVAC LinkedIn advertising lets HVAC companies target property managers, facility directors, and commercial decision-makers directly. Before competitors enter the conversation.
             </p>
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.22s" }}>
-              We build LinkedIn campaigns designed to open doors to multi-location and commercial HVAC opportunities.
+              We build LinkedIn campaigns designed to open doors to multi-location and commercial HVAC opportunities: maintenance contracts, retrofit programs, and service agreements that produce recurring booked calls rather than one-time emergency work.
             </p>
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               {bullets.map((bullet, i) => (
