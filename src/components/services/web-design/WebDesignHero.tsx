@@ -46,12 +46,10 @@ const WebDesignHero = () => {
               ))}
             </nav>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
-              Web Design for Plumbing & HVAC Companies That Converts Visitors Into Calls
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Web Design for Plumbing & HVAC Companies{" "}
+              <span className="text-cta">That Converts Visitors Into Calls</span>
             </h1>
-            <p className="text-xl font-semibold text-cta mb-6">
-              Built From the Ground Up. No Templates. No Shortcuts.
-            </p>
             <p className="text-text-secondary leading-relaxed mb-8">
               Most contractor websites are built on templates that look the same as every competitor in your market. We build custom, high-performance sites designed around one outcome: turning local search traffic into booked service calls.
             </p>
