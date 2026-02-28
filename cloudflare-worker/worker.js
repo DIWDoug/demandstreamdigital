@@ -97,6 +97,18 @@ const WHITE_LABEL_REDIRECTS = {
   "/white-label-client-presentation-decks": "/plumbing-reporting",
   // SEO campaigns / misc
   "/white-label-seo-campaigns": "/hvac-and-plumbing-seo",
+  // ── P0 canonical-pointing-to-/404 fixes ──
+  "/aio-geo": "/ai-automation",
+  "/plumbing-hvac-digital-marketing": "/",
+  "/facebook-advertising": "/plumbing-facebook-advertising",
+  "/hvac-programmatic-advertising": "/plumbing-programmatic-advertising",
+  "/linkedin-advertising": "/plumbing-linkedin-advertising",
+  "/microsoft-advertising": "/hvac-and-plumbing-paid-ads",
+  "/web-design": "/plumbing-and-hvac-web-design",
+  "/ai-search-optimization": "/ai-automation",
+  "/local-services-ads": "/hvac-and-plumbing-paid-ads",
+  "/instagram-advertising": "/plumbing-instagram-advertising",
+  "/google-search-ads": "/plumbing-search-ads",
   // Nested white-label-inbound-marketing-services paths
   "/white-label-inbound-marketing-services/local-seo": "/hvac-and-plumbing-seo",
   "/white-label-inbound-marketing-services/google-maps": "/plumbing-google-maps",
