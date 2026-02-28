@@ -81,7 +81,7 @@ const Index = () => {
       
       {/* Problem framing */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" animated />
         <ProblemSolution />
       </div>
       
@@ -92,37 +92,37 @@ const Index = () => {
       
       {/* Proof: case studies (moved up) */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
         <FeaturedCaseStudies />
       </div>
       
       {/* Market exclusivity (after proof) */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
         <MarketExclusivity />
       </div>
 
       {/* Process: how we do it */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
         <GrowthProcess />
       </div>
       
       {/* Convert warm leads */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
         <MidPageCTA variant="light" />
       </div>
       
       {/* Industry expertise (condensed) */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" />
+        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
         <TopicalExpertise />
       </div>
       
       {/* What working with us looks like */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip />
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
         <WhyPartnerWithUs />
       </div>
       
