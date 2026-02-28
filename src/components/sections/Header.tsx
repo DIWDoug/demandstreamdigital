@@ -66,14 +66,6 @@ const Header = () => {
       spokes: [
         { label: "Plumbing SEO", href: "/plumbing-seo" },
         { label: "HVAC SEO", href: "/hvac-seo" },
-        { label: "On-Page SEO", href: "/white-label-on-page-local-optimization" },
-        { label: "Technical SEO", href: "/white-label-technical-seo-multi-location" },
-        { label: "Local Keyword Strategy", href: "/white-label-keyword-research-mapping" },
-        { label: "Content Development", href: "/white-label-local-content-strategy" },
-        { label: "Link Building", href: "/white-label-local-link-acquisition" },
-        { label: "GBP SEO", href: "/white-label-gbp-seo" },
-        { label: "Reputation Management", href: "/white-label-reputation-management" },
-        { label: "AEO for Local", href: "/white-label-aeo-local" },
       ],
     },
     {
@@ -82,10 +74,6 @@ const Header = () => {
       spokes: [
         { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
-        { label: "Google Ads for Plumbers", href: "/white-label-google-ads" },
-        { label: "Facebook Ads", href: "/white-label-facebook-advertising" },
-        { label: "LSA / Google Guaranteed", href: "/white-label-local-services-ads" },
-        { label: "Retargeting Campaigns", href: "/white-label-retargeting" },
       ],
     },
     {
@@ -94,10 +82,6 @@ const Header = () => {
       spokes: [
         { label: "Plumbing Google Maps", href: "/plumbing-google-maps" },
         { label: "HVAC Google Maps", href: "/hvac-google-maps" },
-        { label: "GBP Profile Optimization", href: "/white-label-gbp-profile-optimization" },
-        { label: "Review Generation", href: "/white-label-review-generation" },
-        { label: "Citation Building", href: "/white-label-citation-building" },
-        { label: "GBP Posts & Content", href: "/white-label-gbp-posts" },
       ],
     },
     {
