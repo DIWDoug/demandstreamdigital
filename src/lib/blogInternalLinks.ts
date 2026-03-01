@@ -225,7 +225,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
   'what-is-white-label-digital-marketing': {
     slug: 'what-is-white-label-digital-marketing',
     relevantLinks: [
-      { text: 'white label services', url: '/white-label-inbound-marketing-services', context: 'white label services' },
+      { text: 'white label services', url: '/', context: 'white label services' },
       { text: 'local SEO', url: '/white-label-local-seo', context: 'local seo' },
       { text: 'paid media', url: '/white-label-paid-media', context: 'ppc paid media' },
       { text: 'email marketing', url: '/white-label-email-marketing', context: 'email marketing' },
