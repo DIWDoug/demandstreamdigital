@@ -199,6 +199,9 @@ const App = () => (
           <Route path="/hvac-website-design" element={<HVACWebsiteDesign />} />
           <Route path="/hvac-website-design/" element={<HVACWebsiteDesign />} />
           <Route path="/ai-automation" element={<AIAutomation />} />
+          {/* Legacy /aio-geo → permanent redirect to /ai-automation */}
+          <Route path="/aio-geo" element={<Navigate to="/ai-automation" replace />} />
+          <Route path="/aio-geo/" element={<Navigate to="/ai-automation" replace />} />
           <Route path="/hvac-facebook-advertising/" element={<HVACFacebookAdvertising />} />
           <Route path="/hvac-instagram-advertising" element={<HVACInstagramAdvertising />} />
           <Route path="/hvac-instagram-advertising/" element={<HVACInstagramAdvertising />} />
