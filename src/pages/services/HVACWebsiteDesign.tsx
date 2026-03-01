@@ -126,11 +126,11 @@ const HVACWebsiteDesign = () => {
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Seasonal intent structure — separate pages for no-cool, no-heat, and replacement research",
-                  "Repair vs. install separation — Google reads these as distinct intents",
+                  "Seasonal intent structure: separate pages for no-cool, no-heat, and replacement research",
+                  "Repair vs. install separation. Google reads these as distinct intents.",
                   "Heat pump and ductless-ready page structure for equipment transitions",
                   "Maintenance agreement conversion paths built into service pages",
-                  "Google Business Profile alignment — categories, services, and page signals working together",
+                  "Google Business Profile alignment: categories, services, and page signals working together",
                   "AI-ready structure with schema, FAQs, and answer blocks by default",
                   "ServiceTitan-compatible booking UX with call tracking from day one",
                 ].map((b, i) => (

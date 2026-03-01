@@ -154,12 +154,12 @@ const PlumbingWebsiteDesign = () => {
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Separate pages for emergency drain, water heater, repipe, sewer — not one catch-all",
+                  "Separate pages for emergency drain, water heater, repipe, and sewer. No catch-all.",
                   "Aligned to your GBP service catalog so Maps and web reinforce each other",
                   "AI-ready structure: answer blocks and FAQs for the actual questions homeowners ask",
                   "Call-first UX with emergency reassurance above the fold on mobile",
                   "Built to activate plumbing SEO and paid advertising from day one",
-                  "ServiceTitan-compatible — booking flow and call tracking ready at launch",
+                  "ServiceTitan-compatible: booking flow and call tracking ready at launch",
                 ].map((b, i) => (
                   <li key={i} className="flex items-start gap-3 text-text-secondary">
                     <span className="text-cta mt-0.5 shrink-0 font-bold">✓</span>
