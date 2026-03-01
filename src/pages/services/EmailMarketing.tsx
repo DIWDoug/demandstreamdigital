@@ -157,6 +157,27 @@ const EmailMarketing = () => {
       />
 
       <MarketExclusivity />
+
+      {/* Related Tools */}
+      <section className="py-10 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-4 text-center">Free Planning Tools</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {[
+                { label: "Email Marketing Calculator", href: "/partner-tools/email-calculator", desc: "Forecast ROI from list size & engagement" },
+                { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", desc: "Model revenue impact of full inbound strategy" },
+                { label: "Investment Calculator", href: "/partner-tools/investment-calculator", desc: "Scope multi-service monthly costs" },
+              ].map((t) => (
+                <a key={t.href} href={t.href} className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200">
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{t.label}</span>
+                  <span className="text-xs text-text-secondary">{t.desc}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">

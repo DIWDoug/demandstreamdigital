@@ -411,6 +411,39 @@ const PartnerTools = () => {
         {/* Exclusivity */}
         <MarketExclusivity />
 
+        {/* Related Services */}
+        <section className="py-12 bg-surface-elevated border-t border-border/30">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-3 text-center">Services Behind the Numbers</p>
+              <h2 className="text-lg md:text-xl font-semibold text-foreground text-center mb-6">
+                Ready to put the projections into practice?
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {[
+                  { label: "Plumbing SEO", href: "/plumbing-seo" },
+                  { label: "HVAC SEO", href: "/hvac-seo" },
+                  { label: "Plumbing Paid Ads", href: "/plumbing-paid-advertising" },
+                  { label: "HVAC Paid Ads", href: "/hvac-paid-advertising" },
+                  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+                  { label: "Content Marketing", href: "/plumbing-content-marketing" },
+                  { label: "AI Automation", href: "/ai-automation" },
+                  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+                ].map((s) => (
+                  <Link
+                    key={s.href}
+                    to={s.href}
+                    className="group flex items-center justify-between gap-2 px-4 py-3 rounded-lg border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-dark transition-all duration-200"
+                  >
+                    <span className="text-sm font-medium text-foreground group-hover:text-accent-blue transition-colors">{s.label}</span>
+                    <ArrowRight className="h-3.5 w-3.5 text-text-secondary group-hover:text-accent-blue transition-colors flex-shrink-0" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form Section */}
         <ContactForm />
       </main>
