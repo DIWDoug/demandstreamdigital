@@ -6,6 +6,7 @@ import Footer from "@/components/sections/Footer";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
 import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
+import WebDesignExclusivity from "@/components/services/web-design/WebDesignExclusivity";
 import { SITE_URL, PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/website-design`;
@@ -419,6 +420,9 @@ const WebDesignHub = () => {
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={webDesignHubQualification} />
+
+      {/* EXCLUSIVITY */}
+      <WebDesignExclusivity />
 
       {/* CONTACT */}
       <ServiceContactForm
