@@ -7,6 +7,7 @@ import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
 import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
+import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -494,6 +495,9 @@ const HVACWebsiteDesign = () => {
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={hvacWebDesignQualification} />
+
+      {/* EXCLUSIVITY */}
+      <HVACPaidAdsExclusivity />
 
       {/* CONTACT */}
       <ServiceContactForm

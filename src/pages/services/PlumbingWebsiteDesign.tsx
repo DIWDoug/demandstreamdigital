@@ -7,6 +7,7 @@ import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
 import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
+import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -466,6 +467,9 @@ const PlumbingWebsiteDesign = () => {
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={plumbingWebDesignQualification} />
+
+      {/* EXCLUSIVITY */}
+      <PlumbingPaidAdsExclusivity />
 
       {/* CONTACT */}
       <ServiceContactForm
