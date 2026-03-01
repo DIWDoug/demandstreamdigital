@@ -366,8 +366,8 @@ const SocialMediaROICalculator = () => {
               <div className="mb-8 bg-surface-elevated rounded-2xl p-6 border border-border/30">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
-                    <p className="text-sm text-text-muted">Auto-fill with typical values for your industry</p>
+                        <h2 className="text-lg font-semibold text-foreground">Industry Benchmarks</h2>
+                        <p className="text-sm text-text-muted">Auto-fill with typical values for your industry</p>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {Object.entries(industryBenchmarks).map(([key, benchmark]) => (
@@ -414,7 +414,7 @@ const SocialMediaROICalculator = () => {
                         <TrendingUp className="h-5 w-5 text-emerald-500" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground">Return</h3>
+                        <h2 className="text-lg font-semibold text-foreground">Return</h2>
                         <p className="text-sm text-text-muted">Campaign performance metrics</p>
                       </div>
                     </div>
@@ -469,7 +469,7 @@ const SocialMediaROICalculator = () => {
                         <DollarSign className="h-5 w-5 text-amber-500" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground">Investment</h3>
+                        <h2 className="text-lg font-semibold text-foreground">Investment</h2>
                         <p className="text-sm text-text-muted">Campaign costs and expenses</p>
                       </div>
                     </div>
@@ -518,7 +518,7 @@ const SocialMediaROICalculator = () => {
                         <Calculator className="h-5 w-5 text-accent-blue" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground">Estimated Results</h3>
+                        <h2 className="text-lg font-semibold text-foreground">Estimated Results</h2>
                         <p className="text-sm text-text-muted">Projected campaign outcomes</p>
                       </div>
                     </div>

@@ -116,7 +116,7 @@ const JobCostEstimator = () => {
                       className="group p-8 rounded-xl border border-border bg-card hover:border-cta/50 hover:shadow-lg transition-all text-left"
                     >
                       <Icon className="h-10 w-10 text-accent-blue mb-4" />
-                      <h3 className="text-xl font-bold mb-2">{cat.label}</h3>
+                      <h2 className="text-xl font-bold mb-2">{cat.label}</h2>
                       <p className="text-sm text-text-muted">{cat.jobs.length} common job types</p>
                     </button>
                   );
