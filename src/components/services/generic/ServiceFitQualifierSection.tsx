@@ -29,9 +29,9 @@ const ServiceFitQualifierSection = ({ config }: ServiceFitQualifierSectionProps)
 
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-semibold uppercase tracking-wider mb-4">
               {config.eyebrow}
-            </p>
+            </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
               {config.headline}
             </h2>
