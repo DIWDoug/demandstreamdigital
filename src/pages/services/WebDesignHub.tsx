@@ -188,87 +188,108 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* MARKET DOMINATION FRAMEWORK — dark */}
-      <section className="py-24 lg:py-32 bg-surface-dark">
+      {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A */}
+      <section className="py-24 lg:py-32 bg-[#0F1E2D]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
+            {/* Label + centered headline */}
+            <div className="text-center mb-10">
               <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
                 The Market Domination Framework™
               </h2>
-              <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
-                The Market Domination Framework™ is a repeatable system for building plumbing and HVAC websites that rank and convert. It isn't a template. It isn't a theme swap. It's a structured approach built specifically around how plumbing and HVAC customers search — and what it takes to turn that search into a booked call.
-              </p>
               <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
-                Every website we build runs through this framework. Structure first. Then design. Then content. Then technical SEO foundation. In that order, every time.
+                A repeatable system for building plumbing and HVAC websites that rank and convert. Structure first. Then design. Then content. Then technical SEO foundation. In that order, every time.
               </p>
             </div>
 
-            {/* Full-width callout bar */}
-            <div className="bg-surface-elevated border border-border/50 rounded-xl p-6 mb-10 text-center">
-              <p className="text-text-secondary text-base leading-relaxed">
-                When these five elements work together, the website becomes a platform, not just a page.{" "}
-                <span className="text-foreground font-semibold">It activates your SEO investment. It compounds over time.</span>
+            {/* Full-width stat/callout bar */}
+            <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 mb-10 text-center">
+              <p className="text-foreground text-base leading-relaxed">
+                A plumbing company at a 45% booking rate loses half its ad spend to leads that never convert. The framework starts by fixing structure, not budget.{" "}
+                <span className="text-accent-blue font-semibold">Structure is what activates SEO and paid advertising from day one.</span>
               </p>
             </div>
 
-            {/* 2x3 card grid — NOT 5 across */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* 2x2 card grid */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
               {pillars.map((p, i) => (
-                <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-6 flex gap-4 items-start">
-                  <div className="shrink-0 w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7 flex gap-5 items-start">
+                  <div className="shrink-0 w-11 h-11 rounded-lg bg-accent-blue/15 flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-accent-blue" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-foreground mb-1">{p.label}</p>
+                    <p className="text-base font-bold text-foreground mb-2">{p.label}</p>
                     <p className="text-text-secondary text-sm leading-relaxed">{p.body}</p>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Footer note */}
+            <p className="text-center text-text-muted text-sm italic">
+              When these five elements work together, the website becomes revenue infrastructure, not just a page.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* DIFFERENT CALL = DIFFERENT PAGE — light */}
+      {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 split */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-              <div className="lg:sticky lg:top-32">
-                <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  Different Phone Call = Different Page
-                </h2>
+            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Different Phone Call = Different Page
+            </h2>
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+              {/* Left 3/5 — primary explanation */}
+              <div className="lg:col-span-3">
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  This is the rule that drives our website structure: if the customer's reason for calling is different, the page should be different. Search engines interpret repair intent and installation intent as two distinct queries.
+                  If the customer's reason for calling is different, the page should be different. Search engines read repair intent and installation intent as two separate queries. One page can't rank well for both — it confuses Google's relevance signal and reduces conversion for each customer type.
                 </p>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  When you blend them onto one page, you confuse Google, you confuse the customer, and your conversion rate drops. Detailed service structure for plumbing and HVAC is covered on each industry-specific page below.
-                </p>
+                {/* Numbered intent rows */}
+                {[
+                  {
+                    num: "01",
+                    label: "Emergency Repair",
+                    color: "text-cta",
+                    queries: ['"water heater not working"', '"AC not cooling"', '"drain backup"'],
+                    note: "Customer needs help now. Page must lead with availability, phone number, and same-day booking. No friction.",
+                  },
+                  {
+                    num: "02",
+                    label: "Install / Replacement",
+                    color: "text-accent-blue",
+                    queries: ['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'],
+                    note: "Customer is researching. Page must lead with trust, options, proof, and pricing context.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className={`flex gap-6 py-6 ${i < 1 ? "border-b border-slate-200" : ""}`}>
+                    <span className={`text-4xl font-black leading-none shrink-0 ${item.color} opacity-30`}>{item.num}</span>
+                    <div>
+                      <p className={`text-xs font-semibold tracking-widest uppercase mb-2 ${item.color}`}>{item.label}</p>
+                      <ul className="space-y-1 text-slate-500 text-sm italic mb-3">
+                        {item.queries.map((q, j) => <li key={j}>{q}</li>)}
+                      </ul>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.note}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="space-y-4">
-                <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">Repair Intent</p>
-                  <ul className="space-y-2 text-slate-600 text-sm mb-4">
-                    <li>"water heater not working"</li>
-                    <li>"AC not cooling"</li>
-                    <li>"drain backup"</li>
-                  </ul>
-                  <p className="text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                    Urgency-driven. Customer wants a fast answer and a same-day call. Page must lead with availability and booking.
+
+              {/* Right 2/5 — callout */}
+              <div className="lg:col-span-2 lg:sticky lg:top-32">
+                <div className="bg-white border border-slate-200 rounded-2xl p-7 shadow-sm">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-4">The Rule</p>
+                  <p className="text-slate-900 text-lg font-bold leading-snug mb-4">
+                    One service. One intent. One page.
                   </p>
-                </div>
-                <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">Install / Replacement Intent</p>
-                  <ul className="space-y-2 text-slate-600 text-sm mb-4">
-                    <li>"water heater replacement cost"</li>
-                    <li>"new AC unit installation"</li>
-                    <li>"whole house repipe"</li>
-                  </ul>
-                  <p className="text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                    Research-driven. Customer is comparing options and prices. Page must lead with trust, options, and proof.
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    When you blend repair and install onto the same page, you dilute your relevance signal for both queries and split your conversion path for both customer types.
+                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Industry-specific page structure is covered in detail on the Plumbing and HVAC pages below.
                   </p>
                 </div>
               </div>
