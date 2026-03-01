@@ -247,31 +247,39 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
-      {/* MARKET DOMINATION FRAMEWORK — dark, Pattern D with category grouping */}
-      <section id="framework" className="py-24 lg:py-32 bg-surface-dark scroll-mt-32">
+      {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A */}
+      <section id="framework" className="py-24 lg:py-32 bg-[#0F1E2D] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
+            {/* Label + centered headline */}
+            <div className="text-center mb-10">
               <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
                 The Market Domination Framework™ for Plumbing
               </h2>
               <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
-                The Market Domination Framework™ is the structure system behind every plumbing website we build. It starts with how customers search and works backward to site structure, page content, conversion flow, and technical setup. For plumbing, this means the site is organized around service clusters, not a single catch-all page.
+                Organized around service clusters — not a single Plumbing Services page. Every plumbing website we build starts with how customers search and works backward to structure, content, and conversion flow.
               </p>
             </div>
 
-            {/* Five pillars — 2x3 grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {/* Full-width stat/callout bar */}
+            <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 mb-10 text-center">
+              <p className="text-foreground text-base leading-relaxed">
+                A homeowner with an active leak searches by problem and urgency, not by service category.{" "}
+                <span className="text-accent-blue font-semibold">A plumbing website that doesn't reflect that structure loses high-value calls to competitors who do.</span>
+              </p>
+            </div>
+
+            {/* 2x2 card grid */}
+            <div className="grid sm:grid-cols-2 gap-6 mb-12">
               {[
-                { label: "Architecture", body: "Service clusters with dedicated pages — not a single Plumbing Services page" },
-                { label: "Trust", body: "Reviews, licensing, warranties, real job photos front and center" },
-                { label: "Speed", body: "Core Web Vitals compliance — needed for emergency mobile searches" },
-                { label: "AI Structure", body: "Answer blocks and FAQs for burst pipe, water heater, sewer backup queries" },
-                { label: "Conversion", body: "Emergency-first UX, prominent call path, financing options where applicable" },
+                { label: "Architecture", body: "Dedicated pages per service cluster. Drain cleaning, water heaters, repiping, and sewer each get their own page built around actual search behavior." },
+                { label: "Trust", body: "Reviews, licensing, warranties, and real job photos positioned where they reduce friction on high-ticket decisions." },
+                { label: "Speed", body: "Core Web Vitals compliance built in. Emergency searches happen on phones in high-stress moments. A slow site loses those calls." },
+                { label: "Conversion", body: "Emergency-first UX with a clear call path above the fold on mobile. Call tracking and CRM integration ready from launch day." },
               ].map((p, i) => (
-                <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-6">
-                  <p className="text-sm font-bold text-foreground mb-2">{p.label}</p>
+                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7">
+                  <p className="text-base font-bold text-foreground mb-2">{p.label}</p>
                   <p className="text-text-secondary text-sm leading-relaxed">{p.body}</p>
                 </div>
               ))}
@@ -281,7 +289,7 @@ const PlumbingWebsiteDesign = () => {
             <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-6">Plumbing Service Cluster Map</p>
             <div className="grid sm:grid-cols-2 gap-6">
               {serviceCluster.map((cluster, i) => (
-                <div key={i} className="bg-surface-elevated border border-border/50 rounded-xl p-6">
+                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6">
                   <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">{cluster.heading}</p>
                   <ul className="space-y-1.5">
                     {cluster.items.map((item, j) => (
@@ -294,76 +302,81 @@ const PlumbingWebsiteDesign = () => {
                 </div>
               ))}
             </div>
+
+            <p className="text-center text-text-muted text-sm italic mt-8">
+              The cluster map above reflects how each service type is structured on a fully built plumbing website. Every cluster gets its own page family.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* DIFFERENT CALL = DIFFERENT PAGE — light, Pattern B */}
+      {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 numbered layout */}
       <section id="architecture" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-                Different Plumbing Call = Different Page
-              </h2>
-              <p className="text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                A homeowner with a burst pipe at 2am is not the same customer as a homeowner researching repipe estimates. The search is different. The urgency is different. The conversion path is different. Serving them from the same page costs you both calls.
-              </p>
-            </div>
-
-            {/* 2-column intent cards — Pattern C style */}
-            <div className="grid lg:grid-cols-2 gap-6 mb-10">
-              <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-4">Emergency Intent (Act Now)</p>
-                <ul className="space-y-2 text-slate-600 text-sm mb-4">
-                  <li>"plumber near me" — needs help immediately</li>
-                  <li>"burst pipe repair [city]" — urgent property damage</li>
-                  <li>"clogged drain not draining" — active problem</li>
-                  <li>"water heater not working" — no hot water</li>
-                  <li>"sewage backup" — health-level urgency</li>
-                </ul>
-                <p className="text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                  Page must: lead with phone number, show availability, remove friction. Every second of confusion costs a call.
+            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+              Different Plumbing Call = Different Page
+            </h2>
+            <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+              {/* Left 3/5 — numbered intent rows */}
+              <div className="lg:col-span-3">
+                <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                  A homeowner with a burst pipe at 2am is not the same customer as someone researching repipe estimates. The search is different. The urgency is different. The conversion path is different. Serving them from the same page costs you both calls.
                 </p>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-                <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-4">Planned / Research Intent (Earn the Call)</p>
-                <ul className="space-y-2 text-slate-600 text-sm mb-4">
-                  <li>"water heater replacement cost" — comparing options</li>
-                  <li>"whole house repipe estimate" — planning a project</li>
-                  <li>"trenchless sewer replacement" — researching method</li>
-                  <li>"tankless water heater installation" — evaluating upgrade</li>
-                  <li>"hydro jet drain cleaning" — looking for best solution</li>
-                </ul>
-                <p className="text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                  Page must: build trust, show process, surface reviews and proof, present options and pricing ranges.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-4">Page Architecture Examples</p>
-              <div className="grid sm:grid-cols-2 gap-3">
                 {[
-                  ["Emergency Drain Cleaning", "/drain-cleaning-[city]/", "urgent, call-first"],
-                  ["Hydro-Jet Service", "/hydro-jet-drain-cleaning/", "method comparison, trust-forward"],
-                  ["Water Heater Repair", "/water-heater-repair-[city]/", "urgent, same-day angle"],
-                  ["Water Heater Replacement", "/water-heater-replacement/", "research, options, pricing"],
-                  ["Whole-House Repipe", "/repipe-specialist-[city]/", "project, process, warranty"],
-                  ["Slab Leak Detection & Repair", "/slab-leak-repair/", "high-anxiety, trust, proof"],
-                  ["Sewer Camera Inspection", "/sewer-camera-inspection/", "diagnostic, process-heavy"],
-                  ["Trenchless Sewer Replacement", "/trenchless-sewer-replacement/", "method, cost comparison"],
-                ].map(([label, url, note], i) => (
-                  <div key={i} className="flex gap-3 items-start p-3 rounded-lg bg-slate-50 border border-slate-100">
-                    <span className="text-cta text-xs shrink-0 mt-0.5">→</span>
+                  {
+                    num: "01",
+                    label: "Emergency Intent",
+                    color: "text-cta",
+                    queries: ['"plumber near me"', '"burst pipe repair [city]"', '"sewage backup"', '"water heater not working"'],
+                    note: "Lead with phone number, show availability, remove every point of friction. Every extra second costs a call.",
+                  },
+                  {
+                    num: "02",
+                    label: "Research Intent",
+                    color: "text-accent-blue",
+                    queries: ['"water heater replacement cost"', '"whole house repipe estimate"', '"trenchless sewer replacement"', '"tankless installation"'],
+                    note: "Lead with trust, process, and proof. Show options and pricing context. Earn the estimate request.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className={`flex gap-6 py-7 ${i < 1 ? "border-b border-slate-200" : ""}`}>
+                    <span className={`text-4xl font-black leading-none shrink-0 ${item.color} opacity-25`}>{item.num}</span>
                     <div>
-                      <p className="text-sm font-medium text-slate-900">{label}</p>
-                      <p className="text-xs text-slate-400 font-mono">{url}</p>
-                      <p className="text-xs text-slate-500 italic">{note}</p>
+                      <p className={`text-xs font-semibold tracking-widest uppercase mb-3 ${item.color}`}>{item.label}</p>
+                      <ul className="space-y-1 text-slate-500 text-sm italic mb-4">
+                        {item.queries.map((q, j) => <li key={j}>{q}</li>)}
+                      </ul>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.note}</p>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Right 2/5 — page architecture examples */}
+              <div className="lg:col-span-2 lg:sticky lg:top-32">
+                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-5">Page Architecture Examples</p>
+                  <div className="space-y-3">
+                    {[
+                      ["Emergency Drain Cleaning", "call-first, urgency"],
+                      ["Water Heater Repair", "same-day, trust"],
+                      ["Water Heater Replacement", "research, options"],
+                      ["Whole-House Repipe", "project, process"],
+                      ["Slab Leak Detection", "high-anxiety, proof"],
+                      ["Trenchless Sewer Replacement", "method, cost"],
+                      ["Sewer Camera Inspection", "diagnostic, process"],
+                    ].map(([label, note], i) => (
+                      <div key={i} className="flex gap-3 items-start">
+                        <span className="text-cta text-xs shrink-0 mt-1">→</span>
+                        <div>
+                          <p className="text-sm font-medium text-slate-900 leading-tight">{label}</p>
+                          <p className="text-xs text-slate-400 italic">{note}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
