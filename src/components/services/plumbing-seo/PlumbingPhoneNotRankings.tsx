@@ -3,23 +3,23 @@ import { Phone, BarChart3, Gauge, AlertTriangle } from "lucide-react";
 const points = [
   {
     icon: Phone,
-    title: "Call Tracking Is Mandatory",
-    body: "Every plumbing SEO campaign we build includes call tracking. We track which searches and pages produce booked calls, not just call volume. Ranking data without call data is incomplete."
+    title: "Call Tracking Is Required",
+    body: "Every plumbing SEO campaign we build includes call tracking. We track which searches and pages produce booked calls, not just call volume. Ranking data without call data tells you nothing useful."
   },
   {
     icon: BarChart3,
     title: "Booking Rate Is Tracked, Not Assumed",
-    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is converting to revenue. A company at 45% produces different results than one at 72%. That gap has to be identified before we scale volume."
+    body: "Rankings tell us visibility. Booking rate tells us whether that visibility is producing revenue. A company at 45% produces different results than one at 72%. That gap has to be identified before we push more volume."
   },
   {
     icon: AlertTriangle,
     title: "Missed Calls Are Measurable Losses",
-    body: "A missed call during a freeze event or a no-hot-water spike is a job that went to your competitor. Emergency calls cannot go to voicemail. We identify the patterns before scaling volume."
+    body: "A missed call during a freeze event or a no-hot-water spike is a job that went to your competitor. Emergency calls cannot go to voicemail. We identify the patterns before pushing more volume."
   },
   {
     icon: Gauge,
     title: "Capacity Alignment Is Built In",
-    body: "If your board is full in July, we throttle. If February is slow, we push. Marketing that ignores your operational reality creates chaos. Plumbing SEO has to align with how your operation runs."
+    body: "If your board is full in July, we hold. If February is slow, we push. Marketing that ignores your operational reality creates chaos. Plumbing SEO has to align with how your operation runs."
   }
 ];
 
@@ -70,7 +70,7 @@ const PlumbingPhoneNotRankings = () => {
           </div>
 
           <p className="text-center text-text-muted text-sm mt-8 leading-relaxed">
-            Local SEO must account for the operational realities of running a plumbing company. A strategy built without that context generates calls the operation cannot run.
+            Local SEO has to account for the operational realities of running a plumbing company. A strategy built without that context generates calls the operation cannot run.
           </p>
         </div>
       </div>
