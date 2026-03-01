@@ -45,14 +45,14 @@ const serviceCluster = [
 ];
 
 const gbpRows = [
-  { category: "Plumber (Primary)", page: "/plumbing-website-design/ [parent]", intent: "Brand / market-level" },
-  { category: "Drain Cleaning Service", page: "/drain-cleaning-[city]/", intent: "Emergency, high urgency" },
-  { category: "Water Heater Installation / Repair", page: "/water-heater-replacement/ + /water-heater-repair/", intent: "Repair urgent / install research" },
-  { category: "Sewer Services", page: "/sewer-cleaning/ + /trenchless-sewer-replacement/", intent: "Emergency + project" },
-  { category: "Pipe Repair / Repipe", page: "/repipe-specialist/", intent: "Research, high ticket" },
-  { category: "Leak Detection", page: "/slab-leak-detection/", intent: "High-anxiety, trust-driven" },
-  { category: "Backflow Testing", page: "/backflow-testing-certification/", intent: "Commercial, compliance" },
-  { category: "Water Filtration", page: "/water-filtration-installation/", intent: "Upgrade intent, seasonal" },
+  { category: "Plumber (Primary)", page: "/plumbing/[city]/[state-abr]/", intent: "Brand / market-level" },
+  { category: "Drain Cleaning Service", page: "/drain-cleaning-[city]-[state-abr]/", intent: "Emergency, high urgency" },
+  { category: "Water Heater Installation / Repair", page: "/water-heater-installation/[city]/[state-abr]/ + /water-heater-repair/[city]/[state-abr]/", intent: "Repair urgent / install research" },
+  { category: "Sewer Services", page: "/sewer-cleaning/[city]/[state-abr]/ + /trenchless-sewer-replacement/[city]/[state-abr]/", intent: "Emergency + project" },
+  { category: "Pipe Repair / Repipe", page: "/repipe-specialist/[city]/[state-abr]/", intent: "Research, high ticket" },
+  { category: "Leak Detection", page: "/slab-leak-detection/[city]/[state-abr]/", intent: "High-anxiety, trust-driven" },
+  { category: "Backflow Testing", page: "/backflow-testing-certification/[city]/[state-abr]/", intent: "Commercial, compliance" },
+  { category: "Water Filtration", page: "/water-filtration-installation/[city]/[state-abr]/", intent: "Upgrade intent, seasonal" },
 ];
 
 const plumbingWebDesignQualification = {
