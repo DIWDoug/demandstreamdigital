@@ -9,6 +9,7 @@ import ServiceContactForm from "@/components/services/generic/ServiceContactForm
 import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
 import WebDesignExclusivity from "@/components/services/web-design/WebDesignExclusivity";
 import { SITE_URL, PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 
 const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
@@ -461,6 +462,7 @@ const WebDesignHub = () => {
         headline="See If Your Market Is Available"
         subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
         exclusivityLine="One plumbing client and one HVAC client per market. Your competitors don't get in."
+        steps={WEB_DESIGN_STEPS}
       />
 
       <Footer />

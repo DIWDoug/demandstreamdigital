@@ -10,6 +10,7 @@ import ServiceContactForm from "@/components/services/generic/ServiceContactForm
 import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 
 const canonicalUrl = `${SITE_URL}/plumbing-website-design`;
 const metaTitle = "Plumbing Website Design Built to Rank & Book Calls | DSD";
@@ -477,6 +478,7 @@ const PlumbingWebsiteDesign = () => {
         headline="See If Your Market Is Available"
         subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
         exclusivityLine="One plumbing company per market. Your competitors don't get in."
+        steps={WEB_DESIGN_STEPS}
       />
 
       <Footer />

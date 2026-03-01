@@ -9,8 +9,9 @@ import WebDesignProblem from "@/components/services/web-design/WebDesignProblem"
 import WebDesignDeliverables from "@/components/services/web-design/WebDesignDeliverables";
 import WebDesignFit from "@/components/services/web-design/WebDesignFit";
 import WebDesignExclusivity from "@/components/services/web-design/WebDesignExclusivity";
-import WebDesignContactForm from "@/components/services/web-design/WebDesignContactForm";
+import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
 import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
+import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 
 const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
@@ -110,7 +111,13 @@ const WebDesign = () => {
       />
 
       {/* 07. CONTACT */}
-      <WebDesignContactForm />
+      <ServiceContactForm
+        formType="web_design_contact"
+        headline="Ready to Build a Site That Actually Books Calls?"
+        subheadline="Tell us where you operate and what you're building. We'll confirm if your market is available and scope the right build."
+        exclusivityLine="One plumbing client and one HVAC client per market. Your competitors don't get in."
+        steps={WEB_DESIGN_STEPS}
+      />
 
       {/* 08. FOOTER */}
       <Footer />
