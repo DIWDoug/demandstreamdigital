@@ -64,6 +64,10 @@ const PaidAdvertising = lazy(() => import("./pages/services/PaidAdvertising"));
 const PlumbingPaidAdvertising = lazy(() => import("./pages/services/PlumbingPaidAdvertising"));
 const HVACPaidAdvertising = lazy(() => import("./pages/services/HVACPaidAdvertising"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
+const HVACGoogleMaps = lazy(() => import("./pages/services/HVACGoogleMaps"));
+const HVACEmailMarketing = lazy(() => import("./pages/services/HVACEmailMarketing"));
+const HVACContentMarketing = lazy(() => import("./pages/services/HVACContentMarketing"));
+const HVACReporting = lazy(() => import("./pages/services/HVACReporting"));
 const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
@@ -216,12 +220,12 @@ const App = () => (
 
           {/* HVAC Service Pages */}
           <Route path="/hvac-seo" element={<HVACSEO />} />
-          <Route path="/hvac-google-maps" element={<GoogleMaps />} />
+          <Route path="/hvac-google-maps" element={<HVACGoogleMaps />} />
           <Route path="/hvac-paid-advertising" element={<HVACPaidAdvertising />} />
-          <Route path="/hvac-email-marketing" element={<EmailMarketing />} />
-          <Route path="/hvac-content-marketing" element={<ContentMarketing />} />
+          <Route path="/hvac-email-marketing" element={<HVACEmailMarketing />} />
+          <Route path="/hvac-content-marketing" element={<HVACContentMarketing />} />
           <Route path="/hvac-authority-building" element={<Authority />} />
-          <Route path="/hvac-reporting" element={<Reporting />} />
+          <Route path="/hvac-reporting" element={<HVACReporting />} />
 
           {/* ============ WHITE-LABEL → TRADE-SPECIFIC REDIRECTS ============ */}
           

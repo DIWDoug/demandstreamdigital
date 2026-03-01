@@ -183,7 +183,8 @@ const OurBlog = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital" />
         <meta property="og:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital." />
-        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
+        <link rel="canonical" href="https://demandstreamdigital.com/our-blog" />
+        <meta property="og:url" content="https://demandstreamdigital.com/our-blog" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
         

@@ -167,6 +167,8 @@ const PartnerTools = () => {
         <meta name="twitter:title" content="Marketing Tools for Plumbing & HVAC Companies | Demand Stream Digital" />
         <meta name="twitter:description" content="Use Demand Stream Digital's calculators to plan SEO, paid ads, and content marketing for your plumbing or HVAC business." />
         <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/partner-tools.png" />
+        <link rel="canonical" href="https://demandstreamdigital.com/partner-tools" />
+        <meta property="og:url" content="https://demandstreamdigital.com/partner-tools" />
       </Helmet>
       
       <Header />
