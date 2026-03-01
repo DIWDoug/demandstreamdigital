@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, AlertTriangle, Map, Eye, Globe, ShieldOff, BarChart2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -75,28 +75,46 @@ const plumbingWebDesignQualification = {
 
 const failureItems = [
   {
-    title: "The \"Plumbing Services\" Catch-All",
+    icon: AlertTriangle,
+    title: 'The "Plumbing Services" Catch-All',
     body: "One page trying to rank for every service. It doesn't rank for anything specific, so calls from high-value searches — water heater replacement, repipe, hydro-jet — go to competitors with dedicated pages.",
+    color: "text-cta",
+    bg: "bg-cta/10",
   },
   {
+    icon: Map,
     title: "GBP and Website Disconnected",
     body: "Your Google Business Profile lists services. Your website should mirror that taxonomy. When it doesn't, you're splitting the authority signal Google needs to rank you in Maps.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
   },
   {
+    icon: Eye,
     title: "Emergency Intent Gets Buried",
     body: "A homeowner with an active leak isn't reading a brochure page. They need to see a phone number and a booking path in under three seconds. If your site doesn't deliver that on mobile, they move to the next result.",
+    color: "text-cta",
+    bg: "bg-cta/10",
   },
   {
+    icon: Globe,
     title: "No City-Level Structure",
     body: "Plumbing is local. A company covering eight cities needs eight pages, not one page with a list of cities in the footer. Without city-specific pages, local search performance stays flat outside the primary market.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
   },
   {
+    icon: ShieldOff,
     title: "No Trust Signals",
     body: "Plumbing is high-ticket, high-trust. A customer deciding between you and the next company is looking for reviews, licensing, real photos, and proof of recent work. If those elements aren't prominent, they move on.",
+    color: "text-accent-green",
+    bg: "bg-accent-green/10",
   },
   {
+    icon: BarChart2,
     title: "No Tracking at Launch",
     body: "Most contractor websites go live with no call tracking and no attribution. That means every dollar spent on ads or SEO from day one is invisible. You can't improve what you can't measure.",
+    color: "text-cta",
+    bg: "bg-cta/10",
   },
 ];
 
@@ -239,19 +257,27 @@ const PlumbingWebsiteDesign = () => {
                 </div>
               </div>
 
-              {/* RIGHT — 55%, stacked items, no card borders, generous spacing */}
-              <div className="space-y-8">
-                {failureItems.map((item, i) => (
-                  <div key={i} className="flex items-start gap-5">
-                    <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-cta text-xs font-bold">✕</span>
+              {/* RIGHT — 55%, icon rows with hr dividers matching golden rule */}
+              <div>
+                {failureItems.map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i}>
+                      <div className="flex items-start gap-4 py-6">
+                        <div className={`w-9 h-9 rounded-lg ${item.bg} flex items-center justify-center shrink-0 mt-0.5`}>
+                          <Icon className={`h-4 w-4 ${item.color}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-slate-900 text-[15px] mb-1.5">{item.title}</p>
+                          <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+                        </div>
+                      </div>
+                      {i < failureItems.length - 1 && (
+                        <hr className="border-t border-slate-200" />
+                      )}
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-bold text-slate-900 text-[15px] mb-2">{item.title}</p>
-                      <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

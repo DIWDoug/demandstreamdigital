@@ -1,4 +1,4 @@
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Layers, Zap, Globe, BarChart2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -56,20 +56,32 @@ const hvacWebDesignQualification = {
 
 const failureItems = [
   {
+    icon: Layers,
     title: "Heating and Cooling Mixed Onto One Page",
     body: "A homeowner searching 'AC repair' and a homeowner searching 'furnace repair' have completely different intent. One page can't serve both well. Google reads blurred search intent as lower relevance for both terms.",
+    color: "text-cta",
+    bg: "bg-cta/10",
   },
   {
+    icon: Zap,
     title: "Repair and Installation Blended Together",
     body: "'AC Repair & Installation' on one page confuses search intent and reduces your ranking potential for both terms. You lose the repair call and the install lead.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
   },
   {
+    icon: Globe,
     title: "No Seasonal Urgency in the UX",
     body: "Emergency callers don't want to read three paragraphs before finding your number. Peak-season pages need to be built for speed and clarity. The phone number should be the first thing they see.",
+    color: "text-cta",
+    bg: "bg-cta/10",
   },
   {
+    icon: BarChart2,
     title: "No Structure to Scale",
     body: "Adding a heat pump page, a ductless page, or a new city later breaks everything because the site wasn't built with structure in mind. Every addition becomes a rebuild.",
+    color: "text-accent-blue",
+    bg: "bg-accent-blue/10",
   },
 ];
 
@@ -212,19 +224,27 @@ const HVACWebsiteDesign = () => {
                 </div>
               </div>
 
-              {/* RIGHT — 55%, stacked items, no card borders, generous spacing */}
-              <div className="space-y-8">
-                {failureItems.map((item, i) => (
-                  <div key={i} className="flex items-start gap-5">
-                    <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-cta text-xs font-bold">✕</span>
+              {/* RIGHT — 55%, icon rows with hr dividers matching golden rule */}
+              <div>
+                {failureItems.map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={i}>
+                      <div className="flex items-start gap-4 py-6">
+                        <div className={`w-9 h-9 rounded-lg ${item.bg} flex items-center justify-center shrink-0 mt-0.5`}>
+                          <Icon className={`h-4 w-4 ${item.color}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-slate-900 text-[15px] mb-1.5">{item.title}</p>
+                          <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+                        </div>
+                      </div>
+                      {i < failureItems.length - 1 && (
+                        <hr className="border-t border-slate-200" />
+                      )}
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-bold text-slate-900 text-[15px] mb-2">{item.title}</p>
-                      <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
