@@ -18,24 +18,6 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { authorityConfig } from "@/data/service-pages/authority";
-import { ServiceBiggerPicture } from "@/components/services/generic";
-
-const AUTHORITY_BIGGER_PICTURE_SERVICES = [
-  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Content Marketing", href: "/plumbing-content-marketing" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-];
-const AUTHORITY_ORBIT_NODES = [
-  { label: "Local SEO", angle: 0 },
-  { label: "Google Maps / GBP", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Content Marketing", angle: 300 },
-];
 import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 

@@ -15,7 +15,6 @@ import {
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
   ServiceEcosystemSection,
-  ServiceBiggerPicture
 } from "@/components/services/generic";
 import { hvacGoogleMapsConfig } from "@/data/service-pages/hvac-google-maps";
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";

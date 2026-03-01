@@ -16,24 +16,6 @@ import HVACPaidAdsFit from "@/components/services/hvac-paid-advertising/HVACPaid
 import HVACPaidAdsFAQ from "@/components/services/hvac-paid-advertising/HVACPaidAdsFAQ";
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/HVACPaidAdsContactForm";
-import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
-
-const HVAC_PAID_BIGGER_PICTURE_SERVICES = [
-  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-];
-const HVAC_PAID_ORBIT_NODES = [
-  { label: "Local SEO", angle: 0 },
-  { label: "Google Maps / GBP", angle: 60 },
-  { label: "Reputation Mgmt", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Web Design", angle: 300 },
-];
 
 const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />

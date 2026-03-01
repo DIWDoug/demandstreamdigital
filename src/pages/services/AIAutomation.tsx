@@ -17,7 +17,6 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { aiAutomationConfig } from "@/data/service-pages/ai-automation";
-import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
 import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (

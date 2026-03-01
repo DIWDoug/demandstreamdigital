@@ -18,24 +18,6 @@ import {
   ServiceEcosystemSection
 } from "@/components/services/generic";
 import { contentMarketingConfig } from "@/data/service-pages/content-marketing";
-import { ServiceBiggerPicture } from "@/components/services/generic";
-
-const CONTENT_BIGGER_PICTURE_SERVICES = [
-  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-];
-const CONTENT_ORBIT_NODES = [
-  { label: "Local SEO", angle: 0 },
-  { label: "Google Maps / GBP", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Web Design", angle: 300 },
-];
 import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
