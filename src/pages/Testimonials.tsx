@@ -197,7 +197,6 @@ const Testimonials = () => {
         description="Hear from companies and agency partners who've worked with Demand Stream Digital. Real feedback on our SEO, PPC, and content marketing work."
         canonical="https://demandstreamdigital.com/testimonials"
         ogImage="https://demandstreamdigital.com/og-images/testimonials.jpg"
-        keywords="plumbing marketing reviews, HVAC marketing results, client success stories, plumbing SEO testimonials, local marketing feedback"
         schemaJson={testimonialsSchema}
       />
       

@@ -183,7 +183,6 @@ const ROICalculator = () => {
         <title>Marketing ROI Calculator | DemandStream Digital</title>
         <meta name="description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
-        <meta name="keywords" content="marketing ROI calculator, plumbing marketing ROI, HVAC marketing ROI, SEO return on investment, PPC ROI calculator" />
         
         
         <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>

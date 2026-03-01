@@ -8,7 +8,7 @@ export const aiAutomationConfig: ServicePageConfig = {
   metaTitle: "AI Automation for Plumbing & HVAC: Missed Call Recovery",
   metaDescription: "Missed call recovery, estimate follow-up, and lead reactivation on autopilot. AI automation built specifically for plumbing and HVAC dispatch operations.",
   canonicalUrl: `${SITE_URL}/ai-automation`,
-  keywords: "AI automation plumbing HVAC, missed call recovery, lead follow-up automation, AI chatbot plumbing, automated scheduling HVAC, CRM automation trades",
+  keywords: undefined,
 
   hero: {
     headline: "AI Automation for",

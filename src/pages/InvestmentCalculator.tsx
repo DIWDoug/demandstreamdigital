@@ -270,7 +270,6 @@ const InvestmentCalculator = () => {
         <title>Marketing Investment Calculator | DemandStream Digital</title>
         <meta name="description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
-        <meta name="keywords" content="marketing budget calculator, plumbing marketing investment, HVAC marketing planner, digital marketing budget estimator" />
         
         
         <script type="application/ld+json">{JSON.stringify(investmentCalculatorSchema)}</script>

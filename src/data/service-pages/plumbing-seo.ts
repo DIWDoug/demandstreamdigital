@@ -5,10 +5,9 @@ import { SITE_URL } from "@/lib/constants";
 export const plumbingSEOConfig: ServicePageConfig = {
   slug: "plumbing-seo",
   title: "Plumbing SEO",
-  metaTitle: "Plumbing SEO That Drives More Booked Calls | DemandStream",
-  metaDescription: "SEO for plumbing companies that ranks drain, sewer, water heater, and emergency service pages. Local pack, on-page, and technical SEO tied directly to dispatch capacity.",
+  metaTitle: "Plumbing SEO That Drives More Booked Calls | DSD",
+  metaDescription: "SEO for plumbing companies that ranks drain, sewer, water heater, and emergency service pages. Local pack and technical SEO tied to dispatch capacity.",
   canonicalUrl: `${SITE_URL}/plumbing-seo`,
-  keywords: "plumbing SEO, plumbing SEO services, SEO for plumbers, plumbing company SEO, plumber local SEO, plumbing marketing",
 
   hero: {
     headline: "Plumbing SEO Services That Drive",

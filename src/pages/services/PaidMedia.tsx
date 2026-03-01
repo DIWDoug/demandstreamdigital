@@ -52,7 +52,6 @@ const PaidMedia = () => {
       <Helmet>
         <title>{paidMediaConfig.metaTitle}</title>
         <meta name="description" content={paidMediaConfig.metaDescription} />
-        <meta name="keywords" content="plumbing HVAC PPC management, paid media, Google Ads management, Meta Ads services, local service ads" />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
         
         

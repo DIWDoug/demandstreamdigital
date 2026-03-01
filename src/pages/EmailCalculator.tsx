@@ -180,7 +180,6 @@ const EmailCalculator = () => {
         <title>Email Marketing ROI Calculator | DemandStream Digital</title>
         <meta name="description" content="Forecast email campaign performance and ROI for your plumbing or HVAC business. Free email calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/email-calculator" />
-        <meta name="keywords" content="email marketing calculator, email ROI calculator, open rate estimator, email campaign planner, plumbing HVAC email tool" />
         
         
         <script type="application/ld+json">{JSON.stringify(emailCalculatorSchema)}</script>

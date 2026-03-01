@@ -79,7 +79,6 @@ const PaidAdvertising = () => {
         title={metaTitle}
         description={metaDescription}
         canonical={canonicalUrl}
-        keywords="paid advertising plumbing HVAC, Google Ads for plumbers, HVAC PPC management, Local Services Ads management, Facebook ads for plumbing companies"
         schemaJson={[pageSchema, faqSchema]}
       />
 

@@ -98,7 +98,6 @@ const ServicePageLayout = ({
         <title>{config.metaTitle}</title>
         <meta name="description" content={config.metaDescription} />
         <link rel="canonical" href={config.canonicalUrl} />
-        {config.keywords && <meta name="keywords" content={config.keywords} />}
         
         
         {/* Open Graph */}

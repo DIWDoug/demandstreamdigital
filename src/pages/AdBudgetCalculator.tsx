@@ -141,7 +141,6 @@ const AdBudgetCalculator = () => {
         <title>Ad Budget &amp; PPC ROI Calculator | DemandStream</title>
         <meta name="description" content="Estimate Google Ads and Meta ad spend ROI for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/ad-budget-calculator" />
-        <meta name="keywords" content="PPC calculator, ad budget estimator, Google Ads ROI, Meta Ads calculator, paid media planning tool" />
         
         
         <script type="application/ld+json">{JSON.stringify(adBudgetCalculatorSchema)}</script>

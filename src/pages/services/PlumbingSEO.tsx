@@ -78,7 +78,6 @@ const PlumbingSEO = () => {
         title={plumbingSEOConfig.metaTitle}
         description={plumbingSEOConfig.metaDescription}
         canonical={plumbingSEOConfig.canonicalUrl}
-        keywords={plumbingSEOConfig.keywords}
         schemaJson={combinedSchema}
       />
 

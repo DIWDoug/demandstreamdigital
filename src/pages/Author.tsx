@@ -108,7 +108,6 @@ const Author = () => {
         <title>{author.name} - {author.role} | Demand Stream Digital</title>
         <meta name="description" content={author.shortBio} />
         <link rel="canonical" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
-        <meta name="keywords" content={`${author.name}, ${author.role}, plumbing HVAC marketing expert, local SEO specialist`} />
         
         
         <script type="application/ld+json">

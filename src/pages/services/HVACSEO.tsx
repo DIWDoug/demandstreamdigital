@@ -78,7 +78,6 @@ const HVACSEO = () => {
         title={hvacSEOConfig.metaTitle}
         description={hvacSEOConfig.metaDescription}
         canonical={hvacSEOConfig.canonicalUrl}
-        keywords={hvacSEOConfig.keywords}
         schemaJson={combinedSchema}
       />
 
