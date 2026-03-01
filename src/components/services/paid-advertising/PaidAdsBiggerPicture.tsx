@@ -7,6 +7,7 @@ const services = [
   { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+  { label: "Web Design", href: "/website-design" },
 ];
 
 const orbitNodes = [
