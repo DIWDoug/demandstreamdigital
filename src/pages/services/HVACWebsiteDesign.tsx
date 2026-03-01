@@ -191,7 +191,7 @@ const HVACWebsiteDesign = () => {
             <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
               {/* LEFT — 45% */}
               <div className="lg:sticky lg:top-32">
-                <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
+                <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                   Why Most HVAC Websites Don't Generate Consistent Booked Calls
                 </h2>

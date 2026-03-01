@@ -61,7 +61,7 @@ const TopicalExpertise = () => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Section header */}
          <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Plumbing & HVAC</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">Plumbing & HVAC</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             Built for Both. Tailored to Each.
           </h2>

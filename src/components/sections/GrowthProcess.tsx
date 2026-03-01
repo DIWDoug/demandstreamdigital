@@ -159,7 +159,7 @@ const GrowthProcess = () => {
       <StreamTexture variant="light" opacity={0.08} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
          <div className="text-center mb-8 max-w-3xl mx-auto">
-           <p className="text-sm font-semibold uppercase tracking-wider text-cta mb-3">Our Process</p>
+           <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">Our Process</p>
            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
              From Audit to Growth
            </h2>
