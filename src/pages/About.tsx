@@ -760,9 +760,15 @@ const About = () => {
                       </div>
                     )}
                   </div>
-                  <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h4>
+                  {member.name === "Doug Bryson" ? (
+                    <Link to="/authors/doug-bryson" className="block text-base lg:text-lg font-semibold text-foreground hover:text-accent-blue transition-colors mb-1">
+                      {member.name}
+                    </Link>
+                  ) : (
+                    <h4 className="text-base lg:text-lg font-semibold text-foreground mb-1">
+                      {member.name}
+                    </h4>
+                  )}
                   <p className="text-sm text-text-secondary mb-2">
                     {member.role}
                   </p>

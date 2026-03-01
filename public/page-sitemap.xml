@@ -179,12 +179,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://demandstreamdigital.com/hvac-authority-building</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://demandstreamdigital.com/hvac-reporting</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -323,24 +317,5 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- ============ HOMEOWNER TOOLS (Priority 0.5) ============ -->
-  <url>
-    <loc>https://demandstreamdigital.com/tools/job-cost-estimator</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/tools/financing-calculator</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/tools/plumbing-cost-quiz</loc>
-    <lastmod>2026-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 
 </urlset>
