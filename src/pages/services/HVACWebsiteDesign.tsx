@@ -10,6 +10,7 @@ import ServiceContactForm from "@/components/services/generic/ServiceContactForm
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 
 const canonicalUrl = `${SITE_URL}/hvac-website-design`;
 const metaTitle = "HVAC Website Design for Seasonal Demand | DSD";
@@ -505,6 +506,7 @@ const HVACWebsiteDesign = () => {
         headline="See If Your Market Is Available"
         subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
         exclusivityLine="One HVAC company per market. Your competitors don't get in."
+        steps={WEB_DESIGN_STEPS}
       />
 
       <Footer />
