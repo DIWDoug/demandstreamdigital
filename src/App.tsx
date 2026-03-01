@@ -168,6 +168,7 @@ const App = () => (
           <Route path="/plumbing-seo" element={<PlumbingSEO />} />
           <Route path="/plumbing-google-maps" element={<GoogleMaps />} />
           <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
+          <Route path="/plumbing-paid-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
           <Route path="/plumbing-content-marketing" element={<ContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
@@ -223,6 +224,7 @@ const App = () => (
           <Route path="/hvac-seo" element={<HVACSEO />} />
           <Route path="/hvac-google-maps" element={<HVACGoogleMaps />} />
           <Route path="/hvac-paid-advertising" element={<HVACPaidAdvertising />} />
+          <Route path="/hvac-paid-advertising/" element={<Navigate to="/hvac-paid-advertising" replace />} />
           <Route path="/hvac-email-marketing" element={<HVACEmailMarketing />} />
           <Route path="/hvac-content-marketing" element={<HVACContentMarketing />} />
           <Route path="/hvac-authority-building" element={<Authority />} />
