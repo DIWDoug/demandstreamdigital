@@ -154,19 +154,7 @@ const HVACPaidAdvertising = () => {
       {/* 12. FAQ */}
       <HVACPaidAdsFAQ />
 
-      {/* 13. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="HVAC Paid Advertising Is Part of a"
-        headingHighlight="Bigger Growth System"
-        body1="Paid advertising captures seasonal demand at the moment of intent. But it compounds when it runs connected to SEO, GBP, and email — not managed in isolation."
-        body2="Your GBP reviews improve paid ad quality scores and reduce cost per click. Your SEO lowers the blended cost per booked call over time. Your email marketing reactivates past customers before they click a competitor's ad. When every channel pulls toward the same outcome — more booked service calls at a lower cost — the system compounds."
-        centerLabel="HVAC Paid Ads"
-        centerSublabel="Seasonal demand control."
-        services={HVAC_PAID_BIGGER_PICTURE_SERVICES}
-        orbitNodes={HVAC_PAID_ORBIT_NODES}
-      />
-
-      {/* 14. LEAD FORM */}
+      {/* 13. LEAD FORM */}
       <HVACPaidAdsContactForm />
 
       {/* 15. CHANNEL DEEP DIVES */}
