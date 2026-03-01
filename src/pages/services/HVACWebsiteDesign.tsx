@@ -5,6 +5,8 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
+import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -32,20 +34,25 @@ const gbpRows = [
   { category: "Ductless Mini-Split", page: "/ductless-mini-split-[city]/", intent: "Research — add-on or replacement" },
 ];
 
-const goodFit = [
-  "5 to 40+ truck HVAC operations with a growth or scale mindset",
-  "Companies running seasonal campaigns who need landing pages that actually convert",
-  "Operators preparing to scale with heat pump and ductless services",
-  "HVAC companies ready to build or expand a maintenance agreement base",
-  "Owners who measure success by booked calls, not traffic reports",
-];
-
-const notFit = [
-  "Under $500K revenue looking for the lowest-cost option",
-  "\"Just need something online\" — companies not ready to invest in performance",
-  "Operations not planning to track calls or measure cost per booked call",
-  "Companies not ready to activate SEO or paid advertising after launch",
-];
+const hvacWebDesignQualification = {
+  eyebrow: "Selective Fit",
+  headline: "Is HVAC Website Design Right for Your Company?",
+  subheadline: "We work best with established HVAC companies that want to own their seasonal market with a website built for real call volume.",
+  goodFit: [
+    { point: "5 to 40+ truck HVAC operations with a growth or scale mindset", detail: "You run an active dispatch board and want your website to fill it during peak and shoulder season." },
+    { point: "Companies running seasonal campaigns who need landing pages that actually convert", detail: "You're spending on paid advertising and need pages that match that spend with real booking performance." },
+    { point: "Operators preparing to scale with heat pump and ductless services", detail: "Equipment transitions require new page structure. We build that in from the start, not as an add-on." },
+    { point: "HVAC companies ready to build or expand a maintenance agreement base", detail: "Shoulder season is the highest-value window for maintenance enrollment. Your site needs to be built for it." },
+    { point: "Owners who measure success by booked calls, not traffic reports", detail: "Every design decision is filtered through one question: does this generate a dispatched call?" },
+  ],
+  notFit: [
+    { point: "Under $500K revenue looking for the lowest-cost option", detail: "A performance build requires investment. If budget is the primary filter, there are better fits for where you are." },
+    { point: '"Just need something online" — companies not ready to invest in performance', detail: "We build revenue infrastructure. Checkbox websites are not in scope." },
+    { point: "Operations not planning to track calls or measure cost per booked call", detail: "Every site includes call tracking. Without measurement, the investment can't show its return." },
+    { point: "Companies not ready to activate SEO or paid advertising after launch", detail: "The site is built to power both channels. Without activating them, you won't recover the investment." },
+  ],
+  ctaText: "Claim Your Territory Today",
+};
 
 const failureItems = [
   {
@@ -459,107 +466,21 @@ const HVACWebsiteDesign = () => {
         </div>
       </section>
 
-      {/* WHO THIS IS FOR + EXCLUSIVITY — dark */}
-      <section id="fit" className="py-24 lg:py-32 bg-surface-dark scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">Selective Fit</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-                Who This Is For
-              </h2>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-              <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 lg:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
-                    <span className="text-cta text-sm font-bold">✓</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Good Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {goodFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
-                      <span className="text-cta mt-0.5 shrink-0">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 lg:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-                    <span className="text-destructive text-sm font-bold">✕</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Not a Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {notFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
-                      <span className="text-destructive mt-0.5 shrink-0">✕</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+      {/* SELECTIVE FIT */}
+      <ServiceFitQualifierSection config={hvacWebDesignQualification} />
 
-            {/* Exclusivity block */}
-            <div className="relative overflow-hidden bg-surface-elevated border border-border/50 rounded-2xl p-8 lg:p-12 text-center">
-              <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
-                Exclusivity
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                One HVAC Company Per Market. That's the Model.
-              </h3>
-              <p className="text-text-secondary leading-relaxed mb-4 max-w-xl mx-auto">
-                When you work with DemandStream, your HVAC competitors don't. We take one HVAC client per service area. One company gets the structure, the SEO foundation, the paid activation, and the reputation system.
-              </p>
-              <p className="text-text-secondary mb-4">Your competitor can't buy the same thing. That's by design.</p>
-              <p className="text-text-secondary mb-8">If your market is available, it's worth finding out now.</p>
-              <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
-                Claim Your Territory Today
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT — light */}
-      <section id="contact" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Get Started</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Ready to Build an HVAC Website That Performs All Year?
-            </h2>
-            <p className="text-slate-600 leading-relaxed mb-10">
-              Most HVAC websites were built to check a box. We build HVAC websites to fill a dispatch board, peak season, shoulder season, and everything in between. One market. One HVAC partner. Built for your territory.
-            </p>
-            <div className="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
-              <TwoStepContactForm
-                formType="hvac_web_design_contact"
-                submitButtonText="Claim Your Territory Today"
-                step1ButtonText="Claim Your Territory Today"
-              />
-            </div>
-            <div className="flex justify-center gap-6 mt-8">
-              <Link to="/website-design" className="text-sm text-slate-400 hover:text-slate-900 transition-colors">
-                ← Back to Website Design
-              </Link>
-              <Link to="/plumbing-website-design" className="text-sm text-accent-blue hover:text-slate-900 transition-colors flex items-center gap-1">
-                Plumbing Website Design
-                <ArrowRight className="h-3 w-3" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* CONTACT */}
+      <ServiceContactForm
+        formType="hvac_web_design_contact"
+        headline="See If Your Market Is Available"
+        subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
+        exclusivityLine="One HVAC company per market. Your competitors don't get in."
+      />
 
       <Footer />
     </div>
   );
 };
+
 
 export default HVACWebsiteDesign;

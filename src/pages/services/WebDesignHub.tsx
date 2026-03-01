@@ -4,6 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
+import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
 import { SITE_URL, PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/website-design`;
@@ -37,20 +39,25 @@ const failures = [
   },
 ];
 
-const goodFit = [
-  "5 to 40+ truck operations with a growth mindset",
-  "Companies ready to invest in a premium, scalable web presence",
-  "Owners and GMs who measure success by booked calls and revenue",
-  "Operators who want SEO and paid advertising to work from day one",
-  "Companies where the phone ringing is the only metric that matters",
-];
-
-const notFit = [
-  "Under $500K revenue looking for the lowest price option",
-  "\"Just need something live\" — bare-minimum website projects",
-  "Companies not ready to track calls or measure cost per booked call",
-  "Operations not planning to grow beyond current capacity",
-];
+const webDesignHubQualification = {
+  eyebrow: "Selective Fit",
+  headline: "Is Website Design Right for Your Company?",
+  subheadline: "We work best with established plumbing and HVAC companies that want to own their market, not just check a website box.",
+  goodFit: [
+    { point: "5 to 40+ truck operations with a growth mindset", detail: "You're running an active dispatch board and want your website to generate more of the calls that fill it." },
+    { point: "Companies ready to invest in a premium, scalable web presence", detail: "You understand a performance website is infrastructure, not a commodity. You're ready to build it right." },
+    { point: "Owners and GMs who measure success by booked calls and revenue", detail: "You don't care about traffic reports. You care whether the phone rings with jobs that match your margins." },
+    { point: "Operators who want SEO and paid advertising to work from day one", detail: "Your site will be built to activate both channels immediately, not require a separate rebuild six months later." },
+    { point: "Companies where the phone ringing is the only metric that matters", detail: "Every design and content decision we make is filtered through one question: does this make a customer more likely to call?" },
+  ],
+  notFit: [
+    { point: "Under $500K revenue looking for the lowest price option", detail: "A performance build requires investment. If budget is the primary filter, there are better fits for where you are right now." },
+    { point: '"Just need something live" — bare-minimum website projects', detail: "We build revenue infrastructure, not placeholders. Minimum viable websites are not in our scope." },
+    { point: "Companies not ready to track calls or measure cost per booked call", detail: "Every site we build includes call tracking. If you're not ready to measure, we can't show you the ROI." },
+    { point: "Operations not planning to grow beyond current capacity", detail: "Our builds are designed to scale. If you're not planning to grow, the investment won't make sense." },
+  ],
+  ctaText: "Claim Your Territory Today",
+};
 
 const WebDesignHub = () => {
   const pageSchema = {
@@ -410,78 +417,16 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* WHO THIS IS FOR — dark */}
-      <section className="py-24 lg:py-32 bg-surface-dark">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">Selective Fit</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-                Who This Is For
-              </h2>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 lg:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
-                    <span className="text-cta text-sm font-bold">✓</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Good Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {goodFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
-                      <span className="text-cta mt-0.5 shrink-0">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 lg:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
-                    <span className="text-destructive text-sm font-bold">✕</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground">Not a Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {notFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-text-secondary text-sm">
-                      <span className="text-destructive mt-0.5 shrink-0">✕</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <p className="text-text-muted text-center text-sm">If you're building for scale, this is built for you. If you're looking for a cheap website, there are better options for where you are right now.</p>
-          </div>
-        </div>
-      </section>
+      {/* SELECTIVE FIT */}
+      <ServiceFitQualifierSection config={webDesignHubQualification} />
 
-      {/* EXCLUSIVITY + FINAL CTA — light */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] relative overflow-hidden">
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-xs font-semibold uppercase tracking-wider mb-6">
-              Exclusivity
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-              One Plumbing Company. One HVAC Company. Per Market.
-            </h2>
-            <p className="text-slate-600 text-base leading-relaxed mb-4 max-w-2xl mx-auto">
-              When you work with DemandStream, your competitors don't. We take one plumbing client and one HVAC client per service area. The website we build is designed to put you ahead, not split between you and the shop down the street.
-            </p>
-            <p className="text-slate-600 text-base mb-10">
-              If your market is available, it's worth finding out now.
-            </p>
-            <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
-              Claim Your Territory Today
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* CONTACT */}
+      <ServiceContactForm
+        formType="web_design_hub_contact"
+        headline="See If Your Market Is Available"
+        subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
+        exclusivityLine="One plumbing client and one HVAC client per market. Your competitors don't get in."
+      />
 
       <Footer />
     </div>
