@@ -40,39 +40,38 @@ const VALID_ROUTES = new Set([
 // ============= 301 PERMANENT REDIRECTS =============
 const PERMANENT_REDIRECTS: Record<string, string> = {
   // ===== LEGACY SERVICE PAGES -> NEW HUBS =====
-  '/search-engine-optimization': '/white-label-local-seo',
-  '/seo': '/white-label-local-seo',
-  '/local-search-marketing': '/white-label-local-seo',
-  '/nashville-seo': '/white-label-local-seo',
-  '/nashville-local-seo': '/white-label-local-seo',
-  '/nashville-local-search-marketing': '/white-label-local-seo',
-  '/local-seo-company': '/white-label-local-seo',
+  '/search-engine-optimization': '/hvac-and-plumbing-seo',
+  '/seo': '/hvac-and-plumbing-seo',
+  '/local-search-marketing': '/hvac-and-plumbing-seo',
+  '/nashville-seo': '/hvac-and-plumbing-seo',
+  '/nashville-local-seo': '/hvac-and-plumbing-seo',
+  '/nashville-local-search-marketing': '/hvac-and-plumbing-seo',
+  '/local-seo-company': '/hvac-and-plumbing-seo',
   
   // ===== PPC/PAID MEDIA REDIRECTS =====
-  '/white-label-local-ppc': '/white-label-paid-media',
-  '/ppc': '/white-label-paid-media',
-  '/nashville-ppc': '/white-label-paid-media',
-  '/nashville-paid-search-ppc-marketing': '/white-label-paid-media',
+  '/white-label-local-ppc': '/hvac-and-plumbing-paid-ads',
+  '/ppc': '/hvac-and-plumbing-paid-ads',
+  '/nashville-ppc': '/hvac-and-plumbing-paid-ads',
+  '/nashville-paid-search-ppc-marketing': '/hvac-and-plumbing-paid-ads',
   
   // ===== SOCIAL MEDIA -> CONTENT MARKETING =====
-  '/social-media-marketing': '/white-label-content-marketing',
-  '/nashville-social-media-marketing': '/white-label-content-marketing',
-  '/facebook-marketing': '/white-label-content-marketing',
-  '/facebook-advertising': '/white-label-content-marketing',
+  '/social-media-marketing': '/plumbing-content-marketing',
+  '/nashville-social-media-marketing': '/plumbing-content-marketing',
+  '/facebook-marketing': '/plumbing-content-marketing',
+  '/facebook-advertising': '/plumbing-content-marketing',
   
   // ===== EMAIL MARKETING =====
-  '/email-marketing': '/white-label-email-marketing',
-  '/nashville-email-marketing': '/white-label-email-marketing',
+  '/email-marketing': '/plumbing-email-marketing',
+  '/nashville-email-marketing': '/plumbing-email-marketing',
   
   // ===== CONTENT MARKETING =====
-  '/white-label-topical-content': '/white-label-topical-authority',
-  '/content-marketing': '/white-label-content-marketing',
-  '/content-marketing-nashville': '/white-label-content-marketing',
+  '/content-marketing': '/plumbing-content-marketing',
+  '/content-marketing-nashville': '/plumbing-content-marketing',
   
   // ===== ABOUT/CONTACT/SERVICES =====
   '/about-us': '/about',
   '/contact-us': '/contact',
-  '/services': '/white-label-inbound-marketing-services',
+  '/services': '/',
   
   // ===== LEGACY CALCULATOR URLs =====
   '/roi-calculator': '/partner-tools/roi-calculator',
@@ -84,119 +83,40 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/ai-ready-check': '/partner-tools/ai-ready-check',
   '/agency-calculator': '/partner-tools/roi-calculator',
   
-  // ===== NESTED SERVICE PATHS -> FLAT PATHS =====
-  '/white-label-inbound-marketing-services/local-seo': '/white-label-local-seo',
-  '/white-label-inbound-marketing-services/google-maps': '/white-label-gbp-seo',
-  '/white-label-inbound-marketing-services/paid-media': '/white-label-paid-media',
-  '/white-label-inbound-marketing-services/email-marketing': '/white-label-email-marketing',
-  '/white-label-inbound-marketing-services/authority-building': '/white-label-local-authority-building',
-  '/white-label-inbound-marketing-services/reporting': '/white-label-reporting',
-  '/white-label-inbound-marketing-services/content-marketing': '/white-label-content-marketing',
-  
   // ===== NASHVILLE-SPECIFIC PAGES =====
-  '/nashville-tn-online-review-management': '/white-label-review-management',
-  '/nashville-tn-online-reputation-management': '/white-label-review-management',
-  '/nashville-mobile-website-design': '/white-label-landing-page-design',
-  '/nashville-mobile-marketing': '/white-label-paid-media',
-  '/nashville-mobile-advertising': '/white-label-paid-media',
-  '/nashville-online-reputation-management': '/white-label-review-management',
-  '/nashville-web-design': '/white-label-landing-page-design',
-  '/nashville-qr-code-marketing': '/white-label-paid-media',
+  '/nashville-tn-online-review-management': '/plumbing-google-maps',
+  '/nashville-tn-online-reputation-management': '/plumbing-google-maps',
+  '/nashville-mobile-website-design': '/plumbing-and-hvac-web-design',
+  '/nashville-mobile-marketing': '/hvac-and-plumbing-paid-ads',
+  '/nashville-mobile-advertising': '/hvac-and-plumbing-paid-ads',
+  '/nashville-online-reputation-management': '/plumbing-google-maps',
+  '/nashville-web-design': '/plumbing-and-hvac-web-design',
+  '/nashville-qr-code-marketing': '/hvac-and-plumbing-paid-ads',
   '/nashville-digital-marketing': '/',
-  
+
   // ===== DALLAS-SPECIFIC PAGES =====
-  '/dallas-seo': '/white-label-local-seo',
-  '/dallas-ppc': '/white-label-paid-media',
+  '/dallas-seo': '/hvac-and-plumbing-seo',
+  '/dallas-ppc': '/hvac-and-plumbing-paid-ads',
   '/dallas-digital-marketing': '/',
-  
+
   // ===== REPUTATION MANAGEMENT =====
-  '/online-reputation-management': '/white-label-review-management',
-  '/online-reputation-management-small-businesses': '/white-label-review-management',
-  '/online-presence-management-for-startups': '/white-label-review-management',
-  '/online-presence-audit-startups': '/white-label-review-management',
-  
+  '/online-reputation-management': '/plumbing-google-maps',
+  '/online-reputation-management-small-businesses': '/plumbing-google-maps',
+  '/online-presence-management-for-startups': '/plumbing-google-maps',
+  '/online-presence-audit-startups': '/plumbing-google-maps',
+
   // ===== CONVERSION RATE OPTIMIZATION =====
-  '/conversion-rate-optimization': '/white-label-conversion-tracking',
+  '/conversion-rate-optimization': '/plumbing-reporting',
   '/conversion-rate-optimization-what-you-need-to-know': '/blog',
-  
+
   // ===== WORDPRESS REMNANTS =====
   '/wp-content': '/',
   '/wp-admin': '/',
   '/wp-login.php': '/',
   '/xmlrpc.php': '/',
-  
+
   // ===== /our-blog → /blog (canonical consolidation) =====
   '/our-blog': '/blog',
-
-  // ===== WHITE-LABEL → TRADE-SPECIFIC (Cluster A — 33 pages) =====
-  '/white-label-inbound-marketing-services': '/',
-  '/services': '/',
-
-  // GBP / Google Maps spokes → plumbing-google-maps
-  '/white-label-gbp-seo': '/plumbing-google-maps',
-  '/white-label-gbp-optimization': '/plumbing-google-maps',
-  '/white-label-review-management': '/plumbing-google-maps',
-  '/white-label-citation-building': '/plumbing-google-maps',
-  '/white-label-photo-optimization': '/plumbing-google-maps',
-  '/white-label-qa-management': '/plumbing-google-maps',
-  '/white-label-post-scheduling': '/plumbing-google-maps',
-
-  // Email Marketing spokes → plumbing-email-marketing
-  '/white-label-email-marketing': '/plumbing-email-marketing',
-  '/white-label-newsletter-design': '/plumbing-email-marketing',
-  '/white-label-list-management': '/plumbing-email-marketing',
-  '/white-label-automation-flows': '/plumbing-email-marketing',
-  '/white-label-campaign-strategy': '/plumbing-email-marketing',
-  '/white-label-ab-testing': '/plumbing-email-marketing',
-  '/white-label-performance-analytics': '/plumbing-email-marketing',
-
-  // Content Marketing spokes → plumbing-content-marketing
-  '/white-label-content-marketing': '/plumbing-content-marketing',
-  '/white-label-case-studies': '/plumbing-content-marketing',
-  '/white-label-lead-magnets': '/plumbing-content-marketing',
-  '/white-label-press-releases': '/plumbing-content-marketing',
-  '/white-label-ebooks-guides': '/plumbing-content-marketing',
-  '/white-label-power-posts': '/plumbing-content-marketing',
-  '/white-label-topical-authority': '/plumbing-content-marketing',
-  '/white-label-geographical-content': '/plumbing-content-marketing',
-  '/white-label-faq-content': '/plumbing-content-marketing',
-  '/white-label-hub-spoke-buildouts': '/plumbing-content-marketing',
-
-  // Reporting spokes → plumbing-reporting
-  '/white-label-reporting': '/plumbing-reporting',
-  '/white-label-rank-tracking-visibility': '/plumbing-reporting',
-  '/white-label-monthly-performance-reports': '/plumbing-reporting',
-  '/white-label-branded-dashboards': '/plumbing-reporting',
-  '/white-label-client-presentation-decks': '/plumbing-reporting',
-  '/white-label-roi-revenue-analysis': '/plumbing-reporting',
-  '/white-label-call-tracking-lead-attribution': '/plumbing-reporting',
-
-  // Authority Building spokes → plumbing-authority-building
-  '/white-label-local-authority-building': '/plumbing-authority-building',
-  '/white-label-sponsorships': '/plumbing-authority-building',
-  '/white-label-brand-mentions': '/plumbing-authority-building',
-  '/white-label-anchor-text': '/plumbing-authority-building',
-  '/white-label-structured-citations': '/plumbing-authority-building',
-  '/white-label-unstructured-citations': '/plumbing-authority-building',
-
-  // Local SEO spokes → plumbing-seo (catch-all)
-  '/white-label-local-seo': '/plumbing-seo',
-  '/white-label-onpage-optimization': '/plumbing-seo',
-  '/white-label-technical-seo': '/plumbing-seo',
-  '/white-label-local-keyword-strategy': '/plumbing-seo',
-  '/white-label-content-development': '/plumbing-content-marketing',
-  '/white-label-link-building': '/plumbing-authority-building',
-  '/white-label-schema-markup': '/plumbing-seo',
-  '/white-label-nap-citations': '/plumbing-google-maps',
-
-  // Paid Media spokes → hvac-and-plumbing-paid-ads
-  '/white-label-paid-media': '/hvac-and-plumbing-paid-ads',
-  '/white-label-google-ads': '/hvac-and-plumbing-paid-ads',
-  '/white-label-meta-ads': '/hvac-and-plumbing-paid-ads',
-  '/white-label-local-service-ads': '/hvac-and-plumbing-paid-ads',
-  '/white-label-retargeting-campaigns': '/hvac-and-plumbing-paid-ads',
-  '/white-label-landing-page-design': '/plumbing-and-hvac-web-design',
-  '/white-label-conversion-tracking': '/plumbing-reporting',
 
   // ===== SOFT 404 FIXES =====
   '/plumbing-hvac-digital-marketing': '/',
@@ -325,19 +245,19 @@ const PATTERN_REDIRECTS: Array<{ pattern: RegExp; destination: string }> = [
   { pattern: /^\/portfolio\/.*\/www\..*$/, destination: '/case-studies' },
   
   // Nashville pages -> appropriate hubs
-  { pattern: /^\/nashville-.*-seo.*$/, destination: '/white-label-local-seo' },
-  { pattern: /^\/nashville-.*-ppc.*$/, destination: '/white-label-paid-media' },
+  { pattern: /^\/nashville-.*-seo.*$/, destination: '/hvac-and-plumbing-seo' },
+  { pattern: /^\/nashville-.*-ppc.*$/, destination: '/hvac-and-plumbing-paid-ads' },
   { pattern: /^\/nashville-.*-marketing.*$/, destination: '/' },
   
   // Dallas pages -> appropriate hubs
-  { pattern: /^\/dallas-.*-seo.*$/, destination: '/white-label-local-seo' },
-  { pattern: /^\/dallas-.*-ppc.*$/, destination: '/white-label-paid-media' },
+  { pattern: /^\/dallas-.*-seo.*$/, destination: '/hvac-and-plumbing-seo' },
+  { pattern: /^\/dallas-.*-ppc.*$/, destination: '/hvac-and-plumbing-paid-ads' },
   { pattern: /^\/dallas-.*-marketing.*$/, destination: '/' },
   
   // General city-specific pages -> homepage
   { pattern: /^\/[a-z]+-digital-marketing\/?$/, destination: '/' },
-  { pattern: /^\/[a-z]+-seo\/?$/, destination: '/white-label-local-seo' },
-  { pattern: /^\/[a-z]+-ppc\/?$/, destination: '/white-label-paid-media' },
+  { pattern: /^\/[a-z]+-seo\/?$/, destination: '/hvac-and-plumbing-seo' },
+  { pattern: /^\/[a-z]+-ppc\/?$/, destination: '/hvac-and-plumbing-paid-ads' },
 ];
 
 // ============= DYNAMIC ROUTE PATTERNS =============

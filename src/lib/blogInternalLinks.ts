@@ -132,7 +132,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'retargeting campaigns', url: '/white-label-retargeting-campaigns', context: 'retargeting remarketing' },
       { text: 'conversion tracking', url: '/white-label-conversion-tracking', context: 'conversion tracking' },
       { text: 'landing page design', url: '/white-label-landing-page-design', context: 'landing pages' },
-      { text: 'call tracking', url: '/white-label-call-tracking-lead-attribution', context: 'call tracking' },
+      { text: 'call tracking', url: '/plumbing-reporting', context: 'call tracking' },
     ],
     externalLink: {
       matchPhrases: ['pay-per-click', 'PPC specialists', 'paid advertising', 'location extensions'],
@@ -160,7 +160,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'local keyword strategy', url: '/white-label-local-keyword-strategy', context: 'keyword research' },
       { text: 'schema markup', url: '/white-label-schema-markup', context: 'schema structured data' },
       { text: 'content development', url: '/white-label-content-development', context: 'content' },
-      { text: 'GBP optimization', url: '/white-label-gbp-optimization', context: 'google business profile' },
+      { text: 'GBP optimization', url: '/plumbing-google-maps', context: 'google business profile' },
     ],
     externalLink: {
       matchPhrases: ['backlinks', 'title tags', 'meta descriptions', 'header tags'],
