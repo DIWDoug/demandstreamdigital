@@ -19,7 +19,6 @@ import { useGeoBlock } from "./hooks/useGeoBlock";
 // Lazy loaded pages
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const Services = lazy(() => import("./pages/Services"));
 const ROICalculator = lazy(() => import("./pages/ROICalculator"));
 const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
 const AdBudgetCalculator = lazy(() => import("./pages/AdBudgetCalculator"));
@@ -68,7 +67,6 @@ const HVACGoogleMaps = lazy(() => import("./pages/services/HVACGoogleMaps"));
 const HVACEmailMarketing = lazy(() => import("./pages/services/HVACEmailMarketing"));
 const HVACContentMarketing = lazy(() => import("./pages/services/HVACContentMarketing"));
 const HVACReporting = lazy(() => import("./pages/services/HVACReporting"));
-const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
