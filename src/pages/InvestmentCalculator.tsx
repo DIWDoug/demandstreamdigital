@@ -267,8 +267,8 @@ const InvestmentCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital</title>
-        <meta name="description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <title>Marketing Investment Calculator | DemandStream Digital</title>
+        <meta name="description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/investment-calculator" />
         <meta name="keywords" content="marketing budget calculator, plumbing marketing investment, HVAC marketing planner, digital marketing budget estimator" />
         
@@ -276,8 +276,8 @@ const InvestmentCalculator = () => {
         <script type="application/ld+json">{JSON.stringify(investmentCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta property="og:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <meta property="og:title" content="Marketing Investment Calculator | DemandStream Digital" />
+        <meta property="og:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from DemandStream Digital." />
         <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/investment-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
@@ -287,8 +287,8 @@ const InvestmentCalculator = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marketing Investment Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta name="twitter:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from Demand Stream Digital." />
+        <meta name="twitter:title" content="Marketing Investment Calculator | DemandStream Digital" />
+        <meta name="twitter:description" content="Estimate marketing investment by channel for your plumbing or HVAC business. Free scoping tool from DemandStream Digital." />
         <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/investment-calculator.png" />
       </Helmet>
       

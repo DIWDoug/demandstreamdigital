@@ -57,11 +57,6 @@ const AIAutomation = () => {
         description={aiAutomationConfig.metaDescription}
         canonical={aiAutomationConfig.canonicalUrl}
         keywords={aiAutomationConfig.keywords}
-        hrefLangs={[
-          { hrefLang: "en-US", href: aiAutomationConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: aiAutomationConfig.canonicalUrl },
-          { hrefLang: "x-default", href: aiAutomationConfig.canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
 

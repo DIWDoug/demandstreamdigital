@@ -36,8 +36,8 @@ const Contact = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
-        title="Free Plumbing & HVAC Marketing Audit | DemandStream"
-        description="Book a free marketing audit for your plumbing or HVAC company. No contracts, no pitch decks. Just a real conversation about driving more booked calls."
+        title="Contact DemandStream Digital | Plumbing & HVAC Marketing"
+        description="Get in touch with DemandStream Digital. Book a free strategy call for your plumbing or HVAC company. No contracts, no pitch decks — real answers."
         canonical="https://demandstreamdigital.com/contact"
         ogImage="https://demandstreamdigital.com/og-images/contact.png"
         keywords="contact plumbing marketing, HVAC marketing consultation, plumber SEO contact, growth marketing for trades"

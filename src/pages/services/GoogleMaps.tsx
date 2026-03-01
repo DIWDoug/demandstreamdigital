@@ -75,11 +75,6 @@ const GoogleMaps = () => {
         description={googleMapsConfig.metaDescription}
         canonical={googleMapsConfig.canonicalUrl}
         keywords="plumbing Google Maps SEO, HVAC GBP optimization, Google Business Profile for plumbers, local pack ranking, plumbing review management"
-        hrefLangs={[
-          { hrefLang: "en-US", href: googleMapsConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: googleMapsConfig.canonicalUrl },
-          { hrefLang: "x-default", href: googleMapsConfig.canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
       

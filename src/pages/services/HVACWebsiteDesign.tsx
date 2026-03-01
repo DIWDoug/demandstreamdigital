@@ -74,10 +74,6 @@ const HVACWebsiteDesign = () => {
         description={metaDescription}
         canonical={canonicalUrl}
         keywords="HVAC website design, HVAC contractor website, heating cooling website design, air conditioning website, HVAC web design"
-        hrefLangs={[
-          { hrefLang: "en-US", href: canonicalUrl },
-          { hrefLang: "x-default", href: canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
 

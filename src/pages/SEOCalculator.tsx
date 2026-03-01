@@ -548,8 +548,8 @@ const SEOCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital</title>
-        <meta name="description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <title>Local SEO Cost Calculator | DemandStream Digital</title>
+        <meta name="description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         <meta name="keywords" content="SEO calculator, local SEO cost estimator, plumbing SEO pricing, HVAC SEO cost, organic traffic forecast" />
         
@@ -557,8 +557,8 @@ const SEOCalculator = () => {
         <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta property="og:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <meta property="og:title" content="Local SEO Cost Calculator | DemandStream Digital" />
+        <meta property="og:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from DemandStream Digital." />
         <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/seo-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
@@ -568,8 +568,8 @@ const SEOCalculator = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Local SEO Cost Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta name="twitter:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from Demand Stream Digital." />
+        <meta name="twitter:title" content="Local SEO Cost Calculator | DemandStream Digital" />
+        <meta name="twitter:description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from DemandStream Digital." />
         <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/seo-calculator.jpg" />
       </Helmet>
       

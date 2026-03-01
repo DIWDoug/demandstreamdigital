@@ -79,11 +79,6 @@ const PlumbingSEO = () => {
         description={plumbingSEOConfig.metaDescription}
         canonical={plumbingSEOConfig.canonicalUrl}
         keywords={plumbingSEOConfig.keywords}
-        hrefLangs={[
-          { hrefLang: "en-US", href: plumbingSEOConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: plumbingSEOConfig.canonicalUrl },
-          { hrefLang: "x-default", href: plumbingSEOConfig.canonicalUrl },
-        ]}
         schemaJson={combinedSchema}
       />
 

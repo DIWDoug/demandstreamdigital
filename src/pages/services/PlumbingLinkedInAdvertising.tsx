@@ -38,11 +38,6 @@ const PlumbingLinkedInAdvertising = () => {
         title={metaTitle}
         description={metaDescription}
         canonical={canonicalUrl}
-        hrefLangs={[
-          { hrefLang: "en-US", href: canonicalUrl },
-          { hrefLang: "en-CA", href: canonicalUrl },
-          { hrefLang: "x-default", href: canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
       <Header />

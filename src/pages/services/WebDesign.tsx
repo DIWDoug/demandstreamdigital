@@ -69,11 +69,6 @@ const WebDesign = () => {
         description={metaDescription}
         canonical={canonicalUrl}
         keywords="web design plumbing HVAC, plumbing website design, HVAC website design, contractor website design, custom web design plumbing"
-        hrefLangs={[
-          { hrefLang: "en-US", href: canonicalUrl },
-          { hrefLang: "en-CA", href: canonicalUrl },
-          { hrefLang: "x-default", href: canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
 

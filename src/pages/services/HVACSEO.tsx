@@ -79,11 +79,6 @@ const HVACSEO = () => {
         description={hvacSEOConfig.metaDescription}
         canonical={hvacSEOConfig.canonicalUrl}
         keywords={hvacSEOConfig.keywords}
-        hrefLangs={[
-          { hrefLang: "en-US", href: hvacSEOConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: hvacSEOConfig.canonicalUrl },
-          { hrefLang: "x-default", href: hvacSEOConfig.canonicalUrl },
-        ]}
         schemaJson={combinedSchema}
       />
 

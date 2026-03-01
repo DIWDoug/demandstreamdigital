@@ -69,11 +69,6 @@ const EmailMarketing = () => {
         description={emailMarketingConfig.metaDescription}
         canonical={emailMarketingConfig.canonicalUrl}
         keywords="plumbing HVAC email marketing, email campaign management, newsletter services, email automation, service business email"
-        hrefLangs={[
-          { hrefLang: "en-US", href: emailMarketingConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: emailMarketingConfig.canonicalUrl },
-          { hrefLang: "x-default", href: emailMarketingConfig.canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
       

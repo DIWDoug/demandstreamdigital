@@ -69,11 +69,6 @@ const Authority = () => {
         description={authorityConfig.metaDescription}
         canonical={authorityConfig.canonicalUrl}
         keywords="plumbing HVAC link building, local authority building, digital PR, backlink services, local SEO authority"
-        hrefLangs={[
-          { hrefLang: "en-US", href: authorityConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: authorityConfig.canonicalUrl },
-          { hrefLang: "x-default", href: authorityConfig.canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
       
