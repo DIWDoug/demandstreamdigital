@@ -227,10 +227,7 @@ const App = () => (
           <Route path="/hvac-authority-building" element={<Authority />} />
           <Route path="/hvac-reporting" element={<HVACReporting />} />
 
-          {/* ============ WHITE-LABEL → TRADE-SPECIFIC REDIRECTS ============ */}
-          
-          {/* Hub page redirects */}
-          <Route path="/white-label-inbound-marketing-services" element={<Navigate to="/#services" replace />} />
+          {/* ============ WHITE-LABEL → TRADE-SPECIFIC REDIRECTS (kept for crawl budget) ============ */}
           <Route path="/white-label-local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-gbp-seo" element={<Navigate to="/plumbing-google-maps" replace />} />
           <Route path="/white-label-paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
@@ -238,8 +235,12 @@ const App = () => (
           <Route path="/white-label-local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
           <Route path="/white-label-reporting" element={<Navigate to="/plumbing-reporting" replace />} />
           <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
-
-          {/* Local SEO spoke pages → consolidated hvac-and-plumbing-seo */}
+          <Route path="/white-label-google-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-meta-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-local-service-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-retargeting-campaigns" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-landing-page-design" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-conversion-tracking" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-onpage-optimization" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-technical-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-local-keyword-strategy" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
@@ -247,59 +248,9 @@ const App = () => (
           <Route path="/white-label-link-building" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-schema-markup" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-nap-citations" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-
-          {/* Google Maps spoke pages → consolidated plumbing-google-maps */}
-          <Route path="/white-label-gbp-optimization" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-review-management" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-citation-building" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-post-scheduling" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-photo-optimization" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-qa-management" element={<Navigate to="/plumbing-google-maps" replace />} />
-
-          {/* Paid Media spoke pages → consolidated plumbing-paid-advertising */}
-          <Route path="/white-label-google-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-meta-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-local-service-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-retargeting-campaigns" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-landing-page-design" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-conversion-tracking" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-
-          {/* Email Marketing spoke pages → consolidated plumbing-email-marketing */}
-          <Route path="/white-label-campaign-strategy" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-list-management" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-automation-flows" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-newsletter-design" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-ab-testing" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-performance-analytics" element={<Navigate to="/plumbing-email-marketing" replace />} />
-
-          {/* Content Marketing spoke pages → consolidated plumbing-content-marketing */}
-          <Route path="/white-label-geographical-content" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-topical-authority" element={<Navigate to="/plumbing-content-marketing" replace />} />
           <Route path="/white-label-topical-content" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-power-posts" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-ebooks-guides" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-lead-magnets" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-press-releases" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-case-studies" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-faq-content" element={<Navigate to="/plumbing-content-marketing" replace />} />
-          <Route path="/white-label-hub-spoke-buildouts" element={<Navigate to="/plumbing-content-marketing" replace />} />
-
-          {/* Authority Building spoke pages → consolidated plumbing-authority-building */}
-          <Route path="/white-label-structured-citations" element={<Navigate to="/plumbing-authority-building" replace />} />
           <Route path="/white-label-local-links" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-unstructured-citations" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-brand-mentions" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-anchor-text" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-sponsorships" element={<Navigate to="/plumbing-authority-building" replace />} />
-
-          {/* Reporting spoke pages → consolidated plumbing-reporting */}
-          <Route path="/white-label-branded-dashboards" element={<Navigate to="/plumbing-reporting" replace />} />
           <Route path="/white-label-dashboards" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-monthly-performance-reports" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-rank-tracking-visibility" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-call-tracking-lead-attribution" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-roi-revenue-analysis" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-client-presentation-decks" element={<Navigate to="/plumbing-reporting" replace />} />
 
           {/* ============ OLD NESTED STRUCTURE REDIRECTS ============ */}
           
