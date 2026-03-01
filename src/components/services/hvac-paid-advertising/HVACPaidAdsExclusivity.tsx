@@ -8,8 +8,11 @@ const HVACPaidAdsExclusivity = () => {
         backgroundImage: `radial-gradient(circle at 30% 50%, hsl(var(--cta)) 0%, transparent 60%),
                           radial-gradient(circle at 70% 50%, hsl(var(--accent-blue)) 0%, transparent 60%)`
       }} />
+      {/* Top divider */}
+      <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
+          <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">Exclusivity</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight">
             One HVAC Company Per Market.
           </h2>
