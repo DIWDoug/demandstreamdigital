@@ -39,7 +39,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "Paid Advertising for Plumbing & HVAC Operators Who Need More Booked Calls | DemandStream Digital";
+const metaTitle = "Plumbing & HVAC Paid Ads for Booked Calls | DSD";
 const metaDescription = "Google Ads, LSAs, and social ads built for plumbing and HVAC operators. Every campaign tied to booked calls and revenue, not clicks and impressions.";
 const canonicalUrl = `${SITE_URL}/hvac-and-plumbing-paid-ads`;
 

@@ -8,8 +8,8 @@ import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import { SITE_URL } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/hvac-website-design`;
-const metaTitle = "HVAC Website Design for Seasonal Demand & Booked Calls | DSD";
-const metaDescription = "Your HVAC website isn't built for seasonal demand or search intent. We design HVAC contractor websites with separate pages for repair, install, and maintenance — built to rank and convert.";
+const metaTitle = "HVAC Website Design for Seasonal Demand | DSD";
+const metaDescription = "Your HVAC website isn't built for seasonal demand or search intent. We design HVAC contractor websites with separate pages for repair, install, and maintenance. Built to rank and convert.";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
