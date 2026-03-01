@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Instagram Ads for Install Season | DSD";
-const metaDescription = "HVAC Instagram ads built for brand authority and replacement install demand. Visual campaigns tied to booked revenue through ServiceTitan integration.";
+const metaDescription = "System installs, seasonal tune-up promotions, and HVAC brand authority on Instagram. Visual content that builds trust and converts followers into booked service calls.";
 const canonicalUrl = `${SITE_URL}/hvac-instagram-advertising`;
 
 const HVACInstagramAdvertising = () => {
