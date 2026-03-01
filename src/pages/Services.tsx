@@ -65,7 +65,7 @@ const Services = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital</title>
+        <title>Plumbing & HVAC Inbound Marketing Services | DemandStream</title>
         <meta name="description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
         <meta name="keywords" content="plumbing marketing services, HVAC marketing services, local SEO plumbing, HVAC lead generation, plumbing inbound marketing" />
         <link rel="canonical" href="https://demandstreamdigital.com/services" />
@@ -74,7 +74,7 @@ const Services = () => {
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital" />
+        <meta property="og:title" content="Plumbing & HVAC Inbound Marketing Services | DemandStream" />
         <meta property="og:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
         <meta property="og:url" content="https://demandstreamdigital.com/services" />
         <meta property="og:type" content="website" />
@@ -83,7 +83,7 @@ const Services = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Plumbing & HVAC Inbound Marketing Services | Demand Stream Digital" />
+        <meta name="twitter:title" content="Plumbing & HVAC Inbound Marketing Services | DemandStream" />
         <meta name="twitter:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>

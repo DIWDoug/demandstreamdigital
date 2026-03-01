@@ -50,7 +50,7 @@ const Blog = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital</title>
+        <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
         <meta name="description" content="Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, email, and more on the Demand Stream Digital blog." />
         <link rel="canonical" href="https://demandstreamdigital.com/blog" />
       </Helmet>
