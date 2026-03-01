@@ -56,6 +56,9 @@ const PlumbingInstagramAdvertising = lazy(() => import("./pages/services/Plumbin
 const PlumbingLinkedInAdvertising = lazy(() => import("./pages/services/PlumbingLinkedInAdvertising"));
 const PlumbingProgrammaticAdvertising = lazy(() => import("./pages/services/PlumbingProgrammaticAdvertising"));
 const HVACSearchAds = lazy(() => import("./pages/services/HVACSearchAds"));
+const LSAHub = lazy(() => import("./pages/services/LSAHub"));
+const PlumbingLSA = lazy(() => import("./pages/services/PlumbingLSA"));
+const HVACLSA = lazy(() => import("./pages/services/HVACLSA"));
 const PlumbingSearchAds = lazy(() => import("./pages/services/PlumbingSearchAds"));
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
 const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
@@ -209,6 +212,12 @@ const App = () => (
           <Route path="/hvac-linkedin-advertising" element={<HVACLinkedInAdvertising />} />
           <Route path="/hvac-linkedin-advertising/" element={<HVACLinkedInAdvertising />} />
 
+          {/* LSA Pages */}
+          <Route path="/plumbing-hvac-local-service-ads" element={<LSAHub />} />
+          <Route path="/plumbing-local-service-ads" element={<PlumbingLSA />} />
+          <Route path="/hvac-local-service-ads" element={<HVACLSA />} />
+          {/* Legacy white-label LSA redirect updated to hub */}
+
           {/* Search Ads Spoke Pages */}
           <Route path="/hvac-search-ads" element={<HVACSearchAds />} />
           <Route path="/hvac-search-ads/" element={<HVACSearchAds />} />
@@ -240,7 +249,7 @@ const App = () => (
           <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
           <Route path="/white-label-google-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-meta-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-local-service-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
+          <Route path="/white-label-local-service-ads" element={<Navigate to="/plumbing-hvac-local-service-ads" replace />} />
           <Route path="/white-label-retargeting-campaigns" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-landing-page-design" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-conversion-tracking" element={<Navigate to="/plumbing-paid-advertising" replace />} />
