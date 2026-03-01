@@ -543,7 +543,7 @@ const BlogPostPage = () => {
                       },
                       a: ({ href, children }) => {
                         // Check if this is an old dialedinweb.com link (not blog)
-                        if (href?.includes('dialedinweb.com') && !href?.includes('dialedinweb.com/blog')) {
+                        if (href?.includes('dialedinweb.com') && !href?.includes('demandstreamdigital.com/blog')) {
                           return <span className="font-semibold text-foreground">{children}</span>;
                         }
                         
