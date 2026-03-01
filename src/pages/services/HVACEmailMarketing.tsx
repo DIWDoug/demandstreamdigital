@@ -15,7 +15,6 @@ import {
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
   ServiceEcosystemSection,
-  ServiceBiggerPicture
 } from "@/components/services/generic";
 import { hvacEmailMarketingConfig } from "@/data/service-pages/hvac-email-marketing";
 import { getServiceHubSchema } from "@/lib/schema";

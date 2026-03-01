@@ -10,25 +10,7 @@ import WebDesignDeliverables from "@/components/services/web-design/WebDesignDel
 import WebDesignFit from "@/components/services/web-design/WebDesignFit";
 import WebDesignExclusivity from "@/components/services/web-design/WebDesignExclusivity";
 import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
-import ServiceBiggerPicture from "@/components/services/generic/ServiceBiggerPicture";
 import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
-
-const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
-  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Content Marketing", href: "/plumbing-content-marketing" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-];
-const WEB_DESIGN_ORBIT_NODES = [
-  { label: "Local SEO", angle: 0 },
-  { label: "Google Maps / GBP", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Content Marketing", angle: 300 },
-];
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
