@@ -28,16 +28,16 @@ import { ServiceBiggerPicture } from "@/components/services/generic";
 
 const LOCAL_SEO_BIGGER_PICTURE_SERVICES = [
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+  { label: "Reputation Management", href: "/hvac-and-plumbing-reputation-management" },
   { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Content Marketing", href: "/plumbing-content-marketing" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+  { label: "Web Design", href: "/website-design" },
 ];
 const LOCAL_SEO_ORBIT_NODES = [
   { label: "Google Maps / GBP", angle: 0 },
-  { label: "Paid Advertising", angle: 60 },
-  { label: "Content Marketing", angle: 120 },
+  { label: "Reputation Mgmt", angle: 60 },
+  { label: "Paid Advertising", angle: 120 },
   { label: "Email Marketing", angle: 180 },
   { label: "Reporting & Dashboards", angle: 240 },
   { label: "Web Design", angle: 300 },
