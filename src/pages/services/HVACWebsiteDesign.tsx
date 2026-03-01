@@ -98,10 +98,12 @@ const HVACWebsiteDesign = () => {
                 <span className="text-border">/</span>
                 <span className="text-foreground">HVAC</span>
               </nav>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                HVAC Website Design{" "}
-                <span className="text-cta">Built to Rank and Convert</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
+                HVAC Website Design
               </h1>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight">
+                Built to Rank and Convert
+              </p>
               <p className="text-text-secondary leading-relaxed mb-4 font-medium">
                 A premium HVAC website built around seasonal demand, service-level architecture, and a call-first experience that fills your dispatch board.
               </p>

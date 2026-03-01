@@ -104,10 +104,12 @@ const WebDesignHub = () => {
                 <span className="text-foreground">Website Design</span>
               </nav>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Website Design for Plumbing & HVAC{" "}
-                <span className="text-cta">Built to Rank and Convert</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
+                Website Design for Plumbing & HVAC Companies
               </h1>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight">
+                Built to Rank and Convert
+              </p>
               <p className="text-text-secondary leading-relaxed mb-4">
                 Premium, trust-heavy websites engineered for visibility, booked calls, and long-term market position.
               </p>
