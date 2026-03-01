@@ -199,55 +199,64 @@ export const localSEOConfig: ServicePageConfig = {
         title: "On-Page Optimization",
         slug: "on-page-optimization",
         description: "Location-specific title tags, meta descriptions, headers, and on-page content that targets how customers in your market search for plumbing and HVAC services.",
-        icon: FileText
+        icon: FileText,
+        cluster: "TECHNICAL"
       },
       {
         title: "Technical SEO",
         slug: "technical-seo",
         description: "Site architecture, crawlability, Core Web Vitals, and technical fixes that establish the ranking ceiling. Foundation work that makes every other tactic more effective.",
-        icon: Settings
+        icon: Settings,
+        cluster: "TECHNICAL"
       },
       {
         title: "Local Keyword Strategy",
         slug: "local-keyword-strategy",
         description: "Seed keyword development, implicit vs. explicit local intent classification, competitor gap analysis, and keyword-to-URL mapping aligned to your service area and truck coverage.",
-        icon: Search
+        icon: Search,
+        cluster: "TECHNICAL"
       },
       {
         title: "Content Development",
         slug: "content-development",
         description: "Service area pages, trade-specific blog content, and FAQ sections built to capture high-intent local searches and turn that visibility into calls.",
-        icon: FileText
+        icon: FileText,
+        cluster: "AUTHORITY"
       },
       {
         title: "Link Building",
         slug: "link-building",
         description: "Outreach to local publications, community organizations, trade associations, and relevant industry sites to build geographic authority that strengthens Map Pack and organic rankings.",
-        icon: Link2
+        icon: Link2,
+        cluster: "AUTHORITY"
       },
       {
         title: "AI & GEO Optimization",
         slug: "ai-optimization",
         description: "Structured data, FAQ schema, entity optimization, and content formatting that positions your business for AI Overviews, generative search engines, and conversational AI citations.",
-        icon: Bot
+        icon: Bot,
+        cluster: "AUTHORITY"
       },
       {
         title: "NAP Citations",
         slug: "nap-citations",
         description: "NAP consistency audits, citation cleanup, and strategic directory submissions that validate business identity for rankings, trust signals, and AI search visibility.",
-        icon: Globe
+        icon: Globe,
+        cluster: "VISIBILITY"
       },
       {
         title: "Local Reputation Management",
         slug: "reputation-management",
         description: "Review generation systems, response management, and reputation monitoring that build trust signals and directly influence local ranking performance.",
-        icon: Award
+        icon: Award,
+        cluster: "VISIBILITY"
       },
       {
-        title: "Google Business Pro",
+        title: "Google Business Profile",
         slug: "gbp-strategy",
         description: "Advanced Google Business Profile strategy including post scheduling, Q&A management, photo optimization, and attribute management to maximize local pack visibility.",
-        icon: Map
+        icon: Map,
+        cluster: "VISIBILITY"
       }
     ]
   },
