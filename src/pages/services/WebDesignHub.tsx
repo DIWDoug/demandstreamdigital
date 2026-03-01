@@ -7,7 +7,7 @@ import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import { SITE_URL } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/website-design`;
-const metaTitle = "Website Design for Plumbing & HVAC Companies Built to Rank | DemandStream Digital";
+const metaTitle = "Plumbing & HVAC Website Design Built to Rank | DemandStream";
 const metaDescription = "Your website isn't generating booked calls? We design plumbing and HVAC websites with service architecture, AI-ready structure, and call-first UX built in. See how it works.";
 
 const SectionDivider = () => (

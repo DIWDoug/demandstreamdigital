@@ -173,7 +173,7 @@ const OurBlog = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital</title>
+        <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
         <meta
           name="description"
           content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital."
@@ -181,10 +181,9 @@ const OurBlog = () => {
         <link rel="canonical" href="https://demandstreamdigital.com/blog" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital" />
+        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
         <meta property="og:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital." />
-        <link rel="canonical" href="https://demandstreamdigital.com/our-blog" />
-        <meta property="og:url" content="https://demandstreamdigital.com/our-blog" />
+        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
         

@@ -57,7 +57,7 @@ export default function BlogIndex() {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>Digital Marketing Insights | Plumbing & HVAC Marketing Blog</title>
+        <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
         <meta
           name="description"
           content="Actionable tips for agency owners. Explore local SEO, PPC, email, and more on the Demand Stream Digital blog."

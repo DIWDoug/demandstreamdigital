@@ -8,7 +8,7 @@ import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import { SITE_URL } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/plumbing-website-design`;
-const metaTitle = "Plumbing Website Design Built to Rank and Generate Booked Calls | DemandStream Digital";
+const metaTitle = "Plumbing Website Design Built to Rank & Book Calls | DSD";
 const metaDescription = "Generic plumbing websites don't get calls. We build plumber web design with service-level architecture, GBP alignment, and emergency-first UX that converts traffic into booked jobs.";
 
 const SectionDivider = () => (
