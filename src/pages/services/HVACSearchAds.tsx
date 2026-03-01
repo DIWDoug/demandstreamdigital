@@ -33,7 +33,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Search Ads for No-Cool Calls & Install Season | DSD";
-const metaDescription = "HVAC search ads built for no-cool calls and install season demand. Campaigns structured around emergency intent and cost per booked call, not clicks.";
+const metaDescription = "Google Ads for HVAC built around no-cool calls in summer and no-heat in winter. Seasonal campaign structure that captures emergency and install demand and reports to cost per booked call.";
 const canonicalUrl = `${SITE_URL}/hvac-search-ads`;
 
 const HVACSearchAds = () => {

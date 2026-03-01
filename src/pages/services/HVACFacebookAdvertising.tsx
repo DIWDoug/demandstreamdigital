@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Facebook Ads for Replacement & Membership Growth | DSD";
-const metaDescription = "HVAC Facebook advertising built to drive replacement demand and grow maintenance memberships. Campaigns tracked through ServiceTitan to booked revenue.";
+const metaDescription = "System replacements, maintenance agreements, and pre-season promotions for HVAC companies. Facebook campaigns built around seasonal intent and tracked to booked revenue.";
 const canonicalUrl = `${SITE_URL}/hvac-facebook-advertising`;
 
 const HVACFacebookAdvertising = () => {

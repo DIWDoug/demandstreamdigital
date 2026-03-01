@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Facebook Ads for Replacement & Membership Growth";
-const metaDescription = "Plumbing Facebook ads that drive water heater replacement demand and grow maintenance memberships. Tracked through ServiceTitan to booked revenue.";
+const metaDescription = "Water heater replacements, drain emergencies, and membership growth for plumbing companies. Facebook campaigns built around service-level intent and tracked to booked calls.";
 const canonicalUrl = `${SITE_URL}/plumbing-facebook-advertising`;
 
 const PlumbingFacebookAdvertising = () => {

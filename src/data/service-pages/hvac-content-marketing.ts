@@ -6,7 +6,7 @@ export const hvacContentMarketingConfig: ServicePageConfig = {
   slug: "hvac-content-marketing",
   title: "HVAC Content Marketing",
   metaTitle: "HVAC Content Marketing: Seasonal Blogs & SEO Copy | DSD",
-  metaDescription: "Blog posts, service area pages, and SEO copy written specifically for HVAC companies. Seasonal content that ranks for no-cool, no-heat, and maintenance queries — and converts to booked calls.",
+  metaDescription: "HVAC content built around seasonal intent. No-cool, no-heat, and maintenance query pages written to capture emergency and replacement demand and convert readers into scheduled calls.",
   canonicalUrl: `${SITE_URL}/hvac-content-marketing`,
 
   hero: {

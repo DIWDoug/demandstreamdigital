@@ -18,7 +18,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC LinkedIn Ads for Commercial Contracts | DemandStream";
-const metaDescription = "LinkedIn advertising for HVAC companies targeting commercial contracts. Reach property managers and facility directors in your service area.";
+const metaDescription = "Win commercial HVAC maintenance agreements on LinkedIn. Target facility directors and property managers who control multi-site service contracts in your region.";
 const canonicalUrl = `${SITE_URL}/hvac-linkedin-advertising`;
 
 const HVACLinkedInAdvertising = () => {

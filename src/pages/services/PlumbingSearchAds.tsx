@@ -33,7 +33,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Plumbing Search Ads That Drive Booked Calls | DemandStream";
-const metaDescription = "Plumbing search ads built around booked calls, not clicks. Campaign structure, service area control, and budget allocation tied to cost per booked call.";
+const metaDescription = "Google Ads for plumbers built around emergency drain, sewer, and water heater intent. Segmented campaigns that control service area, match job types, and report to cost per booked call.";
 const canonicalUrl = `${SITE_URL}/plumbing-search-ads`;
 
 const PlumbingSearchAds = () => {
