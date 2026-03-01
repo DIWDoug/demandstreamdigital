@@ -58,11 +58,37 @@ export default function BlogIndex() {
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
         <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
-        <meta
-          name="description"
-          content="Actionable tips for agency owners. Explore local SEO, PPC, email, and more on the Demand Stream Digital blog."
-        />
+        <meta name="description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
         <link rel="canonical" href="https://demandstreamdigital.com/blog" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
+        <meta property="og:description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
+        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/blog.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
+        <meta name="twitter:description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/blog.png" />
+        {/* JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          "@id": "https://demandstreamdigital.com/blog",
+          "name": "Plumbing & HVAC Marketing Blog",
+          "description": "Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy.",
+          "url": "https://demandstreamdigital.com/blog",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://demandstreamdigital.com/#organization",
+            "name": "Demand Stream Digital",
+            "url": "https://demandstreamdigital.com"
+          }
+        })}</script>
       </Helmet>
 
       <Header />
@@ -73,14 +99,34 @@ export default function BlogIndex() {
           <div className="container mx-auto px-6 lg:px-8 relative">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block px-4 py-1.5 bg-cta/10 border border-cta/20 rounded-full text-cta text-sm font-medium mb-6">
-                Agency Growth Insights
+                Plumbing &amp; HVAC Marketing Insights
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-                The Demand Stream Digital <span className="text-cta">Blog</span>
+                The DemandStream Digital Blog
               </h1>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
-                Search, scan, and share in-depth guides on fulfillment, local SEO, paid media, and agency operations.
+                In-depth guides on local SEO, Google Ads, email marketing, and AI automation for plumbing and HVAC companies.
               </p>
+
+              {/* Static topic nav — always visible to crawlers, no JS required */}
+              <nav aria-label="Blog topics" className="flex flex-wrap justify-center gap-2 mb-8">
+                {[
+                  { label: "Plumbing SEO", href: "/plumbing-seo" },
+                  { label: "HVAC SEO", href: "/hvac-seo" },
+                  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+                  { label: "Email Marketing", href: "/plumbing-email-marketing" },
+                  { label: "AI Automation", href: "/ai-automation" },
+                  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+                ].map((t) => (
+                  <a
+                    key={t.href}
+                    href={t.href}
+                    className="px-3 py-1 rounded-full text-sm border border-border/50 text-text-secondary hover:border-accent-blue/50 hover:text-accent-blue transition-colors"
+                  >
+                    {t.label}
+                  </a>
+                ))}
+              </nav>
 
               <div className="max-w-xl mx-auto relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-text-muted" />
