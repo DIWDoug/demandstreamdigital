@@ -252,24 +252,6 @@ const App = () => (
           <Route path="/white-label-local-links" element={<Navigate to="/plumbing-authority-building" replace />} />
           <Route path="/white-label-dashboards" element={<Navigate to="/plumbing-reporting" replace />} />
 
-          {/* ============ OLD NESTED STRUCTURE REDIRECTS ============ */}
-          
-          <Route path="/white-label-inbound-marketing-services/local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-          <Route path="/white-label-inbound-marketing-services/google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-inbound-marketing-services/paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-inbound-marketing-services/email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-inbound-marketing-services/local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-inbound-marketing-services/reporting" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-inbound-marketing-services/content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
-
-          {/* Old nested spoke redirects → consolidated hub pages */}
-          <Route path="/white-label-inbound-marketing-services/local-seo/*" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-          <Route path="/white-label-inbound-marketing-services/google-maps/*" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-inbound-marketing-services/paid-media/*" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/white-label-inbound-marketing-services/email-marketing/*" element={<Navigate to="/plumbing-email-marketing" replace />} />
-          <Route path="/white-label-inbound-marketing-services/local-authority-building/*" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-inbound-marketing-services/reporting/*" element={<Navigate to="/plumbing-reporting" replace />} />
-          <Route path="/white-label-inbound-marketing-services/content-marketing/*" element={<Navigate to="/plumbing-content-marketing" replace />} />
 
           {/* Legacy /services redirects */}
           <Route path="/services" element={<Navigate to="/#services" replace />} />
