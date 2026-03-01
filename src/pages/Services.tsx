@@ -67,7 +67,6 @@ const Services = () => {
       <Helmet>
         <title>Plumbing & HVAC Inbound Marketing Services | DemandStream</title>
         <meta name="description" content="SEO, paid ads, email, content, and web design built for plumbing and HVAC companies. Every service tied to booked calls and dispatch capacity." />
-        <meta name="keywords" content="plumbing marketing services, HVAC marketing services, local SEO plumbing, HVAC lead generation, plumbing inbound marketing" />
         <link rel="canonical" href="https://demandstreamdigital.com/services" />
         
         

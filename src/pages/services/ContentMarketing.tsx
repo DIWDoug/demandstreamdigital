@@ -67,7 +67,6 @@ const ContentMarketing = () => {
       <Helmet>
         <title>{contentMarketingConfig.metaTitle}</title>
         <meta name="description" content={contentMarketingConfig.metaDescription} />
-        <meta name="keywords" content="plumbing content marketing, HVAC blog writing, SEO content for plumbers, service area pages, plumbing lead magnets" />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
         
         

@@ -146,9 +146,8 @@ const PartnerTools = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing Tools for Agencies | DemandStream Digital</title>
-        <meta name="description" content="Use Demand Stream Digital's calculators and tools to support SEO, PPC, and content strategy planning for your agency." />
-        <meta name="keywords" content="plumbing marketing tools, HVAC marketing calculators, SEO cost estimator, PPC budget planner, local marketing ROI calculator" />
+        <title>Marketing Tools for Plumbing & HVAC | DemandStream</title>
+        <meta name="description" content="Calculators and planning tools for plumbing and HVAC marketing. Forecast SEO, PPC, and content ROI." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools" />
         
         

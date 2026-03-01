@@ -13,7 +13,6 @@ const Privacy = () => {
         description="How Demand Stream Digital handles your data. Covers collection, usage, GDPR compliance, cookies, and your rights as a visitor or client."
         canonical="https://demandstreamdigital.com/privacy"
         ogImage="https://demandstreamdigital.com/og-images/privacy.jpg"
-        keywords="privacy policy, GDPR, data protection, Demand Stream Digital privacy, cookies"
       />
 
       <Header />

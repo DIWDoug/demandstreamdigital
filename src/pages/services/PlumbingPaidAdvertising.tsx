@@ -90,7 +90,6 @@ const PlumbingPaidAdvertising = () => {
         title={metaTitle}
         description={metaDescription}
         canonical={canonicalUrl}
-        keywords="plumbing paid advertising, Google Ads for plumbers, plumbing PPC management, plumbing Local Services Ads, Facebook ads for plumbing companies"
         schemaJson={[pageSchema, faqSchema]}
       />
 

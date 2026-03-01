@@ -67,7 +67,6 @@ const Reporting = () => {
       <Helmet>
         <title>{reportingConfig.metaTitle}</title>
         <meta name="description" content={reportingConfig.metaDescription} />
-        <meta name="keywords" content="plumbing HVAC reporting, marketing dashboards, SEO reporting, marketing analytics, performance reporting" />
         <link rel="canonical" href={reportingConfig.canonicalUrl} />
         
         

@@ -40,7 +40,6 @@ const Contact = () => {
         description="Get in touch with DemandStream Digital. Book a free strategy call for your plumbing or HVAC company. No contracts, no pitch decks — real answers."
         canonical="https://demandstreamdigital.com/contact"
         ogImage="https://demandstreamdigital.com/og-images/contact.png"
-        keywords="contact plumbing marketing, HVAC marketing consultation, plumber SEO contact, growth marketing for trades"
         schemaJson={contactSchema}
       />
 

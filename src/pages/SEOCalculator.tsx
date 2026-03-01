@@ -551,7 +551,6 @@ const SEOCalculator = () => {
         <title>Local SEO Cost Calculator | DemandStream Digital</title>
         <meta name="description" content="Forecast SEO costs and outcomes for your plumbing or HVAC business. Free local SEO cost calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/seo-calculator" />
-        <meta name="keywords" content="SEO calculator, local SEO cost estimator, plumbing SEO pricing, HVAC SEO cost, organic traffic forecast" />
         
         
         <script type="application/ld+json">{JSON.stringify(seoCalculatorSchema)}</script>

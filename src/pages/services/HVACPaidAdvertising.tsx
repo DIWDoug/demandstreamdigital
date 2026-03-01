@@ -89,7 +89,6 @@ const HVACPaidAdvertising = () => {
         title={metaTitle}
         description={metaDescription}
         canonical={canonicalUrl}
-        keywords="HVAC paid advertising, Google Ads for HVAC companies, HVAC PPC management, HVAC Local Services Ads, Facebook ads for HVAC contractors"
         schemaJson={[pageSchema, faqSchema]}
       />
 

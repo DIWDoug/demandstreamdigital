@@ -301,7 +301,6 @@ const SocialMediaROICalculator = () => {
         <title>Social Media ROI Calculator | DemandStream Digital</title>
         <meta name="description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free social media ROI calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
-        <meta name="keywords" content="social media ROI calculator, plumbing social media ROI, HVAC social media marketing, campaign ROI calculator" />
         
         
         <script type="application/ld+json">{JSON.stringify(socialMediaROISchema)}</script>

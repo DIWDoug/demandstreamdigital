@@ -121,7 +121,6 @@ const About = () => {
         description="15 years in digital marketing. Now exclusively serving plumbing and HVAC. A team built on execution, communication, and long-term results."
         canonical="https://demandstreamdigital.com/about"
         ogImage="https://demandstreamdigital.com/og-images/about.jpg"
-        keywords="plumbing marketing company, HVAC marketing team, Doug Bryson SEO, Demand Stream Digital, growth marketing Dallas"
         schemaJson={{
           "@context": "https://schema.org",
           "@graph": [

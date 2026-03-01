@@ -74,7 +74,6 @@ const GoogleMaps = () => {
         title={googleMapsConfig.metaTitle}
         description={googleMapsConfig.metaDescription}
         canonical={googleMapsConfig.canonicalUrl}
-        keywords="plumbing Google Maps SEO, HVAC GBP optimization, Google Business Profile for plumbers, local pack ranking, plumbing review management"
         schemaJson={pageSchema}
       />
       
