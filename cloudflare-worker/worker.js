@@ -119,7 +119,39 @@ const WHITE_LABEL_REDIRECTS = {
   "/white-label-inbound-marketing-services/content-marketing": "/plumbing-content-marketing",
 };
 
-const VALID_ROUTES = new Set([  "/",  "/404",  "/about",  "/case-studies",  "/contact",  "/our-blog",]);
+const VALID_ROUTES = new Set([
+  // Core
+  "/", "/404", "/about", "/case-studies", "/contact", "/our-blog",
+  // Plumbing verticals
+  "/plumbing-seo", "/plumbing-google-maps", "/plumbing-paid-advertising",
+  "/plumbing-email-marketing", "/plumbing-content-marketing",
+  "/plumbing-authority-building", "/plumbing-reporting",
+  "/plumbing-facebook-advertising", "/plumbing-instagram-advertising",
+  "/plumbing-linkedin-advertising", "/plumbing-programmatic-advertising",
+  "/plumbing-search-ads", "/plumbing-website-design",
+  // HVAC verticals
+  "/hvac-seo", "/hvac-google-maps", "/hvac-paid-advertising",
+  "/hvac-email-marketing", "/hvac-content-marketing",
+  "/hvac-authority-building", "/hvac-reporting",
+  "/hvac-facebook-advertising", "/hvac-instagram-advertising",
+  "/hvac-linkedin-advertising", "/hvac-search-ads", "/hvac-website-design",
+  // Hubs
+  "/hvac-and-plumbing-seo", "/hvac-and-plumbing-paid-ads",
+  "/plumbing-and-hvac-web-design", "/website-design",
+  "/services", "/ai-automation",
+  // Tools & calculators
+  "/free-audit", "/partner-tools", "/local-seo",
+  "/roi-calculator", "/seo-calculator", "/ad-budget-calculator",
+  "/investment-calculator", "/email-calculator",
+  "/social-media-roi-calculator", "/content-marketing-calculator",
+  "/ai-ready-check", "/financing-calculator",
+  "/job-cost-estimator", "/plumbing-health-quiz",
+  // Content
+  "/blog", "/our-blog", "/case-studies", "/testimonials",
+  "/best-plumbing-seo-companies", "/best-plumbing-ppc-companies",
+  // Legal / utility
+  "/privacy", "/terms", "/thank-you", "/services",
+]);
 
 
 function normalizePath(pathname) {
