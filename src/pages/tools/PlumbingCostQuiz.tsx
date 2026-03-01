@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, ClipboardCheck, AlertTriangle, CheckCircle, XCircle, Droplets } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -166,10 +166,11 @@ const PlumbingCostQuiz = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Free Plumbing Cost Quiz | Demand Stream Digital</title>
-        <meta name="description" content="Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands." />
-      </Helmet>
+      <SEOHead
+        title="Free Plumbing Health Quiz | DemandStream Digital"
+        description="Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands."
+        canonical="https://demandstreamdigital.com/plumbing-health-quiz"
+      />
 
       <div className="dark">
         <Header />

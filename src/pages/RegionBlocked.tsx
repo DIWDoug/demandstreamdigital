@@ -1,13 +1,14 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 
 const RegionBlocked = () => {
   return (
     <>
-      <Helmet>
-        <title>Region Access Restricted | This Page Is Not Available in Your Location | Dialed-in Web White Label Services</title>
-        <meta name="description" content="This page is restricted in your region. Contact Dialed-in Web for white label digital marketing service availability." />
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
+      <SEOHead
+        title="Region Access Restricted | DemandStream Digital"
+        description="This page is restricted in your region. DemandStream Digital serves marketing agencies in North America, Europe, Australia, Africa, and South America."
+        canonical="https://demandstreamdigital.com/region-blocked"
+        noIndex={true}
+      />
       <div className="min-h-screen bg-background flex items-center justify-center px-6">
         <div className="max-w-md text-center">
           <div className="mb-8">
