@@ -38,7 +38,7 @@ Deno.serve(async (req) => {
         : new Date().toISOString().split('T')[0];
       
       return `  <url>
-    <loc>https://dialedinweb.com/blog/${post.slug}</loc>
+    <loc>https://demandstreamdigital.com/blog/${post.slug}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
