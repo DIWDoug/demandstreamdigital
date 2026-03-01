@@ -176,7 +176,42 @@ const PlumbingPaidAdvertising = () => {
       {/* 14. LEAD FORM */}
       <PlumbingPaidAdsContactForm />
 
-      {/* 13. FOOTER */}
+      {/* 15. CHANNEL DEEP DIVES */}
+      <section className="py-12 lg:py-16 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-3 text-center">Explore by Channel</p>
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
+              Plumbing Paid Advertising — Channel Deep Dives
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+              {[
+                { label: "Plumbing Search Ads", href: "/plumbing-search-ads", desc: "Google & LSA for emergency drain and pipe calls" },
+                { label: "Plumbing Facebook Ads", href: "/plumbing-facebook-advertising", desc: "Repipe, water heater & retargeting campaigns" },
+                { label: "Plumbing Instagram Ads", href: "/plumbing-instagram-advertising", desc: "Brand awareness & seasonal visual campaigns" },
+                { label: "Plumbing LinkedIn Ads", href: "/plumbing-linkedin-advertising", desc: "Commercial and multi-unit property targeting" },
+                { label: "Programmatic Advertising", href: "/plumbing-programmatic-advertising", desc: "Display & retargeting across the open web" },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200"
+                >
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{item.label}</span>
+                  <span className="text-xs text-text-secondary">{item.desc}</span>
+                </a>
+              ))}
+            </div>
+            <p className="text-center text-sm text-text-secondary">
+              Comparing agencies?{" "}
+              <a href="/best-plumbing-ppc-companies" className="text-accent-blue hover:underline font-medium">
+                See how we stack up against the best plumbing PPC companies →
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

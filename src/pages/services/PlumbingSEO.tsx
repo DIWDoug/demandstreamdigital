@@ -192,6 +192,18 @@ const PlumbingSEO = () => {
         <ContactForm />
       </div>
 
+      {/* Editorial Resource */}
+      <section className="py-10 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <p className="text-sm text-text-secondary">
+            Evaluating SEO agencies?{" "}
+            <a href="/best-plumbing-seo-companies" className="text-accent-blue hover:underline font-medium">
+              See our breakdown of the best plumbing SEO companies →
+            </a>
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

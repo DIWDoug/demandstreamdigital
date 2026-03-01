@@ -175,7 +175,35 @@ const HVACPaidAdvertising = () => {
       {/* 14. LEAD FORM */}
       <HVACPaidAdsContactForm />
 
-      {/* 13. FOOTER */}
+      {/* 15. CHANNEL DEEP DIVES */}
+      <section className="py-12 lg:py-16 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-3 text-center">Explore by Channel</p>
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
+              HVAC Paid Advertising — Channel Deep Dives
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {[
+                { label: "HVAC Search Ads", href: "/hvac-search-ads", desc: "Google & LSA for emergency + install capture" },
+                { label: "HVAC Facebook Ads", href: "/hvac-facebook-advertising", desc: "Seasonal demand & install retargeting" },
+                { label: "HVAC Instagram Ads", href: "/hvac-instagram-advertising", desc: "Brand visibility during shoulder seasons" },
+                { label: "HVAC LinkedIn Ads", href: "/hvac-linkedin-advertising", desc: "Commercial & property management targeting" },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200"
+                >
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{item.label}</span>
+                  <span className="text-xs text-text-secondary">{item.desc}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
