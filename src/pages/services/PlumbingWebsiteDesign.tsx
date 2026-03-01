@@ -5,6 +5,8 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
+import ServiceContactForm from "@/components/services/generic/ServiceContactForm";
 import { SITE_URL } from "@/lib/constants";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
@@ -51,20 +53,25 @@ const gbpRows = [
   { category: "Water Filtration", page: "/water-filtration-installation/", intent: "Upgrade intent, seasonal" },
 ];
 
-const goodFit = [
-  "3 to 40+ truck plumbing operations with a growth mindset",
-  "Companies ready for a premium, scalable plumbing web presence",
-  "Operators who measure success by booked calls and average ticket",
-  "Plumbers who want SEO and paid ads working from day one",
-  "Companies where the phone ringing is the only metric that matters",
-];
-
-const notFit = [
-  "Under $500K revenue looking for a low-cost website option",
-  "\"Just need something live\" — bare-minimum website projects",
-  "Companies not ready to track calls or measure source performance",
-  "Plumbers not planning to scale beyond current truck count",
-];
+const plumbingWebDesignQualification = {
+  eyebrow: "Selective Fit",
+  headline: "Is Plumbing Website Design Right for Your Company?",
+  subheadline: "We work best with established plumbing companies that want to own their market with a website built to generate booked calls.",
+  goodFit: [
+    { point: "3 to 40+ truck plumbing operations with a growth mindset", detail: "You're running an active dispatch board and want your website to bring in more of the calls that fill it." },
+    { point: "Companies ready for a premium, scalable plumbing web presence", detail: "You understand a performance website is built once and built right — not rebuilt every two years." },
+    { point: "Operators who measure success by booked calls and average ticket", detail: "Traffic reports don't matter to you. The phone ringing with the right jobs does." },
+    { point: "Plumbers who want SEO and paid ads working from day one", detail: "Your site will be structured to activate both channels at launch, not require a separate rebuild." },
+    { point: "Companies where the phone ringing is the only metric that matters", detail: "Every design and structural decision is filtered through one question: does this generate a call?" },
+  ],
+  notFit: [
+    { point: "Under $500K revenue looking for a low-cost website option", detail: "A performance build requires investment. If budget is the primary filter, there are better fits right now." },
+    { point: '"Just need something live" — bare-minimum website projects', detail: "We build revenue infrastructure. Minimum viable placeholders are not in scope." },
+    { point: "Companies not ready to track calls or measure source performance", detail: "Every site includes call tracking. If you're not ready to measure, the investment won't show its return." },
+    { point: "Plumbers not planning to scale beyond current truck count", detail: "Our builds are designed to scale. If growth isn't the goal, the investment won't make sense." },
+  ],
+  ctaText: "Claim Your Territory Today",
+};
 
 const failureItems = [
   {
@@ -425,102 +432,16 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
-      {/* WHO THIS IS FOR + EXCLUSIVITY — light */}
-      <section id="fit" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">Selective Fit</p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-                Who This Is For
-              </h2>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-              <div className="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-cta/20 flex items-center justify-center">
-                    <span className="text-cta text-sm font-bold">✓</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">Good Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {goodFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-slate-600 text-sm">
-                      <span className="text-cta mt-0.5 shrink-0">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                    <span className="text-red-500 text-sm font-bold">✕</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900">Not a Fit</h3>
-                </div>
-                <ul className="space-y-3">
-                  {notFit.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-slate-600 text-sm">
-                      <span className="text-red-500 mt-0.5 shrink-0">✕</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+      {/* SELECTIVE FIT */}
+      <ServiceFitQualifierSection config={plumbingWebDesignQualification} />
 
-            {/* Exclusivity block */}
-            <div className="relative overflow-hidden bg-white border border-slate-200 rounded-2xl p-8 lg:p-12 text-center shadow-sm">
-              <span className="inline-block px-3 py-1 rounded-full bg-cta/10 text-cta text-xs font-semibold uppercase tracking-wider mb-6">
-                Exclusivity
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                One Plumbing Company Per Market.
-              </h3>
-              <p className="text-slate-600 leading-relaxed mb-6 max-w-xl mx-auto">
-                When you work with DemandStream, your competitors don't. We take one plumbing client per service area. The plumbing website we build is designed exclusively to put your company ahead, not split between you and the shop down the street.
-              </p>
-              <p className="text-slate-600 mb-8">If your market is available, it's worth finding out now.</p>
-              <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
-                Claim Your Territory Today
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT — dark */}
-      <section id="contact" className="py-24 lg:py-32 bg-surface-dark scroll-mt-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Get Started</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ready to Build a Plumbing Website That Actually Generates Calls?
-            </h2>
-            <p className="text-text-secondary leading-relaxed mb-10">
-              Your current website is either generating booked plumbing calls or it isn't. If the phone isn't ringing at the rate it should, the structure is the problem, not the ad budget. One market. One plumbing company. Built around your territory.
-            </p>
-            <div className="bg-surface-elevated border border-border/50 rounded-2xl p-6 lg:p-8">
-              <TwoStepContactForm
-                formType="plumbing_web_design_contact"
-                submitButtonText="Claim Your Territory Today"
-                step1ButtonText="Claim Your Territory Today"
-              />
-            </div>
-            <div className="flex justify-center gap-6 mt-8">
-              <Link to="/website-design" className="text-sm text-text-muted hover:text-foreground transition-colors flex items-center gap-1">
-                ← Back to Website Design
-              </Link>
-              <Link to="/hvac-website-design" className="text-sm text-accent-blue hover:text-foreground transition-colors flex items-center gap-1">
-                HVAC Website Design
-                <ArrowRight className="h-3 w-3" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* CONTACT */}
+      <ServiceContactForm
+        formType="plumbing_web_design_contact"
+        headline="See If Your Market Is Available"
+        subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
+        exclusivityLine="One plumbing company per market. Your competitors don't get in."
+      />
 
       <Footer />
     </div>
