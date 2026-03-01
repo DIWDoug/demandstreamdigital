@@ -14,7 +14,7 @@ import { getCalculatorSchema } from "@/lib/schema";
 const socialMediaROISchema = getCalculatorSchema({
   name: "Social Media ROI Calculator",
   description: "Calculate the return on investment of your social media campaigns. Measure leads, sales, and revenue generated from social media marketing.",
-  url: "https://dialedinweb.com/partner-tools/social-media-roi-calculator",
+  url: "https://demandstreamdigital.com/partner-tools/social-media-roi-calculator",
   category: "BusinessApplication"
 });
 
