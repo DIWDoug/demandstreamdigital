@@ -49,7 +49,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "HVAC Paid Advertising for Seasonal Demand Control | DemandStream Digital";
+const metaTitle = "HVAC Paid Ads for Seasonal Demand Control | DemandStream";
 const metaDescription = "HVAC paid advertising built around seasonal demand, repair vs. install segmentation, and emergency capture. Track every dollar to cost per booked call.";
 const canonicalUrl = `${SITE_URL}/hvac-paid-advertising`;
 

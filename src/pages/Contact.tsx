@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
-        title="Contact Demand Stream Digital | Free Marketing Audit for Plumbing & HVAC Companies"
+        title="Free Plumbing & HVAC Marketing Audit | DemandStream"
         description="Book a free marketing audit for your plumbing or HVAC company. No contracts, no pitch decks. Just a real conversation about driving more booked calls."
         canonical="https://demandstreamdigital.com/contact"
         ogImage="https://demandstreamdigital.com/og-images/contact.png"

@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const plumbingSEOConfig: ServicePageConfig = {
   slug: "plumbing-seo",
   title: "Plumbing SEO",
-  metaTitle: "Plumbing SEO Services That Drive More Booked Service Calls for Plumbers | DemandStream Digital",
+  metaTitle: "Plumbing SEO That Drives More Booked Calls | DemandStream",
   metaDescription: "Plumbing SEO built for plumbing companies, not generic contractor marketing. Connected SEO systems that generate more booked service calls. See how.",
   canonicalUrl: `${SITE_URL}/plumbing-seo`,
   keywords: "plumbing SEO, plumbing SEO services, SEO for plumbers, plumbing company SEO, plumber local SEO, plumbing marketing",

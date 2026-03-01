@@ -17,7 +17,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "Plumbing Programmatic Advertising for Replacement Demand and Brand Visibility | DemandStream";
+const metaTitle = "Plumbing Programmatic Ads for Replacement Demand | DemandStream";
 const metaDescription = "Plumbing programmatic advertising across display and CTV. Drive water heater replacement demand and keep your brand visible across every screen.";
 const canonicalUrl = `${SITE_URL}/plumbing-programmatic-advertising`;
 

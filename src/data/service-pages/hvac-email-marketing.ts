@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const hvacEmailMarketingConfig: ServicePageConfig = {
   slug: "hvac-email-marketing",
   title: "HVAC Email Marketing",
-  metaTitle: "Email Marketing for HVAC Companies | Seasonal Campaigns, Maintenance Reminders & List Growth | Demand Stream Digital",
+  metaTitle: "HVAC Email Marketing: Seasonal Campaigns & Automation | DSD",
   metaDescription: "Email programs built for HVAC companies. Seasonal campaigns, maintenance membership reminders, pre-season promotions, and automation that drives repeat revenue year-round.",
   canonicalUrl: `${SITE_URL}/hvac-email-marketing`,
 

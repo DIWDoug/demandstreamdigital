@@ -17,7 +17,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "HVAC Instagram Advertising for Brand Authority and Replacement Install Demand | DemandStream";
+const metaTitle = "HVAC Instagram Ads for Replacement Demand | DemandStream";
 const metaDescription = "HVAC Instagram ads built for brand authority and replacement install demand. Visual campaigns tied to booked revenue through ServiceTitan integration.";
 const canonicalUrl = `${SITE_URL}/hvac-instagram-advertising`;
 

@@ -32,7 +32,7 @@ const anchorItems = [
   { label: "Check Your Market", href: "#contact" },
 ];
 
-const metaTitle = "HVAC Search Advertising Built for No-Cool Calls and Install Season Demand | DemandStream Digital";
+const metaTitle = "HVAC Search Ads for No-Cool Calls & Install Season | DSD";
 const metaDescription = "HVAC search ads built for no-cool calls and install season demand. Campaigns structured around emergency intent and cost per booked call, not clicks.";
 const canonicalUrl = `${SITE_URL}/hvac-search-ads`;
 

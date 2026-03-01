@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const authorityConfig: ServicePageConfig = {
   slug: "authority",
   title: "Authority Building",
-  metaTitle: "Local Authority & Link Building for Plumbing & HVAC | Trust Signals & Backlinks | Demand Stream Digital",
+  metaTitle: "Authority & Link Building for Plumbing & HVAC | DSD",
   metaDescription: "Link building and trust signals built for plumbing and HVAC companies. Local sponsorships, guest posts, and brand mentions that strengthen your rankings.",
   canonicalUrl: `${SITE_URL}/plumbing-authority-building`,
 

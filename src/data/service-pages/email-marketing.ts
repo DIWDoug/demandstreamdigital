@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const emailMarketingConfig: ServicePageConfig = {
   slug: "email-marketing",
   title: "Email Marketing",
-  metaTitle: "Email Marketing for Plumbing & HVAC Companies | Campaigns, Automation & List Growth | Demand Stream Digital",
+  metaTitle: "Plumbing Email Marketing: Campaigns & Automation | DSD",
   metaDescription: "Email programs that drive repeat business for plumbing and HVAC companies. Automation, seasonal campaigns, membership reminders, and list growth.",
   canonicalUrl: `${SITE_URL}/plumbing-email-marketing`,
 
