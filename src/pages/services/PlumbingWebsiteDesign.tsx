@@ -118,12 +118,14 @@ const PlumbingWebsiteDesign = () => {
                 <span className="text-border">/</span>
                 <span className="text-foreground">Plumbing</span>
               </nav>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Plumbing Website Design{" "}
-                <span className="text-cta">Built to Rank and Convert</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
+                Plumbing Website Design
               </h1>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight">
+                Built to Rank and Convert
+              </p>
               <p className="text-text-secondary leading-relaxed mb-4 font-medium">
-                Trade-specific website architecture for plumbing companies that want more booked service calls — not just more traffic.
+                Trade-specific website architecture for plumbing companies that want more booked service calls, not just more traffic.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
                 Most plumbing websites are built like brochures. A services page. A contact form. Some stock photos of a truck. They look reasonable. They don't generate calls. A plumbing website built for actual performance is architected around how customers search — by problem, by urgency, by service type.
