@@ -245,7 +245,7 @@ const PlumbingCostQuiz = () => {
               /* Results */
               <div className="text-center">
                 <div className="text-center mb-8">
-                  <h1 className="text-2xl md:text-3xl font-bold mb-2">Your Results Are In</h1>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Your Results Are In</h2>
                   <p className="text-text-muted">Here's what your plumbing & HVAC health looks like.</p>
                 </div>
 
@@ -265,7 +265,7 @@ const PlumbingCostQuiz = () => {
 
                 {/* Breakdown */}
                 <div className="bg-card border border-border rounded-xl p-6 mb-8 text-left">
-                  <h3 className="font-bold mb-4">Your Answers Breakdown</h3>
+                  <h3 className="font-bold mb-4">Answers Breakdown</h3>
                   <div className="space-y-3">
                     {questions.map((q) => {
                       const score = answers[q.id] ?? 0;

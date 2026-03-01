@@ -252,7 +252,7 @@ const ROICalculator = () => {
                       <BarChart3 className="h-5 w-5 text-accent-blue" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-foreground">Industry Benchmarks</h3>
+                      <h2 className="text-lg font-semibold text-foreground">Industry Benchmarks</h2>
                       <p className="text-sm text-text-muted">Select an industry for starting estimates, then adjust to your client's actual data</p>
                     </div>
                   </div>
@@ -418,7 +418,7 @@ const ROICalculator = () => {
                     <TrendingUp className="h-5 w-5 text-cta" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">Conversion Rate Growth Forecast</h3>
+                    <h2 className="text-lg font-semibold text-foreground">Conversion Rate Growth Forecast</h2>
                     <p className="text-sm text-text-muted">Based on current inputs: {visitors.toLocaleString()} visitors, {leadConversionRate}% conversion, {leadToCustomerRate}% close rate, ${revenuePerCustomer.toLocaleString()} avg. value</p>
                   </div>
                 </div>
