@@ -15,7 +15,7 @@ const channels = [
   },
   {
     title: "Local Services Ads (LSA)",
-    href: "/hvac-and-plumbing-paid-ads",
+    href: "/plumbing-hvac-local-service-ads",
     bullets: [
       "Pay-per-lead structure with Google Guarantee",
       "Budget pacing aligned to peak demand windows",
