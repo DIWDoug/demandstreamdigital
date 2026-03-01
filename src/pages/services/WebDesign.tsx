@@ -44,7 +44,7 @@ const anchorItems = [
 ];
 
 const metaTitle = "Web Design for Plumbing & HVAC That Converts | DemandStream";
-const metaDescription = "Custom websites for plumbing and HVAC companies. Built for mobile-first conversion, local SEO architecture, and CRM integration from day one. No templates.";
+const metaDescription = "Custom websites for plumbing and HVAC companies. Built for mobile-first conversion, local SEO architecture, and CRM integration from day one.";
 const canonicalUrl = `${SITE_URL}/plumbing-and-hvac-web-design`;
 
 const WebDesign = () => {

@@ -184,7 +184,7 @@ const ContentMarketingCalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Content Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
+        <title>Content Marketing ROI Calculator | DemandStream</title>
         <meta name="description" content="Estimate traffic and lead value from content campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/content-marketing-calculator" />
         <meta name="keywords" content="content marketing calculator, blog ROI calculator, content value estimator, SEO content planner, lead generation calculator" />

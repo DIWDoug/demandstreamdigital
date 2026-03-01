@@ -8,7 +8,7 @@ import { SITE_URL } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/website-design`;
 const metaTitle = "Plumbing & HVAC Website Design Built to Rank | DemandStream";
-const metaDescription = "Your website isn't generating booked calls? We design plumbing and HVAC websites with service architecture, AI-ready structure, and call-first UX built in. See how it works.";
+const metaDescription = "Your website isn't generating booked calls? We design plumbing and HVAC websites with service architecture, AI-ready structure, and call-first UX. See how it works.";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
