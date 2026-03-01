@@ -31,7 +31,6 @@ const LocalGrowthEngine = () => {
     
     // CAPTCHA Check 1: Honeypot field should be empty (bots often fill hidden fields)
     if (honeypot) {
-      console.log("Bot detected: honeypot filled");
       // Silently reject but show success to avoid tipping off bots
       setIsSubmitted(true);
       return;
@@ -40,7 +39,6 @@ const LocalGrowthEngine = () => {
     // CAPTCHA Check 2: Form submitted too quickly (under 2 seconds = likely bot)
     const timeSinceLoad = Date.now() - formLoadTime.current;
     if (timeSinceLoad < 2000) {
-      console.log("Bot detected: submitted too fast", timeSinceLoad);
       setIsSubmitted(true);
       return;
     }
@@ -69,7 +67,6 @@ const LocalGrowthEngine = () => {
       });
 
       if (error) {
-        console.error("Error submitting ebook lead:", error);
         toast({
           title: "Something went wrong",
           description: "Please try again later.",
@@ -79,12 +76,10 @@ const LocalGrowthEngine = () => {
         return;
       }
 
-      console.log("Ebook lead submitted:", data);
       
       // Redirect to thank you page
       navigate("/thank-you?type=ebook");
     } catch (error) {
-      console.error("Error submitting ebook lead:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again later.",

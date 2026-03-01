@@ -85,11 +85,8 @@ export function useGeoBlock() {
         const continentCode = geoData.continent_code;
         const userIP = geoData.ip;
         
-        console.log("Geo check result:", { country: countryCode, continent: continentCode, ip: userIP });
-        
         // Check if hard blocked (show 404 - site doesn't exist for them)
         if (HARD_BLOCKED_COUNTRIES.includes(countryCode)) {
-          console.log("Country hard blocked (404):", countryCode);
           sessionStorage.setItem("geo_checked", "true");
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
@@ -99,7 +96,6 @@ export function useGeoBlock() {
         
         // Check if soft blocked (show region-blocked page)
         if (BLOCKED_COUNTRIES.includes(countryCode)) {
-          console.log("Country blocked:", countryCode);
           sessionStorage.setItem("geo_checked", "true");
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
@@ -109,7 +105,6 @@ export function useGeoBlock() {
         
         // Check if explicitly allowed (overrides continent block)
         if (ALLOWED_COUNTRIES.includes(countryCode)) {
-          console.log("Country explicitly allowed:", countryCode);
           sessionStorage.setItem("geo_checked", "true");
           sessionStorage.setItem("geo_blocked", "false");
           setIsChecking(false);
@@ -118,7 +113,6 @@ export function useGeoBlock() {
         
         // Check if continent is allowed
         if (!ALLOWED_CONTINENTS.includes(continentCode)) {
-          console.log("Continent not in allowlist:", continentCode);
           sessionStorage.setItem("geo_checked", "true");
           sessionStorage.setItem("geo_blocked", "true");
           setIsBlocked(true);
@@ -144,10 +138,6 @@ export function useGeoBlock() {
                 const ipData = vpnData[userIP];
                 
                 if (ipData && typeof ipData === "object" && ipData.proxy === "yes") {
-                  console.log("VPN/Proxy detected:", {
-                    type: ipData.type,
-                    provider: ipData.provider,
-                  });
                   sessionStorage.setItem("geo_checked", "true");
                   sessionStorage.setItem("geo_blocked", "true");
                   setIsBlocked(true);
@@ -163,11 +153,9 @@ export function useGeoBlock() {
         }
         
         // All checks passed - allow access
-        console.log("Access allowed for:", { country: countryCode, continent: continentCode });
         sessionStorage.setItem("geo_checked", "true");
         sessionStorage.setItem("geo_blocked", "false");
-      } catch (error) {
-        console.error("Geo check error:", error);
+      } catch {
         // On error, allow access (fail open)
         sessionStorage.setItem("geo_checked", "true");
         sessionStorage.setItem("geo_blocked", "false");

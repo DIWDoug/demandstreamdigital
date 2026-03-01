@@ -16,7 +16,6 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", website);
     // TODO: Handle form submission - navigate to full form or trigger modal
   };
 
