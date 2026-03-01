@@ -64,17 +64,6 @@ const channels = [
       "Facility management and building operations audiences"
     ]
   },
-  {
-    title: "Web Design",
-    href: "/plumbing-and-hvac-web-design",
-    bullets: [
-      "Landing pages built to convert paid traffic into booked calls",
-      "Service-specific pages matched to ad campaign intent",
-      "Mobile-first build for emergency search behavior",
-      "Speed and Core Web Vitals that protect Quality Score",
-      "Ad-to-page message match that improves booking rate"
-    ]
-  }
 ];
 
 const PaidAdsChannels = () => {
@@ -88,7 +77,7 @@ const PaidAdsChannels = () => {
             Paid Advertising Channels We Deploy
           </h2>
           <p className="text-lg text-text-secondary mb-12 max-w-3xl">
-            Each channel serves a different part of the demand curve. No channel grouping. Each is scoped, managed, and reported separately. Web design is included because a paid campaign is only as strong as the page it sends traffic to.
+            Each channel serves a different part of the demand curve. No channel grouping. Each is scoped, managed, and reported separately.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
