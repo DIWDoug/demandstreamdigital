@@ -93,10 +93,6 @@ const PlumbingWebsiteDesign = () => {
         description={metaDescription}
         canonical={canonicalUrl}
         keywords="plumbing website design, plumber web design, plumbing website, custom plumbing website, plumbing contractor website design"
-        hrefLangs={[
-          { hrefLang: "en-US", href: canonicalUrl },
-          { hrefLang: "x-default", href: canonicalUrl },
-        ]}
         schemaJson={pageSchema}
       />
 

@@ -180,8 +180,8 @@ const ROICalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
-        <meta name="description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <title>Marketing ROI Calculator | DemandStream Digital</title>
+        <meta name="description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         <meta name="keywords" content="marketing ROI calculator, plumbing marketing ROI, HVAC marketing ROI, SEO return on investment, PPC ROI calculator" />
         
@@ -189,8 +189,8 @@ const ROICalculator = () => {
         <script type="application/ld+json">{JSON.stringify(roiCalculatorSchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta property="og:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <meta property="og:title" content="Marketing ROI Calculator | DemandStream Digital" />
+        <meta property="og:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from DemandStream Digital." />
         <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/roi-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
@@ -200,8 +200,8 @@ const ROICalculator = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Marketing ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta name="twitter:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from Demand Stream Digital." />
+        <meta name="twitter:title" content="Marketing ROI Calculator | DemandStream Digital" />
+        <meta name="twitter:description" content="Prove marketing ROI for your plumbing or HVAC business across SEO, PPC, and more. Free ROI calculator from DemandStream Digital." />
         <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/roi-calculator.png" />
       </Helmet>
       

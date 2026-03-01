@@ -80,11 +80,6 @@ const PaidAdvertising = () => {
         description={metaDescription}
         canonical={canonicalUrl}
         keywords="paid advertising plumbing HVAC, Google Ads for plumbers, HVAC PPC management, Local Services Ads management, Facebook ads for plumbing companies"
-        hrefLangs={[
-          { hrefLang: "en-US", href: canonicalUrl },
-          { hrefLang: "en-CA", href: canonicalUrl },
-          { hrefLang: "x-default", href: canonicalUrl },
-        ]}
         schemaJson={[pageSchema, faqSchema]}
       />
 

@@ -47,11 +47,6 @@ const BestPlumbingSEOCompanies = () => {
         canonical={config.canonicalUrl}
         keywords={config.keywords}
         ogType="article"
-        hrefLangs={[
-          { hrefLang: "en-US", href: config.canonicalUrl },
-          { hrefLang: "en-CA", href: config.canonicalUrl },
-          { hrefLang: "x-default", href: config.canonicalUrl },
-        ]}
         schemaJson={{
           "@context": "https://schema.org",
           "@graph": [

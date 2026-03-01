@@ -32,5 +32,5 @@ Disallow: /thank-you
 Disallow: /admin/
 Disallow: /api/
 
-# Sitemap Index
-Sitemap: https://demandstreamdigital.com/sitemap_index.xml
+# Sitemap
+Sitemap: https://demandstreamdigital.com/sitemap.xml

@@ -298,8 +298,8 @@ const SocialMediaROICalculator = () => {
   return (
     <>
       <Helmet>
-        <title>Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital</title>
-        <meta name="description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <title>Social Media ROI Calculator | DemandStream Digital</title>
+        <meta name="description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free social media ROI calculator from DemandStream Digital." />
         <link rel="canonical" href="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
         <meta name="keywords" content="social media ROI calculator, plumbing social media ROI, HVAC social media marketing, campaign ROI calculator" />
         
@@ -307,8 +307,8 @@ const SocialMediaROICalculator = () => {
         <script type="application/ld+json">{JSON.stringify(socialMediaROISchema)}</script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta property="og:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta property="og:title" content="Social Media ROI Calculator | DemandStream Digital" />
+        <meta property="og:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free social media ROI calculator from DemandStream Digital." />
         <meta property="og:url" content="https://demandstreamdigital.com/partner-tools/social-media-roi-calculator" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Demand Stream Digital" />
@@ -318,8 +318,8 @@ const SocialMediaROICalculator = () => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Social Media ROI Calculator for Plumbing & HVAC | Demand Stream Digital" />
-        <meta name="twitter:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free calculator from Demand Stream Digital." />
+        <meta name="twitter:title" content="Social Media ROI Calculator | DemandStream Digital" />
+        <meta name="twitter:description" content="Calculate the ROI of social media campaigns for your plumbing or HVAC business. Free social media ROI calculator from DemandStream Digital." />
         <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/social-media-roi-calculator.png" />
       </Helmet>
       

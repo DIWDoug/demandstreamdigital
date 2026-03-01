@@ -99,11 +99,6 @@ const LocalSEO = () => {
         description={localSEOConfig.metaDescription}
         canonical={localSEOConfig.canonicalUrl}
         keywords="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing"
-        hrefLangs={[
-          { hrefLang: "en-US", href: localSEOConfig.canonicalUrl },
-          { hrefLang: "en-CA", href: localSEOConfig.canonicalUrl },
-          { hrefLang: "x-default", href: localSEOConfig.canonicalUrl },
-        ]}
         schemaJson={combinedSchema}
       />
       
