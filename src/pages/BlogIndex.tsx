@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -51,26 +51,13 @@ export default function BlogIndex() {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
-        <meta name="description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
-        <link rel="canonical" href="https://demandstreamdigital.com/blog" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
-        <meta property="og:description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
-        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/blog.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
-        <meta name="twitter:description" content="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team." />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/blog.png" />
-        {/* JSON-LD */}
-        <script type="application/ld+json">{JSON.stringify({
+      <SEOHead
+        title="Plumbing & HVAC Marketing Blog | DemandStream Digital"
+        description="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team."
+        canonical="https://demandstreamdigital.com/blog"
+        ogImage="https://demandstreamdigital.com/og-images/blog.png"
+        noIndex={true}
+        schemaJson={{
           "@context": "https://schema.org",
           "@type": "Blog",
           "@id": "https://demandstreamdigital.com/blog",
@@ -83,8 +70,8 @@ export default function BlogIndex() {
             "name": "Demand Stream Digital",
             "url": "https://demandstreamdigital.com"
           }
-        })}</script>
-      </Helmet>
+        }}
+      />
 
       <Header />
 
