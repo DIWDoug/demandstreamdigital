@@ -308,14 +308,6 @@ const PATTERN_REDIRECTS: Array<{ pattern: RegExp; destination: string }> = [
   { pattern: /^\/wp-includes\/.*$/, destination: '/' },
   { pattern: /^\/wp-content\/.*$/, destination: '/' },
   
-  // Legacy nested service paths
-  { pattern: /^\/white-label-inbound-marketing-services\/local-seo\/.*$/, destination: '/white-label-local-seo' },
-  { pattern: /^\/white-label-inbound-marketing-services\/google-maps\/.*$/, destination: '/white-label-gbp-seo' },
-  { pattern: /^\/white-label-inbound-marketing-services\/paid-media\/.*$/, destination: '/white-label-paid-media' },
-  { pattern: /^\/white-label-inbound-marketing-services\/email-marketing\/.*$/, destination: '/white-label-email-marketing' },
-  { pattern: /^\/white-label-inbound-marketing-services\/authority-building\/.*$/, destination: '/white-label-local-authority-building' },
-  { pattern: /^\/white-label-inbound-marketing-services\/reporting\/.*$/, destination: '/white-label-reporting' },
-  { pattern: /^\/white-label-inbound-marketing-services\/content-marketing\/.*$/, destination: '/white-label-content-marketing' },
   
   // Liquid theme WordPress remnants
   { pattern: /^\/liquid-.*-sitemap\.xml\/?$/, destination: '/' },
