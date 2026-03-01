@@ -53,6 +53,20 @@ const Blog = () => {
         <title>Plumbing & HVAC Marketing Blog | DemandStream Digital</title>
         <meta name="description" content="Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, email, and more on the Demand Stream Digital blog." />
         <link rel="canonical" href="https://demandstreamdigital.com/blog" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
+        <meta property="og:description" content="Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, email, and more on the Demand Stream Digital blog." />
+        <meta property="og:url" content="https://demandstreamdigital.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/blog.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Plumbing & HVAC Marketing Blog | DemandStream Digital" />
+        <meta name="twitter:description" content="Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, email, and more on the Demand Stream Digital blog." />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/blog.png" />
       </Helmet>
       
       <Header />
