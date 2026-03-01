@@ -132,18 +132,6 @@ const HVACContentMarketing = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={hvacContentMarketingConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="HVAC Content Marketing Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="HVAC content builds topical authority and seasonal organic traffic. But it compounds when it feeds the broader system — not when it runs as an isolated blog strategy."
-        body2="HVAC service area pages reinforce local SEO signals and GBP relevance for no-cool and no-heat queries. Seasonal content drives organic traffic that paid ads can retarget. Authoritative replacement guides strengthen the domain that your link building and paid campaigns rely on. When HVAC content is built inside the growth system, every asset earns compounding returns — not just one-time traffic spikes."
-        centerLabel="HVAC Content Marketing"
-        centerSublabel="Seasonal authority & long-tail organic reach."
-        services={HVAC_CONTENT_BIGGER_PICTURE_SERVICES}
-        orbitNodes={HVAC_CONTENT_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
 
       {/* 12. CONTACT */}

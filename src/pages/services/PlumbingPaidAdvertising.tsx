@@ -155,18 +155,6 @@ const PlumbingPaidAdvertising = () => {
       {/* 12. FAQ */}
       <PlumbingPaidAdsFAQ />
 
-      {/* 13. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Paid Ads Are One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Paid advertising captures immediate demand. But it performs best when the rest of your growth system is working alongside it."
-        body2="Your SEO builds the organic baseline that lowers your cost-per-click over time. Your GBP drives map pack visibility for searches paid ads don't cover. Your email marketing reactivates past customers before they search for a competitor. Your reporting connects ad spend directly to booked calls, so you know exactly what's working. When paid advertising is integrated with every other channel, you stop paying for demand you already own."
-        centerLabel="Paid Advertising"
-        centerSublabel="Capture emergency and high-intent demand fast."
-        services={PLUMBING_PAID_BIGGER_PICTURE_SERVICES}
-        orbitNodes={PLUMBING_PAID_ORBIT_NODES}
-      />
-
       {/* 14. LEAD FORM */}
       <PlumbingPaidAdsContactForm />
 

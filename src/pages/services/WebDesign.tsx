@@ -98,18 +98,6 @@ const WebDesign = () => {
       {/* 06. EXCLUSIVITY */}
       <WebDesignExclusivity />
 
-      {/* 06B. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Web Design Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Your website is the conversion engine everything else drives traffic to. But it compounds when it's built to support SEO, paid ads, and GBP — not just to look good."
-        body2="An SEO-architected site earns organic rankings faster and holds them longer. Speed and mobile experience reduce paid ad cost per click and improve conversion rates. Schema markup strengthens local pack visibility. Review integration builds trust on every landing page. When your website is built inside the system, every channel performs better from day one."
-        centerLabel="Web Design"
-        centerSublabel="Conversion engine for every channel."
-        services={WEB_DESIGN_BIGGER_PICTURE_SERVICES}
-        orbitNodes={WEB_DESIGN_ORBIT_NODES}
-      />
-
       {/* 07. CONTACT */}
       <ServiceContactForm
         formType="web_design_contact"

@@ -131,18 +131,6 @@ const HVACEmailMarketing = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={hvacEmailMarketingConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="HVAC Email Marketing Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="HVAC email reactivates the revenue already in your customer list and retains your maintenance membership roster. But it performs best when connected to seasonal SEO, paid ads, and GBP — not as standalone blasts."
-        body2="Seasonal email campaigns reinforce HVAC paid ad messaging and reduce cost per booked call. Review request sequences feed GBP velocity and organic rankings. Maintenance plan renewal campaigns keep customers from searching for a competitor before next season. When HVAC email works inside the broader system, every channel gets more efficient — and customer lifetime value compounds."
-        centerLabel="HVAC Email Marketing"
-        centerSublabel="Seasonal reactivation & maintenance retention."
-        services={HVAC_EMAIL_BIGGER_PICTURE_SERVICES}
-        orbitNodes={HVAC_EMAIL_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
 
       {/* Related Tools */}

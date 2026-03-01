@@ -138,18 +138,6 @@ const HVACGoogleMaps = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={hvacGoogleMapsConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="HVAC Google Maps Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Your HVAC GBP drives pack visibility and emergency calls. But it performs best when it's connected to organic SEO, seasonal review velocity, and paid advertising — not running in isolation."
-        body2="Strong HVAC GBP signals reinforce your local organic rankings for no-cool and no-heat queries. High review velocity after installs improves paid ad quality scores and conversion rates. Your seasonal content supports the topical relevance that Maps uses to rank. Every channel feeds the next — and when they work together, HVAC call volume compounds faster than any single channel can produce alone."
-        centerLabel="HVAC Google Maps"
-        centerSublabel="Emergency & seasonal pack visibility."
-        services={HVAC_GBP_BIGGER_PICTURE_SERVICES}
-        orbitNodes={HVAC_GBP_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
 
       {/* 12. CONTACT */}

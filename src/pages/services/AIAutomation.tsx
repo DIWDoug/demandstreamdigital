@@ -138,32 +138,6 @@ const AIAutomation = () => {
       {/* 9. ECOSYSTEM */}
       <ServiceEcosystemSection config={aiAutomationConfig.ecosystem} />
 
-      {/* 10. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="AI Automation Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="AI automation compounds when it's connected to the channels driving calls — not deployed as a standalone tool."
-        body2="Automated review requests accelerate GBP velocity and organic rankings. Lead qualification sequences improve booking rates from paid campaigns. Follow-up automations reactivate estimates from your CRM before customers call a competitor. When AI automation runs inside the growth system, every lead works harder and every channel closes more of what it generates."
-        centerLabel="AI Automation"
-        centerSublabel="Intelligent workflow across channels."
-        services={[
-          { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-          { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-          { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-          { label: "Content Marketing", href: "/plumbing-content-marketing" },
-          { label: "Email Marketing", href: "/plumbing-email-marketing" },
-          { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-        ]}
-        orbitNodes={[
-          { label: "Local SEO", angle: 0 },
-          { label: "Google Maps / GBP", angle: 60 },
-          { label: "Paid Advertising", angle: 120 },
-          { label: "Email Marketing", angle: 180 },
-          { label: "Reporting & Dashboards", angle: 240 },
-          { label: "Content Marketing", angle: 300 },
-        ]}
-      />
-
       <MarketExclusivity />
 
       {/* Related Tools */}

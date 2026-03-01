@@ -140,18 +140,6 @@ const Authority = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={authorityConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Authority Building Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Links and citations build domain authority. But authority compounds when it works alongside SEO, content, and paid advertising — not as a standalone tactic."
-        body2="Stronger domain authority raises the ceiling on what your local SEO can achieve. PR placements drive branded search that reduces paid ad costs. Citations reinforce GBP trust signals and local pack rankings. When authority building feeds the full system, every other channel performs better — and your market position becomes harder for competitors to close."
-        centerLabel="Authority Building"
-        centerSublabel="Domain authority & local trust."
-        services={AUTHORITY_BIGGER_PICTURE_SERVICES}
-        orbitNodes={AUTHORITY_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
       
       {/* 11. CONTACT */}

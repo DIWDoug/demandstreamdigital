@@ -155,18 +155,6 @@ const ContentMarketing = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={contentMarketingConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Content Marketing Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Content builds topical authority and long-tail organic traffic. But it compounds when it feeds the broader system — not when it runs as an isolated blog strategy."
-        body2="Service area pages reinforce local SEO signals and GBP relevance. How-to content drives organic traffic that paid ads can retarget. Authoritative content strengthens the domain that your link building and paid campaigns rely on. When content is built inside the growth system, every asset earns compounding returns — not just one-time traffic."
-        centerLabel="Content Marketing"
-        centerSublabel="Authority & long-tail organic reach."
-        services={CONTENT_BIGGER_PICTURE_SERVICES}
-        orbitNodes={CONTENT_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
 
       {/* Related Tools */}

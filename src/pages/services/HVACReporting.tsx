@@ -129,18 +129,6 @@ const HVACReporting = () => {
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={hvacReportingConfig.ecosystem} />
 
-      {/* 11. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="HVAC Reporting Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="HVAC reporting shows what's working across every channel and every season. But its real value comes when it feeds decisions back into SEO, paid ads, and email — closing the loop on seasonal investment."
-        body2="HVAC call tracking data improves Google Ads bid strategy before peak season. Booking rate data identifies which landing pages are losing emergency calls. Revenue-per-job data shows which HVAC service campaigns are worth scaling. When reporting is connected to every channel, the entire system learns faster — and your cost per booked call drops over time instead of staying flat."
-        centerLabel="HVAC Reporting"
-        centerSublabel="Seasonal revenue intelligence across all channels."
-        services={HVAC_REPORTING_BIGGER_PICTURE_SERVICES}
-        orbitNodes={HVAC_REPORTING_ORBIT_NODES}
-      />
-
       <MarketExclusivity />
 
       {/* 12. CONTACT */}
