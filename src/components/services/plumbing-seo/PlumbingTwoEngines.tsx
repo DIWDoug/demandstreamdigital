@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const organicPoints = [
   "Clean URL structure aligned to service + city: /water-heater-replacement-dallas/",
-  "Three-tier architecture: core service hubs, sub-service specialization, problem-level emergency pages",
+  "Three-tier structure: core service hubs, sub-service specialization, problem-level emergency pages",
   "City pages built around your dispatch radius, not just the nearest major metro",
   "Each page targets a distinct search intent. 'Tankless installation' ranks faster than 'plumbing services'"
 ];
@@ -59,8 +59,8 @@ const PlumbingTwoEngines = () => {
                   <h3 className="text-base font-semibold text-foreground">Organic Plumbing SEO</h3>
                 </div>
               </div>
-              <p className="text-text-secondary mb-5 leading-relaxed text-sm">
-                Organic rankings are structural. Built through page architecture, content quality, and authority signals. The most important structural decision:{" "}
+            <p className="text-text-secondary mb-5 leading-relaxed text-sm">
+                Organic rankings are structural. Built through page structure, content quality, and authority signals. The most important decision:{" "}
                 <span className="text-foreground font-medium">if it's a different phone call, it's a different page.</span>
               </p>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -88,7 +88,7 @@ const PlumbingTwoEngines = () => {
                       Every distinct service gets its own page. Water Heater, Drain Cleaning, Slab Leak, Repiping, Hydro Jetting, each as a hub with sub-service pages targeting specific high-intent searches.
                     </p>
                     <p className="text-xs text-text-secondary leading-relaxed">
-                      Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection, each as a hub with sub-service pages targeting specific high-intent searches.
+                      Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection. Each as a hub with sub-service pages targeting specific high-intent searches.
                     </p>
                   </div>
                 )}
@@ -117,10 +117,10 @@ const PlumbingTwoEngines = () => {
               <p className="text-text-secondary mb-4 leading-relaxed text-sm">
                 Maps rankings respond to GBP activity, review signals, and proximity. Over{" "}
                 <span className="text-foreground font-medium">70% of local service searches end at the Map Pack.</span>{" "}
-                For emergency plumbing calls, the Map Pack is where the revenue decision happens.
+                For emergency plumbing calls, the Map Pack is where the call decision happens.
               </p>
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
-                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Maps is Behavioral</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Maps Responds to Activity</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
                   A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly, uploading real job photos, and responding to every review.
                 </p>
@@ -160,7 +160,7 @@ const PlumbingTwoEngines = () => {
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">GEO vs SEO</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers: a different signal set, but built on the same technical and content foundation.
+                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers. A different signal set, but built on the same technical and content foundation.
                 </p>
               </div>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -182,7 +182,7 @@ const PlumbingTwoEngines = () => {
           </div>
 
           <p className="text-center text-text-muted text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
-            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured data support AI citations. The system compounds when every channel is aligned.
+            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured data support AI citations. The results compound when every channel is aligned.
           </p>
         </div>
       </div>

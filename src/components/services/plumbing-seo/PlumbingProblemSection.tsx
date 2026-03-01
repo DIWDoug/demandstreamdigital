@@ -7,21 +7,21 @@ const painPoints = [
   {
     icon: Zap,
     title: "Emergency Intent Dominates",
-    body: "The majority of high-value plumbing searches are urgent: 'emergency plumber near me,' 'burst pipe repair,' 'water heater not working.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first, not retrofitted from a template built for dentists and dog groomers.",
+    body: "The majority of high-value plumbing searches are urgent. 'Emergency plumber near me.' 'Burst pipe repair.' 'Water heater not working.' These are not research queries. They are active emergencies. Plumbing SEO has to be built around that urgency first, not retrofitted from a template built for dentists and dog groomers.",
     color: "text-cta",
     bg: "bg-cta/10",
   },
   {
     icon: MapPin,
     title: "Proximity Shifts Rankings Dramatically",
-    body: "A plumbing company ranking #1 from three miles away may not appear at all for a searcher on the other side of the service area. Google weights proximity heavily for emergency local searches. A strategy that ignores ZIP-level competition leaves high-margin calls on the table every single day.",
+    body: "A plumbing company ranking #1 from three miles away may not appear at all for a searcher on the other side of the service area. Google weights proximity heavily for emergency local searches. A strategy that ignores ZIP-level competition leaves calls on the table every day.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
   {
     icon: Award,
     title: "Review Velocity Is a Trust Signal, Not a Bonus",
-    body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors. Not a nice-to-have, not a bonus. They are part of the system.",
+    body: "When a homeowner finds two plumbers in the Map Pack, the one with more recent reviews and a response to each one gets the call. Review recency and response discipline are direct ranking and conversion factors. They are part of the system.",
     color: "text-accent-green",
     bg: "bg-accent-green/10",
   },
@@ -35,7 +35,7 @@ const painPoints = [
   {
     icon: Phone,
     title: "After-Hours Calls Are High-Margin Calls",
-    body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix. The customer is not price shopping, they need a plumber now. Your GBP and site have to be configured to capture that demand 24 hours a day, not just during office hours.",
+    body: "Plumbing emergencies don't follow business hours. After-hours calls are often the highest-margin jobs in the mix. The customer is not price shopping. They need a plumber now. Your GBP and site have to be configured to capture that demand 24 hours a day, not just during office hours.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
@@ -61,7 +61,7 @@ const PlumbingProblemSection = () => {
                 Plumbing is not a general home services business. It is an emergency-driven, reputation-sensitive trade where the buying decision happens in under two minutes.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                Generic contractor packages apply the same keyword lists, the same content templates, and the same link building tactics to every trade. They don't account for how plumbing calls actually come in, or what makes a homeowner choose one plumber over another when they're standing in two inches of water.
+                Generic contractor packages apply the same keyword lists, the same content templates, and the same link building tactics to every trade. They don't account for how plumbing calls actually come in, or what makes a homeowner choose one plumber over another when they're standing in two inches of water at midnight.
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
                 <p className="text-slate-700 text-sm leading-relaxed font-medium">
