@@ -74,6 +74,18 @@ const Header = () => {
       spokes: [
         { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
         { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
+        { label: "Plumbing Search Ads", href: "/plumbing-search-ads" },
+        { label: "HVAC Search Ads", href: "/hvac-search-ads" },
+        { label: "Plumbing Local Service Ads", href: "/plumbing-local-service-ads" },
+        { label: "HVAC Local Service Ads", href: "/hvac-local-service-ads" },
+        { label: "Plumbing Facebook Ads", href: "/plumbing-facebook-advertising" },
+        { label: "HVAC Facebook Ads", href: "/hvac-facebook-advertising" },
+        { label: "Plumbing Instagram Ads", href: "/plumbing-instagram-advertising" },
+        { label: "HVAC Instagram Ads", href: "/hvac-instagram-advertising" },
+        { label: "Plumbing LinkedIn Ads", href: "/plumbing-linkedin-advertising" },
+        { label: "HVAC LinkedIn Ads", href: "/hvac-linkedin-advertising" },
+        { label: "Plumbing Programmatic Ads", href: "/plumbing-programmatic-advertising" },
+        { label: "HVAC Programmatic Ads", href: "/hvac-programmatic-advertising" },
       ],
     },
     {
