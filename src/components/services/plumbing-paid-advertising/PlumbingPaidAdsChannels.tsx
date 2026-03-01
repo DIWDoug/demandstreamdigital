@@ -62,6 +62,32 @@ const PlumbingPaidAdsChannels = () => {
           {/* 2x2 grid for remaining channels */}
           <div className="grid md:grid-cols-2 gap-6">
 
+            {/* LSA */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Local Services Ads (LSA)</h3>
+              <ul className="space-y-2.5 flex-1 mb-6">
+                {[
+                  "Google Guaranteed placement above all other results",
+                  "Pay-per-lead structure — you pay for plumbing leads, not clicks",
+                  "Emergency category setup matched to how homeowners search",
+                  "Booking-rate strategy that protects your LSA ranking",
+                  "Dispute management and budget pacing"
+                ].map((bullet, j) => (
+                  <li key={j} className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <span className="text-accent-blue mt-0.5 shrink-0">&#10003;</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/plumbing-local-service-ads"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-blue hover:text-accent-blue/80 transition-colors group mt-auto"
+              >
+                Explore Plumbing LSA Management
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+
             {/* Facebook */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Facebook Advertising</h3>
