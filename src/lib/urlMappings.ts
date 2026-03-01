@@ -36,14 +36,6 @@ export const SPOKE_URL_MAP: Record<string, { url: string; hubSlug: string }> = {
   'schema-markup': { url: '/white-label-schema-markup', hubSlug: 'local-seo' },
   'nap-citations': { url: '/white-label-nap-citations', hubSlug: 'local-seo' },
   
-  // GBP SEO spokes
-  'gbp-optimization': { url: '/white-label-gbp-optimization', hubSlug: 'google-maps' },
-  'review-management': { url: '/white-label-review-management', hubSlug: 'google-maps' },
-  'citation-building': { url: '/white-label-citation-building', hubSlug: 'google-maps' },
-  'post-scheduling': { url: '/white-label-post-scheduling', hubSlug: 'google-maps' },
-  'photo-optimization': { url: '/white-label-photo-optimization', hubSlug: 'google-maps' },
-  'qa-management': { url: '/white-label-qa-management', hubSlug: 'google-maps' },
-  
   // Paid Media spokes
   'google-ads': { url: '/white-label-google-ads', hubSlug: 'paid-media' },
   'meta-ads': { url: '/white-label-meta-ads', hubSlug: 'paid-media' },
@@ -51,40 +43,6 @@ export const SPOKE_URL_MAP: Record<string, { url: string; hubSlug: string }> = {
   'retargeting-campaigns': { url: '/white-label-retargeting-campaigns', hubSlug: 'paid-media' },
   'landing-page-design': { url: '/white-label-landing-page-design', hubSlug: 'paid-media' },
   'conversion-tracking': { url: '/white-label-conversion-tracking', hubSlug: 'paid-media' },
-  
-  // Email Marketing spokes
-  'campaign-strategy': { url: '/white-label-campaign-strategy', hubSlug: 'email-marketing' },
-  'list-management': { url: '/white-label-list-management', hubSlug: 'email-marketing' },
-  'automation-flows': { url: '/white-label-automation-flows', hubSlug: 'email-marketing' },
-  'newsletter-design': { url: '/white-label-newsletter-design', hubSlug: 'email-marketing' },
-  'ab-testing': { url: '/white-label-ab-testing', hubSlug: 'email-marketing' },
-  'performance-analytics': { url: '/white-label-performance-analytics', hubSlug: 'email-marketing' },
-  
-  // Content Marketing spokes
-  'geographical-content': { url: '/white-label-geographical-content', hubSlug: 'content-marketing' },
-  'topical-authority': { url: '/white-label-topical-authority', hubSlug: 'content-marketing' },
-  'power-posts': { url: '/white-label-power-posts', hubSlug: 'content-marketing' },
-  'ebooks-guides': { url: '/white-label-ebooks-guides', hubSlug: 'content-marketing' },
-  'lead-magnets': { url: '/white-label-lead-magnets', hubSlug: 'content-marketing' },
-  'press-releases': { url: '/white-label-press-releases', hubSlug: 'content-marketing' },
-  'case-studies': { url: '/white-label-case-studies', hubSlug: 'content-marketing' },
-  'faq-content': { url: '/white-label-faq-content', hubSlug: 'content-marketing' },
-  'hub-spoke-buildouts': { url: '/white-label-hub-spoke-buildouts', hubSlug: 'content-marketing' },
-  
-  // Authority Building spokes
-  'structured-citations': { url: '/white-label-structured-citations', hubSlug: 'local-authority-building' },
-  'unstructured-citations': { url: '/white-label-unstructured-citations', hubSlug: 'local-authority-building' },
-  'brand-mentions': { url: '/white-label-brand-mentions', hubSlug: 'local-authority-building' },
-  'anchor-text': { url: '/white-label-anchor-text', hubSlug: 'local-authority-building' },
-  'sponsorships': { url: '/white-label-sponsorships', hubSlug: 'local-authority-building' },
-  
-  // Reporting spokes
-  'branded-dashboards': { url: '/white-label-branded-dashboards', hubSlug: 'reporting' },
-  'monthly-performance-reports': { url: '/white-label-monthly-performance-reports', hubSlug: 'reporting' },
-  'rank-tracking-visibility': { url: '/white-label-rank-tracking-visibility', hubSlug: 'reporting' },
-  'call-tracking-lead-attribution': { url: '/white-label-call-tracking-lead-attribution', hubSlug: 'reporting' },
-  'roi-revenue-analysis': { url: '/white-label-roi-revenue-analysis', hubSlug: 'reporting' },
-  'client-presentation-decks': { url: '/white-label-client-presentation-decks', hubSlug: 'reporting' },
 };
 
 // Reverse mapping: flat URL path to spoke slug and hub
