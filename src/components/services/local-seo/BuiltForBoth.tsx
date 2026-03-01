@@ -43,7 +43,7 @@ const BuiltForBoth = () => {
                 <div className="w-14 h-14 rounded-xl bg-accent-blue/10 flex items-center justify-center">
                   <Droplets className="h-7 w-7 text-accent-blue" />
                 </div>
-                <Link to="/hvac-and-plumbing-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-accent-blue transition-colors">Plumbing Local SEO</Link>
+                <Link to="/plumbing-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-accent-blue transition-colors">Plumbing Local SEO</Link>
               </div>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 Plumbing demand is largely emergency-driven. A main line backup, a burst pipe, a water heater that stopped working — these are not planned purchases. The homeowner searches, they look at the Map Pack, and they call. Plumbing local SEO has to win that moment.
@@ -57,7 +57,7 @@ const BuiltForBoth = () => {
                 ))}
               </ul>
               <Link 
-                to="/hvac-and-plumbing-seo" 
+                to="/plumbing-seo" 
                 className="btn-cta group inline-flex items-center gap-2 text-sm"
               >
                 Plumbing SEO Details
@@ -71,7 +71,7 @@ const BuiltForBoth = () => {
                 <div className="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center">
                   <Thermometer className="h-7 w-7 text-amber-500" />
                 </div>
-                <Link to="/hvac-and-plumbing-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-amber-500 transition-colors">HVAC Local SEO</Link>
+                <Link to="/hvac-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-amber-500 transition-colors">HVAC Local SEO</Link>
               </div>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 HVAC demand is seasonal. Peak season in a cooling-heavy market creates a fundamentally different call flow than shoulder season. HVAC local SEO has to account for both — ranking for emergency no-cool calls in summer and positioning for planned changeouts and maintenance agreements year-round.
@@ -85,7 +85,7 @@ const BuiltForBoth = () => {
                 ))}
               </ul>
               <Link 
-                to="/hvac-and-plumbing-seo" 
+                to="/hvac-seo" 
                 className="btn-cta group inline-flex items-center gap-2 text-sm"
               >
                 HVAC SEO Details
