@@ -189,35 +189,42 @@ const PlumbingWebsiteDesign = () => {
       <section id="why-they-fail" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-              {/* Left sticky column */}
+            <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
+              {/* LEFT — 45% */}
               <div className="lg:sticky lg:top-32">
                 <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                   Why Most Plumbing Websites Don't Generate Calls
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-4">
+                <p className="text-lg text-slate-600 leading-relaxed mb-5">
                   Plumbing has a wide service range. That range is also the reason most plumbing websites underperform. The standard approach is to dump everything onto a single Plumbing Services page.
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                <p className="text-lg text-slate-600 leading-relaxed mb-5">
                   That page tries to rank for drain cleaning, water heater replacement, slab leak repair, and repipe, all at once. It ranks for none of them.
                 </p>
-                <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
-                  <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                    A homeowner with an active leak isn't browsing service menus. They need a phone number and a booking path in under three seconds. If your site doesn't deliver that on mobile, they call the next result.
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  The result is a website that looks reasonable, gets some traffic, and converts very little of it into booked calls.
+                </p>
+                {/* Blockquote — left red border, italic */}
+                <blockquote className="border-l-4 border-cta pl-5 mb-6">
+                  <p className="text-slate-700 text-base italic leading-relaxed">
+                    "A homeowner with an active leak isn't browsing service menus. They need a phone number and a booking path in under three seconds. If your site doesn't deliver that on mobile, they call the next result."
                   </p>
-                </div>
+                </blockquote>
+                <p className="text-slate-600 leading-relaxed mb-8">
+                  The six failure patterns on the right are not rare. They are the default. Every one of them has a structural fix.
+                </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm"
                   >
                     Claim Your Territory Today
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
                     href={PHONE_HREF}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
                   >
                     <Phone className="h-4 w-4" />
                     {PHONE_NUMBER}
@@ -225,20 +232,17 @@ const PlumbingWebsiteDesign = () => {
                 </div>
               </div>
 
-              {/* Right: stacked icon rows, no card boxes */}
-              <div>
+              {/* RIGHT — 55%, stacked items, no card borders, generous spacing */}
+              <div className="space-y-8">
                 {failureItems.map((item, i) => (
-                  <div key={i}>
-                    <div className="flex items-start gap-4 py-6">
-                      <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-cta text-xs font-bold">✕</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-slate-900 text-[15px] mb-1.5">{item.title}</p>
-                        <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
-                      </div>
+                  <div key={i} className="flex items-start gap-5">
+                    <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-cta text-xs font-bold">✕</span>
                     </div>
-                    {i < failureItems.length - 1 && <hr className="border-t border-slate-200" />}
+                    <div className="flex-1 min-w-0">
+                      <p className="font-bold text-slate-900 text-[15px] mb-2">{item.title}</p>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+                    </div>
                   </div>
                 ))}
               </div>

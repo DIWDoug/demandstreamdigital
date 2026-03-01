@@ -1,10 +1,10 @@
-import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick } from "lucide-react";
+import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const canonicalUrl = `${SITE_URL}/website-design`;
 const metaTitle = "Plumbing & HVAC Website Design Built to Rank | DemandStream";
@@ -142,44 +142,64 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* WHY WEBSITES FAIL — light */}
+      {/* WHY WEBSITES FAIL — light, Pattern B */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-              {/* Left sticky column */}
+            <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
+              {/* LEFT — 45% */}
               <div className="lg:sticky lg:top-32">
                 <p className="text-cta text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                   Why Most 'Pretty' Contractor Websites Don't Perform
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-4">
+                <p className="text-lg text-slate-600 leading-relaxed mb-5">
                   A new contractor website goes live. It looks clean. The owner is happy. Three months later, the phone hasn't moved.
                 </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                <p className="text-lg text-slate-600 leading-relaxed mb-5">
                   This happens constantly. The reason is always the same: the site was built to look good, not to rank or convert.
                 </p>
-                <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4">
-                  <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                    A website built for plumbing and HVAC needs separate intent pages, GBP alignment, and a clear call path. Not a brochure designed to win a design award.
+                <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                  Design is not the problem. Structure is the problem. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start.
+                </p>
+                {/* Blockquote — left red border, italic */}
+                <blockquote className="border-l-4 border-cta pl-5 mb-6">
+                  <p className="text-slate-700 text-base italic leading-relaxed">
+                    "A website built for plumbing and HVAC needs separate intent pages, GBP alignment, and a clear call path. Not a brochure designed to win a design award."
                   </p>
+                </blockquote>
+                <p className="text-slate-600 leading-relaxed mb-8">
+                  The four patterns on the right are the same patterns we see on every underperforming contractor site. If your current website has any of them, the structure is costing you calls.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm"
+                  >
+                    Claim Your Territory Today
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <a
+                    href={PHONE_HREF}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
+                  >
+                    <Phone className="h-4 w-4" />
+                    {PHONE_NUMBER}
+                  </a>
                 </div>
               </div>
 
-              {/* Right: stacked icon rows */}
-              <div>
+              {/* RIGHT — 55%, 5 stacked items, no card borders */}
+              <div className="space-y-8">
                 {failures.map((item, i) => (
-                  <div key={i}>
-                    <div className="flex items-start gap-4 py-6">
-                      <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <span className="text-cta text-xs font-bold">✕</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-semibold text-slate-900 text-[15px] mb-1.5">{item.problem}</p>
-                        <p className="text-accent-blue text-sm font-semibold">{item.pattern}</p>
-                      </div>
+                  <div key={i} className="flex items-start gap-5">
+                    <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-cta text-xs font-bold">✕</span>
                     </div>
-                    {i < failures.length - 1 && <hr className="border-t border-slate-200" />}
+                    <div className="flex-1 min-w-0">
+                      <p className="font-bold text-slate-900 text-[15px] mb-2">{item.problem}</p>
+                      <p className="text-accent-blue text-sm font-semibold leading-relaxed">{item.pattern}</p>
+                    </div>
                   </div>
                 ))}
               </div>
