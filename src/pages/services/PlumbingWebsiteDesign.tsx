@@ -45,14 +45,14 @@ const serviceCluster = [
 ];
 
 const gbpRows = [
-  { category: "Plumber (Primary)", page: "/plumbing/[city]/[state-abr]/", intent: "Brand / market-level" },
-  { category: "Drain Cleaning Service", page: "/drain-cleaning-[city]-[state-abr]/", intent: "Emergency, high urgency" },
-  { category: "Water Heater Installation / Repair", page: "/water-heater-installation/[city]/[state-abr]/ + /water-heater-repair/[city]/[state-abr]/", intent: "Repair urgent / install research" },
-  { category: "Sewer Services", page: "/sewer-cleaning/[city]/[state-abr]/ + /trenchless-sewer-replacement/[city]/[state-abr]/", intent: "Emergency + project" },
-  { category: "Pipe Repair / Repipe", page: "/repipe-specialist/[city]/[state-abr]/", intent: "Research, high ticket" },
-  { category: "Leak Detection", page: "/slab-leak-detection/[city]/[state-abr]/", intent: "High-anxiety, trust-driven" },
-  { category: "Backflow Testing", page: "/backflow-testing-certification/[city]/[state-abr]/", intent: "Commercial, compliance" },
-  { category: "Water Filtration", page: "/water-filtration-installation/[city]/[state-abr]/", intent: "Upgrade intent, seasonal" },
+  { category: "Plumber (Primary)", page: "/plumbing-[city]-[state]", intent: "Brand / market-level" },
+  { category: "Drain Cleaning Service", page: "/drain-cleaning-[city]-[state]", intent: "Emergency, high urgency" },
+  { category: "Water Heater Installation / Repair", page: "/water-heater-installation-[city]-[state] + /water-heater-repair-[city]-[state]", intent: "Repair urgent / install research" },
+  { category: "Sewer Services", page: "/sewer-cleaning-[city]-[state] + /trenchless-sewer-replacement-[city]-[state]", intent: "Emergency + project" },
+  { category: "Pipe Repair / Repipe", page: "/repipe-specialist-[city]-[state]", intent: "Research, high ticket" },
+  { category: "Leak Detection", page: "/slab-leak-detection-[city]-[state]", intent: "High-anxiety, trust-driven" },
+  { category: "Backflow Testing", page: "/backflow-testing-certification-[city]-[state]", intent: "Commercial, compliance" },
+  { category: "Water Filtration", page: "/water-filtration-installation-[city]-[state]", intent: "Upgrade intent, seasonal" },
 ];
 
 const plumbingWebDesignQualification = {
