@@ -42,10 +42,10 @@ const RegionBlocked = () => {
             <p className="text-sm text-text-muted">
               If you believe you're seeing this message in error, please contact us at{" "}
               <a 
-                href="mailto:hello@dialedinweb.com" 
+                href="mailto:hello@demandstreamdigital.com" 
                 className="text-accent-blue hover:underline"
               >
-                hello@dialedinweb.com
+                hello@demandstreamdigital.com
               </a>
             </p>
           </div>
