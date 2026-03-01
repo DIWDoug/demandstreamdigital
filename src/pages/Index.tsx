@@ -72,7 +72,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEOHead
-        title="Plumbing & HVAC Marketing Company | SEO, PPC & Lead Generation | Demand Stream Digital"
+        title="Plumbing & HVAC Marketing | SEO, PPC & Lead Gen | DSD"
         description="More booked service calls for plumbing and HVAC companies. SEO, Google Maps, paid ads, and AI automation built around dispatch capacity and seasonality."
         canonical="https://demandstreamdigital.com/"
         ogImage={ogImage}

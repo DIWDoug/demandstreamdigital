@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
   title: "GBP SEO",
-  metaTitle: "Google Maps SEO for Plumbing & HVAC | GBP Optimization & Local Visibility | Demand Stream Digital",
+  metaTitle: "Plumbing Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management for plumbing and HVAC. Reviews, citations, posts, and local pack strategy that puts your company in the map pack.",
   canonicalUrl: `${SITE_URL}/plumbing-google-maps`,
 

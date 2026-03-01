@@ -76,7 +76,7 @@ const currentYear = 2026;
 export const plumbingSEOCompaniesConfig: ListicleConfig = {
   slug: "best-plumbing-seo-companies",
   title: "Top 30 SEO Companies for Plumbing & HVAC in 2026",
-  metaTitle: "30 Best SEO Companies for Plumbers & HVAC (2026) | Vetted & Ranked",
+  metaTitle: "30 Best SEO Companies for Plumbers & HVAC (2026)",
   metaDescription: "Compare the top 30 SEO companies for plumbing and HVAC businesses in 2026. Includes pricing, services, client reviews, and detailed analysis to help you get more calls and jobs.",
   canonicalUrl: "https://demandstreamdigital.com/best-plumbing-seo-companies",
   keywords: "plumbing SEO, HVAC SEO, SEO for plumbers, SEO companies for HVAC, plumbing marketing, HVAC marketing, local SEO for plumbers, plumber SEO company",

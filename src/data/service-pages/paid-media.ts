@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const paidMediaConfig: ServicePageConfig = {
   slug: "paid-media",
   title: "Paid Media",
-  metaTitle: "Paid Media for Plumbing & HVAC | Google Ads, Meta Ads, LSAs & CRO | Demand Stream Digital",
+  metaTitle: "Paid Media for Plumbing & HVAC: Google Ads & LSAs | DSD",
   metaDescription: "Demand Stream Digital runs data-driven PPC campaigns for plumbing and HVAC companies across Google, Meta & more. Get more calls and booked jobs.",
   canonicalUrl: `${SITE_URL}/plumbing-paid-advertising`,
 

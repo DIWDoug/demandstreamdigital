@@ -193,7 +193,7 @@ const Testimonials = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
-        title="Agency Partner Testimonials | Why Agencies Trust Demand Stream Digital"
+        title="Client Testimonials | DemandStream Digital"
         description="Hear from companies and agency partners who've worked with Demand Stream Digital. Real feedback on our SEO, PPC, and content marketing work."
         canonical="https://demandstreamdigital.com/testimonials"
         ogImage="https://demandstreamdigital.com/og-images/testimonials.jpg"

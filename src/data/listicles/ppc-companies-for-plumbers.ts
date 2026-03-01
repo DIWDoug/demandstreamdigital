@@ -10,7 +10,7 @@ const currentYear = 2026;
 export const plumbingPPCCompaniesConfig: ListicleConfig = {
   slug: "best-plumbing-ppc-companies",
   title: "Top 30 PPC Companies for Plumbing & HVAC in 2026",
-  metaTitle: "30 Best PPC Companies for Plumbers & HVAC (2026) | Vetted & Ranked",
+  metaTitle: "30 Best PPC Companies for Plumbers & HVAC (2026)",
   metaDescription: "Compare the top 30 PPC and Google Ads companies for plumbing and HVAC businesses in 2026. Includes pricing, services, client reviews, and detailed analysis to help you get more calls.",
   canonicalUrl: "https://demandstreamdigital.com/best-plumbing-ppc-companies",
   keywords: "plumbing PPC, HVAC PPC, Google Ads for plumbers, PPC for HVAC, plumbing advertising, HVAC advertising, Google Ads management for plumbers, paid advertising for HVAC",

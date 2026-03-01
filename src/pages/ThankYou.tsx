@@ -14,7 +14,7 @@ const ThankYou = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
         <SEOHead
-          title={isEbook ? "Download Your Ebook | Demand Stream Digital" : "Thank You for Contacting Demand Stream Digital | We'll Be in Touch"}
+          title={isEbook ? "Download Your Ebook | DemandStream Digital" : "Thank You | DemandStream Digital"}
           description={isEbook ? "Your ebook is ready for download." : "Thanks for reaching out. A Demand Stream Digital strategist will connect with you soon."}
           canonical="https://demandstreamdigital.com/thank-you"
           noIndex={true}

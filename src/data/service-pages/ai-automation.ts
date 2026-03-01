@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const aiAutomationConfig: ServicePageConfig = {
   slug: "ai-automation",
   title: "AI Automation",
-  metaTitle: "AI Automation for Plumbing & HVAC Companies | Missed Call Recovery & Lead Follow-Up | Demand Stream Digital",
+  metaTitle: "AI Automation for Plumbing & HVAC: Missed Call Recovery",
   metaDescription: "Missed call recovery, estimate follow-up, and lead reactivation on autopilot. AI automation built specifically for plumbing and HVAC dispatch operations.",
   canonicalUrl: `${SITE_URL}/ai-automation`,
   keywords: "AI automation plumbing HVAC, missed call recovery, lead follow-up automation, AI chatbot plumbing, automated scheduling HVAC, CRM automation trades",

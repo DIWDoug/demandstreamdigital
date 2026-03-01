@@ -50,7 +50,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "Plumbing Paid Advertising for More Booked Service Calls | DemandStream Digital";
+const metaTitle = "Plumbing Paid Ads for More Booked Calls | DemandStream";
 const metaDescription = "Plumbing paid advertising built around emergency intent, service segmentation, and cost per booked call. Not generic contractor PPC. See the difference.";
 const canonicalUrl = `${SITE_URL}/plumbing-paid-advertising`;
 

@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const localSEOConfig: ServicePageConfig = {
   slug: "local-seo",
   title: "Local SEO",
-  metaTitle: "Plumbing & HVAC Local SEO Services for More Booked Calls | DemandStream Digital",
+  metaTitle: "Local SEO for Plumbing & HVAC | More Booked Calls | DSD",
   metaDescription: "Local SEO built for plumbing and HVAC companies, not generic contractors. Rankings, Google Maps, content, and citations connected to booked service calls.",
   canonicalUrl: `${SITE_URL}/hvac-and-plumbing-seo`,
 

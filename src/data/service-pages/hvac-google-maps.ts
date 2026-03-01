@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const hvacGoogleMapsConfig: ServicePageConfig = {
   slug: "hvac-google-maps",
   title: "HVAC GBP SEO",
-  metaTitle: "Google Maps SEO for HVAC Companies | GBP Optimization & Local Pack Rankings | Demand Stream Digital",
+  metaTitle: "HVAC Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management built for HVAC companies. Reviews, seasonal GBP posts, citations, and local pack strategy that keeps your schedule full year-round.",
   canonicalUrl: `${SITE_URL}/hvac-google-maps`,
 

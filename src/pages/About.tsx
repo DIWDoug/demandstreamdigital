@@ -117,7 +117,7 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Our Plumbing & HVAC Marketing Experts | DemandStream Digital"
+        title="About DemandStream Digital | Plumbing & HVAC Marketing"
         description="15 years in digital marketing. Now focused exclusively on plumbing and HVAC. Meet the team that's managed millions in ad spend for the trades."
         canonical="https://demandstreamdigital.com/about"
         ogImage="https://demandstreamdigital.com/og-images/about.jpg"

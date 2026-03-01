@@ -5,7 +5,7 @@ import { SITE_URL } from "@/lib/constants";
 export const hvacReportingConfig: ServicePageConfig = {
   slug: "hvac-reporting",
   title: "HVAC Reporting & Analytics",
-  metaTitle: "HVAC Marketing Reporting | Seasonal Dashboards, Call Attribution & Revenue Analysis | Demand Stream Digital",
+  metaTitle: "HVAC Marketing Reporting & Analytics | DemandStream",
   metaDescription: "Marketing reports for HVAC companies that show exactly what's driving calls, booked jobs, and revenue — by season, by campaign, by service type. No more guessing.",
   canonicalUrl: `${SITE_URL}/hvac-reporting`,
 

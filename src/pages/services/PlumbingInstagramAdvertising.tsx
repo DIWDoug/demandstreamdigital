@@ -17,7 +17,7 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const metaTitle = "Plumbing Instagram Advertising for Replacement Demand and Brand Authority | DemandStream Digital";
+const metaTitle = "Plumbing Instagram Ads for Replacement Demand | DemandStream";
 const metaDescription = "Plumbing Instagram ads that drive replacement demand and build brand authority. Visual campaigns tracked to booked revenue through ServiceTitan.";
 const canonicalUrl = `${SITE_URL}/plumbing-instagram-advertising`;
 
