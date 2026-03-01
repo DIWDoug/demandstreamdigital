@@ -181,11 +181,9 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
   'white-label-social-media': {
     slug: 'white-label-social-media',
     relevantLinks: [
-      { text: 'content marketing', url: '/white-label-content-marketing', context: 'content marketing' },
-      { text: 'Meta Ads', url: '/white-label-meta-ads', context: 'social media advertising' },
-      { text: 'post scheduling', url: '/white-label-post-scheduling', context: 'social posting' },
-      { text: 'white-label reporting', url: '/white-label-reporting', context: 'reporting' },
-      { text: 'branded dashboards', url: '/white-label-branded-dashboards', context: 'dashboards' },
+      { text: 'content marketing', url: '/plumbing-content-marketing', context: 'content marketing' },
+      { text: 'Meta Ads', url: '/hvac-and-plumbing-paid-ads', context: 'social media advertising' },
+      { text: 'white-label reporting', url: '/plumbing-reporting', context: 'reporting' },
     ],
     externalLink: {
       matchPhrases: ['social media agency', 'content calendar', 'engagement', 'platforms'],
@@ -201,9 +199,8 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
       { text: 'on-page optimization', url: '/white-label-onpage-optimization', context: 'on-page' },
       { text: 'link building', url: '/white-label-link-building', context: 'link building' },
       { text: 'technical SEO audits', url: '/white-label-technical-seo', context: 'technical seo' },
-      { text: 'white-label reporting', url: '/white-label-reporting', context: 'reporting' },
-      { text: 'monthly performance reports', url: '/white-label-monthly-performance-reports', context: 'reports' },
-      { text: 'authority building', url: '/white-label-local-authority-building', context: 'authority backlinks' },
+      { text: 'white-label reporting', url: '/plumbing-reporting', context: 'reporting' },
+      { text: 'authority building', url: '/plumbing-authority-building', context: 'authority backlinks' },
     ],
     externalLink: {
       matchPhrases: ['SEO agency', 'outsource', 'fulfillment', 'white labeling'],
