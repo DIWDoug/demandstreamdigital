@@ -169,6 +169,27 @@ const ContentMarketing = () => {
       />
 
       <MarketExclusivity />
+
+      {/* Related Tools */}
+      <section className="py-10 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-4 text-center">Free Planning Tools</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {[
+                { label: "Content Marketing Calculator", href: "/partner-tools/content-marketing-calculator", desc: "Model ROI from content production & traffic" },
+                { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", desc: "Estimate monthly SEO investment by market" },
+                { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", desc: "Project revenue from full inbound strategy" },
+              ].map((t) => (
+                <a key={t.href} href={t.href} className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200">
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{t.label}</span>
+                  <span className="text-xs text-text-secondary">{t.desc}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">
