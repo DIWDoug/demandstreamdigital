@@ -30,74 +30,11 @@ const VALID_ROUTES = new Set([
   '/partner-tools/social-media-roi-calculator',
   '/partner-tools/ai-ready-check',
   
-  // Services Hub
-  '/white-label-inbound-marketing-services',
-  
-  // Local SEO Hub + Spokes
-  '/white-label-local-seo',
-  '/white-label-onpage-optimization',
-  '/white-label-technical-seo',
-  '/white-label-local-keyword-strategy',
-  '/white-label-content-development',
-  '/white-label-link-building',
-  '/white-label-schema-markup',
-  '/white-label-nap-citations',
-  
-  // GBP SEO Hub + Spokes
-  '/white-label-gbp-seo',
-  '/white-label-gbp-optimization',
-  '/white-label-review-management',
-  '/white-label-citation-building',
-  '/white-label-photo-optimization',
-  '/white-label-qa-management',
-  '/white-label-post-scheduling',
-  
-  // Paid Media Hub + Spokes
-  '/white-label-paid-media',
-  '/white-label-google-ads',
-  '/white-label-meta-ads',
-  '/white-label-local-service-ads',
-  '/white-label-retargeting-campaigns',
-  '/white-label-landing-page-design',
-  '/white-label-conversion-tracking',
-  
-  // Email Marketing Hub + Spokes
-  '/white-label-email-marketing',
-  '/white-label-campaign-strategy',
-  '/white-label-list-management',
-  '/white-label-automation-flows',
-  '/white-label-newsletter-design',
-  '/white-label-ab-testing',
-  '/white-label-performance-analytics',
-  
-  // Authority Building Hub + Spokes
-  '/white-label-local-authority-building',
-  '/white-label-structured-citations',
-  '/white-label-unstructured-citations',
-  '/white-label-brand-mentions',
-  '/white-label-anchor-text',
-  '/white-label-sponsorships',
-  
-  // Reporting Hub + Spokes
-  '/white-label-reporting',
-  '/white-label-branded-dashboards',
-  '/white-label-monthly-performance-reports',
-  '/white-label-rank-tracking-visibility',
-  '/white-label-call-tracking-lead-attribution',
-  '/white-label-roi-revenue-analysis',
-  '/white-label-client-presentation-decks',
-  
-  // Content Marketing Hub + Spokes
-  '/white-label-content-marketing',
-  '/white-label-geographical-content',
-  '/white-label-topical-authority',
-  '/white-label-power-posts',
-  '/white-label-ebooks-guides',
-  '/white-label-lead-magnets',
-  '/white-label-press-releases',
-  '/white-label-case-studies',
-  '/white-label-faq-content',
-  '/white-label-hub-spoke-buildouts',
+  // HVAC-specific service pages
+  '/hvac-google-maps',
+  '/hvac-email-marketing',
+  '/hvac-content-marketing',
+  '/hvac-reporting',
 ]);
 
 // ============= 301 PERMANENT REDIRECTS =============
@@ -188,6 +125,79 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/wp-login.php': '/',
   '/xmlrpc.php': '/',
   
+  // ===== /our-blog → /blog (canonical consolidation) =====
+  '/our-blog': '/blog',
+
+  // ===== WHITE-LABEL → TRADE-SPECIFIC (Cluster A — 33 pages) =====
+  '/white-label-inbound-marketing-services': '/',
+  '/services': '/',
+
+  // GBP / Google Maps spokes → plumbing-google-maps
+  '/white-label-gbp-seo': '/plumbing-google-maps',
+  '/white-label-gbp-optimization': '/plumbing-google-maps',
+  '/white-label-review-management': '/plumbing-google-maps',
+  '/white-label-citation-building': '/plumbing-google-maps',
+  '/white-label-photo-optimization': '/plumbing-google-maps',
+  '/white-label-qa-management': '/plumbing-google-maps',
+  '/white-label-post-scheduling': '/plumbing-google-maps',
+
+  // Email Marketing spokes → plumbing-email-marketing
+  '/white-label-email-marketing': '/plumbing-email-marketing',
+  '/white-label-newsletter-design': '/plumbing-email-marketing',
+  '/white-label-list-management': '/plumbing-email-marketing',
+  '/white-label-automation-flows': '/plumbing-email-marketing',
+  '/white-label-campaign-strategy': '/plumbing-email-marketing',
+  '/white-label-ab-testing': '/plumbing-email-marketing',
+  '/white-label-performance-analytics': '/plumbing-email-marketing',
+
+  // Content Marketing spokes → plumbing-content-marketing
+  '/white-label-content-marketing': '/plumbing-content-marketing',
+  '/white-label-case-studies': '/plumbing-content-marketing',
+  '/white-label-lead-magnets': '/plumbing-content-marketing',
+  '/white-label-press-releases': '/plumbing-content-marketing',
+  '/white-label-ebooks-guides': '/plumbing-content-marketing',
+  '/white-label-power-posts': '/plumbing-content-marketing',
+  '/white-label-topical-authority': '/plumbing-content-marketing',
+  '/white-label-geographical-content': '/plumbing-content-marketing',
+  '/white-label-faq-content': '/plumbing-content-marketing',
+  '/white-label-hub-spoke-buildouts': '/plumbing-content-marketing',
+
+  // Reporting spokes → plumbing-reporting
+  '/white-label-reporting': '/plumbing-reporting',
+  '/white-label-rank-tracking-visibility': '/plumbing-reporting',
+  '/white-label-monthly-performance-reports': '/plumbing-reporting',
+  '/white-label-branded-dashboards': '/plumbing-reporting',
+  '/white-label-client-presentation-decks': '/plumbing-reporting',
+  '/white-label-roi-revenue-analysis': '/plumbing-reporting',
+  '/white-label-call-tracking-lead-attribution': '/plumbing-reporting',
+
+  // Authority Building spokes → plumbing-authority-building
+  '/white-label-local-authority-building': '/plumbing-authority-building',
+  '/white-label-sponsorships': '/plumbing-authority-building',
+  '/white-label-brand-mentions': '/plumbing-authority-building',
+  '/white-label-anchor-text': '/plumbing-authority-building',
+  '/white-label-structured-citations': '/plumbing-authority-building',
+  '/white-label-unstructured-citations': '/plumbing-authority-building',
+
+  // Local SEO spokes → plumbing-seo (catch-all)
+  '/white-label-local-seo': '/plumbing-seo',
+  '/white-label-onpage-optimization': '/plumbing-seo',
+  '/white-label-technical-seo': '/plumbing-seo',
+  '/white-label-local-keyword-strategy': '/plumbing-seo',
+  '/white-label-content-development': '/plumbing-content-marketing',
+  '/white-label-link-building': '/plumbing-authority-building',
+  '/white-label-schema-markup': '/plumbing-seo',
+  '/white-label-nap-citations': '/plumbing-google-maps',
+
+  // Paid Media spokes → hvac-and-plumbing-paid-ads
+  '/white-label-paid-media': '/hvac-and-plumbing-paid-ads',
+  '/white-label-google-ads': '/hvac-and-plumbing-paid-ads',
+  '/white-label-meta-ads': '/hvac-and-plumbing-paid-ads',
+  '/white-label-local-service-ads': '/hvac-and-plumbing-paid-ads',
+  '/white-label-retargeting-campaigns': '/hvac-and-plumbing-paid-ads',
+  '/white-label-landing-page-design': '/plumbing-and-hvac-web-design',
+  '/white-label-conversion-tracking': '/plumbing-reporting',
+
   // ===== SOFT 404 FIXES =====
   '/plumbing-hvac-digital-marketing': '/',
   '/web-design': '/plumbing-and-hvac-web-design',
