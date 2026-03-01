@@ -118,13 +118,17 @@ export const localSEOConfig: ServicePageConfig = {
         title: "Google Business Profile & Maps",
         description: "Over 70% of local searches end at the Map Pack. For emergency plumbing and HVAC calls, Maps is where the revenue decision happens. GBP optimization starts on day one.",
         activities: [
+          "110% profile optimization: categories, attributes, amenities, service descriptions, and business hours",
           "Primary and secondary category selection aligned to highest-revenue services",
           "Fully built-out services list with service-specific descriptions",
           "Accurate service area configuration aligned to truck coverage",
-          "Weekly photo uploads with location and service relevance",
-          "Geo-aligned content updates tied to seasonal demand patterns",
-          "Active GBP posting tied to seasonal demand cycles",
-          "Seasonal GBP posting calendar and service area alignment"
+          "High-frequency GBP posting tied to seasonal demand cycles and emergency intent",
+          "Seasonal GBP posting calendar with promotional and informational post types",
+          "Review velocity system: post-service review requests integrated into service workflow",
+          "Q&A monitoring and responsiveness for emergency and high-intent queries",
+          "Geotagged image uploads with location and service relevance metadata",
+          "Weekly photo drip feed: job site, equipment, team, and before-and-after content",
+          "Geo-aligned content updates tied to seasonal demand patterns"
         ],
         icon: Map,
         color: "hsl(200, 70%, 50%)"
