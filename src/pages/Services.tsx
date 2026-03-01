@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -64,28 +64,13 @@ const Services = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Plumbing & HVAC Inbound Marketing Services | DemandStream</title>
-        <meta name="description" content="SEO, paid ads, email, content, and web design built for plumbing and HVAC companies. Every service tied to booked calls and dispatch capacity." />
-        <link rel="canonical" href="https://demandstreamdigital.com/services" />
-        
-        
-        <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Plumbing & HVAC Inbound Marketing Services | DemandStream" />
-        <meta property="og:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
-        <meta property="og:url" content="https://demandstreamdigital.com/services" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content={ogImage} />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Plumbing & HVAC Inbound Marketing Services | DemandStream" />
-        <meta name="twitter:description" content="Demand Stream Digital delivers end-to-end inbound marketing for plumbing and HVAC companies. Local SEO, paid advertising, reputation management, and more." />
-        <meta name="twitter:image" content={ogImage} />
-      </Helmet>
+      <SEOHead
+        title="Plumbing & HVAC Inbound Marketing Services | DSD"
+        description="SEO, paid ads, email, content, and web design built for plumbing and HVAC companies. Every service tied to booked calls and dispatch capacity."
+        canonical="https://demandstreamdigital.com/services"
+        ogImage={ogImage}
+        schemaJson={servicesSchema}
+      />
       
       <Header />
       

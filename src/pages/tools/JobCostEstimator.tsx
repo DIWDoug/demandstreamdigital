@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, DollarSign, Wrench, Droplets, Flame, Wind, Gauge } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -78,10 +78,11 @@ const JobCostEstimator = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Instant Job Cost Estimator | Plumbing & HVAC | Demand Stream Digital</title>
-        <meta name="description" content="Get instant ballpark cost estimates for common plumbing and HVAC jobs. Know what to expect before you call." />
-      </Helmet>
+      <SEOHead
+        title="Job Cost Estimator | Plumbing & HVAC | DemandStream"
+        description="Get instant ballpark cost estimates for common plumbing and HVAC jobs. Know what to expect before you call."
+        canonical="https://demandstreamdigital.com/job-cost-estimator"
+      />
 
       <div className="dark">
         <Header />
