@@ -18,115 +18,55 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
-// Ensure removed routes don't leave stale HTML behind (fixes blank /blog when old dist/blog.html exists)
-try {
-  fs.rmSync(toAbsolute('dist/blog.html'), { force: true })
-  fs.rmSync(toAbsolute('dist/blog/index.html'), { force: true })
-  fs.rmSync(toAbsolute('dist/blog'), { recursive: true, force: true })
-} catch {
-  // ignore
+// Clean up stale files from routes that no longer exist
+const stalePaths = [
+  'dist/blog.html',
+  'dist/blog/index.html',
+  'dist/our-blog.html',
+  // Old white-label routes — now 301 redirects, no prerender needed
+  'dist/white-label-inbound-marketing-services.html',
+  'dist/white-label-local-seo.html',
+  'dist/white-label-gbp-seo.html',
+  'dist/white-label-paid-media.html',
+  'dist/white-label-email-marketing.html',
+  'dist/white-label-local-authority-building.html',
+  'dist/white-label-reporting.html',
+  'dist/white-label-content-marketing.html',
+];
+for (const p of stalePaths) {
+  try { fs.rmSync(toAbsolute(p), { force: true }) } catch {}
 }
+// Also clean stale white-label directories
+try { fs.rmSync(toAbsolute('dist/blog'), { recursive: true, force: true }) } catch {}
 
 
-// Comprehensive route list with ALL pages that need prerendering
+// ============================================================
+// ROUTES TO PRERENDER
+// Only include pages that actually serve content.
+// 301-redirect paths (white-label, legacy) are excluded —
+// they are handled by the Cloudflare Worker / url-router.
+// ============================================================
 const routesToPrerender = [
-  // Main pages
+  // ── Core pages ──
   '/',
   '/about',
-  // Note: /blog is excluded from prerendering because it fetches dynamic content from Supabase
-  // which causes hydration mismatches. It renders client-side only.
   '/testimonials',
   '/contact',
   '/privacy',
   '/terms',
-  
-  // Authors
-  '/authors/doug-bryson',
-  
-  // Partner Tools
-  '/partner-tools',
-  '/partner-tools/roi-calculator',
-  '/partner-tools/investment-calculator',
-  '/partner-tools/ad-budget-calculator',
-  '/partner-tools/seo-calculator',
-  '/partner-tools/email-calculator',
-  '/partner-tools/content-marketing-calculator',
-  '/partner-tools/social-media-roi-calculator',
-  '/partner-tools/ai-ready-check',
-  
-  // Blog
+  '/thank-you',
+  '/region-blocked',
+  '/free-audit',
   '/our-blog',
-  
-  // Services Hub
-  '/white-label-inbound-marketing-services',
-  
-  // ============ LOCAL SEO HUB + SPOKES ============
-  '/white-label-local-seo',
-  '/white-label-onpage-optimization',
-  '/white-label-technical-seo',
-  '/white-label-local-keyword-strategy',
-  '/white-label-content-development',
-  '/white-label-link-building',
-  '/white-label-schema-markup',
-  '/white-label-nap-citations',
-  
-  // ============ GBP SEO (GOOGLE MAPS) HUB + SPOKES ============
-  '/white-label-gbp-seo',
-  '/white-label-gbp-optimization',
-  '/white-label-review-management',
-  '/white-label-citation-building',
-  '/white-label-photo-optimization',
-  '/white-label-qa-management',
-  '/white-label-post-scheduling',
-  
-  // ============ PAID MEDIA HUB + SPOKES ============
-  '/white-label-paid-media',
-  '/white-label-google-ads',
-  '/white-label-meta-ads',
-  '/white-label-local-service-ads',
-  '/white-label-retargeting-campaigns',
-  '/white-label-landing-page-design',
-  '/white-label-conversion-tracking',
-  
-  // ============ EMAIL MARKETING HUB + SPOKES ============
-  '/white-label-email-marketing',
-  '/white-label-campaign-strategy',
-  '/white-label-list-management',
-  '/white-label-automation-flows',
-  '/white-label-newsletter-design',
-  '/white-label-ab-testing',
-  '/white-label-performance-analytics',
-  
-  // ============ LOCAL AUTHORITY BUILDING HUB + SPOKES ============
-  '/white-label-local-authority-building',
-  '/white-label-structured-citations',
-  '/white-label-unstructured-citations',
-  '/white-label-brand-mentions',
-  '/white-label-anchor-text',
-  '/white-label-sponsorships',
-  
-  // ============ REPORTING HUB + SPOKES ============
-  '/white-label-reporting',
-  '/white-label-branded-dashboards',
-  '/white-label-monthly-performance-reports',
-  '/white-label-rank-tracking-visibility',
-  '/white-label-call-tracking-lead-attribution',
-  '/white-label-roi-revenue-analysis',
-  '/white-label-client-presentation-decks',
-  
-  // ============ CONTENT MARKETING HUB + SPOKES ============
-  '/white-label-content-marketing',
-  '/white-label-geographical-content',
-  '/white-label-topical-authority',
-  '/white-label-power-posts',
-  '/white-label-ebooks-guides',
-  '/white-label-lead-magnets',
-  '/white-label-press-releases',
-  '/white-label-case-studies',
-  '/white-label-faq-content',
-  '/white-label-hub-spoke-buildouts',
-  
-  // ============ CASE STUDIES ============
+
+  // ── Authors ──
+  '/authors/doug-bryson',
+
+  // ── Listicle pages ──
+  '/best-plumbing-seo-companies',
+  '/best-plumbing-ppc-companies',
+
+  // ── Case Studies ──
   '/case-studies',
   '/case-studies/recreational-boating-seo',
   '/case-studies/barn-restoration-seo',
@@ -136,17 +76,74 @@ const routesToPrerender = [
   '/case-studies/auction-house-seo',
   '/case-studies/dallas-plumbing-seo',
   '/case-studies/las-vegas-plumbing-seo',
-  
-  // Utility pages (noindex but prerendered for user experience)
-  '/thank-you',
-  '/region-blocked',
+
+  // ── Partner Tools ──
+  '/partner-tools',
+  '/partner-tools/roi-calculator',
+  '/partner-tools/investment-calculator',
+  '/partner-tools/ad-budget-calculator',
+  '/partner-tools/seo-calculator',
+  '/partner-tools/email-calculator',
+  '/partner-tools/content-marketing-calculator',
+  '/partner-tools/social-media-roi-calculator',
+  '/partner-tools/ai-ready-check',
+
+  // ── Homeowner Tools ──
+  '/tools/job-cost-estimator',
+  '/tools/financing-calculator',
+  '/tools/plumbing-cost-quiz',
+
+  // ── Trade-specific SEO Hub ──
+  '/hvac-and-plumbing-seo',
+
+  // ── Plumbing Service Pages ──
+  '/plumbing-seo',
+  '/plumbing-google-maps',
+  '/plumbing-paid-advertising',
+  '/plumbing-email-marketing',
+  '/plumbing-content-marketing',
+  '/plumbing-authority-building',
+  '/plumbing-reporting',
+  '/plumbing-and-hvac-web-design',
+
+  // ── Plumbing Paid Advertising Channel Spokes ──
+  '/plumbing-search-ads',
+  '/plumbing-facebook-advertising',
+  '/plumbing-instagram-advertising',
+  '/plumbing-linkedin-advertising',
+  '/plumbing-programmatic-advertising',
+
+  // ── HVAC Service Pages ──
+  '/hvac-seo',
+  '/hvac-google-maps',
+  '/hvac-paid-advertising',
+  '/hvac-email-marketing',
+  '/hvac-content-marketing',
+  '/hvac-authority-building',
+  '/hvac-reporting',
+
+  // ── HVAC Paid Advertising Channel Spokes ──
+  '/hvac-search-ads',
+  '/hvac-facebook-advertising',
+  '/hvac-instagram-advertising',
+  '/hvac-linkedin-advertising',
+
+  // ── Shared / Combined Service Hubs ──
+  '/hvac-and-plumbing-paid-ads',
+  '/ai-automation',
+
+  // ── Web Design ──
+  '/plumbing-and-hvac-web-design',
 ]
+
+// Deduplicate (guard against accidental duplicates above)
+const uniqueRoutes = [...new Set(routesToPrerender)]
 
 ;(async () => {
   let successCount = 0;
   let errorCount = 0;
   
-  for (const route of routesToPrerender) {
+  for (const route of uniqueRoutes) {
     try {
       const { html: appHtml, helmet } = render(route);
 
@@ -154,7 +151,6 @@ const routesToPrerender = [
       let headContent = '';
       
       if (helmet) {
-        // Extract all helmet components
         const titleStr = helmet.title?.toString?.() || '';
         const metaStr = helmet.meta?.toString?.() || '';
         const linkStr = helmet.link?.toString?.() || '';
@@ -166,7 +162,6 @@ const routesToPrerender = [
           .filter(Boolean)
           .join('\n    ');
         
-        // Log what helmet is producing for debugging
         if (titleStr) {
           const titleMatch = titleStr.match(/<title[^>]*>([^<]+)<\/title>/);
           console.log(`  Title: ${titleMatch ? titleMatch[1].substring(0, 60) + '...' : 'MISSING'}`);
@@ -174,7 +169,6 @@ const routesToPrerender = [
           console.log(`  WARNING: No title generated for ${route}`);
         }
         
-        // Check for canonical
         if (!linkStr.includes('canonical')) {
           console.log(`  WARNING: No canonical generated for ${route}`);
         }
