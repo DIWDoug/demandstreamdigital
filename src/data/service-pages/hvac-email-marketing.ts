@@ -6,7 +6,7 @@ export const hvacEmailMarketingConfig: ServicePageConfig = {
   slug: "hvac-email-marketing",
   title: "HVAC Email Marketing",
   metaTitle: "HVAC Email Marketing: Seasonal Campaigns & Automation | DSD",
-  metaDescription: "Email programs built for HVAC companies. Seasonal campaigns, maintenance membership reminders, pre-season promotions, and automation that drives repeat revenue year-round.",
+  metaDescription: "HVAC email programs for seasonal campaigns, maintenance reminders, and pre-season promotions. Automation that drives repeat revenue all year.",
   canonicalUrl: `${SITE_URL}/hvac-email-marketing`,
 
   hero: {
