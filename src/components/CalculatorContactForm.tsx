@@ -36,15 +36,15 @@ const CalculatorContactForm = () => {
                 </a>
 
                 <a 
-                  href="mailto:hello@dialedinweb.com"
+                  href="mailto:hello@demandstreamdigital.com"
                   className="flex items-center gap-4 text-text-secondary hover:text-foreground transition-colors group"
                 >
-                  <span className="w-12 h-12 rounded-lg bg-accent-blue/10 text-accent-blue flex items-center justify-center group-hover:bg-accent-blue group-hover:text-white transition-colors">
+                  <span className="w-12 h-12 rounded-lg bg-cta/10 text-cta flex items-center justify-center group-hover:bg-cta group-hover:text-white transition-colors">
                     <Mail className="w-5 h-5" />
                   </span>
                   <div>
                     <p className="text-sm text-text-muted">Email us</p>
-                    <p className="text-foreground font-medium">hello@dialedinweb.com</p>
+                    <p className="text-foreground font-medium">hello@demandstreamdigital.com</p>
                   </div>
                 </a>
               </div>

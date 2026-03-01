@@ -138,11 +138,11 @@ const ThankYou = () => {
                   <span>{PHONE_NUMBER}</span>
                 </a>
                 <a 
-                  href="mailto:hello@dialedinweb.com"
+                  href="mailto:hello@demandstreamdigital.com"
                   className="flex items-center gap-2 text-foreground hover:text-accent-blue transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>hello@dialedinweb.com</span>
+                  <span>hello@demandstreamdigital.com</span>
                 </a>
               </div>
             </div>
