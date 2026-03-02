@@ -12,3 +12,4 @@ export { default as ServiceEcosystemSection } from './ServiceEcosystemSection';
 export { default as ServiceBiggerPicture } from './ServiceBiggerPicture';
 export { default as ServiceFitSection } from './ServiceFitSection';
 export { default as ServiceContactForm } from './ServiceContactForm';
+export { default as ServiceTestimonialsSection } from './ServiceTestimonialsSection';
