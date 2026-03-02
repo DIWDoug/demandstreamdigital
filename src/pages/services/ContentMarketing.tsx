@@ -174,14 +174,10 @@ const ContentMarketing = () => {
         />
       </div>
 
-      <SectionDivider />
-
       {/* 9. FAQ */}
       <div id="faq" className="scroll-mt-32">
         <ServiceGroupedFAQ config={contentMarketingConfig.faq} />
       </div>
-
-      <SectionDivider />
 
       {/* 10. ECOSYSTEM / BIGGER PICTURE */}
       <ServiceEcosystemSection config={contentMarketingConfig.ecosystem} />

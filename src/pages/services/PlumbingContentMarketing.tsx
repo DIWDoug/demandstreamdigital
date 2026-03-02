@@ -120,8 +120,6 @@ const PlumbingContentMarketing = () => {
         />
       </div>
 
-      <SectionDivider />
-
       {/* 8. FAQ */}
       <div id="faq" className="scroll-mt-32">
         <ServiceGroupedFAQ config={plumbingContentMarketingConfig.faq} />
