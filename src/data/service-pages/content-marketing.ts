@@ -1,115 +1,117 @@
-import { FileText, PenTool, BookOpen, Target, Megaphone, BarChart3, Sparkles, MapPin, Lightbulb, HelpCircle, Layers, Award, Search, Map, Mail, Shield } from "lucide-react";
+import { FileText, PenTool, BookOpen, Target, Megaphone, BarChart3, Sparkles, MapPin, HelpCircle, Layers, Award, Search, Map, Mail, Shield } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 import { SITE_URL } from "@/lib/constants";
 
 export const contentMarketingConfig: ServicePageConfig = {
   slug: "content-marketing",
-  title: "Content Marketing",
-  metaTitle: "Plumbing Content Marketing: Blogs & SEO Copy | DemandStream",
-  metaDescription: "Plumbing content that ranks for drain, sewer, and water heater queries. Service area pages, problem-aware blog posts, and lead magnets written to convert search traffic into booked jobs.",
-  canonicalUrl: `${SITE_URL}/plumbing-content-marketing`,
+  title: "Plumbing & HVAC Content Marketing",
+  metaTitle: "Plumbing & HVAC Content Marketing for Revenue Growth | DemandStream Digital",
+  metaDescription: "Generic content doesn't book plumbing and HVAC calls. We build structured content systems that drive local authority, AI visibility, and booked service calls. See how.",
+  canonicalUrl: `${SITE_URL}/plumbing-hvac-content-marketing/`,
 
   hero: {
-    headline: "Content Marketing for",
-    highlightedText: "Plumbing & HVAC Companies",
-    subheadline: "We create the content that makes your business visible: service area pages, power posts, lead magnets, and strategic content that converts visitors into booked jobs.",
-    qualifierLine: "You focus on your crew and your customers. We handle the research, writing, and optimization that makes content actually work.",
-    ctaText: "Start the Conversation",
-    ctaSubtext: "Built for plumbing and HVAC companies who need content that ranks and converts."
+    headline: "Plumbing & HVAC",
+    highlightedText: "Content Marketing",
+    subheadline: "Built for Authority, Rankings, and Booked Calls",
+    qualifierLine: "Most contractor content is written to fill a blog page. It ranks for searches outside your service area. It pulls in homeowners who aren't buying. It has no path to a booked call. We build content systems that do the opposite.",
+    ctaText: "Claim Your Territory Today",
+    ctaSubtext: "No generic blog posts. No filler articles. No word-count marketing."
   },
 
   problem: {
-    eyebrow: "The Pattern We See",
-    headline: "Why Most Content Marketing Fails",
-    intro: "You've seen this before. Traffic looks great in the report, but the phone doesn't ring. The problem isn't content volume—it's misunderstood metrics and missing strategy.",
+    eyebrow: "The Problem",
+    headline: "Why Most Plumbing & HVAC Content Marketing Doesn't Produce Calls",
+    intro: "Plumbing and HVAC are local, intent-driven trades. A homeowner searching \"furnace repair near me\" at 10pm is not browsing. They are calling whoever surfaces first with clear, credible, relevant content. Most contractor content fails that test.",
     painPoints: [
       {
-        icon: BarChart3,
-        title: "Misunderstood Metrics",
-        body: "Content ranking for 'People Also Ask' questions inflates organic traffic numbers but serves no one. A Texas plumber ranking for general questions gets California traffic that will never convert."
-      },
-      {
         icon: MapPin,
-        title: "Geographic Mismatch",
-        body: "Informational content that ranks nationally but attracts visitors from cities you don't serve. Impressive traffic reports that mean nothing to your bottom line."
-      },
-      {
-        icon: Target,
-        title: "No Conversion Architecture",
-        body: "The 'Ultimate Guide to Water Heater Repair in Dallas' ranks beautifully—but has no phone number, no contact form, no CTA. It's content, not a lead generation asset."
+        title: "Traffic That Never Converts",
+        body: "Informational content that pulls traffic from outside your service area. Visits that will never become calls."
       },
       {
         icon: FileText,
-        title: "Content Without Intent Alignment",
-        body: "Blog posts targeting informational queries when your business needs transactional visibility. Traffic from people researching, not people ready to call."
+        title: "Education That Benefits Competitors",
+        body: "\"Ultimate guide\" articles with no conversion structure or CTA. You educate the reader, and your competitor gets the call."
+      },
+      {
+        icon: Layers,
+        title: "Authority With Nowhere to Go",
+        body: "No internal linking architecture connecting content to service pages. Authority that can't flow where it needs to."
+      },
+      {
+        icon: MapPin,
+        title: "Geographic Signals Google Ignores",
+        body: "City pages with identical content and swapped city names. Geographic signals that Google dismisses as duplicate content."
       },
       {
         icon: Sparkles,
-        title: "AI-Invisible Content",
-        body: "Content that search engines index but AI systems ignore. Without semantic structure and authoritative depth, LLMs will never cite your business in local recommendations."
+        title: "Invisible to AI Search",
+        body: "No AI-structured formatting — no FAQ blocks, no semantic hierarchy. Invisible to AI overviews and voice search results."
+      },
+      {
+        icon: BarChart3,
+        title: "Channels Running in Silos",
+        body: "Content disconnected from paid advertising and GBP strategy. Channels operating independently instead of as a system."
       }
     ],
-    closingLine: "We build content that ranks where it matters and converts when it counts.",
-    closingHighlight: "Local relevance. Conversion architecture. Measurable ROI.",
-    ctaText: "Start the Conversation"
+    closingLine: "Traffic that doesn't convert is not growth. It's cost.",
+    closingHighlight: "When a homeowner's water heater fails on a Sunday, they don't read blog posts. They scan the Map Pack and the top organic results, and they call. Every content asset we build is designed to support one of those positions.",
+    ctaText: "Claim Your Territory Today"
   },
 
   outcomes: {
-    headline: "What Actually Changes When Content Works",
-    subheadline: "These outcomes only appear when content is strategically planned and consistently executed.",
+    headline: "What Changes When Content Marketing Works",
+    subheadline: "These outcomes only appear when content is built around how plumbing and HVAC demand actually works — not around page volume.",
     items: [
       {
-        title: "Geographic Market Dominance",
-        description: "Service area pages that rank in every target city. Competitors without local content cannot compete for 'near me' and city-specific searches."
+        title: "01 — Geographic Market Control",
+        description: "Service-area content built around your actual dispatch radius, not the nearest major metro. City-level pages that reinforce GBP service categories, support proximity rankings, and capture the near-me searches your competitors are leaving on the table."
       },
       {
-        title: "Topical Authority Recognition",
-        description: "Deep content that positions your business as the expert Google trusts. Authority compounds as interlinked content reinforces expertise signals."
+        title: "02 — Topical Authority Recognition",
+        description: "Interlinked content clusters that tell Google you are the authoritative source for drain cleaning, water heater replacement, AC repair, or whatever your highest-margin services are. Clusters built to compound — each new page strengthens the ones around it."
       },
       {
-        title: "Lead Generation at Scale",
-        description: "Content assets that capture phone calls and form submissions. Guides and resources that build trust while you sleep."
+        title: "03 — AI Visibility and Citations",
+        description: "Semantically structured content formatted so that AI systems — Google AI Overviews, voice search, assistant queries — pull from your pages rather than competitors'. When a homeowner asks \"how long does a water heater last,\" your company is the source that gets cited."
       },
       {
-        title: "AI Visibility and Citations",
-        description: "Semantically structured content that AI systems reference. When ChatGPT and Perplexity answer local queries, your business appears."
+        title: "04 — Lead Generation at Scale",
+        description: "Content designed with conversion architecture from the first paragraph. Clear calls to action. Phone-first structure. Internal links to high-conversion service pages. Every asset earns its place by moving the reader toward a booked call."
       }
     ]
   },
 
   roadmap: {
-    eyebrow: "The Framework",
-    headline: "From Content Gap to Content System",
-    subheadline: "Content marketing is infrastructure. Each phase builds leverage for the next. Skipping steps breaks the system.",
+    eyebrow: "The Structure",
+    headline: "The Market Domination Framework™ for Content Marketing",
+    subheadline: "Every content engagement runs through this framework. Foundation first. Then infrastructure. Then expansion. Then ongoing optimization. In that order, every time.",
     phases: [
       {
         phase: 1,
         name: "Foundation",
         title: "Audit & Strategy",
-        description: "We assess current content, identify gaps, and map the competitive landscape.",
+        description: "Before a single piece of content is written, we establish what you already have, what your market needs, and what your competitors are missing.",
         activities: [
-          "Content inventory and gap analysis",
-          "Competitor content audit",
-          "Keyword opportunity research",
-          "Hub-and-spoke topic mapping",
-          "Content calendar development",
-          "Conversion path planning"
+          "Content audit of existing pages and performance",
+          "Keyword and gap analysis by service and geography",
+          "Competitive content research across your market",
+          "Hub-and-spoke topic mapping aligned to service architecture",
+          "Conversion path planning from content to booked call"
         ],
         icon: Shield,
         color: "hsl(76, 42%, 41%)"
       },
       {
         phase: 2,
-        name: "Infrastructure",
+        name: "Infrastructure Build",
         title: "Core Content Build",
-        description: "Creating the foundational content assets that support all other marketing.",
+        description: "Core content assets that establish your authority and geographic relevance. These are the pages that do the long-term ranking work.",
         activities: [
-          "Service page optimization",
-          "Geographical content creation",
-          "Power post development",
-          "Schema markup implementation",
-          "Internal linking architecture",
-          "FAQ content development"
+          "Service-supporting articles aligned to high-intent searches",
+          "Geographic content pages built around your dispatch radius",
+          "FAQ blocks structured for AI extraction and featured snippets",
+          "Internal linking architecture connecting content to service pages"
         ],
         icon: Layers,
         color: "hsl(224, 60%, 55%)"
@@ -117,15 +119,13 @@ export const contentMarketingConfig: ServicePageConfig = {
       {
         phase: 3,
         name: "Expansion",
-        title: "Lead Magnets & Growth",
-        description: "Building content assets that capture leads and expand reach.",
+        title: "Authority Assets",
+        description: "Once the foundation is producing, we expand into higher-authority and higher-conversion assets.",
         activities: [
-          "Guide and resource creation",
-          "Lead magnet development",
-          "Case study production",
-          "Press release distribution",
-          "AI visibility optimization",
-          "Topical cluster expansion"
+          "Power posts that establish topical depth on high-margin services",
+          "Guides and educational content that support the sales conversation",
+          "Case studies that build trust with decision-stage visitors",
+          "Lead magnets that capture demand before it goes to a competitor"
         ],
         icon: Target,
         color: "hsl(35, 90%, 50%)"
@@ -134,156 +134,191 @@ export const contentMarketingConfig: ServicePageConfig = {
         phase: 4,
         name: "Optimization",
         title: "Performance & Iteration",
-        description: "Refining content based on performance data and expanding what works.",
+        description: "Content is not a one-time build. We monitor performance and update assets to maintain rankings, improve conversion, and adapt to AI search changes.",
         activities: [
-          "Content performance analysis",
-          "Conversion rate optimization",
-          "Content refresh program",
-          "New opportunity targeting",
-          "Competitive gap monitoring",
-          "Quarterly strategy reviews"
+          "Performance analysis at the asset and cluster level",
+          "Content updates to preserve and improve ranking positions",
+          "AI structure refinement as search behavior evolves"
         ],
         icon: BarChart3,
         color: "hsl(280, 60%, 55%)"
       }
     ],
-    footerNote: "Foundation typically spans 2-4 weeks. Core content build runs 2-3 months. Lead generation assets compound over 6-12 months."
+    footerNote: "Foundation typically spans 2 to 4 weeks. Core content build runs 2 to 3 months. Expansion and optimization assets compound over 6 to 12 months."
   },
 
   buildingBlocks: {
     eyebrow: "The Levers We Pull",
-    headline: "The Levers We Pull Based on Content Goals",
-    subheadline: "Each component is scoped based on your market and content gaps.",
+    headline: "The Levers We Pull in Competitive Plumbing & HVAC Markets",
+    subheadline: "Each content component is scoped based on your market's competition level, your current content gaps, and your highest-margin revenue targets. No standard packages. No fixed deliverable lists that ignore what your market actually requires.",
     blocks: [
       {
-        title: "Geographical Content",
-        slug: "geographical-content",
-        description: "Service area pages that capture local search intent and support Google Business Profile rankings.",
+        title: "Geographic Content Pages",
+        slug: "geographic-content",
+        cluster: "Geographic",
+        description: "Service-area pages built around your actual dispatch radius. City-level relevance that reinforces GBP categories, supports proximity rankings, and captures near-me searches that convert.",
         icon: MapPin
       },
       {
-        title: "Topical Authority",
-        slug: "topical-authority",
-        description: "Industry expertise articles that build topical authority and support GBP rankings through relevance signals.",
-        icon: BookOpen
+        title: "Local FAQ Content",
+        slug: "local-faq-content",
+        cluster: "Geographic",
+        description: "Question-and-answer content formatted around real local searches. Structured for AI extraction and featured snippet capture.",
+        icon: HelpCircle
+      },
+      {
+        title: "Topical Cluster Build-Outs",
+        slug: "topical-clusters",
+        cluster: "Authority",
+        description: "Hub-and-spoke architecture connecting service hubs to supporting articles to city pages. Every page strengthens the pages around it. Clusters built to compound, not decay.",
+        icon: Layers
       },
       {
         title: "Power Posts",
         slug: "power-posts",
-        description: "Comprehensive pillar content that dominates competitive keywords.",
+        cluster: "Authority",
+        description: "\"How long does a water heater last,\" \"Signs your AC needs replacement,\" \"What causes low water pressure.\" Written to rank and to pre-sell.",
         icon: Award
-      },
-      {
-        title: "Guides & Resources",
-        slug: "ebooks-guides",
-        description: "Long-form downloadable content that captures leads and demonstrates expertise.",
-        icon: FileText
-      },
-      {
-        title: "Lead Generation Magnets",
-        slug: "lead-magnets",
-        description: "Checklists, templates, and tools that convert visitors into contacts.",
-        icon: Target
-      },
-      {
-        title: "Press Releases",
-        slug: "press-releases",
-        description: "Newsworthy announcements distributed to media outlets and news aggregators.",
-        icon: Megaphone
       },
       {
         title: "Case Studies",
         slug: "case-studies",
-        description: "Success stories that build trust and demonstrate real-world results.",
+        cluster: "Authority",
+        description: "Real outcome documentation. What the problem was, what we built, what changed. Designed to convert decision-stage visitors who need proof before they call.",
         icon: BarChart3
       },
       {
-        title: "FAQ Content",
-        slug: "faq-content",
-        description: "Structured Q&A content that captures featured snippets and voice search.",
-        icon: HelpCircle
+        title: "E-books & Downloadable Guides",
+        slug: "ebooks-guides",
+        cluster: "Conversion",
+        description: "\"What to Do When Your Furnace Fails,\" \"Homeowner's Guide to Water Heater Replacement.\" Built around your highest-priority services.",
+        icon: FileText
       },
       {
-        title: "Hub & Spoke Build-outs",
-        slug: "hub-spoke-buildouts",
-        description: "Strategic content architecture that maximizes topical authority.",
-        icon: Layers
+        title: "Press Releases",
+        slug: "press-releases",
+        cluster: "Conversion",
+        description: "Locally distributed releases tied to new service offerings, certifications, expansions, and community presence. Builds citation signals and local authority.",
+        icon: Megaphone
       }
     ]
   },
 
   qualification: {
-    eyebrow: "Before We Talk",
-    headline: "We Are Selective About Who We Work With",
-    subheadline: "Fit matters more than volume. This is who gets results, and who should look elsewhere.",
+    eyebrow: "Selective Fit",
+    headline: "Is Plumbing & HVAC Content Marketing Right for Your Company?",
+    subheadline: "We work best with established plumbing and HVAC companies that want to own their service area — not just generate a few more organic visits this month.",
     goodFit: [
       {
-        point: "You understand content as an investment",
-        detail: "Content marketing compounds over time. We work with businesses who see content as infrastructure, not an expense line."
+        point: "You run a plumbing or HVAC company with an active dispatch board and real service capacity, ideally 3 or more trucks",
+        detail: "Content marketing drives call volume over time. Without dispatch and service capacity in place, the leads have nowhere to land."
       },
       {
-        point: "You value quality over quantity",
-        detail: "One strategic power post outperforms ten generic blogs. We focus on content that ranks and converts, not content calendars filled with filler."
+        point: "You want content that produces booked calls — not impressions, traffic reports, or brand awareness metrics",
+        detail: "We build reports around the numbers that show up on the dispatch board. Page views and traffic reports do not."
       },
       {
-        point: "You have expertise worth documenting",
-        detail: "Great content requires subject matter input. We work with businesses that can provide the insights that make content authoritative."
+        point: "You understand that content marketing is a 6 to 12 month investment with compounding returns, not an overnight fix",
+        detail: "Content compounds over time. Short-term evaluations produce incomplete data and cut the strategy before it has time to work."
       },
       {
-        point: "You need geographic market coverage",
-        detail: "Plumbing and HVAC companies that serve multiple cities or service areas benefit enormously from local content that creates compound visibility."
+        point: "You are willing to invest in topical authority as a core part of the system, not an optional add-on",
+        detail: "Topical authority is the foundation that makes every other content asset more effective. It cannot be skipped."
       },
       {
-        point: "You need to replace inconsistent vendors",
-        detail: "Transitioning from an inconsistent vendor is seamless. We onboard quickly, establish content baselines, and deliver without disruption."
+        point: "You want a growth partner who reports on booked calls and cost per booked call, not just page views",
+        detail: "Attribution integrity is a prerequisite. We connect content performance to dispatch board outcomes, not vanity metrics."
+      },
+      {
+        point: "You have a verified, address-visible Google Business Profile",
+        detail: "GBP signals reinforce content authority and geographic relevance. A weak or unverified profile limits content effectiveness."
       }
     ],
     notFit: [
       {
-        point: "Expecting AI-generated content at scale",
-        detail: "We use AI as a research tool, not a replacement for human expertise. Content that ranks requires original insights and genuine authority."
+        point: "You expect content to produce leads within the first 30 days",
+        detail: "Content marketing is a durable channel, not a fast one. Companies expecting immediate results are not a fit for this system."
       },
       {
-        point: "Unable to provide subject matter input",
-        detail: "The best content comes from real expertise. If you are unresponsive to content interviews or reviews, quality suffers."
+        point: "You want a set number of blog posts per month regardless of strategy",
+        detail: "We do not sell content by volume. Every asset is scoped to your market, your gaps, and your highest-margin services."
       },
       {
-        point: "Short-term engagement expectations",
-        detail: "Content compounds over time. Engagements shorter than 6 months rarely show the full potential of strategic content marketing."
+        point: "You are not willing to commit to internal linking and service page alignment",
+        detail: "Content without internal linking architecture cannot transfer authority where it needs to go. The system requires it."
       },
       {
-        point: "Volume-based deliverable expectations",
-        detail: "We do not sell content by word count. Our approach prioritizes impact, which sometimes means fewer but more strategic pieces."
+        point: "You need guaranteed ranking positions for specific keywords",
+        detail: "No ethical agency can guarantee specific ranking positions. We guarantee every asset is built to earn its position."
+      },
+      {
+        point: "You are looking for the lowest-cost option available",
+        detail: "Quality content management is an investment. Price-first decisions produce price-first results."
+      },
+      {
+        point: "You are not willing to commit to a minimum 6-month engagement after roadmap delivery",
+        detail: "Content compounds over time. Engagements shorter than 6 months rarely demonstrate the full potential of the system."
       }
     ],
-    ctaText: "Let's Talk About Your Business"
+    ctaText: "Claim Your Territory Today"
   },
 
   faq: {
-    headline: "Frequently Asked Questions",
+    headline: "Frequently Asked Questions About Plumbing & HVAC Content Marketing",
     groups: [
       {
         category: "Results & Timing",
         items: [
-          { question: "How long does it take to see results from content marketing?", answer: "Initial ranking movement may appear within 2-3 months. Lead generation and conversion improvements often show earlier. Compound effects become significant at 6-12 months." },
-          { question: "How do you measure content performance?", answer: "We track rankings, organic traffic, time on page, conversion rates, and lead generation. The real measure is business impact: leads and revenue attributable to content." },
-          { question: "How many pieces of content do you produce per month?", answer: "It depends on strategy, not arbitrary quotas. Some businesses need 2 power posts. Others need 20 service area pages. We scope based on goals and gaps." }
+          {
+            question: "How long does content marketing take to produce booked calls?",
+            answer: "Content marketing compounds over time. Most plumbing and HVAC companies see meaningful ranking movement within 3 to 6 months on targeted service and geographic pages. Significant Map Pack support and AI visibility gains typically follow by month 6 to 9. Content is not a fast channel — it is a durable one. The companies that commit to it build lead flow that doesn't disappear when an ad budget changes."
+          },
+          {
+            question: "How do you measure the success of content marketing?",
+            answer: "We measure what shows up on your dispatch board — booked calls, cost per booked call, and booking rate by source. We also track ranking positions on service and city pages, organic call volume, and AI citation frequency. We do not lead with traffic or impressions."
+          },
+          {
+            question: "Do you guarantee content ranking positions?",
+            answer: "No. Any agency that guarantees specific ranking positions is making a promise they cannot keep. What we guarantee is that every content asset is built to earn a position — with the right structure, intent alignment, and geographic relevance to compete in your market."
+          },
+          {
+            question: "What if we already have some content on our site?",
+            answer: "We audit what you have before we build anything new. Existing content that is performing gets protected and reinforced. Content that is cannibalizing rankings or pulling the wrong traffic gets restructured or consolidated. We don't build on top of a broken foundation."
+          }
         ]
       },
       {
-        category: "Services & Approach",
+        category: "Content Marketing vs. Paid Ads",
         items: [
-          { question: "Do you write the content or do I?", answer: "We handle all writing. We conduct intake interviews to capture your expertise, then create content that reflects your voice and knowledge." },
-          { question: "How do you handle content for multiple locations?", answer: "We create unique, locally relevant content for each service area. No duplicate content with city names swapped. Each page provides genuine local value." },
-          { question: "What makes your content AI-optimized?", answer: "Semantic structure, clear headings, FAQ schema, and authoritative depth. We structure content so AI systems can parse, understand, and cite it." }
+          {
+            question: "Should we run content marketing or Google Ads for our plumbing or HVAC company?",
+            answer: "Both serve different functions. Paid ads produce immediate call volume and are capacity-adjustable. Content marketing builds durable organic positions that don't require ongoing spend to hold. They work better together — organic authority improves paid ad quality scores, and paid ad data informs which content topics to prioritize."
+          },
+          {
+            question: "How is content marketing different from SEO?",
+            answer: "Content marketing is one component of a complete SEO system. It builds the topical depth and geographic relevance that supports organic rankings. But SEO also requires technical foundation, GBP optimization, review velocity, and link authority. Content without the rest of the system underperforms. That's why we build it as part of a connected system, not as a standalone service."
+          },
+          {
+            question: "Can content help generate install leads, not just repair calls?",
+            answer: "Yes. Installation intent operates on different search behavior than emergency repair. A homeowner researching \"how long does an AC unit last\" or \"water heater replacement cost\" is in a planning window. Content built around those searches captures demand earlier in the decision cycle — often before the homeowner calls anyone."
+          }
         ]
       },
       {
-        category: "Partnership & Process",
+        category: "Process & Delivery",
         items: [
-          { question: "How does content delivery work?", answer: "All content is delivered ready to publish. We can publish directly to your site or deliver via shared drives. Clear, simple, no hassle." },
-          { question: "Do you require long-term contracts?", answer: "No mandatory contracts, but we recommend 6+ month commitments. Content compounds over time, and short engagements rarely show full potential." },
-          { question: "What do you need to get started?", answer: "Website access, brand guidelines, target keywords, and availability for one intake call. The more context on your expertise, the better the content." }
+          {
+            question: "How do you handle communication and reporting?",
+            answer: "You receive clear monthly reporting showing content performance, ranking movement, and call attribution by source. Proactive updates keep you informed at every stage."
+          },
+          {
+            question: "What access do you need from us?",
+            answer: "Google Search Console, Google Analytics, Google Business Profile, and your CMS. We keep requirements minimal and handle the technical setup."
+          },
+          {
+            question: "What is your content process for plumbing and HVAC companies?",
+            answer: "We start with a foundation audit and topic map. From there, content is built in priority order — highest-margin services and highest-competition gaps first. Every asset goes through a brand voice, SEO, and conversion review before it publishes."
+          }
         ]
       }
     ]
@@ -291,20 +326,20 @@ export const contentMarketingConfig: ServicePageConfig = {
 
   ecosystem: {
     eyebrow: "The Bigger Picture",
-    headline: "Content Marketing Is One Piece of the",
-    highlightedText: "360° Growth Engine",
-    intro: "Content powers every other channel when it is done right.",
-    body: "Content supports local rankings. Lead magnets grow your contact list. Case studies close deals. We offer each service independently, but the magic happens when they work in concert.",
+    headline: "Plumbing & HVAC Content Marketing Is Part of a",
+    highlightedText: "Bigger Growth System",
+    intro: "Content marketing drives topical authority and geographic relevance. But it produces the strongest results when it works with the rest of the marketing system — not in isolation from it.",
+    body: "Your content strengthens your Google Maps performance. Your GBP reviews improve the trust signals that make content convert. Your paid ads capture the demand your content surfaces. Your email marketing reactivates past customers before they search for a new plumber or HVAC company. Your reporting dashboard connects all of it to cost per booked call.",
     services: [
-      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Strategic content that ranks and converts.", href: "/plumbing-content-marketing", isCenter: true },
+      { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Topical authority and geographic relevance.", href: "/plumbing-hvac-content-marketing", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/hvac-and-plumbing-seo" },
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
-      { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Google Ads and Meta campaigns.", href: "/plumbing-paid-advertising" },
-      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Nurture leads into customers.", href: "/plumbing-email-marketing" },
-      { icon: Award, id: "authority", title: "Authority Building", description: "Links and citations that compound.", href: "/plumbing-authority-building" },
-      { icon: BarChart3, id: "reporting", title: "Reporting", description: "Dashboards that prove value.", href: "/plumbing-reporting" }
+      { icon: Map, id: "google-maps", title: "Google Maps / GBP", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
+      { icon: Sparkles, id: "paid-media", title: "Google Ads", description: "Paid search and LSA campaigns.", href: "/hvac-and-plumbing-paid-ads" },
+      { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Reactivate past customers.", href: "/plumbing-email-marketing" },
+      { icon: Award, id: "reputation", title: "Reputation Management", description: "Review velocity and trust signals.", href: "/reputation-management" },
+      { icon: BarChart3, id: "reporting", title: "Reporting & Dashboards", description: "Connect every channel to cost per booked call.", href: "/reporting-dashboards" }
     ],
-    ctaText: "Explore All Services",
+    ctaText: "Explore All Plumbing & HVAC Services",
     ctaHref: "/#services"
   }
 };

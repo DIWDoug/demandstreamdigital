@@ -173,7 +173,9 @@ const App = () => (
           <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-paid-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
-          <Route path="/plumbing-content-marketing" element={<ContentMarketing />} />
+          <Route path="/plumbing-hvac-content-marketing" element={<ContentMarketing />} />
+          <Route path="/plumbing-hvac-content-marketing/" element={<ContentMarketing />} />
+          <Route path="/plumbing-content-marketing" element={<Navigate to="/plumbing-hvac-content-marketing" replace />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
           <Route path="/plumbing-reporting" element={<Reporting />} />
 
