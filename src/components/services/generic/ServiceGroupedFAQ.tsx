@@ -21,7 +21,7 @@ const FAQAnswerWithBlogLink = ({ question, answer }: { question: string; answer:
   const blogLink = getBlogLinkForFAQ(question);
   
   return (
-    <div className="text-text-secondary text-sm leading-relaxed pb-4">
+    <div className="text-white/60 text-sm leading-relaxed pb-4">
       {answer}
       {blogLink && (
         <Link 
@@ -44,15 +44,15 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
   const rightGroups = config.groups.slice(midpoint);
 
   return (
-    <section id="faq" className="py-20 lg:py-28 bg-surface-dark relative">
+    <section id="faq" className="py-20 lg:py-28 relative" style={{ backgroundColor: "#1A2E44" }}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "#CC3300" }}>
               Common Questions
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
               {config.headline}
             </h2>
           </div>
@@ -63,7 +63,7 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
             <div className="space-y-10">
               {leftGroups.map((group, groupIndex) => (
                 <div key={groupIndex}>
-                  <h3 className="text-lg font-semibold text-foreground mb-4 pb-2 border-b border-border/50">
+                  <h3 className="text-lg font-semibold text-white mb-4">
                     {group.category}
                   </h3>
                   <Accordion type="single" collapsible className="space-y-3">
@@ -71,9 +71,10 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
                       <AccordionItem 
                         key={faqIndex} 
                         value={`left-${groupIndex}-${faqIndex}`}
-                        className="bg-surface-elevated border border-border/50 rounded-xl px-5 data-[state=open]:border-cta/30"
+                        className="rounded-xl px-5 border border-white/10 data-[state=open]:border-white/20"
+                        style={{ backgroundColor: "#243D56" }}
                       >
-                        <AccordionTrigger className="text-left text-foreground hover:text-cta py-4 text-sm font-medium">
+                        <AccordionTrigger className="text-left text-white hover:text-white/80 py-4 text-sm font-medium">
                           {faq.question}
                         </AccordionTrigger>
                         <AccordionContent>
@@ -90,7 +91,7 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
             <div className="space-y-10">
               {rightGroups.map((group, groupIndex) => (
                 <div key={groupIndex}>
-                  <h3 className="text-lg font-semibold text-foreground mb-4 pb-2 border-b border-border/50">
+                  <h3 className="text-lg font-semibold text-white mb-4">
                     {group.category}
                   </h3>
                   <Accordion type="single" collapsible className="space-y-3">
@@ -98,9 +99,10 @@ const ServiceGroupedFAQ = ({ config }: ServiceGroupedFAQProps) => {
                       <AccordionItem 
                         key={faqIndex} 
                         value={`right-${groupIndex}-${faqIndex}`}
-                        className="bg-surface-elevated border border-border/50 rounded-xl px-5 data-[state=open]:border-cta/30"
+                        className="rounded-xl px-5 border border-white/10 data-[state=open]:border-white/20"
+                        style={{ backgroundColor: "#243D56" }}
                       >
-                        <AccordionTrigger className="text-left text-foreground hover:text-cta py-4 text-sm font-medium">
+                        <AccordionTrigger className="text-left text-white hover:text-white/80 py-4 text-sm font-medium">
                           {faq.question}
                         </AccordionTrigger>
                         <AccordionContent>
