@@ -74,6 +74,7 @@ const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
+const PlumbingContentMarketing = lazy(() => import("./pages/services/PlumbingContentMarketing"));
 const WebDesign = lazy(() => import("./pages/services/WebDesign"));
 const WebDesignHub = lazy(() => import("./pages/services/WebDesignHub"));
 const PlumbingWebsiteDesign = lazy(() => import("./pages/services/PlumbingWebsiteDesign"));
@@ -175,7 +176,8 @@ const App = () => (
           <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
           <Route path="/plumbing-hvac-content-marketing" element={<ContentMarketing />} />
           <Route path="/plumbing-hvac-content-marketing/" element={<ContentMarketing />} />
-          <Route path="/plumbing-content-marketing" element={<Navigate to="/plumbing-hvac-content-marketing" replace />} />
+          <Route path="/plumbing-content-marketing" element={<PlumbingContentMarketing />} />
+          <Route path="/plumbing-content-marketing/" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
           <Route path="/plumbing-reporting" element={<Reporting />} />
 
