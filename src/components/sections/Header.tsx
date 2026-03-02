@@ -232,37 +232,40 @@ const Header = () => {
 
                 {isMegaMenuOpen && (
                   <div
-                    className="absolute top-full left-0 mt-1 w-[700px] rounded-lg shadow-2xl overflow-hidden animate-fade-in"
+                    className="absolute top-full left-0 mt-1 w-[780px] rounded-lg shadow-2xl overflow-hidden animate-fade-in"
                     style={{ backgroundColor: "#0D1B2A", border: "1px solid rgba(255,255,255,0.1)" }}
                   >
                     <div className="p-5">
                       <div className="grid grid-cols-3 gap-x-5 gap-y-4">
-                        {serviceHubs.map((hub, i) => (
-                          <div key={i}>
-                            <Link
-                              to={hub.href}
-                              onClick={() => setIsMegaMenuOpen(false)}
-                              className="block text-[11px] font-bold text-white uppercase tracking-widest mb-2 px-2 hover:text-[#4A90B8] transition-colors"
-                            >
-                              {hub.label}
-                            </Link>
-                            {hub.spokes.length > 0 && (
-                              <ul className="space-y-0.5">
-                                {hub.spokes.map((spoke, j) => (
-                                  <li key={j}>
-                                    <Link
-                                      to={spoke.href}
-                                      onClick={() => setIsMegaMenuOpen(false)}
-                                      className="block px-2 py-1 rounded text-[12px] text-white/60 hover:text-white hover:bg-white/5 transition-colors"
-                                    >
-                                      {spoke.label}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </div>
-                        ))}
+                        {serviceHubs.map((hub, i) => {
+                          const isWide = hub.spokes.length > 4;
+                          return (
+                            <div key={i} className={isWide ? "col-span-2" : ""}>
+                              <Link
+                                to={hub.href}
+                                onClick={() => setIsMegaMenuOpen(false)}
+                                className="block text-[11px] font-bold text-white uppercase tracking-widest mb-2 px-2 hover:text-[#4A90B8] transition-colors"
+                              >
+                                {hub.label}
+                              </Link>
+                              {hub.spokes.length > 0 && (
+                                <ul className={isWide ? "grid grid-cols-2 gap-x-2 gap-y-0.5" : "space-y-0.5"}>
+                                  {hub.spokes.map((spoke, j) => (
+                                    <li key={j}>
+                                      <Link
+                                        to={spoke.href}
+                                        onClick={() => setIsMegaMenuOpen(false)}
+                                        className="block px-2 py-1 rounded text-[12px] text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                                      >
+                                        {spoke.label}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                       <div className="mt-4 pt-3" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                         <Link
