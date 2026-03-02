@@ -78,7 +78,7 @@ const ServiceTestimonialsSection = ({
             </div>
             <span
               className="text-sm font-semibold px-4 py-2 rounded-full shrink-0"
-              style={{ backgroundColor: "#D1FAE5", color: "#065F46" }}
+              style={{ backgroundColor: "#1A6B3A", color: "#FFFFFF" }}
             >
               {featured.metricBadge}
             </span>
