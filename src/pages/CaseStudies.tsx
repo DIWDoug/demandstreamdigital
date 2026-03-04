@@ -152,8 +152,7 @@ const CaseStudies = () => {
                 <span className="text-accent-blue">Partnerships</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                See how we've helped plumbing and HVAC companies grow with 
-                local SEO, paid media, and content marketing.
+                See how we've helped multiple small and medium sized businesses grow with local SEO, paid media, and content marketing. Now we focus solely on HVAC and Plumbing.
               </p>
             </div>
             
