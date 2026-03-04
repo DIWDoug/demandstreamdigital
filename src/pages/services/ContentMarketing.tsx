@@ -108,7 +108,7 @@ const ContentMarketing = () => {
 
       {/* 5. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
-        <ServiceBuildingBlocksSection config={contentMarketingConfig.buildingBlocks} hubSlug="content-marketing" />
+        <ServiceBuildingBlocksSection config={contentMarketingConfig.buildingBlocks} />
       </div>
 
       <SectionDivider />
