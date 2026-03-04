@@ -63,7 +63,17 @@ const HVACContentMarketing = () => {
       <div className="pt-16">
         <ServiceHubHero
           title={hvacContentMarketingConfig.title}
-          description={hvacContentMarketingConfig.hero.qualifierLine}
+          heroHeadline="HVAC Content Marketing"
+          heroSubtitle="Built to Rank and Convert"
+          description={{
+            intro: "When a homeowner's AC stops working in August, they don't browse options. They call whoever shows up in the Map Pack first with a clear, credible, local answer.",
+            bullets: [
+              "Built around HVAC's dual demand structure — emergency repair and planned replacement",
+              "Seasonal authority, maintenance agreement support, and AI-ready content",
+              "Structured to earn positions in the most competitive HVAC searches in your market",
+            ],
+            closing: "No generic blog libraries. No filler articles. No content built just to fill a publishing calendar."
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>

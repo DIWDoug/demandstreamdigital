@@ -63,7 +63,17 @@ const PlumbingContentMarketing = () => {
       <div className="pt-16">
         <ServiceHubHero
           title={plumbingContentMarketingConfig.title}
-          description={plumbingContentMarketingConfig.hero.qualifierLine}
+          heroHeadline="Plumbing Content Marketing"
+          heroSubtitle="Built to Rank and Convert"
+          description={{
+            intro: "When a homeowner searches \"emergency plumber near me\" or \"water heater replacement cost,\" they are not browsing options. They are calling whoever shows up with a credible, relevant, local answer.",
+            bullets: [
+              "Built around how plumbing demand actually works — emergency intent and service specificity",
+              "Geographic content aligned to your actual dispatch radius, not just major city names",
+              "Structured to move readers toward a booked call — not just a page view",
+            ],
+            closing: "No generic listicles. No filler blogs. No content that exists just to exist."
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>

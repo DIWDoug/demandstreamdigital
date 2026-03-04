@@ -65,7 +65,17 @@ const ContentMarketing = () => {
       <div className="pt-16">
         <ServiceHubHero
           title={contentMarketingConfig.title}
-          description="Most contractor content is written to fill a blog page. It ranks for searches outside your service area. It pulls in homeowners who aren't buying. It has no path to a booked call. We build content systems that do the opposite."
+          heroHeadline="Plumbing & HVAC Content Marketing"
+          heroSubtitle="Built for Authority, Rankings, and Booked Calls"
+          description={{
+            intro: "Most contractor content is written to fill a blog page. It ranks for searches outside your service area. It pulls in homeowners who aren't buying. It has no path to a booked call.",
+            bullets: [
+              "Built around how customers search for plumbing and HVAC in your market",
+              "Connected strategy across Google Maps, organic, and local search",
+              "Compressed to essentials: structure, intent, conversion — and only what actually works",
+            ],
+            closing: "No generic home services approach. Built for plumbing and HVAC operators only."
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>
