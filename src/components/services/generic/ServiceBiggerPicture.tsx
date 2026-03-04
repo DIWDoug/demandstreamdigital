@@ -38,7 +38,7 @@ const ServiceBiggerPicture = ({
   ctaHref = "/hvac-and-plumbing-paid-ads",
 }: ServiceBiggerPictureProps) => {
   return (
-    <section className="py-20 lg:py-28 bg-background scroll-mt-32">
+    <section className="py-20 lg:py-28 bg-surface scroll-mt-32">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
 
