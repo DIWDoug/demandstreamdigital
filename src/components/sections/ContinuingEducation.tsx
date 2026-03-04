@@ -1,16 +1,31 @@
 import { BookOpen, Users } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const ContinuingEducation = () => {
   const currentlyStudying = [
-    "Google LSA ranking factors and verification requirements for plumbing and HVAC",
-    "Local search algorithm updates affecting Maps pack visibility",
-    "Hub and spoke SEO methodology for trade service area authority",
-    "Call tracking and attribution models for multi-channel service campaigns",
-    "AI search integration and its effect on local service queries",
-    "GBP service-to-content alignment for maximum local visibility",
-    "ServiceTitan and Housecall Pro integration with marketing attribution",
-    "Multi-location GMB optimization strategies",
+    "Caleb Ulku's AI SEO Mastery framework",
+    "The logistics of Taylor Swift's Eras Tour (it's actually impressive)",
+    "Matthew Woodward's Search Logistics Content approach",
     "Advanced local citation building techniques",
+    "Multi-location GMB optimization strategies",
+    "The art of bonsai tree trimming (patience is a virtue)",
+    "Conversion rate optimization for service businesses",
+    "Client retention and upsell frameworks",
+    "Schema markup for enhanced SERP visibility",
+    "Review generation and reputation management tactics",
+    "Local landing page optimization best practices",
+    "Google Business Profile post strategies",
+    "Competitor analysis and gap identification",
+    "Technical SEO auditing methodologies",
+    "Go High Level CRM automation and workflows",
+    "Loganix link building and citation strategies",
+    "Hub & Spoke SEO methodology for topical authority domination",
+    "Whitespark's Local Search Ranking Factors 2026 deep dive",
+    "High-impact link building through strategic outreach campaigns",
+    "AI-powered SEO tactics that future-proof your rankings",
+    "Ryan Reynolds' workout routine (for research purposes)",
+    "GBP service-to-content expansion for maximum local visibility",
+    "Operational Streamlining for agency efficiency",
   ];
 
   const industryVoices = [
@@ -43,7 +58,7 @@ const ContinuingEducation = () => {
 
         <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* What We're Studying */}
-          <div className="p-8 rounded-2xl bg-surface-elevated border border-border/60">
+          <div className="p-8 rounded-2xl bg-surface-elevated border border-border/60 flex flex-col">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 rounded-xl bg-accent-blue/10 border border-accent-blue/20">
                 <BookOpen className="w-6 h-6 text-accent-blue" />
@@ -51,14 +66,16 @@ const ContinuingEducation = () => {
               <h3 className="text-xl font-semibold text-foreground">What We're Studying Now</h3>
             </div>
 
-            <div className="space-y-0">
-              {currentlyStudying.map((topic, index) => (
-                <div key={index} className="flex items-start gap-3 py-3 border-b border-border/20 last:border-0">
-                  <div className="w-2 h-2 rounded-full bg-accent-blue mt-2 shrink-0" />
-                  <span className="text-text-secondary text-sm leading-relaxed">{topic}</span>
-                </div>
-              ))}
-            </div>
+            <ScrollArea className="h-80">
+              <div className="space-y-0 pr-4">
+                {currentlyStudying.map((topic, index) => (
+                  <div key={index} className="flex items-start gap-3 py-3 border-b border-border/20 last:border-0">
+                    <div className="w-2 h-2 rounded-full bg-accent-blue mt-2 shrink-0" />
+                    <span className="text-text-secondary text-sm leading-relaxed">{topic}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollArea>
           </div>
 
           {/* Industry Voices */}
