@@ -3,6 +3,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 const ContinuingEducation = () => {
   const currentlyStudying = [
+    "Cameron Herold's COO Alliance leadership systems",
+    "How to teach my dog to speak Mandarin",
+    "Edward Sturm's Compact Keywords strategy",
     "Caleb Ulku's AI SEO Mastery framework",
     "The logistics of Taylor Swift's Eras Tour (it's actually impressive)",
     "Matthew Woodward's Search Logistics Content approach",
