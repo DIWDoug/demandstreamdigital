@@ -82,6 +82,8 @@ const PlumbingContentMarketing = () => {
         <ServiceOutcomesSection config={plumbingContentMarketingConfig.outcomes} />
       </div>
 
+      <MarketExclusivity />
+
       <SectionDivider />
 
       {/* 4. WHERE WE START (ROADMAP) */}
@@ -126,8 +128,6 @@ const PlumbingContentMarketing = () => {
       </div>
 
       {/* NOTE: No Bigger Picture / Ecosystem section on this child page — lives on parent hub only */}
-
-      <MarketExclusivity />
 
       {/* 9. CONTACT */}
       <div id="contact" className="scroll-mt-32">
