@@ -132,16 +132,16 @@ const ContentMarketing = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Plumbing */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
-                  <Droplets className="h-6 w-6 text-accent-blue" strokeWidth={1.5} />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0">
+                  <Droplets className="h-7 w-7 text-accent-blue" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">Plumbing Content Marketing</h3>
               </div>
-              <p className="text-slate-600 text-base leading-relaxed mb-5">
+              <p className="text-slate-600 text-base leading-relaxed mb-6">
                 Plumbing demand is largely emergency-driven. A burst pipe, a failed water heater, a backed-up main line — these are not planned purchases. The homeowner searches, scans the top results, and calls. Plumbing content marketing has to win that moment.
               </p>
-              <ul className="space-y-2.5 mb-8 flex-1">
+              <ul className="space-y-3 mb-8 flex-1">
                 {[
                   "Emergency and high-intent keyword prioritization: 'burst pipe repair [city],' 'water heater replacement [city]'",
                   "Geographic content pages aligned to your actual dispatch coverage — not just major city names",
@@ -149,8 +149,8 @@ const ContentMarketing = () => {
                   "GBP category alignment for drain cleaning, water heater, slab leak, and repiping revenue",
                   "Multi-truck radius scaling: as your coverage expands, the content structure scales with it",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cta shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-cta shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -165,16 +165,16 @@ const ContentMarketing = () => {
 
             {/* HVAC */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col">
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
-                  <Thermometer className="h-6 w-6 text-amber-500" strokeWidth={1.5} />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                  <Thermometer className="h-7 w-7 text-amber-500" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">HVAC Content Marketing</h3>
               </div>
-              <p className="text-slate-600 text-base leading-relaxed mb-5">
+              <p className="text-slate-600 text-base leading-relaxed mb-6">
                 HVAC demand is seasonal and dual-natured — emergency repair in peak season and planned replacement year-round. HVAC content marketing has to capture both: no-cool calls in summer and equipment changeout intent before a system fails.
               </p>
-              <ul className="space-y-2.5 mb-8 flex-1">
+              <ul className="space-y-3 mb-8 flex-1">
                 {[
                   "Heating vs. cooling keyword splits by season and market climate zone",
                   "Install vs. repair content structure: each service type gets its own page, its own intent targeting",
@@ -182,8 +182,8 @@ const ContentMarketing = () => {
                   "Seasonal demand alignment: no-cool spikes, freeze prep, and shoulder season strategies",
                   "Equipment transition and changeout keyword capture for high-margin replacement revenue",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cta shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
+                    <span className="mt-1.5 w-2 h-2 rounded-full bg-cta shrink-0" />
                     {item}
                   </li>
                 ))}
