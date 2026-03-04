@@ -108,7 +108,7 @@ const ContentMarketing = () => {
         <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent-blue mb-4">
               Trade-Specific Execution
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">

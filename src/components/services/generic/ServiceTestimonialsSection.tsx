@@ -34,7 +34,7 @@ const ServiceTestimonialsSection = ({
 
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-xs font-bold tracking-widest uppercase text-slate-400 mb-4">
+          <p className="text-xs font-bold tracking-widest uppercase text-accent-blue mb-4">
             {featured.eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
