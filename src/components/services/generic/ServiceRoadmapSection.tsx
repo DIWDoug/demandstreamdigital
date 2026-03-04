@@ -25,7 +25,7 @@ const ServiceRoadmapSection = ({ config }: ServiceRoadmapSectionProps) => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="max-w-3xl mb-10">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-green mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">
             {config.eyebrow}
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4 leading-tight">
