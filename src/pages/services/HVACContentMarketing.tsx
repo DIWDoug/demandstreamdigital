@@ -105,7 +105,7 @@ const HVACContentMarketing = () => {
 
       {/* 5. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
-        <ServiceBuildingBlocksSection config={hvacContentMarketingConfig.buildingBlocks} hubSlug="content-marketing" />
+        <ServiceBuildingBlocksSection config={hvacContentMarketingConfig.buildingBlocks} />
       </div>
 
       <SectionDivider />
