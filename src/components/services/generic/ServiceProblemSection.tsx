@@ -67,8 +67,12 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             {config.painPoints.map((point, index) => (
               <div key={index}>
                 <div className="flex items-start gap-5 py-6">
-                  <div className="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <point.icon className="h-5 w-5 text-accent-blue" strokeWidth={1.5} />
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
+                    index % 2 === 0
+                      ? 'bg-cta/15'
+                      : 'bg-accent-blue/10'
+                  }`}>
+                    <point.icon className={`h-5 w-5 ${index % 2 === 0 ? 'text-cta' : 'text-accent-blue'}`} strokeWidth={1.5} />
                   </div>
                   <div>
                     <strong className="block text-base font-semibold text-foreground mb-1.5">
