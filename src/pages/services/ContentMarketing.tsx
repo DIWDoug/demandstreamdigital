@@ -85,6 +85,8 @@ const ContentMarketing = () => {
         <ServiceOutcomesSection config={contentMarketingConfig.outcomes} />
       </div>
 
+      <MarketExclusivity />
+
       <SectionDivider />
 
       {/* 4. THE STRUCTURE (ROADMAP) */}
@@ -218,8 +220,6 @@ const ContentMarketing = () => {
 
       {/* 10. ECOSYSTEM / BIGGER PICTURE */}
       <ServiceEcosystemSection config={contentMarketingConfig.ecosystem} />
-
-      <MarketExclusivity />
 
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">
