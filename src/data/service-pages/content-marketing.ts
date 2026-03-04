@@ -1,4 +1,4 @@
-import { FileText, PenTool, BookOpen, Target, Megaphone, BarChart3, Sparkles, MapPin, HelpCircle, Layers, Award, Search, Map, Mail, Shield } from "lucide-react";
+import { FileText, Target, Megaphone, BarChart3, Sparkles, MapPin, Layers, Award, Search, Map, Shield, PenTool, Mail } from "lucide-react";
 import type { ServicePageConfig } from "@/types/servicePage";
 import { SITE_URL } from "@/lib/constants";
 
@@ -152,6 +152,7 @@ export const contentMarketingConfig: ServicePageConfig = {
     headline: "The Levers We Pull in Competitive Plumbing & HVAC Markets",
     subheadline: "Each content component is scoped based on your market's competition level, your current content gaps, and your highest-margin revenue targets. No standard packages. No fixed deliverable lists that ignore what your market actually requires.",
     blocks: [
+      // ── GEOGRAPHIC ────────────────────────────────────────────────────────
       {
         title: "Geographic Content Pages",
         slug: "geographic-content",
@@ -160,24 +161,25 @@ export const contentMarketingConfig: ServicePageConfig = {
         icon: MapPin
       },
       {
-        title: "Local FAQ Content",
-        slug: "local-faq-content",
-        cluster: "Geographic",
-        description: "Question-and-answer content formatted around real local searches. Structured for AI extraction and featured snippet capture.",
-        icon: HelpCircle
-      },
-      {
         title: "Topical Cluster Build-Outs",
         slug: "topical-clusters",
-        cluster: "Authority",
-        description: "Hub-and-spoke architecture connecting service hubs to supporting articles to city pages. Every page strengthens the pages around it. Clusters built to compound, not decay.",
+        cluster: "Geographic",
+        description: "Hub-and-spoke architecture connecting service hubs to supporting articles to city pages. Builds the topical depth Google requires before awarding rankings in competitive geographic markets.",
         icon: Layers
       },
+      {
+        title: "Maps Influence Content",
+        slug: "maps-influence-content",
+        cluster: "Geographic",
+        description: "GBP-aligned content assets — optimized service descriptions, local Q&A, and geotagged supporting pages — that reinforce Map Pack signals and lift proximity rankings in markets where organic alone isn't enough.",
+        icon: Map
+      },
+      // ── AUTHORITY ─────────────────────────────────────────────────────────
       {
         title: "Power Posts",
         slug: "power-posts",
         cluster: "Authority",
-        description: "\"How long does a water heater last,\" \"Signs your AC needs replacement,\" \"What causes low water pressure.\" Written to rank and to pre-sell.",
+        description: "\"How long does a water heater last,\" \"Signs your AC needs replacement,\" \"What causes low water pressure.\" Long-form, intent-matched content written to rank and to pre-sell.",
         icon: Award
       },
       {
@@ -188,18 +190,33 @@ export const contentMarketingConfig: ServicePageConfig = {
         icon: BarChart3
       },
       {
+        title: "Listicles & Comparison Content",
+        slug: "listicles-comparison",
+        cluster: "Authority",
+        description: "\"Best water heater brands,\" \"HVAC company reviews near me.\" Research-stage content that intercepts high-intent comparison searches and positions your company as the authoritative local answer.",
+        icon: Search
+      },
+      // ── CONVERSION ────────────────────────────────────────────────────────
+      {
         title: "E-books & Downloadable Guides",
         slug: "ebooks-guides",
         cluster: "Conversion",
-        description: "\"What to Do When Your Furnace Fails,\" \"Homeowner's Guide to Water Heater Replacement.\" Built around your highest-priority services.",
+        description: "\"What to Do When Your Furnace Fails,\" \"Homeowner's Guide to Water Heater Replacement.\" Built around your highest-priority services to capture demand before it goes to a competitor.",
         icon: FileText
       },
       {
         title: "Press Releases",
         slug: "press-releases",
         cluster: "Conversion",
-        description: "Locally distributed releases tied to new service offerings, certifications, expansions, and community presence. Builds citation signals and local authority.",
+        description: "Locally distributed releases tied to new service offerings, certifications, expansions, and community presence. Builds citation signals and reinforces local authority.",
         icon: Megaphone
+      },
+      {
+        title: "Lead Magnets",
+        slug: "lead-magnets",
+        cluster: "Conversion",
+        description: "Maintenance checklists, seasonal tune-up reminders, and cost estimators that capture homeowner contact information at the research stage — before they're ready to call and before they find a competitor.",
+        icon: Target
       }
     ]
   },
