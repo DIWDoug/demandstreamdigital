@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, AlertTriangle } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { PainPoint } from "@/types/servicePage";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
@@ -21,109 +21,81 @@ interface ServiceProblemSectionProps {
 
 const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
   return (
-    <section className="py-20 lg:py-28 section-light relative">
+    <section className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
-          <div className="mb-14">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
+        <div className="grid lg:grid-cols-5 gap-16 lg:gap-20 max-w-6xl mx-auto">
+
+          {/* LEFT COLUMN — sticky H2 + body + CTAs (40%) */}
+          <div className="lg:col-span-2 lg:sticky lg:top-32 self-start">
+            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">
               {config.eyebrow}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight text-balance">
               {config.headline}
             </h2>
-            <div className="max-w-[600px] space-y-4">
+
+            {/* Red-bordered blockquote */}
+            <div className="border-l-4 border-cta pl-5 mb-6 space-y-4">
               {config.intro.split("\n\n").map((para, i) => (
-                <p key={i} className="text-lg text-slate-600">
+                <p key={i} className="text-text-secondary text-base leading-relaxed">
                   {para}
                 </p>
               ))}
             </div>
 
-            {/* Urgency Callout Card */}
-            {config.introCallout && (
-              <div className="mt-8 max-w-[600px] bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-6 py-5">
-                <p className="text-slate-700 text-base leading-relaxed font-medium">
-                  {config.introCallout}
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start gap-3 mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm whitespace-nowrap"
+              >
+                {config.ctaText}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href={PHONE_HREF}
+                className="inline-flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-foreground transition-colors"
+              >
+                <Phone className="h-4 w-4 text-accent-blue" />
+                {PHONE_NUMBER}
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN — icon rows with hr dividers (60%) */}
+          <div className="lg:col-span-3">
+            {config.painPoints.map((point, index) => (
+              <div key={index}>
+                <div className="flex items-start gap-5 py-6">
+                  <div className="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <point.icon className="h-5 w-5 text-accent-blue" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <strong className="block text-base font-semibold text-foreground mb-1.5">
+                      {point.title}
+                    </strong>
+                    <p className="text-sm text-text-secondary leading-relaxed">
+                      {point.body}
+                    </p>
+                  </div>
+                </div>
+                {index < config.painPoints.length - 1 && (
+                  <hr className="border-t border-white/10" />
+                )}
+              </div>
+            ))}
+
+            {/* Closing line */}
+            {(config.closingLine || config.closingHighlight) && (
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {config.closingLine}{" "}
+                  <span className="font-semibold text-foreground">{config.closingHighlight}</span>
                 </p>
               </div>
             )}
           </div>
 
-          {/* Pain Point Cards - First card is featured and spans full width */}
-          <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
-            {config.painPoints.map((point, index) => {
-              const isFirst = index === 0;
-              return (
-                <div 
-                  key={index}
-                  className={`rounded-xl p-6 lg:p-8 border transition-all ${
-                    isFirst 
-                      ? 'sm:col-span-2 bg-gradient-to-br from-white via-white to-cta/5 border-cta/30 shadow-[0_4px_20px_-4px_hsl(var(--cta)/0.15)] relative overflow-hidden' 
-                      : 'bg-white border-slate-200 shadow-sm hover:border-cta/30'
-                  }`}
-                >
-                  {/* Featured badge for first card */}
-                  {isFirst && (
-                    <div className="absolute top-4 right-4">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-cta bg-cta/10 px-2.5 py-1 rounded-full">
-                        Key Insight
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className={`flex items-center gap-4 ${isFirst ? 'mb-5' : 'mb-4'}`}>
-                    <div className={`rounded-xl flex items-center justify-center shrink-0 ${
-                      isFirst 
-                        ? 'w-14 h-14 bg-accent-blue/15 shadow-sm' 
-                        : 'w-12 h-12 bg-accent-blue/10'
-                    }`}>
-                      <point.icon className={`text-accent-blue ${isFirst ? 'h-7 w-7' : 'h-5 w-5'}`} />
-                    </div>
-                    <strong className={`font-semibold text-slate-900 ${isFirst ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
-                      {point.title}
-                    </strong>
-                  </div>
-                  <p className={`text-slate-500 leading-7 ${isFirst ? 'text-base lg:text-lg max-w-3xl' : 'text-[13px]'}`}>
-                    {point.body}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* System Closing (optional) */}
-          {config.systemClosing && config.systemClosing.length > 0 && (
-            <p className="text-center text-slate-700 text-lg font-medium mt-10">
-              {config.systemClosing}
-            </p>
-          )}
-
-          {/* Transition Line + CTAs */}
-          <div className={`text-center ${config.systemClosing && config.systemClosing.length > 0 ? 'mt-6' : 'mt-14'} space-y-8`}>
-            <p className="text-slate-600 text-lg">
-              {config.closingLine} <span className="font-semibold text-slate-900">{config.closingHighlight}</span>
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center gap-2 px-6 py-3 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors"
-              >
-                Schedule a Discovery Call
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <span className="text-slate-400 text-sm font-medium">or</span>
-              <a 
-                href={PHONE_HREF}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all"
-              >
-                <Phone className="h-4 w-4" />
-                {PHONE_NUMBER}
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
