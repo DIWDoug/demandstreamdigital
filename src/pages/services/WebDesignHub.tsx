@@ -12,71 +12,71 @@ import { SITE_URL, PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 
 const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
-  { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-];
+{ label: "Local SEO", href: "/hvac-and-plumbing-seo" },
+{ label: "Google Maps / GBP", href: "/plumbing-google-maps" },
+{ label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+{ label: "Email Marketing", href: "/plumbing-email-marketing" },
+{ label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
+{ label: "Reporting & Dashboards", href: "/plumbing-reporting" }];
+
 const WEB_DESIGN_ORBIT_NODES = [
-  { label: "Local SEO", angle: 0 },
-  { label: "Google Maps / GBP", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Reputation Management", angle: 300 },
-];
+{ label: "Local SEO", angle: 0 },
+{ label: "Google Maps / GBP", angle: 60 },
+{ label: "Paid Advertising", angle: 120 },
+{ label: "Email Marketing", angle: 180 },
+{ label: "Reporting & Dashboards", angle: 240 },
+{ label: "Reputation Management", angle: 300 }];
+
 
 const canonicalUrl = `${SITE_URL}/website-design`;
 const metaTitle = "Plumbing & HVAC Website Design Built to Rank | DemandStream";
 const metaDescription = "Your website isn't generating booked calls? We design plumbing and HVAC websites with service architecture, AI-ready structure, and call-first UX. See how it works.";
 
 const pillars = [
-  { icon: Layout, label: "Architecture", body: "Service-level page structure built around how customers search" },
-  { icon: Shield, label: "Trust", body: "Credibility signals, reviews, licensing, and real photography" },
-  { icon: Zap, label: "Speed", body: "Core Web Vitals compliance and mobile-first build standards" },
-  { icon: Bot, label: "AI Structure", body: "Schema, FAQ blocks, and answer-forward content for AI and voice" },
-  { icon: MousePointerClick, label: "Conversion", body: "Call-first UX, tracking readiness, and CRM integration paths" },
-];
+{ icon: Layout, label: "Architecture", body: "Service-level page structure built around how customers search" },
+{ icon: Shield, label: "Trust", body: "Credibility signals, reviews, licensing, and real photography" },
+{ icon: Zap, label: "Speed", body: "Core Web Vitals compliance and mobile-first build standards" },
+{ icon: Bot, label: "AI Structure", body: "Schema, FAQ blocks, and answer-forward content for AI and voice" },
+{ icon: MousePointerClick, label: "Conversion", body: "Call-first UX, tracking readiness, and CRM integration paths" }];
+
 
 const failures = [
-  {
-    problem: "Generic service pages that blend repair and install intent",
-    pattern: "Looks good. Doesn't rank.",
-  },
-  {
-    problem: "No alignment to Google's service taxonomy. The site doesn't reinforce your GBP, limiting Maps visibility.",
-    pattern: "Ranks a little. Doesn't convert.",
-  },
-  {
-    problem: "No internal structure to scale. Adding a city page or new service breaks everything.",
-    pattern: "Converts some. Can't scale.",
-  },
-  {
-    problem: "No clear conversion path. The visitor doesn't know whether to call, fill out a form, or book online.",
-    pattern: "A website built for plumbing and HVAC needs to solve all three.",
-  },
-];
+{
+  problem: "Generic service pages that blend repair and install intent",
+  pattern: "Looks good. Doesn't rank."
+},
+{
+  problem: "No alignment to Google's service taxonomy. The site doesn't reinforce your GBP, limiting Maps visibility.",
+  pattern: "Ranks a little. Doesn't convert."
+},
+{
+  problem: "No internal structure to scale. Adding a city page or new service breaks everything.",
+  pattern: "Converts some. Can't scale."
+},
+{
+  problem: "No clear conversion path. The visitor doesn't know whether to call, fill out a form, or book online.",
+  pattern: "A website built for plumbing and HVAC needs to solve all three."
+}];
+
 
 const webDesignHubQualification = {
   eyebrow: "Selective Fit",
   headline: "Is Website Design Right for Your Company?",
   subheadline: "We work best with established plumbing and HVAC companies that want to own their market, not just check a website box.",
   goodFit: [
-    { point: "5 to 40+ truck operations with a growth mindset", detail: "You're running an active dispatch board and want your website to generate more of the calls that fill it." },
-    { point: "Companies ready to invest in a premium, scalable web presence", detail: "You understand a performance website is infrastructure, not a commodity. You're ready to build it right." },
-    { point: "Owners and GMs who measure success by booked calls and revenue", detail: "You don't care about traffic reports. You care whether the phone rings with jobs that match your margins." },
-    { point: "Operators who want SEO and paid advertising to work from day one", detail: "Your site will be built to activate both channels immediately, not require a separate rebuild six months later." },
-    { point: "Companies where the phone ringing is the only metric that matters", detail: "Every design and content decision we make is filtered through one question: does this make a customer more likely to call?" },
-  ],
+  { point: "5 to 40+ truck operations with a growth mindset", detail: "You're running an active dispatch board and want your website to generate more of the calls that fill it." },
+  { point: "Companies ready to invest in a premium, scalable web presence", detail: "You understand a performance website is infrastructure, not a commodity. You're ready to build it right." },
+  { point: "Owners and GMs who measure success by booked calls and revenue", detail: "You don't care about traffic reports. You care whether the phone rings with jobs that match your margins." },
+  { point: "Operators who want SEO and paid advertising to work from day one", detail: "Your site will be built to activate both channels immediately, not require a separate rebuild six months later." },
+  { point: "Companies where the phone ringing is the only metric that matters", detail: "Every design and content decision we make is filtered through one question: does this make a customer more likely to call?" }],
+
   notFit: [
-    { point: "Under $500K revenue looking for the lowest price option", detail: "A performance build requires investment. If budget is the primary filter, there are better fits for where you are right now." },
-    { point: '"Just need something live" — bare-minimum website projects', detail: "We build revenue infrastructure, not placeholders. Minimum viable websites are not in our scope." },
-    { point: "Companies not ready to track calls or measure cost per booked call", detail: "Every site we build includes call tracking. If you're not ready to measure, we can't show you the ROI." },
-    { point: "Operations not planning to grow beyond current capacity", detail: "Our builds are designed to scale. If you're not planning to grow, the investment won't make sense." },
-  ],
-  ctaText: "Claim Your Territory Today",
+  { point: "Under $500K revenue looking for the lowest price option", detail: "A performance build requires investment. If budget is the primary filter, there are better fits for where you are right now." },
+  { point: '"Just need something live" — bare-minimum website projects', detail: "We build revenue infrastructure, not placeholders. Minimum viable websites are not in our scope." },
+  { point: "Companies not ready to track calls or measure cost per booked call", detail: "Every site we build includes call tracking. If you're not ready to measure, we can't show you the ROI." },
+  { point: "Operations not planning to grow beyond current capacity", detail: "Our builds are designed to scale. If you're not planning to grow, the investment won't make sense." }],
+
+  ctaText: "Claim Your Territory Today"
 };
 
 const WebDesignHub = () => {
@@ -90,8 +90,8 @@ const WebDesignHub = () => {
     "provider": {
       "@type": "Organization",
       "name": "Demand Stream Digital",
-      "url": SITE_URL,
-    },
+      "url": SITE_URL
+    }
   };
 
   return (
@@ -100,8 +100,8 @@ const WebDesignHub = () => {
         title={metaTitle}
         description={metaDescription}
         canonical={canonicalUrl}
-        schemaJson={pageSchema}
-      />
+        schemaJson={pageSchema} />
+      
 
       <Header />
 
@@ -126,9 +126,9 @@ const WebDesignHub = () => {
               </nav>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
-                Website Design for Plumbing & HVAC Companies
+                Website Design for Plumbing & HVAC
               </h1>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight px-0">
                 Built to Rank and Convert
               </p>
               <p className="text-text-secondary leading-relaxed mb-4">
@@ -140,17 +140,17 @@ const WebDesignHub = () => {
 
               <ul className="space-y-3 mb-8">
                 {[
-                  "Service-level page structure (not generic pages that blend intent)",
-                  "Alignment to Google Business Profile service taxonomy",
-                  "AI-ready structure with clear answers, FAQ blocks, and schema by default",
-                  "Call-first UX with tracking and CRM readiness (ServiceTitan-friendly)",
-                  "Built to activate SEO and paid advertising from day one",
-                ].map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-text-secondary">
+                "Service-level page structure (not generic pages that blend intent)",
+                "Alignment to Google Business Profile service taxonomy",
+                "AI-ready structure with clear answers, FAQ blocks, and schema by default",
+                "Call-first UX with tracking and CRM readiness (ServiceTitan-friendly)",
+                "Built to activate SEO and paid advertising from day one"].
+                map((bullet, i) =>
+                <li key={i} className="flex items-start gap-3 text-text-secondary">
                     <span className="text-cta mt-0.5 shrink-0 font-bold">✓</span>
                     <span>{bullet}</span>
                   </li>
-                ))}
+                )}
               </ul>
             </div>
 
@@ -160,8 +160,8 @@ const WebDesignHub = () => {
                 <TwoStepContactForm
                   formType="web_design_hub_hero"
                   submitButtonText="Claim Your Territory Today"
-                  step1ButtonText="Claim Your Territory Today"
-                />
+                  step1ButtonText="Claim Your Territory Today" />
+                
                 <p className="text-center text-xs text-text-muted mt-4">One plumbing client and one HVAC client per market.</p>
               </div>
             </div>
@@ -201,15 +201,15 @@ const WebDesignHub = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm"
-                  >
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm">
+                    
                     Claim Your Territory Today
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a
                     href={PHONE_HREF}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
-                  >
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm">
+                    
                     <Phone className="h-4 w-4" />
                     {PHONE_NUMBER}
                   </a>
@@ -218,8 +218,8 @@ const WebDesignHub = () => {
 
               {/* RIGHT — 55%, 5 stacked items, no card borders */}
               <div className="space-y-8">
-                {failures.map((item, i) => (
-                  <div key={i} className="flex items-start gap-5">
+                {failures.map((item, i) =>
+                <div key={i} className="flex items-start gap-5">
                     <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
                       <span className="text-cta text-xs font-bold">✕</span>
                     </div>
@@ -228,7 +228,7 @@ const WebDesignHub = () => {
                       <p className="text-accent-blue text-sm font-semibold leading-relaxed">{item.pattern}</p>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -260,8 +260,8 @@ const WebDesignHub = () => {
 
             {/* 2x2 card grid */}
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              {pillars.map((p, i) => (
-                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7 flex gap-5 items-start">
+              {pillars.map((p, i) =>
+              <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7 flex gap-5 items-start">
                   <div className="shrink-0 w-11 h-11 rounded-lg bg-accent-blue/15 flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-accent-blue" strokeWidth={1.5} />
                   </div>
@@ -270,7 +270,7 @@ const WebDesignHub = () => {
                     <p className="text-text-secondary text-sm leading-relaxed">{p.body}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
 
             {/* Footer note */}
@@ -297,22 +297,22 @@ const WebDesignHub = () => {
                 </p>
                 {/* Numbered intent rows */}
                 {[
-                  {
-                    num: "01",
-                    label: "Emergency Repair",
-                    color: "text-cta",
-                    queries: ['"water heater not working"', '"AC not cooling"', '"drain backup"'],
-                    note: "Customer needs help now. Page must lead with availability, phone number, and same-day booking. No friction.",
-                  },
-                  {
-                    num: "02",
-                    label: "Install / Replacement",
-                    color: "text-accent-blue",
-                    queries: ['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'],
-                    note: "Customer is researching. Page must lead with trust, options, proof, and pricing context.",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className={`flex gap-6 py-6 ${i < 1 ? "border-b border-slate-200" : ""}`}>
+                {
+                  num: "01",
+                  label: "Emergency Repair",
+                  color: "text-cta",
+                  queries: ['"water heater not working"', '"AC not cooling"', '"drain backup"'],
+                  note: "Customer needs help now. Page must lead with availability, phone number, and same-day booking. No friction."
+                },
+                {
+                  num: "02",
+                  label: "Install / Replacement",
+                  color: "text-accent-blue",
+                  queries: ['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'],
+                  note: "Customer is researching. Page must lead with trust, options, proof, and pricing context."
+                }].
+                map((item, i) =>
+                <div key={i} className={`flex gap-6 py-6 ${i < 1 ? "border-b border-slate-200" : ""}`}>
                     <span className={`text-4xl font-black leading-none shrink-0 ${item.color} opacity-30`}>{item.num}</span>
                     <div>
                       <p className={`text-xs font-semibold tracking-widest uppercase mb-2 ${item.color}`}>{item.label}</p>
@@ -322,7 +322,7 @@ const WebDesignHub = () => {
                       <p className="text-slate-600 text-sm leading-relaxed">{item.note}</p>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
 
               {/* Right 2/5 — callout */}
@@ -364,12 +364,12 @@ const WebDesignHub = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  { label: "Answer Blocks", body: "Built into all service pages — structured for featured snippets and AI results" },
-                  { label: "FAQ Structure", body: "Written for voice and conversational query formats, not industry jargon" },
-                  { label: "Schema by Default", body: "LocalBusiness, Service, and FAQPage schema implemented at build" },
-                  { label: "Heading Hierarchy", body: "Signals topic authority to crawlers and AI systems simultaneously" },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 items-start bg-surface-elevated border border-border/50 rounded-xl p-5">
+                { label: "Answer Blocks", body: "Built into all service pages — structured for featured snippets and AI results" },
+                { label: "FAQ Structure", body: "Written for voice and conversational query formats, not industry jargon" },
+                { label: "Schema by Default", body: "LocalBusiness, Service, and FAQPage schema implemented at build" },
+                { label: "Heading Hierarchy", body: "Signals topic authority to crawlers and AI systems simultaneously" }].
+                map((item, i) =>
+                <div key={i} className="flex gap-4 items-start bg-surface-elevated border border-border/50 rounded-xl p-5">
                     <div className="shrink-0 w-7 h-7 rounded-full bg-accent-blue/15 flex items-center justify-center mt-0.5">
                       <span className="text-accent-blue text-xs font-bold">✓</span>
                     </div>
@@ -378,7 +378,7 @@ const WebDesignHub = () => {
                       <p className="text-text-secondary text-sm leading-relaxed">{item.body}</p>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -401,8 +401,8 @@ const WebDesignHub = () => {
             <div className="grid sm:grid-cols-2 gap-6">
               <Link
                 to="/plumbing-website-design"
-                className="group bg-white border border-slate-200 hover:border-cta/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10"
-              >
+                className="group bg-white border border-slate-200 hover:border-cta/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-cta/10">
+                
                 <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">Plumbing</p>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-cta transition-colors">
                   Plumbing Website Design
@@ -418,8 +418,8 @@ const WebDesignHub = () => {
 
               <Link
                 to="/hvac-website-design"
-                className="group bg-white border border-slate-200 hover:border-accent-blue/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10"
-              >
+                className="group bg-white border border-slate-200 hover:border-accent-blue/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10">
+                
                 <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">HVAC</p>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-accent-blue transition-colors">
                   HVAC Website Design
@@ -450,8 +450,8 @@ const WebDesignHub = () => {
         centerSublabel="Conversion engine for every channel."
         services={WEB_DESIGN_BIGGER_PICTURE_SERVICES}
         orbitNodes={WEB_DESIGN_ORBIT_NODES}
-        ctaHref="/plumbing-and-hvac-web-design"
-      />
+        ctaHref="/plumbing-and-hvac-web-design" />
+      
 
       {/* EXCLUSIVITY */}
       <WebDesignExclusivity />
@@ -462,12 +462,12 @@ const WebDesignHub = () => {
         headline="See If Your Market Is Available"
         subheadline="Tell us where you operate and what you're working toward. We'll take it from there."
         exclusivityLine="One plumbing client and one HVAC client per market. Your competitors don't get in."
-        steps={WEB_DESIGN_STEPS}
-      />
+        steps={WEB_DESIGN_STEPS} />
+      
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default WebDesignHub;
