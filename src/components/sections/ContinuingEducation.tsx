@@ -1,5 +1,5 @@
 import { BookOpen, Users } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { useEffect, useRef } from "react";
 
 const ContinuingEducation = () => {
   const currentlyStudying = [
@@ -46,6 +46,33 @@ const ContinuingEducation = () => {
     { name: "Josh Nelson", focus: "Agency Growth" },
   ];
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const animFrameRef = useRef<number>(0);
+  const pausedRef = useRef(false);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let pos = 0;
+    const speed = 0.5; // px per frame
+
+    const tick = () => {
+      if (!pausedRef.current && el) {
+        pos += speed;
+        // Reset when we've scrolled through the first copy
+        if (pos >= el.scrollHeight / 2) {
+          pos = 0;
+        }
+        el.scrollTop = pos;
+      }
+      animFrameRef.current = requestAnimationFrame(tick);
+    };
+
+    animFrameRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animFrameRef.current);
+  }, []);
+
   return (
     <section className="py-24 lg:py-32 bg-surface relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -69,16 +96,31 @@ const ContinuingEducation = () => {
               <h3 className="text-xl font-semibold text-foreground">What We're Studying Now</h3>
             </div>
 
-            <ScrollArea className="h-80">
-              <div className="space-y-0 pr-4">
-                {currentlyStudying.map((topic, index) => (
+            {/* Scroll container with fade */}
+            <div
+              className="relative h-80 overflow-hidden"
+              onMouseEnter={() => { pausedRef.current = true; }}
+              onMouseLeave={() => { pausedRef.current = false; }}
+            >
+              <div
+                ref={scrollRef}
+                className="h-full overflow-y-scroll pr-4 scrollbar-hide"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {/* Duplicate list for seamless loop */}
+                {[...currentlyStudying, ...currentlyStudying].map((topic, index) => (
                   <div key={index} className="flex items-start gap-3 py-3 border-b border-border/20 last:border-0">
                     <div className="w-2 h-2 rounded-full bg-accent-blue mt-2 shrink-0" />
                     <span className="text-text-secondary text-sm leading-relaxed">{topic}</span>
                   </div>
                 ))}
               </div>
-            </ScrollArea>
+
+              {/* Fade gradient at bottom */}
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-elevated to-transparent" />
+              {/* Subtle fade at top too */}
+              <div className="pointer-events-none absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-surface-elevated to-transparent" />
+            </div>
           </div>
 
           {/* Industry Voices */}
