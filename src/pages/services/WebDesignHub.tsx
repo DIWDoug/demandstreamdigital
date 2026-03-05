@@ -1,4 +1,4 @@
-import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone } from "lucide-react";
+import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone, Palette, X, CheckCircle2, AlertTriangle, TrendingUp, MapPin, Smartphone } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -37,25 +37,34 @@ const pillars = [
 { icon: Shield, label: "Trust", body: "Credibility signals, reviews, licensing, and real photography" },
 { icon: Zap, label: "Speed", body: "Core Web Vitals compliance and mobile-first build standards" },
 { icon: Bot, label: "AI Structure", body: "Schema, FAQ blocks, and answer-forward content for AI and voice" },
-{ icon: MousePointerClick, label: "Conversion", body: "Call-first UX, tracking readiness, and CRM integration paths" }];
+{ icon: MousePointerClick, label: "Conversion", body: "Call-first UX, tracking readiness, and CRM integration paths" },
+{ icon: Palette, label: "Beautiful Design", body: "Custom visual identity built to reflect your brand, establish trust, and look unmistakably professional in your market" }];
 
 
 const failures = [
 {
+  icon: AlertTriangle,
   problem: "Generic service pages that blend repair and install intent",
-  pattern: "Looks good. Doesn't rank."
+  pattern: "Looks good. Doesn't rank.",
+  detail: "When repair and install share a page, Google can't clearly attribute search intent. Rankings stay mediocre for both query types."
 },
 {
+  icon: MapPin,
   problem: "No alignment to Google's service taxonomy. The site doesn't reinforce your GBP, limiting Maps visibility.",
-  pattern: "Ranks a little. Doesn't convert."
+  pattern: "Ranks a little. Doesn't convert.",
+  detail: "GBP categories and your website's service architecture must mirror each other. Misalignment caps your Map Pack visibility."
 },
 {
+  icon: TrendingUp,
   problem: "No internal structure to scale. Adding a city page or new service breaks everything.",
-  pattern: "Converts some. Can't scale."
+  pattern: "Converts some. Can't scale.",
+  detail: "Template-based sites aren't built to expand. Every new page becomes a manual rebuild that dilutes authority instead of compounding it."
 },
 {
+  icon: Smartphone,
   problem: "No clear conversion path. The visitor doesn't know whether to call, fill out a form, or book online.",
-  pattern: "A website built for plumbing and HVAC needs to solve all three."
+  pattern: "A website built for plumbing and HVAC needs to solve all three.",
+  detail: "Friction kills calls. Every page needs a dominant, frictionless path to a booked job based on what that customer type needs to do next."
 }];
 
 
@@ -128,7 +137,8 @@ const WebDesignHub = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
                 Website Design for Plumbing & HVAC
               </h1>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-cta mb-6 leading-tight px-0">
+              {/* Subheadline — matches SEO parent page size */}
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-cta mb-6 leading-tight">
                 Built to Rank and Convert
               </p>
               <p className="text-text-secondary leading-relaxed mb-4">
@@ -169,73 +179,74 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* WHY WEBSITES FAIL — light, Pattern B */}
+      {/* WHY WEBSITES FAIL — light, redesigned Pattern B */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
-              {/* LEFT — 45% */}
-              <div className="lg:sticky lg:top-32">
-                <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  Why Most 'Pretty' Contractor Websites Don't Perform
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-5">
-                  A new contractor website goes live. It looks clean. The owner is happy. Three months later, the phone hasn't moved.
-                </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-5">
-                  This happens constantly. The reason is always the same: the site was built to look good, not to rank or convert.
-                </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  Design is not the problem. Structure is the problem. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start.
-                </p>
-                {/* Blockquote — left red border, italic */}
-                <blockquote className="border-l-4 border-cta pl-5 mb-6">
-                  <p className="text-slate-700 text-base italic leading-relaxed">
-                    "A website built for plumbing and HVAC needs separate intent pages, GBP alignment, and a clear call path. Not a brochure designed to win a design award."
-                  </p>
-                </blockquote>
-                <p className="text-slate-600 leading-relaxed mb-8">
-                  The four patterns on the right are the same patterns we see on every underperforming contractor site. If your current website has any of them, the structure is costing you calls.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm">
-                    
-                    Claim Your Territory Today
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <a
-                    href={PHONE_HREF}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm">
-                    
-                    <Phone className="h-4 w-4" />
-                    {PHONE_NUMBER}
-                  </a>
-                </div>
-              </div>
+            {/* Section header */}
+            <div className="mb-12">
+              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-3">The Problem</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight max-w-2xl">
+                Why Most 'Pretty' Contractor Websites Don't Perform
+              </h2>
+              <p className="text-slate-600 leading-relaxed max-w-3xl">
+                Design is not the problem. Structure is. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start — not bolted on later.
+              </p>
+            </div>
 
-              {/* RIGHT — 55%, 5 stacked items, no card borders */}
-              <div className="space-y-8">
-                {failures.map((item, i) =>
-                <div key={i} className="flex items-start gap-5">
-                    <div className="w-9 h-9 rounded-lg bg-cta/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-cta text-xs font-bold">✕</span>
+            {/* 2-column problem cards */}
+            <div className="grid sm:grid-cols-2 gap-5 mb-10">
+              {failures.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-cta/30 hover:shadow-md transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-cta/8 border border-cta/15 flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5 text-cta" strokeWidth={1.5} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-bold text-slate-900 text-[15px] mb-2">{item.problem}</p>
-                      <p className="text-accent-blue text-sm font-semibold leading-relaxed">{item.pattern}</p>
+                      <p className="font-bold text-slate-900 text-[15px] leading-snug mb-1">
+                        {item.problem}
+                      </p>
+                      <span className="inline-block text-xs font-semibold text-cta bg-cta/8 px-2.5 py-0.5 rounded-full">
+                        {item.pattern}
+                      </span>
                     </div>
                   </div>
-                )}
+                  <p className="text-slate-500 text-sm leading-relaxed pl-14">
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom callout bar */}
+            <div className="bg-slate-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <p className="text-white text-base leading-relaxed max-w-xl">
+                <span className="font-semibold text-white">Every one of these patterns is fixable.</span>{" "}
+                <span className="text-slate-300">The sites we build are structured to rank, convert, and scale from launch — not patched later.</span>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap">
+                  Claim Your Territory
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href={PHONE_HREF}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/20 text-white hover:bg-white/10 font-medium transition-all text-sm whitespace-nowrap">
+                  <Phone className="h-4 w-4" />
+                  {PHONE_NUMBER}
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A */}
+      {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A, 6 pillars */}
       <section className="py-24 lg:py-32 bg-[#0F1E2D]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -258,24 +269,24 @@ const WebDesignHub = () => {
               </p>
             </div>
 
-            {/* 2x2 card grid */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
-              {pillars.map((p, i) =>
-              <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7 flex gap-5 items-start">
+            {/* 3-column × 2-row grid for 6 pillars */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+              {pillars.map((p, i) => (
+                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6 flex gap-4 items-start hover:border-accent-blue/30 transition-colors">
                   <div className="shrink-0 w-11 h-11 rounded-lg bg-accent-blue/15 flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-accent-blue" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-base font-bold text-foreground mb-2">{p.label}</p>
+                    <p className="text-base font-bold text-foreground mb-1.5">{p.label}</p>
                     <p className="text-text-secondary text-sm leading-relaxed">{p.body}</p>
                   </div>
                 </div>
-              )}
+              ))}
             </div>
 
             {/* Footer note */}
             <p className="text-center text-text-muted text-sm italic">
-              When these five elements work together, the website becomes revenue infrastructure, not just a page.
+              When these six elements work together, the website becomes revenue infrastructure, not just a page.
             </p>
           </div>
         </div>
@@ -284,65 +295,89 @@ const WebDesignHub = () => {
       {/* EXCLUSIVITY */}
       <WebDesignExclusivity />
 
-      {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 split */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA]">
+      {/* DIFFERENT CALL = DIFFERENT PAGE — dark, redesigned */}
+      <section className="py-24 lg:py-32 bg-[#0F1E2D]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Different Phone Call = Different Page
-            </h2>
-            <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
-              {/* Left 3/5 — primary explanation */}
-              <div className="lg:col-span-3">
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  If the customer's reason for calling is different, the page should be different. Search engines read repair intent and installation intent as two separate queries. One page can't rank well for both — it confuses Google's relevance signal and reduces conversion for each customer type.
-                </p>
-                {/* Numbered intent rows */}
-                {[
-                {
-                  num: "01",
-                  label: "Emergency Repair",
-                  color: "text-cta",
-                  queries: ['"water heater not working"', '"AC not cooling"', '"drain backup"'],
-                  note: "Customer needs help now. Page must lead with availability, phone number, and same-day booking. No friction."
-                },
-                {
-                  num: "02",
-                  label: "Install / Replacement",
-                  color: "text-accent-blue",
-                  queries: ['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'],
-                  note: "Customer is researching. Page must lead with trust, options, proof, and pricing context."
-                }].
-                map((item, i) =>
-                <div key={i} className={`flex gap-6 py-6 ${i < 1 ? "border-b border-slate-200" : ""}`}>
-                    <span className={`text-4xl font-black leading-none shrink-0 ${item.color} opacity-30`}>{item.num}</span>
-                    <div>
-                      <p className={`text-xs font-semibold tracking-widest uppercase mb-2 ${item.color}`}>{item.label}</p>
-                      <ul className="space-y-1 text-slate-500 text-sm italic mb-3">
-                        {item.queries.map((q, j) => <li key={j}>{q}</li>)}
-                      </ul>
-                      <p className="text-slate-600 text-sm leading-relaxed">{item.note}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
 
-              {/* Right 2/5 — callout */}
-              <div className="lg:col-span-2 lg:sticky lg:top-32">
-                <div className="bg-white border border-slate-200 rounded-2xl p-7 shadow-sm">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-slate-400 mb-4">The Rule</p>
-                  <p className="text-slate-900 text-lg font-bold leading-snug mb-4">
-                    One service. One intent. One page.
-                  </p>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    When you blend repair and install onto the same page, you dilute your relevance signal for both queries and split your conversion path for both customer types.
-                  </p>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Industry-specific page structure is covered in detail on the Plumbing and HVAC pages below.
+            {/* Header */}
+            <div className="text-center mb-12">
+              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">Architecture Principle</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+                Different Phone Call = Different Page
+              </h2>
+              <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
+                If the customer's reason for calling is different, the page should be different. Search engines read repair intent and installation intent as two separate queries. One page can't rank well for both.
+              </p>
+            </div>
+
+            {/* 3-column layout: intent card, rule callout, intent card */}
+            <div className="grid lg:grid-cols-3 gap-6 mb-10">
+
+              {/* Emergency Repair */}
+              <div className="bg-[#162233] border border-white/10 rounded-2xl p-7 flex flex-col">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-cta/15 flex items-center justify-center shrink-0">
+                    <span className="text-cta text-lg font-black leading-none">01</span>
+                  </div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-cta">Emergency Repair</p>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {['"water heater not working"', '"AC not cooling"', '"drain backup"'].map((q, j) => (
+                    <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
+                  ))}
+                </ul>
+                <div className="mt-auto pt-4 border-t border-white/10">
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    Customer needs help <span className="text-foreground font-semibold">now</span>. Page must lead with availability, phone number, and same-day booking. No friction.
                   </p>
                 </div>
               </div>
+
+              {/* The Rule — center */}
+              <div className="bg-cta/10 border border-cta/25 rounded-2xl p-7 flex flex-col items-center text-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-cta/20 flex items-center justify-center mb-5">
+                  <CheckCircle2 className="w-7 h-7 text-cta" strokeWidth={1.5} />
+                </div>
+                <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Rule</p>
+                <p className="text-foreground text-xl font-bold leading-snug mb-4">
+                  One service. One intent. One page.
+                </p>
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                  Blending repair and install onto the same page dilutes your relevance signal for both queries and splits your conversion path for both customer types.
+                </p>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  Industry-specific page structure is covered in detail on the Plumbing and HVAC pages below.
+                </p>
+              </div>
+
+              {/* Install / Replacement */}
+              <div className="bg-[#162233] border border-white/10 rounded-2xl p-7 flex flex-col">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-accent-blue/15 flex items-center justify-center shrink-0">
+                    <span className="text-accent-blue text-lg font-black leading-none">02</span>
+                  </div>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue">Install / Replacement</p>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'].map((q, j) => (
+                    <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
+                  ))}
+                </ul>
+                <div className="mt-auto pt-4 border-t border-white/10">
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    Customer is <span className="text-foreground font-semibold">researching</span>. Page must lead with trust, options, proof, and pricing context.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Bottom callout */}
+            <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 text-center">
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Every service category in plumbing and HVAC follows this split. The result is a site with <span className="text-foreground font-semibold">2–4× more rankable pages</span> than a generic contractor build — each targeting a distinct intent with a distinct conversion path.
+              </p>
             </div>
           </div>
         </div>
@@ -388,7 +423,7 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* INDUSTRY BREAKOUT — light */}
+      {/* INDUSTRY BREAKOUT — light, expanded copy */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -410,8 +445,8 @@ const WebDesignHub = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-cta transition-colors">
                   Plumbing Website Design
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Built around the call types that drive plumbing revenue: water heaters, repiping, drain cleaning, slab leaks. Structure that matches how customers search for plumbing help.
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  Built around the call types that drive plumbing revenue: water heaters, repiping, drain cleaning, and slab leaks. Most plumbing websites blend emergency repair and installation onto the same page — which means they rank weakly for both. We build separate, intent-aligned pages for every service type, each structured for the specific customer journey at that moment. Emergency pages lead with availability and a phone number. Replacement pages lead with trust, options, and pricing context. Every city you serve gets its own localized page tied to your Google Business Profile. The result is a site that generates calls across every job type, not just the ones you happen to rank for by accident.
                 </p>
                 <span className="inline-flex items-center text-sm font-medium text-cta gap-2">
                   See the plumbing approach
@@ -427,8 +462,8 @@ const WebDesignHub = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-accent-blue transition-colors">
                   HVAC Website Design
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Built around seasonal demand, changeouts, maintenance agreements, and no-cool/no-heat urgency. Site structure that works year-round and captures maintenance agreement revenue.
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                  Built around seasonal demand, changeouts, maintenance agreements, and the urgency of no-cool and no-heat calls. HVAC has a unique search pattern: summers and winters drive high-urgency emergency calls, while spring and fall bring comparison shoppers researching replacement costs. A well-built HVAC site captures both customer types with separate intent-aligned pages, dedicated maintenance agreement landing pages, and seasonal campaign readiness built into the structure. We also build for maintenance agreement upsell — because recurring revenue from agreements is the most stable part of any HVAC business, and most websites completely ignore it.
                 </p>
                 <span className="inline-flex items-center text-sm font-medium text-accent-blue gap-2">
                   See the HVAC approach
