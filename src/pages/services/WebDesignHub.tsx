@@ -281,6 +281,9 @@ const WebDesignHub = () => {
         </div>
       </section>
 
+      {/* EXCLUSIVITY */}
+      <WebDesignExclusivity />
+
       {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 split */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
         <div className="container mx-auto px-6 lg:px-8">
@@ -452,9 +455,6 @@ const WebDesignHub = () => {
         orbitNodes={WEB_DESIGN_ORBIT_NODES}
         ctaHref="/plumbing-and-hvac-web-design" />
       
-
-      {/* EXCLUSIVITY */}
-      <WebDesignExclusivity />
 
       {/* CONTACT */}
       <ServiceContactForm
