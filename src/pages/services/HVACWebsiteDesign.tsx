@@ -185,74 +185,65 @@ const HVACWebsiteDesign = () => {
 
       <ServiceHubAnchorNav items={anchorItems} />
 
-      {/* WHY HVAC WEBSITES FAIL — light, Pattern B */}
+      {/* WHY HVAC WEBSITES FAIL — light, redesigned 2×2 cards */}
       <section id="why-they-fail" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-start">
-              {/* LEFT — 45% */}
-              <div className="lg:sticky lg:top-32">
-                <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Problem</p>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  Why Most HVAC Websites Don't Generate Consistent Booked Calls
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed mb-5">
-                  HVAC is one of the most search-driven trades. Homeowners search when they're in pain: no cooling in July, no heat in January. That urgency is your opportunity. But only if your website is built to capture it.
-                </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-5">
-                  Most HVAC websites are built once and left static. Same pages, same messaging, year-round. That's a missed opportunity on every front.
-                </p>
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                  The result is a site that may rank for the company name and little else — invisible when homeowners are searching during the moments that generate calls.
-                </p>
-                {/* Blockquote — left red border, italic */}
-                <blockquote className="border-l-4 border-cta pl-5 mb-6">
-                  <p className="text-slate-700 text-base italic leading-relaxed">
-                    "When a homeowner searches 'AC not cooling' at 7pm in July, they are not browsing. They are calling whoever shows up first with a clear booking path. That page has to be built specifically for that moment."
-                  </p>
-                </blockquote>
-                <p className="text-slate-600 leading-relaxed mb-8">
-                  The four failure patterns on the right aren't edge cases. They are the default state for most HVAC websites. Each one has a direct structural fix.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-cta hover:bg-[#A93226] text-white font-bold rounded tracking-wide transition-colors text-sm"
-                  >
-                    Claim Your Territory Today
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <a
-                    href={PHONE_HREF}
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded border border-slate-300 text-slate-700 hover:bg-cta hover:border-cta hover:text-white font-medium transition-all text-sm"
-                  >
-                    <Phone className="h-4 w-4" />
-                    {PHONE_NUMBER}
-                  </a>
-                </div>
-              </div>
+            {/* Section header */}
+            <div className="mb-12">
+              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-3">The Problem</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 leading-tight max-w-2xl">
+                Why Most HVAC Websites Don't Generate Consistent Booked Calls
+              </h2>
+              <p className="text-slate-600 leading-relaxed max-w-3xl">
+                HVAC is one of the most search-driven trades. Homeowners search when they're in pain — no cooling in July, no heat in January. That urgency is your opportunity, but only if your website is built to capture it.
+              </p>
+            </div>
 
-              {/* RIGHT — 55%, icon rows with hr dividers matching golden rule */}
-              <div>
-                {failureItems.map((item, i) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={i}>
-                      <div className="flex items-start gap-4 py-6">
-                        <div className={`w-9 h-9 rounded-lg ${item.bg} flex items-center justify-center shrink-0 mt-0.5`}>
-                          <Icon className={`h-4 w-4 ${item.color}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-slate-900 text-[15px] mb-1.5">{item.title}</p>
-                          <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
-                        </div>
+            {/* 2×2 problem cards grid */}
+            <div className="grid sm:grid-cols-2 gap-5 mb-10">
+              {failureItems.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={i}
+                    className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-cta/30 hover:shadow-md transition-all duration-300 group"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`w-10 h-10 rounded-xl ${item.bg} border border-cta/15 flex items-center justify-center shrink-0`}>
+                        <Icon className={`h-5 w-5 ${item.color}`} strokeWidth={1.5} />
                       </div>
-                      {i < failureItems.length - 1 && (
-                        <hr className="border-t border-slate-200" />
-                      )}
+                      <p className="font-bold text-slate-900 text-[15px] leading-snug pt-1">
+                        {item.title}
+                      </p>
                     </div>
-                  );
-                })}
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Bottom callout bar */}
+            <div className="bg-slate-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <p className="text-white text-base leading-relaxed max-w-xl">
+                <span className="font-semibold text-white">Every one of these patterns is fixable.</span>{" "}
+                <span className="text-slate-300">When a homeowner searches 'AC not cooling' at 7pm in July, they call whoever shows up first with a clear booking path. Every build we do is structured to be that result.</span>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap">
+                  Claim Your Territory
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href={PHONE_HREF}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/20 text-white hover:bg-white/10 font-medium transition-all text-sm whitespace-nowrap">
+                  <Phone className="h-4 w-4" />
+                  {PHONE_NUMBER}
+                </a>
               </div>
             </div>
           </div>
