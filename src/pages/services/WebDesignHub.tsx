@@ -264,8 +264,8 @@ const WebDesignHub = () => {
             {/* Full-width stat/callout bar */}
             <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 mb-10 text-center">
               <p className="text-foreground text-base leading-relaxed">
-                A plumbing company at a 45% booking rate loses half its ad spend to leads that never convert. The framework starts by fixing structure, not budget.{" "}
-                <span className="text-accent-blue font-semibold">Structure is what activates SEO and paid advertising from day one.</span>
+                Most contractor websites are built in a day and forgotten. Ours are built as a system —{" "}
+                <span className="text-accent-blue font-semibold">every page designed to rank, every layout designed to convert, and every decision tied to a booked call.</span>
               </p>
             </div>
 
