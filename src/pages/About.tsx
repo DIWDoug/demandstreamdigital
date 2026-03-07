@@ -23,6 +23,7 @@ import {
 
 // Team images - local imports
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
+import robertKnoester from "@/assets/team/member_robert.jpg";
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
 import carolMora from "@/assets/team/carol-mora.png";
@@ -45,6 +46,12 @@ const About = () => {
       bio: "15 years building marketing systems for local service businesses. The last several focused entirely on plumbing and HVAC. Doug built DemandStream around a single conviction: trade operators deserve marketing that speaks their language and reports in metrics they can act on.",
       image: dougHeadshot,
       linkedin: "https://www.linkedin.com/in/douglasebryson/"
+    },
+    {
+      name: "Robert Knoester",
+      role: "CTO",
+      bio: "Leads the technical architecture behind DemandStream's digital infrastructure — from site builds and performance optimization to tracking systems and automation. Robert ensures every platform we build is fast, structured for search, and engineered to convert.",
+      image: robertKnoester,
     },
     {
       name: "John Joseph Santos (JJ)",
