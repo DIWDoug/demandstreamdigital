@@ -25,7 +25,21 @@ import {
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import robertKnoester from "@/assets/team/member_robert.jpg";
 import wyler from "@/assets/wyler.jpg";
-...
+import johnSantos from "@/assets/team/john-santos.webp";
+import carolMora from "@/assets/team/carol-mora.png";
+import iraSalvador from "@/assets/team/ira-salvador.png";
+import samantaLeal from "@/assets/team/samanta-leal.webp";
+import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
+import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
+import muhammadBilal from "@/assets/team/muhammad-bilal.png";
+import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
+import athenaYenko from "@/assets/team/athena-yenko.jpeg";
+
+// Other assets
+import clientLogosBanner from "@/assets/client-logos-banner.png";
+
+const About = () => {
+  const teamMembers = [
     {
       name: "Doug Bryson",
       role: "CEO & Founder",
