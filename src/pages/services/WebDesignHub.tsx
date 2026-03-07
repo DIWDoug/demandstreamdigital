@@ -335,11 +335,11 @@ const WebDesignHub = () => {
               </div>
 
               {/* The Rule — center */}
-              <div className="bg-cta/10 border border-cta/25 rounded-2xl p-7 flex flex-col items-center text-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-cta/20 flex items-center justify-center mb-5">
-                  <CheckCircle2 className="w-7 h-7 text-cta" strokeWidth={1.5} />
+              <div className="bg-accent-blue/10 border border-accent-blue/25 rounded-2xl p-7 flex flex-col items-center text-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-accent-blue/20 flex items-center justify-center mb-5">
+                  <CheckCircle2 className="w-7 h-7 text-accent-blue" strokeWidth={1.5} />
                 </div>
-                <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">The Rule</p>
+                <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">The Rule</p>
                 <p className="text-foreground text-xl font-bold leading-snug mb-4">
                   One service. One intent. One page.
                 </p>
