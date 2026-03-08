@@ -180,7 +180,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* WHY WEBSITES FAIL — light, redesigned Pattern B */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
@@ -250,7 +250,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A, 6 pillars */}
       <section className="py-24 lg:py-32 bg-[#0F1E2D]">
@@ -299,13 +299,13 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* EXCLUSIVITY */}
       <WebDesignExclusivity />
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* DIFFERENT CALL = DIFFERENT PAGE — dark, redesigned */}
       <section className="py-24 lg:py-32 bg-[#0F1E2D]">
@@ -396,7 +396,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* AI & VOICE — dark */}
       <section className="py-24 lg:py-32 bg-surface-dark">
@@ -439,7 +439,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* INDUSTRY BREAKOUT — light, expanded copy */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
@@ -508,7 +508,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={webDesignHubQualification} />
