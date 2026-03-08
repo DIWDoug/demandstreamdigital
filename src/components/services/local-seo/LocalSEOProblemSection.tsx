@@ -6,7 +6,7 @@ const painPoints = [
   {
     icon: MapPin,
     title: "Proximity Changes Everything",
-    body: "A plumbing company ranking #1 from three miles away may not appear at all from across the service area. Local rankings shift based on where the searcher is standing. A strategy built around one ZIP code is not a strategy — it's a starting point.",
+    body: "A plumbing company ranking #1 from three miles away may not appear at all from across the service area. Local rankings shift based on where the searcher is standing. A strategy built around one ZIP code is not a strategy. It's a starting point.",
     color: "text-cta",
     bg: "bg-cta/10",
   },
