@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "What's the difference between working with you versus a general marketing agency?",
-    answer: "General agencies spread thin across dozens of industries. We focus exclusively on plumbing and HVAC, which means we already know your competitive landscape, seasonal patterns, and which strategies actually generate booked jobs — not just clicks."
+    answer: "General agencies spread thin across dozens of industries. We focus exclusively on plumbing and HVAC, which means we already know your competitive landscape, seasonal patterns, and which strategies actually generate booked jobs, not just clicks."
   },
   {
     question: "How do you ensure the quality of SEO and marketing services?",
