@@ -181,7 +181,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* WHY WEBSITES FAIL — light, redesigned Pattern B */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
