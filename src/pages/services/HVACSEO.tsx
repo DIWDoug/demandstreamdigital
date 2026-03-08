@@ -176,10 +176,6 @@ const HVACSEO = () => {
         <ServiceGroupedFAQ config={hvacSEOConfig.faq} />
       </div>
 
-      <SectionDivider />
-
-      {/* 12. ECOSYSTEM */}
-      <ServiceEcosystemSection config={hvacSEOConfig.ecosystem} />
 
       <div id="contact" className="scroll-mt-32">
         <HVACContactForm />
