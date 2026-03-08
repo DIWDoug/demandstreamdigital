@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, AlertTriangle, Map, Eye, Globe, ShieldOff, BarChart2 } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";

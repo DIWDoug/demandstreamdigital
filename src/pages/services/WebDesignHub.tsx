@@ -1,4 +1,5 @@
 import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone, Palette, X, CheckCircle2, AlertTriangle, TrendingUp, MapPin, Smartphone } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
