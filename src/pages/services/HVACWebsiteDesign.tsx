@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, Layers, Zap, Globe, BarChart2 } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -260,6 +261,11 @@ const HVACWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
+
       {/* FRAMEWORK — dark, Pattern A */}
       <section id="framework" className="py-24 lg:py-32 bg-[#0F1E2D] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -309,6 +315,11 @@ const HVACWebsiteDesign = () => {
 
       {/* EXCLUSIVITY */}
       <HVACPaidAdsExclusivity />
+
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* FOUR CALL TYPES — light, 60/40 numbered layout */}
       <section id="architecture" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
@@ -384,6 +395,11 @@ const HVACWebsiteDesign = () => {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
 
       {/* SEASONAL INTENT — dark, 60/40 numbered layout */}
       <section id="seasonal" className="py-24 lg:py-32 bg-[#0F1E2D] scroll-mt-32">
@@ -462,6 +478,11 @@ const HVACWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
+
       {/* GBP ALIGNMENT — light */}
       <section id="gbp" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -499,6 +520,11 @@ const HVACWebsiteDesign = () => {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={hvacWebDesignQualification} />

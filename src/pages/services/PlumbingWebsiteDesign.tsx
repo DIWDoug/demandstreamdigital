@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, AlertTriangle, Map, Eye, Globe, ShieldOff, BarChart2 } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -275,6 +276,11 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
+
       {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A */}
       <section id="framework" className="py-24 lg:py-32 bg-[#0F1E2D] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -321,6 +327,11 @@ const PlumbingWebsiteDesign = () => {
 
       {/* EXCLUSIVITY */}
       <PlumbingPaidAdsExclusivity />
+
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 numbered layout */}
       <section id="architecture" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
@@ -395,6 +406,11 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 44%, 18%)" variant="curve" flip animated />
+      </div>
+
       {/* GBP ALIGNMENT — dark */}
       <section id="gbp" className="py-24 lg:py-32 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -432,6 +448,11 @@ const PlumbingWebsiteDesign = () => {
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 44%, 18%)" toColor="hsl(210, 53%, 11%)" variant="curve" animated />
+      </div>
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={plumbingWebDesignQualification} />

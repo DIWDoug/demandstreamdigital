@@ -1,4 +1,5 @@
 import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone, Palette, X, CheckCircle2, AlertTriangle, TrendingUp, MapPin, Smartphone } from "lucide-react";
+import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -180,7 +181,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* WHY WEBSITES FAIL — light, redesigned Pattern B */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
@@ -250,7 +253,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
 
       {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A, 6 pillars */}
       <section className="py-24 lg:py-32 bg-[#0F1E2D]">
@@ -299,7 +304,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* EXCLUSIVITY */}
       <WebDesignExclusivity />
@@ -395,8 +402,10 @@ const WebDesignHub = () => {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      {/* Divider - dark→dark: subtle border blend */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="hsl(210, 44%, 18%)" variant="curve" animated />
+      </div>
 
       {/* AI & VOICE — dark */}
       <section className="py-24 lg:py-32 bg-surface-dark">
@@ -439,7 +448,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 44%, 18%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* INDUSTRY BREAKOUT — light, expanded copy */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
@@ -508,7 +519,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={webDesignHubQualification} />
