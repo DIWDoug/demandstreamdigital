@@ -445,14 +445,17 @@ const WebDesignHub = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-cta transition-colors">
                   Plumbing Website Design
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Most plumbing websites make a critical mistake: they blend emergency repair and installation content onto the same page, which means they end up ranking weakly for both. We build around the call types that actually drive plumbing revenue, including water heaters, repiping, drain cleaning, and slab leaks, with separate, intent-aligned pages for every service type.
-
-Each page is structured around where the customer is in their decision. Emergency pages lead with availability and a phone number, because someone with a burst pipe isn't browsing. They're calling. Replacement pages lead with trust, options, and pricing context, because that customer is comparing and needs a reason to choose you.
-
-Every city you serve also gets its own localized page, tied directly to your Google Business Profile. The result is a site that generates calls across every job type, not just the ones you happen to rank for by accident.
-                
-                </p>
+                <div className="space-y-3 mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Most plumbing websites make a critical mistake: they blend emergency repair and installation content onto the same page, which means they end up ranking weakly for both. We build around the call types that actually drive plumbing revenue, including water heaters, repiping, drain cleaning, and slab leaks, with separate, intent-aligned pages for every service type.
+                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Each page is structured around where the customer is in their decision. Emergency pages lead with availability and a phone number, because someone with a burst pipe isn't browsing. They're calling. Replacement pages lead with trust, options, and pricing context, because that customer is comparing and needs a reason to choose you.
+                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Every city you serve also gets its own localized page, tied directly to your Google Business Profile. The result is a site that generates calls across every job type, not just the ones you happen to rank for by accident.
+                  </p>
+                </div>
                 <span className="inline-flex items-center text-sm font-medium text-cta gap-2">
                   See the plumbing approach
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
