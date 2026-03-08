@@ -84,7 +84,7 @@ export const contentMarketingConfig: ServicePageConfig = {
 
   roadmap: {
     eyebrow: "The Structure",
-    headline: "The Market Domination Framework™ for Content Marketing",
+    headline: "The Market Domination Framework for Content Marketing",
     subheadline: "Every content engagement runs through this framework. Foundation first. Then infrastructure. Then expansion. Then ongoing optimization. In that order, every time.",
     phases: [
       {

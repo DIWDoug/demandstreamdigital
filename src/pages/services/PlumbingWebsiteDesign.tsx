@@ -291,7 +291,7 @@ const PlumbingWebsiteDesign = () => {
             <div className="text-center mb-10">
               <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-                The Market Domination Framework™ for Plumbing
+                The Market Domination Framework for Plumbing
               </h2>
               <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
                 Organized around service clusters — not a single Plumbing Services page. Every plumbing website we build starts with how customers search and works backward to structure, content, and conversion flow.
