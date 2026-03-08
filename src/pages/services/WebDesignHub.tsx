@@ -376,7 +376,7 @@ const WebDesignHub = () => {
             {/* Bottom callout */}
             <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 text-center">
               <p className="text-text-secondary text-sm leading-relaxed">
-                Every service category in plumbing and HVAC follows this split. The result is a site with <span className="text-foreground font-semibold">2–4× more rankable pages</span> than a generic contractor build — each targeting a distinct intent with a distinct conversion path.
+                Every service category in plumbing and HVAC follows this split. The result is a site with <span className="text-foreground font-semibold">2–4× more rankable pages</span> than a generic contractor build, each targeting a distinct intent with a distinct conversion path.
               </p>
             </div>
           </div>
