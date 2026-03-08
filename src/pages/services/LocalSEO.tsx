@@ -24,23 +24,6 @@ import PhoneNotRankings from "@/components/services/local-seo/PhoneNotRankings";
 import BuiltForBoth from "@/components/services/local-seo/BuiltForBoth";
 import LocalSEOProblemSection from "@/components/services/local-seo/LocalSEOProblemSection";
 
-const LOCAL_SEO_BIGGER_PICTURE_SERVICES = [
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Reputation Management", href: "/hvac-and-plumbing-reputation-management" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-  { label: "Web Design", href: "/website-design" },
-];
-const LOCAL_SEO_ORBIT_NODES = [
-  { label: "Google Maps / GBP", angle: 0 },
-  { label: "Reputation Mgmt", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Web Design", angle: 300 },
-];
-
 // Flatten FAQ groups for schema
 const getFlatFAQs = () => {
   if (!localSEOConfig.faq?.groups) return [];
