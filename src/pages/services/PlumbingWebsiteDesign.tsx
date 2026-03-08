@@ -449,6 +449,11 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 44%, 18%)" toColor="hsl(210, 53%, 11%)" variant="curve" animated />
+      </div>
+
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={plumbingWebDesignQualification} />
 
