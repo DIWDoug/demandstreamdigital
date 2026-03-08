@@ -11,8 +11,7 @@ import {
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
-  ServiceGroupedFAQ,
-  ServiceEcosystemSection
+  ServiceGroupedFAQ
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
