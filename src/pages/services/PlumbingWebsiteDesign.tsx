@@ -27,20 +27,47 @@ const anchorItems = [
 
 const serviceCluster = [
   {
-    heading: "Emergency Drain & Sewer",
-    items: ["Main line backup / stoppage", "Hydro-jet drain cleaning", "Camera inspection / sewer scope", "Spot repair", "Trenchless sewer replacement"],
+    parent: "Drainage Services",
+    hubs: [
+      {
+        heading: "Drain Cleaning",
+        items: ["Hydro-jet drain cleaning", "Main line cleaning", "Camera inspection / sewer scope", "Trenchless sewer replacement"],
+      },
+    ],
   },
   {
-    heading: "Water Heater",
-    items: ["Water heater repair", "Water heater replacement", "Tankless installation", "Expansion tank", "Anode rod service"],
+    parent: "Water Heater Services",
+    hubs: [
+      {
+        heading: "Water Heater Repair",
+        items: ["No hot water", "Leaking water heater", "Pilot light / ignition issues"],
+      },
+      {
+        heading: "Water Heater Replacement",
+        items: ["Tank water heater replacement", "Tankless installation", "Expansion tank installation", "Anode rod service"],
+      },
+    ],
   },
   {
-    heading: "Repiping & Water Quality",
-    items: ["Whole-house repipe", "PRV replacement", "Slab leak detection & repair", "Backflow testing", "Water filtration installation"],
-  },
-  {
-    heading: "Fixtures & Plumbing Repairs",
-    items: ["Toilet repair & replacement", "Faucet & fixture repair", "Hose bibb replacement", "Garbage disposal", "Under-sink leak repair"],
+    parent: "Plumbing Services",
+    hubs: [
+      {
+        heading: "Emergency Plumbing",
+        items: ["Main line backup / stoppage", "Slab leak detection", "Burst pipe / water shutoff", "Spot repair", "Under-sink leak repair"],
+      },
+      {
+        heading: "Fixture Repair",
+        items: ["Toilet repair", "Faucet repair", "Hose bibb repair", "Garbage disposal repair"],
+      },
+      {
+        heading: "Fixture Replacement",
+        items: ["Toilet replacement", "Faucet & fixture replacement", "Hose bibb replacement", "Garbage disposal replacement"],
+      },
+      {
+        heading: "Repiping & Water Quality",
+        items: ["Whole-house repipe", "PRV replacement", "Backflow testing", "Water filtration installation"],
+      },
+    ],
   },
 ];
 
