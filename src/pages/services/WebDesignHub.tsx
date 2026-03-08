@@ -190,7 +190,7 @@ const WebDesignHub = () => {
                 Why Most 'Pretty' Contractor Websites Don't Perform
               </h2>
               <p className="text-slate-600 leading-relaxed max-w-3xl">
-                Design is not the problem. Structure is. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start — not bolted on later.
+                Design is not the problem. Structure is. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start, not bolted on later.
               </p>
             </div>
 
