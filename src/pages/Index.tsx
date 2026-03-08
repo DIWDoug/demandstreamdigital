@@ -157,6 +157,9 @@ const Index = () => {
         <Testimonials />
       </div>
       
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(210, 53%, 11%)" variant="curve" flip />
+      </div>
       <FAQ />
       
       <ContactForm />
