@@ -23,7 +23,7 @@ const leftFAQs = [
 const rightFAQs = [
   {
     q: "What metrics do you actually report on?",
-    a: "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to what shows up on your dispatch board — separated by repair, replacement, and commercial campaigns.",
+    a: "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to what shows up on your dispatch board, separated by repair, replacement, and commercial campaigns.",
   },
   {
     q: "We have run paid ads before and they did not produce results. Why would this be different?",
