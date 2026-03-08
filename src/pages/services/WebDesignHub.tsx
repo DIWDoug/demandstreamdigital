@@ -439,7 +439,7 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="h-16 w-full pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(15,30,45,0.0) 0%, rgba(226,232,240,0.18) 50%, rgba(248,249,250,0.0) 100%)" }} />
 
       {/* INDUSTRY BREAKOUT — light, expanded copy */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
