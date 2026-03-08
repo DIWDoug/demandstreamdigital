@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What does a full-service marketing partnership look like for plumbing and HVAC companies?",
-    answer: "We handle SEO, paid advertising, content marketing, email marketing, and reporting — all coordinated as one unified growth strategy. You focus on running your business while we drive calls, leads, and booked jobs through your marketing channels."
+    answer: "We handle SEO, paid advertising, content marketing, email marketing, and reporting, all coordinated as one unified growth strategy. You focus on running your business while we drive calls, leads, and booked jobs through your marketing channels."
   },
   {
     question: "Why do plumbing and HVAC companies need specialized marketing?",
