@@ -196,11 +196,11 @@ const WebDesignHub = () => {
 
             {/* 2-column problem cards */}
             <div className="grid sm:grid-cols-2 gap-5 mb-10">
-              {failures.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-cta/30 hover:shadow-md transition-all duration-300 group"
-                >
+              {failures.map((item, i) =>
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-7 border border-slate-200 hover:border-cta/30 hover:shadow-md transition-all duration-300 group">
+                
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-cta/8 border border-cta/15 flex items-center justify-center shrink-0">
                       <item.icon className="w-5 h-5 text-cta" strokeWidth={1.5} />
@@ -218,7 +218,7 @@ const WebDesignHub = () => {
                     {item.detail}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
 
             {/* Bottom callout bar */}
@@ -254,7 +254,7 @@ const WebDesignHub = () => {
             <div className="text-center mb-10">
               <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-                The Market Domination Framework™
+                The Market Domination Framework
               </h2>
               <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
                 A repeatable system for building plumbing and HVAC websites that rank and convert. Structure first. Then design. Then content. Then technical SEO foundation. In that order, every time.
@@ -271,8 +271,8 @@ const WebDesignHub = () => {
 
             {/* 3-column × 2-row grid for 6 pillars */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-              {pillars.map((p, i) => (
-                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6 flex gap-4 items-start hover:border-accent-blue/30 transition-colors">
+              {pillars.map((p, i) =>
+              <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6 flex gap-4 items-start hover:border-accent-blue/30 transition-colors">
                   <div className="shrink-0 w-11 h-11 rounded-lg bg-accent-blue/15 flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-accent-blue" strokeWidth={1.5} />
                   </div>
@@ -281,7 +281,7 @@ const WebDesignHub = () => {
                     <p className="text-text-secondary text-sm leading-relaxed">{p.body}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
 
             {/* Footer note */}
@@ -323,9 +323,9 @@ const WebDesignHub = () => {
                   <p className="text-xs font-semibold tracking-widest uppercase text-cta">Emergency Repair</p>
                 </div>
                 <ul className="space-y-2 mb-5">
-                  {['"water heater not working"', '"AC not cooling"', '"drain backup"'].map((q, j) => (
-                    <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
-                  ))}
+                  {['"water heater not working"', '"AC not cooling"', '"drain backup"'].map((q, j) =>
+                  <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
+                  )}
                 </ul>
                 <div className="mt-auto pt-4 border-t border-white/10">
                   <p className="text-text-secondary text-sm leading-relaxed">
@@ -360,9 +360,9 @@ const WebDesignHub = () => {
                   <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue">Install / Replacement</p>
                 </div>
                 <ul className="space-y-2 mb-5">
-                  {['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'].map((q, j) => (
-                    <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
-                  ))}
+                  {['"water heater replacement cost"', '"new AC unit"', '"whole house repipe"'].map((q, j) =>
+                  <li key={j} className="text-text-muted text-sm italic bg-white/5 rounded-lg px-3 py-2">{q}</li>
+                  )}
                 </ul>
                 <div className="mt-auto pt-4 border-t border-white/10">
                   <p className="text-text-secondary text-sm leading-relaxed">
