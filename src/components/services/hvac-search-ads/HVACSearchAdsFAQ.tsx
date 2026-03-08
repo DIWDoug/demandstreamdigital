@@ -27,7 +27,7 @@ const rightFAQs = [
   },
   {
     q: "We have tried Google Ads before and it did not work. Why would this be different?",
-    a: "Most failed campaigns share the same problems — broad match keywords, no service segmentation, budgets that do not adjust for season, and reporting that stops at the lead instead of the booked call. We build the campaign structure from scratch around how your market actually works.",
+    a: "Most failed campaigns share the same problems: broad match keywords, no service segmentation, budgets that do not adjust for season, and reporting that stops at the lead instead of the booked call. We build the campaign structure from scratch around how your market actually works.",
   },
   {
     q: "Do you work with companies already running ads with another agency?",
