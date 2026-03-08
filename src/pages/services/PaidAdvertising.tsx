@@ -110,38 +110,33 @@ const PaidAdvertising = () => {
       {/* 06. BUILT FOR BOTH */}
       <PaidAdsBuiltForBoth />
 
+      {/* 07. EXCLUSIVITY — right after Built for Both */}
+      <PaidAdsExclusivity />
+
       <SectionDivider />
 
-      {/* 07. FRAMEWORK / PROCESS */}
+      {/* 08. FRAMEWORK / PROCESS */}
       <PaidAdsFramework />
 
       <SectionDivider />
 
-      {/* 08. METRICS */}
+      {/* 09. METRICS */}
       <PaidAdsMetrics />
 
       <SectionDivider />
 
-      {/* 09. FIT */}
-      <PaidAdsFit />
-
-      {/* 10. EXCLUSIVITY */}
-      <PaidAdsExclusivity />
-
-      {/* 11. FAQ */}
-      <PaidAdsFAQ />
-
-      <SectionDivider />
-
-      {/* 12. SEO INTEGRATION */}
+      {/* 10. SEO INTEGRATION */}
       <PaidAdsSEOIntegration />
 
       <SectionDivider />
 
-      {/* 13. BIGGER PICTURE */}
-      <PaidAdsBiggerPicture />
+      {/* 11. FIT */}
+      <PaidAdsFit />
 
-      {/* 12. LEAD FORM */}
+      {/* 12. FAQ */}
+      <PaidAdsFAQ />
+
+      {/* 13. LEAD FORM */}
       <PaidAdsContactForm />
 
       {/* Related Tools */}
