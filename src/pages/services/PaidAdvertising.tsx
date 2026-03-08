@@ -11,6 +11,11 @@ import PaidAdsPPCFails from "@/components/services/paid-advertising/PaidAdsPPCFa
 import PaidAdsChannels from "@/components/services/paid-advertising/PaidAdsChannels";
 import PaidAdsFramework from "@/components/services/paid-advertising/PaidAdsFramework";
 import PaidAdsMetrics from "@/components/services/paid-advertising/PaidAdsMetrics";
+import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
+import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
+import PaidAdsSEOIntegration from "@/components/services/paid-advertising/PaidAdsSEOIntegration";
+import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
+import PaidAdsExclusivity from "@/components/services/paid-advertising/PaidAdsExclusivity";
 import PaidAdsFAQ from "@/components/services/paid-advertising/PaidAdsFAQ";
 
 const SectionDivider = () => (
