@@ -47,7 +47,7 @@ const DEFAULT_STEPS: ContactStep[] = [
   },
   {
     title: "Delight & Retain",
-    content: "We go beyond delivery — helping you exceed growth targets, build a stronger local reputation, and keep your schedule booked year-round."
+    content: "We go beyond delivery. Helping you exceed growth targets, build a stronger local reputation, and keep your schedule booked year-round."
   }
 ];
 

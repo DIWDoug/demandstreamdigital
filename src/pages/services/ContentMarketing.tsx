@@ -125,7 +125,7 @@ const ContentMarketing = () => {
               Built for Both. Engineered for Each.
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and different keyword structures. Every content strategy we build treats them separately — even when we serve both for the same operator.
+              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and different keyword structures. Every content strategy we build treats them separately, even when we serve both for the same operator.
             </p>
           </div>
 

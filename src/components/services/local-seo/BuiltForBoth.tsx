@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const plumbingPoints = [
   "Emergency and high-intent keyword prioritization: 'emergency plumber near me,' 'hydro jetting [city],' 'water heater replacement [city]'",
-  "Service area page structure aligned to actual dispatch coverage — not just major city names",
+  "Service area page structure aligned to actual dispatch coverage, not just major city names",
   "Review velocity as a primary trust signal for emergency callers comparing options",
   "GBP category and service configuration optimized for drain, water heater, slab leak, and repiping revenue",
   "Multi-truck radius scaling: as your coverage expands, the local SEO structure scales with it"
@@ -31,7 +31,7 @@ const BuiltForBoth = () => {
               Built for Both. Engineered for Each.
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and different keyword structures. Every strategy we build treats them separately — even when we serve both for the same operator.
+              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and different keyword structures. Every strategy we build treats them separately, even when we serve both for the same operator.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const BuiltForBoth = () => {
                 <Link to="/hvac-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-amber-500 transition-colors">HVAC Local SEO</Link>
               </div>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                HVAC demand is seasonal. Peak season in a cooling-heavy market creates a fundamentally different call flow than shoulder season. HVAC local SEO has to account for both — ranking for emergency no-cool calls in summer and positioning for planned changeouts and maintenance agreements year-round.
+                HVAC demand is seasonal. Peak season in a cooling-heavy market creates a fundamentally different call flow than shoulder season. HVAC local SEO has to account for both: ranking for emergency no-cool calls in summer and positioning for planned changeouts and maintenance agreements year-round.
               </p>
               <ul className="space-y-3 mb-6">
                 {hvacPoints.map((point, i) => (

@@ -5,15 +5,15 @@ const deliverables = [
   },
   {
     label: "Mobile-First Build",
-    body: "Emergency searches happen on phones. We build for mobile conversion first, then desktop — not the other way around."
+    body: "Emergency searches happen on phones. We build for mobile conversion first, then desktop. Not the other way around."
   },
   {
     label: "Location & Service Area Pages",
-    body: "Each city and service combination gets its own optimized page — the architecture local search requires to rank."
+    body: "Each city and service combination gets its own optimized page, the structure local search requires to rank."
   },
   {
     label: "Core Web Vitals Optimized",
-    body: "Speed, interactivity, and visual stability scores that meet Google's thresholds — built in, not patched on."
+    body: "Speed, interactivity, and visual stability scores that meet Google's thresholds, built in from the start."
   },
   {
     label: "Call Tracking Integration",
@@ -21,7 +21,7 @@ const deliverables = [
   },
   {
     label: "Lead Capture Architecture",
-    body: "Forms, chat widgets, and CTAs positioned around the moments homeowners make booking decisions — not decorative elements."
+    body: "Forms, chat widgets, and CTAs positioned around the moments homeowners make booking decisions. Not decorative elements."
   },
   {
     label: "CRM & Dispatch Integration",
@@ -29,7 +29,7 @@ const deliverables = [
   },
   {
     label: "SEO Foundation Built In",
-    body: "Schema markup, structured data, canonical tags, sitemap, and on-page optimization delivered at launch — not added later."
+    body: "Schema markup, structured data, canonical tags, sitemap, and on-page optimization delivered at launch. Not added later."
   },
 ];
 

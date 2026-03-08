@@ -13,7 +13,7 @@ const rows = [
   },
   {
     label: "Cost Per Booked Call by Campaign",
-    body: "True acquisition cost calculated at the campaign, ad group, and keyword level — including seasonal variance.",
+    body: "True acquisition cost calculated at the campaign, ad group, and keyword level, including seasonal variance.",
   },
   {
     label: "Seasonal Revenue Reporting",

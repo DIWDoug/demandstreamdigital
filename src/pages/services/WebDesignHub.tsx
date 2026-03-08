@@ -190,7 +190,7 @@ const WebDesignHub = () => {
                 Why Most 'Pretty' Contractor Websites Don't Perform
               </h2>
               <p className="text-slate-600 leading-relaxed max-w-3xl">
-                Design is not the problem. Structure is. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start — not bolted on later.
+                Design is not the problem. Structure is. Plumbing and HVAC websites need intent-specific pages, GBP alignment, and a conversion path built in from the start, not bolted on later.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ const WebDesignHub = () => {
             <div className="bg-slate-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-6">
               <p className="text-white text-base leading-relaxed max-w-xl">
                 <span className="font-semibold text-white">Every one of these patterns is fixable.</span>{" "}
-                <span className="text-slate-300">The sites we build are structured to rank, convert, and scale from launch — not patched later.</span>
+                <span className="text-slate-300">The sites we build are structured to rank, convert, and scale from launch. Not patched later.</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <Link
@@ -264,7 +264,7 @@ const WebDesignHub = () => {
             {/* Full-width stat/callout bar */}
             <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 mb-10 text-center">
               <p className="text-foreground text-base leading-relaxed">
-                Most contractor websites are built in a day and forgotten. Ours are built as a system —{" "}
+                Most contractor websites are built in a day and forgotten. Ours are built as a system.{" "}
                 <span className="text-accent-blue font-semibold">every page designed to rank, every layout designed to convert, and every decision tied to a booked call.</span>
               </p>
             </div>
@@ -376,7 +376,7 @@ const WebDesignHub = () => {
             {/* Bottom callout */}
             <div className="bg-[#162233] border border-white/10 rounded-xl px-8 py-5 text-center">
               <p className="text-text-secondary text-sm leading-relaxed">
-                Every service category in plumbing and HVAC follows this split. The result is a site with <span className="text-foreground font-semibold">2–4× more rankable pages</span> than a generic contractor build — each targeting a distinct intent with a distinct conversion path.
+                Every service category in plumbing and HVAC follows this split. The result is a site with <span className="text-foreground font-semibold">2–4× more rankable pages</span> than a generic contractor build, each targeting a distinct intent with a distinct conversion path.
               </p>
             </div>
           </div>
@@ -402,7 +402,7 @@ const WebDesignHub = () => {
               </div>
               <div className="space-y-4">
                 {[
-                { label: "Answer Blocks", body: "Built into all service pages — structured for featured snippets and AI results" },
+                { label: "Answer Blocks", body: "Built into all service pages, structured for featured snippets and AI results" },
                 { label: "FAQ Structure", body: "Written for voice and conversational query formats, not industry jargon" },
                 { label: "Schema by Default", body: "LocalBusiness, Service, and FAQPage schema implemented at build" },
                 { label: "Heading Hierarchy", body: "Signals topic authority to crawlers and AI systems simultaneously" }].

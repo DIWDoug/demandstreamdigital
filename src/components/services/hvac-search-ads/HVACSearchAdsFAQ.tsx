@@ -8,11 +8,11 @@ const leftFAQs = [
   },
   {
     q: "How long before we see booked calls from search ads?",
-    a: "Emergency campaigns typically produce calls within the first two weeks of launch. Replacement and install campaigns take longer to optimize — expect 60 to 90 days before cost-per-booked-call stabilizes on higher-ticket service types.",
+    a: "Emergency campaigns typically produce calls within the first two weeks of launch. Replacement and install campaigns take longer to optimize. Expect 60 to 90 days before cost-per-booked-call stabilizes on higher-ticket service types.",
   },
   {
     q: "Do you require long-term contracts?",
-    a: "We require a minimum 6-month engagement. Search advertising compounds over time as campaign data builds. Agencies that let you go month-to-month have no incentive to build campaigns that improve — they just need to hold you for another 30 days.",
+    a: "We require a minimum 6-month engagement. Search advertising compounds over time as campaign data builds. Agencies that let you go month-to-month have no incentive to build campaigns that improve. They just need to hold you for another 30 days.",
   },
   {
     q: "How do you handle peak season budget adjustments?",
@@ -27,7 +27,7 @@ const rightFAQs = [
   },
   {
     q: "We have tried Google Ads before and it did not work. Why would this be different?",
-    a: "Most failed campaigns share the same problems — broad match keywords, no service segmentation, budgets that do not adjust for season, and reporting that stops at the lead instead of the booked call. We build the campaign structure from scratch around how your market actually works.",
+    a: "Most failed campaigns share the same problems: broad match keywords, no service segmentation, budgets that do not adjust for season, and reporting that stops at the lead instead of the booked call. We build the campaign structure from scratch around how your market actually works.",
   },
   {
     q: "Do you work with companies already running ads with another agency?",

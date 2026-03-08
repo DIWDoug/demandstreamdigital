@@ -142,8 +142,8 @@ const EmailMarketing = () => {
       <ServiceBiggerPicture
         heading="Email Marketing Is One Piece of the"
         headingHighlight="Connected Growth System"
-        body1="Email reactivates the revenue already in your customer list. But it performs best when connected to SEO, paid ads, and GBP — not as a standalone send."
-        body2="Your seasonal email campaigns reinforce paid ad messaging and reduce cost per booked call. Review request sequences feed GBP velocity and organic rankings. Maintenance plan campaigns keep customers from searching for competitors. When email works inside the broader system, every channel gets more efficient — and customer lifetime value compounds."
+        body1="Email reactivates the revenue already in your customer list. But it performs best when connected to SEO, paid ads, and GBP, not as a standalone send."
+        body2="Your seasonal email campaigns reinforce paid ad messaging and reduce cost per booked call. Review request sequences feed GBP velocity and organic rankings. Maintenance plan campaigns keep customers from searching for competitors. When email works inside the broader system, every channel gets more efficient and customer lifetime value compounds."
         centerLabel="Email Marketing"
         centerSublabel="Reactivation & lifecycle revenue."
         services={EMAIL_BIGGER_PICTURE_SERVICES}

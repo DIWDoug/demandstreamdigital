@@ -11,7 +11,7 @@ import StreamTexture from "@/components/StreamTexture";
 export const homepageFAQs = [
   {
     question: "How much does plumbing marketing cost?",
-    answer: "Most plumbing and HVAC companies invest between $2,000 and $8,000 per month in digital marketing, depending on their market size, competition level, and growth goals. That range typically covers a combination of local SEO, Google Ads, Google Maps optimization, and reputation management. We scope every engagement based on your specific service area and competitive landscape — not a one-size-fits-all package. During our strategy call, we'll walk through exactly what's included, what results to expect, and how we measure ROI so you know where every dollar goes before we start."
+    answer: "Most plumbing and HVAC companies invest between $2,000 and $8,000 per month in digital marketing, depending on their market size, competition level, and growth goals. That range typically covers a combination of local SEO, Google Ads, Google Maps optimization, and reputation management. We scope every engagement based on your specific service area and competitive landscape, not a one-size-fits-all package. During our strategy call, we'll walk through exactly what's included, what results to expect, and how we measure ROI so you know where every dollar goes before we start."
   },
   {
     question: "Do you require long-term contracts?",
@@ -35,7 +35,7 @@ export const homepageFAQs = [
   },
   {
     question: "How long does HVAC SEO take?",
-    answer: "HVAC SEO is a longer-term investment that typically takes 3 to 6 months to show significant traction, though some improvements — like Google Business Profile optimization and on-page fixes — can produce gains within the first 30 to 60 days. The timeline depends on your market's competitiveness, the current state of your website, and how established your online presence is. Paid advertising (Google Ads and Local Services Ads) can start generating calls within the first few weeks while SEO builds momentum. We set realistic expectations during our strategy call so you know exactly what to expect at each stage of the engagement."
+    answer: "HVAC SEO is a longer-term investment that typically takes 3 to 6 months to show significant traction, though some improvements, like Google Business Profile optimization and on-page fixes, can produce gains within the first 30 to 60 days. The timeline depends on your market's competitiveness, the current state of your website, and how established your online presence is. Paid advertising (Google Ads and Local Services Ads) can start generating calls within the first few weeks while SEO builds momentum. We set realistic expectations during our strategy call so you know exactly what to expect at each stage of the engagement."
   },
   {
     question: "What size companies do you typically work with?",
@@ -43,7 +43,7 @@ export const homepageFAQs = [
   },
   {
     question: "Do you offer exclusive service areas?",
-    answer: "Yes — market exclusivity is a core part of how we operate. We limit the number of clients we take on in each geographic area to ensure zero conflict of interest. When you partner with DemandStream Digital, we're fully invested in helping you dominate your local market, not splitting our attention between you and a competitor across town. This exclusivity model means your SEO strategy, ad targeting, and content development are all built to give you a competitive edge — not shared with another company fighting for the same keywords and customers. Once a market is taken, it's taken."
+    answer: "Yes. Market exclusivity is a core part of how we operate. We limit the number of clients we take on in each geographic area to make sure there's zero conflict of interest. When you partner with DemandStream Digital, we're fully invested in helping you own your local market, not splitting our attention between you and a competitor across town. Your SEO strategy, ad targeting, and content development are all built to give you a competitive edge, not shared with another company fighting for the same keywords and customers. Once a market is taken, it's taken."
   },
   {
     question: "What happens if I want to pause or cancel?",

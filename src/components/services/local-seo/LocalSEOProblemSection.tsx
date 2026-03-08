@@ -6,14 +6,14 @@ const painPoints = [
   {
     icon: MapPin,
     title: "Proximity Changes Everything",
-    body: "A plumbing company ranking #1 from three miles away may not appear at all from across the service area. Local rankings shift based on where the searcher is standing. A strategy built around one ZIP code is not a strategy — it's a starting point.",
+    body: "A plumbing company ranking #1 from three miles away may not appear at all from across the service area. Local rankings shift based on where the searcher is standing. A strategy built around one ZIP code is not a strategy. It's a starting point.",
     color: "text-cta",
     bg: "bg-cta/10",
   },
   {
     icon: Search,
     title: "Emergency Intent Is Different",
-    body: "A homeowner searching 'no-heat repair' at 6am on a cold morning is not comparison shopping. That call goes to whoever shows up in the Map Pack right now. HVAC and plumbing local SEO have to prioritize emergency and high-intent searches first — not just high-volume keywords.",
+    body: "A homeowner searching 'no-heat repair' at 6am on a cold morning is not comparison shopping. That call goes to whoever shows up in the Map Pack right now. HVAC and plumbing local SEO have to prioritize emergency and high-intent searches first, not just high-volume keywords.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
@@ -61,7 +61,7 @@ const LocalSEOProblemSection = () => {
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
                 <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                  When a homeowner's AC goes out in July, they don't browse. They search and call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency — not applied from a template that works the same way for a dentist or a dog groomer.
+                  When a homeowner's AC goes out in July, they don't browse. They search and call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency, not applied from a template that works the same way for a dentist or a dog groomer.
                 </p>
               </div>
               <p className="text-slate-500 text-sm mb-8">

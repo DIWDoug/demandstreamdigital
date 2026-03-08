@@ -14,7 +14,7 @@ const services: Service[] = [
   {
     icon: Layout,
     title: "Website Design",
-    description: "Custom high-performance websites built for the trades. Mobile-first, fast-loading, and architected to convert visitors into booked calls — with location and service area pages baked in from day one.",
+    description: "Custom high-performance websites built for the trades. Mobile-first, fast-loading, and architected to convert visitors into booked calls, with location and service area pages baked in from day one.",
     href: "/website-design",
   },
   {
@@ -50,13 +50,13 @@ const services: Service[] = [
   {
     icon: Cpu,
     title: "AIO & GEO",
-    description: "Optimize your content for AI-powered search engines and generative answer platforms. As Google SGE, ChatGPT, and Perplexity reshape how homeowners find contractors, we position your brand to appear in AI-generated answers — not just traditional search results.",
+    description: "Optimize your content for AI-powered search engines and generative answer platforms. As Google SGE, ChatGPT, and Perplexity reshape how homeowners find contractors, we position your brand to appear in AI-generated answers, not just traditional search results.",
     href: "/ai-automation",
   },
   {
     icon: Bot,
     title: "AI Automation",
-    description: "Put your follow-up on autopilot. AI-powered workflows that respond to missed calls, re-engage cold leads, and nurture estimates — so no opportunity falls through the cracks.",
+    description: "Put your follow-up on autopilot. AI-powered workflows that respond to missed calls, re-engage cold leads, and nurture estimates so no opportunity falls through the cracks.",
     href: "/ai-automation",
   },
 ];

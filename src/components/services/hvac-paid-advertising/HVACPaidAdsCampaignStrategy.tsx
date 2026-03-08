@@ -41,7 +41,7 @@ const HVACPaidAdsCampaignStrategy = () => {
                 Install and Replacement Campaigns
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
-                System replacement has a longer decision cycle, higher ticket value, and financing sensitivity. A homeowner researching replacement costs is not calling immediately — they need education, proof, and a reason to choose you.
+                System replacement has a longer decision cycle, higher ticket value, and financing sensitivity. A homeowner researching replacement costs is not calling immediately. They need education, proof, and a reason to choose you.
               </p>
               <ul className="space-y-3">
                 {[

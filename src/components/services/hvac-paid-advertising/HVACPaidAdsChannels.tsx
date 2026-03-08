@@ -24,7 +24,7 @@ const HVACPaidAdsChannels = () => {
               </div>
             </div>
             <p className="text-gray-600 leading-relaxed mb-5 max-w-3xl">
-              Search advertising captures homeowners actively searching for HVAC service right now. No-cool calls in July. No-heat calls in January. System replacement inquiries in September. These are the calls that fill the dispatch board — and search is where they start.
+              Search advertising captures homeowners actively searching for HVAC service right now. No-cool calls in July. No-heat calls in January. System replacement inquiries in September. These are the calls that fill the dispatch board, and search is where they start.
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
@@ -68,7 +68,7 @@ const HVACPaidAdsChannels = () => {
               <ul className="space-y-2.5 flex-1 mb-6">
                 {[
                   "Google Guaranteed placement above all other results",
-                  "Pay-per-lead structure — you pay for HVAC leads, not clicks",
+                  "Pay-per-lead structure: you pay for HVAC leads, not clicks",
                   "Seasonal demand alignment so ad spend matches your capacity",
                   "Repair vs replacement segmentation for cleaner lead classification",
                   "Dispute management and seasonal budget pacing"
@@ -168,7 +168,7 @@ const HVACPaidAdsChannels = () => {
             <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Programmatic Advertising</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                Programmatic expands reach beyond search. It reinforces visibility across the web and on Connected TV before and during peak demand windows. It supports emergency search capture — it does not replace it.
+                Programmatic expands reach beyond search. It reinforces visibility across the web and on Connected TV before and during peak demand windows. It supports emergency search capture. It does not replace it.
               </p>
               <ul className="space-y-2.5 flex-1 mb-6">
                 {[

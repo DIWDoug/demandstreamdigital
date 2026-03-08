@@ -4,7 +4,7 @@ const points = [
   {
     icon: Phone,
     title: "Call Tracking Is Mandatory",
-    body: "Every campaign we build includes call tracking so we know which searches, pages, and channels are producing booked calls — not just calls."
+    body: "Every campaign we build includes call tracking so we know which searches, pages, and channels are producing booked calls, not just calls."
   },
   {
     icon: BarChart3,

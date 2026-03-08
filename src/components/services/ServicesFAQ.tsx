@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "What does a full-service marketing partnership look like for plumbing and HVAC companies?",
-    answer: "We handle SEO, paid advertising, content marketing, email marketing, and reporting — all coordinated as one unified growth strategy. You focus on running your business while we drive calls, leads, and booked jobs through your marketing channels."
+    answer: "We handle SEO, paid advertising, content marketing, email marketing, and reporting, all coordinated as one unified growth strategy. You focus on running your business while we drive calls, leads, and booked jobs through your marketing channels."
   },
   {
     question: "Why do plumbing and HVAC companies need specialized marketing?",
-    answer: "Trade businesses compete differently than other industries. You need local visibility, Google Maps rankings, and lead generation that converts to booked service calls — not vanity metrics. Our strategies are built specifically around dispatch capacity, seasonality, and service area coverage."
+    answer: "Trade businesses compete differently than other industries. You need local visibility, Google Maps rankings, and lead generation that converts to booked service calls, not vanity metrics. Our strategies are built specifically around dispatch capacity, seasonality, and service area coverage."
   },
   {
     question: "How does your marketing approach help my business scale?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "What's the difference between working with you versus a general marketing agency?",
-    answer: "General agencies spread thin across dozens of industries. We focus exclusively on plumbing and HVAC, which means we already know your competitive landscape, seasonal patterns, and which strategies actually generate booked jobs — not just clicks."
+    answer: "General agencies spread thin across dozens of industries. We focus exclusively on plumbing and HVAC, which means we already know your competitive landscape, seasonal patterns, and which strategies actually generate booked jobs, not just clicks."
   },
   {
     question: "How do you ensure the quality of SEO and marketing services?",
@@ -38,11 +38,11 @@ const faqs = [
   },
   {
     question: "Can I rebrand reports and dashboards for my own records?",
-    answer: "Yes. All deliverables — reports, strategy documents, audits, dashboards — are designed to be clear and actionable. We structure everything for easy review so you always know exactly what's happening with your marketing."
+    answer: "Yes. All deliverables, including reports, strategy documents, audits, and dashboards, are designed to be clear and actionable. We structure everything for easy review so you always know exactly what's happening with your marketing."
   },
   {
     question: "Do you require long-term contracts?",
-    answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, sustainable SEO requires consistency — most meaningful results come within 3-6 months of focused effort."
+    answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, sustainable SEO requires consistency. Most meaningful results come within 3 to 6 months of focused effort."
   },
   {
     question: "Is it worth investing in marketing when I already get referrals?",

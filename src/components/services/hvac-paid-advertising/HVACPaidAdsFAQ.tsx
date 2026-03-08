@@ -12,7 +12,7 @@ const leftFAQs = [
   },
   {
     q: "Do you require long-term contracts?",
-    a: "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves — they just need to hold the account for another 30 days.",
+    a: "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves. They just need to hold the account for another 30 days.",
   },
   {
     q: "How do you handle budget shifts between heating and cooling seasons?",
@@ -23,15 +23,15 @@ const leftFAQs = [
 const rightFAQs = [
   {
     q: "What metrics do you actually report on?",
-    a: "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to what shows up on your dispatch board — separated by repair, replacement, and commercial campaigns.",
+    a: "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to what shows up on your dispatch board, separated by repair, replacement, and commercial campaigns.",
   },
   {
     q: "We have run paid ads before and they did not produce results. Why would this be different?",
-    a: "Most failed HVAC campaigns share the same structural problems — no service segmentation, flat budgets that ignore seasonality, broad match keywords capturing low-intent traffic, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market and season actually work.",
+    a: "Most failed HVAC campaigns share the same structural problems: no service segmentation, flat budgets that ignore seasonality, broad match keywords capturing low-intent traffic, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market and season actually work.",
   },
   {
     q: "Can you manage campaigns we already have running?",
-    a: "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch, and reporting that cannot connect spend to revenue. We document everything and show you exactly what changes before we touch the budget.",
+    a: "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues: keyword waste, missing negative lists, no call tracking tied to dispatch, and reporting that cannot connect spend to revenue. We document everything and show you exactly what changes before we touch the budget.",
   },
   {
     q: "What size HVAC company do you typically work with?",
