@@ -252,7 +252,7 @@ const WebDesignHub = () => {
           <div className="max-w-6xl mx-auto">
             {/* Label + centered headline */}
             <div className="text-center mb-10">
-              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
+              <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">​part of the framework    </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
                 The Market Domination Framework
               </h2>
@@ -446,7 +446,12 @@ const WebDesignHub = () => {
                   Plumbing Website Design
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Built around the call types that drive plumbing revenue: water heaters, repiping, drain cleaning, and slab leaks. Most plumbing websites blend emergency repair and installation onto the same page — which means they rank weakly for both. We build separate, intent-aligned pages for every service type, each structured for the specific customer journey at that moment. Emergency pages lead with availability and a phone number. Replacement pages lead with trust, options, and pricing context. Every city you serve gets its own localized page tied to your Google Business Profile. The result is a site that generates calls across every job type, not just the ones you happen to rank for by accident.
+                  Most plumbing websites make a critical mistake: they blend emergency repair and installation content onto the same page, which means they end up ranking weakly for both. We build around the call types that actually drive plumbing revenue, including water heaters, repiping, drain cleaning, and slab leaks, with separate, intent-aligned pages for every service type.
+
+Each page is structured around where the customer is in their decision. Emergency pages lead with availability and a phone number, because someone with a burst pipe isn't browsing. They're calling. Replacement pages lead with trust, options, and pricing context, because that customer is comparing and needs a reason to choose you.
+
+Every city you serve also gets its own localized page, tied directly to your Google Business Profile. The result is a site that generates calls across every job type, not just the ones you happen to rank for by accident.
+                
                 </p>
                 <span className="inline-flex items-center text-sm font-medium text-cta gap-2">
                   See the plumbing approach
@@ -454,9 +459,7 @@ const WebDesignHub = () => {
                 </span>
               </Link>
 
-              <Link
-                to="/hvac-website-design"
-                className="group bg-white border border-slate-200 hover:border-accent-blue/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10">
+              <Link to="/hvac-website-design" className="group bg-white border border-slate-200 hover:border-accent-blue/40 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent-blue/10">
                 
                 <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-3">HVAC</p>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-accent-blue transition-colors">
@@ -479,16 +482,13 @@ const WebDesignHub = () => {
       <ServiceFitQualifierSection config={webDesignHubQualification} />
 
       {/* BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Web Design Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Your website is the conversion engine everything else drives traffic to. But it compounds when it's built to support SEO, paid ads, and GBP — not just to look good."
-        body2="An SEO-architected site earns organic rankings faster and holds them longer. Speed and mobile experience reduce paid ad cost per click and improve conversion rates. Schema markup strengthens local pack visibility. Review integration builds trust on every landing page. When your website is built inside the system, every channel performs better from day one."
-        centerLabel="Web Design"
-        centerSublabel="Conversion engine for every channel."
-        services={WEB_DESIGN_BIGGER_PICTURE_SERVICES}
-        orbitNodes={WEB_DESIGN_ORBIT_NODES}
-        ctaHref="/plumbing-and-hvac-web-design" />
+      <ServiceBiggerPicture heading="Web Design Is One Piece of the" headingHighlight="Connected Growth System" body1="Your website is the conversion engine everything else drives traffic to. But it compounds when it's built to support SEO, paid ads, and GBP — not just to look good."
+      body2="An SEO-architected site earns organic rankings faster and holds them longer. Speed and mobile experience reduce paid ad cost per click and improve conversion rates. Schema markup strengthens local pack visibility. Review integration builds trust on every landing page. When your website is built inside the system, every channel performs better from day one."
+      centerLabel="Web Design"
+      centerSublabel="Conversion engine for every channel."
+      services={WEB_DESIGN_BIGGER_PICTURE_SERVICES}
+      orbitNodes={WEB_DESIGN_ORBIT_NODES}
+      ctaHref="/plumbing-and-hvac-web-design" />
       
 
       {/* CONTACT */}
