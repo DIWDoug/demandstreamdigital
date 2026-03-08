@@ -13,7 +13,7 @@ const painPoints = [
   {
     icon: Search,
     title: "Emergency Intent Is Different",
-    body: "A homeowner searching 'no-heat repair' at 6am on a cold morning is not comparison shopping. That call goes to whoever shows up in the Map Pack right now. HVAC and plumbing local SEO have to prioritize emergency and high-intent searches first — not just high-volume keywords.",
+    body: "A homeowner searching 'no-heat repair' at 6am on a cold morning is not comparison shopping. That call goes to whoever shows up in the Map Pack right now. HVAC and plumbing local SEO have to prioritize emergency and high-intent searches first, not just high-volume keywords.",
     color: "text-accent-blue",
     bg: "bg-accent-blue/10",
   },
