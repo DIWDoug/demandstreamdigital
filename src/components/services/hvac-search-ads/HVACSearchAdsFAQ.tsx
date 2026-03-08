@@ -8,7 +8,7 @@ const leftFAQs = [
   },
   {
     q: "How long before we see booked calls from search ads?",
-    a: "Emergency campaigns typically produce calls within the first two weeks of launch. Replacement and install campaigns take longer to optimize — expect 60 to 90 days before cost-per-booked-call stabilizes on higher-ticket service types.",
+    a: "Emergency campaigns typically produce calls within the first two weeks of launch. Replacement and install campaigns take longer to optimize. Expect 60 to 90 days before cost-per-booked-call stabilizes on higher-ticket service types.",
   },
   {
     q: "Do you require long-term contracts?",
