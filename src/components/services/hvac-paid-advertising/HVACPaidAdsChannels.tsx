@@ -24,7 +24,7 @@ const HVACPaidAdsChannels = () => {
               </div>
             </div>
             <p className="text-gray-600 leading-relaxed mb-5 max-w-3xl">
-              Search advertising captures homeowners actively searching for HVAC service right now. No-cool calls in July. No-heat calls in January. System replacement inquiries in September. These are the calls that fill the dispatch board — and search is where they start.
+              Search advertising captures homeowners actively searching for HVAC service right now. No-cool calls in July. No-heat calls in January. System replacement inquiries in September. These are the calls that fill the dispatch board, and search is where they start.
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
