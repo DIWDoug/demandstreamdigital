@@ -68,7 +68,7 @@ const HVACPaidAdsChannels = () => {
               <ul className="space-y-2.5 flex-1 mb-6">
                 {[
                   "Google Guaranteed placement above all other results",
-                  "Pay-per-lead structure — you pay for HVAC leads, not clicks",
+                  "Pay-per-lead structure: you pay for HVAC leads, not clicks",
                   "Seasonal demand alignment so ad spend matches your capacity",
                   "Repair vs replacement segmentation for cleaner lead classification",
                   "Dispute management and seasonal budget pacing"

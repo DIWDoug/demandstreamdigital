@@ -33,7 +33,7 @@ const WhyPartnerWithUs = () => {
     {
       icon: Cpu,
       title: "AI-Resourced Strategy",
-      description: "We use AI tools to increase output, sharpen targeting, and stretch your budget further — all guided by experienced marketers who know the trades.",
+      description: "We use AI tools to increase output, sharpen targeting, and stretch your budget further. All guided by experienced marketers who know the trades.",
       isQualifier: false
     },
     {

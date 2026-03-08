@@ -56,7 +56,7 @@ const services: Service[] = [
   {
     icon: Bot,
     title: "AI Automation",
-    description: "Put your follow-up on autopilot. AI-powered workflows that respond to missed calls, re-engage cold leads, and nurture estimates — so no opportunity falls through the cracks.",
+    description: "Put your follow-up on autopilot. AI-powered workflows that respond to missed calls, re-engage cold leads, and nurture estimates so no opportunity falls through the cracks.",
     href: "/ai-automation",
   },
 ];

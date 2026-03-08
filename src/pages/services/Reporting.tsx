@@ -156,8 +156,8 @@ const Reporting = () => {
       <ServiceBiggerPicture
         heading="Reporting Is One Piece of the"
         headingHighlight="Connected Growth System"
-        body1="Reporting shows what's working across every channel. But its real value comes when it feeds decisions back into SEO, paid ads, and email — closing the loop."
-        body2="Call tracking data improves Google Ads bid strategy. Booking rate data identifies which landing pages need to be fixed. Revenue-per-job data shows which service campaigns are worth scaling. When reporting is connected to every channel, the entire system learns faster — and your cost per booked call drops over time instead of staying flat."
+        body1="Reporting shows what's working across every channel. But its real value comes when it feeds decisions back into SEO, paid ads, and email, closing the loop."
+        body2="Call tracking data improves Google Ads bid strategy. Booking rate data identifies which landing pages need to be fixed. Revenue-per-job data shows which service campaigns are worth scaling. When reporting is connected to every channel, the entire system learns faster and your cost per booked call drops over time instead of staying flat."
         centerLabel="Reporting"
         centerSublabel="Data intelligence across all channels."
         services={REPORTING_BIGGER_PICTURE_SERVICES}

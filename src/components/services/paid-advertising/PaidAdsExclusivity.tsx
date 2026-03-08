@@ -19,7 +19,7 @@ const PaidAdsExclusivity = () => {
             One Plumbing Company. One HVAC Company. Per Market.
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed mb-4 max-w-2xl mx-auto">
-            When you work with DemandStream, your competitors don't. We take one plumbing client and one HVAC client per service area. That's the model. It keeps our incentives aligned with yours and guarantees the strategy we build is designed to put you ahead — not split between you and the shop down the street.
+            When you work with DemandStream, your competitors don't. We take one plumbing client and one HVAC client per service area. That's the model. It keeps our incentives aligned with yours and makes sure the strategy we build is designed to put you ahead, not split between you and the shop down the street.
           </p>
           <p className="text-muted-foreground text-base mb-10">
             Markets fill. If yours is still open, it's worth confirming now before a competitor does.

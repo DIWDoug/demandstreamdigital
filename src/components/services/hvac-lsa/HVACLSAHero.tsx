@@ -64,7 +64,7 @@ const HVACLSAHero = () => {
               ))}
             </ul>
             <p className="text-sm text-text-secondary max-w-xl animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.28s" }}>
-              We manage HVAC LSA to increase booking rate, control capacity, and improve cost per booked job — tied to your seasonal reality and your dispatch board. HVAC companies only.
+              We manage HVAC LSA to increase booking rate, control capacity, and improve cost per booked job, tied to your seasonal reality and your dispatch board. HVAC companies only.
             </p>
           </div>
 

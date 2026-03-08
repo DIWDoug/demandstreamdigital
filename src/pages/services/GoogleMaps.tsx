@@ -154,8 +154,8 @@ const GoogleMaps = () => {
       <ServiceBiggerPicture
         heading="Google Maps Is One Piece of the"
         headingHighlight="Connected Growth System"
-        body1="Your GBP drives pack visibility and direct calls. But it performs best when it's connected to organic SEO, review velocity, and paid advertising — not running in isolation."
-        body2="Strong GBP signals reinforce your local organic rankings. High review velocity improves paid ad quality scores and conversion rates. Your SEO content supports the topical relevance that Maps uses to rank. Every channel feeds the next — and when they work together, call volume compounds faster than any single channel can produce alone."
+        body1="Your GBP drives pack visibility and direct calls. But it performs best when it's connected to organic SEO, review velocity, and paid advertising, not running in isolation."
+        body2="Strong GBP signals reinforce your local organic rankings. High review velocity improves paid ad quality scores and conversion rates. Your SEO content supports the topical relevance that Maps uses to rank. Every channel feeds the next. When they work together, call volume compounds faster than any single channel can produce alone."
         centerLabel="Google Maps"
         centerSublabel="Local pack visibility & direct calls."
         services={GBP_BIGGER_PICTURE_SERVICES}

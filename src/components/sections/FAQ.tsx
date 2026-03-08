@@ -43,7 +43,7 @@ export const homepageFAQs = [
   },
   {
     question: "Do you offer exclusive service areas?",
-    answer: "Yes — market exclusivity is a core part of how we operate. We limit the number of clients we take on in each geographic area to ensure zero conflict of interest. When you partner with DemandStream Digital, we're fully invested in helping you dominate your local market, not splitting our attention between you and a competitor across town. This exclusivity model means your SEO strategy, ad targeting, and content development are all built to give you a competitive edge — not shared with another company fighting for the same keywords and customers. Once a market is taken, it's taken."
+    answer: "Yes. Market exclusivity is a core part of how we operate. We limit the number of clients we take on in each geographic area to make sure there's zero conflict of interest. When you partner with DemandStream Digital, we're fully invested in helping you own your local market, not splitting our attention between you and a competitor across town. Your SEO strategy, ad targeting, and content development are all built to give you a competitive edge, not shared with another company fighting for the same keywords and customers. Once a market is taken, it's taken."
   },
   {
     question: "What happens if I want to pause or cancel?",

@@ -38,7 +38,7 @@ const ServiceFitSection = ({
   const [openGood, setOpenGood] = useState<number | null>(null);
   const [openNot, setOpenNot] = useState<number | null>(null);
 
-  const defaultExclusivityBody = `When you work with DemandStream, your competitors don't. We take one ${tradeNoun.toLowerCase()} client per service area. That keeps our incentives fully aligned with yours — every strategy, every campaign, and every dollar of spend is working to put your company ahead in your market, not divided between you and the company across town. If your market is available, it's worth finding out now. If it isn't, we'll tell you that too.`;
+  const defaultExclusivityBody = `When you work with DemandStream, your competitors don't. We take one ${tradeNoun.toLowerCase()} client per service area. That keeps our incentives fully aligned with yours. Every strategy, every campaign, and every dollar of spend is working to put your company ahead in your market, not divided between you and the company across town. If your market is available, it's worth finding out now. If it isn't, we'll tell you that too.`;
 
   return (
     <>
