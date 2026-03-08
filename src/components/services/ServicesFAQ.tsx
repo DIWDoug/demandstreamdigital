@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     question: "Why do plumbing and HVAC companies need specialized marketing?",
-    answer: "Trade businesses compete differently than other industries. You need local visibility, Google Maps rankings, and lead generation that converts to booked service calls — not vanity metrics. Our strategies are built specifically around dispatch capacity, seasonality, and service area coverage."
+    answer: "Trade businesses compete differently than other industries. You need local visibility, Google Maps rankings, and lead generation that converts to booked service calls, not vanity metrics. Our strategies are built specifically around dispatch capacity, seasonality, and service area coverage."
   },
   {
     question: "How does your marketing approach help my business scale?",
