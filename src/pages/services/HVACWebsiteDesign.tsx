@@ -521,6 +521,11 @@ const HVACWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
+
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={hvacWebDesignQualification} />
 
