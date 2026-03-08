@@ -11,8 +11,7 @@ import {
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
-  ServiceGroupedFAQ,
-  ServiceEcosystemSection
+  ServiceGroupedFAQ
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
@@ -176,10 +175,6 @@ const HVACSEO = () => {
         <ServiceGroupedFAQ config={hvacSEOConfig.faq} />
       </div>
 
-      <SectionDivider />
-
-      {/* 12. ECOSYSTEM */}
-      <ServiceEcosystemSection config={hvacSEOConfig.ecosystem} />
 
       <div id="contact" className="scroll-mt-32">
         <HVACContactForm />
