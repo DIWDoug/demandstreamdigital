@@ -25,51 +25,6 @@ const anchorItems = [
   { label: "Get Started", href: "#contact" },
 ];
 
-const serviceCluster = [
-  {
-    parent: "Drainage Services",
-    hubs: [
-      {
-        heading: "Drain Cleaning",
-        items: ["Hydro-jet drain cleaning", "Main line cleaning", "Camera inspection / sewer scope", "Trenchless sewer replacement"],
-      },
-    ],
-  },
-  {
-    parent: "Water Heater Services",
-    hubs: [
-      {
-        heading: "Water Heater Repair",
-        items: ["No hot water", "Leaking water heater", "Pilot light / ignition issues"],
-      },
-      {
-        heading: "Water Heater Replacement",
-        items: ["Tank water heater replacement", "Tankless installation", "Expansion tank installation", "Anode rod service"],
-      },
-    ],
-  },
-  {
-    parent: "Plumbing Services",
-    hubs: [
-      {
-        heading: "Emergency Plumbing",
-        items: ["Main line backup / stoppage", "Slab leak detection", "Burst pipe / water shutoff", "Spot repair", "Under-sink leak repair"],
-      },
-      {
-        heading: "Fixture Repair",
-        items: ["Toilet repair", "Faucet repair", "Hose bibb repair", "Garbage disposal repair"],
-      },
-      {
-        heading: "Fixture Replacement",
-        items: ["Toilet replacement", "Faucet & fixture replacement", "Hose bibb replacement", "Garbage disposal replacement"],
-      },
-      {
-        heading: "Repiping & Water Quality",
-        items: ["Whole-house repipe", "PRV replacement", "Backflow testing", "Water filtration installation"],
-      },
-    ],
-  },
-];
 
 const gbpRows = [
   { category: "Plumber (Primary)", page: "/plumbing-[city]-[state]", intent: "Brand / market-level" },
