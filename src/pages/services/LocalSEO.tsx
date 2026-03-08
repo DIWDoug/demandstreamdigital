@@ -13,7 +13,6 @@ import {
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
-  ServiceEcosystemSection
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
@@ -24,7 +23,6 @@ import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFac
 import PhoneNotRankings from "@/components/services/local-seo/PhoneNotRankings";
 import BuiltForBoth from "@/components/services/local-seo/BuiltForBoth";
 import LocalSEOProblemSection from "@/components/services/local-seo/LocalSEOProblemSection";
-import { ServiceBiggerPicture } from "@/components/services/generic";
 
 const LOCAL_SEO_BIGGER_PICTURE_SERVICES = [
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
