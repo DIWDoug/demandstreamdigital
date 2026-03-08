@@ -12,13 +12,11 @@ import PaidAdsChannels from "@/components/services/paid-advertising/PaidAdsChann
 import PaidAdsFramework from "@/components/services/paid-advertising/PaidAdsFramework";
 import PaidAdsMetrics from "@/components/services/paid-advertising/PaidAdsMetrics";
 import PaidAdsFit from "@/components/services/paid-advertising/PaidAdsFit";
-import PaidAdsBiggerPicture from "@/components/services/paid-advertising/PaidAdsBiggerPicture";
 import PaidAdsBuiltForBoth from "@/components/services/paid-advertising/PaidAdsBuiltForBoth";
 import PaidAdsSEOIntegration from "@/components/services/paid-advertising/PaidAdsSEOIntegration";
 import PaidAdsContactForm from "@/components/services/paid-advertising/PaidAdsContactForm";
 import PaidAdsExclusivity from "@/components/services/paid-advertising/PaidAdsExclusivity";
 import PaidAdsFAQ from "@/components/services/paid-advertising/PaidAdsFAQ";
-import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -110,38 +108,33 @@ const PaidAdvertising = () => {
       {/* 06. BUILT FOR BOTH */}
       <PaidAdsBuiltForBoth />
 
+      {/* 07. EXCLUSIVITY — right after Built for Both */}
+      <PaidAdsExclusivity />
+
       <SectionDivider />
 
-      {/* 07. FRAMEWORK / PROCESS */}
+      {/* 08. FRAMEWORK / PROCESS */}
       <PaidAdsFramework />
 
       <SectionDivider />
 
-      {/* 08. METRICS */}
+      {/* 09. METRICS */}
       <PaidAdsMetrics />
 
       <SectionDivider />
 
-      {/* 09. FIT */}
-      <PaidAdsFit />
-
-      {/* 10. EXCLUSIVITY */}
-      <PaidAdsExclusivity />
-
-      {/* 11. FAQ */}
-      <PaidAdsFAQ />
-
-      <SectionDivider />
-
-      {/* 12. SEO INTEGRATION */}
+      {/* 10. SEO INTEGRATION */}
       <PaidAdsSEOIntegration />
 
       <SectionDivider />
 
-      {/* 13. BIGGER PICTURE */}
-      <PaidAdsBiggerPicture />
+      {/* 11. FIT */}
+      <PaidAdsFit />
 
-      {/* 12. LEAD FORM */}
+      {/* 12. FAQ */}
+      <PaidAdsFAQ />
+
+      {/* 13. LEAD FORM */}
       <PaidAdsContactForm />
 
       {/* Related Tools */}
