@@ -406,6 +406,11 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 44%, 18%)" variant="curve" flip animated />
+      </div>
+
       {/* GBP ALIGNMENT — dark */}
       <section id="gbp" className="py-24 lg:py-32 bg-surface-dark scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
