@@ -12,7 +12,7 @@ const leftFAQs = [
   },
   {
     q: "Do you require long-term contracts?",
-    a: "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves — they just need to hold the account for another 30 days.",
+    a: "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves. They just need to hold the account for another 30 days.",
   },
   {
     q: "How do you handle budget shifts between heating and cooling seasons?",
