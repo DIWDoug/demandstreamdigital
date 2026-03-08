@@ -27,7 +27,7 @@ const rightFAQs = [
   },
   {
     q: "We have run paid ads before and they did not produce results. Why would this be different?",
-    a: "Most failed plumbing campaigns share the same structural problems — no service segmentation, broad match keywords capturing low-intent traffic, flat budgets that do not prioritize emergency demand, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market actually works.",
+    a: "Most failed plumbing campaigns share the same structural problems: no service segmentation, broad match keywords capturing low-intent traffic, flat budgets that do not prioritize emergency demand, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market actually works.",
   },
   {
     q: "Can you manage campaigns we already have running?",
