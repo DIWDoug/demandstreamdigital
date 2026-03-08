@@ -27,20 +27,47 @@ const anchorItems = [
 
 const serviceCluster = [
   {
-    heading: "Emergency Drain & Sewer",
-    items: ["Main line backup / stoppage", "Hydro-jet drain cleaning", "Camera inspection / sewer scope", "Spot repair", "Trenchless sewer replacement"],
+    parent: "Drainage Services",
+    hubs: [
+      {
+        heading: "Drain Cleaning",
+        items: ["Hydro-jet drain cleaning", "Main line cleaning", "Camera inspection / sewer scope", "Trenchless sewer replacement"],
+      },
+    ],
   },
   {
-    heading: "Water Heater",
-    items: ["Water heater repair", "Water heater replacement", "Tankless installation", "Expansion tank", "Anode rod service"],
+    parent: "Water Heater Services",
+    hubs: [
+      {
+        heading: "Water Heater Repair",
+        items: ["No hot water", "Leaking water heater", "Pilot light / ignition issues"],
+      },
+      {
+        heading: "Water Heater Replacement",
+        items: ["Tank water heater replacement", "Tankless installation", "Expansion tank installation", "Anode rod service"],
+      },
+    ],
   },
   {
-    heading: "Repiping & Water Quality",
-    items: ["Whole-house repipe", "PRV replacement", "Slab leak detection & repair", "Backflow testing", "Water filtration installation"],
-  },
-  {
-    heading: "Fixtures & Plumbing Repairs",
-    items: ["Toilet repair & replacement", "Faucet & fixture repair", "Hose bibb replacement", "Garbage disposal", "Under-sink leak repair"],
+    parent: "Plumbing Services",
+    hubs: [
+      {
+        heading: "Emergency Plumbing",
+        items: ["Main line backup / stoppage", "Slab leak detection", "Burst pipe / water shutoff", "Spot repair", "Under-sink leak repair"],
+      },
+      {
+        heading: "Fixture Repair",
+        items: ["Toilet repair", "Faucet repair", "Hose bibb repair", "Garbage disposal repair"],
+      },
+      {
+        heading: "Fixture Replacement",
+        items: ["Toilet replacement", "Faucet & fixture replacement", "Hose bibb replacement", "Garbage disposal replacement"],
+      },
+      {
+        heading: "Repiping & Water Quality",
+        items: ["Whole-house repipe", "PRV replacement", "Backflow testing", "Water filtration installation"],
+      },
+    ],
   },
 ];
 
@@ -323,18 +350,25 @@ const PlumbingWebsiteDesign = () => {
 
             {/* Service cluster map */}
             <p className="text-xs font-semibold tracking-widest uppercase text-accent-blue mb-6">Plumbing Service Cluster Map</p>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {serviceCluster.map((cluster, i) => (
-                <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6">
-                  <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">{cluster.heading}</p>
-                  <ul className="space-y-1.5">
-                    {cluster.items.map((item, j) => (
-                      <li key={j} className="flex items-center gap-2 text-text-secondary text-sm">
-                        <span className="w-1 h-1 rounded-full bg-cta shrink-0" />
-                        {item}
-                      </li>
+            <div className="space-y-8">
+              {serviceCluster.map((group, gi) => (
+                <div key={gi}>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-text-muted mb-4 border-b border-white/10 pb-2">{group.parent}</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {group.hubs.map((cluster, i) => (
+                      <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-6">
+                        <p className="text-xs font-semibold tracking-widest uppercase text-cta mb-3">{cluster.heading}</p>
+                        <ul className="space-y-1.5">
+                          {cluster.items.map((item, j) => (
+                            <li key={j} className="flex items-center gap-2 text-text-secondary text-sm">
+                              <span className="w-1 h-1 rounded-full bg-cta shrink-0" />
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
