@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const plumbingPoints = [
   "Emergency and high-intent keyword prioritization: 'emergency plumber near me,' 'hydro jetting [city],' 'water heater replacement [city]'",
-  "Service area page structure aligned to actual dispatch coverage — not just major city names",
+  "Service area page structure aligned to actual dispatch coverage, not just major city names",
   "Review velocity as a primary trust signal for emergency callers comparing options",
   "GBP category and service configuration optimized for drain, water heater, slab leak, and repiping revenue",
   "Multi-truck radius scaling: as your coverage expands, the local SEO structure scales with it"
