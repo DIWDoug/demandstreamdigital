@@ -258,7 +258,7 @@ const HVACWebsiteDesign = () => {
             <div className="text-center mb-10">
               <p className="text-accent-blue text-xs font-semibold uppercase tracking-widest mb-4">The Framework</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
-                The Market Domination Framework™ Applied to HVAC
+                The Market Domination Framework Applied to HVAC
               </h2>
               <p className="text-text-secondary leading-relaxed max-w-2xl mx-auto">
                 Built for your market, your climate, and your service mix. The call types are different from plumbing. The seasonal pressure is different. The equipment transitions happening right now create content and trust requirements a generic website can't address.
