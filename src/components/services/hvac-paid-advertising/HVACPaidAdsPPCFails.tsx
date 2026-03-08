@@ -58,7 +58,7 @@ const HVACPaidAdsPPCFails = () => {
                 HVAC advertising requires specialization. Seasonal volatility, emergency-first search behavior, repair vs install segmentation, and commercial growth opportunities all require structured campaign architecture. Generic contractor PPC applies the same keyword list and bid strategy to every trade in every season. Budget leaks on low-intent traffic. Emergency calls in July go to competitors who are bidding more precisely on the right terms.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                A no-cool call in August and a system replacement inquiry in September require different pages, different copy, different conversion paths, and different bid logic. When campaigns group them together, neither converts correctly — and the reporting hides it.
+                A no-cool call in August and a system replacement inquiry in September require different pages, different copy, different conversion paths, and different bid logic. When campaigns group them together, neither converts correctly. The reporting hides it.
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-6">
                 <p className="text-gray-700 text-sm leading-relaxed font-medium">

@@ -69,7 +69,7 @@ const FitQualifier = () => {
               Are We the Right Fit for Your Shop?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We work with established plumbing and HVAC companies that want to own their service area — not just generate random traffic.
+              We work with established plumbing and HVAC companies that want to own their service area, not just generate random traffic.
             </p>
           </div>
 

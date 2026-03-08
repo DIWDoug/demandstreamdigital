@@ -31,7 +31,7 @@ const rightFAQs = [
   },
   {
     q: "Can you manage campaigns we already have running?",
-    a: "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch, and reporting that cannot connect spend to revenue. We document everything and show you exactly what changes before we touch the budget.",
+    a: "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues: keyword waste, missing negative lists, no call tracking tied to dispatch, and reporting that cannot connect spend to revenue. We document everything and show you exactly what changes before we touch the budget.",
   },
   {
     q: "What size plumbing company do you typically work with?",

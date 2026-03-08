@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     question: "Do you require long-term contracts?",
-    answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, sustainable SEO requires consistency — most meaningful results come within 3-6 months of focused effort."
+    answer: "No. We work month-to-month with a 30-day notice policy. Our retention comes from results, not lock-in agreements. That said, sustainable SEO requires consistency. Most meaningful results come within 3 to 6 months of focused effort."
   },
   {
     question: "Is it worth investing in marketing when I already get referrals?",
