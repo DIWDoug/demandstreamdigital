@@ -12,7 +12,7 @@ const leftFAQs = [
   },
   {
     q: "Do you require long-term contracts?",
-    a: "We require a minimum 6-month engagement. Search advertising compounds over time as campaign data builds. Agencies that let you go month-to-month have no incentive to build campaigns that improve — they just need to hold you for another 30 days.",
+    a: "We require a minimum 6-month engagement. Search advertising compounds over time as campaign data builds. Agencies that let you go month-to-month have no incentive to build campaigns that improve. They just need to hold you for another 30 days.",
   },
   {
     q: "How do you handle peak season budget adjustments?",
