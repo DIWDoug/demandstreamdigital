@@ -253,7 +253,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
 
       {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A, 6 pillars */}
       <section className="py-24 lg:py-32 bg-[#0F1E2D]">

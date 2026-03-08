@@ -276,6 +276,11 @@ const PlumbingWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="#F8F9FA" toColor="hsl(210, 53%, 11%)" variant="curve" flip animated />
+      </div>
+
       {/* MARKET DOMINATION FRAMEWORK — dark, Pattern A */}
       <section id="framework" className="py-24 lg:py-32 bg-[#0F1E2D] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
