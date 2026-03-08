@@ -507,6 +507,9 @@ const WebDesignHub = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={webDesignHubQualification} />
 
