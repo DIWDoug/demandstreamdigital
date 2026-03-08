@@ -448,7 +448,9 @@ const WebDesignHub = () => {
       </section>
 
       {/* Divider */}
-      <div className="h-px w-full" style={{ background: "linear-gradient(to right, transparent, rgba(226,232,240,0.8) 20%, rgba(226,232,240,0.8) 80%, transparent)" }} />
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 44%, 18%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
 
       {/* INDUSTRY BREAKOUT — light, expanded copy */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA]">
