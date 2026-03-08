@@ -123,7 +123,7 @@ const ResultsBar = () => {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
-            to="/about"
+            to="/about#team"
             className="inline-flex items-center gap-2 text-sm font-semibold text-cta hover:text-cta/80 transition-colors border border-cta/30 rounded-lg px-5 py-3 hover:bg-cta/5">
 
             <User className="h-4 w-4" />
