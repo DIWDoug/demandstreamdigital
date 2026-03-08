@@ -307,6 +307,9 @@ const HVACWebsiteDesign = () => {
         </div>
       </section>
 
+      {/* EXCLUSIVITY */}
+      <HVACPaidAdsExclusivity />
+
       {/* FOUR CALL TYPES — light, 60/40 numbered layout */}
       <section id="architecture" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -499,9 +502,6 @@ const HVACWebsiteDesign = () => {
 
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={hvacWebDesignQualification} />
-
-      {/* EXCLUSIVITY */}
-      <HVACPaidAdsExclusivity />
 
       {/* CONTACT */}
       <ServiceContactForm
