@@ -168,7 +168,7 @@ const HVACPaidAdsChannels = () => {
             <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Programmatic Advertising</h3>
               <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                Programmatic expands reach beyond search. It reinforces visibility across the web and on Connected TV before and during peak demand windows. It supports emergency search capture — it does not replace it.
+                Programmatic expands reach beyond search. It reinforces visibility across the web and on Connected TV before and during peak demand windows. It supports emergency search capture. It does not replace it.
               </p>
               <ul className="space-y-2.5 flex-1 mb-6">
                 {[

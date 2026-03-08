@@ -54,7 +54,7 @@ const HVACPaidAdsHero = () => {
               Demand Control for HVAC Companies. Scale Up. Throttle Down.
             </p>
             <p className="text-base text-text-secondary max-w-xl mb-6 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-              HVAC demand spikes during heat waves. It surges during freezes. It slows during shoulder seasons. Paid advertising gives you control — scale when capacity allows, throttle when the board is full, and defend your territory when competitors surge. DemandStream builds HVAC advertising systems around cost per booked call. Not clicks.
+              HVAC demand spikes during heat waves. It surges during freezes. It slows during shoulder seasons. Paid advertising gives you control. Scale when capacity allows, hold when the board is full, and defend your territory when competitors surge. DemandStream builds HVAC advertising systems around cost per booked call. Not clicks.
             </p>
             <ul className="space-y-3 mb-8 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               {bullets.map((bullet, i) => (

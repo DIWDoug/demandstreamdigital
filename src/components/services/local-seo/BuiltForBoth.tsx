@@ -74,7 +74,7 @@ const BuiltForBoth = () => {
                 <Link to="/hvac-seo" className="text-xl lg:text-2xl font-semibold text-slate-900 hover:text-amber-500 transition-colors">HVAC Local SEO</Link>
               </div>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                HVAC demand is seasonal. Peak season in a cooling-heavy market creates a fundamentally different call flow than shoulder season. HVAC local SEO has to account for both — ranking for emergency no-cool calls in summer and positioning for planned changeouts and maintenance agreements year-round.
+                HVAC demand is seasonal. Peak season in a cooling-heavy market creates a fundamentally different call flow than shoulder season. HVAC local SEO has to account for both: ranking for emergency no-cool calls in summer and positioning for planned changeouts and maintenance agreements year-round.
               </p>
               <ul className="space-y-3 mb-6">
                 {hvacPoints.map((point, i) => (

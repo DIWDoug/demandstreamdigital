@@ -61,7 +61,7 @@ const LocalSEOProblemSection = () => {
               </p>
               <div className="bg-gradient-to-r from-cta/5 to-transparent border-l-4 border-cta rounded-r-xl px-5 py-4 mb-8">
                 <p className="text-slate-700 text-sm leading-relaxed font-medium">
-                  When a homeowner's AC goes out in July, they don't browse. They search and call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency — not applied from a template that works the same way for a dentist or a dog groomer.
+                  When a homeowner's AC goes out in July, they don't browse. They search and call whoever shows up first. Plumbing and HVAC local SEO has to be built around that urgency, not applied from a template that works the same way for a dentist or a dog groomer.
                 </p>
               </div>
               <p className="text-slate-500 text-sm mb-8">
