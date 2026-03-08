@@ -27,7 +27,7 @@ const rightFAQs = [
   },
   {
     q: "We have run paid ads before and they did not produce results. Why would this be different?",
-    a: "Most failed HVAC campaigns share the same structural problems — no service segmentation, flat budgets that ignore seasonality, broad match keywords capturing low-intent traffic, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market and season actually work.",
+    a: "Most failed HVAC campaigns share the same structural problems: no service segmentation, flat budgets that ignore seasonality, broad match keywords capturing low-intent traffic, and reporting that stops at the lead instead of the booked call. We build from scratch around how your market and season actually work.",
   },
   {
     q: "Can you manage campaigns we already have running?",
