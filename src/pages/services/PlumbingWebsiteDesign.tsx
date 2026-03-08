@@ -328,6 +328,11 @@ const PlumbingWebsiteDesign = () => {
       {/* EXCLUSIVITY */}
       <PlumbingPaidAdsExclusivity />
 
+      {/* Divider */}
+      <div className="relative">
+        <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
+      </div>
+
       {/* DIFFERENT CALL = DIFFERENT PAGE — light, 60/40 numbered layout */}
       <section id="architecture" className="py-24 lg:py-32 bg-[#F8F9FA] scroll-mt-32">
         <div className="container mx-auto px-6 lg:px-8">
