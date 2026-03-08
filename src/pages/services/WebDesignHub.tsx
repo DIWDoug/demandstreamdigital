@@ -468,9 +468,17 @@ const WebDesignHub = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-accent-blue transition-colors">
                   HVAC Website Design
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  Built around seasonal demand, changeouts, maintenance agreements, and the urgency of no-cool and no-heat calls. HVAC has a unique search pattern: summers and winters drive high-urgency emergency calls, while spring and fall bring comparison shoppers researching replacement costs. A well-built HVAC site captures both customer types with separate intent-aligned pages, dedicated maintenance agreement landing pages, and seasonal campaign readiness built into the structure. We also build for maintenance agreement upsell — because recurring revenue from agreements is the most stable part of any HVAC business, and most websites completely ignore it.
-                </p>
+                <div className="space-y-3 mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    HVAC has a unique search pattern that most websites completely ignore. Summers and winters drive high-urgency emergency calls, while spring and fall bring comparison shoppers researching replacement costs. A site built around that reality captures both customer types, with separate intent-aligned pages for each and seasonal campaign readiness built into the structure from the start.
+                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    We also build around the call types that define HVAC revenue: changeouts, maintenance agreements, and the urgency of no-cool and no-heat calls. Each service gets its own page structured for the customer at that specific moment, whether they need someone out today or are weighing their options for a system replacement.
+                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Maintenance agreement upsell gets dedicated landing pages too, because recurring agreement revenue is the most stable part of any HVAC business, and most websites do nothing to support it.
+                  </p>
+                </div>
                 <span className="inline-flex items-center text-sm font-medium text-accent-blue gap-2">
                   See the HVAC approach
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
