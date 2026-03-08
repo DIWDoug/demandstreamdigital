@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     question: "Can I rebrand reports and dashboards for my own records?",
-    answer: "Yes. All deliverables — reports, strategy documents, audits, dashboards — are designed to be clear and actionable. We structure everything for easy review so you always know exactly what's happening with your marketing."
+    answer: "Yes. All deliverables, including reports, strategy documents, audits, and dashboards, are designed to be clear and actionable. We structure everything for easy review so you always know exactly what's happening with your marketing."
   },
   {
     question: "Do you require long-term contracts?",
