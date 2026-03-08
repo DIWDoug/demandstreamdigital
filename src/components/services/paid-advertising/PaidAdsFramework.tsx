@@ -1,26 +1,42 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
-import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 
 const tabs = [
   {
     id: "tracking",
     label: "Tracking & Attribution",
     title: "Tracking & Attribution Integrity",
-    timingNote: "Starting point: No paid spend runs until call tracking and booking rate measurement are confirmed.",
-    body: "A paid campaign that cannot measure cost per booked call is building toward the wrong outcome. Before we build a single ad group, we confirm that every inbound call is tracked, every booking is attributed to a source, and every campaign has a clear cost-per-booked-call baseline. That number is what we measure against.",
+    timingNote: "Starting point: No paid spend runs until call tracking and CRM reconciliation are confirmed.",
+    body: "A paid campaign that cannot measure cost per booked call is building toward the wrong outcome. Before we build a single ad group, we confirm that every inbound call is tracked at the keyword level, every booking is attributed to a source, and conversion actions are configured to fire once — not 3–4 times for the same lead. A reported CPA of $135 can reflect a true cost of $287–$328 when duplicate conversion actions are counted by smart bidding as separate wins.",
     leftItems: [
       "Call tracking setup with keyword-level attribution",
       "Booking rate baseline measurement before spend begins",
-      "CRM alignment so booked calls are tied back to campaigns",
-      "Cost per booked call target established by service type"
+      "CRM alignment — booked calls tied back to campaigns",
+      "Conversion actions audited and pruned to unique-fire only",
     ],
     rightItems: [
       "Source-of-truth reporting dashboard configured",
       "Conversion tracking verified across all ad platforms",
       "Missed call and abandon rate benchmarked",
-      "Baseline close rate captured by call type"
+      "Offline conversion sync to feed real job revenue back to Google",
+    ]
+  },
+  {
+    id: "audit",
+    label: "Account Audit",
+    title: "Audit Before Spend — Excavation, Not Demolition",
+    timingNote: null,
+    body: "Most agencies gut inherited accounts and rebuild from scratch. We don't. When an account has 7 months of history and $384K+ in spend, there are winners buried inside it. The job is excavation, not demolition. We mine what's working, pause confirmed losers, and restructure the account around the campaigns that have proven CRM-verified ROAS — before touching a single budget line.",
+    leftItems: [
+      "Full campaign audit against CRM revenue data",
+      "Identify confirmed winners vs. confirmed money-losers",
+      "Pause campaigns below breakeven ROAS — no exceptions",
+      "Apply 50K+ placement exclusion list to PMax campaigns",
+    ],
+    rightItems: [
+      "Deploy master negative keyword list (4,700+ terms)",
+      "Kill AI Max — confirmed 7–8× worse CPA than exact match",
+      "Fix landing page 404s before spend resumes",
+      "Demote duplicate conversion actions to Secondary",
     ]
   },
   {
@@ -28,18 +44,18 @@ const tabs = [
     label: "Campaign Architecture",
     title: "Campaign Architecture",
     timingNote: null,
-    body: "The structure of a campaign determines its ceiling. An HVAC campaign that groups emergency repair and system replacement into the same ad group will never perform correctly. The intent, the margin, and the conversion path are different. We build campaigns around how plumbing and HVAC demand actually works.",
+    body: "The structure of a campaign determines its ceiling. An HVAC campaign that groups emergency repair and system replacement into the same ad group will never perform correctly. The intent, the margin, and the conversion path are different. Repair calls run at a different breakeven ROAS than install calls. We build campaigns around how plumbing and HVAC demand actually works — and set ROAS targets accordingly.",
     leftItems: [
       "Separate campaigns for repair intent and install intent",
       "City-level bid structure aligned to service radius",
       "Emergency keyword prioritization with dedicated budgets",
-      "Negative keyword filtering to remove low-margin call types"
+      "Negative keyword filtering to remove low-margin call types",
     ],
     rightItems: [
       "Ad copy written to urgency and booking, not features",
       "Landing pages matched to search intent by service type",
       "Device-level targeting weighted toward mobile",
-      "Budget allocation by channel and service priority"
+      "Geo bid modifiers built from CRM revenue-by-ZIP data",
     ]
   },
   {
@@ -47,18 +63,18 @@ const tabs = [
     label: "Refinement & Scaling",
     title: "Optimization & Scaling",
     timingNote: null,
-    body: "Once attribution is clean and campaigns are structured correctly, we refine. Bid adjustments are made based on booking rate data, not click-through rate. Ad copy is tested against booked call outcomes, not impressions. Scaling happens when the cost per booked call justifies it. Not before.",
+    body: "Once attribution is clean and campaigns are structured correctly, we refine. Bid adjustments are made based on CRM-verified booking rate data, not click-through rate. Budget changes are deliberate and spaced to avoid resetting smart bidding learning periods. Scaling happens when the cost per booked call justifies it — measured against ServiceTitan or your dispatch system, not Google's reported numbers.",
     leftItems: [
       "Bid adjustments driven by cost per booked call by keyword",
       "Ad copy testing measured against conversion to booked call",
       "Geographic performance review by ZIP and corridor",
-      "Search term report review and negative keyword expansion"
+      "Search term report review and negative keyword expansion",
     ],
     rightItems: [
       "Device-level bid refinement based on booking behavior",
       "Landing page conversion rate testing",
       "Budget reallocation toward highest-performing call types",
-      "Quality Score improvement across Google campaigns"
+      "Quality Score improvement across Google campaigns",
     ]
   },
   {
@@ -66,18 +82,18 @@ const tabs = [
     label: "Capacity & Seasonal Control",
     title: "Capacity & Seasonal Control",
     timingNote: null,
-    body: "Paid advertising is the fastest lever to adjust when operational reality changes. When July board is full, we pull back. When February slows down, we push install campaigns. When a freeze event hits and competitors are surging, we defend. The campaign responds to how the business is actually running. Not on a fixed monthly budget that ignores what's happening on the dispatch board.",
+    body: "Paid advertising is the fastest lever to adjust when operational reality changes. When the July board is full, we pull back. When February slows down, we push install campaigns. When a freeze event hits and competitors are surging, we defend. The campaign responds to how the business is actually running — not on a fixed monthly budget that ignores what's happening on the dispatch board.",
     leftItems: [
       "Capacity throttle triggers tied to dispatch board status",
       "Shoulder season install push campaigns pre-built and ready",
       "Emergency surge response protocols for weather events",
-      "Seasonal bid calendar mapped to your climate zone"
+      "Seasonal bid calendar mapped to your climate zone",
     ],
     rightItems: [
       "Peak season budget defense against competitor spend surges",
       "Maintenance agreement campaigns timed to pre-season windows",
-      "Post-peak reactivation sequences for homeowners who did not book",
-      "Monthly capacity review built into reporting cadence"
+      "Post-peak retargeting sequences for homeowners who did not book",
+      "Monthly capacity review built into reporting cadence",
     ]
   }
 ];
@@ -96,7 +112,7 @@ const PaidAdsFramework = () => {
             Our Paid Advertising Process
           </h2>
           <p className="text-gray-600 leading-relaxed max-w-3xl mb-10">
-            Every paid campaign we build follows the same four-phase sequence. Tracking first. Architecture second. Refinement third. Capacity control fourth. We do not run spend before attribution is clean. We do not scale before booking rate is measured. The sequence matters.
+            Every paid campaign we build follows the same five-phase sequence. Tracking first. Audit before spend. Architecture second. Refinement third. Capacity control fourth. We do not run spend before attribution is clean. We do not scale before booking rate is measured against your CRM. The sequence matters.
           </p>
 
           {/* Tab list */}
@@ -136,7 +152,6 @@ const PaidAdsFramework = () => {
               ))}
             </div>
           </div>
-
 
         </div>
       </div>
