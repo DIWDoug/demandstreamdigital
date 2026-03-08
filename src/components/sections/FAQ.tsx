@@ -70,49 +70,51 @@ const FAQ = () => {
   const rightColumn = faqs.slice(midpoint);
 
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section relative overflow-hidden">
-      <StreamTexture variant="light" opacity={0.1} />
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-[#0D1B2A] reveal-section relative overflow-hidden">
+      <StreamTexture variant="dark" opacity={0.06} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-             <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">FAQs</p>
-             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-               Questions Contractors Ask
-             </h2>
-            <p className="text-lg text-slate-600">
+            <span className="inline-block bg-accent-blue/10 text-accent-blue text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
+              Common Questions
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
+              Questions Contractors Ask
+            </h2>
+            <p className="text-lg text-text-secondary">
               Common questions from plumbing & HVAC business owners.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Accordion type="single" collapsible className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-4">
+            <Accordion type="single" collapsible className="space-y-3">
               {leftColumn.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-left-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-primary/30 transition-all duration-300 shadow-sm"
+                  className="bg-[#1A2E44] border border-white/8 rounded-xl px-6 data-[state=open]:border-accent-blue/30 transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                  <AccordionTrigger className="text-base font-medium text-foreground hover:no-underline py-4 text-left hover:text-accent-blue transition-colors">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                  <AccordionContent className="text-text-secondary pb-4 text-sm leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
 
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-3">
               {rightColumn.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-right-${index}`}
-                  className="bg-white border border-gray-200 rounded-lg px-6 data-[state=open]:border-primary/30 transition-all duration-300 shadow-sm"
+                  className="bg-[#1A2E44] border border-white/8 rounded-xl px-6 data-[state=open]:border-accent-blue/30 transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-base font-medium text-gray-900 hover:no-underline py-4 text-left">
+                  <AccordionTrigger className="text-base font-medium text-foreground hover:no-underline py-4 text-left hover:text-accent-blue transition-colors">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-4 text-sm">
+                  <AccordionContent className="text-text-secondary pb-4 text-sm leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
