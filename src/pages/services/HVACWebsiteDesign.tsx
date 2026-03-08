@@ -273,13 +273,15 @@ const HVACWebsiteDesign = () => {
               </p>
             </div>
 
-            {/* 2x2 card grid */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            {/* 3x2 pillar grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
               {[
-                { label: "Architecture", body: "Separate pages for cooling, heating, heat pumps, ductless, and maintenance. Each page is built for the specific intent of that customer." },
-                { label: "Trust", body: "NATE certifications, EPA 608 credentials, real team photography, and financing options positioned where they convert." },
-                { label: "Speed", body: "Mobile-first build throughout. Most emergency HVAC searches happen on phones during peak discomfort. A slow page loses that call." },
-                { label: "Conversion", body: "Urgency-matched CTAs: emergency pages lead with the phone number. Install and replacement pages lead with estimates and equipment options." },
+                { label: "Architecture", body: "Separate pages for cooling, heating, heat pumps, ductless, and maintenance. Each page is built for the specific intent of that customer: emergency, repair, or planned replacement." },
+                { label: "Trust", body: "NATE certifications, EPA 608 credentials, real team photography, and financing options positioned where they convert on high-ticket install decisions." },
+                { label: "Speed", body: "Mobile-first build throughout. Most emergency HVAC searches happen on phones during peak discomfort. A slow page loses that call to whoever loads faster." },
+                { label: "AI Structure", body: "Schema markup, FAQ blocks, and answer-forward content built for featured snippets, voice search, and AI-generated results. Equipment terminology and seasonal queries covered." },
+                { label: "Conversion", body: "Urgency-matched CTAs throughout: emergency pages lead with the phone number, install and replacement pages lead with estimates and equipment options." },
+                { label: "Beautiful Design", body: "Custom visual identity built to reflect your brand, establish trust, and look unmistakably professional in your local market. No shared templates." },
               ].map((p, i) => (
                 <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7">
                   <p className="text-base font-bold text-foreground mb-2">{p.label}</p>
