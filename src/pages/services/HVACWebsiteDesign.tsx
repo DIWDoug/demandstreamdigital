@@ -503,9 +503,6 @@ const HVACWebsiteDesign = () => {
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={hvacWebDesignQualification} />
 
-      {/* EXCLUSIVITY */}
-      <HVACPaidAdsExclusivity />
-
       {/* CONTACT */}
       <ServiceContactForm
         formType="hvac_web_design_contact"

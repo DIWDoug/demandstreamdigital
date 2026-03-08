@@ -436,9 +436,6 @@ const PlumbingWebsiteDesign = () => {
       {/* SELECTIVE FIT */}
       <ServiceFitQualifierSection config={plumbingWebDesignQualification} />
 
-      {/* EXCLUSIVITY */}
-      <PlumbingPaidAdsExclusivity />
-
       {/* CONTACT */}
       <ServiceContactForm
         formType="plumbing_web_design_contact"
