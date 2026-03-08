@@ -11,7 +11,7 @@ import StreamTexture from "@/components/StreamTexture";
 export const homepageFAQs = [
   {
     question: "How much does plumbing marketing cost?",
-    answer: "Most plumbing and HVAC companies invest between $2,000 and $8,000 per month in digital marketing, depending on their market size, competition level, and growth goals. That range typically covers a combination of local SEO, Google Ads, Google Maps optimization, and reputation management. We scope every engagement based on your specific service area and competitive landscape — not a one-size-fits-all package. During our strategy call, we'll walk through exactly what's included, what results to expect, and how we measure ROI so you know where every dollar goes before we start."
+    answer: "Most plumbing and HVAC companies invest between $2,000 and $8,000 per month in digital marketing, depending on their market size, competition level, and growth goals. That range typically covers a combination of local SEO, Google Ads, Google Maps optimization, and reputation management. We scope every engagement based on your specific service area and competitive landscape, not a one-size-fits-all package. During our strategy call, we'll walk through exactly what's included, what results to expect, and how we measure ROI so you know where every dollar goes before we start."
   },
   {
     question: "Do you require long-term contracts?",
