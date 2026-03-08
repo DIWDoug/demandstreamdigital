@@ -333,13 +333,15 @@ const PlumbingWebsiteDesign = () => {
               </p>
             </div>
 
-            {/* 2x2 card grid */}
-            <div className="grid sm:grid-cols-2 gap-6 mb-12">
+            {/* 3x2 pillar grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
               {[
-                { label: "Architecture", body: "Dedicated pages per service cluster. Drain cleaning, water heaters, repiping, and sewer each get their own page built around actual search behavior." },
-                { label: "Trust", body: "Reviews, licensing, warranties, and real job photos positioned where they reduce friction on high-ticket decisions." },
-                { label: "Speed", body: "Core Web Vitals compliance built in. Emergency searches happen on phones in high-stress moments. A slow site loses those calls." },
+                { label: "Architecture", body: "Dedicated pages per service cluster: drain cleaning, water heaters, repiping, sewer, and fixtures. Each page is built around actual plumbing search behavior, not a catch-all services page." },
+                { label: "Trust", body: "Reviews, licensing, warranties, and real job photos positioned where they reduce friction on high-ticket decisions. Homeowners compare before they call." },
+                { label: "Speed", body: "Core Web Vitals compliance built in. Emergency plumbing searches happen on phones in high-stress moments. A slow site loses those calls to whoever loads faster." },
+                { label: "AI Structure", body: "Schema markup, FAQ blocks, and answer-forward content built to perform in featured snippets, voice search, and AI-generated results, not just the ten blue links." },
                 { label: "Conversion", body: "Emergency-first UX with a clear call path above the fold on mobile. Call tracking and CRM integration ready from launch day." },
+                { label: "Beautiful Design", body: "Custom visual identity built to reflect your brand, establish trust, and look unmistakably professional in your local market. No shared templates." },
               ].map((p, i) => (
                 <div key={i} className="bg-[#162233] border border-white/10 rounded-xl p-7">
                   <p className="text-base font-bold text-foreground mb-2">{p.label}</p>
