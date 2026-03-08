@@ -35,7 +35,7 @@ export const homepageFAQs = [
   },
   {
     question: "How long does HVAC SEO take?",
-    answer: "HVAC SEO is a longer-term investment that typically takes 3 to 6 months to show significant traction, though some improvements — like Google Business Profile optimization and on-page fixes — can produce gains within the first 30 to 60 days. The timeline depends on your market's competitiveness, the current state of your website, and how established your online presence is. Paid advertising (Google Ads and Local Services Ads) can start generating calls within the first few weeks while SEO builds momentum. We set realistic expectations during our strategy call so you know exactly what to expect at each stage of the engagement."
+    answer: "HVAC SEO is a longer-term investment that typically takes 3 to 6 months to show significant traction, though some improvements, like Google Business Profile optimization and on-page fixes, can produce gains within the first 30 to 60 days. The timeline depends on your market's competitiveness, the current state of your website, and how established your online presence is. Paid advertising (Google Ads and Local Services Ads) can start generating calls within the first few weeks while SEO builds momentum. We set realistic expectations during our strategy call so you know exactly what to expect at each stage of the engagement."
   },
   {
     question: "What size companies do you typically work with?",
