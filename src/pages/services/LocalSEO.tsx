@@ -13,7 +13,6 @@ import {
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
-  ServiceEcosystemSection
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
@@ -24,24 +23,6 @@ import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFac
 import PhoneNotRankings from "@/components/services/local-seo/PhoneNotRankings";
 import BuiltForBoth from "@/components/services/local-seo/BuiltForBoth";
 import LocalSEOProblemSection from "@/components/services/local-seo/LocalSEOProblemSection";
-import { ServiceBiggerPicture } from "@/components/services/generic";
-
-const LOCAL_SEO_BIGGER_PICTURE_SERVICES = [
-  { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Reputation Management", href: "/hvac-and-plumbing-reputation-management" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
-  { label: "Email Marketing", href: "/plumbing-email-marketing" },
-  { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
-  { label: "Web Design", href: "/website-design" },
-];
-const LOCAL_SEO_ORBIT_NODES = [
-  { label: "Google Maps / GBP", angle: 0 },
-  { label: "Reputation Mgmt", angle: 60 },
-  { label: "Paid Advertising", angle: 120 },
-  { label: "Email Marketing", angle: 180 },
-  { label: "Reporting & Dashboards", angle: 240 },
-  { label: "Web Design", angle: 300 },
-];
 
 // Flatten FAQ groups for schema
 const getFlatFAQs = () => {
@@ -188,22 +169,6 @@ const LocalSEO = () => {
         <ServiceGroupedFAQ config={localSEOConfig.faq} />
       </div>
       
-      <SectionDivider />
-      
-      {/* 12. ECOSYSTEM */}
-      <ServiceEcosystemSection config={localSEOConfig.ecosystem} />
-
-      {/* 13. BIGGER PICTURE */}
-      <ServiceBiggerPicture
-        heading="Local SEO Is One Piece of the"
-        headingHighlight="Connected Growth System"
-        body1="Local SEO drives organic visibility in search and Google Maps. But it compounds when it works with the rest of the system, not in isolation."
-        body2="Your GBP optimization reinforces your organic rankings. Your paid ads capture demand that organic SEO misses during ramp-up. Your review velocity improves both Maps performance and paid ad quality scores. Your email marketing reactivates past customers before they search for someone new. When every channel is connected and pulling in the same direction, you get predictable call flow you can build a schedule around."
-        centerLabel="Local SEO"
-        centerSublabel="Organic visibility in local search results."
-        services={LOCAL_SEO_BIGGER_PICTURE_SERVICES}
-        orbitNodes={LOCAL_SEO_ORBIT_NODES}
-      />
 
       {/* 14. CONTACT */}
       <div id="contact" className="scroll-mt-32">
