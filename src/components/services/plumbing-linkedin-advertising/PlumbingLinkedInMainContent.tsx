@@ -59,7 +59,7 @@ const PlumbingLinkedInMainContent = () => {
               {[
                 {
                   title: "Maintenance Contract Acquisition",
-                  body: "The most valuable commercial plumbing relationship is the maintenance contract — a recurring agreement that produces scheduled service calls, annual inspections, and priority response partnerships across multiple buildings. LinkedIn campaigns reach the decision-makers who sign these contracts before the renewal cycle begins, before they have a crisis, and before a competitor has established the relationship.",
+                  body: "The most valuable commercial plumbing relationship is the maintenance contract, a recurring agreement that produces scheduled service calls, annual inspections, and priority response partnerships across multiple buildings. LinkedIn campaigns reach the decision-makers who sign these contracts before the renewal cycle begins, before they have a crisis, and before a competitor has established the relationship.",
                   bullets: [
                     "Preventative maintenance programs for commercial properties",
                     "Multi-building service agreements for portfolio operators",

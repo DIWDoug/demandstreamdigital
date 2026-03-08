@@ -402,7 +402,7 @@ const WebDesignHub = () => {
               </div>
               <div className="space-y-4">
                 {[
-                { label: "Answer Blocks", body: "Built into all service pages — structured for featured snippets and AI results" },
+                { label: "Answer Blocks", body: "Built into all service pages, structured for featured snippets and AI results" },
                 { label: "FAQ Structure", body: "Written for voice and conversational query formats, not industry jargon" },
                 { label: "Schema by Default", body: "LocalBusiness, Service, and FAQPage schema implemented at build" },
                 { label: "Heading Hierarchy", body: "Signals topic authority to crawlers and AI systems simultaneously" }].
