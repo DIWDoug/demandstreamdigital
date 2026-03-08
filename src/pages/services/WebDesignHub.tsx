@@ -225,7 +225,7 @@ const WebDesignHub = () => {
             <div className="bg-slate-900 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-6">
               <p className="text-white text-base leading-relaxed max-w-xl">
                 <span className="font-semibold text-white">Every one of these patterns is fixable.</span>{" "}
-                <span className="text-slate-300">The sites we build are structured to rank, convert, and scale from launch — not patched later.</span>
+                <span className="text-slate-300">The sites we build are structured to rank, convert, and scale from launch. Not patched later.</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <Link
