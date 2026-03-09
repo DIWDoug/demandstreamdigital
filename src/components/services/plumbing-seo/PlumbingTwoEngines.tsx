@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ArrowRight, ChevronRight, Droplets, Map, Bot } from "lucide-react";
+import { ArrowRight, Droplets, Map, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const organicPoints = [
