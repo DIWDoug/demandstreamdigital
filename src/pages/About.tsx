@@ -23,7 +23,7 @@ import {
 
 // Team images - local imports
 import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
-import robertKnoester from "@/assets/team/member_robert.jpg";
+
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
 import carolMora from "@/assets/team/carol-mora.png";
