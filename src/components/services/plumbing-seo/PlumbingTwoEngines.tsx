@@ -26,8 +26,6 @@ const aiGeoPoints = [
 ];
 
 const PlumbingTwoEngines = () => {
-  const [clusterOpen, setClusterOpen] = useState(false);
-
   return (
     <section className="py-20 lg:py-28 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -58,7 +56,7 @@ const PlumbingTwoEngines = () => {
                   <h3 className="text-base font-semibold text-foreground">Organic Plumbing SEO</h3>
                 </div>
               </div>
-            <p className="text-text-secondary mb-5 leading-relaxed text-sm">
+              <p className="text-text-secondary mb-5 leading-relaxed text-sm">
                 Organic rankings are structural. Built through page structure, content quality, and authority signals. The most important decision:{" "}
                 <span className="text-foreground font-medium">if it's a different phone call, it's a different page.</span>
               </p>
@@ -70,28 +68,6 @@ const PlumbingTwoEngines = () => {
                   </li>
                 ))}
               </ul>
-
-              {/* Collapsed cluster toggle */}
-              <div className="border-t border-border/40 pt-4 mb-4">
-                <button
-                  onClick={() => setClusterOpen(!clusterOpen)}
-                  className="flex items-center gap-2 text-accent-blue text-sm font-medium hover:opacity-80 transition-opacity"
-                >
-                  <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${clusterOpen ? "rotate-90" : ""}`} />
-                  View service cluster architecture
-                </button>
-                {clusterOpen && (
-                  <div className="mt-3 bg-background/50 rounded-lg p-4 border border-border/40">
-                    <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Service Cluster Architecture</p>
-                    <p className="text-xs text-text-secondary leading-relaxed mb-2">
-                      Every distinct service gets its own page. Water Heater, Drain Cleaning, Slab Leak, Repiping, Hydro Jetting, each as a hub with sub-service pages targeting specific high-intent searches.
-                    </p>
-                    <p className="text-xs text-text-secondary leading-relaxed">
-                      Water Heater · Drain Cleaning · Sewer Line · Emergency Plumbing · Repiping · Slab Leak Detection. Each as a hub with sub-service pages targeting specific high-intent searches.
-                    </p>
-                  </div>
-                )}
-              </div>
 
               <Link
                 to="/hvac-and-plumbing-seo"
