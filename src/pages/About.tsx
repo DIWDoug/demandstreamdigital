@@ -48,13 +48,6 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/douglasebryson/"
     },
     {
-      name: "Robert Knoester",
-      role: "CTO",
-      bio: "Leads the technical architecture behind DemandStream's digital infrastructure — from site builds and performance optimization to tracking systems and automation. Robert ensures every platform we build is fast, structured for search, and engineered to convert.",
-      image: robertKnoester,
-      linkedin: "https://www.linkedin.com/in/robert-k-1223941b",
-    },
-    {
       name: "John Joseph Santos (JJ)",
       role: "Team Lead",
       bio: "Specialist in on-page optimization and paid advertising for local service companies. Builds and manages campaigns with a focus on qualified call volume and cost per booked call.",
