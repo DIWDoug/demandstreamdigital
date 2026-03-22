@@ -1179,7 +1179,6 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
   ],
 };
 
-    // Top Pick - Demand Stream Digital
     {
       rank: 0,
       name: "Demand Stream Digital",
