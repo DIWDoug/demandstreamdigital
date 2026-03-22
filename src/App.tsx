@@ -45,6 +45,7 @@ const Author = lazy(() => import("./pages/Author"));
 // Listicle Pages
 const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
 const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompanies"));
+const BestHVACSEOCompanies = lazy(() => import("./pages/BestHVACSEOCompanies"));
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
@@ -160,6 +161,8 @@ const App = () => (
           {/* ============ LISTICLE PAGES ============ */}
           <Route path="/best-plumbing-seo-companies" element={<BestPlumbingSEOCompanies />} />
           <Route path="/best-plumbing-ppc-companies" element={<BestPlumbingPPCCompanies />} />
+          <Route path="/best-hvac-seo-companies" element={<BestHVACSEOCompanies />} />
+          <Route path="/best-hvac-seo-agencies" element={<Navigate to="/best-hvac-seo-companies" replace />} />
           <Route path="/best-plumbing-seo-agencies" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
           
           {/* Legacy listicle redirects */}
