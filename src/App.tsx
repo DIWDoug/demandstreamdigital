@@ -45,6 +45,7 @@ const Author = lazy(() => import("./pages/Author"));
 // Listicle Pages
 const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
 const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompanies"));
+const BestHVACSEOCompanies = lazy(() => import("./pages/BestHVACSEOCompanies"));
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
