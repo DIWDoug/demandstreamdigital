@@ -50,6 +50,7 @@ const BestHVACPPCCompanies = lazy(() => import("./pages/BestHVACPPCCompanies"));
 const BestGoogleAdsCompaniesForPlumbers = lazy(() => import("./pages/BestGoogleAdsCompaniesForPlumbers"));
 const BestContentMarketingForHVAC = lazy(() => import("./pages/BestContentMarketingForHVAC"));
 const BestContentMarketingForPlumbers = lazy(() => import("./pages/BestContentMarketingForPlumbers"));
+const BestGoogleAdsCompaniesForHVAC = lazy(() => import("./pages/BestGoogleAdsCompaniesForHVAC"));
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
@@ -172,6 +173,7 @@ const App = () => (
           <Route path="/best-google-ads-companies-for-plumbers" element={<BestGoogleAdsCompaniesForPlumbers />} />
           <Route path="/best-content-marketing-for-hvac" element={<BestContentMarketingForHVAC />} />
           <Route path="/best-content-marketing-for-plumbers" element={<BestContentMarketingForPlumbers />} />
+          <Route path="/best-google-ads-companies-for-hvac" element={<BestGoogleAdsCompaniesForHVAC />} />
 
           {/* Legacy listicle redirects */}
           <Route path="/top-agencies/white-label-seo" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
