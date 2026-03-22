@@ -61,10 +61,10 @@ const GoogleMaps = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "GBP SEO & Google Maps for Plumbing & HVAC",
+    name: "Google Business Pro SEO & Google Maps for Plumbing & HVAC",
     description: googleMapsConfig.metaDescription,
     url: googleMapsConfig.canonicalUrl,
-    serviceType: "GBP SEO Service",
+    serviceType: "Google Business Pro SEO Service",
     faqGroups: googleMapsConfig.faq.groups
   });
 

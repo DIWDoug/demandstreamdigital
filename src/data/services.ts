@@ -233,7 +233,7 @@ export const hubs: Hub[] = [
   },
   {
     icon: Map,
-    title: "GBP SEO",
+    title: "Google Business Pro SEO",
     slug: "google-maps",
     summary: "Own the local 3-pack and drive calls directly from Google Maps listings.",
     heroDescription: {
