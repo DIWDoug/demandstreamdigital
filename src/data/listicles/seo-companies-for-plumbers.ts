@@ -1179,12 +1179,6 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
   ],
 };
 
-    {
-      rank: 0,
-      name: "Demand Stream Digital",
-      website: "https://demandstreamdigital.com",
-      websiteDisplay: "demandstreamdigital.com",
-      minProject: "$1,000",
       hourlyRate: "$66/hr",
       clientRating: 5.0,
       clientReviews: 25,
