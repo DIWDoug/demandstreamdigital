@@ -173,6 +173,7 @@ const App = () => (
           <Route path="/best-google-ads-companies-for-plumbers" element={<BestGoogleAdsCompaniesForPlumbers />} />
           <Route path="/best-content-marketing-for-hvac" element={<BestContentMarketingForHVAC />} />
           <Route path="/best-content-marketing-for-plumbers" element={<BestContentMarketingForPlumbers />} />
+          <Route path="/best-google-ads-companies-for-hvac" element={<BestGoogleAdsCompaniesForHVAC />} />
 
           {/* Legacy listicle redirects */}
           <Route path="/top-agencies/white-label-seo" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
