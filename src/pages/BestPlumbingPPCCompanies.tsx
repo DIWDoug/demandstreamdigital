@@ -224,7 +224,7 @@ const BestPlumbingPPCCompanies = () => {
                   <AccordionItem value="faq-13">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[13].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of percentage-of-spend pricing, so your costs don't increase as your ad budget grows. You get direct access to the person managing your campaigns, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit.
+                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($100/hour) instead of percentage-of-spend pricing, so your costs don't increase as your ad budget grows. You get direct access to the person managing your campaigns, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit.
                     </AccordionContent>
                   </AccordionItem>
 

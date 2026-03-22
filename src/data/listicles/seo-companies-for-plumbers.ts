@@ -1170,7 +1170,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "What makes DemandStream Digital different?",
-      answer: "DemandStream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of inflated packages, so you know exactly what you're paying for. You talk directly to the person working on your account, not a ticket queue.",
+      answer: "DemandStream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($100/hour) instead of inflated packages, so you know exactly what you're paying for. You talk directly to the person working on your account, not a ticket queue.",
     },
     {
       question: "Who owns my website and marketing assets if I leave an agency?",

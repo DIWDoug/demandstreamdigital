@@ -153,7 +153,7 @@ export const plumbingPPCCompaniesConfig: ListicleConfig = {
       isTopPick: true,
       deepDive: {
         tagline: "PPC management built specifically for plumbing and HVAC companies. Every dollar tracked to real calls.",
-        description: "Demand Stream Digital brings transparent, results-first PPC management to the trades. With $66/hr billing, you know exactly what you're paying for. No hidden platform fees, no percentage-of-spend pricing that punishes you for growing your ad budget. With 15+ years of experience working with service businesses, they understand that PPC for plumbers and HVAC techs isn't about click-through rates. It's about booked jobs and revenue. Unlike high-volume PPC companies that run hundreds of accounts through automated rules, Demand Stream Digital provides hands-on campaign management with direct access to the strategist working on your ads.",
+        description: "Demand Stream Digital brings transparent, results-first PPC management to the trades. With $100/hr billing, you know exactly what you're paying for. No hidden platform fees, no percentage-of-spend pricing that punishes you for growing your ad budget. With 15+ years of experience working with service businesses, they understand that PPC for plumbers and HVAC techs isn't about click-through rates. It's about booked jobs and revenue. Unlike high-volume PPC companies that run hundreds of accounts through automated rules, Demand Stream Digital provides hands-on campaign management with direct access to the strategist working on your ads.",
         coreServices: [
           "Google Ads management (Search, Display, Shopping, Performance Max) with strategic oversight",
           "Local Service Ads setup and management for Google Guaranteed leads",
