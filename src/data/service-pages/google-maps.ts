@@ -19,7 +19,7 @@ export const googleMapsConfig: ServicePageConfig = {
       "No ignoring competitive signals"
     ],
     qualifierLine: "Every engagement is scoped to the local pack landscape, category dynamics, and your capacity so execution matches the market.",
-    integrationNote: "GBP SEO, Local SEO, and Authority Building overlap by design. Engaged independently they create lift, but coordinated they drive durable map pack visibility.",
+    integrationNote: "Google Business Pro SEO, Local SEO, and Authority Building overlap by design. Engaged independently they create lift, but coordinated they drive durable map pack visibility.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Tell us about your business. We'll take it from there."
   },
