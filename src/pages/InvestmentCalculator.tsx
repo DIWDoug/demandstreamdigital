@@ -54,7 +54,7 @@ const initialFormData: FormData = {
   services: []
 };
 
-const OEM_HOURLY_RATE = 65;
+const OEM_HOURLY_RATE = 100;
 
 // Dynamic min/max based on competition and metro tier
 const getMinMaxBounds = (competition: string, metroTier: string): { min: number; max: number } => {

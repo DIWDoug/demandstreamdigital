@@ -327,7 +327,7 @@ const initialFormData: FormData = {
   services: []
 };
 
-const OEM_HOURLY_RATE = 60;
+const OEM_HOURLY_RATE = 100;
 const MSRP_HOURLY_LOW = 120;
 const MSRP_HOURLY_HIGH = 150;
 const MIN_MONTHLY = 500;

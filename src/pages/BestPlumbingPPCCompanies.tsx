@@ -198,7 +198,7 @@ const BestPlumbingPPCCompanies = () => {
                   <AccordionItem value="faq-1">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[1].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      PPC management pricing for plumbing and HVAC varies based on your ad budget and goals. Flat-fee management typically ranges from $500-$2,500/month. Percentage-of-spend models charge 10-20% of your ad budget. Demand Stream Digital uses transparent hourly billing at $66/hour, so your management costs don't spike as your ad spend grows. <IL to="/contact">Get in touch</IL> to learn more.
+                      PPC management pricing for plumbing and HVAC varies based on your ad budget and goals. Flat-fee management typically ranges from $500-$2,500/month. Percentage-of-spend models charge 10-20% of your ad budget. Demand Stream Digital uses transparent hourly billing at $100/hour, so your management costs don't spike as your ad spend grows. <IL to="/contact">Get in touch</IL> to learn more.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -224,7 +224,7 @@ const BestPlumbingPPCCompanies = () => {
                   <AccordionItem value="faq-13">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[13].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of percentage-of-spend pricing, so your costs don't increase as your ad budget grows. You get direct access to the person managing your campaigns, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit.
+                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($100/hour) instead of percentage-of-spend pricing, so your costs don't increase as your ad budget grows. You get direct access to the person managing your campaigns, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit.
                     </AccordionContent>
                   </AccordionItem>
 

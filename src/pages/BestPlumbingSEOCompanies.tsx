@@ -193,7 +193,7 @@ const BestPlumbingSEOCompanies = () => {
                   <AccordionItem value="faq-1">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[1].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      SEO pricing for plumbing and HVAC companies varies widely. Basic local SEO packages typically run $500-$1,500/month. Mid-range campaigns covering multiple service areas cost $1,500-$3,500/month. Enterprise-level SEO for multi-location operations can exceed $5,000/month. Demand Stream Digital offers transparent hourly billing ($66/hour) so you only pay for the work that actually gets done. <IL to="/contact">Get in touch</IL> to learn more.
+                      SEO pricing for plumbing and HVAC companies varies widely. Basic local SEO packages typically run $500-$1,500/month. Mid-range campaigns covering multiple service areas cost $1,500-$3,500/month. Enterprise-level SEO for multi-location operations can exceed $5,000/month. Demand Stream Digital offers transparent hourly billing ($100/hour) so you only pay for the work that actually gets done. <IL to="/contact">Get in touch</IL> to learn more.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -219,7 +219,7 @@ const BestPlumbingSEOCompanies = () => {
                   <AccordionItem value="faq-13">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[13].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of bloated packages, so you know exactly what you're paying for. You get direct communication with the person working on your account, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit for your business.
+                      Demand Stream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($100/hour) instead of bloated packages, so you know exactly what you're paying for. You get direct communication with the person working on your account, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit for your business.
                     </AccordionContent>
                   </AccordionItem>
 

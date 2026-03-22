@@ -207,7 +207,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       website: "https://demandstreamdigital.com",
       websiteDisplay: "demandstreamdigital.com",
       minProject: "$1,500",
-      hourlyRate: "$66/hr",
+      hourlyRate: "$100/hr",
       clientRating: 5.0,
       clientReviews: 25,
       employeeRating: 5.0,
@@ -219,7 +219,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       isTopPick: true,
       deepDive: {
         tagline: "Built specifically for plumbing and HVAC companies. Transparent pricing, real results.",
-        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services — from the panic-driven 'emergency plumber near me' at midnight to the deliberate 'tankless water heater installation cost' researched over a weekend. Their hub-and-spoke content architecture builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $66/hour with month-to-month terms.",
+        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services — from the panic-driven 'emergency plumber near me' at midnight to the deliberate 'tankless water heater installation cost' researched over a weekend. Their hub-and-spoke content architecture builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $100/hour with month-to-month terms.",
         coreServices: [
           "Local SEO, hub-and-spoke content architecture for plumbing services",
           "Google Business Profile optimization and geo-tagged image SEO",
@@ -230,7 +230,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         ],
         whyTheyRank: [
           "Plumbing and HVAC vertical exclusivity — 15+ years of trades-specific execution",
-          "Transparent $66/hr pricing; no inflated packages or hidden fees",
+          "Transparent $100/hr pricing; no inflated packages or hidden fees",
           "Direct communication with senior strategists, no account manager buffers",
           "Hub-and-spoke architecture covering every service type and city in the service area",
           "Geo-tagged image SEO increases map pack engagement and click-through rate",
@@ -1170,7 +1170,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "What makes DemandStream Digital different?",
-      answer: "DemandStream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($66/hour) instead of inflated packages, so you know exactly what you're paying for. You talk directly to the person working on your account, not a ticket queue.",
+      answer: "DemandStream Digital was built specifically for plumbing and HVAC companies. We use transparent hourly billing ($100/hour) instead of inflated packages, so you know exactly what you're paying for. You talk directly to the person working on your account, not a ticket queue.",
     },
     {
       question: "Who owns my website and marketing assets if I leave an agency?",
