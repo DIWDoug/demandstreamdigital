@@ -110,7 +110,7 @@ export const plumbingPPCCompaniesConfig: ListicleConfig = {
     intro: "Here's a quick snapshot of our top-ranked PPC providers for plumbing and HVAC businesses, ordered by our composite score weighing campaign performance, pricing transparency, client satisfaction, and trade-industry expertise.",
     topPickNote: "⭐ Our Top Pick combines transparent pricing, multi-platform expertise, and deep trade-industry knowledge that high-volume competitors can't match.",
     items: [
-      { rank: 0, name: "Demand Stream Digital", anchor: "top-pick-dialed-in-web", description: "Built for plumbing & HVAC with $66/hr transparent pricing and hands-on PPC strategy" },
+      { rank: 0, name: "Demand Stream Digital", anchor: "top-pick-dialed-in-web", description: "Built for plumbing & HVAC with $100/hr transparent pricing and hands-on PPC strategy" },
       { rank: 2, name: "White Shark Media", anchor: "2-white-shark-media", description: "Google Premier Partner with 1,000+ managed accounts and full-service PPC platform" },
       { rank: 3, name: "InvisiblePPC", anchor: "3-invisibleppc", description: "Purpose-built PPC provider with dedicated account managers and proven processes" },
       { rank: 4, name: "DashClicks", anchor: "4-dashclicks", description: "SaaS-first platform with integrated PPC management tools" },
