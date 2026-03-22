@@ -73,6 +73,8 @@ const HVACEmailMarketing = () => {
           title={hvacEmailMarketingConfig.title}
           description={hvacEmailMarketingConfig.hero.subheadline}
           breadcrumbs={breadcrumbItems}
+          heroHeadline={hvacEmailMarketingConfig.hero.headline}
+          heroSubtitle={hvacEmailMarketingConfig.hero.highlightedText}
         />
       </div>
 
