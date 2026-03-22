@@ -186,15 +186,15 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       { rank: 8, name: "RYNO Strategic Solutions", anchor: "8-ryno-strategic-solutions", description: "Google Premier Partner, RYNOtrax2.0 integrates with ServiceTitan" },
       { rank: 9, name: "On The Map Marketing", anchor: "9-on-the-map-marketing", description: "621% organic traffic increase documented, dedicated account manager model" },
       { rank: 10, name: "Leads4Build", anchor: "10-leads4build", description: "AI voice agents + PPC, 245% increase in emergency service calls documented" },
-      { rank: 11, name: "Plumbing Partners", anchor: "11-plumbing-partners", description: "Plumbing-exclusive agency, entire framework built around plumbing search behavior" },
+      { rank: 11, name: "Plumbing Partners", anchor: "11-plumbing-partners", description: "Plumbing-exclusive agency, entire structure built around plumbing search behavior" },
       { rank: 12, name: "Thrive Internet Marketing", anchor: "12-thrive-internet-marketing", description: "Month-to-month terms, 862% ChatGPT traffic increase documented for home services" },
       { rank: 13, name: "KickCharge Creative", anchor: "13-kickcharge-creative", description: "2,500+ contractor rebrands, Ryan Redding (plumbing marketing author) now CMO" },
       { rank: 14, name: "Corberry Digital", anchor: "14-corberry-digital", description: "CEO's ecommerce background drives strong ROI accountability, LSA + PPC + organic" },
       { rank: 15, name: "Valve+Meter", anchor: "15-valvemeter", description: "Performance-based model, free marketing assessment, full attribution to booked jobs" },
       { rank: 16, name: "1SEO Digital Agency", anchor: "16-1seo-digital-agency", description: "Dedicated home services managers, PPC + LSA coordination for competitive metros" },
-      { rank: 17, name: "WebFX", anchor: "17-webfx", description: "$6B+ in tracked client revenue, MarketingCloudFX, dynamic campaign adjustments" },
+      { rank: 17, name: "WebFX", anchor: "17-webfx", description: "$6B+ in tracked client revenue, MarketingCloudFX, active campaign adjustments" },
       { rank: 18, name: "Scorpion", anchor: "18-scorpion", description: "RevenueMAX connects ad spend to ServiceTitan dispatch data in real time" },
-      { rank: 19, name: "High Level Marketing", anchor: "19-high-level-marketing", description: "Build-and-explain model empowers owner-operators to understand their marketing" },
+      { rank: 19, name: "High Level Marketing", anchor: "19-high-level-marketing", description: "Build-and-explain model helps owner-operators to understand their marketing" },
       { rank: 20, name: "Fast Hippo Media", anchor: "20-fast-hippo-media", description: "Selective client roster, map pack coverage focus for single-location plumbers" },
     ],
   },
@@ -219,9 +219,9 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       isTopPick: true,
       deepDive: {
         tagline: "Built specifically for plumbing and HVAC companies. Transparent pricing, real results.",
-        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services — from the panic-driven 'emergency plumber near me' at midnight to the deliberate 'tankless water heater installation cost' researched over a weekend. Their hub-and-spoke content architecture builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $100/hour with month-to-month terms.",
+        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services — from the urgent 'emergency plumber near me' search at midnight to the research-phase 'tankless water heater installation cost' lookup. Their hub-and-spoke content structure builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $100/hour with month-to-month terms.",
         coreServices: [
-          "Local SEO, hub-and-spoke content architecture for plumbing services",
+          "Local SEO, hub-and-spoke content structure for plumbing services",
           "Google Business Profile optimization and geo-tagged image SEO",
           "Citation building and on-page SEO tailored to trade businesses",
           "PPC management and emergency service page optimization",
@@ -234,7 +234,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Direct communication with senior strategists, no account manager buffers",
           "Hub-and-spoke architecture covering every service type and city in the service area",
           "Geo-tagged image SEO increases map pack engagement and click-through rate",
-          "GBP and AI Overview optimization as core deliverables, not add-ons",
+          "GBP and AI Overview optimization as core outputs, not add-ons",
         ],
         clientTestimonials: [
           "We were paying $3,000/month to another company and barely getting any calls. DemandStream got us ranking in the map pack within 4 months.",
@@ -341,7 +341,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "5K-15K",
       deepDive: {
         tagline: "An Inc. 5000 agency with roots in HVAC and deep experience in plumbing.",
-        description: "Relentless Digital was founded by Joshua Crouch, who built his expertise inside the HVAC and plumbing trades before starting the agency. The agency earned Inc. 5000 #217 in 2024 and returned to the list in 2025, making it one of the fastest-growing marketing companies in the country. Their Zapier-based automation tools help contractors systematize lead follow-up and CSR processes — addressing one of the biggest conversion problems small plumbing operations face: leads that never get properly worked.",
+        description: "Relentless Digital was founded by Joshua Crouch, who built his expertise inside the HVAC and plumbing trades before starting the agency. The agency earned Inc. 5000 #217 in 2024 and returned to the list in 2025, making it one of the fastest-growing marketing companies in the country. Their Zapier-based automation tools help contractors systematize lead follow-up and CSR processes, addressing one of the biggest conversion problems small plumbing operations face: leads that never get properly worked.",
         coreServices: [
           "SEO, PPC, GBP optimization, and web design for contractors",
           "AI automation and Zapier integrations for lead follow-up",
@@ -351,14 +351,14 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         whyTheyRank: [
           "Inc. 5000 #217 (2024) and Inc. 5000 (2025) plus Inc. Best Workplaces 2025",
           "90% home service contractor client base",
-          "AI automation addresses lead follow-up — a major gap for small plumbing operations",
+          "AI automation addresses lead follow-up, a major gap for small plumbing operations",
           "Transparent asset ownership; clients retain all digital assets",
           "Founded by a practitioner who understands field service operations",
         ],
         clientTestimonials: [
           "The automation alone was worth it. We stopped losing leads to voicemail.",
           "Joshua built the agency from inside the trades. It shows in how they approach every campaign.",
-          "Inc. 5000 growth is real — they keep delivering results that earn the growth.",
+          "Inc. 5000 growth is real. They keep delivering results that earn the ranking.",
         ],
       },
     },
@@ -393,7 +393,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "4.9-star Google rating across 174+ reviews",
         ],
         clientTestimonials: [
-          "The investment is real but so are the results. We dominate the map pack in our market.",
+          "The investment is real but so are the results. We own the map pack in our market.",
           "54% keyword ranking increase in 10 weeks was not what I expected. Worth every dollar.",
           "They told us their goal was positions 1–3 in the map pack. They delivered.",
         ],
@@ -430,7 +430,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Functions as a genuine team extension, not a vendor",
         ],
         clientTestimonials: [
-          "They actually know my business. Not just the metrics — the business.",
+          "They actually know my business. Not just the metrics. The business.",
           "Boutique attention at every step. Never felt like a number on a spreadsheet.",
           "5.0 stars is earned. They deliver every month without drama.",
         ],
@@ -491,7 +491,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "5K-15K",
       deepDive: {
         tagline: "The analytics platform that integrates directly with your ServiceTitan data.",
-        description: "RYNO Strategic Solutions brings enterprise-level analytics to plumbing marketing. Their RYNOtrax2.0 platform connects with ServiceTitan and over 30 advertising platforms, giving contractors a unified view of how every marketing channel performs in terms of actual revenue — not just leads. They are a Google Premier Partner for paid search. Hometown Plumbing grew qualified leads by 72 percent year over year in year one of working with RYNO.",
+        description: "RYNO Strategic Solutions brings enterprise-level analytics to plumbing marketing. Their RYNOtrax2.0 platform connects with ServiceTitan and over 30 advertising platforms, giving contractors a unified view of how every marketing channel performs in terms of actual revenue, not just leads. They are a Google Premier Partner for paid search. Hometown Plumbing grew qualified leads by 72 percent year over year in year one of working with RYNO.",
         coreServices: [
           "SEO, PPC, web design, and reputation management",
           "RYNOtrax2.0 analytics integrating ServiceTitan and 30+ ad platforms",
@@ -566,7 +566,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "5K-10K",
       deepDive: {
         tagline: "AI-powered lead intake for plumbers who want to stop missing calls.",
-        description: "Leads4Build pairs paid advertising with AI voice agents that answer calls and handle lead intake automatically — addressing one of the most common revenue leaks for plumbing companies: the call that comes in after hours and goes to voicemail. Their documented results include a 245 percent increase in emergency service calls and a 40 percent reduction in cost per lead.",
+        description: "Leads4Build pairs paid advertising with AI voice agents that answer calls and handle lead intake automatically, addressing one of the most common revenue leaks for plumbing companies: the call that comes in after hours and goes to voicemail. Their documented results include a 245 percent increase in emergency service calls and a 40 percent reduction in cost per lead.",
         coreServices: [
           "Google Ads, Facebook Ads, and AI voice agents for contractor lead gen",
           "CRM automation and reputation management",
@@ -603,15 +603,15 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "1K-5K",
       deepDive: {
         tagline: "Built from scratch for plumbers, by people who understand how plumbers work.",
-        description: "Plumbing Partners is a plumbing-exclusive SEO and digital marketing agency that built its entire service framework around how homeowners search for plumbing services. They do not take HVAC clients, electrical clients, or any other trade — the focus is entirely on plumbing. For plumbers who have worked with agencies that treated them like any other local business, working with a firm that speaks the language of plumbing without being educated first is a different experience.",
+        description: "Plumbing Partners is a plumbing-exclusive SEO and digital marketing agency that built its entire service structure around how homeowners search for plumbing services. They do not take HVAC clients, electrical clients, or any other trade — the focus is entirely on plumbing. For plumbers who have worked with agencies that treated them like any other local business, working with a firm that speaks the language of plumbing without being educated first is a different experience.",
         coreServices: [
           "Local SEO, GBP management, and content marketing for plumbers",
           "PPC, lead generation, and citation building",
           "Long-term growth orientation with compounding organic visibility",
         ],
         whyTheyRank: [
-          "Plumbing-exclusive focus; no dilution across other trades or industries",
-          "Entire service framework built around plumbing-specific search behavior",
+          "Plumbing-exclusive focus with no dilution across other trades or industries",
+          "Entire service structure built around plumbing-specific search behavior",
           "Long-term growth orientation with compounding organic visibility",
           "Tailored campaigns matching each plumbing company's service mix and geography",
         ],
@@ -640,7 +640,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "100K-120K",
       deepDive: {
         tagline: "Month-to-month terms from a full-service agency with documented AI results.",
-        description: "Thrive does not require a long-term contract — a meaningful differentiator for seasonal businesses like plumbing operations. Their AI SEO testing for home service clients produced an 862 percent increase in ChatGPT traffic from January to October 2025. For mid-sized plumbing companies that want one partner handling multiple channels without a 12-month commitment, Thrive's flexibility is a practical advantage.",
+        description: "Thrive does not require a long-term contract, a meaningful differentiator for seasonal businesses like plumbing companies. Their AI SEO testing for home service clients produced an 862 percent increase in ChatGPT traffic from January to October 2025. For mid-sized plumbing companies that want one partner handling multiple channels without a 12-month commitment, Thrive's flexibility is a practical advantage.",
         coreServices: [
           "SEO, local SEO, PPC, web design, content marketing, AI SEO",
           "CRO, ORM, and listings management for home services",
@@ -677,7 +677,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "10K-20K",
       deepDive: {
         tagline: "When the biggest problem is that nobody can tell your plumbing company apart.",
-        description: "KickCharge Creative has rebranded over 2,500 contractor companies globally in 30 years of business. CEO Dan Antonelli's book on contractor branding has sold over 40,000 copies. In February 2025, they acquired Levergy, bringing Ryan Redding — author of the digital marketing book for plumbing and HVAC contractors — on as Chief Marketing Officer.",
+        description: "KickCharge Creative has rebranded over 2,500 contractor companies globally in 30 years of business. CEO Dan Antonelli's book on contractor branding has sold over 40,000 copies. In February 2025, they acquired Levergy, bringing Ryan Redding, author of the digital marketing book for plumbing and HVAC contractors — on as Chief Marketing Officer.",
         coreServices: [
           "Branding, logo design, web design, and vehicle wraps for contractors",
           "SEO, PPC, social media, and content marketing",
@@ -691,7 +691,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         ],
         clientTestimonials: [
           "Our new brand made us look like the premium option in our market. The phones changed immediately.",
-          "Rebrand plus SEO together — finally felt like a real marketing strategy.",
+          "Rebrand plus SEO together. Finally felt like a real marketing strategy.",
           "Dan Antonelli's team knows contractor branding at a level nobody else touches.",
         ],
       },
@@ -714,7 +714,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "2K-8K",
       deepDive: {
         tagline: "Conversion-focused campaigns for plumbers in competitive city markets.",
-        description: "CEO Michael Fox brings an ecommerce background from co-founding eFaucets.com and Hausera.com, which means every campaign is evaluated through a cost-per-acquisition lens. Their combination of Local Services Ads management, Google Ads, and organic SEO gives plumbing clients multi-channel SERP coverage — appearing multiple times for high-intent searches.",
+        description: "CEO Michael Fox brings an ecommerce background from co-founding eFaucets.com and Hausera.com, which means every campaign is evaluated through a cost-per-acquisition lens. Their combination of Local Services Ads management, Google Ads, and organic SEO gives plumbing clients multi-channel SERP coverage, appearing multiple times for high-intent searches.",
         coreServices: [
           "Local SEO, PPC, Google LSAs, and web design for home services",
           "Content marketing and GBP management",
@@ -798,11 +798,11 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Dedicated home services campaign managers with plumbing experience",
           "Tight PPC and LSA coordination for maximum SERP coverage in competitive markets",
           "Strong performance in major US cities with intense competition",
-          "Clear deliverables and fast feedback loops",
+          "Clear results and fast feedback loops",
         ],
         clientTestimonials: [
           "Competitive Dallas market and we're ranking across the board.",
-          "PPC and LSA coordinated together — finally stopped cannibalizing our own spend.",
+          "PPC and LSA coordinated together. Finally stopped cannibalizing our own spend.",
           "The home services team actually understands what we do.",
         ],
       },
@@ -825,7 +825,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "500K-600K",
       deepDive: {
         tagline: "Enterprise analytics for large plumbing operations.",
-        description: "WebFX has been in digital marketing since 1996 and has helped clients generate over $6 billion in trackable revenue across 28 years. Their MarketingCloudFX platform can adapt dynamically to demand spikes — when a cold front generates emergency pipe burst calls, their system adjusts campaign spend faster than manually managed accounts.",
+        description: "WebFX has been in digital marketing since 1996 and has helped clients generate over $6 billion in trackable revenue across 28 years. Their MarketingCloudFX platform can adjust quickly to demand spikes, when a cold front generates emergency pipe burst calls, their system adjusts campaign spend faster than manually managed accounts.",
         coreServices: [
           "SEO, PPC, content marketing, social media, web design",
           "MarketingCloudFX analytics platform with revenue dashboards",
@@ -873,7 +873,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "AI-driven advertising platform with Ranking AI and Reputation AI tools",
         ],
         clientTestimonials: [
-          "RevenueMAX auto-adjusting spend based on schedule availability was a game changer.",
+          "RevenueMAX auto-adjusting spend based on schedule availability was a big improvement.",
           "Enterprise platform makes sense for our multi-location operation.",
           "Be aware: you don't own the site. But for franchise operations it works.",
         ],
@@ -905,12 +905,12 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         ],
         whyTheyRank: [
           "Build-and-explain model: campaigns executed alongside client education",
-          "Empowers owner-operators to make informed marketing decisions",
+          "Helps owner-operators to make informed marketing decisions",
           "Strong performance in high-competition metro markets",
         ],
         clientTestimonials: [
           "I actually understand what they're doing now. Makes approving budgets easier.",
-          "Owner-operator friendly — they work around my schedule, not the other way around.",
+          "Owner-operator friendly. They work around my schedule, not the other way around.",
           "Education-first approach turned me into a better client and got better results.",
         ],
       },
@@ -940,7 +940,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Clear pricing structures and transparent reporting dashboards",
         ],
         whyTheyRank: [
-          "Selective client roster ensures genuine account attention",
+          "Selective client roster means genuine account attention",
           "Service-area optimization focuses on map pack coverage across full territory",
           "Clear pricing structures and transparent reporting dashboards",
           "Focused on single-location plumbers in mid-sized markets",
@@ -1122,7 +1122,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "How much does plumbing SEO cost?",
-      answer: "Most plumbing contractors pay between $1,500 and $4,000 per month for a solid local SEO program. Enterprise agencies like WebFX and Scorpion run higher, from $3,000 to $10,000 per month. Be cautious of programs priced below $1,000 per month — the deliverables are usually insufficient for competitive markets.",
+      answer: "Most plumbing contractors pay between $1,500 and $4,000 per month for a solid local SEO program. Enterprise agencies like WebFX and Scorpion run higher, from $3,000 to $10,000 per month. Be cautious of programs priced below $1,000 per month — the work is usually insufficient for competitive markets.",
     },
     {
       question: "How long does plumbing SEO take to work?",
@@ -1174,7 +1174,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "Who owns my website and marketing assets if I leave an agency?",
-      answer: "This varies significantly by agency. Some agencies like DemandStream Digital, Relentless Digital, and Plumbing Webmasters ensure clients retain full ownership of their website, Google Business Profile, and Google Ads account. Others, like Scorpion, build on proprietary platforms where clients do not own the site. Always ask about asset ownership before signing.",
+      answer: "This varies significantly by agency. Some agencies like DemandStream Digital, Relentless Digital, and Plumbing Webmasters make sure clients retain full ownership of their website, Google Business Profile, and Google Ads account. Others, like Scorpion, build on proprietary platforms where clients do not own the site. Always ask about asset ownership before signing.",
     },
   ],
 };
