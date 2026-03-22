@@ -4,14 +4,14 @@ import { SITE_URL } from "@/lib/constants";
 
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
-  title: "GBP SEO",
+  title: "Google Business Pro SEO",
   metaTitle: "Plumbing Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management for plumbing and HVAC. Reviews, citations, posts, and local pack strategy that puts your company in the map pack.",
   canonicalUrl: `${SITE_URL}/plumbing-google-maps`,
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
-    highlightedText: "GBP SEO for Plumbing & HVAC",
+    highlightedText: "Google Business Pro SEO for Plumbing & HVAC",
     subheadline: "We help plumbing and HVAC companies earn and hold Google Maps visibility through GBP optimization built for competitive local markets.",
     bullets: [
       "No cookie-cutter profile setups",
@@ -327,7 +327,7 @@ export const googleMapsConfig: ServicePageConfig = {
     intro: "GBP SEO acts as the demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
     body: "Google Maps visibility improves when reinforced by local SEO, review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Map, id: "google-maps", title: "GBP SEO", description: "The demand capture layer for local businesses.", href: "/plumbing-google-maps", isCenter: true },
+      { icon: Map, id: "google-maps", title: "Google Business Pro SEO", description: "The demand capture layer for local businesses.", href: "/plumbing-google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/hvac-and-plumbing-seo" },
       { icon: Sparkles, id: "paid-media", title: "Paid Media", description: "Accelerate results with Google Ads and Meta campaigns.", href: "/plumbing-paid-advertising" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Turn one-time customers into repeat buyers.", href: "/plumbing-email-marketing" },
