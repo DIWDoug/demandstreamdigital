@@ -175,7 +175,7 @@ export const hvacSEOCompaniesConfig: ListicleConfig = {
           "HVAC and plumbing vertical exclusivity with 15+ years of trades-specific execution",
           "Transparent $100/hr pricing with no inflated packages or hidden fees",
           "Direct communication with senior strategists, no account manager buffers",
-          "Hub-and-spoke architecture covering every service type and city in the service area",
+          "Hub-and-spoke content structure covering every service type and city in the service area",
           "Geo-tagged image SEO increases map pack engagement and click-through rates",
           "GBP and AI Overview optimization as core outputs, not add-ons",
         ],
@@ -442,7 +442,7 @@ export const hvacSEOCompaniesConfig: ListicleConfig = {
           "Marketing coaching for HVAC owner-operators",
         ],
         whyTheyRank: [
-          "Founder grew up in a family HVAC company — authentic insider knowledge",
+          "Founder grew up in a family HVAC company, with authentic insider knowledge",
           "Specializes in full rebrands that differentiate contractors on more than price",
           "From the Yellow Chair podcast and SQUEEEZE conference build real community",
           "CertainPath partnership gives members a 3.5% rebate on services",
@@ -854,7 +854,7 @@ export const hvacSEOCompaniesConfig: ListicleConfig = {
   faq: [
     {
       question: "What does an HVAC SEO agency do?",
-      answer: "An HVAC SEO agency improves a heating and cooling company's visibility in Google search results and Google Maps through on-page optimization, local SEO, Google Business Profile management, content creation, link building, and citation management — designed to generate inbound calls and booked service appointments.",
+      answer: "An HVAC SEO agency improves a heating and cooling company's visibility in Google search results and Google Maps through on-page optimization, local SEO, Google Business Profile management, content creation, link building, and citation management, designed to generate inbound calls and booked service appointments.",
     },
     {
       question: "How much does HVAC SEO cost?",
@@ -886,7 +886,7 @@ export const hvacSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "What is the difference between local SEO and regular SEO for HVAC?",
-      answer: "Local SEO focuses specifically on ranking in Google Maps and the local pack — the results showing a map and three businesses that appear for searches like 'AC repair near me.' Regular SEO focuses on organic ranking in the main search results. HVAC companies need both, but local SEO often drives a higher volume of calls because it appears at the top of the page.",
+      answer: "Local SEO focuses specifically on ranking in Google Maps and the local pack, which shows a map and three businesses that appear for searches like 'AC repair near me.' Regular SEO focuses on organic ranking in the main search results. HVAC companies need both, but local SEO often drives a higher volume of calls because it appears at the top of the page.",
     },
     {
       question: "How do I know if my HVAC company needs SEO?",

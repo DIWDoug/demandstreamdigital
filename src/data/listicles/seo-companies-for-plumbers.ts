@@ -229,10 +229,10 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Monthly reporting with plain-English explanations",
         ],
         whyTheyRank: [
-          "Plumbing and HVAC vertical exclusivity — 15+ years of trades-specific execution",
+          "Plumbing and HVAC vertical exclusivity with 15+ years of trades-specific execution",
           "Transparent $100/hr pricing; no inflated packages or hidden fees",
           "Direct communication with senior strategists, no account manager buffers",
-          "Hub-and-spoke architecture covering every service type and city in the service area",
+          "Hub-and-spoke content structure covering every service type and city in the service area",
           "Geo-tagged image SEO increases map pack engagement and click-through rate",
           "GBP and AI Overview optimization as core outputs, not add-ons",
         ],
@@ -272,7 +272,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         whyTheyRank: [
           "300+ plumbing and HVAC companies served; 20,000+ leads generated monthly",
           "Client revenue doubled and tripled across multiple documented case studies",
-          "100% focused on home service contractors — no learning curve on your budget",
+          "100% focused on home service contractors with no learning curve on your budget",
           "Nexstar partnership adds industry network and credibility",
           "Strong call tracking and KPI reporting tied to actual job bookings",
         ],
@@ -346,7 +346,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "SEO, PPC, GBP optimization, and web design for contractors",
           "AI automation and Zapier integrations for lead follow-up",
           "CSR coaching to improve conversion from inbound calls",
-          "Transparent asset ownership — clients retain all digital assets",
+          "Transparent asset ownership. Clients retain all digital assets.",
         ],
         whyTheyRank: [
           "Inc. 5000 #217 (2024) and Inc. 5000 (2025) plus Inc. Best Workplaces 2025",
@@ -536,7 +536,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
           "Dedicated account manager for every client",
         ],
         whyTheyRank: [
-          "Dedicated account manager for every client — no rotating contacts",
+          "Dedicated account manager for every client with no rotating contacts",
           "621% organic traffic increase documented for a contractor client",
           "Notable plumbing clients: Babe Plumbing, Champion Plumbing, Spartan Plumbing",
           "Google-focused strategy concentrates effort on the highest-value channel",
@@ -603,7 +603,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "1K-5K",
       deepDive: {
         tagline: "Built from scratch for plumbers, by people who understand how plumbers work.",
-        description: "Plumbing Partners is a plumbing-exclusive SEO and digital marketing agency that built its entire service structure around how homeowners search for plumbing services. They do not take HVAC clients, electrical clients, or any other trade — the focus is entirely on plumbing. For plumbers who have worked with agencies that treated them like any other local business, working with a firm that speaks the language of plumbing without being educated first is a different experience.",
+        description: "Plumbing Partners is a plumbing-exclusive SEO and digital marketing agency that built its entire service structure around how homeowners search for plumbing services. They do not take HVAC clients, electrical clients, or any other trade. The focus is entirely on plumbing. For plumbers who have worked with agencies that treated them like any other local business, working with a firm that speaks the language of plumbing without being educated first is a different experience.",
         coreServices: [
           "Local SEO, GBP management, and content marketing for plumbers",
           "PPC, lead generation, and citation building",
@@ -677,7 +677,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "10K-20K",
       deepDive: {
         tagline: "When the biggest problem is that nobody can tell your plumbing company apart.",
-        description: "KickCharge Creative has rebranded over 2,500 contractor companies globally in 30 years of business. CEO Dan Antonelli's book on contractor branding has sold over 40,000 copies. In February 2025, they acquired Levergy, bringing Ryan Redding, author of the digital marketing book for plumbing and HVAC contractors — on as Chief Marketing Officer.",
+        description: "KickCharge Creative has rebranded over 2,500 contractor companies globally in 30 years of business. CEO Dan Antonelli's book on contractor branding has sold over 40,000 copies. In February 2025, they acquired Levergy, bringing Ryan Redding, author of the digital marketing book for plumbing and HVAC contractors, on as Chief Marketing Officer.",
         coreServices: [
           "Branding, logo design, web design, and vehicle wraps for contractors",
           "SEO, PPC, social media, and content marketing",
@@ -1122,7 +1122,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "How much does plumbing SEO cost?",
-      answer: "Most plumbing contractors pay between $1,500 and $4,000 per month for a solid local SEO program. Enterprise agencies like WebFX and Scorpion run higher, from $3,000 to $10,000 per month. Be cautious of programs priced below $1,000 per month — the work is usually insufficient for competitive markets.",
+      answer: "Most plumbing contractors pay between $1,500 and $4,000 per month for a solid local SEO program. Enterprise agencies like WebFX and Scorpion run higher, from $3,000 to $10,000 per month. Be cautious of programs priced below $1,000 per month. The work is usually insufficient for competitive markets.",
     },
     {
       question: "How long does plumbing SEO take to work?",
@@ -1150,7 +1150,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     },
     {
       question: "How do I know if SEO is right for my plumbing business?",
-      answer: "SEO makes sense if: you want more leads from homeowners searching for your services online, your competitors are showing up above you in Google, you're expanding to new service areas, or you want a consistent pipeline of leads beyond word-of-mouth referrals. It may not be the right first step if you need calls today — PPC can deliver faster while SEO builds long-term.",
+      answer: "SEO makes sense if: you want more leads from homeowners searching for your services online, your competitors are showing up above you in Google, you're expanding to new service areas, or you want a consistent pipeline of leads beyond word-of-mouth referrals. It may not be the right first step if you need calls today. PPC can deliver faster while SEO builds long-term.",
     },
     {
       question: "What should I look for in a plumbing SEO agency?",
