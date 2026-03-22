@@ -46,6 +46,10 @@ const Author = lazy(() => import("./pages/Author"));
 const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
 const BestPlumbingPPCCompanies = lazy(() => import("./pages/BestPlumbingPPCCompanies"));
 const BestHVACSEOCompanies = lazy(() => import("./pages/BestHVACSEOCompanies"));
+const BestHVACPPCCompanies = lazy(() => import("./pages/BestHVACPPCCompanies"));
+const BestGoogleAdsCompaniesForPlumbers = lazy(() => import("./pages/BestGoogleAdsCompaniesForPlumbers"));
+const BestContentMarketingForHVAC = lazy(() => import("./pages/BestContentMarketingForHVAC"));
+const BestContentMarketingForPlumbers = lazy(() => import("./pages/BestContentMarketingForPlumbers"));
 
 // Service Hub Pages
 const LocalSEO = lazy(() => import("./pages/services/LocalSEO"));
