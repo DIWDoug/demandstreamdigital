@@ -311,12 +311,12 @@ export const hvacGoogleMapsConfig: ServicePageConfig = {
 
   ecosystem: {
     eyebrow: "The Bigger Picture",
-    headline: "HVAC GBP SEO Is One Piece of the",
+    headline: "Google Business Pro SEO Is One Piece of the",
     highlightedText: "360° Growth Engine",
-    intro: "HVAC GBP SEO acts as the emergency demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
+    intro: "Google Business Pro SEO acts as the emergency demand capture layer, supported by authority, relevance, and conversion infrastructure across the ecosystem.",
     body: "HVAC Maps visibility improves when reinforced by local SEO, seasonal review strategy, and consistent NAP signals. We offer each service independently, but the magic happens when they work in concert.",
     services: [
-      { icon: Map, id: "google-maps", title: "HVAC GBP SEO", description: "The emergency demand capture layer for HVAC.", href: "/hvac-google-maps", isCenter: true },
+      { icon: Map, id: "google-maps", title: "Google Business Pro SEO", description: "The emergency demand capture layer for HVAC.", href: "/hvac-google-maps", isCenter: true },
       { icon: Search, id: "local-seo", title: "HVAC Local SEO", description: "Organic visibility in local search results.", href: "/hvac-seo" },
       { icon: Sparkles, id: "paid-media", title: "HVAC Paid Media", description: "Accelerate results with Google Ads.", href: "/hvac-paid-advertising" },
       { icon: Mail, id: "email-marketing", title: "HVAC Email", description: "Reactivate customers between seasons.", href: "/hvac-email-marketing" },
