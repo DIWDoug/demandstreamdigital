@@ -141,7 +141,7 @@ export const plumbingPPCCompaniesConfig: ListicleConfig = {
       website: "https://demandstreamdigital.com",
       websiteDisplay: "demandstreamdigital.com",
       minProject: "$1,000",
-      hourlyRate: "$66/hr",
+      hourlyRate: "$100/hr",
       clientRating: 5.0,
       clientReviews: 25,
       employeeRating: 5.0,
