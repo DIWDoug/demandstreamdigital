@@ -36,7 +36,6 @@ const EMAIL_ORBIT_NODES = [
   { label: "Reporting & Dashboards", angle: 240 },
   { label: "Web Design", angle: 300 },
 ];
-import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
@@ -46,12 +45,9 @@ const SectionDivider = () => (
 );
 
 const EmailMarketing = () => {
-  const hub = getHubBySlug("email-marketing");
-  if (!hub) return null;
-
   const breadcrumbItems = [
     { label: "Services", href: "/#services" },
-    { label: hub.title }
+    { label: emailMarketingConfig.title }
   ];
 
   const pageSchema = getServiceHubSchema({
@@ -75,10 +71,12 @@ const EmailMarketing = () => {
       
       {/* 1. HERO */}
       <div className="pt-16">
-        <ServiceHubHero 
-          title={hub.title} 
-          description={hub.heroDescription}
+        <ServiceHubHero
+          title={emailMarketingConfig.title}
+          description={emailMarketingConfig.hero.subheadline}
           breadcrumbs={breadcrumbItems}
+          heroHeadline={emailMarketingConfig.hero.headline}
+          heroSubtitle={emailMarketingConfig.hero.highlightedText}
         />
       </div>
       
