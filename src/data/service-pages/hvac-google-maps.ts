@@ -4,14 +4,14 @@ import { SITE_URL } from "@/lib/constants";
 
 export const hvacGoogleMapsConfig: ServicePageConfig = {
   slug: "hvac-google-maps",
-  title: "HVAC GBP SEO",
+  title: "Google Business Pro SEO",
   metaTitle: "HVAC Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management built for HVAC companies. Reviews, seasonal GBP posts, citations, and local pack strategy that keeps your schedule full year-round.",
   canonicalUrl: `${SITE_URL}/hvac-google-maps`,
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
-    highlightedText: "GBP SEO for HVAC Companies",
+    highlightedText: "Google Business Pro SEO for HVAC Companies",
     subheadline: "We help HVAC companies earn and hold Google Maps visibility through GBP optimization built for seasonal demand — no-cool calls in July, no-heat calls in January.",
     bullets: [
       "No cookie-cutter profile setups",
