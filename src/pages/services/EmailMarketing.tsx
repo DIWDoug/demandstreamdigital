@@ -36,7 +36,6 @@ const EMAIL_ORBIT_NODES = [
   { label: "Reporting & Dashboards", angle: 240 },
   { label: "Web Design", angle: 300 },
 ];
-import { getHubBySlug } from "@/data/services";
 import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
