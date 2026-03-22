@@ -4,14 +4,14 @@ import { SITE_URL } from "@/lib/constants";
 
 export const googleMapsConfig: ServicePageConfig = {
   slug: "google-maps",
-  title: "GBP SEO",
+  title: "Google Business Pro SEO",
   metaTitle: "Plumbing Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management for plumbing and HVAC. Reviews, citations, posts, and local pack strategy that puts your company in the map pack.",
   canonicalUrl: `${SITE_URL}/plumbing-google-maps`,
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
-    highlightedText: "GBP SEO for Plumbing & HVAC",
+    highlightedText: "Google Business Pro SEO for Plumbing & HVAC",
     subheadline: "We help plumbing and HVAC companies earn and hold Google Maps visibility through GBP optimization built for competitive local markets.",
     bullets: [
       "No cookie-cutter profile setups",
