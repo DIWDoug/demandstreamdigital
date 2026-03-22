@@ -219,7 +219,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       isTopPick: true,
       deepDive: {
         tagline: "Built specifically for plumbing and HVAC companies. Transparent pricing, real results.",
-        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services — from the urgent 'emergency plumber near me' search at midnight to the research-phase 'tankless water heater installation cost' lookup. Their hub-and-spoke content structure builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $100/hour with month-to-month terms.",
+        description: "DemandStream Digital does not take clients outside plumbing and HVAC. That focus means every element of their approach reflects how homeowners search for plumbing services, from the urgent 'emergency plumber near me' search at midnight to the research-phase 'tankless water heater installation cost' lookup. Their hub-and-spoke content structure builds purpose-built pages for every service type and every geographic area a plumber serves. On the Google Business Profile side, their geo-tagged image process, service gap analysis, and AI Overview optimization give plumbing clients a full local search presence. Clients retain ownership of every page, profile, and account. Pricing is transparent at $100/hour with month-to-month terms.",
         coreServices: [
           "Local SEO, hub-and-spoke content structure for plumbing services",
           "Google Business Profile optimization and geo-tagged image SEO",
@@ -897,7 +897,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
       monthlyVisits: "5K-15K",
       deepDive: {
         tagline: "They build your marketing and make sure you understand it.",
-        description: "High Level Marketing coaches clients through the strategy while executing it — unusual in an industry where most agencies prefer clients to stay passive. For owner-operated plumbing companies where the owner is involved in operations, sales, and marketing decisions simultaneously, understanding why each campaign element works means smarter budget decisions over time.",
+        description: "High Level Marketing coaches clients through the strategy while executing it. Most agencies prefer clients to stay passive. For owner-operated plumbing companies where the owner is involved in operations, sales, and marketing decisions simultaneously, understanding why each campaign element works means smarter budget decisions over time.",
         coreServices: [
           "SEO, PPC, web design, local SEO, GBP optimization",
           "Reputation management and marketing coaching",
