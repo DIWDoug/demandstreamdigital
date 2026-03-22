@@ -6,7 +6,7 @@ import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 import Testimonials from "@/components/sections/Testimonials";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
-import { getHubBySlug } from "@/data/services";
+
 import type { BreadcrumbItem } from "@/types/servicePage";
 import { getServiceHubSchema } from "@/lib/schema";
 
