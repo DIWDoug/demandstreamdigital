@@ -50,10 +50,10 @@ const HVACGoogleMaps = () => {
   ];
 
   const pageSchema = getServiceHubSchema({
-    name: "GBP SEO & Google Maps for HVAC Companies",
+    name: "Google Business Pro SEO & Google Maps for HVAC Companies",
     description: hvacGoogleMapsConfig.metaDescription,
     url: hvacGoogleMapsConfig.canonicalUrl,
-    serviceType: "HVAC GBP SEO Service",
+    serviceType: "Google Business Pro SEO Service",
     faqGroups: hvacGoogleMapsConfig.faq.groups
   });
 
