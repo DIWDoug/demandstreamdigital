@@ -98,7 +98,7 @@ const BestPlumbingSEOCompanies = () => {
                       </span>
                       <span>
                         <a href={`#${item.anchor}`} className="font-semibold text-foreground hover:text-primary transition-colors">{item.name}</a>
-                        <span className="text-muted-foreground"> — {item.description}</span>
+                        <span className="text-muted-foreground">: {item.description}</span>
                       </span>
                     </li>
                   ))}
