@@ -81,7 +81,7 @@ const BestPlumbingSEOCompanies = () => {
                   We spent over 200 hours researching this space, analyzing Clutch profiles, combing through G2 reviews, cross-referencing Trustpilot ratings, checking LinkedIn headcounts, and talking to trade business owners who use these services. The result is this guide ranking the 30 best SEO companies for plumbing and HVAC businesses in 2026.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you're a one-truck operation looking to fill your schedule or a multi-location company looking to dominate your market, this guide will help you find the right SEO partner for your business.
+                  Whether you're a one-truck operation looking to fill your schedule or a multi-location company looking to own your market, this guide will help you find the right SEO partner for your business.
                 </p>
               </div>
 
