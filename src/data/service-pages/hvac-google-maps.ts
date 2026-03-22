@@ -19,7 +19,7 @@ export const hvacGoogleMapsConfig: ServicePageConfig = {
       "No ignoring seasonal demand signals"
     ],
     qualifierLine: "Every engagement is scoped to your local HVAC market, competitive landscape, and seasonal patterns so execution matches where demand actually comes from.",
-    integrationNote: "GBP SEO, Local SEO, and Authority Building overlap by design. Coordinated, they drive durable map pack visibility across peak HVAC seasons.",
+    integrationNote: "Google Business Pro SEO, Local SEO, and Authority Building overlap by design. Coordinated, they drive durable map pack visibility across peak HVAC seasons.",
     ctaText: "Start the Conversation",
     ctaSubtext: "Tell us about your HVAC business. We'll take it from there."
   },
