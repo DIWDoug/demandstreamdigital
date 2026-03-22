@@ -230,7 +230,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
         ],
         whyTheyRank: [
           "Plumbing and HVAC vertical exclusivity — 15+ years of trades-specific execution",
-          "Transparent $66/hr pricing; no inflated packages or hidden fees",
+          "Transparent $100/hr pricing; no inflated packages or hidden fees",
           "Direct communication with senior strategists, no account manager buffers",
           "Hub-and-spoke architecture covering every service type and city in the service area",
           "Geo-tagged image SEO increases map pack engagement and click-through rate",
