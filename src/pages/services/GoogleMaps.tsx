@@ -6,7 +6,7 @@ import MarketExclusivity from "@/components/sections/MarketExclusivity";
 
 import Testimonials from "@/components/sections/Testimonials";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
-import { getHubBySlug } from "@/data/services";
+
 import type { BreadcrumbItem } from "@/types/servicePage";
 import { getServiceHubSchema } from "@/lib/schema";
 
@@ -52,9 +52,6 @@ const SectionDivider = () => (
 );
 
 const GoogleMaps = () => {
-  const hub = getHubBySlug("google-maps");
-  if (!hub) return null;
-
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: "Services", href: "/#services" },
     { label: googleMapsConfig.title }
@@ -82,12 +79,12 @@ const GoogleMaps = () => {
       {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
-          title={hub.title}
-          description={hub.heroDescription}
+          title={googleMapsConfig.title}
+          description={googleMapsConfig.hero.subheadline}
           breadcrumbs={breadcrumbItems}
-          integrationNote={hub.integrationNote}
-          heroHeadline={hub.heroHeadline}
-          heroSubtitle={hub.heroSubtitle}
+          integrationNote={googleMapsConfig.hero.integrationNote}
+          heroHeadline={googleMapsConfig.hero.headline}
+          heroSubtitle={googleMapsConfig.hero.highlightedText}
         />
       </div>
       
