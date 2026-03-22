@@ -21,6 +21,7 @@ const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
 );
 
+
 const anchorItems = [
   { label: "Why It's Different", href: "#why-its-different" },
   { label: "Channels", href: "#channels" },
