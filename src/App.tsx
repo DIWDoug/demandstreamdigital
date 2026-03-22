@@ -168,7 +168,11 @@ const App = () => (
           <Route path="/best-hvac-seo-companies" element={<BestHVACSEOCompanies />} />
           <Route path="/best-hvac-seo-agencies" element={<Navigate to="/best-hvac-seo-companies" replace />} />
           <Route path="/best-plumbing-seo-agencies" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
-          
+          <Route path="/best-hvac-ppc-companies" element={<BestHVACPPCCompanies />} />
+          <Route path="/best-google-ads-companies-for-plumbers" element={<BestGoogleAdsCompaniesForPlumbers />} />
+          <Route path="/best-content-marketing-for-hvac" element={<BestContentMarketingForHVAC />} />
+          <Route path="/best-content-marketing-for-plumbers" element={<BestContentMarketingForPlumbers />} />
+
           {/* Legacy listicle redirects */}
           <Route path="/top-agencies/white-label-seo" element={<Navigate to="/best-plumbing-seo-companies" replace />} />
           <Route path="/top-agencies/white-label-ppc" element={<Navigate to="/best-plumbing-ppc-companies" replace />} />
