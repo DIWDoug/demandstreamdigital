@@ -3,6 +3,7 @@ import { ArrowRight, Play } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import YouTubeModal from "@/components/ui/youtube-modal";
 import TopoTexture from "@/components/TopoTexture";
+import heroBgAgency from "@/assets/hero-bg-agency.jpg";
 
 const Hero = () => {
   const [website, setWebsite] = useState("");
