@@ -38,7 +38,7 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
         height={1080}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-background/85" />
 
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20 hidden sm:block">
