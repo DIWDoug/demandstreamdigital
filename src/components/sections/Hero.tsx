@@ -17,6 +17,21 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
+      {/* Background photo - subtle agency team image */}
+      <img
+        src={heroBgAgency}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        fetchPriority="high"
+        loading="eager"
+        width={1920}
+        height={1080}
+      />
+      {/* Light overlay so the white/light hero design is preserved */}
+      <div className="absolute inset-0 bg-[#f9f9f9]/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f9f9f9]/80 via-[#f9f9f9]/60 to-[#f9f9f9]/75" />
+
       <TopoTexture opacity={0.12} />
 
       {/* Visible gradient color washes */}
