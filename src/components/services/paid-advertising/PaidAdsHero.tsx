@@ -30,7 +30,7 @@ const PaidAdsHero = () => {
         height={1080}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-background/85" />
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20 hidden sm:block">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />

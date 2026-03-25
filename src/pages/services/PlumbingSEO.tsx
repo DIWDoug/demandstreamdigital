@@ -15,6 +15,7 @@ import {
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
+import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 import { plumbingSEOConfig } from "@/data/service-pages/plumbing-seo";
 import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
@@ -87,6 +88,7 @@ const PlumbingSEO = () => {
         <LocalSEOTwoColumnHero
           config={plumbingSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
+          bgImage={heroBgPlumbing}
         />
       </div>
 

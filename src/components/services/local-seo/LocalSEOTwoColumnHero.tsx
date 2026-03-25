@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import heroBgTrade from "@/assets/hero-bg-agency.jpg";
+import heroBgAgency from "@/assets/hero-bg-agency.jpg";
 
 interface HeroSubheadline {
   intro: string;
@@ -21,14 +21,16 @@ interface HeroConfig {
 interface LocalSEOTwoColumnHeroProps {
   config: HeroConfig;
   breadcrumbs?: BreadcrumbItem[];
+  bgImage?: string;
 }
 
-const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroProps) => {
+const LocalSEOTwoColumnHero = ({ config, breadcrumbs, bgImage }: LocalSEOTwoColumnHeroProps) => {
+  const heroImage = bgImage ?? heroBgAgency;
   return (
     <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
       {/* Background photo */}
       <img
-        src={heroBgTrade}
+        src={heroImage}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center"
@@ -38,7 +40,7 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
         height={1080}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-background/85" />
 
       {/* Background effects */}
       <div className="absolute inset-0 opacity-20 hidden sm:block">
