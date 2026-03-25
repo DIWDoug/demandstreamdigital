@@ -37,9 +37,7 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, hero
         height={1080}
       />
       {/* Dark overlay so text stays readable */}
-      <div className="absolute inset-0 bg-background/88" />
-      {/* Subtle gradient vignette */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/40" />
+      <div className="absolute inset-0 bg-background/95" />
 
       {/* Background effects */}
       <div className="absolute inset-0 opacity-15">
