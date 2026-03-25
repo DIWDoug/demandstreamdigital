@@ -88,6 +88,7 @@ const PlumbingSEO = () => {
         <LocalSEOTwoColumnHero
           config={plumbingSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
+          bgImage={heroBgPlumbing}
         />
       </div>
 

@@ -88,6 +88,7 @@ const HVACSEO = () => {
         <LocalSEOTwoColumnHero
           config={hvacSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
+          bgImage={heroBgHVAC}
         />
       </div>
 
