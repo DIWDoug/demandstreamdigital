@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import heroBgTrade from "@/assets/hero-bg-trade.jpg";
 
 interface HeroSubheadline {
   intro: string;

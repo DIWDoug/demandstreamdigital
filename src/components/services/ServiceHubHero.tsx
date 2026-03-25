@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
+import heroBgTrade from "@/assets/hero-bg-trade.jpg";
 
 interface BreadcrumbItem {
   label: string;
