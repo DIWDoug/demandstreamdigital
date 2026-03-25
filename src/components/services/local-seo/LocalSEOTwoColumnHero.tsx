@@ -24,12 +24,13 @@ interface LocalSEOTwoColumnHeroProps {
   bgImage?: string;
 }
 
-const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroProps) => {
+const LocalSEOTwoColumnHero = ({ config, breadcrumbs, bgImage }: LocalSEOTwoColumnHeroProps) => {
+  const heroImage = bgImage ?? heroBgAgency;
   return (
     <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
       {/* Background photo */}
       <img
-        src={heroBgTrade}
+        src={heroImage}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center"
