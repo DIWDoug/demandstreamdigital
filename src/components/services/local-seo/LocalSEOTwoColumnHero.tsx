@@ -21,6 +21,7 @@ interface HeroConfig {
 interface LocalSEOTwoColumnHeroProps {
   config: HeroConfig;
   breadcrumbs?: BreadcrumbItem[];
+  bgImage?: string;
 }
 
 const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroProps) => {
