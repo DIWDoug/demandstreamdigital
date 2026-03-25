@@ -31,8 +31,7 @@ const HVACFacebookHero = () => {
         height={1080}
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/88" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/40" />
+      <div className="absolute inset-0 bg-background/95" />
       <div className="absolute inset-0 opacity-20 hidden sm:block">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
