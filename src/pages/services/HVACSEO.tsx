@@ -15,6 +15,7 @@ import {
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
+import heroBgHVAC from "@/assets/hero-bg-hvac.jpg";
 import { hvacSEOConfig } from "@/data/service-pages/hvac-seo";
 import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
