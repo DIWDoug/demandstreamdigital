@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import heroBgTrade from "@/assets/hero-bg-trade.jpg";
+import heroBgTrade from "@/assets/hero-bg-agency2.jpg";
 
 const PaidAdsHero = () => {
   const breadcrumbs = [

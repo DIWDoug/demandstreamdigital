@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBgTrade from "@/assets/hero-bg-trade.jpg";
+import heroBgTrade from "@/assets/hero-bg-agency.jpg";
 import { useState } from "react";
 
 interface BreadcrumbItem {
