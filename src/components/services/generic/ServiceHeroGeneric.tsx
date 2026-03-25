@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import heroBgTrade from "@/assets/hero-bg-trade.jpg";
 import { Link } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
@@ -28,6 +29,20 @@ const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) =>
 
   return (
     <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center justify-center overflow-hidden">
+      {/* Background photo */}
+      <img
+        src={heroBgTrade}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+        fetchPriority="high"
+        loading="eager"
+        width={1920}
+        height={1080}
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/88" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/40" />
       {/* Background effects - hidden on small mobile to prevent overflow */}
       <div className="absolute inset-0 opacity-20 hidden sm:block">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
