@@ -7,7 +7,7 @@ export const emailMarketingConfig: ServicePageConfig = {
   title: "Email Marketing",
   metaTitle: "Plumbing Email Marketing: Campaigns & Automation | DSD",
   metaDescription: "Plumbing email programs that turn one-time service calls into repeat customers. Membership reminders, water heater follow-ups, and reactivation sequences built for dispatch growth.",
-  canonicalUrl: `${SITE_URL}/plumbing-email-marketing`,
+  canonicalUrl: `${SITE_URL}/plumbing-and-hvac-email-marketing`,
 
   hero: {
     headline: "Email Marketing for",
