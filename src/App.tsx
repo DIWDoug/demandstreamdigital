@@ -77,8 +77,11 @@ const HVACEmailMarketing = lazy(() => import("./pages/services/HVACEmailMarketin
 const HVACContentMarketing = lazy(() => import("./pages/services/HVACContentMarketing"));
 const HVACReporting = lazy(() => import("./pages/services/HVACReporting"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
+const PlumbingEmailMarketing = lazy(() => import("./pages/services/PlumbingEmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
+const PlumbingReporting = lazy(() => import("./pages/services/PlumbingReporting"));
+const PlumbingGoogleMaps = lazy(() => import("./pages/services/PlumbingGoogleMaps"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const PlumbingContentMarketing = lazy(() => import("./pages/services/PlumbingContentMarketing"));
 const WebDesign = lazy(() => import("./pages/services/WebDesign"));
@@ -184,16 +187,16 @@ const App = () => (
           {/* Plumbing & HVAC Service Pages */}
           <Route path="/hvac-and-plumbing-seo" element={<LocalSEO />} />
           <Route path="/plumbing-seo" element={<PlumbingSEO />} />
-          <Route path="/plumbing-google-maps" element={<GoogleMaps />} />
+          <Route path="/plumbing-google-maps" element={<PlumbingGoogleMaps />} />
           <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-paid-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
-          <Route path="/plumbing-email-marketing" element={<EmailMarketing />} />
+          <Route path="/plumbing-email-marketing" element={<PlumbingEmailMarketing />} />
           <Route path="/plumbing-hvac-content-marketing" element={<ContentMarketing />} />
           <Route path="/plumbing-hvac-content-marketing/" element={<ContentMarketing />} />
           <Route path="/plumbing-content-marketing" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-content-marketing/" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
-          <Route path="/plumbing-reporting" element={<Reporting />} />
+          <Route path="/plumbing-reporting" element={<PlumbingReporting />} />
 
           {/* Paid Advertising Hub */}
           <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />
