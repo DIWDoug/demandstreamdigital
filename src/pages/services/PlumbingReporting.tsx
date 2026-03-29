@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { reportingConfig } from "@/data/service-pages/reporting";
 import { getServiceHubSchema } from "@/lib/schema";
+import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -54,9 +55,12 @@ const PlumbingReporting = () => {
       {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero
-          title={reportingConfig.title}
-          description={reportingConfig.hero.subheadline}
+          title="Plumbing Reporting & Analytics"
+          description="For plumbing companies, reporting connects marketing spend to booked calls and revenue. We build dashboards that show which campaigns drive drain cleaning, water heater, and sewer line jobs so you know exactly where to invest."
           breadcrumbs={breadcrumbItems}
+          heroHeadline="Reporting & Analytics for"
+          heroSubtitle="Plumbing Companies"
+          bgImage={heroBgPlumbing}
         />
       </div>
 
