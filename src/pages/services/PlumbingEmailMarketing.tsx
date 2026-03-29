@@ -4,6 +4,7 @@ import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import Testimonials from "@/components/sections/Testimonials";
+import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -59,6 +60,7 @@ const PlumbingEmailMarketing = () => {
           breadcrumbs={breadcrumbItems}
           heroHeadline="Email Marketing for"
           heroSubtitle="Plumbing Companies"
+          bgImage={heroBgPlumbing}
         />
       </div>
 

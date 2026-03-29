@@ -19,6 +19,7 @@ import {
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";
 import { getServiceHubSchema } from "@/lib/schema";
+import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -55,12 +56,12 @@ const PlumbingGoogleMaps = () => {
       {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero
-          title={googleMapsConfig.title}
-          description={googleMapsConfig.hero.subheadline}
+          title="Plumbing Google Maps SEO"
+          description="For plumbing companies, the Google Maps 3-pack is where emergency and high-intent customers choose who to call. We build and optimize your Google Business Profile to dominate local map results for drain cleaning, water heater, and sewer line searches."
           breadcrumbs={breadcrumbItems}
-          integrationNote={googleMapsConfig.hero.integrationNote}
-          heroHeadline={googleMapsConfig.hero.headline}
-          heroSubtitle={googleMapsConfig.hero.highlightedText}
+          heroHeadline="Google Maps SEO for"
+          heroSubtitle="Plumbing Companies"
+          bgImage={heroBgPlumbing}
         />
       </div>
 
