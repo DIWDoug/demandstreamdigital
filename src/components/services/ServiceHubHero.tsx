@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import heroBgTrade from "@/assets/hero-bg-agency2.jpg";
+import heroBgDefault from "@/assets/hero-bg-trades.jpg";
 
 interface BreadcrumbItem {
   label: string;
@@ -20,14 +20,15 @@ interface ServiceHubHeroProps {
   integrationNote?: string;
   heroHeadline?: string;
   heroSubtitle?: string;
+  bgImage?: string;
 }
 
-const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle, bgImage }: ServiceHubHeroProps) => {
   return (
     <section className="relative min-h-[50vh] gradient-hero noise-overlay flex items-center overflow-hidden">
       {/* Background photo */}
       <img
-        src={heroBgTrade}
+        src={bgImage ?? heroBgDefault}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-center"
