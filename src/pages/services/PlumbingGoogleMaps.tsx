@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";
+import GBPBeforeAfterCaseStudy from "@/components/services/gbp/GBPBeforeAfterCaseStudy";
 import { getServiceHubSchema } from "@/lib/schema";
 import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 
@@ -78,6 +79,9 @@ const PlumbingGoogleMaps = () => {
       <div id="outcomes" className="scroll-mt-32">
         <ServiceOutcomesSection config={googleMapsConfig.outcomes} />
       </div>
+
+      {/* CASE STUDY: Before/After Grid Scan */}
+      <GBPBeforeAfterCaseStudy />
 
       {/* Ranking Factors - GBP specific */}
       <GBPRankingFactors />
