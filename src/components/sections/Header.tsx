@@ -114,7 +114,7 @@ const Header = () => {
     },
     {
       label: "Email Marketing",
-      href: "/plumbing-email-marketing",
+      href: "/plumbing-and-hvac-email-marketing",
       spokes: [
         { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
         { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
@@ -122,7 +122,7 @@ const Header = () => {
     },
     {
       label: "Reporting & Dashboards",
-      href: "/plumbing-reporting",
+      href: "/plumbing-and-hvac-reporting",
       spokes: [
         { label: "Plumbing Reporting", href: "/plumbing-reporting" },
         { label: "HVAC Reporting", href: "/hvac-reporting" },
