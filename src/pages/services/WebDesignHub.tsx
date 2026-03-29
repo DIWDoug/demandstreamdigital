@@ -1,4 +1,5 @@
 import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone, Palette, X, CheckCircle2, AlertTriangle, TrendingUp, MapPin, Smartphone } from "lucide-react";
+import DeviceMockupShowcase from "@/components/services/web-design/DeviceMockupShowcase";
 import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
@@ -307,6 +308,9 @@ const WebDesignHub = () => {
       <div className="relative">
         <WaveDivider position="top" fromColor="hsl(210, 53%, 11%)" toColor="#F8F9FA" variant="curve" animated />
       </div>
+
+      {/* DEVICE MOCKUP SHOWCASE */}
+      <DeviceMockupShowcase />
 
       {/* EXCLUSIVITY */}
       <WebDesignExclusivity />
