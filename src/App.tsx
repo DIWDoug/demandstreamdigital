@@ -265,7 +265,7 @@ const App = () => (
 
           {/* ============ WHITE-LABEL → TRADE-SPECIFIC REDIRECTS (kept for crawl budget) ============ */}
           <Route path="/white-label-local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-          <Route path="/white-label-gbp-seo" element={<Navigate to="/plumbing-google-maps" replace />} />
+          <Route path="/white-label-gbp-seo" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
           <Route path="/white-label-paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
           <Route path="/white-label-local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
@@ -293,9 +293,9 @@ const App = () => (
           <Route path="/services" element={<Navigate to="/#services" replace />} />
           <Route path="/services/" element={<Navigate to="/#services" replace />} />
           <Route path="/services/local-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-          <Route path="/services/google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-google-maps-local-seo" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/white-label-google-maps" element={<Navigate to="/plumbing-google-maps" replace />} />
+          <Route path="/services/google-maps" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
+          <Route path="/white-label-google-maps-local-seo" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
+          <Route path="/white-label-google-maps" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
           <Route path="/services/paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/services/email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
           <Route path="/services/local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
@@ -321,8 +321,8 @@ const App = () => (
           <Route path="/advanced-local-seo-services/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/orthodontist-seo" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/orthodontist-seo/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
-          <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/plumbing-google-maps" replace />} />
-          <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/plumbing-google-maps" replace />} />
+          <Route path="/online-reputation-management-small-businesses" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
+          <Route path="/online-reputation-management-small-businesses/" element={<Navigate to="/plumbing-and-hvac-google-maps" replace />} />
           <Route path="/dentist-seo-company" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/dentist-seo-company/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/local-seo-company" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
