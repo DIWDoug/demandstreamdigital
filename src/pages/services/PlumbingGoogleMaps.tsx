@@ -80,6 +80,9 @@ const PlumbingGoogleMaps = () => {
         <ServiceOutcomesSection config={googleMapsConfig.outcomes} />
       </div>
 
+      {/* CASE STUDY: Before/After Grid Scan */}
+      <GBPBeforeAfterCaseStudy />
+
       {/* Ranking Factors - GBP specific */}
       <GBPRankingFactors />
 
