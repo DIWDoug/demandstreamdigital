@@ -58,10 +58,10 @@ const PlumbingGoogleMaps = () => {
       <div className="pt-16">
         <ServiceHubHero
           title="Plumbing Google Maps SEO"
-          description="For plumbing companies, the Google Maps 3-pack is where emergency and high-intent customers choose who to call. We build and optimize your Google Business Profile to dominate local map results for drain cleaning, water heater, and sewer line searches."
+          description="We help plumbing companies earn and hold Google Maps visibility through GBP optimization built for emergency drain, water heater, and sewer line searches in competitive local markets."
           breadcrumbs={breadcrumbItems}
-          heroHeadline="Google Maps SEO for"
-          heroSubtitle="Plumbing Companies"
+          heroHeadline="Earn and Hold Google Maps Visibility"
+          heroSubtitle="Google Business Pro SEO for Plumbing Companies"
           bgImage={heroBgPlumbing}
         />
       </div>
