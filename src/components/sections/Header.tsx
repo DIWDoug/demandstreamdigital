@@ -90,7 +90,7 @@ const Header = () => {
     },
     {
       label: "Google Maps / GBP",
-      href: "/plumbing-google-maps",
+      href: "/plumbing-and-hvac-google-maps",
       spokes: [
         { label: "Plumbing Google Maps", href: "/plumbing-google-maps" },
         { label: "HVAC Google Maps", href: "/hvac-google-maps" },

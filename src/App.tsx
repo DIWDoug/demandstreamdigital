@@ -187,6 +187,7 @@ const App = () => (
           {/* Plumbing & HVAC Service Pages */}
           <Route path="/hvac-and-plumbing-seo" element={<LocalSEO />} />
           <Route path="/plumbing-seo" element={<PlumbingSEO />} />
+          <Route path="/plumbing-and-hvac-google-maps" element={<GoogleMaps />} />
           <Route path="/plumbing-google-maps" element={<PlumbingGoogleMaps />} />
           <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-paid-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
