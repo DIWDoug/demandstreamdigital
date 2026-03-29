@@ -60,6 +60,7 @@ const PlumbingEmailMarketing = () => {
           breadcrumbs={breadcrumbItems}
           heroHeadline="Email Marketing for"
           heroSubtitle="Plumbing Companies"
+          bgImage={heroBgPlumbing}
         />
       </div>
 
