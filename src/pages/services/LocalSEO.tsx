@@ -91,6 +91,7 @@ const LocalSEO = () => {
         <LocalSEOTwoColumnHero 
           config={localSEOConfig.hero}
           breadcrumbs={breadcrumbItems}
+          bgImage={heroBgSeoHub}
         />
       </div>
 
