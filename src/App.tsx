@@ -197,6 +197,7 @@ const App = () => (
           <Route path="/plumbing-content-marketing/" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
           <Route path="/plumbing-reporting" element={<PlumbingReporting />} />
+          <Route path="/plumbing-and-hvac-reporting" element={<Reporting />} />
 
           {/* Paid Advertising Hub */}
           <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />

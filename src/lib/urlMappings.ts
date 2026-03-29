@@ -10,7 +10,7 @@ export const HUB_URL_MAP: Record<string, string> = {
   'paid-media': '/hvac-and-plumbing-paid-ads',
   'email-marketing': '/plumbing-email-marketing',
   'local-authority-building': '/hvac-and-plumbing-seo',
-  'reporting': '/plumbing-reporting',
+  'reporting': '/plumbing-and-hvac-reporting',
   'content-marketing': '/plumbing-content-marketing'
 };
 

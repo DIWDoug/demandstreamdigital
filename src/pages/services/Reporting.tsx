@@ -1,9 +1,8 @@
-import { Helmet } from "react-helmet-async";
+import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 import MarketExclusivity from "@/components/sections/MarketExclusivity";
-
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
@@ -15,10 +14,12 @@ import {
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
-  ServiceEcosystemSection
+  ServiceEcosystemSection,
+  ServiceBiggerPicture
 } from "@/components/services/generic";
 import { reportingConfig } from "@/data/service-pages/reporting";
-import { ServiceBiggerPicture } from "@/components/services/generic";
+import { getServiceHubSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/constants";
 
 const REPORTING_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
@@ -36,8 +37,6 @@ const REPORTING_ORBIT_NODES = [
   { label: "Content Marketing", angle: 240 },
   { label: "Web Design", angle: 300 },
 ];
-import { getHubBySlug } from "@/data/services";
-import { getServiceHubSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -45,56 +44,43 @@ const SectionDivider = () => (
   </div>
 );
 
-const Reporting = () => {
-  const hub = getHubBySlug("reporting");
-  if (!hub) return null;
+const metaTitle = "Plumbing & HVAC Marketing Reporting & Analytics | DSD";
+const metaDescription = "Marketing reports for plumbing and HVAC companies that show exactly what's working. Dashboards, rank tracking, call attribution, and ROI analysis.";
+const canonicalUrl = `${SITE_URL}/plumbing-and-hvac-reporting`;
 
+const Reporting = () => {
   const breadcrumbItems = [
     { label: "Services", href: "/#services" },
-    { label: hub.title }
+    { label: "Reporting & Analytics" }
   ];
 
   const pageSchema = getServiceHubSchema({
     name: "Reporting & Analytics for Plumbing & HVAC",
-    description: reportingConfig.metaDescription,
-    url: reportingConfig.canonicalUrl,
+    description: metaDescription,
+    url: canonicalUrl,
     serviceType: "Marketing Analytics Service",
     faqGroups: reportingConfig.faq.groups
   });
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>{reportingConfig.metaTitle}</title>
-        <meta name="description" content={reportingConfig.metaDescription} />
-        <link rel="canonical" href={reportingConfig.canonicalUrl} />
-        
-        
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={reportingConfig.metaTitle} />
-        <meta property="og:description" content={reportingConfig.metaDescription} />
-        <meta property="og:url" content={reportingConfig.canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={reportingConfig.metaTitle} />
-        <meta name="twitter:description" content={reportingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-      </Helmet>
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        canonical={canonicalUrl}
+        schemaJson={pageSchema}
+      />
       
       <Header />
       
       {/* 1. HERO */}
       <div className="pt-16">
         <ServiceHubHero 
-          title={hub.title} 
-          description={hub.heroDescription}
+          title="Reporting & Analytics"
+          description="You should never wonder where your marketing dollars are going. We provide clear, honest reporting that proves value, builds trust, and shows exactly what's driving calls and booked jobs."
           breadcrumbs={breadcrumbItems}
+          heroHeadline="Reporting & Analytics for"
+          heroSubtitle="Plumbing & HVAC Companies"
         />
       </div>
       
@@ -166,7 +152,7 @@ const Reporting = () => {
 
       <MarketExclusivity />
       
-      {/* 11. CONTACT */}
+      {/* 12. CONTACT */}
       <div id="contact" className="scroll-mt-32">
         <ContactForm />
       </div>
