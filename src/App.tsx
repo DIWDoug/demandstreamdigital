@@ -77,8 +77,11 @@ const HVACEmailMarketing = lazy(() => import("./pages/services/HVACEmailMarketin
 const HVACContentMarketing = lazy(() => import("./pages/services/HVACContentMarketing"));
 const HVACReporting = lazy(() => import("./pages/services/HVACReporting"));
 const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
+const PlumbingEmailMarketing = lazy(() => import("./pages/services/PlumbingEmailMarketing"));
 const Authority = lazy(() => import("./pages/services/Authority"));
 const Reporting = lazy(() => import("./pages/services/Reporting"));
+const PlumbingReporting = lazy(() => import("./pages/services/PlumbingReporting"));
+const PlumbingGoogleMaps = lazy(() => import("./pages/services/PlumbingGoogleMaps"));
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const PlumbingContentMarketing = lazy(() => import("./pages/services/PlumbingContentMarketing"));
 const WebDesign = lazy(() => import("./pages/services/WebDesign"));
