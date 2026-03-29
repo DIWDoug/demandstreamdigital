@@ -106,7 +106,7 @@ const Header = () => {
     },
     {
       label: "Content Marketing",
-      href: "/plumbing-content-marketing",
+      href: "/plumbing-and-hvac-content-marketing",
       spokes: [
         { label: "Plumbing Content", href: "/plumbing-content-marketing" },
         { label: "HVAC Content", href: "/hvac-content-marketing" },

@@ -191,8 +191,9 @@ const App = () => (
           <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-paid-advertising/" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/plumbing-email-marketing" element={<PlumbingEmailMarketing />} />
-          <Route path="/plumbing-hvac-content-marketing" element={<ContentMarketing />} />
-          <Route path="/plumbing-hvac-content-marketing/" element={<ContentMarketing />} />
+          <Route path="/plumbing-and-hvac-content-marketing" element={<ContentMarketing />} />
+          <Route path="/plumbing-hvac-content-marketing" element={<Navigate to="/plumbing-and-hvac-content-marketing" replace />} />
+          <Route path="/plumbing-hvac-content-marketing/" element={<Navigate to="/plumbing-and-hvac-content-marketing" replace />} />
           <Route path="/plumbing-content-marketing" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-content-marketing/" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
@@ -268,7 +269,7 @@ const App = () => (
           <Route path="/white-label-email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
           <Route path="/white-label-local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
           <Route path="/white-label-reporting" element={<Navigate to="/plumbing-and-hvac-reporting" replace />} />
-          <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
+          <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-and-hvac-content-marketing" replace />} />
           <Route path="/white-label-google-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-meta-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-local-service-ads" element={<Navigate to="/plumbing-hvac-local-service-ads" replace />} />

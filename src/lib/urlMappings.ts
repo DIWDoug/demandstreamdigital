@@ -11,7 +11,7 @@ export const HUB_URL_MAP: Record<string, string> = {
   'email-marketing': '/plumbing-email-marketing',
   'local-authority-building': '/hvac-and-plumbing-seo',
   'reporting': '/plumbing-and-hvac-reporting',
-  'content-marketing': '/plumbing-content-marketing'
+  'content-marketing': '/plumbing-and-hvac-content-marketing'
 };
 
 // Flat URL prefix to hub slug mapping (reverse)

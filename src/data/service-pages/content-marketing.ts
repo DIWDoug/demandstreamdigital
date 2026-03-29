@@ -7,7 +7,7 @@ export const contentMarketingConfig: ServicePageConfig = {
   title: "Plumbing & HVAC Content Marketing",
   metaTitle: "Plumbing & HVAC Content Marketing for Revenue Growth | DemandStream Digital",
   metaDescription: "Generic content doesn't book plumbing and HVAC calls. We build structured content systems that drive local authority, AI visibility, and booked service calls. See how.",
-  canonicalUrl: `${SITE_URL}/plumbing-hvac-content-marketing/`,
+  canonicalUrl: `${SITE_URL}/plumbing-and-hvac-content-marketing`,
 
   hero: {
     headline: "Plumbing & HVAC",
