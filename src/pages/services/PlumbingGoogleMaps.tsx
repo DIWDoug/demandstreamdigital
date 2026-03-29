@@ -18,6 +18,7 @@ import {
 } from "@/components/services/generic";
 import { googleMapsConfig } from "@/data/service-pages/google-maps";
 import GBPRankingFactors from "@/components/services/gbp/GBPRankingFactors";
+import GBPBeforeAfterCaseStudy from "@/components/services/gbp/GBPBeforeAfterCaseStudy";
 import { getServiceHubSchema } from "@/lib/schema";
 import heroBgPlumbing from "@/assets/hero-bg-plumbing.jpg";
 
