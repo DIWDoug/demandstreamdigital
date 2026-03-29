@@ -197,6 +197,7 @@ const App = () => (
           <Route path="/plumbing-content-marketing/" element={<PlumbingContentMarketing />} />
           <Route path="/plumbing-authority-building" element={<Authority />} />
           <Route path="/plumbing-reporting" element={<PlumbingReporting />} />
+          <Route path="/plumbing-and-hvac-reporting" element={<Reporting />} />
 
           {/* Paid Advertising Hub */}
           <Route path="/hvac-and-plumbing-paid-ads" element={<PaidAdvertising />} />
@@ -266,7 +267,7 @@ const App = () => (
           <Route path="/white-label-paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
           <Route path="/white-label-local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-reporting" element={<Navigate to="/plumbing-reporting" replace />} />
+          <Route path="/white-label-reporting" element={<Navigate to="/plumbing-and-hvac-reporting" replace />} />
           <Route path="/white-label-content-marketing" element={<Navigate to="/plumbing-content-marketing" replace />} />
           <Route path="/white-label-google-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/white-label-meta-ads" element={<Navigate to="/plumbing-paid-advertising" replace />} />
@@ -283,7 +284,7 @@ const App = () => (
           <Route path="/white-label-nap-citations" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-topical-content" element={<Navigate to="/plumbing-content-marketing" replace />} />
           <Route path="/white-label-local-links" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/white-label-dashboards" element={<Navigate to="/plumbing-reporting" replace />} />
+          <Route path="/white-label-dashboards" element={<Navigate to="/plumbing-and-hvac-reporting" replace />} />
 
 
           {/* Legacy /services redirects */}
@@ -296,7 +297,7 @@ const App = () => (
           <Route path="/services/paid-media" element={<Navigate to="/plumbing-paid-advertising" replace />} />
           <Route path="/services/email-marketing" element={<Navigate to="/plumbing-email-marketing" replace />} />
           <Route path="/services/local-authority-building" element={<Navigate to="/plumbing-authority-building" replace />} />
-          <Route path="/services/reporting" element={<Navigate to="/plumbing-reporting" replace />} />
+          <Route path="/services/reporting" element={<Navigate to="/plumbing-and-hvac-reporting" replace />} />
           <Route path="/services/:hubSlug/:spokeSlug" element={<LegacySpokeRedirect />} />
 
           {/* Legacy site URL redirects */}
@@ -493,7 +494,7 @@ const LegacySpokeRedirect = () => {
       'email-marketing': '/plumbing-email-marketing',
       'content-marketing': '/plumbing-content-marketing',
       'local-authority-building': '/plumbing-authority-building',
-      'reporting': '/plumbing-reporting',
+      'reporting': '/plumbing-and-hvac-reporting',
     };
     return <Navigate to={hubMap[hubSlug] || '/'} replace />;
   }
