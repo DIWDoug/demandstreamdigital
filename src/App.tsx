@@ -494,7 +494,7 @@ const LegacySpokeRedirect = () => {
       'email-marketing': '/plumbing-email-marketing',
       'content-marketing': '/plumbing-content-marketing',
       'local-authority-building': '/plumbing-authority-building',
-      'reporting': '/plumbing-reporting',
+      'reporting': '/plumbing-and-hvac-reporting',
     };
     return <Navigate to={hubMap[hubSlug] || '/'} replace />;
   }
