@@ -7,7 +7,7 @@ export const googleMapsConfig: ServicePageConfig = {
   title: "Google Business Pro SEO",
   metaTitle: "Plumbing Google Maps SEO & GBP Optimization | DemandStream",
   metaDescription: "Google Business Profile management for plumbing and HVAC. Reviews, citations, posts, and local pack strategy that puts your company in the map pack.",
-  canonicalUrl: `${SITE_URL}/plumbing-google-maps`,
+  canonicalUrl: `${SITE_URL}/plumbing-and-hvac-google-maps`,
 
   hero: {
     headline: "Earn and Hold Google Maps Visibility",
