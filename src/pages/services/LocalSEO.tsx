@@ -15,6 +15,7 @@ import {
   ServiceGroupedFAQ,
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
+import heroBgSeoHub from "@/assets/hero-bg-seo-hub.jpg";
 import { localSEOConfig } from "@/data/service-pages/local-seo";
 import { getFAQPageSchema, getServiceSchema, getOrganizationSchema } from "@/lib/schema";
 
