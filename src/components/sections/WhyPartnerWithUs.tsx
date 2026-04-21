@@ -45,17 +45,17 @@ const WhyPartnerWithUs = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 section-light relative reveal-section overflow-hidden">
-      <StreamTexture variant="light" opacity={0.1} />
+    <section ref={sectionRef} className="pt-12 pb-8 lg:pt-16 lg:pb-10 bg-background relative reveal-section overflow-hidden">
+      <StreamTexture variant="dark" opacity={0.1} />
       <div className="section-divider absolute top-0" />
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
          <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">The Partnership</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             What Working With Us Looks Like
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Every campaign is built around how customers search for plumbers and HVAC companies in your specific market, and what it takes to get them to call.
           </p>
         </div>
@@ -66,26 +66,21 @@ const WhyPartnerWithUs = () => {
               key={benefit.title}
               className={`text-center p-8 rounded-xl border ${
                 benefit.isQualifier 
-                  ? 'bg-gradient-to-br from-gray-100 to-gray-200/80 border-gray-300/70' 
-                  : 'bg-gradient-to-br from-white to-[#F0F0ED] border-gray-300/50'
+                  ? 'bg-card/40 border-border/60' 
+                  : 'bg-card border-border'
               }`}
-              style={{ 
-                boxShadow: benefit.isQualifier 
-                  ? 'inset 0 2px 4px rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.08)' 
-                  : 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)' 
-              }}
             >
               <div className={`inline-flex items-center justify-center p-4 rounded-xl mb-5 ${
                 benefit.isQualifier 
-                  ? 'bg-gray-400/15 border border-gray-400/25' 
+                  ? 'bg-muted/20 border border-border/40' 
                   : 'bg-accent-blue/10 border border-accent-blue/20'
               }`}>
-                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-accent-blue'}`} strokeWidth={1.5} />
+                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-muted-foreground' : 'text-accent-blue'}`} strokeWidth={1.5} />
               </div>
-              <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
+              <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-muted-foreground' : 'text-foreground'}`}>
                 {benefit.title}
               </h3>
-              <p className={`text-sm leading-relaxed ${benefit.isQualifier ? 'text-gray-500' : 'text-gray-600'}`}>
+              <p className={`text-sm leading-relaxed ${benefit.isQualifier ? 'text-muted-foreground/80' : 'text-text-secondary'}`}>
                 {benefit.description}
               </p>
             </div>

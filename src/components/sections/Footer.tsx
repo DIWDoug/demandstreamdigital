@@ -9,28 +9,28 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   const serviceCategories = [
     {
       title: "PLUMBING MARKETING",
-      href: "/contact",
+      href: "/plumbing-seo",
       items: [
-        { label: "Plumbing SEO", href: "/contact" },
-        { label: "Plumbing Google Maps / GBP", href: "/contact" },
-        { label: "Plumbing PPC / Google Ads", href: "/contact" },
-        { label: "Plumbing Web Design", href: "/contact" },
-        { label: "Plumbing Reputation Management", href: "/contact" },
-        { label: "Plumbing Email Marketing", href: "/contact" },
-        { label: "Multi-Location Plumbing & HVAC", href: "/contact" },
+        { label: "Plumbing SEO", href: "/plumbing-seo" },
+        { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
+        { label: "Plumbing PPC / Google Ads", href: "/plumbing-paid-advertising" },
+        { label: "Plumbing Web Design", href: "/plumbing-website-design" },
+        { label: "Plumbing Reputation Management", href: "/plumbing-google-maps" },
+        { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
+        { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
       ]
     },
     {
       title: "HVAC MARKETING",
-      href: "/contact",
+      href: "/hvac-seo",
       items: [
-        { label: "HVAC SEO", href: "/contact" },
-        { label: "HVAC Google Maps / GBP", href: "/contact" },
-        { label: "HVAC PPC / Google Ads", href: "/contact" },
-        { label: "HVAC Web Design", href: "/contact" },
-        { label: "HVAC Reputation Management", href: "/contact" },
-        { label: "HVAC Email Marketing", href: "/contact" },
-        { label: "Multi-Location Plumbing & HVAC", href: "/contact" },
+        { label: "HVAC SEO", href: "/hvac-seo" },
+        { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
+        { label: "HVAC PPC / Google Ads", href: "/hvac-paid-advertising" },
+        { label: "HVAC Web Design", href: "/hvac-website-design" },
+        { label: "HVAC Reputation Management", href: "/hvac-google-maps" },
+        { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
+        { label: "HVAC Local Service Ads", href: "/hvac-local-service-ads" },
       ]
     },
     {
@@ -38,16 +38,17 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       href: "/#services",
       items: [
         { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-        { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-        { label: "Paid Advertising", href: "/plumbing-paid-advertising" },
-        { label: "Content Marketing", href: "/plumbing-content-marketing" },
-        { label: "Email Marketing", href: "/plumbing-email-marketing" },
-        { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
+        { label: "Google Maps / GBP", href: "/plumbing-and-hvac-google-maps" },
+        { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+        { label: "Content Marketing", href: "/plumbing-and-hvac-content-marketing" },
+        { label: "Email Marketing", href: "/plumbing-and-hvac-email-marketing" },
+        { label: "Website Design", href: "/website-design" },
+        { label: "Reporting & Dashboards", href: "/plumbing-and-hvac-reporting" },
       ]
     },
     {
       title: "RESOURCES",
-      href: "/contact",
+      href: "/case-studies",
       items: [
         { label: "Case Studies", href: "/case-studies" },
         { label: "Partner Tools", href: "/partner-tools" },
