@@ -221,7 +221,7 @@ const CaseStudies = () => {
         {/* Featured Case Study */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-6 lg:px-8">
-            <FeaturedCaseStudy study={caseStudies.find(s => s.slug === "barn-restoration-seo")!} />
+            <FeaturedCaseStudy study={caseStudies.find(s => s.slug === "las-vegas-plumbing-seo")!} />
           </div>
         </section>
         
