@@ -66,26 +66,21 @@ const WhyPartnerWithUs = () => {
               key={benefit.title}
               className={`text-center p-8 rounded-xl border ${
                 benefit.isQualifier 
-                  ? 'bg-gradient-to-br from-gray-100 to-gray-200/80 border-gray-300/70' 
-                  : 'bg-gradient-to-br from-white to-[#F0F0ED] border-gray-300/50'
+                  ? 'bg-card/40 border-border/60' 
+                  : 'bg-card border-border'
               }`}
-              style={{ 
-                boxShadow: benefit.isQualifier 
-                  ? 'inset 0 2px 4px rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.08)' 
-                  : 'inset 0 3px 6px rgba(255,255,255,1), inset 0 -3px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.1)' 
-              }}
             >
               <div className={`inline-flex items-center justify-center p-4 rounded-xl mb-5 ${
                 benefit.isQualifier 
-                  ? 'bg-gray-400/15 border border-gray-400/25' 
+                  ? 'bg-muted/20 border border-border/40' 
                   : 'bg-accent-blue/10 border border-accent-blue/20'
               }`}>
-                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-gray-500' : 'text-accent-blue'}`} strokeWidth={1.5} />
+                <benefit.icon className={`w-7 h-7 ${benefit.isQualifier ? 'text-muted-foreground' : 'text-accent-blue'}`} strokeWidth={1.5} />
               </div>
-              <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-gray-700' : 'text-gray-900'}`}>
+              <h3 className={`text-lg md:text-xl font-semibold mb-3 ${benefit.isQualifier ? 'text-muted-foreground' : 'text-foreground'}`}>
                 {benefit.title}
               </h3>
-              <p className={`text-sm leading-relaxed ${benefit.isQualifier ? 'text-gray-500' : 'text-gray-600'}`}>
+              <p className={`text-sm leading-relaxed ${benefit.isQualifier ? 'text-muted-foreground/80' : 'text-text-secondary'}`}>
                 {benefit.description}
               </p>
             </div>
