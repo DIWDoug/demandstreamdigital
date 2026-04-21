@@ -205,51 +205,6 @@ export const caseStudyCards: CaseStudy[] = [
     thumbnail: auctionHouseHero,
     relationshipType: "partner",
   },
-  {
-    slug: "dallas-plumbing-seo",
-    client: "Dallas Plumbing",
-    industry: "Plumbing/Home Services",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
-    headline: "Plumbing SEO Case Study – Dallas | +306% Organic Growth",
-    heroMetric: {
-      value: "+306%",
-      label: "Google Organic YoY Growth",
-    },
-    secondaryMetrics: [
-      { value: "70", label: "Keywords Tracked" },
-      { value: "20+", label: "Top 10 Keywords" },
-    ],
-    roiHighlight: {
-      monthlyRevenue: "$50K+/mo (est.)",
-      roiRange: "High ROI",
-    },
-    challenge: "Plumbing company with stalled organic traffic despite solid domain history, facing fierce competition in the Dallas-Fort Worth metro for high-value service keywords.",
-    thumbnail: dallasPlumbingHero,
-    relationshipType: "direct",
-  },
-  {
-    slug: "las-vegas-plumbing-seo",
-    client: "Las Vegas Plumbing & HVAC",
-    industry: "Plumbing & HVAC",
-    services: ["Local SEO", "GBP Optimization", "Link Building", "Content Development", "Authority", "Customized Reporting"],
-    headline: "Plumbing & HVAC SEO Case Study – Las Vegas | 57-Point Keyword Growth",
-    heroMetric: {
-      value: "57pt",
-      label: "Performance Turnaround (-54% → +3% YoY)",
-    },
-    secondaryMetrics: [
-      { value: "65", label: "Keywords Tracked" },
-      { value: "10+", label: "#1 Rankings" },
-    ],
-    roiHighlight: {
-      monthlyRevenue: "$40K+/mo",
-      roiRange: "25x+",
-      seoSpend: "$1,600/mo",
-    },
-    challenge: "Las Vegas plumbing & HVAC company experiencing multi-year organic decline due to tracking issues, prior mismanagement (RYNO → Blue Corona), and no SEO structure — reversed entirely within 5 months.",
-    thumbnail: lasVegasPlumbingHero,
-    relationshipType: "direct",
-  },
 ];
 
 // ============ NARRATION TEXT FOR TTS ============
