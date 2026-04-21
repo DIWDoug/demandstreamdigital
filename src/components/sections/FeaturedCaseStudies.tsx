@@ -22,7 +22,7 @@ const FeaturedCaseStudies = () => {
   filter(Boolean);
 
   return (
-    <section className="py-28 lg:py-36 bg-background relative overflow-hidden">
+    <section className="pt-28 lg:pt-36 pb-14 lg:pb-18 bg-background relative overflow-hidden">
       <StreamTexture variant="dark" opacity={0.08} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}

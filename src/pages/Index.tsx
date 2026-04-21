@@ -28,7 +28,7 @@ import GrowthProcess from "@/components/sections/GrowthProcess";
 const TerritoryCallout = () => (
   <div className="dark relative">
     <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
-    <div className="py-16 bg-background relative overflow-hidden">
+    <div className="pt-8 pb-16 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-semibold uppercase tracking-wider text-accent-blue mb-3">One Company Per Market</p>
