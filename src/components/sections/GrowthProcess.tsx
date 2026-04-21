@@ -289,35 +289,6 @@ const GrowthProcess = () => {
           </div>
         </div>
 
-        {/* Closing block */}
-        <div className="mt-16 max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-            Every Channel Working Together. That's the Difference.
-          </h3>
-          <p className="text-slate-600 mb-6">
-            We do not sell isolated services. All working together under one roof.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {managedServices.map((s) =>
-            <span
-              key={s}
-              className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-
-                {s}
-              </span>
-            )}
-          </div>
-          <p className="text-slate-500 text-sm mb-8">
-            You get strategy, execution, and ongoing refinement — under one roof.
-          </p>
-          <Link
-            to="/contact"
-            className="btn-cta group inline-flex items-center gap-2">
-
-            Start With a Growth Roadmap
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
       </div>
     </section>);
 
