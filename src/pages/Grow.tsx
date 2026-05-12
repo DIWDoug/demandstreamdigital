@@ -66,7 +66,7 @@ const Grow = () => {
         }}
       />
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 max-w-5xl">
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 w-full max-w-[1400px]">
         {/* Logo */}
         <div className="flex justify-center mb-10 md:mb-14">
           <img src={logo} alt="DemandStream Digital" className="h-10 md:h-12" />
