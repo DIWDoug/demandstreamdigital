@@ -41,6 +41,7 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
+const Grow = lazy(() => import("./pages/Grow"));
 
 // Listicle Pages
 const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
@@ -161,6 +162,8 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/grow" element={<Grow />} />
+          <Route path="/grow-qualifier" element={<Navigate to="/grow#fit-check" replace />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
