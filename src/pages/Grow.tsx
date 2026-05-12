@@ -1,241 +1,235 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, X, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
-import Header from "@/components/sections/Header";
-import Footer from "@/components/sections/Footer";
-import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import WaveDivider from "@/components/WaveDivider";
-import heroBg from "@/assets/hero-bg-trade.jpg";
-import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import logo from "@/assets/demandstream-digital-logo.svg";
 
 const bullets = [
-  { label: "Owned assets", body: "Your website, your GBP, your ad accounts, your call data. The fulfillment engine stays with you, not us." },
-  { label: "One per market", body: "We work with a single Plumbing or HVAC operator per service area. If your market is available, it stays yours." },
-  { label: "Booked calls, not clicks", body: "Tracked through your CRM to cost per booked call, so you see revenue, not vanity metrics." },
-  { label: "Built for the trades", body: "Plumbing and HVAC only. Your budget never funds side experiments in other industries." },
+  {
+    label: "OWNED ASSETS:",
+    body: "Your website, your GBP, your ad accounts, your call data. The fulfillment engine stays with you, not us.",
+  },
+  {
+    label: "ONE PER MARKET:",
+    body: "We work with a single Plumbing or HVAC operator per service area. If your market is available, it stays yours.",
+  },
+  {
+    label: "BOOKED CALLS, NOT CLICKS:",
+    body: "Tracked through your CRM to cost-per-booked-call, so you see revenue, not vanity metrics.",
+  },
+  {
+    label: "BUILT FOR THE TRADES:",
+    body: "Plumbing and HVAC only, independents and franchises alike. Your budget never funds side experiments in other industries.",
+  },
 ];
 
-const goodFit = [
-  "$5K+ per month available for ads",
-  "Dedicated CSR or answering team during business hours",
-  "ServiceTitan or comparable CRM with booking visibility",
-  "Active Google Business Profile with reviews",
-  "Service area with measurable search demand",
+const stats = [
+  { value: "40%", label: "YoY revenue growth", sub: "Pure Plumbing, year over year" },
+  { value: "50+", label: "Booked homeowner calls / mo", sub: "Tracked end to end in your CRM" },
+  { value: "3.2x", label: "Return on ad spend", sub: "Measured against booked revenue" },
 ];
 
-const notFit = [
-  "1-truck startup with no CSR to answer calls",
-  "Under $3K per month total ad budget",
-  "No call tracking, and not willing to install it",
-  "Looking for cheapest cost per lead",
-  "Outside the United States",
-];
+const CTA = ({ children = "CHECK AVAILABILITY", size = "lg" as "lg" | "md" }) => (
+  <Link
+    to="/grow-qualifier"
+    className={`inline-flex items-center gap-2 rounded-md bg-[#E63946] hover:bg-[#d32f3c] transition-colors text-white font-extrabold tracking-wide shadow-[0_12px_40px_-10px_rgba(230,57,70,0.7)] ${
+      size === "lg" ? "px-10 md:px-14 py-4 md:py-5 text-lg md:text-xl" : "px-8 md:px-12 py-3.5 md:py-4 text-base md:text-lg"
+    }`}
+  >
+    {children}
+    <ArrowRight className="h-5 w-5" />
+  </Link>
+);
 
 const Grow = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[#0D1B2A] text-white relative overflow-hidden">
       <SEOHead
-        title="Get Booked Plumbing & HVAC Calls in Your ZIP | DemandStream"
-        description="We build the Google demand system (ads, tracking, reporting) for Plumbing & HVAC operators. See cost per booked call, not vanity metrics. One operator per market."
+        title="50+ Exclusive Plumbing & HVAC Homeowner Calls / Month"
+        description="The Unified Front Marketing System for Plumbing and HVAC. Owned assets, one operator per market, booked calls tracked end to end in your CRM."
         canonical="https://demandstreamdigital.com/grow"
       />
-      <Header />
 
-      {/* HERO */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-background">
-        <img
-          src={heroBg}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-0 bg-background/90" />
-        <div className="absolute inset-0 opacity-20 hidden sm:block">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/40 to-accent-blue/20" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/30 to-cta/15" />
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 50% 0%, rgba(74, 144, 184, 0.22) 0%, rgba(13, 27, 42, 0) 70%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(80% 60% at 80% 100%, rgba(74, 144, 184, 0.1) 0%, rgba(13, 27, 42, 0) 70%)",
+        }}
+      />
+
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 max-w-5xl">
+        {/* Logo */}
+        <div className="flex justify-center mb-10 md:mb-14">
+          <img src={logo} alt="DemandStream Digital" className="h-10 md:h-12" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            {/* Left: copy */}
-            <div className="lg:col-span-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cta mb-5">
-                For Plumbing &amp; HVAC Operators
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-5 text-foreground" style={{ lineHeight: 1.05 }}>
-                Get consistent booked homeowner calls in your ZIP.
-              </h1>
-              <p className="text-lg md:text-xl text-text-secondary mb-3 leading-relaxed">
-                We build and manage your Google driven demand system. Ads, tracking, reporting. So you see cost per booked call, not vanity metrics.
-              </p>
-              <p className="text-sm text-text-muted mb-8 italic">
-                Up to 50+ exclusive booked homeowner calls per month for qualified markets and budgets.
-              </p>
+        {/* Hero */}
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-semibold text-white/85 mb-4">
+            The Unified Front Marketing System for Plumbing &amp; HVAC That Books
+          </p>
+          <h1 className="font-extrabold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="block text-[#E63946]">50+ EXCLUSIVE</span>
+            <span className="block text-white mt-1">HOMEOWNER CALLS</span>
+          </h1>
+          <p className="mt-4 text-xl md:text-2xl tracking-[0.2em] font-bold text-white/90">
+            EVERY SINGLE MONTH
+          </p>
+        </div>
 
-              <ul className="space-y-4 mb-10">
-                {bullets.map((b) => (
-                  <li key={b.label} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-accent-blue/15 border border-accent-blue/40 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-accent-blue" />
-                    </span>
-                    <span className="text-base text-text-secondary leading-relaxed">
-                      <span className="font-semibold text-foreground">{b.label}.</span> {b.body}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+        {/* Bullets */}
+        <ul className="mt-10 md:mt-12 max-w-2xl mx-auto space-y-4">
+          {bullets.map((b) => (
+            <li key={b.label} className="flex items-start gap-3 text-base md:text-lg">
+              <span
+                aria-hidden="true"
+                className="inline-flex items-center justify-center w-6 h-6 rounded bg-[#22C55E] text-black font-bold text-sm shrink-0 mt-0.5"
+              >
+                ✓
+              </span>
+              <p className="text-white/90">
+                <span className="font-bold text-white">{b.label}</span> {b.body}
+              </p>
+            </li>
+          ))}
+        </ul>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <a href="#fit-check" className="btn-cta inline-flex items-center gap-2 px-6 py-4 text-base">
-                  Start 2-Min Availability + Fit Check
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-                <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-semibold transition-colors">
-                  <Phone className="h-4 w-4" />
-                  {PHONE_NUMBER}
-                </a>
-              </div>
-              <p className="text-xs text-text-muted mt-3">See market demand and estimated booked call volume in your service area.</p>
+        {/* Primary CTA */}
+        <div className="mt-12 flex flex-col items-center text-center">
+          <p className="text-lg md:text-xl font-bold text-white underline underline-offset-[6px] decoration-2 decoration-white/60 mb-6">
+            Territories are filling.
+          </p>
+          <CTA />
+        </div>
+
+        {/* Trust line */}
+        <div className="mt-14 md:mt-16 text-center">
+          <p className="text-sm md:text-base font-bold tracking-wider text-white/80">
+            GOOGLE CERTIFIED PARTNER · TRUSTED BY HUNDREDS OF PLUMBING &amp; HVAC OPERATORS
+          </p>
+        </div>
+
+        {/* Media grid */}
+        <div className="mt-8 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="flex flex-col gap-6">
+            <div className="w-full aspect-[4/3] rounded-md overflow-hidden bg-black border border-white/10 flex items-center justify-center">
+              <video
+                className="h-full w-full object-contain"
+                src="https://demandstreamdigital.com/media/doug-testimonial.mov"
+                poster="https://demandstreamdigital.com/media/doug-testimonial-poster.png"
+                controls
+                playsInline
+                preload="metadata"
+              />
             </div>
-
-            {/* Right: form card */}
-            <div id="fit-check" className="lg:col-span-5 lg:sticky lg:top-28">
-              <div className="rounded-2xl border border-border bg-surface-elevated/95 backdrop-blur-md p-6 lg:p-8 shadow-2xl">
-                <h2 className="text-xl font-semibold text-foreground mb-1">Availability + Fit Check</h2>
-                <p className="text-sm text-text-muted mb-5">Two minutes. If your ZIP is open and the fit is right, we book a 30 minute strategy call.</p>
-                <TwoStepContactForm
-                  formType="grow_lander"
-                  submitButtonText="Check My Market"
-                  step1ButtonText="Check My Market"
+            <div className="w-full aspect-[4/3] rounded-md overflow-hidden bg-black border border-white/10">
+              <img
+                src="https://demandstreamdigital.com/assets/las-vegas-plumbing-hero-BLWRUVVQ.jpg"
+                alt="Pure Plumbing case study"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-center text-center h-full">
+            <div className="flex-1 w-full rounded-md overflow-hidden bg-white border border-white/10">
+              <div className="flex flex-col h-full">
+                <img
+                  src="https://demandstreamdigital.com/assets/pure-plumbing-review-1-jNLNRLF3.png"
+                  alt="Pure Plumbing 5-star Google review"
+                  className="w-full flex-1 object-cover object-top block"
+                  loading="lazy"
                 />
-                <p className="text-xs text-text-muted text-center mt-4">
-                  Plumbing &amp; HVAC operators only. No pitch, no pressure.
-                </p>
+                <img
+                  src="https://demandstreamdigital.com/assets/pure-plumbing-review-2-CWW5rTqV.png"
+                  alt="Pure Plumbing & Air 5-star Google review"
+                  className="w-full flex-1 object-cover object-top block"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* CASE STUDY */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
-        <section className="bg-[#f9f9f9] py-20 lg:py-24">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-3 text-center">
-                Real Results, In Context
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-3">
-                Pure Plumbing, Las Vegas
-              </h2>
-              <p className="text-center text-gray-600 mb-10">A 60 day window of paid + local SEO, tracked end to end.</p>
+        {/* Secondary CTA */}
+        <div className="mt-16 md:mt-20 flex flex-col items-center text-center">
+          <p className="text-base md:text-lg font-bold text-white/90 mb-4">
+            Still reading? Markets close fast.
+          </p>
+          <CTA size="md" />
+        </div>
 
-              <div className="grid md:grid-cols-4 gap-4 lg:gap-6">
-                {[
-                  { metric: "60 days", label: "Build to first results" },
-                  { metric: "5 figure", label: "Monthly Google Ads spend" },
-                  { metric: "$78", label: "Cost per booked call" },
-                  { metric: "40%", label: "YoY revenue growth" },
-                ].map((s) => (
-                  <div key={s.label} className="bg-white border border-gray-200 rounded-xl p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cta mb-2">{s.metric}</div>
-                    <div className="text-sm text-gray-600 leading-snug">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-sm text-gray-500 mt-6 text-center max-w-2xl mx-auto">
-                Spend ranges blurred for client confidentiality. Cost per booked call reconciled inside ServiceTitan against booked jobs, not form fills.
-              </p>
-
-              <div className="mt-10 text-center">
-                <Link to="/case-studies" className="text-accent-blue hover:underline font-semibold inline-flex items-center gap-2">
-                  See more case studies <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* FIT FILTER */}
-      <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
-        <section className="bg-background py-20 lg:py-24">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-3 text-center">
-                Honest Filter
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-3">
-                Who this is, and is not, for.
-              </h2>
-              <p className="text-center text-text-secondary mb-12 max-w-2xl mx-auto">
-                We are upfront. The wrong fit wastes your money and our calendar.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="rounded-2xl border border-accent-blue/30 bg-surface-elevated p-6 lg:p-8">
-                  <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-2">
-                    <Check className="h-5 w-5 text-accent-blue" /> Good fit
-                  </h3>
-                  <ul className="space-y-3">
-                    {goodFit.map((p) => (
-                      <li key={p} className="flex items-start gap-3 text-sm text-text-secondary leading-relaxed">
-                        <Check className="h-4 w-4 text-accent-blue mt-0.5 flex-shrink-0" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
+        {/* Stat cards */}
+        <div className="mt-10 md:mt-12 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {stats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-md border border-white/10 bg-white/[0.03] p-5 text-center"
+              >
+                <div className="text-3xl md:text-4xl font-extrabold text-[#E63946] leading-none">
+                  {s.value}
                 </div>
-                <div className="rounded-2xl border border-cta/30 bg-surface-elevated p-6 lg:p-8">
-                  <h3 className="text-lg font-semibold text-foreground mb-5 flex items-center gap-2">
-                    <X className="h-5 w-5 text-cta" /> Not a fit
-                  </h3>
-                  <ul className="space-y-3">
-                    {notFit.map((p) => (
-                      <li key={p} className="flex items-start gap-3 text-sm text-text-secondary leading-relaxed">
-                        <X className="h-4 w-4 text-cta mt-0.5 flex-shrink-0" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <div className="mt-2 text-sm font-bold text-white">{s.label}</div>
+                <div className="mt-1 text-xs text-white/65">{s.sub}</div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-      </div>
+          <p className="mt-4 text-xs md:text-sm text-white/65 text-center max-w-2xl mx-auto">
+            How we measure: every call, form, and chat is tagged at the source, pushed into your CRM, and reconciled against booked jobs. You see cost per booked call and revenue per channel, not clicks or impressions.
+          </p>
+        </div>
 
-      {/* HOW WE MEASURE */}
-      <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
-        <section className="bg-[#f9f9f9] py-20 lg:py-24">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-3">
-                Your Reporting, Not Ours
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
-                Leads, booked jobs, and cost per booked call. One view.
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Every call, form, and chat is tagged at the source, pushed into your CRM, and reconciled against booked jobs. You see cost per booked call and revenue per channel before the next invoice, not after.
-              </p>
-              <a href="#fit-check" className="btn-cta inline-flex items-center gap-2 px-6 py-4">
-                Start 2-Min Availability + Fit Check
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <p className="text-xs text-gray-500 mt-3">Plumbing and HVAC operators only.</p>
-            </div>
+        {/* Dashboard */}
+        <div className="mt-10 md:mt-14 max-w-4xl mx-auto">
+          <div className="text-center mb-4">
+            <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#E63946]">
+              YOUR REPORTING, NOT OURS
+            </p>
+            <h2 className="mt-2 text-2xl md:text-3xl font-extrabold text-white leading-tight">
+              Leads, booked jobs, and cost per lead in one view.
+            </h2>
+            <p className="mt-2 text-sm md:text-base text-white/70 max-w-2xl mx-auto">
+              Every campaign rolls up to revenue and ROI. You see what is working before the next invoice, not after.
+            </p>
           </div>
-        </section>
-      </div>
+          <div className="rounded-lg overflow-hidden border border-white/10 bg-white shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+            <img
+              src="https://demandstreamdigital.com/assets/marketing-overview-dashboard-5tChs5Bh.jpg"
+              alt="DemandStream Digital marketing overview dashboard showing leads, booked jobs, cost per lead, and ROI"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+        </div>
 
-      <div className="dark">
-        <Footer />
+        {/* Final CTA */}
+        <div className="mt-12 md:mt-16 flex flex-col items-center text-center">
+          <p className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#E63946] mb-3">
+            ONE PROVIDER PER MARKET
+          </p>
+          <h3 className="text-2xl md:text-3xl font-extrabold text-white leading-tight max-w-2xl">
+            See if your market is still open.
+          </h3>
+          <p className="mt-3 text-sm md:text-base text-white/70 max-w-xl">
+            Two minute qualifier. If your ZIP is available and the fit is right, you book a 30 minute strategy call. No pitch, no pressure.
+          </p>
+          <div className="mt-6">
+            <CTA size="md" />
+          </div>
+          <p className="mt-3 text-xs text-white/50">Plumbing and HVAC operators only.</p>
+        </div>
       </div>
     </div>
   );
