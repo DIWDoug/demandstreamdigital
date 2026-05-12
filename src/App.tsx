@@ -42,6 +42,9 @@ const Terms = lazy(() => import("./pages/Terms"));
 const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
 const Grow = lazy(() => import("./pages/Grow"));
+const GrowQualifier = lazy(() => import("./pages/GrowQualifier"));
+const GrowThanks = lazy(() => import("./pages/GrowThanks"));
+const GrowBooked = lazy(() => import("./pages/GrowBooked"));
 
 // Listicle Pages
 const BestPlumbingSEOCompanies = lazy(() => import("./pages/BestPlumbingSEOCompanies"));
@@ -163,7 +166,15 @@ const App = () => (
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/grow" element={<Grow />} />
-          <Route path="/grow-qualifier" element={<Navigate to="/grow#fit-check" replace />} />
+          <Route path="/grow-qualifier" element={<GrowQualifier />} />
+          <Route path="/grow/thanks" element={<GrowThanks />} />
+          <Route path="/grow/booked" element={<GrowBooked />} />
+          <Route path="/grow-strategy-call" element={<Grow />} />
+          <Route path="/grow-strategy-call/:step" element={<Grow />} />
+          <Route path="/grow-strategy-call/thanks" element={<GrowThanks />} />
+          <Route path="/grow-main" element={<Grow />} />
+          <Route path="/grow-main/:step" element={<Grow />} />
+          <Route path="/grow-main/thanks" element={<GrowThanks />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
