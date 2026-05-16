@@ -69,14 +69,14 @@ export default function AdScan() {
     <div className="bg-[#F7F8FA] text-[#0D1B2A]">
       <SEOHead
         title="Plumbing & HVAC Ad Scan. Who's Fixing Your Leaky Ads? | $97"
-        description="Plumbing and HVAC owners: we check your Google Ads, Facebook Ads, missed calls, tracking, and Google Business Pro. Most owners are bleeding $500 to $2,000 a month. Normally $297. Today $97. Full refund if we don't find 3 problems."
+        description="Plumbing and HVAC owners: we check your Google Ads, Facebook Ads, missed calls, tracking, and Google Business Pro. Most owners are bleeding $500 to $2,000 a month. Normally $697. Today $97. Full refund if we don't find 3 problems."
         canonical="https://demandstreamdigital.com/ad-scan"
         noIndex
       />
 
       {/* Announcement bar */}
       <div className="bg-[#C0392B] text-white text-center text-sm md:text-base font-bold py-2.5 px-4 tracking-wide">
-        PLUMBING &amp; HVAC OWNERS ONLY. Only 10 Ad Scans per week. Normally <span className="line-through opacity-80">$297</span>. Today <span className="underline">$97</span>.
+        PLUMBING &amp; HVAC OWNERS ONLY. Only 10 Ad Scans per week. Normally <span className="line-through opacity-80">$697</span>. Today <span className="underline">$97</span>.
       </div>
 
       {/* Hero */}
@@ -98,7 +98,7 @@ export default function AdScan() {
               We check 5 things in your plumbing or HVAC shop: Google Ads,
               Facebook Ads, tracking, missed calls, and Google Business Pro.
               You get a report with a score.
-              <strong> Worth $297. Today $97.</strong>
+              <strong> Worth $697. Today $97.</strong>
             </p>
             <CTA>CLAIM MY $97 AD SCAN</CTA>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm text-[#475569]">
@@ -560,7 +560,7 @@ export default function AdScan() {
               },
               {
                 q: "How much is it?",
-                a: "$97 today. The normal price is $297. You pay one time. No monthly fee.",
+                a: "$97 today. The normal price is $697. You pay one time. No monthly fee.",
               },
             ].map((item) => (
               <details
@@ -613,7 +613,7 @@ export default function AdScan() {
                   Today&rsquo;s Investment
                 </div>
                 <div className="flex items-baseline justify-center gap-4">
-                  <span className="text-2xl text-[#6B7280] line-through font-bold">$297</span>
+                  <span className="text-2xl text-[#6B7280] line-through font-bold">$697</span>
                   <span className="text-6xl md:text-7xl font-black" style={{ color: RED }}>
                     $97
                   </span>
@@ -710,7 +710,7 @@ export default function AdScan() {
             Keep More Of Every Dollar You Spend.
           </h2>
           <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-            $97 today. $297 next week. 100% guarantee either way.
+            $97 today. $697 next week. 100% guarantee either way.
           </p>
           <a
             href="#order"
