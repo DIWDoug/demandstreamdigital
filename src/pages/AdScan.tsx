@@ -427,6 +427,81 @@ export default function AdScan() {
         </div>
       </section>
 
+      {/* FAQ — plain language */}
+      <section className="bg-white py-16 md:py-20 border-t border-[#E5E7EB]">
+        <div className="max-w-[820px] mx-auto px-5 md:px-8">
+          <div className="text-center mb-10">
+            <div
+              className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+              style={{ color: ACCENT }}
+            >
+              Quick Answers
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#0D1B2A] leading-tight">
+              Got Questions? Here Are The Short Answers.
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What do you check?",
+                a: "Five things. Your Google Ads. Your Facebook and Instagram ads. Your missed calls. Your Google Business Pro page. And your tracking, like GA4 and call tracking. We give each one a score from 0 to 100.",
+              },
+              {
+                q: "Is this only for plumbers and HVAC shops?",
+                a: "Yes. We only work with plumbing and HVAC owners. We know your tools, like ServiceTitan and Housecall Pro. We do not take other trades.",
+              },
+              {
+                q: "Do I need to be running ads already?",
+                a: "Yes. If you are not running ads yet, come back when you are. We need real ad data to find real leaks.",
+              },
+              {
+                q: "How long does it take?",
+                a: "About 10 minutes for you to grant access. Then we send your full report in 5 business days after we have all five logins.",
+              },
+              {
+                q: "Will you change anything in my accounts?",
+                a: "No. We can only look. We cannot post, pay, or change a thing. You can turn off our access any time.",
+              },
+              {
+                q: "What if you find a problem?",
+                a: "We list it in the report with a real dollar number and a clear fix. You can hand the fix to your team, your agency, or us. You choose.",
+              },
+              {
+                q: "What if you do not find any problems?",
+                a: "If we do not find 3 real problems that cost you money, we send your $97 back. No questions. We have never had to.",
+              },
+              {
+                q: "How much is it?",
+                a: "$97 today. The normal price is $297. You pay one time. No monthly fee.",
+              },
+            ].map((item) => (
+              <details
+                key={item.q}
+                className="group bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg p-5 md:p-6"
+              >
+                <summary className="cursor-pointer list-none flex items-start justify-between gap-4 font-bold text-[#0D1B2A] text-base md:text-lg">
+                  <span>{item.q}</span>
+                  <span
+                    className="flex-shrink-0 h-7 w-7 rounded-full flex items-center justify-center font-black text-white transition-transform group-open:rotate-45"
+                    style={{ background: ACCENT }}
+                    aria-hidden="true"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="mt-3 text-[#334155] text-base leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <CTA size="md">GET MY AD SCAN FOR $97</CTA>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing / Order */}
       <section id="order" className="bg-[#0D1B2A] py-16 md:py-24 text-white">
         <div className="max-w-[820px] mx-auto px-5 md:px-8">
