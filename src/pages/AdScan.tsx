@@ -623,6 +623,57 @@ export default function AdScan() {
             </p>
           </div>
 
+          {/* What happens after you book */}
+          <div className="mb-10 bg-[#1A2E44] border border-white/10 rounded-2xl p-6 md:p-8">
+            <div className="text-center mb-6">
+              <div
+                className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-2"
+                style={{ color: GOLD }}
+              >
+                What Happens After You Book
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black leading-tight">
+                Three steps. No fluff. No agency dance.
+              </h3>
+            </div>
+            <ol className="grid md:grid-cols-3 gap-4">
+              {[
+                {
+                  n: "01",
+                  t: "Fill out the short form",
+                  b: "Takes 2 minutes. Tell me your shop name, your service area, and whether you run plumbing, HVAC, or both. That is it.",
+                },
+                {
+                  n: "02",
+                  t: "We get on a quick call",
+                  b: "15 minutes. I ask about your trucks, your average ticket, your busy season. You send read-only access to your Google Ads, Meta, and Google Business Pro. No passwords.",
+                },
+                {
+                  n: "03",
+                  t: "You get your scan in 5 days",
+                  b: "A scored report with real dollar amounts. Stuff like, you are missing 31% of your after-hours calls, or your HVAC tune-up ads are burning $1,400 a month on the wrong zip codes. You decide what to fix.",
+                },
+              ].map((s) => (
+                <li
+                  key={s.n}
+                  className="bg-[#0D1B2A] border border-white/10 rounded-xl p-5"
+                >
+                  <div
+                    className="text-xs font-black tracking-[0.2em] mb-2"
+                    style={{ color: GOLD }}
+                  >
+                    STEP {s.n}
+                  </div>
+                  <div className="text-lg font-black mb-2 text-white">{s.t}</div>
+                  <p className="text-white/75 text-sm leading-relaxed">{s.b}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="text-center text-white/60 italic text-sm mt-6">
+              Wyler&rsquo;s leash is in my hand. Talk soon. Doug
+            </p>
+          </div>
+
           <div className="bg-white text-[#0D1B2A] rounded-2xl overflow-hidden shadow-2xl border-4" style={{ borderColor: GOLD }}>
             <div className="px-6 md:px-10 py-8 md:py-10">
               <div className="text-center mb-6">
