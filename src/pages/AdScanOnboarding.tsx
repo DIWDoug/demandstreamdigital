@@ -162,11 +162,11 @@ const AdScanOnboarding = () => {
             <ShieldCheck className="h-3.5 w-3.5" /> Step 2 of 2 · Payment confirmed
           </div>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-4">
-            Grant read only access. We start the scan within 24 hours.
+            Let us in to look. We start in 24 hours.
           </h1>
           <p className="text-lg text-white/80 max-w-3xl">
-            Five short steps. No screen shares. No passwords. Every grant is read only and
-            revocable in one click. Average completion time: 10 minutes.
+            Five short steps. No screen shares. No passwords. We can only look, not
+            change. You can turn it off any time. Most folks finish in 10 minutes.
           </p>
           <div className="mt-7 grid grid-cols-2 md:grid-cols-5 gap-3 max-w-3xl">
             {["Your info", "Google Ads", "Meta", "Google Business", "Tracking"].map((s, i) => (
@@ -186,9 +186,9 @@ const AdScanOnboarding = () => {
         <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-16 space-y-6">
 
           {/* Step 1 — Your info */}
-          <Step num={1} title="Tell us who you are" badge="Required" estMinutes={2}>
+          <Step num={1} title="Tell us who you are" badge="Needed" estMinutes={2}>
             <p className="text-text-muted">
-              We use this only to match your accounts and send your scan report. No spam.
+              We use this to find your accounts and send you the report. No spam.
             </p>
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
               <div>
@@ -219,7 +219,7 @@ const AdScanOnboarding = () => {
               {/* Account IDs */}
               <div className="md:col-span-2 mt-2 pt-4 border-t border-border/40">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-text-muted mb-3">
-                  Account IDs (paste as you grant access below)
+                  Your account numbers (copy them in as you go below)
                 </h3>
               </div>
               <div>
@@ -248,23 +248,26 @@ const AdScanOnboarding = () => {
               </div>
               <div className="md:col-span-2 pt-2">
                 <Button type="submit" size="lg" disabled={submitting || submitted} className="w-full md:w-auto">
-                  {submitted ? "Submitted ✓" : submitting ? "Submitting..." : "Submit and start my scan →"}
+                  {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
                 <p className="text-xs text-text-muted mt-3">
-                  You can submit now and finish the access grants below at your own pace. We will not start the scan until all five grants are in place.
+                  You can send this now and finish the steps below when you have time. We start the scan when all five are done.
                 </p>
               </div>
             </form>
           </Step>
 
           {/* Step 2 — Google Ads */}
-          <Step num={2} title="Grant Google Ads access" badge="Read only" estMinutes={2}>
-            <CopyField label="Our Google Ads MCC Customer ID" value={GRANT_INFO.googleAdsMCC} />
+          <Step num={2} title="Let us see your Google Ads" badge="Look only" estMinutes={2}>
+            <p className="text-text-muted">
+              Example: this is like handing a friend a copy of your spending bill so they can read it. They cannot spend your money.
+            </p>
+            <CopyField label="Our Google Ads Customer ID" value={GRANT_INFO.googleAdsMCC} />
             <ol className="list-decimal pl-5 space-y-2 mt-4 text-foreground/90">
-              <li>Sign in to <a className="text-cta underline" href="https://ads.google.com" target="_blank" rel="noreferrer">ads.google.com</a> as an admin.</li>
-              <li>Top right → <strong>Tools</strong> → <strong>Admin</strong> → <strong>Access and security</strong>.</li>
-              <li>Tab: <strong>Managers</strong> → click <strong>+</strong>.</li>
-              <li>Paste the Customer ID above, set permission to <strong>Read only</strong>, click <strong>Send invitation</strong>.</li>
+              <li>Sign in to <a className="text-cta underline" href="https://ads.google.com" target="_blank" rel="noreferrer">ads.google.com</a> as the owner.</li>
+              <li>Top right, click <strong>Tools</strong>, then <strong>Admin</strong>, then <strong>Access and security</strong>.</li>
+              <li>Click the <strong>Managers</strong> tab, then the <strong>+</strong> button.</li>
+              <li>Paste the number above. Pick <strong>Read only</strong>. Click <strong>Send invitation</strong>.</li>
             </ol>
             <a href="https://ads.google.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-cta font-semibold hover:underline mt-2">
               Open Google Ads <ExternalLink className="h-3.5 w-3.5" />
@@ -272,14 +275,17 @@ const AdScanOnboarding = () => {
           </Step>
 
           {/* Step 3 — Meta */}
-          <Step num={3} title="Grant Meta (Facebook + Instagram) access" badge="Analyze only" estMinutes={3}>
-            <CopyField label="Our Meta Business Manager ID" value={GRANT_INFO.metaPartnerId} />
+          <Step num={3} title="Let us see your Facebook and Instagram ads" badge="Look only" estMinutes={3}>
+            <p className="text-text-muted">
+              Example: this is like giving us a guest pass to read your Facebook ad report. We cannot post, change, or pay.
+            </p>
+            <CopyField label="Our Meta Business ID" value={GRANT_INFO.metaPartnerId} />
             <ol className="list-decimal pl-5 space-y-2 mt-4 text-foreground/90">
               <li>Open <a className="text-cta underline" href="https://business.facebook.com/settings" target="_blank" rel="noreferrer">business.facebook.com/settings</a>.</li>
-              <li>Left nav → <strong>Users</strong> → <strong>Partners</strong> → <strong>Add</strong> → <strong>Give a partner access to your assets</strong>.</li>
-              <li>Paste our Business Manager ID above.</li>
-              <li>Select your <strong>Ad Account</strong>, <strong>Facebook Page</strong>, <strong>Instagram Account</strong>, and <strong>Pixel</strong>.</li>
-              <li>For each, choose <strong>Analyze performance</strong> (read only). Click <strong>Save Changes</strong>.</li>
+              <li>On the left, click <strong>Users</strong>, then <strong>Partners</strong>, then <strong>Add</strong>, then <strong>Give a partner access to your assets</strong>.</li>
+              <li>Paste our Business ID above.</li>
+              <li>Pick your <strong>Ad Account</strong>, <strong>Facebook Page</strong>, <strong>Instagram</strong>, and <strong>Pixel</strong>.</li>
+              <li>For each one, choose <strong>Analyze performance</strong> (look only). Click <strong>Save Changes</strong>.</li>
             </ol>
             <a href="https://business.facebook.com/settings" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-cta font-semibold hover:underline mt-2">
               Open Meta Business Settings <ExternalLink className="h-3.5 w-3.5" />
@@ -287,33 +293,38 @@ const AdScanOnboarding = () => {
           </Step>
 
           {/* Step 4 — GBP */}
-          <Step num={4} title="Grant Google Business Profile access" badge="Manager role" estMinutes={2}>
+          <Step num={4} title="Let us see your Google Business Profile" badge="Manager" estMinutes={2}>
+            <p className="text-text-muted">
+              Example: this is like adding us to your shop's Google page so we can read your map stats. We will not edit your profile.
+            </p>
             <CopyField label="Email to add as Manager" value={GRANT_INFO.gbpManagerEmail} />
             <ol className="list-decimal pl-5 space-y-2 mt-4 text-foreground/90">
-              <li>Search your business name in Google while signed in as the owner.</li>
-              <li>In the side panel, click the <strong>three-dot menu</strong> → <strong>Business Profile settings</strong>.</li>
-              <li>Open <strong>People and access</strong> → <strong>Add</strong>.</li>
-              <li>Paste the email above. Select role <strong>Manager</strong>. Click <strong>Invite</strong>.</li>
+              <li>Search your shop name on Google while signed in as the owner.</li>
+              <li>In the side box, click the <strong>three dots</strong>, then <strong>Business Profile settings</strong>.</li>
+              <li>Open <strong>People and access</strong>, then <strong>Add</strong>.</li>
+              <li>Paste the email above. Pick <strong>Manager</strong>. Click <strong>Invite</strong>.</li>
             </ol>
-            <p className="text-sm text-text-muted">Manager is the minimum role needed to pull Insights data. We never edit your profile.</p>
+            <p className="text-sm text-text-muted">Manager is the smallest role that lets us read your map stats. We never edit your page.</p>
           </Step>
 
           {/* Step 5 — Tracking */}
-          <Step num={5} title="Grant GA4 and call tracking access" badge="Viewer" estMinutes={3}>
+          <Step num={5} title="Let us see your tracking and call data" badge="Viewer" estMinutes={3}>
+            <p className="text-text-muted">
+              Example: this is like sharing your scoreboard so we can see which ads bring real calls and jobs.
+            </p>
             <CopyField label="Email to add to GA4 and call tracking" value={GRANT_INFO.ga4Email} />
             <div>
               <p className="font-semibold text-foreground mb-2">Google Analytics 4</p>
               <ol className="list-decimal pl-5 space-y-2 text-foreground/90">
-                <li>Open <a className="text-cta underline" href="https://analytics.google.com" target="_blank" rel="noreferrer">analytics.google.com</a> → <strong>Admin</strong>.</li>
-                <li>Property column → <strong>Property access management</strong> → <strong>+</strong>.</li>
+                <li>Open <a className="text-cta underline" href="https://analytics.google.com" target="_blank" rel="noreferrer">analytics.google.com</a>, then <strong>Admin</strong>.</li>
+                <li>In the Property column, click <strong>Property access management</strong>, then the <strong>+</strong>.</li>
                 <li>Paste the email above. Role: <strong>Viewer</strong>. Save.</li>
               </ol>
             </div>
             <div className="pt-2">
-              <p className="font-semibold text-foreground mb-2">Call tracking (CallRail / CTM / ServiceTitan)</p>
+              <p className="font-semibold text-foreground mb-2">Call tracking (CallRail, CTM, or ServiceTitan)</p>
               <p className="text-foreground/90">
-                Add the same email as a <strong>Viewer / Reporting user</strong> in your platform's user
-                settings. If you do not have call tracking installed, skip this. We will flag it in the report.
+                Add the same email as a <strong>Viewer</strong> in your call tracking tool. If you do not have call tracking, skip this. We will note it in the report.
               </p>
             </div>
           </Step>
@@ -322,8 +333,8 @@ const AdScanOnboarding = () => {
           <div className="rounded-lg bg-navy text-white p-6 md:p-8 text-center">
             <h3 className="text-2xl font-bold mb-2">That's it. We take it from here.</h3>
             <p className="text-white/80 mb-5 max-w-2xl mx-auto">
-              You will get a confirmation email once we accept each grant. Your full scan
-              report lands in your inbox within 5 business days.
+              You will get an email when we accept each one. Your full scan report
+              lands in your inbox in 5 business days.
             </p>
             <Link to="/ad-scan">
               <Button variant="ghost" size="lg">
