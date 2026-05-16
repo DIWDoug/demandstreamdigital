@@ -189,12 +189,12 @@ export default function AdScan() {
 
           <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {[
-              "Your Google Ads cost more each month. No one can say why.",
-              "Facebook sends leads, but the phone stays quiet on Monday.",
-              "You think calls are missed, but no one keeps track.",
-              "No one has touched your Google Business Pro in 6 months.",
-              "Your agency sends reports full of clicks and views. They don&rsquo;t help.",
-              "You don&rsquo;t know what one booked job really costs you.",
+              "Plumbing and HVAC owners: your Google Ads cost more every month and no one can tell you why. 🔧",
+              "HVAC operators: Facebook sends leads but the phone stays quiet when the trucks roll out Monday. ❄️",
+              "Plumbing shops: you think calls are getting missed, but no one in the office is tracking it. 💧",
+              "Plumbing and HVAC operators: no one has touched your Google Business Pro in 6 months. 📍",
+              "Your agency sends plumbing and HVAC reports full of clicks and views. None of it books a job. 📊",
+              "Plumbing and HVAC owners: you don&rsquo;t know what one booked call actually costs you. 🌡️",
             ].map((t) => (
               <div
                 key={t}
