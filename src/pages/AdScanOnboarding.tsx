@@ -162,11 +162,11 @@ const AdScanOnboarding = () => {
             <ShieldCheck className="h-3.5 w-3.5" /> Step 2 of 2 · Payment confirmed
           </div>
           <h1 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-4">
-            Grant read only access. We start the scan within 24 hours.
+            Let us in to look. We start in 24 hours.
           </h1>
           <p className="text-lg text-white/80 max-w-3xl">
-            Five short steps. No screen shares. No passwords. Every grant is read only and
-            revocable in one click. Average completion time: 10 minutes.
+            Five short steps. No screen shares. No passwords. We can only look, not
+            change. You can turn it off any time. Most folks finish in 10 minutes.
           </p>
           <div className="mt-7 grid grid-cols-2 md:grid-cols-5 gap-3 max-w-3xl">
             {["Your info", "Google Ads", "Meta", "Google Business", "Tracking"].map((s, i) => (
