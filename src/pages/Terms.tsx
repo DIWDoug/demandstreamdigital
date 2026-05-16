@@ -100,6 +100,22 @@ const Terms = () => {
               </p>
             </section>
 
+            {/* 5a. Ad Scan Refund Eligibility */}
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">5a. Local Lead Ad Scan: Refund Eligibility</h2>
+              <p className="text-text-secondary leading-relaxed">
+                The Local Lead Ad Scan ($97) is backed by a money-back guarantee. To qualify for a refund, the following conditions apply:
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>A "problem" qualifies if it is (a) documented in the delivered Scan Report, (b) tied to a measurable metric such as dollars wasted, missed calls, scoring below benchmark, or broken tracking, and (c) actionable, meaning a specific fix exists.</li>
+                <li>Subjective opinions, stylistic preferences, or items already known and disclosed by the Client prior to the audit do not qualify.</li>
+                <li>If we fail to identify at least three (3) qualifying problems, the Client is entitled to a full refund of the $97 audit fee.</li>
+                <li>Refund requests must be submitted in writing to hello@demandstreamdigital.com within fourteen (14) days of report delivery.</li>
+                <li>Client must provide the requested read-only access to ad accounts, Google Business Profile, call tracking, and analytics within seven (7) days of purchase. Failure to provide access voids the guarantee.</li>
+                <li>The audit is delivered within seventy-two (72) hours of receiving full account access.</li>
+              </ul>
+            </section>
+
             {/* 6. Intellectual Property */}
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">6. Intellectual Property</h2>
