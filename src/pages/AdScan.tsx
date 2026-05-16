@@ -87,16 +87,17 @@ export default function AdScan() {
               className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-5"
               style={{ color: ACCENT }}
             >
-              For Plumbing &amp; HVAC Operators Only
+              Plumbing &amp; HVAC Owners. Read This First.
             </div>
             <h1 className="text-[34px] leading-[1.05] sm:text-5xl md:text-6xl font-black text-[#0D1B2A] mb-5">
-              We Look At Your Ads And Show You{" "}
-              <span style={{ color: ACCENT }}>Where Your Money Is Going</span>
+              Plumbing And HVAC Owners.{" "}
+              <span style={{ color: ACCENT }}>Who&rsquo;s Fixing Your Leaky Ads?</span>
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              We check 5 things: Google Ads, Facebook Ads, tracking, missed
-              calls, and Google Business Pro. You get a report with a score.
+              We check 5 things in your plumbing or HVAC shop: Google Ads,
+              Facebook Ads, tracking, missed calls, and Google Business Pro.
+              You get a report with a score.
               <strong> Worth $297. Today $97.</strong>
             </p>
             <CTA>CLAIM MY $97 AD SCAN</CTA>
