@@ -69,7 +69,7 @@ export default function AdScan() {
     <div className="bg-[#F7F8FA] text-[#0D1B2A]">
       <SEOHead
         title="Local Lead Ad Scan — Find The Leaks In Your Marketing | $97"
-        description="A 5-channel forensic audit of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
+        description="A 5-part deep check of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
         canonical="https://demandstreamdigital.com/ad-scan"
         noIndex
       />
