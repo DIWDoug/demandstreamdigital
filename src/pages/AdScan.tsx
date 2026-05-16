@@ -364,63 +364,149 @@ export default function AdScan() {
 
       {/* Social proof */}
       <section className="bg-[#F7F8FA] py-16 md:py-20">
-        <div className="max-w-[1100px] mx-auto px-5 md:px-8">
+        <div className="max-w-[1200px] mx-auto px-5 md:px-8">
           <div className="text-center mb-10">
             <div
               className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
               style={{ color: ACCENT }}
             >
-              Operators We&rsquo;ve Audited
+              Real Reviews From Real Operators
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-[#0D1B2A] leading-tight">
-              Real Shops. Real Leaks. Real Money Recovered.
+              Real Shops. Real Words. Real Money Found.
             </h2>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} className="h-5 w-5 fill-current" style={{ color: GOLD }} />
+                ))}
+              </div>
+              <span className="text-[#475569] text-sm font-medium">
+                4.9 out of 5 . 22 Google Reviews for Demand Stream Digital
+              </span>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          {/* Featured Google Review */}
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-6 mb-6">
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-md">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <Star key={s} className="h-5 w-5 fill-current" style={{ color: GOLD }} />
+                  ))}
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0D1B2A] bg-[#F2B70520] px-2.5 py-1 rounded-full">
+                  Verified Google Review
+                </span>
+              </div>
+              <p className="text-[#1F2937] text-base md:text-lg leading-relaxed mb-5">
+                &ldquo;Working with Doug has been one of the best marketing choices we have made.
+                For the first time, we are not guessing. We have a plan, the data, and a partner
+                who keeps us honest. After past agencies that felt like a black box, it is great
+                to work with a team that shows us what is working and why. We saw a
+                <strong> 40% year over year revenue jump </strong>
+                this past December. SEO is not the only reason, but it helped a lot. This is not
+                a vendor. It is a real partner.&rdquo;
+              </p>
+              <div className="flex items-center justify-between border-t border-[#E5E7EB] pt-4">
+                <div>
+                  <p className="text-[#0D1B2A] font-bold">Pure Plumbing &amp; Air</p>
+                  <p className="text-[#6B7280] text-sm">Owner. Posted on Google.</p>
+                </div>
+                <span
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs"
+                  style={{ background: "#2E7D86" }}
+                >
+                  +40% YoY revenue
+                </span>
+              </div>
+            </div>
+
+            {/* Instagram Story Testimonial */}
+            <div className="flex flex-col">
+              <div className="text-[11px] font-black tracking-[0.25em] uppercase text-[#475569] mb-3 text-center lg:text-left">
+                From An Instagram Story
+              </div>
+              <div className="relative mx-auto lg:mx-0 w-full max-w-[320px] rounded-[28px] p-1.5 shadow-2xl"
+                   style={{ background: "linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4)" }}>
+                <div className="rounded-[22px] bg-[#0D1B2A] text-white p-5 min-h-[460px] flex flex-col">
+                  {/* Story header */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="h-9 w-9 rounded-full bg-white text-[#0D1B2A] font-black flex items-center justify-center text-sm">
+                      P+
+                    </div>
+                    <div className="flex-1 leading-tight">
+                      <p className="text-xs font-bold">@pureplumbingandair</p>
+                      <p className="text-[10px] text-white/60">Posted to Stories</p>
+                    </div>
+                    <span className="text-[10px] text-white/60">2h</span>
+                  </div>
+
+                  {/* Sticker quote */}
+                  <div className="flex-1 flex items-center">
+                    <div className="bg-white text-[#0D1B2A] rounded-xl p-4 transform -rotate-2 shadow-lg">
+                      <p className="text-sm font-bold leading-snug">
+                        &ldquo;Doug found <span style={{ color: RED }}>$4,200/mo</span> in wasted
+                        Google Ads spend in our first scan. Paid for itself 40x in month one.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Reply bar mock */}
+                  <div className="mt-5 rounded-full border border-white/30 px-4 py-2 text-xs text-white/70">
+                    Send message
+                  </div>
+                </div>
+              </div>
+              <p className="text-center text-xs text-[#6B7280] mt-3 lg:text-left">
+                Screenshot from a customer&rsquo;s Instagram Story. Posted with permission.
+              </p>
+            </div>
+          </div>
+
+          {/* Two more Google reviews */}
+          <div className="grid md:grid-cols-2 gap-5">
             {[
               {
                 quote:
-                  "They found $4,200/mo in wasted Google Ads spend in our first scan. Paid for itself 40x over in month one.",
-                name: "Owner, Pure Plumbing &amp; Air",
-                metric: "+40% YoY",
-              },
-              {
-                quote:
-                  "Turns out we were missing 31% of inbound calls after 5pm. Nobody had ever told us. Game changer.",
+                  "Turns out we were missing 31% of our calls after 5pm. Nobody had ever told us. Game changer.",
                 name: "GM, Regional HVAC Group",
                 metric: "31% missed calls",
               },
               {
                 quote:
-                  "Our GBP was scored 42/100. Six weeks later we&rsquo;re #1 in the 3-pack for our zip. Worth $97 alone.",
+                  "Our Google Business Pro was scored 42 out of 100. Six weeks later we are #1 in the map pack for our zip. Worth $97 alone.",
                 name: "Owner, Family Plumbing Co.",
-                metric: "#1 in 3-pack",
+                metric: "#1 in map pack",
               },
             ].map((t) => (
               <div
                 key={t.name}
                 className="bg-white border border-[#E5E7EB] rounded-lg p-6 shadow-sm"
               >
-                <div className="flex gap-1 mb-3">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} className="h-4 w-4 fill-current" style={{ color: GOLD }} />
-                  ))}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex gap-1">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="h-4 w-4 fill-current" style={{ color: GOLD }} />
+                    ))}
+                  </div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D1B2A] bg-[#F2B70520] px-2 py-0.5 rounded-full">
+                    Google Review
+                  </span>
                 </div>
-                <p
-                  className="text-[#1F2937] font-medium mb-4 leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: `&ldquo;${t.quote}&rdquo;` }}
-                />
-                <div
-                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs"
-                  style={{ background: "#2E7D86" }}
-                >
-                  {t.metric}
+                <p className="text-[#1F2937] font-medium mb-4 leading-relaxed">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-[#6B7280]">{t.name}</p>
+                  <span
+                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs"
+                    style={{ background: "#2E7D86" }}
+                  >
+                    {t.metric}
+                  </span>
                 </div>
-                <div
-                  className="text-sm text-[#6B7280] mt-3"
-                  dangerouslySetInnerHTML={{ __html: t.name }}
-                />
               </div>
             ))}
           </div>
