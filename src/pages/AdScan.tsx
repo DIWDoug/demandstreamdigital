@@ -267,13 +267,13 @@ export default function AdScan() {
           >
             <ShieldCheck className="h-16 w-16 mx-auto mb-4" />
             <div className="text-xs font-black tracking-[0.25em] uppercase mb-2">
-              Iron-Clad 100% Money-Back Guarantee
+              100% Money Back Promise
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
               If We Don&rsquo;t Find <span style={{ color: RED }}>3 Real Problems</span> Costing You Money, You Pay Nothing.
             </h2>
             <p className="text-base md:text-lg text-[#0D1B2A]/80 max-w-2xl mx-auto">
-              We&rsquo;ll refund your $97 in full, no questions asked. We&rsquo;ve never had to.
+              We give back your $97. No questions asked. We have never had to.
             </p>
           </div>
 
