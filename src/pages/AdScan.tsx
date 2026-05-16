@@ -138,20 +138,20 @@ export default function AdScan() {
               The Honest Reality
             </div>
             <h2 className="text-3xl md:text-5xl font-black leading-tight">
-              You&rsquo;re Spending Thousands On Ads.
+              You Spend A Lot On Ads.
               <br className="hidden md:block" />
-              <span style={{ color: GOLD }}> Are You Sure It&rsquo;s Working?</span>
+              <span style={{ color: GOLD }}> Is It Really Working?</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {[
-              "Your Google Ads cost-per-call keeps creeping up and nobody can explain why.",
-              "Facebook leads come in, but the phone barely rings on Monday.",
-              "You suspect calls are being missed, but nobody is tracking them.",
-              "Your Google Business Pro hasn&rsquo;t been touched in 6 months.",
-              "Your agency sends &ldquo;reports&rdquo; full of impressions, clicks, and CTR. Useless.",
-              "You don&rsquo;t actually know your real cost-per-booked-job.",
+              "Your Google Ads cost more each month. No one can say why.",
+              "Facebook sends leads, but the phone stays quiet on Monday.",
+              "You think calls are missed, but no one keeps track.",
+              "No one has touched your Google Business Pro in 6 months.",
+              "Your agency sends reports full of clicks and views. They don&rsquo;t help.",
+              "You don&rsquo;t know what one booked job really costs you.",
             ].map((t) => (
               <div
                 key={t}
@@ -167,7 +167,7 @@ export default function AdScan() {
           </div>
 
           <p className="text-center text-white/70 max-w-2xl mx-auto mt-10 text-lg italic">
-            One leak in your funnel can quietly cost a Plumbing or HVAC shop $40k a year. The Ad Scan finds them.
+            One small leak can quietly cost a Plumbing or HVAC shop $40k a year. The Ad Scan finds them.
           </p>
         </div>
       </section>
