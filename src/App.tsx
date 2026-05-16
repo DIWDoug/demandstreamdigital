@@ -173,6 +173,7 @@ const App = () => (
           <Route path="/ad-scan" element={<AdScan />} />
           <Route path="/local-lead-ad-scan" element={<AdScan />} />
           <Route path="/ad-scan/onboarding" element={<AdScanOnboarding />} />
+          <Route path="/ad-scan/thanks" element={<AdScanThanks />} />
           <Route path="/brand" element={<BrandGuide />} />
           <Route path="/style-guide" element={<BrandGuide />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
