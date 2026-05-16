@@ -219,7 +219,7 @@ const AdScanOnboarding = () => {
               {/* Account IDs */}
               <div className="md:col-span-2 mt-2 pt-4 border-t border-border/40">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-text-muted mb-3">
-                  Account IDs (paste as you grant access below)
+                  Your account numbers (copy them in as you go below)
                 </h3>
               </div>
               <div>
