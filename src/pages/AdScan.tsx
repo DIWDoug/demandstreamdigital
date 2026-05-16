@@ -418,7 +418,7 @@ export default function AdScan() {
               </div>
 
               <ul className="space-y-3 mb-8 max-w-md mx-auto">
-                <Check>Full 5-channel forensic audit</Check>
+                <Check>Full 5-part deep check</Check>
                 <Check>Scored report (0&ndash;100 per channel)</Check>
                 <Check>Dollar value of waste identified</Check>
                 <Check>30-day prioritized action plan</Check>
