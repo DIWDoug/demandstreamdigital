@@ -608,6 +608,52 @@ export default function AdScan() {
         </div>
       </section>
 
+      {/* What we need from you */}
+      <section className="bg-[#F7F8FA] py-16 md:py-20 border-t border-[#E5E7EB]">
+        <div className="max-w-[1000px] mx-auto px-5 md:px-8">
+          <div className="text-center mb-10">
+            <div
+              className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+              style={{ color: ACCENT }}
+            >
+              Set Your Expectations
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-[#0D1B2A] leading-tight mb-3">
+              What We&rsquo;ll Need From You
+            </h2>
+            <p className="text-[#475569] text-lg max-w-2xl mx-auto">
+              Read-only access. We can look. We cannot change a thing in your accounts. No passwords. Ever.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            {[
+              { t: "Google Ads", b: "Read-only access to your Search, Performance Max, and Local Service Ads accounts." },
+              { t: "Facebook & Instagram Ads", b: "Read-only access to your Meta Ads Manager and Business Manager." },
+              { t: "Google Business Pro", b: "Read-only access to your Google Business Pro listing for each location." },
+              { t: "Google Analytics (GA4)", b: "Read-only access to your GA4 property and call tracking if you have it." },
+            ].map((item) => (
+              <div
+                key={item.t}
+                className="bg-white border border-[#E5E7EB] rounded-xl p-5 flex items-start gap-3 shadow-sm"
+              >
+                <Lock className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: ACCENT }} />
+                <div>
+                  <div className="font-black text-[#0D1B2A] mb-1">{item.t}</div>
+                  <p className="text-[#475569] text-sm leading-relaxed">{item.b}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 max-w-2xl mx-auto bg-white border border-[#E5E7EB] rounded-xl p-5 text-center">
+            <p className="text-[#334155] text-sm md:text-base">
+              <strong className="text-[#0D1B2A]">Takes about 10 minutes.</strong> We send a secure access request from a verified manager account. You click approve. We never touch a setting, change a budget, or pause a campaign without your written sign-off.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing / Order */}
       <section id="order" className="bg-[#0D1B2A] py-16 md:py-24 text-white">
         <div className="max-w-[820px] mx-auto px-5 md:px-8">
