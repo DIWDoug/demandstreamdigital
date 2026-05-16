@@ -136,15 +136,15 @@ export default function AdScan() {
       <section className="bg-[#F7F8FA] border-b border-[#E5E7EB] py-12 md:py-16">
         <div className="max-w-[900px] mx-auto px-5 md:px-8">
           <div className="bg-white border border-[#E5E7EB] rounded-2xl shadow-lg p-6 md:p-10">
-            <div className="grid md:grid-cols-[180px_1fr] gap-6 md:gap-8 items-start">
+            <div className="grid md:grid-cols-[260px_1fr] gap-6 md:gap-10 items-start">
               <div className="mx-auto md:mx-0">
                 <img
                   src={dougHeadshot}
                   alt="Doug Bryson, founder of Demand Stream Digital"
-                  width={180}
-                  height={180}
+                  width={260}
+                  height={260}
                   loading="lazy"
-                  className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-2xl object-cover border border-[#E5E7EB] shadow-md"
+                  className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-2xl object-cover border border-[#E5E7EB] shadow-md"
                 />
                 <p className="text-center text-xs font-bold text-[#0D1B2A] mt-3">Doug Bryson</p>
                 <p className="text-center text-[11px] text-[#6B7280]">Founder, Demand Stream Digital</p>
