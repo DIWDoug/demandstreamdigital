@@ -242,11 +242,11 @@ export default function AdScan() {
               A Report Your Current Agency Will Never Send You.
             </h2>
             <ul className="space-y-4">
-              <Check>A 0&ndash;100 score for each of your 5 channels.</Check>
-              <Check>The exact dollar value of waste we found in your accounts.</Check>
-              <Check>Your top 3 highest-ROI fixes, ranked by impact.</Check>
-              <Check>A side-by-side benchmark vs other Plumbing &amp; HVAC shops in your size range.</Check>
-              <Check>A 30-day action plan you can hand to anyone, including your in-house team.</Check>
+              <Check>A score from 0 to 100 for each of your 5 channels.</Check>
+              <Check>The real dollars you waste right now.</Check>
+              <Check>The top 3 fixes that help you the most.</Check>
+              <Check>How you stack up next to other Plumbing &amp; HVAC shops your size.</Check>
+              <Check>A 30 day plan you can hand to your team.</Check>
             </ul>
             <div className="mt-8">
               <CTA size="md">GET MY AD SCAN FOR $97</CTA>
