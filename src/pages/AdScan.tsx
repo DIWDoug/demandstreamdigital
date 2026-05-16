@@ -310,13 +310,13 @@ export default function AdScan() {
           >
             <ShieldCheck className="h-16 w-16 mx-auto mb-4" />
             <div className="text-xs font-black tracking-[0.25em] uppercase mb-2">
-              100% Money Back Promise
+              🛡️ Only $97
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
-              If We Don&rsquo;t Find <span style={{ color: RED }}>3 Real Problems</span> Costing You Money, You Pay Nothing.
+              If We Don&rsquo;t Find <span style={{ color: RED }}>3 Problems?</span> Full Refund. No Questions.
             </h2>
             <p className="text-base md:text-lg text-[#0D1B2A]/80 max-w-2xl mx-auto">
-              We give back your $97. No questions asked. We have never had to.
+              Sign up for a Local Lead Ad Audit. Only $97. If we don&rsquo;t find 3 problems, you get every dollar back. No questions.
             </p>
           </div>
 
