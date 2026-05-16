@@ -44,6 +44,7 @@ const Author = lazy(() => import("./pages/Author"));
 const Grow = lazy(() => import("./pages/Grow"));
 const BrandGuide = lazy(() => import("./pages/BrandGuide"));
 const AdScan = lazy(() => import("./pages/AdScan"));
+const AdScanOnboarding = lazy(() => import("./pages/AdScanOnboarding"));
 const GrowQualifier = lazy(() => import("./pages/GrowQualifier"));
 const GrowThanks = lazy(() => import("./pages/GrowThanks"));
 const GrowBooked = lazy(() => import("./pages/GrowBooked"));
