@@ -42,6 +42,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
 const Grow = lazy(() => import("./pages/Grow"));
+const BrandGuide = lazy(() => import("./pages/BrandGuide"));
 const GrowQualifier = lazy(() => import("./pages/GrowQualifier"));
 const GrowThanks = lazy(() => import("./pages/GrowThanks"));
 const GrowBooked = lazy(() => import("./pages/GrowBooked"));
@@ -166,6 +167,8 @@ const App = () => (
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/grow" element={<Grow />} />
+          <Route path="/brand" element={<BrandGuide />} />
+          <Route path="/style-guide" element={<BrandGuide />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
           <Route path="/grow/thanks" element={<GrowThanks />} />
           <Route path="/grow/booked" element={<GrowBooked />} />
