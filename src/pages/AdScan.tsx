@@ -193,7 +193,7 @@ export default function AdScan() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <Pillar
               icon={Target}
-              title="01 — Google Ads Forensics"
+              title="01 — Google Ads Deep Check"
               body="Search terms, negative gaps, geo waste, ad copy, Quality Score, smart bidding, conversion mapping. Every dollar audited."
             />
             <Pillar
