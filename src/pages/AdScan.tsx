@@ -68,15 +68,15 @@ export default function AdScan() {
   return (
     <div className="bg-[#F7F8FA] text-[#0D1B2A]">
       <SEOHead
-        title="Local Lead Ad Scan — Find The Leaks In Your Marketing | $97"
-        description="A 5-part deep check of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
+        title="Plumbing & HVAC Ad Scan. Who's Fixing Your Leaky Ads? | $97"
+        description="Plumbing and HVAC owners: we check your Google Ads, Facebook Ads, missed calls, tracking, and Google Business Pro. Most owners are bleeding $500 to $2,000 a month. Normally $297. Today $97. Full refund if we don't find 3 problems."
         canonical="https://demandstreamdigital.com/ad-scan"
         noIndex
       />
 
       {/* Announcement bar */}
       <div className="bg-[#C0392B] text-white text-center text-sm md:text-base font-bold py-2.5 px-4 tracking-wide">
-        LIMITED: Only 10 Ad Scans accepted per week. Normally <span className="line-through opacity-80">$297</span> — today <span className="underline">$97</span>.
+        PLUMBING &amp; HVAC OWNERS ONLY. Only 10 Ad Scans per week. Normally <span className="line-through opacity-80">$297</span>. Today <span className="underline">$97</span>.
       </div>
 
       {/* Hero */}
@@ -87,16 +87,17 @@ export default function AdScan() {
               className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-5"
               style={{ color: ACCENT }}
             >
-              For Plumbing &amp; HVAC Operators Only
+              Plumbing &amp; HVAC Owners. Read This First.
             </div>
             <h1 className="text-[34px] leading-[1.05] sm:text-5xl md:text-6xl font-black text-[#0D1B2A] mb-5">
-              We Look At Your Ads And Show You{" "}
-              <span style={{ color: ACCENT }}>Where Your Money Is Going</span>
+              Plumbing And HVAC Owners.{" "}
+              <span style={{ color: ACCENT }}>Who&rsquo;s Fixing Your Leaky Ads?</span>
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              We check 5 things: Google Ads, Facebook Ads, tracking, missed
-              calls, and Google Business Pro. You get a report with a score.
+              We check 5 things in your plumbing or HVAC shop: Google Ads,
+              Facebook Ads, tracking, missed calls, and Google Business Pro.
+              You get a report with a score.
               <strong> Worth $297. Today $97.</strong>
             </p>
             <CTA>CLAIM MY $97 AD SCAN</CTA>
@@ -123,6 +124,48 @@ export default function AdScan() {
               className="w-full block"
               loading="eager"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* From Doug, personal note */}
+      <section className="bg-[#F7F8FA] border-b border-[#E5E7EB] py-12 md:py-16">
+        <div className="max-w-[900px] mx-auto px-5 md:px-8">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl shadow-lg p-6 md:p-10">
+            <div
+              className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+              style={{ color: ACCENT }}
+            >
+              A Quick Note From Doug
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-[#0D1B2A] leading-tight mb-4">
+              Hey, I&rsquo;m Doug. I fix broken ad accounts for plumbers and HVAC shops.
+            </h2>
+            <div className="space-y-4 text-[#334155] text-base md:text-lg leading-relaxed">
+              <p>
+                I am not the person in the picture. That is just AI. I can&rsquo;t even hit 5,000 steps a day, and I have a dog.
+              </p>
+              <p>
+                For almost 16 years I have quietly fixed broken ad accounts for local service shops while their agencies stay quiet and keep cashing checks.
+              </p>
+              <p>
+                What I keep finding is not pretty. Most plumbing and HVAC owners are bleeding <strong>$500 to $2,000 a month</strong> on ads and have no idea.
+              </p>
+              <p>
+                We know your world. ServiceTitan. Housecall Pro. We build the scan around the way your shop actually runs.
+              </p>
+              <p className="text-[#0D1B2A] font-bold">This scan is for owners who:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Run ads but the phone is not ringing enough.</span></li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are tired of paying an agency and guessing what they get.</span></li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are ready to find out what is broken.</span></li>
+                <li className="flex items-start gap-3"><AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: RED }} /><span>Not running ads yet? Come back when you are.</span></li>
+              </ul>
+              <p className="italic text-[#475569]">Wyler&rsquo;s leash is in my hand. Talk soon.<br/>Doug</p>
+            </div>
+            <div className="mt-7">
+              <CTA size="md">CLAIM MY $97 AD SCAN</CTA>
+            </div>
           </div>
         </div>
       </section>
