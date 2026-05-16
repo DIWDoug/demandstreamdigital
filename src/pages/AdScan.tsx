@@ -287,20 +287,20 @@ export default function AdScan() {
                 What Counts As A Problem
               </div>
               <h3 className="text-2xl md:text-3xl font-black leading-tight">
-                A "Real Problem" Is Anything Fixable That&rsquo;s Costing You Booked Jobs Or Wasted Spend.
+                A "Real Problem" Is Anything We Can Fix That Costs You Jobs Or Money.
               </h3>
               <p className="text-[#475569] mt-3 max-w-2xl mx-auto">
-                Verified against our Plumbing &amp; HVAC benchmarks. Documented. Tied to a number. Actionable.
+                We check it with our Plumbing and HVAC numbers. We write it down. We tie it to a real dollar amount. You can act on it.
               </p>
             </div>
             <ul className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
               {[
-                "Wasted ad spend on non-converting search terms, audiences, or geos",
-                "Missed inbound calls during business hours or after hours",
-                "Broken or missing tracking: GA4, call tracking, Meta pixel, conversions",
-                "Google Business Pro scoring below our 80/100 benchmark",
-                "Cost-per-booked-job above benchmark for your market and shop size",
-                "Quality Score, ad copy, or landing page gaps suppressing performance",
+                "Ad money spent on words, people, or places that bring no jobs",
+                "Calls you missed in the day or at night",
+                "Tracking that is broken or missing: GA4, call tracking, Meta pixel",
+                "A Google Business Pro score below 80 out of 100",
+                "A booked job that costs more than it should for your shop size",
+                "Weak ad words, ad copy, or pages that hold your ads back",
               ].map((p) => (
                 <li key={p} className="flex items-start gap-3 bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg p-4">
                   <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" style={{ color: "#16A34A" }} />
