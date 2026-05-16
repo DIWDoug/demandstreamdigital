@@ -24,17 +24,20 @@ const GOLD = "#F2B705";
 const RED = "#C0392B";
 
 const CTA = ({ children = "CLAIM MY $97 AD SCAN", size = "lg" as "lg" | "md" }) => (
-  <a
-    href="#order"
-    className={`inline-flex items-center justify-center gap-3 rounded-md bg-[#C0392B] hover:bg-[#a4301f] active:translate-y-px transition-all text-white font-black uppercase tracking-wide shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)] ring-1 ring-white/10 ${
-      size === "lg"
-        ? "px-8 md:px-12 py-5 md:py-6 text-lg md:text-2xl"
-        : "px-6 md:px-10 py-4 text-base md:text-lg"
-    }`}
-  >
-    {children}
-    <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
-  </a>
+  <div className="inline-flex flex-col items-center">
+    <a
+      href="#order"
+      className={`inline-flex items-center justify-center gap-3 rounded-md bg-[#C0392B] hover:bg-[#a4301f] active:translate-y-px transition-all text-white font-black uppercase tracking-wide shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)] ring-1 ring-white/10 ${
+        size === "lg"
+          ? "px-8 md:px-12 py-5 md:py-6 text-lg md:text-2xl"
+          : "px-6 md:px-10 py-4 text-base md:text-lg"
+      }`}
+    >
+      {children}
+      <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
+    </a>
+    <span className="mt-2 text-xs md:text-sm italic opacity-70">($697 value)</span>
+  </div>
 );
 
 const Pillar = ({
