@@ -186,9 +186,9 @@ const AdScanOnboarding = () => {
         <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-16 space-y-6">
 
           {/* Step 1 — Your info */}
-          <Step num={1} title="Tell us who you are" badge="Required" estMinutes={2}>
+          <Step num={1} title="Tell us who you are" badge="Needed" estMinutes={2}>
             <p className="text-text-muted">
-              We use this only to match your accounts and send your scan report. No spam.
+              We use this to find your accounts and send you the report. No spam.
             </p>
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
               <div>
