@@ -69,7 +69,7 @@ export default function AdScan() {
     <div className="bg-[#F7F8FA] text-[#0D1B2A]">
       <SEOHead
         title="Local Lead Ad Scan — Find The Leaks In Your Marketing | $97"
-        description="A 5-channel forensic audit of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
+        description="A 5-part deep check of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
         canonical="https://demandstreamdigital.com/ad-scan"
         noIndex
       />
@@ -95,7 +95,7 @@ export default function AdScan() {
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              A 5-channel forensic audit of your Google Ads, Facebook Ads,
+              A 5-part deep check of your Google Ads, Facebook Ads,
               tracking, missed calls, and Google Business Pro. Delivered as a
               scored report. <strong>$297 value. Today $97.</strong>
             </p>
@@ -180,7 +180,7 @@ export default function AdScan() {
               className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
               style={{ color: ACCENT }}
             >
-              The 5-Channel Forensic Audit
+              The 5-Part Deep Check
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-[#0D1B2A] mb-4 leading-tight">
               Here&rsquo;s Exactly What We Tear Apart.
@@ -193,7 +193,7 @@ export default function AdScan() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <Pillar
               icon={Target}
-              title="01 — Google Ads Forensics"
+              title="01 — Google Ads Deep Check"
               body="Search terms, negative gaps, geo waste, ad copy, Quality Score, smart bidding, conversion mapping. Every dollar audited."
             />
             <Pillar
@@ -418,7 +418,7 @@ export default function AdScan() {
               </div>
 
               <ul className="space-y-3 mb-8 max-w-md mx-auto">
-                <Check>Full 5-channel forensic audit</Check>
+                <Check>Full 5-part deep check</Check>
                 <Check>Scored report (0&ndash;100 per channel)</Check>
                 <Check>Dollar value of waste identified</Check>
                 <Check>30-day prioritized action plan</Check>
