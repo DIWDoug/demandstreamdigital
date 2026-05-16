@@ -128,6 +128,48 @@ export default function AdScan() {
         </div>
       </section>
 
+      {/* From Doug, personal note */}
+      <section className="bg-[#F7F8FA] border-b border-[#E5E7EB] py-12 md:py-16">
+        <div className="max-w-[900px] mx-auto px-5 md:px-8">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl shadow-lg p-6 md:p-10">
+            <div
+              className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+              style={{ color: ACCENT }}
+            >
+              A Quick Note From Doug
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-[#0D1B2A] leading-tight mb-4">
+              Hey, I&rsquo;m Doug. I fix broken ad accounts for plumbers and HVAC shops.
+            </h2>
+            <div className="space-y-4 text-[#334155] text-base md:text-lg leading-relaxed">
+              <p>
+                I am not the person in the picture. That is just AI. I can&rsquo;t even hit 5,000 steps a day, and I have a dog.
+              </p>
+              <p>
+                For almost 16 years I have quietly fixed broken ad accounts for local service shops while their agencies stay quiet and keep cashing checks.
+              </p>
+              <p>
+                What I keep finding is not pretty. Most plumbing and HVAC owners are bleeding <strong>$500 to $2,000 a month</strong> on ads and have no idea.
+              </p>
+              <p>
+                We know your world. ServiceTitan. Housecall Pro. We build the scan around the way your shop actually runs.
+              </p>
+              <p className="text-[#0D1B2A] font-bold">This scan is for owners who:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Run ads but the phone is not ringing enough.</span></li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are tired of paying an agency and guessing what they get.</span></li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are ready to find out what is broken.</span></li>
+                <li className="flex items-start gap-3"><AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: RED }} /><span>Not running ads yet? Come back when you are.</span></li>
+              </ul>
+              <p className="italic text-[#475569]">Wyler&rsquo;s leash is in my hand. Talk soon.<br/>Doug</p>
+            </div>
+            <div className="mt-7">
+              <CTA size="md">CLAIM MY $97 AD SCAN</CTA>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pain section */}
       <section className="bg-[#0D1B2A] text-white py-16 md:py-24">
         <div className="max-w-[1100px] mx-auto px-5 md:px-8">
