@@ -90,14 +90,14 @@ export default function AdScan() {
               For Plumbing &amp; HVAC Operators Only
             </div>
             <h1 className="text-[34px] leading-[1.05] sm:text-5xl md:text-6xl font-black text-[#0D1B2A] mb-5">
-              We&rsquo;ll Tear Apart Your Local Ads &amp; Show You{" "}
-              <span style={{ color: ACCENT }}>Exactly Where Your Money Is Leaking</span>
+              We Look At Your Ads And Show You{" "}
+              <span style={{ color: ACCENT }}>Where Your Money Is Going</span>
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              A 5-part deep check of your Google Ads, Facebook Ads,
-              tracking, missed calls, and Google Business Pro. Delivered as a
-              scored report. <strong>$297 value. Today $97.</strong>
+              We check 5 things: Google Ads, Facebook Ads, tracking, missed
+              calls, and Google Business Pro. You get a report with a score.
+              <strong> Worth $297. Today $97.</strong>
             </p>
             <CTA>CLAIM MY $97 AD SCAN</CTA>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm text-[#475569]">
@@ -138,20 +138,20 @@ export default function AdScan() {
               The Honest Reality
             </div>
             <h2 className="text-3xl md:text-5xl font-black leading-tight">
-              You&rsquo;re Spending Thousands On Ads.
+              You Spend A Lot On Ads.
               <br className="hidden md:block" />
-              <span style={{ color: GOLD }}> Are You Sure It&rsquo;s Working?</span>
+              <span style={{ color: GOLD }}> Is It Really Working?</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
             {[
-              "Your Google Ads cost-per-call keeps creeping up and nobody can explain why.",
-              "Facebook leads come in, but the phone barely rings on Monday.",
-              "You suspect calls are being missed, but nobody is tracking them.",
-              "Your Google Business Pro hasn&rsquo;t been touched in 6 months.",
-              "Your agency sends &ldquo;reports&rdquo; full of impressions, clicks, and CTR. Useless.",
-              "You don&rsquo;t actually know your real cost-per-booked-job.",
+              "Your Google Ads cost more each month. No one can say why.",
+              "Facebook sends leads, but the phone stays quiet on Monday.",
+              "You think calls are missed, but no one keeps track.",
+              "No one has touched your Google Business Pro in 6 months.",
+              "Your agency sends reports full of clicks and views. They don&rsquo;t help.",
+              "You don&rsquo;t know what one booked job really costs you.",
             ].map((t) => (
               <div
                 key={t}
@@ -167,7 +167,7 @@ export default function AdScan() {
           </div>
 
           <p className="text-center text-white/70 max-w-2xl mx-auto mt-10 text-lg italic">
-            One leak in your funnel can quietly cost a Plumbing or HVAC shop $40k a year. The Ad Scan finds them.
+            One small leak can quietly cost a Plumbing or HVAC shop $40k a year. The Ad Scan finds them.
           </p>
         </div>
       </section>
@@ -242,11 +242,11 @@ export default function AdScan() {
               A Report Your Current Agency Will Never Send You.
             </h2>
             <ul className="space-y-4">
-              <Check>A 0&ndash;100 score for each of your 5 channels.</Check>
-              <Check>The exact dollar value of waste we found in your accounts.</Check>
-              <Check>Your top 3 highest-ROI fixes, ranked by impact.</Check>
-              <Check>A side-by-side benchmark vs other Plumbing &amp; HVAC shops in your size range.</Check>
-              <Check>A 30-day action plan you can hand to anyone, including your in-house team.</Check>
+              <Check>A score from 0 to 100 for each of your 5 channels.</Check>
+              <Check>The real dollars you waste right now.</Check>
+              <Check>The top 3 fixes that help you the most.</Check>
+              <Check>How you stack up next to other Plumbing &amp; HVAC shops your size.</Check>
+              <Check>A 30 day plan you can hand to your team.</Check>
             </ul>
             <div className="mt-8">
               <CTA size="md">GET MY AD SCAN FOR $97</CTA>
@@ -267,13 +267,13 @@ export default function AdScan() {
           >
             <ShieldCheck className="h-16 w-16 mx-auto mb-4" />
             <div className="text-xs font-black tracking-[0.25em] uppercase mb-2">
-              Iron-Clad 100% Money-Back Guarantee
+              100% Money Back Promise
             </div>
             <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
               If We Don&rsquo;t Find <span style={{ color: RED }}>3 Real Problems</span> Costing You Money, You Pay Nothing.
             </h2>
             <p className="text-base md:text-lg text-[#0D1B2A]/80 max-w-2xl mx-auto">
-              We&rsquo;ll refund your $97 in full, no questions asked. We&rsquo;ve never had to.
+              We give back your $97. No questions asked. We have never had to.
             </p>
           </div>
 
@@ -287,20 +287,20 @@ export default function AdScan() {
                 What Counts As A Problem
               </div>
               <h3 className="text-2xl md:text-3xl font-black leading-tight">
-                A "Real Problem" Is Anything Fixable That&rsquo;s Costing You Booked Jobs Or Wasted Spend.
+                A "Real Problem" Is Anything We Can Fix That Costs You Jobs Or Money.
               </h3>
               <p className="text-[#475569] mt-3 max-w-2xl mx-auto">
-                Verified against our Plumbing &amp; HVAC benchmarks. Documented. Tied to a number. Actionable.
+                We check it with our Plumbing and HVAC numbers. We write it down. We tie it to a real dollar amount. You can act on it.
               </p>
             </div>
             <ul className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
               {[
-                "Wasted ad spend on non-converting search terms, audiences, or geos",
-                "Missed inbound calls during business hours or after hours",
-                "Broken or missing tracking: GA4, call tracking, Meta pixel, conversions",
-                "Google Business Pro scoring below our 80/100 benchmark",
-                "Cost-per-booked-job above benchmark for your market and shop size",
-                "Quality Score, ad copy, or landing page gaps suppressing performance",
+                "Ad money spent on words, people, or places that bring no jobs",
+                "Calls you missed in the day or at night",
+                "Tracking that is broken or missing: GA4, call tracking, Meta pixel",
+                "A Google Business Pro score below 80 out of 100",
+                "A booked job that costs more than it should for your shop size",
+                "Weak ad words, ad copy, or pages that hold your ads back",
               ].map((p) => (
                 <li key={p} className="flex items-start gap-3 bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg p-4">
                   <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" style={{ color: "#16A34A" }} />
