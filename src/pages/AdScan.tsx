@@ -276,6 +276,46 @@ export default function AdScan() {
               We&rsquo;ll refund your $97 in full, no questions asked. We&rsquo;ve never had to.
             </p>
           </div>
+
+          {/* What counts as a problem */}
+          <div className="mt-10 bg-white text-[#0D1B2A] rounded-2xl p-8 md:p-10 border border-[#E5E7EB] shadow-xl">
+            <div className="text-center mb-6">
+              <div
+                className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-2"
+                style={{ color: ACCENT }}
+              >
+                What Counts As A Problem
+              </div>
+              <h3 className="text-2xl md:text-3xl font-black leading-tight">
+                A "Real Problem" Is Anything Fixable That&rsquo;s Costing You Booked Jobs Or Wasted Spend.
+              </h3>
+              <p className="text-[#475569] mt-3 max-w-2xl mx-auto">
+                Verified against our Plumbing &amp; HVAC benchmarks. Documented. Tied to a number. Actionable.
+              </p>
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto">
+              {[
+                "Wasted ad spend on non-converting search terms, audiences, or geos",
+                "Missed inbound calls during business hours or after hours",
+                "Broken or missing tracking: GA4, call tracking, Meta pixel, conversions",
+                "Google Business Pro scoring below our 80/100 benchmark",
+                "Cost-per-booked-job above benchmark for your market and shop size",
+                "Quality Score, ad copy, or landing page gaps suppressing performance",
+              ].map((p) => (
+                <li key={p} className="flex items-start gap-3 bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg p-4">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 mt-0.5" style={{ color: "#16A34A" }} />
+                  <span className="text-[#1F2937] text-sm md:text-base leading-relaxed">{p}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-center text-xs text-[#6B7280] mt-6">
+              Full refund eligibility terms on our{" "}
+              <Link to="/terms" className="underline font-bold" style={{ color: ACCENT }}>
+                Terms of Service
+              </Link>
+              . Refund requests must be submitted within 14 days of report delivery.
+            </p>
+          </div>
         </div>
       </section>
 
