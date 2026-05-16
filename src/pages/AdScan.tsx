@@ -180,7 +180,7 @@ export default function AdScan() {
               className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
               style={{ color: ACCENT }}
             >
-              The 5-Channel Forensic Audit
+              The 5-Part Deep Check
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-[#0D1B2A] mb-4 leading-tight">
               Here&rsquo;s Exactly What We Tear Apart.
