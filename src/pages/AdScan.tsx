@@ -68,15 +68,15 @@ export default function AdScan() {
   return (
     <div className="bg-[#F7F8FA] text-[#0D1B2A]">
       <SEOHead
-        title="Local Lead Ad Scan — Find The Leaks In Your Marketing | $97"
-        description="A 5-part deep check of your Google Ads, Facebook Ads, missed calls, and Google Business Pro for Plumbing & HVAC operators. Normally $297. Today $97. 100% money-back guarantee."
+        title="Plumbing & HVAC Ad Scan. Who's Fixing Your Leaky Ads? | $97"
+        description="Plumbing and HVAC owners: we check your Google Ads, Facebook Ads, missed calls, tracking, and Google Business Pro. Most owners are bleeding $500 to $2,000 a month. Normally $297. Today $97. Full refund if we don't find 3 problems."
         canonical="https://demandstreamdigital.com/ad-scan"
         noIndex
       />
 
       {/* Announcement bar */}
       <div className="bg-[#C0392B] text-white text-center text-sm md:text-base font-bold py-2.5 px-4 tracking-wide">
-        LIMITED: Only 10 Ad Scans accepted per week. Normally <span className="line-through opacity-80">$297</span> — today <span className="underline">$97</span>.
+        PLUMBING &amp; HVAC OWNERS ONLY. Only 10 Ad Scans per week. Normally <span className="line-through opacity-80">$297</span>. Today <span className="underline">$97</span>.
       </div>
 
       {/* Hero */}
