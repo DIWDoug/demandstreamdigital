@@ -95,7 +95,7 @@ export default function AdScan() {
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              A 5-channel forensic audit of your Google Ads, Facebook Ads,
+              A 5-part deep check of your Google Ads, Facebook Ads,
               tracking, missed calls, and Google Business Pro. Delivered as a
               scored report. <strong>$297 value. Today $97.</strong>
             </p>
