@@ -322,7 +322,7 @@ const AdScanOnboarding = () => {
           <div className="rounded-lg bg-navy text-white p-6 md:p-8 text-center">
             <h3 className="text-2xl font-bold mb-2">That's it. We take it from here.</h3>
             <p className="text-white/80 mb-5 max-w-2xl mx-auto">
-              You will get a confirmation email once we accept each grant. Your full forensic scan
+              You will get a confirmation email once we accept each grant. Your full scan
               report lands in your inbox within 5 business days.
             </p>
             <Link to="/ad-scan">
