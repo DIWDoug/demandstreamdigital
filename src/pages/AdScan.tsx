@@ -17,6 +17,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/ad-scan-hero.png";
 import heroAlt from "@/assets/ad-scan-hvac.png";
+import dougHeadshot from "@/assets/doug-bryson-headshot-2.jpeg";
 
 const ACCENT = "#1E5BD6"; // ClickFunnels-style royal blue accent
 const GOLD = "#F2B705";
@@ -132,39 +133,55 @@ export default function AdScan() {
       <section className="bg-[#F7F8FA] border-b border-[#E5E7EB] py-12 md:py-16">
         <div className="max-w-[900px] mx-auto px-5 md:px-8">
           <div className="bg-white border border-[#E5E7EB] rounded-2xl shadow-lg p-6 md:p-10">
-            <div
-              className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
-              style={{ color: ACCENT }}
-            >
-              A Quick Note From Doug
-            </div>
-            <h2 className="text-2xl md:text-3xl font-black text-[#0D1B2A] leading-tight mb-4">
-              Hey, I&rsquo;m Doug. I fix broken ad accounts for plumbers and HVAC shops.
-            </h2>
-            <div className="space-y-4 text-[#334155] text-base md:text-lg leading-relaxed">
-              <p>
-                I am not the person in the picture. That is just AI. I can&rsquo;t even hit 5,000 steps a day, and I have a dog.
-              </p>
-              <p>
-                For almost 16 years I have quietly fixed broken ad accounts for local service shops while their agencies stay quiet and keep cashing checks.
-              </p>
-              <p>
-                What I keep finding is not pretty. Most plumbing and HVAC owners are bleeding <strong>$500 to $2,000 a month</strong> on ads and have no idea.
-              </p>
-              <p>
-                We know your world. ServiceTitan. Housecall Pro. We build the scan around the way your shop actually runs.
-              </p>
-              <p className="text-[#0D1B2A] font-bold">This scan is for owners who:</p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Run ads but the phone is not ringing enough.</span></li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are tired of paying an agency and guessing what they get.</span></li>
-                <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are ready to find out what is broken.</span></li>
-                <li className="flex items-start gap-3"><AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: RED }} /><span>Not running ads yet? Come back when you are.</span></li>
-              </ul>
-              <p className="italic text-[#475569]">Wyler&rsquo;s leash is in my hand. Talk soon.<br/>Doug</p>
-            </div>
-            <div className="mt-7">
-              <CTA size="md">CLAIM MY $97 AD SCAN</CTA>
+            <div className="grid md:grid-cols-[180px_1fr] gap-6 md:gap-8 items-start">
+              <div className="mx-auto md:mx-0">
+                <img
+                  src={dougHeadshot}
+                  alt="Doug Bryson, founder of Demand Stream Digital"
+                  width={180}
+                  height={180}
+                  loading="lazy"
+                  className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-2xl object-cover border border-[#E5E7EB] shadow-md"
+                />
+                <p className="text-center text-xs font-bold text-[#0D1B2A] mt-3">Doug Bryson</p>
+                <p className="text-center text-[11px] text-[#6B7280]">Founder, Demand Stream Digital</p>
+              </div>
+              <div>
+                <div
+                  className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+                  style={{ color: ACCENT }}
+                >
+                  A Quick Note From Doug
+                </div>
+                <h2 className="text-2xl md:text-3xl font-black text-[#0D1B2A] leading-tight mb-4">
+                  Hey, I&rsquo;m Doug. I fix broken ad accounts for plumbers and HVAC shops.
+                </h2>
+                <div className="space-y-4 text-[#334155] text-base md:text-lg leading-relaxed">
+                  <p>
+                    Yes, that is actually me. I can&rsquo;t even hit 5,000 steps a day, and I have a dog.
+                  </p>
+                  <p>
+                    For almost 16 years I have quietly fixed broken ad accounts for local service shops while their agencies stay quiet and keep cashing checks.
+                  </p>
+                  <p>
+                    What I keep finding is not pretty. Most plumbing and HVAC owners are bleeding <strong>$500 to $2,000 a month</strong> on ads and have no idea.
+                  </p>
+                  <p>
+                    We know your world. ServiceTitan. Housecall Pro. We build the scan around the way your shop actually runs.
+                  </p>
+                  <p className="text-[#0D1B2A] font-bold">This scan is for owners who:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Run ads but the phone is not ringing enough.</span></li>
+                    <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are tired of paying an agency and guessing what they get.</span></li>
+                    <li className="flex items-start gap-3"><CheckCircle2 className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: "#16A34A" }} /><span>Are ready to find out what is broken.</span></li>
+                    <li className="flex items-start gap-3"><AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0" style={{ color: RED }} /><span>Not running ads yet? Come back when you are.</span></li>
+                  </ul>
+                  <p className="italic text-[#475569]">Wyler&rsquo;s leash is in my hand. Talk soon.<br/>Doug</p>
+                </div>
+                <div className="mt-7">
+                  <CTA size="md">CLAIM MY $97 AD SCAN</CTA>
+                </div>
+              </div>
             </div>
           </div>
         </div>
