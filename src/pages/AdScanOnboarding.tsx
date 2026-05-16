@@ -248,10 +248,10 @@ const AdScanOnboarding = () => {
               </div>
               <div className="md:col-span-2 pt-2">
                 <Button type="submit" size="lg" disabled={submitting || submitted} className="w-full md:w-auto">
-                  {submitted ? "Submitted ✓" : submitting ? "Submitting..." : "Submit and start my scan →"}
+                  {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
                 <p className="text-xs text-text-muted mt-3">
-                  You can submit now and finish the access grants below at your own pace. We will not start the scan until all five grants are in place.
+                  You can send this now and finish the steps below when you have time. We start the scan when all five are done.
                 </p>
               </div>
             </form>
