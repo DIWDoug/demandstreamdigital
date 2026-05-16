@@ -90,14 +90,14 @@ export default function AdScan() {
               For Plumbing &amp; HVAC Operators Only
             </div>
             <h1 className="text-[34px] leading-[1.05] sm:text-5xl md:text-6xl font-black text-[#0D1B2A] mb-5">
-              We&rsquo;ll Tear Apart Your Local Ads &amp; Show You{" "}
-              <span style={{ color: ACCENT }}>Exactly Where Your Money Is Leaking</span>
+              We Look At Your Ads And Show You{" "}
+              <span style={{ color: ACCENT }}>Where Your Money Is Going</span>
               <span className="text-[#C0392B]">.</span>
             </h1>
             <p className="text-lg md:text-2xl text-[#334155] max-w-3xl mx-auto leading-relaxed mb-7">
-              A 5-part deep check of your Google Ads, Facebook Ads,
-              tracking, missed calls, and Google Business Pro. Delivered as a
-              scored report. <strong>$297 value. Today $97.</strong>
+              We check 5 things: Google Ads, Facebook Ads, tracking, missed
+              calls, and Google Business Pro. You get a report with a score.
+              <strong> Worth $297. Today $97.</strong>
             </p>
             <CTA>CLAIM MY $97 AD SCAN</CTA>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm text-[#475569]">
