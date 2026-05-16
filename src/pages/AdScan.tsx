@@ -17,6 +17,7 @@ import {
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/ad-scan-hero.png";
 import heroAlt from "@/assets/ad-scan-hvac.png";
+import dougHeadshot from "@/assets/doug-bryson-headshot-2.jpeg";
 
 const ACCENT = "#1E5BD6"; // ClickFunnels-style royal blue accent
 const GOLD = "#F2B705";
