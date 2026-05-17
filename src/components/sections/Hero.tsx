@@ -94,7 +94,7 @@ const Hero = () => {
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
+              className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-sans font-bold mb-4 animate-fade-in-up text-white"
               style={{ lineHeight: "1.1" }}>Plumbing & HVAC Digital Marketing & AI Automation Company
 
 
