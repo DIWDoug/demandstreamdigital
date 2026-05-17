@@ -3,22 +3,7 @@ import StreamTexture from "@/components/StreamTexture";
 import review1 from "@/assets/pure-plumbing-review-1.png";
 import review2 from "@/assets/pure-plumbing-review-2.png";
 
-interface FeaturedReview {
-  eyebrow?: string;
-  quote?: string;
-  author?: string;
-  source?: string;
-  metricBadge?: string;
-  rating?: number;
-}
-
-interface PlaceholderCard {
-  hint: string;
-}
-
 interface ServiceTestimonialsSectionProps {
-  featured?: FeaturedReview;
-  placeholders?: PlaceholderCard[];
   ratingLine?: string;
   eyebrow?: string;
   heading?: string;
@@ -26,14 +11,11 @@ interface ServiceTestimonialsSectionProps {
 }
 
 const ServiceTestimonialsSection = ({
-  featured,
   ratingLine = "4.9 out of 5 · 22 Google Reviews for Demand Stream Digital",
-  eyebrow,
+  eyebrow = "Real Reviews From Real Operators",
   heading = "Real Shops. Real Words. Real Money Found.",
   subhead,
 }: ServiceTestimonialsSectionProps) => {
-  const eyebrowText = eyebrow ?? featured?.eyebrow ?? "Real Reviews From Real Operators";
-
   return (
     <section className="py-24 lg:py-32 section-light relative overflow-hidden" style={{ background: "linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%)" }}>
       <StreamTexture variant="light" opacity={0.1} />
