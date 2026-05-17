@@ -109,38 +109,34 @@ test.describe("SMS/TCPA consent text renders verbatim on every lead form", () =>
     await page.goto("/grow-qualifier");
     await page.waitForLoadState("networkidle");
 
-    // Walk through the qualifier to reach the contact step, where consent renders.
-    // Each step uses a primary "OK" button to advance after a selection.
-    const clickChoice = async (label: string | RegExp) => {
-      await page.getByRole("button", { name: label }).first().click();
-    };
+    // Walk the qualifier through to the contact step, where consent renders.
+    // Each step has a primary "OK" advance button.
     const clickOk = async () => {
       await page.getByRole("button", { name: /^OK$/ }).first().click();
     };
 
-    // Step 1 contractor type
-    await clickChoice(/HVAC|Plumbing/);
+    // Step 1: contractor type
+    await page.getByRole("button", { name: /^HVAC$/ }).first().click();
     await clickOk();
 
-    // Step 2 company name (text input)
-    await page.locator("input[type=text]").first().fill("Test Co");
+    // Step 2: company name
+    await page.locator("input[placeholder=\"Acme Plumbing\"]").fill("Test Co");
     await clickOk();
 
-    // Step 3 website
-    await page.locator("input[type=text]").first().fill("test.com");
+    // Step 3: website
+    await page.locator("input[placeholder=\"acmeplumbing.com\"]").fill("test.com");
     await clickOk();
 
-    // Step 4 channels (pick one)
-    await clickChoice(/Google Ads|Google Local|Facebook|Other|None/);
+    // Step 4: channels (multi-select; pick at least one)
+    await page.getByRole("button", { name: /^Google Ads$/ }).first().click();
     await clickOk();
 
-    // Step 5 revenue band - pick the $500k+ tier so we route straight to qualified -> contact
-    // (this avoids the budget detour).
-    await clickChoice(/\$500K\+|500K\+|500,000|500k/i);
+    // Step 5: revenue. Picking the top tier routes straight to "qualified" and skips the budget gate.
+    await page.getByRole("button", { name: /Greater than \$10mm/ }).first().click();
     await clickOk();
 
-    // Qualified screen: click through to the contact step.
-    await page.getByRole("button", { name: /Continue|Book|Start|Get/i }).first().click();
+    // Qualified interstitial -> click "Continue" to reach the contact step.
+    await page.getByRole("button", { name: /^Continue$/ }).first().click();
 
     // Contact step should now render both consent components.
     await expect(page.locator("text=/Reply HELP for help or STOP to unsubscribe/")).toBeVisible({ timeout: 5000 });
