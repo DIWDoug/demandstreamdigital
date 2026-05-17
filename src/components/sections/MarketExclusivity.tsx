@@ -9,7 +9,7 @@ const MarketExclusivity = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 lg:py-28 bg-background reveal-section relative overflow-hidden"
+      className="py-10 lg:py-14 bg-background reveal-section relative overflow-hidden"
     >
       <StreamTexture variant="dark" opacity={0.09} />
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
