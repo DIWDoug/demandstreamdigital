@@ -210,7 +210,7 @@ const BestHVACSEOCompanies = () => {
                   <AccordionItem value="faq-1">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[1].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      HVAC SEO pricing ranges from around $1,500/month for smaller HVAC-specific agencies to $5,000–$10,000/month for enterprise platforms. Most mid-tier contractors find a solid program in the $2,000–$4,000/month range. Demand Stream Digital offers transparent hourly billing ($100/hour) so you only pay for the work that actually gets done. <IL to="/contact">Get in touch</IL> to learn more.
+                      HVAC SEO pricing ranges from around $1,500/month for smaller HVAC-specific agencies to $5,000–$10,000/month for enterprise platforms. Most mid-tier contractors find a solid program in the $2,000–$4,000/month range. Demand Stream Digital offers transparent hourly billing ($100/hour) so you only pay for the work that actually gets done. <IL to="/grow-qualifier">Get in touch</IL> to learn more.
                     </AccordionContent>
                   </AccordionItem>
 
@@ -229,7 +229,7 @@ const BestHVACSEOCompanies = () => {
                   <AccordionItem value="faq-14">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[14].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      Demand Stream Digital was built specifically for HVAC and plumbing companies. We use transparent hourly billing ($100/hour) instead of bloated packages, so you know exactly what you're paying for. You get direct communication with the person working on your account, not a ticket queue. <IL to="/contact">Start the conversation</IL> to see if we're the right fit for your business.
+                      Demand Stream Digital was built specifically for HVAC and plumbing companies. We use transparent hourly billing ($100/hour) instead of bloated packages, so you know exactly what you're paying for. You get direct communication with the person working on your account, not a ticket queue. <IL to="/grow-qualifier">Start the conversation</IL> to see if we're the right fit for your business.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

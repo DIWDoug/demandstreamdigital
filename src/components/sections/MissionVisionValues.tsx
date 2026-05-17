@@ -157,7 +157,7 @@ const MissionVisionValues = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-24">
               <Link 
-                to="/contact" 
+                to="/grow-qualifier" 
                 className="btn-cta group"
               >
                 Explore a Partnership

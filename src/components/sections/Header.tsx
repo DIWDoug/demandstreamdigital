@@ -255,7 +255,7 @@ const Header = () => {
               </a>
 
               <Link
-                to="/contact"
+                to="/grow-qualifier"
                 className="inline-flex items-center justify-center font-bold text-white text-[15px] tracking-[0.04em] whitespace-nowrap transition-colors"
                 style={{
                   backgroundColor: "#C0392B",
@@ -421,7 +421,7 @@ const Header = () => {
                 </a>
 
                 <Link
-                  to="/contact"
+                  to="/grow-qualifier"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center justify-center w-full font-bold text-white text-[15px] tracking-[0.04em] transition-colors"
                   style={{

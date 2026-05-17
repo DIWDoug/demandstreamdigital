@@ -241,7 +241,7 @@ export default function AuditReport({ data, userName }: AuditReportProps) {
           <Download className="w-4 h-4" /> Download PDF
         </Button>
         <Button asChild className="gap-2 bg-cta hover:bg-cta/90 text-white">
-          <Link to="/contact">
+          <Link to="/grow-qualifier">
             Get Expert Help <ArrowRight className="w-4 h-4" />
           </Link>
         </Button>
@@ -363,7 +363,7 @@ export default function AuditReport({ data, userName }: AuditReportProps) {
             turn these insights into a growth plan.
           </p>
           <Button asChild size="lg" className="bg-cta hover:bg-cta/90 text-white">
-            <Link to="/contact">
+            <Link to="/grow-qualifier">
               Schedule a Free Strategy Call <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </Button>

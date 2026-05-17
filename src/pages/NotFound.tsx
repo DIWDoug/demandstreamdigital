@@ -38,7 +38,7 @@ const NotFound = () => {
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link 
-            to="/contact" 
+            to="/grow-qualifier" 
             className="px-6 py-4 rounded-lg border border-border text-foreground hover:bg-surface-elevated transition-colors"
           >
             Contact Us

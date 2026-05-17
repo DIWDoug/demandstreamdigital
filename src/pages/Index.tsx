@@ -39,7 +39,7 @@ const TerritoryCallout = () => (
             We take one plumbing client and one HVAC client per service area. If your market is open, now is when to find out.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+            <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
               Claim Your Territory Today
               <ArrowRight className="h-4 w-4" />
             </Link>

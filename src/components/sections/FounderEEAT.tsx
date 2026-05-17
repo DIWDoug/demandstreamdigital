@@ -52,7 +52,7 @@ const FounderEEAT = () => {
               <p className="text-white font-semibold mt-6">Doug</p>
             </div>
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="btn-cta group inline-flex items-center gap-2 mt-8"
             >
               Start a Conversation

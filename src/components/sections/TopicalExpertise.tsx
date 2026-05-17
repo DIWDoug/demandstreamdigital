@@ -159,7 +159,7 @@ const TopicalExpertise = () => {
         {/* Section CTAs */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
           <Link
-            to="/contact"
+            to="/grow-qualifier"
             className="btn-cta inline-flex items-center gap-2"
           >
             Get a Free Audit

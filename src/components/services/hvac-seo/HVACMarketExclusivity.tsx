@@ -21,7 +21,7 @@ const HVACMarketExclusivity = () => {
             If your market is available, it's worth finding out now.
           </p>
           <Link
-            to="/contact"
+            to="/grow-qualifier"
             className="btn-cta group inline-flex items-center gap-2"
           >
             Claim Your Territory Today

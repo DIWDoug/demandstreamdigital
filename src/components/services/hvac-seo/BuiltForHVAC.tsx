@@ -62,7 +62,7 @@ const BuiltForHVAC = () => {
           {/* CTA */}
           <div className="text-center">
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="btn-cta group inline-flex items-center gap-2"
             >
               Claim Your Territory Today

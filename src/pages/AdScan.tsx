@@ -740,7 +740,7 @@ export default function AdScan() {
               </div>
             </div>
             <div className="bg-[#F7F8FA] border-t border-[#E5E7EB] px-6 py-4 text-center text-sm text-[#475569]">
-              Prefer to talk first? <Link to="/contact" className="font-bold underline" style={{ color: ACCENT }}>Book a 15-min call</Link>.
+              Prefer to talk first? <Link to="/grow-qualifier" className="font-bold underline" style={{ color: ACCENT }}>Book a 15-min call</Link>.
             </div>
           </div>
         </div>
@@ -817,7 +817,7 @@ export default function AdScan() {
             <ArrowRight className="h-6 w-6" />
           </a>
           <div className="flex items-center justify-center gap-2 mt-6 text-sm text-white/80">
-            <Phone className="h-4 w-4" /> Questions? <Link to="/contact" className="underline font-bold ml-1">Talk to us</Link>
+            <Phone className="h-4 w-4" /> Questions? <Link to="/grow-qualifier" className="underline font-bold ml-1">Talk to us</Link>
           </div>
         </div>
       </section>

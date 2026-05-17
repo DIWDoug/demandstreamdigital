@@ -180,7 +180,7 @@ const WebDesignHub = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 shrink-0">
                 <Link
-                  to="/contact"
+                  to="/grow-qualifier"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-semibold rounded-lg transition-colors text-sm whitespace-nowrap">
                   Claim Your Territory
                   <ArrowRight className="w-4 h-4" />

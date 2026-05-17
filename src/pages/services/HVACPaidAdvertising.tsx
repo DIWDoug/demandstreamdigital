@@ -101,7 +101,7 @@ const HVACPaidAdvertising = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Not Clear Which Channel Fits Your Market?</h2>
           <p className="text-text-secondary mb-8 max-w-xl mx-auto">Repair, replacement, and commercial growth each require a different paid mix. We scope it to your market and your season.</p>
-          <a href="/contact" className="btn-cta inline-flex items-center gap-2">
+          <a href="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
             Claim Your Territory Today
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>

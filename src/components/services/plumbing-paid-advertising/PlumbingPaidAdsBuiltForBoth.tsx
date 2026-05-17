@@ -57,7 +57,7 @@ const PlumbingPaidAdsBuiltForBoth = () => {
 
           <div className="text-center">
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 hover:border-cta hover:text-cta font-medium rounded-lg transition-all text-sm"
             >
               Get a Paid Ads Performance Audit

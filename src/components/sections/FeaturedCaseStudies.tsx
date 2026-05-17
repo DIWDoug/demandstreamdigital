@@ -103,7 +103,7 @@ const FeaturedCaseStudies = () => {
           })}
 
           <Link
-            to="/contact"
+            to="/grow-qualifier"
             className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
           >
             <div className="relative aspect-[16/9] overflow-hidden bg-surface-elevated">

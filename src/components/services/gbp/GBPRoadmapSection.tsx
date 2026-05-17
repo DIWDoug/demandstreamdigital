@@ -92,7 +92,7 @@ const GBPRoadmapSection = ({ config }: GBPRoadmapSectionProps) => {
           {/* CTA */}
           <div className="text-center mt-8">
             <Link 
-              to="/contact" 
+              to="/grow-qualifier" 
               className="inline-flex items-center gap-2 text-accent-green font-medium hover:text-accent-green/80 transition-colors"
             >
               Discuss Your Roadmap

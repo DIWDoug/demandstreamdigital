@@ -109,7 +109,7 @@ const ServicesTestimonials = () => {
           <div className="mt-14 pt-10 border-t border-border/20">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link 
-                to="/contact" 
+                to="/grow-qualifier" 
                 className="btn-cta group flex items-center gap-2"
               >
                 Start a Conversation

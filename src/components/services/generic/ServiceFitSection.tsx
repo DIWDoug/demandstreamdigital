@@ -31,7 +31,7 @@ const ServiceFitSection = ({
   goodFit,
   notFit,
   ctaLabel = "Claim Your Territory Today",
-  ctaHref = "/contact",
+  ctaHref = "/grow-qualifier",
   tradeNoun,
   exclusivityBody,
 }: ServiceFitSectionProps) => {

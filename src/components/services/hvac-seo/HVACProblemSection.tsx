@@ -76,7 +76,7 @@ const HVACProblemSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  to="/contact"
+                  to="/grow-qualifier"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm"
                 >
                   Claim Your Territory Today

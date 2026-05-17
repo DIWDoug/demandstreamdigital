@@ -151,7 +151,7 @@ const FitQualifier = () => {
           {/* CTA */}
           <div className="text-center mt-12">
             <Link 
-              to="/contact" 
+              to="/grow-qualifier" 
               className="btn-cta group inline-flex items-center gap-2"
             >
               Get Your Free Marketing Audit
