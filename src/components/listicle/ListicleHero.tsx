@@ -1,4 +1,4 @@
-import { Calendar, User } from "lucide-react";
+import { Calendar, User, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ListicleHeroProps {
@@ -10,9 +10,16 @@ interface ListicleHeroProps {
   };
   lastUpdated: string;
   breadcrumbs?: { label: string; href?: string }[];
+  bullets?: string[];
 }
 
-const ListicleHero = ({ title, author, lastUpdated, breadcrumbs }: ListicleHeroProps) => {
+const DEFAULT_BULLETS = [
+  "Independently researched. Built for plumbing and HVAC operators, not generic home services.",
+  "Ranked on real fit for the trade, not pay-to-play placements",
+  "Updated as agencies, pricing, and results actually change",
+];
+
+const ListicleHero = ({ title, author, lastUpdated, breadcrumbs, bullets = DEFAULT_BULLETS }: ListicleHeroProps) => {
   return (
     <section className="relative pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-6 lg:px-8">
