@@ -2,6 +2,7 @@ import { KeyboardEvent, useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Loader2, Quote, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
+import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import {
