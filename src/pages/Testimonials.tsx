@@ -52,7 +52,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team at Dialed-In did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price and in many cases, went above and beyond what they promised. And while Doug never promised results, he and his team delivered with our organic rankings for the targeted keywords up across the board. And that's saying something since we work in a very competitive space (divorce mediation) and in a very populated area (NY/NJ and Chicago).",
+      quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price and in many cases, went above and beyond what they promised. And while Doug never promised results, he and his team delivered with our organic rankings for the targeted keywords up across the board. And that's saying something since we work in a very competitive space (divorce mediation) and in a very populated area (NY/NJ and Chicago).",
       name: "Joseph Dillon",
       title: "Small Business Owner",
       location: "NY/NJ & Chicago",
@@ -169,7 +169,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "The Dialed-In Web team have always been professional and knowledgeable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
+      quote: "The team have always been professional and knowledgeable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
       name: "Cynthia Cavoto",
       title: "Business Owner",
       location: "",
