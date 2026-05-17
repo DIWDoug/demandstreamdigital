@@ -78,7 +78,7 @@ const FreeAudit = () => {
 
     if (honeypot) return; // bot
 
-    if (!url.trim() || !name.trim() || !email.trim() || !phone.trim()) {
+    if (!url.trim() || !name.trim() || !email.trim()) {
       toast({
         title: "Missing fields",
         description: "Please fill in all fields.",
