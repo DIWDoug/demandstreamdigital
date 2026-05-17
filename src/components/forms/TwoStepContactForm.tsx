@@ -181,6 +181,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               onChange={(e) => setStep1Data({ ...step1Data, name: e.target.value })}
               onFocus={initRecaptcha}
               placeholder="Your name"
+              autoComplete="name"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore
               className={inputClass}
             />
           </div>
@@ -195,6 +199,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               value={step1Data.email}
               onChange={(e) => setStep1Data({ ...step1Data, email: e.target.value })}
               placeholder="you@yourcompany.com"
+              autoComplete="email"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore
               className={inputClass}
             />
           </div>
@@ -209,6 +217,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               value={step1Data.website}
               onChange={(e) => setStep1Data({ ...step1Data, website: e.target.value })}
               placeholder="yourcompany.com"
+              autoComplete="off"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore
               className={inputClass}
             />
           </div>
@@ -224,6 +236,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               onChange={(e) => setStep1Data({ ...step1Data, city: e.target.value })}
               placeholder="e.g. Dallas, TX"
               maxLength={100}
+              autoComplete="address-level2"
+              data-1p-ignore
+              data-lpignore="true"
+              data-bwignore
               className={inputClass}
             />
           </div>
