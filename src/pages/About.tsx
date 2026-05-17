@@ -51,17 +51,17 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/douglasebryson/"
     },
     {
-      name: "John Joseph Santos (JJ)",
+      name: "JJ Santos",
       role: "Team Lead",
       bio: "Specialist in on-page optimization and paid advertising for local service companies. Builds and manages campaigns with a focus on qualified call volume and cost per booked call.",
       image: johnSantos,
       linkedin: "https://www.linkedin.com/in/jj-santosads/"
     },
     {
-      name: "Wyler",
-      role: "Chief Morale Officer",
-      bio: "Ensures team morale stays high. Undefeated in this role.",
-      image: wyler
+      name: "Oleksii Skorykh",
+      role: "Head of Automation",
+      bio: "Builds and maintains the automation systems that keep campaign delivery efficient across every client account.",
+      image: oleksiiSkorykh,
     },
     {
       name: "Carol Mora",
@@ -70,11 +70,10 @@ const About = () => {
       image: carolMora,
     },
     {
-      name: "Ira Salvador",
-      role: "Project Manager",
-      bio: "Manages campaign workflows and client deliverables. Focused on execution quality and timeline consistency.",
-      image: iraSalvador,
-      linkedin: "https://www.linkedin.com/in/indira-salvador-926b7a212/"
+      name: "Carla Finela",
+      role: "Certified ClickUp PM",
+      bio: "Manages campaign workflows and project delivery using ClickUp systems. Focused on execution quality and timeline consistency across client accounts.",
+      image: carlaFinela,
     },
     {
       name: "Samanta Sanchezborja Leal",
@@ -84,11 +83,10 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/esamanthasbl87/"
     },
     {
-      name: "Lanilyn Erauda",
-      role: "Systems and Processes",
-      bio: "Builds and maintains the internal processes that keep campaign quality consistent across every client account.",
-      image: lanilynErauda,
-      linkedin: "https://www.linkedin.com/in/lanilyn-erauda-87b077265/"
+      name: "Athena Yenko",
+      role: "Content Strategist",
+      bio: "Leads SEO content strategy and execution for plumbing and HVAC accounts. Focused on building topical authority through service pages and location content that ranks and drives qualified call volume.",
+      image: athenaYenko,
     },
     {
       name: "Desiree Abbariao",
@@ -98,12 +96,6 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/desireeabbariao/"
     },
     {
-      name: "Athena Yenko",
-      role: "Senior SEO Content Manager",
-      bio: "Leads SEO content strategy and execution for plumbing and HVAC accounts. Focused on building topical authority through service pages and location content that ranks and drives qualified call volume.",
-      image: athenaYenko,
-    },
-    {
       name: "Leilani Maravillas",
       role: "OnPage Specialist",
       bio: "Handles on-page optimization across client sites: headings, meta data, internal linking, and page structure built for local search.",
@@ -111,10 +103,34 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
     },
     {
+      name: "James Belmes",
+      role: "Link Building Specialist",
+      bio: "Runs strategic outreach and link building campaigns that strengthen domain authority for plumbing and HVAC clients.",
+      image: jamesBelmes,
+    },
+    {
+      name: "Bel Aniano",
+      role: "Marketing Coordinator",
+      bio: "Coordinates campaign deliverables and supports the team with day to day marketing operations across client accounts.",
+      image: belAniano,
+    },
+    {
       name: "Muhammad Bilal",
       role: "Web Developer",
       bio: "Builds and maintains client websites with a focus on speed, structure, and conversion-ready design for plumbing and HVAC companies.",
       image: muhammadBilal,
+    },
+    {
+      name: "Michael Lipura",
+      role: "CPA",
+      bio: "Handles financial operations and accounting. Keeps the business running clean so the team can focus on client work.",
+      image: michaelLipura,
+    },
+    {
+      name: "Wyler",
+      role: "Chief Morale Officer",
+      bio: "Ensures team morale stays high. Undefeated in this role.",
+      image: wyler
     },
   ];
 
