@@ -122,7 +122,7 @@ const Index = () => {
       
       {/* Convert warm leads */}
       <div className="dark relative">
-        <WaveDivider position="top" fromColor="#f9f9f9" toColor="hsl(213, 64%, 8%)" variant="curve" flip animated />
+        <div className="h-px w-full bg-accent-blue/30" />
         <MidPageCTA variant="dark" />
       </div>
       
