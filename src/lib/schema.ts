@@ -230,7 +230,7 @@ export const getServicesPageSchema = () => {
     {
       name: "Paid Media for Plumbing & HVAC",
       description: "Google Ads, Meta Ads, and local service ads management to generate calls and booked jobs.",
-      url: `${SITE_URL}/plumbing-paid-advertising`,
+      url: `${SITE_URL}/paid-marketing`,
       serviceType: "PPC Advertising Service"
     },
     {

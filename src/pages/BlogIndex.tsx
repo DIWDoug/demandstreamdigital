@@ -95,7 +95,7 @@ export default function BlogIndex() {
                 {[
                   { label: "Plumbing SEO", href: "/plumbing-seo" },
                   { label: "HVAC SEO", href: "/hvac-seo" },
-                  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+                  { label: "Paid Advertising", href: "/paid-marketing" },
                   { label: "Email Marketing", href: "/plumbing-email-marketing" },
                   { label: "AI Automation", href: "/ai-automation" },
                   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },

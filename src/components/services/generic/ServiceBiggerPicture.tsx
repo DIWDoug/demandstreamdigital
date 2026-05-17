@@ -35,7 +35,7 @@ const ServiceBiggerPicture = ({
   services,
   orbitNodes,
   ctaLabel = "See How the Full System Works",
-  ctaHref = "/hvac-and-plumbing-paid-ads",
+  ctaHref = "/paid-marketing",
 }: ServiceBiggerPictureProps) => {
   return (
     <section className="py-20 lg:py-28 bg-surface scroll-mt-32">

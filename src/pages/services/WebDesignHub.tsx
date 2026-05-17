@@ -16,7 +16,7 @@ import { WEB_DESIGN_STEPS } from "@/data/web-design-steps";
 const WEB_DESIGN_BIGGER_PICTURE_SERVICES = [
 { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
 { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-{ label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+{ label: "Paid Advertising", href: "/paid-marketing" },
 { label: "Email Marketing", href: "/plumbing-email-marketing" },
 { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
 { label: "Reporting & Dashboards", href: "/plumbing-reporting" }];

@@ -319,7 +319,7 @@ export const aiAutomationConfig: ServicePageConfig = {
       { icon: Bot, id: "ai-automation", title: "AI Automation", description: "Recover leads and automate follow-up.", href: "/ai-automation", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search.", href: "/hvac-and-plumbing-seo" },
       { icon: Map, id: "google-maps", title: "GBP SEO", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
-      { icon: Target, id: "paid-media", title: "Paid Advertising", description: "Google Ads and Meta campaigns.", href: "/hvac-and-plumbing-paid-ads" },
+      { icon: Target, id: "paid-media", title: "Paid Advertising", description: "Google Ads and Meta campaigns.", href: "/paid-marketing" },
       { icon: Mail, id: "email", title: "Email Marketing", description: "Nurture and convert your list.", href: "/plumbing-email-marketing" },
       { icon: PenTool, id: "content", title: "Content Development", description: "Content that earns and converts.", href: "/plumbing-content-marketing" }
     ],

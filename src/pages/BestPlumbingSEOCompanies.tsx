@@ -207,7 +207,7 @@ const BestPlumbingSEOCompanies = () => {
                   <AccordionItem value="faq-11">
                     <AccordionTrigger className="text-left font-semibold">{config.faq[11].question}</AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      SEO services for plumbing and HVAC companies typically include: <IL to="/hvac-and-plumbing-seo">local SEO optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">content creation</IL>, <IL to="/hvac-and-plumbing-seo">link building and authority development</IL>, <IL to="/hvac-and-plumbing-paid-ads">paid search campaigns</IL>, and <IL to="/plumbing-reporting">monthly reporting</IL>. Premium services may include reputation management, conversion rate optimization, and advanced analytics.
+                      SEO services for plumbing and HVAC companies typically include: <IL to="/hvac-and-plumbing-seo">local SEO optimization</IL>, <IL to="/plumbing-google-maps">Google Business Profile management</IL>, <IL to="/plumbing-content-marketing">content creation</IL>, <IL to="/hvac-and-plumbing-seo">link building and authority development</IL>, <IL to="/paid-marketing">paid search campaigns</IL>, and <IL to="/plumbing-reporting">monthly reporting</IL>. Premium services may include reputation management, conversion rate optimization, and advanced analytics.
                     </AccordionContent>
                   </AccordionItem>
 

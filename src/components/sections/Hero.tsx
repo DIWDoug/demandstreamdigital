@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import YouTubeModal from "@/components/ui/youtube-modal";
 import TopoTexture from "@/components/TopoTexture";
 
 const Hero = () => {
   const [website, setWebsite] = useState("");
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -154,6 +152,19 @@ const Hero = () => {
               Built to Drive More Booked Service Calls
             </p>
 
+            <div className="lg:hidden mb-6 animate-fade-in-up" style={{ animationDelay: "0.08s" }}>
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
+                <iframe
+                  src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                  title="DemandStream Digital"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
             <p
               className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}>We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, AI Automation and website design, built as one connected system.
@@ -192,30 +203,20 @@ const Hero = () => {
           </div>
 
           {/* Right column — Video placeholder */}
-          <div className="animate-fade-in-up lg:pl-4" style={{ animationDelay: "0.2s" }}>
-            <div
-              className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 cursor-pointer group shadow-2xl"
-              onClick={() => setIsVideoOpen(true)}>
-
-              {/* Placeholder content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-cta flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cta/30">
-                  <Play className="h-8 w-8 text-white fill-white ml-1" />
-                </div>
-                <span className="text-white font-semibold text-sm uppercase tracking-wider">Watch Now</span>
-              </div>
+          <div className="hidden animate-fade-in-up lg:block lg:pl-4" style={{ animationDelay: "0.2s" }}>
+            <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                title="DemandStream Digital"
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
             </div>
-
           </div>
         </div>
       </div>
-
-      {/* Video Modal - replace VIDEO_ID_HERE with actual YouTube ID later */}
-      <YouTubeModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        videoId="VIDEO_ID_HERE"
-        title="Demand Stream Digital - Get Better Leads" />
 
     </section>);
 

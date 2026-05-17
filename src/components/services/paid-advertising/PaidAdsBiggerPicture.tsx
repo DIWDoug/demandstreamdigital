@@ -4,7 +4,7 @@ const services = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
   { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Paid Advertising", href: "/paid-marketing" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },
   { label: "Web Design", href: "/website-design" },

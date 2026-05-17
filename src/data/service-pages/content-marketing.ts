@@ -351,7 +351,7 @@ export const contentMarketingConfig: ServicePageConfig = {
       { icon: PenTool, id: "content-marketing", title: "Content Marketing", description: "Topical authority and geographic relevance.", href: "/plumbing-hvac-content-marketing", isCenter: true },
       { icon: Search, id: "local-seo", title: "Local SEO", description: "Organic visibility in local search results.", href: "/hvac-and-plumbing-seo" },
       { icon: Map, id: "google-maps", title: "Google Maps / GBP", description: "Dominate the local 3-pack.", href: "/plumbing-google-maps" },
-      { icon: Sparkles, id: "paid-media", title: "Google Ads", description: "Paid search and LSA campaigns.", href: "/hvac-and-plumbing-paid-ads" },
+      { icon: Sparkles, id: "paid-media", title: "Google Ads", description: "Paid search and LSA campaigns.", href: "/paid-marketing" },
       { icon: Mail, id: "email-marketing", title: "Email Marketing", description: "Reactivate past customers.", href: "/plumbing-email-marketing" },
       { icon: Award, id: "reputation", title: "Reputation Management", description: "Review velocity and trust signals.", href: "/reputation-management" },
       { icon: BarChart3, id: "reporting", title: "Reporting & Dashboards", description: "Connect every channel to cost per booked call.", href: "/reporting-dashboards" }

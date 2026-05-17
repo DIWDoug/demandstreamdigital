@@ -182,7 +182,7 @@ export const blogLinkMappings: Record<string, BlogLinkMapping> = {
     slug: 'white-label-social-media',
     relevantLinks: [
       { text: 'content marketing', url: '/plumbing-content-marketing', context: 'content marketing' },
-      { text: 'Meta Ads', url: '/hvac-and-plumbing-paid-ads', context: 'social media advertising' },
+      { text: 'Meta Ads', url: '/paid-marketing', context: 'social media advertising' },
       { text: 'white-label reporting', url: '/plumbing-reporting', context: 'reporting' },
     ],
     externalLink: {
