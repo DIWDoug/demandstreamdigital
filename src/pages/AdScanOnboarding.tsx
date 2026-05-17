@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { SITE_URL } from "@/lib/constants";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 
 // Demand Stream credentials the client pastes into each platform
 const GRANT_INFO = {
@@ -227,6 +227,7 @@ const AdScanOnboarding = () => {
                     required
                   />
                 </div>
+                <SmsConsentSummary className="mt-2 text-[11px] leading-snug text-text-muted" />
               </div>
               <div>
                 <Label htmlFor="company">Company *</Label>

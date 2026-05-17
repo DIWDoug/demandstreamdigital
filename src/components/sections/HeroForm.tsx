@@ -4,7 +4,7 @@ import { ArrowRight, Loader2, ChevronDown, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 
 const serviceOptions = [
   "Local SEO",
@@ -231,6 +231,10 @@ const HeroForm = () => {
             countryCode={formData.phoneCountryCode}
             onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
             required
+          />
+          <SmsConsentSummary
+            className="-mt-1 text-[11px] leading-snug text-text-muted"
+            linkClassName="text-primary hover:underline"
           />
 
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
-import { SmsConsentText } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import {
   markGrowLeadVerified,
@@ -512,6 +512,10 @@ const GrowthQualifierFlow = () => {
                   countryCode={contact.phoneCountryCode}
                   onCountryCodeChange={(code) => setContact((p) => ({ ...p, phoneCountryCode: code }))}
                   required
+                />
+                <SmsConsentSummary
+                  className="mt-2 text-[11px] leading-snug text-white/60"
+                  linkClassName="underline hover:text-white"
                 />
               </div>
 

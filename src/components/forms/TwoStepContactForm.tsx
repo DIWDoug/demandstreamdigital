@@ -5,7 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 import { Checkbox } from "@/components/ui/checkbox";
 import { serviceInterestOptions } from "@/data/servicesInterested";
 
@@ -266,6 +266,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               countryCode={step1Data.phoneCountryCode}
               onCountryCodeChange={(code) => setStep1Data({ ...step1Data, phoneCountryCode: code })}
               required
+            />
+            <SmsConsentSummary
+              className="mt-2 text-[11px] leading-snug text-text-muted"
+              linkClassName="text-accent-blue hover:underline"
             />
           </div>
 
