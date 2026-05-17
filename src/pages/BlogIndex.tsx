@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, Search, X, BookOpen, ArrowRight } from "lucide-react";
+import { getBlogFeaturedImage } from "@/lib/blogImages";
 
 interface BlogItem {
   id: string;
@@ -178,13 +179,14 @@ export default function BlogIndex() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filtered.map((blog) => {
                     const dateLabel = formatDate(blog.published_at);
+                    const resolvedImage = getBlogFeaturedImage(blog.featured_image);
                     return (
                       <Link key={blog.id} to={`/blog/${blog.slug}`} className="group">
                         <div className="bg-background border border-border hover:border-cta/30 transition-all duration-300 rounded-lg overflow-hidden h-full">
                           <div className="h-48 bg-surface-elevated overflow-hidden flex items-center justify-center">
-                            {blog.featured_image ? (
+                            {resolvedImage ? (
                               <img
-                                src={blog.featured_image}
+                                src={resolvedImage}
                                 alt={blog.title}
                                 loading="lazy"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
