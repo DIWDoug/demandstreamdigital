@@ -12,15 +12,7 @@ export const hvacSEOConfig: ServicePageConfig = {
   hero: {
     headline: "HVAC SEO Services That Drive",
     highlightedText: "More Booked Service Calls",
-    subheadline: {
-      intro: "When a homeowner searches 'AC repair near me' during a heat wave, they are not browsing options. They are calling whoever shows up first.",
-      bullets: [
-        "A no-cool call at 9pm in July",
-        "A furnace that stopped working during a freeze",
-        "A heat pump that has not responded since Monday"
-      ],
-      closing: "Whoever shows up in the Map Pack gets the call. HVAC SEO from DemandStream is built around how HVAC customers actually search and call. No generic contractor marketing. HVAC companies only."
-    },
+    subheadline: "When a homeowner searches 'AC repair near me' during a heat wave, they are not browsing options. They are calling whoever shows up first. HVAC SEO from DemandStream is built around how HVAC customers actually search and call. No generic contractor marketing.",
     qualifierLine: "",
     ctaText: "Claim My Territory",
     ctaSubtext: "HVAC companies only. No plumbing. No general contractors."

@@ -144,7 +144,7 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
                 onClick={() => navigate("/grow-qualifier")}
                 className="btn-cta group whitespace-nowrap px-6 py-4 inline-flex items-center"
               >
-                Schedule a Consultation Now
+                Schedule a Growth Audit
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
               <p className="text-xs text-white/50 mt-3">

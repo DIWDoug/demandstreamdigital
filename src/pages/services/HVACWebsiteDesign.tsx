@@ -123,20 +123,7 @@ const HVACWebsiteDesign = () => {
           { label: "Website Design", href: "/website-design" },
           { label: "HVAC" },
         ]}
-        description={{
-          intro:
-            "HVAC companies run on seasonal urgency. Your website needs to match that reality. When a homeowner searches for AC repair in July, the page they land on needs to answer the right question and make it easy to call.",
-          bullets: [
-            "Seasonal intent structure: separate pages for no-cool, no-heat, and replacement research",
-            "Repair vs. install separation. Google reads these as distinct intents.",
-            "Heat pump and ductless-ready page structure for equipment transitions",
-            "Maintenance agreement conversion paths built into service pages",
-            "Google Business Profile alignment: categories, services, and page signals working together",
-            "AI-ready structure with schema, FAQs, and answer blocks by default",
-            "ServiceTitan-compatible booking UX with call tracking from day one",
-          ],
-          closing: "HVAC companies only. No general contractors.",
-        }}
+        description="HVAC companies run on seasonal urgency, and your website needs to match that reality. We build sites with separate pages for no-cool, no-heat, and replacement research, aligned to your Google Business Profile and ready to convert the moment a homeowner lands. HVAC companies only."
       />
 
       <ServiceHubAnchorNav items={anchorItems} />
