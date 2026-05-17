@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2, ChevronDown, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "@/components/ui/phone-input";
+import { isValidPhone } from "@/lib/validation/phone";
 
 const serviceOptions = [
   "Local SEO",
