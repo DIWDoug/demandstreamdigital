@@ -62,7 +62,7 @@ const BuiltForPlumbers = () => {
           {/* CTA */}
           <div className="text-center">
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="btn-cta group inline-flex items-center gap-2"
             >
               Check Market Availability

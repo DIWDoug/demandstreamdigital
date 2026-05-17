@@ -315,7 +315,7 @@ const Author = () => {
               Ready to explore how our team can support your agency's growth? Let's start a conversation.
             </p>
             <Button asChild size="lg">
-              <Link to="/contact">Start the Conversation</Link>
+              <Link to="/grow-qualifier">Start the Conversation</Link>
             </Button>
           </section>
         </div>

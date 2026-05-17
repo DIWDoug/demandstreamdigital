@@ -99,7 +99,7 @@ const PlumbingPaidAdsFit = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 btn-cta group">
+            <Link to="/grow-qualifier" className="inline-flex items-center gap-2 btn-cta group">
               Claim Your Territory Today
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>

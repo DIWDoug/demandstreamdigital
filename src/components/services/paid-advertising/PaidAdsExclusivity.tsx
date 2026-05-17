@@ -25,7 +25,7 @@ const PaidAdsExclusivity = () => {
             Markets fill. If yours is still open, it's worth confirming now before a competitor does.
           </p>
           <Link
-            to="/contact"
+            to="/grow-qualifier"
             className="btn-cta group inline-flex items-center gap-2"
           >
             Check Your Market

@@ -151,7 +151,7 @@ const ThankYou = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {isEbook && (
                 <Link 
-                  to="/contact"
+                  to="/grow-qualifier"
                   className="btn-cta inline-flex group"
                 >
                   Start a Conversation

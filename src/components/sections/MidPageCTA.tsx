@@ -16,7 +16,7 @@ const MidPageCTA = ({ variant = "dark" }: MidPageCTAProps) => {
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <Link 
-            to="/contact" 
+            to="/grow-qualifier" 
             className="btn-cta group flex items-center gap-2"
           >
             Claim Your Territory Today

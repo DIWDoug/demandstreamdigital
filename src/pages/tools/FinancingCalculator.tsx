@@ -161,7 +161,7 @@ const FinancingCalculator = () => {
                     </div>
                   </div>
 
-                  <Link to="/contact" className="btn-cta group w-full justify-center text-sm">
+                  <Link to="/grow-qualifier" className="btn-cta group w-full justify-center text-sm">
                     Get Real Financing Options
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>

@@ -157,7 +157,7 @@ const ListicleAgencyCard = ({ agency, isTopPick }: ListicleAgencyCardProps) => {
           {isTopPick && (
             <div className="pt-4">
               <Button asChild className="bg-primary hover:bg-primary/90">
-                <a href="/contact">Start the Conversation</a>
+                <a href="/grow-qualifier">Start the Conversation</a>
               </Button>
             </div>
           )}

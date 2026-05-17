@@ -13,7 +13,7 @@ const ListicleCTA = ({
   title = "Looking for Growth Marketing for Your Plumbing or HVAC Business?",
   description = "We help plumbing and HVAC companies get more calls, more jobs, and more revenue with marketing that actually works.",
   buttonText = "Get a Free Strategy Call",
-  buttonHref = "/contact",
+  buttonHref = "/grow-qualifier",
 }: ListicleCTAProps) => {
   return (
     <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 rounded-xl p-6 md:p-8">

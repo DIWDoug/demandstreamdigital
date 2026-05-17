@@ -547,7 +547,7 @@ const GrowthQualifierFlow = () => {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
-                onClick={() => navigate("/contact")}
+                onClick={() => navigate("/grow-qualifier")}
                 className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-7 py-3 text-base font-bold text-white shadow-lg transition-colors hover:bg-[#d32f3c]"
               >
                 Contact Us

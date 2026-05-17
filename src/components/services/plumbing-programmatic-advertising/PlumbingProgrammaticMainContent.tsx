@@ -134,7 +134,7 @@ const PlumbingProgrammaticMainContent = () => {
               ))}
             </div>
             <div className="text-center">
-              <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+              <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
                 Claim Your Territory Today
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -225,7 +225,7 @@ const PlumbingProgrammaticMainContent = () => {
               ))}
             </div>
             <p className="text-text-muted text-sm mb-8">Other CRMs supported. ServiceTitan is the primary integration.</p>
-            <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+            <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
               Claim Your Territory Today
               <ArrowRight className="h-4 w-4" />
             </Link>

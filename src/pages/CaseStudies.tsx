@@ -272,7 +272,7 @@ const CaseStudies = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
-                    to="/contact"
+                    to="/grow-qualifier"
                     className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25"
                   >
                     Start the Conversation

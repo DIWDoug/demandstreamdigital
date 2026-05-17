@@ -221,7 +221,7 @@ const JobCostEstimator = () => {
                   <button onClick={reset} className="px-6 py-3 rounded-lg border border-border text-foreground hover:border-accent-blue transition-all font-medium">
                     Estimate Another Job
                   </button>
-                  <Link to="/contact" className="btn-cta group">
+                  <Link to="/grow-qualifier" className="btn-cta group">
                     Get a Real Quote <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

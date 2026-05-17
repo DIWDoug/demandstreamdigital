@@ -22,7 +22,7 @@ const WebDesignExclusivity = () => {
           <p className="text-muted-foreground text-base mb-10">
             If your market is available, it's worth finding out now.
           </p>
-          <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
+          <Link to="/grow-qualifier" className="btn-cta group inline-flex items-center gap-2">
             Check Your Market
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>

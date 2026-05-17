@@ -65,7 +65,7 @@ const WebDesignFit = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/contact" className="btn-cta group inline-flex items-center gap-2">
+            <Link to="/grow-qualifier" className="btn-cta group inline-flex items-center gap-2">
               See If Your Market Is Open
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>

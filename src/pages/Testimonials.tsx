@@ -328,7 +328,7 @@ const Testimonials = () => {
               Join agencies who trust us with their fulfillment.
             </p>
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="inline-flex items-center justify-center px-6 py-3 bg-cta text-cta-foreground font-medium rounded-lg hover:bg-cta/90 transition-colors"
             >
               Let's Talk Partnership
@@ -462,7 +462,7 @@ const Testimonials = () => {
               Let's discuss how we can help grow your business.
             </p>
             <Link
-              to="/contact"
+              to="/grow-qualifier"
               className="inline-flex items-center justify-center px-6 py-3 bg-cta text-cta-foreground font-medium rounded-lg hover:bg-cta/90 transition-colors"
             >
               Let's Talk Partnership

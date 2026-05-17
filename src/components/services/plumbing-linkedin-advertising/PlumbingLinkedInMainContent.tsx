@@ -165,7 +165,7 @@ const PlumbingLinkedInMainContent = () => {
               LinkedIn advertising builds the commercial side of your business that residential search advertising cannot reach. When both systems run together, you have coverage on the emergency board and a recurring revenue base that keeps the schedule full regardless of how busy or slow the residential market gets.
             </p>
             <div className="text-center">
-              <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+              <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
                 Claim Your Territory Today
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -257,7 +257,7 @@ const PlumbingLinkedInMainContent = () => {
               ))}
             </div>
             <p className="text-text-muted text-sm mb-8">Other CRMs supported. ServiceTitan is the primary integration.</p>
-            <Link to="/contact" className="btn-cta inline-flex items-center gap-2">
+            <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
               Claim Your Territory Today
               <ArrowRight className="h-4 w-4" />
             </Link>

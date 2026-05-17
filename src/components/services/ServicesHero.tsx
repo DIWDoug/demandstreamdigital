@@ -50,7 +50,7 @@ const ServicesHero = () => {
               Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes—delivering consistent, scalable results without added overhead.
             </p>
             <Link 
-              to="/contact" 
+              to="/grow-qualifier" 
               className="btn-cta group inline-flex items-center px-6 py-3"
             >
               Start a Partner Conversation

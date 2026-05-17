@@ -53,7 +53,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Case Studies", href: "/case-studies" },
         { label: "Blog", href: "/blog" },
         { label: "About Us", href: "/about" },
-        { label: "Contact", href: "/contact" },
+        { label: "Contact", href: "/grow-qualifier" },
       ]
     },
   ];

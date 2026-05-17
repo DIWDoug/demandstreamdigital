@@ -87,7 +87,7 @@ const ListicleScrollCTA = () => {
                 </p>
                 <div className="flex gap-2">
                   <Button asChild size="sm" className="bg-primary hover:bg-primary/90 flex-1">
-                    <Link to="/contact" className="inline-flex items-center justify-center gap-2">
+                    <Link to="/grow-qualifier" className="inline-flex items-center justify-center gap-2">
                       Let's Talk
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>

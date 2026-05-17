@@ -46,7 +46,7 @@ const ServiceProblemSection = ({ config }: ServiceProblemSectionProps) => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start gap-3 mt-8">
               <Link
-                to="/contact"
+                to="/grow-qualifier"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-cta hover:bg-cta/90 text-white font-medium rounded-lg transition-colors text-sm whitespace-nowrap"
               >
                 {config.ctaText}

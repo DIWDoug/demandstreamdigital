@@ -59,7 +59,7 @@ const SpokeAlternatingBlocks = ({ blocks, spokeSlug }: SpokeAlternatingBlocksPro
                   {block.ctaText && (
                     <div className="pt-4">
                       <Link 
-                        to="/contact"
+                        to="/grow-qualifier"
                         className="inline-flex items-center gap-2 btn-cta group"
                       >
                         {block.ctaText}

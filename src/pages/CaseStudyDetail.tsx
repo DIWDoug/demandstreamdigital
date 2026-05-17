@@ -740,7 +740,7 @@ const CaseStudyDetail = () => {
               Let's discuss how we can help you deliver exceptional results for your clients.
             </p>
             <Link 
-              to="/contact"
+              to="/grow-qualifier"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Start the Conversation
