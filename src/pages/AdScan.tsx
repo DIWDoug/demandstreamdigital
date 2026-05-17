@@ -407,26 +407,7 @@ export default function AdScan() {
             </div>
           </div>
 
-          {/* Video Testimonial */}
-          <div className="max-w-3xl mx-auto mb-10">
-            <div className="text-center mb-4">
-              <div
-                className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase"
-                style={{ color: ACCENT }}
-              >
-                Video Testimonial
-              </div>
-            </div>
-            <div className="w-full max-w-md mx-auto aspect-[4/3] rounded-md overflow-hidden bg-black border border-[#E5E7EB] shadow-xl flex items-center justify-center">
-              <video
-                src="/videos/doug-testimonial.mp4"
-                controls
-                preload="metadata"
-                playsInline
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
+
 
           {/* Featured Google Review */}
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-6 mb-6">
@@ -464,44 +445,22 @@ export default function AdScan() {
               </div>
             </div>
 
-            {/* Instagram Story Testimonial */}
+            {/* Video Testimonial (replaces Instagram Story) */}
             <div className="flex flex-col">
               <div className="text-[11px] font-black tracking-[0.25em] uppercase text-[#475569] mb-3 text-center lg:text-left">
-                From An Instagram Story
+                Video Testimonial
               </div>
-              <div className="relative mx-auto lg:mx-0 w-full max-w-[320px] rounded-[28px] p-1.5 shadow-2xl"
-                   style={{ background: "linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4)" }}>
-                <div className="rounded-[22px] bg-[#0D1B2A] text-white p-5 min-h-[460px] flex flex-col">
-                  {/* Story header */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="h-9 w-9 rounded-full bg-white text-[#0D1B2A] font-black flex items-center justify-center text-sm">
-                      P+
-                    </div>
-                    <div className="flex-1 leading-tight">
-                      <p className="text-xs font-bold">@pureplumbingandair</p>
-                      <p className="text-[10px] text-white/60">Posted to Stories</p>
-                    </div>
-                    <span className="text-[10px] text-white/60">2h</span>
-                  </div>
-
-                  {/* Sticker quote */}
-                  <div className="flex-1 flex items-center">
-                    <div className="bg-white text-[#0D1B2A] rounded-xl p-4 transform -rotate-2 shadow-lg">
-                      <p className="text-sm font-bold leading-snug">
-                        &ldquo;Doug found <span style={{ color: RED }}>$4,200/mo</span> in wasted
-                        Google Ads spend in our first scan. Paid for itself 40x in month one.&rdquo;
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Reply bar mock */}
-                  <div className="mt-5 rounded-full border border-white/30 px-4 py-2 text-xs text-white/70">
-                    Send message
-                  </div>
-                </div>
+              <div className="w-full aspect-[4/3] rounded-md overflow-hidden bg-black border border-[#E5E7EB] shadow-xl flex items-center justify-center">
+                <video
+                  src="/videos/doug-testimonial.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  className="h-full w-full object-contain"
+                />
               </div>
               <p className="text-center text-xs text-[#6B7280] mt-3 lg:text-left">
-                Screenshot from a customer&rsquo;s Instagram Story. Posted with permission.
+                Real customer. Posted with permission.
               </p>
             </div>
           </div>
