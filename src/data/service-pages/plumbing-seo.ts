@@ -12,15 +12,7 @@ export const plumbingSEOConfig: ServicePageConfig = {
   hero: {
     headline: "Plumbing SEO Services That Drive",
     highlightedText: "More Booked Service Calls",
-    subheadline: {
-      intro: "When a homeowner searches 'emergency plumber near me,' they are not browsing options. They are calling whoever shows up first.",
-      bullets: [
-        "A burst pipe discovered at midnight",
-        "A main line backup on a Sunday morning",
-        "A water heater that stopped working at 10pm"
-      ],
-      closing: "Whoever shows up in the Map Pack gets the call. Plumbing SEO from DemandStream is built around how plumbing customers actually search and call. No generic contractor marketing. Plumbing companies only."
-    },
+    subheadline: "When a homeowner searches 'emergency plumber near me,' they are not browsing options. They are calling whoever shows up first. Plumbing SEO from DemandStream is built around how plumbing customers actually search and call. No generic contractor marketing.",
     qualifierLine: "",
     ctaText: "Get a Free Plumbing SEO Audit",
     ctaSubtext: "Plumbing companies only. No HVAC. No general contractors."
