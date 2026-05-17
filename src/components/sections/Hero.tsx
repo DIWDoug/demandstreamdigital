@@ -7,43 +7,28 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#050B14]">
-      <TopoTexture opacity={0.12} />
+      <TopoTexture opacity={0.04} />
 
-      {/* Visible gradient color washes */}
+      {/* Subtle dark gradient washes */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div
-          className="absolute rounded-full blur-[120px] animate-stream-drift"
+          className="absolute rounded-full blur-[120px]"
           style={{
             width: '55%',
             height: '60%',
             top: '-15%',
             left: '-5%',
-            background: 'radial-gradient(ellipse at center, hsla(210, 50%, 72%, 0.35) 0%, transparent 70%)'
+            background: 'radial-gradient(ellipse at center, hsla(210, 60%, 18%, 0.5) 0%, transparent 70%)'
           }} />
-
         <div
-          className="absolute rounded-full blur-[100px] animate-stream-drift"
+          className="absolute rounded-full blur-[100px]"
           style={{
             width: '45%',
             height: '50%',
             top: '30%',
             right: '-10%',
-            background: 'radial-gradient(ellipse at center, hsla(200, 40%, 76%, 0.25) 0%, transparent 70%)',
-            animationDelay: '-25s',
-            animationDirection: 'reverse'
+            background: 'radial-gradient(ellipse at center, hsla(210, 55%, 14%, 0.45) 0%, transparent 70%)'
           }} />
-
-        <div
-          className="absolute rounded-full blur-[100px] animate-stream-drift"
-          style={{
-            width: '40%',
-            height: '40%',
-            bottom: '-10%',
-            left: '30%',
-            background: 'radial-gradient(ellipse at center, hsla(220, 35%, 78%, 0.2) 0%, transparent 70%)',
-            animationDelay: '-45s'
-          }} />
-
       </div>
 
       {/* Fine grid texture overlay for depth */}
