@@ -104,10 +104,15 @@ const Testimonials = () => {
                 <p className="text-slate-600 text-sm mb-6 flex-grow">
                   "{testimonial.quote}"
                 </p>
-                <div className="border-t border-slate-200 pt-4">
-                  <p className="text-slate-900 font-medium">{testimonial.author}</p>
-                  <p className="text-slate-500 text-sm">{testimonial.company}</p>
-                  <p className="text-primary text-xs mt-1">{testimonial.source}</p>
+                <div className="border-t border-slate-200 pt-4 flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-slate-900 font-medium">{testimonial.author}</p>
+                    <p className="text-slate-500 text-sm">{testimonial.company}</p>
+                    <p className="text-primary text-xs mt-1">{testimonial.source}</p>
+                  </div>
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs shrink-0" style={{ background: "#2E7D86" }}>
+                    {testimonial.metric}
+                  </span>
                 </div>
               </CardContent>
             </Card>
