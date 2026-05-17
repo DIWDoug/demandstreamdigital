@@ -75,7 +75,14 @@ const EmailMarketing = () => {
           title="Email Marketing for Plumbing & HVAC Companies"
           heroHeadline="Email Marketing for Plumbing & HVAC Companies"
           heroSubtitle="Turn Past Customers Into Repeat Revenue"
-          description="Your existing customer list is the cheapest lead source you own. We build maintenance reminders, seasonal campaigns, and review requests that re-activate past customers and keep your trucks full between peak seasons."
+          description={{
+            intro: "Your existing customer list is the cheapest lead source you own.",
+            bullets: [
+              "Maintenance reminders that re-book past plumbing and HVAC customers",
+              "Seasonal campaigns aligned to peak demand and shoulder seasons",
+              "Review requests and referral nudges that compound your local authority",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>
