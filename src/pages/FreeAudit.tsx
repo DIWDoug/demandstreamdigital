@@ -88,6 +88,15 @@ const FreeAudit = () => {
       return;
     }
 
+    if (!isValidPhone(phone, countryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number for your audit results.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
