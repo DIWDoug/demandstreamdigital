@@ -92,6 +92,7 @@ const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
 const FinancingCalculator = lazy(() => import("./pages/tools/FinancingCalculator"));
 const PlumbingCostQuiz = lazy(() => import("./pages/tools/PlumbingCostQuiz"));
 const FreeAudit = lazy(() => import("./pages/FreeAudit"));
+const RefundRequest = lazy(() => import("./pages/RefundRequest"));
 
 const queryClient = new QueryClient();
 
@@ -177,6 +178,7 @@ const App = () => (
           <Route path="/tools/financing-calculator" element={<FinancingCalculator />} />
           <Route path="/tools/plumbing-cost-quiz" element={<PlumbingCostQuiz />} />
           <Route path="/free-audit" element={<FreeAudit />} />
+          <Route path="/refund-request" element={<RefundRequest />} />
 
           {/* Legacy calculator redirects */}
           {/* Legacy calculator redirects → home (partner tools removed) */}
