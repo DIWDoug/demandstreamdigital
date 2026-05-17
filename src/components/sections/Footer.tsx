@@ -51,7 +51,6 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       href: "/case-studies",
       items: [
         { label: "Case Studies", href: "/case-studies" },
-        { label: "Partner Tools", href: "/partner-tools" },
         { label: "Blog", href: "/blog" },
         { label: "About Us", href: "/about" },
         { label: "Contact", href: "/contact" },
