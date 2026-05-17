@@ -88,6 +88,7 @@ const RefundRequest = () => {
       <SEOHead
         title="Refund Request"
         description="Submit a refund request for Lovable credits."
+        canonical="/refund-request"
         noIndex
       />
       <main className="min-h-screen bg-background py-16 px-4">
