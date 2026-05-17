@@ -244,6 +244,18 @@ const FreeAudit = () => {
                       />
                     </div>
 
+                    <div>
+                      <Label htmlFor="audit-phone">Phone Number *</Label>
+                      <div className="mt-1">
+                        <PhoneInput
+                          value={phone}
+                          onChange={setPhone}
+                          countryCode={countryCode}
+                          onCountryCodeChange={setCountryCode}
+                          required
+                        />
+                      </div>
+                    </div>
 
 
                     <Button
