@@ -58,7 +58,14 @@ const PlumbingReporting = () => {
           title="Reporting & Analytics for Plumbing Companies"
           heroHeadline="Reporting & Analytics for Plumbing Companies"
           heroSubtitle="See What's Driving Booked Calls and Revenue"
-          description="You should never wonder which channels are filling your plumbing schedule. We tie every call and booked job back to the campaign that created it, so you can scale the channels that drive drain, water heater, and sewer revenue."
+          description={{
+            intro: "You should never wonder which channels are filling your plumbing schedule.",
+            bullets: [
+              "Every booked call traced back to the campaign and keyword that created it",
+              "Drain, water heater, and sewer revenue broken out by source",
+              "ServiceTitan integration so you scale what books, not what clicks",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
           bgImage={heroBgPlumbing}
         />
