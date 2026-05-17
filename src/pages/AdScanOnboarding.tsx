@@ -23,6 +23,7 @@ type FormState = {
   lastName: string;
   email: string;
   phone: string;
+  phoneCountryCode: string;
   company: string;
   website: string;
   googleAdsCid: string;
