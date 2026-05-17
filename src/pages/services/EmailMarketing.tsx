@@ -23,7 +23,7 @@ import { ServiceBiggerPicture } from "@/components/services/generic";
 const EMAIL_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/paid-marketing" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
   { label: "Content Marketing", href: "/plumbing-content-marketing" },
   { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
   { label: "Reporting & Dashboards", href: "/plumbing-reporting" },

@@ -30,7 +30,7 @@ import { ServiceBiggerPicture } from "@/components/services/generic";
 
 const GBP_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
-  { label: "Paid Advertising", href: "/paid-marketing" },
+  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
   { label: "Reputation Management", href: "/hvac-and-plumbing-seo" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
   { label: "Web Design", href: "/plumbing-and-hvac-web-design" },
