@@ -184,13 +184,6 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                   Case Studies
                 </Link>
                 <Link 
-                  to="/partner-tools"
-                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-accent-blue transition-colors"
-                >
-                  <Calculator className="h-3.5 w-3.5" />
-                  Partner Tools
-                </Link>
-                <Link 
                   to="/privacy"
                   className="text-xs text-text-muted hover:text-text-secondary transition-colors"
                 >
