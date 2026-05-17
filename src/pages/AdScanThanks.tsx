@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -96,6 +96,91 @@ const AdScanThanks = () => {
                     Real customer. Posted with permission.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Reiterated, larger "What happens on the call" section */}
+            <div className="mt-16 rounded-xl border border-border bg-surface-elevated p-8 md:p-12 shadow-2xl">
+              <div className="text-center max-w-3xl mx-auto">
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-accent-blue">
+                  Your 15 minute kickoff call
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  Here is exactly what happens on the call.
+                </h2>
+                <p className="mt-4 text-lg text-text-secondary">
+                  No pitch, no fluff. We confirm your accounts, walk you through read only
+                  access grants live, and lock in the date your scored Ad Scan report hits
+                  your inbox.
+                </p>
+              </div>
+
+              <div className="mt-10 grid gap-6 md:grid-cols-3">
+                <div className="rounded-lg border border-border bg-background p-6">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-blue/15 text-accent-blue">
+                    <ShieldCheck className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
+                    Step 1
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold text-foreground">
+                    Confirm your accounts
+                  </h3>
+                  <p className="mt-3 text-sm text-text-secondary">
+                    We verify your Google Ads, Meta, Google Business Profile, and tracking
+                    setup so the scan covers every channel driving calls today.
+                  </p>
+                </div>
+
+                <div className="rounded-lg border border-border bg-background p-6">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-blue/15 text-accent-blue">
+                    <Link2 className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
+                    Step 2
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold text-foreground">
+                    Grant read only access, live
+                  </h3>
+                  <p className="mt-3 text-sm text-text-secondary">
+                    We screen share and walk you through each access grant. No passwords,
+                    no admin handoff, no changes to your accounts. View only.
+                  </p>
+                </div>
+
+                <div className="rounded-lg border border-border bg-background p-6">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-blue/15 text-accent-blue">
+                    <CalendarCheck className="h-6 w-6" />
+                  </div>
+                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
+                    Step 3
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold text-foreground">
+                    Lock the delivery date
+                  </h3>
+                  <p className="mt-3 text-sm text-text-secondary">
+                    We set the date your scored Ad Scan report lands in your inbox,
+                    typically within 5 business days of the call.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-10 flex flex-col items-center gap-3">
+                <a
+                  href={bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cta inline-flex items-center gap-2"
+                >
+                  Pick your kickoff time
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <Link
+                  to="/ad-scan/onboarding"
+                  className="text-sm font-medium text-accent-blue hover:underline"
+                >
+                  Skip the call. Grant access myself.
+                </Link>
               </div>
             </div>
 
