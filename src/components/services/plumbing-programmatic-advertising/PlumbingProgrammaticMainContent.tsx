@@ -223,7 +223,6 @@ const PlumbingProgrammaticMainContent = () => {
               ))}
             </div>
             <p className="text-text-muted text-sm mb-8">Other CRMs supported. ServiceTitan is the primary integration.</p>
-            <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
             <ClaimTerritoryCTA variant="light" />
           </div>
         </div>

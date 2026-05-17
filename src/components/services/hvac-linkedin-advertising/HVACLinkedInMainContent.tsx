@@ -233,7 +233,6 @@ const HVACLinkedInMainContent = () => {
             ))}
           </div>
           <p className="text-sm text-text-muted mb-8">Other CRMs supported. ServiceTitan is the primary integration.</p>
-          <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
           <ClaimTerritoryCTA variant="light" />
         </div>
       </section>
