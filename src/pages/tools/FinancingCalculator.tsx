@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, DollarSign, Calculator, Info } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import HeroBullets from "@/components/HeroBullets";
 
 const presetAmounts = [2500, 5000, 7500, 10000, 15000, 20000];
 const termOptions = [12, 24, 36, 48, 60, 72];
@@ -51,9 +52,20 @@ const FinancingCalculator = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Financing Payment Calculator
               </h1>
-              <p className="text-lg text-text-secondary max-w-xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-xl mx-auto mb-6">
                 See what monthly payments look like for your next plumbing or HVAC project.
               </p>
+              <div className="max-w-md mx-auto text-left">
+                <HeroBullets
+                  variant="light"
+                  items={[
+                    "Real APR and term scenarios from the trades",
+                    "Plumbing and HVAC jobs from $2.5k to $20k",
+                    "Free, no email required to see results",
+                  ]}
+                  className="mb-0"
+                />
+              </div>
             </div>
 
             <div className="grid lg:grid-cols-5 gap-8">

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBgTrade from "@/assets/hero-bg-agency.jpg";
 import { useState } from "react";
+import HeroBullets from "@/components/HeroBullets";
 
 interface BreadcrumbItem {
   label: string;
@@ -87,9 +88,21 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
           </p>
 
           {/* Qualifier line */}
-          <p className="text-base text-text-muted mb-12 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base text-text-muted mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             You stay the hero. We handle the local SEO execution that keeps clients paying and confident.
           </p>
+
+          <div className="max-w-xl mx-auto animate-fade-in-up text-left" style={{ animationDelay: "0.25s" }}>
+            <HeroBullets
+              variant="dark"
+              items={[
+                "Local pack rankings tied to real call volume, not vanity positions",
+                "Google Business Pro SEO managed weekly, not quarterly",
+                "Reported in dollars and booked calls, not impressions",
+              ]}
+              className="mb-10"
+            />
+          </div>
 
           {/* Simple email/website form */}
           <div className="animate-fade-in-up max-w-xl mx-auto" style={{ animationDelay: "0.3s" }}>

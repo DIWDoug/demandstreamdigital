@@ -10,6 +10,7 @@ import ContinuingEducation from "@/components/sections/ContinuingEducation";
 import { ArrowRight, Phone, Linkedin, Briefcase } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import StreamTexture from "@/components/StreamTexture";
+import HeroBullets from "@/components/HeroBullets";
 import { Button } from "@/components/ui/button";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import Autoplay from "embla-carousel-autoplay";
@@ -248,9 +249,18 @@ const About = () => {
               <p className="font-serif text-lg lg:text-xl text-text-secondary leading-relaxed mb-4">
                 We work exclusively with plumbing and HVAC companies. Not dentists. Not restaurants. Not e-commerce. Every system we build, every keyword we target, every campaign we run is designed around one outcome: more booked service calls for trade operators.
               </p>
-              <p className="font-serif text-base lg:text-lg text-text-secondary leading-relaxed">
+              <p className="font-serif text-base lg:text-lg text-text-secondary leading-relaxed mb-6">
                 If you run 3 to 40+ trucks and want a marketing partner who understands your service area, your seasonal swings, and what a full dispatch board actually requires: this is where that starts.
               </p>
+              <HeroBullets
+                variant="dark"
+                items={[
+                  "Dallas-based, Plumbing and HVAC only",
+                  "Hands-on fulfillment, not white-label resold",
+                  "15+ years of execution, 100+ campaigns shipped",
+                ]}
+                className="mb-0"
+              />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import HeroBullets from "@/components/HeroBullets";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -125,6 +126,16 @@ const Hero = () => {
 
 
             </p>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.13s" }}>
+              <HeroBullets
+                variant="dark"
+                items={[
+                  "Booked calls tracked into ServiceTitan, not vanity impressions",
+                  "One market, one plumbing or HVAC operator. No competing accounts.",
+                  "Built and run by Plumbing and HVAC operators, not generalists",
+                ]}
+              />
+            </div>
             <p
               className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.15s" }}>

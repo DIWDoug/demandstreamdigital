@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, ClipboardCheck, AlertTriangle, CheckCircle, XCircle, Droplets } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import HeroBullets from "@/components/HeroBullets";
 
 type Question = {
   id: string;
@@ -190,7 +191,18 @@ const PlumbingCostQuiz = () => {
                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
                     How Much Is Your Plumbing Costing You?
                   </h1>
-                  <p className="text-text-secondary">Answer {questions.length} quick questions to find out.</p>
+                  <p className="text-text-secondary mb-6">Answer {questions.length} quick questions to find out.</p>
+                  <div className="max-w-md mx-auto text-left">
+                    <HeroBullets
+                      variant="light"
+                      items={[
+                        "Built for Plumbing and HVAC homeowners",
+                        "Takes under 90 seconds. No email required.",
+                        "Get an honest risk grade, not a sales pitch",
+                      ]}
+                      className="mb-0"
+                    />
+                  </div>
                 </div>
 
                 {/* Progress */}

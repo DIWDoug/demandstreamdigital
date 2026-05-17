@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBgTrade from "@/assets/hero-bg-agency.jpg";
 import GrowthEngineDiagram from "./GrowthEngineDiagram";
+import HeroBullets from "@/components/HeroBullets";
 
 const ServicesHero = () => {
   return (
@@ -46,9 +47,17 @@ const ServicesHero = () => {
               White Label Inbound Marketing{" "}
               <span className="text-gradient-primary">Executed as a System</span>
             </h1>
-            <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-6 sm:mb-8">
-              Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes—delivering consistent, scalable results without added overhead.
+            <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-6">
+              Most agencies don't struggle with strategy. They struggle with consistent execution as clients, channels, and expectations grow. You retain the client relationship and strategic control. We execute behind the scenes, delivering consistent, scalable results without added overhead.
             </p>
+            <HeroBullets
+              variant="dark"
+              items={[
+                "Every channel tied to a booked call, not a click",
+                "Plumbing and HVAC only. No franchise, no general contractor.",
+                "One market exclusivity across SEO, Paid, GBP, and AI",
+              ]}
+            />
             <Link 
               to="/grow-qualifier" 
               className="btn-cta group inline-flex items-center px-6 py-3"
