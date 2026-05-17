@@ -39,6 +39,7 @@ const initialForm: FormState = {
   lastName: "",
   email: "",
   phone: "",
+  phoneCountryCode: "+1",
   company: "",
   website: "",
   googleAdsCid: "",
