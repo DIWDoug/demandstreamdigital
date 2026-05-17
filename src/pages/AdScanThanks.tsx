@@ -3,7 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
-const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/PE7f9lpA0Qyu8GCa9UA0";
+const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/FgaNIXha3oshEeyagMaN";
 
 const AdScanThanks = () => {
   return (
