@@ -11,13 +11,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
 
   const navigateMobile = (to: string) => {
     setIsMobileMenuOpen(false);
     setIsMegaMenuOpen(false);
-    setIsToolsMenuOpen(false);
     requestAnimationFrame(() => navigate(to));
   };
 
@@ -31,8 +29,6 @@ const Header = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node))
         setIsMegaMenuOpen(false);
-      if (toolsMenuRef.current && !toolsMenuRef.current.contains(event.target as Node))
-        setIsToolsMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -43,7 +39,6 @@ const Header = () => {
       if (e.key === "Escape") {
         setIsMegaMenuOpen(false);
         setIsMobileMenuOpen(false);
-        setIsToolsMenuOpen(false);
       }
     };
     document.addEventListener("keydown", handleEscape);
