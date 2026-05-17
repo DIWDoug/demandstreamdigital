@@ -513,6 +513,10 @@ const GrowthQualifierFlow = () => {
                   onCountryCodeChange={(code) => setContact((p) => ({ ...p, phoneCountryCode: code }))}
                   required
                 />
+                <SmsConsentSummary
+                  className="mt-2 text-[11px] leading-snug text-white/60"
+                  linkClassName="underline hover:text-white"
+                />
               </div>
 
               <div>
