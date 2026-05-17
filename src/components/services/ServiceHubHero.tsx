@@ -83,12 +83,12 @@ const ServiceHubHero = ({
             </h1>
 
             {heroSubtitle && (
-              <p
+              <h2
                 className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
                 style={{ animationDelay: "0.05s" }}
               >
                 {heroSubtitle}
-              </p>
+              </h2>
             )}
 
             {/* Mobile video */}
