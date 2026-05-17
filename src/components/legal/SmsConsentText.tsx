@@ -1,3 +1,4 @@
+import { MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface SmsConsentTextProps {
@@ -45,24 +46,62 @@ export function SmsConsentText({
 export default SmsConsentText;
 
 interface SmsConsentSummaryProps {
+  /** Outer wrapper classes. Defaults to a bordered, tinted surface so the notice is visually obvious. */
+  className?: string;
+  /** Tailwind classes applied to the Privacy/Terms links. */
+  linkClassName?: string;
+  /** Body text color class. Override for dark backgrounds. */
+  textClassName?: string;
+  /** Icon color class. Override for dark backgrounds. */
+  iconClassName?: string;
+  /** Hide the icon (for very compact placements). */
+  hideIcon?: boolean;
+}
+
+/**
+ * Prominent inline consent notice rendered next to every contact form's submit
+ * action so users see the SMS/call/email disclosure before they submit. The full
+ * TCPA paragraph still renders via <SmsConsentText /> for legal completeness.
+ */
+export function SmsConsentSummary({
+  className = "mt-3 flex items-start gap-2 rounded-md border border-border bg-muted/40 px-3 py-2",
+  linkClassName = "underline font-medium hover:text-foreground",
+  textClassName = "text-[12px] leading-snug text-text-muted",
+  iconClassName = "h-4 w-4 mt-0.5 shrink-0 text-text-muted",
+  hideIcon = false,
+}: SmsConsentSummaryProps) {
+  return (
+    <div className={className} role="note" aria-label="SMS and contact consent notice">
+      {hideIcon ? null : <MessageSquare className={iconClassName} aria-hidden="true" />}
+      <p className={textClassName}>
+        <span className="font-semibold">Heads up:</span> by submitting, you agree to receive marketing calls, SMS, and
+        emails from Demand Stream Digital at the contact info provided (autodialer may be used). Consent is not a
+        condition of purchase. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See our{" "}
+        <Link to="/privacy" className={linkClassName}>Privacy Policy</Link> and{" "}
+        <Link to="/terms" className={linkClassName}>Terms</Link>.
+      </p>
+    </div>
+  );
+}
+
+interface EmailMarketingConsentProps {
   className?: string;
   linkClassName?: string;
 }
 
 /**
- * Short inline consent summary rendered directly under the phone field so users
- * see the SMS disclosure before they submit. The full TCPA paragraph still renders
- * via <SmsConsentText /> near the submit button.
+ * Email-only marketing consent notice for forms that collect an email but no phone.
+ * Use this on newsletter / lead-magnet signups so every contact form on the site
+ * carries an explicit consent line.
  */
-export function SmsConsentSummary({
-  className,
-  linkClassName = "underline hover:text-foreground",
-}: SmsConsentSummaryProps) {
+export function EmailMarketingConsent({
+  className = "mt-3 text-[12px] leading-snug text-text-muted",
+  linkClassName = "underline font-medium hover:text-foreground",
+}: EmailMarketingConsentProps) {
   return (
-    <p className={className}>
-      By submitting, you agree to receive marketing calls, SMS, and emails from Demand Stream Digital at this number
-      (autodialer may be used). Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to
-      opt out, HELP for help. See our{" "}
+    <p className={className} role="note">
+      By submitting, you agree to receive marketing emails from Demand Stream Digital. You can unsubscribe at any time.
+      See our{" "}
       <Link to="/privacy" className={linkClassName}>Privacy Policy</Link> and{" "}
       <Link to="/terms" className={linkClassName}>Terms</Link>.
     </p>

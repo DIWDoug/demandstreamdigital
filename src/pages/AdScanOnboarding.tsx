@@ -227,7 +227,7 @@ const AdScanOnboarding = () => {
                     required
                   />
                 </div>
-                <SmsConsentSummary className="mt-2 text-[11px] leading-snug text-text-muted" />
+                <SmsConsentSummary />
               </div>
               <div>
                 <Label htmlFor="company">Company *</Label>
