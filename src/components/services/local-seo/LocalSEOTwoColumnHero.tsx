@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
@@ -114,9 +114,9 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
             {bullets.length > 0 && (
               <ul className="space-y-2.5 mb-4 animate-fade-in-up" style={{ animationDelay: "0.12s" }}>
                 {bullets.map((bullet, index) => (
-                  <li key={index} className="flex items-start gap-3 text-base text-white/80">
-                    <span className="text-cta font-bold mt-0.5 shrink-0">.</span>
-                    {bullet}
+                  <li key={index} className="flex items-start gap-3 text-base text-white/85">
+                    <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5 text-accent-blue" aria-hidden="true" />
+                    <span className="leading-relaxed">{bullet}</span>
                   </li>
                 ))}
               </ul>
