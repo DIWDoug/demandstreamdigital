@@ -324,6 +324,17 @@
     background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface-dark)));
   }
 
+  .hero-shell {
+    @apply container mx-auto px-6 lg:px-8 pb-20 md:pb-28 relative z-10;
+    padding-top: 50px;
+  }
+
+  @media (min-width: 768px) {
+    .hero-shell {
+      padding-top: 72px;
+    }
+  }
+
   /* Light section — Off-white #F7F8FA per design system */
   .section-light {
     background: #F7F8FA;

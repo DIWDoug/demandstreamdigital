@@ -89,7 +89,7 @@ const Hero = () => {
 
         </path>
       </svg>
-      <div className="container mx-auto px-6 lg:px-8 pt-[50px] pb-20 md:pt-[72px] md:pb-28 relative z-10">
+      <div className="hero-shell">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
