@@ -74,7 +74,7 @@ const Reporting = () => {
       <Header />
       
       {/* 1. HERO */}
-      <div className="pt-8">
+      <div className="pt-[28px]">
         <ServiceHubHero 
           title="Reporting & Analytics"
           description="You should never wonder where your marketing dollars are going. We provide clear, honest reporting that proves value, builds trust, and shows exactly what's driving calls and booked jobs."

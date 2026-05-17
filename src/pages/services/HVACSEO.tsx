@@ -84,7 +84,7 @@ const HVACSEO = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-8">
+      <div className="pt-[28px]">
         <LocalSEOTwoColumnHero
           config={hvacSEOConfig.hero}
           breadcrumbs={breadcrumbItems}

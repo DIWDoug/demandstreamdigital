@@ -53,7 +53,7 @@ const PlumbingReporting = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-8">
+      <div className="pt-[28px]">
         <ServiceHubHero
           title="Plumbing Reporting & Analytics"
           description="For plumbing companies, reporting connects marketing spend to booked calls and revenue. We build dashboards that show which campaigns drive drain cleaning, water heater, and sewer line jobs so you know exactly where to invest."
