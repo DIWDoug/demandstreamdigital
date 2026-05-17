@@ -348,7 +348,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
 
             {/* Consent & reCAPTCHA notice */}
             <p className="text-xs text-text-muted text-center leading-relaxed">
-              By submitting, you consent to marketing messages via email/SMS. View our{" "}
+              By submitting, you agree to receive marketing emails from us. View our{" "}
               <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link> and{" "}
               <Link to="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>. Protected by reCAPTCHA.
             </p>
