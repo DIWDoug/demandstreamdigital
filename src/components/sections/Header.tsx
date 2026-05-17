@@ -121,36 +121,9 @@ const Header = () => {
 
   return (
     <>
-      {/* ─── ANNOUNCEMENT BAR ─── */}
-      {/* Fixed, full-width, 40px, red #C0392B, always on top */}
-      <div
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "h-0 overflow-hidden opacity-0 pointer-events-none" : "h-10 opacity-100"
-        }`}
-        style={{ backgroundColor: "#C0392B" }}
-        aria-hidden={isScrolled}
-      >
-        <div className="h-full max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-          {/* Left */}
-          <Link
-            to="/free-audit"
-            className="text-[13px] text-white hover:underline underline-offset-2 leading-none"
-          >
-            Free Marketing Audit: See Where You're Losing Leads
-          </Link>
-          {/* Right */}
-          <span className="hidden sm:flex items-center gap-2 text-[13px] font-bold text-white uppercase tracking-widest leading-none">
-            <span className="w-2 h-2 rounded-full bg-green-400" aria-hidden="true" />
-            Plumbing &amp; HVAC Specialists
-          </span>
-        </div>
-      </div>
-
       {/* ─── MAIN HEADER ─── */}
       <header
-        className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? "top-0 shadow-lg" : "top-10"
-        }`}
+        className="fixed left-0 right-0 top-0 z-40 transition-all duration-300 shadow-lg"
         style={{ backgroundColor: "#0D1B2A" }}
       >
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
