@@ -79,7 +79,14 @@ const Reporting = () => {
           title="Reporting & Analytics for Plumbing & HVAC Companies"
           heroHeadline="Reporting & Analytics for Plumbing & HVAC Companies"
           heroSubtitle="See What's Driving Booked Calls and Revenue"
-          description="You should never wonder where your marketing dollars go. We deliver clear, honest reporting that ties every channel to booked jobs and revenue, so you can scale what works and cut what doesn't."
+          description={{
+            intro: "You should never wonder where your marketing dollars go.",
+            bullets: [
+              "Every channel tied to a booked call, not a click or impression",
+              "Cost-per-booked-call tracked through ServiceTitan and your dispatch board",
+              "Honest reporting that proves what to scale and what to cut",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>
