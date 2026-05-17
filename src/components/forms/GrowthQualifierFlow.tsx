@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
+import { SmsConsentText } from "@/components/legal/SmsConsentText";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import {
   markGrowLeadVerified,
@@ -529,14 +530,10 @@ const GrowthQualifierFlow = () => {
               </div>
             </div>
 
-            <p className="mt-6 text-xs leading-relaxed text-white/60">
-              By providing your phone number and submitting this form, you agree to receive marketing emails and SMS messages
-              from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent is not a
-              condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or
-              STOP to unsubscribe. View our{" "}
-              <a href="/privacy" className="underline hover:text-white">Privacy Policy</a> and{" "}
-              <a href="/terms" className="underline hover:text-white">Terms of Service</a>.
-            </p>
+            <SmsConsentText
+              className="mt-6 text-xs leading-relaxed text-white/60"
+              linkClassName="underline hover:text-white"
+            />
 
             <div className="mt-8 flex items-center justify-between gap-4">
               <button

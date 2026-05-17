@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { SITE_URL } from "@/lib/constants";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
+import { SmsConsentText } from "@/components/legal/SmsConsentText";
 
 // Demand Stream credentials the client pastes into each platform
 const GRANT_INFO = {
@@ -270,15 +271,10 @@ const AdScanOnboarding = () => {
                 <Button type="submit" size="lg" disabled={submitting || submitted} className="w-full md:w-auto">
                   {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
-                <p className="text-xs text-text-muted mt-3 leading-relaxed">
-                  You can send this now and finish the steps below when you have time. We start the scan when all five are done.
-                  By providing your phone number and submitting this form, you agree to receive marketing emails and SMS
-                  messages from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent
-                  is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP
-                  for help or STOP to unsubscribe. View our{" "}
-                  <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a> and{" "}
-                  <a href="/terms" className="underline hover:text-foreground">Terms of Service</a>.
-                </p>
+                <SmsConsentText
+                  className="text-xs text-text-muted mt-3 leading-relaxed"
+                  prefix="You can send this now and finish the steps below when you have time. We start the scan when all five are done."
+                />
               </div>
             </form>
           </Step>
