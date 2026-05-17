@@ -139,19 +139,7 @@ const PlumbingWebsiteDesign = () => {
           { label: "Website Design", href: "/website-design" },
           { label: "Plumbing" },
         ]}
-        description={{
-          intro:
-            "Most plumbing websites are built like brochures. A services page. A contact form. Some stock photos of a truck. They look reasonable. They don't generate calls.",
-          bullets: [
-            "Separate pages for emergency drain, water heater, repipe, and sewer. No catch-all.",
-            "Aligned to your GBP service catalog so Maps and web reinforce each other",
-            "AI-ready structure: answer blocks and FAQs for the actual questions homeowners ask",
-            "Call-first UX with emergency reassurance above the fold on mobile",
-            "Built to activate plumbing SEO and paid advertising from day one",
-            "ServiceTitan-compatible: booking flow and call tracking ready at launch",
-          ],
-          closing: "Plumbing companies only. No general contractors.",
-        }}
+        description="Most plumbing websites are built like brochures and don't generate calls. We build sites with separate pages for emergency drain, water heater, repipe, and sewer, aligned to your Google Business Profile and ready to convert from the first tap. Plumbing companies only."
       />
 
       <ServiceHubAnchorNav items={anchorItems} />
