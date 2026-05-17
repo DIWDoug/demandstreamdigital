@@ -407,26 +407,7 @@ export default function AdScan() {
             </div>
           </div>
 
-          {/* Video Testimonial */}
-          <div className="max-w-3xl mx-auto mb-10">
-            <div className="text-center mb-4">
-              <div
-                className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase"
-                style={{ color: ACCENT }}
-              >
-                Video Testimonial
-              </div>
-            </div>
-            <div className="w-full max-w-md mx-auto aspect-[4/3] rounded-md overflow-hidden bg-black border border-[#E5E7EB] shadow-xl flex items-center justify-center">
-              <video
-                src="/videos/doug-testimonial.mp4"
-                controls
-                preload="metadata"
-                playsInline
-                className="h-full w-full object-contain"
-              />
-            </div>
-          </div>
+
 
           {/* Featured Google Review */}
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-6 mb-6">
