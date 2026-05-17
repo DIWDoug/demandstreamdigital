@@ -72,9 +72,9 @@ const ServiceHubHero = ({
           </nav>
         )}
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left column */}
-          <div className="max-w-xl">
+          <div className="max-w-xl lg:col-span-7">
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
               style={{ lineHeight: "1.1" }}
@@ -163,7 +163,7 @@ const ServiceHubHero = ({
 
           {/* Right column — Video */}
           <div
-            className="hidden animate-fade-in-up lg:block lg:pl-4"
+            className="hidden animate-fade-in-up lg:block lg:col-span-5 lg:pl-4"
             style={{ animationDelay: "0.2s" }}
           >
             <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
