@@ -45,10 +45,10 @@ const DENSITY: Record<NonNullable<ScheduleGrowthAuditCTAProps["density"]>, strin
  */
 const ScheduleGrowthAuditCTA = ({
   eyebrow = "Ready to Own Your Market?",
-  headline = "Schedule Your Growth Audit",
+  headline = "Let's Get Started Today",
   description = "A short, no pressure conversation to understand your shop, your service area, and whether DemandStream is the right fulfillment partner for your next phase of growth.",
   exclusivityLine = "One Plumbing company and one HVAC company per market. Real conversations, not sales calls.",
-  ctaLabel,
+  ctaLabel = "Let's Get Started Today",
   ctaHref = "/grow-qualifier",
   reassurance = "Takes about 60 seconds to qualify. We'll follow up within one business day.",
   showPhoneFallback = false,
