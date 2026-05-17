@@ -267,6 +267,10 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               onCountryCodeChange={(code) => setStep1Data({ ...step1Data, phoneCountryCode: code })}
               required
             />
+            <SmsConsentSummary
+              className="mt-2 text-[11px] leading-snug text-text-muted"
+              linkClassName="text-accent-blue hover:underline"
+            />
           </div>
 
           <div>
