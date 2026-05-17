@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#0D1B2A]">
       <TopoTexture opacity={0.12} />
 
       {/* Visible gradient color washes */}
