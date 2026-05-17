@@ -156,7 +156,7 @@ const GrowthProcess = () => {
       ref={sectionRef}
       className="py-20 lg:py-28 section-light reveal-section relative overflow-hidden">
 
-      <StreamTexture variant="light" opacity={0.08} />
+      
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
          <div className="text-center mb-8 max-w-3xl mx-auto">
            <p className="text-sm font-semibold uppercase tracking-wider text-accent-blue mb-3">Our Process</p>
