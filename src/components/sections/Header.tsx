@@ -441,7 +441,7 @@ const Header = () => {
       </header>
 
       {/* Spacer so page content clears the fixed header */}
-      <div style={{ height: isScrolled ? "64px" : "104px" }} className="transition-all duration-300" />
+      <div style={{ height: "64px" }} />
     </>
   );
 };
