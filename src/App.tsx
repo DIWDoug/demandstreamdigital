@@ -92,6 +92,7 @@ const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
 const FinancingCalculator = lazy(() => import("./pages/tools/FinancingCalculator"));
 const PlumbingCostQuiz = lazy(() => import("./pages/tools/PlumbingCostQuiz"));
 const FreeAudit = lazy(() => import("./pages/FreeAudit"));
+const RefundRequest = lazy(() => import("./pages/RefundRequest"));
 
 const queryClient = new QueryClient();
 
