@@ -179,6 +179,14 @@ const GrowthQualifierFlow = () => {
       navigate("/grow/thanks");
       return;
     }
+    if (!contact.firstName.trim() || !contact.lastName.trim() || !contact.email.trim()) {
+      toast({ title: "Missing required fields", description: "Name and email are required.", variant: "destructive" });
+      return;
+    }
+    if (!isValidPhone(contact.phone, contact.phoneCountryCode)) {
+      toast({ title: "Valid phone number required", description: "Please enter a valid phone number so we can text you about your market.", variant: "destructive" });
+      return;
+    }
     setIsSubmitting(true);
     try {
       const recaptchaToken = await executeRecaptcha("grow_qualifier_submit");
