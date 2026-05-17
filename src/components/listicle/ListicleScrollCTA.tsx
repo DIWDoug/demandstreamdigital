@@ -18,7 +18,7 @@ const ListicleScrollCTA = () => {
     }
 
     const handleScroll = () => {
-      // Look for the top-pick card (Dialed-In Web)
+      // Look for the top-pick card
       const topPickEl = document.getElementById("top-pick-dialed-in-web");
       if (!topPickEl) return;
 
