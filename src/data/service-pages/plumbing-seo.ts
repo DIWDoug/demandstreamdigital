@@ -12,7 +12,13 @@ export const plumbingSEOConfig: ServicePageConfig = {
   hero: {
     headline: "Plumbing SEO Services That Drive",
     highlightedText: "More Booked Service Calls",
-    subheadline: "When a homeowner searches 'emergency plumber near me,' they are not browsing options. They are calling whoever shows up first. Plumbing SEO from DemandStream is built around how plumbing customers actually search and call. No generic contractor marketing.",
+    subheadline: {
+      intro: "When a homeowner searches 'emergency plumber near me,' they are not browsing options. They are calling whoever shows up first. Plumbing SEO from DemandStream is built around how plumbing customers actually search and call. No generic contractor marketing.",
+      bullets: [
+        "Service and ZIP-level pages built around emergency intent, not generic 'plumber near me' templates.",
+        "Google Business Pro and review velocity tuned to win the Map Pack where after-hours calls convert highest."
+      ]
+    },
     qualifierLine: "",
     ctaText: "Get a Free Plumbing SEO Audit",
     ctaSubtext: "Plumbing companies only. No HVAC. No general contractors."
