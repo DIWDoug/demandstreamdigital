@@ -281,7 +281,8 @@ const FreeAudit = () => {
                       messages from Demand Stream Digital at the number provided, including messages sent by autodialer.
                       Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies.
                       Reply HELP for help or STOP to unsubscribe. View our{" "}
-                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a>.
+                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a> and{" "}
+                      <a href="/terms" className="underline hover:text-foreground">Terms of Service</a>.
                     </p>
                   </form>
                 </div>
