@@ -287,14 +287,8 @@ const FreeAudit = () => {
                       )}
                     </Button>
 
-                    <p className="text-xs text-text-muted text-center leading-relaxed">
-                      By providing your phone number and submitting this form, you agree to receive marketing emails and SMS
-                      messages from Demand Stream Digital at the number provided, including messages sent by autodialer.
-                      Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies.
-                      Reply HELP for help or STOP to unsubscribe. View our{" "}
-                      <a href="/privacy" className="underline hover:text-foreground">Privacy Policy</a> and{" "}
-                      <a href="/terms" className="underline hover:text-foreground">Terms of Service</a>.
-                    </p>
+                    <SmsConsentText className="text-xs text-text-muted text-center leading-relaxed" />
+
                   </form>
                 </div>
               </div>
