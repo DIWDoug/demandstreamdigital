@@ -120,7 +120,7 @@ const ServicePageLayout = ({
       <Header />
       
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHeroGeneric 
           config={config.hero}
           breadcrumbs={breadcrumbItems}

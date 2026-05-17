@@ -84,7 +84,7 @@ const PlumbingSEO = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <LocalSEOTwoColumnHero
           config={plumbingSEOConfig.hero}
           breadcrumbs={breadcrumbItems}

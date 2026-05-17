@@ -65,7 +65,7 @@ const HVACLinkedInAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><HVACLinkedInHero /></div>
+      <div><HVACLinkedInHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <HVACLinkedInMainContent />
       <HVACLinkedInFitExclusivity />

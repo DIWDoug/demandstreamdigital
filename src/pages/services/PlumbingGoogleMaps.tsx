@@ -55,7 +55,7 @@ const PlumbingGoogleMaps = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero
           title="Plumbing Google Maps SEO"
           description="We help plumbing companies earn and hold Google Maps visibility through GBP optimization built for emergency drain, water heater, and sewer line searches in competitive local markets."

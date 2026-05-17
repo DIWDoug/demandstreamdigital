@@ -41,7 +41,7 @@ const PlumbingProgrammaticAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><PlumbingProgrammaticHero /></div>
+      <div><PlumbingProgrammaticHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <PlumbingProgrammaticMainContent />
       <PlumbingProgrammaticFitExclusivity />

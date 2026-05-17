@@ -68,7 +68,7 @@ const HVACEmailMarketing = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero
           title={hvacEmailMarketingConfig.title}
           description={hvacEmailMarketingConfig.hero.subheadline}

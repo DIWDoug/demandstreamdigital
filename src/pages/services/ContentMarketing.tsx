@@ -62,7 +62,7 @@ const ContentMarketing = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero
           title={contentMarketingConfig.title}
           heroHeadline="Plumbing & HVAC Content Marketing"

@@ -197,7 +197,7 @@ const About = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-[58px] pb-20 lg:pt-[72px] lg:pb-28 relative overflow-hidden bg-surface-dark">
+      <section className="hero-offset relative overflow-hidden bg-surface-dark">
         {/* Background image with overlay */}
         <img
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80"

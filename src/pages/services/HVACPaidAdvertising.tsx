@@ -78,7 +78,7 @@ const HVACPaidAdvertising = () => {
       <Header />
 
       {/* 01. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <HVACPaidAdsHero />
       </div>
 

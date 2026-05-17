@@ -52,7 +52,7 @@ const LocalSEOHero = ({ breadcrumbs }: LocalSEOHeroProps) => {
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 pt-[58px] pb-20 lg:pt-[72px] lg:pb-28 relative z-10">
+      <div className="hero-shell">
         <div className="max-w-4xl mx-auto text-center">
           {/* Breadcrumbs as eyebrow */}
           {breadcrumbs && breadcrumbs.length > 0 && (
