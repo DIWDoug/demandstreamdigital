@@ -283,10 +283,15 @@ const About = () => {
 
               {/* Right: accordion */}
               <div>
-                <Accordion type="single" collapsible className="space-y-3">
+                <Accordion type="single" collapsible defaultValue="credentials" className="space-y-3">
                   <AccordionItem value="credentials" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                      The Credentials
+                    <AccordionTrigger className="items-start text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      <span className="flex min-w-0 flex-1 flex-col gap-2 pr-4">
+                        <span>The Credentials</span>
+                        <span className="block max-h-[2.75rem] overflow-hidden text-sm font-normal leading-snug text-text-secondary line-clamp-2 md:line-clamp-1 md:max-h-[1.4rem]">
+                          Expert-Vetted on Upwork, top 1% globally in paid advertising and SEO.
+                        </span>
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
                       Doug Bryson spent that time earning an Expert-Vetted designation on Upwork, reaching the top 1% of freelancers globally in paid advertising and SEO. He managed millions in ad spend across industries ranging from apartment locators to national franchises to e-commerce brands.
@@ -294,8 +299,13 @@ const About = () => {
                   </AccordionItem>
 
                   <AccordionItem value="pattern" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                      The Pattern
+                    <AccordionTrigger className="items-start text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      <span className="flex min-w-0 flex-1 flex-col gap-2 pr-4">
+                        <span>The Pattern</span>
+                        <span className="block max-h-[2.75rem] overflow-hidden text-sm font-normal leading-snug text-text-secondary line-clamp-2 md:line-clamp-1 md:max-h-[1.4rem]">
+                          The strongest results kept coming from plumbing and HVAC companies.
+                        </span>
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
                       But a pattern kept emerging. The clients that got the best results, the ones where marketing actually moved the dispatch board, were plumbing and HVAC companies. Call-driven. Seasonal. Reputation-dependent. Businesses where every dollar of marketing spend either produced a booked job or it did not.
@@ -303,8 +313,13 @@ const About = () => {
                   </AccordionItem>
 
                   <AccordionItem value="decision" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                      The Decision
+                    <AccordionTrigger className="items-start text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      <span className="flex min-w-0 flex-1 flex-col gap-2 pr-4">
+                        <span>The Decision</span>
+                        <span className="block max-h-[2.75rem] overflow-hidden text-sm font-normal leading-snug text-text-secondary line-clamp-2 md:line-clamp-1 md:max-h-[1.4rem]">
+                          In 2026, everything narrowed into a dedicated system for the trades.
+                        </span>
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-text-secondary leading-relaxed text-base font-serif pb-6">
                       In 2026, the decision was made to take everything that worked best and build a dedicated system for the trades. DemandStream Digital was created as a focused growth engine for plumbing and HVAC companies — built on 15 years of execution experience and designed entirely around how trade businesses grow.
@@ -312,8 +327,13 @@ const About = () => {
                   </AccordionItem>
 
                   <AccordionItem value="result" className="border-border/30 rounded-xl bg-background/5 px-6 border">
-                    <AccordionTrigger className="text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
-                      The Result
+                    <AccordionTrigger className="items-start text-foreground hover:no-underline text-left text-base lg:text-lg font-semibold py-5 [&[data-state=open]>svg]:text-accent-blue">
+                      <span className="flex min-w-0 flex-1 flex-col gap-2 pr-4">
+                        <span>The Result</span>
+                        <span className="block max-h-[2.75rem] overflow-hidden text-sm font-normal leading-snug text-text-secondary line-clamp-2 md:line-clamp-1 md:max-h-[1.4rem]">
+                          A trade-specific growth system built by people who actually do the work.
+                        </span>
+                      </span>
                     </AccordionTrigger>
                     <AccordionContent className="text-foreground leading-relaxed text-base font-serif font-medium pb-6">
                       That is what DemandStream is. Not a general agency that happens to take trade clients. A trade-specific growth system built by someone who has done the work — and continues to do it every day.
