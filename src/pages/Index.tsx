@@ -115,7 +115,7 @@ const Index = () => {
       <TerritoryCallout />
 
       {/* Process: how we do it */}
-      <div className="relative">
+      <div className="relative bg-[#F7F8FA]">
         <div className="h-px w-full bg-accent-blue/30" />
         <GrowthProcess />
       </div>
