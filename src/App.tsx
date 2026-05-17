@@ -19,15 +19,6 @@ import { useGeoBlock } from "./hooks/useGeoBlock";
 // Lazy loaded pages
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const ROICalculator = lazy(() => import("./pages/ROICalculator"));
-const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
-const AdBudgetCalculator = lazy(() => import("./pages/AdBudgetCalculator"));
-const SEOCalculator = lazy(() => import("./pages/SEOCalculator"));
-const EmailCalculator = lazy(() => import("./pages/EmailCalculator"));
-const ContentMarketingCalculator = lazy(() => import("./pages/ContentMarketingCalculator"));
-const SocialMediaROICalculator = lazy(() => import("./pages/SocialMediaROICalculator"));
-const AIReadyCheck = lazy(() => import("./pages/AIReadyCheck"));
-const PartnerTools = lazy(() => import("./pages/PartnerTools"));
 const About = lazy(() => import("./pages/About"));
 const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
