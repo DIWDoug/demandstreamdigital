@@ -72,9 +72,9 @@ const ServiceHubHero = ({
           </nav>
         )}
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left column */}
-          <div className="max-w-xl">
+          <div className="max-w-xl lg:col-span-7">
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
               style={{ lineHeight: "1.1" }}
