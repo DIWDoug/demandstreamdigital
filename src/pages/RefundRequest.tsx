@@ -88,7 +88,7 @@ const RefundRequest = () => {
       <SEOHead
         title="Refund Request"
         description="Submit a refund request for Lovable credits."
-        noindex
+        noIndex
       />
       <main className="min-h-screen bg-background py-16 px-4">
         <div className="max-w-2xl mx-auto">
