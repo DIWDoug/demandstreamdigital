@@ -113,16 +113,30 @@ const CallRailContactFooterBlocker = () => {
       'script[src*="cdn.callrail.com"][src*="swap.js"]',
       'script[src*="js.callrail.com/group/"][src*="poll.js"]',
       'script[src*="js.callrail.com/companies/"][src*="contact.js"]',
+      'link[href*="js.callrail.com/packs/contact/"]',
+    ];
+
+    const badWidgetSelectors = [
+      "#cta-contact-us",
+      "#contact-widget-iframe",
+      '[class*="contact-cta-btn-contact"]',
+      '[class*="contact-bottom-right-contact"]',
+      '[class*="contact-bottom-left-contact"]',
+      'iframe[src*="js.callrail.com/companies/"][src*="/contact/iframe"]',
     ];
 
     const removeBadScripts = () => {
       document.querySelectorAll(badScriptSelectors.join(',')).forEach((node) => node.remove());
     };
 
+    const removeBadWidgets = () => {
+      document.querySelectorAll(badWidgetSelectors.join(',')).forEach((node) => node.remove());
+    };
+
     const removeBadInjectedBlocks = () => {
       document.querySelectorAll('body *').forEach((node) => {
         const text = node.textContent || '';
-        if (/214[^0-9]*239[^0-9]*1880/.test(text)) {
+        if (/214[^0-9]*239[^0-9]*1880/.test(text) || text.trim() === 'Contact Us') {
           const el = node;
           if (el instanceof HTMLElement && (el.tagName === 'IFRAME' || el.tagName === 'SCRIPT' || getComputedStyle(el).position === 'fixed')) {
             el.remove();
@@ -133,6 +147,7 @@ const CallRailContactFooterBlocker = () => {
 
     const clean = () => {
       removeBadScripts();
+      removeBadWidgets();
       removeBadInjectedBlocks();
     };
 
