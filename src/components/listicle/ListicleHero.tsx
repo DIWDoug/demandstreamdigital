@@ -63,7 +63,7 @@ const ListicleHero = ({ title, author, lastUpdated, breadcrumbs, bullets = DEFAU
           <ul className="mb-6 space-y-2 max-w-3xl">
             {bullets.map((b, i) => (
               <li key={i} className="flex items-start gap-3 text-base text-foreground/85">
-                <Check className="mt-1 h-4 w-4 flex-shrink-0 text-primary" strokeWidth={3} />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-blue" aria-hidden="true" />
                 <span className="leading-relaxed">{b}</span>
               </li>
             ))}
