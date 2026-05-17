@@ -108,6 +108,29 @@ const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) =>
               {subIntro}
             </p>
 
+            {subBullets.length > 0 && (
+              <ul
+                className="mb-4 space-y-2 animate-fade-in-up"
+                style={{ animationDelay: "0.12s" }}
+              >
+                {subBullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/85">
+                    <Check className="mt-1 h-4 w-4 flex-shrink-0 text-cta" strokeWidth={3} />
+                    <span className="text-base leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {subClosing && (
+              <p
+                className="text-base text-white/75 leading-relaxed mb-4 animate-fade-in-up"
+                style={{ animationDelay: "0.14s" }}
+              >
+                {subClosing}
+              </p>
+            )}
+
             <p
               className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.15s" }}
