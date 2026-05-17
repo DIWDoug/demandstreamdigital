@@ -179,6 +179,30 @@ export type Database = {
         }
         Relationships: []
       }
+      refund_requests: {
+        Row: {
+          contact_email: string | null
+          created_at: string
+          id: string
+          summary: string
+          workspace_name: string
+        }
+        Insert: {
+          contact_email?: string | null
+          created_at?: string
+          id?: string
+          summary: string
+          workspace_name: string
+        }
+        Update: {
+          contact_email?: string | null
+          created_at?: string
+          id?: string
+          summary?: string
+          workspace_name?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
