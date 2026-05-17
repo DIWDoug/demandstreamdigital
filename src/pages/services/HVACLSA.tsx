@@ -42,7 +42,7 @@ const HVACLSA = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-16"><HVACLSAHero /></div>
+      <div className="pt-[28px]"><HVACLSAHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <HVACLSAMainContent />
       <HVACLSAFitExclusivity />

@@ -41,7 +41,7 @@ const PlumbingFacebookAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-16"><PlumbingFacebookHero /></div>
+      <div className="pt-[28px]"><PlumbingFacebookHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <PlumbingFacebookMainContent />
       <PlumbingFacebookFitExclusivity />
