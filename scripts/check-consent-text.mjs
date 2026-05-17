@@ -32,7 +32,6 @@ const SMS_FORMS = [
   "src/components/forms/TwoStepContactForm.tsx",
   "src/pages/FreeAudit.tsx",
   "src/pages/AdScanOnboarding.tsx",
-  "src/components/forms/TerritoryAuditForm.tsx",
 ];
 
 // Email-only signups (newsletter / lead magnet) -> must render <EmailMarketingConsent />.
