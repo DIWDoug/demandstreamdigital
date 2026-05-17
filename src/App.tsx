@@ -178,6 +178,7 @@ const App = () => (
           <Route path="/tools/financing-calculator" element={<FinancingCalculator />} />
           <Route path="/tools/plumbing-cost-quiz" element={<PlumbingCostQuiz />} />
           <Route path="/free-audit" element={<FreeAudit />} />
+          <Route path="/refund-request" element={<RefundRequest />} />
 
           {/* Legacy calculator redirects */}
           {/* Legacy calculator redirects → home (partner tools removed) */}
