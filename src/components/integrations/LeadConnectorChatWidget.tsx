@@ -33,6 +33,15 @@ const SCRIPT_SRC = "https://widgets.leadconnectorhq.com/loader.js";
 const RESOURCES_URL =
   "https://widgets.leadconnectorhq.com/chat-widget/loader.js";
 const WIDGET_ID = "6a09c0585ba4f033f861d870";
+const WIDGET_NODE_SELECTORS = [
+  "lead-connector-chat-widget",
+  "#lc_text--chat-widget",
+  'iframe[src*="leadconnectorhq"]',
+  'iframe[src*="msgsndr.com"][src*="chat-widget"]',
+  'div[id*="lc_chat"]',
+  'div[id*="leadconnector"]',
+  'script[src*="leadconnectorhq"]',
+].join(", ");
 
 function normalizePath(pathname: string): string {
   if (pathname.length > 1 && pathname.endsWith("/")) {
@@ -64,24 +73,30 @@ function mountWidget(): void {
 function unmountWidget(): void {
   if (typeof document === "undefined") return;
   document.getElementById(SCRIPT_ID)?.remove();
-  // Best-effort cleanup of any nodes the widget injects.
-  document
-    .querySelectorAll(
-      'iframe[src*="leadconnectorhq"], div[id*="lc_chat"], div[id*="leadconnector"], script[src*="leadconnectorhq"]',
-    )
-    .forEach((node) => node.remove());
+  document.querySelectorAll(WIDGET_NODE_SELECTORS).forEach((node) => node.remove());
 }
 
 export default function LeadConnectorChatWidget() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (isAllowed(pathname)) {
+    const allowed = isAllowed(pathname);
+
+    if (allowed) {
       mountWidget();
     } else {
       unmountWidget();
     }
+
+    const observer =
+      !allowed && typeof document !== "undefined"
+        ? new MutationObserver(() => unmountWidget())
+        : null;
+
+    observer?.observe(document.body, { childList: true, subtree: true });
+
     return () => {
+      observer?.disconnect();
       // Always tear the widget down on route change so it cannot bleed onto a
       // page that contains an SMS opt-in form.
       unmountWidget();
