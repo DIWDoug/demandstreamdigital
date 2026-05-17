@@ -19,7 +19,6 @@ import { useLocation } from "react-router-dom";
  * The denylist is also exported for the consent CI guard.
  */
 export const CHAT_WIDGET_DENYLIST: ReadonlyArray<string | RegExp> = [
-  "/",
   "/grow-qualifier",
   "/free-audit",
   "/ad-scan",
