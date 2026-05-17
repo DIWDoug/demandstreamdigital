@@ -55,11 +55,11 @@ const PlumbingEmailMarketing = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero
-          title="Plumbing Email Marketing"
-          description="For plumbing businesses, email turns one-time service calls into repeat customers and keeps your business top-of-mind between visits. We build email programs that drive maintenance plan sign-ups, water heater follow-ups, and reactivation revenue."
+          title="Email Marketing for Plumbing Companies"
+          heroHeadline="Email Marketing for Plumbing Companies"
+          heroSubtitle="Turn Past Customers Into Repeat Revenue"
+          description="Your existing customer list is the cheapest lead source you own. We build maintenance reminders, water heater follow-ups, and seasonal campaigns that re-activate past customers and keep your trucks booked between peak seasons."
           breadcrumbs={breadcrumbItems}
-          heroHeadline="Email Marketing for"
-          heroSubtitle="Plumbing Companies"
           bgImage={heroBgPlumbing}
         />
       </div>
