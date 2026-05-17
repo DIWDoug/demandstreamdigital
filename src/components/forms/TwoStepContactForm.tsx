@@ -245,17 +245,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
             />
           </div>
 
-          <div>
-            <label className={labelClass}>
-              Phone Number
-            </label>
-            <PhoneInput
-              value={step1Data.phone}
-              onChange={(phone) => setStep1Data({ ...step1Data, phone })}
-              countryCode={step1Data.phoneCountryCode}
-              onCountryCodeChange={(code) => setStep1Data({ ...step1Data, phoneCountryCode: code })}
-            />
-          </div>
+
 
           <div>
             <label className={labelClass}>
