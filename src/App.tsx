@@ -179,14 +179,15 @@ const App = () => (
           <Route path="/free-audit" element={<FreeAudit />} />
 
           {/* Legacy calculator redirects */}
-          <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
-          <Route path="/investment-calculator" element={<Navigate to="/partner-tools/investment-calculator" replace />} />
-          <Route path="/ad-budget-calculator" element={<Navigate to="/partner-tools/ad-budget-calculator" replace />} />
-          <Route path="/seo-calculator" element={<Navigate to="/partner-tools/seo-calculator" replace />} />
-          <Route path="/email-calculator" element={<Navigate to="/partner-tools/email-calculator" replace />} />
-          <Route path="/content-marketing-calculator" element={<Navigate to="/partner-tools/content-marketing-calculator" replace />} />
-          <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
-          <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
+          {/* Legacy calculator redirects → home (partner tools removed) */}
+          <Route path="/roi-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/investment-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/ad-budget-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/seo-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/email-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/content-marketing-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/ai-ready-check" element={<Navigate to="/" replace />} />
+          <Route path="/agency-calculator" element={<Navigate to="/" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
