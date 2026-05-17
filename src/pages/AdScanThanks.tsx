@@ -134,12 +134,6 @@ const AdScanThanks = () => {
                   Pick your kickoff time
                   <ArrowRight className="h-4 w-4" />
                 </a>
-                <Link
-                  to="/ad-scan/onboarding"
-                  className="text-sm font-medium text-accent-blue hover:underline"
-                >
-                  Skip the call. Grant access myself.
-                </Link>
               </div>
             </div>
 
