@@ -26,14 +26,17 @@ import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
+import oleksiiSkorykh from "@/assets/team/oleksii-skorykh.jpg";
 import carolMora from "@/assets/team/carol-mora.png";
-import iraSalvador from "@/assets/team/ira-salvador.png";
+import carlaFinela from "@/assets/team/carla-finela.jpg";
 import samantaLeal from "@/assets/team/samanta-leal.webp";
-import lanilynErauda from "@/assets/team/lanilyn-erauda.webp";
-import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
-import muhammadBilal from "@/assets/team/muhammad-bilal.png";
-import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
 import athenaYenko from "@/assets/team/athena-yenko.jpeg";
+import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
+import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
+import jamesBelmes from "@/assets/team/james-belmes.webp";
+import belAniano from "@/assets/team/bel-aniano.jpeg";
+import muhammadBilal from "@/assets/team/muhammad-bilal.png";
+import michaelLipura from "@/assets/team/michael-lipura.jpg";
 
 // Other assets
 import clientLogosBanner from "@/assets/client-logos-banner.png";
