@@ -86,7 +86,6 @@ const YouMayAlsoLike = ({ currentSlug, currentCategory }: YouMayAlsoLikeProps) =
   const categoryLabels: Record<string, string> = {
     'white-label-seo': 'White-Label SEO',
     'local-seo': 'Local SEO',
-    'agency-growth': 'Agency Growth',
     'paid-media': 'Paid Media',
     'content-marketing': 'Content Marketing',
     'email-marketing': 'Email Marketing',
