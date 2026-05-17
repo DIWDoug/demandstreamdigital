@@ -47,7 +47,7 @@ const ServiceHubHero = ({
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 pt-14 pb-20 md:pt-20 md:pb-28 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 pt-[50px] pb-20 md:pt-[72px] md:pb-28 relative z-10">
         {/* Breadcrumbs */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <nav
