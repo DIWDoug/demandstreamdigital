@@ -116,7 +116,7 @@ const Index = () => {
 
       {/* Process: how we do it */}
       <div className="relative">
-        <WaveDivider position="top" fromColor="hsl(213, 64%, 8%)" toColor="#f9f9f9" variant="curve" animated />
+        <div className="h-px w-full bg-accent-blue/30" />
         <GrowthProcess />
       </div>
       
