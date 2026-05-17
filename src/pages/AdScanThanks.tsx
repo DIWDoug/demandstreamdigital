@@ -1,5 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -35,67 +34,28 @@ const AdScanThanks = () => {
               </p>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-              <div className="overflow-hidden rounded-lg border border-border bg-surface-elevated shadow-2xl">
-                <iframe
-                  title="Book your Ad Scan kickoff call"
-                  src={bookingUrl}
-                  className="h-[720px] w-full bg-background"
-                  loading="lazy"
-                />
-              </div>
+            <div className="overflow-hidden rounded-lg border border-border bg-surface-elevated shadow-2xl">
+              <iframe
+                title="Book your Ad Scan kickoff call"
+                src={bookingUrl}
+                className="h-[820px] w-full bg-background"
+                loading="lazy"
+              />
+            </div>
 
-              <div className="rounded-lg border border-border bg-surface-elevated p-6">
-                <div className="mb-6 flex items-center gap-3 text-accent-blue">
-                  <Calendar className="h-5 w-5" />
-                  <p className="font-semibold">Your 15 minute kickoff, at a glance</p>
-                </div>
-                <div className="space-y-4 text-sm text-text-secondary">
-                  <p>1. Map every channel driving calls today, so nothing in the scan gets missed.</p>
-                  <p>2. Get read only access live in under 10 minutes. No passwords, no admin changes.</p>
-                  <p>3. Leave with a locked delivery date for your scored report, typically 5 business days out.</p>
-                  <p className="text-text-muted">
-                    Prefer to move now? Grant access yourself on the onboarding page below.
-                  </p>
-                </div>
-                <a
-                  href={bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-cta mt-8 inline-flex items-center gap-2"
-                >
-                  Open calendar in new tab
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <p className="mt-4 text-xs text-text-muted">
-                  If the calendar will not load, use the button above to schedule.
-                </p>
-                <Link
-                  to="/ad-scan/onboarding"
-                  className="mt-6 inline-flex text-sm font-medium text-accent-blue hover:underline"
-                >
-                  Skip the call. Grant access myself.
-                </Link>
-
-                {/* Video testimonial under the sidebar */}
-                <div className="mt-8 border-t border-border pt-6">
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-blue">
-                    Hear it from a customer
-                  </p>
-                  <div className="mx-auto w-full max-w-[240px] aspect-[9/16] rounded-md overflow-hidden bg-black border border-border shadow-lg">
-                    <video
-                      src="/videos/doug-testimonial.mp4"
-                      controls
-                      preload="metadata"
-                      playsInline
-                      className="h-full w-full object-contain"
-                    />
-                  </div>
-                  <p className="mt-2 text-center text-[11px] text-text-muted">
-                    Real customer. Posted with permission.
-                  </p>
-                </div>
-              </div>
+            <div className="mt-6 flex flex-col items-center gap-2 text-center">
+              <a
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-accent-blue hover:underline"
+              >
+                Calendar not loading? Open it in a new tab.
+              </a>
+              <p className="text-sm text-text-secondary">
+                Scroll down to go over what you can expect on the call.
+              </p>
+              <ArrowRight className="h-4 w-4 rotate-90 text-accent-blue" />
             </div>
 
             {/* Reiterated, larger "What happens on the call" section */}
@@ -173,12 +133,6 @@ const AdScanThanks = () => {
                   Pick your kickoff time
                   <ArrowRight className="h-4 w-4" />
                 </a>
-                <Link
-                  to="/ad-scan/onboarding"
-                  className="text-sm font-medium text-accent-blue hover:underline"
-                >
-                  Skip the call. Grant access myself.
-                </Link>
               </div>
             </div>
 
