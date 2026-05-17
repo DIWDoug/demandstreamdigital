@@ -123,6 +123,14 @@ const AdScanOnboarding = () => {
       });
       return;
     }
+    if (!isValidPhone(form.phone, form.phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number so we can confirm access.",
+        variant: "destructive",
+      });
+      return;
+    }
     setSubmitting(true);
     try {
       const { supabase } = await import("@/integrations/supabase/client");
