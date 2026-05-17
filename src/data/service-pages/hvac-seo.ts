@@ -12,7 +12,13 @@ export const hvacSEOConfig: ServicePageConfig = {
   hero: {
     headline: "HVAC SEO Services That Drive",
     highlightedText: "More Booked Service Calls",
-    subheadline: "When a homeowner searches 'AC repair near me' during a heat wave, they are not browsing options. They are calling whoever shows up first. HVAC SEO from DemandStream is built around how HVAC customers actually search and call. No generic contractor marketing.",
+    subheadline: {
+      intro: "When a homeowner searches 'AC repair near me' during a heat wave, they are not browsing options. They are calling whoever shows up first. HVAC SEO from DemandStream is built around how HVAC customers actually search and call. No generic contractor marketing.",
+      bullets: [
+        "Service and ZIP-level pages built for peak-season demand: AC repair, furnace replacement, tune-ups, and emergency calls.",
+        "Google Business Pro and review velocity tuned to win the Map Pack when capacity, not clicks, decides the month."
+      ]
+    },
     qualifierLine: "",
     ctaText: "Claim My Territory",
     ctaSubtext: "HVAC companies only. No plumbing. No general contractors."
