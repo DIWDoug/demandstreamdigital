@@ -19,15 +19,6 @@ import { useGeoBlock } from "./hooks/useGeoBlock";
 // Lazy loaded pages
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const ROICalculator = lazy(() => import("./pages/ROICalculator"));
-const InvestmentCalculator = lazy(() => import("./pages/InvestmentCalculator"));
-const AdBudgetCalculator = lazy(() => import("./pages/AdBudgetCalculator"));
-const SEOCalculator = lazy(() => import("./pages/SEOCalculator"));
-const EmailCalculator = lazy(() => import("./pages/EmailCalculator"));
-const ContentMarketingCalculator = lazy(() => import("./pages/ContentMarketingCalculator"));
-const SocialMediaROICalculator = lazy(() => import("./pages/SocialMediaROICalculator"));
-const AIReadyCheck = lazy(() => import("./pages/AIReadyCheck"));
-const PartnerTools = lazy(() => import("./pages/PartnerTools"));
 const About = lazy(() => import("./pages/About"));
 const BlogIndex = lazy(() => import("./pages/BlogIndex"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
@@ -177,15 +168,9 @@ const App = () => (
           <Route path="/blog/white-label-local-ppc" element={<Navigate to="/paid-marketing" replace />} />
           <Route path="/our-blog" element={<OurBlog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/partner-tools" element={<PartnerTools />} />
-          <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
-          <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
-          <Route path="/partner-tools/ad-budget-calculator" element={<AdBudgetCalculator />} />
-          <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
-          <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
-          <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
-          <Route path="/partner-tools/social-media-roi-calculator" element={<SocialMediaROICalculator />} />
-          <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
+          {/* Partner tools removed: redirect any remaining links to home */}
+          <Route path="/partner-tools" element={<Navigate to="/" replace />} />
+          <Route path="/partner-tools/*" element={<Navigate to="/" replace />} />
 
           {/* Interactive Homeowner Tools */}
           <Route path="/tools/job-cost-estimator" element={<JobCostEstimator />} />
@@ -194,14 +179,15 @@ const App = () => (
           <Route path="/free-audit" element={<FreeAudit />} />
 
           {/* Legacy calculator redirects */}
-          <Route path="/roi-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
-          <Route path="/investment-calculator" element={<Navigate to="/partner-tools/investment-calculator" replace />} />
-          <Route path="/ad-budget-calculator" element={<Navigate to="/partner-tools/ad-budget-calculator" replace />} />
-          <Route path="/seo-calculator" element={<Navigate to="/partner-tools/seo-calculator" replace />} />
-          <Route path="/email-calculator" element={<Navigate to="/partner-tools/email-calculator" replace />} />
-          <Route path="/content-marketing-calculator" element={<Navigate to="/partner-tools/content-marketing-calculator" replace />} />
-          <Route path="/ai-ready-check" element={<Navigate to="/partner-tools/ai-ready-check" replace />} />
-          <Route path="/agency-calculator" element={<Navigate to="/partner-tools/roi-calculator" replace />} />
+          {/* Legacy calculator redirects → home (partner tools removed) */}
+          <Route path="/roi-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/investment-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/ad-budget-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/seo-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/email-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/content-marketing-calculator" element={<Navigate to="/" replace />} />
+          <Route path="/ai-ready-check" element={<Navigate to="/" replace />} />
+          <Route path="/agency-calculator" element={<Navigate to="/" replace />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />

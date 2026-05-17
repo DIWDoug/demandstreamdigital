@@ -11,14 +11,11 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const [isToolsMenuOpen, setIsToolsMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
-  const toolsMenuRef = useRef<HTMLDivElement>(null);
 
   const navigateMobile = (to: string) => {
     setIsMobileMenuOpen(false);
     setIsMegaMenuOpen(false);
-    setIsToolsMenuOpen(false);
     requestAnimationFrame(() => navigate(to));
   };
 
@@ -32,8 +29,6 @@ const Header = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node))
         setIsMegaMenuOpen(false);
-      if (toolsMenuRef.current && !toolsMenuRef.current.contains(event.target as Node))
-        setIsToolsMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -44,7 +39,6 @@ const Header = () => {
       if (e.key === "Escape") {
         setIsMegaMenuOpen(false);
         setIsMobileMenuOpen(false);
-        setIsToolsMenuOpen(false);
       }
     };
     document.addEventListener("keydown", handleEscape);
@@ -121,16 +115,6 @@ const Header = () => {
     { label: "Testimonials", href: "/testimonials", isRoute: true },
     { label: "Blog", href: "/our-blog", isRoute: true },
   ];
-  const partnerToolsLinks = [
-    { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", description: "Estimate monthly SEO investment" },
-    { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", description: "Show clients their marketing ROI" },
-    { label: "Social Media ROI Calculator", href: "/partner-tools/social-media-roi-calculator", description: "Calculate social media campaign ROI" },
-    { label: "Investment Calculator", href: "/partner-tools/investment-calculator", description: "Scope monthly service costs" },
-    { label: "Ad Budget Calculator", href: "/partner-tools/ad-budget-calculator", description: "Project ad campaign results" },
-    { label: "Email Marketing Calculator", href: "/partner-tools/email-calculator", description: "Calculate email ROI potential" },
-    { label: "Content Marketing Calculator", href: "/partner-tools/content-marketing-calculator", description: "Calculate content ROI" },
-    { label: "AI Ready Check", href: "/partner-tools/ai-ready-check", description: "Scan website AI compatibility" },
-  ];
 
   const navLinkClass =
     "px-3 py-2 text-[15px] font-medium text-white/85 hover:text-white transition-colors whitespace-nowrap";
@@ -202,7 +186,6 @@ const Header = () => {
                   type="button"
                   onClick={() => {
                     setIsMegaMenuOpen(!isMegaMenuOpen);
-                    setIsToolsMenuOpen(false);
                   }}
                   className={`${navLinkClass} flex items-center gap-1`}
                   aria-haspopup="true"
@@ -279,55 +262,6 @@ const Header = () => {
                 )
               )}
 
-              {/* Partner Tools dropdown */}
-              <div className="relative" ref={toolsMenuRef}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsToolsMenuOpen(!isToolsMenuOpen);
-                    setIsMegaMenuOpen(false);
-                  }}
-                  className={`${navLinkClass} flex items-center gap-1`}
-                  aria-haspopup="true"
-                  aria-expanded={isToolsMenuOpen}
-                >
-                  Partner Tools
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? "rotate-180" : ""}`}
-                    aria-hidden="true"
-                  />
-                </button>
-
-                {isToolsMenuOpen && (
-                  <div
-                    className="absolute top-full right-0 mt-1 w-72 rounded-lg shadow-2xl overflow-hidden animate-fade-in"
-                    style={{ backgroundColor: "#0D1B2A", border: "1px solid rgba(255,255,255,0.1)" }}
-                  >
-                    <div className="p-2">
-                      {partnerToolsLinks.map((tool, i) => (
-                        <Link
-                          key={i}
-                          to={tool.href}
-                          onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-2.5 rounded-md hover:bg-white/5 transition-colors"
-                        >
-                          <p className="text-[13px] font-medium text-white">{tool.label}</p>
-                          <p className="text-[12px] text-white/50 mt-0.5">{tool.description}</p>
-                        </Link>
-                      ))}
-                      <div className="mt-2 pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                        <Link
-                          to="/partner-tools"
-                          onClick={() => setIsToolsMenuOpen(false)}
-                          className="block text-center text-[13px] font-medium text-[#4A90B8] hover:text-white transition-colors py-1.5"
-                        >
-                          View All Partner Tools →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </nav>
 
             {/* ── Right: Phone + CTA ── */}
@@ -497,19 +431,6 @@ const Header = () => {
                 </Link>
               ))}
 
-              {/* Partner Tools */}
-              <Link
-                to="/partner-tools"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
-                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
-              >
-                <span
-                  className="w-1 h-5 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: "#C0392B" }}
-                />
-                Partner Tools
-              </Link>
 
               {/* Phone + CTA */}
               <div className="pt-6 space-y-4">

@@ -51,7 +51,6 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       href: "/case-studies",
       items: [
         { label: "Case Studies", href: "/case-studies" },
-        { label: "Partner Tools", href: "/partner-tools" },
         { label: "Blog", href: "/blog" },
         { label: "About Us", href: "/about" },
         { label: "Contact", href: "/contact" },
@@ -183,13 +182,6 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
                 >
                   <FileText className="h-3.5 w-3.5" />
                   Case Studies
-                </Link>
-                <Link 
-                  to="/partner-tools"
-                  className="flex items-center gap-1.5 text-xs text-text-muted hover:text-accent-blue transition-colors"
-                >
-                  <Calculator className="h-3.5 w-3.5" />
-                  Partner Tools
                 </Link>
                 <Link 
                   to="/privacy"
