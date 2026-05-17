@@ -3,22 +3,7 @@ import StreamTexture from "@/components/StreamTexture";
 import review1 from "@/assets/pure-plumbing-review-1.png";
 import review2 from "@/assets/pure-plumbing-review-2.png";
 
-interface FeaturedReview {
-  eyebrow?: string;
-  quote?: string;
-  author?: string;
-  source?: string;
-  metricBadge?: string;
-  rating?: number;
-}
-
-interface PlaceholderCard {
-  hint: string;
-}
-
 interface ServiceTestimonialsSectionProps {
-  featured?: FeaturedReview;
-  placeholders?: PlaceholderCard[];
   ratingLine?: string;
   eyebrow?: string;
   heading?: string;
@@ -26,14 +11,11 @@ interface ServiceTestimonialsSectionProps {
 }
 
 const ServiceTestimonialsSection = ({
-  featured,
   ratingLine = "4.9 out of 5 · 22 Google Reviews for Demand Stream Digital",
-  eyebrow,
+  eyebrow = "Real Reviews From Real Operators",
   heading = "Real Shops. Real Words. Real Money Found.",
   subhead,
 }: ServiceTestimonialsSectionProps) => {
-  const eyebrowText = eyebrow ?? featured?.eyebrow ?? "Real Reviews From Real Operators";
-
   return (
     <section className="py-24 lg:py-32 section-light relative overflow-hidden" style={{ background: "linear-gradient(180deg, #F2F4F7 0%, #FFFFFF 100%)" }}>
       <StreamTexture variant="light" opacity={0.1} />
@@ -41,7 +23,7 @@ const ServiceTestimonialsSection = ({
         {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-xs font-bold tracking-widest uppercase text-accent-blue mb-4">
-            {eyebrowText}
+            {eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
             {heading}
@@ -60,18 +42,18 @@ const ServiceTestimonialsSection = ({
         </div>
 
         {/* Two Google review screenshot cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6 max-w-5xl mx-auto">
           <a
             href="https://www.google.com/search?q=Demand+Stream+Digital+reviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-[#1F1F1F] transition-transform hover:-translate-y-1"
+            className="block rounded-2xl shadow-lg border border-slate-200 bg-[#1F1F1F] p-3 sm:p-4 transition-transform hover:-translate-y-1"
             aria-label="Read the Pure Plumbing Google review"
           >
             <img
               src={review1}
               alt="Google review from Pure Plumbing: 5 stars, praising the Dallas SEO partnership with Demand Stream Digital."
-              className="w-full h-auto block"
+              className="w-full h-auto object-contain block rounded-lg"
               loading="lazy"
             />
           </a>
@@ -79,13 +61,13 @@ const ServiceTestimonialsSection = ({
             href="https://www.google.com/search?q=Demand+Stream+Digital+reviews"
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-[#1F1F1F] transition-transform hover:-translate-y-1"
+            className="block rounded-2xl shadow-lg border border-slate-200 bg-[#1F1F1F] p-3 sm:p-4 transition-transform hover:-translate-y-1"
             aria-label="Read the Pure Plumbing and Air Google review"
           >
             <img
               src={review2}
               alt="Google review from Pure Plumbing and Air: 5 stars, citing a 40% year-over-year revenue increase."
-              className="w-full h-auto block"
+              className="w-full h-auto object-contain block rounded-lg"
               loading="lazy"
             />
           </a>
