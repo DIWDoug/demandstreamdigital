@@ -125,6 +125,32 @@ const GrowthQualifierFlow = () => {
     honeypot: "",
   });
 
+  // Hydrate contact + company from TerritoryAuditForm handoff, if present.
+  useEffect(() => {
+    try {
+      const raw = sessionStorage.getItem("grow_qualifier_prefill");
+      if (!raw) return;
+      const data = JSON.parse(raw) as {
+        firstName?: string;
+        companyName?: string;
+        email?: string;
+        phone?: string;
+        phoneCountryCode?: string;
+      };
+      if (data.companyName) setCompanyName(data.companyName);
+      setContact((p) => ({
+        ...p,
+        firstName: data.firstName ?? p.firstName,
+        email: data.email ?? p.email,
+        phone: data.phone ?? p.phone,
+        phoneCountryCode: data.phoneCountryCode ?? p.phoneCountryCode,
+      }));
+      sessionStorage.removeItem("grow_qualifier_prefill");
+    } catch {
+      // ignore malformed prefill
+    }
+  }, []);
+
   useEffect(() => {
     pushGrowDataLayer("grow_funnel_start", { funnel: "grow_qualifier" });
     safeTrackCustom("GrowFunnelStart", { funnel: "grow_qualifier" });
