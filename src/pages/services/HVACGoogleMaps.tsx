@@ -22,7 +22,7 @@ import { getServiceHubSchema } from "@/lib/schema";
 
 const HVAC_GBP_BIGGER_PICTURE_SERVICES = [
   { label: "HVAC Local SEO", href: "/hvac-seo" },
-  { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
+  { label: "HVAC Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
   { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
   { label: "HVAC Content Marketing", href: "/hvac-content-marketing" },
   { label: "Web Design", href: "/plumbing-and-hvac-web-design" },

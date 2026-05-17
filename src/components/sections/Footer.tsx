@@ -13,7 +13,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       items: [
         { label: "Plumbing SEO", href: "/plumbing-seo" },
         { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
-        { label: "Plumbing PPC / Google Ads", href: "/plumbing-paid-advertising" },
+        { label: "Plumbing PPC / Google Ads", href: "/paid-marketing" },
         { label: "Plumbing Web Design", href: "/plumbing-website-design" },
         { label: "Plumbing Reputation Management", href: "/plumbing-google-maps" },
         { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
@@ -26,7 +26,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
       items: [
         { label: "HVAC SEO", href: "/hvac-seo" },
         { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
-        { label: "HVAC PPC / Google Ads", href: "/hvac-paid-advertising" },
+        { label: "HVAC PPC / Google Ads", href: "/paid-marketing" },
         { label: "HVAC Web Design", href: "/hvac-website-design" },
         { label: "HVAC Reputation Management", href: "/hvac-google-maps" },
         { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },

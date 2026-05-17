@@ -422,8 +422,8 @@ const PartnerTools = () => {
                 {[
                   { label: "Plumbing SEO", href: "/plumbing-seo" },
                   { label: "HVAC SEO", href: "/hvac-seo" },
-                  { label: "Plumbing Paid Ads", href: "/plumbing-paid-advertising" },
-                  { label: "HVAC Paid Ads", href: "/hvac-paid-advertising" },
+                  { label: "Plumbing Paid Ads", href: "/paid-marketing" },
+                  { label: "HVAC Paid Ads", href: "/paid-marketing" },
                   { label: "Email Marketing", href: "/plumbing-email-marketing" },
                   { label: "Content Marketing", href: "/plumbing-content-marketing" },
                   { label: "AI Automation", href: "/ai-automation" },
