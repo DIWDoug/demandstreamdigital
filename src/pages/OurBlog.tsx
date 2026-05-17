@@ -9,30 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import { getPageOgImage } from "@/lib/ogImages";
-
-// Import blog images statically for proper resolution
-import whiteLabelSeoBenefitsHero from "@/assets/blog/white-label-seo-benefits-hero.jpg";
-import whiteLabelSeoChecklist from "@/assets/blog/white-label-seo-checklist.jpg";
-import whatIsWhiteLabelMarketing from "@/assets/blog/what-is-white-label-marketing.jpg";
-import whiteLabelSocialMedia from "@/assets/blog/white-label-social-media.jpg";
-import onPageLocalSeo from "@/assets/blog/on-page-local-seo.jpg";
-import whiteLabelLocalPpc from "@/assets/blog/white-label-local-ppc.jpg";
-
-// Map database featured_image values to imported images
-const featuredImageMap: Record<string, string> = {
-  "white-label-seo-benefits-hero": whiteLabelSeoBenefitsHero,
-  "white-label-seo-checklist": whiteLabelSeoChecklist,
-  "what-is-white-label-marketing": whatIsWhiteLabelMarketing,
-  "white-label-social-media": whiteLabelSocialMedia,
-  "on-page-local-seo": onPageLocalSeo,
-  "white-label-local-ppc": whiteLabelLocalPpc,
-};
-
-// Resolve featured image from database value to actual image path
-const resolveFeaturedImage = (featuredImage: string | null): string | null => {
-  if (!featuredImage) return null;
-  return featuredImageMap[featuredImage] || null;
-};
+import { getBlogFeaturedImage as resolveFeaturedImage } from "@/lib/blogImages";
 
 
 interface BlogPost {
