@@ -288,7 +288,10 @@ const HeroForm = () => {
               className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0"
             />
             <span className="text-xs text-text-muted leading-relaxed">
-              I agree to receive marketing emails from Demand Stream Digital. View our{" "}
+              By providing your phone number and submitting this form, you agree to receive marketing emails and SMS messages
+              from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent is not a
+              condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or
+              STOP to unsubscribe. View our{" "}
               <Link to="/privacy" className="text-primary hover:underline">Privacy Policy</Link> and{" "}
               <Link to="/terms" className="text-primary hover:underline">Terms of Service</Link>.
             </span>
