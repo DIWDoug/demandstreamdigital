@@ -122,18 +122,7 @@ const WebDesignHub = () => {
         title="Website Design for Plumbing & HVAC"
         heroSubtitle="Built to Rank and Convert"
         breadcrumbs={[{ label: "Website Design" }]}
-        description={{
-          intro:
-            "Premium, trust-heavy websites built for visibility, booked calls, and long-term market position. Most contractor websites look fine. They just don't work. They aren't built for how customers search, how Google reads service intent, or how a phone call actually gets booked. We design plumbing and HVAC websites with service structure, local intent, and conversion flow built into every page. Not a brochure. Revenue infrastructure.",
-          bullets: [
-            "Service-level page structure (not generic pages that blend intent)",
-            "Alignment to Google Business Profile service taxonomy",
-            "AI-ready structure with clear answers, FAQ blocks, and schema by default",
-            "Call-first UX with tracking and CRM readiness (ServiceTitan-friendly)",
-            "Built to activate SEO and paid advertising from day one",
-          ],
-          closing: "One plumbing client and one HVAC client per market.",
-        }}
+        description="Premium, trust-heavy websites built for visibility, booked calls, and long-term market position. We design plumbing and HVAC websites with service structure, local intent, and conversion flow built into every page. Not a brochure. Revenue infrastructure."
       />
 
       {/* Divider */}
