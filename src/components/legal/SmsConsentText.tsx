@@ -43,3 +43,29 @@ export function SmsConsentText({
 }
 
 export default SmsConsentText;
+
+interface SmsConsentSummaryProps {
+  className?: string;
+  linkClassName?: string;
+}
+
+/**
+ * Short inline consent summary rendered directly under the phone field so users
+ * see the SMS disclosure before they submit. The full TCPA paragraph still renders
+ * via <SmsConsentText /> near the submit button.
+ */
+export function SmsConsentSummary({
+  className,
+  linkClassName = "underline hover:text-foreground",
+}: SmsConsentSummaryProps) {
+  return (
+    <p className={className}>
+      By submitting, you agree to receive marketing calls, SMS, and emails from Demand Stream Digital at this number
+      (autodialer may be used). Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to
+      opt out, HELP for help. See our{" "}
+      <Link to="/privacy" className={linkClassName}>Privacy Policy</Link> and{" "}
+      <Link to="/terms" className={linkClassName}>Terms</Link>.
+    </p>
+  );
+}
+
