@@ -148,7 +148,7 @@ const Hero = () => {
           </div>
 
           {/* Right column — Video placeholder */}
-          <div className="hidden animate-fade-in-up lg:block lg:pl-4 lg:scale-[1.08] lg:origin-right" style={{ animationDelay: "0.2s" }}>
+          <div className="hidden animate-fade-in-up lg:block lg:scale-[1.2] lg:origin-right" style={{ animationDelay: "0.2s" }}>
             <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"

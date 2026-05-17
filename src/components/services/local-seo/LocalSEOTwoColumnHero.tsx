@@ -154,7 +154,7 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
           </div>
 
           <div
-            className="hidden animate-fade-in-up lg:block lg:col-span-5 lg:pl-4 lg:scale-[1.08] lg:origin-right"
+            className="hidden animate-fade-in-up lg:block lg:col-span-5 lg:scale-[1.2] lg:origin-right"
             style={{ animationDelay: "0.2s" }}
           >
             <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
