@@ -12,7 +12,7 @@ import InboundPainPoints from "@/components/services/InboundPainPoints";
 import FitQualifier from "@/components/services/FitQualifier";
 import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
 import ServicesFramework from "@/components/services/ServicesFramework";
-import ServicesTestimonials from "@/components/services/ServicesTestimonials";
+import ServiceTestimonialsSection from "@/components/services/generic/ServiceTestimonialsSection";
 import ServicesFAQ from "@/components/services/ServicesFAQ";
 import ServicesResultsInAction from "@/components/services/ServicesResultsInAction";
 import { getServicesPageSchema } from "@/lib/schema";
@@ -132,7 +132,7 @@ const Services = () => {
       
       {/* Testimonials - Social proof after framework */}
       <div id="testimonials" className="scroll-mt-32">
-        <ServicesTestimonials />
+        <ServiceTestimonialsSection />
       </div>
       
       {/* Results in Action - Case Studies */}
