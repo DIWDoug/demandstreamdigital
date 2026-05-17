@@ -12,9 +12,9 @@ import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
-import { ArrowRight, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
+import TerritoryAuditForm from "@/components/forms/TerritoryAuditForm";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQ, { getHomepageFAQSchema } from "@/components/sections/FAQ";
@@ -38,14 +38,11 @@ const TerritoryCallout = () => (
           <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-xl mx-auto">
             We take one plumbing client and one HVAC client per service area. If your market is open, now is when to find out.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link to="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
-              Claim Your Territory Today
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+          <TerritoryAuditForm />
+          <div className="mt-6 flex justify-center">
             <a href={PHONE_HREF} className="inline-flex items-center gap-2 text-accent-blue hover:text-accent-blue/80 font-semibold transition-colors">
               <Phone className="h-4 w-4" />
-              {PHONE_NUMBER}
+              Prefer to call? {PHONE_NUMBER}
             </a>
           </div>
         </div>
