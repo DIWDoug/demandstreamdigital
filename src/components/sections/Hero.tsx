@@ -1,16 +1,9 @@
-import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import TopoTexture from "@/components/TopoTexture";
 
 const Hero = () => {
-  const [website, setWebsite] = useState("");
   const navigate = useNavigate();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate(`/contact?website=${encodeURIComponent(website)}`);
-  };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#0D1B2A]">
