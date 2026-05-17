@@ -29,7 +29,6 @@ const CONSENT_COMPONENT = "src/components/legal/SmsConsentText.tsx";
 const SMS_FORMS = [
   "src/components/sections/HeroForm.tsx",
   "src/components/forms/GrowthQualifierFlow.tsx",
-  "src/components/forms/TwoStepContactForm.tsx",
   "src/pages/FreeAudit.tsx",
   "src/pages/AdScanOnboarding.tsx",
 ];
