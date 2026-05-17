@@ -12,9 +12,9 @@ import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 
 import WhatWeSolve from "@/components/sections/WhatWeSolve";
-import { Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
-import TerritoryAuditForm from "@/components/forms/TerritoryAuditForm";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/sections/ContactForm";
 import FAQ, { getHomepageFAQSchema } from "@/components/sections/FAQ";
