@@ -59,29 +59,8 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
   ];
 
   return (
-    <footer ref={ref} className="bg-background relative pt-16 lg:pt-20" role="contentinfo">
+    <footer ref={ref} className="bg-background relative pt-28 lg:pt-32" role="contentinfo">
       <SubtleOrbs variant="bottom-left" />
-
-      {/* Global Claim Your Territory / phone CTA, rendered above the footer on every page */}
-      <div className="container mx-auto px-6 lg:px-8 pb-12 lg:pb-16">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <Link
-            to="/grow-qualifier"
-            className="btn-cta group flex items-center gap-2"
-          >
-            Claim Your Territory Today
-            <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-          </Link>
-          <span className="text-sm font-medium text-text-muted">or</span>
-          <a
-            href={PHONE_HREF}
-            className="flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-text-secondary hover:text-white hover:border-primary hover:bg-primary transition-all font-medium text-sm"
-          >
-            <Phone className="h-4 w-4" />
-            {PHONE_NUMBER}
-          </a>
-        </div>
-      </div>
 
       {/* Service Categories Grid */}
       <nav aria-label="Service categories" className="py-12 border-b border-border">
