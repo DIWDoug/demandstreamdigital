@@ -73,7 +73,14 @@ const HVACEmailMarketing = () => {
           title="Email Marketing for HVAC Companies"
           heroHeadline="Email Marketing for HVAC Companies"
           heroSubtitle="Turn Past Customers Into Repeat Maintenance and Replacements"
-          description="Your install and service list is the most profitable lead source you own. We build tune-up reminders, seasonal campaigns, and IAQ offers that drive maintenance plans, replacements, and reviews from customers who already trust you."
+          description={{
+            intro: "Your install and service list is the most profitable lead source you own.",
+            bullets: [
+              "Tune-up reminders that fill spring and fall maintenance schedules",
+              "IAQ and replacement offers built for high-margin HVAC revenue",
+              "Maintenance plan nurture that grows recurring membership rosters",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
         />
       </div>
