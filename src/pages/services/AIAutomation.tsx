@@ -62,7 +62,7 @@ const AIAutomation = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero
           title={aiAutomationConfig.title}
           description={{

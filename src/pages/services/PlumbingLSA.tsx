@@ -42,7 +42,7 @@ const PlumbingLSA = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><PlumbingLSAHero /></div>
+      <div><PlumbingLSAHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <PlumbingLSAMainContent />
       <PlumbingLSAFitExclusivity />

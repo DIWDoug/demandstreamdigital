@@ -78,7 +78,7 @@ const HVACSearchAds = () => {
 
       <Header />
 
-      <div className="pt-[28px]">
+      <div>
         <HVACSearchAdsHero />
       </div>
 

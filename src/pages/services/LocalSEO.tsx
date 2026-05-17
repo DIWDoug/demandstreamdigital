@@ -87,7 +87,7 @@ const LocalSEO = () => {
       <Header />
       
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <LocalSEOTwoColumnHero 
           config={localSEOConfig.hero}
           breadcrumbs={breadcrumbItems}

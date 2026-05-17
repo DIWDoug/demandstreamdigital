@@ -65,7 +65,7 @@ const HVACInstagramAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><HVACInstagramHero /></div>
+      <div><HVACInstagramHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <HVACInstagramMainContent />
       <HVACInstagramFitExclusivity />

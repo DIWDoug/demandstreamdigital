@@ -65,7 +65,7 @@ const HVACFacebookAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><HVACFacebookHero /></div>
+      <div><HVACFacebookHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <HVACFacebookMainContent />
       <HVACFacebookFitExclusivity />

@@ -42,7 +42,7 @@ const LSAHub = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-[28px]"><LSAHubHero /></div>
+      <div><LSAHubHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <LSAHubMainContent />
       <LSAHubFitExclusivity />

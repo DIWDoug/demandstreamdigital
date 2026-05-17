@@ -57,7 +57,7 @@ const Authority = () => {
       <Header />
       
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero 
           title={hub.title} 
           heroSubtitle="Built to Drive More Booked Service Calls"

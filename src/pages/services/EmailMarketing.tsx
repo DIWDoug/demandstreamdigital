@@ -70,7 +70,7 @@ const EmailMarketing = () => {
       <Header />
       
       {/* 1. HERO */}
-      <div className="pt-[28px]">
+      <div>
         <ServiceHubHero
           title={emailMarketingConfig.title}
           description={emailMarketingConfig.hero.subheadline}
