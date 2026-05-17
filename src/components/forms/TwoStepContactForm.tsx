@@ -369,14 +369,11 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
 
 
             {/* Consent & reCAPTCHA notice */}
-            <p className="text-xs text-text-muted text-center leading-relaxed">
-              By providing your phone number and submitting this form, you agree to receive marketing emails and SMS messages
-              from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent is not a
-              condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or
-              STOP to unsubscribe. View our{" "}
-              <Link to="/privacy" className="text-accent-blue hover:underline">Privacy Policy</Link> and{" "}
-              <Link to="/terms" className="text-accent-blue hover:underline">Terms of Service</Link>. Protected by reCAPTCHA.
-            </p>
+            <SmsConsentText
+              className="text-xs text-text-muted text-center leading-relaxed"
+              linkClassName="text-accent-blue hover:underline"
+              withRecaptcha
+            />
 
             <button
               type="submit"
