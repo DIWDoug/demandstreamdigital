@@ -143,4 +143,38 @@ test.describe("SMS/TCPA consent text renders verbatim on every lead form", () =>
     await expectCanonicalConsent(page);
     await expectCanonicalSummary(page);
   });
+
+  /**
+   * Consent links must point at the real /privacy and /terms pages in EVERY
+   * environment (dev, preview, production). Because we use react-router <Link>
+   * with same-origin paths, the targets are environment-independent: as long
+   * as those routes are wired in App.tsx and render the right legal pages,
+   * the links work everywhere. This test clicks the actual rendered anchors
+   * (from /free-audit, where consent is visible without form steps) and
+   * verifies each one lands on the correct route with the expected H1.
+   */
+  test("Consent /privacy and /terms links resolve to the real legal pages", async ({ page }) => {
+    await page.goto("/free-audit");
+    await page.waitForLoadState("networkidle");
+
+    // Every Privacy link in the consent copy must use the exact path "/privacy".
+    const privacyLinks = page.locator('a[href="/privacy"]');
+    const termsLinks = page.locator('a[href="/terms"]');
+    expect(await privacyLinks.count()).toBeGreaterThan(0);
+    expect(await termsLinks.count()).toBeGreaterThan(0);
+
+    // Click a Privacy link from the consent block and assert the legal page renders.
+    await privacyLinks.first().click();
+    await expect(page).toHaveURL(/\/privacy$/);
+    await expect(page.getByRole("heading", { level: 1, name: "Privacy Policy" })).toBeVisible({ timeout: 10000 });
+    await expect(page).toHaveTitle(/Privacy Policy \| Demand Stream Digital/);
+
+    // Back to the form and click a Terms link.
+    await page.goBack();
+    await page.waitForLoadState("networkidle");
+    await page.locator('a[href="/terms"]').first().click();
+    await expect(page).toHaveURL(/\/terms$/);
+    await expect(page.getByRole("heading", { level: 1, name: "Terms of Service" })).toBeVisible({ timeout: 10000 });
+    await expect(page).toHaveTitle(/Terms of Service \| Demand Stream Digital/);
+  });
 });
