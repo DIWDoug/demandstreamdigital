@@ -64,10 +64,12 @@ interface SmsConsentSummaryProps {
  * TCPA paragraph still renders via <SmsConsentText /> for legal completeness.
  */
 export function SmsConsentSummary({
-  className = "mt-3 flex items-start gap-2 rounded-md border border-border bg-muted/40 px-3 py-2",
-  linkClassName = "underline font-medium hover:text-foreground",
-  textClassName = "text-[12px] leading-snug text-text-muted",
-  iconClassName = "h-4 w-4 mt-0.5 shrink-0 text-text-muted",
+  className = "mt-3 flex items-start gap-2 rounded-md border border-border bg-muted/40 px-3 py-2.5",
+  // Underlined + medium weight + explicit foreground color keeps links AAA on every surface.
+  linkClassName = "underline font-medium text-foreground hover:opacity-80",
+  // Bump from 12px/muted to 13px/text-secondary so the disclosure passes WCAG AA at small sizes.
+  textClassName = "text-[13px] leading-relaxed text-text-secondary",
+  iconClassName = "h-4 w-4 mt-0.5 shrink-0 text-text-secondary",
   hideIcon = false,
 }: SmsConsentSummaryProps) {
   return (
