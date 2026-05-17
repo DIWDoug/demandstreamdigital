@@ -69,6 +69,15 @@ const HeroForm = () => {
       return;
     }
 
+    if (!isValidPhone(formData.phone, formData.phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number so we can reach you about your market.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
