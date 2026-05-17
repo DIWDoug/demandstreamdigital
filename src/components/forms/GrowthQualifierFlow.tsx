@@ -2,6 +2,7 @@ import { KeyboardEvent, useEffect, useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Loader2, Quote, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
+import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import {
@@ -177,6 +178,14 @@ const GrowthQualifierFlow = () => {
   const submitLead = async () => {
     if (contact.honeypot) {
       navigate("/grow/thanks");
+      return;
+    }
+    if (!contact.firstName.trim() || !contact.lastName.trim() || !contact.email.trim()) {
+      toast({ title: "Missing required fields", description: "Name and email are required.", variant: "destructive" });
+      return;
+    }
+    if (!isValidPhone(contact.phone, contact.phoneCountryCode)) {
+      toast({ title: "Valid phone number required", description: "Please enter a valid phone number so we can text you about your market.", variant: "destructive" });
       return;
     }
     setIsSubmitting(true);

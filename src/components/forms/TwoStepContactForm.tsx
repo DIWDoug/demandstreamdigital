@@ -4,6 +4,7 @@ import { ArrowRight, Loader2, CheckCircle, ChevronLeft } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import PhoneInput from "@/components/ui/phone-input";
+import { isValidPhone } from "@/lib/validation/phone";
 import { Checkbox } from "@/components/ui/checkbox";
 import { serviceInterestOptions } from "@/data/servicesInterested";
 
@@ -58,6 +59,15 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     // Bot detection
     if (step1Data.honeypot) {
       setStep(2);
+      return;
+    }
+
+    if (!isValidPhone(step1Data.phone, step1Data.phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number to continue.",
+        variant: "destructive",
+      });
       return;
     }
 

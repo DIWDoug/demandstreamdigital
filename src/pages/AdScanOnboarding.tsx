@@ -9,6 +9,7 @@ import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 import { SITE_URL } from "@/lib/constants";
 import PhoneInput from "@/components/ui/phone-input";
+import { isValidPhone } from "@/lib/validation/phone";
 
 // Demand Stream credentials the client pastes into each platform
 const GRANT_INFO = {
@@ -118,6 +119,14 @@ const AdScanOnboarding = () => {
       toast({
         title: "Missing required fields",
         description: "Name, email, and company are required.",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (!isValidPhone(form.phone, form.phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number so we can confirm access.",
         variant: "destructive",
       });
       return;
