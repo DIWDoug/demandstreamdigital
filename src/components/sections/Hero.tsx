@@ -1,19 +1,12 @@
-import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import TopoTexture from "@/components/TopoTexture";
 
 const Hero = () => {
-  const [website, setWebsite] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate(`/contact?website=${encodeURIComponent(website)}`);
-  };
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f9f9]">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#0D1B2A]">
       <TopoTexture opacity={0.12} />
 
       {/* Visible gradient color washes */}
@@ -140,7 +133,7 @@ const Hero = () => {
           {/* Left column — Headline, copy & website input */}
           <div className="max-w-xl">
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-gray-900"
+              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
               style={{ lineHeight: "1.1" }}>Plumbing & HVAC Digital Marketing & AI Automation Company
 
 
@@ -153,7 +146,7 @@ const Hero = () => {
             </p>
 
             <div className="lg:hidden mb-6 animate-fade-in-up" style={{ animationDelay: "0.08s" }}>
-              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-surface-elevated shadow-2xl">
                 <iframe
                   src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
                   title="DemandStream Digital"
@@ -166,39 +159,30 @@ const Hero = () => {
             </div>
 
             <p
-              className="text-lg text-gray-600 leading-relaxed mb-4 animate-fade-in-up"
+              className="text-lg text-white/80 leading-relaxed mb-4 animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}>We help plumbing and HVAC companies generate more booked service calls. SEO, Google Maps, paid advertising, Local Services Ads, email marketing, AI Automation and website design, built as one connected system.
 
 
             </p>
             <p
-              className="text-sm text-gray-500 font-medium mb-10 animate-fade-in-up"
+              className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"
               style={{ animationDelay: "0.15s" }}>
 
               No generic home service marketing. Built for plumbing and HVAC companies only.
             </p>
 
-            {/* Website input + CTA */}
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 max-w-lg animate-fade-in-up"
+            <div
+              className="animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}>
-
-              <input
-                type="text"
-                placeholder="Enter your website"
-                value={website}
-                onChange={(e) => setWebsite(e.target.value)}
-                className="flex-1 px-5 py-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base shadow-sm" />
-
               <button
-                type="submit"
-                className="btn-cta group whitespace-nowrap px-6 py-4">
-
-                Get Your Free Growth Audit
+                type="button"
+                onClick={() => navigate("/grow-qualifier")}
+                className="btn-cta group whitespace-nowrap px-6 py-4 inline-flex items-center">
+                Schedule a Consultation Now
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
-            </form>
+              <p className="text-xs text-white/50 mt-3">One plumbing client and one HVAC client per market.</p>
+            </div>
 
           </div>
 
