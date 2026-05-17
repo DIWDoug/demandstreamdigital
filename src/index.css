@@ -324,15 +324,19 @@
     background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface-dark)));
   }
 
-  .hero-shell {
-    @apply container mx-auto px-6 lg:px-8 pb-20 md:pb-28 relative z-10;
+  .hero-offset {
+    @apply pb-20 md:pb-28;
     padding-top: 50px;
   }
 
   @media (min-width: 768px) {
-    .hero-shell {
+    .hero-offset {
       padding-top: 72px;
     }
+  }
+
+  .hero-shell {
+    @apply hero-offset container mx-auto px-6 lg:px-8 relative z-10;
   }
 
   /* Light section — Off-white #F7F8FA per design system */
