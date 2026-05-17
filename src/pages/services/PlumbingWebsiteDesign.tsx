@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import ServiceHubHero from "@/components/services/ServiceHubHero";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import ServiceFitQualifierSection from "@/components/services/generic/ServiceFitQualifierSection";
@@ -131,73 +132,27 @@ const PlumbingWebsiteDesign = () => {
       <Header />
 
       {/* HERO */}
-      <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20 hidden sm:block">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-        </div>
-        <div className="absolute inset-0 opacity-[0.05]" style={{
-          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }} />
-        <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-28 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left column */}
-            <div>
-              <nav className="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
-                <Link to="/" className="text-text-muted hover:text-foreground transition-colors">Home</Link>
-                <span className="text-text-muted">/</span>
-                <Link to="/website-design" className="text-text-muted hover:text-foreground transition-colors">Website Design</Link>
-                <span className="text-text-muted">/</span>
-                <span className="text-accent-blue">Plumbing</span>
-              </nav>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-foreground mb-4 leading-tight">
-                Plumbing Website Design
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-cta mb-6 leading-tight">
-                Built to Rank and Convert
-              </p>
-              <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                Trade-specific website structure for plumbing companies that want more booked service calls, not just more traffic.
-              </p>
-              <div className="max-w-xl mb-4">
-                <p className="text-base text-text-secondary leading-relaxed mb-4">
-                  Most plumbing websites are built like brochures. A services page. A contact form. Some stock photos of a truck. They look reasonable. They don't generate calls.
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {[
-                    "Separate pages for emergency drain, water heater, repipe, and sewer. No catch-all.",
-                    "Aligned to your GBP service catalog so Maps and web reinforce each other",
-                    "AI-ready structure: answer blocks and FAQs for the actual questions homeowners ask",
-                    "Call-first UX with emergency reassurance above the fold on mobile",
-                    "Built to activate plumbing SEO and paid advertising from day one",
-                    "ServiceTitan-compatible: booking flow and call tracking ready at launch",
-                  ].map((b, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
-                      <span className="text-cta mt-0.5">—</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="text-sm text-text-muted">Plumbing companies only. No general contractors.</p>
-            </div>
-            {/* Right column — form card */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-              <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
-                <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
-                <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
-                <TwoStepContactForm
-                  formType="plumbing_web_design_hero"
-                  submitButtonText="Claim My Territory"
-                  step1ButtonText="Claim My Territory"
-                />
-                <p className="text-xs text-text-muted text-center mt-4">One plumbing company per market.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHubHero
+        title="Plumbing Website Design"
+        heroSubtitle="Built to Rank and Convert"
+        breadcrumbs={[
+          { label: "Website Design", href: "/website-design" },
+          { label: "Plumbing" },
+        ]}
+        description={{
+          intro:
+            "Most plumbing websites are built like brochures. A services page. A contact form. Some stock photos of a truck. They look reasonable. They don't generate calls.",
+          bullets: [
+            "Separate pages for emergency drain, water heater, repipe, and sewer. No catch-all.",
+            "Aligned to your GBP service catalog so Maps and web reinforce each other",
+            "AI-ready structure: answer blocks and FAQs for the actual questions homeowners ask",
+            "Call-first UX with emergency reassurance above the fold on mobile",
+            "Built to activate plumbing SEO and paid advertising from day one",
+            "ServiceTitan-compatible: booking flow and call tracking ready at launch",
+          ],
+          closing: "Plumbing companies only. No general contractors.",
+        }}
+      />
 
       <ServiceHubAnchorNav items={anchorItems} />
 
