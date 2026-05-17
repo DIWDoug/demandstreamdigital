@@ -213,6 +213,14 @@ const HeroForm = () => {
             className={inputClass}
           />
 
+          {/* Phone */}
+          <PhoneInput
+            value={formData.phone}
+            onChange={(phone) => setFormData({ ...formData, phone })}
+            countryCode={formData.phoneCountryCode}
+            onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
+            required
+          />
 
 
           {/* Website (pre-filled, editable) */}
