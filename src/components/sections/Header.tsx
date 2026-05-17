@@ -121,16 +121,6 @@ const Header = () => {
     { label: "Testimonials", href: "/testimonials", isRoute: true },
     { label: "Blog", href: "/our-blog", isRoute: true },
   ];
-  const partnerToolsLinks = [
-    { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", description: "Estimate monthly SEO investment" },
-    { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", description: "Show clients their marketing ROI" },
-    { label: "Social Media ROI Calculator", href: "/partner-tools/social-media-roi-calculator", description: "Calculate social media campaign ROI" },
-    { label: "Investment Calculator", href: "/partner-tools/investment-calculator", description: "Scope monthly service costs" },
-    { label: "Ad Budget Calculator", href: "/partner-tools/ad-budget-calculator", description: "Project ad campaign results" },
-    { label: "Email Marketing Calculator", href: "/partner-tools/email-calculator", description: "Calculate email ROI potential" },
-    { label: "Content Marketing Calculator", href: "/partner-tools/content-marketing-calculator", description: "Calculate content ROI" },
-    { label: "AI Ready Check", href: "/partner-tools/ai-ready-check", description: "Scan website AI compatibility" },
-  ];
 
   const navLinkClass =
     "px-3 py-2 text-[15px] font-medium text-white/85 hover:text-white transition-colors whitespace-nowrap";
