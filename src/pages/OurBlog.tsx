@@ -292,7 +292,7 @@ const OurBlog = () => {
                 <p className="text-text-secondary mb-4">
                   {searchQuery
                     ? `No articles match "${searchQuery}"`
-                    : "We're preparing expert content for agency growth."}
+                    : "We're preparing new articles for plumbing and HVAC companies."}
                 </p>
                 {searchQuery && (
                   <button
