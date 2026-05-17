@@ -68,7 +68,7 @@ const HVACReporting = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-16">
+      <div className="pt-8">
         <ServiceHubHero
           title={hvacReportingConfig.title}
           heroSubtitle="Built to Track Booked Calls and Revenue"
