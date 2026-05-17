@@ -261,8 +261,12 @@ const AdScanOnboarding = () => {
                 <Button type="submit" size="lg" disabled={submitting || submitted} className="w-full md:w-auto">
                   {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
-                <p className="text-xs text-text-muted mt-3">
+                <p className="text-xs text-text-muted mt-3 leading-relaxed">
                   You can send this now and finish the steps below when you have time. We start the scan when all five are done.
+                  By providing your phone number and submitting this form, you agree to receive marketing emails and SMS
+                  messages from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent
+                  is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP
+                  for help or STOP to unsubscribe.
                 </p>
               </div>
             </form>
