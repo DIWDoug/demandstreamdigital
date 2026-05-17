@@ -10,7 +10,6 @@ import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 const blogCategories = [
   { name: "Trade SEO", slug: "white-label-seo" },
   { name: "Local SEO", slug: "local-seo" },
-  { name: "Agency Growth", slug: "agency-growth" },
   { name: "Paid Media", slug: "paid-media" },
   { name: "Content Marketing", slug: "content-marketing" },
   { name: "Email Marketing", slug: "email-marketing" },
@@ -19,7 +18,6 @@ const blogCategories = [
 const categoryLabels: Record<string, string> = {
   'white-label-seo': 'Trade SEO',
   'local-seo': 'Local SEO',
-  'agency-growth': 'Agency Growth',
   'paid-media': 'Paid Media',
   'content-marketing': 'Content Marketing',
   'email-marketing': 'Email Marketing',

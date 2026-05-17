@@ -52,7 +52,6 @@ const getPostAuthor = (slug: string): Author => {
 const categoryLabels: Record<string, string> = {
   'white-label-seo': 'Trade SEO',
   'local-seo': 'Local SEO',
-  'agency-growth': 'Agency Growth',
   'paid-media': 'Paid Media',
   'content-marketing': 'Content Marketing',
   'email-marketing': 'Email Marketing',
@@ -645,12 +644,6 @@ const BlogPostPage = () => {
                         {categoryLabels[blog.category] || blog.category}
                       </Link>
                     )}
-                    <Link 
-                      to="/blog?category=agency-growth"
-                      className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
-                    >
-                      Agency Growth
-                    </Link>
                     <Link 
                       to="/blog"
                       className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"

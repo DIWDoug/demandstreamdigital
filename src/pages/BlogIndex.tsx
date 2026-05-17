@@ -166,7 +166,7 @@ export default function BlogIndex() {
               <div className="text-center py-16">
                 <BookOpen className="w-16 h-16 text-border mx-auto mb-4" />
                 <h2 className="text-2xl font-semibold text-foreground mb-2">Coming Soon</h2>
-                <p className="text-text-secondary">We’re working on expert content for agency growth. Check back soon.</p>
+                <p className="text-text-secondary">We’re publishing new articles for plumbing and HVAC companies. Check back soon.</p>
               </div>
             ) : (
               <div className="space-y-6">

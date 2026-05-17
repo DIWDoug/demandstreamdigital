@@ -43,7 +43,7 @@ const ContinuingEducation = () => {
     { name: "Single Grain", focus: "Digital Marketing" },
     { name: "Darryl Rosser", focus: "SEO Best Practices" },
     { name: "Matthew Woodward", focus: "Link Building & Outreach" },
-    { name: "Josh Nelson", focus: "Agency Growth" },
+    { name: "Josh Nelson", focus: "Home Services Marketing" },
   ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
