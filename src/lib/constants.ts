@@ -4,8 +4,8 @@
 export const SITE_URL = "https://demandstreamdigital.com";
 
 // Contact Information
-export const PHONE_NUMBER = "+1 (214) 307-2995";
-export const PHONE_NUMBER_RAW = "+12143072995";
+export const PHONE_NUMBER = "+1 (682) 345-9957";
+export const PHONE_NUMBER_RAW = "+16823459957";
 export const PHONE_HREF = `tel:${PHONE_NUMBER_RAW}`;
 export const EMAIL = "hello@demandstreamdigital.com";
 

@@ -279,7 +279,7 @@ const Terms = () => {
                 <p className="text-text-secondary">4849 Greenville Ave, Suite 100-176</p>
                 <p className="text-text-secondary">Dallas, TX 75206</p>
                 <p className="text-text-secondary">United States</p>
-                <p className="text-text-secondary mt-3">Phone: +1 214-307-2995</p>
+                <p className="text-text-secondary mt-3">Phone: +1 682-345-9957</p>
                 <p className="text-text-secondary">Email: hello@demandstreamdigital.com</p>
                 <p className="text-text-secondary">
                   Website:{" "}
