@@ -15,6 +15,7 @@ import {
   Star,
 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import ServiceTestimonialsSection from "@/components/services/generic/ServiceTestimonialsSection";
 import heroImg from "@/assets/ad-scan-hero.png";
 import heroAlt from "@/assets/ad-scan-hvac.png";
 import dougHeadshot from "@/assets/doug-bryson-headshot-2.jpeg";
