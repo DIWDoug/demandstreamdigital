@@ -7,29 +7,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: "#0D1B2A" }}>
-      <TopoTexture opacity={0.04} />
-
-      {/* Subtle dark gradient washes */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div
-          className="absolute rounded-full blur-[120px]"
-          style={{
-            width: '55%',
-            height: '60%',
-            top: '-15%',
-            left: '-5%',
-            background: 'radial-gradient(ellipse at center, hsla(210, 60%, 18%, 0.5) 0%, transparent 70%)'
-          }} />
-        <div
-          className="absolute rounded-full blur-[100px]"
-          style={{
-            width: '45%',
-            height: '50%',
-            top: '30%',
-            right: '-10%',
-            background: 'radial-gradient(ellipse at center, hsla(210, 55%, 14%, 0.45) 0%, transparent 70%)'
-          }} />
-      </div>
+      <TopoTexture opacity={0.03} />
 
       {/* Fine grid texture overlay for depth */}
       <div
