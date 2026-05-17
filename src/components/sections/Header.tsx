@@ -269,55 +269,6 @@ const Header = () => {
                 )
               )}
 
-              {/* Partner Tools dropdown */}
-              <div className="relative" ref={toolsMenuRef}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsToolsMenuOpen(!isToolsMenuOpen);
-                    setIsMegaMenuOpen(false);
-                  }}
-                  className={`${navLinkClass} flex items-center gap-1`}
-                  aria-haspopup="true"
-                  aria-expanded={isToolsMenuOpen}
-                >
-                  Partner Tools
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${isToolsMenuOpen ? "rotate-180" : ""}`}
-                    aria-hidden="true"
-                  />
-                </button>
-
-                {isToolsMenuOpen && (
-                  <div
-                    className="absolute top-full right-0 mt-1 w-72 rounded-lg shadow-2xl overflow-hidden animate-fade-in"
-                    style={{ backgroundColor: "#0D1B2A", border: "1px solid rgba(255,255,255,0.1)" }}
-                  >
-                    <div className="p-2">
-                      {partnerToolsLinks.map((tool, i) => (
-                        <Link
-                          key={i}
-                          to={tool.href}
-                          onClick={() => setIsToolsMenuOpen(false)}
-                          className="block px-4 py-2.5 rounded-md hover:bg-white/5 transition-colors"
-                        >
-                          <p className="text-[13px] font-medium text-white">{tool.label}</p>
-                          <p className="text-[12px] text-white/50 mt-0.5">{tool.description}</p>
-                        </Link>
-                      ))}
-                      <div className="mt-2 pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                        <Link
-                          to="/partner-tools"
-                          onClick={() => setIsToolsMenuOpen(false)}
-                          className="block text-center text-[13px] font-medium text-[#4A90B8] hover:text-white transition-colors py-1.5"
-                        >
-                          View All Partner Tools →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
             </nav>
 
             {/* ── Right: Phone + CTA ── */}
