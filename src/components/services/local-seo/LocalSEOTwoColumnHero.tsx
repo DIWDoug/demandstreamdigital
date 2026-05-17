@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
