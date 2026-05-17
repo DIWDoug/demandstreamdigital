@@ -76,11 +76,11 @@ const Reporting = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero 
-          title="Reporting & Analytics"
-          description="You should never wonder where your marketing dollars are going. We provide clear, honest reporting that proves value, builds trust, and shows exactly what's driving calls and booked jobs."
+          title="Reporting & Analytics for Plumbing & HVAC Companies"
+          heroHeadline="Reporting & Analytics for Plumbing & HVAC Companies"
+          heroSubtitle="See What's Driving Booked Calls and Revenue"
+          description="You should never wonder where your marketing dollars go. We deliver clear, honest reporting that ties every channel to booked jobs and revenue, so you can scale what works and cut what doesn't."
           breadcrumbs={breadcrumbItems}
-          heroHeadline="Reporting & Analytics for"
-          heroSubtitle="Plumbing & HVAC Companies"
         />
       </div>
       

@@ -55,11 +55,11 @@ const PlumbingReporting = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero
-          title="Plumbing Reporting & Analytics"
-          description="For plumbing companies, reporting connects marketing spend to booked calls and revenue. We build dashboards that show which campaigns drive drain cleaning, water heater, and sewer line jobs so you know exactly where to invest."
+          title="Reporting & Analytics for Plumbing Companies"
+          heroHeadline="Reporting & Analytics for Plumbing Companies"
+          heroSubtitle="See What's Driving Booked Calls and Revenue"
+          description="You should never wonder which channels are filling your plumbing schedule. We tie every call and booked job back to the campaign that created it, so you can scale the channels that drive drain, water heater, and sewer revenue."
           breadcrumbs={breadcrumbItems}
-          heroHeadline="Reporting & Analytics for"
-          heroSubtitle="Plumbing Companies"
           bgImage={heroBgPlumbing}
         />
       </div>

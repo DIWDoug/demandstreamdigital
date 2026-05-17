@@ -79,12 +79,12 @@ const GoogleMaps = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero 
-          title={googleMapsConfig.title}
-          description={googleMapsConfig.hero.subheadline}
+          title="Google Business Pro SEO for Plumbing & HVAC Companies"
+          heroHeadline="Google Business Pro SEO for Plumbing & HVAC Companies"
+          heroSubtitle="Earn and Hold Google Maps Visibility"
+          description="Your Google Business Profile drives the calls competitors never see you compete for. We optimize your profile, reviews, and local signals to rank in the map pack across every service area you cover."
           breadcrumbs={breadcrumbItems}
           integrationNote={googleMapsConfig.hero.integrationNote}
-          heroHeadline={googleMapsConfig.hero.headline}
-          heroSubtitle={googleMapsConfig.hero.highlightedText}
         />
       </div>
       

@@ -71,12 +71,12 @@ const HVACGoogleMaps = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero
-          title={hvacGoogleMapsConfig.title}
-          description={hvacGoogleMapsConfig.hero.subheadline}
+          title="Google Business Pro SEO for HVAC Companies"
+          heroHeadline="Google Business Pro SEO for HVAC Companies"
+          heroSubtitle="Earn and Hold Google Maps Visibility"
+          description="Homeowners searching for emergency AC or furnace help call the top 3 results in the map pack. We optimize your Google Business Profile, reviews, and local signals so HVAC customers see and call you first."
           breadcrumbs={breadcrumbItems}
           integrationNote={hvacGoogleMapsConfig.hero.integrationNote}
-          heroHeadline={hvacGoogleMapsConfig.hero.headline}
-          heroSubtitle={hvacGoogleMapsConfig.hero.highlightedText}
         />
       </div>
 

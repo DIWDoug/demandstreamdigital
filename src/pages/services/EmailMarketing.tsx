@@ -72,11 +72,11 @@ const EmailMarketing = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero
-          title={emailMarketingConfig.title}
-          description={emailMarketingConfig.hero.subheadline}
+          title="Email Marketing for Plumbing & HVAC Companies"
+          heroHeadline="Email Marketing for Plumbing & HVAC Companies"
+          heroSubtitle="Turn Past Customers Into Repeat Revenue"
+          description="Your existing customer list is the cheapest lead source you own. We build maintenance reminders, seasonal campaigns, and review requests that re-activate past customers and keep your trucks full between peak seasons."
           breadcrumbs={breadcrumbItems}
-          heroHeadline={emailMarketingConfig.hero.headline}
-          heroSubtitle={emailMarketingConfig.hero.highlightedText}
         />
       </div>
       
