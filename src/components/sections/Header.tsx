@@ -438,19 +438,6 @@ const Header = () => {
                 </Link>
               ))}
 
-              {/* Partner Tools */}
-              <Link
-                to="/partner-tools"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
-                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
-              >
-                <span
-                  className="w-1 h-5 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: "#C0392B" }}
-                />
-                Partner Tools
-              </Link>
 
               {/* Phone + CTA */}
               <div className="pt-6 space-y-4">
