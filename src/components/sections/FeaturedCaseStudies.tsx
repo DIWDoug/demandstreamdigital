@@ -37,7 +37,7 @@ const FeaturedCaseStudies = () => {
         </div>
 
         {/* Case Study Cards */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto mb-14">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto mb-14">
           {featuredStudies.map((study, index) => {
             if (!study) return null;
             const Icon = getIcon(index);
@@ -101,6 +101,48 @@ const FeaturedCaseStudies = () => {
               </Link>);
 
           })}
+
+          <Link
+            to="/contact"
+            className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10"
+          >
+            <div className="relative aspect-[16/9] overflow-hidden bg-surface-elevated">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/15 via-background to-primary/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <Award className="w-4 h-4 text-primary" />
+                  <span className="text-xs text-white/70 uppercase tracking-wider">
+                    Plumbing or HVAC
+                  </span>
+                </div>
+                <div className="text-4xl font-bold text-white">
+                  Available
+                </div>
+                <div className="text-base text-white/80 mt-0.5">
+                  Your Market
+                </div>
+              </div>
+            </div>
+
+            <div className="p-7">
+              <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Your Market
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                This market is still open. Be the only client we take here.
+              </p>
+              <div className="flex items-center justify-between text-sm pt-4 mt-4 border-t border-border/50">
+                <span className="text-muted-foreground">Plumbing or HVAC</span>
+                <span className="text-primary font-semibold">Claim It</span>
+              </div>
+            </div>
+
+            <div className="absolute top-5 right-5 w-9 h-9 bg-primary/10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <ArrowRight className="w-4 h-4 text-primary" />
+            </div>
+          </Link>
         </div>
 
         {/* CTA */}
