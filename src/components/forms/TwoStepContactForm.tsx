@@ -49,6 +49,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
   const [step2Data, setStep2Data] = useState({
     revenue: "",
     servicesInterested: [] as string[],
+    helpMessage: "",
   });
 
   const handleStep1Submit = async (e: React.FormEvent) => {
