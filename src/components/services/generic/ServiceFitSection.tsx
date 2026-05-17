@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
+import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 export interface FitItem {
   point: string;
   detail?: string;

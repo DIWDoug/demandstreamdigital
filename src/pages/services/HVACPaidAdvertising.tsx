@@ -17,6 +17,7 @@ import HVACPaidAdsFAQ from "@/components/services/hvac-paid-advertising/HVACPaid
 import HVACPaidAdsExclusivity from "@/components/services/hvac-paid-advertising/HVACPaidAdsExclusivity";
 import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/HVACPaidAdsContactForm";
 
+import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
 );
