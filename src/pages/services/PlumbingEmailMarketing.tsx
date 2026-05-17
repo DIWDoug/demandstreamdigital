@@ -53,7 +53,7 @@ const PlumbingEmailMarketing = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-16">
+      <div className="pt-8">
         <ServiceHubHero
           title="Plumbing Email Marketing"
           description="For plumbing businesses, email turns one-time service calls into repeat customers and keeps your business top-of-mind between visits. We build email programs that drive maintenance plan sign-ups, water heater follow-ups, and reactivation revenue."
