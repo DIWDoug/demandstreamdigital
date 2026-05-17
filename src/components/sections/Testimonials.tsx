@@ -17,7 +17,22 @@ const testimonials: Array<{
   source: string;
   company: string;
   rating: number;
-}> = [];
+}> = [
+  {
+    quote: "I would highly recommend Doug to any business looking to grow with SEO. He is a great business partner and excellent communicator. My rankings have shown tremendous growth in a very short period of time.",
+    author: "Service Business Owner",
+    company: "Local Operator",
+    source: "Google Review",
+    rating: 5,
+  },
+  {
+    quote: "Doug and his team have been great to work with. The monthly reporting really lets me see what they're doing on a monthly basis, and the results have been great. I really enjoy working with such a professional company.",
+    author: "Home Services Owner",
+    company: "Local Operator",
+    source: "Google Review",
+    rating: 5,
+  },
+];
 
 const Testimonials = () => {
   const sectionRef = useScrollReveal();
