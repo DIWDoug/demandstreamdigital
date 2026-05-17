@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { PHONE_NUMBER, PHONE_HREF, ADDRESS, EMAIL } from "@/lib/constants";
 import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
 import { getContactPageSchema } from "@/lib/schema";
+import HeroBullets from "@/components/HeroBullets";
 
 const testimonials = [
   {
@@ -61,9 +62,17 @@ const Contact = () => {
                   <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                     Start a <span className="text-accent-blue">Conversation</span>
                   </h1>
-                  <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                    Whether you're looking to grow your plumbing or HVAC business, or you need a marketing partner who understands your industry, we're here to help. Tell us about your business—we'll take it from there.
+                  <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+                    Whether you're looking to grow your plumbing or HVAC business, or you need a marketing partner who understands your industry, we're here to help. Tell us about your business, we'll take it from there.
                   </p>
+                  <HeroBullets
+                    variant="dark"
+                    items={[
+                      "Reply within 1 business day",
+                      "Free 30 minute market check",
+                      "No long-term contract, no setup fee",
+                    ]}
+                  />
 
                   {/* Contact Info */}
                   <div className="space-y-4 mb-8">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, DollarSign, Wrench, Droplets, Flame, Wind, Gauge } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import HeroBullets from "@/components/HeroBullets";
 
 type JobCategory = {
   id: string;
@@ -100,9 +101,20 @@ const JobCostEstimator = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Instant Job Cost Estimator
               </h1>
-              <p className="text-lg text-text-secondary max-w-xl mx-auto">
+              <p className="text-lg text-text-secondary max-w-xl mx-auto mb-6">
                 Get a ballpark cost range for common plumbing and HVAC jobs in your area. No signup required.
               </p>
+              <div className="max-w-md mx-auto text-left">
+                <HeroBullets
+                  variant="light"
+                  items={[
+                    "Built from real Plumbing and HVAC job data",
+                    "$120 per hour OEM baseline rate",
+                    "Free, no email required to see results",
+                  ]}
+                  className="mb-0"
+                />
+              </div>
             </div>
 
             {/* Step: Category */}
