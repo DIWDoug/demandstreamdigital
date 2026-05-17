@@ -83,13 +83,13 @@ const AdScanThanks = () => {
                   <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-accent-blue">
                     Hear it from a customer
                   </p>
-                  <div className="w-full aspect-square rounded-md overflow-hidden bg-black border border-border shadow-lg flex items-center justify-center">
+                  <div className="mx-auto w-full max-w-[240px] aspect-[9/16] rounded-md overflow-hidden bg-black border border-border shadow-lg">
                     <video
                       src="/videos/doug-testimonial.mp4"
                       controls
                       preload="metadata"
                       playsInline
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain"
                     />
                   </div>
                   <p className="mt-2 text-center text-[11px] text-text-muted">
