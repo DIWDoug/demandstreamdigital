@@ -57,7 +57,7 @@ const WebDesign = () => {
       <Header />
 
       {/* 01. HERO */}
-      <div className="pt-16">
+      <div className="pt-[28px]">
         <WebDesignHero />
       </div>
 

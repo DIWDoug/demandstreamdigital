@@ -69,7 +69,7 @@ const HVACGoogleMaps = () => {
       <Header />
 
       {/* 1. HERO */}
-      <div className="pt-16">
+      <div className="pt-[28px]">
         <ServiceHubHero
           title={hvacGoogleMapsConfig.title}
           description={hvacGoogleMapsConfig.hero.subheadline}

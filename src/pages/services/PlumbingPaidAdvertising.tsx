@@ -78,7 +78,7 @@ const PlumbingPaidAdvertising = () => {
       <Header />
 
       {/* 01. HERO */}
-      <div className="pt-16">
+      <div className="pt-[28px]">
         <PlumbingPaidAdsHero />
       </div>
 

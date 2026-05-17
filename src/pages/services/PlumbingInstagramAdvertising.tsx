@@ -41,7 +41,7 @@ const PlumbingInstagramAdvertising = () => {
         schemaJson={pageSchema}
       />
       <Header />
-      <div className="pt-16"><PlumbingInstagramHero /></div>
+      <div className="pt-[28px]"><PlumbingInstagramHero /></div>
       <ServiceHubAnchorNav items={anchorItems} />
       <PlumbingInstagramMainContent />
       <PlumbingInstagramFitExclusivity />
