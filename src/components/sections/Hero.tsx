@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import TopoTexture from "@/components/TopoTexture";
 
 const Hero = () => {
   const navigate = useNavigate();
