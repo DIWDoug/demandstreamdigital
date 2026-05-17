@@ -48,15 +48,14 @@ const AdScanThanks = () => {
               <div className="rounded-lg border border-border bg-surface-elevated p-6">
                 <div className="mb-6 flex items-center gap-3 text-accent-blue">
                   <Calendar className="h-5 w-5" />
-                  <p className="font-semibold">What happens on the call</p>
+                  <p className="font-semibold">Your 15 minute kickoff, at a glance</p>
                 </div>
                 <div className="space-y-4 text-sm text-text-secondary">
-                  <p>1. We confirm your Google Ads, Meta, GBP, and tracking accounts.</p>
-                  <p>2. We walk you through each read only access grant, live.</p>
-                  <p>3. We set the date your scored Ad Scan report hits your inbox.</p>
+                  <p>1. Map every channel driving calls today, so nothing in the scan gets missed.</p>
+                  <p>2. Get read only access live in under 10 minutes. No passwords, no admin changes.</p>
+                  <p>3. Leave with a locked delivery date for your scored report, typically 5 business days out.</p>
                   <p className="text-text-muted">
-                    Want to start now? You can grant access on your own at the
-                    onboarding page below.
+                    Prefer to move now? Grant access yourself on the onboarding page below.
                   </p>
                 </div>
                 <a
@@ -103,15 +102,14 @@ const AdScanThanks = () => {
             <div className="mt-16 rounded-xl border border-border bg-surface-elevated p-8 md:p-12 shadow-2xl">
               <div className="text-center max-w-3xl mx-auto">
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-accent-blue">
-                  Your 15 minute kickoff call
+                  15 minutes. 3 outcomes.
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Here is exactly what happens on the call.
+                  You hang up with a scoped scan and a delivery date.
                 </h2>
                 <p className="mt-4 text-lg text-text-secondary">
-                  No pitch, no fluff. We confirm your accounts, walk you through read only
-                  access grants live, and lock in the date your scored Ad Scan report hits
-                  your inbox.
+                  No pitch. No discovery loop. Three working outcomes inside one call,
+                  with your scored report in your inbox within 5 business days.
                 </p>
               </div>
 
@@ -121,14 +119,14 @@ const AdScanThanks = () => {
                     <ShieldCheck className="h-6 w-6" />
                   </div>
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
-                    Step 1
+                    Minutes 0 to 5
                   </p>
                   <h3 className="mt-2 text-xl font-bold text-foreground">
-                    Confirm your accounts
+                    Scope the channels driving your calls
                   </h3>
                   <p className="mt-3 text-sm text-text-secondary">
-                    We verify your Google Ads, Meta, Google Business Profile, and tracking
-                    setup so the scan covers every channel driving calls today.
+                    Outcome: a confirmed list of every paid, organic, and map channel
+                    feeding your phone, so the scan reflects how leads actually arrive.
                   </p>
                 </div>
 
@@ -137,14 +135,14 @@ const AdScanThanks = () => {
                     <Link2 className="h-6 w-6" />
                   </div>
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
-                    Step 2
+                    Minutes 5 to 12
                   </p>
                   <h3 className="mt-2 text-xl font-bold text-foreground">
-                    Grant read only access, live
+                    Hand over view only access, the safe way
                   </h3>
                   <p className="mt-3 text-sm text-text-secondary">
-                    We screen share and walk you through each access grant. No passwords,
-                    no admin handoff, no changes to your accounts. View only.
+                    Outcome: every grant approved on screen with you. No passwords change
+                    hands, no admin rights move, nothing inside your accounts gets touched.
                   </p>
                 </div>
 
@@ -153,14 +151,14 @@ const AdScanThanks = () => {
                     <CalendarCheck className="h-6 w-6" />
                   </div>
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent-blue">
-                    Step 3
+                    Minutes 12 to 15
                   </p>
                   <h3 className="mt-2 text-xl font-bold text-foreground">
-                    Lock the delivery date
+                    Walk away with a delivery date
                   </h3>
                   <p className="mt-3 text-sm text-text-secondary">
-                    We set the date your scored Ad Scan report lands in your inbox,
-                    typically within 5 business days of the call.
+                    Outcome: a calendar-confirmed drop date for your scored report,
+                    typically 5 business days out, with the exact KPIs we will grade against.
                   </p>
                 </div>
               </div>
