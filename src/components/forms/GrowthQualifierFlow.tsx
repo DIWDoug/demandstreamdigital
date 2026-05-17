@@ -492,17 +492,7 @@ const GrowthQualifierFlow = () => {
                 />
               </div>
 
-              <div>
-                <label className="mb-2 block text-sm font-semibold text-white">
-                  Phone number<span className="text-[#E63946]">*</span>
-                </label>
-                <PhoneInput
-                  value={contact.phone}
-                  onChange={(phone) => setContact((p) => ({ ...p, phone }))}
-                  countryCode={contact.phoneCountryCode}
-                  onCountryCodeChange={(phoneCountryCode) => setContact((p) => ({ ...p, phoneCountryCode }))}
-                />
-              </div>
+
 
               <div>
                 <label className="mb-1 block text-sm font-semibold text-white">

@@ -78,7 +78,7 @@ const FreeAudit = () => {
 
     if (honeypot) return; // bot
 
-    if (!url.trim() || !name.trim() || !email.trim() || !phone.trim()) {
+    if (!url.trim() || !name.trim() || !email.trim()) {
       toast({
         title: "Missing fields",
         description: "Please fill in all fields.",
@@ -244,20 +244,7 @@ const FreeAudit = () => {
                       />
                     </div>
 
-                    <div>
-                      <Label>Phone Number</Label>
-                      <PhoneInput
-                        value={phone}
-                        onChange={setPhone}
-                        countryCode={countryCode}
-                        onCountryCodeChange={setCountryCode}
-                        countryId={countryId}
-                        onCountryIdChange={setCountryId}
-                        placeholder="(555) 123-4567"
-                        required
-                        className="mt-1"
-                      />
-                    </div>
+
 
                     <Button
                       type="submit"
