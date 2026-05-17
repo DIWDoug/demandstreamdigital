@@ -1,5 +1,6 @@
 import { ArrowRight, Layout, Shield, Zap, Bot, MousePointerClick, Phone, Palette, X, CheckCircle2, AlertTriangle, TrendingUp, MapPin, Smartphone } from "lucide-react";
 import DeviceMockupShowcase from "@/components/services/web-design/DeviceMockupShowcase";
+import ServiceHubHero from "@/components/services/ServiceHubHero";
 import WaveDivider from "@/components/WaveDivider";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
