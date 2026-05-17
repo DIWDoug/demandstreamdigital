@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import bookCover from "@/assets/ebook-cover.jpg";
 import StreamTexture from "@/components/StreamTexture";
+import { EmailMarketingConsent } from "@/components/legal/SmsConsentText";
 
 
 const LocalGrowthEngine = () => {
