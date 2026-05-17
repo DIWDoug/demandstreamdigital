@@ -5,7 +5,7 @@ import heroBgTrade from "@/assets/hero-bg-hvac.jpg";
 const HVACSearchAdsHero = () => {
   const breadcrumbs = [
     { label: "Services", href: "/#services" },
-    { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+    { label: "Paid Advertising", href: "/paid-marketing" },
     { label: "HVAC Paid Ads", href: "/hvac-paid-advertising" },
     { label: "HVAC Search Advertising" }
   ];

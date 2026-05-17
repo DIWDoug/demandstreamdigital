@@ -39,7 +39,7 @@ const anchorItems = [
 
 const metaTitle = "Plumbing & HVAC Paid Ads for Booked Calls | DSD";
 const metaDescription = "Google Ads, LSAs, and social ads built for plumbing and HVAC operators. Every campaign tied to booked calls and revenue, not clicks and impressions.";
-const canonicalUrl = `${SITE_URL}/hvac-and-plumbing-paid-ads`;
+const canonicalUrl = `${SITE_URL}/paid-marketing`;
 
 const PaidAdvertising = () => {
   const pageSchema = {

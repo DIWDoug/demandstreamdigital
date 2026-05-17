@@ -24,7 +24,7 @@ import { SITE_URL } from "@/lib/constants";
 const REPORTING_BIGGER_PICTURE_SERVICES = [
   { label: "Local SEO", href: "/hvac-and-plumbing-seo" },
   { label: "Google Maps / GBP", href: "/plumbing-google-maps" },
-  { label: "Paid Advertising", href: "/hvac-and-plumbing-paid-ads" },
+  { label: "Paid Advertising", href: "/paid-marketing" },
   { label: "Content Marketing", href: "/plumbing-content-marketing" },
   { label: "Email Marketing", href: "/plumbing-email-marketing" },
   { label: "Web Design", href: "/plumbing-and-hvac-web-design" },

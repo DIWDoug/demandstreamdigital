@@ -33,7 +33,7 @@ const services: Service[] = [
     id: "paid-media",
     title: "Paid Media",
     description: "Accelerate results with Google Ads and Meta campaigns.",
-    href: "/hvac-and-plumbing-paid-ads"
+    href: "/paid-marketing"
   },
   {
     icon: Star,
@@ -68,7 +68,7 @@ const services: Service[] = [
     id: "retargeting",
     title: "Retargeting",
     description: "Stay top of mind with display and social retargeting.",
-    href: "/hvac-and-plumbing-paid-ads"
+    href: "/paid-marketing"
   }
 ];
 

@@ -26,7 +26,7 @@ const channels = [
   },
   {
     title: "Microsoft / Bing Advertising",
-    href: "/hvac-and-plumbing-paid-ads",
+    href: "/paid-marketing",
     bullets: [
       "Lower cost-per-click than Google in most markets",
       "Older homeowner demographic with higher install intent",
