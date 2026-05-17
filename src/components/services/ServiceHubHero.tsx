@@ -163,7 +163,7 @@ const ServiceHubHero = ({
 
           {/* Right column — Video */}
           <div
-            className="hidden animate-fade-in-up lg:block lg:pl-4"
+            className="hidden animate-fade-in-up lg:block lg:col-span-5 lg:pl-4"
             style={{ animationDelay: "0.2s" }}
           >
             <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
