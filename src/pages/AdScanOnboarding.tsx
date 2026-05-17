@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import SEOHead from "@/components/SEOHead";
 import { useToast } from "@/hooks/use-toast";
 import { SITE_URL } from "@/lib/constants";
+import PhoneInput from "@/components/ui/phone-input";
 
 // Demand Stream credentials the client pastes into each platform
 const GRANT_INFO = {
@@ -22,6 +23,7 @@ type FormState = {
   lastName: string;
   email: string;
   phone: string;
+  phoneCountryCode: string;
   company: string;
   website: string;
   googleAdsCid: string;
@@ -37,6 +39,7 @@ const initialForm: FormState = {
   lastName: "",
   email: "",
   phone: "",
+  phoneCountryCode: "+1",
   company: "",
   website: "",
   googleAdsCid: "",
@@ -204,6 +207,18 @@ const AdScanOnboarding = () => {
                 <Input id="email" type="email" required value={form.email} onChange={(e) => update("email", e.target.value)} />
               </div>
               <div>
+                <Label htmlFor="phone">Phone *</Label>
+                <div className="mt-1">
+                  <PhoneInput
+                    value={form.phone}
+                    onChange={(phone) => update("phone", phone)}
+                    countryCode={form.phoneCountryCode}
+                    onCountryCodeChange={(code) => update("phoneCountryCode", code)}
+                    required
+                  />
+                </div>
+              </div>
+              <div>
                 <Label htmlFor="company">Company *</Label>
                 <Input id="company" required value={form.company} onChange={(e) => update("company", e.target.value)} />
               </div>
@@ -246,8 +261,12 @@ const AdScanOnboarding = () => {
                 <Button type="submit" size="lg" disabled={submitting || submitted} className="w-full md:w-auto">
                   {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
-                <p className="text-xs text-text-muted mt-3">
+                <p className="text-xs text-text-muted mt-3 leading-relaxed">
                   You can send this now and finish the steps below when you have time. We start the scan when all five are done.
+                  By providing your phone number and submitting this form, you agree to receive marketing emails and SMS
+                  messages from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent
+                  is not a condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP
+                  for help or STOP to unsubscribe.
                 </p>
               </div>
             </form>

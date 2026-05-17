@@ -492,7 +492,18 @@ const GrowthQualifierFlow = () => {
                 />
               </div>
 
-
+              <div>
+                <label className="mb-1 block text-sm font-semibold text-white">
+                  Phone<span className="text-[#E63946]">*</span>
+                </label>
+                <PhoneInput
+                  value={contact.phone}
+                  onChange={(phone) => setContact((p) => ({ ...p, phone }))}
+                  countryCode={contact.phoneCountryCode}
+                  onCountryCodeChange={(code) => setContact((p) => ({ ...p, phoneCountryCode: code }))}
+                  required
+                />
+              </div>
 
               <div>
                 <label className="mb-1 block text-sm font-semibold text-white">
@@ -508,6 +519,15 @@ const GrowthQualifierFlow = () => {
                 />
               </div>
             </div>
+
+            <p className="mt-6 text-xs leading-relaxed text-white/60">
+              By providing your phone number and submitting this form, you agree to receive marketing emails and SMS messages
+              from Demand Stream Digital at the number provided, including messages sent by autodialer. Consent is not a
+              condition of any purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or
+              STOP to unsubscribe. View our{" "}
+              <a href="/privacy" className="underline hover:text-white">Privacy Policy</a> and{" "}
+              <a href="/terms" className="underline hover:text-white">Terms of Service</a>.
+            </p>
 
             <div className="mt-8 flex items-center justify-between gap-4">
               <button
