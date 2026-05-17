@@ -12,7 +12,6 @@ import {
   TrendingUp,
   AlertTriangle,
   Lock,
-  Star,
 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import ServiceTestimonialsSection from "@/components/services/generic/ServiceTestimonialsSection";
