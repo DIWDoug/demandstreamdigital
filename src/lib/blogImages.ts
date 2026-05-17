@@ -28,6 +28,12 @@ import infographicWhiteLabelFlow from '@/assets/blog/infographic-white-label-flo
 import infographicSeoHourlyRates from '@/assets/blog/infographic-seo-hourly-rates.png';
 import whiteLabelSeoBenefitsHero from '@/assets/blog/white-label-seo-benefits-hero.jpg';
 
+// Plumbing & HVAC blog featured images
+import plumbingHvacWebsiteLeadLeaks from '@/assets/blog/plumbing-hvac-website-lead-leaks-fixes.jpg';
+import lsaVsGoogleAdsPlumbingHvac from '@/assets/blog/lsa-vs-google-ads-plumbing-hvac.jpg';
+import costPerBookedCallPlumbingHvac from '@/assets/blog/cost-per-booked-call-plumbing-hvac-google-ads.jpg';
+import winGoogleMapPackPlumbingHvac from '@/assets/blog/win-google-map-pack-plumbing-hvac.jpg';
+
 const blogImageMap: Record<string, string> = {
   'white-label-seo-benefits': whiteLabelSeoBenefits,
   'white-label-local-ppc': whiteLabelLocalPpc,
@@ -53,6 +59,11 @@ const blogImageMap: Record<string, string> = {
   'infographic-white-label-flow': infographicWhiteLabelFlow,
   'infographic-seo-hourly-rates': infographicSeoHourlyRates,
   'white-label-seo-benefits-hero': whiteLabelSeoBenefitsHero,
+  // Plumbing & HVAC blog featured images
+  'plumbing-hvac-website-lead-leaks-fixes': plumbingHvacWebsiteLeadLeaks,
+  'lsa-vs-google-ads-plumbing-hvac': lsaVsGoogleAdsPlumbingHvac,
+  'cost-per-booked-call-plumbing-hvac-google-ads': costPerBookedCallPlumbingHvac,
+  'win-google-map-pack-plumbing-hvac': winGoogleMapPackPlumbingHvac,
 };
 
 /**
