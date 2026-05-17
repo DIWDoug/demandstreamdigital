@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 /**
- * TCPA / SMS consent diff-check
+ * TCPA / SMS + email marketing consent diff-check
  * ---------------------------------------------------------------------------
- * Guards two invariants across every lead form on the site:
+ * Guards three invariants across every lead capture on the site:
  *
  *   1. The canonical TCPA paragraph is defined exactly ONCE, inside
- *      <SmsConsentText> at src/components/legal/SmsConsentText.tsx.
- *   2. Each of the five lead forms renders <SmsConsentText> (i.e. nobody has
- *      forked or hand-pasted the legal copy back into a form file).
+ *      <SmsConsentText> at src/components/legal/SmsConsentText.tsx, and the
+ *      canonical email-only paragraph lives ONCE in <EmailMarketingConsent>
+ *      in the same file.
+ *   2. No form / lead-capture file inlines a forked copy of either paragraph.
+ *   3. Every SMS-collecting form renders <SmsConsentText />, and every
+ *      email-only signup renders <EmailMarketingConsent />.
  *
  * Run:  bun scripts/check-consent-text.mjs
  *       node scripts/check-consent-text.mjs
@@ -22,7 +25,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const CONSENT_COMPONENT = "src/components/legal/SmsConsentText.tsx";
 
-const FORMS = [
+// Forms that collect a phone number -> must render <SmsConsentText />.
+const SMS_FORMS = [
   "src/components/sections/HeroForm.tsx",
   "src/components/forms/GrowthQualifierFlow.tsx",
   "src/components/forms/TwoStepContactForm.tsx",
@@ -30,10 +34,15 @@ const FORMS = [
   "src/pages/AdScanOnboarding.tsx",
 ];
 
+// Email-only signups (newsletter / lead magnet) -> must render <EmailMarketingConsent />.
+const EMAIL_FORMS = [
+  "src/components/sections/LocalGrowthEngine.tsx",
+];
+
 /**
- * The canonical TCPA paragraph. Whitespace is collapsed before comparison so
- * JSX line-wraps do not cause false positives, but every word must match
- * byte-for-byte after collapse.
+ * Canonical TCPA paragraph (phone + SMS + email). Whitespace is collapsed
+ * before comparison so JSX line-wraps do not cause false positives, but every
+ * word must match byte-for-byte after collapse.
  */
 const CANONICAL_TCPA = `
   By providing your phone number and submitting this form, you agree to receive
@@ -41,6 +50,15 @@ const CANONICAL_TCPA = `
   provided, including messages sent by autodialer. Consent is not a condition
   of any purchase. Message and data rates may apply. Message frequency varies.
   Reply HELP for help or STOP to unsubscribe. View our
+`;
+
+/**
+ * Canonical email-only marketing consent paragraph rendered by
+ * <EmailMarketingConsent /> on newsletter / lead-magnet signups.
+ */
+const CANONICAL_EMAIL = `
+  By submitting, you agree to receive marketing emails from Demand Stream
+  Digital. You can unsubscribe at any time. See our
 `;
 
 const normalize = (s) => s.replace(/\s+/g, " ").trim();
@@ -53,41 +71,64 @@ const fail = (msg) => {
   console.log(`  FAIL  ${msg}`);
 };
 
-console.log("\nTCPA / SMS consent diff-check");
+console.log("\nTCPA / SMS + email consent diff-check");
 console.log("================================================================");
 
-// --- 1. Canonical text lives in SmsConsentText.tsx ---------------------------
-console.log(`\n[1/3] Canonical paragraph defined in ${CONSENT_COMPONENT}`);
 const componentSrc = read(CONSENT_COMPONENT);
 const componentNormalized = normalize(componentSrc);
-const canonicalNormalized = normalize(CANONICAL_TCPA);
+const canonicalTcpaNormalized = normalize(CANONICAL_TCPA);
+const canonicalEmailNormalized = normalize(CANONICAL_EMAIL);
 
-if (componentNormalized.includes(canonicalNormalized)) {
-  ok("canonical TCPA paragraph found in SmsConsentText");
+// --- 1. Canonical paragraphs live in the consent component ------------------
+console.log(`\n[1/5] Canonical paragraphs defined in ${CONSENT_COMPONENT}`);
+if (componentNormalized.includes(canonicalTcpaNormalized)) {
+  ok("canonical TCPA paragraph found in <SmsConsentText>");
 } else {
   fail(
-    "canonical TCPA paragraph NOT found in SmsConsentText. " +
+    "canonical TCPA paragraph NOT found in <SmsConsentText>. " +
       "Update CANONICAL_TCPA in this script and the component together.",
   );
 }
+if (componentNormalized.includes(canonicalEmailNormalized)) {
+  ok("canonical email-marketing paragraph found in <EmailMarketingConsent>");
+} else {
+  fail(
+    "canonical email-marketing paragraph NOT found in <EmailMarketingConsent>. " +
+      "Update CANONICAL_EMAIL in this script and the component together.",
+  );
+}
 
-// --- 2. No form file inlines its own copy of the TCPA paragraph -------------
-console.log("\n[2/3] No form has its own forked copy of the TCPA paragraph");
-for (const form of FORMS) {
+// --- 2. No SMS form inlines the TCPA paragraph ------------------------------
+console.log("\n[2/5] No SMS form has its own forked copy of the TCPA paragraph");
+for (const form of SMS_FORMS) {
   const src = normalize(read(form));
-  if (src.includes(canonicalNormalized)) {
+  if (src.includes(canonicalTcpaNormalized)) {
     fail(
       `${form} appears to inline the canonical TCPA paragraph. ` +
         "Remove the duplicate and render <SmsConsentText /> instead.",
     );
   } else {
-    ok(`${form} does not duplicate the legal copy`);
+    ok(`${form} does not duplicate the TCPA copy`);
   }
 }
 
-// --- 3. Every form actually renders <SmsConsentText /> ----------------------
-console.log("\n[3/3] Every form renders <SmsConsentText />");
-for (const form of FORMS) {
+// --- 3. No email-only form inlines the email-marketing paragraph ------------
+console.log("\n[3/5] No email-only form has its own forked copy of the email paragraph");
+for (const form of EMAIL_FORMS) {
+  const src = normalize(read(form));
+  if (src.includes(canonicalEmailNormalized)) {
+    fail(
+      `${form} appears to inline the canonical email-marketing paragraph. ` +
+        "Remove the duplicate and render <EmailMarketingConsent /> instead.",
+    );
+  } else {
+    ok(`${form} does not duplicate the email-marketing copy`);
+  }
+}
+
+// --- 4. Every SMS form renders <SmsConsentText /> ---------------------------
+console.log("\n[4/5] Every SMS form renders <SmsConsentText />");
+for (const form of SMS_FORMS) {
   const src = read(form);
   const importsIt = /from\s+["']@\/components\/legal\/SmsConsentText["']/.test(src);
   const rendersIt = /<SmsConsentText\b/.test(src);
@@ -96,7 +137,23 @@ for (const form of FORMS) {
   } else {
     fail(
       `${form} is missing <SmsConsentText /> (imports=${importsIt}, renders=${rendersIt}). ` +
-        "Every lead form must render the shared consent component.",
+        "Every phone-collecting form must render the shared SMS consent component.",
+    );
+  }
+}
+
+// --- 5. Every email-only signup renders <EmailMarketingConsent /> -----------
+console.log("\n[5/5] Every email-only signup renders <EmailMarketingConsent />");
+for (const form of EMAIL_FORMS) {
+  const src = read(form);
+  const importsIt = /from\s+["']@\/components\/legal\/SmsConsentText["']/.test(src);
+  const rendersIt = /<EmailMarketingConsent\b/.test(src);
+  if (importsIt && rendersIt) {
+    ok(`${form} imports and renders <EmailMarketingConsent />`);
+  } else {
+    fail(
+      `${form} is missing <EmailMarketingConsent /> (imports=${importsIt}, renders=${rendersIt}). ` +
+        "Every email-only signup must render the shared email-marketing consent component.",
     );
   }
 }
@@ -106,5 +163,9 @@ if (errors.length > 0) {
   console.log(`FAILED: ${errors.length} consent drift issue(s) detected.\n`);
   process.exit(1);
 } else {
-  console.log(`PASSED: all ${FORMS.length} forms share byte-identical consent copy.\n`);
+  const total = SMS_FORMS.length + EMAIL_FORMS.length;
+  console.log(
+    `PASSED: ${SMS_FORMS.length} SMS form(s) and ${EMAIL_FORMS.length} email-only signup(s) ` +
+      `(${total} total) share byte-identical consent copy.\n`,
+  );
 }
