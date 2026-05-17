@@ -1,4 +1,4 @@
-import { Calendar, User, Check } from "lucide-react";
+import { Calendar, User, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ListicleHeroProps {
