@@ -8,6 +8,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 import ScrollToTop from "./components/ScrollToTop";
+import CanonicalDomainRedirect from "./components/CanonicalDomainRedirect";
 import BackToTop from "./components/BackToTop";
 import ElfsightReviews from "./components/ElfsightReviews";
 import SilentErrorBoundary from "./components/SilentErrorBoundary";
@@ -169,6 +170,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <CallRailContactFooterBlocker />
+        <CanonicalDomainRedirect />
         <ScrollToTop />
         <BackToTop />
         <SilentErrorBoundary>
