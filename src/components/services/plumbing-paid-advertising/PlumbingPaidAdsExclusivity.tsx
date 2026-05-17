@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 const PlumbingPaidAdsExclusivity = () => {
   return (
     <section id="exclusivity" className="py-20 lg:py-28 bg-background relative overflow-hidden scroll-mt-32">
@@ -22,13 +23,7 @@ const PlumbingPaidAdsExclusivity = () => {
           <p className="text-muted-foreground text-base mb-10">
             If your market is available, it's worth finding out now.
           </p>
-          <Link
-            to="/grow-qualifier"
-            className="btn-cta group inline-flex items-center gap-2"
-          >
-            Claim Your Territory Today
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          <ClaimTerritoryCTA />
         </div>
       </div>
     </section>
