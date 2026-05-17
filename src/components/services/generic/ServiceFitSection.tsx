@@ -142,10 +142,8 @@ const ServiceFitSection = ({
             </div>
 
             {/* CTA */}
-            <div className="text-center mt-12">
-              <Link to={ctaHref} className="btn-cta group inline-flex items-center gap-2">
-                {ctaLabel} →
-              </Link>
+            <div className="mt-12">
+              <ClaimTerritoryCTA label={ctaLabel} to={ctaHref} variant="light" />
             </div>
           </div>
         </div>
@@ -165,9 +163,7 @@ const ServiceFitSection = ({
           <p className="text-text-secondary max-w-2xl mx-auto mb-8 leading-relaxed">
             {exclusivityBody ?? defaultExclusivityBody}
           </p>
-          <Link to={ctaHref} className="btn-cta group inline-flex items-center gap-2">
-            {ctaLabel} →
-          </Link>
+          <ClaimTerritoryCTA label={ctaLabel} to={ctaHref} />
         </div>
       </section>
     </>
