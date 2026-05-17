@@ -119,6 +119,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           phoneCountryCode: step1Data.phoneCountryCode,
           revenue: step2Data.revenue,
           servicesInterested: step2Data.servicesInterested,
+          helpMessage: step2Data.helpMessage,
           formType,
           recaptchaToken,
         },
