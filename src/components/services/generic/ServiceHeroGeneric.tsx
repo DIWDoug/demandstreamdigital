@@ -1,11 +1,11 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
 interface HeroConfig {
   headline: string;
   highlightedText: string;
-  subheadline: string | { intro: string; bullets: string[]; closing: string };
+  subheadline: string | { intro: string; bullets: string[]; closing?: string };
   qualifierLine: string;
   ctaText: string;
   ctaSubtext: string;
@@ -19,8 +19,16 @@ interface ServiceHeroGenericProps {
 const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) => {
   const navigate = useNavigate();
 
-  const subIntro =
-    typeof config.subheadline === "string" ? config.subheadline : config.subheadline.intro;
+  const isStructured = typeof config.subheadline !== "string";
+  const subIntro = isStructured
+    ? (config.subheadline as { intro: string }).intro
+    : (config.subheadline as string);
+  const subBullets = isStructured
+    ? (config.subheadline as { bullets: string[] }).bullets
+    : [];
+  const subClosing = isStructured
+    ? (config.subheadline as { closing?: string }).closing
+    : undefined;
 
   return (
     <section
