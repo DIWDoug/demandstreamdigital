@@ -1,121 +1,125 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollAnimation";
 import StreamTexture from "@/components/StreamTexture";
 
-const featuredTestimonial = {
-  quote: "Working with our SEO partner has been one of the best marketing decisions we've made. In just a few months, he has completely transformed our SEO performance with a roadmap that is not only strategic, but clearly tailored to our business. For the first time, we don't feel like we're guessing. We have a plan, data to back it up, and a partner who keeps us accountable.\n\nWhat truly sets him apart is transparency. After past experiences with agencies where SEO felt like a \"black box,\" it's refreshing to work with a team that provides real, clear data and explains what's working and why. His insights are thoughtful, his ideas are strong, and his use of AI is smart and intentional, not gimmicky.\n\nBeyond the strategy, the results speak for themselves. We saw a 40% year-over-year revenue increase this past December, and while SEO isn't the only factor, it has absolutely contributed to that growth.\n\nHe is passionate about what he does, and it shows in both his work and his team. This is not a vendor relationship. This is a true partnership.\n\nIf you're looking for an SEO company that is strategic, transparent, and genuinely invested in your success, I can't recommend him enough.",
-  author: "Pure Plumbing & Air",
-  source: "Google Review",
-  highlight: "40% year-over-year revenue increase",
-  rating: 5,
-};
+const ACCENT = "#C0392B";
+const GOLD = "#F2B705";
 
-const testimonials: Array<{
-  quote: string;
-  author: string;
-  source: string;
-  company: string;
-  rating: number;
-  metric: string;
-}> = [
+const testimonials = [
   {
-    quote: "Turns out we were missing 31% of our calls after 5pm. Nobody had ever told us. Game changer.",
-    author: "GM",
-    company: "Regional HVAC Group",
-    source: "Google Review",
-    rating: 5,
+    quote:
+      "Turns out we were missing 31% of our calls after 5pm. Nobody had ever told us. Game changer.",
+    name: "GM, Regional HVAC Group",
     metric: "31% missed calls",
   },
   {
-    quote: "Our Google Business Pro was scored 42 out of 100. Six weeks later we are #1 in the map pack for our zip. Worth $97 alone.",
-    author: "Owner",
-    company: "Family Plumbing Co.",
-    source: "Google Review",
-    rating: 5,
+    quote:
+      "Our Google Business Pro was scored 42 out of 100. Six weeks later we are #1 in the map pack for our zip. Worth $97 alone.",
+    name: "Owner, Family Plumbing Co.",
     metric: "#1 in map pack",
   },
 ];
 
 const Testimonials = () => {
   const sectionRef = useScrollReveal();
-  
+
   return (
-    <section ref={sectionRef} className="py-24 lg:py-32 section-light reveal-section relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="reveal-section relative overflow-hidden bg-[#F7F8FA] py-16 md:py-20"
+    >
       <StreamTexture variant="light" opacity={0.1} />
-      <div className="container mx-auto px-6 max-w-6xl relative z-10">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-4">What Plumbing Operators Say</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
-            Real Results. Real Operators.
+        <div className="text-center mb-10">
+          <div
+            className="inline-block text-[11px] md:text-xs font-black tracking-[0.25em] uppercase mb-3"
+            style={{ color: ACCENT }}
+          >
+            Real Reviews From Real Operators
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black text-[#0D1B2A] leading-tight">
+            Real Shops. Real Words. Real Money Found.
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-slate-600">
-            These are not agency reviews. These come from plumbing companies that wanted more booked calls and got them.
-          </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+              {[1, 2, 3, 4, 5].map((s) => (
+                <Star key={s} className="h-5 w-5 fill-current" style={{ color: GOLD }} />
               ))}
             </div>
-            <span className="text-slate-600 text-sm font-medium">4.9 out of 5 · 22 Reviews | Google Reviews | DemandStream Digital</span>
+            <span className="text-[#475569] text-sm font-medium">
+              4.9 out of 5 . 22 Google Reviews for Demand Stream Digital
+            </span>
           </div>
         </div>
 
-        {/* Featured Partnership Review */}
-        <Card className="bg-white border-primary/20 shadow-lg mb-8 max-w-4xl mx-auto">
-          <CardContent className="p-8 md:p-10">
-            <div className="flex items-center gap-1 mb-4">
-              {[...Array(featuredTestimonial.rating)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
-              ))}
+        {/* Featured Google Review */}
+        <div className="max-w-4xl mx-auto mb-6">
+          <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-md">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex gap-1">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} className="h-5 w-5 fill-current" style={{ color: GOLD }} />
+                ))}
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0D1B2A] bg-[#F2B70520] px-2.5 py-1 rounded-full">
+                Verified Google Review
+              </span>
             </div>
-            <Quote className="h-10 w-10 text-primary/40 mb-5" />
-            <p className="text-slate-700 text-base leading-relaxed whitespace-pre-line mb-6">
-              "{featuredTestimonial.quote}"
+            <p className="text-[#1F2937] text-base md:text-lg leading-relaxed mb-5">
+              &ldquo;Working with Doug has been one of the best marketing choices we have made.
+              For the first time, we are not guessing. We have a plan, the data, and a partner
+              who keeps us honest. After past agencies that felt like a black box, it is great
+              to work with a team that shows us what is working and why. We saw a
+              <strong> 40% year over year revenue jump </strong>
+              this past December. SEO is not the only reason, but it helped a lot. This is not
+              a vendor. It is a real partner.&rdquo;
             </p>
-            <div className="flex items-center justify-between border-t border-slate-200 pt-5">
+            <div className="flex items-center justify-between border-t border-[#E5E7EB] pt-4">
               <div>
-                <p className="text-slate-900 font-semibold text-lg">{featuredTestimonial.author}</p>
-                <p className="text-primary text-sm">{featuredTestimonial.source}</p>
+                <p className="text-[#0D1B2A] font-bold">Pure Plumbing &amp; Air</p>
+                <p className="text-[#6B7280] text-sm">Owner. Posted on Google.</p>
               </div>
-              <div className="bg-accent-blue/10 text-accent-blue font-semibold text-sm px-4 py-2 rounded-full">
-                {featuredTestimonial.highlight}
-              </div>
+              <span
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs"
+                style={{ background: "#2E7D86" }}
+              >
+                +40% YoY revenue
+              </span>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
-        {/* Homeowner Reviews */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="bg-white border-slate-200 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
+        {/* Two more Google reviews */}
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          {testimonials.map((t) => (
+            <div
+              key={t.name}
+              className="bg-white border border-[#E5E7EB] rounded-lg p-6 shadow-sm"
             >
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <Star key={s} className="h-4 w-4 fill-current" style={{ color: GOLD }} />
                   ))}
                 </div>
-                <Quote className="h-8 w-8 text-primary/40 mb-4" />
-                <p className="text-slate-600 text-sm mb-6 flex-grow">
-                  "{testimonial.quote}"
-                </p>
-                <div className="border-t border-slate-200 pt-4 flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-slate-900 font-medium">{testimonial.author}</p>
-                    <p className="text-slate-500 text-sm">{testimonial.company}</p>
-                    <p className="text-primary text-xs mt-1">{testimonial.source}</p>
-                  </div>
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs shrink-0" style={{ background: "#2E7D86" }}>
-                    {testimonial.metric}
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D1B2A] bg-[#F2B70520] px-2 py-0.5 rounded-full">
+                  Google Review
+                </span>
+              </div>
+              <p className="text-[#1F2937] font-medium mb-4 leading-relaxed">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-[#6B7280]">{t.name}</p>
+                <span
+                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-white font-bold text-xs"
+                  style={{ background: "#2E7D86" }}
+                >
+                  {t.metric}
+                </span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
