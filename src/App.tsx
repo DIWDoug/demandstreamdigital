@@ -268,8 +268,8 @@ const App = () => (
           <Route path="/paid-marketing/" element={<PaidMedia />} />
           <Route path="/hvac-and-plumbing-paid-advertising" element={<PaidMedia />} />
           <Route path="/hvac-and-plumbing-paid-advertising/" element={<PaidMedia />} />
-          <Route path="/paid-marketing" element={<Navigate to="/paid-marketing" replace />} />
-          <Route path="/paid-marketing/" element={<Navigate to="/paid-marketing" replace />} />
+          <Route path="/hvac-and-plumbing-paid-ads" element={<Navigate to="/paid-marketing" replace />} />
+          <Route path="/hvac-and-plumbing-paid-ads/" element={<Navigate to="/paid-marketing" replace />} />
           <Route path="/paid-advertising" element={<Navigate to="/paid-marketing" replace />} />
           <Route path="/paid-advertising/" element={<Navigate to="/paid-marketing" replace />} />
 
