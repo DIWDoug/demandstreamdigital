@@ -6,7 +6,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#050B14]">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: "#0D1B2A" }}>
       <TopoTexture opacity={0.04} />
 
       {/* Subtle dark gradient washes */}
