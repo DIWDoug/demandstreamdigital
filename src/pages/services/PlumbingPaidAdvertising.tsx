@@ -18,6 +18,7 @@ import PlumbingPaidAdsFAQ from "@/components/services/plumbing-paid-advertising/
 import PlumbingPaidAdsExclusivity from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsExclusivity";
 import PlumbingPaidAdsContactForm from "@/components/services/plumbing-paid-advertising/PlumbingPaidAdsContactForm";
 
+import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 const SectionDivider = () => (
   <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
 );
@@ -101,10 +102,7 @@ const PlumbingPaidAdvertising = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Not Clear Which Channel Fits Your Market?</h2>
           <p className="text-text-secondary mb-8 max-w-xl mx-auto">Emergency capture, water heater replacement, sewer campaigns — each requires a different paid mix. We scope it to your market.</p>
-          <a href="/grow-qualifier" className="btn-cta inline-flex items-center gap-2">
-            Claim Your Territory Today
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
+          <ClaimTerritoryCTA />
         </div>
       </section>
 

@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
 
+import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 const goodFit = [
   { point: "You run a plumbing company with active dispatch and real service capacity, ideally 2 or more trucks", detail: "Paid ads drive call volume fast. Without dispatch and service capacity in place, the spend has nowhere to land." },
   { point: "You track booking rate or are willing to start", detail: "Booking rate is the core metric. If it is not being measured today, we start there before any spend goes live." },
@@ -99,10 +100,7 @@ const PlumbingPaidAdsFit = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/grow-qualifier" className="inline-flex items-center gap-2 btn-cta group">
-              Claim Your Territory Today
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            <ClaimTerritoryCTA />
           </div>
 
         </div>
