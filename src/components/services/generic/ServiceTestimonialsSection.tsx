@@ -23,7 +23,7 @@ const ServiceTestimonialsSection = ({
         {/* Section Header */}
         <div className="text-center mb-12">
           <p className="text-xs font-bold tracking-widest uppercase text-accent-blue mb-4">
-            {eyebrowText}
+            {eyebrow}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-slate-900">
             {heading}
