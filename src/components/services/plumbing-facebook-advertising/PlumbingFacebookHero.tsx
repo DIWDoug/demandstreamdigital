@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const PlumbingFacebookHero = () => (
   <ServiceHubHero
     title="Plumbing Facebook Advertising That Drives Replacement and Membership Growth"
+    heroSubtitle="Built to Fill the Replacement Pipeline"
     breadcrumbs={[
       { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
       { label: "Plumbing Facebook Advertising" },

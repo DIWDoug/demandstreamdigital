@@ -76,9 +76,17 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
               className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
               style={{ lineHeight: "1.1" }}
             >
-              {config.headline}{" "}
-              <span className="text-cta">{config.highlightedText}</span>
+              {config.headline}
             </h1>
+
+            {config.highlightedText && (
+              <p
+                className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
+                style={{ animationDelay: "0.05s" }}
+              >
+                {config.highlightedText}
+              </p>
+            )}
 
             <div
               className="lg:hidden mb-6 animate-fade-in-up"
@@ -136,10 +144,12 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
                 onClick={() => navigate("/grow-qualifier")}
                 className="btn-cta group whitespace-nowrap px-6 py-4 inline-flex items-center"
               >
-                {config.ctaText}
+                Schedule a Consultation Now
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </button>
-              <p className="text-xs text-white/50 mt-3">{config.ctaSubtext}</p>
+              <p className="text-xs text-white/50 mt-3">
+                One plumbing client and one HVAC client per market.
+              </p>
             </div>
           </div>
 

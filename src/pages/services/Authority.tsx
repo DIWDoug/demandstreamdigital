@@ -60,6 +60,7 @@ const Authority = () => {
       <div className="pt-16">
         <ServiceHubHero 
           title={hub.title} 
+          heroSubtitle="Built to Drive More Booked Service Calls"
           description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
           integrationNote={hub.integrationNote}

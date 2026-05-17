@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const HVACLinkedInHero = () => (
   <ServiceHubHero
     title="HVAC LinkedIn Advertising That Wins Commercial Contracts"
+    heroSubtitle="Built to Win Commercial HVAC Contracts"
     breadcrumbs={[
       { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
       { label: "HVAC LinkedIn Advertising" },
