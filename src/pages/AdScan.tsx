@@ -417,13 +417,13 @@ export default function AdScan() {
                 Video Testimonial
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-[#E5E7EB] shadow-xl bg-black">
+            <div className="w-full max-w-md mx-auto aspect-[4/3] rounded-md overflow-hidden bg-black border border-[#E5E7EB] shadow-xl flex items-center justify-center">
               <video
                 src="/videos/doug-testimonial.mp4"
                 controls
                 preload="metadata"
                 playsInline
-                className="w-full h-auto block"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
