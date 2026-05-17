@@ -498,9 +498,10 @@ const GrowthQualifierFlow = () => {
                 </label>
                 <PhoneInput
                   value={contact.phone}
-                  onChange={(phone, code) => setContact((p) => ({ ...p, phone, phoneCountryCode: code }))}
+                  onChange={(phone) => setContact((p) => ({ ...p, phone }))}
+                  countryCode={contact.phoneCountryCode}
+                  onCountryCodeChange={(code) => setContact((p) => ({ ...p, phoneCountryCode: code }))}
                   required
-                  variant="dark"
                 />
               </div>
 
