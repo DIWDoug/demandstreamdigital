@@ -115,7 +115,7 @@ const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) =>
               >
                 {subBullets.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-3 text-white/85">
-                    <Check className="mt-1 h-4 w-4 flex-shrink-0 text-cta" strokeWidth={3} />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-blue" aria-hidden="true" />
                     <span className="text-base leading-relaxed">{bullet}</span>
                   </li>
                 ))}
