@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
-import { HERO_VIDEO_FRAME_STYLE } from "@/lib/heroVideo";
 
 interface HeroSubheadline {
   intro: string;
@@ -155,13 +154,10 @@ const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroPro
           </div>
 
           <div
-            className="hidden animate-fade-in-up lg:flex lg:justify-end"
+            className="hidden animate-fade-in-up lg:block lg:scale-[1.08] lg:origin-right"
             style={{ animationDelay: "0.2s" }}
           >
-            <div
-              className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl"
-              style={HERO_VIDEO_FRAME_STYLE}
-            >
+            <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
                 title="DemandStream Digital"
