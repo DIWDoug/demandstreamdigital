@@ -6,29 +6,22 @@ import { useLocation } from "react-router-dom";
  *
  * TCPA / vendor compliance:
  * This widget collects phone numbers and constitutes an SMS opt-in path.
- * The vendor's "Multiple Opt-ins" rule forbids it from coexisting on the same
- * page as any other phone or SMS opt-in form. Our standard lead, contact,
- * audit and qualifier flows all collect phone numbers, so the widget may ONLY
- * mount on the strict allowlist below.
+ * The vendor's "Multiple Opt-ins" rule forbids it from coexisting on the
+ * same page as any other phone or SMS opt-in form. We therefore load the
+ * widget site-wide EXCEPT on the denylist below, which enumerates every
+ * route that still renders a phone field + SmsConsentText.
  *
- * Do NOT add the loader to index.html.
- * Do NOT extend this allowlist to any page that renders a phone field,
- * SmsConsentText, ServiceContactForm, HeroForm, ListicleScrollCTA, or
- * LocalGrowthEngine email capture.
+ * Do NOT add the loader to index.html (we need per-route mount/unmount).
+ * If you add a new route that collects a phone number, add it to
+ * CHAT_WIDGET_DENYLIST in this file AND to SMS_FORMS in
+ * scripts/check-consent-text.mjs.
  *
- * The allowlist is also exported for the consent CI guard.
+ * The denylist is also exported for the consent CI guard.
  */
-export const CHAT_WIDGET_ALLOWLIST: ReadonlyArray<string | RegExp> = [
-  "/privacy",
-  "/terms",
-  "/refund-request",
-  "/brand",
-  "/style-guide",
-  "/region-blocked",
-  "/thank-you",
-  "/grow/thanks",
-  "/grow/booked",
-  "/ad-scan/thanks",
+export const CHAT_WIDGET_DENYLIST: ReadonlyArray<string | RegExp> = [
+  "/grow-qualifier",
+  "/free-audit",
+  "/ad-scan/onboarding",
 ];
 
 const SCRIPT_ID = "leadconnector-chat-widget-loader";
@@ -46,7 +39,7 @@ function normalizePath(pathname: string): string {
 
 function isAllowed(pathname: string): boolean {
   const p = normalizePath(pathname);
-  return CHAT_WIDGET_ALLOWLIST.some((entry) =>
+  return !CHAT_WIDGET_DENYLIST.some((entry) =>
     typeof entry === "string" ? entry === p : entry.test(p),
   );
 }
