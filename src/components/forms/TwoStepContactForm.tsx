@@ -43,13 +43,13 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
     city: "",
     phone: "",
     phoneCountryCode: "+1",
+    helpMessage: "",
     honeypot: "",
   });
 
   const [step2Data, setStep2Data] = useState({
     revenue: "",
     servicesInterested: [] as string[],
-    helpMessage: "",
   });
 
   const handleStep1Submit = async (e: React.FormEvent) => {
@@ -74,6 +74,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           city: step1Data.city,
           phone: step1Data.phone,
           phoneCountryCode: step1Data.phoneCountryCode,
+          helpMessage: step1Data.helpMessage,
           formType: `${formType}_step1`,
         },
       });
@@ -119,7 +120,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
           phoneCountryCode: step1Data.phoneCountryCode,
           revenue: step2Data.revenue,
           servicesInterested: step2Data.servicesInterested,
-          helpMessage: step2Data.helpMessage,
+          helpMessage: step1Data.helpMessage,
           formType,
           recaptchaToken,
         },
@@ -256,6 +257,20 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
             />
           </div>
 
+          <div>
+            <label className={labelClass}>
+              How can we help you today?
+            </label>
+            <textarea
+              value={step1Data.helpMessage}
+              onChange={(e) => setStep1Data({ ...step1Data, helpMessage: e.target.value })}
+              placeholder="Tell us briefly what you're looking for. (optional)"
+              rows={compact ? 3 : 4}
+              maxLength={1000}
+              className={`${inputClass} resize-y min-h-[88px]`}
+            />
+          </div>
+
           <button
             type="submit"
             disabled={isSubmittingStep1}
@@ -339,19 +354,7 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
               </div>
             )}
 
-            <div>
-              <label className={labelClass}>
-                How can we help you today?
-              </label>
-              <textarea
-                value={step2Data.helpMessage}
-                onChange={(e) => setStep2Data({ ...step2Data, helpMessage: e.target.value })}
-                placeholder="Tell us briefly what you're looking for. (optional)"
-                rows={compact ? 3 : 4}
-                maxLength={1000}
-                className={`${inputClass} resize-y min-h-[88px]`}
-              />
-            </div>
+
 
             {/* Consent & reCAPTCHA notice */}
             <p className="text-xs text-text-muted text-center leading-relaxed">
