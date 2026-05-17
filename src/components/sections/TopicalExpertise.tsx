@@ -72,7 +72,7 @@ const TopicalExpertise = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl shadow-sm cursor-pointer transition-all duration-300 overflow-hidden ${
+              className={`bg-white rounded-xl shadow-sm cursor-pointer transition-all duration-300 overflow-hidden h-full flex flex-col ${
                 isExpanded(index)
                   ? "ring-1 ring-accent-blue/50"
                   : "hover:translate-y-[-2px]"
@@ -82,7 +82,7 @@ const TopicalExpertise = () => {
               {/* Card top with accent bar */}
               <div className="h-1 bg-gradient-to-r from-accent-blue to-accent-blue/40" />
               
-              <div className="p-6 lg:p-7 border border-t-0 border-gray-200 rounded-b-xl">
+              <div className="p-6 lg:p-7 border border-t-0 border-gray-200 rounded-b-xl flex-1">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
