@@ -116,70 +116,24 @@ const WebDesignHub = () => {
 
       <Header />
 
-      {/* HERO — dark */}
-      <section className="relative min-h-[90vh] flex items-center bg-background overflow-hidden pt-16">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cta/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl" />
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px"
-          }} />
-        </div>
-
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <nav className="flex items-center gap-2 text-xs text-text-muted mb-6 flex-wrap" aria-label="Breadcrumb">
-                <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
-                <span className="text-border">/</span>
-                <span className="text-foreground">Website Design</span>
-              </nav>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2 leading-tight">
-                Website Design for Plumbing & HVAC
-              </h1>
-              {/* Subheadline — matches SEO parent page size */}
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-cta mb-6 leading-tight">
-                Built to Rank and Convert
-              </p>
-              <p className="text-text-secondary leading-relaxed mb-4">
-                Premium, trust-heavy websites built for visibility, booked calls, and long-term market position.
-              </p>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                Most contractor websites look fine. They just don't work. They aren't built for how customers search, how Google reads service intent, or how a phone call actually gets booked. We design plumbing and HVAC websites with service structure, local intent, and conversion flow built into every page. Not a brochure. Revenue infrastructure.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {[
-                "Service-level page structure (not generic pages that blend intent)",
-                "Alignment to Google Business Profile service taxonomy",
-                "AI-ready structure with clear answers, FAQ blocks, and schema by default",
-                "Call-first UX with tracking and CRM readiness (ServiceTitan-friendly)",
-                "Built to activate SEO and paid advertising from day one"].
-                map((bullet, i) =>
-                <li key={i} className="flex items-start gap-3 text-text-secondary">
-                    <span className="text-cta mt-0.5 shrink-0 font-bold">✓</span>
-                    <span>{bullet}</span>
-                  </li>
-                )}
-              </ul>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-cta/10 to-accent-blue/5 rounded-2xl blur-xl" />
-              <div className="relative bg-surface-dark border border-border/60 rounded-2xl p-6 lg:p-8 shadow-2xl">
-                <TwoStepContactForm
-                  formType="web_design_hub_hero"
-                  submitButtonText="Claim Your Territory Today"
-                  step1ButtonText="Claim Your Territory Today" />
-                
-                <p className="text-center text-xs text-text-muted mt-4">One plumbing client and one HVAC client per market.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* HERO */}
+      <ServiceHubHero
+        title="Website Design for Plumbing & HVAC"
+        heroSubtitle="Built to Rank and Convert"
+        breadcrumbs={[{ label: "Website Design" }]}
+        description={{
+          intro:
+            "Premium, trust-heavy websites built for visibility, booked calls, and long-term market position. Most contractor websites look fine. They just don't work. They aren't built for how customers search, how Google reads service intent, or how a phone call actually gets booked. We design plumbing and HVAC websites with service structure, local intent, and conversion flow built into every page. Not a brochure. Revenue infrastructure.",
+          bullets: [
+            "Service-level page structure (not generic pages that blend intent)",
+            "Alignment to Google Business Profile service taxonomy",
+            "AI-ready structure with clear answers, FAQ blocks, and schema by default",
+            "Call-first UX with tracking and CRM readiness (ServiceTitan-friendly)",
+            "Built to activate SEO and paid advertising from day one",
+          ],
+          closing: "One plumbing client and one HVAC client per market.",
+        }}
+      />
 
       {/* Divider */}
       <div className="relative">

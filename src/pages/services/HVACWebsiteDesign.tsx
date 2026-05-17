@@ -115,74 +115,28 @@ const HVACWebsiteDesign = () => {
       <Header />
 
       {/* HERO */}
-      <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20 hidden sm:block">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-        </div>
-        <div className="absolute inset-0 opacity-[0.05]" style={{
-          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }} />
-        <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-28 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left column */}
-            <div>
-              <nav className="flex items-center gap-2 text-sm mb-8" aria-label="Breadcrumb">
-                <Link to="/" className="text-text-muted hover:text-foreground transition-colors">Home</Link>
-                <span className="text-text-muted">/</span>
-                <Link to="/website-design" className="text-text-muted hover:text-foreground transition-colors">Website Design</Link>
-                <span className="text-text-muted">/</span>
-                <span className="text-accent-blue">HVAC</span>
-              </nav>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-foreground mb-4 leading-tight">
-                HVAC Website Design
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-cta mb-6 leading-tight">
-                Built to Rank and Convert
-              </p>
-              <p className="text-lg text-text-secondary leading-relaxed mb-4">
-                A premium HVAC website built around seasonal demand, service-level structure, and a call-first experience that fills your dispatch board.
-              </p>
-              <div className="max-w-xl mb-4">
-                <p className="text-base text-text-secondary leading-relaxed mb-4">
-                  HVAC companies run on seasonal urgency. Your website needs to match that reality. When a homeowner searches for AC repair in July, the page they land on needs to answer the right question and make it easy to call.
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {[
-                    "Seasonal intent structure: separate pages for no-cool, no-heat, and replacement research",
-                    "Repair vs. install separation. Google reads these as distinct intents.",
-                    "Heat pump and ductless-ready page structure for equipment transitions",
-                    "Maintenance agreement conversion paths built into service pages",
-                    "Google Business Profile alignment: categories, services, and page signals working together",
-                    "AI-ready structure with schema, FAQs, and answer blocks by default",
-                    "ServiceTitan-compatible booking UX with call tracking from day one",
-                  ].map((b, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
-                      <span className="text-cta mt-0.5">—</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <p className="text-sm text-text-muted">HVAC companies only. No general contractors.</p>
-            </div>
-            {/* Right column — form card */}
-            <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-              <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
-                <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
-                <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
-                <TwoStepContactForm
-                  formType="hvac_web_design_hero"
-                  submitButtonText="Claim My Territory"
-                  step1ButtonText="Claim My Territory"
-                />
-                <p className="text-xs text-text-muted text-center mt-4">One HVAC company per market.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHubHero
+        title="HVAC Website Design"
+        heroSubtitle="Built to Rank and Convert"
+        breadcrumbs={[
+          { label: "Website Design", href: "/website-design" },
+          { label: "HVAC" },
+        ]}
+        description={{
+          intro:
+            "HVAC companies run on seasonal urgency. Your website needs to match that reality. When a homeowner searches for AC repair in July, the page they land on needs to answer the right question and make it easy to call.",
+          bullets: [
+            "Seasonal intent structure: separate pages for no-cool, no-heat, and replacement research",
+            "Repair vs. install separation. Google reads these as distinct intents.",
+            "Heat pump and ductless-ready page structure for equipment transitions",
+            "Maintenance agreement conversion paths built into service pages",
+            "Google Business Profile alignment: categories, services, and page signals working together",
+            "AI-ready structure with schema, FAQs, and answer blocks by default",
+            "ServiceTitan-compatible booking UX with call tracking from day one",
+          ],
+          closing: "HVAC companies only. No general contractors.",
+        }}
+      />
 
       <ServiceHubAnchorNav items={anchorItems} />
 
