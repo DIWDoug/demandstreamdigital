@@ -79,6 +79,48 @@ const AdScanThanks = () => {
                 </Link>
               </div>
             </div>
+
+            {/* Trust strip: video testimonial + two screenshot reviews */}
+            <div className="mt-12">
+              <p className="mb-6 text-center text-xs font-bold uppercase tracking-[0.25em] text-accent-blue">
+                Why operators trust the Ad Scan
+              </p>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="flex flex-col gap-3">
+                  <div className="w-full aspect-[4/3] rounded-md overflow-hidden bg-black border border-border shadow-xl flex items-center justify-center">
+                    <video
+                      src="/videos/doug-testimonial.mp4"
+                      controls
+                      preload="metadata"
+                      playsInline
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <p className="text-center text-xs text-text-muted">
+                    Real customer. Posted with permission.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <div className="w-full rounded-md overflow-hidden bg-white border border-border shadow-xl">
+                    <img
+                      src="https://demandstreamdigital.com/assets/pure-plumbing-review-1-jNLNRLF3.png"
+                      alt="Pure Plumbing 5-star Google review"
+                      className="w-full block"
+                      loading="lazy"
+                    />
+                    <img
+                      src="https://demandstreamdigital.com/assets/pure-plumbing-review-2-CWW5rTqV.png"
+                      alt="Pure Plumbing & Air 5-star Google review"
+                      className="w-full block border-t border-border"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="text-center text-xs text-text-muted">
+                    Verified Google reviews from Pure Plumbing &amp; Air.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
