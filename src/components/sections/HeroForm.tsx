@@ -4,6 +4,7 @@ import { ArrowRight, Loader2, ChevronDown, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
+import { SmsConsentText } from "@/components/legal/SmsConsentText";
 
 const serviceOptions = [
   "Local SEO",
