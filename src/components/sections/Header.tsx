@@ -11,9 +11,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-  const [isToolsMenuOpen, setIsToolsMenuOpen] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
-  const toolsMenuRef = useRef<HTMLDivElement>(null);
 
   const navigateMobile = (to: string) => {
     setIsMobileMenuOpen(false);
