@@ -168,15 +168,9 @@ const App = () => (
           <Route path="/blog/white-label-local-ppc" element={<Navigate to="/paid-marketing" replace />} />
           <Route path="/our-blog" element={<OurBlog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/partner-tools" element={<PartnerTools />} />
-          <Route path="/partner-tools/roi-calculator" element={<ROICalculator />} />
-          <Route path="/partner-tools/investment-calculator" element={<InvestmentCalculator />} />
-          <Route path="/partner-tools/ad-budget-calculator" element={<AdBudgetCalculator />} />
-          <Route path="/partner-tools/seo-calculator" element={<SEOCalculator />} />
-          <Route path="/partner-tools/email-calculator" element={<EmailCalculator />} />
-          <Route path="/partner-tools/content-marketing-calculator" element={<ContentMarketingCalculator />} />
-          <Route path="/partner-tools/social-media-roi-calculator" element={<SocialMediaROICalculator />} />
-          <Route path="/partner-tools/ai-ready-check" element={<AIReadyCheck />} />
+          {/* Partner tools removed: redirect any remaining links to home */}
+          <Route path="/partner-tools" element={<Navigate to="/" replace />} />
+          <Route path="/partner-tools/*" element={<Navigate to="/" replace />} />
 
           {/* Interactive Homeowner Tools */}
           <Route path="/tools/job-cost-estimator" element={<JobCostEstimator />} />
