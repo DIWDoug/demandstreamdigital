@@ -186,7 +186,6 @@ const Header = () => {
                   type="button"
                   onClick={() => {
                     setIsMegaMenuOpen(!isMegaMenuOpen);
-                    setIsToolsMenuOpen(false);
                   }}
                   className={`${navLinkClass} flex items-center gap-1`}
                   aria-haspopup="true"
