@@ -139,7 +139,14 @@ const PlumbingWebsiteDesign = () => {
           { label: "Website Design", href: "/website-design" },
           { label: "Plumbing" },
         ]}
-        description="Most plumbing websites are built like brochures and don't generate calls. We build sites with separate pages for emergency drain, water heater, repipe, and sewer, aligned to your Google Business Profile and ready to convert from the first tap. Plumbing companies only."
+        description={{
+          intro: "Most plumbing websites are built like brochures and don't generate calls. We build sites engineered to convert from the first tap. Plumbing companies only.",
+          bullets: [
+            "Dedicated pages for emergency drain, water heater, repipe, and sewer intent",
+            "Mobile-first conversion flow aligned to your Google Business Profile",
+            "Call tracking wired to ServiceTitan so every lead ties back to revenue",
+          ],
+        }}
       />
 
       <ServiceHubAnchorNav items={anchorItems} />
