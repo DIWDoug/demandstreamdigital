@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
-import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import heroBgAgency from "@/assets/hero-bg-agency.jpg";
 
 interface HeroSubheadline {
   intro: string;
@@ -24,107 +23,139 @@ interface LocalSEOTwoColumnHeroProps {
   bgImage?: string;
 }
 
-const LocalSEOTwoColumnHero = ({ config, breadcrumbs, bgImage }: LocalSEOTwoColumnHeroProps) => {
-  const heroImage = bgImage ?? heroBgAgency;
+const LocalSEOTwoColumnHero = ({ config, breadcrumbs }: LocalSEOTwoColumnHeroProps) => {
+  const navigate = useNavigate();
+  const subIntro =
+    typeof config.subheadline === "string" ? config.subheadline : config.subheadline.intro;
+  const bullets =
+    typeof config.subheadline === "string" ? [] : config.subheadline.bullets;
+  const closing =
+    typeof config.subheadline === "string" ? "" : config.subheadline.closing;
+
   return (
-    <section className="relative min-h-[70vh] gradient-hero noise-overlay flex items-center overflow-hidden">
-      {/* Background photo */}
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-        fetchPriority="high"
-        loading="eager"
-        width={1920}
-        height={1080}
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/85" />
-
-      {/* Background effects */}
-      <div className="absolute inset-0 opacity-20 hidden sm:block">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-      </div>
-
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ backgroundColor: "#0D1B2A" }}
+    >
       <div
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.04] z-0"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `linear-gradient(hsl(213 64% 16% / 0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(213 64% 16% / 0.3) 1px, transparent 1px)`,
+          backgroundSize: "48px 48px",
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-28 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left column - Copy */}
-          <div>
-            {breadcrumbs && breadcrumbs.length > 0 && (
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm mb-8 animate-fade-in">
-                <Link to="/" className="text-text-muted hover:text-foreground transition-colors">Home</Link>
-                {breadcrumbs.map((item, index) => (
-                  <span key={index} className="flex items-center gap-2">
-                    <span className="text-text-muted">/</span>
-                    {item.href ? (
-                      <Link to={item.href} className="text-text-muted hover:text-foreground transition-colors">{item.label}</Link>
-                    ) : (
-                      <span className="text-accent-blue">{item.label}</span>
-                    )}
-                  </span>
-                ))}
-              </nav>
-            )}
+      <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-sm mb-8 animate-fade-in"
+          >
+            <Link to="/" className="text-white/60 hover:text-white transition-colors">
+              Home
+            </Link>
+            {breadcrumbs.map((item, index) => (
+              <span key={index} className="flex items-center gap-2">
+                <span className="text-white/40">/</span>
+                {item.href ? (
+                  <Link to={item.href} className="text-white/60 hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span className="text-white">{item.label}</span>
+                )}
+              </span>
+            ))}
+          </nav>
+        )}
 
-            <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-sans font-semibold mb-4 animate-fade-in-up text-foreground" style={{ lineHeight: "1.1", animationDelay: "0.1s" }}>
-              {config.headline}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="max-w-xl">
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
+              style={{ lineHeight: "1.1" }}
+            >
+              {config.headline}{" "}
+              <span className="text-cta">{config.highlightedText}</span>
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-              {config.highlightedText}
+
+            <div
+              className="lg:hidden mb-6 animate-fade-in-up"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-surface-elevated shadow-2xl">
+                <iframe
+                  src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                  title="DemandStream Digital"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <p
+              className="text-lg text-white/80 leading-relaxed mb-4 animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              {subIntro}
             </p>
 
-            {typeof config.subheadline === 'string' ? (
-              <p className="text-lg text-text-secondary max-w-xl mb-4 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
-                {config.subheadline}
-              </p>
-            ) : (
-              <div className="max-w-xl mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                <p className="text-base text-text-secondary leading-relaxed mb-4">
-                  {config.subheadline.intro}
-                </p>
-                <ul className="space-y-2 mb-4">
-                  {config.subheadline.bullets.map((bullet, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
-                      <span className="text-cta mt-0.5">—</span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm text-text-muted leading-relaxed">
-                  {config.subheadline.closing}
-                </p>
-              </div>
+            {bullets.length > 0 && (
+              <ul className="space-y-2.5 mb-4 animate-fade-in-up" style={{ animationDelay: "0.12s" }}>
+                {bullets.map((bullet, index) => (
+                  <li key={index} className="flex items-start gap-3 text-base text-white/80">
+                    <span className="text-cta font-bold mt-0.5 shrink-0">.</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             )}
 
-            <p className="text-sm text-text-muted animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            {closing && (
+              <p
+                className="text-base text-white/70 leading-snug mb-4 animate-fade-in-up"
+                style={{ animationDelay: "0.13s" }}
+              >
+                {closing}
+              </p>
+            )}
+
+            <p
+              className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"
+              style={{ animationDelay: "0.15s" }}
+            >
               {config.qualifierLine}
             </p>
+
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              <button
+                type="button"
+                onClick={() => navigate("/grow-qualifier")}
+                className="btn-cta group whitespace-nowrap px-6 py-4 inline-flex items-center"
+              >
+                {config.ctaText}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </button>
+              <p className="text-xs text-white/50 mt-3">{config.ctaSubtext}</p>
+            </div>
           </div>
 
-          {/* Right column - Form card */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
-            <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
-              <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
-              <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
-              <TwoStepContactForm
-                formType="local_seo_hero"
-                submitButtonText="Claim My Territory"
-                step1ButtonText="Claim My Territory"
+          <div
+            className="hidden animate-fade-in-up lg:block lg:pl-4"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                title="DemandStream Digital"
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
               />
-              <p className="text-xs text-text-muted text-center mt-4">
-                {config.ctaSubtext}
-              </p>
             </div>
           </div>
         </div>
