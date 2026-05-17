@@ -288,7 +288,7 @@ const FreeAudit = () => {
                       )}
                     </Button>
 
-                    <SmsConsentText className="text-xs text-text-muted text-center leading-relaxed" />
+                    <SmsConsentText className="text-[13px] text-text-secondary text-center leading-relaxed" linkClassName="text-primary font-medium underline hover:opacity-80" />
 
                   </form>
                 </div>
