@@ -5,7 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 import { Checkbox } from "@/components/ui/checkbox";
 import { serviceInterestOptions } from "@/data/servicesInterested";
 
