@@ -70,9 +70,10 @@ const HVACReporting = () => {
       {/* 1. HERO */}
       <div>
         <ServiceHubHero
-          title={hvacReportingConfig.title}
-          heroSubtitle="Built to Track Booked Calls and Revenue"
-          description={hvacReportingConfig.hero.subheadline}
+          title="Reporting & Analytics for HVAC Companies"
+          heroHeadline="Reporting & Analytics for HVAC Companies"
+          heroSubtitle="See What's Driving Booked Calls and Revenue"
+          description="You should never wonder which channels are filling your HVAC schedule. We tie every call, install, and replacement back to the campaign that created it, so you can scale the channels that book seats and cut the ones that don't."
           breadcrumbs={breadcrumbItems}
         />
       </div>
