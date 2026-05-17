@@ -1,0 +1,30 @@
+name: TCPA / SMS consent guard
+
+# Fails the build whenever the canonical TCPA/SMS consent paragraph drifts,
+# a lead form stops rendering <SmsConsentText />, or a form re-inlines its
+# own copy of the disclosure. Backed by scripts/check-consent-text.mjs.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+jobs:
+  consent-text:
+    name: Diff-check consent copy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # No install step needed: the script is zero-dep and uses only Node built-ins.
+      - name: Run TCPA/SMS consent diff-check
+        run: node scripts/check-consent-text.mjs
