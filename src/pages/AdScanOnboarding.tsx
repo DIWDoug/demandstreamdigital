@@ -273,7 +273,8 @@ const AdScanOnboarding = () => {
                   {submitted ? "Sent ✓" : submitting ? "Sending..." : "Send and start my scan →"}
                 </Button>
                 <SmsConsentText
-                  className="text-xs text-text-muted mt-3 leading-relaxed"
+                  className="text-[13px] text-text-secondary mt-3 leading-relaxed"
+                  linkClassName="text-primary font-medium underline hover:opacity-80"
                   prefix="You can send this now and finish the steps below when you have time. We start the scan when all five are done."
                 />
               </div>

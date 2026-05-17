@@ -514,10 +514,10 @@ const GrowthQualifierFlow = () => {
                   required
                 />
                 <SmsConsentSummary
-                  className="mt-3 flex items-start gap-2 rounded-md border border-white/15 bg-white/5 px-3 py-2"
-                  textClassName="text-[12px] leading-snug text-white/75"
-                  iconClassName="h-4 w-4 mt-0.5 shrink-0 text-white/70"
-                  linkClassName="underline font-medium hover:text-white"
+                  className="mt-3 flex items-start gap-2 rounded-md border border-white/20 bg-white/[0.07] px-3 py-2.5"
+                  textClassName="text-[13px] leading-relaxed text-white/90"
+                  iconClassName="h-4 w-4 mt-0.5 shrink-0 text-white/80"
+                  linkClassName="underline font-medium text-white hover:opacity-80"
                 />
               </div>
 
@@ -537,8 +537,8 @@ const GrowthQualifierFlow = () => {
             </div>
 
             <SmsConsentText
-              className="mt-6 text-xs leading-relaxed text-white/60"
-              linkClassName="underline hover:text-white"
+              className="mt-6 text-[13px] leading-relaxed text-white/85"
+              linkClassName="underline font-medium text-white hover:opacity-80"
             />
 
             <div className="mt-8 flex items-center justify-between gap-4">

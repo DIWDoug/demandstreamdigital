@@ -371,8 +371,8 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
 
             {/* Consent & reCAPTCHA notice */}
             <SmsConsentText
-              className="text-xs text-text-muted text-center leading-relaxed"
-              linkClassName="text-accent-blue hover:underline"
+              className="text-[13px] text-text-secondary text-center leading-relaxed"
+              linkClassName="text-accent-blue font-medium underline hover:opacity-80"
               withRecaptcha
             />
 

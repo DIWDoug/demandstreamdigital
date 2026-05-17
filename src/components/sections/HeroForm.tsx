@@ -301,8 +301,8 @@ const HeroForm = () => {
             />
             <SmsConsentText
               as="span"
-              className="text-xs text-text-muted leading-relaxed"
-              linkClassName="text-primary hover:underline"
+              className="text-[13px] text-text-secondary leading-relaxed"
+              linkClassName="text-primary font-medium underline hover:opacity-80"
             />
           </label>
 
