@@ -23,7 +23,7 @@ const ACCENT = "#1E5BD6"; // ClickFunnels-style royal blue accent
 const GOLD = "#F2B705";
 const RED = "#C0392B";
 
-const CTA = ({ children = "CLAIM MY $97 AD SCAN", size = "lg" as "lg" | "md" }) => (
+const CTA = ({ children = "CLAIM MY $97 AD AUDIT", size = "lg" as "lg" | "md" }) => (
   <div className="inline-flex flex-col items-center">
     <a
       href="#order"
@@ -104,7 +104,7 @@ export default function AdScan() {
               You get a report with a score.
               <strong> Worth $697. Today $97.</strong>
             </p>
-            <CTA>CLAIM MY $97 AD SCAN</CTA>
+            <CTA>CLAIM MY $97 AD AUDIT</CTA>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm text-[#475569]">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4" style={{ color: "#16A34A" }} />
@@ -182,7 +182,7 @@ export default function AdScan() {
                   <p className="italic text-[#475569]">Wyler&rsquo;s leash is in my hand. Talk soon.<br/>Doug</p>
                 </div>
                 <div className="mt-7">
-                  <CTA size="md">CLAIM MY $97 AD SCAN</CTA>
+                  <CTA size="md">CLAIM MY $97 AD AUDIT</CTA>
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@ export default function AdScan() {
               <Check>A 30 day plan you can hand to your team.</Check>
             </ul>
             <div className="mt-8">
-              <CTA size="md">GET MY AD SCAN FOR $97</CTA>
+              <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
             </div>
           </div>
         </div>
@@ -455,7 +455,7 @@ export default function AdScan() {
           </div>
 
           <div className="text-center mt-10">
-            <CTA size="md">GET MY AD SCAN FOR $97</CTA>
+            <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
           </div>
         </div>
       </section>
@@ -604,7 +604,7 @@ export default function AdScan() {
                   className="inline-flex items-center justify-center gap-3 w-full rounded-md bg-[#C0392B] hover:bg-[#a4301f] transition-colors text-white font-black uppercase tracking-wide px-6 py-5 md:py-6 text-lg md:text-2xl shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)]"
                 >
                   <Lock className="h-5 w-5" />
-                  YES &mdash; START MY AD SCAN
+                  YES &mdash; START MY AD AUDIT
                 </a>
                 <div className="flex items-center justify-center gap-2 mt-4 text-xs text-[#6B7280]">
                   <Lock className="h-3 w-3" /> Secure checkout. Delivered in 72 hours.
@@ -685,7 +685,7 @@ export default function AdScan() {
             href="#order"
             className="inline-flex items-center justify-center gap-3 rounded-md bg-white text-[#C0392B] hover:bg-[#0D1B2A] hover:text-white transition-colors font-black uppercase tracking-wide px-10 py-5 md:py-6 text-lg md:text-2xl shadow-2xl ring-2 ring-white/30"
           >
-            CLAIM MY $97 AD SCAN
+            CLAIM MY $97 AD AUDIT
             <ArrowRight className="h-6 w-6" />
           </a>
           <div className="flex items-center justify-center gap-2 mt-6 text-sm text-white/80">
