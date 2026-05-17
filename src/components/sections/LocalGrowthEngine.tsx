@@ -191,6 +191,7 @@ const LocalGrowthEngine = () => {
                           )}
                         </button>
                       </form>
+                      <EmailMarketingConsent className="mt-3 text-[12px] leading-snug text-muted-foreground" />
                       <p className="text-muted-foreground text-xs mt-2">Protected by reCAPTCHA</p>
                     </div>
                   </div>
