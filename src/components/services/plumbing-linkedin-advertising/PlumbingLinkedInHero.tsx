@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const PlumbingLinkedInHero = () => (
   <ServiceHubHero
     title="Plumbing LinkedIn Advertising That Wins Commercial Contracts"
+    heroSubtitle="Built to Win Commercial Plumbing Contracts"
     breadcrumbs={[
       { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
       { label: "Plumbing LinkedIn Advertising" },

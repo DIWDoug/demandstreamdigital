@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const WebDesignHero = () => (
   <ServiceHubHero
     title="Web Design for Plumbing & HVAC Companies That Converts Visitors Into Calls"
+    heroSubtitle="Built to Rank and Convert"
     breadcrumbs={[
       { label: "Services", href: "/services" },
       { label: "Web Design" },

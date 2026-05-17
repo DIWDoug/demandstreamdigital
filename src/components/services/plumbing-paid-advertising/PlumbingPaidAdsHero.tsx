@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const PlumbingPaidAdsHero = () => (
   <ServiceHubHero
     title="Plumbing Paid Advertising That Drives Booked Service Calls"
+    heroSubtitle="Built to Drive Booked Service Calls"
     breadcrumbs={[
       { label: "Services", href: "/#services" },
       { label: "Paid Advertising", href: "/paid-marketing" },

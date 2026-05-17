@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const PlumbingProgrammaticHero = () => (
   <ServiceHubHero
     title="Plumbing Programmatic Advertising That Keeps Your Brand Visible Across Every Screen"
+    heroSubtitle="Built to Keep You Visible Across Every Screen"
     breadcrumbs={[
       { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
       { label: "Plumbing Programmatic Advertising" },

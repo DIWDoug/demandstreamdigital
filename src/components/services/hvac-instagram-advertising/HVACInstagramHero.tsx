@@ -3,6 +3,7 @@ import ServiceHubHero from "@/components/services/ServiceHubHero";
 const HVACInstagramHero = () => (
   <ServiceHubHero
     title="HVAC Instagram Advertising That Builds Brand Authority and Drives Replacement Calls"
+    heroSubtitle="Built to Build Brand and Booked Calls"
     breadcrumbs={[
       { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
       { label: "HVAC Instagram Advertising" },
