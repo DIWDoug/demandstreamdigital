@@ -122,7 +122,14 @@ const WebDesignHub = () => {
         title="Website Design for Plumbing & HVAC"
         heroSubtitle="Built to Rank and Convert"
         breadcrumbs={[{ label: "Website Design" }]}
-        description="Premium, trust-heavy websites built for visibility, booked calls, and long-term market position. We design plumbing and HVAC websites with service structure, local intent, and conversion flow built into every page. Not a brochure. Revenue infrastructure."
+        description={{
+          intro: "Premium, trust-heavy websites built for visibility, booked calls, and long-term market position. Not a brochure. Revenue infrastructure.",
+          bullets: [
+            "Service and ZIP-level pages built around real plumbing and HVAC search intent",
+            "Conversion flow tuned for mobile emergency calls, not desktop browsing",
+            "Call tracking and lead capture wired in from day one",
+          ],
+        }}
       />
 
       {/* Divider */}
