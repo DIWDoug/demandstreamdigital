@@ -3,9 +3,10 @@
  * LeadConnector / GHL chat widget guard.
  *
  * Vendor TCPA rule: the LeadConnector chat widget collects phone numbers and
- * counts as an SMS opt-in path. It may NEVER be embedded site-wide, and may
- * only mount on the strict allowlist defined in
- * src/components/integrations/LeadConnectorChatWidget.tsx.
+ * counts as an SMS opt-in path. It must be route-gated through the dedicated
+ * <LeadConnectorChatWidget /> component and excluded from any route in
+ * CHAT_WIDGET_DENYLIST (defined in
+ * src/components/integrations/LeadConnectorChatWidget.tsx).
  *
  * This script enforces three invariants:
  *   1. index.html does NOT contain the loader script (it must be route-gated).
