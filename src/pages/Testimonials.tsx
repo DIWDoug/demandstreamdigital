@@ -43,7 +43,7 @@ const Testimonials = () => {
   // Client testimonials from Google reviews
   const clientTestimonials = [
     {
-      quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Dialed-In Local. From the first time we met with Doug we felt confident in his ability to help us. Fast forward to today, he has proven that he not only has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed. I really like how he communicates and explains how things work as well as advises us on the best way to go about things (which has ended up saving us money in the long run). He helped clean up our online mess and since working with him, we have seen some sites increase almost 300% in organic searches.",
+      quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Doug's team. From the first time we met with Doug we felt confident in his ability to help us. Fast forward to today, he has proven that he not only has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed. I really like how he communicates and explains how things work as well as advises us on the best way to go about things (which has ended up saving us money in the long run). He helped clean up our online mess and since working with him, we have seen some sites increase almost 300% in organic searches.",
       name: "Car Spa",
       title: "National Car Wash Company",
       location: "Multiple Locations",
@@ -52,7 +52,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team at Dialed-In did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price and in many cases, went above and beyond what they promised. And while Doug never promised results, he and his team delivered with our organic rankings for the targeted keywords up across the board. And that's saying something since we work in a very competitive space (divorce mediation) and in a very populated area (NY/NJ and Chicago).",
+      quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price and in many cases, went above and beyond what they promised. And while Doug never promised results, he and his team delivered with our organic rankings for the targeted keywords up across the board. And that's saying something since we work in a very competitive space (divorce mediation) and in a very populated area (NY/NJ and Chicago).",
       name: "Joseph Dillon",
       title: "Small Business Owner",
       location: "NY/NJ & Chicago",
@@ -79,7 +79,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "After wasting a lot of time and money with other marketing companies, I was pretty burned out and was starting to feel like it was all a scam. After a couple of conversations with Doug Bryson at Dialed-In Local I decided to give him a shot and am glad I did. He not only turned my marketing around, but was very detailed in explaining the process to me, as well as giving me realistic expectations as to the timeline. It took a few months for him to clean up a lot of the junk that previous experts had left behind and get my website on the right track, but it was well worth the wait. My phone now rings with new potential clients regularly.",
+      quote: "After wasting a lot of time and money with other marketing companies, I was pretty burned out and was starting to feel like it was all a scam. After a couple of conversations with Doug Bryson at Doug's team I decided to give him a shot and am glad I did. He not only turned my marketing around, but was very detailed in explaining the process to me, as well as giving me realistic expectations as to the timeline. It took a few months for him to clean up a lot of the junk that previous experts had left behind and get my website on the right track, but it was well worth the wait. My phone now rings with new potential clients regularly.",
       name: "Jack Haynes",
       title: "Business Owner",
       location: "",
@@ -88,7 +88,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "I would highly recommend Doug at Dialed in Local to any business looking to grow with SEO. Doug is a great business partner and excellent communicator. My rankings have shown tremendous growth in a very short period of time.",
+      quote: "I would highly recommend Doug at Doug's team to any business looking to grow with SEO. Doug is a great business partner and excellent communicator. My rankings have shown tremendous growth in a very short period of time.",
       name: "ASAP Apartment Finders",
       title: "Apartment Locator Service",
       location: "",
@@ -97,7 +97,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "We at Veterans Auto Services have really appreciated Dialed-In. Doug Bryson was great to work with. He closely monitored our company's reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view of the public. You have brought success to our door and we thank you.",
+      quote: "We at Veterans Auto Services have really appreciated Doug's team. Doug Bryson was great to work with. He closely monitored our company's reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view of the public. You have brought success to our door and we thank you.",
       name: "Wendy Burns",
       title: "Veterans Auto Services",
       location: "Nashville, TN",
@@ -106,7 +106,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "I have worked with Doug and the Dialed-In Local team for many years in a variety of capacities. Doug is incredibly talented at what he does. He has a great business mind and is adept at understanding the unique needs, goals and visions of each company with which he works. This is particularly the case with small businesses. As a copywriter, I've worked with many marketing companies, but few have the drive, passion and the ability to get real results quite like Doug and the Dialed-In team.",
+      quote: "I have worked with Doug and the Doug's team for many years in a variety of capacities. Doug is incredibly talented at what he does. He has a great business mind and is adept at understanding the unique needs, goals and visions of each company with which he works. This is particularly the case with small businesses. As a copywriter, I've worked with many marketing companies, but few have the drive, passion and the ability to get real results quite like Doug and the Doug's team.",
       name: "Rebecca Daneault",
       title: "Copywriter & Marketing Professional",
       location: "",
@@ -115,7 +115,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "I've worked with Doug and Dialed-In Local for several years now and am always impressed with their broad technical knowledge of the constantly changing landscape of online marketing. Not only do they understand it, they take the time to make sure their clients understand it with detailed explanations of each program offered and detailed follow up. One of their best qualities is their ability to manage expectations. While many other businesses and consultants make their clients believe web marketing happens overnight and is a 'one size fits all' solution, Doug takes the time to outline programs with the best benefits and realistic time frames for results.",
+      quote: "I've worked with Doug and Doug's team for several years now and am always impressed with their broad technical knowledge of the constantly changing landscape of online marketing. Not only do they understand it, they take the time to make sure their clients understand it with detailed explanations of each program offered and detailed follow up. One of their best qualities is their ability to manage expectations. While many other businesses and consultants make their clients believe web marketing happens overnight and is a 'one size fits all' solution, Doug takes the time to outline programs with the best benefits and realistic time frames for results.",
       name: "Chris Farr",
       title: "Business Owner",
       location: "",
@@ -133,7 +133,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "Dialed-In Local is definitely where I go for all things web. Doug's understanding of the web market has been a huge resource for my web presence in Nashville. Being an IT Company by trait we tend to learn technology based systems quickly. Having someone like Dialed-In allows me to not have to invest valuable time learning a new and ever changing system. Instead I can invest on doing what I do best and taking care of my clients.",
+      quote: "Doug's team is definitely where I go for all things web. Doug's understanding of the web market has been a huge resource for my web presence in Nashville. Being an IT Company by trait we tend to learn technology based systems quickly. Having someone like Doug's team allows me to not have to invest valuable time learning a new and ever changing system. Instead I can invest on doing what I do best and taking care of my clients.",
       name: "Tommy Wolosin",
       title: "IT Company Owner",
       location: "Nashville, TN",
@@ -169,7 +169,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "The Dialed-In Web team have always been professional and knowledgeable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
+      quote: "The team have always been professional and knowledgeable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
       name: "Cynthia Cavoto",
       title: "Business Owner",
       location: "",

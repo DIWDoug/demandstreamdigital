@@ -184,13 +184,13 @@ const OurBlog = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-cta/10 border border-cta/20 rounded-full text-cta text-sm font-medium mb-6">
                 <TrendingUp className="w-4 h-4" />
-                Agency Growth Insights
+                Plumbing & HVAC Marketing Insights
               </div>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-5">
                 Our Blog
               </h1>
               <p className="text-lg text-text-secondary max-w-xl mx-auto">
-                Actionable strategies for scaling your agency with white-label fulfillment, local SEO, and paid media.
+                Actionable strategies for plumbing and HVAC companies. SEO, Google Maps, paid advertising, and booked service calls.
               </p>
             </div>
 

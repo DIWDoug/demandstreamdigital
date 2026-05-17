@@ -160,8 +160,8 @@ export const hubs: Hub[] = [
           "Internal linking architecture execution",
           "Post-implementation verification and ongoing monitoring"
         ],
-        metaTitle: "Local On-Page SEO Services for Agencies | White Label Optimization for Titles, Headers & Content | Dialed-in Web",
-        metaDescription: "Dialed-in Web improves site structure, metadata, and content for local SEO—white labeled to help your agency scale efficiently."
+        metaTitle: "Local On-Page SEO Services for Agencies | White Label Optimization for Titles, Headers & Content ",
+        metaDescription: "DemandStream Digital improves site structure, metadata, and content for local SEO—white labeled to help your agency scale efficiently."
       },
       {
         title: "Technical SEO",
@@ -171,8 +171,8 @@ export const hubs: Hub[] = [
         benefits: ["Flat, organized site architecture that Google can fully crawl", "Faster page load times through size reduction and optimization", "Zero duplicate content issues through canonical and noindex implementation", "Mobile-first usability that passes Core Web Vitals", "Clean URL structure with logical hierarchy"],
         deliverables: ["Complete technical SEO audit with prioritized fixes", "Site architecture analysis and recommendations", "XML sitemap optimization and validation", "Robots.txt and meta robots configuration", "Core Web Vitals and page speed improvements", "Duplicate content resolution via canonicals and noindex", "Internal linking structure optimization", "Mobile usability issue remediation"],
         process: ["Crawl analysis with Screaming Frog and Search Console", "Site structure and architecture review", "Indexation issue identification and resolution", "Duplicate and thin content remediation", "Page speed optimization", "Mobile usability verification", "Ongoing monitoring and quarterly re-audits"],
-        metaTitle: "Technical SEO for Local Agencies | Site Speed, Crawlability & Indexing Fixes | White Label by Dialed-in Web",
-        metaDescription: "Fix SEO blockers fast. Dialed-in Web delivers audits and tech SEO fixes for agencies—fully managed and white labeled."
+        metaTitle: "Technical SEO for Local Agencies | Site Speed, Crawlability & Indexing Fixes | White Label ",
+        metaDescription: "Fix SEO blockers fast. DemandStream Digital delivers audits and tech SEO fixes for agencies—fully managed and white labeled."
       },
       {
         title: "Local Keyword Strategy",
@@ -193,8 +193,8 @@ export const hubs: Hub[] = [
         benefits: ["Capture long-tail queries competitors miss", "Build topical authority", "Support link building efforts", "Improve engagement metrics", "Create reusable content frameworks"],
         deliverables: ["Content audit and gap analysis", "Service area page content", "Blog content calendar and execution", "FAQ content development", "Content briefs", "Internal linking recommendations"],
         process: ["Keyword research and gap analysis", "Content strategy development", "Service area page creation", "Ongoing content production", "Performance tracking"],
-        metaTitle: "Local SEO Content Development for Agencies | City Pages, Blog Posts & Service Copy | Dialed-in Web",
-        metaDescription: "Dialed-in Web writes geo-targeted content that ranks and converts—white labeled for agencies serving local businesses."
+        metaTitle: "Local SEO Content Development for Agencies | City Pages, Blog Posts & Service Copy ",
+        metaDescription: "DemandStream Digital writes geo-targeted content that ranks and converts—white labeled for agencies serving local businesses."
       },
       {
         title: "Link Building",
@@ -215,8 +215,8 @@ export const hubs: Hub[] = [
         benefits: ["Page-level knowledge graphs with connected entities", "Rich result eligibility for stars, FAQs, and breadcrumbs", "AI Overview citation accuracy through explicit structured data", "E-E-A-T signals via Person schema with knowsAbout properties", "sameAs validation linking to authoritative external sources", "Reduced NLP guesswork for search engines and LLMs"],
         deliverables: ["Connected schema audit with relationship mapping", "@graph structure with @id entity connections", "LocalBusiness + Organization + Person schema", "Service schema with offers and ratings", "FAQ and Article schema for content pages", "Three-step validation (Schema.org, Rich Results, Classy Schema)", "AI citation verification via LLM testing"],
         process: ["Current schema audit and visualization", "Entity relationship planning", "@graph structure development", "sameAs and knowsAbout implementation", "Three-step validation workflow", "Deployment and Search Console monitoring", "Quarterly audits and AI visibility checks"],
-        metaTitle: "Schema Markup for Local SEO | White Label Structured Data for Reviews, Business Info & FAQs | Dialed-in Web",
-        metaDescription: "Dialed-in Web adds schema for local business, reviews, FAQ, and events—white labeled for your agency's SEO delivery."
+        metaTitle: "Schema Markup for Local SEO | White Label Structured Data for Reviews, Business Info & FAQs ",
+        metaDescription: "DemandStream Digital adds schema for local business, reviews, FAQ, and events—white labeled for your agency's SEO delivery."
       },
       {
         title: "NAP Citations",
@@ -226,8 +226,8 @@ export const hubs: Hub[] = [
         benefits: ["Improved local pack rankings through NAP consistency", "AI Overview source eligibility via trusted directories", "Enhanced trust signals for Google's local algorithm", "Referral traffic from high-authority directories", "Foundation for local authority building", "Reduced ranking suppression from conflicting data"],
         deliverables: ["Complete NAP audit using citation tools", "Incorrect citation correction and cleanup", "Core citation building across 50+ directories", "Data aggregator submissions (Foursquare, Data Axle, Neustar)", "Industry-specific directory submissions", "AI source audit for Yelp, TripAdvisor, and vertical platforms", "Ongoing NAP monitoring and maintenance"],
         process: ["Current NAP audit with Semrush/BrightLocal", "Inconsistency identification and cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "AI visibility verification", "Ongoing monitoring and quarterly re-audits"],
-        metaTitle: "Local NAP Citation Management for Agencies | Build & Clean Directories at Scale | White Label | Dialed-in Web",
-        metaDescription: "Dialed-in Web builds, audits, and cleans local citations across directories—white labeled to help agencies rank local clients."
+        metaTitle: "Local NAP Citation Management for Agencies | Build & Clean Directories at Scale | White Label ",
+        metaDescription: "DemandStream Digital builds, audits, and cleans local citations across directories—white labeled to help agencies rank local clients."
       }
     ]
   },
@@ -292,8 +292,8 @@ export const hubs: Hub[] = [
         benefits: ["Improved visibility in local pack and AI Overviews", "Higher engagement from searchers through complete profiles", "Better conversion from views to actions", "AI Overview citation eligibility through structured attributes", "Expanded keyword coverage through secondary categories", "Foundation for Maps optimization and AI visibility"],
         deliverables: ["Complete GBP audit and optimization", "Primary and secondary category optimization", "Business attribute maximization for AI extraction", "Service and product catalog with keyword alignment", "Business description optimization for AI parsing", "Profile completeness maximization", "Ongoing profile maintenance"],
         process: ["Profile audit against best practices", "Competitive GBP analysis", "Category expansion research", "Optimization implementation", "AI visibility verification", "Performance monitoring", "Ongoing refinement"],
-        metaTitle: "White Label GBP Optimization for Agencies | Wholesale Google Business Profile Services by Dialed-in Web",
-        metaDescription: "Dialed-in Web optimizes GBP listings to improve local search results and visibility. Offer this service wholesale. Schedule a discovery call today."
+        metaTitle: "White Label GBP Optimization for Agencies | Wholesale Google Business Profile Services ",
+        metaDescription: "DemandStream Digital optimizes GBP listings to improve local search results and visibility. Offer this service wholesale. Schedule a discovery call today."
       },
       {
         title: "Review Generation & Response",
@@ -317,8 +317,8 @@ export const hubs: Hub[] = [
           "AI platform monitoring for Yelp, TripAdvisor, OpenTable, and industry directories"
         ],
         process: ["Review audit and competitive analysis", "Generation campaign strategy with optimal timing windows", "Multi-channel request system implementation", "Response workflow with brand voice templates", "Performance tracking and monthly strategy refinement"],
-        metaTitle: "White Label Review Generation & Response for Agencies | Wholesale GBP Reputation SEO by Dialed-in Web",
-        metaDescription: "Dialed-in Web manages review generation and responses to boost local trust and rankings. Resell this service today. Schedule a call with our team."
+        metaTitle: "White Label Review Generation & Response for Agencies | Wholesale GBP Reputation SEO ",
+        metaDescription: "DemandStream Digital manages review generation and responses to boost local trust and rankings. Resell this service today. Schedule a call with our team."
       },
       {
         title: "Citation Building & Cleanup",
@@ -328,8 +328,8 @@ export const hubs: Hub[] = [
         benefits: ["Improved local pack rankings", "Consistent business information", "Enhanced trust signals for Google", "Referral traffic from directories", "Foundation for local authority"],
         deliverables: ["Citation audit and cleanup", "Core citation building (50+ sites)", "Data aggregator submissions", "Industry-specific directories", "Ongoing citation monitoring", "NAP consistency maintenance"],
         process: ["Current citation audit", "Inconsistency cleanup", "Core directory submissions", "Data aggregator distribution", "Industry directory submission", "Ongoing monitoring"],
-        metaTitle: "White Label Citation Building & Cleanup for Agencies | Wholesale GBP SEO Listings by Dialed-in Web",
-        metaDescription: "We build and clean GBP citations to improve NAP accuracy and local SEO performance. Resell citation work. Book a discovery call with Dialed-in Web."
+        metaTitle: "White Label Citation Building & Cleanup for Agencies | Wholesale GBP SEO Listings ",
+        metaDescription: "We build and clean GBP citations to improve NAP accuracy and local SEO performance. Resell citation work. Book a discovery call with DemandStream Digital."
       },
       {
         title: "Photo & Media Management",
@@ -339,8 +339,8 @@ export const hubs: Hub[] = [
         benefits: ["Higher engagement rates on GBP", "Improved trust and credibility", "Better conversion from views", "Competitive differentiation", "Fresh profile appearance"],
         deliverables: ["Photo audit and recommendations", "Photo optimization and geotagging", "Cover and logo optimization", "Ongoing photo updates", "User photo management", "Visual content calendar"],
         process: ["Current photo audit", "Competitive visual analysis", "Photo strategy development", "Optimization implementation", "Ongoing content management"],
-        metaTitle: "White Label Photo & Media Management for Agencies | Wholesale GBP Visual SEO by Dialed-in Web",
-        metaDescription: "Dialed-in Web optimizes images for engagement and local search impact. Enhance client GBP presence. Add media management to your stack today."
+        metaTitle: "White Label Photo & Media Management for Agencies | Wholesale GBP Visual SEO ",
+        metaDescription: "DemandStream Digital optimizes images for engagement and local search impact. Enhance client GBP presence. Add media management to your stack today."
       },
       {
         title: "Local Pack Strategy",
@@ -350,8 +350,8 @@ export const hubs: Hub[] = [
         benefits: ["Capture additional search queries", "Build trust with potential customers", "Control the narrative", "Reduce repetitive customer inquiries", "Competitive differentiation"],
         deliverables: ["Q&A audit and strategy", "Question seeding with answers", "Ongoing Q&A monitoring", "Response drafting for new questions", "Competitor Q&A analysis", "Monthly Q&A reporting"],
         process: ["Current Q&A audit", "Question opportunity identification", "Question seeding implementation", "Monitoring setup", "Ongoing response management"],
-        metaTitle: "White Label Local Pack Strategy for Agencies | Wholesale GBP Q&A Management by Dialed-in Web",
-        metaDescription: "We manage GBP Q&A to influence local pack visibility and conversions. Strengthen SEO with strategy. Talk to Dialed-in Web to offer this service."
+        metaTitle: "White Label Local Pack Strategy for Agencies | Wholesale GBP Q&A Management ",
+        metaDescription: "We manage GBP Q&A to influence local pack visibility and conversions. Strengthen SEO with strategy. Talk to DemandStream Digital to offer this service."
       },
       {
         title: "GBP Posting & Content",
@@ -361,8 +361,8 @@ export const hubs: Hub[] = [
         benefits: ["Active profile signals to Google", "Increased customer engagement", "Promotion of offers and events", "Fresh content for searchers", "Competitive advantage"],
         deliverables: ["Post content calendar", "Weekly post creation", "Offer and event posts", "Image selection and optimization", "Post performance tracking", "Monthly engagement reporting"],
         process: ["Content calendar development", "Post creation and scheduling", "Image optimization", "Performance monitoring", "Calendar refinement"],
-        metaTitle: "White Label Google Post Scheduling for Agencies | Wholesale GBP Content Strategy by Dialed-in Web",
-        metaDescription: "Dialed-in Web creates and schedules Google Posts to boost local engagement and CTR. Resell content publishing. Get started with us today."
+        metaTitle: "White Label Google Post Scheduling for Agencies | Wholesale GBP Content Strategy ",
+        metaDescription: "DemandStream Digital creates and schedules Google Posts to boost local engagement and CTR. Resell content publishing. Get started with us today."
       }
     ]
   },
@@ -426,8 +426,8 @@ export const hubs: Hub[] = [
         benefits: ["Highest-intent traffic capture", "Immediate visibility for money keywords", "Scalable lead generation", "Precise geographic targeting", "Measurable cost per lead"],
         deliverables: ["Campaign structure and buildout", "Keyword research and mapping", "Ad copy development", "Extension optimization", "Bid strategy configuration", "Ongoing optimization and reporting"],
         process: ["Market and competitor analysis", "Campaign architecture design", "Build and launch", "Initial optimization period", "Weekly refinement", "Monthly strategy review"],
-        metaTitle: "White Label Google Ads Management for Agencies | Wholesale PPC Campaign Services by Dialed-in Web",
-        metaDescription: "Dialed-in Web runs Google Ads that drive qualified leads and ROI for your clients. Offer high-performance PPC. Book a strategy call today."
+        metaTitle: "White Label Google Ads Management for Agencies | Wholesale PPC Campaign Services ",
+        metaDescription: "DemandStream Digital runs Google Ads that drive qualified leads and ROI for your clients. Offer high-performance PPC. Book a strategy call today."
       },
       {
         title: "Meta Ads",
@@ -437,8 +437,8 @@ export const hubs: Hub[] = [
         benefits: ["Broad local awareness building", "Precise demographic targeting", "Visual storytelling capability", "Lower cost per impression", "Strong retargeting performance"],
         deliverables: ["Campaign structure and setup", "Audience research and building", "Creative development", "Placement optimization", "Lead form or landing page strategy", "Performance reporting"],
         process: ["Audience research", "Campaign architecture", "Creative development", "Launch and testing", "Ongoing optimization", "Scale winning combinations"],
-        metaTitle: "White Label Meta Ads Management for Agencies | Wholesale Facebook & Instagram Ads by Dialed-in Web",
-        metaDescription: "Dialed-in Web delivers Meta Ads that grow client visibility and engagement. Resell paid social with results. Partner with us today."
+        metaTitle: "White Label Meta Ads Management for Agencies | Wholesale Facebook & Instagram Ads ",
+        metaDescription: "DemandStream Digital delivers Meta Ads that grow client visibility and engagement. Resell paid social with results. Partner with us today."
       },
       {
         title: "Local Service Ads",
@@ -448,8 +448,8 @@ export const hubs: Hub[] = [
         benefits: ["Top-of-page visibility", "Google Guaranteed trust signal", "Pay-per-lead model", "Direct phone calls from search", "High-intent local prospects"],
         deliverables: ["LSA profile setup and optimization", "Service category configuration", "Review strategy integration", "Budget and bid management", "Lead dispute management", "Performance tracking and reporting"],
         process: ["Eligibility verification", "Profile optimization", "Service area configuration", "Launch and monitoring", "Ongoing bid management", "Lead quality review"],
-        metaTitle: "White Label Local Service Ads for Agencies | Wholesale Google LSA Lead Generation by Dialed-in Web",
-        metaDescription: "Local Service Ads from Dialed-in Web generate high-intent leads for local clients. Resell Google LSA campaigns. Contact us to get started."
+        metaTitle: "White Label Local Service Ads for Agencies | Wholesale Google LSA Lead Generation ",
+        metaDescription: "Local Service Ads from DemandStream Digital generate high-intent leads for local clients. Resell Google LSA campaigns. Contact us to get started."
       },
       {
         title: "Retargeting Campaigns",
@@ -459,8 +459,8 @@ export const hubs: Hub[] = [
         benefits: ["Higher conversion rates from warm traffic", "Lower cost per acquisition", "Extended brand visibility", "Multi-platform reach", "Nurture prospects to conversion"],
         deliverables: ["Audience segmentation strategy", "Retargeting pixel implementation", "Creative development by funnel stage", "Cross-platform campaign setup", "Frequency management", "Attribution reporting"],
         process: ["Audience analysis and segmentation", "Pixel and tracking setup", "Creative strategy development", "Campaign launch", "Performance optimization", "Cross-platform coordination"],
-        metaTitle: "White Label Retargeting Campaigns for Agencies | Wholesale Remarketing Services by Dialed-in Web",
-        metaDescription: "Retargeting campaigns from Dialed-in Web increase ROI and recover lost traffic. Add remarketing to your stack. Schedule a call today."
+        metaTitle: "White Label Retargeting Campaigns for Agencies | Wholesale Remarketing Services ",
+        metaDescription: "Retargeting campaigns from DemandStream Digital increase ROI and recover lost traffic. Add remarketing to your stack. Schedule a call today."
       },
       {
         title: "Landing Page Design",
@@ -470,8 +470,8 @@ export const hubs: Hub[] = [
         benefits: ["Higher conversion rates", "Lower cost per lead", "Better Quality Scores", "Improved mobile experience", "Clear performance attribution"],
         deliverables: ["Landing page design and development", "A/B testing framework", "Form optimization", "Click-to-call implementation", "Trust signal integration", "Page speed optimization"],
         process: ["Current page audit", "Competitive analysis", "Design and development", "A/B testing implementation", "Ongoing conversion optimization"],
-        metaTitle: "White Label Landing Page Design for Agencies | Wholesale CRO-Focused Pages by Dialed-in Web",
-        metaDescription: "Dialed-in Web builds landing pages that convert ad traffic into leads. Enhance your PPC offering. Request high-converting pages today."
+        metaTitle: "White Label Landing Page Design for Agencies | Wholesale CRO-Focused Pages ",
+        metaDescription: "DemandStream Digital builds landing pages that convert ad traffic into leads. Enhance your PPC offering. Request high-converting pages today."
       },
       {
         title: "Conversion Tracking",
@@ -481,8 +481,8 @@ export const hubs: Hub[] = [
         benefits: ["True ROI measurement", "Call and form attribution", "Lead quality insights", "Optimization data", "Client-ready reporting"],
         deliverables: ["Call tracking setup", "Form tracking implementation", "Dynamic number insertion", "Google Tag Manager configuration", "Attribution modeling", "Conversion reporting dashboard"],
         process: ["Tracking requirements assessment", "Platform selection and setup", "Technical implementation", "Testing and verification", "Reporting configuration", "Ongoing maintenance"],
-        metaTitle: "White Label Conversion Tracking Setup for Agencies | Wholesale Funnel Analytics by Dialed-in Web",
-        metaDescription: "Dialed-in Web installs conversion tracking that proves ROI and drives optimization. Offer accurate data. Get started today."
+        metaTitle: "White Label Conversion Tracking Setup for Agencies | Wholesale Funnel Analytics ",
+        metaDescription: "DemandStream Digital installs conversion tracking that proves ROI and drives optimization. Offer accurate data. Get started today."
       }
     ]
   },
@@ -546,8 +546,8 @@ export const hubs: Hub[] = [
         benefits: ["Strategic alignment with business goals", "Seasonal opportunity capture", "Consistent send cadence", "Higher engagement through relevance", "Reduced campaign fatigue"],
         deliverables: ["Annual campaign calendar", "Seasonal campaign planning", "Send cadence strategy", "Campaign theme development", "Content angle identification", "Performance goal setting"],
         process: ["Business cycle analysis", "Seasonal opportunity mapping", "Calendar development", "Campaign theme creation", "Ongoing calendar refinement"],
-        metaTitle: "White Label Email Campaign Strategy for Agencies | Wholesale List Segmentation by Dialed-in Web",
-        metaDescription: "We craft high-converting email campaign strategies that improve performance. Offer expert planning. Talk to Dialed-in Web today."
+        metaTitle: "White Label Email Campaign Strategy for Agencies | Wholesale List Segmentation ",
+        metaDescription: "We craft high-converting email campaign strategies that improve performance. Offer expert planning. Talk to DemandStream Digital today."
       },
       {
         title: "List Management",
@@ -557,8 +557,8 @@ export const hubs: Hub[] = [
         benefits: ["Protected sender reputation", "Higher deliverability rates", "Reduced spam complaints", "More relevant messaging", "Lower sending costs"],
         deliverables: ["Permission audit and cleanup", "Opt-in form optimization", "Segmentation strategy", "Inactive subscriber protocols", "List growth tactics", "Ongoing hygiene maintenance"],
         process: ["Current list assessment", "Permission verification", "Segmentation implementation", "Cleanup protocols", "Ongoing monitoring"],
-        metaTitle: "White Label Email List Management for Agencies | Wholesale Segmentation & Cleanup by Dialed-in Web",
-        metaDescription: "Dialed-in Web manages email lists to maximize deliverability and open rates. Add list hygiene to your stack. Contact us now."
+        metaTitle: "White Label Email List Management for Agencies | Wholesale Segmentation & Cleanup ",
+        metaDescription: "DemandStream Digital manages email lists to maximize deliverability and open rates. Add list hygiene to your stack. Contact us now."
       },
       {
         title: "Automation Flows",
@@ -568,7 +568,7 @@ export const hubs: Hub[] = [
         benefits: ["24/7 customer nurturing and review generation", "Review requests timed to peak satisfaction moments", "Personalized messaging using customer name and service details", "Multi-channel support: email primary, SMS fallback (29% prefer text)", "Consistent follow-up execution that customers forget without", "Lapsed customer recovery before they go cold"],
         deliverables: ["Welcome sequence development", "Post-service review request automation with optimal timing", "Direct review links to Google, Facebook, Yelp, or industry sites", "Follow-up reminder sequences (3-7 day cadence)", "Win-back campaigns", "Performance tracking and conversion optimization"],
         process: ["Customer journey mapping with review touchpoints", "Sequence strategy development", "Personalized email content creation", "Review link generation and platform options", "Technical implementation and CRM integration", "Testing, launch, and ongoing optimization"],
-        metaTitle: "White Label Email Automation Flows for Agencies | Wholesale Lifecycle Sequences by Dialed-in Web",
+        metaTitle: "White Label Email Automation Flows for Agencies | Wholesale Lifecycle Sequences ",
         metaDescription: "We build email automations that nurture leads and drive sales. Resell proven flows under your brand. Book a strategy call today."
       },
       {
@@ -579,8 +579,8 @@ export const hubs: Hub[] = [
         benefits: ["Professional brand presentation", "Mobile-first responsiveness", "Consistent visual identity", "Higher engagement rates", "Improved click-through rates"],
         deliverables: ["Custom template design", "Mobile optimization", "Header and footer templates", "Promotional email templates", "Newsletter templates", "Template documentation"],
         process: ["Brand guidelines review", "Template architecture planning", "Design development", "Cross-device testing", "Template library creation"],
-        metaTitle: "White Label Newsletter Design for Agencies | Wholesale Email Templates & Branding by Dialed-in Web",
-        metaDescription: "Dialed-in Web designs branded newsletters that build engagement and trust. Offer stunning emails today. Contact us to get started."
+        metaTitle: "White Label Newsletter Design for Agencies | Wholesale Email Templates & Branding ",
+        metaDescription: "DemandStream Digital designs branded newsletters that build engagement and trust. Offer stunning emails today. Contact us to get started."
       },
       {
         title: "A/B Testing",
@@ -590,8 +590,8 @@ export const hubs: Hub[] = [
         benefits: ["Continuous performance improvement", "Data-driven decisions", "Higher open rates", "Improved click-through rates", "Optimized send timing"],
         deliverables: ["Testing strategy development", "Subject line testing", "Send time optimization", "Content format testing", "CTA testing", "Test result analysis and reporting"],
         process: ["Baseline establishment", "Test hypothesis development", "Test execution", "Results analysis", "Winning variant implementation", "Next test planning"],
-        metaTitle: "White Label Email A/B Testing for Agencies | Wholesale Optimization Services by Dialed-in Web",
-        metaDescription: "Dialed-in Web tests subject lines, CTAs, and timing to improve email ROI. Optimize client campaigns. Partner with us today."
+        metaTitle: "White Label Email A/B Testing for Agencies | Wholesale Optimization Services ",
+        metaDescription: "DemandStream Digital tests subject lines, CTAs, and timing to improve email ROI. Optimize client campaigns. Partner with us today."
       },
       {
         title: "Performance Analytics",
@@ -601,7 +601,7 @@ export const hubs: Hub[] = [
         benefits: ["Clear performance visibility", "Revenue attribution", "Actionable insights", "Trend identification", "ROI demonstration"],
         deliverables: ["Analytics dashboard setup", "Monthly performance reports", "Conversion tracking integration", "Revenue attribution setup", "Trend analysis", "Optimization recommendations"],
         process: ["Tracking implementation", "Baseline establishment", "Ongoing monitoring", "Monthly reporting", "Insight development", "Recommendation delivery"],
-        metaTitle: "White Label Email Performance Analytics for Agencies | Wholesale Reporting by Dialed-in Web",
+        metaTitle: "White Label Email Performance Analytics for Agencies | Wholesale Reporting ",
         metaDescription: "Get white label email analytics with open, click, and conversion insights. Show real results. Book a reporting walkthrough today."
       }
     ]
@@ -667,7 +667,7 @@ export const hubs: Hub[] = [
         benefits: ["Geographic relevance signals", "Local publication visibility", "Community trust building", "Regional authority establishment", "Competitive differentiation"],
         deliverables: ["Local publication outreach", "Community blog placements", "Local news coverage", "Regional directory submissions", "Geographic link tracking", "Monthly acquisition reporting"],
         process: ["Local opportunity research", "Outreach strategy development", "Relationship building", "Placement execution", "Link documentation", "Performance analysis"],
-        metaTitle: "White Label Local Link Building for Agencies | Wholesale SEO Authority Services by Dialed-in Web",
+        metaTitle: "White Label Local Link Building for Agencies | Wholesale SEO Authority Services ",
         metaDescription: "Get location-relevant backlinks that improve local rankings. Resell powerful SEO link building. Schedule your demo today."
       },
       {
@@ -678,8 +678,8 @@ export const hubs: Hub[] = [
         benefits: ["Media-rich authority signals beyond directories", "AI discovery through diverse content formats", "Entity validation across multiple mediums", "Press release syndication visibility", "Web 2.0 platform presence", "Podcast and video mention leverage"],
         deliverables: ["Video citation placement strategy", "Image citation and infographic distribution", "Podcast and audio mention coordination", "Web 2.0 platform profile creation", "Press release syndication", "Unstructured citation tracking and reporting"],
         process: ["Content asset audit", "Platform and channel identification", "Media creation or coordination", "Distribution execution", "Mention documentation", "Performance analysis"],
-        metaTitle: "White Label Unstructured Citation Building for Agencies | Wholesale Local Mentions by Dialed-in Web",
-        metaDescription: "Dialed-in Web builds unstructured citations to boost local authority and SEO. Add this to your stack. Book a discovery call today."
+        metaTitle: "White Label Unstructured Citation Building for Agencies | Wholesale Local Mentions ",
+        metaDescription: "DemandStream Digital builds unstructured citations to boost local authority and SEO. Add this to your stack. Book a discovery call today."
       },
       {
         title: "Brand Mentions",
@@ -689,7 +689,7 @@ export const hubs: Hub[] = [
         benefits: ["Organic brand visibility", "AI discovery signals", "Community trust building", "Topical relevance signals", "Unstructured citation value"],
         deliverables: ["Reddit community engagement", "Quora topic responses", "Social platform monitoring", "Mention opportunity identification", "Strategic response development", "Brand mention tracking"],
         process: ["Platform research", "Engagement strategy", "Monitoring setup", "Response execution", "Documentation", "Performance analysis"],
-        metaTitle: "White Label Brand Mentions for Agencies | Wholesale Online Authority Signals by Dialed-in Web",
+        metaTitle: "White Label Brand Mentions for Agencies | Wholesale Online Authority Signals ",
         metaDescription: "We secure high-quality brand mentions to elevate trust and visibility. Offer this under your brand. Partner with us now."
       },
       {
@@ -700,8 +700,8 @@ export const hubs: Hub[] = [
         benefits: ["Natural link profile appearance", "Maximized ranking power", "Penalty risk avoidance", "Strategic keyword targeting", "Long-term profile health"],
         deliverables: ["Anchor text audit", "Distribution strategy", "Target anchor planning", "Ongoing profile monitoring", "Competitor anchor analysis", "Monthly profile reporting"],
         process: ["Current profile analysis", "Competitor benchmarking", "Strategy development", "Implementation guidelines", "Ongoing monitoring", "Quarterly review"],
-        metaTitle: "White Label Anchor Text Strategy for Agencies | Wholesale SEO Link Optimization by Dialed-in Web",
-        metaDescription: "Dialed-in Web optimizes anchor text to support rankings and relevance. Improve link impact. Talk to us about wholesale SEO today."
+        metaTitle: "White Label Anchor Text Strategy for Agencies | Wholesale SEO Link Optimization ",
+        metaDescription: "DemandStream Digital optimizes anchor text to support rankings and relevance. Improve link impact. Talk to us about wholesale SEO today."
       },
       {
         title: "Sponsorships",
@@ -711,8 +711,8 @@ export const hubs: Hub[] = [
         benefits: ["Authentic community connection", "High-quality sponsorship links", "Local brand visibility", "Community goodwill", "PR opportunities"],
         deliverables: ["Sponsorship opportunity research", "Outreach and coordination", "Link placement verification", "Event participation support", "Coverage documentation", "ROI tracking"],
         process: ["Opportunity identification", "Value assessment", "Outreach execution", "Sponsorship coordination", "Link verification", "Performance reporting"],
-        metaTitle: "White Label Local Sponsorship Links for Agencies | Wholesale Community SEO by Dialed-in Web",
-        metaDescription: "We source local sponsorships to boost SEO authority and visibility. Resell locally trusted links. Contact Dialed-in Web today."
+        metaTitle: "White Label Local Sponsorship Links for Agencies | Wholesale Community SEO ",
+        metaDescription: "We source local sponsorships to boost SEO authority and visibility. Resell locally trusted links. Contact DemandStream Digital today."
       },
       {
         title: "Reputation Signals",
@@ -722,8 +722,8 @@ export const hubs: Hub[] = [
         benefits: ["Enhanced trust signals", "Review volume growth", "Third-party credibility", "Prominence factor improvement", "Conversion rate support"],
         deliverables: ["Review generation strategy", "Testimonial outreach", "Trust badge implementation", "Review platform optimization", "Reputation monitoring", "Monthly reputation reporting"],
         process: ["Current reputation audit", "Strategy development", "Campaign implementation", "Ongoing monitoring", "Response management", "Performance tracking"],
-        metaTitle: "White Label Reputation Signal Building for Agencies | Wholesale Trust SEO Services by Dialed-in Web",
-        metaDescription: "Dialed-in Web builds trust signals to boost rankings and credibility. Add reputation SEO to your offer. Let's connect today."
+        metaTitle: "White Label Reputation Signal Building for Agencies | Wholesale Trust SEO Services ",
+        metaDescription: "DemandStream Digital builds trust signals to boost rankings and credibility. Add reputation SEO to your offer. Let's connect today."
       }
     ]
   },
@@ -787,8 +787,8 @@ export const hubs: Hub[] = [
         benefits: ["Real-time metric visibility", "Reduced client questions", "Professional presentation", "Your branding throughout", "Client self-service access"],
         deliverables: ["Custom dashboard design", "Data source integration", "Branded interface", "Client access setup", "Training documentation", "Ongoing maintenance"],
         process: ["Requirements gathering", "Data integration", "Dashboard design", "Branding implementation", "Testing and refinement", "Launch and training"],
-        metaTitle: "White Label Marketing Dashboards for Agencies | Wholesale SEO & PPC Reporting by Dialed-in Web",
-        metaDescription: "Give clients live dashboards branded as your own. Dialed-in Web automates reporting. Offer real-time visibility today."
+        metaTitle: "White Label Marketing Dashboards for Agencies | Wholesale SEO & PPC Reporting ",
+        metaDescription: "Give clients live dashboards branded as your own. DemandStream Digital automates reporting. Offer real-time visibility today."
       },
       {
         title: "Monthly Performance Reports",
@@ -798,8 +798,8 @@ export const hubs: Hub[] = [
         benefits: ["Clear progress documentation", "Client confidence building", "Retention tool", "Strategy alignment", "Professional presentation"],
         deliverables: ["Executive summary", "Detailed metric analysis", "Trend visualization", "Recommendations section", "Competitive context", "Next month preview"],
         process: ["Data collection", "Analysis and insights", "Report creation", "Quality review", "Delivery scheduling", "Follow-up support"],
-        metaTitle: "White Label Monthly Performance Reports for Agencies | Wholesale Client Reporting by Dialed-in Web",
-        metaDescription: "Dialed-in Web creates detailed monthly reports with SEO, PPC, and traffic insights. Offer this under your brand. Book a call today."
+        metaTitle: "White Label Monthly Performance Reports for Agencies | Wholesale Client Reporting ",
+        metaDescription: "DemandStream Digital creates detailed monthly reports with SEO, PPC, and traffic insights. Offer this under your brand. Book a call today."
       },
       {
         title: "Rank Tracking & Visibility",
@@ -809,8 +809,8 @@ export const hubs: Hub[] = [
         benefits: ["Daily ranking data", "Trend visualization", "Competitive comparison", "Alert on significant changes", "Progress demonstration"],
         deliverables: ["Keyword list setup", "Daily tracking configuration", "Ranking reports", "Visibility trend analysis", "Competitor tracking", "Alert configuration"],
         process: ["Keyword research and selection", "Tracking setup", "Baseline establishment", "Ongoing monitoring", "Regular reporting"],
-        metaTitle: "White Label Rank Tracking & Visibility Reports for Agencies | Wholesale SEO Metrics by Dialed-in Web",
-        metaDescription: "Track SEO performance with branded rank reports from Dialed-in Web. Keep clients engaged with results. Start offering this today."
+        metaTitle: "White Label Rank Tracking & Visibility Reports for Agencies | Wholesale SEO Metrics ",
+        metaDescription: "Track SEO performance with branded rank reports from DemandStream Digital. Keep clients engaged with results. Start offering this today."
       },
       {
         title: "Call Tracking & Lead Attribution",
@@ -820,8 +820,8 @@ export const hubs: Hub[] = [
         benefits: ["Call source attribution", "Marketing ROI clarity", "Lead quality insights", "Call recording access", "Multi-touch understanding"],
         deliverables: ["Call tracking setup", "Dynamic number implementation", "Recording configuration", "Attribution modeling", "Integration with reporting", "Call analytics dashboard"],
         process: ["Technical assessment", "Platform selection", "Implementation", "Testing and verification", "Integration with reporting", "Ongoing monitoring"],
-        metaTitle: "White Label Call Tracking & Lead Attribution for Agencies | Wholesale Conversions by Dialed-in Web",
-        metaDescription: "Track calls and leads from SEO and PPC efforts. Dialed-in Web makes attribution easy. Add it to your reporting suite today."
+        metaTitle: "White Label Call Tracking & Lead Attribution for Agencies | Wholesale Conversions ",
+        metaDescription: "Track calls and leads from SEO and PPC efforts. DemandStream Digital makes attribution easy. Add it to your reporting suite today."
       },
       {
         title: "ROI & Revenue Analysis",
@@ -831,8 +831,8 @@ export const hubs: Hub[] = [
         benefits: ["Clear ROI demonstration", "Investment justification", "Budget optimization data", "Client confidence", "Renewal support"],
         deliverables: ["ROI framework development", "Revenue tracking setup", "Conversion value assignment", "ROI dashboards", "Monthly ROI reports", "Year-over-year analysis"],
         process: ["Conversion definition", "Value assignment", "Tracking implementation", "Reporting configuration", "Ongoing analysis"],
-        metaTitle: "White Label ROI & Revenue Analysis Reports for Agencies | Wholesale Performance Data by Dialed-in Web",
-        metaDescription: "Show ROI clearly with revenue-based reports from Dialed-in Web. Resell performance insights. Let's build your dashboard now."
+        metaTitle: "White Label ROI & Revenue Analysis Reports for Agencies | Wholesale Performance Data ",
+        metaDescription: "Show ROI clearly with revenue-based reports from DemandStream Digital. Resell performance insights. Let's build your dashboard now."
       },
       {
         title: "Client Presentation Decks",
@@ -842,8 +842,8 @@ export const hubs: Hub[] = [
         benefits: ["Professional presentation materials", "Client-ready slides", "Strategic narrative support", "QBR preparation", "Win communication"],
         deliverables: ["Presentation template development", "Monthly or quarterly slide updates", "Executive summary slides", "Strategy recommendation slides", "Visual design", "Speaker notes"],
         process: ["Template design", "Data integration", "Narrative development", "Visual polish", "Delivery preparation", "Presentation support"],
-        metaTitle: "White Label Client Presentation Decks for Agencies | Wholesale Reporting Slides by Dialed-in Web",
-        metaDescription: "We build white label decks your team can present with confidence. Dialed-in Web handles the slides. Request samples today."
+        metaTitle: "White Label Client Presentation Decks for Agencies | Wholesale Reporting Slides ",
+        metaDescription: "We build white label decks your team can present with confidence. DemandStream Digital handles the slides. Request samples today."
       }
     ]
   },
@@ -912,7 +912,7 @@ export const hubs: Hub[] = [
         benefits: ["Rank in every target city", "Capture 'near me' searches", "Build geographic authority", "Avoid duplicate content penalties", "Support local pack rankings"],
         deliverables: ["Service area page content", "City-specific landing pages", "Neighborhood content where relevant", "Local schema markup", "Internal linking architecture", "Geographic keyword targeting"],
         process: ["Service area mapping", "Keyword research per location", "Unique content development", "Local schema implementation", "Internal linking setup", "Performance tracking"],
-        metaTitle: "White Label Geographical Content for Agencies | Wholesale Local SEO Page Creation by Dialed-in Web",
+        metaTitle: "White Label Geographical Content for Agencies | Wholesale Local SEO Page Creation ",
         metaDescription: "We create location-specific pages to help clients rank locally. Sell geo content as your own. Schedule a strategy session today."
       },
       {
@@ -923,8 +923,8 @@ export const hubs: Hub[] = [
         benefits: ["Build topical authority", "Capture long-tail queries", "Support E-E-A-T signals", "Create internal linking opportunities", "Feed social and email channels"],
         deliverables: ["Industry expertise articles", "How-to guides", "Educational content", "Comparison content", "Seasonal/timely content", "Content refresh updates"],
         process: ["Topic cluster mapping", "Keyword research", "Content brief development", "Writing and optimization", "Internal linking", "Performance tracking"],
-        metaTitle: "White Label Topical Content for Agencies | Wholesale Timely SEO Blog Posts by Dialed-in Web",
-        metaDescription: "Stay ahead with relevant content that drives organic traffic. Dialed-in Web writes what's trending. Partner with us today."
+        metaTitle: "White Label Topical Content for Agencies | Wholesale Timely SEO Blog Posts ",
+        metaDescription: "Stay ahead with relevant content that drives organic traffic. DemandStream Digital writes what's trending. Partner with us today."
       },
       {
         title: "Power Posts",
@@ -934,8 +934,8 @@ export const hubs: Hub[] = [
         benefits: ["Dominate competitive keywords", "Earn natural backlinks", "Establish definitive authority", "Support hub-and-spoke architecture", "Create evergreen assets"],
         deliverables: ["Comprehensive pillar content", "Visual elements and graphics", "Internal linking structure", "FAQ sections", "Schema markup", "Content promotion plan"],
         process: ["Competitive analysis", "Outline development", "Comprehensive writing", "Visual creation", "Optimization", "Promotion and link building"],
-        metaTitle: "White Label Power Posts for Agencies | Wholesale Long-Form SEO Blog Content by Dialed-in Web",
-        metaDescription: "Dialed-in Web creates long-form blog content that ranks and converts. Offer premium SEO writing. Let's plan your content today."
+        metaTitle: "White Label Power Posts for Agencies | Wholesale Long-Form SEO Blog Content ",
+        metaDescription: "DemandStream Digital creates long-form blog content that ranks and converts. Offer premium SEO writing. Let's plan your content today."
       },
       {
         title: "E-books & Guides",
@@ -944,8 +944,8 @@ export const hubs: Hub[] = [
         fullDescription: "E-books and guides are premium content assets that capture email addresses while demonstrating deep expertise. They're the cornerstone of content-driven lead generation.",
         benefits: ["Capture qualified leads", "Demonstrate expertise", "Build email lists", "Support nurture campaigns", "Create repurposable content"],
         deliverables: ["E-book content writing", "Professional design", "Landing page copy", "Email sequence integration", "Lead magnet funnel", "Promotion strategy"],
-        metaTitle: "White Label Ebooks & Guides for Agencies | Wholesale Lead Magnet Content by Dialed-in Web",
-        metaDescription: "Generate leads with custom ebooks and guides. Dialed-in Web writes them under your brand. Start creating high-value assets today.",
+        metaTitle: "White Label Ebooks & Guides for Agencies | Wholesale Lead Magnet Content ",
+        metaDescription: "Generate leads with custom ebooks and guides. DemandStream Digital writes them under your brand. Start creating high-value assets today.",
         process: ["Topic selection", "Outline and structure", "Content development", "Design and formatting", "Landing page creation", "Funnel integration"]
       },
       {
@@ -956,8 +956,8 @@ export const hubs: Hub[] = [
         benefits: ["High conversion rates", "Low production cost", "Quick implementation", "Segment subscribers", "Support automation"],
         deliverables: ["Checklist development", "Template creation", "Tool design", "Landing page copy", "Thank you page optimization", "Email integration"],
         process: ["Magnet concept development", "Content creation", "Design and formatting", "Landing page setup", "Automation integration", "A/B testing"],
-        metaTitle: "White Label Lead Magnets for Agencies | Wholesale Conversion Content Creation by Dialed-in Web",
-        metaDescription: "Dialed-in Web designs lead magnets that turn traffic into leads. Resell content with real impact. Get your assets started today."
+        metaTitle: "White Label Lead Magnets for Agencies | Wholesale Conversion Content Creation ",
+        metaDescription: "DemandStream Digital designs lead magnets that turn traffic into leads. Resell content with real impact. Get your assets started today."
       },
       {
         title: "Press Releases",
@@ -967,8 +967,8 @@ export const hubs: Hub[] = [
         benefits: ["Media visibility", "Citation building", "Brand awareness", "Authority signals", "News aggregator inclusion"],
         deliverables: ["Press release writing", "Distribution strategy", "Media list development", "Follow-up outreach", "Coverage tracking", "Citation documentation"],
         process: ["News angle development", "Press release writing", "Distribution execution", "Media follow-up", "Coverage monitoring", "Citation tracking"],
-        metaTitle: "White Label Press Release Writing for Agencies | Wholesale Content Distribution by Dialed-in Web",
-        metaDescription: "Dialed-in Web writes press releases that build brand awareness and SEO. Add PR content to your services. Request a call today."
+        metaTitle: "White Label Press Release Writing for Agencies | Wholesale Content Distribution ",
+        metaDescription: "DemandStream Digital writes press releases that build brand awareness and SEO. Add PR content to your services. Request a call today."
       },
       {
         title: "AIO Content",
@@ -978,7 +978,7 @@ export const hubs: Hub[] = [
         benefits: ["AI Overview inclusion", "LLM citation eligibility", "Future-proof content", "Semantic structure", "Voice search optimization"],
         deliverables: ["Semantic content structure", "FAQ schema implementation", "Clear heading hierarchies", "Authoritative depth", "Entity optimization", "Citation-friendly formatting"],
         process: ["AI visibility audit", "Content restructuring", "Schema implementation", "Authority building", "Performance monitoring", "Ongoing optimization"],
-        metaTitle: "White Label AIO Content for Agencies | Wholesale AI-Assisted SEO Copywriting by Dialed-in Web",
+        metaTitle: "White Label AIO Content for Agencies | Wholesale AI-Assisted SEO Copywriting ",
         metaDescription: "We combine AI and expert editors to create optimized content at scale. Resell smarter SEO writing. Book your AIO plan today."
       },
       {
@@ -989,8 +989,8 @@ export const hubs: Hub[] = [
         benefits: ["Build prospect trust", "Support sales process", "Document results", "Create social proof", "Enable client testimonials"],
         deliverables: ["Client interview", "Case study writing", "Visual design", "Testimonial extraction", "Distribution strategy", "Sales enablement"],
         process: ["Client selection", "Interview and research", "Story development", "Design and formatting", "Client approval", "Distribution"],
-        metaTitle: "White Label Case Study Writing for Agencies | Wholesale Client Success Content by Dialed-in Web",
-        metaDescription: "Dialed-in Web crafts case studies that build trust and conversions. Offer proof-driven content. Talk to our writing team today."
+        metaTitle: "White Label Case Study Writing for Agencies | Wholesale Client Success Content ",
+        metaDescription: "DemandStream Digital crafts case studies that build trust and conversions. Offer proof-driven content. Talk to our writing team today."
       },
       {
         title: "FAQ Content",
@@ -1000,7 +1000,7 @@ export const hubs: Hub[] = [
         benefits: ["Featured snippet eligibility", "Voice search optimization", "AI visibility", "User experience improvement", "Long-tail keyword capture"],
         deliverables: ["FAQ research and development", "Structured Q&A content", "FAQ schema markup", "Page integration", "Internal linking", "Performance tracking"],
         process: ["Question research", "Answer development", "Schema implementation", "Page integration", "Snippet optimization", "Ongoing expansion"],
-        metaTitle: "White Label FAQ Content for Agencies | Wholesale SEO Answer Pages by Dialed-in Web",
+        metaTitle: "White Label FAQ Content for Agencies | Wholesale SEO Answer Pages ",
         metaDescription: "Improve rankings and user experience with expert FAQ content. Resell optimized answer pages. Get started with us today."
       },
       {
@@ -1011,8 +1011,8 @@ export const hubs: Hub[] = [
         benefits: ["Maximize topical authority", "Clear content organization", "Strategic internal linking", "User experience improvement", "Scalable content framework"],
         deliverables: ["Topic cluster mapping", "Pillar page development", "Supporting content creation", "Internal linking architecture", "Content gap analysis", "Expansion roadmap"],
         process: ["Topic cluster identification", "Pillar page creation", "Spoke content development", "Internal linking implementation", "Performance analysis", "Ongoing expansion"],
-        metaTitle: "White Label Hub and Spoke Content for Agencies | Wholesale SEO Content Architecture by Dialed-in Web",
-        metaDescription: "Dialed-in Web builds hub-and-spoke frameworks for topical authority. Offer strategic content. Schedule your content roadmap today."
+        metaTitle: "White Label Hub and Spoke Content for Agencies | Wholesale SEO Content Architecture ",
+        metaDescription: "DemandStream Digital builds hub-and-spoke frameworks for topical authority. Offer strategic content. Schedule your content roadmap today."
       }
     ]
   }

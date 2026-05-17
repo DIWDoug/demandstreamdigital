@@ -9,7 +9,7 @@ const stats = [
   value: "15+",
   label: "Years of Execution",
   icon: Flame,
-  detail: "Since 2011, Doug Bryson and the teams behind Dialed In Local and Dialed In Web have been building marketing systems for local and national businesses across paid advertising, SEO, email marketing, web design, and content development."
+  detail: "Since 2011, Doug Bryson and team have been building marketing systems for local and national businesses across paid advertising, SEO, email marketing, web design, and content development."
 },
 {
   value: "100+",

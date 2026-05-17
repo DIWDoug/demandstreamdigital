@@ -631,7 +631,7 @@ const About = () => {
                     rating: 5
                   },
                   {
-                    quote: "I don't write many reviews but after having a great experience with Dialed-In, I had to let everyone know! Doug helped us create our website and was with us every step of the way. This was the first time I had built a website and didn't know what to expect or even where to begin, but Doug answered all of our questions and made the process so easy. Doug has proven he has great business ethics and is always professional. I highly recommend this business for anyone looking to enhance their online presence, website, or increase business.",
+                    quote: "I don't write many reviews but after having a great experience with Doug's team, I had to let everyone know! Doug helped us create our website and was with us every step of the way. This was the first time I had built a website and didn't know what to expect or even where to begin, but Doug answered all of our questions and made the process so easy. Doug has proven he has great business ethics and is always professional. I highly recommend this business for anyone looking to enhance their online presence, website, or increase business.",
                     name: "David Dorn",
                     date: "2018",
                     services: "Web Design",
@@ -645,42 +645,42 @@ const About = () => {
                     rating: 5
                   },
                   {
-                    quote: "Dialedin Local has done an exceptional job with our SEO management. We have seen consistent improvements and sales growth since working with Doug. I highly recommend them!",
+                    quote: "Doug's team has done an exceptional job with our SEO management. We have seen consistent improvements and sales growth since working with Doug. I highly recommend them!",
                     name: "Curtis Feather",
                     date: "2016",
                     services: "Local SEO",
                     rating: 5
                   },
                   {
-                    quote: "The Dialed-In Web team have always been professional and knowledgable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
+                    quote: "The team have always been professional and knowledgable in their industry. I had a great experience working with them, and would highly recommend this business to grow your online presence.",
                     name: "Cynthia Cavoto",
                     date: "2019",
                     services: "Local SEO, Web Design",
                     rating: 5
                   },
                   {
-                    quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team at Dialed-In did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price.",
+                    quote: "I was looking for an SEO firm that could help me optimize my local listings and improve our rankings for certain location specific keywords without breaking the bank. Doug and the team did just that. As a small business owner, I simply don't have $10,000 a month to retain a firm unless I don't want to pay my mortgage. Doug and his team did excellent work for a reasonable price.",
                     name: "Joseph Dillon",
                     date: "2017",
                     services: "Local SEO",
                     rating: 5
                   },
                   {
-                    quote: "We at Veterans Auto Services have really appreciated Dialed-In. Doug Bryson was great to work with. He closely monitored our companies reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view the public. Thank you Doug and Dialed-In for all that you do.",
+                    quote: "We at Veterans Auto Services have really appreciated Doug's team. Doug Bryson was great to work with. He closely monitored our companies reviews and was always quick to act with ideas and would implement them to make sure that our company was in full view the public. Thank you Doug and Doug's team for all that you do.",
                     name: "Wendy Burns",
                     date: "2015",
                     services: "Local SEO, Reputation Management",
                     rating: 5
                   },
                   {
-                    quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Dialed-In Local. From the first time we met with Doug we felt confident in his ability to help us. He has proven that he has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed.",
+                    quote: "We run a national car wash company with multiple units. After looking at different companies to help us with our SEO efforts, we ultimately decided to try Doug's team. From the first time we met with Doug we felt confident in his ability to help us. He has proven that he has the technical skills and know how but has proven he genuinely cares about seeing his clients succeed.",
                     name: "Car Spa",
                     date: "2014",
                     services: "National SEO, Multi-Location SEO",
                     rating: 5
                   },
                   {
-                    quote: "I would highly recommend Doug at Dialed in Local to any business looking to grow with SEO. Doug is a great business partner and an excellent communicator. My rankings have shown tremendous growth in a very short period of time. Highly recommended!",
+                    quote: "I would highly recommend Doug at Doug's team to any business looking to grow with SEO. Doug is a great business partner and an excellent communicator. My rankings have shown tremendous growth in a very short period of time. Highly recommended!",
                     name: "ASAP Apartment Finders",
                     date: "2016",
                     services: "Local SEO",
