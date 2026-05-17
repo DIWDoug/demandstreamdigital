@@ -58,6 +58,18 @@ const ListicleHero = ({ title, author, lastUpdated, breadcrumbs, bullets = DEFAU
           {title}
         </h1>
 
+        {/* Bullets */}
+        {bullets.length > 0 && (
+          <ul className="mb-6 space-y-2 max-w-3xl">
+            {bullets.map((b, i) => (
+              <li key={i} className="flex items-start gap-3 text-base text-foreground/85">
+                <Check className="mt-1 h-4 w-4 flex-shrink-0 text-primary" strokeWidth={3} />
+                <span className="leading-relaxed">{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
         {/* Author & Date */}
         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
