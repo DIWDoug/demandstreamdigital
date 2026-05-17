@@ -108,8 +108,8 @@ const AdScanThanks = () => {
                   You hang up with a scoped scan and a delivery date.
                 </h2>
                 <p className="mt-4 text-lg text-text-secondary">
-                  No pitch. No discovery loop. Three working outcomes inside one call,
-                  with your scored report in your inbox within 5 business days.
+                  Three working outcomes inside one call, with your scored report in
+                  your inbox within 5 business days.
                 </p>
               </div>
 
