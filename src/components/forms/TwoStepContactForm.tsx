@@ -62,6 +62,15 @@ const TwoStepContactForm = forwardRef<HTMLDivElement, TwoStepContactFormProps>(
       return;
     }
 
+    if (!isValidPhone(step1Data.phone, step1Data.phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Please enter a valid phone number to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmittingStep1(true);
 
     try {
