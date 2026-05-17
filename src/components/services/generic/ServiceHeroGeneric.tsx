@@ -1,11 +1,11 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import type { BreadcrumbItem } from "@/types/servicePage";
 
 interface HeroConfig {
   headline: string;
   highlightedText: string;
-  subheadline: string | { intro: string; bullets: string[]; closing: string };
+  subheadline: string | { intro: string; bullets: string[]; closing?: string };
   qualifierLine: string;
   ctaText: string;
   ctaSubtext: string;
@@ -19,8 +19,16 @@ interface ServiceHeroGenericProps {
 const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) => {
   const navigate = useNavigate();
 
-  const subIntro =
-    typeof config.subheadline === "string" ? config.subheadline : config.subheadline.intro;
+  const isStructured = typeof config.subheadline !== "string";
+  const subIntro = isStructured
+    ? (config.subheadline as { intro: string }).intro
+    : (config.subheadline as string);
+  const subBullets = isStructured
+    ? (config.subheadline as { bullets: string[] }).bullets
+    : [];
+  const subClosing = isStructured
+    ? (config.subheadline as { closing?: string }).closing
+    : undefined;
 
   return (
     <section
@@ -99,6 +107,29 @@ const ServiceHeroGeneric = ({ config, breadcrumbs }: ServiceHeroGenericProps) =>
             >
               {subIntro}
             </p>
+
+            {subBullets.length > 0 && (
+              <ul
+                className="mb-4 space-y-2 animate-fade-in-up"
+                style={{ animationDelay: "0.12s" }}
+              >
+                {subBullets.map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/85">
+                    <Check className="mt-1 h-4 w-4 flex-shrink-0 text-cta" strokeWidth={3} />
+                    <span className="text-base leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {subClosing && (
+              <p
+                className="text-base text-white/75 leading-relaxed mb-4 animate-fade-in-up"
+                style={{ animationDelay: "0.14s" }}
+              >
+                {subClosing}
+              </p>
+            )}
 
             <p
               className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"

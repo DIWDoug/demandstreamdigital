@@ -5,7 +5,7 @@ import type { BreadcrumbItem } from "@/types/servicePage";
 interface HeroSubheadline {
   intro: string;
   bullets: string[];
-  closing: string;
+  closing?: string;
 }
 
 interface HeroConfig {
