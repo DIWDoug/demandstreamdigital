@@ -123,7 +123,14 @@ const HVACWebsiteDesign = () => {
           { label: "Website Design", href: "/website-design" },
           { label: "HVAC" },
         ]}
-        description="HVAC companies run on seasonal urgency, and your website needs to match that reality. We build sites with separate pages for no-cool, no-heat, and replacement research, aligned to your Google Business Profile and ready to convert the moment a homeowner lands. HVAC companies only."
+        description={{
+          intro: "HVAC companies run on seasonal urgency, and your website needs to match that reality. We build sites engineered to convert the moment a homeowner lands. HVAC companies only.",
+          bullets: [
+            "Dedicated pages for no-cool, no-heat, and replacement research intent",
+            "Mobile-first conversion flow aligned to your Google Business Profile",
+            "Call tracking wired to ServiceTitan so every lead ties back to revenue",
+          ],
+        }}
       />
 
       <ServiceHubAnchorNav items={anchorItems} />
