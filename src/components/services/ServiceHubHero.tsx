@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import TwoStepContactForm from "@/components/forms/TwoStepContactForm";
-import heroBgDefault from "@/assets/hero-bg-trades.jpg";
+import { ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 interface BreadcrumbItem {
   label: string;
@@ -23,95 +22,114 @@ interface ServiceHubHeroProps {
   bgImage?: string;
 }
 
-const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, heroHeadline, heroSubtitle, bgImage }: ServiceHubHeroProps) => {
+const ServiceHubHero = ({
+  title,
+  description,
+  breadcrumbs,
+  integrationNote,
+  heroHeadline,
+  heroSubtitle,
+}: ServiceHubHeroProps) => {
+  const navigate = useNavigate();
+
   return (
-    <section className="relative min-h-[50vh] gradient-hero noise-overlay flex items-center overflow-hidden">
-      {/* Background photo */}
-      <img
-        src={bgImage ?? heroBgDefault}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-        fetchPriority="high"
-        loading="eager"
-        width={1920}
-        height={1080}
-      />
-      {/* Dark overlay so text stays readable */}
-      <div className="absolute inset-0 bg-background/85" />
-
-      {/* Background effects */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full blur-[100px] bg-gradient-to-br from-cta/50 to-accent-blue/30 animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full blur-[80px] bg-gradient-to-tl from-accent-blue/40 to-cta/20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
-      </div>
-
-      {/* Grid pattern */}
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ backgroundColor: "#0D1B2A" }}
+    >
+      {/* Fine grid texture overlay for depth */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04] z-0"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--cta)/0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--cta)/0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `linear-gradient(hsl(213 64% 16% / 0.3) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(213 64% 16% / 0.3) 1px, transparent 1px)`,
+          backgroundSize: "48px 48px",
         }}
       />
 
-      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-7 gap-12 lg:gap-16 items-center">
+      <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 md:pt-40 md:pb-28 relative z-10">
+        {/* Breadcrumbs */}
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-sm mb-8 animate-fade-in"
+          >
+            <Link to="/" className="text-white/60 hover:text-white transition-colors">
+              Home
+            </Link>
+            {breadcrumbs.map((item, index) => (
+              <span key={index} className="flex items-center gap-2">
+                <span className="text-white/40">/</span>
+                {item.href ? (
+                  <Link to={item.href} className="text-white/60 hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
+                ) : (
+                  <span className="text-white">{item.label}</span>
+                )}
+              </span>
+            ))}
+          </nav>
+        )}
 
-          {/* Left Column — 4/7 */}
-          <div className="lg:col-span-4 relative">
-
-            {/* Breadcrumbs */}
-            {breadcrumbs && breadcrumbs.length > 0 && (
-              <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm mb-6 animate-fade-in">
-                <Link to="/" className="text-text-muted hover:text-foreground transition-colors">Home</Link>
-                {breadcrumbs.map((item, index) => (
-                  <span key={index} className="flex items-center gap-2">
-                    <span className="text-text-muted">/</span>
-                    {item.href ? (
-                      <Link to={item.href} className="text-text-muted hover:text-foreground transition-colors">{item.label}</Link>
-                    ) : (
-                      <span className="text-text-muted">{item.label}</span>
-                    )}
-                  </span>
-                ))}
-              </nav>
-            )}
-
-            {/* H1 */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-3 leading-[1.1] animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Left column */}
+          <div className="max-w-xl">
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold mb-4 animate-fade-in-up text-white"
+              style={{ lineHeight: "1.1" }}
+            >
               {heroHeadline || title}
             </h1>
 
-            {/* Red subheadline */}
             {heroSubtitle && (
-              <p className="text-2xl md:text-3xl font-bold text-cta mb-6 animate-fade-in">
+              <p
+                className="text-xl md:text-2xl lg:text-3xl font-sans font-semibold text-cta mb-6 animate-fade-in-up"
+                style={{ animationDelay: "0.05s" }}
+              >
                 {heroSubtitle}
               </p>
             )}
 
+            {/* Mobile video */}
+            <div
+              className="lg:hidden mb-6 animate-fade-in-up"
+              style={{ animationDelay: "0.08s" }}
+            >
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-surface-elevated shadow-2xl">
+                <iframe
+                  src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                  title="DemandStream Digital"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
             {/* Description */}
-            <div className="max-w-xl animate-fade-in mt-6">
-              {typeof description === 'string' ? (
-                <p className="text-base text-text-secondary leading-relaxed">
-                  {description}
-                </p>
+            <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              {typeof description === "string" ? (
+                <p className="text-lg text-white/80 leading-relaxed mb-4">{description}</p>
               ) : (
                 <>
-                  <p className="text-base text-text-muted leading-snug mb-5">
+                  <p className="text-lg text-white/80 leading-relaxed mb-4">
                     {description.intro}
                   </p>
-                  <ul className="space-y-2.5 mb-5">
+                  <ul className="space-y-2.5 mb-4">
                     {description.bullets.map((bullet, index) => (
-                      <li key={index} className="flex items-start gap-3 text-base text-text-secondary">
-                        <span className="text-cta font-bold mt-0.5 shrink-0">—</span>
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 text-base text-white/80"
+                      >
+                        <span className="text-cta font-bold mt-0.5 shrink-0">.</span>
                         {bullet}
                       </li>
                     ))}
                   </ul>
                   {description.closing && (
-                    <p className="text-sm text-text-muted/80 leading-snug">
+                    <p className="text-base text-white/70 leading-snug mb-4">
                       {description.closing}
                     </p>
                   )}
@@ -120,30 +138,45 @@ const ServiceHubHero = ({ title, description, breadcrumbs, integrationNote, hero
             </div>
 
             {integrationNote && (
-              <p className="text-sm text-text-muted/60 italic max-w-xl animate-fade-in mt-6">
+              <p
+                className="text-sm text-white/60 font-medium mb-10 animate-fade-in-up"
+                style={{ animationDelay: "0.15s" }}
+              >
                 {integrationNote}
               </p>
             )}
-          </div>
 
-          {/* Right Column — Form card 3/7 */}
-          <div className="lg:col-span-3 animate-fade-in">
-            <div className="bg-surface-elevated/90 backdrop-blur-md border border-border rounded-2xl p-6 lg:p-8 shadow-xl">
-              <h2 className="text-xl font-semibold text-foreground mb-2">See If Your Market Is Available</h2>
-              <p className="text-sm text-text-muted mb-6">Tell us about your business. We'll take it from there.</p>
-
-              <TwoStepContactForm
-                formType="service_hub_hero"
-                submitButtonText="Claim My Territory →"
-                step1ButtonText="Continue →"
-              />
-
-              <p className="text-xs text-text-muted text-center mt-4">
-                Built for plumbing and HVAC companies in competitive local markets.
+            <div className="animate-fade-in-up mt-6" style={{ animationDelay: "0.2s" }}>
+              <button
+                type="button"
+                onClick={() => navigate("/grow-qualifier")}
+                className="btn-cta group whitespace-nowrap px-6 py-4 inline-flex items-center"
+              >
+                Schedule a Consultation Now
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </button>
+              <p className="text-xs text-white/50 mt-3">
+                One plumbing client and one HVAC client per market.
               </p>
             </div>
           </div>
 
+          {/* Right column — Video */}
+          <div
+            className="hidden animate-fade-in-up lg:block lg:pl-4"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="aspect-video overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/uEZw3rKc3SE?rel=0"
+                title="DemandStream Digital"
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
