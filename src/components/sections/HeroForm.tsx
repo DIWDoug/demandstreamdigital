@@ -232,10 +232,7 @@ const HeroForm = () => {
             onCountryCodeChange={(code) => setFormData({ ...formData, phoneCountryCode: code })}
             required
           />
-          <SmsConsentSummary
-            className="-mt-1 text-[11px] leading-snug text-text-muted"
-            linkClassName="text-primary hover:underline"
-          />
+          <SmsConsentSummary linkClassName="text-primary underline font-medium hover:underline" />
 
 
           {/* Website (pre-filled, editable) */}
