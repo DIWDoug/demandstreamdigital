@@ -12,7 +12,14 @@ export const localSEOConfig: ServicePageConfig = {
   hero: {
     headline: "Local SEO for Plumbing & HVAC Companies",
     highlightedText: "That Want More Booked Service Calls",
-    subheadline: "When a homeowner searches for a water heater replacement or an emergency no-cool call, the first page of results gets the majority of the calls. We build a connected local SEO system across Google Maps, organic search, and service area pages designed for how plumbing and HVAC customers actually search and call.",
+    subheadline: {
+      intro: "When a homeowner searches for a water heater replacement or an emergency no-cool call, the first page of results gets the majority of the calls. We build a connected local SEO system across Google Maps, organic search, and service area pages designed for how plumbing and HVAC customers actually search and call.",
+      bullets: [
+        "Service and ZIP-level pages tuned for emergency intent, not generic templates",
+        "Google Business Pro and review velocity built for the Map Pack where calls convert highest",
+        "Every ranking signal tied back to booked service calls, not vanity traffic",
+      ],
+    },
     qualifierLine: "No generic home services approach. Built for plumbing and HVAC operators only.",
     ctaText: "Get a Free Local SEO Audit",
     ctaSubtext: "Built for plumbing and HVAC companies in competitive local markets."

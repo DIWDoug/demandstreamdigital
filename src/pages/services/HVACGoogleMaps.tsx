@@ -74,7 +74,14 @@ const HVACGoogleMaps = () => {
           title="Google Business Pro SEO for HVAC Companies"
           heroHeadline="Google Business Pro SEO for HVAC Companies"
           heroSubtitle="Earn and Hold Google Maps Visibility"
-          description="Homeowners searching for emergency AC or furnace help call the top 3 results in the map pack. We optimize your Google Business Profile, reviews, and local signals so HVAC customers see and call you first."
+          description={{
+            intro: "Homeowners searching for emergency AC or furnace help call the top 3 results in the map pack.",
+            bullets: [
+              "GBP optimization tuned for no-cool and no-heat emergency intent",
+              "Review velocity and category signals built for the seasonal demand cycle",
+              "Local pack visibility tracked through to booked install and repair revenue",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
           integrationNote={hvacGoogleMapsConfig.hero.integrationNote}
         />

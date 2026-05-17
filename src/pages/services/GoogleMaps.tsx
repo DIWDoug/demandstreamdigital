@@ -82,7 +82,14 @@ const GoogleMaps = () => {
           title="Google Business Pro SEO for Plumbing & HVAC Companies"
           heroHeadline="Google Business Pro SEO for Plumbing & HVAC Companies"
           heroSubtitle="Earn and Hold Google Maps Visibility"
-          description="Your Google Business Profile drives the calls competitors never see you compete for. We optimize your profile, reviews, and local signals to rank in the map pack across every service area you cover."
+          description={{
+            intro: "Your Google Business Profile drives the calls competitors never see you compete for.",
+            bullets: [
+              "Profile, reviews, and category signals tuned for the local 3-pack",
+              "Proximity-aware optimization across every ZIP you actually dispatch to",
+              "Map Pack visibility tied to booked calls, not impressions",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
           integrationNote={googleMapsConfig.hero.integrationNote}
         />

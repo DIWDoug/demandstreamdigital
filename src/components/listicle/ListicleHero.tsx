@@ -1,4 +1,4 @@
-import { Calendar, User } from "lucide-react";
+import { Calendar, User, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ListicleHeroProps {
@@ -10,9 +10,16 @@ interface ListicleHeroProps {
   };
   lastUpdated: string;
   breadcrumbs?: { label: string; href?: string }[];
+  bullets?: string[];
 }
 
-const ListicleHero = ({ title, author, lastUpdated, breadcrumbs }: ListicleHeroProps) => {
+const DEFAULT_BULLETS = [
+  "Independently researched. Built for plumbing and HVAC operators, not generic home services.",
+  "Ranked on real fit for the trade, not pay-to-play placements",
+  "Updated as agencies, pricing, and results actually change",
+];
+
+const ListicleHero = ({ title, author, lastUpdated, breadcrumbs, bullets = DEFAULT_BULLETS }: ListicleHeroProps) => {
   return (
     <section className="relative pt-8 pb-12 md:pt-12 md:pb-16 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-6 lg:px-8">
@@ -50,6 +57,18 @@ const ListicleHero = ({ title, author, lastUpdated, breadcrumbs }: ListicleHeroP
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6 max-w-4xl">
           {title}
         </h1>
+
+        {/* Bullets */}
+        {bullets.length > 0 && (
+          <ul className="mb-6 space-y-2 max-w-3xl">
+            {bullets.map((b, i) => (
+              <li key={i} className="flex items-start gap-3 text-base text-foreground/85">
+                <Check className="mt-1 h-4 w-4 flex-shrink-0 text-primary" strokeWidth={3} />
+                <span className="leading-relaxed">{b}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Author & Date */}
         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">

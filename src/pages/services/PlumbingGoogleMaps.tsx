@@ -60,7 +60,14 @@ const PlumbingGoogleMaps = () => {
           title="Google Business Pro SEO for Plumbing Companies"
           heroHeadline="Google Business Pro SEO for Plumbing Companies"
           heroSubtitle="Earn and Hold Google Maps Visibility"
-          description="When a drain backs up or a water heater fails, homeowners call the top 3 plumbers in the map pack. We optimize your Google Business Profile, reviews, and local signals to keep your phone ringing first."
+          description={{
+            intro: "When a drain backs up or a water heater fails, homeowners call the top 3 plumbers in the map pack.",
+            bullets: [
+              "Profile and category signals tuned for emergency plumbing intent",
+              "Review velocity built around drain, sewer, and water heater calls",
+              "Map Pack visibility tied to booked service calls, not impressions",
+            ],
+          }}
           breadcrumbs={breadcrumbItems}
           bgImage={heroBgPlumbing}
         />

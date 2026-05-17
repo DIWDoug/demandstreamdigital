@@ -21,7 +21,7 @@ export interface HubFAQ {
 export interface HeroDescription {
   intro: string;
   bullets: string[];
-  closing: string;
+  closing?: string;
 }
 
 export interface Hub {
