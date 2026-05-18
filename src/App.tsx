@@ -39,6 +39,7 @@ const BrandGuide = lazy(() => import("./pages/BrandGuide"));
 const AdScan = lazy(() => import("./pages/AdScan"));
 const AdScanOnboarding = lazy(() => import("./pages/AdScanOnboarding"));
 const AdScanThanks = lazy(() => import("./pages/AdScanThanks"));
+const AdScanOffer = lazy(() => import("./pages/AdScanOffer"));
 const GrowQualifier = lazy(() => import("./pages/GrowQualifier"));
 const GrowThanks = lazy(() => import("./pages/GrowThanks"));
 const GrowBooked = lazy(() => import("./pages/GrowBooked"));
@@ -218,6 +219,8 @@ const App = () => (
           <Route path="/local-lead-ad-scan" element={<AdScan />} />
           <Route path="/ad-scan/onboarding" element={<AdScanOnboarding />} />
           <Route path="/ad-scan/thanks" element={<AdScanThanks />} />
+          <Route path="/ad-scan-offer" element={<AdScanOffer />} />
+          <Route path="/local-lead-ad-scan-offer" element={<AdScanOffer />} />
           <Route path="/brand" element={<BrandGuide />} />
           <Route path="/style-guide" element={<BrandGuide />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
