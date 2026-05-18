@@ -50,34 +50,44 @@ const CTA = ({
   </div>
 );
 
-// A mock "slide" tile — visual stand-in for the blueprint's slide previews.
-const SlideTile = ({
+// Real audit slide preview — uses an actual page from a redacted client report.
+const AuditSlide = ({
   num,
   title,
-  metric,
-  body,
+  src,
+  light = false,
 }: {
   num: string;
   title: string;
-  metric: string;
-  body: string;
+  src: string;
+  light?: boolean;
 }) => (
-  <div className="rounded-xl border border-[#E5E7EB] bg-white shadow-md overflow-hidden">
+  <div
+    className={`rounded-xl border overflow-hidden shadow-md ${
+      light
+        ? "bg-white border-[#E5E7EB]"
+        : "bg-white border-white/10"
+    }`}
+  >
     <div
-      className="px-5 py-3 text-[11px] font-black tracking-[0.25em] uppercase text-white"
+      className="px-5 py-2.5 text-[10px] md:text-[11px] font-black tracking-[0.25em] uppercase text-white flex items-center justify-between"
       style={{ background: "#0D1B2A" }}
     >
-      Sample Slide {num}
+      <span>Slide {num}</span>
+      <span className="text-white/60 font-bold tracking-wider">Sample. Client redacted.</span>
     </div>
-    <div className="p-6">
-      <h4 className="text-lg md:text-xl font-black text-[#0D1B2A] mb-2">{title}</h4>
-      <div className="text-3xl md:text-4xl font-black mb-3" style={{ color: ACCENT }}>
-        {metric}
+    <div className="bg-white p-3 md:p-4">
+      <div className="aspect-[5/4] overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA]">
+        <img
+          src={src}
+          alt={title}
+          loading="lazy"
+          className="w-full h-full object-cover object-top"
+        />
       </div>
-      <p className="text-sm text-[#475569] leading-relaxed">{body}</p>
-      <div className="mt-4 h-1.5 w-full rounded-full bg-[#F1F5F9] overflow-hidden">
-        <div className="h-full w-3/4" style={{ background: ACCENT }} />
-      </div>
+      <h4 className="mt-3 text-sm md:text-base font-black text-[#0D1B2A] leading-snug">
+        {title}
+      </h4>
     </div>
   </div>
 );
