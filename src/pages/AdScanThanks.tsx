@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { ArrowRight, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
