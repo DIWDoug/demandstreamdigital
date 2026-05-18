@@ -695,7 +695,7 @@ export default function AdScan() {
             $97 today. $697 next week. 100% guarantee either way.
           </p>
           <a
-            href="#order"
+            href={CHECKOUT_URL}
             className="inline-flex items-center justify-center gap-3 rounded-md bg-white text-[#C0392B] hover:bg-[#0D1B2A] hover:text-white transition-colors font-black uppercase tracking-wide px-10 py-5 md:py-6 text-lg md:text-2xl shadow-2xl ring-2 ring-white/30"
           >
             CLAIM MY $97 AD AUDIT
