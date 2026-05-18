@@ -50,34 +50,44 @@ const CTA = ({
   </div>
 );
 
-// A mock "slide" tile — visual stand-in for the blueprint's slide previews.
-const SlideTile = ({
+// Real audit slide preview — uses an actual page from a redacted client report.
+const AuditSlide = ({
   num,
   title,
-  metric,
-  body,
+  src,
+  light = false,
 }: {
   num: string;
   title: string;
-  metric: string;
-  body: string;
+  src: string;
+  light?: boolean;
 }) => (
-  <div className="rounded-xl border border-[#E5E7EB] bg-white shadow-md overflow-hidden">
+  <div
+    className={`rounded-xl border overflow-hidden shadow-md ${
+      light
+        ? "bg-white border-[#E5E7EB]"
+        : "bg-white border-white/10"
+    }`}
+  >
     <div
-      className="px-5 py-3 text-[11px] font-black tracking-[0.25em] uppercase text-white"
+      className="px-5 py-2.5 text-[10px] md:text-[11px] font-black tracking-[0.25em] uppercase text-white flex items-center justify-between"
       style={{ background: "#0D1B2A" }}
     >
-      Sample Slide {num}
+      <span>Slide {num}</span>
+      <span className="text-white/60 font-bold tracking-wider">Sample. Client redacted.</span>
     </div>
-    <div className="p-6">
-      <h4 className="text-lg md:text-xl font-black text-[#0D1B2A] mb-2">{title}</h4>
-      <div className="text-3xl md:text-4xl font-black mb-3" style={{ color: ACCENT }}>
-        {metric}
+    <div className="bg-white p-3 md:p-4">
+      <div className="aspect-[5/4] overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA]">
+        <img
+          src={src}
+          alt={title}
+          loading="lazy"
+          className="w-full h-full object-cover object-top"
+        />
       </div>
-      <p className="text-sm text-[#475569] leading-relaxed">{body}</p>
-      <div className="mt-4 h-1.5 w-full rounded-full bg-[#F1F5F9] overflow-hidden">
-        <div className="h-full w-3/4" style={{ background: ACCENT }} />
-      </div>
+      <h4 className="mt-3 text-sm md:text-base font-black text-[#0D1B2A] leading-snug">
+        {title}
+      </h4>
     </div>
   </div>
 );
@@ -176,23 +186,23 @@ export default function AdScanOffer() {
 
           {/* 3 slide previews */}
           <div className="mt-12 grid md:grid-cols-3 gap-5">
-            <SlideTile
+            <AuditSlide
               num="03"
-              title="Local Maps Visibility"
-              metric="42/100"
-              body="Grid level visibility across your service area. Where you win, where you lose, and what it costs."
+              title="Money-losing campaigns, confirmed in dollars"
+              src="/audit-samples/slide-03.jpg"
+              light
             />
-            <SlideTile
-              num="04"
-              title="Booked Call Economics"
-              metric="$184/job"
-              body="Real cost per booked job by channel: Google, Meta, LSAs, GBP, tied to ServiceTitan."
+            <AuditSlide
+              num="07"
+              title="Competitive landscape and wasted competitor spend"
+              src="/audit-samples/slide-07.jpg"
+              light
             />
-            <SlideTile
+            <AuditSlide
               num="01"
-              title="Ad Waste Forecast"
-              metric="$1,840/mo"
-              body="Negative keyword gaps, geo waste, and dead ad groups quantified in monthly dollars."
+              title="Top-line account scorecard and ROAS reconciliation"
+              src="/audit-samples/slide-01.jpg"
+              light
             />
           </div>
         </div>
@@ -330,53 +340,45 @@ export default function AdScanOffer() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <SlideTile
+            <AuditSlide
               num="01"
-              title="Google Ads Waste Report"
-              metric="$1,840/mo"
-              body="Search term waste, negative keyword gaps, geo bleed, and dead ad groups quantified in dollars per month."
+              title="Account scorecard: spend, revenue, ROAS, cancellations"
+              src="/audit-samples/slide-01.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="02"
-              title="Meta Cost Per Booked Call"
-              metric="$312/call"
-              body="Audience fatigue, creative drop off, pixel events, and the real cost per booked call versus your benchmark."
+              title="Campaign performance with full ROAS reconciliation"
+              src="/audit-samples/slide-02.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="03"
-              title="Local Maps Visibility Grid"
-              metric="42/100"
-              body="Grid level rankings across your service area. The neighborhoods you own and the ones you are losing."
+              title="Money-losing campaigns and the dollar shortfall"
+              src="/audit-samples/slide-03.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="04"
-              title="GBP 110% Scorecard"
-              metric="68/100"
-              body="Categories, services, photos, posts, Q&A, review velocity, and geo signals scored against top shops."
+              title="Monthly spend and impression trend analysis"
+              src="/audit-samples/slide-04.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="05"
-              title="Missed Call Audit"
-              metric="14% missed"
-              body="Day shift drops, after hours rings, voicemail dumps. Tied to ServiceTitan or Housecall Pro booked rate."
+              title="Revenue by job type: where the money actually comes from"
+              src="/audit-samples/slide-05.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="06"
-              title="Tracking Health Check"
-              metric="3 broken"
-              body="GA4, call tracking, Meta pixel, and CRM tie in. Every broken event flagged with the fix."
+              title="Day-of-week CPA and bid adjustment plan"
+              src="/audit-samples/slide-06.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="07"
-              title="Booked Call Forecast"
-              metric="+38 calls/mo"
-              body="A 90 day forecast if you ship the top 3 fixes. Booked calls, cost per call, and revenue impact."
+              title="Competitive landscape and wasted competitor spend"
+              src="/audit-samples/slide-07.jpg"
             />
-            <SlideTile
+            <AuditSlide
               num="08"
-              title="30 Day Action List"
-              metric="Top 3 fixes"
-              body="A prioritized list your team can ship Monday morning. Owner, deadline, expected dollar lift."
+              title="90-day projected targets and the levers to get there"
+              src="/audit-samples/slide-08.jpg"
             />
           </div>
 
