@@ -340,46 +340,14 @@ export default function AdScanOffer() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <AuditSlide
-              num="01"
-              title="Account scorecard: spend, revenue, ROAS, cancellations"
-              src="/audit-samples/slide-01.jpg"
-            />
-            <AuditSlide
-              num="02"
-              title="Campaign performance with full ROAS reconciliation"
-              src="/audit-samples/slide-02.jpg"
-            />
-            <AuditSlide
-              num="03"
-              title="Money-losing campaigns and the dollar shortfall"
-              src="/audit-samples/slide-03.jpg"
-            />
-            <AuditSlide
-              num="04"
-              title="Monthly spend and impression trend analysis"
-              src="/audit-samples/slide-04.jpg"
-            />
-            <AuditSlide
-              num="05"
-              title="Revenue by job type: where the money actually comes from"
-              src="/audit-samples/slide-05.jpg"
-            />
-            <AuditSlide
-              num="06"
-              title="Day-of-week CPA and bid adjustment plan"
-              src="/audit-samples/slide-06.jpg"
-            />
-            <AuditSlide
-              num="07"
-              title="Competitive landscape and wasted competitor spend"
-              src="/audit-samples/slide-07.jpg"
-            />
-            <AuditSlide
-              num="08"
-              title="90-day projected targets and the levers to get there"
-              src="/audit-samples/slide-08.jpg"
-            />
+            <AuditSlide num="01" title="Executive summary: 7 months of real data" src="/audit-samples/slide-01.jpg" />
+            <AuditSlide num="02" title="The real ROAS picture, broken down by source" src="/audit-samples/slide-02.jpg" />
+            <AuditSlide num="03" title="The $358K attribution mystery and 3 root causes" src="/audit-samples/slide-03.jpg" />
+            <AuditSlide num="04" title="Where your revenue comes from: zip code analysis" src="/audit-samples/slide-04.jpg" />
+            <AuditSlide num="05" title="Match type opportunity: 12x CPA gap" src="/audit-samples/slide-05.jpg" />
+            <AuditSlide num="06" title="Paused campaigns: investigate before reactivating" src="/audit-samples/slide-06.jpg" />
+            <AuditSlide num="07" title='99 "competitor arrived" cancellations quantified' src="/audit-samples/slide-07.jpg" />
+            <AuditSlide num="08" title="Next steps: ready to move when you are" src="/audit-samples/slide-08.jpg" />
           </div>
 
           <div className="text-center mt-12">
