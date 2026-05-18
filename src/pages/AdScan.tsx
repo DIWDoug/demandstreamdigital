@@ -23,10 +23,23 @@ const ACCENT = "#1E5BD6"; // ClickFunnels-style royal blue accent
 const GOLD = "#F2B705";
 const RED = "#C0392B";
 
-const CTA = ({ children = "CLAIM MY $97 AD AUDIT", size = "lg" as "lg" | "md" }) => (
+// Single source of truth for the $97 buy link. Drop the live Spiffy URL here
+// and every CTA on the page will use it. Spiffy success URL should point to
+// /ad-scan/onboarding so buyers land on the access-grant flow.
+const CHECKOUT_URL = "https://demandstream.spiffy.co/checkout/ad-scan-97";
+
+const CTA = ({
+  children = "CLAIM MY $97 AD AUDIT",
+  size = "lg" as "lg" | "md",
+  href = CHECKOUT_URL,
+}: {
+  children?: React.ReactNode;
+  size?: "lg" | "md";
+  href?: string;
+}) => (
   <div className="inline-flex flex-col items-center">
     <a
-      href="#order"
+      href={href}
       className={`inline-flex items-center justify-center gap-3 rounded-md bg-[#C0392B] hover:bg-[#a4301f] active:translate-y-px transition-all text-white font-black uppercase tracking-wide shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)] ring-1 ring-white/10 ${
         size === "lg"
           ? "px-8 md:px-12 py-5 md:py-6 text-lg md:text-2xl"
@@ -36,7 +49,7 @@ const CTA = ({ children = "CLAIM MY $97 AD AUDIT", size = "lg" as "lg" | "md" })
       {children}
       <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
     </a>
-    <span className="mt-2 text-xs md:text-sm italic opacity-70">($697 value)</span>
+    <span className="mt-2 text-xs md:text-sm italic opacity-70">($697 value). Secure Spiffy checkout.</span>
   </div>
 );
 
