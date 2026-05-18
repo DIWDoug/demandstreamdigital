@@ -1,11 +1,30 @@
+import { useEffect } from "react";
 import { ArrowRight, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
-const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/FgaNIXha3oshEeyagMaN";
+const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/kCLhmSeFKCQYFuGhExGe";
+const bookingEmbedId = "kCLhmSeFKCQYFuGhExGe_1779143351926";
+const bookingEmbedScriptId = "ad-scan-booking-embed-script";
+const bookingEmbedScriptSrc = "https://link.msgsndr.com/js/form_embed.js";
 
 const AdScanThanks = () => {
+  useEffect(() => {
+    if (document.getElementById(bookingEmbedScriptId)) return;
+
+    const script = document.createElement("script");
+    script.id = bookingEmbedScriptId;
+    script.src = bookingEmbedScriptSrc;
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.getElementById(bookingEmbedScriptId)?.remove();
+    };
+  }, []);
+
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
@@ -38,8 +57,10 @@ const AdScanThanks = () => {
               <iframe
                 title="Book your Ad Scan kickoff call"
                 src={bookingUrl}
-                className="h-[820px] w-full bg-background"
-                loading="lazy"
+                id={bookingEmbedId}
+                className="min-h-[820px] w-full bg-background"
+                style={{ width: "100%", border: "none", overflow: "hidden" }}
+                scrolling="no"
               />
             </div>
 
