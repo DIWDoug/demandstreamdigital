@@ -188,19 +188,19 @@ export default function AdScanOffer() {
           <div className="mt-12 grid md:grid-cols-3 gap-5">
             <AuditSlide
               num="03"
-              title="Money-losing campaigns, confirmed in dollars"
+              title="$358K attribution mystery, isolated and explained"
               src="/audit-samples/slide-03.jpg"
               light
             />
             <AuditSlide
-              num="07"
-              title="Competitive landscape and wasted competitor spend"
-              src="/audit-samples/slide-07.jpg"
+              num="06"
+              title="Paused campaigns: investigate before reactivating"
+              src="/audit-samples/slide-06.jpg"
               light
             />
             <AuditSlide
               num="01"
-              title="Top-line account scorecard and ROAS reconciliation"
+              title="7 months of real data, scored against benchmarks"
               src="/audit-samples/slide-01.jpg"
               light
             />
