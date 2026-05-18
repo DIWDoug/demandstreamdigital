@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Cookie, X } from "lucide-react";
 
 const COOKIE_CONSENT_KEY = "cookie-consent";
+const COOKIE_CONSENT_ROUTE_DENYLIST = ["/ad-scan/thanks", "/audit/schedule"];
 
 type ConsentStatus = "accepted" | "rejected" | null;
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
+    if (COOKIE_CONSENT_ROUTE_DENYLIST.includes(pathname)) {
+      setShowBanner(false);
+      return;
+    }
+
     // Check if user has already made a choice
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY) as ConsentStatus;
     if (!consent) {
@@ -18,7 +25,7 @@ const CookieConsent = () => {
       const timer = setTimeout(() => setShowBanner(true), 1000);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [pathname]);
 
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
