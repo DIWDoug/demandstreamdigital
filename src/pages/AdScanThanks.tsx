@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArrowRight, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -6,6 +7,13 @@ import Footer from "@/components/sections/Footer";
 const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/FgaNIXha3oshEeyagMaN";
 
 const AdScanThanks = () => {
+  useEffect(() => {
+    if (document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')) return;
+    const s = document.createElement("script");
+    s.src = "https://link.msgsndr.com/js/form_embed.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
@@ -38,9 +46,11 @@ const AdScanThanks = () => {
               <iframe
                 title="Book your Ad Scan kickoff call"
                 src={bookingUrl}
+                id="FgaNIXha3oshEeyagMaN_kickoff"
+                scrolling="no"
                 className="h-[820px] w-full bg-background"
-                loading="lazy"
               />
+              
             </div>
 
             <div className="mt-6 flex flex-col items-center gap-2 text-center">
