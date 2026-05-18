@@ -11,6 +11,14 @@ const bookingEmbedScriptSrc = "https://link.msgsndr.com/js/form_embed.js";
 
 const AdScanThanks = () => {
   useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      try {
+        window.fbq("track", "Schedule");
+      } catch {
+        // no-op
+      }
+    }
+
     if (document.getElementById(bookingEmbedScriptId)) return;
 
     const script = document.createElement("script");

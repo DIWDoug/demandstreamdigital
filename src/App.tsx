@@ -219,6 +219,7 @@ const App = () => (
           <Route path="/local-lead-ad-scan" element={<AdScan />} />
           <Route path="/ad-scan/onboarding" element={<AdScanOnboarding />} />
           <Route path="/ad-scan/thanks" element={<AdScanThanks />} />
+          <Route path="/audit/schedule" element={<AdScanThanks />} />
           <Route path="/ad-scan-offer" element={<AdScanOffer />} />
           <Route path="/local-lead-ad-scan-offer" element={<AdScanOffer />} />
           <Route path="/brand" element={<BrandGuide />} />
