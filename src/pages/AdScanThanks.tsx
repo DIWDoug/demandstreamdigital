@@ -38,9 +38,11 @@ const AdScanThanks = () => {
               <iframe
                 title="Book your Ad Scan kickoff call"
                 src={bookingUrl}
+                id="FgaNIXha3oshEeyagMaN_kickoff"
+                scrolling="no"
                 className="h-[820px] w-full bg-background"
-                loading="lazy"
               />
+              <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" async />
             </div>
 
             <div className="mt-6 flex flex-col items-center gap-2 text-center">
