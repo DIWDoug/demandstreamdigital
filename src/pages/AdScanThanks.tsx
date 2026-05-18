@@ -49,9 +49,6 @@ const AdScanThanks = () => {
               <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-accent-green/15 text-accent-green">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-accent-blue">
-                Payment confirmed
-              </p>
               <h1 className="text-4xl font-bold text-foreground md:text-5xl">
                 Your Ad Scan is locked in. Pick a kickoff time.
               </h1>
