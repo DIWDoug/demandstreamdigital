@@ -50,7 +50,7 @@ const AdScanThanks = () => {
                 scrolling="no"
                 className="h-[820px] w-full bg-background"
               />
-              <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript" async />
+              
             </div>
 
             <div className="mt-6 flex flex-col items-center gap-2 text-center">
