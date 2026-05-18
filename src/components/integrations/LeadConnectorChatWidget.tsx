@@ -24,6 +24,7 @@ export const CHAT_WIDGET_DENYLIST: ReadonlyArray<string | RegExp> = [
   "/ad-scan",
   "/ad-scan/onboarding",
   "/ad-scan/thanks",
+  "/audit/schedule",
   "/contact",
 ];
 
