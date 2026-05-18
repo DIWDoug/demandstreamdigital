@@ -4,8 +4,8 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
-const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/kCLhmSeFKCQYFuGhExGe";
-const bookingEmbedId = "kCLhmSeFKCQYFuGhExGe_1779143351926";
+const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/FgaNIXha3oshEeyagMaN";
+const bookingEmbedId = "FgaNIXha3oshEeyagMaN_1779147417675";
 const bookingEmbedScriptId = "ad-scan-booking-embed-script";
 const bookingEmbedScriptSrc = "https://link.msgsndr.com/js/form_embed.js";
 
