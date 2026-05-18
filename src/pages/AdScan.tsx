@@ -23,10 +23,23 @@ const ACCENT = "#1E5BD6"; // ClickFunnels-style royal blue accent
 const GOLD = "#F2B705";
 const RED = "#C0392B";
 
-const CTA = ({ children = "CLAIM MY $97 AD AUDIT", size = "lg" as "lg" | "md" }) => (
+// Single source of truth for the $97 buy link. Drop the live Spiffy URL here
+// and every CTA on the page will use it. Spiffy success URL should point to
+// /ad-scan/onboarding so buyers land on the access-grant flow.
+const CHECKOUT_URL = "https://demandstream.spiffy.co/checkout/ad-scan-97";
+
+const CTA = ({
+  children = "CLAIM MY $97 AD AUDIT",
+  size = "lg" as "lg" | "md",
+  href = CHECKOUT_URL,
+}: {
+  children?: React.ReactNode;
+  size?: "lg" | "md";
+  href?: string;
+}) => (
   <div className="inline-flex flex-col items-center">
     <a
-      href="#order"
+      href={href}
       className={`inline-flex items-center justify-center gap-3 rounded-md bg-[#C0392B] hover:bg-[#a4301f] active:translate-y-px transition-all text-white font-black uppercase tracking-wide shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)] ring-1 ring-white/10 ${
         size === "lg"
           ? "px-8 md:px-12 py-5 md:py-6 text-lg md:text-2xl"
@@ -36,7 +49,7 @@ const CTA = ({ children = "CLAIM MY $97 AD AUDIT", size = "lg" as "lg" | "md" })
       {children}
       <ArrowRight className="h-5 w-5 md:h-6 md:w-6" />
     </a>
-    <span className="mt-2 text-xs md:text-sm italic opacity-70">($697 value)</span>
+    <span className="mt-2 text-xs md:text-sm italic opacity-70">($697 value). Secure Spiffy checkout.</span>
   </div>
 );
 
@@ -600,14 +613,14 @@ export default function AdScan() {
 
               <div className="text-center">
                 <a
-                  href="https://buy.stripe.com/test_placeholder"
+                  href={CHECKOUT_URL}
                   className="inline-flex items-center justify-center gap-3 w-full rounded-md bg-[#C0392B] hover:bg-[#a4301f] transition-colors text-white font-black uppercase tracking-wide px-6 py-5 md:py-6 text-lg md:text-2xl shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)]"
                 >
                   <Lock className="h-5 w-5" />
-                  YES &mdash; START MY AD AUDIT
+                  YES. START MY $97 AD AUDIT
                 </a>
                 <div className="flex items-center justify-center gap-2 mt-4 text-xs text-[#6B7280]">
-                  <Lock className="h-3 w-3" /> Secure checkout. Delivered in 72 hours.
+                  <Lock className="h-3 w-3" /> Secure Spiffy checkout. Report delivered in 5 business days.
                 </div>
               </div>
             </div>
@@ -682,7 +695,7 @@ export default function AdScan() {
             $97 today. $697 next week. 100% guarantee either way.
           </p>
           <a
-            href="#order"
+            href={CHECKOUT_URL}
             className="inline-flex items-center justify-center gap-3 rounded-md bg-white text-[#C0392B] hover:bg-[#0D1B2A] hover:text-white transition-colors font-black uppercase tracking-wide px-10 py-5 md:py-6 text-lg md:text-2xl shadow-2xl ring-2 ring-white/30"
           >
             CLAIM MY $97 AD AUDIT
