@@ -24,7 +24,7 @@ const RED = "#C0392B";
 const CHECKOUT_URL = "https://demandstream.spiffy.co/checkout/ad-scan-97";
 
 const CTA = ({
-  children = "GET MY AD AUDIT — $97",
+  children = "GET MY AD AUDIT FOR $97",
   size = "lg" as "lg" | "md",
   href = CHECKOUT_URL,
 }: {
@@ -157,7 +157,7 @@ export default function AdScanOffer() {
               ServiceTitan and Housecall Pro shops.{" "}
               <strong>Worth $697. Today $97.</strong>
             </p>
-            <CTA>GET MY AD AUDIT — $97</CTA>
+            <CTA>GET MY AD AUDIT FOR $97</CTA>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-6 text-sm text-[#475569]">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4" style={{ color: "#16A34A" }} />
@@ -186,7 +186,7 @@ export default function AdScanOffer() {
               num="04"
               title="Booked Call Economics"
               metric="$184/job"
-              body="Real cost per booked job by channel — Google, Meta, LSAs, GBP — tied to ServiceTitan."
+              body="Real cost per booked job by channel: Google, Meta, LSAs, GBP, tied to ServiceTitan."
             />
             <SlideTile
               num="01"
@@ -246,7 +246,7 @@ export default function AdScanOffer() {
           </div>
 
           <div className="text-center mt-10">
-            <CTA size="md">GET MY AD AUDIT — $97</CTA>
+            <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
           </div>
         </div>
       </section>
@@ -304,7 +304,7 @@ export default function AdScanOffer() {
           </div>
 
           <div className="text-center mt-14">
-            <CTA size="md">GET MY AD AUDIT — $97</CTA>
+            <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
           </div>
         </div>
       </section>
@@ -381,7 +381,7 @@ export default function AdScanOffer() {
           </div>
 
           <div className="text-center mt-12">
-            <CTA size="md">GET MY AD AUDIT — $97</CTA>
+            <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
           </div>
         </div>
       </section>
@@ -483,7 +483,7 @@ export default function AdScanOffer() {
             </ul>
 
             <div className="flex justify-center">
-              <CTA>GET MY AD AUDIT — $97</CTA>
+              <CTA>GET MY AD AUDIT FOR $97</CTA>
             </div>
             <p className="text-center text-xs text-[#6B7280] mt-4">
               Limited to 10 audits per week. Delivered in 5 business days.
@@ -576,7 +576,7 @@ export default function AdScanOffer() {
           </div>
 
           <div className="text-center mt-12">
-            <CTA size="md">GET MY AD AUDIT — $97</CTA>
+            <CTA size="md">GET MY AD AUDIT FOR $97</CTA>
           </div>
         </div>
       </section>
