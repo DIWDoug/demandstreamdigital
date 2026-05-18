@@ -613,14 +613,14 @@ export default function AdScan() {
 
               <div className="text-center">
                 <a
-                  href="https://buy.stripe.com/test_placeholder"
+                  href={CHECKOUT_URL}
                   className="inline-flex items-center justify-center gap-3 w-full rounded-md bg-[#C0392B] hover:bg-[#a4301f] transition-colors text-white font-black uppercase tracking-wide px-6 py-5 md:py-6 text-lg md:text-2xl shadow-[0_18px_45px_-12px_rgba(192,57,43,0.75)]"
                 >
                   <Lock className="h-5 w-5" />
-                  YES &mdash; START MY AD AUDIT
+                  YES. START MY $97 AD AUDIT
                 </a>
                 <div className="flex items-center justify-center gap-2 mt-4 text-xs text-[#6B7280]">
-                  <Lock className="h-3 w-3" /> Secure checkout. Delivered in 72 hours.
+                  <Lock className="h-3 w-3" /> Secure Spiffy checkout. Report delivered in 5 business days.
                 </div>
               </div>
             </div>
