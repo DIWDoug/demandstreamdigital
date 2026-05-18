@@ -35,7 +35,8 @@ const WIDGET_ID = "6a09c0585ba4f033f861d870";
 const WIDGET_NODE_SELECTORS = [
   "lead-connector-chat-widget",
   "#lc_text--chat-widget",
-  'iframe[src*="leadconnectorhq"]',
+  'iframe[src*="leadconnectorhq.com/chat-widget"]',
+  'iframe[src*="leadconnectorhq.com/widget/message"]',
   'iframe[src*="msgsndr.com"][src*="chat-widget"]',
   'div[id*="lc_chat"]',
   'div[id*="leadconnector"]',
