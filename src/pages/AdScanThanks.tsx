@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArrowRight, CheckCircle, ShieldCheck, Link2, CalendarCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
@@ -6,6 +7,13 @@ import Footer from "@/components/sections/Footer";
 const bookingUrl = "https://api.leadconnectorhq.com/widget/booking/FgaNIXha3oshEeyagMaN";
 
 const AdScanThanks = () => {
+  useEffect(() => {
+    if (document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]')) return;
+    const s = document.createElement("script");
+    s.src = "https://link.msgsndr.com/js/form_embed.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <SEOHead
