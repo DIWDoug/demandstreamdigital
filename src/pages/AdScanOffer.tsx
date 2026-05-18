@@ -186,23 +186,23 @@ export default function AdScanOffer() {
 
           {/* 3 slide previews */}
           <div className="mt-12 grid md:grid-cols-3 gap-5">
-            <SlideTile
+            <AuditSlide
               num="03"
-              title="Local Maps Visibility"
-              metric="42/100"
-              body="Grid level visibility across your service area. Where you win, where you lose, and what it costs."
+              title="Money-losing campaigns, confirmed in dollars"
+              src="/audit-samples/slide-03.jpg"
+              light
             />
-            <SlideTile
-              num="04"
-              title="Booked Call Economics"
-              metric="$184/job"
-              body="Real cost per booked job by channel: Google, Meta, LSAs, GBP, tied to ServiceTitan."
+            <AuditSlide
+              num="07"
+              title="Competitive landscape and wasted competitor spend"
+              src="/audit-samples/slide-07.jpg"
+              light
             />
-            <SlideTile
+            <AuditSlide
               num="01"
-              title="Ad Waste Forecast"
-              metric="$1,840/mo"
-              body="Negative keyword gaps, geo waste, and dead ad groups quantified in monthly dollars."
+              title="Top-line account scorecard and ROAS reconciliation"
+              src="/audit-samples/slide-01.jpg"
+              light
             />
           </div>
         </div>
