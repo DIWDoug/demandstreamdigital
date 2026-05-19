@@ -143,10 +143,11 @@ const HeroForm = () => {
 
   const servicesLabel =
     formData.services.length === 0
-      ? "Services You're Interested In"
+      ? SERVICES_LABEL_DEFAULT
       : formData.services.length <= 2
         ? formData.services.join(", ")
         : `${formData.services.length} services selected`;
+
 
   const inputClass =
     "w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base";
