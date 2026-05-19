@@ -117,7 +117,7 @@ const Header = () => {
   ];
 
   const navLinkClass =
-    "px-3 py-2 text-[15px] font-medium text-white/85 hover:text-white transition-colors whitespace-nowrap";
+    "px-3 py-2 text-[19px] font-medium text-white/85 hover:text-white transition-colors whitespace-nowrap";
 
   return (
     <>
