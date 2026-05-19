@@ -457,7 +457,7 @@ const GrowthQualifierFlow = () => {
           <div>
             <QuestionHeader
               num={3}
-              title={`Wow, ${firstNameDisplay} ${lastName.trim()}. What an amazing name. What email should we send your market scan to?`}
+              title={`Wow, ${firstNameDisplay} ${lastName.trim()}, what an amazing name! I think that means one who makes smart decisions. What email should we send your market scan to?`}
               subtitle="We'll never spam or share it. Pinky promise."
             />
             <input
