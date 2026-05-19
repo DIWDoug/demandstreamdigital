@@ -168,17 +168,49 @@ const GrowthQualifierFlow = () => {
       moveTo("budget");
       return;
     }
-    moveTo("qualified");
+    moveTo("checking");
   };
 
   const handleBudgetContinue = () => {
     if (!canInvest) return;
     if (canInvest === "yes") {
-      moveTo("qualified");
+      moveTo("checking");
       return;
     }
     moveTo("disqualified");
   };
+
+  // Auto-advance the "Double-checking your market" interstitial
+  const [checkingProgress, setCheckingProgress] = useState(0);
+  useEffect(() => {
+    if (step !== "checking") return;
+    setCheckingProgress(0);
+    const start = Date.now();
+    const duration = 2800;
+    const interval = setInterval(() => {
+      const pct = Math.min(100, ((Date.now() - start) / duration) * 100);
+      setCheckingProgress(pct);
+      if (pct >= 100) {
+        clearInterval(interval);
+        setStep("qualified");
+        setHistory((prev) => [...prev, "checking"]);
+      }
+    }, 60);
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
+
+  const checkingMessage =
+    checkingProgress < 33
+      ? "Scanning your service area..."
+      : checkingProgress < 66
+        ? "Checking competitor saturation..."
+        : checkingProgress < 95
+          ? "Confirming market availability..."
+          : "Almost there...";
+
+  const companyDisplay = companyName.trim() || "your shop";
+
 
   const submitLead = async () => {
     if (contact.honeypot) {
