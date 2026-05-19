@@ -461,12 +461,14 @@ const GrowthQualifierFlow = () => {
                 <>
                   <span className="block">
                     Wow, {firstNameDisplay} {lastName.trim()}, what an amazing name!
+                    <span className="ml-1 text-[#E63946]">*</span>
                   </span>
                   <span className="mt-6 block">
                     What email should we use when reaching out?
                   </span>
                 </>
               }
+              required={false}
               subtitle="We'll never spam or share it. Pinky promise."
             />
             <input
