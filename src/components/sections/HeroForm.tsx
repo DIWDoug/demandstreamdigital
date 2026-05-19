@@ -18,6 +18,9 @@ const serviceOptions = [
   "Not Sure Yet",
 ];
 
+const SERVICES_LABEL_DEFAULT = "Services You're Interested In *";
+
+
 const HeroForm = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
