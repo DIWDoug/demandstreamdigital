@@ -306,7 +306,7 @@ const GrowthQualifierFlow = () => {
 
   const review = reviews[step];
 
-  const QuestionHeader = ({ num, title, subtitle, required = true }: { num?: number; title: string; subtitle?: string; required?: boolean }) => (
+  const QuestionHeader = ({ num, title, subtitle, required = true }: { num?: number; title: React.ReactNode; subtitle?: string; required?: boolean }) => (
     <div className="mb-8 flex items-start gap-4">
       {num ? (
         <span className="mt-2 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[#E63946] text-base font-bold text-white">
