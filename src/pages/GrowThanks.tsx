@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Target, Map, CalendarCheck } from "lucide-reac
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import { SmsConsentText } from "@/components/legal/SmsConsentText";
 import {
   consumeGrowLeadVerified,
   isBookingSuccessfulMessage,
