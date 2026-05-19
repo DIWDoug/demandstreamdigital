@@ -18,6 +18,9 @@ const serviceOptions = [
   "Not Sure Yet",
 ];
 
+const SERVICES_LABEL_DEFAULT = "Services You're Interested In *";
+
+
 const HeroForm = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -70,6 +73,15 @@ const HeroForm = () => {
       return;
     }
 
+    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.website.trim()) {
+      toast({
+        title: "Missing required fields",
+        description: "Please complete every field before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!isValidPhone(formData.phone, formData.phoneCountryCode)) {
       toast({
         title: "Valid phone number required",
@@ -78,6 +90,26 @@ const HeroForm = () => {
       });
       return;
     }
+
+    if (formData.services.length === 0) {
+      toast({
+        title: "Pick at least one service",
+        description: "Tell us which services you're interested in so we can tailor the proposal.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!formData.consent || !formData.notRobot) {
+      toast({
+        title: "Please confirm consent",
+        description: "Check both boxes to confirm consent and that you're not a robot.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+
 
     setIsSubmitting(true);
 
@@ -111,10 +143,11 @@ const HeroForm = () => {
 
   const servicesLabel =
     formData.services.length === 0
-      ? "Services You're Interested In"
+      ? SERVICES_LABEL_DEFAULT
       : formData.services.length <= 2
         ? formData.services.join(", ")
         : `${formData.services.length} services selected`;
+
 
   const inputClass =
     "w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-text-muted focus:outline-none focus:border-cta focus:ring-1 focus:ring-cta transition-all text-base";
