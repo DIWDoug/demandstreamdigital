@@ -1,4 +1,4 @@
-import { KeyboardEvent, useEffect, useMemo, useState } from "react";
+import { KeyboardEvent, useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight, Loader2, Quote, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
@@ -13,6 +13,10 @@ import {
 } from "@/lib/growFunnel";
 
 type StepKey =
+  | "firstName"
+  | "lastName"
+  | "email"
+  | "phone"
   | "contractor"
   | "company"
   | "website"
@@ -21,9 +25,7 @@ type StepKey =
   | "budget"
   | "checking"
   | "qualified"
-  | "contact"
   | "disqualified";
-
 
 const contractorOptions = ["HVAC", "Plumbing", "Both HVAC and Plumbing"];
 
@@ -54,18 +56,39 @@ const budgetOptions = [
 ];
 
 const stepNumberMap: Partial<Record<StepKey, number>> = {
-  contractor: 1,
-  company: 2,
-  website: 3,
-  channels: 4,
-  revenue: 5,
-  budget: 6,
-  contact: 7,
+  firstName: 1,
+  lastName: 2,
+  email: 3,
+  phone: 4,
+  contractor: 5,
+  company: 6,
+  website: 7,
+  channels: 8,
+  revenue: 9,
+  budget: 10,
 };
 
-const totalSteps = 7;
+const totalSteps = 10;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const reviews: Record<StepKey, { quote: string; attribution: string } | null> = {
+  firstName: {
+    quote: "We have a plan, data to back it up, and a partner who keeps us accountable.",
+    attribution: "Pure Plumbing & Air",
+  },
+  lastName: {
+    quote: "We saw a 40% year-over-year revenue increase this past December.",
+    attribution: "Pure Plumbing & Air",
+  },
+  email: {
+    quote: "He has completely transformed our SEO performance with a roadmap that is not only strategic, but clearly tailored to our business.",
+    attribution: "Pure Plumbing & Air",
+  },
+  phone: {
+    quote: "After past experiences with agencies where SEO felt like a black box, it's refreshing to work with a team that provides real, clear data.",
+    attribution: "Pure Plumbing & Air",
+  },
   contractor: {
     quote: "We have a plan, data to back it up, and a partner who keeps us accountable.",
     attribution: "Pure Plumbing & Air",
@@ -95,13 +118,8 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
     quote: "In a market as competitive as Dallas, having a strategic and trustworthy SEO partner like this makes all the difference.",
     attribution: "Pure Plumbing",
   },
-  contact: {
-    quote: "We have a plan, data to back it up, and a partner who keeps us accountable.",
-    attribution: "Pure Plumbing & Air",
-  },
   disqualified: null,
 };
-
 
 const letter = (i: number) => String.fromCharCode(65 + i);
 
@@ -110,9 +128,16 @@ const GrowthQualifierFlow = () => {
   const { toast } = useToast();
   const { executeRecaptcha, initRecaptcha } = useRecaptcha();
 
-  const [step, setStep] = useState<StepKey>("contractor");
+  const [step, setStep] = useState<StepKey>("firstName");
   const [history, setHistory] = useState<StepKey[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [phoneCountryCode, setPhoneCountryCode] = useState("+1");
+  const [honeypot, setHoneypot] = useState("");
 
   const [contractor, setContractor] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -120,14 +145,6 @@ const GrowthQualifierFlow = () => {
   const [channels, setChannels] = useState<string[]>([]);
   const [revenueBand, setRevenueBand] = useState("");
   const [canInvest, setCanInvest] = useState<"yes" | "no" | "">("");
-  const [contact, setContact] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    phoneCountryCode: "+1",
-    honeypot: "",
-  });
 
   useEffect(() => {
     pushGrowDataLayer("grow_funnel_start", { funnel: "grow_qualifier" });
@@ -160,7 +177,13 @@ const GrowthQualifierFlow = () => {
   };
 
   const currentNumber = stepNumberMap[step];
-  const progress = currentNumber ? (currentNumber / totalSteps) * 100 : step === "qualified" ? (6.5 / totalSteps) * 100 : 100;
+  const progress = currentNumber
+    ? (currentNumber / totalSteps) * 100
+    : step === "checking"
+      ? 95
+      : step === "qualified"
+        ? 100
+        : 100;
 
   const handleRevenueContinue = () => {
     if (!revenueBand) return;
@@ -209,20 +232,36 @@ const GrowthQualifierFlow = () => {
           ? "Confirming market availability..."
           : "Almost there...";
 
+  const firstNameDisplay = firstName.trim() || "friend";
   const companyDisplay = companyName.trim() || "your shop";
 
+  const handleEmailContinue = () => {
+    if (!EMAIL_RE.test(email.trim())) {
+      toast({
+        title: "Hmm, that email looks off",
+        description: "Double-check it so we can actually reach you.",
+        variant: "destructive",
+      });
+      return;
+    }
+    moveTo("phone");
+  };
+
+  const handlePhoneContinue = () => {
+    if (!isValidPhone(phone, phoneCountryCode)) {
+      toast({
+        title: "Valid phone number required",
+        description: "Drop a real number so we can text you about your market.",
+        variant: "destructive",
+      });
+      return;
+    }
+    moveTo("contractor");
+  };
 
   const submitLead = async () => {
-    if (contact.honeypot) {
+    if (honeypot) {
       navigate("/grow/thanks");
-      return;
-    }
-    if (!contact.firstName.trim() || !contact.lastName.trim() || !contact.email.trim()) {
-      toast({ title: "Missing required fields", description: "Name and email are required.", variant: "destructive" });
-      return;
-    }
-    if (!isValidPhone(contact.phone, contact.phoneCountryCode)) {
-      toast({ title: "Valid phone number required", description: "Please enter a valid phone number so we can text you about your market.", variant: "destructive" });
       return;
     }
     setIsSubmitting(true);
@@ -231,10 +270,10 @@ const GrowthQualifierFlow = () => {
       const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
         body: {
-          name: `${contact.firstName} ${contact.lastName}`.trim(),
-          email: contact.email,
-          phone: contact.phone,
-          phoneCountryCode: contact.phoneCountryCode,
+          name: `${firstName} ${lastName}`.trim(),
+          email,
+          phone,
+          phoneCountryCode,
           website,
           company: companyName,
           contractorTypes: [contractor],
@@ -317,17 +356,18 @@ const GrowthQualifierFlow = () => {
     </button>
   );
 
-  const SubmitRow = ({ label = "OK", onClick, disabled = false, showEnter = true }: { label?: string; onClick: () => void; disabled?: boolean; showEnter?: boolean }) => (
+  const SubmitRow = ({ label = "OK", onClick, disabled = false, showEnter = true, loading = false }: { label?: string; onClick: () => void; disabled?: boolean; showEnter?: boolean; loading?: boolean }) => (
     <div className="mt-8 flex items-center justify-between gap-4">
       <div className="flex items-center gap-3">
         <button
           type="button"
           onClick={onClick}
-          disabled={disabled}
+          disabled={disabled || loading}
           className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-7 py-3 text-base font-bold text-white shadow-lg transition-colors hover:bg-[#d32f3c] disabled:cursor-not-allowed disabled:opacity-40"
         >
+          {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
           {label}
-          <ArrowRight className="h-4 w-4" />
+          {!loading ? <ArrowRight className="h-4 w-4" /> : null}
         </button>
         {showEnter ? (
           <span className="text-sm text-white/60">
@@ -343,6 +383,9 @@ const GrowthQualifierFlow = () => {
       ) : null}
     </div>
   );
+
+  const textInputClass =
+    "w-full border-0 border-b-2 border-[#E63946] bg-transparent px-0 py-3 text-2xl font-medium text-white placeholder:text-white/30 focus:border-[#E63946] focus:outline-none focus:ring-0 md:text-3xl";
 
   return (
     <div className="relative min-h-screen bg-[#0D1B2A] text-white">
@@ -362,11 +405,107 @@ const GrowthQualifierFlow = () => {
         }}
       />
 
+      {/* Honeypot, always rendered */}
+      <input
+        type="text"
+        name="company_url"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        className="absolute -left-[9999px] opacity-0"
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <div className="relative mx-auto w-full max-w-3xl px-5 py-16 md:px-8 md:py-24">
-        {/* STEP 1 contractor */}
+        {/* STEP 1 first name */}
+        {step === "firstName" ? (
+          <div>
+            <QuestionHeader num={1} title="Let's start with the basics. What's your first name?" />
+            <input
+              autoFocus
+              type="text"
+              value={firstName}
+              onFocus={initRecaptcha}
+              onChange={(e) => setFirstName(e.target.value)}
+              onKeyDown={(e) => onEnter(e, () => firstName.trim() && moveTo("lastName"))}
+              placeholder="Jane"
+              className={textInputClass}
+            />
+            <SubmitRow onClick={() => firstName.trim() && moveTo("lastName")} disabled={!firstName.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 2 last name */}
+        {step === "lastName" ? (
+          <div>
+            <QuestionHeader num={2} title={`Nice to meet you, ${firstNameDisplay}. What's your last name?`} />
+            <input
+              autoFocus
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              onKeyDown={(e) => onEnter(e, () => lastName.trim() && moveTo("email"))}
+              placeholder="Smith"
+              className={textInputClass}
+            />
+            <SubmitRow onClick={() => lastName.trim() && moveTo("email")} disabled={!lastName.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 3 email */}
+        {step === "email" ? (
+          <div>
+            <QuestionHeader
+              num={3}
+              title={`Thanks ${firstNameDisplay}. What email should we send your market scan to?`}
+              subtitle="We'll never spam or share it. Pinky promise."
+            />
+            <input
+              autoFocus
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={(e) => onEnter(e, handleEmailContinue)}
+              placeholder="name@company.com"
+              className={textInputClass}
+            />
+            <SubmitRow onClick={handleEmailContinue} disabled={!email.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 4 phone */}
+        {step === "phone" ? (
+          <div>
+            <QuestionHeader
+              num={4}
+              title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
+              subtitle="We'll text or call once to confirm market availability. That's it."
+            />
+            <PhoneInput
+              value={phone}
+              onChange={setPhone}
+              countryCode={phoneCountryCode}
+              onCountryCodeChange={setPhoneCountryCode}
+              required
+            />
+            <SmsConsentSummary
+              className="mt-4 flex items-start gap-2 rounded-md border border-white/20 bg-white/[0.07] px-3 py-2.5"
+              textClassName="text-[13px] leading-relaxed text-white/90"
+              iconClassName="h-4 w-4 mt-0.5 shrink-0 text-white/80"
+              linkClassName="underline font-medium text-white hover:opacity-80"
+            />
+            <SmsConsentText
+              className="mt-4 text-[12px] leading-relaxed text-white/70"
+              linkClassName="underline font-medium text-white hover:opacity-80"
+            />
+            <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 5 contractor */}
         {step === "contractor" ? (
           <div>
-            <QuestionHeader num={1} title="First things first: are you Plumbing, HVAC, or both?" subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
+            <QuestionHeader num={5} title={`Okay ${firstNameDisplay}, are you Plumbing, HVAC, or both?`} subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Pick one</p>
             <div className="space-y-3">
               {contractorOptions.map((opt, i) => (
@@ -375,9 +514,7 @@ const GrowthQualifierFlow = () => {
                   index={i}
                   label={opt}
                   selected={contractor === opt}
-                  onClick={() => {
-                    setContractor(opt);
-                  }}
+                  onClick={() => setContractor(opt)}
                 />
               ))}
             </div>
@@ -385,10 +522,10 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* STEP 2 company */}
+        {/* STEP 6 company */}
         {step === "company" ? (
           <div>
-            <QuestionHeader num={2} title="What's the name of your shop?" subtitle="The one on the side of the truck." />
+            <QuestionHeader num={6} title="What's the name of your shop?" subtitle="The one on the side of the truck." />
             <input
               autoFocus
               type="text"
@@ -396,17 +533,17 @@ const GrowthQualifierFlow = () => {
               onChange={(e) => setCompanyName(e.target.value)}
               onKeyDown={(e) => onEnter(e, () => companyName.trim() && moveTo("website"))}
               placeholder="Acme Plumbing"
-              className="w-full border-0 border-b-2 border-[#E63946] bg-transparent px-0 py-3 text-2xl font-medium text-white placeholder:text-white/30 focus:border-[#E63946] focus:outline-none focus:ring-0 md:text-3xl"
+              className={textInputClass}
             />
             <SubmitRow onClick={() => companyName.trim() && moveTo("website")} disabled={!companyName.trim()} />
           </div>
         ) : null}
 
-        {/* STEP 3 website */}
+        {/* STEP 7 website */}
         {step === "website" ? (
           <div>
             <QuestionHeader
-              num={3}
+              num={7}
               title={`Nice. Where can homeowners find ${companyDisplay} online?`}
               subtitle="Drop your main site so we can peek at your current presence."
             />
@@ -414,21 +551,20 @@ const GrowthQualifierFlow = () => {
               autoFocus
               type="text"
               value={website}
-              onFocus={initRecaptcha}
               onChange={(e) => setWebsite(e.target.value)}
               onKeyDown={(e) => onEnter(e, () => website.trim() && moveTo("channels"))}
               placeholder="acmeplumbing.com"
-              className="w-full border-0 border-b-2 border-[#E63946] bg-transparent px-0 py-3 text-2xl font-medium text-white placeholder:text-white/30 focus:outline-none focus:ring-0 md:text-3xl"
+              className={textInputClass}
             />
             <SubmitRow onClick={() => website.trim() && moveTo("channels")} disabled={!website.trim()} />
           </div>
         ) : null}
 
-        {/* STEP 4 channels */}
+        {/* STEP 8 channels */}
         {step === "channels" ? (
           <div>
             <QuestionHeader
-              num={4}
+              num={8}
               title={`How is ${companyDisplay} getting calls today?`}
               subtitle="Pick everything you're running. No judgment if the list is short."
             />
@@ -450,10 +586,10 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* STEP 5 revenue */}
+        {/* STEP 9 revenue */}
         {step === "revenue" ? (
           <div>
-            <QuestionHeader num={5} title="What did the last 12 months look like?" subtitle="Ballpark is fine. We tailor the plan to your size and goals." />
+            <QuestionHeader num={9} title="What did the last 12 months look like?" subtitle="Ballpark is fine. We tailor the plan to your size and goals." />
             <div className="space-y-3">
               {revenueOptions.map((opt, i) => (
                 <ChoiceButton
@@ -469,10 +605,10 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* STEP 6 budget gate */}
+        {/* STEP 10 budget gate */}
         {step === "budget" ? (
           <div>
-            <QuestionHeader num={6} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
+            <QuestionHeader num={10} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
             <div className="space-y-3">
               {budgetOptions.map((opt, i) => (
                 <ChoiceButton
@@ -505,125 +641,21 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* QUALIFIED interstitial */}
+        {/* QUALIFIED */}
         {step === "qualified" ? (
           <div>
             <QuestionHeader
-              title={`Good news. ${companyDisplay} looks like a fit. Let's lock in your spot.`}
+              title={`Good news, ${firstNameDisplay}. ${companyDisplay} looks like a fit.`}
+              subtitle="Hit submit and we'll be in touch within one business day to lock in your spot."
               required={false}
             />
-            <SubmitRow label="Continue" onClick={() => moveTo("contact")} />
+            <SubmitRow
+              label={isSubmitting ? "Submitting..." : "Submit & Lock In My Spot"}
+              onClick={() => void submitLead()}
+              loading={isSubmitting}
+              showEnter={false}
+            />
           </div>
-        ) : null}
-
-
-        {/* STEP 7 contact */}
-        {step === "contact" ? (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              void submitLead();
-            }}
-          >
-            <QuestionHeader num={7} title={`Last step. How do we reach the person running ${companyDisplay}?`} subtitle="We'll never spam or share your info. This just helps us prep for your call." />
-
-            <input
-              type="text"
-              name="company_url"
-              value={contact.honeypot}
-              onChange={(e) => setContact((p) => ({ ...p, honeypot: e.target.value }))}
-              className="absolute -left-[9999px] opacity-0"
-              tabIndex={-1}
-              autoComplete="off"
-            />
-
-            <div className="space-y-6">
-              <div>
-                <label className="mb-1 block text-sm font-semibold text-white">
-                  First name<span className="text-[#E63946]">*</span>
-                </label>
-                <input
-                  required
-                  autoFocus
-                  type="text"
-                  value={contact.firstName}
-                  onChange={(e) => setContact((p) => ({ ...p, firstName: e.target.value }))}
-                  placeholder="Jane"
-                  className="w-full border-0 border-b-2 border-white/30 bg-transparent px-0 py-2 text-xl text-white placeholder:text-white/30 focus:border-[#E63946] focus:outline-none focus:ring-0 md:text-2xl"
-                />
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-semibold text-white">
-                  Last name<span className="text-[#E63946]">*</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={contact.lastName}
-                  onChange={(e) => setContact((p) => ({ ...p, lastName: e.target.value }))}
-                  placeholder="Smith"
-                  className="w-full border-0 border-b-2 border-white/30 bg-transparent px-0 py-2 text-xl text-white placeholder:text-white/30 focus:border-[#E63946] focus:outline-none focus:ring-0 md:text-2xl"
-                />
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-semibold text-white">
-                  Phone<span className="text-[#E63946]">*</span>
-                </label>
-                <PhoneInput
-                  value={contact.phone}
-                  onChange={(phone) => setContact((p) => ({ ...p, phone }))}
-                  countryCode={contact.phoneCountryCode}
-                  onCountryCodeChange={(code) => setContact((p) => ({ ...p, phoneCountryCode: code }))}
-                  required
-                />
-                <SmsConsentSummary
-                  className="mt-3 flex items-start gap-2 rounded-md border border-white/20 bg-white/[0.07] px-3 py-2.5"
-                  textClassName="text-[13px] leading-relaxed text-white/90"
-                  iconClassName="h-4 w-4 mt-0.5 shrink-0 text-white/80"
-                  linkClassName="underline font-medium text-white hover:opacity-80"
-                />
-              </div>
-
-              <div>
-                <label className="mb-1 block text-sm font-semibold text-white">
-                  Email<span className="text-[#E63946]">*</span>
-                </label>
-                <input
-                  required
-                  type="email"
-                  value={contact.email}
-                  onChange={(e) => setContact((p) => ({ ...p, email: e.target.value }))}
-                  placeholder="name@example.com"
-                  className="w-full border-0 border-b-2 border-white/30 bg-transparent px-0 py-2 text-xl text-white placeholder:text-white/30 focus:border-[#E63946] focus:outline-none focus:ring-0 md:text-2xl"
-                />
-              </div>
-            </div>
-
-            <SmsConsentText
-              className="mt-6 text-[13px] leading-relaxed text-white/85"
-              linkClassName="underline font-medium text-white hover:opacity-80"
-            />
-
-            <div className="mt-8 flex items-center justify-between gap-4">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-7 py-3 text-base font-bold text-white shadow-lg transition-colors hover:bg-[#d32f3c] disabled:cursor-not-allowed disabled:opacity-40"
-              >
-                {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-                Submit
-                <ArrowRight className="h-4 w-4" />
-              </button>
-              {history.length > 0 ? (
-                <button type="button" onClick={goBack} className="inline-flex items-center gap-1 text-sm text-white/70 hover:text-white">
-                  <ArrowLeft className="h-4 w-4" />
-                  Back
-                </button>
-              ) : null}
-            </div>
-          </form>
         ) : null}
 
         {/* DISQUALIFIED */}
@@ -644,7 +676,7 @@ const GrowthQualifierFlow = () => {
                 type="button"
                 onClick={() => {
                   setHistory([]);
-                  setStep("contractor");
+                  setStep("firstName");
                   setRevenueBand("");
                   setCanInvest("");
                 }}
