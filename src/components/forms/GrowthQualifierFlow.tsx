@@ -90,6 +90,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
     quote: "In a market as competitive as Dallas, having a strategic and trustworthy SEO partner like this makes all the difference.",
     attribution: "Pure Plumbing",
   },
+  checking: null,
   qualified: {
     quote: "In a market as competitive as Dallas, having a strategic and trustworthy SEO partner like this makes all the difference.",
     attribution: "Pure Plumbing",
@@ -100,6 +101,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
   },
   disqualified: null,
 };
+
 
 const letter = (i: number) => String.fromCharCode(65 + i);
 
