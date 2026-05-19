@@ -202,6 +202,11 @@ const GrowThanks = () => {
                 From Pure Plumbing &amp; Air on Google.
               </p>
             </div>
+
+            <SmsConsentText
+              className="mt-12 text-center text-xs leading-relaxed text-text-muted"
+              linkClassName="underline font-medium text-text-secondary hover:text-foreground"
+            />
           </div>
         </section>
       </main>
