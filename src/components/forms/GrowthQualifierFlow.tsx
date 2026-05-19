@@ -462,11 +462,8 @@ const GrowthQualifierFlow = () => {
                   <span className="block">
                     Wow, {firstNameDisplay} {lastName.trim()}, what an amazing name!
                   </span>
-                  <span className="mt-3 block italic text-white/80">
-                    (I think that means one who makes smart decisions.)
-                  </span>
-                  <span className="mt-4 block">
-                    What email should we send your market scan to?
+                  <span className="mt-6 block">
+                    What email should we use when reaching out?
                   </span>
                 </>
               }
