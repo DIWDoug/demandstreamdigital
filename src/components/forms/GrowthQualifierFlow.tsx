@@ -306,7 +306,7 @@ const GrowthQualifierFlow = () => {
 
   const review = reviews[step];
 
-  const QuestionHeader = ({ num, title, subtitle, required = true }: { num?: number; title: string; subtitle?: string; required?: boolean }) => (
+  const QuestionHeader = ({ num, title, subtitle, required = true }: { num?: number; title: React.ReactNode; subtitle?: string; required?: boolean }) => (
     <div className="mb-8 flex items-start gap-4">
       {num ? (
         <span className="mt-2 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[#E63946] text-base font-bold text-white">
@@ -457,7 +457,19 @@ const GrowthQualifierFlow = () => {
           <div>
             <QuestionHeader
               num={3}
-              title={`Wow, ${firstNameDisplay} ${lastName.trim()}, what an amazing name! I think that means one who makes smart decisions. What email should we send your market scan to?`}
+              title={
+                <>
+                  <span className="block">
+                    Wow, {firstNameDisplay} {lastName.trim()}, what an amazing name!
+                  </span>
+                  <span className="mt-3 block italic text-white/80">
+                    (I think that means one who makes smart decisions.)
+                  </span>
+                  <span className="mt-4 block">
+                    What email should we send your market scan to?
+                  </span>
+                </>
+              }
               subtitle="We'll never spam or share it. Pinky promise."
             />
             <input
