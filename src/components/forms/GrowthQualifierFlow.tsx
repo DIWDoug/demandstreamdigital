@@ -19,9 +19,11 @@ type StepKey =
   | "channels"
   | "revenue"
   | "budget"
+  | "checking"
   | "qualified"
   | "contact"
   | "disqualified";
+
 
 const contractorOptions = ["HVAC", "Plumbing", "Both HVAC and Plumbing"];
 
