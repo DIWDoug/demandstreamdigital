@@ -19,9 +19,11 @@ type StepKey =
   | "channels"
   | "revenue"
   | "budget"
+  | "checking"
   | "qualified"
   | "contact"
   | "disqualified";
+
 
 const contractorOptions = ["HVAC", "Plumbing", "Both HVAC and Plumbing"];
 
@@ -88,6 +90,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
     quote: "In a market as competitive as Dallas, having a strategic and trustworthy SEO partner like this makes all the difference.",
     attribution: "Pure Plumbing",
   },
+  checking: null,
   qualified: {
     quote: "In a market as competitive as Dallas, having a strategic and trustworthy SEO partner like this makes all the difference.",
     attribution: "Pure Plumbing",
@@ -98,6 +101,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
   },
   disqualified: null,
 };
+
 
 const letter = (i: number) => String.fromCharCode(65 + i);
 
@@ -164,17 +168,49 @@ const GrowthQualifierFlow = () => {
       moveTo("budget");
       return;
     }
-    moveTo("qualified");
+    moveTo("checking");
   };
 
   const handleBudgetContinue = () => {
     if (!canInvest) return;
     if (canInvest === "yes") {
-      moveTo("qualified");
+      moveTo("checking");
       return;
     }
     moveTo("disqualified");
   };
+
+  // Auto-advance the "Double-checking your market" interstitial
+  const [checkingProgress, setCheckingProgress] = useState(0);
+  useEffect(() => {
+    if (step !== "checking") return;
+    setCheckingProgress(0);
+    const start = Date.now();
+    const duration = 2800;
+    const interval = setInterval(() => {
+      const pct = Math.min(100, ((Date.now() - start) / duration) * 100);
+      setCheckingProgress(pct);
+      if (pct >= 100) {
+        clearInterval(interval);
+        setStep("qualified");
+        setHistory((prev) => [...prev, "checking"]);
+      }
+    }, 60);
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
+
+  const checkingMessage =
+    checkingProgress < 33
+      ? "Scanning your service area..."
+      : checkingProgress < 66
+        ? "Checking competitor saturation..."
+        : checkingProgress < 95
+          ? "Confirming market availability..."
+          : "Almost there...";
+
+  const companyDisplay = companyName.trim() || "your shop";
+
 
   const submitLead = async () => {
     if (contact.honeypot) {
@@ -330,7 +366,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 1 contractor */}
         {step === "contractor" ? (
           <div>
-            <QuestionHeader num={1} title="Are you HVAC, Plumbing, or both?" subtitle="We work exclusively with HVAC and Plumbing operators. Pick what fits your shop." />
+            <QuestionHeader num={1} title="First things first: are you Plumbing, HVAC, or both?" subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Pick one</p>
             <div className="space-y-3">
               {contractorOptions.map((opt, i) => (
@@ -352,7 +388,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 2 company */}
         {step === "company" ? (
           <div>
-            <QuestionHeader num={2} title="Company Name" />
+            <QuestionHeader num={2} title="What's the name of your shop?" subtitle="The one on the side of the truck." />
             <input
               autoFocus
               type="text"
@@ -369,7 +405,11 @@ const GrowthQualifierFlow = () => {
         {/* STEP 3 website */}
         {step === "website" ? (
           <div>
-            <QuestionHeader num={3} title="What's your website URL?" subtitle="Drop the link to your main site so we can review your current online presence." />
+            <QuestionHeader
+              num={3}
+              title={`Nice. Where can homeowners find ${companyDisplay} online?`}
+              subtitle="Drop your main site so we can peek at your current presence."
+            />
             <input
               autoFocus
               type="text"
@@ -387,7 +427,11 @@ const GrowthQualifierFlow = () => {
         {/* STEP 4 channels */}
         {step === "channels" ? (
           <div>
-            <QuestionHeader num={4} title="Which marketing channels are you currently using?" subtitle="This helps us identify gaps and growth opportunities." />
+            <QuestionHeader
+              num={4}
+              title={`How is ${companyDisplay} getting calls today?`}
+              subtitle="Pick everything you're running. No judgment if the list is short."
+            />
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Choose as many as you like</p>
             <div className="space-y-3">
               {channelOptions.map((opt, i) => (
@@ -409,7 +453,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 5 revenue */}
         {step === "revenue" ? (
           <div>
-            <QuestionHeader num={5} title="What's your business revenue in the past 12 months?" subtitle="We'll tailor your strategy based on your business size and growth goals." />
+            <QuestionHeader num={5} title="What did the last 12 months look like?" subtitle="Ballpark is fine. We tailor the plan to your size and goals." />
             <div className="space-y-3">
               {revenueOptions.map((opt, i) => (
                 <ChoiceButton
@@ -428,7 +472,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 6 budget gate */}
         {step === "budget" ? (
           <div>
-            <QuestionHeader num={6} title="Can you currently invest $1,000/month into growth?" subtitle="We're transparent: our minimum partnership starts at this level." />
+            <QuestionHeader num={6} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
             <div className="space-y-3">
               {budgetOptions.map((opt, i) => (
                 <ChoiceButton
@@ -444,13 +488,34 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
+        {/* CHECKING interstitial */}
+        {step === "checking" ? (
+          <div className="py-8 animate-fade-in">
+            <div className="mb-8 flex items-baseline gap-4">
+              <span className="text-5xl font-bold text-white md:text-6xl">{Math.round(checkingProgress)}%</span>
+              <div className="flex-1 h-3 rounded-full bg-white/10 overflow-hidden">
+                <div
+                  className="h-full bg-[#E63946] transition-all duration-150 ease-out"
+                  style={{ width: `${checkingProgress}%` }}
+                />
+              </div>
+            </div>
+            <p className="text-xl font-medium text-white/90 md:text-2xl">{checkingMessage}</p>
+            <p className="mt-3 text-sm text-white/60">Hang tight, this only takes a second.</p>
+          </div>
+        ) : null}
+
         {/* QUALIFIED interstitial */}
         {step === "qualified" ? (
           <div>
-            <QuestionHeader title="Looks like you qualify. Let's lock in a spot." required={false} />
+            <QuestionHeader
+              title={`Good news. ${companyDisplay} looks like a fit. Let's lock in your spot.`}
+              required={false}
+            />
             <SubmitRow label="Continue" onClick={() => moveTo("contact")} />
           </div>
         ) : null}
+
 
         {/* STEP 7 contact */}
         {step === "contact" ? (
@@ -460,7 +525,7 @@ const GrowthQualifierFlow = () => {
               void submitLead();
             }}
           >
-            <QuestionHeader num={7} title="Tell us how to get in touch" subtitle="We'll never spam or share your info. This just helps us prep for your call." />
+            <QuestionHeader num={7} title={`Last step. How do we reach the person running ${companyDisplay}?`} subtitle="We'll never spam or share your info. This just helps us prep for your call." />
 
             <input
               type="text"
