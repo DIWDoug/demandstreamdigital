@@ -506,7 +506,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 5 contractor */}
         {step === "contractor" ? (
           <div>
-            <QuestionHeader num={5} title={`Okay ${firstNameDisplay}, are you Plumbing, HVAC, or both?`} subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
+            <QuestionHeader num={5} title={`Okay ${firstNameDisplay}, do you represent or own a Plumbing, HVAC company, or both?`} subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Pick one</p>
             <div className="space-y-3">
               {contractorOptions.map((opt, i) => (
