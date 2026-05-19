@@ -440,13 +440,17 @@ serve(async (req) => {
     }
 
     // Forward to Zapier webhook (used to reach CRM)
-    const zapierWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL");
+    // Grow qualifier uses its own dedicated webhook so the funnel routing is independent.
+    const isGrowFunnel = typeof formType === "string" && formType.startsWith("grow");
+    const zapierWebhookUrl = isGrowFunnel
+      ? (Deno.env.get("ZAPIER_WEBHOOK_URL_GROW") || Deno.env.get("ZAPIER_WEBHOOK_URL"))
+      : Deno.env.get("ZAPIER_WEBHOOK_URL");
     const zapier: { attempted: boolean; status?: number; ok?: boolean } = {
       attempted: false,
     };
 
     if (!zapierWebhookUrl) {
-      console.log("Zapier webhook URL not configured (ZAPIER_WEBHOOK_URL missing)");
+      console.log("Zapier webhook URL not configured");
     } else {
       zapier.attempted = true;
 
