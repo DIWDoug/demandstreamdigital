@@ -499,16 +499,6 @@ const GrowthQualifierFlow = () => {
               onCountryCodeChange={setPhoneCountryCode}
               required
             />
-            <SmsConsentSummary
-              className="mt-4 flex items-start gap-2 rounded-md border border-white/20 bg-white/[0.07] px-3 py-2.5"
-              textClassName="text-[13px] leading-relaxed text-white/90"
-              iconClassName="h-4 w-4 mt-0.5 shrink-0 text-white/80"
-              linkClassName="underline font-medium text-white hover:opacity-80"
-            />
-            <SmsConsentText
-              className="mt-4 text-[12px] leading-relaxed text-white/70"
-              linkClassName="underline font-medium text-white hover:opacity-80"
-            />
             <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim()} />
           </div>
         ) : null}

@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Target, Map, CalendarCheck } from "lucide-reac
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
+import { SmsConsentText } from "@/components/legal/SmsConsentText";
 import {
   consumeGrowLeadVerified,
   isBookingSuccessfulMessage,
@@ -201,6 +202,11 @@ const GrowThanks = () => {
                 From Pure Plumbing &amp; Air on Google.
               </p>
             </div>
+
+            <SmsConsentText
+              className="mt-12 text-center text-xs leading-relaxed text-text-muted"
+              linkClassName="underline font-medium text-text-secondary hover:text-foreground"
+            />
           </div>
         </section>
       </main>
