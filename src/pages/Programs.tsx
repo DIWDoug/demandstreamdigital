@@ -8,6 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import StreamTexture from "@/components/StreamTexture";
 import klarnaLogo from "@/assets/klarna-badge.png";
 import paypalCreditLogo from "@/assets/paypal-credit.png";
+import paymentMethods from "@/assets/payment-methods.png";
 
 
 /* ─── Tokens used (existing design system) ───────────────────────────────
@@ -675,6 +676,27 @@ const Programs = () => {
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
                     Covers your full foundation build. One-time, not recurring.
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-white/10">
+                    <div className="text-[10px] font-semibold uppercase tracking-wider text-white/55 mb-2">
+                      Payment Options
+                    </div>
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center text-[10px] font-semibold text-navy">
+                        Credit / Debit
+                      </span>
+                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
+                        <img src={klarnaLogo} alt="Klarna" className="h-3 w-auto" />
+                      </span>
+                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
+                        <img src={paypalCreditLogo} alt="PayPal Credit" className="h-3 w-auto" />
+                      </span>
+                    </div>
+                    <img
+                      src={paymentMethods}
+                      alt="Visa, Mastercard, American Express, PayPal accepted"
+                      className="mt-2 h-5 w-auto opacity-90"
+                    />
                   </div>
                 </div>
               </div>
