@@ -112,8 +112,6 @@ const Header = () => {
   const preServiceLinks = [{ label: "About", href: "/about", isRoute: true }];
   const postServiceLinks = [
     { label: "Programs & Pricing", href: "/programs", isRoute: true },
-    { label: "Source Tier", href: "/programs/source", isRoute: true },
-    { label: "Setup", href: "/programs/setup", isRoute: true },
     { label: "Case Studies", href: "/case-studies", isRoute: true },
     { label: "Testimonials", href: "/testimonials", isRoute: true },
     { label: "Blog", href: "/our-blog", isRoute: true },
