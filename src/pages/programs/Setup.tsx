@@ -253,7 +253,7 @@ const Setup = () => {
                 >
                   <div>
                     <div className="font-extrabold text-cta text-[15px]">{p.days}</div>
-                    <div className="text-[11px] tracking-[0.09em] uppercase text-accent-blue font-bold mt-1">
+                    <div className="text-xs uppercase tracking-wider text-accent-blue font-semibold mt-1">
                       {p.phase}
                     </div>
                   </div>
