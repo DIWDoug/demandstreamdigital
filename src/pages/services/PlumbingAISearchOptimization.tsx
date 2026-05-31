@@ -41,7 +41,7 @@ const PlumbingAISearchOptimization = () => {
 
   return (
     <div className="dark min-h-screen bg-background text-foreground">
-      <SEOHead title={cfg.metaTitle} description={cfg.metaDescription} canonical={cfg.canonicalUrl} schemaJson={pageSchema} />
+      <SEOHead title={cfg.metaTitle} description={cfg.metaDescription} canonical={cfg.canonicalUrl} ogImage="/og-images/plumbing-ai-search-optimization.jpg" schemaJson={pageSchema} />
       <Header />
 
       <div>
