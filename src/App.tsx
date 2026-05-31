@@ -40,6 +40,7 @@ const Programs = lazy(() => import("./pages/Programs"));
 const ProgramsSource = lazy(() => import("./pages/programs/Source"));
 const ProgramsCurrent = lazy(() => import("./pages/programs/Current"));
 const ProgramsSurge = lazy(() => import("./pages/programs/Surge"));
+const ProgramsSetup = lazy(() => import("./pages/programs/Setup"));
 const AdScan = lazy(() => import("./pages/AdScan"));
 const AdScanOnboarding = lazy(() => import("./pages/AdScanOnboarding"));
 const AdScanThanks = lazy(() => import("./pages/AdScanThanks"));
@@ -232,6 +233,7 @@ const App = () => (
           <Route path="/programs/source" element={<ProgramsSource />} />
           <Route path="/programs/current" element={<ProgramsCurrent />} />
           <Route path="/programs/surge" element={<ProgramsSurge />} />
+          <Route path="/programs/setup" element={<ProgramsSetup />} />
           <Route path="/pricing" element={<Navigate to="/programs" replace />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
           <Route path="/grow/thanks" element={<GrowThanks />} />
