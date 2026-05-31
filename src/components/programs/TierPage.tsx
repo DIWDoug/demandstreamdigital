@@ -91,7 +91,11 @@ const TierPage = ({ data }: { data: TierPageData }) => {
 
           {/* ── Hero ── */}
           <section>
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-accent-blue flex items-center gap-3">
+            <div
+              className={`text-[12px] font-bold uppercase tracking-[0.21em] flex items-center gap-3 ${
+                data.eyebrowColor === "cta" ? "text-cta" : "text-accent-blue"
+              }`}
+            >
               <span className="text-[30px] leading-none">{data.symbol}</span>
               {data.eyebrow}
             </div>
