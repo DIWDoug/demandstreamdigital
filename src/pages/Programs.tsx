@@ -61,7 +61,7 @@ const TierCard = ({
     <div className={`relative ${popular ? "md:-translate-y-3" : ""}`}>
       {popular && (
         <div className="absolute -top-5 left-0 right-0 mx-auto w-fit z-10">
-          <div className="bg-gold text-navy text-[12px] font-extrabold tracking-[0.18em] uppercase px-6 py-2 rounded shadow-[0_6px_24px_hsl(var(--gold)/0.35)]">
+          <div className="bg-gold text-navy text-xs font-bold tracking-wider uppercase px-6 py-2 rounded shadow-[0_6px_24px_hsl(var(--gold)/0.35)]">
             ★ Most Popular
           </div>
         </div>
