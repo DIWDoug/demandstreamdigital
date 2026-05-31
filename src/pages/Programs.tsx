@@ -51,84 +51,100 @@ const TierCard = ({
   ctaText?: string;
   ctaTo?: string;
 }) => {
-  const checkColor = popular ? "text-cta" : "text-accent-blue";
-  const headingColor = popular ? "text-cta" : "text-accent-blue";
+  const accentText = popular ? "text-gold" : "text-accent-blue";
+  const accentBorder = popular ? "border-gold" : "border-accent-blue/40";
+  const checkColor = popular ? "text-gold" : "text-accent-blue";
 
   return (
-    <div
-      className={`relative rounded-lg bg-card border p-7 sm:p-8 ${
-        popular
-          ? "border-cta/55 shadow-[0_0_48px_hsl(var(--cta-glow)/0.18)] md:-translate-y-2"
-          : "border-border-card/70"
-      }`}
-    >
+    <div className={`relative ${popular ? "md:-translate-y-3" : ""}`}>
       {popular && (
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cta text-white text-[12px] font-bold tracking-[0.14em] uppercase px-4 py-1.5 rounded-full whitespace-nowrap">
-          ★ Most Popular
-        </div>
-      )}
-
-      <div className="flex items-center gap-2.5 font-extrabold text-[26px] tracking-[0.03em] text-white">
-        <span className={`text-[20px] ${headingColor}`}>{symbol}</span>
-        {name}
-      </div>
-
-      <p className="text-[15px] text-white/75 mt-2.5 min-h-[44px] leading-snug">{tag}</p>
-
-      <div className="mt-5 text-[44px] font-extrabold tracking-tight text-white leading-none">
-        {price}
-        <span className="text-[17px] font-semibold text-white/55 ml-1">/mo</span>
-      </div>
-
-      {everything && (
-        <div className="mt-4 text-[13.5px] font-semibold text-cta bg-cta/[0.08] border border-cta/35 rounded px-3.5 py-2.5">
-          {everything}
-        </div>
-      )}
-
-      <div className="mt-5 space-y-5">
-        {groups.map((g, gi) => (
-          <div key={gi}>
-            <h4 className={`text-[12.5px] font-bold uppercase tracking-[0.14em] mb-2.5 ${headingColor}`}>
-              {g.title}
-            </h4>
-            <ul className="space-y-2">
-              {g.items.map((item, ii) => (
-                <li
-                  key={ii}
-                  className="flex items-start gap-2.5 text-[15px] text-white/80 leading-snug"
-                >
-                  <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
-                  <span>
-                    {typeof item === "string" ? (
-                      item
-                    ) : (
-                      <>
-                        <span className="text-white font-semibold">{item.em}</span>
-                        {item.rest}
-                      </>
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
+        <div className="absolute -top-5 left-0 right-0 mx-auto w-fit z-10">
+          <div className="bg-gold text-navy text-[12px] font-extrabold tracking-[0.18em] uppercase px-6 py-2 rounded shadow-[0_6px_24px_hsl(var(--gold)/0.35)]">
+            ★ Most Popular
           </div>
-        ))}
-      </div>
+        </div>
+      )}
 
-      <Link
-        to={ctaTo}
-        className="btn-cta w-full mt-6 text-[15px]"
+      <div
+        className={`relative rounded-md bg-card border-2 ${accentBorder} p-7 sm:p-8 ${
+          popular ? "shadow-[0_0_60px_hsl(var(--gold)/0.18)]" : ""
+        }`}
       >
-        {ctaText}
-      </Link>
+        {/* Phase label */}
+        <div className={`text-center text-[13px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+          {name}
+        </div>
+        <div className="text-center text-[12px] text-white/55 mt-1 tracking-[0.05em]">
+          {tag}
+        </div>
 
-      <div className="text-[13px] text-white/50 border-t border-border-card/70 mt-5 pt-3.5">
-        {cap}
+        {/* Price block */}
+        <div className="text-center mt-6">
+          <div className={`inline-flex items-start font-extrabold ${accentText} leading-none`}>
+            <span className="text-[28px] mt-3 mr-1">$</span>
+            <span className="text-[68px] tracking-tight">{price.replace(/[$,/mo]/g, "").replace(",", "")}</span>
+            <span className="text-[14px] mt-3 ml-1 opacity-80">™</span>
+          </div>
+          <div className="text-[13px] italic text-white/55 mt-1">Per Month</div>
+        </div>
+
+        {everything && (
+          <div className="mt-5 text-center text-[13px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
+            {everything}
+          </div>
+        )}
+
+        {/* Feature list */}
+        <div className="mt-6 space-y-5">
+          {groups.map((g, gi) => (
+            <div key={gi}>
+              <h4 className={`text-[11.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+                {g.title}
+              </h4>
+              <ul className="space-y-2.5">
+                {g.items.map((item, ii) => (
+                  <li
+                    key={ii}
+                    className="flex items-start gap-2.5 text-[14.5px] text-white/85 leading-snug"
+                  >
+                    <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
+                    <span>
+                      {typeof item === "string" ? (
+                        item
+                      ) : (
+                        <>
+                          <span className="text-white font-semibold">{item.em}</span>
+                          {item.rest}
+                        </>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-7 pt-6 border-t border-white/10 text-center">
+          <Link
+            to={ctaTo}
+            className={`inline-flex items-center justify-center font-extrabold tracking-[0.14em] uppercase text-[13px] px-7 py-3 rounded transition-colors ${
+              popular
+                ? "bg-gold text-navy hover:bg-gold/90"
+                : "bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-navy"
+            }`}
+          >
+            {ctaText}
+          </Link>
+          <div className="text-[12px] text-white/45 mt-4 leading-snug">{cap}</div>
+        </div>
       </div>
     </div>
   );
 };
+
+
 
 
 const Programs = () => {
