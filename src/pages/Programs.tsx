@@ -593,37 +593,211 @@ const Programs = () => {
             </div>
           </section>
 
-          {/* ───── SETUP BANNER ───── */}
+          {/* ───── ONE-TIME SETUP (Foundation Build) ───── */}
           <section
-            className="mt-10 mb-2 rounded-lg p-6 sm:p-7 flex flex-wrap items-center justify-between gap-5 border border-cta/35"
+            className="mt-12 rounded-xl border border-cta/30 overflow-hidden"
             style={{
               background:
-                "linear-gradient(120deg, hsl(var(--cta) / 0.10), hsl(var(--navy-light)))",
+                "linear-gradient(135deg, hsl(var(--cta) / 0.10), hsl(var(--navy-light)) 55%, hsl(var(--navy)))",
             }}
           >
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                One-Time Setup
-              </div>
-              <div className="font-extrabold text-[34px] leading-none mt-1 text-white">
-                $5,000
-              </div>
-              <div className="text-white/70 text-[14px] mt-1">
-                60-day build · billed at signup, work starts day one
+            {/* Header band */}
+            <div className="px-6 sm:px-10 pt-9 pb-7 border-b border-white/[0.07]">
+              <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
+                <div>
+                  <Eyebrow>The Foundation Build</Eyebrow>
+                  <h2 className="font-extrabold text-white text-[28px] md:text-[36px] leading-[1.08] tracking-tight mt-3 mb-3">
+                    Before any program runs, we build the engine.
+                  </h2>
+                  <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
+                    The website is the growth engine, not a brochure. Every Google ranking, ad click,
+                    review, and missed-call text-back has to land somewhere that converts. We build that
+                    foundation once. Every program after this drives demand through it.
+                  </p>
+                  <p className="text-white/55 text-[15px] mt-3">
+                    Required for all programs. Billed at signup, work starts day one.
+                  </p>
+                </div>
+
+                {/* Price block */}
+                <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-cta">
+                    One-Time Investment
+                  </div>
+                  <div className="flex items-baseline gap-1 mt-2">
+                    <span className="text-2xl font-bold text-white">$</span>
+                    <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
+                      5,000
+                    </span>
+                  </div>
+                  <div className="text-white/65 text-sm mt-2">
+                    60-day build. Paid once at signup.
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
+                    Roughly $80 per deliverable across the full build.
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-start sm:items-end gap-3">
-              <div className="text-white/55 text-[13px] max-w-[520px] leading-relaxed text-left sm:text-right">
-                Your complete foundation: 30-page growth website · Google Business Profile
-                optimization · call tracking &amp; conversion setup · schema &amp;
-                structured data · CRM &amp; automation install · starter brand kit.
+
+            {/* Deliverables grid */}
+            <div className="px-6 sm:px-10 py-9">
+              <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
+                What you actually get
+              </h3>
+              <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
+                A complete, owned, conversion-ready foundation. Built by our team, installed during a
+                60-day onboarding, yours to keep.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                {[
+                  {
+                    Icon: Globe,
+                    title: "The Growth Website",
+                    items: [
+                      "30-page conversion-built website on the DemandStream framework",
+                      "Mobile-first, fast-loading, accessibility-ready",
+                      "Hub-and-spoke service + service-area page structure",
+                      "Financing CTAs, online booking and click-to-call built in",
+                      "Schema and structured data across every page",
+                      "Your brand kit applied: logo, colors, fonts, imagery",
+                    ],
+                  },
+                  {
+                    Icon: MapPin,
+                    title: "Google & Local Visibility",
+                    items: [
+                      "Google Business Profile fully optimized (110-point checklist)",
+                      "Local Services Ads (LSA) account stood up and verified",
+                      "Citation and listing foundation across core directories",
+                      "AI search readiness for AI Maps and answer engines",
+                    ],
+                  },
+                  {
+                    Icon: BarChart3,
+                    title: "Tracking & Measurement",
+                    items: [
+                      "Call tracking provisioned for every channel",
+                      "Conversion tracking and analytics wired end-to-end",
+                      "Reporting dashboard stood up. One view of the funnel",
+                      "Attribution mapped from first touch to booked job",
+                    ],
+                  },
+                  {
+                    Icon: Workflow,
+                    title: "Systems & Automation",
+                    items: [
+                      "CRM and sales pipeline configured",
+                      "Missed-call text-back live on day one",
+                      "24/7 lead-capture chat and review engine installed",
+                      "Customer reactivation email sequence connected",
+                    ],
+                  },
+                  {
+                    Icon: Compass,
+                    title: "Onboarding & Strategy",
+                    items: [
+                      "Full audit and 6-month growth roadmap",
+                      "Kickoff and strategy session with your specialist",
+                      "Dedicated Success Specialist assigned for life of program",
+                    ],
+                  },
+                  {
+                    Icon: Zap,
+                    title: "Why this is the floor, not the ceiling",
+                    items: [
+                      "We will not run ads to a site we did not build",
+                      "We will not promise rankings on a Google Profile we did not optimize",
+                      "Every program after this compounds on the same foundation",
+                      "Built once. Owned by you. Expanded forever.",
+                    ],
+                    accent: true,
+                  },
+                ].map(({ Icon, title, items, accent }, gi) => (
+                  <div
+                    key={gi}
+                    className={`rounded-lg p-5 sm:p-6 border ${
+                      accent
+                        ? "bg-cta/[0.06] border-cta/35"
+                        : "bg-card border-border-card/70"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <div
+                        className={`w-10 h-10 rounded-md flex items-center justify-center border ${
+                          accent
+                            ? "bg-cta/15 border-cta/40"
+                            : "bg-accent-blue/10 border-accent-blue/30"
+                        }`}
+                      >
+                        <Icon
+                          className={`w-5 h-5 ${accent ? "text-cta" : "text-accent-blue"}`}
+                          strokeWidth={2.2}
+                        />
+                      </div>
+                      <h4 className="font-bold text-white text-[17px] md:text-[18px] tracking-tight">
+                        {title}
+                      </h4>
+                    </div>
+                    <ul className="space-y-2.5">
+                      {items.map((it, ii) => (
+                        <li
+                          key={ii}
+                          className="flex items-start gap-2.5 text-[15px] md:text-base text-white/80 leading-snug"
+                        >
+                          <Check
+                            className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${
+                              accent ? "text-cta" : "text-accent-blue"
+                            }`}
+                            strokeWidth={3}
+                          />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
-              <Link
-                to="/programs/setup"
-                className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-[13px] tracking-[0.03em] px-5 py-2.5 rounded transition-colors"
-              >
-                See What's Included →
-              </Link>
+
+              {/* Phase strip */}
+              <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
+                {[
+                  { d: "Days 1 to 15", p: "Audit & Foundation" },
+                  { d: "Days 15 to 35", p: "Website & Brand Build" },
+                  { d: "Days 35 to 50", p: "Systems & Tracking" },
+                  { d: "Days 50 to 60", p: "QA, Launch & Handoff" },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className="bg-navy/60 border border-border-card/60 rounded-md px-4 py-3.5"
+                  >
+                    <div className="text-cta font-bold text-sm">{s.d}</div>
+                    <div className="text-white/85 text-[15px] md:text-base font-semibold mt-1 leading-snug">
+                      {s.p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA row */}
+              <div className="mt-9 flex flex-wrap items-center gap-4 pt-7 border-t border-white/[0.08]">
+                <Link
+                  to="/programs/setup"
+                  className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-base px-7 py-3.5 rounded transition-colors"
+                >
+                  See the full 60-day build →
+                </Link>
+                <Link
+                  to="/grow-qualifier"
+                  className="inline-flex items-center justify-center bg-transparent border-2 border-white/25 hover:border-white/45 text-white font-semibold text-base px-7 py-3 rounded transition-colors"
+                >
+                  Check if your market is open
+                </Link>
+                <span className="text-white/55 text-[14px]">
+                  Setup pairs with a monthly program: Source, Current, or Surge.
+                </span>
+              </div>
             </div>
           </section>
 
