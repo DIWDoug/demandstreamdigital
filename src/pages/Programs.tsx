@@ -336,6 +336,7 @@ const Programs = () => {
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
+              ctaTo="/programs/current"
             />
             <TierCard
               symbol="❖"
