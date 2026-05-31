@@ -51,64 +51,64 @@ const TierCard = ({
   ctaText?: string;
   ctaTo?: string;
 }) => {
-  const dotColor = popular ? "bg-cta" : "bg-accent-blue/80";
+  const checkColor = popular ? "text-cta" : "text-accent-blue";
   const headingColor = popular ? "text-cta" : "text-accent-blue";
 
   return (
     <div
-      className={`relative rounded-lg bg-card border p-6 sm:p-7 ${
+      className={`relative rounded-lg bg-card border p-7 sm:p-8 ${
         popular
           ? "border-cta/55 shadow-[0_0_48px_hsl(var(--cta-glow)/0.18)] md:-translate-y-2"
           : "border-border-card/70"
       }`}
     >
       {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-bold tracking-[0.12em] uppercase px-3.5 py-1 rounded-full whitespace-nowrap">
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-cta text-white text-[12px] font-bold tracking-[0.14em] uppercase px-4 py-1.5 rounded-full whitespace-nowrap">
           ★ Most Popular
         </div>
       )}
 
-      <div className="flex items-center gap-2.5 font-extrabold text-[23px] tracking-[0.03em] text-white">
-        <span className={`text-[18px] ${headingColor}`}>{symbol}</span>
+      <div className="flex items-center gap-2.5 font-extrabold text-[26px] tracking-[0.03em] text-white">
+        <span className={`text-[20px] ${headingColor}`}>{symbol}</span>
         {name}
       </div>
 
-      <p className="text-[13px] text-white/70 mt-2 min-h-[36px] leading-snug">{tag}</p>
+      <p className="text-[15px] text-white/75 mt-2.5 min-h-[44px] leading-snug">{tag}</p>
 
-      <div className="mt-4 text-[38px] font-extrabold tracking-tight text-white leading-none">
+      <div className="mt-5 text-[44px] font-extrabold tracking-tight text-white leading-none">
         {price}
-        <span className="text-[15px] font-semibold text-white/50 ml-0.5">/mo</span>
+        <span className="text-[17px] font-semibold text-white/55 ml-1">/mo</span>
       </div>
 
       {everything && (
-        <div className="mt-3 text-[12px] font-semibold text-cta bg-cta/[0.08] border border-cta/35 rounded px-3 py-2">
+        <div className="mt-4 text-[13.5px] font-semibold text-cta bg-cta/[0.08] border border-cta/35 rounded px-3.5 py-2.5">
           {everything}
         </div>
       )}
 
-      <div className="mt-4 space-y-4">
+      <div className="mt-5 space-y-5">
         {groups.map((g, gi) => (
           <div key={gi}>
-            <h4 className={`text-[11px] font-bold uppercase tracking-[0.13em] mb-2 ${headingColor}`}>
+            <h4 className={`text-[12.5px] font-bold uppercase tracking-[0.14em] mb-2.5 ${headingColor}`}>
               {g.title}
             </h4>
-            <ul className="space-y-1">
+            <ul className="space-y-2">
               {g.items.map((item, ii) => (
                 <li
                   key={ii}
-                  className="relative pl-5 text-[13.5px] text-white/70 leading-snug py-1"
+                  className="flex items-start gap-2.5 text-[15px] text-white/80 leading-snug"
                 >
-                  <span
-                    className={`absolute left-0.5 top-[10px] w-1.5 h-1.5 rounded-full ${dotColor}`}
-                  />
-                  {typeof item === "string" ? (
-                    item
-                  ) : (
-                    <>
-                      <span className="text-white font-semibold">{item.em}</span>
-                      {item.rest}
-                    </>
-                  )}
+                  <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
+                  <span>
+                    {typeof item === "string" ? (
+                      item
+                    ) : (
+                      <>
+                        <span className="text-white font-semibold">{item.em}</span>
+                        {item.rest}
+                      </>
+                    )}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -118,17 +118,18 @@ const TierCard = ({
 
       <Link
         to={ctaTo}
-        className="btn-cta w-full mt-5"
+        className="btn-cta w-full mt-6 text-[15px]"
       >
         {ctaText}
       </Link>
 
-      <div className="text-[12px] text-white/45 border-t border-border-card/70 mt-4 pt-3">
+      <div className="text-[13px] text-white/50 border-t border-border-card/70 mt-5 pt-3.5">
         {cap}
       </div>
     </div>
   );
 };
+
 
 const Programs = () => {
   const source: Group[] = [
