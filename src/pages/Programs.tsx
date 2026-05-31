@@ -592,7 +592,7 @@ const Programs = () => {
               Built for Plumbing &amp; HVAC. Designed to Book More Calls.
             </div>
 
-            <h1 className="font-extrabold text-white mt-3 md:mt-5 mb-3 md:mb-6 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(30px,8.5vw,88px)]">
+            <h1 className="font-extrabold text-white mt-2 md:mt-4 mb-2 md:mb-5 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(26px,7.5vw,88px)]">
               One <span className="text-accent-blue">Stream</span> of Demand.
               <br />
               Three Ways to Grow.
