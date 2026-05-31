@@ -268,7 +268,7 @@ const Setup = () => {
             className="mt-9 text-center rounded-lg border border-border-card/70 px-6 py-12"
             style={{ background: "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))" }}
           >
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-accent-blue">
+            <div className="text-xs font-semibold uppercase tracking-wider text-accent-blue">
               Ready to own your market?
             </div>
             <h2 className="font-extrabold text-white text-[30px] tracking-[-0.015em] mt-2.5 mb-2">
