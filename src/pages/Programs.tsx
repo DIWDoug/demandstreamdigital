@@ -692,11 +692,13 @@ const Programs = () => {
                         <img src={paypalCreditLogo} alt="PayPal Credit" className="h-4 w-auto" />
                       </span>
                     </div>
-                    <img
-                      src={paymentMethods}
-                      alt="Visa, Mastercard, American Express, PayPal accepted"
-                      className="mt-3 h-7 w-auto opacity-90"
-                    />
+                    <div className="bg-white rounded-md px-3 py-2 inline-flex mt-3">
+                      <img
+                        src={paymentMethods}
+                        alt="Visa, Mastercard, American Express, PayPal accepted"
+                        className="h-7 w-auto"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
