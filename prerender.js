@@ -104,6 +104,7 @@ const routesToPrerender = [
   '/plumbing-content-marketing',
   '/plumbing-authority-building',
   '/plumbing-reporting',
+  '/plumbing-ai-search-optimization',
   '/plumbing-and-hvac-web-design',
 
   // ── Plumbing Paid Advertising Channel Spokes ──
@@ -121,6 +122,7 @@ const routesToPrerender = [
   '/hvac-content-marketing',
   '/hvac-authority-building',
   '/hvac-reporting',
+  '/hvac-ai-search-optimization',
 
   // ── HVAC Paid Advertising Channel Spokes ──
   '/hvac-search-ads',
@@ -130,6 +132,7 @@ const routesToPrerender = [
 
   // ── Shared / Combined Service Hubs ──
   '/hvac-and-plumbing-paid-ads',
+  '/plumbing-and-hvac-ai-search-optimization',
   '/ai-automation',
 
   // ── Web Design ──

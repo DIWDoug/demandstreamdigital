@@ -96,6 +96,9 @@ const WebDesignHub = lazy(() => import("./pages/services/WebDesignHub"));
 const PlumbingWebsiteDesign = lazy(() => import("./pages/services/PlumbingWebsiteDesign"));
 const HVACWebsiteDesign = lazy(() => import("./pages/services/HVACWebsiteDesign"));
 const AIAutomation = lazy(() => import("./pages/services/AIAutomation"));
+const AISearchOptimization = lazy(() => import("./pages/services/AISearchOptimization"));
+const PlumbingAISearchOptimization = lazy(() => import("./pages/services/PlumbingAISearchOptimization"));
+const HVACAISearchOptimization = lazy(() => import("./pages/services/HVACAISearchOptimization"));
 
 // Interactive Tools
 const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
@@ -286,6 +289,11 @@ const App = () => (
           <Route path="/plumbing-authority-building" element={<Authority />} />
           <Route path="/plumbing-reporting" element={<PlumbingReporting />} />
           <Route path="/plumbing-and-hvac-reporting" element={<Reporting />} />
+
+          {/* AIO & GEO (AI Search Optimization) */}
+          <Route path="/plumbing-and-hvac-ai-search-optimization" element={<AISearchOptimization />} />
+          <Route path="/plumbing-ai-search-optimization" element={<PlumbingAISearchOptimization />} />
+          <Route path="/hvac-ai-search-optimization" element={<HVACAISearchOptimization />} />
 
           {/* Paid Media */}
           <Route path="/paid-marketing" element={<PaidMedia />} />
