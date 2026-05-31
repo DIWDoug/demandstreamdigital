@@ -35,7 +35,8 @@ const TierCard = ({
   groups,
   cap,
   popular = false,
-  ctaText = "Schedule a Growth Audit",
+  ctaText = "View Full Details",
+  ctaTo = "/grow-qualifier",
 }: {
   symbol: string;
   name: string;
@@ -46,6 +47,7 @@ const TierCard = ({
   cap: string;
   popular?: boolean;
   ctaText?: string;
+  ctaTo?: string;
 }) => {
   const dotColor = popular ? "bg-cta" : "bg-accent-blue/80";
   const headingColor = popular ? "text-cta" : "text-accent-blue";
