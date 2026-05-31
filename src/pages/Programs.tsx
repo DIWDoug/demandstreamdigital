@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
+import StreamTexture from "@/components/StreamTexture";
 
 
 /* ─── Tokens used (existing design system) ───────────────────────────────
