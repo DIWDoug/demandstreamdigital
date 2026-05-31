@@ -115,7 +115,7 @@ const TierCard = ({
       </div>
 
       <Link
-        to="/grow-qualifier"
+        to={ctaTo}
         className="btn-cta w-full mt-5"
       >
         {ctaText}
