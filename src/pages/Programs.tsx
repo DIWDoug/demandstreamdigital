@@ -73,10 +73,10 @@ const TierCard = ({
         }`}
       >
         {/* Phase label */}
-        <div className={`text-center text-[13px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+        <div className={`text-center text-[15px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
           {name}
         </div>
-        <div className="text-center text-[12px] text-white/55 mt-1 tracking-[0.05em]">
+        <div className="text-center text-[14.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
           {tag}
         </div>
 
@@ -87,8 +87,9 @@ const TierCard = ({
             <span className="text-[68px] tracking-tight">{price.replace(/[$,/mo]/g, "").replace(",", "")}</span>
             <span className="text-[14px] mt-3 ml-1 opacity-80">™</span>
           </div>
-          <div className="text-[13px] italic text-white/55 mt-1">Per Month</div>
+          <div className="text-[14.5px] italic text-white/65 mt-1.5">Per Month</div>
         </div>
+
 
         {everything && (
           <div className="mt-5 text-center text-[13px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
