@@ -73,10 +73,10 @@ const TierCard = ({
         }`}
       >
         {/* Phase label */}
-        <div className={`text-center text-[15px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+        <div className={`text-center text-[16px] md:text-[17px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
           {name}
         </div>
-        <div className="text-center text-[14.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
+        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
           {tag}
         </div>
 
@@ -92,7 +92,7 @@ const TierCard = ({
 
 
         {everything && (
-          <div className="mt-5 text-center text-[13px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
+          <div className="mt-5 text-center text-[14px] md:text-[15px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
             {everything}
           </div>
         )}
@@ -101,14 +101,14 @@ const TierCard = ({
         <div className="mt-6 space-y-5">
           {groups.map((g, gi) => (
             <div key={gi}>
-              <h4 className={`text-[12.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+              <h4 className={`text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
                 {g.title}
               </h4>
               <ul className="space-y-2.5">
                 {g.items.map((item, ii) => (
                   <li
                     key={ii}
-                    className="flex items-start gap-2.5 text-[15.5px] text-white/85 leading-snug"
+                    className="flex items-start gap-2.5 text-[16px] md:text-[17px] text-white/85 leading-snug"
                   >
                     <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
                     <span>
@@ -132,7 +132,7 @@ const TierCard = ({
         <div className="mt-7 pt-6 border-t border-white/10 text-center">
           <Link
             to={ctaTo}
-            className={`inline-flex items-center justify-center font-extrabold tracking-[0.14em] uppercase text-[13px] px-7 py-3 rounded transition-colors ${
+            className={`inline-flex items-center justify-center font-extrabold tracking-[0.14em] uppercase text-[14px] md:text-[15px] px-7 py-3 rounded transition-colors ${
               popular
                 ? "bg-gold text-navy hover:bg-gold/90"
                 : "bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-navy"
@@ -140,7 +140,7 @@ const TierCard = ({
           >
             {ctaText}
           </Link>
-          <div className="text-[13px] text-white/45 mt-4 leading-snug">{cap}</div>
+          <div className="text-[14px] md:text-[15px] text-white/45 mt-4 leading-snug">{cap}</div>
         </div>
       </div>
     </div>
@@ -258,7 +258,7 @@ const TierShowcase = () => {
               <span className="font-extrabold tracking-[0.18em] text-[13px] md:text-[15px] uppercase">
                 {t.name}
               </span>
-              <span className="hidden md:block text-[11px] tracking-wide text-white/45">
+              <span className="hidden md:block text-[13px] md:text-[14px] tracking-wide text-white/45">
                 {t.tagline}
               </span>
               {isActive && (
@@ -297,16 +297,16 @@ const TierShowcase = () => {
               </div>
             </div>
 
-            <p className="text-white/80 text-[15.5px] leading-relaxed mb-6">
+            <p className="text-white/80 text-[16px] md:text-[17px] leading-relaxed mb-6">
               {tier.description}
             </p>
 
-            <div className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent-blue mb-3">
+            <div className="text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.18em] text-accent-blue mb-3">
               What you walk away with
             </div>
             <ul className="space-y-2.5">
               {tier.outcomes.map((o, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-[15px] text-white/85 leading-snug">
+                <li key={i} className="flex items-start gap-2.5 text-[16px] md:text-[17px] text-white/85 leading-snug">
                   <Check className="w-[18px] h-[18px] mt-[3px] shrink-0 text-cta" strokeWidth={3} />
                   <span>{o}</span>
                 </li>
@@ -317,7 +317,7 @@ const TierShowcase = () => {
           {/* Right: stat panel */}
           <div className="rounded-md border border-border-card/70 bg-navy/60 backdrop-blur-sm p-6 space-y-5">
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
                 Investment
               </div>
               <div className="font-extrabold text-white text-[28px] leading-none">
@@ -325,16 +325,16 @@ const TierShowcase = () => {
               </div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
                 Best For
               </div>
-              <div className="text-white/85 text-[14px] leading-snug">{tier.bestFor}</div>
+              <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.bestFor}</div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
                 Timeline
               </div>
-              <div className="text-white/85 text-[14px] leading-snug">{tier.timeframe}</div>
+              <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.timeframe}</div>
             </div>
             <Link
               to={tier.ctaTo}
@@ -637,10 +637,10 @@ const Programs = () => {
           >
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
               <div className="max-w-[720px]">
-                <h3 className="text-[14px] font-bold tracking-[0.18em] uppercase text-accent-blue">
+                <h3 className="text-[15px] md:text-[16px] font-bold tracking-[0.18em] uppercase text-accent-blue">
                   Ad Spend &amp; Management
                 </h3>
-                <p className="text-white/80 text-[16px] mt-3 leading-relaxed">
+                <p className="text-white/80 text-[17px] md:text-[18px] mt-3 leading-relaxed">
                   Your ad spend is always your money, paid to Google directly. Never marked up.
                   Every tier includes hands-on campaign management up to its spend cap.
                   Beyond the cap, management is billed as a small percentage of spend.
@@ -654,7 +654,7 @@ const Programs = () => {
                 ].map((p, i) => (
                   <div
                     key={i}
-                    className="bg-card/80 border border-border-card/60 rounded px-5 py-3.5 text-[14px] text-white/75"
+                    className="bg-card/80 border border-border-card/60 rounded px-5 py-3.5 text-[15px] md:text-[16px] text-white/75"
                   >
                     <b className="block text-white font-extrabold text-[20px] leading-tight">
                       {p.b}
