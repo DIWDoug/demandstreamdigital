@@ -98,14 +98,14 @@ const TierCard = ({
         <div className="mt-6 space-y-5">
           {groups.map((g, gi) => (
             <div key={gi}>
-              <h4 className={`text-[11.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+              <h4 className={`text-[12.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
                 {g.title}
               </h4>
               <ul className="space-y-2.5">
                 {g.items.map((item, ii) => (
                   <li
                     key={ii}
-                    className="flex items-start gap-2.5 text-[14.5px] text-white/85 leading-snug"
+                    className="flex items-start gap-2.5 text-[15.5px] text-white/85 leading-snug"
                   >
                     <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
                     <span>
@@ -137,7 +137,7 @@ const TierCard = ({
           >
             {ctaText}
           </Link>
-          <div className="text-[12px] text-white/45 mt-4 leading-snug">{cap}</div>
+          <div className="text-[13px] text-white/45 mt-4 leading-snug">{cap}</div>
         </div>
       </div>
     </div>
