@@ -301,7 +301,7 @@ const TierShowcase = () => {
               {tier.description}
             </p>
 
-            <div className="text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.18em] text-accent-blue mb-3">
+            <div className="text-[15px] md:text-base font-bold text-accent-blue mb-3">
               What you walk away with
             </div>
             <ul className="space-y-2.5">
