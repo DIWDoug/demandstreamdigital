@@ -637,7 +637,7 @@ const Programs = () => {
           >
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
               <div className="max-w-[720px]">
-                <h3 className="text-[15px] md:text-[16px] font-bold tracking-[0.18em] uppercase text-accent-blue">
+                <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight">
                   Ad Spend &amp; Management
                 </h3>
                 <p className="text-white/80 text-[17px] md:text-[18px] mt-3 leading-relaxed">
