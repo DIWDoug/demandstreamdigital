@@ -657,19 +657,20 @@ const Programs = () => {
                 {/* Price block */}
                 <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
                   <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                    First 2 Months
+                    Foundation Build
                   </div>
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
                     <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
-                      5,000
+                      2,500
                     </span>
+                    <span className="text-white/70 text-base font-semibold ml-1">/ month</span>
                   </div>
                   <div className="text-white/65 text-sm mt-2">
-                    60-day build. Your first two months paid upfront.
+                    Billed as a 60-day build. First 2 months ($5,000) paid upfront at signup.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
-                    Roughly $2,500 / month. Covers the full foundation build.
+                    Covers your full foundation build. One-time, not recurring.
                   </div>
                 </div>
               </div>
