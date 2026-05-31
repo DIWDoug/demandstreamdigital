@@ -48,8 +48,20 @@ const TierPage = ({ data }: { data: TierPageData }) => {
         <div
           aria-hidden
           className="pointer-events-none absolute -top-44 left-[20%] w-[640px] h-[640px] rounded-full"
-          style={{ background: "radial-gradient(circle, hsl(var(--cta) / 0.10), transparent 65%)" }}
+          style={{
+            background: `radial-gradient(circle, hsl(var(--cta) / ${data.flagship ? 0.18 : 0.1}), transparent 65%)`,
+          }}
         />
+        {data.flagship && (
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-24 left-1/2 -translate-x-1/2 w-[820px] h-[420px] rounded-full"
+            style={{
+              background:
+                "radial-gradient(ellipse, hsl(var(--cta-glow) / 0.22), transparent 70%)",
+            }}
+          />
+        )}
         <div
           aria-hidden
           className="pointer-events-none absolute -bottom-56 -right-10 w-[580px] h-[580px] rounded-full"
