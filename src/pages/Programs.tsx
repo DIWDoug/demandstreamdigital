@@ -317,7 +317,7 @@ const TierShowcase = () => {
           {/* Right: stat panel */}
           <div className="rounded-md border border-border-card/70 bg-navy/60 backdrop-blur-sm p-6 space-y-5">
             <div>
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Investment
               </div>
               <div className="font-extrabold text-white text-[28px] leading-none">
@@ -325,20 +325,20 @@ const TierShowcase = () => {
               </div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Best For
               </div>
               <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.bestFor}</div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Timeline
               </div>
               <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.timeframe}</div>
             </div>
             <Link
               to={tier.ctaTo}
-              className="block text-center bg-cta hover:bg-cta-hover text-white font-extrabold tracking-[0.12em] uppercase text-[13px] px-5 py-3.5 rounded transition-colors"
+              className="block text-center bg-cta hover:bg-cta-hover text-white font-bold text-sm md:text-[15px] px-5 py-3.5 rounded transition-colors"
             >
               Explore {tier.name} →
             </Link>
