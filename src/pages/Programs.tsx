@@ -809,9 +809,43 @@ const Programs = () => {
             </div>
           </section>
 
-          {/* ───── AD SPEND & MANAGEMENT ───── */}
+          {/* ───── TIERS ───── */}
+          <section className="mt-12 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
+            <TierCard
+              symbol="◇"
+              name="SOURCE"
+              tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
+              price="$2,500"
+              groups={source}
+              cap="Ad management: flat up to $2,000/mo managed spend"
+              ctaTo="/programs/source"
+            />
+            <TierCard
+              symbol="◈"
+              name="CURRENT"
+              tag="Active growth. Paid acceleration plus hands-off automation."
+              price="$4,000"
+              everything="Everything in Source, plus ↓"
+              groups={current}
+              cap="Ad management: flat up to $5,000/mo managed spend"
+              popular
+              ctaTo="/programs/current"
+            />
+            <TierCard
+              symbol="❖"
+              name="SURGE"
+              tag="Own your market. Take competitors' share."
+              price="$6,000"
+              everything="Everything in Current, plus ↓"
+              groups={surge}
+              cap="Ad management: flat up to $10,000/mo managed spend"
+              ctaTo="/programs/surge"
+            />
+          </section>
+
+          {/* ───── AD SPEND & MANAGEMENT (placed after tiers) ───── */}
           <section
-            className="mt-6 rounded-lg p-6 sm:p-8 border border-accent-blue/40"
+            className="mt-8 rounded-lg p-6 sm:p-8 border border-accent-blue/40"
             style={{
               background:
                 "linear-gradient(135deg, hsl(var(--navy-light)), hsl(var(--navy)))",
@@ -846,40 +880,6 @@ const Programs = () => {
                 ))}
               </div>
             </div>
-          </section>
-
-          {/* ───── TIERS ───── */}
-          <section className="mt-6 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
-            <TierCard
-              symbol="◇"
-              name="SOURCE"
-              tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-              price="$2,500"
-              groups={source}
-              cap="Ad management: flat up to $2,000/mo managed spend"
-              ctaTo="/programs/source"
-            />
-            <TierCard
-              symbol="◈"
-              name="CURRENT"
-              tag="Active growth. Paid acceleration plus hands-off automation."
-              price="$4,000"
-              everything="Everything in Source, plus ↓"
-              groups={current}
-              cap="Ad management: flat up to $5,000/mo managed spend"
-              popular
-              ctaTo="/programs/current"
-            />
-            <TierCard
-              symbol="❖"
-              name="SURGE"
-              tag="Own your market. Take competitors' share."
-              price="$6,000"
-              everything="Everything in Current, plus ↓"
-              groups={surge}
-              cap="Ad management: flat up to $10,000/mo managed spend"
-              ctaTo="/programs/surge"
-            />
           </section>
 
           {/* ───── TIER SHOWCASE (tabbed deep-dive) ───── */}
