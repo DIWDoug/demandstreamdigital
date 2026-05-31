@@ -35,7 +35,8 @@ const TierCard = ({
   groups,
   cap,
   popular = false,
-  ctaText = "Schedule a Growth Audit",
+  ctaText = "View Full Details",
+  ctaTo = "/grow-qualifier",
 }: {
   symbol: string;
   name: string;
@@ -46,6 +47,7 @@ const TierCard = ({
   cap: string;
   popular?: boolean;
   ctaText?: string;
+  ctaTo?: string;
 }) => {
   const dotColor = popular ? "bg-cta" : "bg-accent-blue/80";
   const headingColor = popular ? "text-cta" : "text-accent-blue";
@@ -113,7 +115,7 @@ const TierCard = ({
       </div>
 
       <Link
-        to="/grow-qualifier"
+        to={ctaTo}
         className="btn-cta w-full mt-5"
       >
         {ctaText}
@@ -323,6 +325,7 @@ const Programs = () => {
               price="$2,500"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
+              ctaTo="/programs/source"
             />
             <TierCard
               symbol="◈"
@@ -333,6 +336,7 @@ const Programs = () => {
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
+              ctaTo="/programs/current"
             />
             <TierCard
               symbol="❖"
@@ -342,6 +346,7 @@ const Programs = () => {
               everything="Everything in Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
+              ctaTo="/programs/surge"
             />
           </section>
 
