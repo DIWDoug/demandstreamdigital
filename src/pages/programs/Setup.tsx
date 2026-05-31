@@ -198,7 +198,7 @@ const Setup = () => {
               background: "linear-gradient(120deg, hsl(var(--cta) / 0.09), hsl(var(--navy-light)))",
             }}
           >
-            <h3 className="text-[12px] tracking-[0.17em] uppercase text-cta font-bold">Why a real build</h3>
+            <h3 className="text-xs uppercase tracking-wider text-cta font-semibold">Why a real build</h3>
             <p className="text-white text-[17px] mt-2 max-w-[760px] leading-relaxed">
               The website is the growth engine, not a brochure. Everything else (Google, reviews, ads,
               automation) exists to feed it. We build the engine right, then every program drives demand
