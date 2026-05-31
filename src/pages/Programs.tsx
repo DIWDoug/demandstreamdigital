@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
+
 
 /* ─── Tokens used (existing design system) ───────────────────────────────
    --cta (brick red)        : buttons, badges, most-popular border + glow
