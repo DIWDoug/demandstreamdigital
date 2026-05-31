@@ -112,7 +112,14 @@ const TierCard = ({
         ))}
       </div>
 
-      <div className="text-[12px] text-white/45 border-t border-border-card/70 mt-5 pt-3">
+      <Link
+        to="/grow-qualifier"
+        className="btn-cta w-full mt-5"
+      >
+        {ctaText}
+      </Link>
+
+      <div className="text-[12px] text-white/45 border-t border-border-card/70 mt-4 pt-3">
         {cap}
       </div>
     </div>
