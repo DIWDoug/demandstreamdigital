@@ -575,7 +575,7 @@ const Programs = () => {
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-12 pb-20">
           {/* ───── HERO ───── */}
-          <section className="relative -mx-6 px-6 py-20 md:py-28 mb-4 text-center overflow-hidden">
+          <section className="relative -mx-6 px-6 py-10 md:py-20 mb-2 text-center overflow-hidden">
             {/* Radial spotlight wash */}
             <div
               aria-hidden="true"
@@ -588,27 +588,27 @@ const Programs = () => {
             {/* Bottom hairline */}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
-            <div className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.25em] text-cta">
+            <div className="text-[11px] md:text-[13px] font-semibold uppercase tracking-[0.22em] text-cta">
               Built for Plumbing &amp; HVAC. Designed to Book More Calls.
             </div>
 
-            <h1 className="font-extrabold text-white mt-5 mb-6 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(40px,7vw,88px)]">
+            <h1 className="font-extrabold text-white mt-3 md:mt-5 mb-3 md:mb-6 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(30px,8.5vw,88px)]">
               One <span className="text-accent-blue">Stream</span> of Demand.
               <br />
               Three Ways to Grow.
             </h1>
 
-            <p className="text-white/80 text-[17px] sm:text-[19px] max-w-[720px] mx-auto leading-relaxed">
+            <p className="text-white/80 text-[14px] sm:text-[19px] max-w-[720px] mx-auto leading-snug md:leading-relaxed">
               Growth systems for plumbing &amp; HVAC companies.{" "}
               <span className="text-white font-semibold">
                 Not marketing services. A complete growth system.
               </span>
             </p>
-            <p className="text-white font-semibold mt-3 text-[15px] sm:text-[16px]">
+            <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
               Everything in Silver carries into Gold. Everything in Gold carries into Diamond.
             </p>
 
-            <div className="inline-block mt-7 text-[13px] text-white/70 border border-white/20 bg-white/[0.06] px-4 py-1.5 rounded">
+            <div className="inline-block mt-4 md:mt-7 text-[12px] md:text-[13px] text-white/70 border border-white/20 bg-white/[0.06] px-3 md:px-4 py-1.5 rounded">
               ◆ One plumbing company and one HVAC client per market.
             </div>
           </section>
