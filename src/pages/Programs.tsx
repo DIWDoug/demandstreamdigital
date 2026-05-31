@@ -667,7 +667,7 @@ const Programs = () => {
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
                     <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
-                      5,000
+                      4,995
                     </span>
                     <span className="text-white/70 text-base font-semibold ml-1">one time</span>
                   </div>
