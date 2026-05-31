@@ -15,7 +15,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Plumbing Google Maps / GBP", href: "/plumbing-google-maps" },
         { label: "Plumbing PPC / Google Ads", href: "/paid-marketing" },
         { label: "Plumbing Web Design", href: "/plumbing-website-design" },
-        { label: "Plumbing Reputation Management", href: "/plumbing-google-maps" },
+        { label: "Plumbing AIO & GEO", href: "/plumbing-ai-search-optimization" },
         { label: "Plumbing Email Marketing", href: "/plumbing-email-marketing" },
         { label: "Plumbing Content Marketing", href: "/plumbing-content-marketing" },
       ]
@@ -28,7 +28,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "HVAC Google Maps / GBP", href: "/hvac-google-maps" },
         { label: "HVAC PPC / Google Ads", href: "/paid-marketing" },
         { label: "HVAC Web Design", href: "/hvac-website-design" },
-        { label: "HVAC Reputation Management", href: "/hvac-google-maps" },
+        { label: "HVAC AIO & GEO", href: "/hvac-ai-search-optimization" },
         { label: "HVAC Email Marketing", href: "/hvac-email-marketing" },
         { label: "HVAC Local Service Ads", href: "/hvac-local-service-ads" },
       ]
@@ -43,6 +43,7 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
         { label: "Content Marketing", href: "/plumbing-and-hvac-content-marketing" },
         { label: "Email Marketing", href: "/plumbing-and-hvac-email-marketing" },
         { label: "Website Design", href: "/website-design" },
+        { label: "AIO & GEO (AI Search)", href: "/plumbing-and-hvac-ai-search-optimization" },
         { label: "Reporting & Dashboards", href: "/plumbing-and-hvac-reporting" },
       ]
     },
