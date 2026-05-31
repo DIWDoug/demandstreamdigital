@@ -215,9 +215,9 @@ const Setup = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {GROUPS.map((g, gi) => (
                 <div key={gi} className="bg-card border border-border-card/70 rounded-lg p-5">
-                  <h4 className="text-[11px] font-bold uppercase tracking-[0.13em] text-accent-blue mb-2.5">
-                    {g.title}
-                  </h4>
+                <h4 className="text-sm font-bold text-accent-blue mb-2.5">
+                  {g.title}
+                </h4>
                   <ul className="space-y-0">
                     {g.items.map((item, ii) => (
                       <li
