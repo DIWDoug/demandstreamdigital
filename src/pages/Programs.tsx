@@ -932,7 +932,7 @@ const Programs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 relative">
                   {[
                     {
-                      label: "The Source",
+                      label: "The Engine",
                       amount: "$5,000",
                       sub: "Foundation Build",
                       note: "One-time. Paid upfront. 60-day build starts day one.",
@@ -940,7 +940,7 @@ const Programs = () => {
                       accent: "border-cta/40",
                     },
                     {
-                      label: "The Current",
+                      label: "Ignition",
                       amount: "$4,000",
                       sub: "First monthly fee",
                       note: "Program kicks in once the foundation is live. Ad spend paid to Google.",
@@ -948,7 +948,7 @@ const Programs = () => {
                       accent: "border-accent-blue/40",
                     },
                     {
-                      label: "The Surge",
+                      label: "Momentum",
                       amount: "$4,000 / mo",
                       sub: "Recurring",
                       note: "Cancel anytime after 90 days. No long contracts.",
