@@ -182,7 +182,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "1 to 5 trucks. $400K to $1.5M revenue.",
     timeframe: "Foundation laid in 60 days. Compounds month over month.",
-    investment: "$2,500 / month",
+    investment: "$2,495 / month",
     ctaTo: "/programs/source",
   },
   {
@@ -200,7 +200,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "5 to 15 trucks. $1.5M to $4M revenue.",
     timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
-    investment: "$4,000 / month",
+    investment: "$3,995 / month",
     ctaTo: "/programs/current",
   },
   {
@@ -218,7 +218,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "15+ trucks. $4M+ revenue. Multi-location operators.",
     timeframe: "Market share shifts in 90 days. Territory ownership in 12 months.",
-    investment: "$6,000 / month",
+    investment: "$5,995 / month",
     ctaTo: "/programs/surge",
   },
 ];
@@ -863,7 +863,7 @@ const Programs = () => {
               symbol="◇"
               name="The Source"
               tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-              price="$2,500"
+              price="$2,495"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
               ctaTo="/programs/source"
@@ -872,7 +872,7 @@ const Programs = () => {
               symbol="◈"
               name="The Current"
               tag="Active growth. Paid acceleration plus hands-off automation."
-              price="$4,000"
+              price="$3,995"
               everything="Everything in The Source, plus ↓"
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
@@ -883,7 +883,7 @@ const Programs = () => {
               symbol="❖"
               name="The Surge"
               tag="Own your market. Take competitors' share."
-              price="$6,000"
+              price="$5,995"
               everything="Everything in The Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
@@ -923,7 +923,7 @@ const Programs = () => {
                 Investment timeline
               </h3>
               <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
-                Using The Current program ($4,000/mo) as an example. The Engine is one time. Ad spend is paid directly to Google.
+                Using The Current program ($3,995/mo) as an example. The Engine is one time. Ad spend is paid directly to Google.
               </p>
             </div>
 
@@ -943,7 +943,7 @@ const Programs = () => {
                     },
                     {
                       label: "The Current",
-                      amount: "$4,000",
+                      amount: "$3,995",
                       sub: "First monthly fee",
                       note: "Program kicks in once The Engine is live. Ad spend paid to Google.",
                       dot: "bg-accent-blue border-accent-blue",
@@ -951,7 +951,7 @@ const Programs = () => {
                     },
                     {
                       label: "The Current",
-                      amount: "$4,000 / mo",
+                      amount: "$3,995 / mo",
                       sub: "Recurring",
                       note: "Cancel anytime after 90 days. No long contracts.",
                       dot: "bg-accent-blue/70 border-accent-blue/70",
