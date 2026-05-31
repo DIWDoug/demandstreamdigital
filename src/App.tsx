@@ -36,6 +36,7 @@ const RegionBlocked = lazy(() => import("./pages/RegionBlocked"));
 const Author = lazy(() => import("./pages/Author"));
 const Grow = lazy(() => import("./pages/Grow"));
 const BrandGuide = lazy(() => import("./pages/BrandGuide"));
+const Programs = lazy(() => import("./pages/Programs"));
 const AdScan = lazy(() => import("./pages/AdScan"));
 const AdScanOnboarding = lazy(() => import("./pages/AdScanOnboarding"));
 const AdScanThanks = lazy(() => import("./pages/AdScanThanks"));
@@ -224,6 +225,8 @@ const App = () => (
           <Route path="/local-lead-ad-scan-offer" element={<AdScanOffer />} />
           <Route path="/brand" element={<BrandGuide />} />
           <Route path="/style-guide" element={<BrandGuide />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/pricing" element={<Navigate to="/programs" replace />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
           <Route path="/grow/thanks" element={<GrowThanks />} />
           <Route path="/grow/booked" element={<GrowBooked />} />
