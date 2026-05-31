@@ -725,10 +725,7 @@ const Programs = () => {
             >
               Schedule a Growth Audit →
             </Link>
-            <p
-              className="italic text-white/70 text-[14px] mt-6 max-w-[560px] mx-auto leading-relaxed"
-              style={{ fontFamily: "'Lora', Georgia, serif" }}
-            >
+            <p className="italic text-white/70 text-[14px] mt-6 max-w-[560px] mx-auto leading-relaxed">
               "What truly sets them apart is transparency. A team that provides real, clear
               data and explains what's working and why."
             </p>
