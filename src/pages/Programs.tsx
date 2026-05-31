@@ -73,10 +73,10 @@ const TierCard = ({
         }`}
       >
         {/* Phase label */}
-        <div className={`text-center text-[15px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+        <div className={`text-center text-[16px] md:text-[17px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
           {name}
         </div>
-        <div className="text-center text-[14.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
+        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
           {tag}
         </div>
 
