@@ -23,6 +23,7 @@ export type TierPageData = {
   fit: { yes: string[]; no: string[] };
   adManagementCopy: string; // sentence describing this tier's cap + terms
   upNext?: { label: string; to: string };
+  topTierNote?: string;
   eyebrowColor?: "accent-blue" | "cta";
   flagship?: boolean;
   seoTitle: string;
@@ -266,6 +267,11 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                 <Link to={data.upNext.to} className="text-accent-blue font-semibold hover:underline">
                   {data.upNext.label} →
                 </Link>
+              </div>
+            )}
+            {!data.upNext && data.topTierNote && (
+              <div className="mt-5 text-[14px] text-white/60 italic max-w-[480px] mx-auto">
+                {data.topTierNote}
               </div>
             )}
           </section>
