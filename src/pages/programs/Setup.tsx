@@ -174,7 +174,7 @@ const Setup = () => {
               { k: "Website", v: "30", suffix: " pages" },
             ].map((s, i) => (
               <div key={i} className="bg-card border border-border-card/70 rounded-lg px-4 py-4">
-                <div className="text-[11px] tracking-[0.09em] uppercase text-white/55 font-semibold">
+                <div className="text-xs uppercase tracking-wider text-white/55 font-semibold">
                   {s.k}
                 </div>
                 <div
