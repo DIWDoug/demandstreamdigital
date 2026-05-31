@@ -35,6 +35,7 @@ const TierCard = ({
   groups,
   cap,
   popular = false,
+  ctaText = "Schedule a Growth Audit",
 }: {
   symbol: string;
   name: string;
@@ -44,6 +45,7 @@ const TierCard = ({
   groups: Group[];
   cap: string;
   popular?: boolean;
+  ctaText?: string;
 }) => {
   const dotColor = popular ? "bg-cta" : "bg-accent-blue/80";
   const headingColor = popular ? "text-cta" : "text-accent-blue";
