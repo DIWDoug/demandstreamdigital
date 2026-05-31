@@ -23,6 +23,8 @@ export type TierPageData = {
   fit: { yes: string[]; no: string[] };
   adManagementCopy: string; // sentence describing this tier's cap + terms
   upNext?: { label: string; to: string };
+  eyebrowColor?: "accent-blue" | "cta";
+  flagship?: boolean;
   seoTitle: string;
   seoDescription: string;
   canonical: string;
