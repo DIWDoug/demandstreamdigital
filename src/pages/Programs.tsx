@@ -618,6 +618,21 @@ const Programs = () => {
                   <p className="text-white/55 text-[15px] mt-3">
                     Required for all programs. Billed at signup, work starts day one.
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => setFoundationOpen((v) => !v)}
+                    aria-expanded={foundationOpen}
+                    className="mt-5 inline-flex items-center gap-2.5 rounded-md border border-cta/40 bg-cta/10 hover:bg-cta/15 text-white font-semibold text-[15px] px-4 py-2.5 transition-colors"
+                  >
+                    <span className="w-6 h-6 rounded-full bg-cta text-white flex items-center justify-center">
+                      {foundationOpen ? (
+                        <Minus className="w-4 h-4" strokeWidth={3} />
+                      ) : (
+                        <Plus className="w-4 h-4" strokeWidth={3} />
+                      )}
+                    </span>
+                    {foundationOpen ? "Hide what you get" : "See everything you actually get"}
+                  </button>
                 </div>
 
                 {/* Price block */}
