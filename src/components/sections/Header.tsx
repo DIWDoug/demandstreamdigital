@@ -103,6 +103,14 @@ const Header = () => {
       ],
     },
     {
+      label: "AIO & GEO (AI Search)",
+      href: "/plumbing-and-hvac-ai-search-optimization",
+      spokes: [
+        { label: "Plumbing AIO & GEO", href: "/plumbing-ai-search-optimization" },
+        { label: "HVAC AIO & GEO", href: "/hvac-ai-search-optimization" },
+      ],
+    },
+    {
       label: "Reporting & Dashboards",
       href: "/plumbing-and-hvac-reporting",
       spokes: [
