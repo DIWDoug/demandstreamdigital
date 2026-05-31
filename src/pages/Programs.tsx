@@ -677,25 +677,25 @@ const Programs = () => {
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
                     Covers your full foundation build. One-time, not recurring.
                   </div>
-                  <div className="mt-3 pt-3 border-t border-white/10">
-                    <div className="text-[10px] font-semibold uppercase tracking-wider text-white/55 mb-2">
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-2.5">
                       Payment Options
                     </div>
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center text-[10px] font-semibold text-navy">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="bg-white rounded-md px-2.5 py-1.5 inline-flex items-center text-xs font-semibold text-navy">
                         Credit / Debit
                       </span>
-                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
-                        <img src={klarnaLogo} alt="Klarna" className="h-3 w-auto" />
+                      <span className="bg-white rounded-md px-2.5 py-1.5 inline-flex items-center">
+                        <img src={klarnaLogo} alt="Klarna" className="h-4 w-auto" />
                       </span>
-                      <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
-                        <img src={paypalCreditLogo} alt="PayPal Credit" className="h-3 w-auto" />
+                      <span className="bg-white rounded-md px-2.5 py-1.5 inline-flex items-center">
+                        <img src={paypalCreditLogo} alt="PayPal Credit" className="h-4 w-auto" />
                       </span>
                     </div>
                     <img
                       src={paymentMethods}
                       alt="Visa, Mastercard, American Express, PayPal accepted"
-                      className="mt-2 h-5 w-auto opacity-90"
+                      className="mt-3 h-7 w-auto opacity-90"
                     />
                   </div>
                 </div>
