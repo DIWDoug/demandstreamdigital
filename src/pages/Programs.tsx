@@ -169,7 +169,7 @@ type ShowcaseTier = {
 const SHOWCASE_TIERS: ShowcaseTier[] = [
   {
     id: "source",
-    name: "THE SOURCE",
+    name: "The Source",
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
@@ -187,7 +187,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
   },
   {
     id: "current",
-    name: "THE CURRENT",
+    name: "The Current",
     Icon: Zap,
     tagline: "Acceleration Phase",
     description:
@@ -205,7 +205,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
   },
   {
     id: "surge",
-    name: "THE SURGE",
+    name: "The Surge",
     Icon: Crown,
     tagline: "Ownership Phase",
     description:
@@ -859,7 +859,7 @@ const Programs = () => {
           <section className="mt-12 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
             <TierCard
               symbol="◇"
-              name="SOURCE"
+              name="The Source"
               tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
               price="$2,500"
               groups={source}
@@ -868,7 +868,7 @@ const Programs = () => {
             />
             <TierCard
               symbol="◈"
-              name="CURRENT"
+              name="The Current"
               tag="Active growth. Paid acceleration plus hands-off automation."
               price="$4,000"
               everything="Everything in The Source, plus ↓"
@@ -879,7 +879,7 @@ const Programs = () => {
             />
             <TierCard
               symbol="❖"
-              name="SURGE"
+              name="The Surge"
               tag="Own your market. Take competitors' share."
               price="$6,000"
               everything="Everything in The Current, plus ↓"
