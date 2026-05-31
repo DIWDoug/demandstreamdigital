@@ -910,30 +910,30 @@ const Programs = () => {
                       label: "Day 0 — Signup",
                       amount: "$5,000",
                       sub: "Foundation Build",
-                      note: "One-time. Paid upfront. Work starts day one.",
+                      note: "One-time. Paid upfront. 60-day build starts day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
                     {
-                      label: "Month 1",
+                      label: "Days 1 to 60",
+                      amount: "$0",
+                      sub: "Build phase",
+                      note: "No program fee yet. We build, launch, and prove the system.",
+                      dot: "bg-white/40 border-white/40",
+                      accent: "border-white/15",
+                    },
+                    {
+                      label: "Day 61 — Program starts",
                       amount: "$4,000",
-                      sub: "Program fee",
-                      note: "Plus your ad spend paid directly to Google.",
+                      sub: "First monthly fee",
+                      note: "Program kicks in once the foundation is live. Ad spend paid to Google.",
                       dot: "bg-accent-blue border-accent-blue",
                       accent: "border-accent-blue/40",
                     },
                     {
-                      label: "Month 2",
-                      amount: "$4,000",
-                      sub: "Program fee",
-                      note: "Foundation complete. Campaigns scaling.",
-                      dot: "bg-accent-blue border-accent-blue",
-                      accent: "border-accent-blue/40",
-                    },
-                    {
-                      label: "Month 3+",
+                      label: "Month 2+ Ongoing",
                       amount: "$4,000 / mo",
-                      sub: "Ongoing",
+                      sub: "Recurring",
                       note: "Cancel anytime after 90 days. No long contracts.",
                       dot: "bg-accent-blue/70 border-accent-blue/70",
                       accent: "border-accent-blue/30",
@@ -964,12 +964,12 @@ const Programs = () => {
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
-                  <div className="text-white font-extrabold text-[18px] mt-1">$5,000 + 2 × program fee</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Build + first two months</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">$5,000 total</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Foundation Build only. No program fee yet.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ongoing monthly</div>
-                  <div className="text-white font-extrabold text-[18px] mt-1">Program fee only</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 61 onward</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
                   <div className="text-[12px] text-white/55 mt-0.5">$3K / $4K / $6K based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
@@ -978,6 +978,7 @@ const Programs = () => {
                   <div className="text-[12px] text-white/55 mt-0.5">Your card. Never marked up.</div>
                 </div>
               </div>
+
             </div>
           </section>
 
