@@ -73,10 +73,10 @@ const TierCard = ({
         }`}
       >
         {/* Phase label */}
-        <div className={`text-center text-[16px] md:text-[17px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+        <div className={`text-center text-lg md:text-xl font-bold tracking-wider uppercase ${accentText}`}>
           {name}
         </div>
-        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
+        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 leading-snug">
           {tag}
         </div>
 
@@ -92,7 +92,7 @@ const TierCard = ({
 
 
         {everything && (
-          <div className="mt-5 text-center text-[14px] md:text-[15px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
+          <div className="mt-5 text-center text-[15px] md:text-base font-semibold text-white/85 border-y border-white/10 py-2.5">
             {everything}
           </div>
         )}
