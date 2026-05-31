@@ -205,7 +205,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
   },
   {
     id: "surge",
-    name: "THE SURGE",
+    name: "The Surge",
     Icon: Crown,
     tagline: "Ownership Phase",
     description:
