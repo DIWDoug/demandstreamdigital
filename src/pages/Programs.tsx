@@ -904,7 +904,7 @@ const Programs = () => {
               {/* Horizontal rail */}
               <div className="relative">
                 <div className="hidden md:block absolute left-0 right-0 top-[22px] h-[2px] bg-gradient-to-r from-cta/60 via-accent-blue/60 to-accent-blue/30" />
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 relative">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 relative">
                   {[
                     {
                       label: "Day 0 — Signup",
@@ -913,14 +913,6 @@ const Programs = () => {
                       note: "One-time. Paid upfront. 60-day build starts day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
-                    },
-                    {
-                      label: "Days 1 to 60",
-                      amount: "$0",
-                      sub: "Build phase",
-                      note: "No program fee yet. We build, launch, and prove the system.",
-                      dot: "bg-white/40 border-white/40",
-                      accent: "border-white/15",
                     },
                     {
                       label: "Day 61 — Program starts",
