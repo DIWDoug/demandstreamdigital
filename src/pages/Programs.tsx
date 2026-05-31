@@ -271,6 +271,8 @@ const Programs = () => {
       <Header />
 
       <main className="bg-navy text-white pt-16 relative overflow-hidden">
+        <StreamTexture variant="dark" opacity={0.09} />
+
         {/* Fine grid texture overlay (matches homepage hero) */}
         <div
           aria-hidden
