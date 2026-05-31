@@ -154,7 +154,7 @@ const Programs = () => {
       items: [
         "Google Maps Domination",
         "AI Maps Visibility",
-        { em: "On-Page Authority Building", rest: " — 3/mo (service · topical · geographic)" },
+        "On-Page Authority Building",
         "Local Authority & Trust Signals",
       ],
     },
@@ -210,7 +210,7 @@ const Programs = () => {
     },
     {
       title: "Content & Planning",
-      items: ["On-Page Authority Building — 5/mo", "Quarterly Growth Planning"],
+      items: ["On-Page Authority Building", "Quarterly Growth Planning"],
     },
   ];
 
@@ -221,7 +221,7 @@ const Programs = () => {
         { em: "Multi-City Service-Area Expansion" },
         "Multi-Channel Paid (Meta · YouTube · Display)",
         "Competitive Displacement Campaigns",
-        "On-Page Authority Building — 8/mo",
+        "On-Page Authority Building",
         "Off-Site Authority (quarterly placements)",
         "Competitive Visibility Tracking",
         "Competitive Review Tracking",
