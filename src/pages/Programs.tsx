@@ -43,6 +43,7 @@ const TierCard = ({
   everything,
   groups,
   cap,
+  highlights,
   popular = false,
   ctaText = "View Full Details",
   ctaTo = "/grow-qualifier",
@@ -54,6 +55,7 @@ const TierCard = ({
   everything?: string;
   groups: Group[];
   cap: string;
+  highlights?: { label: string; value: string }[];
   popular?: boolean;
   ctaText?: string;
   ctaTo?: string;
@@ -95,6 +97,20 @@ const TierCard = ({
           <div className="text-[14.5px] italic text-white/65 mt-1.5">Per Month</div>
         </div>
 
+        {/* Highlights stripe */}
+        {highlights && highlights.length > 0 && (
+          <div className="mt-6 divide-y divide-white/10 border-y border-white/10">
+            {highlights.map((h, i) => (
+              <div
+                key={i}
+                className="flex items-baseline justify-between gap-3 py-3 text-[15px] md:text-[16px]"
+              >
+                <span className="text-white/65 font-medium">{h.label}</span>
+                <span className={`font-bold ${accentText} text-right`}>{h.value}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {everything && (
           <div className="mt-5 text-center text-[15px] md:text-base font-semibold text-white/85 border-y border-white/10 py-2.5">
