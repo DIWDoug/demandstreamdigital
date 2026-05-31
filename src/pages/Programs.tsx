@@ -377,35 +377,6 @@ const Programs = () => {
             />
           </section>
 
-          {/* ───── AD SPEND & MANAGEMENT ───── */}
-          <section className="mt-10 rounded-lg bg-navy-light border border-border-card/70 p-6 sm:p-7">
-            <h3 className="text-[13px] font-bold tracking-[0.17em] uppercase text-cta">
-              Ad Spend &amp; Management
-            </h3>
-            <p className="text-white/70 text-[14px] mt-2.5 max-w-[780px] leading-relaxed">
-              Your ad spend is always your money, paid to Google directly. Never marked up.
-              Each program includes hands-on management of your campaigns up to its spend
-              cap. Beyond the cap, management is billed as a small percentage of spend.
-            </p>
-            <div className="flex flex-wrap gap-3 mt-5">
-              {[
-                { b: "Included", rest: "management up to each tier's cap" },
-                { b: "20%", rest: "on spend above your cap" },
-                { b: "15%", rest: "on spend above $10,000/mo" },
-              ].map((p, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border-card/70 rounded px-4 py-3 text-[13px] text-white/70"
-                >
-                  <b className="block text-white font-extrabold text-[18px] leading-tight">
-                    {p.b}
-                  </b>
-                  {p.rest}
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* ───── CLOSING CTA ───── */}
           <section
             className="mt-10 text-center rounded-lg border border-border-card/70 px-6 py-12"
