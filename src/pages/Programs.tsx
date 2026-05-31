@@ -169,7 +169,7 @@ type ShowcaseTier = {
 const SHOWCASE_TIERS: ShowcaseTier[] = [
   {
     id: "source",
-    name: "SOURCE",
+    name: "THE SOURCE",
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
@@ -187,7 +187,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
   },
   {
     id: "current",
-    name: "CURRENT",
+    name: "THE CURRENT",
     Icon: Zap,
     tagline: "Acceleration Phase",
     description:
@@ -205,7 +205,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
   },
   {
     id: "surge",
-    name: "SURGE",
+    name: "THE SURGE",
     Icon: Crown,
     tagline: "Ownership Phase",
     description:
@@ -850,7 +850,7 @@ const Programs = () => {
                 Check if your market is open
               </Link>
               <span className="text-white/55 text-[14px]">
-                Setup pairs with a monthly program: Source, Current, or Surge.
+                Setup pairs with a monthly program: The Source, The Current, or The Surge.
               </span>
             </div>
           </section>
@@ -871,7 +871,7 @@ const Programs = () => {
               name="CURRENT"
               tag="Active growth. Paid acceleration plus hands-off automation."
               price="$4,000"
-              everything="Everything in Source, plus ↓"
+              everything="Everything in The Source, plus ↓"
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
@@ -882,7 +882,7 @@ const Programs = () => {
               name="SURGE"
               tag="Own your market. Take competitors' share."
               price="$6,000"
-              everything="Everything in Current, plus ↓"
+              everything="Everything in The Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
               ctaTo="/programs/surge"
@@ -921,7 +921,7 @@ const Programs = () => {
                 Investment timeline
               </h3>
               <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
-                Using the Current program ($4,000/mo) as an example. Foundation Build is one time. Ad spend is paid directly to Google.
+                Using The Current program ($4,000/mo) as an example. The Engine is one time. Ad spend is paid directly to Google.
               </p>
             </div>
 
@@ -940,15 +940,15 @@ const Programs = () => {
                       accent: "border-cta/40",
                     },
                     {
-                      label: "Ignition",
+                      label: "The Current",
                       amount: "$4,000",
                       sub: "First monthly fee",
-                      note: "Program kicks in once the foundation is live. Ad spend paid to Google.",
+                      note: "Program kicks in once The Engine is live. Ad spend paid to Google.",
                       dot: "bg-accent-blue border-accent-blue",
                       accent: "border-accent-blue/40",
                     },
                     {
-                      label: "Momentum",
+                      label: "The Current",
                       amount: "$4,000 / mo",
                       sub: "Recurring",
                       note: "Cancel anytime after 90 days. No long contracts.",
