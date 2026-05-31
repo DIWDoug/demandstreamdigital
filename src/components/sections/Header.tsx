@@ -65,7 +65,10 @@ const Header = () => {
     {
       label: "Paid Advertising",
       href: "/paid-marketing",
-      spokes: [],
+      spokes: [
+        { label: "Plumbing Paid Advertising", href: "/plumbing-paid-advertising" },
+        { label: "HVAC Paid Advertising", href: "/hvac-paid-advertising" },
+      ],
     },
     {
       label: "Google Maps / GBP",
