@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Check, TrendingUp, Zap, Crown, Globe, MapPin, BarChart3, Workflow, Compass } from "lucide-react";
+import { Check, TrendingUp, Zap, Crown, Globe, MapPin, BarChart3, Compass } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -611,8 +611,8 @@ const Programs = () => {
                   </h2>
                   <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
                     The website is the growth engine, not a brochure. Every Google ranking, ad click,
-                    review, and missed-call text-back has to land somewhere that converts. We build that
-                    foundation once. Every program after this drives demand through it.
+                    and review has to land somewhere that converts. We build that foundation once.
+                    Every program after this drives demand through it.
                   </p>
                   <p className="text-white/55 text-[15px] mt-3">
                     Required for all programs. Billed at signup, work starts day one.
