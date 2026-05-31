@@ -20,8 +20,10 @@ import StreamTexture from "@/components/StreamTexture";
 
 const Eyebrow = ({ children, color = "cta" }: { children: React.ReactNode; color?: "cta" | "accent-blue" }) => (
   <div
-    className={`text-xs font-semibold uppercase tracking-wider ${
-      color === "cta" ? "text-cta" : "text-accent-blue"
+    className={`inline-flex items-center text-[11px] md:text-xs font-bold uppercase tracking-[0.18em] px-2.5 py-1 rounded-md ${
+      color === "cta"
+        ? "text-cta bg-cta/15 border border-cta/25"
+        : "text-accent-blue bg-accent-blue/15 border border-accent-blue/25"
     }`}
   >
     {children}
