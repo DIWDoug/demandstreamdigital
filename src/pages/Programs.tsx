@@ -588,7 +588,7 @@ const Programs = () => {
             {/* Bottom hairline */}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
-            <div className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.25em] text-gold">
+            <div className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.25em] text-cta">
               Built for Plumbing &amp; HVAC. Designed to Book More Calls.
             </div>
 
@@ -608,7 +608,7 @@ const Programs = () => {
               Everything in Silver carries into Gold. Everything in Gold carries into Diamond.
             </p>
 
-            <div className="inline-block mt-7 text-[13px] text-gold border border-gold/35 bg-gold/[0.07] px-4 py-1.5 rounded">
+            <div className="inline-block mt-7 text-[13px] text-white/70 border border-white/20 bg-white/[0.06] px-4 py-1.5 rounded">
               ◆ One plumbing company and one HVAC client per market.
             </div>
           </section>
