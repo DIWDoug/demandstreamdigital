@@ -573,7 +573,7 @@ const Programs = () => {
           }}
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-12 pb-20">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-4 md:pt-12 pb-20">
           {/* ───── HERO ───── */}
           <section className="relative -mx-6 px-6 py-10 md:py-20 mb-2 text-center overflow-hidden">
             {/* Radial spotlight wash */}
