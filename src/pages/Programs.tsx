@@ -865,6 +865,29 @@ const Programs = () => {
             />
           </section>
 
+          {/* ───── PAYMENT OPTIONS ───── */}
+          <section className="mt-8 text-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-3 md:gap-5 rounded-lg border border-white/10 bg-white/[0.04] px-5 md:px-8 py-4">
+              <span className="text-[13px] md:text-sm font-semibold text-white/70 uppercase tracking-wider">
+                Flexible payment options
+              </span>
+              <span className="hidden md:block w-px h-4 bg-white/20" />
+              <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+                {["Credit Card", "Klarna", "PayPal Credit", "Debit"].map((method) => (
+                  <span
+                    key={method}
+                    className="text-[12px] md:text-[13px] font-medium text-white/85 bg-white/[0.08] border border-white/10 rounded px-2.5 py-1"
+                  >
+                    {method}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <p className="text-[13px] text-white/45 mt-3">
+              Monthly program fees can be paid via card or financing. Ad spend is billed separately and paid directly to Google.
+            </p>
+          </section>
+
           {/* ───── AD SPEND & MANAGEMENT (placed after tiers) ───── */}
           <section
             className="mt-8 rounded-lg p-6 sm:p-8 border border-accent-blue/40"
