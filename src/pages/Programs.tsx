@@ -309,10 +309,18 @@ const Programs = () => {
                 60-day build · billed at signup, work starts day one
               </div>
             </div>
-            <div className="text-white/55 text-[13px] max-w-[520px] leading-relaxed">
-              Your complete foundation: 30-page growth website · Google Business Profile
-              optimization · call tracking &amp; conversion setup · schema &amp;
-              structured data · CRM &amp; automation install · starter brand kit.
+            <div className="flex flex-col items-start sm:items-end gap-3">
+              <div className="text-white/55 text-[13px] max-w-[520px] leading-relaxed text-left sm:text-right">
+                Your complete foundation: 30-page growth website · Google Business Profile
+                optimization · call tracking &amp; conversion setup · schema &amp;
+                structured data · CRM &amp; automation install · starter brand kit.
+              </div>
+              <Link
+                to="/programs/setup"
+                className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-[13px] tracking-[0.03em] px-5 py-2.5 rounded transition-colors"
+              >
+                See What's Included →
+              </Link>
             </div>
           </section>
 
