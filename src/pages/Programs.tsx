@@ -272,10 +272,12 @@ const TierShowcase = () => {
       {/* Tab Content */}
       <div
         key={tier.id}
-        className="rounded-b-lg border border-t-0 border-border-card/70 px-6 md:px-10 py-8 md:py-10 animate-in fade-in-50 duration-300"
+        className="rounded-b-lg border border-t-0 border-white/[0.08] px-6 md:px-10 py-8 md:py-10 animate-in fade-in-50 duration-300"
         style={{
           background:
             "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))",
+          boxShadow:
+            "inset 0 1px 1px rgba(255,255,255,0.06), inset 0 -1px 2px rgba(0,0,0,0.35), 0 12px 40px rgba(0,0,0,0.25)",
         }}
       >
         <div className="grid md:grid-cols-[1fr_minmax(280px,360px)] gap-8 md:gap-12 items-start">
