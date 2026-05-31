@@ -69,7 +69,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           style={{ background: "radial-gradient(circle, hsl(var(--accent-blue) / 0.10), transparent 65%)" }}
         />
 
-        <div className="relative z-10 max-w-[1040px] mx-auto px-6 pt-10 pb-20">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-10 pb-20">
           {/* ── Tier switcher ── */}
           <nav className="flex flex-wrap gap-2 mb-10" aria-label="Program tiers">
             {TIERS.map((t) => {

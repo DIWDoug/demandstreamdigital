@@ -267,7 +267,7 @@ const Programs = () => {
           }}
         />
 
-        <div className="relative z-10 max-w-[1160px] mx-auto px-6 pt-12 pb-20">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-12 pb-20">
           {/* ───── HERO ───── */}
           <section>
             <Eyebrow>Programs &amp; Pricing</Eyebrow>
