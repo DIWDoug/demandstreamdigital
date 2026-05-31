@@ -697,6 +697,9 @@ const Programs = () => {
             />
           </section>
 
+          {/* ───── TIER SHOWCASE (tabbed deep-dive) ───── */}
+          <TierShowcase />
+
           {/* ───── CLOSING CTA ───── */}
           <section
             className="mt-10 text-center rounded-lg border border-border-card/70 px-6 py-12"
