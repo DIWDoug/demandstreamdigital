@@ -269,6 +269,11 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                 </Link>
               </div>
             )}
+            {!data.upNext && data.topTierNote && (
+              <div className="mt-5 text-[14px] text-white/60 italic max-w-[480px] mx-auto">
+                {data.topTierNote}
+              </div>
+            )}
           </section>
 
           <p className="text-white/45 text-[12px] mt-8 text-center leading-relaxed">
