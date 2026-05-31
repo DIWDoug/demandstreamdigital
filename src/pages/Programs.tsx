@@ -668,7 +668,7 @@ const Programs = () => {
                     Icon: MapPin,
                     title: "Google & Local Visibility",
                     items: [
-                      "Google Business Profile fully optimized (110-point checklist)",
+                      "Google Business Profile 110% optimized (every field, category, service, photo, post)",
                       "Local Services Ads (LSA) account stood up and verified",
                       "Citation and listing foundation across core directories",
                       "AI search readiness for AI Maps and answer engines",
