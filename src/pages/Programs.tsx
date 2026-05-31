@@ -255,10 +255,10 @@ const TierShowcase = () => {
                 }`}
                 strokeWidth={2}
               />
-              <span className="font-extrabold tracking-[0.18em] text-[13px] md:text-[15px] uppercase">
+              <span className="font-bold tracking-wider text-sm md:text-base uppercase">
                 {t.name}
               </span>
-              <span className="hidden md:block text-[13px] md:text-[14px] tracking-wide text-white/45">
+              <span className="hidden md:block text-[13px] md:text-[14px] text-white/55">
                 {t.tagline}
               </span>
               {isActive && (
