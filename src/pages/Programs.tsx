@@ -288,10 +288,10 @@ const TierShowcase = () => {
                 <Icon className="w-5 h-5 text-cta" strokeWidth={2.2} />
               </div>
               <div>
-                <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-cta">
+                <div className="text-xs font-semibold uppercase tracking-wider text-cta">
                   {tier.tagline}
                 </div>
-                <div className="font-extrabold text-white text-[24px] md:text-[28px] tracking-[0.04em] leading-none mt-1">
+                <div className="font-extrabold text-white text-[24px] md:text-[28px] tracking-wider leading-none mt-1">
                   {tier.name}
                 </div>
               </div>
