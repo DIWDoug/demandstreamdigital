@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Linkedin, Facebook, Instagram, FileText } from "lucide-react";
+import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCcDiscover, FaCcPaypal } from "react-icons/fa";
 import SubtleOrbs from "@/components/SubtleOrbs";
 import { PHONE_NUMBER, PHONE_HREF } from "@/lib/constants";
 import logo from "@/assets/demandstream-digital-logo.svg";
@@ -178,35 +179,12 @@ const Footer = forwardRef<HTMLElement, object>((_, ref) => {
               </p>
 
               {/* Payment Methods */}
-              <div className="flex items-center gap-3" aria-label="Accepted payment methods">
-                {/* Visa */}
-                <svg className="h-6 w-auto opacity-70" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.68 1.04l-4.32 10.92h-2.8L9.48 3.24c-.12-.52-.24-.72-.64-.94C8.2 1.98 7.16 1.68 6.16 1.52l.06-.48h4.56c.58 0 1.1.38 1.22 1.04l1.18 6.24 2.92-7.28h2.58zm14.36 7.36c.02-2.88-3.98-3.04-3.96-4.34 0-.38.38-.78 1.2-.88.4-.06 1.52-.1 2.78.52l.5-2.32c-.68-.24-1.56-.48-2.64-.48-2.78 0-4.74 1.48-4.76 3.6-.02 1.58 1.4 2.46 2.46 2.98 1.1.54 1.46.88 1.46 1.36-.02.74-.88 1.06-1.7 1.08-1.42.02-2.26-.38-2.92-.7l-.5 2.38c.64.3 1.82.54 3.04.56 2.96 0 4.9-1.46 4.92-3.76h-.02zm7.44 3.56h2.22l-1.94-10.92h-2.06c-.46 0-.86.28-1.04.7l-3.66 10.22h2.52l.52-1.44h3.14l.3 1.44zm-2.72-3.42l1.28-3.56.74 3.56h-2.02zm-10.5-7.5l-2.14 10.92h2.4l2.14-10.92h-2.4zm-6.26 0l-3.3 10.92h2.44l.48-1.64h2.96l.28 1.64h2.7l-3.2-10.92h-2.36zm.5 6.38l.68-2.3.4 2.3h-1.08z" fill="currentColor"/>
-                </svg>
-                {/* Mastercard */}
-                <svg className="h-6 w-auto opacity-70" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="7" cy="8" r="7" fill="#EB001B"/>
-                  <circle cx="17" cy="8" r="7" fill="#F79E1B"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M12 13.93A8.96 8.96 0 0 1 9.5 8a8.96 8.96 0 0 1 5-5.93 8.96 8.96 0 0 1 2.5 5.93 8.96 8.96 0 0 1-5 5.93z" fill="#FF5F00"/>
-                </svg>
-                {/* American Express */}
-                <svg className="h-6 w-auto opacity-70" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24" height="16" rx="2" fill="#006FCF"/>
-                  <path d="M4 8.5h2.5l1-2.5 1 2.5H11V6h1.5l1 2.5L14.5 6H16v5h-1.5v-2.5L13 11h-1l-1-2.5V11H9l-.5-1H6.5l-.5 1H4V8.5zm2.1.5h1.3l-.65-1.65-.65 1.65zM17 6h3v1h-2v1h2v1h-2v1h2v1h-3V6z" fill="#fff"/>
-                </svg>
-                {/* Discover */}
-                <svg className="h-6 w-auto opacity-70" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24" height="16" rx="2" fill="#FF6000"/>
-                  <path d="M6 4.5h2c1.1 0 2 .9 2 2s-.9 2-2 2H6v-4zm1.5 3h.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-.5v1zM11 4.5h1.5v4H11v-4zM13 4.5h1.5v4H13v-4zM15.5 4.5h1.5c1.1 0 2 .9 2 2s-.9 2-2 2h-1.5v-4zm1.5 3h.25c.28 0 .5-.22.5-.5s-.22-.5-.5-.5h-.25v1z" fill="#fff"/>
-                  <circle cx="20" cy="6.5" r="1.5" fill="#fff"/>
-                </svg>
-                {/* PayPal */}
-                <svg className="h-6 w-auto opacity-70" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24" height="16" rx="2" fill="#003087"/>
-                  <path d="M6 5h2.5c.8 0 1.4.5 1.3 1.2-.1.8-.9 1.3-1.7 1.3H7l-.4 2H5l1-4.5z" fill="#fff"/>
-                  <path d="M10 5h2.5c.8 0 1.4.5 1.3 1.2-.1.8-.9 1.3-1.7 1.3H11l-.4 2H9l1-4.5z" fill="#009CDE"/>
-                  <path d="M8.5 7.5H7l.4-2H9l-.4 2z" fill="#fff" opacity=".8"/>
-                </svg>
+              <div className="flex items-center gap-2 text-text-muted" aria-label="Accepted payment methods">
+                <FaCcVisa className="h-7 w-auto" title="Visa" />
+                <FaCcMastercard className="h-7 w-auto" title="Mastercard" />
+                <FaCcAmex className="h-7 w-auto" title="American Express" />
+                <FaCcDiscover className="h-7 w-auto" title="Discover" />
+                <FaCcPaypal className="h-7 w-auto" title="PayPal" />
               </div>
 
               <div className="flex items-center gap-6">
