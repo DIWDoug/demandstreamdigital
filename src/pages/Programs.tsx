@@ -685,16 +685,6 @@ const Programs = () => {
                     ],
                   },
                   {
-                    Icon: Workflow,
-                    title: "Systems & Automation",
-                    items: [
-                      "CRM and sales pipeline configured",
-                      "Missed-call text-back live on day one",
-                      "24/7 lead-capture chat and review engine installed",
-                      "Customer reactivation email sequence connected",
-                    ],
-                  },
-                  {
                     Icon: Compass,
                     title: "Onboarding & Strategy",
                     items: [
