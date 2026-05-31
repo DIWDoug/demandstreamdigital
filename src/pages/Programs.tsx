@@ -202,7 +202,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     id: "surge",
     name: "SURGE",
     Icon: Crown,
-    tagline: "Domination Phase",
+    tagline: "Ownership Phase",
     description:
       "Everything in Current, plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
     outcomes: [
@@ -352,7 +352,7 @@ const Programs = () => {
     {
       title: "Visibility & Authority",
       items: [
-        "Google Maps Domination",
+        "Google Maps Ownership",
         "AI Maps Visibility",
         "On-Page Authority Building",
         "Local Authority & Trust Signals",
@@ -399,7 +399,7 @@ const Programs = () => {
       ],
     },
     {
-      title: "Automation — Stepped Up",
+      title: "Automation, Stepped Up",
       items: [
         "Referral Program System",
         "Advanced Nurture (email + SMS)",
@@ -416,7 +416,7 @@ const Programs = () => {
 
   const surge: Group[] = [
     {
-      title: "Expansion & Domination",
+      title: "Expansion & Market Ownership",
       items: [
         { em: "Multi-City Service-Area Expansion" },
         "Multi-Channel Paid (Meta · YouTube · Display)",
@@ -669,7 +669,7 @@ const Programs = () => {
             <TierCard
               symbol="◇"
               name="SOURCE"
-              tag="Foundation — get found & capture every lead. For 1–5 truck operators."
+              tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
               price="$2,500"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
@@ -678,7 +678,7 @@ const Programs = () => {
             <TierCard
               symbol="◈"
               name="CURRENT"
-              tag="Active growth — paid acceleration + hands-off automation."
+              tag="Active growth. Paid acceleration plus hands-off automation."
               price="$4,000"
               everything="Everything in Source, plus ↓"
               groups={current}
@@ -689,7 +689,7 @@ const Programs = () => {
             <TierCard
               symbol="❖"
               name="SURGE"
-              tag="Market domination — own your territory, take competitors' share."
+              tag="Own your market. Take competitors' share."
               price="$6,000"
               everything="Everything in Current, plus ↓"
               groups={surge}
