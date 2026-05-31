@@ -147,7 +147,204 @@ const TierCard = ({
 };
 
 
+type ShowcaseTier = {
+  id: string;
+  name: string;
+  Icon: typeof TrendingUp;
+  tagline: string;
+  description: string;
+  outcomes: string[];
+  bestFor: string;
+  timeframe: string;
+  investment: string;
+  ctaTo: string;
+};
 
+const SHOWCASE_TIERS: ShowcaseTier[] = [
+  {
+    id: "source",
+    name: "SOURCE",
+    Icon: TrendingUp,
+    tagline: "Foundation Phase",
+    description:
+      "Built for 1 to 5 truck operators ready to stop relying on word-of-mouth. We install the visibility, review, and lead-capture systems that turn your service area into a predictable booking engine. Every call gets answered, every lead gets followed up, and every search shows your name first.",
+    outcomes: [
+      "Rank in the Google Maps 3-pack for your top service categories",
+      "Capture missed-call leads automatically via text-back",
+      "Build a 5-star reputation that converts browsers into bookings",
+      "Centralize every lead in one CRM with full call tracking",
+    ],
+    bestFor: "1 to 5 trucks. $400K to $1.5M revenue.",
+    timeframe: "Foundation laid in 60 days. Compounds month over month.",
+    investment: "$2,500 / month",
+    ctaTo: "/programs/source",
+  },
+  {
+    id: "current",
+    name: "CURRENT",
+    Icon: Zap,
+    tagline: "Acceleration Phase",
+    description:
+      "Everything in Source, plus the paid acceleration and hands-off automation layer. We layer Google Ads, retargeting, and seasonal campaigns on top of your organic foundation, then automate the follow-up so booked-call rates climb without adding staff. This is the tier most operators graduate into within 6 months.",
+    outcomes: [
+      "Daily booked-call flow from Google Ads + LSA combined",
+      "Landing pages and CRO tuned to your highest-margin services",
+      "Advanced nurture sequences across email and SMS",
+      "Quarterly growth planning with a dedicated specialist",
+    ],
+    bestFor: "5 to 15 trucks. $1.5M to $4M revenue.",
+    timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
+    investment: "$4,000 / month",
+    ctaTo: "/programs/current",
+  },
+  {
+    id: "surge",
+    name: "SURGE",
+    Icon: Crown,
+    tagline: "Domination Phase",
+    description:
+      "Everything in Current, plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
+    outcomes: [
+      "Multi-city service-area expansion with dedicated landing infrastructure",
+      "Competitive displacement campaigns against named competitors",
+      "Custom workflows tied to CRM, payment, and calendar systems",
+      "Priority support with monthly strategy reviews",
+    ],
+    bestFor: "15+ trucks. $4M+ revenue. Multi-location operators.",
+    timeframe: "Market share shifts in 90 days. Territory ownership in 12 months.",
+    investment: "$6,000 / month",
+    ctaTo: "/programs/surge",
+  },
+];
+
+const TierShowcase = () => {
+  const [active, setActive] = useState(SHOWCASE_TIERS[0].id);
+  const tier = SHOWCASE_TIERS.find((t) => t.id === active) ?? SHOWCASE_TIERS[0];
+  const Icon = tier.Icon;
+
+  return (
+    <section className="mt-16">
+      <div className="text-center mb-8">
+        <Eyebrow color="accent-blue">Compare the Tiers</Eyebrow>
+        <h2 className="font-extrabold text-white text-[28px] md:text-[34px] tracking-[-0.01em] mt-2.5">
+          Which growth phase are you in?
+        </h2>
+        <p className="text-white/65 text-[15px] max-w-[620px] mx-auto mt-3 leading-relaxed">
+          Each program builds on the last. Pick the tier that matches your truck count, revenue, and how
+          aggressively you want to take market share.
+        </p>
+      </div>
+
+      {/* Tab Triggers */}
+      <div className="grid grid-cols-3 gap-0 border-b border-white/10 mb-0">
+        {SHOWCASE_TIERS.map((t) => {
+          const isActive = t.id === active;
+          const TIcon = t.Icon;
+          return (
+            <button
+              key={t.id}
+              onClick={() => setActive(t.id)}
+              className={`group relative flex flex-col items-center justify-center gap-1.5 px-3 py-4 md:py-5 transition-colors ${
+                isActive ? "text-white" : "text-white/45 hover:text-white/75"
+              }`}
+            >
+              <TIcon
+                className={`w-5 h-5 transition-colors ${
+                  isActive ? "text-cta" : "text-white/40 group-hover:text-white/60"
+                }`}
+                strokeWidth={2}
+              />
+              <span className="font-extrabold tracking-[0.18em] text-[13px] md:text-[15px] uppercase">
+                {t.name}
+              </span>
+              <span className="hidden md:block text-[11px] tracking-wide text-white/45">
+                {t.tagline}
+              </span>
+              {isActive && (
+                <span className="absolute -bottom-px left-0 right-0 h-[3px] bg-cta" />
+              )}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Tab Content */}
+      <div
+        key={tier.id}
+        className="rounded-b-lg border border-t-0 border-border-card/70 px-6 md:px-10 py-8 md:py-10 animate-in fade-in-50 duration-300"
+        style={{
+          background:
+            "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))",
+        }}
+      >
+        <div className="grid md:grid-cols-[1fr_minmax(280px,360px)] gap-8 md:gap-12 items-start">
+          {/* Left: narrative */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-11 h-11 rounded-md bg-cta/15 border border-cta/30 flex items-center justify-center">
+                <Icon className="w-5 h-5 text-cta" strokeWidth={2.2} />
+              </div>
+              <div>
+                <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-cta">
+                  {tier.tagline}
+                </div>
+                <div className="font-extrabold text-white text-[24px] md:text-[28px] tracking-[0.04em] leading-none mt-1">
+                  {tier.name}
+                </div>
+              </div>
+            </div>
+
+            <p className="text-white/80 text-[15.5px] leading-relaxed mb-6">
+              {tier.description}
+            </p>
+
+            <div className="text-[12px] font-bold uppercase tracking-[0.18em] text-accent-blue mb-3">
+              What you walk away with
+            </div>
+            <ul className="space-y-2.5">
+              {tier.outcomes.map((o, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-[15px] text-white/85 leading-snug">
+                  <Check className="w-[18px] h-[18px] mt-[3px] shrink-0 text-cta" strokeWidth={3} />
+                  <span>{o}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right: stat panel */}
+          <div className="rounded-md border border-border-card/70 bg-navy/60 backdrop-blur-sm p-6 space-y-5">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+                Investment
+              </div>
+              <div className="font-extrabold text-white text-[28px] leading-none">
+                {tier.investment}
+              </div>
+            </div>
+            <div className="border-t border-white/10 pt-4">
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+                Best For
+              </div>
+              <div className="text-white/85 text-[14px] leading-snug">{tier.bestFor}</div>
+            </div>
+            <div className="border-t border-white/10 pt-4">
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+                Timeline
+              </div>
+              <div className="text-white/85 text-[14px] leading-snug">{tier.timeframe}</div>
+            </div>
+            <Link
+              to={tier.ctaTo}
+              className="block text-center bg-cta hover:bg-cta-hover text-white font-extrabold tracking-[0.12em] uppercase text-[13px] px-5 py-3.5 rounded transition-colors"
+            >
+              Explore {tier.name} →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Programs = () => {
   const source: Group[] = [
