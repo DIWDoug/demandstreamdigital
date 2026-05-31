@@ -602,7 +602,7 @@ const Programs = () => {
             }}
           >
             <div>
-              <div className="text-[12px] font-bold tracking-[0.17em] uppercase text-cta">
+              <div className="text-xs font-semibold uppercase tracking-wider text-cta">
                 One-Time Setup
               </div>
               <div className="font-extrabold text-[34px] leading-none mt-1 text-white">
