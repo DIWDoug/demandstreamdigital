@@ -148,7 +148,7 @@ const Setup = () => {
 
           {/* ── Hero ── */}
           <section>
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-cta flex items-center gap-3">
+            <div className="text-xs font-semibold uppercase tracking-wider text-cta flex items-center gap-3">
               <span className="text-[30px] leading-none">■</span>
               One-Time Setup
             </div>
