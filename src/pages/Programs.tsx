@@ -132,7 +132,7 @@ const TierCard = ({
         <div className="mt-7 pt-6 border-t border-white/10 text-center">
           <Link
             to={ctaTo}
-            className={`inline-flex items-center justify-center font-extrabold tracking-[0.14em] uppercase text-[14px] md:text-[15px] px-7 py-3 rounded transition-colors ${
+            className={`inline-flex items-center justify-center font-bold text-[15px] md:text-base px-7 py-3 rounded transition-colors ${
               popular
                 ? "bg-gold text-navy hover:bg-gold/90"
                 : "bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-navy"
