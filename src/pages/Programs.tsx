@@ -888,6 +888,101 @@ const Programs = () => {
             </p>
           </section>
 
+          {/* ───── INVESTMENT TIMELINE MAP ───── */}
+          <section className="mt-12">
+            <div className="text-center mb-6">
+              <Eyebrow>What you actually pay, and when</Eyebrow>
+              <h3 className="font-extrabold text-white text-[24px] md:text-[30px] tracking-tight mt-3">
+                Investment timeline
+              </h3>
+              <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
+                Using the Current program ($4,000/mo) as an example. Foundation Build is one time. Ad spend is paid directly to Google.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 md:p-8">
+              {/* Horizontal rail */}
+              <div className="relative">
+                <div className="hidden md:block absolute left-0 right-0 top-[22px] h-[2px] bg-gradient-to-r from-cta/60 via-accent-blue/60 to-accent-blue/30" />
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4 relative">
+                  {[
+                    {
+                      label: "Day 0 — Signup",
+                      amount: "$5,000",
+                      sub: "Foundation Build",
+                      note: "One-time. Paid upfront. Work starts day one.",
+                      dot: "bg-cta border-cta",
+                      accent: "border-cta/40",
+                    },
+                    {
+                      label: "Month 1",
+                      amount: "$4,000",
+                      sub: "Program fee",
+                      note: "Plus your ad spend paid directly to Google.",
+                      dot: "bg-accent-blue border-accent-blue",
+                      accent: "border-accent-blue/40",
+                    },
+                    {
+                      label: "Month 2",
+                      amount: "$4,000",
+                      sub: "Program fee",
+                      note: "Foundation complete. Campaigns scaling.",
+                      dot: "bg-accent-blue border-accent-blue",
+                      accent: "border-accent-blue/40",
+                    },
+                    {
+                      label: "Month 3+",
+                      amount: "$4,000 / mo",
+                      sub: "Ongoing",
+                      note: "Cancel anytime after 90 days. No long contracts.",
+                      dot: "bg-accent-blue/70 border-accent-blue/70",
+                      accent: "border-accent-blue/30",
+                    },
+                  ].map((step) => (
+                    <div key={step.label} className="relative flex flex-col items-center text-center">
+                      <span className={`hidden md:block w-[14px] h-[14px] rounded-full border-2 ${step.dot} relative z-10 mt-[15px] mb-3`} />
+                      <div className={`w-full rounded-lg border ${step.accent} bg-navy/60 px-4 py-4`}>
+                        <div className="text-[11px] font-bold uppercase tracking-[0.14em] text-white/55">
+                          {step.label}
+                        </div>
+                        <div className="text-white font-extrabold text-[22px] md:text-[24px] mt-1.5 leading-none">
+                          {step.amount}
+                        </div>
+                        <div className="text-[12px] font-semibold text-white/75 mt-1">
+                          {step.sub}
+                        </div>
+                        <p className="text-[12px] text-white/55 mt-2 leading-snug">
+                          {step.note}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Totals row */}
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">$5,000 + 2 × program fee</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Build + first two months</div>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ongoing monthly</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">Program fee only</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$3K / $4K / $6K based on tier</div>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">Paid to Google</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Your card. Never marked up.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
           {/* ───── AD SPEND & MANAGEMENT (placed after tiers) ───── */}
           <section
             className="mt-8 rounded-lg p-6 sm:p-8 border border-accent-blue/40"
