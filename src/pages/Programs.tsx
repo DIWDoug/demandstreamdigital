@@ -664,12 +664,12 @@ const Programs = () => {
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
                     <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
-                      2,500
+                      5,000
                     </span>
-                    <span className="text-white/70 text-base font-semibold ml-1">/ month</span>
+                    <span className="text-white/70 text-base font-semibold ml-1">one time</span>
                   </div>
                   <div className="text-white/65 text-sm mt-2">
-                    Billed as a 60-day build. First 2 months ($5,000) paid upfront at signup.
+                    60-day build. Paid upfront at signup. Work starts day one.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
                     Covers your full foundation build. One-time, not recurring.
