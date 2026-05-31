@@ -43,6 +43,7 @@ const TierCard = ({
   everything,
   groups,
   cap,
+  highlights,
   popular = false,
   ctaText = "View Full Details",
   ctaTo = "/grow-qualifier",
@@ -54,6 +55,7 @@ const TierCard = ({
   everything?: string;
   groups: Group[];
   cap: string;
+  highlights?: { label: string; value: string }[];
   popular?: boolean;
   ctaText?: string;
   ctaTo?: string;
@@ -95,6 +97,20 @@ const TierCard = ({
           <div className="text-[14.5px] italic text-white/65 mt-1.5">Per Month</div>
         </div>
 
+        {/* Highlights stripe */}
+        {highlights && highlights.length > 0 && (
+          <div className="mt-6 divide-y divide-white/10 border-y border-white/10">
+            {highlights.map((h, i) => (
+              <div
+                key={i}
+                className="flex items-baseline justify-between gap-3 py-3 text-[15px] md:text-[16px]"
+              >
+                <span className="text-white/65 font-medium">{h.label}</span>
+                <span className={`font-bold ${accentText} text-right`}>{h.value}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {everything && (
           <div className="mt-5 text-center text-[15px] md:text-base font-semibold text-white/85 border-y border-white/10 py-2.5">
@@ -867,6 +883,12 @@ const Programs = () => {
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
               ctaTo="/programs/source"
+              highlights={[
+                { label: "Best For", value: "1 to 5 trucks" },
+                { label: "Revenue Range", value: "$400K to $1.5M" },
+                { label: "Startup Fee (The Engine)", value: "$4,995" },
+                { label: "Ad Spend Cap", value: "Up to $2,000 / mo" },
+              ]}
             />
             <TierCard
               symbol="◈"
@@ -878,6 +900,12 @@ const Programs = () => {
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
               ctaTo="/programs/current"
+              highlights={[
+                { label: "Best For", value: "5 to 15 trucks" },
+                { label: "Revenue Range", value: "$1.5M to $4M" },
+                { label: "Startup Fee (The Engine)", value: "$4,995" },
+                { label: "Ad Spend Cap", value: "Up to $5,000 / mo" },
+              ]}
             />
             <TierCard
               symbol="❖"
@@ -888,6 +916,12 @@ const Programs = () => {
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
               ctaTo="/programs/surge"
+              highlights={[
+                { label: "Best For", value: "15+ trucks" },
+                { label: "Revenue Range", value: "$4M+" },
+                { label: "Startup Fee (The Engine)", value: "$4,995" },
+                { label: "Ad Spend Cap", value: "Up to $10,000 / mo" },
+              ]}
             />
           </section>
 
