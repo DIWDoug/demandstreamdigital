@@ -98,14 +98,14 @@ const TierCard = ({
         <div className="mt-6 space-y-5">
           {groups.map((g, gi) => (
             <div key={gi}>
-              <h4 className={`text-[11.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+              <h4 className={`text-[12.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
                 {g.title}
               </h4>
               <ul className="space-y-2.5">
                 {g.items.map((item, ii) => (
                   <li
                     key={ii}
-                    className="flex items-start gap-2.5 text-[14.5px] text-white/85 leading-snug"
+                    className="flex items-start gap-2.5 text-[15.5px] text-white/85 leading-snug"
                   >
                     <Check className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${checkColor}`} strokeWidth={3} />
                     <span>
@@ -137,7 +137,7 @@ const TierCard = ({
           >
             {ctaText}
           </Link>
-          <div className="text-[12px] text-white/45 mt-4 leading-snug">{cap}</div>
+          <div className="text-[13px] text-white/45 mt-4 leading-snug">{cap}</div>
         </div>
       </div>
     </div>
@@ -343,6 +343,45 @@ const Programs = () => {
             </div>
           </section>
 
+          {/* ───── AD SPEND & MANAGEMENT ───── */}
+          <section
+            className="mt-6 rounded-lg p-6 sm:p-8 border border-accent-blue/40"
+            style={{
+              background:
+                "linear-gradient(135deg, hsl(var(--navy-light)), hsl(var(--navy)))",
+            }}
+          >
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+              <div className="max-w-[720px]">
+                <h3 className="text-[14px] font-bold tracking-[0.18em] uppercase text-accent-blue">
+                  Ad Spend &amp; Management
+                </h3>
+                <p className="text-white/80 text-[16px] mt-3 leading-relaxed">
+                  Your ad spend is always your money, paid to Google directly. Never marked up.
+                  Every tier includes hands-on campaign management up to its spend cap.
+                  Beyond the cap, management is billed as a small percentage of spend.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 lg:justify-end">
+                {[
+                  { b: "Included", rest: "up to each tier's cap" },
+                  { b: "20%", rest: "on spend above your cap" },
+                  { b: "15%", rest: "above $10,000/mo" },
+                ].map((p, i) => (
+                  <div
+                    key={i}
+                    className="bg-card/80 border border-border-card/60 rounded px-5 py-3.5 text-[14px] text-white/75"
+                  >
+                    <b className="block text-white font-extrabold text-[20px] leading-tight">
+                      {p.b}
+                    </b>
+                    {p.rest}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* ───── TIERS ───── */}
           <section className="mt-6 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
             <TierCard
@@ -375,35 +414,6 @@ const Programs = () => {
               cap="Ad management: flat up to $10,000/mo managed spend"
               ctaTo="/programs/surge"
             />
-          </section>
-
-          {/* ───── AD SPEND & MANAGEMENT ───── */}
-          <section className="mt-10 rounded-lg bg-navy-light border border-border-card/70 p-6 sm:p-7">
-            <h3 className="text-[13px] font-bold tracking-[0.17em] uppercase text-cta">
-              Ad Spend &amp; Management
-            </h3>
-            <p className="text-white/70 text-[14px] mt-2.5 max-w-[780px] leading-relaxed">
-              Your ad spend is always your money, paid to Google directly. Never marked up.
-              Each program includes hands-on management of your campaigns up to its spend
-              cap. Beyond the cap, management is billed as a small percentage of spend.
-            </p>
-            <div className="flex flex-wrap gap-3 mt-5">
-              {[
-                { b: "Included", rest: "management up to each tier's cap" },
-                { b: "20%", rest: "on spend above your cap" },
-                { b: "15%", rest: "on spend above $10,000/mo" },
-              ].map((p, i) => (
-                <div
-                  key={i}
-                  className="bg-card border border-border-card/70 rounded px-4 py-3 text-[13px] text-white/70"
-                >
-                  <b className="block text-white font-extrabold text-[18px] leading-tight">
-                    {p.b}
-                  </b>
-                  {p.rest}
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* ───── CLOSING CTA ───── */}
