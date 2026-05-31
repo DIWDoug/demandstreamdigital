@@ -575,21 +575,40 @@ const Programs = () => {
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-12 pb-20">
           {/* ───── HERO ───── */}
-          <section>
-            <Eyebrow>Programs &amp; Pricing</Eyebrow>
-            <h1 className="font-extrabold text-white mt-3 mb-4 leading-[1.08] tracking-[-0.01em] text-[clamp(30px,4.6vw,48px)]">
-              One <span className="text-accent-blue">stream</span> of demand.
+          <section className="relative -mx-6 px-6 py-20 md:py-28 mb-4 text-center overflow-hidden">
+            {/* Radial spotlight wash */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 -z-10"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--accent-blue) / 0.18), transparent 70%), linear-gradient(180deg, hsl(var(--navy-light) / 0.6), transparent 80%)",
+              }}
+            />
+            {/* Bottom hairline */}
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+
+            <div className="text-[12px] md:text-[13px] font-semibold uppercase tracking-[0.25em] text-gold">
+              Built for Plumbing &amp; HVAC. Designed to Book More Calls.
+            </div>
+
+            <h1 className="font-extrabold text-white mt-5 mb-6 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(40px,7vw,88px)]">
+              One <span className="text-accent-blue">Stream</span> of Demand.
               <br />
-              Three ways to grow.
+              Three Ways to Grow.
             </h1>
-            <p className="text-white/75 text-[17px] sm:text-[18px] max-w-[660px] leading-relaxed">
-              Growth systems for plumbing &amp; HVAC companies. Built to drive more booked
-              service calls.{" "}
-              <b className="text-white font-semibold">
+
+            <p className="text-white/80 text-[17px] sm:text-[19px] max-w-[720px] mx-auto leading-relaxed">
+              Growth systems for plumbing &amp; HVAC companies.{" "}
+              <span className="text-white font-semibold">
                 Not marketing services. A complete growth system.
-              </b>
+              </span>
             </p>
-            <div className="inline-block mt-5 text-[13px] text-gold border border-gold/35 bg-gold/[0.07] px-3.5 py-1.5 rounded">
+            <p className="text-white font-semibold mt-3 text-[15px] sm:text-[16px]">
+              Everything in Silver carries into Gold. Everything in Gold carries into Diamond.
+            </p>
+
+            <div className="inline-block mt-7 text-[13px] text-gold border border-gold/35 bg-gold/[0.07] px-4 py-1.5 rounded">
               ◆ One plumbing company and one HVAC client per market.
             </div>
           </section>
