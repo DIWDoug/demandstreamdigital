@@ -346,6 +346,7 @@ const Programs = () => {
               everything="Everything in Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
+              ctaTo="/programs/surge"
             />
           </section>
 
