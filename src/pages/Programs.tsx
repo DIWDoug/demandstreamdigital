@@ -20,7 +20,7 @@ import StreamTexture from "@/components/StreamTexture";
 
 const Eyebrow = ({ children, color = "cta" }: { children: React.ReactNode; color?: "cta" | "accent-blue" }) => (
   <div
-    className={`text-[12px] font-bold uppercase tracking-[0.21em] ${
+    className={`text-xs font-semibold uppercase tracking-wider ${
       color === "cta" ? "text-cta" : "text-accent-blue"
     }`}
   >
@@ -61,7 +61,7 @@ const TierCard = ({
     <div className={`relative ${popular ? "md:-translate-y-3" : ""}`}>
       {popular && (
         <div className="absolute -top-5 left-0 right-0 mx-auto w-fit z-10">
-          <div className="bg-gold text-navy text-[12px] font-extrabold tracking-[0.18em] uppercase px-6 py-2 rounded shadow-[0_6px_24px_hsl(var(--gold)/0.35)]">
+          <div className="bg-gold text-navy text-xs font-bold tracking-wider uppercase px-6 py-2 rounded shadow-[0_6px_24px_hsl(var(--gold)/0.35)]">
             ★ Most Popular
           </div>
         </div>
@@ -73,10 +73,10 @@ const TierCard = ({
         }`}
       >
         {/* Phase label */}
-        <div className={`text-center text-[16px] md:text-[17px] font-bold tracking-[0.22em] uppercase ${accentText}`}>
+        <div className={`text-center text-lg md:text-xl font-bold tracking-wider uppercase ${accentText}`}>
           {name}
         </div>
-        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 tracking-[0.01em] leading-snug">
+        <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 leading-snug">
           {tag}
         </div>
 
@@ -92,7 +92,7 @@ const TierCard = ({
 
 
         {everything && (
-          <div className="mt-5 text-center text-[14px] md:text-[15px] font-bold uppercase tracking-[0.12em] text-white/85 border-y border-white/10 py-2.5">
+          <div className="mt-5 text-center text-[15px] md:text-base font-semibold text-white/85 border-y border-white/10 py-2.5">
             {everything}
           </div>
         )}
@@ -101,7 +101,7 @@ const TierCard = ({
         <div className="mt-6 space-y-5">
           {groups.map((g, gi) => (
             <div key={gi}>
-              <h4 className={`text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+              <h4 className={`text-[15px] md:text-base font-bold mb-2.5 ${accentText} opacity-95`}>
                 {g.title}
               </h4>
               <ul className="space-y-2.5">
@@ -132,7 +132,7 @@ const TierCard = ({
         <div className="mt-7 pt-6 border-t border-white/10 text-center">
           <Link
             to={ctaTo}
-            className={`inline-flex items-center justify-center font-extrabold tracking-[0.14em] uppercase text-[14px] md:text-[15px] px-7 py-3 rounded transition-colors ${
+            className={`inline-flex items-center justify-center font-bold text-[15px] md:text-base px-7 py-3 rounded transition-colors ${
               popular
                 ? "bg-gold text-navy hover:bg-gold/90"
                 : "bg-transparent border-2 border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-navy"
@@ -255,10 +255,10 @@ const TierShowcase = () => {
                 }`}
                 strokeWidth={2}
               />
-              <span className="font-extrabold tracking-[0.18em] text-[13px] md:text-[15px] uppercase">
+              <span className="font-bold tracking-wider text-sm md:text-base uppercase">
                 {t.name}
               </span>
-              <span className="hidden md:block text-[13px] md:text-[14px] tracking-wide text-white/45">
+              <span className="hidden md:block text-[13px] md:text-[14px] text-white/55">
                 {t.tagline}
               </span>
               {isActive && (
@@ -288,10 +288,10 @@ const TierShowcase = () => {
                 <Icon className="w-5 h-5 text-cta" strokeWidth={2.2} />
               </div>
               <div>
-                <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-cta">
+                <div className="text-xs font-semibold uppercase tracking-wider text-cta">
                   {tier.tagline}
                 </div>
-                <div className="font-extrabold text-white text-[24px] md:text-[28px] tracking-[0.04em] leading-none mt-1">
+                <div className="font-extrabold text-white text-[24px] md:text-[28px] tracking-wider leading-none mt-1">
                   {tier.name}
                 </div>
               </div>
@@ -301,7 +301,7 @@ const TierShowcase = () => {
               {tier.description}
             </p>
 
-            <div className="text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.18em] text-accent-blue mb-3">
+            <div className="text-[15px] md:text-base font-bold text-accent-blue mb-3">
               What you walk away with
             </div>
             <ul className="space-y-2.5">
@@ -317,7 +317,7 @@ const TierShowcase = () => {
           {/* Right: stat panel */}
           <div className="rounded-md border border-border-card/70 bg-navy/60 backdrop-blur-sm p-6 space-y-5">
             <div>
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Investment
               </div>
               <div className="font-extrabold text-white text-[28px] leading-none">
@@ -325,20 +325,20 @@ const TierShowcase = () => {
               </div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Best For
               </div>
               <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.bestFor}</div>
             </div>
             <div className="border-t border-white/10 pt-4">
-              <div className="text-[13px] md:text-[14px] font-bold uppercase tracking-[0.2em] text-white/50 mb-1.5">
+              <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-1.5">
                 Timeline
               </div>
               <div className="text-white/85 text-[15px] md:text-[16px] leading-snug">{tier.timeframe}</div>
             </div>
             <Link
               to={tier.ctaTo}
-              className="block text-center bg-cta hover:bg-cta-hover text-white font-extrabold tracking-[0.12em] uppercase text-[13px] px-5 py-3.5 rounded transition-colors"
+              className="block text-center bg-cta hover:bg-cta-hover text-white font-bold text-sm md:text-[15px] px-5 py-3.5 rounded transition-colors"
             >
               Explore {tier.name} →
             </Link>
@@ -602,7 +602,7 @@ const Programs = () => {
             }}
           >
             <div>
-              <div className="text-[12px] font-bold tracking-[0.17em] uppercase text-cta">
+              <div className="text-xs font-semibold uppercase tracking-wider text-cta">
                 One-Time Setup
               </div>
               <div className="font-extrabold text-[34px] leading-none mt-1 text-white">
@@ -637,7 +637,7 @@ const Programs = () => {
           >
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
               <div className="max-w-[720px]">
-                <h3 className="text-[15px] md:text-[16px] font-bold tracking-[0.18em] uppercase text-accent-blue">
+                <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight">
                   Ad Spend &amp; Management
                 </h3>
                 <p className="text-white/80 text-[17px] md:text-[18px] mt-3 leading-relaxed">

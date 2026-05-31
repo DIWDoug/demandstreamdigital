@@ -148,7 +148,7 @@ const Setup = () => {
 
           {/* ── Hero ── */}
           <section>
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-cta flex items-center gap-3">
+            <div className="text-xs font-semibold uppercase tracking-wider text-cta flex items-center gap-3">
               <span className="text-[30px] leading-none">■</span>
               One-Time Setup
             </div>
@@ -174,7 +174,7 @@ const Setup = () => {
               { k: "Website", v: "30", suffix: " pages" },
             ].map((s, i) => (
               <div key={i} className="bg-card border border-border-card/70 rounded-lg px-4 py-4">
-                <div className="text-[11px] tracking-[0.09em] uppercase text-white/55 font-semibold">
+                <div className="text-xs uppercase tracking-wider text-white/55 font-semibold">
                   {s.k}
                 </div>
                 <div
@@ -198,7 +198,7 @@ const Setup = () => {
               background: "linear-gradient(120deg, hsl(var(--cta) / 0.09), hsl(var(--navy-light)))",
             }}
           >
-            <h3 className="text-[12px] tracking-[0.17em] uppercase text-cta font-bold">Why a real build</h3>
+            <h3 className="text-xs uppercase tracking-wider text-cta font-semibold">Why a real build</h3>
             <p className="text-white text-[17px] mt-2 max-w-[760px] leading-relaxed">
               The website is the growth engine, not a brochure. Everything else (Google, reviews, ads,
               automation) exists to feed it. We build the engine right, then every program drives demand
@@ -215,9 +215,9 @@ const Setup = () => {
             <div className="grid md:grid-cols-2 gap-4">
               {GROUPS.map((g, gi) => (
                 <div key={gi} className="bg-card border border-border-card/70 rounded-lg p-5">
-                  <h4 className="text-[11px] font-bold uppercase tracking-[0.13em] text-accent-blue mb-2.5">
-                    {g.title}
-                  </h4>
+                <h4 className="text-sm font-bold text-accent-blue mb-2.5">
+                  {g.title}
+                </h4>
                   <ul className="space-y-0">
                     {g.items.map((item, ii) => (
                       <li
@@ -253,7 +253,7 @@ const Setup = () => {
                 >
                   <div>
                     <div className="font-extrabold text-cta text-[15px]">{p.days}</div>
-                    <div className="text-[11px] tracking-[0.09em] uppercase text-accent-blue font-bold mt-1">
+                    <div className="text-xs uppercase tracking-wider text-accent-blue font-semibold mt-1">
                       {p.phase}
                     </div>
                   </div>
@@ -268,7 +268,7 @@ const Setup = () => {
             className="mt-9 text-center rounded-lg border border-border-card/70 px-6 py-12"
             style={{ background: "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))" }}
           >
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-accent-blue">
+            <div className="text-xs font-semibold uppercase tracking-wider text-accent-blue">
               Ready to own your market?
             </div>
             <h2 className="font-extrabold text-white text-[30px] tracking-[-0.015em] mt-2.5 mb-2">
