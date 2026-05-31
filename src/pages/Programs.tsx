@@ -101,7 +101,7 @@ const TierCard = ({
         <div className="mt-6 space-y-5">
           {groups.map((g, gi) => (
             <div key={gi}>
-              <h4 className={`text-[13.5px] md:text-[14.5px] font-bold uppercase tracking-[0.16em] mb-2.5 ${accentText} opacity-90`}>
+              <h4 className={`text-[15px] md:text-base font-bold mb-2.5 ${accentText} opacity-95`}>
                 {g.title}
               </h4>
               <ul className="space-y-2.5">
