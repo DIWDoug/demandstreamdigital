@@ -499,6 +499,9 @@ const GrowthQualifierFlow = () => {
               onCountryCodeChange={setPhoneCountryCode}
               required
             />
+            <div className="mt-4">
+              <SmsConsentText />
+            </div>
             <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim()} />
           </div>
         ) : null}
