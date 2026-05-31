@@ -6,6 +6,8 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
 import StreamTexture from "@/components/StreamTexture";
+import klarnaLogo from "@/assets/klarna-badge.png";
+import paypalCreditLogo from "@/assets/paypal-credit.png";
 
 
 /* ─── Tokens used (existing design system) ───────────────────────────────
@@ -867,23 +869,24 @@ const Programs = () => {
 
           {/* ───── PAYMENT OPTIONS ───── */}
           <section className="mt-8 text-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-3 md:gap-5 rounded-lg border border-white/10 bg-white/[0.04] px-5 md:px-8 py-4">
-              <span className="text-[13px] md:text-sm font-semibold text-white/70 uppercase tracking-wider">
-                Flexible payment options
+            <div className="inline-flex flex-wrap items-center justify-center gap-2.5 md:gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 md:px-5 py-2.5">
+              <span className="text-[10px] md:text-[11px] font-semibold text-white/60 uppercase tracking-wider">
+                Pay with
               </span>
-              <span className="hidden md:block w-px h-4 bg-white/20" />
-              <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
-                {["Credit Card", "Klarna", "PayPal Credit", "Debit"].map((method) => (
-                  <span
-                    key={method}
-                    className="text-[12px] md:text-[13px] font-medium text-white/85 bg-white/[0.08] border border-white/10 rounded px-2.5 py-1"
-                  >
-                    {method}
-                  </span>
-                ))}
+              <span className="hidden md:block w-px h-3.5 bg-white/15" />
+              <div className="flex flex-wrap items-center justify-center gap-1.5 md:gap-2">
+                <span className="text-[11px] md:text-[12px] font-medium text-white/85 bg-white/[0.08] border border-white/10 rounded px-2 py-1">
+                  Credit / Debit
+                </span>
+                <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
+                  <img src={klarnaLogo} alt="Klarna" className="h-3.5 md:h-4 w-auto" />
+                </span>
+                <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
+                  <img src={paypalCreditLogo} alt="PayPal Credit" className="h-3.5 md:h-4 w-auto" />
+                </span>
               </div>
             </div>
-            <p className="text-[13px] text-white/45 mt-3">
+            <p className="text-[12px] text-white/45 mt-2.5">
               Monthly program fees can be paid via card or financing. Ad spend is billed separately and paid directly to Google.
             </p>
           </section>
