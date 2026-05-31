@@ -350,6 +350,7 @@ const TierShowcase = () => {
 };
 
 const Programs = () => {
+  const [foundationOpen, setFoundationOpen] = useState(false);
   const source: Group[] = [
     {
       title: "Visibility & Authority",
