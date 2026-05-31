@@ -325,6 +325,7 @@ const Programs = () => {
               price="$2,500"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
+              ctaTo="/programs/source"
             />
             <TierCard
               symbol="◈"
