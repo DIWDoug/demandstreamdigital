@@ -76,6 +76,8 @@ const PlumbingSearchAds = lazy(() => import("./pages/services/PlumbingSearchAds"
 const PlumbingSEO = lazy(() => import("./pages/services/PlumbingSEO"));
 const HVACSEO = lazy(() => import("./pages/services/HVACSEO"));
 const PaidMedia = lazy(() => import("./pages/services/PaidMedia"));
+const PlumbingPaidAdvertising = lazy(() => import("./pages/services/PlumbingPaidAdvertising"));
+const HVACPaidAdvertising = lazy(() => import("./pages/services/HVACPaidAdvertising"));
 const GoogleMaps = lazy(() => import("./pages/services/GoogleMaps"));
 const HVACGoogleMaps = lazy(() => import("./pages/services/HVACGoogleMaps"));
 const HVACEmailMarketing = lazy(() => import("./pages/services/HVACEmailMarketing"));
@@ -272,8 +274,8 @@ const App = () => (
           <Route path="/plumbing-seo" element={<PlumbingSEO />} />
           <Route path="/plumbing-and-hvac-google-maps" element={<GoogleMaps />} />
           <Route path="/plumbing-google-maps" element={<PlumbingGoogleMaps />} />
-          <Route path="/plumbing-paid-advertising" element={<Navigate to="/paid-marketing" replace />} />
-          <Route path="/plumbing-paid-advertising/" element={<Navigate to="/paid-marketing" replace />} />
+          <Route path="/plumbing-paid-advertising" element={<PlumbingPaidAdvertising />} />
+          <Route path="/plumbing-paid-advertising/" element={<PlumbingPaidAdvertising />} />
           <Route path="/plumbing-email-marketing" element={<PlumbingEmailMarketing />} />
           <Route path="/plumbing-and-hvac-email-marketing" element={<EmailMarketing />} />
           <Route path="/plumbing-and-hvac-content-marketing" element={<ContentMarketing />} />
@@ -345,8 +347,8 @@ const App = () => (
           {/* HVAC Service Pages */}
           <Route path="/hvac-seo" element={<HVACSEO />} />
           <Route path="/hvac-google-maps" element={<HVACGoogleMaps />} />
-          <Route path="/hvac-paid-advertising" element={<Navigate to="/paid-marketing" replace />} />
-          <Route path="/hvac-paid-advertising/" element={<Navigate to="/paid-marketing" replace />} />
+          <Route path="/hvac-paid-advertising" element={<HVACPaidAdvertising />} />
+          <Route path="/hvac-paid-advertising/" element={<HVACPaidAdvertising />} />
           <Route path="/hvac-email-marketing" element={<HVACEmailMarketing />} />
           <Route path="/hvac-content-marketing" element={<HVACContentMarketing />} />
           <Route path="/hvac-authority-building" element={<Authority />} />
