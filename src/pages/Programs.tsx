@@ -35,6 +35,7 @@ const TierCard = ({
   groups,
   cap,
   popular = false,
+  ctaText = "Schedule a Growth Audit",
 }: {
   symbol: string;
   name: string;
@@ -44,6 +45,7 @@ const TierCard = ({
   groups: Group[];
   cap: string;
   popular?: boolean;
+  ctaText?: string;
 }) => {
   const dotColor = popular ? "bg-cta" : "bg-accent-blue/80";
   const headingColor = popular ? "text-cta" : "text-accent-blue";
@@ -110,7 +112,14 @@ const TierCard = ({
         ))}
       </div>
 
-      <div className="text-[12px] text-white/45 border-t border-border-card/70 mt-5 pt-3">
+      <Link
+        to="/grow-qualifier"
+        className="btn-cta w-full mt-5"
+      >
+        {ctaText}
+      </Link>
+
+      <div className="text-[12px] text-white/45 border-t border-border-card/70 mt-4 pt-3">
         {cap}
       </div>
     </div>
