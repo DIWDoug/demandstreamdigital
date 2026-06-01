@@ -233,45 +233,52 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             )}
           </section>
 
-          {/* ── What's Included (always expanded) ── */}
+          {/* ── What's Included (Programs-style wide card) ── */}
           <section className="mt-12 border-t border-border-card/40 pt-10">
-            <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12">
-              <div>
-                <div className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-white/45 mb-3">
-                  What is Included
-                </div>
-                <div
-                  aria-hidden
-                  className="font-extrabold uppercase leading-[0.88] tracking-[-0.02em] select-none"
-                  style={{
-                    fontSize: "clamp(64px, 10vw, 132px)",
-                    color: "transparent",
-                    WebkitTextStroke: `1.5px hsl(var(--${accent}) / 0.55)`,
-                  }}
-                >
-                  {data.name.toUpperCase()}
-                </div>
-                <p className="text-white/55 text-[14px] mt-4 max-w-[320px] leading-snug">
-                  Your complete {data.name.toLowerCase()} build. No add-ons required to launch.
-                </p>
+            <div className="text-center mb-6">
+              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-2`}>
+                What is Included
+              </div>
+              <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em]">
+                Your complete {data.name} build.
+              </h2>
+              <p className="text-white/65 text-[15.5px] mt-2 max-w-[620px] mx-auto leading-snug">
+                Every system, every channel, every workflow. No add-ons required to launch.
+              </p>
+            </div>
+
+            <div
+              className={`relative rounded-md bg-card border-2 ${A.borderSoft} p-7 sm:p-10`}
+            >
+              <div className={`text-center text-lg md:text-xl font-bold tracking-wider uppercase ${A.text}`}>
+                {data.symbol} {data.name}
+              </div>
+              <div className="text-center text-[15.5px] md:text-[16.5px] text-white/70 mt-2 leading-snug max-w-[640px] mx-auto">
+                {data.tagline}
               </div>
 
-              <div id="included-content" className="space-y-7">
+              {data.everythingIn && (
+                <div className="mt-6 text-center text-[15px] md:text-base font-semibold text-white/85 border-y border-white/10 py-3">
+                  {data.everythingIn}
+                </div>
+              )}
+
+              <div className="mt-8 grid sm:grid-cols-2 gap-x-10 gap-y-7">
                 {data.groups.map((g, gi) => (
                   <div key={gi}>
-                    <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] ${A.text} mb-2`}>
+                    <h4 className={`text-[15px] md:text-base font-bold mb-3 ${A.text} opacity-95`}>
                       {g.title}
-                    </div>
-                    <ul className="space-y-0 divide-y divide-white/[0.07]">
+                    </h4>
+                    <ul className="space-y-2.5">
                       {g.items.map((item, idx) => {
                         const isObj = typeof item !== "string";
                         return (
                           <li
                             key={idx}
-                            className="flex items-start gap-3 py-3 text-[16.5px] sm:text-[17.5px] text-white/85 leading-snug"
+                            className="flex items-start gap-2.5 text-[16px] md:text-[17px] text-white/85 leading-snug"
                           >
                             <Check
-                              className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${A.text}`}
+                              className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${A.text}`}
                               strokeWidth={3}
                             />
                             <span>
