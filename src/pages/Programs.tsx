@@ -45,7 +45,7 @@ const TierCard = ({
   cap,
   highlights,
   popular = false,
-  ctaText = "View Full Details",
+  ctaText = "Schedule a Growth Audit",
   ctaTo = "/grow-qualifier",
 }: {
   symbol: string;
@@ -371,7 +371,6 @@ const TierShowcase = () => {
 };
 
 const Programs = () => {
-  const [foundationOpen, setFoundationOpen] = useState(false);
   const source: Group[] = [
     {
       title: "Visibility & Authority",
@@ -658,21 +657,6 @@ const Programs = () => {
                   <p className="text-white/55 text-[15px] mt-3">
                     Required for all programs. Billed at signup, work starts day one.
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => setFoundationOpen((v) => !v)}
-                    aria-expanded={foundationOpen}
-                    className="mt-5 inline-flex items-center gap-2.5 rounded-md border border-cta/40 bg-cta/10 hover:bg-cta/15 text-white font-semibold text-[15px] px-4 py-2.5 transition-colors"
-                  >
-                    <span className="w-6 h-6 rounded-full bg-cta text-white flex items-center justify-center">
-                      {foundationOpen ? (
-                        <Minus className="w-4 h-4" strokeWidth={3} />
-                      ) : (
-                        <Plus className="w-4 h-4" strokeWidth={3} />
-                      )}
-                    </span>
-                    {foundationOpen ? "Hide what you get" : "See everything you actually get"}
-                  </button>
                 </div>
 
                 {/* Price block */}
@@ -720,157 +704,151 @@ const Programs = () => {
               </div>
             </div>
 
-            {/* Deliverables grid (collapsible) */}
-            {foundationOpen && (
-              <div className="px-6 sm:px-10 pt-9 pb-2 animate-in fade-in-50 slide-in-from-top-2 duration-300">
-                <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
-                  What you actually get
-                </h3>
-                <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
-                  A complete, owned, conversion-ready foundation. Built by our team, installed during a
-                  60-day onboarding, yours to keep.
-                </p>
-
-                <div className="grid md:grid-cols-2 gap-5">
-                  {[
-                    {
-                      Icon: Globe,
-                      title: "The Growth Website",
-                      items: [
-                        "30-page conversion-built website on the DemandStream framework",
-                        "Mobile-first, fast-loading, accessibility-ready",
-                        "Hub-and-spoke service + service-area page structure",
-                        "Financing CTAs, online booking and click-to-call built in",
-                        "Schema and structured data across every page",
-                        "Your brand kit applied: logo, colors, fonts, imagery",
-                      ],
-                    },
-                    {
-                      Icon: MapPin,
-                      title: "Google & Local Visibility",
-                      items: [
-                        "Google Business Profile 110% optimized (every field, category, service, photo, post)",
-                        "Local Services Ads (LSA) account stood up and verified",
-                        "Citation and listing foundation across core directories",
-                        "AI search readiness for AI Maps and answer engines",
-                      ],
-                    },
-                    {
-                      Icon: BarChart3,
-                      title: "Tracking & Measurement",
-                      items: [
-                        "Call tracking provisioned for every channel",
-                        "Conversion tracking and analytics wired end-to-end",
-                        "Reporting dashboard stood up. One view of the funnel",
-                        "Attribution mapped from first touch to booked job",
-                      ],
-                    },
-                    {
-                      Icon: Compass,
-                      title: "Onboarding & Strategy",
-                      items: [
-                        "Full audit and 6-month growth roadmap",
-                        "Kickoff and strategy session with your specialist",
-                        "Dedicated Success Specialist assigned for life of program",
-                      ],
-                    },
-                    {
-                      Icon: Zap,
-                      title: "Why this is the floor, not the ceiling",
-                      items: [
-                        "We will not run ads to a site we did not build",
-                        "We will not promise rankings on a Google Profile we did not optimize",
-                        "Every program after this compounds on the same foundation",
-                        "Built once. Owned by you. Expanded forever.",
-                      ],
-                      accent: true,
-                    },
-                  ].map(({ Icon, title, items, accent }, gi) => (
-                    <div
-                      key={gi}
-                      className={`rounded-lg p-5 sm:p-6 border ${
-                        accent
-                          ? "bg-cta/[0.06] border-cta/35"
-                          : "bg-card border-border-card/70"
-                      }`}
-                    >
-                      <div className="flex items-center gap-3 mb-4">
-                        <div
-                          className={`w-10 h-10 rounded-md flex items-center justify-center border ${
-                            accent
-                              ? "bg-cta/15 border-cta/40"
-                              : "bg-accent-blue/10 border-accent-blue/30"
-                          }`}
-                        >
-                          <Icon
-                            className={`w-5 h-5 ${accent ? "text-cta" : "text-accent-blue"}`}
-                            strokeWidth={2.2}
-                          />
-                        </div>
-                        <h4 className="font-bold text-white text-[17px] md:text-[18px] tracking-tight">
-                          {title}
-                        </h4>
-                      </div>
-                      <ul className="space-y-2.5">
-                        {items.map((it, ii) => (
-                          <li
-                            key={ii}
-                            className="flex items-start gap-2.5 text-[15px] md:text-base text-white/80 leading-snug"
-                          >
-                            <Check
-                              className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${
-                                accent ? "text-cta" : "text-accent-blue"
-                              }`}
-                              strokeWidth={3}
-                            />
-                            <span>{it}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Phase strip */}
-                <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
-                  {[
-                    { d: "Days 1 to 15", p: "Audit & Foundation" },
-                    { d: "Days 15 to 35", p: "Website & Brand Build" },
-                    { d: "Days 35 to 50", p: "Systems & Tracking" },
-                    { d: "Days 50 to 60", p: "QA, Launch & Handoff" },
-                  ].map((s, i) => (
-                    <div
-                      key={i}
-                      className="bg-navy/60 border border-border-card/60 rounded-md px-4 py-3.5"
-                    >
-                      <div className="text-cta font-bold text-sm">{s.d}</div>
-                      <div className="text-white/85 text-[15px] md:text-base font-semibold mt-1 leading-snug">
-                        {s.p}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {/* CTA row (always visible) */}
             <div className="px-6 sm:px-10 py-7 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
               <Link
-                to="/programs/setup"
+                to="/grow-qualifier"
                 className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-base px-7 py-3.5 rounded transition-colors"
               >
-                See the full 60-day build →
-              </Link>
-              <Link
-                to="/grow-qualifier"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white/25 hover:border-white/45 text-white font-semibold text-base px-7 py-3 rounded transition-colors"
-              >
-                Check if your market is open
+                Schedule a Growth Audit →
               </Link>
               <span className="text-white/55 text-[14px]">
                 Setup pairs with a monthly program: The Source, The Current, or The Surge.
               </span>
             </div>
+
+            {/* Deliverables grid */}
+            <div className="px-6 sm:px-10 pt-9 pb-2">
+              <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
+                What you actually get
+              </h3>
+              <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
+                A complete, owned, conversion-ready foundation. Built by our team, installed during a
+                60-day onboarding, yours to keep.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                {[
+                  {
+                    Icon: Globe,
+                    title: "The Growth Website",
+                    items: [
+                      "30-page conversion-built website on the DemandStream framework",
+                      "Mobile-first, fast-loading, accessibility-ready",
+                      "Hub-and-spoke service + service-area page structure",
+                      "Financing CTAs, online booking and click-to-call built in",
+                      "Schema and structured data across every page",
+                      "Your brand kit applied: logo, colors, fonts, imagery",
+                    ],
+                  },
+                  {
+                    Icon: MapPin,
+                    title: "Google & Local Visibility",
+                    items: [
+                      "Google Business Profile 110% optimized (every field, category, service, photo, post)",
+                      "Local Services Ads (LSA) account stood up and verified",
+                      "Citation and listing foundation across core directories",
+                      "AI search readiness for AI Maps and answer engines",
+                    ],
+                  },
+                  {
+                    Icon: BarChart3,
+                    title: "Tracking & Measurement",
+                    items: [
+                      "Call tracking provisioned for every channel",
+                      "Conversion tracking and analytics wired end-to-end",
+                      "Reporting dashboard stood up. One view of the funnel",
+                      "Attribution mapped from first touch to booked job",
+                    ],
+                  },
+                  {
+                    Icon: Compass,
+                    title: "Onboarding & Strategy",
+                    items: [
+                      "Full audit and 6-month growth roadmap",
+                      "Kickoff and strategy session with your specialist",
+                      "Dedicated Success Specialist assigned for life of program",
+                    ],
+                  },
+                  {
+                    Icon: Zap,
+                    title: "Why this is the floor, not the ceiling",
+                    items: [
+                      "We will not run ads to a site we did not build",
+                      "We will not promise rankings on a Google Profile we did not optimize",
+                      "Every program after this compounds on the same foundation",
+                      "Built once. Owned by you. Expanded forever.",
+                    ],
+                    accent: true,
+                  },
+                ].map(({ Icon, title, items, accent }, gi) => (
+                  <div
+                    key={gi}
+                    className={`rounded-lg p-5 sm:p-6 border ${
+                      accent
+                        ? "bg-cta/[0.06] border-cta/35"
+                        : "bg-card border-border-card/70"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <div
+                        className={`w-10 h-10 rounded-md flex items-center justify-center border ${
+                          accent
+                            ? "bg-cta/15 border-cta/40"
+                            : "bg-accent-blue/10 border-accent-blue/30"
+                        }`}
+                      >
+                        <Icon
+                          className={`w-5 h-5 ${accent ? "text-cta" : "text-accent-blue"}`}
+                          strokeWidth={2.2}
+                        />
+                      </div>
+                      <h4 className="font-bold text-white text-[17px] md:text-[18px] tracking-tight">
+                        {title}
+                      </h4>
+                    </div>
+                    <ul className="space-y-2.5">
+                      {items.map((it, ii) => (
+                        <li
+                          key={ii}
+                          className="flex items-start gap-2.5 text-[15px] md:text-base text-white/80 leading-snug"
+                        >
+                          <Check
+                            className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${
+                              accent ? "text-cta" : "text-accent-blue"
+                            }`}
+                            strokeWidth={3}
+                          />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              {/* Phase strip */}
+              <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
+                {[
+                  { d: "Days 1 to 15", p: "Audit & Foundation" },
+                  { d: "Days 15 to 35", p: "Website & Brand Build" },
+                  { d: "Days 35 to 50", p: "Systems & Tracking" },
+                  { d: "Days 50 to 60", p: "QA, Launch & Handoff" },
+                ].map((s, i) => (
+                  <div
+                    key={i}
+                    className="bg-navy/60 border border-border-card/60 rounded-md px-4 py-3.5"
+                  >
+                    <div className="text-cta font-bold text-sm">{s.d}</div>
+                    <div className="text-white/85 text-[15px] md:text-base font-semibold mt-1 leading-snug">
+                      {s.p}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
           </section>
 
           {/* ───── TIERS ───── */}
@@ -882,7 +860,7 @@ const Programs = () => {
               price="$2,495"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
-              ctaTo="/programs/source"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "1 to 5 trucks" },
                 { label: "Revenue Range", value: "$400K to $1.5M" },
@@ -899,7 +877,7 @@ const Programs = () => {
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
-              ctaTo="/programs/current"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "5 to 15 trucks" },
                 { label: "Revenue Range", value: "$1.5M to $4M" },
@@ -915,7 +893,7 @@ const Programs = () => {
               everything="Everything in The Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
-              ctaTo="/programs/surge"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "15+ trucks" },
                 { label: "Revenue Range", value: "$4M+" },
