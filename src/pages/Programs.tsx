@@ -633,7 +633,7 @@ const Programs = () => {
             </div>
           </section>
 
-          {/* ───── ONE-TIME SETUP (Foundation Build) ───── */}
+          {/* ───── ONE-TIME SETUP (Growth Engine) ───── */}
           <section
             className="mt-12 rounded-xl border border-cta/30 overflow-hidden"
             style={{
