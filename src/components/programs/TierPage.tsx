@@ -491,7 +491,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-6">
                 {data.name} FAQ
               </h2>
-              <div className="grid gap-3 max-w-[860px]">
+              <div className="grid md:grid-cols-2 gap-3">
                 {data.faqs.map((f, i) => (
                   <FAQItem key={i} q={f.q} a={f.a} />
                 ))}
