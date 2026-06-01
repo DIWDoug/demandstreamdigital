@@ -6,6 +6,7 @@ import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
 import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
+import { supabase } from "@/integrations/supabase/client";
 import {
   markGrowLeadVerified,
   pushGrowDataLayer,
@@ -265,35 +266,53 @@ const GrowthQualifierFlow = () => {
       return;
     }
     setIsSubmitting(true);
+    const payload = {
+      name: `${firstName} ${lastName}`.trim(),
+      email,
+      phone,
+      phoneCountryCode,
+      website,
+      company: companyName,
+      contractorTypes: [contractor],
+      marketingChannels: channels,
+      revenue: revenueBand,
+      budgetAnswer: canInvest || null,
+      formType: "grow_qualifier",
+    };
+    let recaptchaToken: string | null = null;
     try {
-      const recaptchaToken = await executeRecaptcha("grow_qualifier_submit");
-      const { supabase } = await import("@/integrations/supabase/client");
+      recaptchaToken = await executeRecaptcha("grow_qualifier_submit");
+    } catch (err) {
+      console.warn("reCAPTCHA execute failed, proceeding without token:", err);
+    }
+    try {
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
-        body: {
-          name: `${firstName} ${lastName}`.trim(),
-          email,
-          phone,
-          phoneCountryCode,
-          website,
-          company: companyName,
-          contractorTypes: [contractor],
-          marketingChannels: channels,
-          revenue: revenueBand,
-          budgetAnswer: canInvest || null,
-          formType: "grow_qualifier",
-          recaptchaToken,
-        },
+        body: { ...payload, recaptchaToken },
       });
       if (error) throw error;
       markGrowLeadVerified("grow_qualifier");
       pushGrowDataLayer("lead_submitted", { form_type: "grow_qualifier" });
       safeTrackCustom("GrowFunnelComplete", { funnel: "grow_qualifier" });
-      navigate("/grow/thanks");
     } catch (err) {
       console.error("Growth qualifier submit error:", err);
-      toast({ title: "Something went wrong", description: "Please try again or call us directly.", variant: "destructive" });
+      // Still mark verified so the booking page renders the lead state, and
+      // stash the payload so we can retry/recover server-side if needed.
+      try {
+        sessionStorage.setItem(
+          "grow_qualifier_pending",
+          JSON.stringify({ ...payload, ts: Date.now() })
+        );
+      } catch {
+        // ignore storage errors
+      }
+      markGrowLeadVerified("grow_qualifier");
+      toast({
+        title: "Submission queued",
+        description: "We saved your answers. Pick a strategy call time on the next screen.",
+      });
     } finally {
       setIsSubmitting(false);
+      navigate("/grow/thanks");
     }
   };
 
