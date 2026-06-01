@@ -625,7 +625,7 @@ const Programs = () => {
               </span>
             </p>
             <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
-              Everything in Silver carries into Gold. Everything in Gold carries into Diamond.
+              Everything in Source carries into Current. Everything in Current carries into Surge.
             </p>
 
             <div className="inline-block mt-4 md:mt-7 text-[12px] md:text-[13px] text-white/70 border border-white/20 bg-white/[0.06] px-3 md:px-4 py-1.5 rounded">
