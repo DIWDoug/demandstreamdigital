@@ -128,7 +128,7 @@ const currentData: TierPageData = {
     },
     {
       q: "How fast can we launch?",
-      a: "If the Foundation Build is already in place, paid campaigns launch in week two and automation handoff completes inside the first 60 days.",
+      a: "If the Growth Engine is already in place, paid campaigns launch in week two and automation handoff completes inside the first 60 days.",
     },
     {
       q: "Can we scale ad spend mid-quarter?",
