@@ -724,7 +724,7 @@ const Programs = () => {
                 What you actually get
               </h3>
               <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
-                A complete, owned, conversion-ready foundation. Built by our team, installed during a
+                A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
                 60-day onboarding, yours to keep.
               </p>
 
