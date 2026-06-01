@@ -717,9 +717,13 @@ const Programs = () => {
             </div>
           </section>
 
+          {/* ───── STICKY SECTION TABS ───── */}
+          <SectionTabs />
+
           {/* ───── ONE-TIME SETUP (Growth Engine) ───── */}
           <section
-            className="mt-12 rounded-xl border border-cta/30 overflow-hidden"
+            id="engine"
+            className="mt-12 scroll-mt-32 rounded-xl border border-cta/30 overflow-hidden"
             style={{
               background:
                 "linear-gradient(135deg, hsl(var(--cta) / 0.10), hsl(var(--navy-light)) 55%, hsl(var(--navy)))",
