@@ -5,6 +5,8 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
 import { type TierData } from "@/data/programs";
+import review1 from "@/assets/pure-plumbing-review-1.png";
+import review2 from "@/assets/pure-plumbing-review-2.png";
 
 // Back-compat exports
 export type TierFeatureItem = string | { em: string; rest?: string };
@@ -369,30 +371,59 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             </section>
           )}
 
-          {/* ── Testimonial ── */}
-          {data.testimonial && (
-            <section className="mt-14 border-t border-border-card/40 pt-10">
-              <div className="bg-white border border-border-card/70 rounded-md p-8 sm:p-10 text-navy">
-                <div className="flex items-center gap-1 mb-4">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <blockquote className="text-navy text-[19px] sm:text-[22px] font-semibold leading-snug tracking-[-0.01em]">
-                  &ldquo;{data.testimonial.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
-                  <div>
-                    <div className="font-bold text-navy text-[15px]">{data.testimonial.attribution}</div>
-                    <div className="text-navy/60 text-[13px]">{data.testimonial.role}</div>
-                  </div>
-                  <div className="inline-block bg-accent-blue/15 text-accent-blue border border-accent-blue/30 rounded px-3 py-1.5 text-[13px] font-bold">
-                    {data.testimonial.metric}
-                  </div>
-                </div>
+          {/* ── Real Google Reviews ── */}
+          <section className="mt-14 border-t border-border-card/40 pt-10">
+            <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-2`}>
+              Real Reviews From Real Operators
+            </div>
+            <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-3">
+              Real shops. Real words. Real money found.
+            </h2>
+            <div className="flex items-center gap-2 mb-6">
+              <div className="flex">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
-            </section>
-          )}
+              <span className="text-white/70 text-[13px] font-medium">
+                4.9 out of 5 · 22 Google Reviews for Demand Stream Digital
+              </span>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5">
+              <a
+                href="https://www.google.com/search?q=Demand+Stream+Digital+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl shadow-lg border border-border-card/70 bg-[#1F1F1F] p-3 sm:p-4 transition-transform hover:-translate-y-1"
+                aria-label="Read the Pure Plumbing Google review"
+              >
+                <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "476 / 523" }}>
+                  <img
+                    src={review1}
+                    alt="Google review from Pure Plumbing: 5 stars, praising the Dallas SEO partnership with Demand Stream Digital."
+                    className="absolute inset-0 w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://www.google.com/search?q=Demand+Stream+Digital+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl shadow-lg border border-border-card/70 bg-[#1F1F1F] p-3 sm:p-4 transition-transform hover:-translate-y-1"
+                aria-label="Read the Pure Plumbing and Air Google review"
+              >
+                <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "487 / 539" }}>
+                  <img
+                    src={review2}
+                    alt="Google review from Pure Plumbing and Air: 5 stars, citing a 40% year-over-year revenue increase."
+                    className="absolute inset-0 w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+          </section>
 
           {/* ── Fit / Not Fit ── */}
           <section className="mt-14 grid md:grid-cols-2 gap-8 border-t border-border-card/40 pt-10">
@@ -460,7 +491,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-6">
                 {data.name} FAQ
               </h2>
-              <div className="grid gap-3 max-w-[860px]">
+              <div className="grid md:grid-cols-2 gap-3">
                 {data.faqs.map((f, i) => (
                   <FAQItem key={i} q={f.q} a={f.a} />
                 ))}
