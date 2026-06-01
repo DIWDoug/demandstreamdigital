@@ -77,9 +77,32 @@ const FAQItem = ({ q, a }: TierFAQ) => {
   );
 };
 
+// Static class maps so Tailwind JIT can detect them.
+const ACCENT_CLASSES = {
+  cta: {
+    text: "text-cta",
+    bg: "bg-cta",
+    border: "border-cta",
+    bgSoft: "bg-cta/[0.08]",
+    borderSoft: "border-cta/35",
+    activePill: "bg-cta text-white border-cta",
+  },
+  "accent-blue": {
+    text: "text-accent-blue",
+    bg: "bg-accent-blue",
+    border: "border-accent-blue",
+    bgSoft: "bg-accent-blue/[0.08]",
+    borderSoft: "border-accent-blue/35",
+    activePill: "bg-accent-blue text-white border-accent-blue",
+  },
+} as const;
+
 const TierPage = ({ data }: { data: TierPageData }) => {
   const flagship = !!data.flagship;
-  const accent = flagship ? "cta" : "accent-blue";
+  const accentKey: "cta" | "accent-blue" = flagship ? "cta" : "accent-blue";
+  const accent = accentKey;
+  const A = ACCENT_CLASSES[accentKey];
+
 
   return (
     <>
