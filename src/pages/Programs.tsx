@@ -429,7 +429,7 @@ const SectionTabs = () => {
   return (
     <div className="sticky top-16 z-30 -mx-6 px-6 bg-navy/90 backdrop-blur-md border-b border-white/10">
       <nav
-        className="max-w-[1400px] mx-auto flex gap-1 sm:gap-2 overflow-x-auto py-2.5 scrollbar-none"
+        className="max-w-[1400px] mx-auto flex justify-center gap-1 sm:gap-2 overflow-x-auto py-2.5 scrollbar-none"
         aria-label="Program sections"
       >
         {SECTION_TABS.map((t) => {
