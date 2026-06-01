@@ -116,10 +116,10 @@ const AdScanOnboarding = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.firstName || !form.email || !form.company) {
+    if (!form.firstName || !form.lastName || !form.email || !form.company || !form.website) {
       toast({
         title: "Missing required fields",
-        description: "Name, email, and company are required.",
+        description: "Name, email, company, and website are all required.",
         variant: "destructive",
       });
       return;
