@@ -663,7 +663,7 @@ const Programs = () => {
                 {/* Price block */}
                 <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
                   <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                    Foundation Build
+                    Growth Engine
                   </div>
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
@@ -676,7 +676,7 @@ const Programs = () => {
                     60-day build. Paid upfront at signup. Work starts day one.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
-                    Covers your full foundation build. One-time, not recurring.
+                    Covers your full Growth Engine build. One-time, not recurring.
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-2.5">
