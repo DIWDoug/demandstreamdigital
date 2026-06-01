@@ -5,6 +5,8 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
 import { type TierData } from "@/data/programs";
+import review1 from "@/assets/pure-plumbing-review-1.png";
+import review2 from "@/assets/pure-plumbing-review-2.png";
 
 // Back-compat exports
 export type TierFeatureItem = string | { em: string; rest?: string };
