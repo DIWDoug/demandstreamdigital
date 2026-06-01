@@ -509,7 +509,9 @@ const DeliverablesCollapsible = () => {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
+
           </div>
 
           <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
