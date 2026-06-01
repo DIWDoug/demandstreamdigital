@@ -98,6 +98,7 @@ const ACCENT_CLASSES = {
 } as const;
 
 const TierPage = ({ data }: { data: TierPageData }) => {
+  const [includedOpen, setIncludedOpen] = useState(false);
   const flagship = !!data.flagship;
   const accentKey: "cta" | "accent-blue" = flagship ? "cta" : "accent-blue";
   const accent = accentKey;
@@ -230,65 +231,87 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             )}
           </section>
 
-          {/* ── What's Included (editorial split) ── */}
-          <section className="mt-12 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12 border-t border-border-card/40 pt-10">
-            <div>
-              <div className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-white/45 mb-3">
-                What is Included
+          {/* ── What's Included (collapsible) ── */}
+          <section className="mt-12 border-t border-border-card/40 pt-10">
+            <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12">
+              <div>
+                <div className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-white/45 mb-3">
+                  What is Included
+                </div>
+                <div
+                  aria-hidden
+                  className="font-extrabold uppercase leading-[0.88] tracking-[-0.02em] select-none"
+                  style={{
+                    fontSize: "clamp(64px, 10vw, 132px)",
+                    color: "transparent",
+                    WebkitTextStroke: `1.5px hsl(var(--${accent}) / 0.55)`,
+                  }}
+                >
+                  {data.name.toUpperCase()}
+                </div>
+                <p className="text-white/55 text-[14px] mt-4 max-w-[320px] leading-snug">
+                  Your complete {data.name.toLowerCase()} build. No add-ons required to launch.
+                </p>
               </div>
-              <div
-                aria-hidden
-                className="font-extrabold uppercase leading-[0.88] tracking-[-0.02em] select-none"
-                style={{
-                  fontSize: "clamp(64px, 10vw, 132px)",
-                  color: "transparent",
-                  WebkitTextStroke: `1.5px hsl(var(--${accent}) / 0.55)`,
-                }}
-              >
-                {data.name.toUpperCase()}
+
+              <div className="flex items-start justify-end lg:pt-4">
+                <button
+                  onClick={() => setIncludedOpen((o) => !o)}
+                  className="inline-flex items-center gap-2.5 bg-card border border-border-card/70 hover:border-border-card rounded-full px-5 py-3 transition-colors"
+                  aria-expanded={includedOpen}
+                  aria-controls="included-content"
+                >
+                  <span className="text-[14px] font-semibold text-white/85">
+                    {includedOpen ? "Hide everything" : "See everything you get"}
+                  </span>
+                  {includedOpen ? (
+                    <Minus className="w-4 h-4 text-cta" strokeWidth={3} />
+                  ) : (
+                    <Plus className="w-4 h-4 text-cta" strokeWidth={3} />
+                  )}
+                </button>
               </div>
-              <p className="text-white/55 text-[14px] mt-4 max-w-[320px] leading-snug">
-                Your complete {data.name.toLowerCase()} build. No add-ons required to launch.
-              </p>
             </div>
 
-            <div className="space-y-7">
-              {data.groups.map((g, gi) => (
-                <div key={gi}>
-                  <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] ${A.text} mb-2`}>
-                    {g.title}
+            {includedOpen && (
+              <div id="included-content" className="mt-8 space-y-7 max-w-[860px]">
+                {data.groups.map((g, gi) => (
+                  <div key={gi}>
+                    <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] ${A.text} mb-2`}>
+                      {g.title}
+                    </div>
+                    <ul className="space-y-0 divide-y divide-white/[0.07]">
+                      {g.items.map((item, idx) => {
+                        const isObj = typeof item !== "string";
+                        return (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-3 py-3 text-[15px] sm:text-[16px] text-white/85 leading-snug"
+                          >
+                            <Check
+                              className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${A.text}`}
+                              strokeWidth={3}
+                            />
+                            <span>
+                              {isObj ? (
+                                <>
+                                  <span className="text-white font-semibold">
+                                    {(item as { em: string }).em}
+                                  </span>
+                                  {(item as { rest?: string }).rest}
+                                </>
+                              ) : (
+                                (item as string)
+                              )}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   </div>
-                  <ul className="space-y-0 divide-y divide-white/[0.07]">
-                    {g.items.map((item, idx) => {
-                      const isObj = typeof item !== "string";
-                      return (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-3 py-3 text-[15px] sm:text-[16px] text-white/85 leading-snug"
-                        >
-                          <Check
-                            className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${A.text}`}
-                            strokeWidth={3}
-                          />
-                          <span>
-                            {isObj ? (
-                              <>
-                                <span className="text-white font-semibold">
-                                  {(item as { em: string }).em}
-                                </span>
-                                {(item as { rest?: string }).rest}
-                              </>
-                            ) : (
-                              (item as string)
-                            )}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </section>
 
           {/* ── Process Timeline ── */}
