@@ -370,6 +370,90 @@ const TierShowcase = () => {
   );
 };
 
+const SECTION_TABS = [
+  { id: "engine", label: "Growth Engine" },
+  { id: "source", label: "Source" },
+  { id: "current", label: "Current" },
+  { id: "surge", label: "Surge" },
+] as const;
+
+const SectionTabs = () => {
+  const [active, setActive] = useState<string>("engine");
+
+  // Honor hash on mount (so /programs#current scrolls correctly after route change).
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash && SECTION_TABS.some((t) => t.id === hash)) {
+      const el = document.getElementById(hash);
+      if (el) {
+        requestAnimationFrame(() =>
+          el.scrollIntoView({ behavior: "smooth", block: "start" }),
+        );
+        setActive(hash);
+      }
+    }
+  }, []);
+
+  // Track which section is in view.
+  useEffect(() => {
+    const els = SECTION_TABS.map((t) => document.getElementById(t.id)).filter(
+      (el): el is HTMLElement => !!el,
+    );
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActive(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
+    );
+
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActive(id);
+    if (window.history.replaceState) {
+      window.history.replaceState(null, "", `#${id}`);
+    }
+  };
+
+  return (
+    <div className="sticky top-16 z-30 -mx-6 px-6 bg-navy/90 backdrop-blur-md border-b border-white/10">
+      <nav
+        className="max-w-[1400px] mx-auto flex gap-1 sm:gap-2 overflow-x-auto py-2.5 scrollbar-none"
+        aria-label="Program sections"
+      >
+        {SECTION_TABS.map((t) => {
+          const isActive = active === t.id;
+          return (
+            <a
+              key={t.id}
+              href={`#${t.id}`}
+              onClick={(e) => handleClick(e, t.id)}
+              className={`shrink-0 text-[12.5px] sm:text-[13.5px] font-bold tracking-[0.04em] uppercase px-3.5 sm:px-5 py-2 rounded transition-colors border ${
+                isActive
+                  ? "bg-cta text-white border-cta"
+                  : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
+              }`}
+            >
+              {t.label}
+            </a>
+          );
+        })}
+      </nav>
+    </div>
+  );
+};
+
 const Programs = () => {
   const source: Group[] = [
     {
