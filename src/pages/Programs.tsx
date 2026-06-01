@@ -443,15 +443,9 @@ const DeliverablesCollapsible = () => {
         aria-controls="engine-deliverables-panel"
         className="w-full flex items-start justify-between gap-4 text-left group"
       >
-        <div>
-          <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
-            What you actually get
-          </h3>
-          <p className="text-white/65 text-[15px] md:text-base max-w-[720px]">
-            A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
-            60-day onboarding, yours to keep.
-          </p>
-        </div>
+        <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight">
+          What you actually get
+        </h3>
         <span
           className={`shrink-0 mt-1 w-10 h-10 rounded-md border flex items-center justify-center transition-colors ${
             open
