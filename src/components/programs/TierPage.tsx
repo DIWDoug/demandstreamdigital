@@ -65,7 +65,7 @@ const FAQItem = ({ q, a }: TierFAQ) => {
         className="w-full text-left px-5 py-4 flex items-center justify-between gap-4"
         aria-expanded={open}
       >
-        <span className="text-white font-semibold text-[15.5px] leading-snug">{q}</span>
+        <span className="text-white font-semibold text-[16.5px] leading-snug">{q}</span>
         {open ? (
           <Minus className="w-4 h-4 shrink-0 text-cta" strokeWidth={3} />
         ) : (
@@ -73,7 +73,7 @@ const FAQItem = ({ q, a }: TierFAQ) => {
         )}
       </button>
       {open && (
-        <div className="px-5 pb-5 -mt-1 text-[14.5px] text-white/75 leading-relaxed">{a}</div>
+        <div className="px-5 pb-5 -mt-1 text-[16px] text-white/80 leading-relaxed">{a}</div>
       )}
     </div>
   );
@@ -156,10 +156,10 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             <h1 className="font-extrabold text-white mt-3 leading-[1.04] tracking-[-0.015em] text-[clamp(34px,5.4vw,58px)] uppercase">
               {data.name}
             </h1>
-            <p className="text-white/75 text-[17px] sm:text-[19px] mt-3 leading-snug">
+            <p className="text-white/75 text-[19px] sm:text-[22px] mt-3 leading-snug">
               {data.tagline}
             </p>
-            <p className="mt-4 text-[14px] text-white/55">
+            <p className="mt-4 text-[15.5px] text-white/55">
               <b className="text-white font-semibold">Best for:</b> {data.bestFor}
             </p>
 
@@ -213,7 +213,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                 </h2>
               </div>
               <div className="border-l-2 border-cta/70 pl-6">
-                <p className="text-white/80 text-[16px] sm:text-[17px] leading-relaxed">
+                <p className="text-white/80 text-[18px] sm:text-[19px] leading-relaxed">
                   {data.problem.body}
                 </p>
               </div>
@@ -223,7 +223,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {/* ── Goal ── */}
           <section className="mt-12 border-t border-border-card/40 pt-7">
             <div className={`text-[11px] font-bold uppercase tracking-[0.18em] ${A.text}`}>Goal</div>
-            <p className="text-white text-[17px] sm:text-[18px] mt-2 max-w-[760px] leading-relaxed">
+            <p className="text-white text-[19px] sm:text-[20px] mt-2 max-w-[760px] leading-relaxed">
               {data.goal}
             </p>
             {data.everythingIn && (
@@ -268,7 +268,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                         return (
                           <li
                             key={idx}
-                            className="flex items-start gap-3 py-3 text-[15px] sm:text-[16px] text-white/85 leading-snug"
+                            className="flex items-start gap-3 py-3 text-[16.5px] sm:text-[17.5px] text-white/85 leading-snug"
                           >
                             <Check
                               className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${A.text}`}
@@ -317,7 +317,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                         {p.phase}
                       </div>
                     </div>
-                    <div className="text-white/80 text-[14.5px] leading-relaxed">{p.what}</div>
+                    <div className="text-white/80 text-[16px] leading-relaxed">{p.what}</div>
                   </div>
                 ))}
               </div>
@@ -339,8 +339,8 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                     <div className={`font-extrabold ${A.text} text-[34px] leading-none tracking-tight`}>
                       {k.metric}
                     </div>
-                    <div className="text-white font-semibold text-[14.5px] mt-2">{k.label}</div>
-                    <div className="text-white/60 text-[13px] mt-1.5 leading-snug">{k.detail}</div>
+                    <div className="text-white font-semibold text-[16px] mt-2">{k.label}</div>
+                    <div className="text-white/65 text-[14.5px] mt-1.5 leading-snug">{k.detail}</div>
                   </div>
                 ))}
               </div>
@@ -413,7 +413,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               </div>
               <ul className="space-y-2">
                 {data.fit.yes.map((t, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-[15px] text-white/80 leading-snug">
+                  <li key={i} className="flex items-start gap-2.5 text-[16.5px] text-white/85 leading-snug">
                     <span className="mt-[8px] w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
                     <span>{t}</span>
                   </li>
@@ -426,7 +426,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               </div>
               <ul className="space-y-2">
                 {data.fit.no.map((t, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-[15px] text-white/70 leading-snug">
+                  <li key={i} className="flex items-start gap-2.5 text-[16.5px] text-white/75 leading-snug">
                     <span className="mt-[8px] w-1.5 h-1.5 rounded-full bg-cta shrink-0" />
                     <span>{t}</span>
                   </li>
@@ -441,7 +441,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               Ad Spend &amp; Management
             </div>
             <p
-              className="text-white/75 text-[14.5px] mt-2.5 max-w-[780px] leading-relaxed"
+              className="text-white/80 text-[16px] mt-2.5 max-w-[780px] leading-relaxed"
               dangerouslySetInnerHTML={{ __html: data.adManagementCopy }}
             />
             <div className="flex flex-wrap gap-3 mt-5">
@@ -490,7 +490,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             <h2 className="font-extrabold text-white text-[28px] sm:text-[32px] tracking-[-0.015em] mt-2.5 mb-2">
               Claim Your Territory
             </h2>
-            <p className="text-white/70 text-[15px] max-w-[520px] mx-auto mb-6 leading-relaxed">
+            <p className="text-white/80 text-[16.5px] max-w-[560px] mx-auto mb-6 leading-relaxed">
               One plumbing company and one HVAC company per market. A short, no-pressure conversation to
               confirm fit before any pitch.
             </p>
