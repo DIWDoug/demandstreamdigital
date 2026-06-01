@@ -949,7 +949,7 @@ const Programs = () => {
                     {
                       label: "The Engine",
                       amount: "$5,000",
-                      sub: "Foundation Build",
+                      sub: "Growth Engine",
                       note: "One-time. Paid upfront. 60-day build starts day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
