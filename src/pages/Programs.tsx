@@ -839,9 +839,9 @@ const Programs = () => {
             <div className="px-6 sm:px-10 py-7 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
               <Link
                 to="/grow-qualifier"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white/25 hover:border-white/45 text-white font-semibold text-base px-7 py-3 rounded transition-colors"
+                className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-base px-7 py-3.5 rounded transition-colors"
               >
-                Check if your market is open
+                Schedule a Growth Audit →
               </Link>
               <span className="text-white/55 text-[14px]">
                 Setup pairs with a monthly program: The Source, The Current, or The Surge.
