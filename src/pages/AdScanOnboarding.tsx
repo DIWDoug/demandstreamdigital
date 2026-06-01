@@ -234,8 +234,8 @@ const AdScanOnboarding = () => {
                 <Input id="company" required value={form.company} onChange={(e) => update("company", e.target.value)} />
               </div>
               <div>
-                <Label htmlFor="website">Website</Label>
-                <Input id="website" placeholder="https://" value={form.website} onChange={(e) => update("website", e.target.value)} />
+                <Label htmlFor="website">Website *</Label>
+                <Input id="website" required placeholder="https://" value={form.website} onChange={(e) => update("website", e.target.value)} />
               </div>
 
               {/* Account IDs */}
