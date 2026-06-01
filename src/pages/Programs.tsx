@@ -370,7 +370,171 @@ const TierShowcase = () => {
   );
 };
 
+const DELIVERABLES_GROUPS = [
+  {
+    Icon: Globe,
+    title: "The Growth Website",
+    items: [
+      "30-page conversion-built website on the DemandStream framework",
+      "Mobile-first, fast-loading, accessibility-ready",
+      "Hub-and-spoke service + service-area page structure",
+      "Financing CTAs, online booking and click-to-call built in",
+      "Schema and structured data across every page",
+      "Your brand kit applied: logo, colors, fonts, imagery",
+    ],
+  },
+  {
+    Icon: MapPin,
+    title: "Google & Local Visibility",
+    items: [
+      "Google Business Profile 110% optimized (every field, category, service, photo, post)",
+      "Local Services Ads (LSA) account stood up and verified",
+      "Citation and listing foundation across core directories",
+      "AI search readiness for AI Maps and answer engines",
+    ],
+  },
+  {
+    Icon: BarChart3,
+    title: "Tracking & Measurement",
+    items: [
+      "Call tracking provisioned for every channel",
+      "Conversion tracking and analytics wired end-to-end",
+      "Reporting dashboard stood up. One view of the funnel",
+      "Attribution mapped from first touch to booked job",
+    ],
+  },
+  {
+    Icon: Compass,
+    title: "Onboarding & Strategy",
+    items: [
+      "Full audit and 6-month growth roadmap",
+      "Kickoff and strategy session with your specialist",
+      "Dedicated Success Specialist assigned for life of program",
+    ],
+  },
+  {
+    Icon: Zap,
+    title: "Why this is the floor, not the ceiling",
+    items: [
+      "We will not run ads to a site we did not build",
+      "We will not promise rankings on a Google Profile we did not optimize",
+      "Every program after this compounds on the same foundation",
+      "Built once. Owned by you. Expanded forever.",
+    ],
+    accent: true,
+  },
+] as const;
+
+const DELIVERABLES_PHASES = [
+  { d: "Days 1 to 15", p: "Audit & Foundation" },
+  { d: "Days 15 to 35", p: "Website & Brand Build" },
+  { d: "Days 35 to 50", p: "Systems & Tracking" },
+  { d: "Days 50 to 60", p: "QA, Launch & Handoff" },
+] as const;
+
+const DeliverablesCollapsible = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="px-6 sm:px-10 pt-9 pb-2">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls="engine-deliverables-panel"
+        className="w-full flex items-start justify-between gap-4 text-left group"
+      >
+        <div>
+          <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
+            What you actually get
+          </h3>
+          <p className="text-white/65 text-[15px] md:text-base max-w-[720px]">
+            A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
+            60-day onboarding, yours to keep.
+          </p>
+        </div>
+        <span
+          className={`shrink-0 mt-1 w-10 h-10 rounded-md border flex items-center justify-center transition-colors ${
+            open
+              ? "bg-cta border-cta text-white"
+              : "bg-card border-border-card/70 text-white/80 group-hover:border-cta/60 group-hover:text-white"
+          }`}
+        >
+          {open ? <Minus className="w-5 h-5" strokeWidth={2.5} /> : <Plus className="w-5 h-5" strokeWidth={2.5} />}
+        </span>
+      </button>
+
+      {open && (
+        <div id="engine-deliverables-panel" className="mt-7 animate-in fade-in-50 duration-200">
+          <div className="grid md:grid-cols-2 gap-5">
+            {DELIVERABLES_GROUPS.map((group, gi) => {
+              const { Icon, title, items } = group;
+              const accent = "accent" in group ? group.accent : false;
+              return (
+
+              <div
+                key={gi}
+                className={`rounded-lg p-5 sm:p-6 border ${
+                  accent ? "bg-cta/[0.06] border-cta/35" : "bg-card border-border-card/70"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className={`w-10 h-10 rounded-md flex items-center justify-center border ${
+                      accent ? "bg-cta/15 border-cta/40" : "bg-accent-blue/10 border-accent-blue/30"
+                    }`}
+                  >
+                    <Icon
+                      className={`w-5 h-5 ${accent ? "text-cta" : "text-accent-blue"}`}
+                      strokeWidth={2.2}
+                    />
+                  </div>
+                  <h4 className="font-bold text-white text-[17px] md:text-[18px] tracking-tight">
+                    {title}
+                  </h4>
+                </div>
+                <ul className="space-y-2.5">
+                  {items.map((it, ii) => (
+                    <li
+                      key={ii}
+                      className="flex items-start gap-2.5 text-[15px] md:text-base text-white/80 leading-snug"
+                    >
+                      <Check
+                        className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${
+                          accent ? "text-cta" : "text-accent-blue"
+                        }`}
+                        strokeWidth={3}
+                      />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              );
+            })}
+
+          </div>
+
+          <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
+            {DELIVERABLES_PHASES.map((s, i) => (
+              <div
+                key={i}
+                className="bg-navy/60 border border-border-card/60 rounded-md px-4 py-3.5"
+              >
+                <div className="text-cta font-bold text-sm">{s.d}</div>
+                <div className="text-white/85 text-[15px] md:text-base font-semibold mt-1 leading-snug">
+                  {s.p}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const SECTION_TABS = [
+
   { id: "engine", label: "Growth Engine" },
   { id: "source", label: "Source" },
   { id: "current", label: "Current" },
@@ -805,136 +969,9 @@ const Programs = () => {
               </span>
             </div>
 
-            {/* Deliverables grid */}
-            <div className="px-6 sm:px-10 pt-9 pb-2">
-              <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
-                What you actually get
-              </h3>
-              <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
-                A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
-                60-day onboarding, yours to keep.
-              </p>
+            {/* Deliverables grid (collapsible) */}
+            <DeliverablesCollapsible />
 
-              <div className="grid md:grid-cols-2 gap-5">
-                {[
-                  {
-                    Icon: Globe,
-                    title: "The Growth Website",
-                    items: [
-                      "30-page conversion-built website on the DemandStream framework",
-                      "Mobile-first, fast-loading, accessibility-ready",
-                      "Hub-and-spoke service + service-area page structure",
-                      "Financing CTAs, online booking and click-to-call built in",
-                      "Schema and structured data across every page",
-                      "Your brand kit applied: logo, colors, fonts, imagery",
-                    ],
-                  },
-                  {
-                    Icon: MapPin,
-                    title: "Google & Local Visibility",
-                    items: [
-                      "Google Business Profile 110% optimized (every field, category, service, photo, post)",
-                      "Local Services Ads (LSA) account stood up and verified",
-                      "Citation and listing foundation across core directories",
-                      "AI search readiness for AI Maps and answer engines",
-                    ],
-                  },
-                  {
-                    Icon: BarChart3,
-                    title: "Tracking & Measurement",
-                    items: [
-                      "Call tracking provisioned for every channel",
-                      "Conversion tracking and analytics wired end-to-end",
-                      "Reporting dashboard stood up. One view of the funnel",
-                      "Attribution mapped from first touch to booked job",
-                    ],
-                  },
-                  {
-                    Icon: Compass,
-                    title: "Onboarding & Strategy",
-                    items: [
-                      "Full audit and 6-month growth roadmap",
-                      "Kickoff and strategy session with your specialist",
-                      "Dedicated Success Specialist assigned for life of program",
-                    ],
-                  },
-                  {
-                    Icon: Zap,
-                    title: "Why this is the floor, not the ceiling",
-                    items: [
-                      "We will not run ads to a site we did not build",
-                      "We will not promise rankings on a Google Profile we did not optimize",
-                      "Every program after this compounds on the same foundation",
-                      "Built once. Owned by you. Expanded forever.",
-                    ],
-                    accent: true,
-                  },
-                ].map(({ Icon, title, items, accent }, gi) => (
-                  <div
-                    key={gi}
-                    className={`rounded-lg p-5 sm:p-6 border ${
-                      accent
-                        ? "bg-cta/[0.06] border-cta/35"
-                        : "bg-card border-border-card/70"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div
-                        className={`w-10 h-10 rounded-md flex items-center justify-center border ${
-                          accent
-                            ? "bg-cta/15 border-cta/40"
-                            : "bg-accent-blue/10 border-accent-blue/30"
-                        }`}
-                      >
-                        <Icon
-                          className={`w-5 h-5 ${accent ? "text-cta" : "text-accent-blue"}`}
-                          strokeWidth={2.2}
-                        />
-                      </div>
-                      <h4 className="font-bold text-white text-[17px] md:text-[18px] tracking-tight">
-                        {title}
-                      </h4>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {items.map((it, ii) => (
-                        <li
-                          key={ii}
-                          className="flex items-start gap-2.5 text-[15px] md:text-base text-white/80 leading-snug"
-                        >
-                          <Check
-                            className={`w-[18px] h-[18px] mt-[3px] shrink-0 ${
-                              accent ? "text-cta" : "text-accent-blue"
-                            }`}
-                            strokeWidth={3}
-                          />
-                          <span>{it}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-
-              {/* Phase strip */}
-              <div className="mt-9 grid sm:grid-cols-4 gap-3.5">
-                {[
-                  { d: "Days 1 to 15", p: "Audit & Foundation" },
-                  { d: "Days 15 to 35", p: "Website & Brand Build" },
-                  { d: "Days 35 to 50", p: "Systems & Tracking" },
-                  { d: "Days 50 to 60", p: "QA, Launch & Handoff" },
-                ].map((s, i) => (
-                  <div
-                    key={i}
-                    className="bg-navy/60 border border-border-card/60 rounded-md px-4 py-3.5"
-                  >
-                    <div className="text-cta font-bold text-sm">{s.d}</div>
-                    <div className="text-white/85 text-[15px] md:text-base font-semibold mt-1 leading-snug">
-                      {s.p}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
 
           </section>
