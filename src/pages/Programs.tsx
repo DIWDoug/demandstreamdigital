@@ -881,7 +881,7 @@ const Programs = () => {
               price="$2,495"
               groups={source}
               cap="Ad management: flat up to $2,000/mo managed spend"
-              ctaTo="/programs/source"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "1 to 5 trucks" },
                 { label: "Revenue Range", value: "$400K to $1.5M" },
@@ -898,7 +898,7 @@ const Programs = () => {
               groups={current}
               cap="Ad management: flat up to $5,000/mo managed spend"
               popular
-              ctaTo="/programs/current"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "5 to 15 trucks" },
                 { label: "Revenue Range", value: "$1.5M to $4M" },
@@ -914,7 +914,7 @@ const Programs = () => {
               everything="Everything in The Current, plus ↓"
               groups={surge}
               cap="Ad management: flat up to $10,000/mo managed spend"
-              ctaTo="/programs/surge"
+              ctaTo="/grow-qualifier"
               highlights={[
                 { label: "Best For", value: "15+ trucks" },
                 { label: "Revenue Range", value: "$4M+" },
