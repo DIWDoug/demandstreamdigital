@@ -128,7 +128,7 @@ const Setup = () => {
           {/* ── Tier switcher ── */}
           <nav className="flex flex-wrap gap-2 mb-10" aria-label="Program tiers">
             {TIERS.map((t) => {
-              const active = t.slug === "setup";
+              const active = false;
               return (
                 <Link
                   key={t.slug}
