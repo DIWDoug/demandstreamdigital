@@ -45,7 +45,7 @@ const TierCard = ({
   cap,
   highlights,
   popular = false,
-  ctaText = "View Full Details",
+  ctaText = "Schedule a Growth Audit",
   ctaTo = "/grow-qualifier",
 }: {
   symbol: string;
