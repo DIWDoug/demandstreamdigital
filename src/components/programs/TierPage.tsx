@@ -1,259 +1,380 @@
-
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Plus, Minus, Check } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import SEOHead from "@/components/SEOHead";
+import { TIERS, type TierData } from "@/data/programs";
 
+// Back-compat exports for existing imports
 export type TierFeatureItem = string | { em: string; rest?: string };
 export type TierGroup = { title: string; items: TierFeatureItem[] };
-
-export type TierPageData = {
-  slug: "source" | "current" | "surge";
-  symbol: string;
-  eyebrow: string;        // e.g. "Foundation"
-  name: string;           // e.g. "Source"
-  tagline: string;
-  bestFor: string;        // text after "Best for:"
-  monthlyPrice: string;   // "$2,500"
-  adSpendCap: string;     // "$2,000"
-  contentPerMo: string;   // "3"
-  goal: string;
-  everythingIn?: string;  // e.g. "Everything in Source, plus ↓"
-  groups: TierGroup[];
-  fit: { yes: string[]; no: string[] };
-  adManagementCopy: string; // sentence describing this tier's cap + terms
+export type TierPageData = TierData & {
+  eyebrowColor?: "accent-blue" | "cta";
   upNext?: { label: string; to: string };
   topTierNote?: string;
-  eyebrowColor?: "accent-blue" | "cta";
-  flagship?: boolean;
-  seoTitle: string;
-  seoDescription: string;
-  canonical: string;
 };
 
-const TIERS = [
-  { slug: "source", label: "SOURCE", to: "/programs/source" },
-  { slug: "current", label: "CURRENT", to: "/programs/current" },
-  { slug: "surge", label: "SURGE", to: "/programs/surge" },
-  { slug: "setup", label: "SETUP", to: "/programs/setup" },
-] as const;
+interface TierPageProps {
+  data: TierData;
+}
 
-const TierPage = ({ data }: { data: TierPageData }) => {
+const TierRow = ({
+  tier,
+  open,
+  onToggle,
+}: {
+  tier: TierData;
+  open: boolean;
+  onToggle: () => void;
+}) => {
+  const flagship = !!tier.flagship;
+  return (
+    <article
+      id={tier.slug}
+      className={`border ${
+        open ? "border-cta/50" : "border-border-card/60"
+      } rounded-md bg-card transition-colors`}
+    >
+      {/* ── Trigger row ── */}
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={`${tier.slug}-panel`}
+        className="w-full flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-5 sm:py-6 text-left group"
+      >
+        <span
+          aria-hidden
+          className={`text-[28px] sm:text-[34px] leading-none shrink-0 ${
+            flagship ? "text-cta" : "text-accent-blue"
+          }`}
+        >
+          {tier.symbol}
+        </span>
+
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h2 className="font-extrabold text-white uppercase tracking-[0.05em] text-[22px] sm:text-[28px] leading-none">
+              {tier.name}
+            </h2>
+            <span
+              className={`text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.18em] ${
+                flagship ? "text-cta" : "text-accent-blue"
+              }`}
+            >
+              {tier.eyebrow}
+            </span>
+          </div>
+          <p className="text-white/60 text-[13.5px] sm:text-[14.5px] mt-1.5 leading-snug line-clamp-2 sm:line-clamp-1">
+            {tier.tagline}
+          </p>
+        </div>
+
+        <div className="hidden sm:flex flex-col items-end shrink-0 mr-2">
+          <span className="text-[11px] uppercase tracking-[0.14em] text-white/45 font-semibold">
+            Monthly
+          </span>
+          <span className="font-extrabold text-white text-[20px] leading-none mt-1">
+            {tier.monthlyPrice}
+            <span className="text-[12px] text-white/50 ml-0.5">/mo</span>
+          </span>
+        </div>
+
+        <span
+          className={`shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-colors ${
+            open
+              ? "border-cta text-cta bg-cta/10"
+              : "border-border-card/80 text-white/60 group-hover:border-white/40"
+          }`}
+        >
+          {open ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+        </span>
+      </button>
+
+      {/* ── Panel ── */}
+      {open && (
+        <div
+          id={`${tier.slug}-panel`}
+          className="px-5 sm:px-7 pb-8 pt-2 border-t border-border-card/40"
+        >
+          {/* Stat row + Goal */}
+          <div className="grid lg:grid-cols-[1fr_auto] gap-6 lg:gap-10 items-start pt-6">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/55">
+                Best For
+              </div>
+              <p className="text-white text-[16px] sm:text-[17px] mt-1.5 leading-relaxed">
+                {tier.bestFor}
+              </p>
+
+              <div className="mt-5 text-[11px] font-bold uppercase tracking-[0.18em] text-cta">
+                Goal
+              </div>
+              <p className="text-white/85 text-[15.5px] sm:text-[16.5px] mt-1.5 leading-relaxed max-w-[680px]">
+                {tier.goal}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 lg:flex lg:flex-col gap-3 lg:gap-2 lg:min-w-[200px] lg:border-l lg:border-border-card/60 lg:pl-6">
+              {[
+                { k: "Monthly Fee", v: tier.monthlyPrice, suffix: "/mo" },
+                { k: "Startup Fee", v: "$5,000", suffix: " 1x" },
+                { k: "Ad Budget", v: tier.adSpendCap, suffix: "/mo" },
+              ].map((s, i) => (
+                <div key={i} className="lg:py-1.5">
+                  <div className="text-[10.5px] uppercase tracking-[0.14em] text-white/50 font-semibold">
+                    {s.k}
+                  </div>
+                  <div className="font-extrabold text-white text-[20px] sm:text-[22px] leading-none mt-1">
+                    {s.v}
+                    <span className="text-[12px] font-semibold text-white/50 ml-0.5">
+                      {s.suffix}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* What's Included — editorial split */}
+          <div className="mt-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12 border-t border-border-card/40 pt-8">
+            {/* Stencil tier name */}
+            <div className="relative">
+              <div className="text-[10.5px] font-bold uppercase tracking-[0.22em] text-white/45 mb-3">
+                What is Included
+              </div>
+              <div
+                aria-hidden
+                className="font-extrabold uppercase leading-[0.88] tracking-[-0.02em] select-none"
+                style={{
+                  fontSize: "clamp(56px, 9vw, 120px)",
+                  color: "transparent",
+                  WebkitTextStroke: `1.5px hsl(var(--${
+                    flagship ? "cta" : "accent-blue"
+                  }) / 0.55)`,
+                }}
+              >
+                {tier.name.toUpperCase()}
+              </div>
+              {tier.everythingIn && (
+                <div className="mt-4 inline-block text-[12.5px] font-semibold text-cta bg-cta/[0.08] border border-cta/35 rounded px-3 py-1.5">
+                  {tier.everythingIn}
+                </div>
+              )}
+            </div>
+
+            {/* Flat feature list */}
+            <ul className="space-y-0 divide-y divide-white/[0.07]">
+              {tier.groups.flatMap((g) =>
+                g.items.map((item, ii) => ({ g, item, ii })),
+              ).map(({ item }, idx) => {
+                const isObj = typeof item !== "string";
+                return (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 py-3 text-[15px] sm:text-[16px] text-white/85 leading-snug"
+                  >
+                    <Check
+                      className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${
+                        flagship ? "text-cta" : "text-accent-blue"
+                      }`}
+                      strokeWidth={3}
+                    />
+                    <span>
+                      {isObj ? (
+                        <>
+                          <span className="text-white font-semibold">
+                            {(item as { em: string }).em}
+                          </span>
+                          {(item as { rest?: string }).rest}
+                        </>
+                      ) : (
+                        (item as string)
+                      )}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* Fit / Not Fit */}
+          <div className="mt-10 grid md:grid-cols-2 gap-6 border-t border-border-card/40 pt-8">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-green-500 mb-3">
+                A strong fit if
+              </div>
+              <ul className="space-y-2">
+                {tier.fit.yes.map((t, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2.5 text-[15px] text-white/80 leading-snug"
+                  >
+                    <span className="mt-[8px] w-1.5 h-1.5 rounded-full bg-green-500 shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-cta mb-3">
+                Maybe not yet if
+              </div>
+              <ul className="space-y-2">
+                {tier.fit.no.map((t, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2.5 text-[15px] text-white/70 leading-snug"
+                  >
+                    <span className="mt-[8px] w-1.5 h-1.5 rounded-full bg-cta shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Ad spend & management */}
+          <div className="mt-8 border-t border-border-card/40 pt-6">
+            <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-cta">
+              Ad Spend &amp; Management
+            </div>
+            <p
+              className="text-white/70 text-[14px] mt-2 max-w-[760px] leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: tier.adManagementCopy }}
+            />
+          </div>
+
+          {/* CTA */}
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              to="/grow-qualifier"
+              className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-[14.5px] tracking-[0.03em] px-6 py-3 rounded transition-colors"
+            >
+              Book Free Consultation →
+            </Link>
+            <span className="text-[13px] text-white/55">
+              One plumbing &amp; one HVAC company per market.
+            </span>
+          </div>
+        </div>
+      )}
+    </article>
+  );
+};
+
+const TierPage = ({ data }: TierPageProps) => {
+  const [openSlug, setOpenSlug] = useState<TierData["slug"]>(data.slug);
+  const mainRef = useRef<HTMLElement>(null);
+
+  // Keep panel in sync if user navigates between /programs/* routes
+  useEffect(() => {
+    setOpenSlug(data.slug);
+  }, [data.slug]);
+
   return (
     <>
-      <SEOHead title={data.seoTitle} description={data.seoDescription} canonical={data.canonical} />
+      <SEOHead
+        title={data.seoTitle}
+        description={data.seoDescription}
+        canonical={data.canonical}
+      />
       <Header />
 
-      <main className="bg-navy text-white pt-16 relative overflow-hidden">
-        {/* radial glows */}
+      <main
+        ref={mainRef}
+        className="bg-navy text-white pt-16 relative overflow-hidden"
+      >
+        {/* subtle wash */}
         <div
           aria-hidden
           className="pointer-events-none absolute -top-44 left-[20%] w-[640px] h-[640px] rounded-full"
           style={{
-            background: `radial-gradient(circle, hsl(var(--cta) / ${data.flagship ? 0.18 : 0.1}), transparent 65%)`,
+            background:
+              "radial-gradient(circle, hsl(var(--cta) / 0.10), transparent 65%)",
           }}
         />
-        {data.flagship && (
-          <div
-            aria-hidden
-            className="pointer-events-none absolute top-24 left-1/2 -translate-x-1/2 w-[820px] h-[420px] rounded-full"
-            style={{
-              background:
-                "radial-gradient(ellipse, hsl(var(--cta-glow) / 0.22), transparent 70%)",
-            }}
-          />
-        )}
         <div
           aria-hidden
           className="pointer-events-none absolute -bottom-56 -right-10 w-[580px] h-[580px] rounded-full"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent-blue) / 0.10), transparent 65%)" }}
+          style={{
+            background:
+              "radial-gradient(circle, hsl(var(--accent-blue) / 0.08), transparent 65%)",
+          }}
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 pt-10 pb-20">
-          {/* ── Tier switcher ── */}
-          <nav className="flex flex-wrap gap-2 mb-10" aria-label="Program tiers">
-            {TIERS.map((t) => {
-              const active = t.slug === data.slug;
-              return (
-                <Link
-                  key={t.slug}
-                  to={t.to}
-                  className={`text-[13px] font-semibold tracking-[0.04em] px-4 py-2 rounded transition-colors border ${
-                    active
-                      ? "bg-cta text-white border-cta"
-                      : "bg-card text-white/75 border-border-card/70 hover:text-white hover:border-cta/50"
-                  }`}
-                >
-                  {t.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* ── Hero ── */}
-          <section>
-            <div
-              className={`text-[12px] font-bold uppercase tracking-[0.21em] flex items-center gap-3 ${
-                data.eyebrowColor === "cta" ? "text-cta" : "text-accent-blue"
-              }`}
-            >
-              <span className="text-[30px] leading-none">{data.symbol}</span>
-              {data.eyebrow}
+        <div className="relative z-10 max-w-[1180px] mx-auto px-5 sm:px-6 pt-10 pb-20">
+          {/* ── Page intro ── */}
+          <header className="mb-10 max-w-[760px]">
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-cta">
+              Our Programs
             </div>
-            <h1 className="font-extrabold text-white mt-2 mb-1.5 leading-[1.04] tracking-[-0.015em] text-[clamp(34px,5.4vw,56px)]">
-              {data.name}
+            <h1 className="font-extrabold text-white mt-2 leading-[1.05] tracking-[-0.015em] text-[clamp(32px,5vw,52px)]">
+              Three Phases. One Growth System.
             </h1>
-            <p className="text-white/75 text-[19px] max-w-[620px] leading-snug">{data.tagline}</p>
-            <p className="mt-3.5 text-[14px] text-white/55">
-              <b className="text-white font-semibold">Best for:</b> {data.bestFor}
+            <p className="text-white/70 text-[16px] sm:text-[17px] mt-3 leading-relaxed">
+              Pick the phase that matches where your plumbing or HVAC company is
+              today. Each tier builds on the last. Tap to expand and see what's
+              inside.
             </p>
-          </section>
+          </header>
 
-          {/* ── 4-stat row ── */}
-          <section className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 mt-8 mb-2">
-            {[
-              { k: "Monthly", v: data.monthlyPrice, suffix: "/mo" },
-              { k: "Setup", v: "$5,000", suffix: " 1x" },
-              { k: "Ad spend cap", v: data.adSpendCap, suffix: "/mo" },
-              { k: "Content / mo", v: data.contentPerMo, suffix: "" },
-            ].map((s, i) => (
-              <div key={i} className="bg-card border border-border-card/70 rounded-lg px-4 py-4">
-                <div className="text-[11px] tracking-[0.09em] uppercase text-white/55 font-semibold">
-                  {s.k}
-                </div>
-                <div className="font-extrabold text-[24px] mt-1 text-white leading-none">
-                  {s.v}
-                  {s.suffix && (
-                    <span className="text-[14px] font-semibold text-white/55 ml-0.5">{s.suffix}</span>
-                  )}
-                </div>
-              </div>
+          {/* ── Accordion ── */}
+          <div className="space-y-3.5">
+            {TIERS.map((t) => (
+              <TierRow
+                key={t.slug}
+                tier={t}
+                open={openSlug === t.slug}
+                onToggle={() =>
+                  setOpenSlug((cur) => (cur === t.slug ? ("" as TierData["slug"]) : t.slug))
+                }
+              />
             ))}
-          </section>
+          </div>
 
-          {/* ── The Goal ── */}
+          {/* ── Setup callout ── */}
           <section
-            className="mt-7 rounded-lg border border-cta/30 px-6 py-6"
-            style={{
-              background: "linear-gradient(120deg, hsl(var(--cta) / 0.09), hsl(var(--navy-light)))",
-            }}
+            className="mt-10 rounded-md border border-border-card/60 px-6 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-card"
           >
-            <h3 className="text-[12px] tracking-[0.17em] uppercase text-cta font-bold">The Goal</h3>
-            <p className="text-white text-[17px] mt-2 max-w-[760px] leading-relaxed">{data.goal}</p>
-            {data.everythingIn && (
-              <div className="inline-block mt-3 text-[13px] font-semibold text-cta bg-cta/[0.08] border border-cta/35 rounded px-3.5 py-2">
-                {data.everythingIn}
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-blue">
+                Required for every program
               </div>
-            )}
-          </section>
-
-          {/* ── What's Included ── */}
-          <section className="mt-9">
-            <h2 className="font-extrabold text-[24px] tracking-[-0.015em] text-white">What's Included</h2>
-            <p className="text-white/55 text-[14px] mb-4">Your complete foundation.</p>
-            <div className="grid md:grid-cols-2 gap-4">
-              {data.groups.map((g, gi) => (
-                <div key={gi} className="bg-card border border-border-card/70 rounded-lg p-5">
-                  <h4 className="text-[11px] font-bold uppercase tracking-[0.13em] text-accent-blue mb-2.5">
-                    {g.title}
-                  </h4>
-                  <ul className="space-y-0">
-                    {g.items.map((item, ii) => (
-                      <li key={ii} className="relative pl-5 text-[14px] text-white/75 py-1 leading-snug">
-                        <span className="absolute left-0.5 top-[10px] w-1.5 h-1.5 rounded-full bg-accent-blue/80" />
-                        {typeof item === "string" ? (
-                          item
-                        ) : (
-                          <>
-                            <span className="text-white font-semibold">{item.em}</span>
-                            {item.rest}
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <div className="font-extrabold text-white text-[20px] mt-1">
+                The Foundation Build · $5,000 one-time
+              </div>
+              <p className="text-white/65 text-[14px] mt-1 max-w-[560px] leading-snug">
+                30-page growth website, GBP optimization, tracking, CRM and
+                automation. 60-day build, then your program runs on top.
+              </p>
             </div>
-          </section>
-
-          {/* ── Fit / Not Fit ── */}
-          <section className="mt-9">
-            <h2 className="font-extrabold text-[24px] tracking-[-0.015em] text-white">
-              Is {data.name} Right for You?
-            </h2>
-            <p className="text-white/55 text-[14px] mb-4">A quick gut check before we talk.</p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-card border border-border-card/70 rounded-lg p-5">
-                <h4 className="text-[13px] font-bold mb-2.5 flex items-center gap-2 text-green-500">
-                  ✓ A strong fit if
-                </h4>
-                <ul className="space-y-0">
-                  {data.fit.yes.map((t, i) => (
-                    <li key={i} className="relative pl-[22px] text-[14px] text-white/75 py-1 leading-snug">
-                      <span className="absolute left-0 top-[9px] w-[9px] h-[9px] rounded-full bg-green-500" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-card border border-border-card/70 rounded-lg p-5">
-                <h4 className="text-[13px] font-bold mb-2.5 flex items-center gap-2 text-cta">
-                  × Maybe not yet if
-                </h4>
-                <ul className="space-y-0">
-                  {data.fit.no.map((t, i) => (
-                    <li key={i} className="relative pl-[22px] text-[14px] text-white/75 py-1 leading-snug">
-                      <span className="absolute left-0 top-[9px] w-[9px] h-[9px] rounded-full bg-cta" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* ── Ad spend & management ── */}
-          <section className="mt-9 rounded-lg bg-navy-light border border-border-card/70 px-6 py-6">
-            <h3 className="text-[12px] font-bold tracking-[0.17em] uppercase text-cta">
-              Ad Spend &amp; Management
-            </h3>
-            <p
-              className="text-white/75 text-[14px] mt-2.5 max-w-[780px] leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: data.adManagementCopy }}
-            />
-            <div className="flex flex-wrap gap-3 mt-4">
-              <div className="bg-card border border-border-card/70 rounded px-4 py-3 text-[13px] text-white/70">
-                <b className="block text-white font-extrabold text-[17px] leading-tight">
-                  {data.adSpendCap}
-                </b>
-                managed spend included
-              </div>
-              <div className="bg-card border border-border-card/70 rounded px-4 py-3 text-[13px] text-white/70">
-                <b className="block text-white font-extrabold text-[17px] leading-tight">20%</b>
-                over cap
-              </div>
-              <div className="bg-card border border-border-card/70 rounded px-4 py-3 text-[13px] text-white/70">
-                <b className="block text-white font-extrabold text-[17px] leading-tight">15%</b>
-                above $10k/mo
-              </div>
-            </div>
+            <Link
+              to="/programs/setup"
+              className="inline-flex items-center justify-center bg-transparent border border-accent-blue/70 text-accent-blue hover:bg-accent-blue hover:text-navy font-bold text-[14px] tracking-[0.03em] px-5 py-2.5 rounded transition-colors shrink-0"
+            >
+              See the Setup →
+            </Link>
           </section>
 
           {/* ── Closing CTA ── */}
           <section
-            className="mt-9 text-center rounded-lg border border-border-card/70 px-6 py-12"
-            style={{ background: "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))" }}
+            className="mt-10 text-center rounded-md border border-border-card/60 px-6 py-12"
+            style={{
+              background:
+                "linear-gradient(160deg, hsl(var(--navy-light)), hsl(var(--navy)))",
+            }}
           >
-            <div className="text-[12px] font-bold uppercase tracking-[0.21em] text-accent-blue">
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-blue">
               Ready to own your market?
             </div>
-            <h2 className="font-extrabold text-white text-[30px] tracking-[-0.015em] mt-2.5 mb-2">
+            <h2 className="font-extrabold text-white text-[28px] sm:text-[32px] tracking-[-0.015em] mt-2.5 mb-2">
               Claim Your Territory
             </h2>
             <p className="text-white/70 text-[15px] max-w-[520px] mx-auto mb-6 leading-relaxed">
-              One plumbing company and one HVAC company per market. A short, no-pressure conversation to
-              confirm fit before any pitch.
+              One plumbing company and one HVAC company per market. A short,
+              no-pressure conversation to confirm fit before any pitch.
             </p>
             <Link
               to="/grow-qualifier"
@@ -261,25 +382,13 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             >
               Schedule a Growth Audit →
             </Link>
-            {data.upNext && (
-              <div className="mt-5 text-[14px] text-white/70">
-                Ready for more?{" "}
-                <Link to={data.upNext.to} className="text-accent-blue font-semibold hover:underline">
-                  {data.upNext.label} →
-                </Link>
-              </div>
-            )}
-            {!data.upNext && data.topTierNote && (
-              <div className="mt-5 text-[14px] text-white/60 italic max-w-[480px] mx-auto">
-                {data.topTierNote}
-              </div>
-            )}
           </section>
 
           <p className="text-white/45 text-[12px] mt-8 text-center leading-relaxed">
             DemandStream Digital. Growth systems for plumbing &amp; HVAC.
             <br />
-            Month-to-month after the initial term. Ad spend billed separately as pass-through.
+            Month-to-month after the initial term. Ad spend billed separately as
+            pass-through.
           </p>
         </div>
       </main>
