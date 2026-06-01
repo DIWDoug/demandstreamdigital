@@ -997,7 +997,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">$5,000 total</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Foundation Build only. No program fee yet.</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Growth Engine only. No program fee yet.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 61 onward</div>
