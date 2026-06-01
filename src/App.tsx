@@ -233,10 +233,10 @@ const App = () => (
           <Route path="/brand" element={<BrandGuide />} />
           <Route path="/style-guide" element={<BrandGuide />} />
           <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/source" element={<ProgramsSource />} />
-          <Route path="/programs/current" element={<ProgramsCurrent />} />
-          <Route path="/programs/surge" element={<ProgramsSurge />} />
-          <Route path="/programs/setup" element={<ProgramsSetup />} />
+          <Route path="/programs/source" element={<Navigate to="/programs#source" replace />} />
+          <Route path="/programs/current" element={<Navigate to="/programs#current" replace />} />
+          <Route path="/programs/surge" element={<Navigate to="/programs#surge" replace />} />
+          <Route path="/programs/setup" element={<Navigate to="/programs#engine" replace />} />
           <Route path="/pricing" element={<Navigate to="/programs" replace />} />
           <Route path="/grow-qualifier" element={<GrowQualifier />} />
           <Route path="/grow/thanks" element={<GrowThanks />} />
