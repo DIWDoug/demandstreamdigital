@@ -132,7 +132,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                   to={t.to}
                   className={`text-[13px] font-semibold tracking-[0.04em] px-4 py-2 rounded transition-colors border ${
                     active
-                      ? `bg-${accent} text-white border-${accent}`
+                      ? A.activePill
                       : "bg-card text-white/75 border-border-card/70 hover:text-white hover:border-cta/50"
                   }`}
                 >
@@ -145,7 +145,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {/* ── Hero ── */}
           <header className="max-w-[760px]">
             <div
-              className={`text-[11px] font-bold uppercase tracking-[0.22em] flex items-center gap-3 text-${accent}`}
+              className={`text-[11px] font-bold uppercase tracking-[0.22em] flex items-center gap-3 ${A.text}`}
             >
               <span className="text-[26px] leading-none">{data.symbol}</span>
               {data.eyebrow}
@@ -202,7 +202,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {data.problem && (
             <section className="mt-14 border-t border-border-card/40 pt-10 grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12">
               <div>
-                <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] text-${accent} mb-3`}>
+                <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-3`}>
                   The Pain This Solves
                 </div>
                 <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] leading-tight tracking-[-0.015em]">
@@ -219,12 +219,12 @@ const TierPage = ({ data }: { data: TierPageData }) => {
 
           {/* ── Goal ── */}
           <section className="mt-12 border-t border-border-card/40 pt-7">
-            <div className={`text-[11px] font-bold uppercase tracking-[0.18em] text-${accent}`}>Goal</div>
+            <div className={`text-[11px] font-bold uppercase tracking-[0.18em] ${A.text}`}>Goal</div>
             <p className="text-white text-[17px] sm:text-[18px] mt-2 max-w-[760px] leading-relaxed">
               {data.goal}
             </p>
             {data.everythingIn && (
-              <div className={`inline-block mt-4 text-[13px] font-semibold text-${accent} bg-${accent}/[0.08] border border-${accent}/35 rounded px-3.5 py-2`}>
+              <div className={`inline-block mt-4 text-[13px] font-semibold ${A.text} ${A.bgSoft} border ${A.borderSoft} rounded px-3.5 py-2`}>
                 {data.everythingIn}
               </div>
             )}
@@ -255,7 +255,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             <div className="space-y-7">
               {data.groups.map((g, gi) => (
                 <div key={gi}>
-                  <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] text-${accent} mb-2`}>
+                  <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] ${A.text} mb-2`}>
                     {g.title}
                   </div>
                   <ul className="space-y-0 divide-y divide-white/[0.07]">
@@ -267,7 +267,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                           className="flex items-start gap-3 py-3 text-[15px] sm:text-[16px] text-white/85 leading-snug"
                         >
                           <Check
-                            className={`w-[16px] h-[16px] mt-[5px] shrink-0 text-${accent}`}
+                            className={`w-[16px] h-[16px] mt-[5px] shrink-0 ${A.text}`}
                             strokeWidth={3}
                           />
                           <span>
@@ -294,7 +294,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {/* ── Process Timeline ── */}
           {data.process && data.process.length > 0 && (
             <section className="mt-14 border-t border-border-card/40 pt-10">
-              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] text-${accent} mb-2`}>
+              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-2`}>
                 How We Roll It Out
               </div>
               <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-6">
@@ -307,7 +307,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                     className="bg-card border border-border-card/70 rounded-md p-5 grid sm:grid-cols-[180px_1fr] gap-2 sm:gap-6"
                   >
                     <div>
-                      <div className={`font-extrabold text-${accent} text-[15px]`}>{p.days}</div>
+                      <div className={`font-extrabold ${A.text} text-[15px]`}>{p.days}</div>
                       <div className="text-[10.5px] uppercase tracking-[0.16em] text-white/55 font-semibold mt-1">
                         {p.phase}
                       </div>
@@ -322,7 +322,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {/* ── KPIs ── */}
           {data.kpis && data.kpis.length > 0 && (
             <section className="mt-14 border-t border-border-card/40 pt-10">
-              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] text-${accent} mb-2`}>
+              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-2`}>
                 Outcomes You Should Expect
               </div>
               <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-6">
@@ -331,7 +331,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {data.kpis.map((k, i) => (
                   <div key={i} className="bg-card border border-border-card/70 rounded-md p-5">
-                    <div className={`font-extrabold text-${accent} text-[34px] leading-none tracking-tight`}>
+                    <div className={`font-extrabold ${A.text} text-[34px] leading-none tracking-tight`}>
                       {k.metric}
                     </div>
                     <div className="text-white font-semibold text-[14.5px] mt-2">{k.label}</div>
@@ -403,7 +403,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
 
           {/* ── Ad spend & management ── */}
           <section className="mt-14 border-t border-border-card/40 pt-8">
-            <div className={`text-[11px] font-bold uppercase tracking-[0.18em] text-${accent}`}>
+            <div className={`text-[11px] font-bold uppercase tracking-[0.18em] ${A.text}`}>
               Ad Spend &amp; Management
             </div>
             <p
@@ -431,7 +431,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
           {/* ── FAQ ── */}
           {data.faqs && data.faqs.length > 0 && (
             <section className="mt-14 border-t border-border-card/40 pt-10">
-              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] text-${accent} mb-2`}>
+              <div className={`text-[10.5px] font-bold uppercase tracking-[0.22em] ${A.text} mb-2`}>
                 Questions, Answered
               </div>
               <h2 className="font-extrabold text-white text-[26px] sm:text-[30px] tracking-[-0.015em] mb-6">
