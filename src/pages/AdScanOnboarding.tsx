@@ -209,8 +209,8 @@ const AdScanOnboarding = () => {
                 <Input id="firstName" required value={form.firstName} onChange={(e) => update("firstName", e.target.value)} />
               </div>
               <div>
-                <Label htmlFor="lastName">Last name</Label>
-                <Input id="lastName" value={form.lastName} onChange={(e) => update("lastName", e.target.value)} />
+                <Label htmlFor="lastName">Last name *</Label>
+                <Input id="lastName" required value={form.lastName} onChange={(e) => update("lastName", e.target.value)} />
               </div>
               <div>
                 <Label htmlFor="email">Email *</Label>
