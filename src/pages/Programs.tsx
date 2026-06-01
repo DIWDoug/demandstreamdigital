@@ -466,7 +466,11 @@ const DeliverablesCollapsible = () => {
       {open && (
         <div id="engine-deliverables-panel" className="mt-7 animate-in fade-in-50 duration-200">
           <div className="grid md:grid-cols-2 gap-5">
-            {DELIVERABLES_GROUPS.map(({ Icon, title, items, accent }, gi) => (
+            {DELIVERABLES_GROUPS.map((group, gi) => {
+              const { Icon, title, items } = group;
+              const accent = "accent" in group ? group.accent : false;
+              return (
+
               <div
                 key={gi}
                 className={`rounded-lg p-5 sm:p-6 border ${
