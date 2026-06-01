@@ -53,7 +53,6 @@ const NAV_TIERS = [
   { slug: "source", label: "SOURCE", to: "/programs/source" },
   { slug: "current", label: "CURRENT", to: "/programs/current" },
   { slug: "surge", label: "SURGE", to: "/programs/surge" },
-  { slug: "setup", label: "SETUP", to: "/programs/setup" },
 ] as const;
 
 const FAQItem = ({ q, a }: TierFAQ) => {
