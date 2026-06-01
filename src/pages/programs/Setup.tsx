@@ -7,7 +7,6 @@ const TIERS = [
   { slug: "source", label: "SOURCE", to: "/programs/source" },
   { slug: "current", label: "CURRENT", to: "/programs/current" },
   { slug: "surge", label: "SURGE", to: "/programs/surge" },
-  { slug: "setup", label: "SETUP", to: "/programs/setup" },
 ] as const;
 
 type Item = string | { em: string; rest?: string };
