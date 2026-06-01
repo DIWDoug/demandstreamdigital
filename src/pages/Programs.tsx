@@ -591,26 +591,47 @@ const SectionTabs = () => {
   return (
     <div className="sticky top-16 z-30 -mx-6 px-6 bg-navy/90 backdrop-blur-md border-b border-white/10">
       <nav
-        className="max-w-[1400px] mx-auto flex justify-center gap-1 sm:gap-2 overflow-x-auto py-2.5 scrollbar-none"
+        className="max-w-[1400px] mx-auto flex flex-col items-center gap-2 py-2.5"
         aria-label="Program sections"
       >
-        {SECTION_TABS.map((t) => {
-          const isActive = active === t.id;
-          return (
-            <a
-              key={t.id}
-              href={`#${t.id}`}
-              onClick={(e) => handleClick(e, t.id)}
-              className={`shrink-0 text-[12.5px] sm:text-[13.5px] font-bold tracking-[0.04em] uppercase px-3.5 sm:px-5 py-2 rounded transition-colors border ${
-                isActive
-                  ? "bg-cta text-white border-cta"
-                  : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
-              }`}
-            >
-              {t.label}
-            </a>
-          );
-        })}
+        {/* Row 1: Foundation */}
+        <div className="flex justify-center">
+          <a
+            href="#engine"
+            onClick={(e) => handleClick(e, "engine")}
+            className={`shrink-0 text-[12.5px] sm:text-[13.5px] font-bold tracking-[0.04em] uppercase px-3.5 sm:px-5 py-2 rounded transition-colors border ${
+              active === "engine"
+                ? "bg-cta text-white border-cta"
+                : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
+            }`}
+          >
+            The Growth Engine
+          </a>
+        </div>
+        {/* Row 2: Tiers */}
+        <div className="flex justify-center gap-1 sm:gap-2">
+          {[
+            { id: "source", label: "The Source: Tier One" },
+            { id: "current", label: "The Current: Tier Two" },
+            { id: "surge", label: "The Surge: Tier Three" },
+          ].map((t) => {
+            const isActive = active === t.id;
+            return (
+              <a
+                key={t.id}
+                href={`#${t.id}`}
+                onClick={(e) => handleClick(e, t.id)}
+                className={`shrink-0 text-[12.5px] sm:text-[13.5px] font-bold tracking-[0.04em] uppercase px-3.5 sm:px-5 py-2 rounded transition-colors border ${
+                  isActive
+                    ? "bg-cta text-white border-cta"
+                    : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
+                }`}
+              >
+                {t.label}
+              </a>
+            );
+          })}
+        </div>
       </nav>
     </div>
   );
