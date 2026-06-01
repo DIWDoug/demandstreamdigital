@@ -457,6 +457,7 @@ const DeliverablesCollapsible = () => {
         </span>
       </button>
 
+      {open && (
         <div id="engine-deliverables-panel" className="mt-7 animate-in fade-in-50 duration-200">
           <p className="text-white/65 text-[15px] md:text-base max-w-[720px] mb-7">
             A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
