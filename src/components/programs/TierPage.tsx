@@ -233,7 +233,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
             )}
           </section>
 
-          {/* ── What's Included (collapsible) ── */}
+          {/* ── What's Included (always expanded) ── */}
           <section className="mt-12 border-t border-border-card/40 pt-10">
             <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-8 lg:gap-12">
               <div>
@@ -256,27 +256,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                 </p>
               </div>
 
-              <div className="flex items-start justify-end lg:pt-4">
-                <button
-                  onClick={() => setIncludedOpen((o) => !o)}
-                  className="inline-flex items-center gap-2.5 bg-card border border-border-card/70 hover:border-border-card rounded-full px-5 py-3 transition-colors"
-                  aria-expanded={includedOpen}
-                  aria-controls="included-content"
-                >
-                  <span className="text-[14px] font-semibold text-white/85">
-                    {includedOpen ? "Hide everything" : "See everything you get"}
-                  </span>
-                  {includedOpen ? (
-                    <Minus className="w-4 h-4 text-cta" strokeWidth={3} />
-                  ) : (
-                    <Plus className="w-4 h-4 text-cta" strokeWidth={3} />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {includedOpen && (
-              <div id="included-content" className="mt-8 space-y-7 max-w-[860px]">
+              <div id="included-content" className="space-y-7">
                 {data.groups.map((g, gi) => (
                   <div key={gi}>
                     <div className={`text-[10.5px] font-bold uppercase tracking-[0.18em] ${A.text} mb-2`}>
@@ -313,7 +293,7 @@ const TierPage = ({ data }: { data: TierPageData }) => {
                   </div>
                 ))}
               </div>
-            )}
+            </div>
           </section>
 
           {/* ── Process Timeline ── */}
