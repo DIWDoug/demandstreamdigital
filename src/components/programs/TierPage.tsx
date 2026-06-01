@@ -98,6 +98,7 @@ const ACCENT_CLASSES = {
 } as const;
 
 const TierPage = ({ data }: { data: TierPageData }) => {
+  const [includedOpen, setIncludedOpen] = useState(false);
   const flagship = !!data.flagship;
   const accentKey: "cta" | "accent-blue" = flagship ? "cta" : "accent-blue";
   const accent = accentKey;
