@@ -459,10 +459,9 @@ const Programs = () => {
     {
       title: "Visibility & Authority",
       items: [
-        "Google Maps Ownership",
-        "AI Maps Visibility",
-        "On-Page Authority Building",
-        "Local Authority & Trust Signals",
+        "Ongoing On-Page Authority Building",
+        "Monthly GBP posts, photos, and Q&A maintenance",
+        "Review velocity and reputation monitoring",
       ],
     },
     {
