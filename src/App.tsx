@@ -37,10 +37,8 @@ const Author = lazy(() => import("./pages/Author"));
 const Grow = lazy(() => import("./pages/Grow"));
 const BrandGuide = lazy(() => import("./pages/BrandGuide"));
 const Programs = lazy(() => import("./pages/Programs"));
-const ProgramsSource = lazy(() => import("./pages/programs/Source"));
-const ProgramsCurrent = lazy(() => import("./pages/programs/Current"));
-const ProgramsSurge = lazy(() => import("./pages/programs/Surge"));
-const ProgramsSetup = lazy(() => import("./pages/programs/Setup"));
+// Tier subpages removed: /programs is now a single anchored page.
+
 const AdScan = lazy(() => import("./pages/AdScan"));
 const AdScanOnboarding = lazy(() => import("./pages/AdScanOnboarding"));
 const AdScanThanks = lazy(() => import("./pages/AdScanThanks"));
