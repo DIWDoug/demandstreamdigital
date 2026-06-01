@@ -7,7 +7,6 @@ const TIERS = [
   { slug: "source", label: "SOURCE", to: "/programs/source" },
   { slug: "current", label: "CURRENT", to: "/programs/current" },
   { slug: "surge", label: "SURGE", to: "/programs/surge" },
-  { slug: "setup", label: "SETUP", to: "/programs/setup" },
 ] as const;
 
 type Item = string | { em: string; rest?: string };
@@ -129,7 +128,7 @@ const Setup = () => {
           {/* ── Tier switcher ── */}
           <nav className="flex flex-wrap gap-2 mb-10" aria-label="Program tiers">
             {TIERS.map((t) => {
-              const active = t.slug === "setup";
+              const active = false;
               return (
                 <Link
                   key={t.slug}
