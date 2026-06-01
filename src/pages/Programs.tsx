@@ -645,14 +645,15 @@ const Programs = () => {
             <div className="px-6 sm:px-10 pt-9 pb-7 border-b border-white/[0.07]">
               <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
                 <div>
-                  <Eyebrow>The Foundation Build</Eyebrow>
+                  <Eyebrow>The Growth Engine</Eyebrow>
                   <h2 className="font-extrabold text-white text-[28px] md:text-[36px] leading-[1.08] tracking-tight mt-3 mb-3">
-                    Before any program runs, we build the engine.
+                    What we do to ensure your website is built right the first time.
                   </h2>
                   <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
-                    The website is the growth engine, not a brochure. Every Google ranking, ad click,
-                    and review has to land somewhere that converts. We build that foundation once.
-                    Every program after this drives demand through it.
+                    A lot of companies are impatient about results and want to get results fast. The
+                    Growth Engine starts the engine and gets a foundation in place so that your baseline
+                    starts off better than most companies' six months in. Every program after this
+                    drives demand through it.
                   </p>
                   <p className="text-white/55 text-[15px] mt-3">
                     Required for all programs. Billed at signup, work starts day one.
