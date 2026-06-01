@@ -443,15 +443,9 @@ const DeliverablesCollapsible = () => {
         aria-controls="engine-deliverables-panel"
         className="w-full flex items-start justify-between gap-4 text-left group"
       >
-        <div>
-          <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
-            What you actually get
-          </h3>
-          <p className="text-white/65 text-[15px] md:text-base max-w-[720px]">
-            A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
-            60-day onboarding, yours to keep.
-          </p>
-        </div>
+        <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight">
+          What you actually get
+        </h3>
         <span
           className={`shrink-0 mt-1 w-10 h-10 rounded-md border flex items-center justify-center transition-colors ${
             open
@@ -465,6 +459,10 @@ const DeliverablesCollapsible = () => {
 
       {open && (
         <div id="engine-deliverables-panel" className="mt-7 animate-in fade-in-50 duration-200">
+          <p className="text-white/65 text-[15px] md:text-base max-w-[720px] mb-7">
+            A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
+            60-day onboarding, yours to keep.
+          </p>
           <div className="grid md:grid-cols-2 gap-5">
             {DELIVERABLES_GROUPS.map((group, gi) => {
               const { Icon, title, items } = group;
