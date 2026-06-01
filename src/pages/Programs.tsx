@@ -921,6 +921,9 @@ const Programs = () => {
                 <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
                   <img src={paypalCreditLogo} alt="PayPal Credit" className="h-3.5 md:h-4 w-auto" />
                 </span>
+                <span className="bg-white rounded px-1.5 py-1 inline-flex items-center">
+                  <img src={paymentMethods} alt="Visa, Mastercard, American Express, PayPal accepted" className="h-3.5 md:h-4 w-auto" />
+                </span>
               </div>
             </div>
             <p className="text-[12px] text-white/45 mt-2.5">
