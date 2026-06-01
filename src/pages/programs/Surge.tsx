@@ -133,7 +133,7 @@ const surgeData: TierPageData = {
     },
     {
       q: "Is there a setup fee on top of $6,000/mo?",
-      a: "Yes. The Foundation Build is $5,000 one-time, billed at signup. Surge does not require additional setup beyond the foundation, but custom integrations and team training are included rather than billed separately.",
+      a: "Yes. The Growth Engine is $5,000 one-time, billed at signup. Surge does not require additional setup beyond the foundation, but custom integrations and team training are included rather than billed separately.",
     },
     {
       q: "How often do we meet?",

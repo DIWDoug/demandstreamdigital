@@ -116,7 +116,7 @@ const sourceData: TierPageData = {
   faqs: [
     {
       q: "Is the $5,000 setup fee included in Source?",
-      a: "No. The Foundation Build is a one-time $5,000 investment billed at signup and is required for every program. Source is the monthly engagement that runs on top of that foundation.",
+      a: "No. The Growth Engine is a one-time $5,000 investment billed at signup and is required for every program. Source is the monthly engagement that runs on top of that foundation.",
     },
     {
       q: "How fast will I see results?",

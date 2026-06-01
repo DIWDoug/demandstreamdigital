@@ -633,7 +633,7 @@ const Programs = () => {
             </div>
           </section>
 
-          {/* ───── ONE-TIME SETUP (Foundation Build) ───── */}
+          {/* ───── ONE-TIME SETUP (Growth Engine) ───── */}
           <section
             className="mt-12 rounded-xl border border-cta/30 overflow-hidden"
             style={{
@@ -645,14 +645,15 @@ const Programs = () => {
             <div className="px-6 sm:px-10 pt-9 pb-7 border-b border-white/[0.07]">
               <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
                 <div>
-                  <Eyebrow>The Foundation Build</Eyebrow>
+                  <Eyebrow>The Growth Engine</Eyebrow>
                   <h2 className="font-extrabold text-white text-[28px] md:text-[36px] leading-[1.08] tracking-tight mt-3 mb-3">
-                    Before any program runs, we build the engine.
+                    What we do to ensure your website is built right the first time.
                   </h2>
                   <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
-                    The website is the growth engine, not a brochure. Every Google ranking, ad click,
-                    and review has to land somewhere that converts. We build that foundation once.
-                    Every program after this drives demand through it.
+                    A lot of companies are impatient about results and want to get results fast. The
+                    Growth Engine starts the engine and gets a foundation in place so that your baseline
+                    starts off better than most companies' six months in. Every program after this
+                    drives demand through it.
                   </p>
                   <p className="text-white/55 text-[15px] mt-3">
                     Required for all programs. Billed at signup, work starts day one.
@@ -662,7 +663,7 @@ const Programs = () => {
                 {/* Price block */}
                 <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
                   <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                    Foundation Build
+                    Growth Engine
                   </div>
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
@@ -675,7 +676,7 @@ const Programs = () => {
                     60-day build. Paid upfront at signup. Work starts day one.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
-                    Covers your full foundation build. One-time, not recurring.
+                    Covers your full Growth Engine build. One-time, not recurring.
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-2.5">
@@ -723,7 +724,7 @@ const Programs = () => {
                 What you actually get
               </h3>
               <p className="text-white/65 text-[15px] md:text-base mb-7 max-w-[720px]">
-                A complete, owned, conversion-ready foundation. Built by our team, installed during a
+                A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
                 60-day onboarding, yours to keep.
               </p>
 
@@ -948,7 +949,7 @@ const Programs = () => {
                     {
                       label: "The Engine",
                       amount: "$5,000",
-                      sub: "Foundation Build",
+                      sub: "Growth Engine",
                       note: "One-time. Paid upfront. 60-day build starts day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
@@ -996,7 +997,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">$5,000 total</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Foundation Build only. No program fee yet.</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Growth Engine only. No program fee yet.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 61 onward</div>
