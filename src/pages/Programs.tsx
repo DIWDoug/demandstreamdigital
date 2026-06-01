@@ -704,6 +704,19 @@ const Programs = () => {
               </div>
             </div>
 
+            {/* CTA row (always visible) */}
+            <div className="px-6 sm:px-10 py-7 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
+              <Link
+                to="/grow-qualifier"
+                className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-base px-7 py-3.5 rounded transition-colors"
+              >
+                Schedule a Growth Audit →
+              </Link>
+              <span className="text-white/55 text-[14px]">
+                Setup pairs with a monthly program: The Source, The Current, or The Surge.
+              </span>
+            </div>
+
             {/* Deliverables grid */}
             <div className="px-6 sm:px-10 pt-9 pb-2">
               <h3 className="font-extrabold text-white text-[22px] md:text-[26px] tracking-tight mb-1.5">
@@ -835,18 +848,7 @@ const Programs = () => {
               </div>
             </div>
 
-            {/* CTA row (always visible) */}
-            <div className="px-6 sm:px-10 py-7 border-t border-white/[0.08] flex flex-wrap items-center gap-4">
-              <Link
-                to="/grow-qualifier"
-                className="inline-flex items-center justify-center bg-cta hover:bg-cta-hover text-white font-bold text-base px-7 py-3.5 rounded transition-colors"
-              >
-                Schedule a Growth Audit →
-              </Link>
-              <span className="text-white/55 text-[14px]">
-                Setup pairs with a monthly program: The Source, The Current, or The Surge.
-              </span>
-            </div>
+
           </section>
 
           {/* ───── TIERS ───── */}
