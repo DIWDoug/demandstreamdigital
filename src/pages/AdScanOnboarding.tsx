@@ -116,10 +116,10 @@ const AdScanOnboarding = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.firstName || !form.email || !form.company) {
+    if (!form.firstName || !form.lastName || !form.email || !form.company || !form.website) {
       toast({
         title: "Missing required fields",
-        description: "Name, email, and company are required.",
+        description: "Name, email, company, and website are all required.",
         variant: "destructive",
       });
       return;
@@ -209,8 +209,8 @@ const AdScanOnboarding = () => {
                 <Input id="firstName" required value={form.firstName} onChange={(e) => update("firstName", e.target.value)} />
               </div>
               <div>
-                <Label htmlFor="lastName">Last name</Label>
-                <Input id="lastName" value={form.lastName} onChange={(e) => update("lastName", e.target.value)} />
+                <Label htmlFor="lastName">Last name *</Label>
+                <Input id="lastName" required value={form.lastName} onChange={(e) => update("lastName", e.target.value)} />
               </div>
               <div>
                 <Label htmlFor="email">Email *</Label>
@@ -234,8 +234,8 @@ const AdScanOnboarding = () => {
                 <Input id="company" required value={form.company} onChange={(e) => update("company", e.target.value)} />
               </div>
               <div>
-                <Label htmlFor="website">Website</Label>
-                <Input id="website" placeholder="https://" value={form.website} onChange={(e) => update("website", e.target.value)} />
+                <Label htmlFor="website">Website *</Label>
+                <Input id="website" required placeholder="https://" value={form.website} onChange={(e) => update("website", e.target.value)} />
               </div>
 
               {/* Account IDs */}

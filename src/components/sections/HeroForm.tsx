@@ -271,9 +271,10 @@ const HeroForm = () => {
           {/* Website (pre-filled, editable) */}
           <input
             type="text"
-            placeholder="Website URL"
+            placeholder="Website URL *"
             value={formData.website}
             onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+            required
             maxLength={255}
             className={inputClass}
           />
