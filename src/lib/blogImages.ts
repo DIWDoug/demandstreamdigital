@@ -66,6 +66,8 @@ const blogImageMap: Record<string, string> = {
   'lsa-vs-google-ads-plumbing-hvac': lsaVsGoogleAdsPlumbingHvac,
   'cost-per-booked-call-plumbing-hvac-google-ads': costPerBookedCallPlumbingHvac,
   'win-google-map-pack-plumbing-hvac': winGoogleMapPackPlumbingHvac,
+  'google-maps-ai-hvac-plumbing': googleMapsAiHvacPlumbing,
+  'google-business-profile-fields-reviews': googleBusinessProfileFieldsReviews,
 };
 
 /**
