@@ -495,11 +495,22 @@ const BlogPostPage = () => {
                           {children}
                         </h4>
                       ),
-                      p: ({ children }) => (
-                        <p className="text-muted-foreground text-base md:text-lg leading-relaxed md:leading-[1.85] mb-6">
-                          {children}
-                        </p>
-                      ),
+                      p: ({ children }) => {
+                        const childArray = React.Children.toArray(children);
+                        const containsImage = childArray.some((child) =>
+                          React.isValidElement(child) && (child.type === 'img' || child.type === 'figure')
+                        );
+
+                        if (containsImage) {
+                          return <>{children}</>;
+                        }
+
+                        return (
+                          <p className="text-muted-foreground text-base md:text-lg leading-relaxed md:leading-[1.85] mb-6">
+                            {children}
+                          </p>
+                        );
+                      },
                       ul: ({ children }) => (
                         <ul className="my-6 ml-1 space-y-3">
                           {React.Children.map(children, (child) => {
