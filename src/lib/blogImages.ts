@@ -33,6 +33,8 @@ import plumbingHvacWebsiteLeadLeaks from '@/assets/blog/plumbing-hvac-website-le
 import lsaVsGoogleAdsPlumbingHvac from '@/assets/blog/lsa-vs-google-ads-plumbing-hvac.jpg';
 import costPerBookedCallPlumbingHvac from '@/assets/blog/cost-per-booked-call-plumbing-hvac-google-ads.jpg';
 import winGoogleMapPackPlumbingHvac from '@/assets/blog/win-google-map-pack-plumbing-hvac.jpg';
+import googleMapsAiHvacPlumbing from '@/assets/blog/google-maps-ai-hvac-plumbing.jpg';
+import googleBusinessProfileFieldsReviews from '@/assets/blog/google-business-profile-fields-reviews.jpg';
 
 const blogImageMap: Record<string, string> = {
   'white-label-seo-benefits': whiteLabelSeoBenefits,
@@ -64,6 +66,8 @@ const blogImageMap: Record<string, string> = {
   'lsa-vs-google-ads-plumbing-hvac': lsaVsGoogleAdsPlumbingHvac,
   'cost-per-booked-call-plumbing-hvac-google-ads': costPerBookedCallPlumbingHvac,
   'win-google-map-pack-plumbing-hvac': winGoogleMapPackPlumbingHvac,
+  'google-maps-ai-hvac-plumbing': googleMapsAiHvacPlumbing,
+  'google-business-profile-fields-reviews': googleBusinessProfileFieldsReviews,
 };
 
 /**
