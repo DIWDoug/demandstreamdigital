@@ -40,6 +40,10 @@ export function cleanBlogContent(content: string, slug?: string): string {
     // Remove scraped/remote images (keep our inline key-based images like (infographic-...))
     /!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)/gi,
     /\*\*!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)\*\*/gi,
+
+    // Remove visible image captions from imported HTML while keeping image alt text intact
+    /<figcaption\b[^>]*>[\s\S]*?<\/figcaption>/gi,
+    /<\/??figcaption\b[^>]*>/gi,
     
     // Old site navigation remnants
     /"\*" indicates required fields[\s\S]*?How can we help you\?/gi,
