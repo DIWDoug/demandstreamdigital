@@ -622,14 +622,12 @@ const BlogPostPage = () => {
                         // Resolve image source - check if it's a key in our blogImages map
                         const resolvedSrc = src ? (getBlogFeaturedImage(src) || src) : '';
                         return (
-                          <figure className="my-10">
-                            <img 
-                              src={resolvedSrc} 
-                              alt={alt || 'Blog content illustration'} 
-                              className="w-full rounded-xl shadow-lg"
-                              loading="lazy"
-                            />
-                          </figure>
+                          <img 
+                            src={resolvedSrc} 
+                            alt={alt || 'Blog content illustration'} 
+                            className="w-full rounded-xl shadow-lg my-10"
+                            loading="lazy"
+                          />
                         );
                       },
                     }}
