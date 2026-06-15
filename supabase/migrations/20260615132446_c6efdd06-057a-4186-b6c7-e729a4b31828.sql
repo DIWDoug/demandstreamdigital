@@ -1,0 +1,1 @@
+UPDATE public.blogs SET content = REPLACE(content, '](google-business-profile-fields-reviews)', '](/__l5e/assets-v1/4e4b0705-d8a8-4a3c-9e9c-004dbcf7a003/google-business-profile-fields-reviews.jpg)') WHERE slug='google-maps-ai-hvac-plumbing';
