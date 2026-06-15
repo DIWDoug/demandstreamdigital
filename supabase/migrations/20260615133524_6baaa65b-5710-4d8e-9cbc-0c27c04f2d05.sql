@@ -1,0 +1,1 @@
+UPDATE blogs SET excerpt = 'Learn how Google Maps AI reshapes contractor recommendations for HVAC and plumbing. Optimize your Google Business Profile to ensure you get noticed by potential clients.' WHERE slug = 'google-maps-ai-hvac-plumbing';
