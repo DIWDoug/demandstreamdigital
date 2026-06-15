@@ -629,11 +629,6 @@ const BlogPostPage = () => {
                               className="w-full rounded-xl shadow-lg"
                               loading="lazy"
                             />
-                            {alt && (
-                              <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
-                                {alt}
-                              </figcaption>
-                            )}
                           </figure>
                         );
                       },
