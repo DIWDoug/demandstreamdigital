@@ -41,9 +41,11 @@ export function cleanBlogContent(content: string, slug?: string): string {
     /!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)/gi,
     /\*\*!\[[^\]]*\]\((?:https?:\/\/|\/\/|data:)[^)]+\)\*\*/gi,
 
-    // Remove visible image captions from imported HTML while keeping image alt text intact
+    // Remove visible image captions and figure wrappers from imported HTML while keeping image alt text intact
     /<figcaption\b[^>]*>[\s\S]*?<\/figcaption>/gi,
     /<\/??figcaption\b[^>]*>/gi,
+    /<figure\b[^>]*>/gi,
+    /<\/figure>/gi,
     
     // Old site navigation remnants
     /"\*" indicates required fields[\s\S]*?How can we help you\?/gi,
