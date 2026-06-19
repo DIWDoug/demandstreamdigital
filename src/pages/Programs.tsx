@@ -216,7 +216,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "5 to 15 trucks. $1.5M to $4M revenue.",
     timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
-    investment: "$3,995 / month",
+    investment: "$4,000 / month",
     ctaTo: "/programs/current",
   },
   {
