@@ -33,7 +33,7 @@ export const TIERS: TierData[] = [
       "The foundational starter. Get found locally and stop missing calls. For one-truck operators just turning on their online presence.",
     monthlyPrice: "$1,995",
     adSpendCap: "$1,000",
-    contentPerMo: "2",
+    contentPerMo: "3",
     goal:
       "Lay the foundation: a real website, a fully optimized Google Business Profile, and the automation to capture every call and review that comes in.",
     groups: [
@@ -42,7 +42,7 @@ export const TIERS: TierData[] = [
         items: [
           { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
           "Google Business Profile optimization",
-          { em: "On-Page Authority Building", rest: " — 2/mo (service · geographic)" },
+          { em: "On-Page Authority Building", rest: " — 3/mo (service · geographic)" },
           "Local citations and trust signals",
         ],
       },
@@ -50,7 +50,8 @@ export const TIERS: TierData[] = [
         title: "Lead Generation",
         items: [
           "Google Guaranteed Lead Ads (LSA)",
-          { em: "5-Star Review Engine + Review Coaching" },
+          "Meta local specials campaigns",
+          { em: "5-Star Review Engine", rest: " — automation-powered" },
         ],
       },
       {
@@ -183,6 +184,8 @@ export const TIERS: TierData[] = [
           "Competitive Displacement Campaigns",
           "On-Page Authority Building, 8/mo",
           "Off-Site Authority (quarterly placements)",
+          "Reddit SEO & AI Citations",
+          "Hiring Ads — scale your team as you grow",
           "Competitive Visibility Tracking",
           "Competitive Review Tracking",
         ],
