@@ -189,9 +189,10 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
-      "Built for the one or two-truck operator just turning on a real online presence. We install a foundational website, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
+      "Built for the one or two-truck operator just turning on a real online presence. We build your website from one of our proven design frameworks, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
     outcomes: [
-      "A real website and fully optimized Google Business Profile",
+      "A custom website built for your brand — conversion-optimized, mobile-first, owned by you",
+      "Fully optimized Google Business Profile that drives Maps visibility",
       "Capture missed-call leads automatically via text-back",
       "Build a 5-star reputation that converts browsers into bookings",
       "Centralize every lead in one CRM with full call tracking",
@@ -207,8 +208,9 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: Zap,
     tagline: "Demand Control · Most Popular",
     description:
-      "Demand control across all four seasons. Everything in Spring, plus Google Ads, Meta special-offer ads, and the automation we run for you. SEO compounds in the background while paid ads generate booked service calls on demand. This is what most operators with capacity to fill end up choosing, because shoulder season stops being scary.",
+      "Demand control across all four seasons. Everything in Spring — including your custom website — plus Google Ads, Meta special-offer ads, and the automation we run for you. SEO compounds in the background while paid ads generate booked service calls on demand. This is what most operators with capacity to fill end up choosing, because shoulder season stops being scary.",
     outcomes: [
+      "Your website continuously optimized for conversions and seasonal campaigns",
       "Demand control across all four seasons. No more shoulder-season anxiety",
       "Google Ads + LSA combined for daily booked-call flow",
       "Meta special-offer ads for tune-ups, water heaters, and seasonal promos",
@@ -225,9 +227,9 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: Crown,
     tagline: "Ownership Phase",
     description:
-      "Everything in Current, plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
+      "Everything in Current — including your website and all landing infrastructure — plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
     outcomes: [
-      "Multi-city service-area expansion with dedicated landing infrastructure",
+      "Multi-city website expansion with dedicated landing pages for every service area",
       "Competitive displacement campaigns against named competitors",
       "Custom workflows tied to CRM, payment, and calendar systems",
       "Priority support with monthly strategy reviews",
@@ -626,6 +628,7 @@ const Programs = () => {
     {
       title: "Visibility & Authority",
       items: [
+        { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
         "On-Page Authority Building (2/mo)",
         "Local citations & trust signals",
@@ -661,6 +664,7 @@ const Programs = () => {
       title: "Demand Control (the difference)",
       items: [
         { em: "Demand control across all four seasons", rest: " — never worry about shoulder season" },
+        { em: "Website included & continuously optimized", rest: " — landing pages, CTAs, and conversion tuning" },
         "Google Ads Management (Search + Performance Max)",
         "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
         "Retargeting + seasonal campaigns",
@@ -694,6 +698,7 @@ const Programs = () => {
     {
       title: "Expansion & Market Ownership",
       items: [
+        { em: "Custom website + multi-city landing infrastructure" },
         { em: "Multi-City Service-Area Expansion" },
         "Multi-Channel Paid (Meta · YouTube · Display)",
         "Competitive Displacement Campaigns",
@@ -862,7 +867,7 @@ const Programs = () => {
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="inline-flex items-center text-[11px] md:text-xs font-bold uppercase tracking-[0.18em] text-cta bg-cta/15 border border-cta/25 px-2.5 py-1 rounded-md">
-              Built for Plumbing &amp; HVAC. Designed to Book More Calls.
+              Built for Plumbing &amp; HVAC. Website Included. Designed to Book More Calls.
             </div>
 
             <h1 className="font-extrabold text-white mt-2 md:mt-4 mb-2 md:mb-5 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(26px,7.5vw,88px)]">
@@ -874,7 +879,7 @@ const Programs = () => {
             <p className="text-white/80 text-[14px] sm:text-[19px] max-w-[720px] mx-auto leading-snug md:leading-relaxed">
               Growth systems for plumbing &amp; HVAC companies.{" "}
               <span className="text-white font-semibold">
-                Not marketing services. A complete growth system.
+                Custom website built for you. Not marketing services. A complete growth system.
               </span>
             </p>
             <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
@@ -905,6 +910,7 @@ const Programs = () => {
                   { label: "Best For", value: "1 to 2 trucks" },
                   { label: "Revenue Range", value: "Under $500K" },
                   { label: "Startup Fee", value: "$3,500" },
+                  { label: "Website", value: "Built for You" },
                   { label: "Ad Spend Cap", value: "Up to $1,000 / mo" },
                 ]}
               />
@@ -924,6 +930,7 @@ const Programs = () => {
                   { label: "Best For", value: "5 to 15 trucks" },
                   { label: "Revenue Range", value: "$1.5M to $4M" },
                   { label: "Startup Fee", value: "$3,500" },
+                  { label: "Website", value: "Included + Optimized" },
                   { label: "Ad Spend Cap", value: "Up to $5,000 / mo" },
                 ]}
               />
@@ -942,6 +949,7 @@ const Programs = () => {
                   { label: "Best For", value: "15+ trucks" },
                   { label: "Revenue Range", value: "$4M+" },
                   { label: "Startup Fee", value: "$3,500" },
+                  { label: "Website", value: "Multi-City Ready" },
                   { label: "Ad Spend Cap", value: "Up to $10,000 / mo" },
                 ]}
               />
@@ -997,8 +1005,8 @@ const Programs = () => {
                     {
                       label: "Startup Fee",
                       amount: "$3,500",
-                      sub: "Starts the program",
-                      note: "Paid at signup. Onboarding scheduled and build begins day one.",
+                      sub: "Website + onboarding",
+                      note: "Paid at signup. Your custom website build begins day one. Onboarding scheduled immediately.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
@@ -1045,7 +1053,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">At signup</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">$3,500 startup fee</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">No monthly fee until 30 days after onboarding.</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Custom website build begins immediately. No monthly fee until 30 days after onboarding.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
