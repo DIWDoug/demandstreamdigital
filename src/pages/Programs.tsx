@@ -698,6 +698,9 @@ const Programs = () => {
       items: [
         "On-Page Authority Building (5/mo)",
         "Reddit SEO & AI Citations",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
+        { em: "Demand Stream Academy", rest: " — included ($997 value)" },
         "Quarterly Growth Planning",
       ],
     },
