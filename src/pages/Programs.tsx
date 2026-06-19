@@ -611,7 +611,7 @@ const SectionTabs = () => {
         {/* Row 2: Tiers */}
         <div className="flex justify-center gap-1 sm:gap-2">
           {[
-            { id: "source", label: "The Source: Tier One" },
+            { id: "spring", label: "The Spring: Tier One" },
             { id: "current", label: "The Current: Tier Two" },
             { id: "surge", label: "The Surge: Tier Three" },
           ].map((t) => {
