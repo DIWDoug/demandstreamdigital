@@ -718,6 +718,8 @@ const Programs = () => {
         "Off-Site Authority (quarterly placements)",
         "Reddit SEO & AI Citations",
         "Hiring Ads — scale your team as you grow",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
         "Competitive Visibility Tracking",
         "Competitive Review Tracking",
       ],
