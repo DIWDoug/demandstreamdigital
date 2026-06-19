@@ -628,6 +628,7 @@ const Programs = () => {
     {
       title: "Visibility & Authority",
       items: [
+        { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
         "On-Page Authority Building (2/mo)",
         "Local citations & trust signals",
@@ -663,6 +664,7 @@ const Programs = () => {
       title: "Demand Control (the difference)",
       items: [
         { em: "Demand control across all four seasons", rest: " — never worry about shoulder season" },
+        { em: "Website included & continuously optimized", rest: " — landing pages, CTAs, and conversion tuning" },
         "Google Ads Management (Search + Performance Max)",
         "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
         "Retargeting + seasonal campaigns",
@@ -696,6 +698,7 @@ const Programs = () => {
     {
       title: "Expansion & Market Ownership",
       items: [
+        { em: "Custom website + multi-city landing infrastructure" },
         { em: "Multi-City Service-Area Expansion" },
         "Multi-Channel Paid (Meta · YouTube · Display)",
         "Competitive Displacement Campaigns",
