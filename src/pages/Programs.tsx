@@ -184,37 +184,37 @@ type ShowcaseTier = {
 
 const SHOWCASE_TIERS: ShowcaseTier[] = [
   {
-    id: "source",
-    name: "The Source",
+    id: "spring",
+    name: "The Spring",
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
-      "Built for 1 to 5 truck operators ready to stop relying on word-of-mouth. We install the visibility, review, and lead-capture systems that turn your service area into a predictable booking engine. Every call gets answered, every lead gets followed up, and every search shows your name first.",
+      "Built for the one or two-truck operator just turning on a real online presence. We install a foundational website, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
     outcomes: [
-      "Rank in the Google Maps 3-pack for your top service categories",
+      "A real website and fully optimized Google Business Profile",
       "Capture missed-call leads automatically via text-back",
       "Build a 5-star reputation that converts browsers into bookings",
       "Centralize every lead in one CRM with full call tracking",
     ],
-    bestFor: "1 to 5 trucks. $400K to $1.5M revenue.",
+    bestFor: "1 to 2 trucks. Just getting started online.",
     timeframe: "Foundation laid in 60 days. Compounds month over month.",
-    investment: "$2,500 / month",
-    ctaTo: "/programs/source",
+    investment: "$1,500 / month",
+    ctaTo: "/programs/spring",
   },
   {
     id: "current",
     name: "The Current",
     Icon: Zap,
-    tagline: "Acceleration Phase",
+    tagline: "Demand Control · Most Popular",
     description:
-      "Everything in Source, plus the paid acceleration and hands-off automation layer. We layer Google Ads, retargeting, and seasonal campaigns on top of your organic foundation, then automate the follow-up so booked-call rates climb without adding staff. This is the tier most operators graduate into within 6 months.",
+      "Demand control across all four seasons. Everything in Spring, plus Google Ads, Meta special-offer ads, and the automation we run for you. SEO compounds in the background while paid ads generate booked service calls on demand. This is what most operators with capacity to fill end up choosing, because shoulder season stops being scary.",
     outcomes: [
-      "Daily booked-call flow from Google Ads + LSA combined",
-      "Landing pages and CRO tuned to your highest-margin services",
-      "Advanced nurture sequences across email and SMS",
-      "Quarterly growth planning with a dedicated specialist",
+      "Demand control across all four seasons. No more shoulder-season anxiety",
+      "Google Ads + LSA combined for daily booked-call flow",
+      "Meta special-offer ads for tune-ups, water heaters, and seasonal promos",
+      "Hands-off automation: nurture, follow-up, review response",
     ],
-    bestFor: "5 to 15 trucks. $1.5M to $4M revenue.",
+    bestFor: "3 to 15 trucks. Ready to control demand year-round.",
     timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
     investment: "$4,000 / month",
     ctaTo: "/programs/current",
@@ -534,7 +534,7 @@ const DeliverablesCollapsible = () => {
 const SECTION_TABS = [
 
   { id: "engine", label: "Startup Fee" },
-  { id: "source", label: "Source" },
+  { id: "spring", label: "Spring" },
   { id: "current", label: "Current" },
   { id: "surge", label: "Surge" },
 ] as const;
@@ -611,7 +611,7 @@ const SectionTabs = () => {
         {/* Row 2: Tiers */}
         <div className="flex justify-center gap-1 sm:gap-2">
           {[
-            { id: "source", label: "The Source: Tier One" },
+            { id: "spring", label: "The Spring: Tier One" },
             { id: "current", label: "The Current: Tier Two" },
             { id: "surge", label: "The Surge: Tier Three" },
           ].map((t) => {
@@ -638,13 +638,13 @@ const SectionTabs = () => {
 };
 
 const Programs = () => {
-  const source: Group[] = [
+  const spring: Group[] = [
     {
       title: "Visibility & Authority",
       items: [
-        "Ongoing On-Page Authority Building",
-        "Monthly GBP posts, photos, and Q&A maintenance",
-        "Review velocity and reputation monitoring",
+        "Google Business Profile optimization",
+        "On-Page Authority Building (2/mo)",
+        "Local citations & trust signals",
       ],
     },
     {
@@ -660,7 +660,6 @@ const Programs = () => {
         "CRM & Sales Pipeline",
         "Missed-Call Text-Back",
         "24/7 Lead Capture Chat",
-        "Customer Reactivation Email",
       ],
     },
     {
@@ -669,15 +668,19 @@ const Programs = () => {
         "Dedicated Success Specialist",
         "Call Tracking & Attribution",
         "Monthly Growth Reporting",
-        "6-Month Roadmap into Current",
       ],
     },
   ];
 
   const current: Group[] = [
     {
-      title: "Paid Acquisition",
-      items: ["Google Ads Management", "Retargeting", "Seasonal Campaigns"],
+      title: "Demand Control (the difference)",
+      items: [
+        { em: "Demand control across all four seasons", rest: " — never worry about shoulder season" },
+        "Google Ads Management (Search + Performance Max)",
+        "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
+        "Retargeting + seasonal campaigns",
+      ],
     },
     {
       title: "Conversion",
@@ -699,7 +702,7 @@ const Programs = () => {
     },
     {
       title: "Content & Planning",
-      items: ["On-Page Authority Building", "Quarterly Growth Planning"],
+      items: ["On-Page Authority Building (5/mo)", "Quarterly Growth Planning"],
     },
   ];
 
@@ -743,7 +746,7 @@ const Programs = () => {
     <>
       <SEOHead
         title="Programs & Pricing | DemandStream Digital"
-        description="Three growth programs for plumbing and HVAC companies. SOURCE, CURRENT, and SURGE. One plumbing company and one HVAC client per market."
+        description="Three growth programs for plumbing and HVAC companies. SPRING, CURRENT, and SURGE. One plumbing company and one HVAC client per market."
         canonical="https://demandstreamdigital.com/programs"
       />
       <Helmet>
@@ -891,7 +894,7 @@ const Programs = () => {
               </span>
             </p>
             <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
-              Everything in Source carries into Current. Everything in Current carries into Surge.
+              Everything in Spring carries into Current. Everything in Current carries into Surge.
             </p>
 
             <div className="inline-block mt-4 md:mt-7 text-[12px] md:text-[13px] text-white/70 border border-white/20 bg-white/[0.06] px-3 md:px-4 py-1.5 rounded">
@@ -984,7 +987,7 @@ const Programs = () => {
                 Schedule a Growth Audit →
               </Link>
               <span className="text-white/55 text-[14px]">
-                Setup pairs with a monthly program: The Source, The Current, or The Surge.
+                Setup pairs with a monthly program: The Spring, The Current, or The Surge.
               </span>
             </div>
 
@@ -997,20 +1000,20 @@ const Programs = () => {
 
           {/* ───── TIERS ───── */}
           <section className="mt-12 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
-            <div id="source" className="scroll-mt-32">
+            <div id="spring" className="scroll-mt-32">
               <TierCard
                 symbol="◇"
-                name="The Source"
-                tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-                price="$2,500"
-                groups={source}
-                cap="Ad management: flat up to $2,000/mo managed spend"
+                name="The Spring"
+                tag="Foundation. Get found locally and stop missing calls. For 1 to 2 truck operators."
+                price="$1,500"
+                groups={spring}
+                cap="LSA management: flat up to $1,000/mo managed spend"
                 ctaTo="/grow-qualifier"
                 highlights={[
-                  { label: "Best For", value: "1 to 5 trucks" },
-                  { label: "Revenue Range", value: "$400K to $1.5M" },
+                  { label: "Best For", value: "1 to 2 trucks" },
+                  { label: "Revenue Range", value: "Under $500K" },
                   { label: "Startup Fee", value: "$3,500" },
-                  { label: "Ad Spend Cap", value: "Up to $2,000 / mo" },
+                  { label: "Ad Spend Cap", value: "Up to $1,000 / mo" },
                 ]}
               />
             </div>
@@ -1020,7 +1023,7 @@ const Programs = () => {
                 name="The Current"
                 tag="Active growth. Paid acceleration plus hands-off automation."
                 price="$4,000"
-                everything="Everything in The Source, plus ↓"
+                everything="Everything in The Spring, plus ↓"
                 groups={current}
                 cap="Ad management: flat up to $5,000/mo managed spend"
                 popular
@@ -1155,7 +1158,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">$2,500 / $4,000 / $6,000 based on tier</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$1,500 / $4,000 / $6,000 based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
