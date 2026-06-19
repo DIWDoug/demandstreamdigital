@@ -711,6 +711,8 @@ const Programs = () => {
         "Competitive Displacement Campaigns",
         "On-Page Authority Building",
         "Off-Site Authority (quarterly placements)",
+        "Reddit SEO & AI Citations",
+        "Hiring Ads — scale your team as you grow",
         "Competitive Visibility Tracking",
         "Competitive Review Tracking",
       ],
