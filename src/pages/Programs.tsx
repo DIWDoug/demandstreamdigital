@@ -198,7 +198,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "1 to 5 trucks. $400K to $1.5M revenue.",
     timeframe: "Foundation laid in 60 days. Compounds month over month.",
-    investment: "$2,495 / month",
+    investment: "$2,500 / month",
     ctaTo: "/programs/source",
   },
   {
