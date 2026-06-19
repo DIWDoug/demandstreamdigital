@@ -89,7 +89,7 @@ export const TIERS: TierData[] = [
       "Your ad spend is always your money, paid to Google directly. Never marked up. Source includes hands-on management up to <b class='text-white font-semibold'>$2,000/mo</b> in spend. Beyond the cap: 20% of spend, dropping to 15% above $10,000/mo.",
     seoTitle: "Source Program | DemandStream Digital",
     seoDescription:
-      "Source: the visibility and lead-capture foundation for plumbing & HVAC companies. $2,500/mo, $5,000 one-time setup. One company per market.",
+      "Source: the visibility and lead-capture foundation for plumbing & HVAC companies. $2,500/mo, $3,500 startup fee. One company per market.",
     canonical: "https://demandstreamdigital.com/programs/source",
   },
   {

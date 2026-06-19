@@ -198,7 +198,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "1 to 5 trucks. $400K to $1.5M revenue.",
     timeframe: "Foundation laid in 60 days. Compounds month over month.",
-    investment: "$2,495 / month",
+    investment: "$2,500 / month",
     ctaTo: "/programs/source",
   },
   {
@@ -216,7 +216,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "5 to 15 trucks. $1.5M to $4M revenue.",
     timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
-    investment: "$3,995 / month",
+    investment: "$4,000 / month",
     ctaTo: "/programs/current",
   },
   {
@@ -234,7 +234,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "15+ trucks. $4M+ revenue. Multi-location operators.",
     timeframe: "Market share shifts in 90 days. Territory ownership in 12 months.",
-    investment: "$5,995 / month",
+    investment: "$6,000 / month",
     ctaTo: "/programs/surge",
   },
 ];
@@ -460,7 +460,7 @@ const DeliverablesCollapsible = () => {
       {open && (
         <div id="engine-deliverables-panel" className="mt-7 animate-in fade-in-50 duration-200">
           <p className="text-white/65 text-[15px] md:text-base max-w-[720px] mb-7">
-            A complete, owned, conversion-ready Growth Engine. Built by our team, installed during a
+            A complete, owned, conversion-ready growth foundation. Built by our team, installed during a
             60-day onboarding, yours to keep.
           </p>
           <div className="grid md:grid-cols-2 gap-5">
@@ -533,7 +533,7 @@ const DeliverablesCollapsible = () => {
 
 const SECTION_TABS = [
 
-  { id: "engine", label: "Growth Engine" },
+  { id: "engine", label: "Startup Fee" },
   { id: "source", label: "Source" },
   { id: "current", label: "Current" },
   { id: "surge", label: "Surge" },
@@ -605,7 +605,7 @@ const SectionTabs = () => {
                 : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
             }`}
           >
-            The Growth Engine
+            Startup Fee
           </a>
         </div>
         {/* Row 2: Tiers */}
@@ -915,38 +915,38 @@ const Programs = () => {
             <div className="px-6 sm:px-10 pt-9 pb-7 border-b border-white/[0.07]">
               <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
                 <div>
-                  <Eyebrow>The Growth Engine</Eyebrow>
+                  <Eyebrow>Startup Fee</Eyebrow>
                   <h2 className="font-extrabold text-white text-[28px] md:text-[36px] leading-[1.08] tracking-tight mt-3 mb-3">
-                    What we do to ensure your website is built right the first time.
+                    One fee to start the program. Work begins day one.
                   </h2>
                   <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
-                    A lot of companies are impatient about results and want to get results fast. The
-                    Growth Engine starts the engine and gets a foundation in place so that your baseline
-                    starts off better than most companies' six months in. Every program after this
-                    drives demand through it.
+                    The startup fee is not a website charge. It is what activates the program: a 25 to 30 page
+                    SEO-built site, GBP optimization, CRM and missed-call text-back, review automation, chat, and
+                    LSA setup. Monthly billing does not begin until 30 days after your onboarding call, so the
+                    startup fee carries you through the build.
                   </p>
                   <p className="text-white/55 text-[15px] mt-3">
-                    Required for all programs. Billed at signup, work starts day one.
+                    Required for all programs. 12-month minimum commitment.
                   </p>
                 </div>
 
                 {/* Price block */}
                 <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
                   <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                    Growth Engine
+                    Startup Fee
                   </div>
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
                     <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
-                      4,995
+                      3,500
                     </span>
                     <span className="text-white/70 text-base font-semibold ml-1">one time</span>
                   </div>
                   <div className="text-white/65 text-sm mt-2">
-                    60-day build. Paid upfront at signup. Work starts day one.
+                    Billed at signup. Your monthly program fee starts 30 days after the onboarding call.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
-                    Covers your full Growth Engine build. One-time, not recurring.
+                    Starts the program. Not itemized as a website build.
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-2.5">
@@ -1002,14 +1002,14 @@ const Programs = () => {
                 symbol="◇"
                 name="The Source"
                 tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-                price="$2,495"
+                price="$2,500"
                 groups={source}
                 cap="Ad management: flat up to $2,000/mo managed spend"
                 ctaTo="/grow-qualifier"
                 highlights={[
                   { label: "Best For", value: "1 to 5 trucks" },
                   { label: "Revenue Range", value: "$400K to $1.5M" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $2,000 / mo" },
                 ]}
               />
@@ -1019,7 +1019,7 @@ const Programs = () => {
                 symbol="◈"
                 name="The Current"
                 tag="Active growth. Paid acceleration plus hands-off automation."
-                price="$3,995"
+                price="$4,000"
                 everything="Everything in The Source, plus ↓"
                 groups={current}
                 cap="Ad management: flat up to $5,000/mo managed spend"
@@ -1028,7 +1028,7 @@ const Programs = () => {
                 highlights={[
                   { label: "Best For", value: "5 to 15 trucks" },
                   { label: "Revenue Range", value: "$1.5M to $4M" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $5,000 / mo" },
                 ]}
               />
@@ -1038,7 +1038,7 @@ const Programs = () => {
                 symbol="❖"
                 name="The Surge"
                 tag="Own your market. Take competitors' share."
-                price="$5,995"
+                price="$6,000"
                 everything="Everything in The Current, plus ↓"
                 groups={surge}
                 cap="Ad management: flat up to $10,000/mo managed spend"
@@ -1046,7 +1046,7 @@ const Programs = () => {
                 highlights={[
                   { label: "Best For", value: "15+ trucks" },
                   { label: "Revenue Range", value: "$4M+" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $10,000 / mo" },
                 ]}
               />
@@ -1089,7 +1089,7 @@ const Programs = () => {
                 Investment timeline
               </h3>
               <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
-                Using The Current program ($3,995/mo) as an example. The Engine is one time. Ad spend is paid directly to Google.
+                Using The Current program ($4,000/mo) as an example. The startup fee is one time. Ad spend is paid directly to Google.
               </p>
             </div>
 
@@ -1100,26 +1100,26 @@ const Programs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 relative">
                   {[
                     {
-                      label: "The Engine",
-                      amount: "$5,000",
-                      sub: "Growth Engine",
-                      note: "One-time. Paid upfront. 60-day build starts day one.",
+                      label: "Startup Fee",
+                      amount: "$3,500",
+                      sub: "Starts the program",
+                      note: "Paid at signup. Onboarding scheduled and build begins day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
                     {
                       label: "The Current",
-                      amount: "$3,995",
+                      amount: "$4,000",
                       sub: "First monthly fee",
-                      note: "Program kicks in once The Engine is live. Ad spend paid to Google.",
+                      note: "Billed 30 days after the onboarding call. Ad spend paid directly to Google.",
                       dot: "bg-accent-blue border-accent-blue",
                       accent: "border-accent-blue/40",
                     },
                     {
                       label: "The Current",
-                      amount: "$3,995 / mo",
+                      amount: "$4,000 / mo",
                       sub: "Recurring",
-                      note: "Cancel anytime after 90 days. No long contracts.",
+                      note: "12-month minimum commitment. Month-to-month after the initial term.",
                       dot: "bg-accent-blue/70 border-accent-blue/70",
                       accent: "border-accent-blue/30",
                     },
@@ -1148,14 +1148,14 @@ const Programs = () => {
               {/* Totals row */}
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
-                  <div className="text-white font-extrabold text-[18px] mt-1">$5,000 total</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Growth Engine only. No program fee yet.</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">At signup</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">$3,500 startup fee</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">No monthly fee until 30 days after onboarding.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 61 onward</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">$3K / $4K / $6K based on tier</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$2,500 / $4,000 / $6,000 based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
