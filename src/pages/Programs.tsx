@@ -534,7 +534,7 @@ const DeliverablesCollapsible = () => {
 const SECTION_TABS = [
 
   { id: "engine", label: "Startup Fee" },
-  { id: "source", label: "Source" },
+  { id: "spring", label: "Spring" },
   { id: "current", label: "Current" },
   { id: "surge", label: "Surge" },
 ] as const;
