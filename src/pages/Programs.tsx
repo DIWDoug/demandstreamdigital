@@ -746,7 +746,7 @@ const Programs = () => {
     <>
       <SEOHead
         title="Programs & Pricing | DemandStream Digital"
-        description="Three growth programs for plumbing and HVAC companies. SOURCE, CURRENT, and SURGE. One plumbing company and one HVAC client per market."
+        description="Three growth programs for plumbing and HVAC companies. SPRING, CURRENT, and SURGE. One plumbing company and one HVAC client per market."
         canonical="https://demandstreamdigital.com/programs"
       />
       <Helmet>
