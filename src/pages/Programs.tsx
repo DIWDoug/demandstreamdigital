@@ -208,8 +208,9 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: Zap,
     tagline: "Demand Control · Most Popular",
     description:
-      "Demand control across all four seasons. Everything in Spring, plus Google Ads, Meta special-offer ads, and the automation we run for you. SEO compounds in the background while paid ads generate booked service calls on demand. This is what most operators with capacity to fill end up choosing, because shoulder season stops being scary.",
+      "Demand control across all four seasons. Everything in Spring — including your custom website — plus Google Ads, Meta special-offer ads, and the automation we run for you. SEO compounds in the background while paid ads generate booked service calls on demand. This is what most operators with capacity to fill end up choosing, because shoulder season stops being scary.",
     outcomes: [
+      "Your website continuously optimized for conversions and seasonal campaigns",
       "Demand control across all four seasons. No more shoulder-season anxiety",
       "Google Ads + LSA combined for daily booked-call flow",
       "Meta special-offer ads for tune-ups, water heaters, and seasonal promos",
@@ -226,9 +227,9 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: Crown,
     tagline: "Ownership Phase",
     description:
-      "Everything in Current, plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
+      "Everything in Current — including your website and all landing infrastructure — plus multi-city expansion and competitive displacement. Designed for the operator who wants to own the metro. We push into adjacent service areas, run multi-channel paid across Meta, YouTube, and Display, and actively track and unseat competitors in your top zip codes.",
     outcomes: [
-      "Multi-city service-area expansion with dedicated landing infrastructure",
+      "Multi-city website expansion with dedicated landing pages for every service area",
       "Competitive displacement campaigns against named competitors",
       "Custom workflows tied to CRM, payment, and calendar systems",
       "Priority support with monthly strategy reviews",
