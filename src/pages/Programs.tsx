@@ -1089,7 +1089,7 @@ const Programs = () => {
                 Investment timeline
               </h3>
               <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
-                Using The Current program ($3,995/mo) as an example. The Engine is one time. Ad spend is paid directly to Google.
+                Using The Current program ($4,000/mo) as an example. The startup fee is one time. Ad spend is paid directly to Google.
               </p>
             </div>
 
@@ -1100,26 +1100,26 @@ const Programs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-4 relative">
                   {[
                     {
-                      label: "The Engine",
-                      amount: "$5,000",
-                      sub: "Growth Engine",
-                      note: "One-time. Paid upfront. 60-day build starts day one.",
+                      label: "Startup Fee",
+                      amount: "$3,500",
+                      sub: "Starts the program",
+                      note: "Paid at signup. Onboarding scheduled and build begins day one.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
                     {
                       label: "The Current",
-                      amount: "$3,995",
+                      amount: "$4,000",
                       sub: "First monthly fee",
-                      note: "Program kicks in once The Engine is live. Ad spend paid to Google.",
+                      note: "Billed 30 days after the onboarding call. Ad spend paid directly to Google.",
                       dot: "bg-accent-blue border-accent-blue",
                       accent: "border-accent-blue/40",
                     },
                     {
                       label: "The Current",
-                      amount: "$3,995 / mo",
+                      amount: "$4,000 / mo",
                       sub: "Recurring",
-                      note: "Cancel anytime after 90 days. No long contracts.",
+                      note: "12-month minimum commitment. Month-to-month after the initial term.",
                       dot: "bg-accent-blue/70 border-accent-blue/70",
                       accent: "border-accent-blue/30",
                     },
@@ -1148,14 +1148,14 @@ const Programs = () => {
               {/* Totals row */}
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">First 60 days</div>
-                  <div className="text-white font-extrabold text-[18px] mt-1">$5,000 total</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Growth Engine only. No program fee yet.</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">At signup</div>
+                  <div className="text-white font-extrabold text-[18px] mt-1">$3,500 startup fee</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">No monthly fee until 30 days after onboarding.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 61 onward</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">$3K / $4K / $6K based on tier</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$2,500 / $4,000 / $6,000 based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
