@@ -638,13 +638,13 @@ const SectionTabs = () => {
 };
 
 const Programs = () => {
-  const source: Group[] = [
+  const spring: Group[] = [
     {
       title: "Visibility & Authority",
       items: [
-        "Ongoing On-Page Authority Building",
-        "Monthly GBP posts, photos, and Q&A maintenance",
-        "Review velocity and reputation monitoring",
+        "Google Business Profile optimization",
+        "On-Page Authority Building (2/mo)",
+        "Local citations & trust signals",
       ],
     },
     {
@@ -660,7 +660,6 @@ const Programs = () => {
         "CRM & Sales Pipeline",
         "Missed-Call Text-Back",
         "24/7 Lead Capture Chat",
-        "Customer Reactivation Email",
       ],
     },
     {
@@ -669,15 +668,19 @@ const Programs = () => {
         "Dedicated Success Specialist",
         "Call Tracking & Attribution",
         "Monthly Growth Reporting",
-        "6-Month Roadmap into Current",
       ],
     },
   ];
 
   const current: Group[] = [
     {
-      title: "Paid Acquisition",
-      items: ["Google Ads Management", "Retargeting", "Seasonal Campaigns"],
+      title: "Demand Control (the difference)",
+      items: [
+        { em: "Demand control across all four seasons", rest: " — never worry about shoulder season" },
+        "Google Ads Management (Search + Performance Max)",
+        "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
+        "Retargeting + seasonal campaigns",
+      ],
     },
     {
       title: "Conversion",
@@ -699,7 +702,7 @@ const Programs = () => {
     },
     {
       title: "Content & Planning",
-      items: ["On-Page Authority Building", "Quarterly Growth Planning"],
+      items: ["On-Page Authority Building (5/mo)", "Quarterly Growth Planning"],
     },
   ];
 
