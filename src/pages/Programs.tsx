@@ -1023,7 +1023,7 @@ const Programs = () => {
                 name="The Current"
                 tag="Active growth. Paid acceleration plus hands-off automation."
                 price="$4,000"
-                everything="Everything in The Source, plus ↓"
+                everything="Everything in The Spring, plus ↓"
                 groups={current}
                 cap="Ad management: flat up to $5,000/mo managed spend"
                 popular
