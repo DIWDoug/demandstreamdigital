@@ -202,7 +202,7 @@ export const aiSearchOptimizationConfig: ServicePageConfig = {
         items: [
           { question: "Do I need traditional SEO before I do this?", answer: "It helps significantly. If you have no organic foundation, we will usually recommend pairing AIO and GEO with local SEO from day one. The two compound." },
           { question: "Will this work for a single-truck operator?", answer: "Yes, in a tight service area. Smaller operators with deep expertise in a specific city often punch above their weight in AI answers." },
-          { question: "Is this included in your programs?", answer: "Foundational AIO work (schema, entity, llms.txt) is in every Source, Current and Surge program. Deeper GEO citation work scales with tier." }
+          { question: "Is this included in your programs?", answer: "Foundational AIO work (schema, entity, llms.txt) is in every Spring, Current and Surge program. Deeper GEO citation work scales with tier." }
         ]
       }
     ]

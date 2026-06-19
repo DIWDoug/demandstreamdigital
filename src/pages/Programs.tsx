@@ -630,7 +630,7 @@ const Programs = () => {
       items: [
         { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
-        "On-Page Authority Building (2/mo)",
+        "On-Page Authority Building (3/mo)",
         "Local citations & trust signals",
       ],
     },
@@ -638,7 +638,8 @@ const Programs = () => {
       title: "Lead Generation",
       items: [
         "Google Guaranteed Lead Ads (LSA)",
-        { em: "5-Star Review Engine + Review Coaching" },
+        "Meta local specials campaigns",
+        { em: "5-Star Review Engine", rest: " — automation-powered" },
       ],
     },
     {
@@ -668,6 +669,7 @@ const Programs = () => {
         "Google Ads Management (Search + Performance Max)",
         "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
         "Retargeting + seasonal campaigns",
+        "Hiring Ads — keep your technician bench full",
       ],
     },
     {
@@ -684,13 +686,18 @@ const Programs = () => {
         "Referral Program System",
         "Advanced Nurture (email + SMS)",
         "Appointment Reminders & Follow-ups",
+        "Customer Reactivation Email",
         { em: "Review Response Management" },
         { em: "Hands-Off Automation Management" },
       ],
     },
     {
       title: "Content & Planning",
-      items: ["On-Page Authority Building (5/mo)", "Quarterly Growth Planning"],
+      items: [
+        "On-Page Authority Building (5/mo)",
+        "Reddit SEO & AI Citations",
+        "Quarterly Growth Planning",
+      ],
     },
   ];
 
@@ -704,6 +711,8 @@ const Programs = () => {
         "Competitive Displacement Campaigns",
         "On-Page Authority Building",
         "Off-Site Authority (quarterly placements)",
+        "Reddit SEO & AI Citations",
+        "Hiring Ads — scale your team as you grow",
         "Competitive Visibility Tracking",
         "Competitive Review Tracking",
       ],
