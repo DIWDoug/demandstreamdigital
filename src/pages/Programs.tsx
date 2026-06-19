@@ -743,7 +743,11 @@ const Programs = () => {
     },
     {
       title: "Partnership",
-      items: ["Monthly Strategy Reviews", "Priority Support"],
+      items: [
+        "Monthly Strategy Reviews",
+        "Priority Support",
+        { em: "Demand Stream Academy", rest: " — included ($997 value)" },
+      ],
     },
   ];
 
