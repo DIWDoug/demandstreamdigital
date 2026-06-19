@@ -630,6 +630,8 @@ const Programs = () => {
       items: [
         { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
         "On-Page Authority Building (3/mo)",
         "Local citations & trust signals",
       ],
