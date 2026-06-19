@@ -630,7 +630,7 @@ const Programs = () => {
       items: [
         { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
-        "On-Page Authority Building (2/mo)",
+        "On-Page Authority Building (3/mo)",
         "Local citations & trust signals",
       ],
     },
@@ -638,7 +638,8 @@ const Programs = () => {
       title: "Lead Generation",
       items: [
         "Google Guaranteed Lead Ads (LSA)",
-        { em: "5-Star Review Engine + Review Coaching" },
+        "Meta local specials campaigns",
+        { em: "5-Star Review Engine", rest: " — automation-powered" },
       ],
     },
     {
