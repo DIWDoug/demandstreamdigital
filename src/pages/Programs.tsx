@@ -630,6 +630,8 @@ const Programs = () => {
       items: [
         { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
         "On-Page Authority Building (3/mo)",
         "Local citations & trust signals",
       ],
@@ -696,6 +698,9 @@ const Programs = () => {
       items: [
         "On-Page Authority Building (5/mo)",
         "Reddit SEO & AI Citations",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
+        { em: "Demand Stream Academy", rest: " — included ($997 value)" },
         "Quarterly Growth Planning",
       ],
     },
@@ -713,6 +718,8 @@ const Programs = () => {
         "Off-Site Authority (quarterly placements)",
         "Reddit SEO & AI Citations",
         "Hiring Ads — scale your team as you grow",
+        "AI Maps Visibility",
+        "Local Sponsorships & Association Coaching",
         "Competitive Visibility Tracking",
         "Competitive Review Tracking",
       ],
@@ -736,7 +743,11 @@ const Programs = () => {
     },
     {
       title: "Partnership",
-      items: ["Monthly Strategy Reviews", "Priority Support"],
+      items: [
+        "Monthly Strategy Reviews",
+        "Priority Support",
+        { em: "Demand Stream Academy", rest: " — included ($997 value)" },
+      ],
     },
   ];
 
