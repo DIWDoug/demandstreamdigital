@@ -1158,7 +1158,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">$2,500 / $4,000 / $6,000 based on tier</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$1,500 / $4,000 / $6,000 based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
