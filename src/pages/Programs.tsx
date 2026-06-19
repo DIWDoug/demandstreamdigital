@@ -189,9 +189,10 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
-      "Built for the one or two-truck operator just turning on a real online presence. We install a foundational website, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
+      "Built for the one or two-truck operator just turning on a real online presence. We build your website from one of our proven design frameworks, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
     outcomes: [
-      "A real website and fully optimized Google Business Profile",
+      "A custom website built for your brand — conversion-optimized, mobile-first, owned by you",
+      "Fully optimized Google Business Profile that drives Maps visibility",
       "Capture missed-call leads automatically via text-back",
       "Build a 5-star reputation that converts browsers into bookings",
       "Centralize every lead in one CRM with full call tracking",
