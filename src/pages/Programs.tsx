@@ -927,6 +927,7 @@ const Programs = () => {
                   { label: "Best For", value: "5 to 15 trucks" },
                   { label: "Revenue Range", value: "$1.5M to $4M" },
                   { label: "Startup Fee", value: "$3,500" },
+                  { label: "Website", value: "Included + Optimized" },
                   { label: "Ad Spend Cap", value: "Up to $5,000 / mo" },
                 ]}
               />
@@ -945,6 +946,7 @@ const Programs = () => {
                   { label: "Best For", value: "15+ trucks" },
                   { label: "Revenue Range", value: "$4M+" },
                   { label: "Startup Fee", value: "$3,500" },
+                  { label: "Website", value: "Multi-City Ready" },
                   { label: "Ad Spend Cap", value: "Up to $10,000 / mo" },
                 ]}
               />
