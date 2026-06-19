@@ -234,7 +234,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "15+ trucks. $4M+ revenue. Multi-location operators.",
     timeframe: "Market share shifts in 90 days. Territory ownership in 12 months.",
-    investment: "$5,995 / month",
+    investment: "$6,000 / month",
     ctaTo: "/programs/surge",
   },
 ];
