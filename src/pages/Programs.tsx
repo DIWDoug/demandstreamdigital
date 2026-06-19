@@ -1002,14 +1002,14 @@ const Programs = () => {
                 symbol="◇"
                 name="The Source"
                 tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-                price="$2,495"
+                price="$2,500"
                 groups={source}
                 cap="Ad management: flat up to $2,000/mo managed spend"
                 ctaTo="/grow-qualifier"
                 highlights={[
                   { label: "Best For", value: "1 to 5 trucks" },
                   { label: "Revenue Range", value: "$400K to $1.5M" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $2,000 / mo" },
                 ]}
               />
@@ -1019,7 +1019,7 @@ const Programs = () => {
                 symbol="◈"
                 name="The Current"
                 tag="Active growth. Paid acceleration plus hands-off automation."
-                price="$3,995"
+                price="$4,000"
                 everything="Everything in The Source, plus ↓"
                 groups={current}
                 cap="Ad management: flat up to $5,000/mo managed spend"
@@ -1028,7 +1028,7 @@ const Programs = () => {
                 highlights={[
                   { label: "Best For", value: "5 to 15 trucks" },
                   { label: "Revenue Range", value: "$1.5M to $4M" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $5,000 / mo" },
                 ]}
               />
@@ -1038,7 +1038,7 @@ const Programs = () => {
                 symbol="❖"
                 name="The Surge"
                 tag="Own your market. Take competitors' share."
-                price="$5,995"
+                price="$6,000"
                 everything="Everything in The Current, plus ↓"
                 groups={surge}
                 cap="Ad management: flat up to $10,000/mo managed spend"
@@ -1046,7 +1046,7 @@ const Programs = () => {
                 highlights={[
                   { label: "Best For", value: "15+ trucks" },
                   { label: "Revenue Range", value: "$4M+" },
-                  { label: "Startup Fee (The Engine)", value: "$4,995" },
+                  { label: "Startup Fee", value: "$3,500" },
                   { label: "Ad Spend Cap", value: "Up to $10,000 / mo" },
                 ]}
               />
