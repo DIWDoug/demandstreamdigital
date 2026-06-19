@@ -42,6 +42,8 @@ export const TIERS: TierData[] = [
         items: [
           { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
           "Google Business Profile optimization",
+          "AI Maps Visibility",
+          "Local Sponsorships & Association Coaching",
           { em: "On-Page Authority Building", rest: " — 3/mo (service · geographic)" },
           "Local citations and trust signals",
         ],
@@ -142,6 +144,9 @@ export const TIERS: TierData[] = [
         items: [
           "On-Page Authority Building, 5/mo",
           "Reddit SEO & AI Citations",
+          "AI Maps Visibility",
+          "Local Sponsorships & Association Coaching",
+          { em: "Demand Stream Academy", rest: " — included ($997 value)" },
           "Quarterly Growth Planning",
         ],
       },
@@ -192,6 +197,8 @@ export const TIERS: TierData[] = [
           "Off-Site Authority (quarterly placements)",
           "Reddit SEO & AI Citations",
           "Hiring Ads — scale your team as you grow",
+          "AI Maps Visibility",
+          "Local Sponsorships & Association Coaching",
           "Competitive Visibility Tracking",
           "Competitive Review Tracking",
         ],
@@ -215,7 +222,11 @@ export const TIERS: TierData[] = [
       },
       {
         title: "Partnership",
-        items: ["Monthly Strategy Reviews", "Priority Support"],
+        items: [
+          "Monthly Strategy Reviews",
+          "Priority Support",
+          { em: "Demand Stream Academy", rest: " — included ($997 value)" },
+        ],
       },
     ],
     fit: {
