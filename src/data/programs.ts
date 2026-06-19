@@ -31,7 +31,7 @@ export const TIERS: TierData[] = [
     name: "Spring",
     tagline:
       "The foundational starter. Get found locally and stop missing calls. For one-truck operators just turning on their online presence.",
-    monthlyPrice: "$1,500",
+    monthlyPrice: "$1,995",
     adSpendCap: "$1,000",
     contentPerMo: "2",
     goal:
@@ -86,7 +86,7 @@ export const TIERS: TierData[] = [
       "Your ad spend is always your money, paid to Google directly. Never marked up. Spring includes hands-on LSA management up to <b class='text-white font-semibold'>$1,000/mo</b> in spend. Beyond the cap: 20% of spend.",
     seoTitle: "Spring Program | DemandStream Digital",
     seoDescription:
-      "Spring: foundational visibility and lead-capture program for one to two truck plumbing & HVAC operators. $1,500/mo, $3,500 startup fee.",
+      "Spring: foundational visibility and lead-capture program for one to two truck plumbing & HVAC operators. $1,995/mo, $3,500 startup fee.",
     canonical: "https://demandstreamdigital.com/programs/spring",
   },
   {
@@ -97,7 +97,7 @@ export const TIERS: TierData[] = [
     name: "Current",
     tagline:
       "Demand control across all four seasons. SEO, LSA, Google Ads, and automation working as one system, so booked calls do not depend on the weather.",
-    monthlyPrice: "$4,000",
+    monthlyPrice: "$2,995",
     adSpendCap: "$5,000",
     contentPerMo: "5",
     flagship: true,
@@ -154,7 +154,7 @@ export const TIERS: TierData[] = [
       "Your ad spend is always your money, paid to Google directly. Never marked up. Current includes hands-on management up to <b class='text-white font-semibold'>$5,000/mo</b> in spend. Beyond the cap: 20% of spend, dropping to 15% above $10,000/mo.",
     seoTitle: "Current Program | DemandStream Digital",
     seoDescription:
-      "Current: demand control across all four seasons for plumbing & HVAC. SEO + Google Ads + LSA + automation. $4,000/mo. Most popular tier.",
+      "Current: demand control across all four seasons for plumbing & HVAC. SEO + Google Ads + LSA + automation. $2,995/mo. Most popular tier.",
     canonical: "https://demandstreamdigital.com/programs/current",
   },
   {
@@ -165,7 +165,7 @@ export const TIERS: TierData[] = [
     name: "Surge",
     tagline:
       "Own your territory and take competitors' share. Advanced visibility, automation, and expansion.",
-    monthlyPrice: "$6,000",
+    monthlyPrice: "$5,995",
     adSpendCap: "$10,000",
     contentPerMo: "8 + off-site",
     goal:
@@ -223,7 +223,7 @@ export const TIERS: TierData[] = [
       "Your ad spend is always your money, paid to Google directly. Never marked up. Surge includes hands-on management up to <b class='text-white font-semibold'>$10,000/mo</b> in spend. Beyond the cap: 20% of spend, dropping to 15% above $10,000/mo.",
     seoTitle: "Surge Program | DemandStream Digital",
     seoDescription:
-      "Surge: market domination tier for established plumbing & HVAC companies. $6,000/mo, $10,000 ad spend cap. Multi-city expansion and custom automation.",
+      "Surge: market domination tier for established plumbing & HVAC companies. $5,995/mo, $10,000 ad spend cap. Multi-city expansion and custom automation.",
     canonical: "https://demandstreamdigital.com/programs/surge",
   },
 ];

@@ -198,7 +198,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "1 to 2 trucks. Just getting started online.",
     timeframe: "Foundation laid in 60 days. Compounds month over month.",
-    investment: "$1,500 / month",
+    investment: "$1,995 / month",
     ctaTo: "/programs/spring",
   },
   {
@@ -216,7 +216,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "3 to 15 trucks. Ready to control demand year-round.",
     timeframe: "Paid traction in 30 days. Compounding lift through quarter two.",
-    investment: "$4,000 / month",
+    investment: "$2,995 / month",
     ctaTo: "/programs/current",
   },
   {
@@ -234,7 +234,7 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     ],
     bestFor: "15+ trucks. $4M+ revenue. Multi-location operators.",
     timeframe: "Market share shifts in 90 days. Territory ownership in 12 months.",
-    investment: "$6,000 / month",
+    investment: "$5,995 / month",
     ctaTo: "/programs/surge",
   },
 ];
@@ -897,7 +897,7 @@ const Programs = () => {
                 symbol="◇"
                 name="The Spring"
                 tag="Foundation. Get found locally and stop missing calls. For 1 to 2 truck operators."
-                price="$1,500"
+                price="$1,995"
                 groups={spring}
                 cap="LSA management: flat up to $1,000/mo managed spend"
                 ctaTo="/grow-qualifier"
@@ -914,7 +914,7 @@ const Programs = () => {
                 symbol="◈"
                 name="The Current"
                 tag="Active growth. Paid acceleration plus hands-off automation."
-                price="$4,000"
+                price="$2,995"
                 everything="Everything in The Spring, plus ↓"
                 groups={current}
                 cap="Ad management: flat up to $5,000/mo managed spend"
@@ -933,7 +933,7 @@ const Programs = () => {
                 symbol="❖"
                 name="The Surge"
                 tag="Own your market. Take competitors' share."
-                price="$6,000"
+                price="$5,995"
                 everything="Everything in The Current, plus ↓"
                 groups={surge}
                 cap="Ad management: flat up to $10,000/mo managed spend"
@@ -984,7 +984,7 @@ const Programs = () => {
                 Investment timeline
               </h3>
               <p className="text-white/70 text-[14px] md:text-[15px] mt-2 max-w-[640px] mx-auto">
-                Using The Current program ($4,000/mo) as an example. The startup fee is one time. Ad spend is paid directly to Google.
+                Using The Current program ($2,995/mo) as an example. The startup fee is one time. Ad spend is paid directly to Google.
               </p>
             </div>
 
@@ -1004,7 +1004,7 @@ const Programs = () => {
                     },
                     {
                       label: "The Current",
-                      amount: "$4,000",
+                      amount: "$2,995",
                       sub: "First monthly fee",
                       note: "Billed 30 days after the onboarding call. Ad spend paid directly to Google.",
                       dot: "bg-accent-blue border-accent-blue",
@@ -1012,7 +1012,7 @@ const Programs = () => {
                     },
                     {
                       label: "The Current",
-                      amount: "$4,000 / mo",
+                      amount: "$2,995 / mo",
                       sub: "Recurring",
                       note: "12-month minimum commitment. Month-to-month after the initial term.",
                       dot: "bg-accent-blue/70 border-accent-blue/70",
@@ -1050,7 +1050,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">Program fee monthly</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">$1,500 / $4,000 / $6,000 based on tier</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">$1,995 / $2,995 / $5,995 based on tier</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Ad spend</div>
