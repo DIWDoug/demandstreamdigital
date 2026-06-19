@@ -2,7 +2,7 @@ export type TierFeatureItem = string | { em: string; rest?: string };
 export type TierGroup = { title: string; items: TierFeatureItem[] };
 
 export type TierData = {
-  slug: "source" | "current" | "surge";
+  slug: "spring" | "current" | "surge";
   symbol: string;
   eyebrow: string;
   bestFor: string;
@@ -24,26 +24,25 @@ export type TierData = {
 
 export const TIERS: TierData[] = [
   {
-    slug: "source",
+    slug: "spring",
     symbol: "◇",
     eyebrow: "Foundation",
-    bestFor: "1 to 5 truck operators building consistent local lead flow.",
-    name: "Source",
+    bestFor: "1 to 2 truck operators getting their first real online presence.",
+    name: "Spring",
     tagline:
-      "Get found and capture every lead. The visibility foundation for plumbing & HVAC growth.",
-    monthlyPrice: "$2,500",
-    adSpendCap: "$2,000",
-    contentPerMo: "3",
+      "The foundational starter. Get found locally and stop missing calls. For one-truck operators just turning on their online presence.",
+    monthlyPrice: "$1,500",
+    adSpendCap: "$1,000",
+    contentPerMo: "2",
     goal:
-      "Establish the visibility and lead-capture foundation that turns local searches into booked service calls, and the system to never miss one.",
+      "Lay the foundation: a real website, a fully optimized Google Business Profile, and the automation to capture every call and review that comes in.",
     groups: [
       {
         title: "Visibility & Authority",
         items: [
-          "Google Maps Domination",
-          "AI Maps Visibility",
-          { em: "On-Page Authority Building", rest: " — 3/mo (service · topical · geographic)" },
-          "Local Authority & Trust Signals",
+          "Google Business Profile optimization",
+          { em: "On-Page Authority Building", rest: " — 2/mo (service · geographic)" },
+          "Local citations and trust signals",
         ],
       },
       {
@@ -59,7 +58,6 @@ export const TIERS: TierData[] = [
           "CRM & Sales Pipeline",
           "Missed-Call Text-Back",
           "24/7 Lead Capture Chat",
-          "Customer Reactivation Email",
         ],
       },
       {
@@ -68,49 +66,53 @@ export const TIERS: TierData[] = [
           "Dedicated Success Specialist",
           "Call Tracking & Attribution",
           "Monthly Growth Reporting",
-          "6-Month Roadmap into Current",
         ],
       },
     ],
     fit: {
       yes: [
-        "You serve a real, defined service area",
-        "You answer the phone and follow up on leads",
-        "You want a foundation that compounds month over month",
-        "You're tired of agencies that report clicks, not calls",
+        "You are a one or two-truck shop just getting started online",
+        "Your phone rings from word-of-mouth and you want a real website",
+        "You want to stop losing calls when you can't answer",
+        "You are not ready to fund paid ads yet",
       ],
       no: [
-        "You're already running heavy paid ads and need management now",
-        "You need multi-city expansion today",
-        "You want done-for-you outbound. That's not this tier.",
+        "You already do $1M+ in revenue. You have outgrown this tier.",
+        "You need demand control today. That is The Current.",
+        "You want multi-city expansion. That is The Surge.",
       ],
     },
     adManagementCopy:
-      "Your ad spend is always your money, paid to Google directly. Never marked up. Source includes hands-on management up to <b class='text-white font-semibold'>$2,000/mo</b> in spend. Beyond the cap: 20% of spend, dropping to 15% above $10,000/mo.",
-    seoTitle: "Source Program | DemandStream Digital",
+      "Your ad spend is always your money, paid to Google directly. Never marked up. Spring includes hands-on LSA management up to <b class='text-white font-semibold'>$1,000/mo</b> in spend. Beyond the cap: 20% of spend.",
+    seoTitle: "Spring Program | DemandStream Digital",
     seoDescription:
-      "Source: the visibility and lead-capture foundation for plumbing & HVAC companies. $2,500/mo, $3,500 startup fee. One company per market.",
-    canonical: "https://demandstreamdigital.com/programs/source",
+      "Spring: foundational visibility and lead-capture program for one to two truck plumbing & HVAC operators. $1,500/mo, $3,500 startup fee.",
+    canonical: "https://demandstreamdigital.com/programs/spring",
   },
   {
     slug: "current",
     symbol: "◈",
-    eyebrow: "Active Growth · Most Popular",
-    bestFor: "Growth-focused shops ready to scale lead generation with paid + automation.",
+    eyebrow: "Demand Control · Most Popular",
+    bestFor: "Growth-focused shops ready to control demand across all four seasons.",
     name: "Current",
     tagline:
-      "Paid acceleration plus a growth system we run for you. More booked calls, hands-off.",
+      "Demand control across all four seasons. SEO, LSA, Google Ads, and automation working as one system, so booked calls do not depend on the weather.",
     monthlyPrice: "$4,000",
     adSpendCap: "$5,000",
     contentPerMo: "5",
     flagship: true,
     goal:
-      "Generate more booked service calls through connected paid campaigns and conversion systems, with the pipeline and follow-up run entirely for you.",
-    everythingIn: "Everything in Source, plus ↓",
+      "Give you demand control. SEO compounds in the background while paid ads and automation generate booked service calls on demand, every season.",
+    everythingIn: "Everything in Spring, plus ↓",
     groups: [
       {
-        title: "Paid Acquisition",
-        items: ["Google Ads Management", "Retargeting", "Seasonal Campaigns"],
+        title: "Demand Control (the difference)",
+        items: [
+          { em: "Demand control across all four seasons", rest: " — never worry about shoulder season again" },
+          "Google Ads Management (Search + Performance Max)",
+          "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
+          "Retargeting + seasonal campaigns",
+        ],
       },
       {
         title: "Conversion",
@@ -137,22 +139,22 @@ export const TIERS: TierData[] = [
     ],
     fit: {
       yes: [
-        "You're ready to invest in paid ads to accelerate",
-        "You want to stop running your own CRM and follow-up",
-        "You have steady inbound and want to scale it",
+        "You are 3+ trucks and want predictable booked-call flow",
+        "You are tired of revenue swinging with the seasons",
+        "You want SEO compounding and paid demand at the same time",
         "You see marketing as an investment, not an expense",
       ],
       no: [
-        "You haven't built your visibility foundation yet (start with Source)",
-        "You're not ready to fund an ad budget",
-        "You're competing across many cities. That's Surge.",
+        "You are a single-truck operator still finding your footing",
+        "You are not ready to fund an ad budget",
+        "You are competing across many cities. That is Surge.",
       ],
     },
     adManagementCopy:
       "Your ad spend is always your money, paid to Google directly. Never marked up. Current includes hands-on management up to <b class='text-white font-semibold'>$5,000/mo</b> in spend. Beyond the cap: 20% of spend, dropping to 15% above $10,000/mo.",
     seoTitle: "Current Program | DemandStream Digital",
     seoDescription:
-      "Current: paid acceleration plus hands-off growth system for plumbing & HVAC. $4,000/mo, $5,000 ad spend cap. Most popular tier.",
+      "Current: demand control across all four seasons for plumbing & HVAC. SEO + Google Ads + LSA + automation. $4,000/mo. Most popular tier.",
     canonical: "https://demandstreamdigital.com/programs/current",
   },
   {
@@ -207,14 +209,14 @@ export const TIERS: TierData[] = [
     fit: {
       yes: [
         "You want to own, not just compete in, your market",
-        "You're expanding into new cities or service areas",
+        "You are expanding into new cities or service areas",
         "You have the capacity to handle a surge in booked jobs",
         "You want custom automation wired into your operations",
       ],
       no: [
-        "You're a single-truck operator just getting started",
-        "You're not ready for aggressive ad spend",
-        "You haven't proven the model at Source or Current first",
+        "You are a single-truck operator just getting started",
+        "You are not ready for aggressive ad spend",
+        "You have not proven the model at Current first",
       ],
     },
     adManagementCopy:
