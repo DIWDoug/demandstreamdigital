@@ -915,38 +915,38 @@ const Programs = () => {
             <div className="px-6 sm:px-10 pt-9 pb-7 border-b border-white/[0.07]">
               <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end">
                 <div>
-                  <Eyebrow>The Growth Engine</Eyebrow>
+                  <Eyebrow>Startup Fee</Eyebrow>
                   <h2 className="font-extrabold text-white text-[28px] md:text-[36px] leading-[1.08] tracking-tight mt-3 mb-3">
-                    What we do to ensure your website is built right the first time.
+                    One fee to start the program. Work begins day one.
                   </h2>
                   <p className="text-white/80 text-[17px] md:text-[18px] leading-relaxed max-w-[680px]">
-                    A lot of companies are impatient about results and want to get results fast. The
-                    Growth Engine starts the engine and gets a foundation in place so that your baseline
-                    starts off better than most companies' six months in. Every program after this
-                    drives demand through it.
+                    The startup fee is not a website charge. It is what activates the program: a 25 to 30 page
+                    SEO-built site, GBP optimization, CRM and missed-call text-back, review automation, chat, and
+                    LSA setup. Monthly billing does not begin until 30 days after your onboarding call, so the
+                    startup fee carries you through the build.
                   </p>
                   <p className="text-white/55 text-[15px] mt-3">
-                    Required for all programs. Billed at signup, work starts day one.
+                    Required for all programs. 12-month minimum commitment.
                   </p>
                 </div>
 
                 {/* Price block */}
                 <div className="rounded-lg bg-navy/70 border border-cta/40 px-7 py-6 min-w-[240px]">
                   <div className="text-xs font-semibold uppercase tracking-wider text-cta">
-                    Growth Engine
+                    Startup Fee
                   </div>
                   <div className="flex items-baseline gap-1 mt-2">
                     <span className="text-2xl font-bold text-white">$</span>
                     <span className="font-extrabold text-white text-[56px] leading-none tracking-tight">
-                      4,995
+                      3,500
                     </span>
                     <span className="text-white/70 text-base font-semibold ml-1">one time</span>
                   </div>
                   <div className="text-white/65 text-sm mt-2">
-                    60-day build. Paid upfront at signup. Work starts day one.
+                    Billed at signup. Your monthly program fee starts 30 days after the onboarding call.
                   </div>
                   <div className="mt-3 pt-3 border-t border-white/10 text-[13px] text-white/55">
-                    Covers your full Growth Engine build. One-time, not recurring.
+                    Starts the program. Not itemized as a website build.
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="text-xs font-semibold uppercase tracking-wider text-white/55 mb-2.5">
