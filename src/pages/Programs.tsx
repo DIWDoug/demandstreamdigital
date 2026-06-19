@@ -864,7 +864,7 @@ const Programs = () => {
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
 
             <div className="inline-flex items-center text-[11px] md:text-xs font-bold uppercase tracking-[0.18em] text-cta bg-cta/15 border border-cta/25 px-2.5 py-1 rounded-md">
-              Built for Plumbing &amp; HVAC. Designed to Book More Calls.
+              Built for Plumbing &amp; HVAC. Website Included. Designed to Book More Calls.
             </div>
 
             <h1 className="font-extrabold text-white mt-2 md:mt-4 mb-2 md:mb-5 leading-[1.02] tracking-[-0.02em] uppercase text-[clamp(26px,7.5vw,88px)]">
@@ -876,7 +876,7 @@ const Programs = () => {
             <p className="text-white/80 text-[14px] sm:text-[19px] max-w-[720px] mx-auto leading-snug md:leading-relaxed">
               Growth systems for plumbing &amp; HVAC companies.{" "}
               <span className="text-white font-semibold">
-                Not marketing services. A complete growth system.
+                Custom website built for you. Not marketing services. A complete growth system.
               </span>
             </p>
             <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
@@ -1050,7 +1050,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">At signup</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">$3,500 startup fee</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">No monthly fee until 30 days after onboarding.</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Custom website build begins immediately. No monthly fee until 30 days after onboarding.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
