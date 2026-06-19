@@ -532,15 +532,13 @@ const DeliverablesCollapsible = () => {
 };
 
 const SECTION_TABS = [
-
-  { id: "engine", label: "Startup Fee" },
   { id: "spring", label: "Spring" },
   { id: "current", label: "Current" },
   { id: "surge", label: "Surge" },
 ] as const;
 
 const SectionTabs = () => {
-  const [active, setActive] = useState<string>("engine");
+  const [active, setActive] = useState<string>("spring");
 
   // Honor hash on mount (so /programs#current scrolls correctly after route change).
   useEffect(() => {
