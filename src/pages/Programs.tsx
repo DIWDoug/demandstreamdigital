@@ -605,7 +605,7 @@ const SectionTabs = () => {
                 : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
             }`}
           >
-            The Growth Engine
+            Startup Fee
           </a>
         </div>
         {/* Row 2: Tiers */}
