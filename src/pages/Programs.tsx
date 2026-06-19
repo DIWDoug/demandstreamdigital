@@ -1002,8 +1002,8 @@ const Programs = () => {
                     {
                       label: "Startup Fee",
                       amount: "$3,500",
-                      sub: "Starts the program",
-                      note: "Paid at signup. Onboarding scheduled and build begins day one.",
+                      sub: "Website + onboarding",
+                      note: "Paid at signup. Your custom website build begins day one. Onboarding scheduled immediately.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
