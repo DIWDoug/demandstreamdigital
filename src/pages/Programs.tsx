@@ -592,21 +592,7 @@ const SectionTabs = () => {
         className="max-w-[1400px] mx-auto flex flex-col items-center gap-2 py-2.5"
         aria-label="Program sections"
       >
-        {/* Row 1: Foundation */}
-        <div className="flex justify-center">
-          <a
-            href="#engine"
-            onClick={(e) => handleClick(e, "engine")}
-            className={`shrink-0 text-[12.5px] sm:text-[13.5px] font-bold tracking-[0.04em] uppercase px-3.5 sm:px-5 py-2 rounded transition-colors border ${
-              active === "engine"
-                ? "bg-cta text-white border-cta"
-                : "bg-card/60 text-white/70 border-border-card/60 hover:text-white hover:border-cta/50"
-            }`}
-          >
-            Startup Fee
-          </a>
-        </div>
-        {/* Row 2: Tiers */}
+        {/* Tiers */}
         <div className="flex justify-center gap-1 sm:gap-2">
           {[
             { id: "spring", label: "The Spring: Tier One" },
