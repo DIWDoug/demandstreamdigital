@@ -1000,20 +1000,20 @@ const Programs = () => {
 
           {/* ───── TIERS ───── */}
           <section className="mt-12 grid gap-5 md:grid-cols-3 items-start max-w-[440px] md:max-w-none mx-auto">
-            <div id="source" className="scroll-mt-32">
+            <div id="spring" className="scroll-mt-32">
               <TierCard
                 symbol="◇"
-                name="The Source"
-                tag="Foundation. Get found and capture every lead. For 1 to 5 truck operators."
-                price="$2,500"
-                groups={source}
-                cap="Ad management: flat up to $2,000/mo managed spend"
+                name="The Spring"
+                tag="Foundation. Get found locally and stop missing calls. For 1 to 2 truck operators."
+                price="$1,500"
+                groups={spring}
+                cap="LSA management: flat up to $1,000/mo managed spend"
                 ctaTo="/grow-qualifier"
                 highlights={[
-                  { label: "Best For", value: "1 to 5 trucks" },
-                  { label: "Revenue Range", value: "$400K to $1.5M" },
+                  { label: "Best For", value: "1 to 2 trucks" },
+                  { label: "Revenue Range", value: "Under $500K" },
                   { label: "Startup Fee", value: "$3,500" },
-                  { label: "Ad Spend Cap", value: "Up to $2,000 / mo" },
+                  { label: "Ad Spend Cap", value: "Up to $1,000 / mo" },
                 ]}
               />
             </div>
