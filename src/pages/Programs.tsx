@@ -987,7 +987,7 @@ const Programs = () => {
                 Schedule a Growth Audit →
               </Link>
               <span className="text-white/55 text-[14px]">
-                Setup pairs with a monthly program: The Source, The Current, or The Surge.
+                Setup pairs with a monthly program: The Spring, The Current, or The Surge.
               </span>
             </div>
 
