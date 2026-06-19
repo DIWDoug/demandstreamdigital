@@ -115,6 +115,7 @@ export const TIERS: TierData[] = [
           "Google Ads Management (Search + Performance Max)",
           "Meta special-offer ads (tune-ups, water heater flushes, seasonal)",
           "Retargeting + seasonal campaigns",
+          "Hiring Ads — keep your technician bench full",
         ],
       },
       {
@@ -131,13 +132,18 @@ export const TIERS: TierData[] = [
           "Referral Program System",
           "Advanced Nurture (email + SMS)",
           "Appointment Reminders & Follow-ups",
+          "Customer Reactivation Email",
           { em: "Review Response Management" },
           { em: "Hands-Off Automation Management" },
         ],
       },
       {
         title: "Content & Planning",
-        items: ["On-Page Authority Building, 5/mo", "Quarterly Growth Planning"],
+        items: [
+          "On-Page Authority Building, 5/mo",
+          "Reddit SEO & AI Citations",
+          "Quarterly Growth Planning",
+        ],
       },
     ],
     fit: {
