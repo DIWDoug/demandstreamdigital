@@ -233,7 +233,8 @@ const App = () => (
           <Route path="/brand" element={<BrandGuide />} />
           <Route path="/style-guide" element={<BrandGuide />} />
           <Route path="/programs" element={<Programs />} />
-          <Route path="/programs/source" element={<Navigate to="/programs#source" replace />} />
+          <Route path="/programs/source" element={<Navigate to="/programs#spring" replace />} />
+          <Route path="/programs/spring" element={<Navigate to="/programs#spring" replace />} />
           <Route path="/programs/current" element={<Navigate to="/programs#current" replace />} />
           <Route path="/programs/surge" element={<Navigate to="/programs#surge" replace />} />
           <Route path="/programs/setup" element={<Navigate to="/programs#engine" replace />} />
