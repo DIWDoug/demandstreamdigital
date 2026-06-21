@@ -40,7 +40,7 @@ export const TIERS: TierData[] = [
       {
         title: "Visibility & Authority",
         items: [
-          { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
+          { em: "Website built from our design styles", rest: " — conversion-optimized, mobile-first, owned by you" },
           "Google Business Profile optimization",
           "AI Maps Visibility",
           "Local Sponsorships & Association Coaching",
@@ -189,7 +189,7 @@ export const TIERS: TierData[] = [
       {
         title: "Expansion & Domination",
         items: [
-          { em: "Custom website + multi-city landing infrastructure" },
+          { em: "Website + multi-city landing infrastructure" },
           { em: "Multi-City Service-Area Expansion" },
           "Multi-Channel Paid (Meta · YouTube · Display)",
           "Competitive Displacement Campaigns",
