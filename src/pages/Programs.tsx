@@ -189,9 +189,9 @@ const SHOWCASE_TIERS: ShowcaseTier[] = [
     Icon: TrendingUp,
     tagline: "Foundation Phase",
     description:
-      "Built for the one or two-truck operator just turning on a real online presence. We build your website from one of our proven design frameworks, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
+      "Built for the one or two-truck operator just turning on a real online presence. We build your website from one of our proven design styles, optimize your Google Business Profile, and stand up the automation so every call gets captured and every job earns a review. No paid ads management yet. This is the foundation, not demand control.",
     outcomes: [
-      "A custom website built for your brand — conversion-optimized, mobile-first, owned by you",
+      "A website built from our design styles — conversion-optimized, mobile-first, owned by you",
       "Fully optimized Google Business Profile that drives Maps visibility",
       "Capture missed-call leads automatically via text-back",
       "Build a 5-star reputation that converts browsers into bookings",
@@ -628,7 +628,7 @@ const Programs = () => {
     {
       title: "Visibility & Authority",
       items: [
-        { em: "Custom website built for your brand", rest: " — conversion-optimized, mobile-first, owned by you" },
+        { em: "Website built from our design styles", rest: " — conversion-optimized, mobile-first, owned by you" },
         "Google Business Profile optimization",
         "AI Maps Visibility",
         "Local Sponsorships & Association Coaching",
@@ -710,7 +710,7 @@ const Programs = () => {
     {
       title: "Expansion & Market Ownership",
       items: [
-        { em: "Custom website + multi-city landing infrastructure" },
+        { em: "Website + multi-city landing infrastructure" },
         { em: "Multi-City Service-Area Expansion" },
         "Multi-Channel Paid (Meta · YouTube · Display)",
         "Competitive Displacement Campaigns",
@@ -899,7 +899,7 @@ const Programs = () => {
             <p className="text-white/80 text-[14px] sm:text-[19px] max-w-[720px] mx-auto leading-snug md:leading-relaxed">
               Growth systems for plumbing &amp; HVAC companies.{" "}
               <span className="text-white font-semibold">
-                Custom website built for you. Not marketing services. A complete growth system.
+                Website built from our design styles. Not marketing services. A complete growth system.
               </span>
             </p>
             <p className="text-white font-semibold mt-2 md:mt-3 text-[13px] sm:text-[16px]">
@@ -1026,7 +1026,7 @@ const Programs = () => {
                       label: "Startup Fee",
                       amount: "$3,500",
                       sub: "Website + onboarding",
-                      note: "Paid at signup. Your custom website build begins day one. Onboarding scheduled immediately.",
+                      note: "Paid at signup. Your website build begins day one. Onboarding scheduled immediately.",
                       dot: "bg-cta border-cta",
                       accent: "border-cta/40",
                     },
@@ -1073,7 +1073,7 @@ const Programs = () => {
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">At signup</div>
                   <div className="text-white font-extrabold text-[18px] mt-1">$3,500 startup fee</div>
-                  <div className="text-[12px] text-white/55 mt-0.5">Custom website build begins immediately. No monthly fee until 30 days after onboarding.</div>
+                  <div className="text-[12px] text-white/55 mt-0.5">Website build begins immediately. No monthly fee until 30 days after onboarding.</div>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-white/50">Day 31 onward</div>
