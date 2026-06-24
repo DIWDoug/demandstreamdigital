@@ -28,13 +28,13 @@ import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
 import oleksiiSkorykh from "@/assets/team/oleksii-skorykh.jpg";
-import carolMora from "@/assets/team/carol-mora.png";
+
 import carlaFinela from "@/assets/team/carla-finela.jpg";
 import samantaLeal from "@/assets/team/samanta-leal.webp";
 import athenaYenko from "@/assets/team/athena-yenko.jpeg";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
-import jamesBelmes from "@/assets/team/james-belmes.webp";
+
 import belAniano from "@/assets/team/bel-aniano.jpeg";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import michaelLipura from "@/assets/team/michael-lipura.jpg";
@@ -63,12 +63,6 @@ const About = () => {
       role: "Head of Automation",
       bio: "Builds and maintains the automation systems that keep campaign delivery efficient across every client account.",
       image: oleksiiSkorykh,
-    },
-    {
-      name: "Carol Mora",
-      role: "Senior Project Manager",
-      bio: "Keeps client campaigns on schedule and communication clear. Ensures every deliverable is executed on time and every client always knows where things stand.",
-      image: carolMora,
     },
     {
       name: "Carla Finela",
@@ -102,12 +96,6 @@ const About = () => {
       bio: "Handles on-page optimization across client sites: headings, meta data, internal linking, and page structure built for local search.",
       image: leilaniMaravillas,
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
-    },
-    {
-      name: "James Belmes",
-      role: "Link Building Specialist",
-      bio: "Runs strategic outreach and link building campaigns that strengthen domain authority for plumbing and HVAC clients.",
-      image: jamesBelmes,
     },
     {
       name: "Bel Aniano",
