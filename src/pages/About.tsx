@@ -28,7 +28,7 @@ import dougHeadshot from "@/assets/doug-bryson-headshot.jpeg";
 import wyler from "@/assets/wyler.jpg";
 import johnSantos from "@/assets/team/john-santos.webp";
 import oleksiiSkorykh from "@/assets/team/oleksii-skorykh.jpg";
-import carolMora from "@/assets/team/carol-mora.png";
+
 import carlaFinela from "@/assets/team/carla-finela.jpg";
 import samantaLeal from "@/assets/team/samanta-leal.webp";
 import athenaYenko from "@/assets/team/athena-yenko.jpeg";
