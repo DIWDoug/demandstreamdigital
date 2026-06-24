@@ -65,12 +65,6 @@ const About = () => {
       image: oleksiiSkorykh,
     },
     {
-      name: "Carol Mora",
-      role: "Senior Project Manager",
-      bio: "Keeps client campaigns on schedule and communication clear. Ensures every deliverable is executed on time and every client always knows where things stand.",
-      image: carolMora,
-    },
-    {
       name: "Carla Finela",
       role: "Certified ClickUp PM",
       bio: "Manages campaign workflows and project delivery using ClickUp systems. Focused on execution quality and timeline consistency across client accounts.",
@@ -102,12 +96,6 @@ const About = () => {
       bio: "Handles on-page optimization across client sites: headings, meta data, internal linking, and page structure built for local search.",
       image: leilaniMaravillas,
       linkedin: "https://www.linkedin.com/in/leilani-jean-maravillas-67a5b746/"
-    },
-    {
-      name: "James Belmes",
-      role: "Link Building Specialist",
-      bio: "Runs strategic outreach and link building campaigns that strengthen domain authority for plumbing and HVAC clients.",
-      image: jamesBelmes,
     },
     {
       name: "Bel Aniano",
