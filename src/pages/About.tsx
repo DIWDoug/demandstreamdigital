@@ -34,7 +34,7 @@ import samantaLeal from "@/assets/team/samanta-leal.webp";
 import athenaYenko from "@/assets/team/athena-yenko.jpeg";
 import desireeAbbariao from "@/assets/team/desiree-abbariao.webp";
 import leilaniMaravillas from "@/assets/team/leilani-maravillas.png";
-import jamesBelmes from "@/assets/team/james-belmes.webp";
+
 import belAniano from "@/assets/team/bel-aniano.jpeg";
 import muhammadBilal from "@/assets/team/muhammad-bilal.png";
 import michaelLipura from "@/assets/team/michael-lipura.jpg";
