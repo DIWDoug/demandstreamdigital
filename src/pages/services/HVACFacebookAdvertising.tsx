@@ -2,7 +2,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, PHONE_NUMBER_RAW } from "@/lib/constants";
 import HVACFacebookHero from "@/components/services/hvac-facebook-advertising/HVACFacebookHero";
 import HVACFacebookMainContent from "@/components/services/hvac-facebook-advertising/HVACFacebookMainContent";
 import HVACFacebookFitExclusivity from "@/components/services/hvac-facebook-advertising/HVACFacebookFitExclusivity";
@@ -35,7 +35,7 @@ const HVACFacebookAdvertising = () => {
           "addressRegion": "TX",
           "postalCode": "75206"
         },
-        "telephone": "+1-469-252-9332",
+        "telephone": PHONE_NUMBER_RAW,
         "url": "https://demandstreamdigital.com"
       },
       {
