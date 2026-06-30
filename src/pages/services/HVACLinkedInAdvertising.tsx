@@ -35,7 +35,7 @@ const HVACLinkedInAdvertising = () => {
           "addressRegion": "TX",
           "postalCode": "75206"
         },
-        "telephone": "+1-682-345-9957",
+        "telephone": "+1-469-252-9332",
         "url": "https://demandstreamdigital.com"
       },
       {
