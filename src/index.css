@@ -684,7 +684,7 @@ iframe[src*="msgsndr.com"][src*="chat-widget"] {
   iframe[src*="leadconnectorhq.com/chat-widget"],
   iframe[src*="msgsndr.com"][src*="chat-widget"] {
     top: auto !important;
-    bottom: 140px !important;
+    bottom: 180px !important;
     transform: none !important;
   }
 
