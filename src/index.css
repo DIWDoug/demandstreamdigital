@@ -684,7 +684,12 @@ iframe[src*="msgsndr.com"][src*="chat-widget"] {
   iframe[src*="leadconnectorhq.com/chat-widget"],
   iframe[src*="msgsndr.com"][src*="chat-widget"] {
     top: auto !important;
-    bottom: 96px !important;
+    bottom: 140px !important;
     transform: none !important;
+  }
+
+  /* Keep the back-to-top button above the mobile bottom CTA bar */
+  .fixed.bottom-6.right-6[aria-label="Back to top"] {
+    bottom: 96px !important;
   }
 }
