@@ -133,8 +133,8 @@ const CrashPage = ({ onReturn }: { onReturn: () => void }) => (
         <span className="text-[#4ecdc4]">{'<Ready to="talk?">'}</span>
         <span className="text-gray-300"> Call us today at </span>
         <span className="text-[#4ecdc4]">{'</'}</span>
-        <a href="tel:7273176826" className="text-[#4ecdc4] underline hover:text-white transition-colors">
-          727.317.6826
+        <a href={PHONE_HREF} className="text-[#4ecdc4] underline hover:text-white transition-colors">
+          {PHONE_NUMBER}
         </a>
         <span className="text-[#4ecdc4]">{'>'}</span>
       </p>
