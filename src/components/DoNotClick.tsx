@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PHONE_HREF, PHONE_NUMBER } from '@/lib/constants';
 
 const ERROR_MESSAGES = [
   'Device is not ready',
