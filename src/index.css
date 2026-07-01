@@ -667,27 +667,8 @@
   }
 }
 
-/* LeadConnector chat widget: move from bottom-right toward vertical middle so it doesn't cover the Back-to-Top button */
-lead-connector-chat-widget,
-#lc_text--chat-widget,
-iframe[src*="leadconnectorhq.com/chat-widget"],
-iframe[src*="msgsndr.com"][src*="chat-widget"] {
-  bottom: auto !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  right: 16px !important;
-}
 
 @media (max-width: 768px) {
-  lead-connector-chat-widget,
-  #lc_text--chat-widget,
-  iframe[src*="leadconnectorhq.com/chat-widget"],
-  iframe[src*="msgsndr.com"][src*="chat-widget"] {
-    top: auto !important;
-    bottom: 180px !important;
-    transform: none !important;
-  }
-
   /* Keep the back-to-top button above the mobile bottom CTA bar */
   .fixed.bottom-6.right-6[aria-label="Back to top"] {
     bottom: 96px !important;
