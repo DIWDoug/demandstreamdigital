@@ -83,6 +83,33 @@ const Privacy = () => {
             </section>
 
             <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">
+                SMS Messaging Program &amp; Mobile Information Sharing
+              </h2>
+              <p className="text-text-secondary leading-relaxed">
+                When you submit a phone number and check the SMS consent box on any Demand Stream Digital form, you
+                are opting in to receive text messages from Demand Stream Digital. Message types include appointment
+                reminders, strategy call confirmations, follow-ups on your growth audit or program, service updates,
+                and marketing communications about our services. Message frequency varies based on your engagement
+                (typically 2 to 8 messages per month). Message and data rates may apply. Reply <strong>HELP</strong>
+                {" "}for help or <strong>STOP</strong> to unsubscribe at any time. Carriers are not liable for delayed
+                or undelivered messages.
+              </p>
+              <p className="text-text-secondary leading-relaxed mt-4 font-semibold text-foreground">
+                No mobile information will be shared with third parties or affiliates for marketing or promotional
+                purposes. All the above categories exclude text messaging originator opt-in data and consent; this
+                information will not be shared with any third parties.
+              </p>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                Information sharing to subcontractors in support services, such as customer service and technical
+                support providers, is permitted solely to fulfill the service you requested (for example, our SMS
+                delivery platform routing your reminder message). These subcontractors are contractually prohibited
+                from using your mobile information for their own marketing.
+              </p>
+            </section>
+
+
+            <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. How We Use Your Information</h2>
               <p className="text-text-secondary leading-relaxed">We use the information we collect to:</p>
               <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">

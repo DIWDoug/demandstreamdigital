@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary, SmsConsentCheckbox } from "@/components/legal/SmsConsentText";
 import AuditReport from "@/components/audit/AuditReport";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -74,6 +74,8 @@ const FreeAudit = () => {
 
   // Honeypot
   const [honeypot, setHoneypot] = useState("");
+  const [smsConsent, setSmsConsent] = useState(false);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,6 +99,17 @@ const FreeAudit = () => {
       });
       return;
     }
+
+    if (!smsConsent) {
+      toast({
+        title: "SMS consent required",
+        description: "Check the SMS opt-in box so we can text you your audit results.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+
 
     setIsLoading(true);
 
@@ -268,6 +281,10 @@ const FreeAudit = () => {
                       </div>
                       <SmsConsentSummary />
                     </div>
+
+                    <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
+
+
 
 
                     <Button

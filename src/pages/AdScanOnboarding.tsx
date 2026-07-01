@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { SITE_URL } from "@/lib/constants";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
-import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary, SmsConsentCheckbox } from "@/components/legal/SmsConsentText";
 
 // Demand Stream credentials the client pastes into each platform
 const GRANT_INFO = {
@@ -110,6 +110,8 @@ const AdScanOnboarding = () => {
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
+
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((f) => ({ ...f, [key]: value }));
@@ -132,7 +134,16 @@ const AdScanOnboarding = () => {
       });
       return;
     }
+    if (!smsConsent) {
+      toast({
+        title: "SMS consent required",
+        description: "Check the SMS opt-in box so we can text you scan progress.",
+        variant: "destructive",
+      });
+      return;
+    }
     setSubmitting(true);
+
     try {
       const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("submit-to-ghl", {
@@ -228,7 +239,11 @@ const AdScanOnboarding = () => {
                   />
                 </div>
                 <SmsConsentSummary />
+                <div className="mt-3">
+                  <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
+                </div>
               </div>
+
               <div>
                 <Label htmlFor="company">Company *</Label>
                 <Input id="company" required value={form.company} onChange={(e) => update("company", e.target.value)} />

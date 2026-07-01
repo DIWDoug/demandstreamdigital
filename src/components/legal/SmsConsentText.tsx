@@ -1,5 +1,7 @@
 import { MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useId } from "react";
+
 
 interface SmsConsentTextProps {
   /** Tailwind classes for the wrapping element. */
@@ -107,6 +109,60 @@ export function EmailMarketingConsent({
       <Link to="/privacy" className={linkClassName}>Privacy Policy</Link> and{" "}
       <Link to="/terms" className={linkClassName}>Terms</Link>.
     </p>
+  );
+}
+
+interface SmsConsentCheckboxProps {
+  /** Controlled checked state. */
+  checked: boolean;
+  /** Change handler. */
+  onChange: (checked: boolean) => void;
+  /** Optional outer wrapper classes. */
+  className?: string;
+  /** Optional link class override. */
+  linkClassName?: string;
+  /** Optional text class override. */
+  textClassName?: string;
+  /** Mark the checkbox as required for form submission (default true). */
+  required?: boolean;
+}
+
+/**
+ * Explicit unchecked opt-in checkbox required for A2P 10DLC (TCR) SMS
+ * campaign approval. The checkbox itself is the affirmative consent record;
+ * the SMS program description travels next to it so the disclosure lives at
+ * the exact point of collection.
+ */
+export function SmsConsentCheckbox({
+  checked,
+  onChange,
+  className = "flex items-start gap-3 rounded-md border border-border bg-muted/40 px-3 py-3 cursor-pointer",
+  linkClassName = "underline font-medium text-foreground hover:opacity-80",
+  textClassName = "text-[13px] leading-relaxed text-text-secondary",
+  required = true,
+}: SmsConsentCheckboxProps) {
+  const id = useId();
+  return (
+    <label htmlFor={id} className={className}>
+      <input
+        id={id}
+        type="checkbox"
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+        required={required}
+        className="mt-1 w-4 h-4 rounded border-border bg-background text-cta focus:ring-cta focus:ring-offset-0 shrink-0"
+        aria-describedby={`${id}-desc`}
+      />
+      <span id={`${id}-desc`} className={textClassName}>
+        <span className="font-semibold text-foreground">I agree to receive SMS messages</span> from Demand Stream
+        Digital at the number provided, including messages sent by autodialer for appointment reminders, follow-ups,
+        and marketing. Consent is not a condition of purchase. Message frequency varies. Message and data rates may
+        apply. Reply HELP for help, STOP to unsubscribe. See our{" "}
+        <Link to="/privacy" className={linkClassName}>Privacy Policy</Link> and{" "}
+        <Link to="/terms" className={linkClassName}>Terms of Service</Link>. Mobile information and SMS opt-in data
+        will not be shared with third parties or affiliates for marketing purposes.
+      </span>
+    </label>
   );
 }
 
