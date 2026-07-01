@@ -110,6 +110,8 @@ const AdScanOnboarding = () => {
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [smsConsent, setSmsConsent] = useState(false);
+
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) =>
     setForm((f) => ({ ...f, [key]: value }));
@@ -132,7 +134,16 @@ const AdScanOnboarding = () => {
       });
       return;
     }
+    if (!smsConsent) {
+      toast({
+        title: "SMS consent required",
+        description: "Check the SMS opt-in box so we can text you scan progress.",
+        variant: "destructive",
+      });
+      return;
+    }
     setSubmitting(true);
+
     try {
       const { supabase } = await import("@/integrations/supabase/client");
       const { error } = await supabase.functions.invoke("submit-to-ghl", {

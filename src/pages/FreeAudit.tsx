@@ -74,6 +74,8 @@ const FreeAudit = () => {
 
   // Honeypot
   const [honeypot, setHoneypot] = useState("");
+  const [smsConsent, setSmsConsent] = useState(false);
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,6 +99,17 @@ const FreeAudit = () => {
       });
       return;
     }
+
+    if (!smsConsent) {
+      toast({
+        title: "SMS consent required",
+        description: "Check the SMS opt-in box so we can text you your audit results.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+
 
     setIsLoading(true);
 
@@ -268,6 +281,10 @@ const FreeAudit = () => {
                       </div>
                       <SmsConsentSummary />
                     </div>
+
+                    <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
+
+
 
 
                     <Button
