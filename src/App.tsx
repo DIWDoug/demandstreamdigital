@@ -188,6 +188,7 @@ const App = () => (
         </SilentErrorBoundary>
         <CookieConsent />
         <MobileBottomCTA />
+        <AccessibilityWidget />
         <Suspense fallback={<RouteLoadingFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
