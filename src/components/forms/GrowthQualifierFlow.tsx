@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
-import { SmsConsentText, SmsConsentSummary } from "@/components/legal/SmsConsentText";
+import { SmsConsentText, SmsConsentSummary, SmsConsentCheckbox } from "@/components/legal/SmsConsentText";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -138,6 +138,8 @@ const GrowthQualifierFlow = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [phoneCountryCode, setPhoneCountryCode] = useState("+1");
+  const [smsConsent, setSmsConsent] = useState(false);
+
   const [honeypot, setHoneypot] = useState("");
 
   const [contractor, setContractor] = useState("");
@@ -257,8 +259,17 @@ const GrowthQualifierFlow = () => {
       });
       return;
     }
+    if (!smsConsent) {
+      toast({
+        title: "SMS consent required",
+        description: "Check the SMS opt-in box so carriers allow us to text you about your market.",
+        variant: "destructive",
+      });
+      return;
+    }
     moveTo("contractor");
   };
+
 
   const submitLead = async () => {
     if (honeypot) {
@@ -518,10 +529,12 @@ const GrowthQualifierFlow = () => {
               onCountryCodeChange={setPhoneCountryCode}
               required
             />
-            <div className="mt-4">
-              <SmsConsentText />
+            <div className="mt-4 space-y-3">
+              <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
+              <SmsConsentText className="text-[12px] text-white/60 leading-relaxed" />
             </div>
-            <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim()} />
+            <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
+
           </div>
         ) : null}
 
