@@ -239,7 +239,11 @@ const AdScanOnboarding = () => {
                   />
                 </div>
                 <SmsConsentSummary />
+                <div className="mt-3">
+                  <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
+                </div>
               </div>
+
               <div>
                 <Label htmlFor="company">Company *</Label>
                 <Input id="company" required value={form.company} onChange={(e) => update("company", e.target.value)} />
