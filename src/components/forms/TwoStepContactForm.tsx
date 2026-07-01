@@ -8,8 +8,8 @@ import { ArrowRight, Clock } from "lucide-react";
  * Replaced site-wide with a Strategy Call CTA card that routes to
  * /grow-qualifier. Props are preserved for backwards compatibility with
  * existing callsites; only `submitButtonText` and `className` still affect
- * rendering. No phone or SMS data is collected here, which is what keeps
- * the chat-widget pages clean of vendor TCPA "multiple opt-in" issues.
+ * rendering. No phone or SMS data is collected here, which keeps this
+ * component compliant with TCPA "multiple opt-in" rules.
  */
 interface TwoStepContactFormProps {
   formType?: string;
