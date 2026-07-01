@@ -41,7 +41,7 @@ const DENSITY: Record<NonNullable<ScheduleGrowthAuditCTAProps["density"]>, strin
  * Single source of truth for the "Schedule Your Growth Audit" CTA card used
  * across MarketExclusivity, HVACMarketExclusivity, and the homepage
  * TerritoryCallout. Routes to /grow-qualifier. No phone/SMS form on this card,
- * which keeps it compliant with the LeadConnector chat widget allowlist rule.
+ * which keeps it compliant with the site's TCPA/SMS consent requirements.
  */
 const ScheduleGrowthAuditCTA = ({
   eyebrow = "Ready to Own Your Market?",
