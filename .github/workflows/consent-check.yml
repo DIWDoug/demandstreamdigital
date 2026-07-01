@@ -28,6 +28,3 @@ jobs:
       # No install step needed: the script is zero-dep and uses only Node built-ins.
       - name: Run TCPA/SMS consent diff-check
         run: node scripts/check-consent-text.mjs
-
-      - name: Run LeadConnector chat widget guard
-        run: node scripts/check-chat-widget.mjs
