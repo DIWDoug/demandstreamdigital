@@ -82,7 +82,7 @@ const BestHVACSEOCompanies = () => {
 
       <Header />
 
-      <main className="pt-16">
+      <div className="pt-16">
         <ListicleHero
           title={config.title}
           author={config.author}
@@ -239,7 +239,7 @@ const BestHVACSEOCompanies = () => {
             </article>
           </div>
         </div>
-      </main>
+      </div>
 
       <Footer />
       <ListicleScrollCTA />

@@ -178,7 +178,7 @@ const BlogPostPage = () => {
     return (
       <div className="dark min-h-screen bg-background text-foreground">
         <Header />
-        <main className="pt-16">
+        <div className="pt-16">
           <Skeleton className="w-full h-[60vh]" />
           <div className="container mx-auto px-4 max-w-3xl py-12 text-center">
             <Skeleton className="h-6 w-32 mx-auto mb-4" />
@@ -187,7 +187,7 @@ const BlogPostPage = () => {
             <Skeleton className="h-16 w-16 rounded-full mx-auto mb-4" />
             <Skeleton className="h-4 w-32 mx-auto" />
           </div>
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -197,7 +197,7 @@ const BlogPostPage = () => {
     return (
       <div className="dark min-h-screen bg-background text-foreground">
         <Header />
-        <main className="pt-24 pb-16">
+        <div className="pt-24 pb-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
             <p className="text-muted-foreground mb-8">The blog post you are looking for does not exist.</p>
@@ -208,7 +208,7 @@ const BlogPostPage = () => {
               </Button>
             </Link>
           </div>
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -310,7 +310,7 @@ const BlogPostPage = () => {
         title={blog.title}
       />
       
-      <main className="pt-16">
+      <div className="pt-16">
         {/* Back Link - Fixed Position */}
         <div className="container mx-auto px-4 py-4">
           <Link to="/our-blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -712,7 +712,7 @@ const BlogPostPage = () => {
             </aside>
           </div>
         </div>
-      </main>
+      </div>
       
       <Footer />
     </div>

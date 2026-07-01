@@ -173,7 +173,7 @@ const OurBlog = () => {
 
       <Header />
 
-      <main className="pt-28 pb-20">
+      <div className="pt-28 pb-20">
         {/* Hero Section */}
         <section className="relative py-16 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-surface-dark to-background" />
@@ -454,7 +454,7 @@ const OurBlog = () => {
             )}
           </div>
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>

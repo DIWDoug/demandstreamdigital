@@ -177,7 +177,7 @@ const PlumbingCostQuiz = () => {
         <Header />
       </div>
 
-      <main className="section-light">
+      <div className="section-light">
         <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-2xl mx-auto">
             {!showResult ? (
@@ -310,7 +310,7 @@ const PlumbingCostQuiz = () => {
             )}
           </div>
         </div>
-      </main>
+      </div>
 
       <div className="dark">
         <Footer />

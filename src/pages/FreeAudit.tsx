@@ -163,7 +163,7 @@ const FreeAudit = () => {
 
       <Header />
 
-      <main className="pt-24 pb-16">
+      <div className="pt-24 pb-16">
         {/* Hero Section */}
         <section className="relative py-16 lg:py-24">
           <SubtleOrbs variant="top-right" />
@@ -401,7 +401,7 @@ const FreeAudit = () => {
             </div>
           </div>
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>

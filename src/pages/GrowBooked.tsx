@@ -21,7 +21,7 @@ const GrowBooked = () => {
         noIndex
       />
       <Header />
-      <main className="pt-32 pb-24">
+      <div className="pt-32 pb-24">
         <section className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-2xl rounded-lg border border-border bg-surface-elevated p-8 text-center shadow-2xl">
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent-green/15 text-accent-green">
@@ -37,7 +37,7 @@ const GrowBooked = () => {
             <Link to="/" className="btn-cta mt-8 inline-flex">Back to DemandStream Digital</Link>
           </div>
         </section>
-      </main>
+      </div>
       <Footer />
     </div>
   );
