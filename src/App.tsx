@@ -190,6 +190,7 @@ const App = () => (
         <MobileBottomCTA />
         <AccessibilityWidget />
         <Suspense fallback={<RouteLoadingFallback />}>
+        <main id="main-content">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
