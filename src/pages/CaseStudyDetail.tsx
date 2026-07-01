@@ -212,7 +212,7 @@ const CaseStudyDetail = () => {
       
       <Header />
       
-      <main>
+      <div>
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-to-b from-surface-dark to-background">
           <div className="container mx-auto px-6 lg:px-8">
@@ -748,7 +748,7 @@ const CaseStudyDetail = () => {
             </Link>
           </div>
         </section>
-      </main>
+      </div>
       
       <Footer />
     </div>

@@ -770,7 +770,7 @@ const Programs = () => {
 
       <Header />
 
-      <main className="bg-navy text-white pt-16 relative overflow-hidden">
+      <div className="bg-navy text-white pt-16 relative overflow-hidden">
         <StreamTexture variant="dark" opacity={0.09} />
 
         {/* Fine grid texture overlay (matches homepage hero) */}
@@ -1169,7 +1169,7 @@ const Programs = () => {
             as pass-through.
           </p>
         </div>
-      </main>
+      </div>
 
       <Footer />
     </>

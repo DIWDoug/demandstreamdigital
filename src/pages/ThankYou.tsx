@@ -22,7 +22,7 @@ const ThankYou = () => {
 
       <Header />
 
-      <main className="pt-32 pb-24">
+      <div className="pt-32 pb-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             {/* Success Icon */}
@@ -172,7 +172,7 @@ const ThankYou = () => {
             </div>
           </div>
         </div>
-      </main>
+      </div>
 
       <Footer />
     </div>

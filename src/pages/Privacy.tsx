@@ -17,7 +17,7 @@ const Privacy = () => {
 
       <Header />
 
-      <main className="pt-32 pb-20">
+      <div className="pt-32 pb-20">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">Privacy Policy</h1>
           <p className="text-text-muted mb-12">Last Updated: {lastUpdated}</p>
@@ -188,7 +188,7 @@ const Privacy = () => {
             </section>
           </div>
         </div>
-      </main>
+      </div>
 
       <Footer />
     </div>

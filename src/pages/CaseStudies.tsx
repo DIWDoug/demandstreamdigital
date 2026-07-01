@@ -132,7 +132,7 @@ const CaseStudies = () => {
       
       <Header />
       
-      <main>
+      <div>
         {/* Hero Section with Stats */}
         <section className="pt-32 pb-16 bg-gradient-to-b from-surface-dark to-background relative overflow-hidden">
           {/* Decorative elements */}
@@ -289,7 +289,7 @@ const CaseStudies = () => {
             </div>
           </section>
         )}
-      </main>
+      </div>
       
       <Footer />
     </div>

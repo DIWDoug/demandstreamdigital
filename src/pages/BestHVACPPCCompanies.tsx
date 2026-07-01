@@ -35,7 +35,7 @@ const BestHVACPPCCompanies = () => {
         }}
       />
       <Header />
-      <main className="pt-16">
+      <div className="pt-16">
         <ListicleHero title={config.title} author={config.author} lastUpdated={config.lastUpdated} breadcrumbs={breadcrumbs} />
         <div className="container mx-auto px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-[280px_1fr] gap-8 xl:gap-12">
@@ -145,7 +145,7 @@ const BestHVACPPCCompanies = () => {
             </article>
           </div>
         </div>
-      </main>
+      </div>
       <Footer />
       <ListicleScrollCTA />
     </div>

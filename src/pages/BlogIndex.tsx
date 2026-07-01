@@ -76,7 +76,7 @@ export default function BlogIndex() {
 
       <Header />
 
-      <main className="pt-32 pb-16">
+      <div className="pt-32 pb-16">
         <section className="relative overflow-hidden pb-10">
           <div className="absolute inset-0 bg-gradient-to-br from-cta/5 via-transparent to-accent-blue/5 pointer-events-none" />
           <div className="container mx-auto px-6 lg:px-8 relative">
@@ -221,7 +221,7 @@ export default function BlogIndex() {
             )}
           </div>
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>

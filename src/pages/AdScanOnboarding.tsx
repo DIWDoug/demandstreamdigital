@@ -206,7 +206,7 @@ const AdScanOnboarding = () => {
         </div>
       </header>
 
-      <main className="bg-surface-light">
+      <div className="bg-surface-light">
         <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-16 space-y-6">
 
           {/* Step 1 — Your info */}
@@ -382,7 +382,7 @@ const AdScanOnboarding = () => {
             </Link>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };

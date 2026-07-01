@@ -131,7 +131,7 @@ const Author = () => {
       
       <Header />
       
-      <main className="pt-24 pb-16">
+      <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -319,7 +319,7 @@ const Author = () => {
             </Button>
           </section>
         </div>
-      </main>
+      </div>
 
       <Footer />
     </div>

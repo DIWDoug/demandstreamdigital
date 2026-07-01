@@ -58,7 +58,7 @@ const BestPlumbingPPCCompanies = () => {
 
       <Header />
 
-      <main className="pt-16">
+      <div className="pt-16">
         <ListicleHero title={config.title} author={config.author} lastUpdated={config.lastUpdated} breadcrumbs={breadcrumbs} />
 
         <div className="container mx-auto px-6 lg:px-8 py-12">
@@ -244,7 +244,7 @@ const BestPlumbingPPCCompanies = () => {
             </article>
           </div>
         </div>
-      </main>
+      </div>
 
       <Footer />
       <ListicleScrollCTA />
