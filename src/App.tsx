@@ -14,6 +14,7 @@ import ElfsightReviews from "./components/ElfsightReviews";
 import SilentErrorBoundary from "./components/SilentErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
 import MobileBottomCTA from "./components/MobileBottomCTA";
+import AccessibilityWidget from "./components/AccessibilityWidget";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 import { useGeoBlock } from "./hooks/useGeoBlock";
@@ -187,6 +188,7 @@ const App = () => (
         </SilentErrorBoundary>
         <CookieConsent />
         <MobileBottomCTA />
+        <AccessibilityWidget />
         <Suspense fallback={<RouteLoadingFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />

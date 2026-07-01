@@ -674,3 +674,53 @@
     bottom: 96px !important;
   }
 }
+
+/* ============ Accessibility widget global modes ============ */
+.a11y-contrast-high {
+  filter: contrast(1.35);
+}
+.a11y-contrast-high body {
+  background: #000 !important;
+  color: #fff !important;
+}
+.a11y-contrast-high a { color: #ffd400 !important; }
+
+.a11y-contrast-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+.a11y-contrast-invert img,
+.a11y-contrast-invert video,
+.a11y-contrast-invert picture,
+.a11y-contrast-invert svg,
+.a11y-contrast-invert [style*="background-image"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.a11y-highlight-links a,
+.a11y-highlight-links button {
+  outline: 2px solid #ffd400 !important;
+  outline-offset: 2px !important;
+  text-decoration: underline !important;
+}
+
+.a11y-reduce-motion *,
+.a11y-reduce-motion *::before,
+.a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+.a11y-dyslexia,
+.a11y-dyslexia * {
+  font-family: Verdana, "Trebuchet MS", Tahoma, sans-serif !important;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.08em !important;
+  line-height: 1.7 !important;
+}
+
+.a11y-large-cursor,
+.a11y-large-cursor * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path d='M6 4 L6 40 L16 30 L22 44 L28 42 L22 28 L36 28 Z' fill='black' stroke='white' stroke-width='2'/></svg>") 4 4, auto !important;
+}
