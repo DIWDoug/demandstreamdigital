@@ -53,7 +53,36 @@ const Terms = () => {
               </p>
             </section>
 
-            {/* 3. Eligibility */}
+            {/* 2b. SMS Messaging Program */}
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">
+                2a. SMS Messaging Program (A2P 10DLC)
+              </h2>
+              <p className="text-text-secondary leading-relaxed">
+                By providing your mobile number and checking the SMS opt-in box on any Demand Stream Digital form,
+                you consent to receive text messages from Demand Stream Digital, including messages sent using an
+                automatic telephone dialing system. Message types include appointment reminders, strategy call
+                confirmations, follow-ups on submitted forms, program updates, and marketing communications about our
+                growth marketing services.
+              </p>
+              <ul className="list-disc list-inside text-text-secondary space-y-2 mt-3">
+                <li>Message frequency varies (typically 2 to 8 messages per month).</li>
+                <li>Message and data rates may apply. Check with your wireless carrier.</li>
+                <li>Reply <strong>HELP</strong> for help. Reply <strong>STOP</strong> to unsubscribe at any time.</li>
+                <li>Carriers are not liable for delayed or undelivered messages.</li>
+                <li>Consent to receive SMS messages is not a condition of purchasing any goods or services.</li>
+              </ul>
+              <p className="text-text-secondary leading-relaxed mt-4 font-semibold text-foreground">
+                No mobile information will be shared with third parties or affiliates for marketing or promotional
+                purposes. Text messaging originator opt-in data and consent will not be shared with any third
+                parties.
+              </p>
+              <p className="text-text-secondary leading-relaxed mt-4">
+                See our <a href="/privacy" className="text-accent-blue hover:underline">Privacy Policy</a> for
+                detailed information on how we handle your mobile information.
+              </p>
+            </section>
+
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">3. Eligibility</h2>
               <p className="text-text-secondary leading-relaxed">
