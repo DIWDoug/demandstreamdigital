@@ -403,6 +403,7 @@ const GBPCategoryDiscovery = () => {
           )}
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>
