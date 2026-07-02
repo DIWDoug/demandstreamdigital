@@ -140,8 +140,12 @@ Respond with JSON only, matching this exact shape:
   "services": [string],
   "pageIdeas": [{ "title": string, "slug": string, "type": "Service Page" | "Location Page" | "FAQ Page", "description": string }],
   "keywords": [string],
+  "peopleAlsoAsk": [string],
+  "topicalClusters": [{ "topic": string, "angle": string }],
+  "geoModifiers": [string],
   "tip": string
 }`;
+
 
 
     const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
