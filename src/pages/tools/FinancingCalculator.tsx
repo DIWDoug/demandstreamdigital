@@ -189,6 +189,7 @@ const FinancingCalculator = () => {
           </div>
         </div>
       </div>
+      </div>
 
       <div className="dark">
         <Footer />
