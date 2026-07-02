@@ -104,6 +104,7 @@ const JobCostEstimator = lazy(() => import("./pages/tools/JobCostEstimator"));
 const FinancingCalculator = lazy(() => import("./pages/tools/FinancingCalculator"));
 const PlumbingCostQuiz = lazy(() => import("./pages/tools/PlumbingCostQuiz"));
 const GBPCategoryDiscovery = lazy(() => import("./pages/tools/GBPCategoryDiscovery"));
+const JobValueBenchmark = lazy(() => import("./pages/tools/JobValueBenchmark"));
 const FreeAudit = lazy(() => import("./pages/FreeAudit"));
 const RefundRequest = lazy(() => import("./pages/RefundRequest"));
 
@@ -210,6 +211,7 @@ const App = () => (
           <Route path="/tools/financing-calculator" element={<FinancingCalculator />} />
           <Route path="/tools/plumbing-cost-quiz" element={<PlumbingCostQuiz />} />
           <Route path="/tools/gbp-category-discovery" element={<GBPCategoryDiscovery />} />
+          <Route path="/tools/job-value-benchmark" element={<JobValueBenchmark />} />
           <Route path="/free-audit" element={<FreeAudit />} />
           <Route path="/refund-request" element={<RefundRequest />} />
 
