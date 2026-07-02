@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, Loader2, MapPin, Layers, ListChecks, FileText, KeyRound, Lightbulb, ArrowRight, AlertTriangle } from "lucide-react";
+import { Search, Loader2, MapPin, Layers, ListChecks, FileText, KeyRound, Lightbulb, ArrowRight, AlertTriangle, Trophy, Sparkles, HelpCircle, Building2 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -9,8 +9,9 @@ import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
-interface CategoryItem { name: string; why: string; }
-interface PageIdea { title: string; slug: string; }
+interface CategoryItem { name: string; why: string; score?: number; matchReason?: string; }
+type PageType = "Service Page" | "Location Page" | "FAQ Page";
+interface PageIdea { title: string; slug: string; type?: PageType; description?: string; }
 interface Result {
   outOfScope: boolean;
   note?: string;
@@ -23,6 +24,20 @@ interface Result {
 }
 
 const EXAMPLES = ["Plumber", "Drain cleaning", "HVAC contractor", "Water heater installation", "Tankless water heater", "AC repair"];
+
+const scoreTier = (score: number): { label: string; className: string } => {
+  if (score >= 90) return { label: "Perfect Match", className: "bg-emerald-100 text-emerald-800 border-emerald-200" };
+  if (score >= 80) return { label: "Excellent Match", className: "bg-green-100 text-green-800 border-green-200" };
+  if (score >= 70) return { label: "Great Match", className: "bg-blue-100 text-blue-800 border-blue-200" };
+  return { label: "Good Match", className: "bg-amber-100 text-amber-800 border-amber-200" };
+};
+
+const pageTypeMeta: Record<PageType, { icon: typeof FileText; className: string }> = {
+  "Service Page": { icon: FileText, className: "bg-cta/10 text-cta border-cta/30" },
+  "Location Page": { icon: Building2, className: "bg-navy/10 text-navy border-navy/20" },
+  "FAQ Page": { icon: HelpCircle, className: "bg-violet-100 text-violet-800 border-violet-200" },
+};
+
 
 const GBPCategoryDiscovery = () => {
   const { toast } = useToast();
@@ -176,60 +191,118 @@ const GBPCategoryDiscovery = () => {
 
           {result && !result.outOfScope && (
             <div className="space-y-6">
-              {/* Primary Category */}
-              <div className="bg-white rounded-lg border-2 border-cta p-6 md:p-8 shadow-sm">
-                <div className="flex items-center gap-2 text-cta text-sm font-bold uppercase tracking-wider mb-2">
-                  <MapPin className="w-4 h-4" /> Primary GBP Category
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-navy mb-3">{result.primaryCategory.name}</h2>
-                <p className="text-muted-foreground">{result.primaryCategory.why}</p>
-              </div>
-
-              {/* Secondary + Services grid */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
-                  <div className="flex items-center gap-2 text-navy font-bold mb-4">
-                    <Layers className="w-5 h-5 text-cta" /> Secondary Categories
-                  </div>
-                  <ul className="space-y-3">
-                    {result.secondaryCategories.map((c) => (
-                      <li key={c.name} className="border-b border-border pb-3 last:border-0 last:pb-0">
-                        <div className="font-semibold text-navy">{c.name}</div>
-                        <div className="text-sm text-muted-foreground">{c.why}</div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
-                  <div className="flex items-center gap-2 text-navy font-bold mb-4">
-                    <ListChecks className="w-5 h-5 text-cta" /> GBP Services to List
-                  </div>
-                  <ul className="grid grid-cols-1 gap-2">
-                    {result.services.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-navy">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cta mt-1.5 shrink-0" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Page ideas */}
-              <div className="bg-white rounded-lg border border-border p-6 md:p-8">
-                <div className="flex items-center gap-2 text-navy font-bold mb-4">
-                  <FileText className="w-5 h-5 text-cta" /> Website Page Ideas
-                </div>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {result.pageIdeas.map((p) => (
-                    <div key={p.slug} className="border border-border rounded-md p-3">
-                      <div className="font-semibold text-navy text-sm">{p.title}</div>
-                      <code className="text-xs text-muted-foreground">/{p.slug.replace(/^\//, "")}</code>
+              {/* Best Match Found */}
+              {(() => {
+                const score = result.primaryCategory.score ?? 95;
+                const tier = scoreTier(score);
+                return (
+                  <div className="bg-white rounded-lg border-2 border-cta p-6 md:p-8 shadow-sm">
+                    <div className="flex items-center gap-2 text-cta text-sm font-bold uppercase tracking-wider mb-3">
+                      <Trophy className="w-4 h-4" /> Best Match Found
                     </div>
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <h2 className="text-3xl md:text-4xl font-bold text-navy">{result.primaryCategory.name || "No verified match"}</h2>
+                      <span className="text-2xl font-bold text-cta">{score}%</span>
+                      <span className={`px-2.5 py-1 rounded-full text-xs font-semibold border ${tier.className}`}>{tier.label}</span>
+                    </div>
+                    <p className="text-muted-foreground mb-3">{result.primaryCategory.why}</p>
+                    {result.primaryCategory.matchReason && (
+                      <div className="text-sm text-navy/70">
+                        <span className="font-semibold">Reason:</span> {result.primaryCategory.matchReason}
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+
+              {/* Alternative Category Suggestions */}
+              {result.secondaryCategories.length > 0 && (
+                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                  <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                    <Layers className="w-5 h-5 text-cta" /> Alternative Category Suggestions
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-5">AI-scored, whitelisted GBP categories that reinforce the primary without diluting it.</p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {result.secondaryCategories.map((c, idx) => {
+                      const score = c.score ?? 70;
+                      const tier = scoreTier(score);
+                      const isTopPick = idx === 0;
+                      return (
+                        <div key={c.name} className="border border-border rounded-lg p-4 relative">
+                          {isTopPick && (
+                            <span className="absolute -top-2 right-3 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cta text-white">
+                              <Sparkles className="w-3 h-3" /> Top Pick
+                            </span>
+                          )}
+                          <div className="flex items-start justify-between gap-3 mb-2">
+                            <div className="font-semibold text-navy">{c.name}</div>
+                            <div className="text-right shrink-0">
+                              <div className="text-lg font-bold text-navy leading-none">{score}%</div>
+                            </div>
+                          </div>
+                          <span className={`inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold border mb-2 ${tier.className}`}>{tier.label}</span>
+                          <div className="text-sm text-muted-foreground">
+                            <span className="font-semibold text-navy/80">Why this fits: </span>{c.why}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-5 pt-4 border-t border-border text-xs text-muted-foreground">
+                    <div className="font-semibold text-navy mb-1">How AI scores categories</div>
+                    <div className="grid sm:grid-cols-2 gap-x-4 gap-y-0.5">
+                      <span>90-100: Perfect/exact match</span>
+                      <span>80-89: Excellent, highly relevant</span>
+                      <span>70-79: Great match, relevant</span>
+                      <span>60-69: Good match, somewhat relevant</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Services */}
+              <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                  <ListChecks className="w-5 h-5 text-cta" /> GBP Services to List
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">Single-intent list. Repair and installation belong on separate profiles/pages.</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {result.services.map((s) => (
+                    <li key={s} className="flex items-start gap-2 text-sm text-navy">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cta mt-1.5 shrink-0" />
+                      {s}
+                    </li>
                   ))}
+                </ul>
+              </div>
+
+              {/* Inner Page Suggestions */}
+              <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                  <FileText className="w-5 h-5 text-cta" /> Inner Page Suggestions
+                </div>
+                <p className="text-sm text-muted-foreground mb-5">Service, Location, and FAQ pages mapped to your primary category and top services.</p>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {result.pageIdeas.map((p) => {
+                    const type: PageType = (p.type as PageType) || "Service Page";
+                    const meta = pageTypeMeta[type] || pageTypeMeta["Service Page"];
+                    const Icon = meta.icon;
+                    return (
+                      <div key={p.slug} className="border border-border rounded-lg p-4">
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <div className="font-semibold text-navy text-sm leading-snug">{p.title}</div>
+                          <span className={`shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold border ${meta.className}`}>
+                            <Icon className="w-3 h-3" /> {type}
+                          </span>
+                        </div>
+                        <code className="block text-xs text-cta bg-neutral-50 border border-border rounded px-2 py-1 mb-2 break-all">/{p.slug.replace(/^\//, "")}</code>
+                        {p.description && <p className="text-xs text-muted-foreground">{p.description}</p>}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
+
 
               {/* Keywords + Tip */}
               <div className="grid md:grid-cols-2 gap-6">
