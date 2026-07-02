@@ -80,7 +80,12 @@ ${ALLOWED_GBP_CATEGORIES.map((c) => `  - ${c}`).join("\n")}
 - services: 8-12 specific service item names a contractor would list under "Services" in GBP, ALL within the chosen intent lane. Never include an install/replacement item in a repair list, or a repair item in an install list. No "repair and installation" combo items.
 - pageIdeas: 6-9 website page ideas, ALL within the chosen intent lane. Each item MUST have a "type" of exactly "Service Page", "Location Page", or "FAQ Page", plus a short "description". Include one "Location Page" for the primary category and one "FAQ Page"; the rest are "Service Page" entries mapped to top services in the same lane. Titles and slugs must NOT contain both "repair" and "install" (or "replacement"), and must not use ampersands, slashes, or the words "and"/"or" to combine intents. Slugs are lowercase, hyphenated, no leading slash, and end with "-your-city" for Service and Location pages.
 - keywords: 6-10 high-intent local search phrases (no city name), all in the same intent lane. No combined "repair and install" phrases.
+- peopleAlsoAsk: 6-8 realistic "People Also Ask" style questions a homeowner would type into Google for this exact intent lane. Natural question phrasing (how, why, what, when, how much, is it worth, etc.). No city names. All must stay in the chosen intent lane.
+- topicalClusters: 4-6 topical content cluster ideas that support the primary category from an E-E-A-T angle (e.g., "Signs You Need X", "Cost Factors for X", "DIY vs Pro for X", "Brand Comparisons"). Each item: { "topic": string, "angle": string } where angle is one sentence describing the content angle. All in the chosen intent lane.
+- geoModifiers: 6-10 geographic modifier PATTERNS a Plumbing/HVAC site should target for local SEO. Use "{city}", "{neighborhood}", "{zip}" as literal placeholders (e.g., "{service} near me", "{service} in {city} {state}", "emergency {service} {neighborhood}", "24 hour {service} {zip}"). No real city names. 
 - tip: one concrete optimization tip specific to this category.
+
+
 
 Return ONLY valid JSON matching the requested schema. No prose, no markdown fences.`;
 
@@ -135,8 +140,12 @@ Respond with JSON only, matching this exact shape:
   "services": [string],
   "pageIdeas": [{ "title": string, "slug": string, "type": "Service Page" | "Location Page" | "FAQ Page", "description": string }],
   "keywords": [string],
+  "peopleAlsoAsk": [string],
+  "topicalClusters": [{ "topic": string, "angle": string }],
+  "geoModifiers": [string],
   "tip": string
 }`;
+
 
 
     const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -258,6 +267,19 @@ Respond with JSON only, matching this exact shape:
       if (Array.isArray(p.keywords)) {
         p.keywords = p.keywords.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
       }
+      if (Array.isArray(p.peopleAlsoAsk)) {
+        p.peopleAlsoAsk = p.peopleAlsoAsk.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.geoModifiers)) {
+        p.geoModifiers = p.geoModifiers.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.topicalClusters)) {
+        p.topicalClusters = p.topicalClusters.filter((tc: any) => {
+          const blob = `${tc?.topic ?? ""} ${tc?.angle ?? ""}`;
+          return !isOtherLane(blob);
+        });
+      }
+
       if (Array.isArray(p.pageIdeas)) {
         p.pageIdeas = p.pageIdeas.filter((pi: any) => {
           const blob = `${pi?.title ?? ""} ${pi?.slug ?? ""} ${pi?.description ?? ""}`;
