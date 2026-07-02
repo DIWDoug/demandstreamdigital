@@ -21,6 +21,48 @@ function checkRate(key: string) {
   return true;
 }
 
+// Verified real Google Business Profile categories (US) for Plumbing & HVAC.
+// Source: categories present in the GBP category picker. Do NOT add categories
+// that are not on this list without verifying them in the live GBP UI.
+const ALLOWED_GBP_CATEGORIES = [
+  // Plumbing
+  "Plumber",
+  "Drainage service",
+  "Septic system service",
+  "Gasfitter",
+  "Hot water system supplier",
+  "Water softening equipment supplier",
+  "Water filter supplier",
+  "Water pump supplier",
+  "Water tank cleaning service",
+  "Water damage restoration service",
+  "Bathroom remodeler",
+  "Kitchen remodeler",
+  "Pipe supplier",
+  // HVAC
+  "HVAC contractor",
+  "Heating contractor",
+  "Air conditioning contractor",
+  "Air conditioning repair service",
+  "Air conditioning system supplier",
+  "Furnace repair service",
+  "Furnace parts supplier",
+  "Heating equipment supplier",
+  "Boiler supplier",
+  "Boiler service",
+  "Heat pump supplier",
+  "Air duct cleaning service",
+  "Air filter supplier",
+  "Insulation contractor",
+  "Ventilating equipment manufacturer",
+  "Mechanical contractor",
+  "Fireplace store",
+  // Adjacent / cross-trade (only when clearly relevant)
+  "Contractor",
+  "General contractor",
+  "Repair service",
+];
+
 const SYSTEM_PROMPT = `You are a Google Business Profile (GBP) category expert specializing in the Plumbing and HVAC trades in the United States.
 
 Given a user's business type, keyword, or short description, respond with the best GBP category setup for a Plumbing or HVAC company.
@@ -28,15 +70,18 @@ Given a user's business type, keyword, or short description, respond with the be
 STRICT RULES:
 - Only respond for Plumbing, HVAC, drain/sewer, water heater, indoor air quality, and directly adjacent home-service trades.
 - If the input is clearly outside Plumbing/HVAC (e.g., "restaurant", "law firm", "salon"), set "outOfScope": true and leave arrays empty; put a short polite explanation in "note".
-- Use ONLY real Google Business Profile category names (exact strings Google uses in the GBP category picker). Do not invent categories.
-- primaryCategory should be the single best fit.
-- secondaryCategories: 3-6 real GBP secondary categories that reinforce topical relevance without diluting the primary.
+- CATEGORY WHITELIST: You MUST pick primaryCategory.name and every secondaryCategories[].name VERBATIM from this exact list. Do not paraphrase, pluralize, reword, translate, or invent. If nothing on the list fits, return fewer categories (or zero secondaries) rather than making one up.
+${ALLOWED_GBP_CATEGORIES.map((c) => `  - ${c}`).join("\n")}
+- primaryCategory: the single best fit from the whitelist.
+- secondaryCategories: 0-5 items from the whitelist. Quality over quantity. Only include a secondary if it is genuinely a different service line the business actually performs and would take real phone calls for. Never pad the list. It is OK (and often correct) to return 0-2 secondaries. Never include the primary again.
+- For each category, the "why" must be a short, concrete reason grounded in the input, not generic filler.
 - services: 8-12 specific service item names a contractor would list under "Services" in GBP. CRITICAL: never mix repair and installation in the same services list. A repair intent and an installation/replacement intent are different phone calls and belong on separate GBP profiles/pages. Infer intent from the input (e.g., "water heater repair" => repair/diagnostic/leak services only; "water heater installation" => install/replace/haul-away services only). If the input is generic (e.g., just "plumber" or "HVAC"), pick ONE intent lane (default to repair/service) and stay in that lane for every service item. Do not include installation items in a repair list or repair items in an installation list.
 - pageIdeas: 5-8 website page/URL slug ideas that map to the primary category and top services for local SEO.
 - keywords: 6-10 high-intent local search phrases (no city name).
 - tip: one concrete optimization tip specific to this category.
 
 Return ONLY valid JSON matching the requested schema. No prose, no markdown fences.`;
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
