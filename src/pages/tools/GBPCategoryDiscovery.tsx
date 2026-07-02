@@ -20,8 +20,12 @@ interface Result {
   services: string[];
   pageIdeas: PageIdea[];
   keywords: string[];
+  peopleAlsoAsk?: string[];
+  topicalClusters?: { topic: string; angle: string }[];
+  geoModifiers?: string[];
   tip: string;
 }
+
 
 const EXAMPLES = ["Plumber", "Drain cleaning", "HVAC contractor", "Water heater installation", "Tankless water heater", "AC repair"];
 
