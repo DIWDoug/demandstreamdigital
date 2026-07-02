@@ -301,10 +301,59 @@ const GBPCategoryDiscovery = () => {
                         </div>
                         <code className="block text-xs text-cta bg-neutral-50 border border-border rounded px-2 py-1 mb-2 break-all">/{p.slug.replace(/^\//, "")}</code>
                         {p.description && <p className="text-xs text-muted-foreground">{p.description}</p>}
-                      </div>
-                    );
-                  })}
+              </div>
+
+              {/* People Also Ask */}
+              {result.peopleAlsoAsk && result.peopleAlsoAsk.length > 0 && (
+                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                  <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                    <MessageCircleQuestion className="w-5 h-5 text-cta" /> People Also Ask
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">Real homeowner questions to answer on service pages, FAQs, and blog content. Each one is a chance to win a SERP feature.</p>
+                  <ul className="space-y-2">
+                    {result.peopleAlsoAsk.map((q) => (
+                      <li key={q} className="flex items-start gap-3 p-3 border border-border rounded-lg bg-neutral-50">
+                        <HelpCircle className="w-4 h-4 text-cta mt-0.5 shrink-0" />
+                        <span className="text-sm text-navy">{q}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+              )}
+
+              {/* Topical Clusters */}
+              {result.topicalClusters && result.topicalClusters.length > 0 && (
+                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                  <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                    <Compass className="w-5 h-5 text-cta" /> Topical Cluster Recommendations
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">Content clusters that build topical authority around your primary category. Each cluster is a hub page plus supporting articles.</p>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {result.topicalClusters.map((tc) => (
+                      <div key={tc.topic} className="border border-border rounded-lg p-4">
+                        <div className="font-semibold text-navy text-sm mb-1">{tc.topic}</div>
+                        <div className="text-xs text-muted-foreground">{tc.angle}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Geographic Modifiers */}
+              {result.geoModifiers && result.geoModifiers.length > 0 && (
+                <div className="bg-white rounded-lg border border-border p-6 md:p-8">
+                  <div className="flex items-center gap-2 text-navy font-bold mb-1">
+                    <Globe2 className="w-5 h-5 text-cta" /> Geographic Modifier Patterns
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">Swap <code className="text-cta">{"{city}"}</code>, <code className="text-cta">{"{neighborhood}"}</code>, and <code className="text-cta">{"{zip}"}</code> with your service area. Build one page per unique combination.</p>
+                  <div className="flex flex-wrap gap-2">
+                    {result.geoModifiers.map((g) => (
+                      <span key={g} className="px-3 py-1.5 rounded-md bg-navy/5 border border-navy/10 text-sm text-navy font-mono">{g}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               </div>
 
 
