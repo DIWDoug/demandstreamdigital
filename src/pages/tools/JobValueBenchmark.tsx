@@ -248,6 +248,7 @@ export default function JobValueBenchmark() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>
