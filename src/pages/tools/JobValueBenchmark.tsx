@@ -50,7 +50,7 @@ export default function JobValueBenchmark() {
       <SEOHead
         title="Plumbing & HVAC Job Value Benchmark Calculator | Demand Stream"
         description="See the industry Low/Avg/High ticket value for plumbing and HVAC job types, then calculate how much revenue missed calls cost your business each month."
-        keywords={["hvac ticket average", "plumbing job value benchmark", "missed call revenue", "hvac install average cost", "plumbing service call average"]}
+        keywords="hvac ticket average, plumbing job value benchmark, missed call revenue, hvac install average cost, plumbing service call average"
         canonicalUrl="/tools/job-value-benchmark"
       />
       <Header />
