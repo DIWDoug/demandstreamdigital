@@ -267,6 +267,19 @@ Respond with JSON only, matching this exact shape:
       if (Array.isArray(p.keywords)) {
         p.keywords = p.keywords.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
       }
+      if (Array.isArray(p.peopleAlsoAsk)) {
+        p.peopleAlsoAsk = p.peopleAlsoAsk.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.geoModifiers)) {
+        p.geoModifiers = p.geoModifiers.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.topicalClusters)) {
+        p.topicalClusters = p.topicalClusters.filter((tc: any) => {
+          const blob = `${tc?.topic ?? ""} ${tc?.angle ?? ""}`;
+          return !isOtherLane(blob);
+        });
+      }
+
       if (Array.isArray(p.pageIdeas)) {
         p.pageIdeas = p.pageIdeas.filter((pi: any) => {
           const blob = `${pi?.title ?? ""} ${pi?.slug ?? ""} ${pi?.description ?? ""}`;
