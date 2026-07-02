@@ -198,19 +198,31 @@ Respond with JSON only, matching this exact shape:
       const isAllowed = (name: unknown) =>
         typeof name === "string" && allowedSet.has(name.trim().toLowerCase());
       if (p.primaryCategory && !isAllowed(p.primaryCategory?.name)) {
-        p.primaryCategory = { name: "", why: "No verified GBP category matched. Review manually." };
+        p.primaryCategory = { name: "", score: 0, matchReason: "No verified GBP category matched.", why: "No verified GBP category matched. Review manually." };
+      } else if (p.primaryCategory) {
+        const s = Number(p.primaryCategory.score);
+        p.primaryCategory.score = Number.isFinite(s) ? Math.max(0, Math.min(100, Math.round(s))) : 90;
+        p.primaryCategory.matchReason = String(p.primaryCategory.matchReason ?? "Best-fit GBP category from the verified list.");
       }
       if (Array.isArray(p.secondaryCategories)) {
         const primaryName = String(p.primaryCategory?.name ?? "").trim().toLowerCase();
         const seen = new Set<string>();
-        p.secondaryCategories = p.secondaryCategories.filter((c: any) => {
-          if (!isAllowed(c?.name)) return false;
-          const key = String(c.name).trim().toLowerCase();
-          if (key === primaryName || seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        });
+        p.secondaryCategories = p.secondaryCategories
+          .filter((c: any) => {
+            if (!isAllowed(c?.name)) return false;
+            const key = String(c.name).trim().toLowerCase();
+            if (key === primaryName || seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          })
+          .map((c: any) => {
+            const s = Number(c.score);
+            c.score = Number.isFinite(s) ? Math.max(60, Math.min(89, Math.round(s))) : 70;
+            return c;
+          })
+          .sort((a: any, b: any) => b.score - a.score);
       }
+
     }
 
     return new Response(JSON.stringify({ result: parsed }), {
