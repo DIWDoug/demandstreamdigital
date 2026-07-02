@@ -312,6 +312,7 @@ const PlumbingCostQuiz = () => {
           </div>
         </div>
       </div>
+      </div>
 
       <div className="dark">
         <Footer />
