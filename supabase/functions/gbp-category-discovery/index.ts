@@ -129,13 +129,14 @@ Respond with JSON only, matching this exact shape:
 {
   "outOfScope": boolean,
   "note": string,
-  "primaryCategory": { "name": string, "why": string },
-  "secondaryCategories": [{ "name": string, "why": string }],
+  "primaryCategory": { "name": string, "score": number, "matchReason": string, "why": string },
+  "secondaryCategories": [{ "name": string, "score": number, "why": string }],
   "services": [string],
-  "pageIdeas": [{ "title": string, "slug": string }],
+  "pageIdeas": [{ "title": string, "slug": string, "type": "Service Page" | "Location Page" | "FAQ Page", "description": string }],
   "keywords": [string],
   "tip": string
 }`;
+
 
     const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
