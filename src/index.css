@@ -627,6 +627,59 @@
 
 /* Article content styling for blog posts */
 @layer components {
+  /* Larger text for free tools pages */
+  .tools-large-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .tools-large-text .text-xs,
+  .tools-large-text .text-\[10px\],
+  .tools-large-text .text-\[11px\] {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.25rem !important;
+  }
+
+  .tools-large-text .text-sm {
+    font-size: 1rem !important; /* 16px */
+    line-height: 1.5rem !important;
+  }
+
+  .tools-large-text .text-base {
+    font-size: 1.0625rem !important; /* 17px */
+    line-height: 1.65rem !important;
+  }
+
+  .tools-large-text .text-lg {
+    font-size: 1.25rem !important; /* 20px */
+    line-height: 1.75rem !important;
+  }
+
+  .tools-large-text .text-xl {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 2rem !important;
+  }
+
+  .tools-large-text .text-2xl {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 2.125rem !important;
+  }
+
+  .tools-large-text .text-3xl {
+    font-size: 2.25rem !important; /* 36px */
+    line-height: 2.5rem !important;
+  }
+
+  .tools-large-text label,
+  .tools-large-text .text-muted-foreground,
+  .tools-large-text .text-text-muted {
+    font-size: 1rem !important;
+  }
+
+  .tools-large-text .article-content {
+    font-size: 1rem;
+  }
+
   .article-content ol {
     counter-reset: list-counter;
   }

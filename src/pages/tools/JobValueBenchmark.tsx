@@ -55,29 +55,30 @@ export default function JobValueBenchmark() {
       />
       <Header />
 
-      <section className="bg-primary text-primary-foreground py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6">
-            <Calculator className="h-4 w-4" />
-            Free tool. No signup.
+      <div className="tools-large-text">
+        <section className="bg-primary text-primary-foreground py-16 md:py-24">
+          <div className="container mx-auto px-4 max-w-5xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6">
+              <Calculator className="h-4 w-4" />
+              Free tool. No signup.
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Plumbing &amp; HVAC Job Value Benchmark
+            </h1>
+            <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto">
+              Industry Low, Average, and High ticket values by job type. Then see the real revenue you leave on the table when calls go unanswered.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Plumbing &amp; HVAC Job Value Benchmark
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto">
-            Industry Low, Average, and High ticket values by job type. Then see the real revenue you leave on the table when calls go unanswered.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* Inputs */}
-            <div className="rounded-xl border bg-card p-6 shadow-sm">
-              <h2 className="text-xl font-semibold mb-6">Your inputs</h2>
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Inputs */}
+              <div className="rounded-xl border bg-card p-6 shadow-sm">
+                <h2 className="text-xl font-semibold mb-6">Your inputs</h2>
 
-              <div className="space-y-6">
+                <div className="space-y-6">
                 <div>
                   <Label className="mb-2 block">Trade</Label>
                   <div className="grid grid-cols-2 gap-2">
@@ -247,6 +248,7 @@ export default function JobValueBenchmark() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>

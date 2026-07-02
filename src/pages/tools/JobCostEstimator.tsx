@@ -89,6 +89,7 @@ const JobCostEstimator = () => {
         <Header />
       </div>
 
+      <div className="tools-large-text">
       <div className="section-light">
         <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-3xl mx-auto">
@@ -241,6 +242,7 @@ const JobCostEstimator = () => {
             )}
           </div>
         </div>
+      </div>
       </div>
 
       <div className="dark">

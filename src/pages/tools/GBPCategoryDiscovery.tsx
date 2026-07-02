@@ -87,6 +87,7 @@ const GBPCategoryDiscovery = () => {
       />
       <Header />
 
+      <div className="tools-large-text">
       {/* HERO */}
       <section className="bg-navy text-white py-20 lg:py-28">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl text-center">
@@ -402,6 +403,7 @@ const GBPCategoryDiscovery = () => {
           )}
         </div>
       </section>
+      </div>
 
       <Footer />
     </div>
