@@ -72,15 +72,17 @@ STRICT RULES:
 - If the input is clearly outside Plumbing/HVAC (e.g., "restaurant", "law firm", "salon"), set "outOfScope": true and leave arrays empty; put a short polite explanation in "note".
 - CATEGORY WHITELIST: You MUST pick primaryCategory.name and every secondaryCategories[].name VERBATIM from this exact list. Do not paraphrase, pluralize, reword, translate, or invent. If nothing on the list fits, return fewer categories (or zero secondaries) rather than making one up.
 ${ALLOWED_GBP_CATEGORIES.map((c) => `  - ${c}`).join("\n")}
-- primaryCategory: the single best fit from the whitelist.
-- secondaryCategories: 0-5 items from the whitelist. Quality over quantity. Only include a secondary if it is genuinely a different service line the business actually performs and would take real phone calls for. Never pad the list. It is OK (and often correct) to return 0-2 secondaries. Never include the primary again.
+- primaryCategory: the single best fit from the whitelist. Include a match "score" from 0-100 and a short "matchReason" (e.g., "Exact keyword match found", "Closest whitelisted category for this service intent").
+- secondaryCategories: 0-5 items from the whitelist. Quality over quantity. Only include a secondary if it is genuinely a different service line the business actually performs and would take real phone calls for. Never pad the list. It is OK (and often correct) to return 0-2 secondaries. Never include the primary again. Each item MUST include a "score" from 60-89 reflecting relevance, sorted highest to lowest.
+- Score guidance: 90-100 = perfect/exact match, 80-89 = excellent match, 70-79 = great match, 60-69 = good match. Never return a secondary below 60.
 - For each category, the "why" must be a short, concrete reason grounded in the input, not generic filler.
 - services: 8-12 specific service item names a contractor would list under "Services" in GBP. CRITICAL: never mix repair and installation in the same services list. A repair intent and an installation/replacement intent are different phone calls and belong on separate GBP profiles/pages. Infer intent from the input (e.g., "water heater repair" => repair/diagnostic/leak services only; "water heater installation" => install/replace/haul-away services only). If the input is generic (e.g., just "plumber" or "HVAC"), pick ONE intent lane (default to repair/service) and stay in that lane for every service item. Do not include installation items in a repair list or repair items in an installation list.
-- pageIdeas: 5-8 website page/URL slug ideas that map to the primary category and top services for local SEO.
+- pageIdeas: 6-9 website page ideas. Each item MUST have a "type" of exactly "Service Page", "Location Page", or "FAQ Page", plus a short "description". Include one "Location Page" for the primary category and one "FAQ Page"; the rest should be "Service Page" entries mapped to the top services (in the SAME intent lane as the services list). Slugs must be lowercase, hyphenated, no leading slash, and end with "-your-city" for Service and Location pages.
 - keywords: 6-10 high-intent local search phrases (no city name).
 - tip: one concrete optimization tip specific to this category.
 
 Return ONLY valid JSON matching the requested schema. No prose, no markdown fences.`;
+
 
 
 Deno.serve(async (req) => {
