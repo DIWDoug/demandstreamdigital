@@ -224,6 +224,53 @@ Respond with JSON only, matching this exact shape:
           .sort((a: any, b: any) => b.score - a.score);
       }
 
+      // Enforce single intent lane across services, pageIdeas, and keywords.
+      const q = query.toLowerCase();
+      const mentions = (s: string, words: string[]) => words.some((w) => s.includes(w));
+      const REPAIR_WORDS = ["repair", "fix", "leak", "diagnos", "service call", "troubleshoot", "not working", "broken"];
+      const INSTALL_WORDS = ["install", "replace", "replacement", "new install", "upgrade", "swap out", "haul away"];
+      const MAINT_WORDS = ["maintenance", "tune-up", "tune up", "seasonal"];
+      const INSPECT_WORDS = ["inspection", "inspect", "audit"];
+
+      let lane: "repair" | "install" | "maintenance" | "inspection" = "repair";
+      if (mentions(q, INSTALL_WORDS)) lane = "install";
+      else if (mentions(q, MAINT_WORDS)) lane = "maintenance";
+      else if (mentions(q, INSPECT_WORDS)) lane = "inspection";
+      else if (mentions(q, REPAIR_WORDS)) lane = "repair";
+
+      const isOtherLane = (text: string) => {
+        const t = text.toLowerCase();
+        // Reject combo/double-stuff regardless of chosen lane.
+        const hasRepair = mentions(t, REPAIR_WORDS);
+        const hasInstall = mentions(t, INSTALL_WORDS);
+        if (hasRepair && hasInstall) return true;
+        if (/\b(and|&|\/|or)\b/.test(t) && hasRepair && hasInstall) return true;
+        if (lane === "repair" && hasInstall) return true;
+        if (lane === "install" && hasRepair) return true;
+        if (lane === "maintenance" && (hasRepair || hasInstall)) return true;
+        if (lane === "inspection" && (hasRepair || hasInstall)) return true;
+        return false;
+      };
+
+      if (Array.isArray(p.services)) {
+        p.services = p.services.filter((s: unknown) => typeof s === "string" && !isOtherLane(s));
+      }
+      if (Array.isArray(p.keywords)) {
+        p.keywords = p.keywords.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.pageIdeas)) {
+        p.pageIdeas = p.pageIdeas.filter((pi: any) => {
+          const blob = `${pi?.title ?? ""} ${pi?.slug ?? ""} ${pi?.description ?? ""}`;
+          if (pi?.type === "FAQ Page" || pi?.type === "Location Page") {
+            // Still block explicit combo language in these too.
+            const t = blob.toLowerCase();
+            return !(mentions(t, REPAIR_WORDS) && mentions(t, INSTALL_WORDS));
+          }
+          return !isOtherLane(blob);
+        });
+      }
+
+      (p as any).intentLane = lane;
     }
 
     return new Response(JSON.stringify({ result: parsed }), {
