@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calculator, ExternalLink, Info, PhoneMissed, TrendingUp } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import SEOHead from "@/components/seo/SEOHead";
+import Header from "@/components/sections/Header";
+import Footer from "@/components/sections/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
