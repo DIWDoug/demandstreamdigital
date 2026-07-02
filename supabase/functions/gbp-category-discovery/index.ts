@@ -31,7 +31,7 @@ STRICT RULES:
 - Use ONLY real Google Business Profile category names (exact strings Google uses in the GBP category picker). Do not invent categories.
 - primaryCategory should be the single best fit.
 - secondaryCategories: 3-6 real GBP secondary categories that reinforce topical relevance without diluting the primary.
-- services: 8-12 specific service item names a contractor would list under "Services" in GBP.
+- services: 8-12 specific service item names a contractor would list under "Services" in GBP. CRITICAL: never mix repair and installation in the same services list. A repair intent and an installation/replacement intent are different phone calls and belong on separate GBP profiles/pages. Infer intent from the input (e.g., "water heater repair" => repair/diagnostic/leak services only; "water heater installation" => install/replace/haul-away services only). If the input is generic (e.g., just "plumber" or "HVAC"), pick ONE intent lane (default to repair/service) and stay in that lane for every service item. Do not include installation items in a repair list or repair items in an installation list.
 - pageIdeas: 5-8 website page/URL slug ideas that map to the primary category and top services for local SEO.
 - keywords: 6-10 high-intent local search phrases (no city name).
 - tip: one concrete optimization tip specific to this category.
