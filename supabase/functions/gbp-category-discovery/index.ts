@@ -76,9 +76,10 @@ ${ALLOWED_GBP_CATEGORIES.map((c) => `  - ${c}`).join("\n")}
 - secondaryCategories: 0-5 items from the whitelist. Quality over quantity. Only include a secondary if it is genuinely a different service line the business actually performs and would take real phone calls for. Never pad the list. It is OK (and often correct) to return 0-2 secondaries. Never include the primary again. Each item MUST include a "score" from 60-89 reflecting relevance, sorted highest to lowest.
 - Score guidance: 90-100 = perfect/exact match, 80-89 = excellent match, 70-79 = great match, 60-69 = good match. Never return a secondary below 60.
 - For each category, the "why" must be a short, concrete reason grounded in the input, not generic filler.
-- services: 8-12 specific service item names a contractor would list under "Services" in GBP. CRITICAL: never mix repair and installation in the same services list. A repair intent and an installation/replacement intent are different phone calls and belong on separate GBP profiles/pages. Infer intent from the input (e.g., "water heater repair" => repair/diagnostic/leak services only; "water heater installation" => install/replace/haul-away services only). If the input is generic (e.g., just "plumber" or "HVAC"), pick ONE intent lane (default to repair/service) and stay in that lane for every service item. Do not include installation items in a repair list or repair items in an installation list.
-- pageIdeas: 6-9 website page ideas. Each item MUST have a "type" of exactly "Service Page", "Location Page", or "FAQ Page", plus a short "description". Include one "Location Page" for the primary category and one "FAQ Page"; the rest should be "Service Page" entries mapped to the top services (in the SAME intent lane as the services list). Slugs must be lowercase, hyphenated, no leading slash, and end with "-your-city" for Service and Location pages.
-- keywords: 6-10 high-intent local search phrases (no city name).
+- SINGLE INTENT LANE (applies to services, pageIdeas, AND keywords): Infer ONE intent lane from the input and stay in it for the entire response. Lanes are mutually exclusive: (a) repair/service/diagnostic/leak, (b) installation/replacement/new install, (c) maintenance/tune-up, (d) inspection. Never mix lanes. If the input is generic (e.g., "plumber", "HVAC"), default to the repair/service lane. A repair call and an installation call are different phone calls and MUST live on different pages.
+- services: 8-12 specific service item names a contractor would list under "Services" in GBP, ALL within the chosen intent lane. Never include an install/replacement item in a repair list, or a repair item in an install list. No "repair and installation" combo items.
+- pageIdeas: 6-9 website page ideas, ALL within the chosen intent lane. Each item MUST have a "type" of exactly "Service Page", "Location Page", or "FAQ Page", plus a short "description". Include one "Location Page" for the primary category and one "FAQ Page"; the rest are "Service Page" entries mapped to top services in the same lane. Titles and slugs must NOT contain both "repair" and "install" (or "replacement"), and must not use ampersands, slashes, or the words "and"/"or" to combine intents. Slugs are lowercase, hyphenated, no leading slash, and end with "-your-city" for Service and Location pages.
+- keywords: 6-10 high-intent local search phrases (no city name), all in the same intent lane. No combined "repair and install" phrases.
 - tip: one concrete optimization tip specific to this category.
 
 Return ONLY valid JSON matching the requested schema. No prose, no markdown fences.`;
@@ -223,6 +224,53 @@ Respond with JSON only, matching this exact shape:
           .sort((a: any, b: any) => b.score - a.score);
       }
 
+      // Enforce single intent lane across services, pageIdeas, and keywords.
+      const q = query.toLowerCase();
+      const mentions = (s: string, words: string[]) => words.some((w) => s.includes(w));
+      const REPAIR_WORDS = ["repair", "fix", "leak", "diagnos", "service call", "troubleshoot", "not working", "broken"];
+      const INSTALL_WORDS = ["install", "replace", "replacement", "new install", "upgrade", "swap out", "haul away"];
+      const MAINT_WORDS = ["maintenance", "tune-up", "tune up", "seasonal"];
+      const INSPECT_WORDS = ["inspection", "inspect", "audit"];
+
+      let lane: "repair" | "install" | "maintenance" | "inspection" = "repair";
+      if (mentions(q, INSTALL_WORDS)) lane = "install";
+      else if (mentions(q, MAINT_WORDS)) lane = "maintenance";
+      else if (mentions(q, INSPECT_WORDS)) lane = "inspection";
+      else if (mentions(q, REPAIR_WORDS)) lane = "repair";
+
+      const isOtherLane = (text: string) => {
+        const t = text.toLowerCase();
+        // Reject combo/double-stuff regardless of chosen lane.
+        const hasRepair = mentions(t, REPAIR_WORDS);
+        const hasInstall = mentions(t, INSTALL_WORDS);
+        if (hasRepair && hasInstall) return true;
+        if (/\b(and|&|\/|or)\b/.test(t) && hasRepair && hasInstall) return true;
+        if (lane === "repair" && hasInstall) return true;
+        if (lane === "install" && hasRepair) return true;
+        if (lane === "maintenance" && (hasRepair || hasInstall)) return true;
+        if (lane === "inspection" && (hasRepair || hasInstall)) return true;
+        return false;
+      };
+
+      if (Array.isArray(p.services)) {
+        p.services = p.services.filter((s: unknown) => typeof s === "string" && !isOtherLane(s));
+      }
+      if (Array.isArray(p.keywords)) {
+        p.keywords = p.keywords.filter((k: unknown) => typeof k === "string" && !isOtherLane(k));
+      }
+      if (Array.isArray(p.pageIdeas)) {
+        p.pageIdeas = p.pageIdeas.filter((pi: any) => {
+          const blob = `${pi?.title ?? ""} ${pi?.slug ?? ""} ${pi?.description ?? ""}`;
+          if (pi?.type === "FAQ Page" || pi?.type === "Location Page") {
+            // Still block explicit combo language in these too.
+            const t = blob.toLowerCase();
+            return !(mentions(t, REPAIR_WORDS) && mentions(t, INSTALL_WORDS));
+          }
+          return !isOtherLane(blob);
+        });
+      }
+
+      (p as any).intentLane = lane;
     }
 
     return new Response(JSON.stringify({ result: parsed }), {
