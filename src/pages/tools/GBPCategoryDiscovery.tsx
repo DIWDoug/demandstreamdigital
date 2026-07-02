@@ -301,7 +301,13 @@ const GBPCategoryDiscovery = () => {
                         </div>
                         <code className="block text-xs text-cta bg-neutral-50 border border-border rounded px-2 py-1 mb-2 break-all">/{p.slug.replace(/^\//, "")}</code>
                         {p.description && <p className="text-xs text-muted-foreground">{p.description}</p>}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
+
+
 
               {/* People Also Ask */}
               {result.peopleAlsoAsk && result.peopleAlsoAsk.length > 0 && (
