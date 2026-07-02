@@ -360,7 +360,7 @@ const GBPCategoryDiscovery = () => {
                 </div>
               )}
 
-              </div>
+
 
 
               {/* Keywords + Tip */}
