@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, Loader2, MapPin, Layers, ListChecks, FileText, KeyRound, Lightbulb, ArrowRight, AlertTriangle, Trophy, Sparkles, HelpCircle, Building2 } from "lucide-react";
+import { Search, Loader2, MapPin, Layers, ListChecks, FileText, KeyRound, Lightbulb, ArrowRight, AlertTriangle, Trophy, Sparkles, HelpCircle, Building2, MessageCircleQuestion, Compass, Globe2 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
