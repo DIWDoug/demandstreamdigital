@@ -188,10 +188,33 @@ Respond with JSON only, matching this exact shape:
       });
     }
 
+    // Enforce the whitelist server-side so hallucinated categories never reach the UI.
+    const allowedSet = new Set(ALLOWED_GBP_CATEGORIES.map((c) => c.toLowerCase()));
+    if (parsed && typeof parsed === "object") {
+      const p = parsed as any;
+      const isAllowed = (name: unknown) =>
+        typeof name === "string" && allowedSet.has(name.trim().toLowerCase());
+      if (p.primaryCategory && !isAllowed(p.primaryCategory?.name)) {
+        p.primaryCategory = { name: "", why: "No verified GBP category matched. Review manually." };
+      }
+      if (Array.isArray(p.secondaryCategories)) {
+        const primaryName = String(p.primaryCategory?.name ?? "").trim().toLowerCase();
+        const seen = new Set<string>();
+        p.secondaryCategories = p.secondaryCategories.filter((c: any) => {
+          if (!isAllowed(c?.name)) return false;
+          const key = String(c.name).trim().toLowerCase();
+          if (key === primaryName || seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+    }
+
     return new Response(JSON.stringify({ result: parsed }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
+
   } catch (err) {
     console.error("gbp-category-discovery error:", err);
     return new Response(JSON.stringify({ error: "Unexpected error." }), {
