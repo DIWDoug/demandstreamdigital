@@ -84,14 +84,16 @@ export default function JobValueBenchmark() {
                   <div className="grid grid-cols-2 gap-2">
                     <Button
                       type="button"
-                      variant={trade === "plumbing" ? "default" : "outline"}
+                      variant={trade === "plumbing" ? "default" : "secondary"}
+                      className={trade === "plumbing" ? "" : "border-2 border-navy/20 text-navy"}
                       onClick={() => handleTradeChange("plumbing")}
                     >
                       Plumbing
                     </Button>
                     <Button
                       type="button"
-                      variant={trade === "hvac" ? "default" : "outline"}
+                      variant={trade === "hvac" ? "default" : "secondary"}
+                      className={trade === "hvac" ? "" : "border-2 border-navy/20 text-navy"}
                       onClick={() => handleTradeChange("hvac")}
                     >
                       HVAC
