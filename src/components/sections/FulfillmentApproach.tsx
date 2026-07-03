@@ -61,7 +61,7 @@ const FulfillmentApproach = () => {
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-semibold text-foreground mb-6 leading-tight">
                 How We Approach{" "}
-                <span className="text-text-secondary">White Label Fulfillment</span>
+                <span className="text-text-secondary">Fulfillment</span>
               </h2>
               <p className="text-text-secondary text-lg leading-relaxed mb-4 max-w-xl">
                 Most fulfillment partners either lock you into rigid packages or leave scope so open that margins disappear. We take a different approach: every engagement starts with a clear picture of the client's market, competition, and goals.
