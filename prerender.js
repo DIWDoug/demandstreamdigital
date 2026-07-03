@@ -77,16 +77,6 @@ const routesToPrerender = [
   '/case-studies/dallas-plumbing-seo',
   '/case-studies/las-vegas-plumbing-seo',
 
-  // ── Partner Tools ──
-  '/partner-tools',
-  '/partner-tools/roi-calculator',
-  '/partner-tools/investment-calculator',
-  '/partner-tools/ad-budget-calculator',
-  '/partner-tools/seo-calculator',
-  '/partner-tools/email-calculator',
-  '/partner-tools/content-marketing-calculator',
-  '/partner-tools/social-media-roi-calculator',
-  '/partner-tools/ai-ready-check',
 
   // ── Homeowner Tools ──
   '/tools/job-cost-estimator',

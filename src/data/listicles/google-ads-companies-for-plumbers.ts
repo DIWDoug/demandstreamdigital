@@ -103,7 +103,7 @@ export const googleAdsPlumbersConfig: ListicleConfig = {
     intro: "Here is a quick snapshot of the top-ranked Google Ads providers for plumbing contractors, ordered by trades expertise, documented results, and campaign management quality.",
     topPickNote: "⭐ Our Top Pick combines plumbing vertical knowledge, transparent pricing, and coordinated Google Ads and LSA management that generalist agencies cannot match.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Built for plumbing and HVAC with coordinated Google Ads and LSA management and transparent pricing" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Built for plumbing and HVAC with coordinated Google Ads and LSA management and transparent pricing" },
       { rank: 2, name: "Leads4Build", anchor: "2-leads4build", description: "AI-built campaigns with $50 CPL documented and AI voice agents for after-hours lead capture" },
       { rank: 3, name: "RYNO Strategic Solutions", anchor: "3-ryno-strategic-solutions", description: "Google Premier Partner with RYNOtrax2.0 ServiceTitan integration and 72% YoY lead growth documented" },
       { rank: 4, name: "Relentless Digital", anchor: "4-relentless-digital", description: "Inc. 5000 company with AI lead automation and plumbing industry knowledge" },

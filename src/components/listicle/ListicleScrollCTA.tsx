@@ -19,7 +19,7 @@ const ListicleScrollCTA = () => {
 
     const handleScroll = () => {
       // Look for the top-pick card
-      const topPickEl = document.getElementById("top-pick-dialed-in-web");
+      const topPickEl = document.getElementById("top-pick-demand-stream-digital");
       if (!topPickEl) return;
 
       const rect = topPickEl.getBoundingClientRect();

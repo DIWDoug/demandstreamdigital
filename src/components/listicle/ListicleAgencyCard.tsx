@@ -12,7 +12,7 @@ const ListicleAgencyCard = ({ agency, isTopPick }: ListicleAgencyCardProps) => {
 
   return (
     <div
-      id={isTopPick ? "top-pick-dialed-in-web" : `${agency.rank}-${agency.name.toLowerCase().replace(/\s+/g, "-")}`}
+      id={isTopPick ? "top-pick-demand-stream-digital" : `${agency.rank}-${agency.name.toLowerCase().replace(/\s+/g, "-")}`}
       className={`scroll-mt-24 ${isTopPick ? "mb-12" : "mb-10"}`}
     >
       {/* Card Header */}
