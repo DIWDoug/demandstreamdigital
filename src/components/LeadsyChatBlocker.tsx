@@ -75,16 +75,12 @@ export function LeadsyChatBlocker() {
   const previousBlocked = useRef(false);
 
   useEffect(() => {
-    console.log("[LeadsyChatBlocker] pathname:", pathname, "blocked:", BLOCKED_PATHS.includes(pathname));
     const blocked = BLOCKED_PATHS.includes(pathname);
 
     if (blocked) {
       previousBlocked.current = true;
       removeLeadsyWidget();
-      const observer = new MutationObserver(() => {
-        console.log("[LeadsyChatBlocker] mutation observed, removing");
-        removeLeadsyWidget();
-      });
+      const observer = new MutationObserver(removeLeadsyWidget);
       observer.observe(document.body, { childList: true, subtree: true });
       return () => observer.disconnect();
     }
