@@ -58,7 +58,7 @@ import linkBuildingImg from "@/assets/stock/link-building.jpg";
 import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
 import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
 import reportingImg from "@/assets/stock/reporting.jpg";
-import whiteLabelDashboardsImg from "@/assets/spoke/branded-dashboards.png";
+import brandedDashboardsImg from "@/assets/spoke/branded-dashboards.png";
 import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
@@ -2178,7 +2178,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Comparison Views", description: "Period-over-period comparisons built in." },
         { title: "Data Quality", description: "Connection health monitored. Issues flagged immediately." }
       ],
-      imageSrc: whiteLabelDashboardsImg,
+      imageSrc: brandedDashboardsImg,
       imageAlt: "Branded reporting dashboard for plumbing and HVAC owners",
       ctaText: "Explore Partnership",
       ctaHref: "/grow-qualifier"
