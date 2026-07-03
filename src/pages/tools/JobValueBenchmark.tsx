@@ -65,7 +65,7 @@ export default function JobValueBenchmark() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Plumbing &amp; HVAC Job Value Benchmark
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto">
               Industry Low, Average, and High ticket values by job type. Then see the real revenue you leave on the table when calls go unanswered.
             </p>
           </div>
