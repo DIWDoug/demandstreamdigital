@@ -56,7 +56,7 @@ export default function JobValueBenchmark() {
       <Header />
 
       <div className="tools-large-text">
-        <section className="bg-primary text-primary-foreground py-16 md:py-24">
+        <section className="bg-navy text-white py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-5xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6">
               <Calculator className="h-4 w-4" />
@@ -65,7 +65,7 @@ export default function JobValueBenchmark() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Plumbing &amp; HVAC Job Value Benchmark
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto">
               Industry Low, Average, and High ticket values by job type. Then see the real revenue you leave on the table when calls go unanswered.
             </p>
           </div>
@@ -84,14 +84,16 @@ export default function JobValueBenchmark() {
                   <div className="grid grid-cols-2 gap-2">
                     <Button
                       type="button"
-                      variant={trade === "plumbing" ? "default" : "outline"}
+                      variant={trade === "plumbing" ? "default" : "secondary"}
+                      className={trade === "plumbing" ? "" : "border-2 border-navy/20 text-navy"}
                       onClick={() => handleTradeChange("plumbing")}
                     >
                       Plumbing
                     </Button>
                     <Button
                       type="button"
-                      variant={trade === "hvac" ? "default" : "outline"}
+                      variant={trade === "hvac" ? "default" : "secondary"}
+                      className={trade === "hvac" ? "" : "border-2 border-navy/20 text-navy"}
                       onClick={() => handleTradeChange("hvac")}
                     >
                       HVAC
@@ -228,7 +230,7 @@ export default function JobValueBenchmark() {
                   Recover this revenue. Book a growth audit. <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="flex-1">
+              <Button asChild size="lg" variant="secondary" className="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white">
                 <Link to="/tools/gbp-category-discovery">
                   Optimize your GBP categories next
                 </Link>
