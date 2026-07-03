@@ -16,14 +16,9 @@ import { getPageOgImage } from "@/lib/ogImages";
 // Map author slugs to their blog post slugs
 const authorArticleMap: Record<string, string[]> = {
   'desiree-abbariao': [
-    'benefits-of-white-label-seo-services',
-    'white-label-local-ppc',
     'on-page-optimization-local-seo',
   ],
   'richard-baylon': [
-    'what-is-white-label-digital-marketing',
-    'white-label-social-media',
-    'white-label-seo-for-agencies-checklist',
   ],
   'doug-bryson': [], // Default author - gets any articles not assigned to others
 };
