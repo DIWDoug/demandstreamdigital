@@ -531,7 +531,6 @@ const GrowthQualifierFlow = () => {
             />
             <div className="mt-4 space-y-3">
               <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
-              <SmsConsentText className="text-[12px] text-white/60 leading-relaxed" />
             </div>
             <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
 
