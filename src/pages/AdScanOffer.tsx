@@ -13,6 +13,9 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { ZoomIn } from "lucide-react";
 import heroImg from "@/assets/ad-scan-hero.png";
 import heroAlt from "@/assets/ad-scan-hvac.png";
 import dougHeadshot from "@/assets/doug-bryson-headshot-2.jpeg";
@@ -77,14 +80,37 @@ const AuditSlide = ({
       <span className="text-white/60 font-bold tracking-wider">Sample. Client redacted.</span>
     </div>
     <div className="bg-white p-3 md:p-4">
-      <div className="overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA]">
-        <img
-          src={src}
-          alt={title}
-          loading="lazy"
-          className="w-full h-auto object-contain"
-        />
-      </div>
+      <Dialog>
+        <DialogTrigger asChild>
+          <button
+            type="button"
+            aria-label={`Expand slide ${num}: ${title}`}
+            className="group relative block w-full overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA] cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-[#1E5BD6] focus:ring-offset-2"
+          >
+            <img
+              src={src}
+              alt={title}
+              loading="lazy"
+              className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+            <span className="absolute top-2 right-2 flex items-center gap-1 rounded-md bg-[#0D1B2A]/80 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <ZoomIn className="w-3 h-3" /> Expand
+            </span>
+          </button>
+        </DialogTrigger>
+        <DialogContent className="max-w-6xl w-[95vw] p-0 bg-white border-none overflow-hidden">
+          <VisuallyHidden>
+            <DialogTitle>{`Slide ${num}: ${title}`}</DialogTitle>
+            <DialogDescription>Full-size preview of audit slide {num}.</DialogDescription>
+          </VisuallyHidden>
+          <div className="max-h-[90vh] overflow-auto">
+            <img src={src} alt={title} className="w-full h-auto object-contain" />
+          </div>
+          <div className="px-5 py-3 border-t border-[#E5E7EB] bg-[#F7F8FA]">
+            <p className="text-sm font-bold text-[#0D1B2A]">Slide {num} — {title}</p>
+          </div>
+        </DialogContent>
+      </Dialog>
       <h4 className="mt-3 text-sm md:text-base font-black text-[#0D1B2A] leading-snug">
         {title}
       </h4>
