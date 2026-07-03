@@ -31,8 +31,17 @@ const LEADSY_WIDGET_SELECTORS = [
   '[aria-label*="chat widget"]',
 ];
 
+const CHAT_WIDGET_SCRIPT_SELECTORS = [
+  'script#vtag-ai-js',
+  'script[src*="leadconnectorhq.com/chat-widget"]',
+  'script[src*="widgets.leadconnectorhq.com"]',
+  'script[src*="leadsy.ai"]',
+];
+
 const removeLeadsyWidget = () => {
-  document.getElementById(LEADSY_ID)?.remove();
+  CHAT_WIDGET_SCRIPT_SELECTORS.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((node) => node.remove());
+  });
 
   LEADSY_WIDGET_SELECTORS.forEach((selector) => {
     document.querySelectorAll(selector).forEach((node) => {
@@ -43,7 +52,7 @@ const removeLeadsyWidget = () => {
   });
 
   document.querySelectorAll("iframe").forEach((iframe) => {
-    if (iframe.src && (iframe.src.includes("leadsy") || iframe.src.includes("vtag"))) {
+    if (iframe.src && (iframe.src.includes("leadsy") || iframe.src.includes("vtag") || iframe.src.includes("leadconnectorhq"))) {
       iframe.remove();
     }
   });
