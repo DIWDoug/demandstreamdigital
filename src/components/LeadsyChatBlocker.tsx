@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 /**
- * Route-gated blocker for the Leadsy AI chat widget.
- * Removes the script and any injected widget elements on pages that must
- * not display a chat widget (e.g. pages with checkout/phone/SMS forms).
+ * Route-gated Leadsy AI chat widget loader.
+ * Injects the Leadsy tag on allowed routes and removes it on routes that
+ * must not show a chat widget (e.g. checkout/phone/SMS forms).
  */
 
 const BLOCKED_PATHS = [
@@ -12,7 +12,10 @@ const BLOCKED_PATHS = [
   "/local-lead-ad-scan-offer",
 ];
 
-const LEADSY_SCRIPT_SELECTOR = 'script#vtag-ai-js';
+const LEADSY_ID = "vtag-ai-js";
+const LEADSY_SRC = "https://r2.leadsy.ai/tag.js";
+const LEADSY_PID = "PjgO2V7YFmY16I1O";
+const LEADSY_VERSION = "062024";
 
 const LEADSY_WIDGET_SELECTORS = [
   "#lc_text-widget",
@@ -28,8 +31,8 @@ const LEADSY_WIDGET_SELECTORS = [
   '[aria-label*="chat widget"]',
 ];
 
-const removeLeadsyChat = () => {
-  document.querySelectorAll(LEADSY_SCRIPT_SELECTOR).forEach((node) => node.remove());
+const removeLeadsyWidget = () => {
+  document.getElementById(LEADSY_ID)?.remove();
 
   LEADSY_WIDGET_SELECTORS.forEach((selector) => {
     document.querySelectorAll(selector).forEach((node) => {
@@ -46,19 +49,40 @@ const removeLeadsyChat = () => {
   });
 };
 
+const injectLeadsyTag = () => {
+  if (document.getElementById(LEADSY_ID)) return;
+
+  const script = document.createElement("script");
+  script.id = LEADSY_ID;
+  script.async = true;
+  script.src = LEADSY_SRC;
+  script.dataset.pid = LEADSY_PID;
+  script.dataset.version = LEADSY_VERSION;
+  document.head.appendChild(script);
+};
+
 export function LeadsyChatBlocker() {
   const { pathname } = useLocation();
+  const previousBlocked = useRef(false);
 
   useEffect(() => {
-    if (!BLOCKED_PATHS.includes(pathname)) {
-      return;
+    const blocked = BLOCKED_PATHS.includes(pathname);
+
+    if (blocked) {
+      previousBlocked.current = true;
+      removeLeadsyWidget();
+      const observer = new MutationObserver(removeLeadsyWidget);
+      observer.observe(document.body, { childList: true, subtree: true });
+      return () => observer.disconnect();
     }
 
-    removeLeadsyChat();
-    const observer = new MutationObserver(removeLeadsyChat);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
+    // Coming from a blocked route to an allowed route: clean up any
+    // lingering widget remnants, then inject the tag.
+    if (previousBlocked.current) {
+      removeLeadsyWidget();
+    }
+    previousBlocked.current = false;
+    injectLeadsyTag();
   }, [pathname]);
 
   return null;
