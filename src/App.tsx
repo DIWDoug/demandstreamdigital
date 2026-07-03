@@ -184,7 +184,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <CallRailContactFooterBlocker />
-        <LeadsyChatBlocker />
+        <LeadConnectorChatWidget />
         <CanonicalDomainRedirect />
         <ScrollToTop />
         <BackToTop />
