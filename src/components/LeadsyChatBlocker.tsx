@@ -29,6 +29,9 @@ const LEADSY_WIDGET_SELECTORS = [
   '.widget-open-icon',
   '.widget-close-icon',
   '[aria-label*="chat widget"]',
+  "chat-widget",
+  "chat-widget-bubble",
+  "chat-widget-launcher",
 ];
 
 const CHAT_WIDGET_SCRIPT_SELECTORS = [
