@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PhoneInput from "@/components/ui/phone-input";
 import { isValidPhone } from "@/lib/validation/phone";
 import { useToast } from "@/hooks/use-toast";
-import { SmsConsentText, SmsConsentSummary, SmsConsentCheckbox } from "@/components/legal/SmsConsentText";
+import { SmsConsentCheckbox } from "@/components/legal/SmsConsentText";
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -531,7 +531,6 @@ const GrowthQualifierFlow = () => {
             />
             <div className="mt-4 space-y-3">
               <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
-              <SmsConsentText className="text-[12px] text-white/60 leading-relaxed" />
             </div>
             <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
 
