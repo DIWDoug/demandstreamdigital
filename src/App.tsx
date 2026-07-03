@@ -15,7 +15,7 @@ import SilentErrorBoundary from "./components/SilentErrorBoundary";
 import CookieConsent from "./components/CookieConsent";
 import MobileBottomCTA from "./components/MobileBottomCTA";
 import AccessibilityWidget from "./components/AccessibilityWidget";
-import { LeadsyChatBlocker } from "./components/LeadsyChatBlocker";
+import { LeadConnectorChatWidget } from "./components/LeadConnectorChatWidget";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import { useKonamiCode } from "./hooks/useKonamiCode";
 import { useGeoBlock } from "./hooks/useGeoBlock";
