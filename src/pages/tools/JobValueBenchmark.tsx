@@ -230,7 +230,7 @@ export default function JobValueBenchmark() {
                   Recover this revenue. Book a growth audit. <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="flex-1">
+              <Button asChild size="lg" variant="secondary" className="flex-1 border-2 border-navy text-navy hover:bg-navy hover:text-white">
                 <Link to="/tools/gbp-category-discovery">
                   Optimize your GBP categories next
                 </Link>
