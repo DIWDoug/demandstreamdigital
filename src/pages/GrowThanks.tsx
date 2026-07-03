@@ -47,8 +47,7 @@ const GrowThanks = () => {
         canonical="https://demandstreamdigital.com/grow/thanks"
         noIndex
       />
-      <Header />
-      <div className="pt-32 pb-24">
+      <div className="pt-12 pb-24">
         <section className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <div className="mb-10 text-center">
