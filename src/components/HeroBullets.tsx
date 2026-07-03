@@ -8,7 +8,7 @@ interface HeroBulletsProps {
 }
 
 const HeroBullets = ({ items, variant = "dark", className }: HeroBulletsProps) => {
-  const textClass = variant === "dark" ? "text-white/85" : "text-foreground/80";
+  const textClass = variant === "dark" ? "text-white/85" : "text-navy/85";
   const iconClass = variant === "dark" ? "text-accent-blue" : "text-primary";
 
   return (
