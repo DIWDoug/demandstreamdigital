@@ -58,7 +58,7 @@ const LocalSEOFitQualifier = () => {
     },
     {
       point: "You want to resell without understanding the work",
-      detail: "We operate white-label, but you still need enough knowledge to set expectations and answer basic client questions. If you want a completely hands-off resale, this is not the right partnership."
+      detail: "You still need to know enough about the marketing plan to answer basic questions from your team. If you want a completely hands-off vendor with no involvement, this is not the right partnership."
     }
   ];
 

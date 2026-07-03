@@ -58,7 +58,7 @@ import linkBuildingImg from "@/assets/stock/link-building.jpg";
 import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
 import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
 import reportingImg from "@/assets/stock/reporting.jpg";
-import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
+import whiteLabelDashboardsImg from "@/assets/spoke/branded-dashboards.png";
 import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
@@ -339,7 +339,7 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Can you prove marketing is profitable?", answer: "In most cases, yes. Clear attribution, reasonable lead values, and consistent tracking let us demonstrate return." }
   ],
   "client-presentation-decks": [
-    { question: "Can you present directly to our clients?", answer: "We operate white-label, so you present. But we can join calls for technical questions if introduced appropriately." },
+    { question: "Can you present directly to our clients?", answer: "You are the trusted local brand, so you own the customer conversation. We can join calls for technical questions when helpful." },
     { question: "What format are presentations?", answer: "PowerPoint/Google Slides standard. PDF exports available. Screen-share optimized." },
     { question: "How far in advance do you need for presentation prep?", answer: "3-5 business days ideal. Rush turnaround possible for existing clients with established templates." }
   ],

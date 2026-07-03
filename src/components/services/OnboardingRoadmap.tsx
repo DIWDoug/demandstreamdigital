@@ -30,7 +30,7 @@ const OnboardingRoadmap = () => {
       icon: BarChart3,
       phase: "Phase 5",
       title: "Reporting Cadence",
-      description: "Monthly reports you can white-label. Quarterly strategy reviews. Ongoing optimization based on data."
+      description: "Plain-English monthly reports tied to booked calls. Quarterly strategy reviews. Ongoing optimization based on data."
     },
     {
       icon: RefreshCcw,
