@@ -1517,7 +1517,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Analysis", description: "Lead quality tracked. Not all conversions are equal." },
         { title: "Trend Identification", description: "Performance trends spotted early. Opportunities and problems identified." },
         { title: "Optimization Recommendations", description: "Data translated into specific optimization actions." },
-        { title: "Client Reporting", description: "White-labeled reports that prove value to end clients." }
+        { title: "Owner-Ready Reporting", description: "Clear, branded reports that show what drove booked calls." }
       ],
       ctaText: "Explore Partnership",
       ctaHref: "/grow-qualifier"
@@ -2179,7 +2179,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Data Quality", description: "Connection health monitored. Issues flagged immediately." }
       ],
       imageSrc: whiteLabelDashboardsImg,
-      imageAlt: "White-label dashboard and reporting interface",
+      imageAlt: "Branded reporting dashboard for plumbing and HVAC owners",
       ctaText: "Explore Partnership",
       ctaHref: "/grow-qualifier"
     }
