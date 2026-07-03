@@ -77,12 +77,12 @@ const AuditSlide = ({
       <span className="text-white/60 font-bold tracking-wider">Sample. Client redacted.</span>
     </div>
     <div className="bg-white p-3 md:p-4">
-      <div className="aspect-[5/4] overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA]">
+      <div className="overflow-hidden rounded-md border border-[#E5E7EB] bg-[#F7F8FA]">
         <img
           src={src}
           alt={title}
           loading="lazy"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-auto object-contain"
         />
       </div>
       <h4 className="mt-3 text-sm md:text-base font-black text-[#0D1B2A] leading-snug">
@@ -339,7 +339,7 @@ export default function AdScanOffer() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="flex flex-col gap-6 max-w-3xl mx-auto">
             <AuditSlide num="01" title="Executive summary: 7 months of real data" src="/audit-samples/slide-01.jpg" />
             <AuditSlide num="02" title="The real ROAS picture, broken down by source" src="/audit-samples/slide-02.jpg" />
             <AuditSlide num="03" title="The $358K attribution mystery and 3 root causes" src="/audit-samples/slide-03.jpg" />
