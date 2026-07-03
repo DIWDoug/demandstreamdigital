@@ -253,7 +253,7 @@ const Testimonials = () => {
               <h2 className="font-serif text-2xl md:text-3xl text-foreground">
                 Agency Partners
               </h2>
-              <p className="text-text-secondary text-sm">White-label fulfillment partnerships</p>
+              <p className="text-text-secondary text-sm">Multi-industry fulfillment leadership</p>
             </div>
           </div>
 
