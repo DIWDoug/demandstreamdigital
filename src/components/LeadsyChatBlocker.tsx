@@ -81,6 +81,7 @@ export function LeadsyChatBlocker() {
       previousBlocked.current = true;
       removeLeadsyWidget();
       const observer = new MutationObserver(removeLeadsyWidget);
+      observer.observe(document.head, { childList: true, subtree: true });
       observer.observe(document.body, { childList: true, subtree: true });
       return () => observer.disconnect();
     }
