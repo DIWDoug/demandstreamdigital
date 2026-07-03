@@ -103,7 +103,7 @@ export const plumbingContentMarketingConfig: ListicleConfig = {
     intro: "Here is a quick snapshot of the top-ranked agencies for plumbing content marketing, ordered by industry expertise, content quality, and documented results.",
     topPickNote: "⭐ Our Top Pick builds full-stack plumbing content architecture: service pages, location pages, blog content, and GBP alignment from a plumbing specialist.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Hub-and-spoke content architecture covering every service type and location for plumbing contractors" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Hub-and-spoke content architecture covering every service type and location for plumbing contractors" },
       { rank: 2, name: "Plumbing Webmasters", anchor: "2-plumbing-webmasters", description: "14+ years of plumbing-only content with writers who have genuine industry knowledge" },
       { rank: 3, name: "Plumbing Partners", anchor: "3-plumbing-partners", description: "Plumbing-exclusive agency with full coverage from emergency intent to installation research" },
       { rank: 4, name: "Relentless Digital", anchor: "4-relentless-digital", description: "Conversion-focused content strategy informed by real plumbing and HVAC industry experience" },

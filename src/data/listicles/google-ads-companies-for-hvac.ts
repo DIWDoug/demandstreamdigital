@@ -103,7 +103,7 @@ export const googleAdsHVACConfig: ListicleConfig = {
     intro: "Here is a quick snapshot of the top-ranked Google Ads providers for HVAC contractors, ordered by trades expertise, documented results, and campaign management quality.",
     topPickNote: "⭐ Our Top Pick combines HVAC vertical knowledge, coordinated Google Ads and LSA management, and transparent pricing that generalist agencies cannot match.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Built for HVAC with coordinated Google Ads and LSA management and transparent month-to-month terms" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Built for HVAC with coordinated Google Ads and LSA management and transparent month-to-month terms" },
       { rank: 2, name: "Leads4Build", anchor: "2-leads4build", description: "$50 CPL documented, 245% increase in emergency service calls, AI voice agents for after-hours leads" },
       { rank: 3, name: "RYNO Strategic Solutions", anchor: "3-ryno-strategic-solutions", description: "Google Premier Partner, Black-Haak 70% CPL reduction, American Vintage Home $2.5M at 77:1 ROI" },
       { rank: 4, name: "Relentless Digital", anchor: "4-relentless-digital", description: "Inc. 5000 company with AI lead automation and real HVAC industry knowledge from founder" },

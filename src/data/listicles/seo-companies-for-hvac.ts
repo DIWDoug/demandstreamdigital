@@ -109,7 +109,7 @@ export const hvacSEOCompaniesConfig: ListicleConfig = {
     intro: "Here is a quick snapshot of the top-ranked HVAC SEO agencies, ordered by our composite score weighing vertical expertise, documented results, pricing transparency, and HVAC industry depth.",
     topPickNote: "⭐ Our Top Pick works exclusively with HVAC and plumbing contractors, offering transparent pricing and hands-on strategic support that generalist agencies simply cannot match.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Exclusive HVAC & plumbing focus, transparent $100/hr pricing, hands-on strategic support" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Exclusive HVAC & plumbing focus, transparent $100/hr pricing, hands-on strategic support" },
       { rank: 2, name: "HVAC Webmasters", anchor: "2-hvac-webmasters", description: "16+ years HVAC-only SEO, proprietary DataPins software, AEO for ChatGPT & AI Overviews" },
       { rank: 3, name: "Rival Digital", anchor: "3-rival-digital", description: "85% trades client base, 5.0-star Google rating, boutique high-touch service model" },
       { rank: 4, name: "Relentless Digital", anchor: "4-relentless-digital", description: "Inc. 5000 #217 (2024), founded by HVAC industry veteran, AI automation tools" },

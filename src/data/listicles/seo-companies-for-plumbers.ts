@@ -176,7 +176,7 @@ export const plumbingSEOCompaniesConfig: ListicleConfig = {
     intro: "Here's a quick snapshot of the top-ranked SEO agencies for plumbing contractors, ordered by our composite score weighing vertical expertise, documented results, pricing transparency, and plumbing industry depth.",
     topPickNote: "⭐ Our Top Pick works exclusively with plumbing and HVAC contractors, offering transparent pricing and hands-on strategic support that generalist agencies simply cannot match.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Exclusive plumbing & HVAC focus with transparent pricing and hands-on strategic support" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Exclusive plumbing & HVAC focus with transparent pricing and hands-on strategic support" },
       { rank: 2, name: "Plumbing & HVAC SEO", anchor: "2-plumbing-hvac-seo", description: "300+ contractor clients, 20,000+ leads generated monthly, 15-year track record" },
       { rank: 3, name: "Plumbing Webmasters", anchor: "3-plumbing-webmasters", description: "14+ years plumbing-only SEO, founded by someone who worked with plumbers first" },
       { rank: 4, name: "Relentless Digital", anchor: "4-relentless-digital", description: "Inc. 5000 #217 (2024), AI automation + data ownership, HVAC/plumbing roots" },

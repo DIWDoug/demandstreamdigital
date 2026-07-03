@@ -104,7 +104,7 @@ export const hvacContentMarketingConfig: ListicleConfig = {
     intro: "Here is a quick snapshot of the top-ranked agencies for HVAC content marketing, ordered by industry expertise, content quality, and documented results.",
     topPickNote: "⭐ Our Top Pick builds full-stack HVAC content architecture: service pages, location pages, seasonal content, and GBP alignment from a vertical specialist.",
     items: [
-      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-dialed-in-web", description: "Hub-and-spoke content architecture built for HVAC contractors covering every service and location" },
+      { rank: 0, name: "DemandStream Digital", anchor: "top-pick-demand-stream-digital", description: "Hub-and-spoke content architecture built for HVAC contractors covering every service and location" },
       { rank: 2, name: "HVAC Webmasters", anchor: "2-hvac-webmasters", description: "16+ years of HVAC-only content with DataPins geo-tagged job-site content" },
       { rank: 3, name: "Relentless Digital", anchor: "3-relentless-digital", description: "Conversion-focused content strategy informed by real HVAC industry experience" },
       { rank: 4, name: "Hook Agency", anchor: "4-hook-agency", description: "Location-specific service pages with documented 54% keyword ranking increase in 10 weeks" },
