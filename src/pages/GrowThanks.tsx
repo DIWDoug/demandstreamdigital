@@ -208,7 +208,23 @@ const GrowThanks = () => {
           </div>
         </section>
       </div>
-      <Footer />
+
+      {/* Minimal footer strip for landing page — no navigation columns */}
+      <footer className="border-t border-border bg-background py-8" role="contentinfo">
+        <div className="container mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-text-muted">
+            &copy; {new Date().getFullYear()} Demand Stream Digital. All Rights Reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <Link to="/privacy" className="text-xs text-text-muted hover:text-text-secondary transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-xs text-text-muted hover:text-text-secondary transition-colors">
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
