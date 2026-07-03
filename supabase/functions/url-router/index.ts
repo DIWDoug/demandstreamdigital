@@ -18,17 +18,8 @@ const VALID_ROUTES = new Set([
   '/thank-you',
   '/region-blocked',
   '/case-studies',
+
   
-  // Partner Tools
-  '/partner-tools',
-  '/partner-tools/roi-calculator',
-  '/partner-tools/investment-calculator',
-  '/partner-tools/ad-budget-calculator',
-  '/partner-tools/seo-calculator',
-  '/partner-tools/email-calculator',
-  '/partner-tools/content-marketing-calculator',
-  '/partner-tools/social-media-roi-calculator',
-  '/partner-tools/ai-ready-check',
   
   // HVAC-specific service pages
   '/hvac-google-maps',
@@ -74,14 +65,24 @@ const PERMANENT_REDIRECTS: Record<string, string> = {
   '/services': '/',
   
   // ===== LEGACY CALCULATOR URLs =====
-  '/roi-calculator': '/partner-tools/roi-calculator',
-  '/investment-calculator': '/partner-tools/investment-calculator',
-  '/ad-budget-calculator': '/partner-tools/ad-budget-calculator',
-  '/seo-calculator': '/partner-tools/seo-calculator',
-  '/email-calculator': '/partner-tools/email-calculator',
-  '/content-marketing-calculator': '/partner-tools/content-marketing-calculator',
-  '/ai-ready-check': '/partner-tools/ai-ready-check',
-  '/agency-calculator': '/partner-tools/roi-calculator',
+  // Legacy calculator paths → home (partner tools removed)
+  '/roi-calculator': '/',
+  '/investment-calculator': '/',
+  '/ad-budget-calculator': '/',
+  '/seo-calculator': '/',
+  '/email-calculator': '/',
+  '/content-marketing-calculator': '/',
+  '/ai-ready-check': '/',
+  '/agency-calculator': '/',
+  '/partner-tools': '/',
+  '/partner-tools/roi-calculator': '/',
+  '/partner-tools/investment-calculator': '/',
+  '/partner-tools/ad-budget-calculator': '/',
+  '/partner-tools/seo-calculator': '/',
+  '/partner-tools/email-calculator': '/',
+  '/partner-tools/content-marketing-calculator': '/',
+  '/partner-tools/social-media-roi-calculator': '/',
+  '/partner-tools/ai-ready-check': '/',
   
   // ===== NASHVILLE-SPECIFIC PAGES =====
   '/nashville-tn-online-review-management': '/plumbing-google-maps',

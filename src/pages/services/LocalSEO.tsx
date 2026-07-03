@@ -184,9 +184,9 @@ const LocalSEO = () => {
             <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-4 text-center">Free Planning Tools</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {[
-                { label: "SEO Cost Calculator", href: "/partner-tools/seo-calculator", desc: "Estimate monthly SEO investment by market size" },
-                { label: "Investment Calculator", href: "/partner-tools/investment-calculator", desc: "Scope multi-service monthly costs" },
-                { label: "Inbound Marketing ROI Calculator", href: "/partner-tools/roi-calculator", desc: "Project revenue from full inbound strategy" },
+                { label: "GBP Category Discovery", href: "/tools/gbp-category-discovery", desc: "Find the right Google Business categories for your service" },
+                { label: "Job Value Benchmark", href: "/tools/job-value-benchmark", desc: "See revenue at risk from missed calls by trade" },
+                { label: "Free SEO Audit", href: "/free-audit", desc: "Custom AI-powered audit of your Google presence" },
               ].map((t) => (
                 <a key={t.href} href={t.href} className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200">
                   <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{t.label}</span>

@@ -265,61 +265,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- ============ PARTNER TOOLS (Priority 0.6–0.5) ============ -->
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/roi-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/investment-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/ad-budget-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/seo-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/email-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/content-marketing-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/social-media-roi-calculator</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://demandstreamdigital.com/partner-tools/ai-ready-check</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 
   <!-- ============ HOMEOWNER TOOLS (Priority 0.5) ============ -->
   <url>
