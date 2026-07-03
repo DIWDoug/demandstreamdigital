@@ -131,7 +131,7 @@ export interface ServicePageConfig {
     headline: string;
     subheadline: string;
     phases: RoadmapPhase[];
-    executionNote?: string; // Optional line about white-label execution
+    executionNote?: string; // Optional line about hands-on fulfillment
     footerNote: string;
   };
 

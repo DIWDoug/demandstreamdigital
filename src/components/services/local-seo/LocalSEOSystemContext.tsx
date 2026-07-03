@@ -100,7 +100,7 @@ const LocalSEOSystemContext = () => {
               </p>
               
               <p className="text-slate-600 leading-relaxed mb-8">
-                We offer each service independently, but the magic happens when they work in concert. Explore our full suite of white-label services to see how they can compound results for your clients.
+                We offer each service independently, but the magic happens when they work in concert. Explore our full suite of branded services to see how they can compound results for your clients.
               </p>
 
               {/* Checklist - linked to services */}

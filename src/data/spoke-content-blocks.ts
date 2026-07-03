@@ -2142,7 +2142,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Client Access", description: "Secure login for client self-service viewing." },
         { title: "Mobile Responsive", description: "Dashboards work on any device. No pinching required." },
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
-        { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
+        { title: "Branded Completely", description: "Zero mention of underlying technology or our company." }
       ],
       imageSrc: realTimeDashboardMeetingImg,
       imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",

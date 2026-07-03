@@ -9,7 +9,7 @@ const InvestmentEducationalContent = () => {
           <div className="p-2 rounded-lg bg-accent-blue/10">
             <DollarSign className="h-5 w-5 text-accent-blue" />
           </div>
-          <h2 className="text-2xl font-bold text-foreground">Understanding White-Label Pricing</h2>
+          <h2 className="text-2xl font-bold text-foreground">Understanding Branded Pricing</h2>
         </div>
         <p className="text-text-secondary text-lg mb-8">
           White-label fulfillment pricing is based on the scope of work required, not arbitrary package tiers. The calculator above factors in your client's specific market, industry, and service needs to estimate a realistic investment range.
@@ -143,7 +143,7 @@ const InvestmentEducationalContent = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           <div>
             <p className="text-text-secondary mb-6">
-              Your markup on white-label services is your margin. Most agencies mark up fulfillment costs by 50-150%, depending on the value-add they provide (strategy, client relationships, reporting).
+              Your markup on branded services is your margin. Most agencies mark up fulfillment costs by 50-150%, depending on the value-add they provide (strategy, client relationships, reporting).
             </p>
             <p className="text-text-secondary">
               The calculator above lets you adjust your MSRP rate to see how different markups affect your profitability while ensuring you remain competitive.
@@ -234,7 +234,7 @@ const InvestmentEducationalContent = () => {
             {[
               { step: "1", title: "Scope the Work", desc: "Use the calculator to estimate investment based on client needs" },
               { step: "2", title: "Set Your Margin", desc: "Add your markup to create a profitable client proposal" },
-              { step: "3", title: "We Deliver", desc: "Seamless white-label execution under your brand" }
+              { step: "3", title: "We Deliver", desc: "Seamless hands-on fulfillment under your brand" }
             ].map((item, i) => (
               <div key={i} className="text-center">
                 <div className="w-12 h-12 rounded-full bg-accent-green/20 flex items-center justify-center text-accent-green font-bold text-lg mx-auto mb-3">
