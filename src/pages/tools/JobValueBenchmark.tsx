@@ -56,7 +56,7 @@ export default function JobValueBenchmark() {
       <Header />
 
       <div className="tools-large-text">
-        <section className="bg-primary text-primary-foreground py-16 md:py-24">
+        <section className="bg-navy text-white py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-5xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6">
               <Calculator className="h-4 w-4" />
