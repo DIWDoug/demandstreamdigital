@@ -7,7 +7,7 @@ import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import TopicalExpertise from "@/components/sections/TopicalExpertise";
 
 import ServiceHubHero from "@/components/services/ServiceHubHero";
-import WhiteLabelExplainer from "@/components/services/WhiteLabelExplainer";
+
 import InboundPainPoints from "@/components/services/InboundPainPoints";
 import FitQualifier from "@/components/services/FitQualifier";
 import OnboardingRoadmap from "@/components/services/OnboardingRoadmap";
@@ -77,7 +77,7 @@ const Services = () => {
       {/* Hero with Form */}
       <ServiceHubHero 
         title="Inbound Marketing"
-        heroHeadline="White Label Inbound Marketing"
+        heroHeadline="Inbound Marketing for Plumbing & HVAC"
         heroSubtitle="Executed as a System"
         description={{
           intro: "Most home service companies don't lack ambition. They lack a reliable digital marketing system — one that drives qualified leads from local search, paid ads, and content marketing without the guesswork.",
@@ -113,9 +113,6 @@ const Services = () => {
           </div>
         </div>
       </nav>
-      
-      {/* What is Inbound Marketing? */}
-      <WhiteLabelExplainer />
       
       <SectionDivider />
       

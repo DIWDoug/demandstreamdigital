@@ -418,9 +418,9 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Competitive marine industry with established local players",
       "Four distinct geographic locations requiring localized SEO strategies",
       "Starting from -80% year-over-year performance baseline in January",
-      "Required seamless white-label execution maintaining agency partner relationships",
+      "Required seamless hands-on fulfillment maintaining agency partner relationships",
     ],
-    solution: "We immediately conducted a historical audit using the Wayback Machine to identify legacy URLs, then implemented a full 301 redirect strategy to prevent traffic loss. Our comprehensive approach involved technical SEO, Google Business Profile optimization, backlink building, and full white-label support that maintained seamless client relationships through custom reporting and live video follow-ups.",
+    solution: "We immediately conducted a historical audit using the Wayback Machine to identify legacy URLs, then implemented a full 301 redirect strategy to prevent traffic loss. Our comprehensive approach involved technical SEO, Google Business Profile optimization, backlink building, and full branded support that maintained seamless client relationships through custom reporting and live video follow-ups.",
     solutionDetails: [
       "Established a 40-keyword strategy across four geographic locations",
       "Performed full schema markup implementation including Open Graph, Twitter cards, and service-level schema",
@@ -428,7 +428,7 @@ export const caseStudyFullContent: Record<string, CaseStudyContent> = {
       "Executed technical SEO clean-up including crawl errors, mobile usability, and sitemap/robots.txt optimization",
       "Partnered with the existing content team to align new content with keyword mapping and service targets",
       "Initiated guest posting campaigns and contextual link insertions for authority building",
-      "Delivered all reporting via white-label video walkthroughs and GPT-generated summaries",
+      "Delivered all reporting via branded video walkthroughs and GPT-generated summaries",
     ],
     results: "The transformation was nothing short of extraordinary. From a challenging start in January with -80% performance, we achieved +584% growth by October across all organic channels. We secured multiple #1-#3 rankings for core terms and achieved high local visibility across Google Maps.",
     resultDetails: [

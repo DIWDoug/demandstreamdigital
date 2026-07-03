@@ -448,14 +448,14 @@ const App = () => (
           <Route path="/local-search-marketing/" element={<Navigate to="/hvac-and-plumbing-seo" replace />} />
           <Route path="/white-label-local-ppc" element={<Navigate to="/paid-marketing" replace />} />
           <Route path="/white-label-local-ppc/" element={<Navigate to="/paid-marketing" replace />} />
-          <Route path="/white-label-social-media" element={<Navigate to="/blog/white-label-social-media" replace />} />
-          <Route path="/white-label-social-media/" element={<Navigate to="/blog/white-label-social-media" replace />} />
-          <Route path="/white-label-local-seo-on-page-optimization-local-seo" element={<Navigate to="/blog/on-page-optimization-local-seo" replace />} />
-          <Route path="/white-label-local-seo-on-page-optimization-local-seo/" element={<Navigate to="/blog/on-page-optimization-local-seo" replace />} />
+          <Route path="/white-label-social-media" element={<Navigate to="/blog" replace />} />
+          <Route path="/white-label-social-media/" element={<Navigate to="/blog" replace />} />
+          <Route path="/white-label-local-seo-on-page-optimization-local-seo" element={<Navigate to="/blog" replace />} />
+          <Route path="/white-label-local-seo-on-page-optimization-local-seo/" element={<Navigate to="/blog" replace />} />
 
           {/* Legacy blog post redirects → /blog */}
-          <Route path="/white-label-seo-for-agencies-checklist" element={<Navigate to="/blog/white-label-seo-for-agencies-checklist" replace />} />
-          <Route path="/white-label-seo-for-agencies-checklist/" element={<Navigate to="/blog/white-label-seo-for-agencies-checklist" replace />} />
+          <Route path="/white-label-seo-for-agencies-checklist" element={<Navigate to="/blog" replace />} />
+          <Route path="/white-label-seo-for-agencies-checklist/" element={<Navigate to="/blog" replace />} />
           <Route path="/what-kinds-of-businesses-should-use-ppc-advertising" element={<Navigate to="/blog" replace />} />
           <Route path="/what-kinds-of-businesses-should-use-ppc-advertising/" element={<Navigate to="/blog" replace />} />
           <Route path="/five-ways-an-seo-consultant-can-help-your-business-grow" element={<Navigate to="/blog" replace />} />
@@ -492,12 +492,12 @@ const App = () => (
           <Route path="/domain-level-competitors-vs-page-level-competitors-where-should-you-focus-your-marketing-strategies/" element={<Navigate to="/blog" replace />} />
           <Route path="/what-does-a-digital-marketer-do-dallas-movers" element={<Navigate to="/blog" replace />} />
           <Route path="/what-does-a-digital-marketer-do-dallas-movers/" element={<Navigate to="/blog" replace />} />
-          <Route path="/benefits-of-white-label-seo-services" element={<Navigate to="/blog/benefits-of-white-label-seo-services" replace />} />
-          <Route path="/benefits-of-white-label-seo-services/" element={<Navigate to="/blog/benefits-of-white-label-seo-services" replace />} />
+          <Route path="/benefits-of-white-label-seo-services" element={<Navigate to="/blog" replace />} />
+          <Route path="/benefits-of-white-label-seo-services/" element={<Navigate to="/blog" replace />} />
           <Route path="/the-top-20-seo-companies-in-dallas-tx-2025-edition" element={<Navigate to="/blog" replace />} />
           <Route path="/the-top-20-seo-companies-in-dallas-tx-2025-edition/" element={<Navigate to="/blog" replace />} />
-          <Route path="/what-is-white-label-digital-marketing" element={<Navigate to="/blog/what-is-white-label-digital-marketing" replace />} />
-          <Route path="/what-is-white-label-digital-marketing/" element={<Navigate to="/blog/what-is-white-label-digital-marketing" replace />} />
+          <Route path="/what-is-white-label-digital-marketing" element={<Navigate to="/blog" replace />} />
+          <Route path="/what-is-white-label-digital-marketing/" element={<Navigate to="/blog" replace />} />
           <Route path="/yelp-google-facebook-reviews-does-one-matter-more-than-the-other" element={<Navigate to="/blog" replace />} />
           <Route path="/yelp-google-facebook-reviews-does-one-matter-more-than-the-other/" element={<Navigate to="/blog" replace />} />
           <Route path="/eight-outstanding-ways-to-leverage-reddit-for-marketing" element={<Navigate to="/blog" replace />} />

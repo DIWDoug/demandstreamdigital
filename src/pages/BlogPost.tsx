@@ -36,13 +36,8 @@ const getPostAuthor = (slug: string): Author => {
   // Map articles to their authors
   const authorMap: Record<string, string> = {
     // Desiree Abbariao's articles
-    'benefits-of-white-label-seo-services': 'desiree-abbariao',
-    'white-label-local-ppc': 'desiree-abbariao',
     'on-page-optimization-local-seo': 'desiree-abbariao',
     // Richard Baylon's articles
-    'what-is-white-label-digital-marketing': 'richard-baylon',
-    'white-label-social-media': 'richard-baylon',
-    'white-label-seo-for-agencies-checklist': 'richard-baylon',
   };
   
   const authorId = authorMap[slug] || 'doug-bryson';
@@ -50,7 +45,6 @@ const getPostAuthor = (slug: string): Author => {
 };
 
 const categoryLabels: Record<string, string> = {
-  'white-label-seo': 'Trade SEO',
   'local-seo': 'Local SEO',
   'paid-media': 'Paid Media',
   'content-marketing': 'Content Marketing',

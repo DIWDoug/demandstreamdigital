@@ -58,7 +58,7 @@ import linkBuildingImg from "@/assets/stock/link-building.jpg";
 import schemaMarkupImg from "@/assets/stock/schema-markup.jpg";
 import contentDevelopmentImg from "@/assets/stock/content-development.jpg";
 import reportingImg from "@/assets/stock/reporting.jpg";
-import whiteLabelDashboardsImg from "@/assets/spoke/white-label-dashboards.png";
+import brandedDashboardsImg from "@/assets/spoke/branded-dashboards.png";
 import dataIntegrationTabletImg from "@/assets/spoke/data-integration-tablet.png";
 import rankTrackingLaptopImg from "@/assets/spoke/rank-tracking-laptop.png";
 import rankAnalysisDashboardImg from "@/assets/spoke/rank-analysis-dashboard.jpg";
@@ -339,7 +339,7 @@ export const spokeFAQs: Record<string, SpokeFAQ[]> = {
     { question: "Can you prove marketing is profitable?", answer: "In most cases, yes. Clear attribution, reasonable lead values, and consistent tracking let us demonstrate return." }
   ],
   "client-presentation-decks": [
-    { question: "Can you present directly to our clients?", answer: "We operate white-label, so you present. But we can join calls for technical questions if introduced appropriately." },
+    { question: "Can you present directly to our clients?", answer: "You are the trusted local brand, so you own the customer conversation. We can join calls for technical questions when helpful." },
     { question: "What format are presentations?", answer: "PowerPoint/Google Slides standard. PDF exports available. Screen-share optimized." },
     { question: "How far in advance do you need for presentation prep?", answer: "3-5 business days ideal. Rush turnaround possible for existing clients with established templates." }
   ],
@@ -1517,7 +1517,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Quality Analysis", description: "Lead quality tracked. Not all conversions are equal." },
         { title: "Trend Identification", description: "Performance trends spotted early. Opportunities and problems identified." },
         { title: "Optimization Recommendations", description: "Data translated into specific optimization actions." },
-        { title: "Client Reporting", description: "White-labeled reports that prove value to end clients." }
+        { title: "Owner-Ready Reporting", description: "Clear, branded reports that show what drove booked calls." }
       ],
       ctaText: "Explore Partnership",
       ctaHref: "/grow-qualifier"
@@ -2142,7 +2142,7 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Client Access", description: "Secure login for client self-service viewing." },
         { title: "Mobile Responsive", description: "Dashboards work on any device. No pinching required." },
         { title: "Role-Based Views", description: "Different views for different stakeholders." },
-        { title: "White-Label Completely", description: "Zero mention of underlying technology or our company." }
+        { title: "Branded Completely", description: "Zero mention of underlying technology or our company." }
       ],
       imageSrc: realTimeDashboardMeetingImg,
       imageAlt: "Team meeting with dashboard presentation showing real-time analytics data",
@@ -2178,8 +2178,8 @@ export const spokeContentBlocks: Record<string, ContentBlock[]> = {
         { title: "Comparison Views", description: "Period-over-period comparisons built in." },
         { title: "Data Quality", description: "Connection health monitored. Issues flagged immediately." }
       ],
-      imageSrc: whiteLabelDashboardsImg,
-      imageAlt: "White-label dashboard and reporting interface",
+      imageSrc: brandedDashboardsImg,
+      imageAlt: "Branded reporting dashboard for plumbing and HVAC owners",
       ctaText: "Explore Partnership",
       ctaHref: "/grow-qualifier"
     }

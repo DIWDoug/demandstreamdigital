@@ -244,7 +244,7 @@ const About = () => {
                 variant="dark"
                 items={[
                   "Dallas-based, Plumbing and HVAC only",
-                  "Hands-on fulfillment, not white-label resold",
+                  "Hands-on fulfillment, not branded resold",
                   "15+ years of execution, 100+ campaigns shipped",
                 ]}
                 className="mb-0"
@@ -497,7 +497,7 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* 2021-2025 - White Label Partnerships */}
+                {/* 2021-2025 - Branded Partnerships */}
                 <div className="group bg-background border border-border rounded-2xl p-6 hover:border-accent-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-accent-blue/20 hover:scale-[1.08] hover:z-20 relative">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-full bg-accent-blue/10 flex items-center justify-center border-2 border-accent-blue">
@@ -505,11 +505,11 @@ const About = () => {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-accent-blue uppercase tracking-wide">2021-2025</p>
-                      <p className="text-lg font-semibold text-foreground">White Label Partnerships</p>
+                      <p className="text-lg font-semibold text-foreground">Branded Partnerships</p>
                     </div>
                   </div>
                   <p className="font-serif text-text-secondary text-sm leading-relaxed mb-3">
-                    Managed white label fulfillment across a wide range of industries — from cowboy boots to water parks, national luxury outdoor furniture to local service brands. Built repeatable systems for agency partners who needed reliable execution without the overhead.
+                    Managed branded fulfillment across a wide range of industries — from cowboy boots to water parks, national luxury outdoor furniture to local service brands. Built repeatable systems for agency partners who needed reliable execution without the overhead.
                   </p>
                   <div className="pt-4 border-t border-border/50 space-y-2">
                     <p className="text-sm text-foreground font-medium">Full-service fulfillment: SEO, paid media, content, and reporting.</p>

@@ -84,7 +84,6 @@ const YouMayAlsoLike = ({ currentSlug, currentCategory }: YouMayAlsoLikeProps) =
   }
 
   const categoryLabels: Record<string, string> = {
-    'white-label-seo': 'White-Label SEO',
     'local-seo': 'Local SEO',
     'paid-media': 'Paid Media',
     'content-marketing': 'Content Marketing',
@@ -106,7 +105,7 @@ const YouMayAlsoLike = ({ currentSlug, currentCategory }: YouMayAlsoLikeProps) =
               <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-surface-dark">
                 <img 
                   src={getBlogFeaturedImage(post.featured_image)!} 
-                  alt={`${post.title} - White Label Marketing Insights`}
+                  alt={`${post.title} — Plumbing & HVAC Marketing Insights`}
                   title={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
