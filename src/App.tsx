@@ -258,6 +258,7 @@ const App = () => (
           <Route path="/grow-main" element={<Grow />} />
           <Route path="/grow-main/:step" element={<Grow />} />
           <Route path="/grow-main/thanks" element={<GrowThanks />} />
+          <Route path="/gms-call" element={<GrowThanks />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
