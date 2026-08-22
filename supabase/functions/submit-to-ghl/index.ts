@@ -618,9 +618,6 @@ serve(async (req) => {
     }
 
 
-    }
-
-
     logResponse({ functionName, statusCode: 200, durationMs: Date.now() - startTime });
     return new Response(JSON.stringify({ success: true, data, zapier }), {
       status: 200,
