@@ -18,6 +18,7 @@ type StepKey =
   | "lastName"
   | "email"
   | "phone"
+  | "otp"
   | "contractor"
   | "company"
   | "website"
@@ -90,6 +91,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
     quote: "After past experiences with agencies where SEO felt like a black box, it's refreshing to work with a team that provides real, clear data.",
     attribution: "Pure Plumbing & Air",
   },
+  otp: null,
   contractor: {
     quote: "We have a plan, data to back it up, and a partner who keeps us accountable.",
     attribution: "Pure Plumbing & Air",
