@@ -359,12 +359,22 @@ const GrowthQualifierFlow = () => {
       navigate("/grow/thanks");
       return;
     }
+    if (!phoneVerified) {
+      toast({
+        title: "Verify your phone number first",
+        description: "Enter the 6 digit code we texted you before submitting.",
+        variant: "destructive",
+      });
+      setStep("otp");
+      return;
+    }
     setIsSubmitting(true);
     const payload = {
       name: `${firstName} ${lastName}`.trim(),
       email,
       phone,
       phoneCountryCode,
+      phoneVerified,
       website,
       company: companyName,
       contractorTypes: [contractor],
