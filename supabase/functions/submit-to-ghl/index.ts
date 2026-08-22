@@ -196,7 +196,12 @@ serve(async (req) => {
       formType,
       leadId,
       recaptchaToken,
+      company,
+      contractorTypes,
+      marketingChannels,
+      budgetAnswer,
     } = body;
+
 
     // Get client IP for rate limiting and reCAPTCHA
     const clientIP =
