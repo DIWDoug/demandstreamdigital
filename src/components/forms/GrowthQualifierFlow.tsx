@@ -609,17 +609,7 @@ const GrowthQualifierFlow = () => {
           <div>
             <QuestionHeader
               num={9}
-              title={
-                <>
-                  <span className="block">
-                    Wow, {firstNameDisplay} {lastName.trim()}, what an amazing name!
-                    <span className="ml-1 text-[#E63946]">*</span>
-                  </span>
-                  <span className="mt-6 block">
-                    What email should we use when reaching out?
-                  </span>
-                </>
-              }
+              title="Great, what's the best email to reach you?"
               required={false}
               subtitle="We'll never spam or share it. Pinky promise."
             />
