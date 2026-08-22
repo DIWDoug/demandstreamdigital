@@ -586,7 +586,11 @@ const GrowthQualifierFlow = () => {
         {/* STEP 8 last name */}
         {step === "lastName" ? (
           <div>
-            <QuestionHeader num={8} title={`Nice to meet you, ${firstNameDisplay}. What's your last name?`} />
+            <QuestionHeader
+              num={8}
+              title="We're almost done. What's your last name so we can address you properly."
+              required={false}
+            />
             <input
               autoFocus
               type="text"
@@ -605,17 +609,7 @@ const GrowthQualifierFlow = () => {
           <div>
             <QuestionHeader
               num={9}
-              title={
-                <>
-                  <span className="block">
-                    Wow, {firstNameDisplay} {lastName.trim()}, what an amazing name!
-                    <span className="ml-1 text-[#E63946]">*</span>
-                  </span>
-                  <span className="mt-6 block">
-                    What email should we use when reaching out?
-                  </span>
-                </>
-              }
+              title="Great, what's the best email to reach you?"
               required={false}
               subtitle="We'll never spam or share it. Pinky promise."
             />
@@ -638,7 +632,7 @@ const GrowthQualifierFlow = () => {
             <QuestionHeader
               num={10}
               title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
-              subtitle="We'll text or call once to confirm market availability. That's it."
+              subtitle="Someone from our team will reach out shortly to book a consultation with you."
             />
             <PhoneInput
               value={phone}
