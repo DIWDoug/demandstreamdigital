@@ -626,7 +626,7 @@ serve(async (req) => {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
-  } catch (error: any) {
+  } catch (error) {
     statusCode = 500;
     console.error("Error in submit-to-ghl function:", error);
     logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
