@@ -190,11 +190,7 @@ const GrowthQualifierFlow = () => {
 
   const handleRevenueContinue = () => {
     if (!revenueBand) return;
-    if (revenueBand === "under_500k") {
-      moveTo("budget");
-      return;
-    }
-    moveTo("lastName");
+    moveTo("budget");
   };
 
   const handleBudgetContinue = () => {
@@ -696,8 +692,8 @@ const GrowthQualifierFlow = () => {
         {/* DISQUALIFIED */}
         {step === "disqualified" ? (
           <div>
-            <QuestionHeader title="We're sorry but, at this time, we do not have a service for you." required={false} />
-            <p className="text-base text-white/70">Our partnerships start at $2,000/month in growth investment.</p>
+            <QuestionHeader title="We are not the cheapest option, but we are one of the best." required={false} />
+            <p className="text-base text-white/70">Cheap oftentimes gets cheap results. If your budget is not ready for a real growth partnership, we are not a fit right now.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
