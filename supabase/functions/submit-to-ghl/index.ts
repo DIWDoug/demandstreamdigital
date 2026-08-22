@@ -454,6 +454,18 @@ serve(async (req) => {
     } else {
       zapier.attempted = true;
 
+      const fullName = typeof name === "string" ? name.trim() : "";
+      const nameParts = fullName.split(/\s+/).filter(Boolean);
+      const firstName = nameParts[0] || "";
+      const lastName = nameParts.slice(1).join(" ");
+      const rawPhone = typeof phone === "string" ? phone.replace(/\D/g, "") : "";
+      const cc = (phoneCountryCode || "+1").replace(/\D/g, "");
+      const phoneE164 = rawPhone
+        ? rawPhone.startsWith(cc)
+          ? `+${rawPhone}`
+          : `+${cc}${rawPhone}`
+        : "";
+
       const payload = {
         id: data.id,
         lead_id: data.id,
@@ -461,6 +473,10 @@ serve(async (req) => {
         lead_type,
         form_type: formType || "unknown",
         name,
+        // Upcall-friendly contact fields
+        first_name: firstName,
+        last_name: lastName,
+        phone_e164: phoneE164,
         email,
         phone,
         phoneCountryCode: phoneCountryCode || "+1",
@@ -471,6 +487,7 @@ serve(async (req) => {
         source: isStep1 ? "contact_form_step1" : "contact_form",
         created_at: data.created_at,
       };
+
 
       console.log("Sending webhook to Zapier:", {
         lead_type,
@@ -499,7 +516,25 @@ serve(async (req) => {
         console.error("Zapier webhook error:", zapierError);
         // Don't fail the request if Zapier fails
       }
+
+      // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
+      const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
+      if (upcallWebhookUrl && !isStep1 && phoneE164) {
+        try {
+          const upcallResponse = await fetch(upcallWebhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...payload, destination: "upcall" }),
+          });
+          console.log("Upcall webhook response:", upcallResponse.status);
+        } catch (upcallError) {
+          console.error("Upcall webhook error:", upcallError);
+        }
+      } else if (!upcallWebhookUrl) {
+        console.log("Upcall webhook URL not configured");
+      }
     }
+
 
     logResponse({ functionName, statusCode: 200, durationMs: Date.now() - startTime });
     return new Response(JSON.stringify({ success: true, data, zapier }), {
