@@ -104,6 +104,18 @@ Deno.serve(async (req) => {
       return json({ status: res.status, body: text }, 200);
     }
 
+    if (action === "attempt") {
+      const sid = String(body?.sid ?? "");
+      const res = await fetch(`https://verify.twilio.com/v2/Attempts/${encodeURIComponent(sid)}`, {
+        headers: { Authorization: `Basic ${btoa(`${ACCOUNT_SID}:${AUTH_TOKEN}`)}` },
+      });
+      const text = await res.text();
+      console.log(`Twilio attempt detail [${res.status}]: ${text}`);
+      return json({ status: res.status, body: text }, 200);
+    }
+
+
+
 
     if (action === "check") {
       const code = String(body?.code ?? "").replace(/\D/g, "");
