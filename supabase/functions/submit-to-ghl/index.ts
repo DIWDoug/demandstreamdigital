@@ -516,7 +516,25 @@ serve(async (req) => {
         console.error("Zapier webhook error:", zapierError);
         // Don't fail the request if Zapier fails
       }
+
+      // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
+      const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
+      if (upcallWebhookUrl && !isStep1 && phoneE164) {
+        try {
+          const upcallResponse = await fetch(upcallWebhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...payload, destination: "upcall" }),
+          });
+          console.log("Upcall webhook response:", upcallResponse.status);
+        } catch (upcallError) {
+          console.error("Upcall webhook error:", upcallError);
+        }
+      } else if (!upcallWebhookUrl) {
+        console.log("Upcall webhook URL not configured");
+      }
     }
+
 
     logResponse({ functionName, statusCode: 200, durationMs: Date.now() - startTime });
     return new Response(JSON.stringify({ success: true, data, zapier }), {
