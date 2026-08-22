@@ -234,7 +234,11 @@ serve(async (req) => {
 
     const isStep1 = !!formType && formType.endsWith("_step1");
 
-    // Verify reCAPTCHA token (required for step 2 submissions, optional for step 1)
+    // Verify reCAPTCHA token when one is supplied.
+    // If the browser could not produce a token (blocked script, extension, offline),
+    // we still accept the lead: honeypot + IP/email rate limiting remain in force.
+    // Losing a real lead is worse than letting a rare unverified one through.
+    let recaptchaVerified = false;
     if (!isStep1 && recaptchaToken) {
       const recaptchaResult = await verifyRecaptcha(recaptchaToken);
       if (!recaptchaResult.success) {
@@ -244,14 +248,11 @@ serve(async (req) => {
           { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
+      recaptchaVerified = true;
     } else if (!isStep1 && RECAPTCHA_SECRET_KEY && !recaptchaToken) {
-      // If reCAPTCHA is configured but no token provided for step 2
-      console.log("reCAPTCHA token missing for step 2 submission");
-      return new Response(
-        JSON.stringify({ error: "Security verification required. Please try again." }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      console.log("reCAPTCHA token missing for step 2 submission; accepting with rate-limit protection only");
     }
+
 
     // Map formType to human-readable lead_type for automations
     const leadTypeMap: Record<string, string> = {
