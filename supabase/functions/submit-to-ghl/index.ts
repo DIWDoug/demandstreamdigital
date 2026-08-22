@@ -518,13 +518,40 @@ serve(async (req) => {
       }
 
       // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
+      // Slim, flat payload named to match Upcall's "Add Contact" fields 1:1.
       const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
       if (upcallWebhookUrl && !isStep1 && phoneE164) {
+        const services = Array.isArray(sanitizedServicesInterested)
+          ? sanitizedServicesInterested.join(", ")
+          : "";
+        const notes = [
+          lead_type ? `Lead type: ${lead_type}` : "",
+          website ? `Website: ${website}` : "",
+          revenue ? `Revenue: ${revenue}` : "",
+          services ? `Services: ${services}` : "",
+          email ? `Email: ${email}` : "",
+          typeof message === "string" && message.trim()
+            ? `Message: ${message.trim().slice(0, 1000)}`
+            : "",
+        ]
+          .filter(Boolean)
+          .join(" | ");
+
+        const upcallPayload = {
+          phone_number: phoneE164,
+          first_name: firstName,
+          last_name: lastName,
+          company_name: website || "",
+          title: lead_type || "",
+          notes,
+          email: email || "",
+        };
+
         try {
           const upcallResponse = await fetch(upcallWebhookUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...payload, destination: "upcall" }),
+            body: JSON.stringify(upcallPayload),
           });
           console.log("Upcall webhook response:", upcallResponse.status);
         } catch (upcallError) {
@@ -533,6 +560,7 @@ serve(async (req) => {
       } else if (!upcallWebhookUrl) {
         console.log("Upcall webhook URL not configured");
       }
+
     }
 
 
