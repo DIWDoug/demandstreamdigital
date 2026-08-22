@@ -52,7 +52,12 @@ interface ContactFormData {
   formType?: string;
   leadId?: string;
   recaptchaToken?: string;
+  company?: string;
+  contractorTypes?: string[];
+  marketingChannels?: string[];
+  budgetAnswer?: string | null;
 }
+
 
 // Rate limiting configuration
 const RATE_LIMIT_WINDOW_MINUTES = 15;
