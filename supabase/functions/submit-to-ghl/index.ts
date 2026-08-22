@@ -450,32 +450,34 @@ serve(async (req) => {
       console.log("Missing email; skipping DB insert/update");
     }
 
-    // Forward to Zapier webhook (used to reach CRM)
-    // Grow qualifier uses its own dedicated webhook so the funnel routing is independent.
+    // Pre-compute contact fields for downstream webhooks.
+    const fullName = typeof name === "string" ? name.trim() : "";
+    const nameParts = fullName.split(/\s+/).filter(Boolean);
+    const firstName = nameParts[0] || "";
+    const lastName = nameParts.slice(1).join(" ");
+    const rawPhone = typeof phone === "string" ? phone.replace(/\D/g, "") : "";
+    const cc = (phoneCountryCode || "+1").replace(/\D/g, "");
+    const phoneE164 = rawPhone
+      ? rawPhone.startsWith(cc)
+        ? `+${rawPhone}`
+        : `+${cc}${rawPhone}`
+      : "";
+
+    // Forward to the legacy Zapier webhook for non-grow funnels only.
+    // The grow funnel now routes exclusively to Upcall below; the old grow Zap
+    // webhook is disabled and should be removed from your Zapier account.
     const isGrowFunnel = typeof formType === "string" && formType.startsWith("grow");
-    const zapierWebhookUrl = isGrowFunnel
-      ? (Deno.env.get("ZAPIER_WEBHOOK_URL_GROW") || Deno.env.get("ZAPIER_WEBHOOK_URL"))
-      : Deno.env.get("ZAPIER_WEBHOOK_URL");
+    const zapierWebhookUrl = !isGrowFunnel ? Deno.env.get("ZAPIER_WEBHOOK_URL") : undefined;
     const zapier: { attempted: boolean; status?: number; ok?: boolean } = {
       attempted: false,
     };
 
     if (!zapierWebhookUrl) {
-      console.log("Zapier webhook URL not configured");
+      if (!isGrowFunnel) {
+        console.log("Zapier webhook URL not configured");
+      }
     } else {
       zapier.attempted = true;
-
-      const fullName = typeof name === "string" ? name.trim() : "";
-      const nameParts = fullName.split(/\s+/).filter(Boolean);
-      const firstName = nameParts[0] || "";
-      const lastName = nameParts.slice(1).join(" ");
-      const rawPhone = typeof phone === "string" ? phone.replace(/\D/g, "") : "";
-      const cc = (phoneCountryCode || "+1").replace(/\D/g, "");
-      const phoneE164 = rawPhone
-        ? rawPhone.startsWith(cc)
-          ? `+${rawPhone}`
-          : `+${cc}${rawPhone}`
-        : "";
 
       const payload = {
         id: data.id,
@@ -498,7 +500,6 @@ serve(async (req) => {
         source: isStep1 ? "contact_form_step1" : "contact_form",
         created_at: data.created_at,
       };
-
 
       console.log("Sending webhook to Zapier:", {
         lead_type,
@@ -527,96 +528,93 @@ serve(async (req) => {
         console.error("Zapier webhook error:", zapierError);
         // Don't fail the request if Zapier fails
       }
+    }
 
-      // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
-      // Slim, flat payload named to match Upcall's "Add Contact" fields 1:1.
-      const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
-      if (upcallWebhookUrl && !isStep1 && phoneE164) {
-        const revenueLabels: Record<string, string> = {
-          under_500k: "Less than $500k",
-          "500k_1mm": "Between $500k and $1mm",
-          "1mm_5mm": "Between $1mm and $5mm",
-          "5mm_10mm": "Between $5mm and $10mm",
-          "10mm_plus": "Greater than $10mm",
-        };
-        const clean = (v: unknown) =>
-          typeof v === "string" ? v.trim().slice(0, 300) : "";
-        const cleanList = (v: unknown) =>
-          Array.isArray(v)
-            ? v.map((x) => clean(x)).filter(Boolean)
-            : [];
+    // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
+    // Slim, flat payload named to match Upcall's "Add Contact" fields 1:1.
+    const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
+    if (upcallWebhookUrl && !isStep1 && phoneE164) {
+      const revenueLabels: Record<string, string> = {
+        under_500k: "Less than $500k",
+        "500k_1mm": "Between $500k and $1mm",
+        "1mm_5mm": "Between $1mm and $5mm",
+        "5mm_10mm": "Between $5mm and $10mm",
+        "10mm_plus": "Greater than $10mm",
+      };
+      const clean = (v: unknown) =>
+        typeof v === "string" ? v.trim().slice(0, 300) : "";
+      const cleanList = (v: unknown) =>
+        Array.isArray(v)
+          ? v.map((x) => clean(x)).filter(Boolean)
+          : [];
 
-        const tradeType = cleanList(contractorTypes).join(", ");
-        const channelList = cleanList(marketingChannels);
-        const services = cleanList(sanitizedServicesInterested);
-        const revenueLabel = revenue
-          ? revenueLabels[clean(revenue)] || clean(revenue)
-          : "";
+      const tradeType = cleanList(contractorTypes).join(", ");
+      const channelList = cleanList(marketingChannels);
+      const services = cleanList(sanitizedServicesInterested);
+      const revenueLabel = revenue
+        ? revenueLabels[clean(revenue)] || clean(revenue)
+        : "";
 
-        const notesLines: string[] = [
-          `Email: ${email || ""}`,
-          `Phone: ${phoneE164}`,
-          `Trade Type: ${tradeType}`,
-          `Company Name: ${clean(company)}`,
-          `Website: ${clean(website)}`,
-          "Currently Getting Calls By Doing:",
-          ...(channelList.length
-            ? channelList.map((c) => `  - ${c}`)
-            : ["  - (none selected)"]),
-          `12 Month Revenue: ${revenueLabel}`,
-        ];
+      const notesLines: string[] = [
+        `Email: ${email || ""}`,
+        `Phone: ${phoneE164}`,
+        `Trade Type: ${tradeType}`,
+        `Company Name: ${clean(company)}`,
+        `Website: ${clean(website)}`,
+        "Currently Getting Calls By Doing:",
+        ...(channelList.length
+          ? channelList.map((c) => `  - ${c}`)
+          : ["  - (none selected)"]),
+        `12 Month Revenue: ${revenueLabel}`,
+      ];
 
-        if (budgetAnswer) {
-          notesLines.push(`Can Invest In Growth: ${clean(budgetAnswer)}`);
-        }
-        if (services.length) {
-          notesLines.push(`Services Interested: ${services.join(", ")}`);
-        }
-        if (typeof message === "string" && message.trim()) {
-          notesLines.push(`Message: ${message.trim().slice(0, 1000)}`);
-        }
-        notesLines.push(`Lead Source: ${lead_type || formType || "Website"}`);
-        if (!recaptchaVerified) {
-          notesLines.push("Note: bot check unverified (script blocked in browser)");
-        }
-
-
-        const upcallPayload = {
-          // Upcall-ready fields
-          phone_number: phoneE164,
-          first_name: firstName,
-          last_name: lastName,
-          company_name: clean(company) || clean(website),
-          title: lead_type || "",
-          notes: notesLines.join("\n"),
-          email: email || "",
-          // Segmentable fields for Zapier filtering / mapping
-          trade_type: tradeType,
-          website: clean(website),
-          marketing_channels: channelList.join(", "),
-          revenue_band: revenueLabel,
-          budget_answer: clean(budgetAnswer),
-          services_interested: services.join(", "),
-          lead_source: lead_type || formType || "Website",
-          recaptcha_status: recaptchaVerified ? "verified" : "unverified",
-          raw_message: typeof message === "string" ? message.trim().slice(0, 1000) : "",
-        };
-
-
-        try {
-          const upcallResponse = await fetch(upcallWebhookUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(upcallPayload),
-          });
-          console.log("Upcall webhook response:", upcallResponse.status);
-        } catch (upcallError) {
-          console.error("Upcall webhook error:", upcallError);
-        }
-      } else if (!upcallWebhookUrl) {
-        console.log("Upcall webhook URL not configured");
+      if (budgetAnswer) {
+        notesLines.push(`Can Invest In Growth: ${clean(budgetAnswer)}`);
+      }
+      if (services.length) {
+        notesLines.push(`Services Interested: ${services.join(", ")}`);
+      }
+      if (typeof message === "string" && message.trim()) {
+        notesLines.push(`Message: ${message.trim().slice(0, 1000)}`);
+      }
+      notesLines.push(`Lead Source: ${lead_type || formType || "Website"}`);
+      if (!recaptchaVerified) {
+        notesLines.push("Note: bot check unverified (script blocked in browser)");
       }
 
+      const upcallPayload = {
+        // Upcall-ready fields
+        phone_number: phoneE164,
+        first_name: firstName,
+        last_name: lastName,
+        company_name: clean(company) || clean(website),
+        title: lead_type || "",
+        notes: notesLines.join("\n"),
+        email: email || "",
+        // Segmentable fields for Zapier filtering / mapping
+        trade_type: tradeType,
+        website: clean(website),
+        marketing_channels: channelList.join(", "),
+        revenue_band: revenueLabel,
+        budget_answer: clean(budgetAnswer),
+        services_interested: services.join(", "),
+        lead_source: lead_type || formType || "Website",
+        recaptcha_status: recaptchaVerified ? "verified" : "unverified",
+        raw_message: typeof message === "string" ? message.trim().slice(0, 1000) : "",
+      };
+
+      try {
+        const upcallResponse = await fetch(upcallWebhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(upcallPayload),
+        });
+        console.log("Upcall webhook response:", upcallResponse.status);
+      } catch (upcallError) {
+        console.error("Upcall webhook error:", upcallError);
+      }
+    } else if (!upcallWebhookUrl) {
+      console.log("Upcall webhook URL not configured");
     }
 
 
@@ -625,7 +623,7 @@ serve(async (req) => {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
-  } catch (error: any) {
+  } catch (error) {
     statusCode = 500;
     console.error("Error in submit-to-ghl function:", error);
     logResponse({ functionName, statusCode, durationMs: Date.now() - startTime });
