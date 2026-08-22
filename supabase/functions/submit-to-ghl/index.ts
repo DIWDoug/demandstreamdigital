@@ -450,18 +450,19 @@ serve(async (req) => {
       console.log("Missing email; skipping DB insert/update");
     }
 
-    // Forward to Zapier webhook (used to reach CRM)
-    // Grow qualifier uses its own dedicated webhook so the funnel routing is independent.
+    // Forward to the legacy Zapier webhook for non-grow funnels only.
+    // The grow funnel now routes exclusively to Upcall below; the old grow Zap
+    // webhook is disabled and should be removed from your Zapier account.
     const isGrowFunnel = typeof formType === "string" && formType.startsWith("grow");
-    const zapierWebhookUrl = isGrowFunnel
-      ? (Deno.env.get("ZAPIER_WEBHOOK_URL_GROW") || Deno.env.get("ZAPIER_WEBHOOK_URL"))
-      : Deno.env.get("ZAPIER_WEBHOOK_URL");
+    const zapierWebhookUrl = !isGrowFunnel ? Deno.env.get("ZAPIER_WEBHOOK_URL") : undefined;
     const zapier: { attempted: boolean; status?: number; ok?: boolean } = {
       attempted: false,
     };
 
     if (!zapierWebhookUrl) {
-      console.log("Zapier webhook URL not configured");
+      if (!isGrowFunnel) {
+        console.log("Zapier webhook URL not configured");
+      }
     } else {
       zapier.attempted = true;
 
@@ -499,7 +500,6 @@ serve(async (req) => {
         created_at: data.created_at,
       };
 
-
       console.log("Sending webhook to Zapier:", {
         lead_type,
         form_type: payload.form_type,
@@ -527,6 +527,8 @@ serve(async (req) => {
         console.error("Zapier webhook error:", zapierError);
         // Don't fail the request if Zapier fails
       }
+    }
+
 
       // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
       // Slim, flat payload named to match Upcall's "Add Contact" fields 1:1.
