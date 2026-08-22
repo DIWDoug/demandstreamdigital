@@ -52,8 +52,8 @@ const revenueOptions = [
 ];
 
 const budgetOptions = [
-  { value: "yes", label: "Yes" },
-  { value: "no", label: "No" },
+  { value: "yes", label: "Yes, assuming I know exactly what I'm getting and it gets results." },
+  { value: "no", label: "No, not there yet." },
 ];
 
 const stepNumberMap: Partial<Record<StepKey, number>> = {
