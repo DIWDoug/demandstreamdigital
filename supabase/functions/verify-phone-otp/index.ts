@@ -87,8 +87,23 @@ Deno.serve(async (req) => {
             : "Could not send the code to that number.";
         return json({ error: message, status: result.status }, result.status === 429 ? 429 : 400);
       }
-      return json({ sent: true, to: phone });
+      console.log(
+        `Twilio verification created: sid=${result.data?.sid} status=${result.data?.status} to=${phone} service=${VERIFY_SERVICE_SID?.slice(0, 6)}… lookup=${JSON.stringify(result.data?.lookup ?? null)} sendCodeAttempts=${JSON.stringify(result.data?.send_code_attempts ?? null)}`
+      );
+      return json({ sent: true, to: phone, sid: result.data?.sid, status: result.data?.status });
     }
+
+    if (action === "status") {
+      const sid = String(body?.sid ?? "");
+      const res = await fetch(
+        `${VERIFY_BASE}/${VERIFY_SERVICE_SID}/Verifications/${encodeURIComponent(sid)}`,
+        { headers: { Authorization: `Basic ${btoa(`${ACCOUNT_SID}:${AUTH_TOKEN}`)}` } }
+      );
+      const text = await res.text();
+      console.log(`Twilio verification status [${res.status}]: ${text}`);
+      return json({ status: res.status, body: text }, 200);
+    }
+
 
     if (action === "check") {
       const code = String(body?.code ?? "").replace(/\D/g, "");
