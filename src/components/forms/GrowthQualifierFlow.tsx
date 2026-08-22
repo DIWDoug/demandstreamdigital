@@ -567,7 +567,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 7 budget gate */}
         {step === "budget" ? (
           <div>
-            <QuestionHeader num={7} title="Are you willing to invest at least $2,000 per month into your business's growth through digital marketing?" subtitle="Straight talk: that's where our partnerships start." />
+            <QuestionHeader num={7} title="Are you willing to invest at least $2,000 per month into your business's growth through digital marketing/advertising?" subtitle="Straight talk: that's where our partnerships start." />
             <div className="space-y-3">
               {budgetOptions.map((opt, i) => (
                 <ChoiceButton
