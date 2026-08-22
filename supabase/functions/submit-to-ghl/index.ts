@@ -531,31 +531,61 @@ serve(async (req) => {
       // Slim, flat payload named to match Upcall's "Add Contact" fields 1:1.
       const upcallWebhookUrl = Deno.env.get("ZAPIER_WEBHOOK_URL_UPCALL");
       if (upcallWebhookUrl && !isStep1 && phoneE164) {
-        const services = Array.isArray(sanitizedServicesInterested)
-          ? sanitizedServicesInterested.join(", ")
+        const revenueLabels: Record<string, string> = {
+          under_500k: "Less than $500k",
+          "500k_1mm": "Between $500k and $1mm",
+          "1mm_5mm": "Between $1mm and $5mm",
+          "5mm_10mm": "Between $5mm and $10mm",
+          "10mm_plus": "Greater than $10mm",
+        };
+        const clean = (v: unknown) =>
+          typeof v === "string" ? v.trim().slice(0, 300) : "";
+        const cleanList = (v: unknown) =>
+          Array.isArray(v)
+            ? v.map((x) => clean(x)).filter(Boolean)
+            : [];
+
+        const tradeType = cleanList(contractorTypes).join(", ");
+        const channelList = cleanList(marketingChannels);
+        const services = cleanList(sanitizedServicesInterested);
+        const revenueLabel = revenue
+          ? revenueLabels[clean(revenue)] || clean(revenue)
           : "";
-        const notes = [
-          lead_type ? `Lead type: ${lead_type}` : "",
-          website ? `Website: ${website}` : "",
-          revenue ? `Revenue: ${revenue}` : "",
-          services ? `Services: ${services}` : "",
-          email ? `Email: ${email}` : "",
-          typeof message === "string" && message.trim()
-            ? `Message: ${message.trim().slice(0, 1000)}`
-            : "",
-        ]
-          .filter(Boolean)
-          .join(" | ");
+
+        const notesLines: string[] = [
+          `Email: ${email || ""}`,
+          `Phone: ${phoneE164}`,
+          `Trade Type: ${tradeType}`,
+          `Company Name: ${clean(company)}`,
+          `Website: ${clean(website)}`,
+          "Currently Getting Calls By Doing:",
+          ...(channelList.length
+            ? channelList.map((c) => `  - ${c}`)
+            : ["  - (none selected)"]),
+          `12 Month Revenue: ${revenueLabel}`,
+        ];
+
+        if (budgetAnswer) {
+          notesLines.push(`Can Invest In Growth: ${clean(budgetAnswer)}`);
+        }
+        if (services.length) {
+          notesLines.push(`Services Interested: ${services.join(", ")}`);
+        }
+        if (typeof message === "string" && message.trim()) {
+          notesLines.push(`Message: ${message.trim().slice(0, 1000)}`);
+        }
+        notesLines.push(`Lead Source: ${lead_type || formType || "Website"}`);
 
         const upcallPayload = {
           phone_number: phoneE164,
           first_name: firstName,
           last_name: lastName,
-          company_name: website || "",
+          company_name: clean(company) || clean(website),
           title: lead_type || "",
-          notes,
+          notes: notesLines.join("\n"),
           email: email || "",
         };
+
 
         try {
           const upcallResponse = await fetch(upcallWebhookUrl, {
