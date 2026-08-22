@@ -113,8 +113,7 @@ Deno.serve(async (req) => {
       console.log(`Twilio message log [${res.status}]: ${text}`);
       return json({ status: res.status, body: text }, 200);
     }
-
-
+    if (action === "attempt") {
       const sid = String(body?.sid ?? "");
       const res = await fetch(`https://verify.twilio.com/v2/Attempts/${encodeURIComponent(sid)}`, {
         headers: { Authorization: `Basic ${btoa(`${ACCOUNT_SID}:${AUTH_TOKEN}`)}` },
