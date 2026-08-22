@@ -104,7 +104,17 @@ Deno.serve(async (req) => {
       return json({ status: res.status, body: text }, 200);
     }
 
-    if (action === "attempt") {
+    if (action === "messages") {
+      const res = await fetch(
+        `https://api.twilio.com/2010-04-01/Accounts/${ACCOUNT_SID}/Messages.json?To=${encodeURIComponent(phone)}&PageSize=5`,
+        { headers: { Authorization: `Basic ${btoa(`${ACCOUNT_SID}:${AUTH_TOKEN}`)}` } }
+      );
+      const text = await res.text();
+      console.log(`Twilio message log [${res.status}]: ${text}`);
+      return json({ status: res.status, body: text }, 200);
+    }
+
+
       const sid = String(body?.sid ?? "");
       const res = await fetch(`https://verify.twilio.com/v2/Attempts/${encodeURIComponent(sid)}`, {
         headers: { Authorization: `Basic ${btoa(`${ACCOUNT_SID}:${AUTH_TOKEN}`)}` },
