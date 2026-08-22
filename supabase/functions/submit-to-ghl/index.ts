@@ -603,6 +603,7 @@ serve(async (req) => {
         services_interested: services.join(", "),
         lead_source: lead_type || formType || "Website",
         recaptcha_status: recaptchaVerified ? "verified" : "unverified",
+        phone_verified: (body as { phoneVerified?: boolean }).phoneVerified ? "yes" : "no",
         raw_message: typeof message === "string" ? message.trim().slice(0, 1000) : "",
       };
 
