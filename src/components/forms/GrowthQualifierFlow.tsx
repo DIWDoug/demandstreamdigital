@@ -632,7 +632,7 @@ const GrowthQualifierFlow = () => {
             <QuestionHeader
               num={10}
               title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
-              subtitle="We'll text or call once to confirm market availability. That's it."
+              subtitle="Someone from our team will reach out shortly to book a consultation with you."
             />
             <PhoneInput
               value={phone}
