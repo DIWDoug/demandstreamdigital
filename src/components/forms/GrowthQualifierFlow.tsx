@@ -571,7 +571,7 @@ const GrowthQualifierFlow = () => {
         {/* STEP 7 budget gate */}
         {step === "budget" ? (
           <div>
-            <QuestionHeader num={7} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
+            <QuestionHeader num={7} title="Are you willing to invest at least $2,000 per month into your business's growth through digital marketing?" subtitle="Straight talk: that's where our partnerships start." />
             <div className="space-y-3">
               {budgetOptions.map((opt, i) => (
                 <ChoiceButton
@@ -697,7 +697,7 @@ const GrowthQualifierFlow = () => {
         {step === "disqualified" ? (
           <div>
             <QuestionHeader title="We're sorry but, at this time, we do not have a service for you." required={false} />
-            <p className="text-base text-white/70">Our partnerships start at $1,000/month in growth investment.</p>
+            <p className="text-base text-white/70">Our partnerships start at $2,000/month in growth investment.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
