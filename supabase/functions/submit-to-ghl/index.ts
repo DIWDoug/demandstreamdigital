@@ -582,6 +582,7 @@ serve(async (req) => {
 
 
         const upcallPayload = {
+          // Upcall-ready fields
           phone_number: phoneE164,
           first_name: firstName,
           last_name: lastName,
@@ -589,6 +590,16 @@ serve(async (req) => {
           title: lead_type || "",
           notes: notesLines.join("\n"),
           email: email || "",
+          // Segmentable fields for Zapier filtering / mapping
+          trade_type: tradeType,
+          website: clean(website),
+          marketing_channels: channelList.join(", "),
+          revenue_band: revenueLabel,
+          budget_answer: clean(budgetAnswer),
+          services_interested: services.join(", "),
+          lead_source: lead_type || formType || "Website",
+          recaptcha_status: recaptchaVerified ? "verified" : "unverified",
+          raw_message: typeof message === "string" ? message.trim().slice(0, 1000) : "",
         };
 
 
