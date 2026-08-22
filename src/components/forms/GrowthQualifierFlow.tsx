@@ -248,7 +248,51 @@ const GrowthQualifierFlow = () => {
     moveTo("phone");
   };
 
-  const handlePhoneContinue = () => {
+  const invokeOtp = async (action: "send" | "check", code?: string) => {
+    const { data, error } = await supabase.functions.invoke("verify-phone-otp", {
+      body: { action, phone, phoneCountryCode, code },
+    });
+    if (error) {
+      let details = error.message;
+      try {
+        const ctx = (error as { context?: { text?: () => Promise<string> } }).context;
+        if (ctx?.text) {
+          const raw = await ctx.text();
+          const parsed = JSON.parse(raw);
+          if (parsed?.error) details = parsed.error;
+        }
+      } catch {
+        // keep generic message
+      }
+      throw new Error(details);
+    }
+    return data as { sent?: boolean; verified?: boolean };
+  };
+
+  const sendCode = async () => {
+    setIsSendingCode(true);
+    try {
+      await invokeOtp("send");
+      setOtpCode("");
+      setResendIn(30);
+      toast({
+        title: "Code sent",
+        description: "We texted you a 6 digit verification code.",
+      });
+      return true;
+    } catch (err) {
+      toast({
+        title: "Could not send the code",
+        description: err instanceof Error ? err.message : "Check the number and try again.",
+        variant: "destructive",
+      });
+      return false;
+    } finally {
+      setIsSendingCode(false);
+    }
+  };
+
+  const handlePhoneContinue = async () => {
     if (!isValidPhone(phone, phoneCountryCode)) {
       toast({
         title: "Valid phone number required",
@@ -265,7 +309,35 @@ const GrowthQualifierFlow = () => {
       });
       return;
     }
-    moveTo("checking");
+    const sent = await sendCode();
+    if (sent) moveTo("otp");
+  };
+
+  const handleVerifyCode = async () => {
+    if (otpCode.replace(/\D/g, "").length < 6) {
+      toast({
+        title: "Enter the 6 digit code",
+        description: "Check your texts for the code we just sent.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setIsVerifyingCode(true);
+    try {
+      await invokeOtp("check", otpCode.replace(/\D/g, ""));
+      setPhoneVerified(true);
+      pushGrowDataLayer("grow_phone_verified", { funnel: "grow_qualifier" });
+      safeTrackCustom("GrowPhoneVerified", { funnel: "grow_qualifier" });
+      moveTo("checking");
+    } catch (err) {
+      toast({
+        title: "That code did not work",
+        description: err instanceof Error ? err.message : "Request a new code and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsVerifyingCode(false);
+    }
   };
 
 
