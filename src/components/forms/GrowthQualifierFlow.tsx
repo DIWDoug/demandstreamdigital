@@ -141,6 +141,11 @@ const GrowthQualifierFlow = () => {
   const [phone, setPhone] = useState("");
   const [phoneCountryCode, setPhoneCountryCode] = useState("+1");
   const [smsConsent, setSmsConsent] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
+  const [phoneVerified, setPhoneVerified] = useState(false);
+  const [isSendingCode, setIsSendingCode] = useState(false);
+  const [isVerifyingCode, setIsVerifyingCode] = useState(false);
+  const [resendIn, setResendIn] = useState(0);
 
   const [honeypot, setHoneypot] = useState("");
 
