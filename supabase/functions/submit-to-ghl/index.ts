@@ -578,6 +578,9 @@ serve(async (req) => {
         notesLines.push(`Message: ${message.trim().slice(0, 1000)}`);
       }
       notesLines.push(`Lead Source: ${lead_type || formType || "Website"}`);
+      notesLines.push(
+        `Phone Verified By SMS Code: ${(body as { phoneVerified?: boolean }).phoneVerified ? "yes" : "no"}`
+      );
       if (!recaptchaVerified) {
         notesLines.push("Note: bot check unverified (script blocked in browser)");
       }
