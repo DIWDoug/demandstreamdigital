@@ -18,6 +18,7 @@ type StepKey =
   | "lastName"
   | "email"
   | "phone"
+  | "otp"
   | "contractor"
   | "company"
   | "website"
@@ -90,6 +91,7 @@ const reviews: Record<StepKey, { quote: string; attribution: string } | null> = 
     quote: "After past experiences with agencies where SEO felt like a black box, it's refreshing to work with a team that provides real, clear data.",
     attribution: "Pure Plumbing & Air",
   },
+  otp: null,
   contractor: {
     quote: "We have a plan, data to back it up, and a partner who keeps us accountable.",
     attribution: "Pure Plumbing & Air",
@@ -139,6 +141,11 @@ const GrowthQualifierFlow = () => {
   const [phone, setPhone] = useState("");
   const [phoneCountryCode, setPhoneCountryCode] = useState("+1");
   const [smsConsent, setSmsConsent] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
+  const [phoneVerified, setPhoneVerified] = useState(false);
+  const [isSendingCode, setIsSendingCode] = useState(false);
+  const [isVerifyingCode, setIsVerifyingCode] = useState(false);
+  const [resendIn, setResendIn] = useState(0);
 
   const [honeypot, setHoneypot] = useState("");
 
@@ -153,6 +160,14 @@ const GrowthQualifierFlow = () => {
     pushGrowDataLayer("grow_funnel_start", { funnel: "grow_qualifier" });
     safeTrackCustom("GrowFunnelStart", { funnel: "grow_qualifier" });
   }, []);
+
+  useEffect(() => {
+    if (resendIn <= 0) return;
+    const timer = setTimeout(() => setResendIn((s) => s - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [resendIn]);
+
+
 
   useEffect(() => {
     if (step === "disqualified") {
@@ -246,7 +261,51 @@ const GrowthQualifierFlow = () => {
     moveTo("phone");
   };
 
-  const handlePhoneContinue = () => {
+  const invokeOtp = async (action: "send" | "check", code?: string) => {
+    const { data, error } = await supabase.functions.invoke("verify-phone-otp", {
+      body: { action, phone, phoneCountryCode, code },
+    });
+    if (error) {
+      let details = error.message;
+      try {
+        const ctx = (error as { context?: { text?: () => Promise<string> } }).context;
+        if (ctx?.text) {
+          const raw = await ctx.text();
+          const parsed = JSON.parse(raw);
+          if (parsed?.error) details = parsed.error;
+        }
+      } catch {
+        // keep generic message
+      }
+      throw new Error(details);
+    }
+    return data as { sent?: boolean; verified?: boolean };
+  };
+
+  const sendCode = async () => {
+    setIsSendingCode(true);
+    try {
+      await invokeOtp("send");
+      setOtpCode("");
+      setResendIn(30);
+      toast({
+        title: "Code sent",
+        description: "We texted you a 6 digit verification code.",
+      });
+      return true;
+    } catch (err) {
+      toast({
+        title: "Could not send the code",
+        description: err instanceof Error ? err.message : "Check the number and try again.",
+        variant: "destructive",
+      });
+      return false;
+    } finally {
+      setIsSendingCode(false);
+    }
+  };
+
+  const handlePhoneContinue = async () => {
     if (!isValidPhone(phone, phoneCountryCode)) {
       toast({
         title: "Valid phone number required",
@@ -263,7 +322,35 @@ const GrowthQualifierFlow = () => {
       });
       return;
     }
-    moveTo("checking");
+    const sent = await sendCode();
+    if (sent) moveTo("otp");
+  };
+
+  const handleVerifyCode = async () => {
+    if (otpCode.replace(/\D/g, "").length < 6) {
+      toast({
+        title: "Enter the 6 digit code",
+        description: "Check your texts for the code we just sent.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setIsVerifyingCode(true);
+    try {
+      await invokeOtp("check", otpCode.replace(/\D/g, ""));
+      setPhoneVerified(true);
+      pushGrowDataLayer("grow_phone_verified", { funnel: "grow_qualifier" });
+      safeTrackCustom("GrowPhoneVerified", { funnel: "grow_qualifier" });
+      moveTo("checking");
+    } catch (err) {
+      toast({
+        title: "That code did not work",
+        description: err instanceof Error ? err.message : "Request a new code and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsVerifyingCode(false);
+    }
   };
 
 
@@ -272,12 +359,22 @@ const GrowthQualifierFlow = () => {
       navigate("/grow/thanks");
       return;
     }
+    if (!phoneVerified) {
+      toast({
+        title: "Verify your phone number first",
+        description: "Enter the 6 digit code we texted you before submitting.",
+        variant: "destructive",
+      });
+      setStep("otp");
+      return;
+    }
     setIsSubmitting(true);
     const payload = {
       name: `${firstName} ${lastName}`.trim(),
       email,
       phone,
       phoneCountryCode,
+      phoneVerified,
       website,
       company: companyName,
       contractorTypes: [contractor],
@@ -632,7 +729,7 @@ const GrowthQualifierFlow = () => {
             <QuestionHeader
               num={10}
               title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
-              subtitle="Someone from our team will reach out shortly to book a consultation with you."
+              subtitle="We text a quick 6 digit code to confirm the number, then someone from our team reaches out to book your consultation."
             />
             <PhoneInput
               value={phone}
@@ -644,10 +741,61 @@ const GrowthQualifierFlow = () => {
             <div className="mt-4 space-y-3">
               <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
             </div>
-            <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
-
+            <SubmitRow
+              label={isSendingCode ? "Sending code..." : "Text Me The Code"}
+              onClick={() => void handlePhoneContinue()}
+              disabled={!phone.trim() || !smsConsent}
+              loading={isSendingCode}
+            />
           </div>
         ) : null}
+
+        {/* STEP 10b phone verification code */}
+        {step === "otp" ? (
+          <div>
+            <QuestionHeader
+              title="Enter the 6 digit code we just texted you."
+              required={false}
+              subtitle={`Sent to ${phoneCountryCode} ${phone}. It expires in about 10 minutes.`}
+            />
+            <input
+              autoFocus
+              type="text"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              maxLength={6}
+              value={otpCode}
+              onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+              onKeyDown={(e) => onEnter(e, () => void handleVerifyCode())}
+              placeholder="123456"
+              className={`${textInputClass} tracking-[0.5em]`}
+            />
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
+              <button
+                type="button"
+                onClick={() => void sendCode()}
+                disabled={isSendingCode || resendIn > 0}
+                className="font-medium text-[#4A90B8] hover:text-white disabled:cursor-not-allowed disabled:text-white/40"
+              >
+                {resendIn > 0 ? `Resend code in ${resendIn}s` : "Resend code"}
+              </button>
+              <button
+                type="button"
+                onClick={goBack}
+                className="text-white/60 hover:text-white"
+              >
+                Wrong number? Edit it
+              </button>
+            </div>
+            <SubmitRow
+              label={isVerifyingCode ? "Verifying..." : "Verify & Continue"}
+              onClick={() => void handleVerifyCode()}
+              disabled={otpCode.length < 6}
+              loading={isVerifyingCode}
+            />
+          </div>
+        ) : null}
+
 
         {/* CHECKING interstitial */}
         {step === "checking" ? (
