@@ -586,7 +586,11 @@ const GrowthQualifierFlow = () => {
         {/* STEP 8 last name */}
         {step === "lastName" ? (
           <div>
-            <QuestionHeader num={8} title={`Nice to meet you, ${firstNameDisplay}. What's your last name?`} />
+            <QuestionHeader
+              num={8}
+              title="We're almost done. What's your last name so we can address you properly."
+              required={false}
+            />
             <input
               autoFocus
               type="text"
