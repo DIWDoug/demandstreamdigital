@@ -450,6 +450,19 @@ serve(async (req) => {
       console.log("Missing email; skipping DB insert/update");
     }
 
+    // Pre-compute contact fields for downstream webhooks.
+    const fullName = typeof name === "string" ? name.trim() : "";
+    const nameParts = fullName.split(/\s+/).filter(Boolean);
+    const firstName = nameParts[0] || "";
+    const lastName = nameParts.slice(1).join(" ");
+    const rawPhone = typeof phone === "string" ? phone.replace(/\D/g, "") : "";
+    const cc = (phoneCountryCode || "+1").replace(/\D/g, "");
+    const phoneE164 = rawPhone
+      ? rawPhone.startsWith(cc)
+        ? `+${rawPhone}`
+        : `+${cc}${rawPhone}`
+      : "";
+
     // Forward to the legacy Zapier webhook for non-grow funnels only.
     // The grow funnel now routes exclusively to Upcall below; the old grow Zap
     // webhook is disabled and should be removed from your Zapier account.
@@ -465,18 +478,6 @@ serve(async (req) => {
       }
     } else {
       zapier.attempted = true;
-
-      const fullName = typeof name === "string" ? name.trim() : "";
-      const nameParts = fullName.split(/\s+/).filter(Boolean);
-      const firstName = nameParts[0] || "";
-      const lastName = nameParts.slice(1).join(" ");
-      const rawPhone = typeof phone === "string" ? phone.replace(/\D/g, "") : "";
-      const cc = (phoneCountryCode || "+1").replace(/\D/g, "");
-      const phoneE164 = rawPhone
-        ? rawPhone.startsWith(cc)
-          ? `+${rawPhone}`
-          : `+${cc}${rawPhone}`
-        : "";
 
       const payload = {
         id: data.id,
@@ -528,6 +529,7 @@ serve(async (req) => {
         // Don't fail the request if Zapier fails
       }
     }
+
 
 
       // Forward the same lead to the Upcall Zap (all contact forms, completed leads only)
