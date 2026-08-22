@@ -58,15 +58,15 @@ const budgetOptions = [
 
 const stepNumberMap: Partial<Record<StepKey, number>> = {
   firstName: 1,
-  lastName: 2,
-  email: 3,
-  phone: 4,
-  contractor: 5,
-  company: 6,
-  website: 7,
-  channels: 8,
-  revenue: 9,
-  budget: 10,
+  company: 2,
+  website: 3,
+  contractor: 4,
+  channels: 5,
+  revenue: 6,
+  budget: 7,
+  lastName: 8,
+  email: 9,
+  phone: 10,
 };
 
 const totalSteps = 10;
@@ -194,13 +194,13 @@ const GrowthQualifierFlow = () => {
       moveTo("budget");
       return;
     }
-    moveTo("checking");
+    moveTo("lastName");
   };
 
   const handleBudgetContinue = () => {
     if (!canInvest) return;
     if (canInvest === "yes") {
-      moveTo("checking");
+      moveTo("lastName");
       return;
     }
     moveTo("disqualified");
@@ -267,7 +267,7 @@ const GrowthQualifierFlow = () => {
       });
       return;
     }
-    moveTo("contractor");
+    moveTo("checking");
   };
 
 
@@ -457,18 +457,140 @@ const GrowthQualifierFlow = () => {
               value={firstName}
               onFocus={initRecaptcha}
               onChange={(e) => setFirstName(e.target.value)}
-              onKeyDown={(e) => onEnter(e, () => firstName.trim() && moveTo("lastName"))}
+              onKeyDown={(e) => onEnter(e, () => firstName.trim() && moveTo("company"))}
               placeholder="Jane"
               className={textInputClass}
             />
-            <SubmitRow onClick={() => firstName.trim() && moveTo("lastName")} disabled={!firstName.trim()} />
+            <SubmitRow onClick={() => firstName.trim() && moveTo("company")} disabled={!firstName.trim()} />
           </div>
         ) : null}
 
-        {/* STEP 2 last name */}
+        {/* STEP 2 company name */}
+        {step === "company" ? (
+          <div>
+            <QuestionHeader num={2} title="What's the name of your shop?" subtitle="The one on the side of the truck." />
+            <input
+              autoFocus
+              type="text"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+              onKeyDown={(e) => onEnter(e, () => companyName.trim() && moveTo("website"))}
+              placeholder="Acme Plumbing"
+              className={textInputClass}
+            />
+            <SubmitRow onClick={() => companyName.trim() && moveTo("website")} disabled={!companyName.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 3 website */}
+        {step === "website" ? (
+          <div>
+            <QuestionHeader
+              num={3}
+              title={`Nice. Where can homeowners find ${companyDisplay} online?`}
+              subtitle="Drop your main site so we can peek at your current presence."
+            />
+            <input
+              autoFocus
+              type="text"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              onKeyDown={(e) => onEnter(e, () => website.trim() && moveTo("contractor"))}
+              placeholder="acmeplumbing.com"
+              className={textInputClass}
+            />
+            <SubmitRow onClick={() => website.trim() && moveTo("contractor")} disabled={!website.trim()} />
+          </div>
+        ) : null}
+
+        {/* STEP 4 contractor type */}
+        {step === "contractor" ? (
+          <div>
+            <QuestionHeader num={4} title={`Okay ${firstNameDisplay}, do you represent or own a Plumbing, HVAC company, or both?`} subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Pick one</p>
+            <div className="space-y-3">
+              {contractorOptions.map((opt, i) => (
+                <ChoiceButton
+                  key={opt}
+                  index={i}
+                  label={opt}
+                  selected={contractor === opt}
+                  onClick={() => setContractor(opt)}
+                />
+              ))}
+            </div>
+            <SubmitRow onClick={() => contractor && moveTo("channels")} disabled={!contractor} />
+          </div>
+        ) : null}
+
+        {/* STEP 5 marketing channels */}
+        {step === "channels" ? (
+          <div>
+            <QuestionHeader
+              num={5}
+              title={`How is ${companyDisplay} getting calls today?`}
+              subtitle="Pick everything you're running. No judgment if the list is short."
+            />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Choose as many as you like</p>
+            <div className="space-y-3">
+              {channelOptions.map((opt, i) => (
+                <ChoiceButton
+                  key={opt}
+                  index={i}
+                  label={opt}
+                  selected={channels.includes(opt)}
+                  onClick={() =>
+                    setChannels((prev) => (prev.includes(opt) ? prev.filter((c) => c !== opt) : [...prev, opt]))
+                  }
+                />
+              ))}
+            </div>
+            <SubmitRow onClick={() => channels.length > 0 && moveTo("revenue")} disabled={channels.length === 0} />
+          </div>
+        ) : null}
+
+        {/* STEP 6 revenue */}
+        {step === "revenue" ? (
+          <div>
+            <QuestionHeader num={6} title="What did the last 12 months look like?" subtitle="Ballpark is fine. We tailor the plan to your size and goals." />
+            <div className="space-y-3">
+              {revenueOptions.map((opt, i) => (
+                <ChoiceButton
+                  key={opt.value}
+                  index={i}
+                  label={opt.label}
+                  selected={revenueBand === opt.value}
+                  onClick={() => setRevenueBand(opt.value)}
+                />
+              ))}
+            </div>
+            <SubmitRow onClick={handleRevenueContinue} disabled={!revenueBand} />
+          </div>
+        ) : null}
+
+        {/* STEP 7 budget gate */}
+        {step === "budget" ? (
+          <div>
+            <QuestionHeader num={7} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
+            <div className="space-y-3">
+              {budgetOptions.map((opt, i) => (
+                <ChoiceButton
+                  key={opt.value}
+                  index={i}
+                  label={opt.label}
+                  selected={canInvest === opt.value}
+                  onClick={() => setCanInvest(opt.value as "yes" | "no")}
+                />
+              ))}
+            </div>
+            <SubmitRow onClick={handleBudgetContinue} disabled={!canInvest} />
+          </div>
+        ) : null}
+
+        {/* STEP 8 last name */}
         {step === "lastName" ? (
           <div>
-            <QuestionHeader num={2} title={`Nice to meet you, ${firstNameDisplay}. What's your last name?`} />
+            <QuestionHeader num={8} title={`Nice to meet you, ${firstNameDisplay}. What's your last name?`} />
             <input
               autoFocus
               type="text"
@@ -482,11 +604,11 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* STEP 3 email */}
+        {/* STEP 9 email */}
         {step === "email" ? (
           <div>
             <QuestionHeader
-              num={3}
+              num={9}
               title={
                 <>
                   <span className="block">
@@ -514,11 +636,11 @@ const GrowthQualifierFlow = () => {
           </div>
         ) : null}
 
-        {/* STEP 4 phone */}
+        {/* STEP 10 phone */}
         {step === "phone" ? (
           <div>
             <QuestionHeader
-              num={4}
+              num={10}
               title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
               subtitle="We'll text or call once to confirm market availability. That's it."
             />
@@ -534,128 +656,6 @@ const GrowthQualifierFlow = () => {
             </div>
             <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
 
-          </div>
-        ) : null}
-
-        {/* STEP 5 contractor */}
-        {step === "contractor" ? (
-          <div>
-            <QuestionHeader num={5} title={`Okay ${firstNameDisplay}, do you represent or own a Plumbing, HVAC company, or both?`} subtitle="We only work with Plumbing and HVAC shops. Pick what fits." />
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Pick one</p>
-            <div className="space-y-3">
-              {contractorOptions.map((opt, i) => (
-                <ChoiceButton
-                  key={opt}
-                  index={i}
-                  label={opt}
-                  selected={contractor === opt}
-                  onClick={() => setContractor(opt)}
-                />
-              ))}
-            </div>
-            <SubmitRow onClick={() => contractor && moveTo("company")} disabled={!contractor} />
-          </div>
-        ) : null}
-
-        {/* STEP 6 company */}
-        {step === "company" ? (
-          <div>
-            <QuestionHeader num={6} title="What's the name of your shop?" subtitle="The one on the side of the truck." />
-            <input
-              autoFocus
-              type="text"
-              value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
-              onKeyDown={(e) => onEnter(e, () => companyName.trim() && moveTo("website"))}
-              placeholder="Acme Plumbing"
-              className={textInputClass}
-            />
-            <SubmitRow onClick={() => companyName.trim() && moveTo("website")} disabled={!companyName.trim()} />
-          </div>
-        ) : null}
-
-        {/* STEP 7 website */}
-        {step === "website" ? (
-          <div>
-            <QuestionHeader
-              num={7}
-              title={`Nice. Where can homeowners find ${companyDisplay} online?`}
-              subtitle="Drop your main site so we can peek at your current presence."
-            />
-            <input
-              autoFocus
-              type="text"
-              value={website}
-              onChange={(e) => setWebsite(e.target.value)}
-              onKeyDown={(e) => onEnter(e, () => website.trim() && moveTo("channels"))}
-              placeholder="acmeplumbing.com"
-              className={textInputClass}
-            />
-            <SubmitRow onClick={() => website.trim() && moveTo("channels")} disabled={!website.trim()} />
-          </div>
-        ) : null}
-
-        {/* STEP 8 channels */}
-        {step === "channels" ? (
-          <div>
-            <QuestionHeader
-              num={8}
-              title={`How is ${companyDisplay} getting calls today?`}
-              subtitle="Pick everything you're running. No judgment if the list is short."
-            />
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">Choose as many as you like</p>
-            <div className="space-y-3">
-              {channelOptions.map((opt, i) => (
-                <ChoiceButton
-                  key={opt}
-                  index={i}
-                  label={opt}
-                  selected={channels.includes(opt)}
-                  onClick={() =>
-                    setChannels((prev) => (prev.includes(opt) ? prev.filter((c) => c !== opt) : [...prev, opt]))
-                  }
-                />
-              ))}
-            </div>
-            <SubmitRow onClick={() => channels.length > 0 && moveTo("revenue")} disabled={channels.length === 0} />
-          </div>
-        ) : null}
-
-        {/* STEP 9 revenue */}
-        {step === "revenue" ? (
-          <div>
-            <QuestionHeader num={9} title="What did the last 12 months look like?" subtitle="Ballpark is fine. We tailor the plan to your size and goals." />
-            <div className="space-y-3">
-              {revenueOptions.map((opt, i) => (
-                <ChoiceButton
-                  key={opt.value}
-                  index={i}
-                  label={opt.label}
-                  selected={revenueBand === opt.value}
-                  onClick={() => setRevenueBand(opt.value)}
-                />
-              ))}
-            </div>
-            <SubmitRow onClick={handleRevenueContinue} disabled={!revenueBand} />
-          </div>
-        ) : null}
-
-        {/* STEP 10 budget gate */}
-        {step === "budget" ? (
-          <div>
-            <QuestionHeader num={10} title="Can you put at least $1,000/month into growth right now?" subtitle="Straight talk: that's where our partnerships start." />
-            <div className="space-y-3">
-              {budgetOptions.map((opt, i) => (
-                <ChoiceButton
-                  key={opt.value}
-                  index={i}
-                  label={opt.label}
-                  selected={canInvest === opt.value}
-                  onClick={() => setCanInvest(opt.value as "yes" | "no")}
-                />
-              ))}
-            </div>
-            <SubmitRow onClick={handleBudgetContinue} disabled={!canInvest} />
           </div>
         ) : null}
 
