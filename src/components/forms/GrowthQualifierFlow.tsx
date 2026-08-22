@@ -729,7 +729,7 @@ const GrowthQualifierFlow = () => {
             <QuestionHeader
               num={10}
               title={`Last contact bit, ${firstNameDisplay}. What's the best number to reach you?`}
-              subtitle="Someone from our team will reach out shortly to book a consultation with you."
+              subtitle="We text a quick 6 digit code to confirm the number, then someone from our team reaches out to book your consultation."
             />
             <PhoneInput
               value={phone}
@@ -741,10 +741,61 @@ const GrowthQualifierFlow = () => {
             <div className="mt-4 space-y-3">
               <SmsConsentCheckbox checked={smsConsent} onChange={setSmsConsent} />
             </div>
-            <SubmitRow onClick={handlePhoneContinue} disabled={!phone.trim() || !smsConsent} />
-
+            <SubmitRow
+              label={isSendingCode ? "Sending code..." : "Text Me The Code"}
+              onClick={() => void handlePhoneContinue()}
+              disabled={!phone.trim() || !smsConsent}
+              loading={isSendingCode}
+            />
           </div>
         ) : null}
+
+        {/* STEP 10b phone verification code */}
+        {step === "otp" ? (
+          <div>
+            <QuestionHeader
+              title="Enter the 6 digit code we just texted you."
+              required={false}
+              subtitle={`Sent to ${phoneCountryCode} ${phone}. It expires in about 10 minutes.`}
+            />
+            <input
+              autoFocus
+              type="text"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              maxLength={6}
+              value={otpCode}
+              onChange={(e) => setOtpCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+              onKeyDown={(e) => onEnter(e, () => void handleVerifyCode())}
+              placeholder="123456"
+              className={`${textInputClass} tracking-[0.5em]`}
+            />
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
+              <button
+                type="button"
+                onClick={() => void sendCode()}
+                disabled={isSendingCode || resendIn > 0}
+                className="font-medium text-[#4A90B8] hover:text-white disabled:cursor-not-allowed disabled:text-white/40"
+              >
+                {resendIn > 0 ? `Resend code in ${resendIn}s` : "Resend code"}
+              </button>
+              <button
+                type="button"
+                onClick={goBack}
+                className="text-white/60 hover:text-white"
+              >
+                Wrong number? Edit it
+              </button>
+            </div>
+            <SubmitRow
+              label={isVerifyingCode ? "Verifying..." : "Verify & Continue"}
+              onClick={() => void handleVerifyCode()}
+              disabled={otpCode.length < 6}
+              loading={isVerifyingCode}
+            />
+          </div>
+        ) : null}
+
 
         {/* CHECKING interstitial */}
         {step === "checking" ? (
