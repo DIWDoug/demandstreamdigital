@@ -162,6 +162,14 @@ const GrowthQualifierFlow = () => {
   }, []);
 
   useEffect(() => {
+    if (resendIn <= 0) return;
+    const timer = setTimeout(() => setResendIn((s) => s - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [resendIn]);
+
+
+
+  useEffect(() => {
     if (step === "disqualified") {
       pushGrowDataLayer("grow_funnel_disqualified", { funnel: "grow_qualifier", revenueBand, canInvest });
       safeTrackCustom("GrowFunnelAbandon", { funnel: "grow_qualifier", step: "budget" });
