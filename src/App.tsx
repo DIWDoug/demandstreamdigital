@@ -12,7 +12,6 @@ import CanonicalDomainRedirect from "./components/CanonicalDomainRedirect";
 import BackToTop from "./components/BackToTop";
 import ElfsightReviews from "./components/ElfsightReviews";
 import SilentErrorBoundary from "./components/SilentErrorBoundary";
-import CookieConsent from "./components/CookieConsent";
 import MobileBottomCTA from "./components/MobileBottomCTA";
 import AccessibilityWidget from "./components/AccessibilityWidget";
 import { LeadConnectorChatWidget } from "./components/LeadConnectorChatWidget";
@@ -191,7 +190,6 @@ const App = () => (
         <SilentErrorBoundary>
           <ElfsightReviews />
         </SilentErrorBoundary>
-        <CookieConsent />
         <MobileBottomCTA />
         <AccessibilityWidget />
         <Suspense fallback={<RouteLoadingFallback />}>
