@@ -3,8 +3,9 @@ import { ArrowRight } from "lucide-react";
 
 const HIDDEN_ROUTE_PREFIXES = [
   "/grow-qualifier",
-  "/grow-thanks",
-  "/grow-booked",
+  "/grow/thanks",
+  "/grow/booked",
+  "/gms-call",
   "/ad-scan/onboarding",
   "/ad-scan/thanks",
   "/audit/schedule",
