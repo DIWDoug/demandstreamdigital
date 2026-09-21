@@ -209,6 +209,7 @@
   }
 
   body.mobile-menu-open .fixed[aria-label="Open accessibility menu"],
+  body.mobile-menu-open .fixed[aria-label="Back to top"],
   body.mobile-menu-open chat-widget,
   body.mobile-menu-open chat-widget-bubble,
   body.mobile-menu-open chat-widget-launcher,
