@@ -208,6 +208,42 @@
     line-height: 1.6;
   }
 
+  body.mobile-menu-open .fixed[aria-label="Open accessibility menu"],
+  body.mobile-menu-open chat-widget,
+  body.mobile-menu-open chat-widget-bubble,
+  body.mobile-menu-open chat-widget-launcher,
+  body.mobile-menu-open #lc_text-widget,
+  body.mobile-menu-open .lc_text-widget,
+  body.mobile-menu-open .lc_text-widget--prompt,
+  body.mobile-menu-open .lc_text-widget_prompt--prompt-text,
+  body.mobile-menu-open .lc_text-widget_prompt--msg-bubble,
+  body.mobile-menu-open .lc_text-widget--bubble,
+  body.mobile-menu-open .lc_text-widget--iframe,
+  body.mobile-menu-open .widget-open-icon,
+  body.mobile-menu-open .widget-close-icon {
+    display: none !important;
+  }
+
+  @media (max-width: 767px) {
+    chat-widget,
+    chat-widget-bubble,
+    chat-widget-launcher,
+    #lc_text-widget,
+    .lc_text-widget,
+    .lc_text-widget--bubble,
+    .lc_text-widget--iframe,
+    .widget-open-icon,
+    .widget-close-icon {
+      bottom: 5.25rem !important;
+    }
+
+    .lc_text-widget--prompt,
+    .lc_text-widget_prompt--prompt-text,
+    .lc_text-widget_prompt--msg-bubble {
+      bottom: 9.25rem !important;
+    }
+  }
+
   /* Typography — Inter for everything */
   h1, h2, h3, h4, h5, h6,
   h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {

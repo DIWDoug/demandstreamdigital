@@ -42,9 +42,11 @@ const Header = () => {
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     document.documentElement.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    document.body.classList.toggle("mobile-menu-open", isMobileMenuOpen);
     return () => {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
+      document.body.classList.remove("mobile-menu-open");
     };
   }, [isMobileMenuOpen]);
 
@@ -132,8 +134,7 @@ const Header = () => {
     <>
       {/* ─── MAIN HEADER ─── */}
       <header
-        className="fixed left-0 right-0 top-0 z-40 transition-all duration-300 shadow-lg"
-        style={{ backgroundColor: "#0D1B2A" }}
+        className="fixed left-0 right-0 top-0 z-40 bg-navy transition-all duration-300 shadow-lg"
       >
         <div className="max-w-screen-xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -295,8 +296,7 @@ const Header = () => {
       {/* ── Mobile menu — fixed below header and above page sticky bars ── */}
       {isMobileMenuOpen && (
         <div
-          className="lg:hidden fixed inset-x-0 bottom-0 top-16 z-[80] flex flex-col"
-          style={{ backgroundColor: "#0D1B2A" }}
+          className="lg:hidden fixed inset-x-0 bottom-0 top-16 z-[80] flex flex-col bg-navy"
         >
           {/* Close button */}
           <button

@@ -84,7 +84,7 @@ export default function AccessibilityWidget() {
         aria-label="Open accessibility menu"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="fixed left-4 bottom-4 z-[9998] flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg ring-2 ring-white/20 hover:scale-105 transition-transform focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
+        className="fixed left-4 bottom-20 md:bottom-4 z-[9998] flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg ring-2 ring-white/20 hover:scale-105 transition-transform focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
       >
         <Accessibility className="h-6 w-6" aria-hidden="true" />
       </button>
@@ -93,7 +93,7 @@ export default function AccessibilityWidget() {
         <div
           role="dialog"
           aria-label="Accessibility settings"
-          className="fixed left-4 bottom-20 z-[9999] w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-border bg-background shadow-2xl"
+          className="fixed left-4 bottom-36 md:bottom-20 z-[9999] w-[min(22rem,calc(100vw-2rem))] rounded-xl border border-border bg-background shadow-2xl"
         >
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
             <h2 className="text-base font-semibold text-foreground">Accessibility</h2>
