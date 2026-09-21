@@ -17,6 +17,7 @@ const LEADSY_ID = "vtag-ai-js";
 const LEADSY_SRC = "https://r2.leadsy.ai/tag.js";
 const LEADSY_PID = "PjgO2V7YFmY16I1O";
 const LEADSY_VERSION = "062024";
+const CHAT_WIDGET_OFFSET_STYLE_ID = "dsd-chat-widget-mobile-offset";
 
 const CHAT_WIDGET_HOST_SELECTORS = [
   "chat-widget",
@@ -82,6 +83,31 @@ const removeChatWidget = () => {
   });
 };
 
+const offsetChatWidgetOnMobile = () => {
+  document.querySelectorAll("chat-widget").forEach((node) => {
+    if (!(node instanceof HTMLElement) || !node.shadowRoot) return;
+    if (node.shadowRoot.getElementById(CHAT_WIDGET_OFFSET_STYLE_ID)) return;
+
+    const style = document.createElement("style");
+    style.id = CHAT_WIDGET_OFFSET_STYLE_ID;
+    style.textContent = `
+      @media (max-width: 767px) {
+        #lc_text-widget,
+        #lc_text-widget--btn,
+        .lc_text-widget,
+        .lc_text-widget--bubble {
+          bottom: calc(5.5rem + env(safe-area-inset-bottom)) !important;
+        }
+
+        .lc_text-widget--prompt {
+          margin-bottom: 0.75rem !important;
+        }
+      }
+    `;
+    node.shadowRoot.appendChild(style);
+  });
+};
+
 const injectLeadsyTag = () => {
   if (document.getElementById(LEADSY_ID)) return;
 
@@ -117,6 +143,10 @@ export function LeadConnectorChatWidget() {
     }
     previousBlocked.current = false;
     injectLeadsyTag();
+    offsetChatWidgetOnMobile();
+    const observer = new MutationObserver(offsetChatWidgetOnMobile);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
   }, [pathname]);
 
   return null;
