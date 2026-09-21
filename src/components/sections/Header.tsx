@@ -19,13 +19,18 @@ const Header = () => {
   };
 
   useEffect(() => {
+    // Only guard the desktop dropdown. On mobile the desktop wrapper is still in
+    // the DOM (hidden lg:flex), so this would close the mobile submenu on
+    // mousedown and unmount the link before its click could fire.
+    if (isMobileMenuOpen) return;
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node))
         setIsMegaMenuOpen(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [isMobileMenuOpen]);
+
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
