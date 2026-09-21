@@ -8,7 +8,6 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const megaMenuRef = useRef<HTMLDivElement>(null);
@@ -18,12 +17,6 @@ const Header = () => {
     setIsMegaMenuOpen(false);
     requestAnimationFrame(() => navigate(to));
   };
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -48,7 +41,11 @@ const Header = () => {
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    document.documentElement.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
   }, [isMobileMenuOpen]);
 
   const getAnchorHref = (anchor: string) => (isHomePage ? anchor : `/${anchor}`);
@@ -293,164 +290,174 @@ const Header = () => {
           </div>
         </div>
 
-        {/* ── Mobile menu — full-screen dark overlay ── */}
-        {isMobileMenuOpen && (
-          <div
-            className="lg:hidden fixed inset-0 z-50 flex flex-col"
-            style={{ backgroundColor: "#0D1B2A", top: isScrolled ? "64px" : "104px" }}
-          >
-            {/* Close button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-5 p-2 text-white/70 hover:text-white transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="h-6 w-6" />
-            </button>
-
-            <nav className="flex-1 overflow-y-auto px-6 py-8 space-y-1">
-              {/* About */}
-              {preServiceLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b border-white/8"
-                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
-                >
-                  <span
-                    className="w-1 h-5 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: "#C0392B" }}
-                  />
-                  {link.label}
-                </Link>
-              ))}
-
-              {/* Services accordion */}
-              <div>
-                <div
-                  className="flex items-center justify-between py-3 border-b"
-                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
-                >
-                  <a
-                    href="/hvac-and-plumbing-seo"
-                    className="flex items-center gap-3 text-[15px] font-medium text-white flex-1"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      navigateMobile("/services");
-                    }}
-                  >
-                    <span
-                      className="w-1 h-5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: "#C0392B" }}
-                    />
-                    Services
-                  </a>
-                  <button
-                    onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
-                    className="p-1 text-white/60 hover:text-white transition-colors"
-                    aria-label="Toggle services"
-                  >
-                    <ChevronDown
-                      className={`h-5 w-5 transition-transform ${isMegaMenuOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                </div>
-
-                {isMegaMenuOpen && (
-                  <div
-                    className="ml-4 pl-3 py-3 mb-1"
-                    style={{ borderLeft: "2px solid rgba(192,57,43,0.4)" }}
-                  >
-                    {serviceHubs.map((hub, i) => (
-                      <div key={i} className="mb-4">
-                        <a
-                          href={hub.href}
-                          className="text-[11px] font-bold uppercase tracking-widest mb-2 block"
-                          style={{ color: "#C0392B" }}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateMobile(hub.href);
-                          }}
-                        >
-                          {hub.label}
-                        </a>
-                        {hub.spokes.length > 0 && (
-                          <ul className="space-y-1.5 ml-1">
-                            {hub.spokes.map((spoke, j) => (
-                              <li key={j}>
-                                <a
-                                  href={spoke.href}
-                                  className="text-[13px] text-white/60 hover:text-white transition-colors"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    navigateMobile(spoke.href);
-                                  }}
-                                >
-                                  {spoke.label}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Post-service links */}
-              {postServiceLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
-                  style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
-                >
-                  <span
-                    className="w-1 h-5 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: "#C0392B" }}
-                  />
-                  {link.label}
-                </Link>
-              ))}
-
-
-              {/* Phone + CTA */}
-              <div className="pt-6 space-y-4">
-                <a
-                  href={PHONE_HREF}
-                  className="flex items-center gap-3 text-white"
-                >
-                  <Phone className="h-5 w-5 flex-shrink-0" style={{ color: "#C0392B" }} />
-                  <div>
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-white/50">
-                      Call Us Today
-                    </div>
-                    <div className="text-[16px] font-bold">{PHONE_NUMBER}</div>
-                  </div>
-                </a>
-
-                <Link
-                  to="/grow-qualifier"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-center w-full font-bold text-white text-[15px] tracking-[0.04em] transition-colors"
-                  style={{
-                    backgroundColor: "#C0392B",
-                    borderRadius: "4px",
-                    padding: "14px 28px",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#A93226")}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#C0392B")}
-                >
-                  Schedule a Call →
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
       </header>
+
+      {/* ── Mobile menu — fixed below header and above page sticky bars ── */}
+      {isMobileMenuOpen && (
+        <div
+          className="lg:hidden fixed inset-x-0 bottom-0 top-16 z-[80] flex flex-col"
+          style={{ backgroundColor: "#0D1B2A" }}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-4 right-5 p-2 text-white/70 hover:text-white transition-colors"
+            aria-label="Close menu"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          <nav className="flex-1 overflow-y-auto px-6 py-8 pb-12 space-y-1">
+            {/* About */}
+            {preServiceLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateMobile(link.href);
+                }}
+                className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b border-white/8"
+                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+              >
+                <span
+                  className="w-1 h-5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: "#C0392B" }}
+                />
+                {link.label}
+              </Link>
+            ))}
+
+            {/* Services accordion */}
+            <div>
+              <div
+                className="flex items-center justify-between py-3 border-b"
+                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+              >
+                <a
+                  href="/services"
+                  className="flex items-center gap-3 text-[15px] font-medium text-white flex-1"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigateMobile("/services");
+                  }}
+                >
+                  <span
+                    className="w-1 h-5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: "#C0392B" }}
+                  />
+                  Services
+                </a>
+                <button
+                  onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                  className="p-1 text-white/60 hover:text-white transition-colors"
+                  aria-label="Toggle services"
+                >
+                  <ChevronDown
+                    className={`h-5 w-5 transition-transform ${isMegaMenuOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+              </div>
+
+              {isMegaMenuOpen && (
+                <div
+                  className="ml-4 pl-3 py-3 mb-1"
+                  style={{ borderLeft: "2px solid rgba(192,57,43,0.4)" }}
+                >
+                  {serviceHubs.map((hub, i) => (
+                    <div key={i} className="mb-4">
+                      <a
+                        href={hub.href}
+                        className="text-[11px] font-bold uppercase tracking-widest mb-2 block"
+                        style={{ color: "#C0392B" }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateMobile(hub.href);
+                        }}
+                      >
+                        {hub.label}
+                      </a>
+                      {hub.spokes.length > 0 && (
+                        <ul className="space-y-1.5 ml-1">
+                          {hub.spokes.map((spoke, j) => (
+                            <li key={j}>
+                              <a
+                                href={spoke.href}
+                                className="text-[13px] text-white/60 hover:text-white transition-colors"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  navigateMobile(spoke.href);
+                                }}
+                              >
+                                {spoke.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Post-service links */}
+            {postServiceLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateMobile(link.href);
+                }}
+                className="flex items-center gap-3 py-3 text-[15px] font-medium text-white border-b"
+                style={{ borderBottomColor: "rgba(255,255,255,0.08)" }}
+              >
+                <span
+                  className="w-1 h-5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: "#C0392B" }}
+                />
+                {link.label}
+              </Link>
+            ))}
+
+
+            {/* Phone + CTA */}
+            <div className="pt-6 space-y-4">
+              <a
+                href={PHONE_HREF}
+                className="flex items-center gap-3 text-white"
+              >
+                <Phone className="h-5 w-5 flex-shrink-0" style={{ color: "#C0392B" }} />
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-white/50">
+                    Call Us Today
+                  </div>
+                  <div className="text-[16px] font-bold">{PHONE_NUMBER}</div>
+                </div>
+              </a>
+
+              <Link
+                to="/grow-qualifier"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateMobile("/grow-qualifier");
+                }}
+                className="flex items-center justify-center w-full font-bold text-white text-[15px] tracking-[0.04em] transition-colors"
+                style={{
+                  backgroundColor: "#C0392B",
+                  borderRadius: "4px",
+                  padding: "14px 28px",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#A93226")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#C0392B")}
+              >
+                Schedule a Call →
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
 
       {/* Spacer so page content clears the fixed header */}
       <div style={{ height: "64px" }} />
