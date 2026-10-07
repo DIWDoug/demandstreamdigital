@@ -11,8 +11,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, Play, Pause, Clock, Loader2, ChevronRight, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getAuthorById, Author } from "@/data/authors";
 import { cleanBlogContent } from "@/lib/cleanBlogContent";
 import { getRelatedFAQs, getExternalLink } from "@/lib/blogInternalLinks";
@@ -36,19 +36,59 @@ const getPostAuthor = (slug: string): Author => {
   // Map articles to their authors
   const authorMap: Record<string, string> = {
     // Desiree Abbariao's articles
-    'on-page-optimization-local-seo': 'desiree-abbariao',
+    "on-page-optimization-local-seo": "desiree-abbariao",
     // Richard Baylon's articles
   };
-  
-  const authorId = authorMap[slug] || 'doug-bryson';
+
+  const authorId = authorMap[slug] || "doug-bryson";
   return getAuthorById(authorId)!;
 };
 
+// Extract FAQ question/answer pairs from the "Frequently Asked Questions" section (H2 + H3 questions)
+const extractFaqs = (md: string): { question: string; answer: string }[] => {
+  const faqs: { question: string; answer: string }[] = [];
+  const strip = (t: string) =>
+    t
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+      .replace(/[*_`]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  let inFaq = false;
+  let question = "";
+  let answer: string[] = [];
+  const flush = () => {
+    if (question && answer.join(" ").trim()) {
+      faqs.push({ question: strip(question), answer: strip(answer.join(" ")) });
+    }
+    question = "";
+    answer = [];
+  };
+  for (const line of md.split("\n")) {
+    const h2 = line.match(/^##\s+(.*)$/);
+    if (h2) {
+      flush();
+      inFaq = /frequently asked questions|^faqs?$/i.test(h2[1].trim());
+      continue;
+    }
+    if (!inFaq) continue;
+    const h3 = line.match(/^###\s+(.*)$/);
+    if (h3) {
+      flush();
+      question = h3[1];
+      continue;
+    }
+    if (question && line.trim()) answer.push(line.trim());
+  }
+  flush();
+  return faqs;
+};
+
 const categoryLabels: Record<string, string> = {
-  'local-seo': 'Local SEO',
-  'paid-media': 'Paid Media',
-  'content-marketing': 'Content Marketing',
-  'email-marketing': 'Email Marketing',
+  "local-seo": "Local SEO",
+  "paid-media": "Paid Media",
+  "content-marketing": "Content Marketing",
+  "email-marketing": "Email Marketing",
 };
 
 // Calculate reading time based on word count
@@ -61,22 +101,22 @@ const calculateReadingTime = (content: string): number => {
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { toast } = useToast();
-  
+
   // Audio state
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoadingAudio, setIsLoadingAudio] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
 
-  const { data: blog, isLoading, error } = useQuery({
-    queryKey: ['blog', slug],
+  const {
+    data: blog,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["blog", slug],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('blogs')
-        .select('*')
-        .eq('slug', slug)
-        .maybeSingle();
-      
+      const { data, error } = await supabase.from("blogs").select("*").eq("slug", slug).maybeSingle();
+
       if (error) throw error;
       return data as BlogPost | null;
     },
@@ -86,15 +126,15 @@ const BlogPostPage = () => {
   // Strip markdown for clean text
   const stripMarkdown = (text: string): string => {
     return text
-      .replace(/#{1,6}\s?/g, '') // Remove headers
-      .replace(/\*\*([^*]+)\*\*/g, '$1') // Remove bold
-      .replace(/\*([^*]+)\*/g, '$1') // Remove italic
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Remove links, keep text
-      .replace(/^[-*+]\s+/gm, '') // Remove list markers
-      .replace(/^\d+\.\s+/gm, '') // Remove numbered list markers
-      .replace(/`([^`]+)`/g, '$1') // Remove code
-      .replace(/>\s?/g, '') // Remove blockquotes
-      .replace(/\n{3,}/g, '\n\n') // Normalize whitespace
+      .replace(/#{1,6}\s?/g, "") // Remove headers
+      .replace(/\*\*([^*]+)\*\*/g, "$1") // Remove bold
+      .replace(/\*([^*]+)\*/g, "$1") // Remove italic
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Remove links, keep text
+      .replace(/^[-*+]\s+/gm, "") // Remove list markers
+      .replace(/^\d+\.\s+/gm, "") // Remove numbered list markers
+      .replace(/`([^`]+)`/g, "$1") // Remove code
+      .replace(/>\s?/g, "") // Remove blockquotes
+      .replace(/\n{3,}/g, "\n\n") // Normalize whitespace
       .trim();
   };
 
@@ -119,19 +159,16 @@ const BlogPostPage = () => {
     setIsLoadingAudio(true);
     try {
       const cleanText = stripMarkdown(cleanBlogContent(blog.content));
-      
-      const response = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-          },
-          body: JSON.stringify({ text: cleanText }),
-        }
-      );
+
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify({ text: cleanText }),
+      });
 
       if (!response.ok) {
         throw new Error("Failed to generate audio");
@@ -214,6 +251,7 @@ const BlogPostPage = () => {
   const relatedFAQs = getRelatedFAQs(blog.slug);
 
   const resolvedFeaturedImage = getBlogFeaturedImage(blog.featured_image);
+  const faqs = extractFaqs(cleanedContent);
 
   // Build breadcrumb items for schema
   const breadcrumbItems = [
@@ -223,12 +261,12 @@ const BlogPostPage = () => {
   if (blog.category) {
     breadcrumbItems.push({
       name: categoryLabels[blog.category] || blog.category,
-      url: `https://demandstreamdigital.com/blog?category=${blog.category}`
+      url: `https://demandstreamdigital.com/blog?category=${blog.category}`,
     });
   }
   breadcrumbItems.push({
     name: blog.title,
-    url: `https://demandstreamdigital.com/blog/${blog.slug}`
+    url: `https://demandstreamdigital.com/blog/${blog.slug}`,
   });
 
   const articleSchema = {
@@ -237,36 +275,49 @@ const BlogPostPage = () => {
       getOrganizationSchema(),
       getBreadcrumbSchema(breadcrumbItems),
       {
-        "@type": "Article",
+        "@type": "BlogPosting",
         "@id": `https://demandstreamdigital.com/blog/${blog.slug}#article`,
-        "headline": blog.title,
-        "description": blog.excerpt || `Read ${blog.title} on Demand Stream Digital`,
-        "image": resolvedFeaturedImage || undefined,
-        "datePublished": blog.published_at,
-        "dateModified": blog.published_at,
-        "author": { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
-        "publisher": { "@id": "https://demandstreamdigital.com/#organization" },
-        "mainEntityOfPage": { "@id": `https://demandstreamdigital.com/blog/${blog.slug}` },
-        "isPartOf": { "@id": "https://demandstreamdigital.com/#website" },
-        "keywords": blog.category ? categoryLabels[blog.category] : undefined,
-        "timeRequired": `PT${readingTime}M`
+        headline: blog.title,
+        description: blog.excerpt || `Read ${blog.title} on Demand Stream Digital`,
+        image: resolvedFeaturedImage || undefined,
+        datePublished: blog.published_at,
+        dateModified: blog.published_at,
+        author: { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
+        publisher: { "@id": "https://demandstreamdigital.com/#organization" },
+        mainEntityOfPage: { "@id": `https://demandstreamdigital.com/blog/${blog.slug}` },
+        isPartOf: { "@id": "https://demandstreamdigital.com/#website" },
+        keywords: blog.category ? categoryLabels[blog.category] : undefined,
+        timeRequired: `PT${readingTime}M`,
       },
       {
         "@type": "Person",
         "@id": `https://demandstreamdigital.com/authors/${author.slug}#person`,
-        "name": author.name,
-        "jobTitle": author.role,
-        "description": author.shortBio,
-        "url": `https://demandstreamdigital.com/authors/${author.slug}`,
-        "worksFor": { "@id": "https://demandstreamdigital.com/#organization" },
-        "sameAs": author.schemaData.sameAs,
-        "knowsAbout": author.schemaData.knowsAbout.map(topic => ({
+        name: author.name,
+        jobTitle: author.role,
+        description: author.shortBio,
+        url: `https://demandstreamdigital.com/authors/${author.slug}`,
+        worksFor: { "@id": "https://demandstreamdigital.com/#organization" },
+        sameAs: author.schemaData.sameAs,
+        knowsAbout: author.schemaData.knowsAbout.map((topic) => ({
           "@type": "Thing",
-          "name": topic.name,
-          "sameAs": topic.sameAs
-        }))
-      }
-    ]
+          name: topic.name,
+          sameAs: topic.sameAs,
+        })),
+      },
+      ...(faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `https://demandstreamdigital.com/blog/${blog.slug}#faq`,
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   return (
@@ -275,39 +326,44 @@ const BlogPostPage = () => {
         <title>{blog.title} | Demand Stream Digital</title>
         <meta name="description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
         <link rel="canonical" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
-        
-        
+
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={`${blog.title} | Demand Stream Digital`} />
         <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
         <meta property="og:url" content={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"} />
-        
+        <meta
+          property="og:image"
+          content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
+        />
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${blog.title} | Demand Stream Digital`} />
         <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
-        <meta name="twitter:image" content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"} />
+        <meta
+          name="twitter:image"
+          content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
+        />
       </Helmet>
-      
+
       <Header />
 
       {/* Social Share Bar */}
-      <SocialShareBar 
-        url={`https://demandstreamdigital.com/blog/${blog.slug}`} 
-        title={blog.title}
-      />
-      
+      <SocialShareBar url={`https://demandstreamdigital.com/blog/${blog.slug}`} title={blog.title} />
+
       <div className="pt-16">
         {/* Back Link - Fixed Position */}
         <div className="container mx-auto px-4 py-4">
-          <Link to="/our-blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <Link
+            to="/our-blog"
+            className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
             <ArrowLeft className="w-3 h-3 mr-1.5" />
             Back to Blog
           </Link>
@@ -316,8 +372,8 @@ const BlogPostPage = () => {
         {/* HERO IMAGE - Full Width */}
         {getBlogFeaturedImage(blog.featured_image) && (
           <figure className="w-full">
-            <img 
-              src={getBlogFeaturedImage(blog.featured_image)!} 
+            <img
+              src={getBlogFeaturedImage(blog.featured_image)!}
               alt={`Featured image for ${blog.title} - plumbing HVAC marketing strategy`}
               className="w-full h-[50vh] md:h-[60vh] object-cover"
             />
@@ -328,7 +384,7 @@ const BlogPostPage = () => {
         <header className="container mx-auto px-4 max-w-4xl py-12 text-center">
           {/* Category Tag */}
           {blog.category && (
-            <Link 
+            <Link
               to={`/blog?category=${blog.category}`}
               className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cta mb-6 hover:text-cta/80 transition-colors"
             >
@@ -340,7 +396,7 @@ const BlogPostPage = () => {
           <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-foreground">
             {blog.title}
           </h1>
-          
+
           {/* Subtitle/Excerpt */}
           {blog.excerpt && (
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -352,37 +408,34 @@ const BlogPostPage = () => {
           <div className="flex flex-col items-center mb-8">
             {/* Author Photo */}
             <Link to={`/authors/${author.slug}`} className="mb-4">
-              <img 
-                src={author.image} 
+              <img
+                src={author.image}
                 alt={`${author.name} - ${author.role} at Demand Stream Digital`}
                 className="w-16 h-16 rounded-full object-cover border-2 border-border hover:border-cta transition-colors"
               />
             </Link>
-            
+
             {/* Author Name */}
-            <Link 
+            <Link
               to={`/authors/${author.slug}`}
               className="text-sm font-medium text-foreground hover:text-cta transition-colors"
             >
               By {author.name}
             </Link>
-            
+
             {/* Date */}
-            <time 
-              dateTime={blog.published_at}
-              className="text-sm text-muted-foreground mt-1"
-            >
-              {new Date(blog.published_at).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
+            <time dateTime={blog.published_at} className="text-sm text-muted-foreground mt-1">
+              {new Date(blog.published_at).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
               })}
             </time>
           </div>
 
           {/* Listen + Reading Time */}
           <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground border-t border-b border-border py-4">
-            <button 
+            <button
               onClick={handlePlayPause}
               disabled={isLoadingAudio}
               className="flex items-center gap-2 hover:text-foreground transition-colors disabled:opacity-50"
@@ -409,16 +462,10 @@ const BlogPostPage = () => {
         </header>
 
         {/* Breadcrumbs */}
-        <nav 
-          aria-label="Breadcrumb" 
-          className="container mx-auto px-4 max-w-7xl mb-8"
-        >
+        <nav aria-label="Breadcrumb" className="container mx-auto px-4 max-w-7xl mb-8">
           <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
             <li>
-              <Link 
-                to="/" 
-                className="hover:text-foreground transition-colors flex items-center gap-1"
-              >
+              <Link to="/" className="hover:text-foreground transition-colors flex items-center gap-1">
                 <Home className="w-3.5 h-3.5" />
                 <span className="sr-only">Home</span>
               </Link>
@@ -427,10 +474,7 @@ const BlogPostPage = () => {
               <ChevronRight className="w-3.5 h-3.5" />
             </li>
             <li>
-              <Link 
-                to="/our-blog"
-                className="hover:text-foreground transition-colors"
-              >
+              <Link to="/our-blog" className="hover:text-foreground transition-colors">
                 Blog
               </Link>
             </li>
@@ -440,10 +484,7 @@ const BlogPostPage = () => {
                   <ChevronRight className="w-3.5 h-3.5" />
                 </li>
                 <li>
-                  <Link 
-                    to={`/blog?category=${blog.category}`}
-                    className="hover:text-foreground transition-colors"
-                  >
+                  <Link to={`/blog?category=${blog.category}`} className="hover:text-foreground transition-colors">
                     {categoryLabels[blog.category] || blog.category}
                   </Link>
                 </li>
@@ -452,9 +493,7 @@ const BlogPostPage = () => {
             <li>
               <ChevronRight className="w-3.5 h-3.5" />
             </li>
-            <li className="text-foreground font-medium truncate max-w-[200px] md:max-w-[300px]">
-              {blog.title}
-            </li>
+            <li className="text-foreground font-medium truncate max-w-[200px] md:max-w-[300px]">{blog.title}</li>
           </ol>
         </nav>
 
@@ -466,7 +505,7 @@ const BlogPostPage = () => {
               <div className="max-w-none">
                 {/* Article prose with proper editorial typography */}
                 <div className="article-content">
-                  <ReactMarkdown 
+                  <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
                       h1: ({ children }) => (
@@ -491,8 +530,8 @@ const BlogPostPage = () => {
                       ),
                       p: ({ children }) => {
                         const childArray = React.Children.toArray(children);
-                        const containsImage = childArray.some((child) =>
-                          React.isValidElement(child) && (child.type === 'img' || child.type === 'figure')
+                        const containsImage = childArray.some(
+                          (child) => React.isValidElement(child) && (child.type === "img" || child.type === "figure"),
                         );
 
                         if (containsImage) {
@@ -508,8 +547,8 @@ const BlogPostPage = () => {
                       ul: ({ children }) => (
                         <ul className="my-6 ml-1 space-y-3">
                           {React.Children.map(children, (child) => {
-                            if (React.isValidElement(child) && child.type === 'li') {
-                              return React.cloneElement(child as React.ReactElement<any>, { 'data-list-type': 'ul' });
+                            if (React.isValidElement(child) && child.type === "li") {
+                              return React.cloneElement(child as React.ReactElement<any>, { "data-list-type": "ul" });
                             }
                             return child;
                           })}
@@ -518,18 +557,21 @@ const BlogPostPage = () => {
                       ol: ({ children }) => (
                         <ol className="my-6 ml-1 space-y-4">
                           {React.Children.map(children, (child, index) => {
-                            if (React.isValidElement(child) && child.type === 'li') {
-                              return React.cloneElement(child as React.ReactElement<any>, { 'data-list-type': 'ol', 'data-index': index + 1 });
+                            if (React.isValidElement(child) && child.type === "li") {
+                              return React.cloneElement(child as React.ReactElement<any>, {
+                                "data-list-type": "ol",
+                                "data-index": index + 1,
+                              });
                             }
                             return child;
                           })}
                         </ol>
                       ),
                       li: ({ children, ...props }) => {
-                        const listType = (props as any)['data-list-type'];
-                        const index = (props as any)['data-index'];
-                        
-                        if (listType === 'ol') {
+                        const listType = (props as any)["data-list-type"];
+                        const index = (props as any)["data-index"];
+
+                        if (listType === "ol") {
                           return (
                             <li className="flex items-start gap-3 text-muted-foreground text-base md:text-lg leading-relaxed">
                               <span className="flex-shrink-0 font-bold text-cta min-w-[1.5rem]">{index}.</span>
@@ -537,7 +579,7 @@ const BlogPostPage = () => {
                             </li>
                           );
                         }
-                        
+
                         return (
                           <li className="flex items-start gap-3 text-muted-foreground text-base md:text-lg leading-relaxed">
                             <span className="flex-shrink-0 w-2 h-2 bg-cta rounded-full mt-2.5" aria-hidden="true" />
@@ -547,33 +589,33 @@ const BlogPostPage = () => {
                       },
                       a: ({ href, children }) => {
                         // Check if this is an old dialedinweb.com link (not blog)
-                        if (href?.includes('dialedinweb.com') && !href?.includes('demandstreamdigital.com/blog')) {
+                        if (href?.includes("dialedinweb.com") && !href?.includes("demandstreamdigital.com/blog")) {
                           return <span className="font-semibold text-foreground">{children}</span>;
                         }
-                        
+
                         // Check if this is an internal link (starts with /)
-                        const isInternalLink = href?.startsWith('/') && !href?.startsWith('//');
-                        
+                        const isInternalLink = href?.startsWith("/") && !href?.startsWith("//");
+
                         // Check if this is our external authority link
                         const externalLink = slug ? getExternalLink(slug) : null;
                         const isExternalAuthority = externalLink && href === externalLink.url;
-                        
+
                         if (isInternalLink) {
                           return (
-                            <Link 
-                              to={href || '#'}
+                            <Link
+                              to={href || "#"}
                               className="text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors font-medium"
                             >
                               {children}
                             </Link>
                           );
                         }
-                        
+
                         // External link with source badge for authority links
                         return (
-                          <a 
-                            href={href} 
-                            target="_blank" 
+                          <a
+                            href={href}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-accent-blue underline underline-offset-2 decoration-accent-blue/50 hover:text-cta hover:decoration-cta transition-colors font-medium"
                           >
@@ -586,17 +628,11 @@ const BlogPostPage = () => {
                           </a>
                         );
                       },
-                      strong: ({ children }) => (
-                        <strong className="font-semibold text-foreground">{children}</strong>
-                      ),
-                      em: ({ children }) => (
-                        <em className="italic text-muted-foreground">{children}</em>
-                      ),
+                      strong: ({ children }) => <strong className="font-semibold text-foreground">{children}</strong>,
+                      em: ({ children }) => <em className="italic text-muted-foreground">{children}</em>,
                       blockquote: ({ children }) => (
                         <blockquote className="my-8 pl-6 border-l-4 border-cta bg-surface-dark/30 py-4 pr-6 rounded-r-lg">
-                          <div className="text-muted-foreground text-lg italic leading-relaxed">
-                            {children}
-                          </div>
+                          <div className="text-muted-foreground text-lg italic leading-relaxed">{children}</div>
                         </blockquote>
                       ),
                       code: ({ children }) => (
@@ -609,16 +645,14 @@ const BlogPostPage = () => {
                           {children}
                         </pre>
                       ),
-                      hr: () => (
-                        <hr className="my-10 border-t border-border/50" />
-                      ),
+                      hr: () => <hr className="my-10 border-t border-border/50" />,
                       img: ({ src, alt }) => {
                         // Resolve image source - check if it's a key in our blogImages map
-                        const resolvedSrc = src ? (getBlogFeaturedImage(src) || src) : '';
+                        const resolvedSrc = src ? getBlogFeaturedImage(src) || src : "";
                         return (
-                          <img 
-                            src={resolvedSrc} 
-                            alt={alt || 'Blog content illustration'} 
+                          <img
+                            src={resolvedSrc}
+                            alt={alt || "Blog content illustration"}
                             className="w-full rounded-xl shadow-lg my-10"
                             loading="lazy"
                           />
@@ -635,14 +669,14 @@ const BlogPostPage = () => {
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="text-sm font-medium text-muted-foreground">Tags:</span>
                     {blog.category && (
-                      <Link 
+                      <Link
                         to={`/blog?category=${blog.category}`}
                         className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
                       >
                         {categoryLabels[blog.category] || blog.category}
                       </Link>
                     )}
-                    <Link 
+                    <Link
                       to="/blog"
                       className="inline-block px-4 py-1.5 bg-surface-dark border border-border rounded-full text-sm text-foreground hover:border-cta hover:text-cta transition-colors"
                     >
@@ -661,7 +695,7 @@ const BlogPostPage = () => {
                     <div className="space-y-4">
                       {relatedFAQs.map((faqGroup, index) => (
                         <div key={index}>
-                          <Link 
+                          <Link
                             to={faqGroup.hubUrl}
                             className="text-sm font-semibold text-cta hover:text-cta/80 transition-colors"
                           >
@@ -707,7 +741,7 @@ const BlogPostPage = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
