@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { serializeSchema } from "@/lib/schemaNormalize";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -11,17 +12,17 @@ import MidPageCTA from "@/components/sections/MidPageCTA";
 import { paidMediaConfig } from "@/data/service-pages/paid-media";
 import { getHubBySlug } from "@/data/services";
 import type { BreadcrumbItem } from "@/types/servicePage";
-import { getServiceHubSchema, normalizeSchema } from "@/lib/schema";
+import { getServiceHubSchema } from "@/lib/schema";
 
 // Generic section components
-import {
+import { 
   ServiceProblemSection,
   ServiceOutcomesSection,
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
   ServiceGroupedFAQ,
-  ServiceEcosystemSection,
+  ServiceEcosystemSection
 } from "@/components/services/generic";
 
 const SectionDivider = () => (
@@ -36,7 +37,7 @@ const PaidMedia = () => {
 
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: "Services", href: "/#services" },
-    { label: paidMediaConfig.title },
+    { label: paidMediaConfig.title }
   ];
 
   const pageSchema = getServiceHubSchema({
@@ -44,7 +45,7 @@ const PaidMedia = () => {
     description: paidMediaConfig.metaDescription,
     url: paidMediaConfig.canonicalUrl,
     serviceType: "PPC Advertising Service",
-    faqGroups: paidMediaConfig.faq.groups,
+    faqGroups: paidMediaConfig.faq.groups
   });
 
   return (
@@ -53,99 +54,102 @@ const PaidMedia = () => {
         <title>{paidMediaConfig.metaTitle}</title>
         <meta name="description" content={paidMediaConfig.metaDescription} />
         <link rel="canonical" href={paidMediaConfig.canonicalUrl} />
-
-        <script type="application/ld+json">{JSON.stringify(normalizeSchema(pageSchema))}</script>
-
+        
+        
+        <script type="application/ld+json">{serializeSchema(pageSchema)}</script>
+        
         {/* Open Graph */}
         <meta property="og:title" content={paidMediaConfig.metaTitle} />
         <meta property="og:description" content={paidMediaConfig.metaDescription} />
         <meta property="og:url" content={paidMediaConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
-
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/paid-media.jpg" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={paidMediaConfig.metaTitle} />
         <meta name="twitter:description" content={paidMediaConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/paid-media.jpg" />
       </Helmet>
-
+      
       <Header />
-
+      
       {/* 1. HERO */}
       <div>
-        <ServiceHubHero
+        <ServiceHubHero 
           title={hub.title}
           heroSubtitle="Built to Drive More Booked Service Calls"
           description={hub.heroDescription}
           breadcrumbs={breadcrumbItems}
         />
       </div>
-
+      
       {/* STICKY ANCHOR NAV */}
       <ServiceHubAnchorNav />
-
+      
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
         <ServiceProblemSection config={paidMediaConfig.problem} />
       </div>
-
+      
       <SectionDivider />
-
+      
       {/* 4. OUTCOMES */}
       <div id="outcomes" className="scroll-mt-32">
         <ServiceOutcomesSection config={paidMediaConfig.outcomes} />
       </div>
-
+      
       <SectionDivider />
-
+      
       {/* 5. ROADMAP */}
       <div id="roadmap" className="scroll-mt-32">
         <ServiceRoadmapSection config={paidMediaConfig.roadmap} />
       </div>
-
+      
       {/* Mid-Page CTA */}
       <MidPageCTA />
-
+      
       <SectionDivider />
-
+      
       {/* 6. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
         <ServiceBuildingBlocksSection config={paidMediaConfig.buildingBlocks} hubSlug="paid-media" />
       </div>
-
+      
       <SectionDivider />
-
+      
       {/* 7. QUALIFICATION */}
       <div id="qualification" className="scroll-mt-32">
         <ServiceFitQualifierSection config={paidMediaConfig.qualification} />
       </div>
-
+      
       {/* 8. TESTIMONIALS */}
       <div id="testimonials" className="scroll-mt-32">
         <Testimonials />
       </div>
-
+      
       <SectionDivider />
-
+      
       {/* 9. FAQ */}
       <div id="faq" className="scroll-mt-32">
         <ServiceGroupedFAQ config={paidMediaConfig.faq} />
       </div>
-
+      
       <SectionDivider />
-
+      
       {/* 10. ECOSYSTEM */}
       <ServiceEcosystemSection config={paidMediaConfig.ecosystem} />
-
+      
       <MarketExclusivity />
-
+      
       {/* 11. CONTACT */}
       <div id="contact" className="scroll-mt-32">
         <ContactForm />
       </div>
-
+      
       <Footer />
     </div>
   );

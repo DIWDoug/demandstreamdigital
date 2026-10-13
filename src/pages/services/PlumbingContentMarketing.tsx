@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { serializeSchema } from "@/lib/schemaNormalize";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -44,17 +45,19 @@ const PlumbingContentMarketing = () => {
         <title>{plumbingContentMarketingConfig.metaTitle}</title>
         <meta name="description" content={plumbingContentMarketingConfig.metaDescription} />
         <link rel="canonical" href={plumbingContentMarketingConfig.canonicalUrl} />
-        <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
+        <script type="application/ld+json">{serializeSchema(pageSchema)}</script>
         <meta property="og:title" content={plumbingContentMarketingConfig.metaTitle} />
         <meta property="og:description" content={plumbingContentMarketingConfig.metaDescription} />
         <meta property="og:url" content={plumbingContentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
+        <meta property="og:site_name" content="DemandStream Digital" />
+        <meta property="og:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={plumbingContentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={plumbingContentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
       </Helmet>
 
       <Header />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import { getCalculatorSchema } from "@/lib/schema";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, DollarSign, Wrench, Droplets, Flame, Wind, Gauge } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -82,7 +83,13 @@ const JobCostEstimator = () => {
       <SEOHead
         title="Job Cost Estimator | Plumbing & HVAC | DemandStream"
         description="Get instant ballpark cost estimates for common plumbing and HVAC jobs. Know what to expect before you call."
-        canonical="https://demandstreamdigital.com/job-cost-estimator"
+        canonical="https://demandstreamdigital.com/tools/job-cost-estimator"
+        schemaJson={getCalculatorSchema({
+          name: "Plumbing & HVAC Job Cost Estimator",
+          description: "Get instant ballpark cost estimates for common plumbing and HVAC jobs. Know what to expect before you call.",
+          url: "https://demandstreamdigital.com/tools/job-cost-estimator",
+          category: "FinanceApplication",
+        })}
       />
 
       <div className="dark">

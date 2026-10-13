@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SEOHead from "@/components/SEOHead";
+import { getCalculatorSchema } from "@/lib/schema";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, ClipboardCheck, AlertTriangle, CheckCircle, XCircle, Droplets } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -170,7 +171,13 @@ const PlumbingCostQuiz = () => {
       <SEOHead
         title="Free Plumbing Health Quiz | DemandStream Digital"
         description="Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands."
-        canonical="https://demandstreamdigital.com/plumbing-health-quiz"
+        canonical="https://demandstreamdigital.com/tools/plumbing-cost-quiz"
+        schemaJson={getCalculatorSchema({
+          name: "Free Plumbing Health Quiz",
+          description: "Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands.",
+          url: "https://demandstreamdigital.com/tools/plumbing-cost-quiz",
+          category: "UtilitiesApplication",
+        })}
       />
 
       <div className="dark">

@@ -56,7 +56,7 @@ export default function BlogIndex() {
         title="Plumbing & HVAC Marketing Blog | DemandStream Digital"
         description="Actionable tips on plumbing and HVAC marketing. Local SEO, Google Ads, email, and growth strategy from the DemandStream Digital team."
         canonical="https://demandstreamdigital.com/blog"
-        ogImage="https://demandstreamdigital.com/og-images/blog.png"
+        ogImage="https://demandstreamdigital.com/og-images/blog.jpg"
         noIndex={true}
         schemaJson={{
           "@context": "https://schema.org",

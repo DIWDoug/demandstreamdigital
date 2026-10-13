@@ -1,11 +1,8 @@
 // Centralized Schema.org markup utilities
 import { PHONE_NUMBER_RAW, EMAIL, ADDRESS, SITE_URL } from "./constants";
 
-// Brand name used in all structured data (one spelling everywhere).
-export const SCHEMA_BUSINESS_NAME = "DemandStream Digital";
-
 export const BUSINESS_INFO = {
-  name: SCHEMA_BUSINESS_NAME,
+  name: "DemandStream Digital",
   legalName: "Demand Stream Digital LLC",
   alternateName: "Demand Stream Digital",
   foundingDate: "2011",
@@ -18,82 +15,82 @@ export const BUSINESS_INFO = {
     addressLocality: ADDRESS.city,
     addressRegion: ADDRESS.state,
     postalCode: ADDRESS.zip,
-    addressCountry: "US",
+    addressCountry: "US"
   },
   geo: {
     latitude: 32.8406,
-    longitude: -96.7693,
+    longitude: -96.7693
   },
   sameAs: [
     "https://www.linkedin.com/company/demand-stream-digital/",
     "https://www.facebook.com/demandstreamdigital",
     "https://www.instagram.com/demandstreamdigital/",
   ],
+  // aggregateRating removed Oct 2026: self-asserted ratings are ineligible for review snippets and the 4.9/21 figure was unverified.
 };
 
 export const getOrganizationSchema = () => ({
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
-  name: BUSINESS_INFO.name,
-  legalName: BUSINESS_INFO.legalName,
-  alternateName: BUSINESS_INFO.alternateName,
-  url: BUSINESS_INFO.url,
-  logo: {
+  "name": BUSINESS_INFO.name,
+  "legalName": BUSINESS_INFO.legalName,
+  "alternateName": BUSINESS_INFO.alternateName,
+  "url": BUSINESS_INFO.url,
+  "logo": {
     "@type": "ImageObject",
     "@id": `${SITE_URL}/#logo`,
-    url: BUSINESS_INFO.logo,
-    contentUrl: BUSINESS_INFO.logo,
-    caption: "DemandStream Digital logo",
+    "url": BUSINESS_INFO.logo,
+    "contentUrl": BUSINESS_INFO.logo,
+    "caption": "DemandStream Digital logo"
   },
-  image: BUSINESS_INFO.logo,
-  email: BUSINESS_INFO.email,
-  telephone: BUSINESS_INFO.telephone,
-  foundingDate: BUSINESS_INFO.foundingDate,
-  address: {
+  "image": BUSINESS_INFO.logo,
+  "email": BUSINESS_INFO.email,
+  "telephone": BUSINESS_INFO.telephone,
+  "foundingDate": BUSINESS_INFO.foundingDate,
+  "address": {
     "@type": "PostalAddress",
-    ...BUSINESS_INFO.address,
+    ...BUSINESS_INFO.address
   },
-  sameAs: BUSINESS_INFO.sameAs,
+  "sameAs": BUSINESS_INFO.sameAs
 });
 
 export const getLocalBusinessSchema = () => ({
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
   "@id": `${SITE_URL}/#localbusiness`,
-  name: BUSINESS_INFO.name,
-  parentOrganization: { "@id": `${SITE_URL}/#organization` },
-  image: BUSINESS_INFO.logo,
-  url: BUSINESS_INFO.url,
-  telephone: BUSINESS_INFO.telephone,
-  email: BUSINESS_INFO.email,
-  priceRange: "$$$",
-  address: {
+  "name": BUSINESS_INFO.name,
+  "image": BUSINESS_INFO.logo,
+  "url": BUSINESS_INFO.url,
+  "telephone": BUSINESS_INFO.telephone,
+  "email": BUSINESS_INFO.email,
+  "priceRange": "$$$",
+  "address": {
     "@type": "PostalAddress",
-    ...BUSINESS_INFO.address,
+    ...BUSINESS_INFO.address
   },
-  geo: {
+  "geo": {
     "@type": "GeoCoordinates",
-    latitude: BUSINESS_INFO.geo.latitude,
-    longitude: BUSINESS_INFO.geo.longitude,
+    "latitude": BUSINESS_INFO.geo.latitude,
+    "longitude": BUSINESS_INFO.geo.longitude
   },
-  openingHoursSpecification: [
+  "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "18:00",
-    },
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
   ],
-  sameAs: BUSINESS_INFO.sameAs,
+  "sameAs": BUSINESS_INFO.sameAs
 });
 
 export const getWebSiteSchema = () => ({
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
-  url: BUSINESS_INFO.url,
-  name: BUSINESS_INFO.name,
-  description: "Growth marketing for plumbing and HVAC companies — SEO, paid ads, reputation management, and more.",
-  publisher: { "@id": `${SITE_URL}/#organization` },
-  inLanguage: "en-US",
+  "url": BUSINESS_INFO.url,
+  "name": BUSINESS_INFO.name,
+  "description": "Growth marketing for plumbing and HVAC companies — SEO, paid ads, reputation management, and more.",
+  "publisher": { "@id": `${SITE_URL}/#organization` },
+  "inLanguage": "en-US"
 });
 
 export const getServiceSchema = (service: {
@@ -104,50 +101,47 @@ export const getServiceSchema = (service: {
 }) => ({
   "@type": "Service",
   "@id": `${service.url}#service`,
-  name: service.name,
-  description: service.description,
-  url: service.url,
-  serviceType: service.serviceType || "Marketing Service",
-  provider: { "@id": `${SITE_URL}/#organization` },
-  areaServed: {
+  "name": service.name,
+  "description": service.description,
+  "url": service.url,
+  "serviceType": service.serviceType || "Marketing Service",
+  "provider": { "@id": `${SITE_URL}/#organization` },
+  "areaServed": {
     "@type": "Country",
-    name: "United States",
+    "name": "United States"
   },
-  hasOfferCatalog: {
+  "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    name: service.name,
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: service.name,
-        },
-      },
-    ],
-  },
+    "name": service.name,
+    "itemListElement": [{
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": service.name
+      }
+    }]
+  }
 });
 
 export const getAboutPageSchema = () => ({
   "@type": "AboutPage",
   "@id": `${SITE_URL}/about#webpage`,
-  url: `${SITE_URL}/about`,
-  name: "About Demand Stream Digital - Growth Marketing for Plumbing & HVAC",
-  description:
-    "Learn about Demand Stream Digital, a growth marketing company built specifically for plumbing and HVAC businesses. Founded in 2011.",
-  isPartOf: { "@id": `${SITE_URL}/#website` },
-  about: { "@id": `${SITE_URL}/#organization` },
-  mainEntity: { "@id": `${SITE_URL}/#organization` },
+  "url": `${SITE_URL}/about`,
+  "name": "About DemandStream Digital - Growth Marketing for Plumbing & HVAC",
+  "description": "Learn about DemandStream Digital, a growth marketing company built specifically for plumbing and HVAC businesses. Founded in 2011.",
+  "isPartOf": { "@id": `${SITE_URL}/#website` },
+  "about": { "@id": `${SITE_URL}/#organization` },
+  "mainEntity": { "@id": `${SITE_URL}/#organization` }
 });
 
 export const getBreadcrumbSchema = (items: { name: string; url: string }[]) => ({
   "@type": "BreadcrumbList",
-  itemListElement: items.map((item, index) => ({
+  "itemListElement": items.map((item, index) => ({
     "@type": "ListItem",
-    position: index + 1,
-    name: item.name,
-    item: item.url,
-  })),
+    "position": index + 1,
+    "name": item.name,
+    "item": item.url
+  }))
 });
 
 export const getReviewSchema = (review: {
@@ -157,31 +151,31 @@ export const getReviewSchema = (review: {
   datePublished?: string;
 }) => ({
   "@type": "Review",
-  author: {
+  "author": {
     "@type": "Person",
-    name: review.author,
+    "name": review.author
   },
-  reviewBody: review.reviewBody,
-  reviewRating: {
+  "reviewBody": review.reviewBody,
+  "reviewRating": {
     "@type": "Rating",
-    ratingValue: review.ratingValue,
-    bestRating: 5,
-    worstRating: 1,
+    "ratingValue": review.ratingValue,
+    "bestRating": 5,
+    "worstRating": 1
   },
-  datePublished: review.datePublished || new Date().toISOString().split("T")[0],
-  itemReviewed: { "@id": `${SITE_URL}/#organization` },
+  ...(review.datePublished ? { "datePublished": review.datePublished } : {}),
+  "itemReviewed": { "@id": `${SITE_URL}/#organization` }
 });
 
 export const getFAQPageSchema = (faqs: { question: string; answer: string }[]) => ({
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  "mainEntity": faqs.map(faq => ({
     "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
+    "name": faq.question,
+    "acceptedAnswer": {
       "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
+      "text": faq.answer
+    }
+  }))
 });
 
 export const getHomepageSchema = () => ({
@@ -193,64 +187,59 @@ export const getHomepageSchema = () => ({
     {
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
-      url: SITE_URL,
-      name: "Growth Marketing for Plumbing & HVAC Companies | Demand Stream Digital",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#organization` },
-      description:
-        "More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies.",
-    },
-  ],
+      "url": SITE_URL,
+      "name": "Growth Marketing for Plumbing & HVAC Companies | DemandStream Digital",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/#organization` },
+      "description": "More calls, more jobs, more growth. SEO, Google Ads, reputation management, and content marketing built specifically for plumbing and HVAC companies."
+    }
+  ]
 });
 
 export const getServicesPageSchema = () => {
   const services = [
     {
       name: "Local SEO for Plumbing & HVAC",
-      description:
-        "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building for plumbing and HVAC companies.",
+      description: "Comprehensive local SEO services including Google Business Profile optimization, local keyword strategy, and citation building for plumbing and HVAC companies.",
       url: `${SITE_URL}/hvac-and-plumbing-seo`,
-      serviceType: "Local SEO Service",
+      serviceType: "Local SEO Service"
     },
     {
       name: "Google Business Profile SEO",
-      description:
-        "Google Business Profile optimization, review management, and local map pack visibility for plumbing and HVAC businesses.",
+      description: "Google Business Profile optimization, review management, and local map pack visibility for plumbing and HVAC businesses.",
       url: `${SITE_URL}/plumbing-google-maps`,
-      serviceType: "GBP SEO Service",
+      serviceType: "GBP SEO Service"
     },
     {
       name: "Paid Media for Plumbing & HVAC",
       description: "Google Ads, Meta Ads, and local service ads management to generate calls and booked jobs.",
       url: `${SITE_URL}/paid-marketing`,
-      serviceType: "PPC Advertising Service",
+      serviceType: "PPC Advertising Service"
     },
     {
       name: "Email Marketing",
       description: "Email campaign strategy, automation, and list management for plumbing and HVAC companies.",
       url: `${SITE_URL}/plumbing-email-marketing`,
-      serviceType: "Email Marketing Service",
+      serviceType: "Email Marketing Service"
     },
     {
       name: "Authority Building",
-      description:
-        "Link building, digital PR, and content marketing for local authority in the plumbing and HVAC space.",
+      description: "Link building, digital PR, and content marketing for local authority in the plumbing and HVAC space.",
       url: `${SITE_URL}/plumbing-authority-building`,
-      serviceType: "Link Building Service",
+      serviceType: "Link Building Service"
     },
     {
       name: "Reporting & Dashboards",
       description: "Custom dashboards, rank tracking, and ROI reporting so you always know what's working.",
       url: `${SITE_URL}/plumbing-reporting`,
-      serviceType: "Marketing Analytics Service",
+      serviceType: "Marketing Analytics Service"
     },
     {
       name: "Content Marketing",
-      description:
-        "Blog content, location pages, and topical authority content development for plumbing and HVAC businesses.",
+      description: "Blog content, location pages, and topical authority content development for plumbing and HVAC businesses.",
       url: `${SITE_URL}/plumbing-content-marketing`,
-      serviceType: "Content Marketing Service",
-    },
+      serviceType: "Content Marketing Service"
+    }
   ];
 
   return {
@@ -260,13 +249,13 @@ export const getServicesPageSchema = () => {
       {
         "@type": "WebPage",
         "@id": `${SITE_URL}/services#webpage`,
-        url: `${SITE_URL}/services`,
-        name: "Growth Marketing Services for Plumbing & HVAC Companies",
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-        about: { "@id": `${SITE_URL}/#organization` },
+        "url": `${SITE_URL}/services`,
+        "name": "Growth Marketing Services for Plumbing & HVAC Companies",
+        "isPartOf": { "@id": `${SITE_URL}/#website` },
+        "about": { "@id": `${SITE_URL}/#organization` }
       },
-      ...services.map((service) => getServiceSchema(service)),
-    ],
+      ...services.map(service => getServiceSchema(service))
+    ]
   };
 };
 
@@ -277,17 +266,20 @@ export const getTestimonialsPageSchema = (reviews: { author: string; reviewBody:
     {
       "@type": "WebPage",
       "@id": `${SITE_URL}/testimonials#webpage`,
-      url: `${SITE_URL}/testimonials`,
-      name: "Client Testimonials & Reviews | Demand Stream Digital",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
+      "url": `${SITE_URL}/testimonials`,
+      "name": "Client Testimonials & Reviews | DemandStream Digital",
+      "isPartOf": { "@id": `${SITE_URL}/#website` }
     },
-    ...reviews.map((review) => getReviewSchema(review)),
-  ],
+    ...reviews.map(review => getReviewSchema(review))
+  ]
 });
 
 export const getAboutSchema = () => ({
   "@context": "https://schema.org",
-  "@graph": [getOrganizationSchema(), getAboutPageSchema()],
+  "@graph": [
+    getOrganizationSchema(),
+    getAboutPageSchema()
+  ]
 });
 
 export const getServiceHubSchema = (config: {
@@ -305,25 +297,25 @@ export const getServiceHubSchema = (config: {
       {
         "@type": "WebPage",
         "@id": `${config.url}#webpage`,
-        url: config.url,
-        name: config.name,
-        description: config.description,
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-        about: { "@id": `${SITE_URL}/#organization` },
-      },
-    ],
+        "url": config.url,
+        "name": config.name,
+        "description": config.description,
+        "isPartOf": { "@id": `${SITE_URL}/#website` },
+        "about": { "@id": `${SITE_URL}/#organization` }
+      }
+    ]
   };
 
   if (config.faqGroups && config.faqGroups.length > 0) {
-    const allFaqs = config.faqGroups.flatMap((group) =>
-      group.items.map((item) => ({
+    const allFaqs = config.faqGroups.flatMap(group => 
+      group.items.map(item => ({
         question: item.question,
-        answer: item.answer,
-      })),
+        answer: item.answer
+      }))
     );
     const faqSchemaWithId = {
       ...getFAQPageSchema(allFaqs),
-      "@id": `${config.url}#faq`,
+      "@id": `${config.url}#faq`
     };
     schema["@graph"].push(faqSchemaWithId);
   }
@@ -338,34 +330,36 @@ export const getContactPageSchema = () => ({
     {
       "@type": "ContactPage",
       "@id": `${SITE_URL}/contact#webpage`,
-      url: `${SITE_URL}/contact`,
-      name: "Contact Demand Stream Digital - Get a Free Strategy Call",
-      description: "Reach out to Demand Stream Digital to explore growth marketing for your plumbing or HVAC business.",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/#organization` },
-      mainEntity: { "@id": `${SITE_URL}/#organization` },
+      "url": `${SITE_URL}/contact`,
+      "name": "Contact DemandStream Digital - Get a Free Strategy Call",
+      "description": "Reach out to DemandStream Digital to explore growth marketing for your plumbing or HVAC business.",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/#organization` },
+      "mainEntity": {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`
+      }
     },
     {
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#localbusiness`,
-      name: BUSINESS_INFO.name,
-      parentOrganization: { "@id": `${SITE_URL}/#organization` },
-      telephone: BUSINESS_INFO.telephone,
-      email: BUSINESS_INFO.email,
-      address: {
+      "name": BUSINESS_INFO.name,
+      "telephone": BUSINESS_INFO.telephone,
+      "email": BUSINESS_INFO.email,
+      "address": {
         "@type": "PostalAddress",
-        ...BUSINESS_INFO.address,
+        ...BUSINESS_INFO.address
       },
-      openingHoursSpecification: [
+      "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "08:00",
-          closes: "18:00",
-        },
-      ],
-    },
-  ],
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+  ]
 });
 
 export const getBlogSchema = () => ({
@@ -375,170 +369,56 @@ export const getBlogSchema = () => ({
     {
       "@type": "Blog",
       "@id": `${SITE_URL}/blog#blog`,
-      url: `${SITE_URL}/blog`,
-      name: "Plumbing & HVAC Marketing Blog | Demand Stream Digital",
-      description:
-        "Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, reputation management, and growth strategies.",
-      publisher: { "@id": `${SITE_URL}/#organization` },
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      inLanguage: "en-US",
+      "url": `${SITE_URL}/blog`,
+      "name": "Plumbing & HVAC Marketing Blog | DemandStream Digital",
+      "description": "Actionable marketing tips for plumbing and HVAC business owners. SEO, Google Ads, reputation management, and growth strategies.",
+      "publisher": { "@id": `${SITE_URL}/#organization` },
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "inLanguage": "en-US"
     },
     {
       "@type": "WebPage",
       "@id": `${SITE_URL}/blog#webpage`,
-      url: `${SITE_URL}/blog`,
-      name: "Plumbing & HVAC Marketing Blog | Demand Stream Digital",
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-      about: { "@id": `${SITE_URL}/blog#blog` },
-    },
-  ],
+      "url": `${SITE_URL}/blog`,
+      "name": "Plumbing & HVAC Marketing Blog | DemandStream Digital",
+      "isPartOf": { "@id": `${SITE_URL}/#website` },
+      "about": { "@id": `${SITE_URL}/blog#blog` }
+    }
+  ]
 });
 
-export const getCalculatorSchema = (config: { name: string; description: string; url: string; category?: string }) => ({
+export const getCalculatorSchema = (config: {
+  name: string;
+  description: string;
+  url: string;
+  category?: string;
+}) => ({
   "@context": "https://schema.org",
   "@graph": [
     getOrganizationSchema(),
     {
       "@type": "SoftwareApplication",
       "@id": `${config.url}#application`,
-      name: config.name,
-      description: config.description,
-      url: config.url,
-      applicationCategory: config.category || "BusinessApplication",
-      operatingSystem: "Web Browser",
-      offers: {
+      "name": config.name,
+      "description": config.description,
+      "url": config.url,
+      "applicationCategory": config.category || "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
         "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      author: { "@id": `${SITE_URL}/#organization` },
-      provider: { "@id": `${SITE_URL}/#organization` },
+      "author": { "@id": `${SITE_URL}/#organization` },
+      "provider": { "@id": `${SITE_URL}/#organization` }
     },
     {
       "@type": "WebPage",
       "@id": `${config.url}#webpage`,
-      url: config.url,
-      name: config.name,
-      description: config.description,
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-    },
-  ],
-});
-
-// ─────────────────────────────────────────────────────────────────────
-// normalizeSchema: run on every JSON-LD block before it is rendered.
-// - One brand entity: any inline Organization / LocalBusiness / HVACBusiness
-//   node for this company becomes a reference to /#organization.
-// - No self-assigned aggregateRating on the brand.
-// - One brand spelling and one address format.
-// - Every referenced core @id (/#organization, /#website, /#localbusiness)
-//   is defined on the page.
-// FAQ Question/Answer and Review text is never rewritten (must match the page).
-// ─────────────────────────────────────────────────────────────────────
-const ORG_ID = `${SITE_URL}/#organization`;
-const WEBSITE_ID = `${SITE_URL}/#website`;
-const LB_ID = `${SITE_URL}/#localbusiness`;
-const BRAND_NAME_RE = /^\s*demand\s?stream digital(\s+llc)?\s*$/i;
-const BRAND_TYPES = ["Organization", "LocalBusiness", "HVACBusiness", "ProfessionalService", "Corporation"];
-const VERBATIM_TYPES = ["Question", "Answer", "Review", "Comment"];
-const KEEP_NAME_KEYS = ["alternateName", "legalName"];
-
-const typesOf = (n: any): string[] => (n && n["@type"] ? (Array.isArray(n["@type"]) ? n["@type"] : [n["@type"]]) : []);
-
-const isBrandEntity = (n: any): boolean => {
-  if (!n || typeof n !== "object" || Array.isArray(n)) return false;
-  if (!typesOf(n).some((t) => BRAND_TYPES.includes(t))) return false;
-  if (n["@id"] === ORG_ID || n["@id"] === LB_ID) return false; // canonical definitions
-  return (typeof n.name === "string" && BRAND_NAME_RE.test(n.name)) || n["@id"] === "HVACBusiness";
-};
-
-const fixString = (v: string): string =>
-  v.replace(/Demand Stream Digital/g, SCHEMA_BUSINESS_NAME).replace(/Suite 100 #176/g, "Suite 100 176");
-
-const fixNode = (node: any, verbatim = false): any => {
-  if (Array.isArray(node)) return node.map((x) => fixNode(x, verbatim));
-  if (!node || typeof node !== "object") {
-    return typeof node === "string" && !verbatim ? fixString(node) : node;
-  }
-  if (isBrandEntity(node)) return { "@id": ORG_ID };
-  const inVerbatim = verbatim || typesOf(node).some((t) => VERBATIM_TYPES.includes(t));
-  const out: any = {};
-  for (const [k, v] of Object.entries(node)) {
-    if (k === "aggregateRating" && (node["@id"] === ORG_ID || node["@id"] === LB_ID)) continue;
-    if (KEEP_NAME_KEYS.includes(k)) {
-      out[k] = v;
-      continue;
+      "url": config.url,
+      "name": config.name,
+      "description": config.description,
+      "isPartOf": { "@id": `${SITE_URL}/#website` }
     }
-    out[k] = fixNode(v, inVerbatim);
-  }
-  return out;
-};
-
-const collectIds = (node: any, defined: Set<string>, referenced: Set<string>) => {
-  if (Array.isArray(node)) return node.forEach((x) => collectIds(x, defined, referenced));
-  if (!node || typeof node !== "object") return;
-  const keys = Object.keys(node);
-  if (typeof node["@id"] === "string") {
-    if (keys.length === 1) referenced.add(node["@id"]);
-    else if (node["@type"]) defined.add(node["@id"]);
-  }
-  for (const k of keys) collectIds(node[k], defined, referenced);
-};
-
-const dedupeGraph = (graph: any[]): any[] => {
-  const seen = new Set<string>();
-  return graph.filter((n) => {
-    if (!n || typeof n !== "object") return false;
-    const id = n["@id"];
-    if (typeof id === "string" && Object.keys(n).length === 1) return false; // bare reference at graph level
-    if (typeof id === "string" && n["@type"]) {
-      if (seen.has(id)) return false;
-      seen.add(id);
-    }
-    return true;
-  });
-};
-
-export function normalizeSchema<T extends object | object[]>(input: T, opts: { ensureOrganization?: boolean } = {}): T {
-  const blocks: any[] = (Array.isArray(input) ? input : [input]).map((b) => fixNode(b));
-  for (const b of blocks) if (Array.isArray(b["@graph"])) b["@graph"] = dedupeGraph(b["@graph"]);
-
-  const defined = new Set<string>();
-  const referenced = new Set<string>();
-  collectIds(blocks, defined, referenced);
-  const extra: any[] = [];
-  if (!defined.has(ORG_ID) && (opts.ensureOrganization || referenced.has(ORG_ID))) extra.push(getOrganizationSchema());
-  if (referenced.has(WEBSITE_ID) && !defined.has(WEBSITE_ID)) extra.push(getWebSiteSchema());
-  if (referenced.has(LB_ID) && !defined.has(LB_ID)) extra.push(getLocalBusinessSchema());
-
-  if (extra.length && blocks.length) {
-    const first = blocks[0];
-    if (Array.isArray(first["@graph"])) {
-      first["@graph"] = dedupeGraph([...first["@graph"], ...extra]);
-    } else {
-      const { ["@context"]: _ctx, ...rest } = first;
-      blocks[0] = { "@context": "https://schema.org", "@graph": dedupeGraph([rest, ...extra]) };
-    }
-  }
-  return (Array.isArray(input) ? blocks : blocks[0]) as T;
-}
-
-// Default graph for pages that pass no schemaJson to SEOHead.
-export const getDefaultWebPageSchema = (page: { url: string; name: string; description: string }) => ({
-  "@context": "https://schema.org",
-  "@graph": [
-    getOrganizationSchema(),
-    getWebSiteSchema(),
-    {
-      "@type": "WebPage",
-      "@id": `${page.url}#webpage`,
-      url: page.url,
-      name: page.name,
-      description: page.description,
-      isPartOf: { "@id": WEBSITE_ID },
-      about: { "@id": ORG_ID },
-      publisher: { "@id": ORG_ID },
-      inLanguage: "en-US",
-    },
-  ],
+  ]
 });

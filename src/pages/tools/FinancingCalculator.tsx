@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import SEOHead from "@/components/SEOHead";
+import { getCalculatorSchema } from "@/lib/schema";
 import { Link } from "react-router-dom";
 import { ArrowRight, DollarSign, Calculator, Info } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -33,7 +34,13 @@ const FinancingCalculator = () => {
       <SEOHead
         title="Financing Calculator | Plumbing & HVAC | DemandStream"
         description="Calculate monthly payments for plumbing and HVAC jobs. See what financing options look like before you commit."
-        canonical="https://demandstreamdigital.com/financing-calculator"
+        canonical="https://demandstreamdigital.com/tools/financing-calculator"
+        schemaJson={getCalculatorSchema({
+          name: "Plumbing & HVAC Financing Calculator",
+          description: "Calculate monthly payments for plumbing and HVAC jobs. See what financing options look like before you commit.",
+          url: "https://demandstreamdigital.com/tools/financing-calculator",
+          category: "FinanceApplication",
+        })}
       />
 
       <div className="dark">

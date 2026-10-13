@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
+import { serializeSchema } from "@/lib/schemaNormalize";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
@@ -18,7 +19,7 @@ import { cleanBlogContent } from "@/lib/cleanBlogContent";
 import { getRelatedFAQs, getExternalLink } from "@/lib/blogInternalLinks";
 import { useToast } from "@/hooks/use-toast";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
-import { getBreadcrumbSchema, getOrganizationSchema, normalizeSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schema";
 
 interface BlogPost {
   id: string;
@@ -278,7 +279,7 @@ const BlogPostPage = () => {
         "@type": "BlogPosting",
         "@id": `https://demandstreamdigital.com/blog/${blog.slug}#article`,
         headline: blog.title,
-        description: blog.excerpt || `Read ${blog.title} on Demand Stream Digital`,
+        description: blog.excerpt || `Read ${blog.title} on DemandStream Digital`,
         image: resolvedFeaturedImage || undefined,
         datePublished: blog.published_at,
         dateModified: blog.published_at,
@@ -323,17 +324,17 @@ const BlogPostPage = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <Helmet>
-        <title>{blog.title} | Demand Stream Digital</title>
-        <meta name="description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <title>{blog.title} | DemandStream Digital</title>
+        <meta name="description" content={blog.excerpt || `Read ${blog.title} on DemandStream Digital`} />
         <link rel="canonical" href={`https://demandstreamdigital.com/blog/${blog.slug}`} />
 
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
-        <script type="application/ld+json">{JSON.stringify(normalizeSchema(articleSchema))}</script>
+        <script type="application/ld+json">{serializeSchema(articleSchema)}</script>
 
         {/* Open Graph */}
-        <meta property="og:title" content={`${blog.title} | Demand Stream Digital`} />
-        <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <meta property="og:title" content={`${blog.title} | DemandStream Digital`} />
+        <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on DemandStream Digital`} />
         <meta property="og:url" content={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="DemandStream Digital" />
@@ -344,8 +345,8 @@ const BlogPostPage = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${blog.title} | Demand Stream Digital`} />
-        <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
+        <meta name="twitter:title" content={`${blog.title} | DemandStream Digital`} />
+        <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on DemandStream Digital`} />
         <meta
           name="twitter:image"
           content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
@@ -410,7 +411,7 @@ const BlogPostPage = () => {
             <Link to={`/authors/${author.slug}`} className="mb-4">
               <img
                 src={author.image}
-                alt={`${author.name} - ${author.role} at Demand Stream Digital`}
+                alt={`${author.name} - ${author.role} at DemandStream Digital`}
                 className="w-16 h-16 rounded-full object-cover border-2 border-border hover:border-cta transition-colors"
               />
             </Link>
