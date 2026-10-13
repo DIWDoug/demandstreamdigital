@@ -50,11 +50,11 @@ const PlumbingContentMarketing = () => {
         <meta property="og:url" content={plumbingContentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={plumbingContentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={plumbingContentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
       </Helmet>
 
       <Header />
