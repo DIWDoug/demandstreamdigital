@@ -8,7 +8,6 @@ import Testimonials from "@/components/sections/Testimonials";
 import type { ServicePageConfig, BreadcrumbItem } from "@/types/servicePage";
 import { getHubOgImage } from "@/lib/ogImages";
 
-
 // Generic section components
 import ServiceHeroGeneric from "./generic/ServiceHeroGeneric";
 import ServiceProblemSection from "./generic/ServiceProblemSection";
@@ -21,10 +20,10 @@ import ServiceEcosystemSection from "./generic/ServiceEcosystemSection";
 
 /**
  * SERVICE PAGE LAYOUT
- * 
+ *
  * A unified layout component that assembles all service page sections
  * following the proven narrative arc:
- * 
+ *
  * 1. Hero - Hook with clear value proposition
  * 2. Trust Reel - Credibility whisper
  * 3. Problem - Why most approaches fail
@@ -37,13 +36,13 @@ import ServiceEcosystemSection from "./generic/ServiceEcosystemSection";
  * 10. FAQ - Handle objections
  * 11. Ecosystem - Cross-sell other services
  * 12. Contact - Final CTA
- * 
+ *
  * Usage:
  * ```tsx
  * import { localSEOConfig } from "@/data/service-pages/local-seo";
- * 
+ *
  * const LocalSEO = () => (
- *   <ServicePageLayout 
+ *   <ServicePageLayout
  *     config={localSEOConfig}
  *     valueSection={<SEOValueExplainer />}  // Optional custom value section
  *     customSections={{
@@ -78,65 +77,51 @@ interface ServicePageLayoutProps {
   };
 }
 
-const ServicePageLayout = ({ 
-  config, 
-  valueSection,
-  customSections = {}
-}: ServicePageLayoutProps) => {
-  const breadcrumbItems: BreadcrumbItem[] = [
-    { label: "Services", href: "/#services" },
-    { label: config.title }
-  ];
+const ServicePageLayout = ({ config, valueSection, customSections = {} }: ServicePageLayoutProps) => {
+  const breadcrumbItems: BreadcrumbItem[] = [{ label: "Services", href: "/#services" }, { label: config.title }];
 
   // Get OG image - use config override, or fall back to hub-based image
   const ogImageUrl = config.ogImage || getHubOgImage(config.slug);
 
   return (
     <div className="dark min-h-screen bg-background text-foreground relative overflow-hidden">
-      
       <Helmet>
         <title>{config.metaTitle}</title>
         <meta name="description" content={config.metaDescription} />
         <link rel="canonical" href={config.canonicalUrl} />
-        
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={config.metaTitle} />
         <meta property="og:description" content={config.metaDescription} />
         <meta property="og:url" content={config.canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:site_name" content="DemandStream Digital" />
         <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={config.metaTitle} />
         <meta name="twitter:description" content={config.metaDescription} />
         <meta name="twitter:image" content={ogImageUrl} />
       </Helmet>
-      
+
       <Header />
-      
+
       {/* 1. HERO */}
       <div>
-        <ServiceHeroGeneric 
-          config={config.hero}
-          breadcrumbs={breadcrumbItems}
-        />
+        <ServiceHeroGeneric config={config.hero} breadcrumbs={breadcrumbItems} />
       </div>
-      
+
       {customSections.afterTrustReel}
-      
+
       <SectionDivider />
-      
+
       {/* 3. THE PROBLEM */}
       <ServiceProblemSection config={config.problem} />
       {customSections.afterProblem}
-      
+
       <SectionDivider />
-      
+
       {/* 4. VALUE CONVERSATION (optional) */}
       {valueSection && (
         <>
@@ -145,48 +130,48 @@ const ServicePageLayout = ({
           <SectionDivider />
         </>
       )}
-      
+
       {/* 5. OUTCOMES */}
       <ServiceOutcomesSection config={config.outcomes} />
       {customSections.afterOutcomes}
-      
+
       <SectionDivider />
-      
+
       {/* 6. THE FRAMEWORK */}
       <ServiceRoadmapSection config={config.roadmap} />
       {customSections.afterRoadmap}
-      
+
       <SectionDivider />
-      
+
       {/* 7. BUILDING BLOCKS */}
       <ServiceBuildingBlocksSection config={config.buildingBlocks} />
       {customSections.afterBuildingBlocks}
-      
+
       <SectionDivider />
-      
+
       {/* 8. QUALIFICATION */}
       <ServiceFitQualifierSection config={config.qualification} />
       {customSections.afterQualification}
-      
+
       {/* 9. SOCIAL PROOF */}
       <Testimonials />
       {customSections.afterTestimonials}
-      
+
       {/* 10. FAQ */}
       <ServiceGroupedFAQ config={config.faq} />
       {customSections.afterFAQ}
-      
+
       <SectionDivider />
-      
+
       {/* 11. ECOSYSTEM CROSS-SELL */}
       <ServiceEcosystemSection config={config.ecosystem} />
-      
+
       {/* EXCLUSIVITY */}
       <MarketExclusivity />
-      
+
       {/* 12. FINAL CTA */}
       <ContactForm />
-      
+
       <Footer />
     </div>
   );
