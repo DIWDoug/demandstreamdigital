@@ -1,6 +1,6 @@
+import { normalizeSchema } from "@/lib/schema";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { serializeSchema } from "@/lib/schemaNormalize";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -16,12 +16,9 @@ import { getPageOgImage } from "@/lib/ogImages";
 
 // Map author slugs to their blog post slugs
 const authorArticleMap: Record<string, string[]> = {
-  'desiree-abbariao': [
-    'on-page-optimization-local-seo',
-  ],
-  'richard-baylon': [
-  ],
-  'doug-bryson': [], // Default author - gets any articles not assigned to others
+  "desiree-abbariao": ["on-page-optimization-local-seo"],
+  "richard-baylon": [],
+  "doug-bryson": [], // Default author - gets any articles not assigned to others
 };
 
 const Author = () => {
@@ -30,29 +27,29 @@ const Author = () => {
 
   // Fetch articles by this author
   const { data: articles, isLoading: articlesLoading } = useQuery({
-    queryKey: ['author-articles', slug],
+    queryKey: ["author-articles", slug],
     queryFn: async () => {
-      const articleSlugs = authorArticleMap[slug || ''] || [];
-      
+      const articleSlugs = authorArticleMap[slug || ""] || [];
+
       if (articleSlugs.length === 0) {
         // For Doug or unknown authors, get articles not assigned to others
         const assignedSlugs = Object.values(authorArticleMap).flat();
         const { data, error } = await supabase
-          .from('blogs')
-          .select('id, title, slug, excerpt, featured_image, published_at')
-          .not('slug', 'in', `(${assignedSlugs.join(',')})`)
-          .order('published_at', { ascending: false });
-        
+          .from("blogs")
+          .select("id, title, slug, excerpt, featured_image, published_at")
+          .not("slug", "in", `(${assignedSlugs.join(",")})`)
+          .order("published_at", { ascending: false });
+
         if (error) throw error;
         return data || [];
       }
-      
+
       const { data, error } = await supabase
-        .from('blogs')
-        .select('id, title, slug, excerpt, featured_image, published_at')
-        .in('slug', articleSlugs)
-        .order('published_at', { ascending: false });
-      
+        .from("blogs")
+        .select("id, title, slug, excerpt, featured_image, published_at")
+        .in("slug", articleSlugs)
+        .order("published_at", { ascending: false });
+
       if (error) throw error;
       return data || [];
     },
@@ -63,7 +60,7 @@ const Author = () => {
     return <Navigate to="/about" replace />;
   }
 
-  const ogImage = getPageOgImage('author');
+  const ogImage = getPageOgImage("author");
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -71,68 +68,67 @@ const Author = () => {
       {
         "@type": "Person",
         "@id": `https://demandstreamdigital.com/authors/${author.slug}#person`,
-        "name": author.name,
-        "jobTitle": author.role,
-        "description": author.shortBio,
-        "image": author.image,
-        "worksFor": {
+        name: author.name,
+        jobTitle: author.role,
+        description: author.shortBio,
+        image: author.image,
+        worksFor: {
           "@type": "Organization",
           "@id": "https://demandstreamdigital.com/#organization",
-          "name": "DemandStream Digital"
+          name: "Demand Stream Digital",
         },
-        "sameAs": author.schemaData.sameAs,
-        "knowsAbout": author.schemaData.knowsAbout.map(topic => ({
+        sameAs: author.schemaData.sameAs,
+        knowsAbout: author.schemaData.knowsAbout.map((topic) => ({
           "@type": "Thing",
-          "name": topic.name,
-          "sameAs": topic.sameAs
-        }))
+          name: topic.name,
+          sameAs: topic.sameAs,
+        })),
       },
       {
         "@type": "ProfilePage",
         "@id": `https://demandstreamdigital.com/authors/${author.slug}`,
-        "name": `${author.name} - ${author.role}`,
-        "description": author.shortBio,
-        "mainEntity": { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
-        "isPartOf": { "@id": "https://demandstreamdigital.com/#website" }
-      }
-    ]
+        name: `${author.name} - ${author.role}`,
+        description: author.shortBio,
+        mainEntity: { "@id": `https://demandstreamdigital.com/authors/${author.slug}#person` },
+        isPartOf: { "@id": "https://demandstreamdigital.com/#website" },
+      },
+    ],
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{author.name} - {author.role} | DemandStream Digital</title>
+        <title>
+          {author.name} - {author.role} | Demand Stream Digital
+        </title>
         <meta name="description" content={author.shortBio} />
         <link rel="canonical" href={`https://demandstreamdigital.com/authors/${author.slug}`} />
-        
-        
-        <script type="application/ld+json">
-          {serializeSchema(schemaData)}
-        </script>
-        
+
+        <script type="application/ld+json">{JSON.stringify(normalizeSchema(schemaData))}</script>
+
         {/* Open Graph */}
-        <meta property="og:title" content={`${author.name} - ${author.role} | DemandStream Digital`} />
+        <meta property="og:title" content={`${author.name} - ${author.role} | Demand Stream Digital`} />
         <meta property="og:description" content={author.shortBio} />
         <meta property="og:url" content={`https://demandstreamdigital.com/authors/${author.slug}`} />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="DemandStream Digital" />
         <meta property="og:image" content={ogImage} />
-        
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${author.name} - ${author.role} | DemandStream Digital`} />
+        <meta name="twitter:title" content={`${author.name} - ${author.role} | Demand Stream Digital`} />
         <meta name="twitter:description" content={author.shortBio} />
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
-      
+
       <Header />
-      
+
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -143,23 +139,13 @@ const Author = () => {
           {/* Author Header */}
           <header className="flex flex-col md:flex-row gap-8 mb-12">
             <div className="shrink-0">
-              <img
-                src={author.image}
-                alt={author.name}
-                className="w-48 h-48 rounded-2xl object-cover shadow-lg"
-              />
+              <img src={author.image} alt={author.name} className="w-48 h-48 rounded-2xl object-cover shadow-lg" />
             </div>
             <div className="flex-1">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                {author.name}
-              </h1>
-              <p className="text-xl text-primary font-medium mb-4">
-                {author.role}
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                {author.shortBio}
-              </p>
-              
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">{author.name}</h1>
+              <p className="text-xl text-primary font-medium mb-4">{author.role}</p>
+              <p className="text-lg text-muted-foreground mb-6">{author.shortBio}</p>
+
               {/* Social Links */}
               {author.socialLinks && (
                 <div className="flex gap-3">
@@ -206,9 +192,9 @@ const Author = () => {
 
           {/* Full Bio */}
           <section className="mb-12">
-            <h2 className="text-xl font-semibold text-foreground mb-4">About {author.name.split(' ')[0]}</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-4">About {author.name.split(" ")[0]}</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              {author.fullBio.split('\n\n').map((paragraph, index) => (
+              {author.fullBio.split("\n\n").map((paragraph, index) => (
                 <p key={index} className="mb-4 leading-relaxed">
                   {paragraph}
                 </p>
@@ -230,10 +216,8 @@ const Author = () => {
 
           {/* Articles by Author */}
           <section className="mb-12">
-            <h2 className="text-xl font-semibold text-foreground mb-6">
-              Articles by {author.name.split(' ')[0]}
-            </h2>
-            
+            <h2 className="text-xl font-semibold text-foreground mb-6">Articles by {author.name.split(" ")[0]}</h2>
+
             {articlesLoading ? (
               <div className="grid md:grid-cols-2 gap-6">
                 {[1, 2].map((i) => (
@@ -256,8 +240,8 @@ const Author = () => {
                     <Card className="bg-surface-dark border-border hover:border-cta/30 transition-all duration-300 h-full group">
                       {getBlogFeaturedImage(article.featured_image) ? (
                         <div className="relative h-40 overflow-hidden rounded-t-lg">
-                          <img 
-                            src={getBlogFeaturedImage(article.featured_image)!} 
+                          <img
+                            src={getBlogFeaturedImage(article.featured_image)!}
                             alt={article.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -270,10 +254,10 @@ const Author = () => {
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-2 text-sm text-text-muted mb-2">
                           <Calendar className="w-4 h-4" />
-                          {new Date(article.published_at).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
+                          {new Date(article.published_at).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
                           })}
                         </div>
                         <CardTitle className="text-lg group-hover:text-cta transition-colors line-clamp-2">
@@ -282,9 +266,7 @@ const Author = () => {
                       </CardHeader>
                       <CardContent>
                         {article.excerpt && (
-                          <p className="text-text-secondary text-sm line-clamp-2 mb-3">
-                            {article.excerpt}
-                          </p>
+                          <p className="text-text-secondary text-sm line-clamp-2 mb-3">{article.excerpt}</p>
                         )}
                         <span className="text-cta text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                           Read Article <ArrowRight className="w-4 h-4" />
@@ -304,9 +286,7 @@ const Author = () => {
 
           {/* CTA */}
           <section className="bg-muted/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-semibold text-foreground mb-3">
-              Work With Our Team
-            </h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-3">Work With Our Team</h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Ready to explore how our team can support your agency's growth? Let's start a conversation.
             </p>
