@@ -168,7 +168,7 @@ export const getReviewSchema = (review: {
     bestRating: 5,
     worstRating: 1,
   },
-  datePublished: review.datePublished || new Date().toISOString().split("T")[0],
+  ...(review.datePublished ? { datePublished: review.datePublished } : {}),
   itemReviewed: { "@id": `${SITE_URL}/#organization` },
 });
 
