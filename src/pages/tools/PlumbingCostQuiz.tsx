@@ -90,42 +90,47 @@ const getScoreResult = (score: number) => {
   const maxScore = questions.length * 3;
   const pct = (score / maxScore) * 100;
 
-  if (pct <= 15) return {
-    grade: "A",
-    label: "Excellent",
-    color: "text-green-600",
-    bgColor: "bg-green-50 border-green-200",
-    icon: CheckCircle,
-    message: "Your home's plumbing and HVAC systems are in great shape! Keep up with annual maintenance to stay ahead.",
-    savings: "$0 – $200/yr",
-  };
-  if (pct <= 35) return {
-    grade: "B",
-    label: "Good",
-    color: "text-accent-blue",
-    bgColor: "bg-blue-50 border-blue-200",
-    icon: CheckCircle,
-    message: "Minor issues detected. A professional checkup could save you from bigger problems down the road.",
-    savings: "$200 – $800/yr",
-  };
-  if (pct <= 55) return {
-    grade: "C",
-    label: "Needs Attention",
-    color: "text-yellow-600",
-    bgColor: "bg-yellow-50 border-yellow-200",
-    icon: AlertTriangle,
-    message: "Several areas need attention. You're likely wasting money on inefficiency and risking costly repairs.",
-    savings: "$800 – $2,000/yr",
-  };
-  if (pct <= 75) return {
-    grade: "D",
-    label: "At Risk",
-    color: "text-orange-600",
-    bgColor: "bg-orange-50 border-orange-200",
-    icon: AlertTriangle,
-    message: "Your systems are costing you significantly. Emergency repairs are likely if you don't act soon.",
-    savings: "$2,000 – $5,000/yr",
-  };
+  if (pct <= 15)
+    return {
+      grade: "A",
+      label: "Excellent",
+      color: "text-green-600",
+      bgColor: "bg-green-50 border-green-200",
+      icon: CheckCircle,
+      message:
+        "Your home's plumbing and HVAC systems are in great shape! Keep up with annual maintenance to stay ahead.",
+      savings: "$0 – $200/yr",
+    };
+  if (pct <= 35)
+    return {
+      grade: "B",
+      label: "Good",
+      color: "text-accent-blue",
+      bgColor: "bg-blue-50 border-blue-200",
+      icon: CheckCircle,
+      message: "Minor issues detected. A professional checkup could save you from bigger problems down the road.",
+      savings: "$200 – $800/yr",
+    };
+  if (pct <= 55)
+    return {
+      grade: "C",
+      label: "Needs Attention",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50 border-yellow-200",
+      icon: AlertTriangle,
+      message: "Several areas need attention. You're likely wasting money on inefficiency and risking costly repairs.",
+      savings: "$800 – $2,000/yr",
+    };
+  if (pct <= 75)
+    return {
+      grade: "D",
+      label: "At Risk",
+      color: "text-orange-600",
+      bgColor: "bg-orange-50 border-orange-200",
+      icon: AlertTriangle,
+      message: "Your systems are costing you significantly. Emergency repairs are likely if you don't act soon.",
+      savings: "$2,000 – $5,000/yr",
+    };
   return {
     grade: "F",
     label: "Critical",
@@ -142,7 +147,7 @@ const PlumbingCostQuiz = () => {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResult, setShowResult] = useState(false);
 
-  const progress = ((currentQ) / questions.length) * 100;
+  const progress = (currentQ / questions.length) * 100;
   const totalScore = Object.values(answers).reduce((sum, s) => sum + s, 0);
   const result = getScoreResult(totalScore);
   const ResultIcon = result.icon;
@@ -173,10 +178,11 @@ const PlumbingCostQuiz = () => {
         description="Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands."
         canonical="https://demandstreamdigital.com/tools/plumbing-cost-quiz"
         schemaJson={getCalculatorSchema({
-          name: "Free Plumbing Health Quiz",
-          description: "Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands.",
+          name: "Plumbing Health Quiz",
+          description:
+            "Take this free quiz to find out if your plumbing and HVAC systems are secretly costing you thousands.",
           url: "https://demandstreamdigital.com/tools/plumbing-cost-quiz",
-          category: "UtilitiesApplication",
+          category: "BusinessApplication",
         })}
       />
 
@@ -185,140 +191,156 @@ const PlumbingCostQuiz = () => {
       </div>
 
       <div className="tools-large-text">
-      <div className="section-light">
-        <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <div className="max-w-2xl mx-auto">
-            {!showResult ? (
-              <>
-                {/* Header */}
-                <div className="text-center mb-10">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-semibold mb-4">
-                    <ClipboardCheck className="h-4 w-4" />
-                    Free Assessment
-                  </div>
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
-                    How Much Is Your Plumbing Costing You?
-                  </h1>
-                  <p className="text-text-secondary mb-6">Answer {questions.length} quick questions to find out.</p>
-                  <div className="max-w-md mx-auto text-left">
-                    <HeroBullets
-                      variant="light"
-                      items={[
-                        "Built for Plumbing and HVAC homeowners",
-                        "Takes under 90 seconds. No email required.",
-                        "Get an honest risk grade, not a sales pitch",
-                      ]}
-                      className="mb-0"
-                    />
-                  </div>
-                </div>
-
-                {/* Progress */}
-                <div className="mb-8">
-                  <div className="flex justify-between text-xs text-text-muted mb-2">
-                    <span>Question {currentQ + 1} of {questions.length}</span>
-                    <span>{Math.round(progress)}% complete</span>
-                  </div>
-                  <div className="w-full h-2 bg-border rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-cta rounded-full transition-all duration-500"
-                      style={{ width: `${progress}%` }}
-                    />
-                  </div>
-                </div>
-
-                {/* Question */}
-                <div className="bg-card border border-border rounded-2xl p-6 sm:p-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Droplets className="h-6 w-6 text-accent-blue flex-shrink-0" />
-                    <h2 className="text-xl font-bold">{q.question}</h2>
-                  </div>
-                  <div className="space-y-3">
-                    {q.options.map((opt, i) => {
-                      const isSelected = answers[q.id] === opt.score;
-                      return (
-                        <button
-                          key={i}
-                          onClick={() => handleAnswer(q.id, opt.score)}
-                          className={`w-full p-4 rounded-xl border text-left transition-all ${
-                            isSelected
-                              ? "border-cta bg-cta/5"
-                              : "border-border bg-background hover:border-cta/30 hover:bg-card"
-                          }`}
-                        >
-                          <span className="font-medium">{opt.label}</span>
-                        </button>
-                      );
-                    })}
+        <div className="section-light">
+          <div className="container mx-auto px-6 lg:px-8 pt-32 pb-20">
+            <div className="max-w-2xl mx-auto">
+              {!showResult ? (
+                <>
+                  {/* Header */}
+                  <div className="text-center mb-10">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cta/10 text-cta text-sm font-semibold mb-4">
+                      <ClipboardCheck className="h-4 w-4" />
+                      Free Assessment
+                    </div>
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+                      How Much Is Your Plumbing Costing You?
+                    </h1>
+                    <p className="text-text-secondary mb-6">Answer {questions.length} quick questions to find out.</p>
+                    <div className="max-w-md mx-auto text-left">
+                      <HeroBullets
+                        variant="light"
+                        items={[
+                          "Built for Plumbing and HVAC homeowners",
+                          "Takes under 90 seconds. No email required.",
+                          "Get an honest risk grade, not a sales pitch",
+                        ]}
+                        className="mb-0"
+                      />
+                    </div>
                   </div>
 
-                  {currentQ > 0 && (
-                    <button
-                      onClick={() => setCurrentQ(currentQ - 1)}
-                      className="flex items-center gap-2 text-sm text-accent-blue hover:underline mt-6"
-                    >
-                      <ArrowLeft className="h-4 w-4" /> Previous question
-                    </button>
-                  )}
-                </div>
-              </>
-            ) : (
-              /* Results */
-              <div className="text-center">
-                <div className="text-center mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Your Results Are In</h2>
-                  <p className="text-text-muted">Here's what your plumbing & HVAC health looks like.</p>
-                </div>
-
-                <div className={`border rounded-2xl p-8 sm:p-12 mb-8 ${result.bgColor}`}>
-                  <div className="flex justify-center mb-4">
-                    <ResultIcon className={`h-16 w-16 ${result.color}`} />
+                  {/* Progress */}
+                  <div className="mb-8">
+                    <div className="flex justify-between text-xs text-text-muted mb-2">
+                      <span>
+                        Question {currentQ + 1} of {questions.length}
+                      </span>
+                      <span>{Math.round(progress)}% complete</span>
+                    </div>
+                    <div className="w-full h-2 bg-border rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-cta rounded-full transition-all duration-500"
+                        style={{ width: `${progress}%` }}
+                      />
+                    </div>
                   </div>
-                  <div className={`text-7xl font-bold mb-2 ${result.color}`}>{result.grade}</div>
-                  <p className={`text-xl font-semibold mb-4 ${result.color}`}>{result.label}</p>
-                  <p className="text-text-secondary max-w-md mx-auto mb-6">{result.message}</p>
 
-                  <div className="bg-card/80 rounded-xl p-5 inline-block">
-                    <p className="text-sm text-text-muted mb-1">Estimated Annual Waste</p>
-                    <p className="text-2xl font-bold text-cta">{result.savings}</p>
+                  {/* Question */}
+                  <div className="bg-card border border-border rounded-2xl p-6 sm:p-8">
+                    <div className="flex items-center gap-3 mb-6">
+                      <Droplets className="h-6 w-6 text-accent-blue flex-shrink-0" />
+                      <h2 className="text-xl font-bold">{q.question}</h2>
+                    </div>
+                    <div className="space-y-3">
+                      {q.options.map((opt, i) => {
+                        const isSelected = answers[q.id] === opt.score;
+                        return (
+                          <button
+                            key={i}
+                            onClick={() => handleAnswer(q.id, opt.score)}
+                            className={`w-full p-4 rounded-xl border text-left transition-all ${
+                              isSelected
+                                ? "border-cta bg-cta/5"
+                                : "border-border bg-background hover:border-cta/30 hover:bg-card"
+                            }`}
+                          >
+                            <span className="font-medium">{opt.label}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {currentQ > 0 && (
+                      <button
+                        onClick={() => setCurrentQ(currentQ - 1)}
+                        className="flex items-center gap-2 text-sm text-accent-blue hover:underline mt-6"
+                      >
+                        <ArrowLeft className="h-4 w-4" /> Previous question
+                      </button>
+                    )}
                   </div>
-                </div>
+                </>
+              ) : (
+                /* Results */
+                <div className="text-center">
+                  <div className="text-center mb-8">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">Your Results Are In</h2>
+                    <p className="text-text-muted">Here's what your plumbing & HVAC health looks like.</p>
+                  </div>
 
-                {/* Breakdown */}
-                <div className="bg-card border border-border rounded-xl p-6 mb-8 text-left">
-                  <h3 className="font-bold mb-4">Answers Breakdown</h3>
-                  <div className="space-y-3">
-                    {questions.map((q) => {
-                      const score = answers[q.id] ?? 0;
-                      const selectedOpt = q.options.find(o => o.score === score);
-                      return (
-                        <div key={q.id} className="flex items-start gap-3 text-sm">
-                          <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
-                            score === 0 ? "bg-green-500" : score === 1 ? "bg-blue-500" : score === 2 ? "bg-yellow-500" : "bg-red-500"
-                          }`} />
-                          <div>
-                            <p className="font-medium">{q.question}</p>
-                            <p className="text-text-muted">{selectedOpt?.label} — {selectedOpt?.detail}</p>
+                  <div className={`border rounded-2xl p-8 sm:p-12 mb-8 ${result.bgColor}`}>
+                    <div className="flex justify-center mb-4">
+                      <ResultIcon className={`h-16 w-16 ${result.color}`} />
+                    </div>
+                    <div className={`text-7xl font-bold mb-2 ${result.color}`}>{result.grade}</div>
+                    <p className={`text-xl font-semibold mb-4 ${result.color}`}>{result.label}</p>
+                    <p className="text-text-secondary max-w-md mx-auto mb-6">{result.message}</p>
+
+                    <div className="bg-card/80 rounded-xl p-5 inline-block">
+                      <p className="text-sm text-text-muted mb-1">Estimated Annual Waste</p>
+                      <p className="text-2xl font-bold text-cta">{result.savings}</p>
+                    </div>
+                  </div>
+
+                  {/* Breakdown */}
+                  <div className="bg-card border border-border rounded-xl p-6 mb-8 text-left">
+                    <h3 className="font-bold mb-4">Answers Breakdown</h3>
+                    <div className="space-y-3">
+                      {questions.map((q) => {
+                        const score = answers[q.id] ?? 0;
+                        const selectedOpt = q.options.find((o) => o.score === score);
+                        return (
+                          <div key={q.id} className="flex items-start gap-3 text-sm">
+                            <div
+                              className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
+                                score === 0
+                                  ? "bg-green-500"
+                                  : score === 1
+                                    ? "bg-blue-500"
+                                    : score === 2
+                                      ? "bg-yellow-500"
+                                      : "bg-red-500"
+                              }`}
+                            />
+                            <div>
+                              <p className="font-medium">{q.question}</p>
+                              <p className="text-text-muted">
+                                {selectedOpt?.label} — {selectedOpt?.detail}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                      onClick={reset}
+                      className="px-6 py-3 rounded-lg border border-border text-foreground hover:border-accent-blue transition-all font-medium"
+                    >
+                      Retake Quiz
+                    </button>
+                    <Link to="/grow-qualifier" className="btn-cta group">
+                      Get a Free Consultation{" "}
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </div>
                 </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button onClick={reset} className="px-6 py-3 rounded-lg border border-border text-foreground hover:border-accent-blue transition-all font-medium">
-                    Retake Quiz
-                  </button>
-                  <Link to="/grow-qualifier" className="btn-cta group">
-                    Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
       <div className="dark">
