@@ -18,7 +18,7 @@ import { cleanBlogContent } from "@/lib/cleanBlogContent";
 import { getRelatedFAQs, getExternalLink } from "@/lib/blogInternalLinks";
 import { useToast } from "@/hooks/use-toast";
 import { getBlogFeaturedImage } from "@/lib/blogImages";
-import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/schema";
+import { getBreadcrumbSchema, getOrganizationSchema, normalizeSchema } from "@/lib/schema";
 
 interface BlogPost {
   id: string;
@@ -329,14 +329,14 @@ const BlogPostPage = () => {
 
         <meta property="article:author" content={author.name} />
         {blog.category && <meta property="article:section" content={categoryLabels[blog.category] || blog.category} />}
-        <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(normalizeSchema(articleSchema))}</script>
 
         {/* Open Graph */}
         <meta property="og:title" content={`${blog.title} | Demand Stream Digital`} />
         <meta property="og:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
         <meta property="og:url" content={`https://demandstreamdigital.com/blog/${blog.slug}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
+        <meta property="og:site_name" content="DemandStream Digital" />
         <meta
           property="og:image"
           content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
