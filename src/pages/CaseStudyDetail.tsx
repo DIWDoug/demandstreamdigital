@@ -235,8 +235,6 @@ const CaseStudyDetail = () => {
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="DemandStream Digital" />
         <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
