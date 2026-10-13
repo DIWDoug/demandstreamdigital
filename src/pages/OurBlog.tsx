@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
+import { normalizeSchema, getDefaultWebPageSchema } from "@/lib/schema";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/sections/Header";
@@ -10,7 +11,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar, Search, X, BookOpen, ArrowRight, TrendingUp, ChevronLeft, ChevronRight, Clock } from "lucide-react";
 import { getPageOgImage } from "@/lib/ogImages";
 import { getBlogFeaturedImage as resolveFeaturedImage } from "@/lib/blogImages";
-
 
 interface BlogPost {
   id: string;
@@ -47,9 +47,13 @@ const OurBlog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [sortBy, setSortBy] = useState<SortOption>("date-desc");
-  const ogImage = getPageOgImage('blog');
+  const ogImage = getPageOgImage("blog");
 
-  const { data: posts = [], isLoading, error } = useQuery({
+  const {
+    data: posts = [],
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ["our-blog-posts"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -74,12 +78,12 @@ const OurBlog = () => {
 
   const filteredPosts = useMemo(() => {
     let filtered = [...posts];
-    
+
     // Filter by category first
     if (selectedCategory) {
       filtered = filtered.filter((post) => post.category === selectedCategory);
     }
-    
+
     // Then filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -87,7 +91,7 @@ const OurBlog = () => {
         (post) =>
           post.title.toLowerCase().includes(query) ||
           post.excerpt?.toLowerCase().includes(query) ||
-          post.category?.toLowerCase().includes(query)
+          post.category?.toLowerCase().includes(query),
       );
     }
 
@@ -106,7 +110,7 @@ const OurBlog = () => {
           return 0;
       }
     });
-    
+
     return filtered;
   }, [posts, searchQuery, selectedCategory, sortBy]);
 
@@ -155,19 +159,41 @@ const OurBlog = () => {
           content="In-depth marketing guides for plumbing and HVAC business owners. SEO strategy, Google Ads, email, and growth tactics from DemandStream Digital."
         />
         <link rel="canonical" href="https://demandstreamdigital.com/our-blog" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Plumbing & HVAC Marketing Insights | DemandStream Digital" />
-        <meta property="og:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital." />
+        <meta
+          property="og:description"
+          content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more from Demand Stream Digital."
+        />
         <meta property="og:url" content="https://demandstreamdigital.com/our-blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Demand Stream Digital" />
-        
+        <meta property="og:site_name" content="DemandStream Digital" />
+
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital" />
-        <meta name="twitter:description" content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more." />
+        <meta
+          name="twitter:title"
+          content="Plumbing & HVAC Marketing Blog | SEO, Ads & Growth Insights | Demand Stream Digital"
+        />
+        <meta
+          name="twitter:description"
+          content="Actionable marketing tips for plumbing and HVAC business owners. Local SEO, Google Ads, email marketing, and more."
+        />
         <meta name="twitter:image" content={ogImage} />
+        <script type="application/ld+json">
+          {JSON.stringify(
+            normalizeSchema(
+              getDefaultWebPageSchema({
+                url: "https://demandstreamdigital.com/our-blog",
+                name: "Plumbing & HVAC Marketing Insights | DemandStream Digital",
+                description:
+                  "In-depth marketing guides for plumbing and HVAC business owners. SEO strategy, Google Ads, email, and growth tactics from DemandStream Digital.",
+              }),
+              { ensureOrganization: true },
+            ),
+          )}
+        </script>
       </Helmet>
 
       <Header />
@@ -178,18 +204,17 @@ const OurBlog = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-surface-dark to-background" />
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-cta/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl" />
-          
+
           <div className="container mx-auto px-6 lg:px-8 relative">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-cta/10 border border-cta/20 rounded-full text-cta text-sm font-medium mb-6">
                 <TrendingUp className="w-4 h-4" />
                 Plumbing & HVAC Marketing Insights
               </div>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-5">
-                Our Blog
-              </h1>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-5">Our Blog</h1>
               <p className="text-lg text-text-secondary max-w-xl mx-auto">
-                Actionable strategies for plumbing and HVAC companies. SEO, Google Maps, paid advertising, and booked service calls.
+                Actionable strategies for plumbing and HVAC companies. SEO, Google Maps, paid advertising, and booked
+                service calls.
               </p>
             </div>
 
@@ -283,7 +308,11 @@ const OurBlog = () => {
             ) : filteredPosts.length === 0 ? (
               <div className="text-center py-20">
                 <div className="w-16 h-16 bg-surface-elevated rounded-full flex items-center justify-center mx-auto mb-4">
-                  {searchQuery ? <Search className="w-8 h-8 text-text-muted" /> : <BookOpen className="w-8 h-8 text-text-muted" />}
+                  {searchQuery ? (
+                    <Search className="w-8 h-8 text-text-muted" />
+                  ) : (
+                    <BookOpen className="w-8 h-8 text-text-muted" />
+                  )}
                 </div>
                 <h2 className="text-xl font-semibold text-foreground mb-2">
                   {searchQuery ? "No results found" : "Coming soon"}
@@ -412,7 +441,7 @@ const OurBlog = () => {
                 </div>
 
                 {/* Pagination */}
-                {((searchQuery || selectedCategory ? totalPagesFiltered : totalPages) > 1) && (
+                {(searchQuery || selectedCategory ? totalPagesFiltered : totalPages) > 1 && (
                   <div className="flex items-center justify-center gap-2 mt-12">
                     <button
                       onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
@@ -422,9 +451,12 @@ const OurBlog = () => {
                       <ChevronLeft className="w-4 h-4" />
                       Previous
                     </button>
-                    
+
                     <div className="flex items-center gap-1">
-                      {Array.from({ length: searchQuery || selectedCategory ? totalPagesFiltered : totalPages }, (_, i) => i + 1).map((page) => (
+                      {Array.from(
+                        { length: searchQuery || selectedCategory ? totalPagesFiltered : totalPages },
+                        (_, i) => i + 1,
+                      ).map((page) => (
                         <button
                           key={page}
                           onClick={() => setCurrentPage(page)}
@@ -438,9 +470,13 @@ const OurBlog = () => {
                         </button>
                       ))}
                     </div>
-                    
+
                     <button
-                      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, searchQuery || selectedCategory ? totalPagesFiltered : totalPages))}
+                      onClick={() =>
+                        setCurrentPage((prev) =>
+                          Math.min(prev + 1, searchQuery || selectedCategory ? totalPagesFiltered : totalPages),
+                        )
+                      }
                       disabled={currentPage === (searchQuery || selectedCategory ? totalPagesFiltered : totalPages)}
                       className="flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg border border-border/50 text-text-secondary hover:text-foreground hover:border-cta/50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                     >
