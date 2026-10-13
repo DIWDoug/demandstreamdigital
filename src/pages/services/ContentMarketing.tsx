@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { serializeSchema } from "@/lib/schemaNormalize";
 import { Link } from "react-router-dom";
 import { ArrowRight, Droplets, Thermometer } from "lucide-react";
 import Header from "@/components/sections/Header";
@@ -19,7 +18,7 @@ import {
   ServiceTestimonialsSection,
 } from "@/components/services/generic";
 import { contentMarketingConfig } from "@/data/service-pages/content-marketing";
-import { getServiceHubSchema } from "@/lib/schema";
+import { getServiceHubSchema, normalizeSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -28,17 +27,14 @@ const SectionDivider = () => (
 );
 
 const ContentMarketing = () => {
-  const breadcrumbItems = [
-    { label: "Services", href: "/#services" },
-    { label: contentMarketingConfig.title }
-  ];
+  const breadcrumbItems = [{ label: "Services", href: "/#services" }, { label: contentMarketingConfig.title }];
 
   const pageSchema = getServiceHubSchema({
     name: "Plumbing & HVAC Content Marketing",
     description: contentMarketingConfig.metaDescription,
     url: contentMarketingConfig.canonicalUrl,
     serviceType: "Content Marketing Service",
-    faqGroups: contentMarketingConfig.faq.groups
+    faqGroups: contentMarketingConfig.faq.groups,
   });
 
   return (
@@ -47,19 +43,17 @@ const ContentMarketing = () => {
         <title>{contentMarketingConfig.metaTitle}</title>
         <meta name="description" content={contentMarketingConfig.metaDescription} />
         <link rel="canonical" href={contentMarketingConfig.canonicalUrl} />
-        <script type="application/ld+json">{serializeSchema(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(normalizeSchema(pageSchema))}</script>
         <meta property="og:title" content={contentMarketingConfig.metaTitle} />
         <meta property="og:description" content={contentMarketingConfig.metaDescription} />
         <meta property="og:url" content={contentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="720" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={contentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={contentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
       </Helmet>
 
       <Header />
@@ -71,13 +65,14 @@ const ContentMarketing = () => {
           heroHeadline="Plumbing & HVAC Content Marketing"
           heroSubtitle="Built for Authority, Rankings, and Booked Calls"
           description={{
-            intro: "Most contractor content is written to fill a blog page. It ranks for searches outside your service area. It pulls in homeowners who aren't buying. It has no path to a booked call.",
+            intro:
+              "Most contractor content is written to fill a blog page. It ranks for searches outside your service area. It pulls in homeowners who aren't buying. It has no path to a booked call.",
             bullets: [
               "Built around how customers search for plumbing and HVAC in your market",
               "Connected strategy across Google Maps, organic, and local search",
               "Compressed to essentials: structure, intent, conversion — and only what actually works",
             ],
-            closing: "No generic home services approach. Built for plumbing and HVAC operators only."
+            closing: "No generic home services approach. Built for plumbing and HVAC operators only.",
           }}
           breadcrumbs={breadcrumbItems}
         />
@@ -128,7 +123,9 @@ const ContentMarketing = () => {
               Built for Both. Engineered for Each.
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and different keyword structures. Every content strategy we build treats them separately, even when we serve both for the same operator.
+              Plumbing and HVAC are different trades with different demand patterns, different seasonality, and
+              different keyword structures. Every content strategy we build treats them separately, even when we serve
+              both for the same operator.
             </p>
           </div>
 
@@ -142,7 +139,9 @@ const ContentMarketing = () => {
                 <h3 className="text-xl font-bold text-slate-900">Plumbing Content Marketing</h3>
               </div>
               <p className="text-slate-600 text-base leading-relaxed mb-6">
-                Plumbing demand is largely emergency-driven. A burst pipe, a failed water heater, a backed-up main line — these are not planned purchases. The homeowner searches, scans the top results, and calls. Plumbing content marketing has to win that moment.
+                Plumbing demand is largely emergency-driven. A burst pipe, a failed water heater, a backed-up main line
+                — these are not planned purchases. The homeowner searches, scans the top results, and calls. Plumbing
+                content marketing has to win that moment.
               </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
@@ -175,7 +174,9 @@ const ContentMarketing = () => {
                 <h3 className="text-xl font-bold text-slate-900">HVAC Content Marketing</h3>
               </div>
               <p className="text-slate-600 text-base leading-relaxed mb-6">
-                HVAC demand is seasonal and dual-natured — emergency repair in peak season and planned replacement year-round. HVAC content marketing has to capture both: no-cool calls in summer and equipment changeout intent before a system fails.
+                HVAC demand is seasonal and dual-natured — emergency repair in peak season and planned replacement
+                year-round. HVAC content marketing has to capture both: no-cool calls in summer and equipment changeout
+                intent before a system fails.
               </p>
               <ul className="space-y-3 mb-8 flex-1">
                 {[
