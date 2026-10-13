@@ -16,9 +16,10 @@
 
 import { Helmet } from "react-helmet-async";
 import { SITE_URL } from "@/lib/constants";
+import { normalizeSchema, getDefaultWebPageSchema, SCHEMA_BUSINESS_NAME } from "@/lib/schema";
 
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-images/default.png`;
-const SITE_NAME = "Demand Stream Digital";
+const SITE_NAME = SCHEMA_BUSINESS_NAME;
 
 interface SEOHeadProps {
   title: string;
@@ -41,11 +42,14 @@ const SEOHead = ({
   noIndex = false,
   schemaJson,
 }: SEOHeadProps) => {
-  const schemaBlocks: object[] = !schemaJson
-    ? []
+  const rawBlocks: object[] = !schemaJson
+    ? noIndex
+      ? []
+      : [getDefaultWebPageSchema({ url: canonical, name: title, description })]
     : Array.isArray(schemaJson)
-    ? schemaJson
-    : [schemaJson];
+      ? schemaJson
+      : [schemaJson];
+  const schemaBlocks: object[] = rawBlocks.length ? normalizeSchema(rawBlocks, { ensureOrganization: true }) : [];
 
   return (
     <Helmet>
