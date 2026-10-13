@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { serializeSchema } from "@/lib/schemaNormalize";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -16,7 +15,7 @@ import {
   ServiceTestimonialsSection,
 } from "@/components/services/generic";
 import { hvacContentMarketingConfig } from "@/data/service-pages/hvac-content-marketing";
-import { getServiceHubSchema } from "@/lib/schema";
+import { getServiceHubSchema, normalizeSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -28,7 +27,7 @@ const HVACContentMarketing = () => {
   const breadcrumbItems = [
     { label: "Services", href: "/#services" },
     { label: "Content Marketing", href: "/plumbing-hvac-content-marketing" },
-    { label: hvacContentMarketingConfig.title }
+    { label: hvacContentMarketingConfig.title },
   ];
 
   const pageSchema = getServiceHubSchema({
@@ -36,7 +35,7 @@ const HVACContentMarketing = () => {
     description: hvacContentMarketingConfig.metaDescription,
     url: hvacContentMarketingConfig.canonicalUrl,
     serviceType: "HVAC Content Marketing Service",
-    faqGroups: hvacContentMarketingConfig.faq.groups
+    faqGroups: hvacContentMarketingConfig.faq.groups,
   });
 
   return (
@@ -45,19 +44,17 @@ const HVACContentMarketing = () => {
         <title>{hvacContentMarketingConfig.metaTitle}</title>
         <meta name="description" content={hvacContentMarketingConfig.metaDescription} />
         <link rel="canonical" href={hvacContentMarketingConfig.canonicalUrl} />
-        <script type="application/ld+json">{serializeSchema(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(normalizeSchema(pageSchema))}</script>
         <meta property="og:title" content={hvacContentMarketingConfig.metaTitle} />
         <meta property="og:description" content={hvacContentMarketingConfig.metaDescription} />
         <meta property="og:url" content={hvacContentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="720" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={hvacContentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={hvacContentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demand-stream-digital-logo.png" />
       </Helmet>
 
       <Header />
@@ -69,13 +66,15 @@ const HVACContentMarketing = () => {
           heroHeadline="HVAC Content Marketing"
           heroSubtitle="Built to Rank and Convert"
           description={{
-            intro: "When a homeowner's AC stops working in August, they don't browse options. They call whoever shows up in the Map Pack first with a clear, credible, local answer.",
+            intro:
+              "When a homeowner's AC stops working in August, they don't browse options. They call whoever shows up in the Map Pack first with a clear, credible, local answer.",
             bullets: [
               "Built around HVAC's dual demand structure — emergency repair and planned replacement",
               "Seasonal authority, maintenance agreement support, and AI-ready content",
               "Structured to earn positions in the most competitive HVAC searches in your market",
             ],
-            closing: "No generic blog libraries. No filler articles. No content built just to fill a publishing calendar."
+            closing:
+              "No generic blog libraries. No filler articles. No content built just to fill a publishing calendar.",
           }}
           breadcrumbs={breadcrumbItems}
         />
