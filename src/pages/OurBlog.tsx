@@ -169,6 +169,7 @@ const OurBlog = () => {
         <meta property="og:url" content="https://demandstreamdigital.com/our-blog" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
+        <meta property="og:image" content={ogImage} />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
