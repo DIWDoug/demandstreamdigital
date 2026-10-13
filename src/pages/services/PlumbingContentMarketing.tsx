@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { serializeSchema } from "@/lib/schemaNormalize";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import ContactForm from "@/components/sections/ContactForm";
@@ -16,7 +15,7 @@ import {
   ServiceTestimonialsSection,
 } from "@/components/services/generic";
 import { plumbingContentMarketingConfig } from "@/data/service-pages/plumbing-content-marketing";
-import { getServiceHubSchema } from "@/lib/schema";
+import { getServiceHubSchema, normalizeSchema } from "@/lib/schema";
 
 const SectionDivider = () => (
   <div className="container mx-auto px-6 lg:px-8">
@@ -28,7 +27,7 @@ const PlumbingContentMarketing = () => {
   const breadcrumbItems = [
     { label: "Services", href: "/#services" },
     { label: "Content Marketing", href: "/plumbing-hvac-content-marketing" },
-    { label: plumbingContentMarketingConfig.title }
+    { label: plumbingContentMarketingConfig.title },
   ];
 
   const pageSchema = getServiceHubSchema({
@@ -36,7 +35,7 @@ const PlumbingContentMarketing = () => {
     description: plumbingContentMarketingConfig.metaDescription,
     url: plumbingContentMarketingConfig.canonicalUrl,
     serviceType: "Plumbing Content Marketing Service",
-    faqGroups: plumbingContentMarketingConfig.faq.groups
+    faqGroups: plumbingContentMarketingConfig.faq.groups,
   });
 
   return (
@@ -45,19 +44,17 @@ const PlumbingContentMarketing = () => {
         <title>{plumbingContentMarketingConfig.metaTitle}</title>
         <meta name="description" content={plumbingContentMarketingConfig.metaDescription} />
         <link rel="canonical" href={plumbingContentMarketingConfig.canonicalUrl} />
-        <script type="application/ld+json">{serializeSchema(pageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(normalizeSchema(pageSchema))}</script>
         <meta property="og:title" content={plumbingContentMarketingConfig.metaTitle} />
         <meta property="og:description" content={plumbingContentMarketingConfig.metaDescription} />
         <meta property="og:url" content={plumbingContentMarketingConfig.canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="DemandStream Digital" />
-        <meta property="og:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="720" />
+        <meta property="og:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={plumbingContentMarketingConfig.metaTitle} />
         <meta name="twitter:description" content={plumbingContentMarketingConfig.metaDescription} />
-        <meta name="twitter:image" content="https://demandstreamdigital.com/og-images/content-marketing.jpg" />
+        <meta name="twitter:image" content="https://demandstreamdigital.com/demandstream-digital-logo.png" />
       </Helmet>
 
       <Header />
@@ -69,13 +66,14 @@ const PlumbingContentMarketing = () => {
           heroHeadline="Plumbing Content Marketing"
           heroSubtitle="Built to Rank and Convert"
           description={{
-            intro: "When a homeowner searches \"emergency plumber near me\" or \"water heater replacement cost,\" they are not browsing options. They are calling whoever shows up with a credible, relevant, local answer.",
+            intro:
+              'When a homeowner searches "emergency plumber near me" or "water heater replacement cost," they are not browsing options. They are calling whoever shows up with a credible, relevant, local answer.',
             bullets: [
               "Built around how plumbing demand actually works — emergency intent and service specificity",
               "Geographic content aligned to your actual dispatch radius, not just major city names",
               "Structured to move readers toward a booked call — not just a page view",
             ],
-            closing: "No generic listicles. No filler blogs. No content that exists just to exist."
+            closing: "No generic listicles. No filler blogs. No content that exists just to exist.",
           }}
           breadcrumbs={breadcrumbItems}
         />
