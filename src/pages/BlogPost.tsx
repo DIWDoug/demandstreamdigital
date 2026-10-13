@@ -339,7 +339,13 @@ const BlogPostPage = () => {
         <meta property="og:site_name" content="DemandStream Digital" />
         <meta
           property="og:image"
-          content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
+          content={
+            resolvedFeaturedImage
+              ? resolvedFeaturedImage.startsWith("http")
+                ? resolvedFeaturedImage
+                : `https://demandstreamdigital.com${resolvedFeaturedImage.startsWith("/") ? "" : "/"}${resolvedFeaturedImage}`
+              : "https://demandstreamdigital.com/demand-stream-digital-logo.png"
+          }
         />
 
         {/* Twitter Card */}
@@ -348,7 +354,13 @@ const BlogPostPage = () => {
         <meta name="twitter:description" content={blog.excerpt || `Read ${blog.title} on Demand Stream Digital`} />
         <meta
           name="twitter:image"
-          content={resolvedFeaturedImage || "https://demandstreamdigital.com/demand-stream-digital-logo.png"}
+          content={
+            resolvedFeaturedImage
+              ? resolvedFeaturedImage.startsWith("http")
+                ? resolvedFeaturedImage
+                : `https://demandstreamdigital.com${resolvedFeaturedImage.startsWith("/") ? "" : "/"}${resolvedFeaturedImage}`
+              : "https://demandstreamdigital.com/demand-stream-digital-logo.png"
+          }
         />
       </Helmet>
 
