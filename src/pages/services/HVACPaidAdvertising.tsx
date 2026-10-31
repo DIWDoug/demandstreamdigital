@@ -19,9 +19,14 @@ import HVACPaidAdsContactForm from "@/components/services/hvac-paid-advertising/
 
 import ClaimTerritoryCTA from "@/components/cta/ClaimTerritoryCTA";
 const SectionDivider = () => (
-  <div className="w-full h-px" style={{ background: "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)" }} />
+  <div
+    className="w-full h-px"
+    style={{
+      background:
+        "linear-gradient(to right, transparent, hsl(var(--border) / 0.5) 20%, hsl(var(--border) / 0.5) 80%, transparent)",
+    }}
+  />
 );
-
 
 const anchorItems = [
   { label: "Why It's Different", href: "#why-its-different" },
@@ -34,37 +39,94 @@ const anchorItems = [
 ];
 
 const metaTitle = "HVAC Paid Ads for Seasonal Demand Control | DemandStream";
-const metaDescription = "HVAC paid advertising built around seasonal demand, repair vs. install segmentation, and emergency capture. Track every dollar to cost per booked call.";
+const metaDescription =
+  "HVAC paid advertising built around seasonal demand, repair vs. install segmentation, and emergency capture. Track every dollar to cost per booked call.";
 const canonicalUrl = `${SITE_URL}/hvac-paid-advertising`;
 
 const HVACPaidAdvertising = () => {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "HVAC Paid Advertising",
-    "description": metaDescription,
-    "url": canonicalUrl,
-    "serviceType": "HVAC PPC Advertising Service",
-    "provider": {
+    name: "HVAC Paid Advertising",
+    description: metaDescription,
+    url: canonicalUrl,
+    serviceType: "HVAC PPC Advertising Service",
+    provider: {
       "@type": "Organization",
-      "name": "Demand Stream Digital",
-      "url": SITE_URL
-    }
+      name: "Demand Stream Digital",
+      url: SITE_URL,
+    },
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much should I budget for HVAC paid advertising?", "acceptedAnswer": { "@type": "Answer", "text": "Budget depends on your market size, service mix, and seasonal demand windows. Most HVAC markets start between $2,500 and $6,000 per month in total ad spend across channels, scaling based on what your dispatch board can absorb." } },
-      { "@type": "Question", "name": "Which paid channels work best for HVAC companies?", "acceptedAnswer": { "@type": "Answer", "text": "For emergency repair and no-cool/no-heat calls, Google Search Ads and Local Services Ads are the highest-intent channels. For replacement and install demand, Facebook retargeting and display work well. The right mix depends on your market and service focus." } },
-      { "@type": "Question", "name": "Do you require long-term contracts?", "acceptedAnswer": { "@type": "Answer", "text": "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves." } },
-      { "@type": "Question", "name": "How do you handle budget shifts between heating and cooling seasons?", "acceptedAnswer": { "@type": "Answer", "text": "We build a seasonal bid calendar before any spend begins. Cooling season budgets increase before and during peak summer demand. Heating season budgets ramp heading into winter. Shoulder months shift toward maintenance agreements and install promotions." } },
-      { "@type": "Question", "name": "What metrics do you actually report on?", "acceptedAnswer": { "@type": "Answer", "text": "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to your dispatch board." } },
-      { "@type": "Question", "name": "We have run paid ads before and they did not produce results. Why would this be different?", "acceptedAnswer": { "@type": "Answer", "text": "Most failed HVAC campaigns share the same structural problems — no service segmentation, flat budgets that ignore seasonality, broad match keywords, and reporting that stops at the lead instead of the booked call." } },
-      { "@type": "Question", "name": "Can you manage campaigns we already have running?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch. We document everything and show you exactly what changes before we touch the budget." } },
-      { "@type": "Question", "name": "What size HVAC company do you typically work with?", "acceptedAnswer": { "@type": "Answer", "text": "HVAC companies running 2 or more trucks with an active dispatch board, call tracking in place or willingness to install it, and a verified Google Business Profile." } },
-    ]
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How much should I budget for HVAC paid advertising?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Budget depends on your market size, service mix, and seasonal demand windows. Most HVAC markets start between $2,500 and $6,000 per month in total ad spend across channels, scaling based on what your dispatch board can absorb.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Which paid channels work best for HVAC companies?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For emergency repair and no-cool/no-heat calls, Google Search Ads and Local Services Ads are the highest-intent channels. For replacement and install demand, Facebook retargeting and display work well. The right mix depends on your market and service focus.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you require long-term contracts?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We require a minimum 6-month engagement. Paid advertising campaigns compound over time as data builds. Agencies that run month-to-month have no incentive to build infrastructure that improves.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do you handle budget shifts between heating and cooling seasons?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We build a seasonal bid calendar before any spend begins. Cooling season budgets increase before and during peak summer demand. Heating season budgets ramp heading into winter. Shoulder months shift toward maintenance agreements and install promotions.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What metrics do you actually report on?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Cost per booked call, booking rate, close rate, revenue per job, and dispatch load by campaign type. Not impressions. Not click-through rate. Every report ties directly back to your dispatch board.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "We have run paid ads before and they did not produce results. Why would this be different?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most failed HVAC campaigns share the same structural problems — no service segmentation, flat budgets that ignore seasonality, broad match keywords, and reporting that stops at the lead instead of the booked call.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you manage campaigns we already have running?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. We conduct a full campaign audit before launch. Most inherited accounts have significant issues — keyword waste, missing negative lists, no call tracking tied to dispatch. We document everything and show you exactly what changes before we touch the budget.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What size HVAC company do you typically work with?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "HVAC companies running 2 or more trucks with an active dispatch board, call tracking in place or willingness to install it, and a verified Google Business Profile.",
+        },
+      },
+    ],
   };
 
   return (
@@ -100,8 +162,13 @@ const HVACPaidAdvertising = () => {
       {/* 05. MID-PAGE CTA */}
       <section className="py-16 lg:py-20 bg-background text-center relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Not Clear Which Channel Fits Your Market?</h2>
-          <p className="text-text-secondary mb-8 max-w-xl mx-auto">Repair, replacement, and commercial growth each require a different paid mix. We scope it to your market and your season.</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            Not Clear Which Channel Fits Your Market?
+          </h2>
+          <p className="text-text-secondary mb-8 max-w-xl mx-auto">
+            Repair, replacement, and commercial growth each require a different paid mix. We scope it to your market and
+            your season.
+          </p>
           <ClaimTerritoryCTA />
         </div>
       </section>
@@ -142,28 +209,66 @@ const HVACPaidAdvertising = () => {
       <section className="py-12 lg:py-16 bg-surface-dark border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-3 text-center">Explore by Channel</p>
+            <p className="text-sm text-accent-blue uppercase tracking-widest font-medium mb-3 text-center">
+              Explore by Channel
+            </p>
             <h2 className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
               HVAC Paid Advertising — Channel Deep Dives
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {[
-                { label: "HVAC Search Ads", href: "/hvac-search-ads", desc: "Google & LSA for emergency + install capture" },
-                { label: "HVAC Facebook Ads", href: "/hvac-facebook-advertising", desc: "Seasonal demand & install retargeting" },
-                { label: "HVAC Instagram Ads", href: "/hvac-instagram-advertising", desc: "Brand visibility during shoulder seasons" },
-                { label: "HVAC LinkedIn Ads", href: "/hvac-linkedin-advertising", desc: "Commercial & property management targeting" },
+                {
+                  label: "HVAC Search Ads",
+                  href: "/hvac-search-ads",
+                  desc: "Google & LSA for emergency + install capture",
+                },
+                {
+                  label: "HVAC Facebook Ads",
+                  href: "/hvac-facebook-advertising",
+                  desc: "Seasonal demand & install retargeting",
+                },
+                {
+                  label: "HVAC Instagram Ads",
+                  href: "/hvac-instagram-advertising",
+                  desc: "Brand visibility during shoulder seasons",
+                },
+                {
+                  label: "HVAC LinkedIn Ads",
+                  href: "/hvac-linkedin-advertising",
+                  desc: "Commercial & property management targeting",
+                },
               ].map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200"
                 >
-                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{item.label}</span>
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">
+                    {item.label}
+                  </span>
                   <span className="text-xs text-text-secondary">{item.desc}</span>
                 </a>
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Editorial Resource */}
+      <section className="py-10 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8 text-center space-y-2">
+          <p className="text-sm text-text-secondary">
+            Comparing HVAC PPC agencies?{" "}
+            <a href="/best-hvac-ppc-companies" className="text-accent-blue hover:underline font-medium">
+              See our breakdown of the best HVAC PPC companies →
+            </a>
+          </p>
+          <p className="text-sm text-text-secondary">
+            Shopping for Google Ads help?{" "}
+            <a href="/best-google-ads-companies-for-hvac" className="text-accent-blue hover:underline font-medium">
+              See the best Google Ads companies for HVAC →
+            </a>
+          </p>
         </div>
       </section>
 
