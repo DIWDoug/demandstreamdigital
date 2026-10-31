@@ -7,7 +7,7 @@ import MarketExclusivity from "@/components/sections/MarketExclusivity";
 import Testimonials from "@/components/sections/Testimonials";
 import ServiceHubAnchorNav from "@/components/services/ServiceHubAnchorNav";
 import MidPageCTA from "@/components/sections/MidPageCTA";
-import { 
+import {
   ServiceOutcomesSection,
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
@@ -28,8 +28,8 @@ import LocalSEOProblemSection from "@/components/services/local-seo/LocalSEOProb
 // Flatten FAQ groups for schema
 const getFlatFAQs = () => {
   if (!localSEOConfig.faq?.groups) return [];
-  return localSEOConfig.faq.groups.flatMap(group => 
-    group.items.map(item => ({ question: item.question, answer: item.answer }))
+  return localSEOConfig.faq.groups.flatMap((group) =>
+    group.items.map((item) => ({ question: item.question, answer: item.answer })),
   );
 };
 
@@ -40,21 +40,18 @@ const SectionDivider = () => (
 );
 
 const anchorItems = [
-  { label: 'Pattern', href: '#problem' },
-  { label: 'What Changes', href: '#outcomes' },
-  { label: 'Our Process', href: '#roadmap' },
-  { label: 'Levers', href: '#building-blocks' },
-  { label: 'Fit', href: '#qualification' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Next Steps', href: '#contact' },
+  { label: "Pattern", href: "#problem" },
+  { label: "What Changes", href: "#outcomes" },
+  { label: "Our Process", href: "#roadmap" },
+  { label: "Levers", href: "#building-blocks" },
+  { label: "Fit", href: "#qualification" },
+  { label: "Reviews", href: "#testimonials" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Next Steps", href: "#contact" },
 ];
 
 const LocalSEO = () => {
-  const breadcrumbItems = [
-    { label: "Services", href: "/#services" },
-    { label: "Local SEO" }
-  ];
+  const breadcrumbItems = [{ label: "Services", href: "/#services" }, { label: "Local SEO" }];
 
   // Build combined schema
   const faqSchema = getFAQPageSchema(getFlatFAQs());
@@ -62,16 +59,12 @@ const LocalSEO = () => {
     name: "Local SEO for Plumbing & HVAC",
     description: localSEOConfig.metaDescription,
     url: localSEOConfig.canonicalUrl,
-    serviceType: "Local SEO Service"
+    serviceType: "Local SEO Service",
   });
-  
+
   const combinedSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      getOrganizationSchema(),
-      serviceSchema,
-      faqSchema
-    ]
+    "@graph": [getOrganizationSchema(), serviceSchema, faqSchema],
   };
 
   return (
@@ -83,16 +76,12 @@ const LocalSEO = () => {
         keywords="plumbing SEO, HVAC SEO, local SEO for plumbers, local SEO for HVAC, plumbing marketing, HVAC marketing"
         schemaJson={combinedSchema}
       />
-      
+
       <Header />
-      
+
       {/* 1. HERO */}
       <div>
-        <LocalSEOTwoColumnHero 
-          config={localSEOConfig.hero}
-          breadcrumbs={breadcrumbItems}
-          bgImage={heroBgSeoHub}
-        />
+        <LocalSEOTwoColumnHero config={localSEOConfig.hero} breadcrumbs={breadcrumbItems} bgImage={heroBgSeoHub} />
       </div>
 
       {/* STICKY ANCHOR NAV */}
@@ -100,16 +89,16 @@ const LocalSEO = () => {
 
       {/* 02B. PHONE NOT RANKINGS */}
       <PhoneNotRankings />
-      
+
       <SectionDivider />
-      
+
       {/* 3. PROBLEM */}
       <div id="problem" className="scroll-mt-32">
         <LocalSEOProblemSection />
       </div>
-      
+
       <SectionDivider />
-      
+
       {/* 4. OUTCOMES */}
       <div id="outcomes" className="scroll-mt-32">
         <ServiceOutcomesSection config={localSEOConfig.outcomes} />
@@ -119,58 +108,60 @@ const LocalSEO = () => {
       <div className="bg-surface-dark pb-10">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-text-secondary text-base text-center max-w-4xl mx-auto leading-relaxed">
-            Local SEO must also account for operational realities specific to plumbing and HVAC. Certifications, equipment transitions, permit timelines, and seasonal demand shifts all influence how marketing converts into revenue. A local SEO strategy built without this context will generate calls the business is not positioned to convert.
+            Local SEO must also account for operational realities specific to plumbing and HVAC. Certifications,
+            equipment transitions, permit timelines, and seasonal demand shifts all influence how marketing converts
+            into revenue. A local SEO strategy built without this context will generate calls the business is not
+            positioned to convert.
           </p>
         </div>
       </div>
 
       {/* EXCLUSIVITY — scarcity right after desire */}
       <MarketExclusivity />
-      
+
       {/* 5. Ranking Factors */}
       <LocalRankingFactors />
-      
+
       <SectionDivider />
-      
+
       {/* 6. ROADMAP */}
       <div id="roadmap" className="scroll-mt-32">
         <ServiceRoadmapSection config={localSEOConfig.roadmap} />
       </div>
-      
+
       {/* Mid-Page CTA */}
       <MidPageCTA />
-      
+
       <SectionDivider />
-      
+
       {/* 7. BUILDING BLOCKS */}
       <div id="building-blocks" className="scroll-mt-32">
         <ServiceBuildingBlocksSection config={localSEOConfig.buildingBlocks} />
       </div>
-      
+
       <SectionDivider />
 
       {/* 8. BUILT FOR BOTH */}
       <BuiltForBoth />
-      
+
       <SectionDivider />
-      
+
       {/* 9. QUALIFICATION */}
       <div id="qualification" className="scroll-mt-32">
         <ServiceFitQualifierSection config={localSEOConfig.qualification} />
       </div>
-      
+
       {/* 10. TESTIMONIALS */}
       <div id="testimonials" className="scroll-mt-32">
         <Testimonials />
       </div>
-      
+
       <SectionDivider />
-      
+
       {/* 11. FAQ */}
       <div id="faq" className="scroll-mt-32">
         <ServiceGroupedFAQ config={localSEOConfig.faq} />
       </div>
-      
 
       {/* 14. CONTACT */}
       <div id="contact" className="scroll-mt-32">
@@ -181,15 +172,50 @@ const LocalSEO = () => {
       <section className="py-10 bg-surface-dark border-t border-border/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-4 text-center">Free Planning Tools</p>
+            <p className="text-xs text-accent-blue uppercase tracking-widest font-medium mb-4 text-center">
+              Free Planning Tools
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {[
-                { label: "GBP Category Discovery", href: "/tools/gbp-category-discovery", desc: "Find the right Google Business categories for your service" },
-                { label: "Job Value Benchmark", href: "/tools/job-value-benchmark", desc: "See revenue at risk from missed calls by trade" },
-                { label: "Free SEO Audit", href: "/free-audit", desc: "Custom AI-powered audit of your Google presence" },
+                {
+                  label: "GBP Category Discovery",
+                  href: "/tools/gbp-category-discovery",
+                  desc: "Find the right Google Business categories for your service",
+                },
+                {
+                  label: "Job Value Benchmark",
+                  href: "/tools/job-value-benchmark",
+                  desc: "See revenue at risk from missed calls by trade",
+                },
+                {
+                  label: "Free SEO Audit",
+                  href: "/free-audit",
+                  desc: "Custom AI-powered audit of your Google presence",
+                },
+                {
+                  label: "Job Cost Estimator",
+                  href: "/tools/job-cost-estimator",
+                  desc: "Ballpark costs for common plumbing and HVAC jobs",
+                },
+                {
+                  label: "Financing Calculator",
+                  href: "/tools/financing-calculator",
+                  desc: "Monthly payment math for big-ticket jobs",
+                },
+                {
+                  label: "Plumbing Cost Quiz",
+                  href: "/tools/plumbing-cost-quiz",
+                  desc: "A quick homeowner quiz on hidden plumbing costs",
+                },
               ].map((t) => (
-                <a key={t.href} href={t.href} className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200">
-                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">{t.label}</span>
+                <a
+                  key={t.href}
+                  href={t.href}
+                  className="group flex flex-col gap-1 p-4 rounded-xl border border-border/40 bg-background hover:border-accent-blue/50 hover:bg-surface-elevated transition-all duration-200"
+                >
+                  <span className="text-sm font-semibold text-foreground group-hover:text-accent-blue transition-colors">
+                    {t.label}
+                  </span>
                   <span className="text-xs text-text-secondary">{t.desc}</span>
                 </a>
               ))}
@@ -197,7 +223,7 @@ const LocalSEO = () => {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
