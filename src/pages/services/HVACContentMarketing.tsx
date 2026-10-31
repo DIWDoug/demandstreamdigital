@@ -134,6 +134,18 @@ const HVACContentMarketing = () => {
         <ContactForm />
       </div>
 
+      {/* Editorial Resource */}
+      <section className="py-10 bg-surface-dark border-t border-border/30">
+        <div className="container mx-auto px-6 lg:px-8 text-center space-y-2">
+          <p className="text-sm text-text-secondary">
+            Comparing content agencies?{" "}
+            <a href="/best-content-marketing-for-hvac" className="text-accent-blue hover:underline font-medium">
+              See the best content marketing companies for HVAC →
+            </a>
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
