@@ -11,7 +11,7 @@ import {
   ServiceRoadmapSection,
   ServiceBuildingBlocksSection,
   ServiceFitQualifierSection,
-  ServiceGroupedFAQ
+  ServiceGroupedFAQ,
 } from "@/components/services/generic";
 import LocalSEOTwoColumnHero from "@/components/services/local-seo/LocalSEOTwoColumnHero";
 import LocalRankingFactors from "@/components/services/local-seo/LocalRankingFactors";
@@ -27,8 +27,8 @@ import PlumbingProblemSection from "@/components/services/plumbing-seo/PlumbingP
 
 const getFlatFAQs = () => {
   if (!plumbingSEOConfig.faq?.groups) return [];
-  return plumbingSEOConfig.faq.groups.flatMap(group =>
-    group.items.map(item => ({ question: item.question, answer: item.answer }))
+  return plumbingSEOConfig.faq.groups.flatMap((group) =>
+    group.items.map((item) => ({ question: item.question, answer: item.answer })),
   );
 };
 
@@ -39,37 +39,30 @@ const SectionDivider = () => (
 );
 
 const anchorItems = [
-  { label: 'Where We Start', href: '#phone-first' },
-  { label: 'The Problem', href: '#problem' },
-  { label: 'What Changes', href: '#outcomes' },
-  { label: 'Our Process', href: '#roadmap' },
-  { label: 'What We Do', href: '#building-blocks' },
-  { label: 'Fit', href: '#qualification' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'Get Started', href: '#contact' },
+  { label: "Where We Start", href: "#phone-first" },
+  { label: "The Problem", href: "#problem" },
+  { label: "What Changes", href: "#outcomes" },
+  { label: "Our Process", href: "#roadmap" },
+  { label: "What We Do", href: "#building-blocks" },
+  { label: "Fit", href: "#qualification" },
+  { label: "Reviews", href: "#testimonials" },
+  { label: "Get Started", href: "#contact" },
 ];
 
 const PlumbingSEO = () => {
-  const breadcrumbItems = [
-    { label: "Services", href: "/#services" },
-    { label: "Plumbing SEO" }
-  ];
+  const breadcrumbItems = [{ label: "Services", href: "/#services" }, { label: "Plumbing SEO" }];
 
   const faqSchema = getFAQPageSchema(getFlatFAQs());
   const serviceSchema = getServiceSchema({
     name: "Plumbing SEO Services",
     description: plumbingSEOConfig.metaDescription,
     url: plumbingSEOConfig.canonicalUrl,
-    serviceType: "Plumbing SEO Service"
+    serviceType: "Plumbing SEO Service",
   });
 
   const combinedSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      getOrganizationSchema(),
-      serviceSchema,
-      faqSchema
-    ]
+    "@graph": [getOrganizationSchema(), serviceSchema, faqSchema],
   };
 
   return (
@@ -85,11 +78,7 @@ const PlumbingSEO = () => {
 
       {/* 1. HERO */}
       <div>
-        <LocalSEOTwoColumnHero
-          config={plumbingSEOConfig.hero}
-          breadcrumbs={breadcrumbItems}
-          bgImage={heroBgPlumbing}
-        />
+        <LocalSEOTwoColumnHero config={plumbingSEOConfig.hero} breadcrumbs={breadcrumbItems} bgImage={heroBgPlumbing} />
       </div>
 
       {/* STICKY ANCHOR NAV */}
@@ -118,7 +107,8 @@ const PlumbingSEO = () => {
       <div className="bg-surface-dark border-t border-border/30 py-10">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-text-secondary text-base text-center max-w-2xl mx-auto leading-relaxed">
-            Local SEO must account for the operational realities of running a plumbing company. A strategy built without that context generates calls the operation cannot run.
+            Local SEO must account for the operational realities of running a plumbing company. A strategy built without
+            that context generates calls the operation cannot run.
           </p>
         </div>
       </div>
@@ -177,7 +167,6 @@ const PlumbingSEO = () => {
         <ServiceGroupedFAQ config={plumbingSEOConfig.faq} />
       </div>
 
-
       {/* 13. CONTACT */}
       <div id="contact" className="scroll-mt-32">
         <ContactForm />
@@ -190,6 +179,12 @@ const PlumbingSEO = () => {
             Evaluating SEO agencies?{" "}
             <a href="/best-plumbing-seo-companies" className="text-accent-blue hover:underline font-medium">
               See our breakdown of the best plumbing SEO companies →
+            </a>
+          </p>
+          <p className="text-sm text-text-secondary mt-2">
+            Need more local authority?{" "}
+            <a href="/plumbing-authority-building" className="text-accent-blue hover:underline font-medium">
+              See how plumbing authority building works →
             </a>
           </p>
         </div>
