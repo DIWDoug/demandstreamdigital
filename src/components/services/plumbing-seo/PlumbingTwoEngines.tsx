@@ -5,7 +5,7 @@ const organicPoints = [
   "Clean URL structure aligned to service + city: /water-heater-replacement-dallas/",
   "Three-tier structure: core service hubs, sub-service specialization, problem-level emergency pages",
   "City pages built around your dispatch radius, not just the nearest major metro",
-  "Each page targets a distinct search intent. 'Tankless installation' ranks faster than 'plumbing services'"
+  "Each page targets a distinct search intent. 'Tankless installation' ranks faster than 'plumbing services'",
 ];
 
 const mapsPoints = [
@@ -14,7 +14,7 @@ const mapsPoints = [
   "Review velocity: post-job SMS acquisition system that runs after every job",
   "Real job photos: water heater installs, drain cleaning, slab leak repairs, uploaded weekly",
   "Seasonal posting calendar: freeze prep in fall, water heater content before winter, drain cleaning in spring",
-  "Behavioral signals: click-to-call, direction requests, and photo engagement tracked consistently"
+  "Behavioral signals: click-to-call, direction requests, and photo engagement tracked consistently",
 ];
 
 const aiGeoPoints = [
@@ -22,7 +22,7 @@ const aiGeoPoints = [
   "Entity optimization: your business name, services, and location connected as a clear knowledge graph signal",
   "Content formatted to answer the exact questions AI systems pull from: 'how long does water heater replacement take,' 'signs of a slab leak'",
   "Conversational search optimization for voice and assistant queries: 'plumber open now near me'",
-  "GBP Q&A seeded with high-intent plumbing questions and direct answers"
+  "GBP Q&A seeded with high-intent plumbing questions and direct answers",
 ];
 
 const PlumbingTwoEngines = () => {
@@ -32,14 +32,14 @@ const PlumbingTwoEngines = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">
-              The Structure
-            </p>
+            <p className="text-cta text-sm font-medium uppercase tracking-widest mb-4">The Structure</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               Plumbing SEO Runs on Three Systems
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Most plumbing companies think of SEO as one thing. It is three. Organic SEO, Google Maps, and AI & Generative Search each operate on different signals and drive different types of calls. All three have to work.
+              Most plumbing companies think of SEO as one thing. It is three. Organic SEO, Google Maps, and AI &
+              Generative Search each operate on different signals and drive different types of calls. All three have to
+              work.
             </p>
           </div>
 
@@ -57,8 +57,11 @@ const PlumbingTwoEngines = () => {
                 </div>
               </div>
               <p className="text-text-secondary mb-5 leading-relaxed text-sm">
-                Organic rankings are structural. Built through page structure, content quality, and authority signals. The most important decision:{" "}
-                <span className="text-foreground font-medium">if it's a different phone call, it's a different page.</span>
+                Organic rankings are structural. Built through page structure, content quality, and authority signals.
+                The most important decision:{" "}
+                <span className="text-foreground font-medium">
+                  if it's a different phone call, it's a different page.
+                </span>
               </p>
               <ul className="space-y-2.5 mb-5 flex-1">
                 {organicPoints.map((point, i) => (
@@ -73,7 +76,7 @@ const PlumbingTwoEngines = () => {
                 to="/hvac-and-plumbing-seo"
                 className="inline-flex items-center gap-2 text-accent-blue text-sm font-medium hover:gap-3 transition-all"
               >
-                See the full Local SEO approach
+                See our plumbing and HVAC SEO approach
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -95,9 +98,12 @@ const PlumbingTwoEngines = () => {
                 For emergency plumbing calls, the Map Pack is where the call decision happens.
               </p>
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
-                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Maps Responds to Activity</p>
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">
+                  Maps Responds to Activity
+                </p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly, uploading real job photos, and responding to every review.
+                  A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly,
+                  uploading real job photos, and responding to every review.
                 </p>
               </div>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -129,13 +135,18 @@ const PlumbingTwoEngines = () => {
                 </div>
               </div>
               <p className="text-text-secondary mb-4 leading-relaxed text-sm">
-                AI Overviews now appear above organic results for a growing share of plumbing searches. A homeowner asking "what causes low water pressure" or "how do I know if I have a slab leak" may never scroll past the AI answer.{" "}
-                <span className="text-foreground font-medium">Your content needs to be the source that gets cited.</span>
+                AI Overviews now appear above organic results for a growing share of plumbing searches. A homeowner
+                asking "what causes low water pressure" or "how do I know if I have a slab leak" may never scroll past
+                the AI answer.{" "}
+                <span className="text-foreground font-medium">
+                  Your content needs to be the source that gets cited.
+                </span>
               </p>
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">GEO vs SEO</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers. A different signal set, but built on the same technical and content foundation.
+                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers. A
+                  different signal set, but built on the same technical and content foundation.
                 </p>
               </div>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -157,7 +168,8 @@ const PlumbingTwoEngines = () => {
           </div>
 
           <p className="text-center text-text-muted text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
-            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured data support AI citations. The results compound when every channel is aligned.
+            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured
+            data support AI citations. The results compound when every channel is aligned.
           </p>
         </div>
       </div>
