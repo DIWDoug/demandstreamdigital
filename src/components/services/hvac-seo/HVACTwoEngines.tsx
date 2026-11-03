@@ -7,7 +7,7 @@ const organicPoints = [
   "Clean URL structure aligned to service + city: /ac-replacement-dallas/",
   "Three-tier architecture: core service hubs, sub-service specialization, problem-level emergency pages",
   "City pages built around your dispatch radius, not just the nearest major metro",
-  "Each page targets a distinct search intent. 'Heat pump installation' ranks faster than 'HVAC services'"
+  "Each page targets a distinct search intent. 'Heat pump installation' ranks faster than 'HVAC services'",
 ];
 
 const mapsPoints = [
@@ -16,7 +16,7 @@ const mapsPoints = [
   "Review velocity: post-job SMS acquisition system that runs after every job",
   "Real job photos: AC installations, furnace replacements, heat pump jobs, uploaded weekly",
   "Seasonal posting calendar: pre-season tune-up content before summer and winter",
-  "Behavioral signals: click-to-call, direction requests, and photo engagement tracked consistently"
+  "Behavioral signals: click-to-call, direction requests, and photo engagement tracked consistently",
 ];
 
 const aiGeoPoints = [
@@ -24,7 +24,7 @@ const aiGeoPoints = [
   "Entity optimization: your business name, services, and location connected as a clear knowledge graph signal",
   "Content formatted to answer the exact questions AI systems pull from: 'how much does AC replacement cost,' 'signs your furnace needs replacing'",
   "Conversational search optimization for voice and assistant queries: 'HVAC company open now near me'",
-  "GBP Q&A seeded with high-intent HVAC questions and direct answers"
+  "GBP Q&A seeded with high-intent HVAC questions and direct answers",
 ];
 
 const HVACTwoEngines = () => {
@@ -36,14 +36,13 @@ const HVACTwoEngines = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">
-              The Structure
-            </p>
+            <p className="text-accent-blue text-sm font-medium uppercase tracking-widest mb-4">The Structure</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               HVAC SEO Runs on Three Systems
             </h2>
             <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-              Most HVAC companies think of SEO as one thing. It is three. Organic SEO, Google Maps, and AI & Generative Search each operate on different signals and drive different types of calls. All three have to work.
+              Most HVAC companies think of SEO as one thing. It is three. Organic SEO, Google Maps, and AI & Generative
+              Search each operate on different signals and drive different types of calls. All three have to work.
             </p>
           </div>
 
@@ -61,8 +60,11 @@ const HVACTwoEngines = () => {
                 </div>
               </div>
               <p className="text-text-secondary mb-5 leading-relaxed text-sm">
-                Organic rankings are structural. Built through page architecture, content quality, and authority signals. The most important structural decision:{" "}
-                <span className="text-foreground font-medium">if it's a different type of call, it's a different page.</span>
+                Organic rankings are structural. Built through page architecture, content quality, and authority
+                signals. The most important structural decision:{" "}
+                <span className="text-foreground font-medium">
+                  if it's a different type of call, it's a different page.
+                </span>
               </p>
               <ul className="space-y-2.5 mb-5 flex-1">
                 {organicPoints.map((point, i) => (
@@ -79,17 +81,24 @@ const HVACTwoEngines = () => {
                   onClick={() => setClusterOpen(!clusterOpen)}
                   className="flex items-center gap-2 text-accent-blue text-sm font-medium hover:opacity-80 transition-opacity"
                 >
-                  <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${clusterOpen ? "rotate-90" : ""}`} />
+                  <ChevronRight
+                    className={`w-4 h-4 transition-transform duration-200 ${clusterOpen ? "rotate-90" : ""}`}
+                  />
                   View service cluster architecture
                 </button>
                 {clusterOpen && (
                   <div className="mt-3 bg-background/50 rounded-lg p-4 border border-border/40">
-                    <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Service Cluster Architecture</p>
+                    <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">
+                      Service Cluster Architecture
+                    </p>
                     <p className="text-xs text-text-secondary leading-relaxed mb-2">
-                      Every distinct service gets its own page. AC Repair, Furnace Installation, Heat Pump Systems, AC Replacement, Indoor Air Quality, each as a hub with sub-service pages targeting specific high-intent searches.
+                      Every distinct service gets its own page. AC Repair, Furnace Installation, Heat Pump Systems, AC
+                      Replacement, Indoor Air Quality, each as a hub with sub-service pages targeting specific
+                      high-intent searches.
                     </p>
                     <p className="text-xs text-text-secondary leading-relaxed">
-                      AC Repair · Furnace Repair · Heat Pump · AC Replacement · Furnace Installation · Indoor Air Quality, each as a hub with sub-service pages targeting specific high-intent searches.
+                      AC Repair · Furnace Repair · Heat Pump · AC Replacement · Furnace Installation · Indoor Air
+                      Quality, each as a hub with sub-service pages targeting specific high-intent searches.
                     </p>
                   </div>
                 )}
@@ -99,7 +108,7 @@ const HVACTwoEngines = () => {
                 to="/hvac-and-plumbing-seo"
                 className="inline-flex items-center gap-2 text-accent-blue text-sm font-medium hover:gap-3 transition-all"
               >
-                See the full Local SEO approach
+                See our HVAC and plumbing SEO approach
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -123,7 +132,8 @@ const HVACTwoEngines = () => {
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">Maps IS BEHAVIORAL</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly, uploading real job photos, and responding to every review.
+                  A GBP profile set up two years ago and never touched is losing ground to competitors posting weekly,
+                  uploading real job photos, and responding to every review.
                 </p>
               </div>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -155,13 +165,18 @@ const HVACTwoEngines = () => {
                 </div>
               </div>
               <p className="text-text-secondary mb-4 leading-relaxed text-sm">
-                AI Overviews now appear above organic results for a growing share of HVAC searches. A homeowner asking 'should I repair or replace my AC' or 'how much does furnace replacement cost' may never scroll past the AI answer.{" "}
-                <span className="text-foreground font-medium">Your content needs to be the source that gets cited.</span>
+                AI Overviews now appear above organic results for a growing share of HVAC searches. A homeowner asking
+                'should I repair or replace my AC' or 'how much does furnace replacement cost' may never scroll past the
+                AI answer.{" "}
+                <span className="text-foreground font-medium">
+                  Your content needs to be the source that gets cited.
+                </span>
               </p>
               <div className="bg-background/50 rounded-lg p-4 mb-5 border border-border/40">
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2 font-medium">GEO vs SEO</p>
                 <p className="text-xs text-text-secondary leading-relaxed">
-                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers: a different signal set, but built on the same technical and content foundation.
+                  Traditional SEO earns rankings. Generative Engine Optimization earns citations inside AI answers: a
+                  different signal set, but built on the same technical and content foundation.
                 </p>
               </div>
               <ul className="space-y-2.5 mb-5 flex-1">
@@ -183,7 +198,8 @@ const HVACTwoEngines = () => {
           </div>
 
           <p className="text-center text-text-muted text-sm mt-10 max-w-2xl mx-auto leading-relaxed">
-            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured data support AI citations. The system compounds when every channel is aligned.
+            All three systems feed each other. Strong organic content supports Maps rankings. Reviews and structured
+            data support AI citations. The system compounds when every channel is aligned.
           </p>
         </div>
       </div>
